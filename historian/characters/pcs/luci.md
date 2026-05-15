@@ -8,6 +8,7 @@ tags:
   - character/pc
   - player/paul
   - campaign/curse-of-strahd
+  - race/aasimar
 
 player: "[[Paul]]"
 race: "Aasimar (Scourge)"
@@ -18,8 +19,6 @@ level: 3
 # --- OPTIONAL ---
 aliases:
   - "Lucy"
-relates_to:
-  - "[[Aasimar]]"
 importance: critical
 active: true
 last_updated: "[[Session 10]]"

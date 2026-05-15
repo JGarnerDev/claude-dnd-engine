@@ -17,6 +17,8 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 |---|---|---|
 | **class** | | |
 | `class` | class entity | Entity type: playable class — flat tag, no subtype |
+| `class/bard` | character | Character is a Bard |
+| `class/wizard` | character | Character is a Wizard |
 | **campaign/** | | |
 | `campaign/curse-of-strahd` | any | Entity belongs to the Curse of Strahd campaign |
 | **character/** | | |
@@ -63,6 +65,8 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `player/paul` | pc | Character played by Paul |
 | **race** | | |
 | `race` | race entity | Entity type: playable race — flat tag, no subtype |
+| `race/aasimar` | character | Character is an Aasimar |
+| `race/gnome` | character | Character is a Gnome |
 | **session/** | | |
 | `session/NN` | session | Identifies the session number — e.g. `session/01`, `session/11` |
 | **size/** | | |

@@ -8,6 +8,8 @@ tags:
   - character/pc
   - player/jeff
   - campaign/curse-of-strahd
+  - race/aasimar
+  - class/bard
 
 player: "[[Jeff]]"
 race: "Aasimar"
@@ -18,9 +20,6 @@ level: 3
 # --- OPTIONAL ---
 aliases:
   - "Iggy"
-relates_to:
-  - "[[Aasimar]]"
-  - "[[Bard]]"
 importance: critical
 active: true
 last_updated: "[[Session 10]]"
