@@ -18,6 +18,9 @@ level: 3
 # --- OPTIONAL ---
 aliases:
   - "Iggy"
+relates_to:
+  - "[[Aasimar]]"
+  - "[[Bard]]"
 importance: critical
 active: true
 last_updated: "[[Session 10]]"

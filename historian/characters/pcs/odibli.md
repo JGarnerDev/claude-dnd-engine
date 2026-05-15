@@ -20,6 +20,9 @@ aliases:
   - "ODB"
   - "Odi"
   - "Odible"
+relates_to:
+  - "[[Gnome]]"
+  - "[[Wizard]]"
 importance: critical
 active: true
 last_updated: "[[Session 10]]"

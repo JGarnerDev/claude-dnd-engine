@@ -18,6 +18,8 @@ level: 3
 # --- OPTIONAL ---
 aliases:
   - "Lucy"
+relates_to:
+  - "[[Aasimar]]"
 importance: critical
 active: true
 last_updated: "[[Session 10]]"
