@@ -1,6 +1,12 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides operational guidance to Claude Code (claude.ai/code) for working with this campaign engine.
+
+**For project overview, quick start, and user-facing documentation:** See [README.md](./README.md)
+
+**This document contains:** Mandatory procedures, reading strategy, entity protocols, and session generation/canonization workflows that Claude must follow exactly.
+
+---
 
 ## Project
 
