@@ -1,4 +1,8 @@
 {
+  "foam.graph": {
+    "repel": 100,
+    "linkDistance": 0
+  },
   "foam.graph.style": {
     "background": "#1e1e2e",
     "edge": "#444466",
