@@ -1,0 +1,69 @@
+# Entity Schema
+
+The base schema for every file in this campaign engine. All entities — regardless of type or subtype — must include this frontmatter. Type and subtype schemas extend this; they do not replace it.
+
+## Canonical Frontmatter
+
+```yaml
+---
+# --- MANDATORY ---
+name: "Exact display name"
+type: location | character | faction | item | event   # pick one
+exists: true | false      # true = canonized in historian; false = data/creative material only
+state: ""                 # current in-world condition, valid values defined per type/subtype schema
+
+tags:
+  - type/subtype          # e.g. location/city, character/npc, faction/guild
+  - region/name           # geographic or conceptual grouping
+
+# --- OPTIONAL ---
+subtype: ""               # more specific classification (city, npc, ruin, etc.)
+aliases:
+  - "Alternate Name"      # Obsidian resolves wiki-links to these names
+
+importance: critical | major | minor | background
+active: true | false      # currently in play; false = retired/dormant but importance unchanged
+
+last_updated: "[[Session NN - Title]]"   # session where this entity was last changed
+
+relates_to:
+  - "[[Entity Name]] (relationship)"    # wiki-link survives in Obsidian graph with annotation
+
+resources:
+  - "[[Entity Name]] (relationship)"    # material, economic, or physical resources tied to this entity
+
+known_by:
+  - "[[Character Name]] (partial | full)"   # who knows this entity exists, and how much
+
+owner: "[[Player Character Name]]"     # player who is narratively responsible for this entity
+
+description: "One-sentence summary shown in Obsidian hover previews."
+---
+```
+
+## Body
+
+Prose, tables, and detail go in the markdown body below the frontmatter. There is no required structure — use headers freely.
+
+## Historian Extensions
+
+Files in `historian/` must have `exists: true` and add the following mandatory fields:
+
+```yaml
+# --- MANDATORY (historian only) ---
+source_session: "[[Session NN - Title]]"   # session that established this as fact
+confirmed_date: ""                          # in-world date or session number when canonized
+
+# --- OPTIONAL (historian only) ---
+supersedes: "[[data/path/to/entity]]"      # data/ draft this entry replaces
+```
+
+## Rules
+
+- Every entity file must open with a YAML frontmatter block (`---`).
+- `name` must match the filename (spaces replaced with hyphens, lowercase).
+- `exists` mirrors the file's location: `data/` entities are `false`, `historian/` entities are `true`. Both must agree.
+- `relates_to`, `resources`, `known_by`, and `owner` must use `[[wiki-link]]` syntax so Obsidian graph edges are preserved. Relationship annotations after the link are allowed.
+- `tags` should follow a `category/specific` hierarchy for Obsidian nested tag support.
+- Never leave mandatory fields blank — use `unknown` or `"TBD"` as placeholders.
+- Valid values for `state` are defined in each type or subtype schema.

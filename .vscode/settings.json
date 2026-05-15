@@ -1,0 +1,45 @@
+{
+  "foam.graph.style": {
+    "background": "#1e1e2e",
+    "edge": "#444466",
+    "node.note": "#666688",
+    "node.placeholder": "#993333",
+    "node.feature": "#ffffff",
+
+    "computed": {
+
+      "Entity Type": {
+        "isNodeStyle": true,
+        "rules": [
+          { "match": { "path": "data/classes" },               "style": { "color": "#ce93d8" } },
+          { "match": { "path": "data/races" },                "style": { "color": "#4dd0e1" } },
+          { "match": { "path": "data/deities" },              "style": { "color": "#ffd54f" } },
+          { "match": { "path": "data/characters/npcs" },      "style": { "color": "#ff8a65" } },
+          { "match": { "path": "data/characters/pcs" },       "style": { "color": "#ef5350" } },
+          { "match": { "path": "data/factions" },             "style": { "color": "#ab47bc" } },
+          { "match": { "path": "data/locations" },            "style": { "color": "#66bb6a" } },
+          { "match": { "path": "data/items" },                "style": { "color": "#ffa726" } },
+          { "match": { "path": "data/events" },               "style": { "color": "#ec407a" } },
+          { "match": { "path": "data/rumors" },               "style": { "color": "#78909c" } },
+          { "match": { "path": "historian/sessions" },        "style": { "color": "#ffca28" } },
+          { "match": { "path": "historian/characters/npcs" }, "style": { "color": "#ff8a65" } },
+          { "match": { "path": "historian/characters/pcs" },  "style": { "color": "#ef5350" } },
+          { "match": { "path": "historian/locations" },       "style": { "color": "#66bb6a" } },
+          { "match": { "path": "scheduler" },                 "style": { "color": "#d4e157" } },
+          { "match": { "path": "meta" },                      "style": { "color": "#90a4ae" } }
+        ]
+      },
+
+      "Canon vs Free": {
+        "isNodeStyle": true,
+        "rules": [
+          { "match": { "path": "data" },      "style": { "color": "#888888" } },
+          { "match": { "path": "historian" }, "style": { "color": "#4fc3f7" } },
+          { "match": { "path": "scheduler" }, "style": { "color": "#aed581" } },
+          { "match": { "path": "meta" },      "style": { "color": "#90a4ae" } }
+        ]
+      }
+
+    }
+  }
+}

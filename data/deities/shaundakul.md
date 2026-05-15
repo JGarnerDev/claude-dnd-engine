@@ -1,0 +1,21 @@
+---
+name: "Shaundakul"
+type: deity
+exists: false
+state: active
+tags:
+  - deity/greater
+  - pantheon/faerûnian
+  - domain/nature
+  - domain/trickery
+domains:
+  - Nature
+  - Trickery
+moral_character: "Chaotic Neutral"
+worshippers: []
+wants: "protect wild places and maintain natural balance; disrupt rigid order and reward cleverness"
+importance: minor
+active: true
+symbol: "Upright hand with a mouth on the palm"
+description: "Chaotic Neutral Faerûnian deity of travel, exploration, caravans, the wind; symbol: Upright hand with a mouth on the palm."
+---

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\meta\\\\schemas\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\data\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\historian\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\scheduler\")",
+      "Bash(Write-Output \"Directories created.\")",
+      "PowerShell(New-Item *)",
+      "WebFetch(domain:www.dnd5eapi.co)",
+      "WebFetch(domain:forgottenrealms.fandom.com)",
+      "Bash(gh pr *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

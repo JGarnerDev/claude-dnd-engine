@@ -1,0 +1,136 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project
+
+This engine generates D&D sessions by synthesizing creative material, campaign history, design principles, and session planning into coherent, playable content.
+
+## Folder Roles
+
+- `./data` — Creative source material (lore, worldbuilding, inspiration). Informational "food" that shapes story flavor and content, but is not authoritative.
+- `./historian` — The authoritative record of the campaign. Past and current in-world facts (events, NPCs, locations, outcomes) live here. When `data` and `historian` conflict, `historian` wins.
+- `./meta` — Principles, guidelines, and rules governing the campaign design (e.g. challenge/reward balance, pacing, tone). These govern *how* sessions are constructed, not *what* happened.
+- `./scheduler` — The active story layer. Contains the campaign document, acts, missions, and session plans. Files here have `exists: false` and move to `historian/` when completed or played.
+
+## Story Hierarchy
+
+Content is organized from largest to smallest narrative unit:
+
+| Level | File location | Moves to historian when… |
+|---|---|---|
+| **Campaign** | `scheduler/campaign.md` | Campaign fully concludes |
+| **Act** | `scheduler/acts/{name}.md` | Act completes |
+| **Mission** | `scheduler/missions/{name}.md` | Mission resolves (success or failure) |
+| **Session** | `scheduler/sessions/session-{nn}-{name}.md` | Session is played |
+
+Each level references the one above it and the ones below it via wiki-links. Sessions advance missions; missions build acts; acts serve the campaign.
+
+## Session Generation Protocol
+
+When asked to plan or generate a session, read in this order before producing any content:
+
+1. `scheduler/campaign.md` — overarching story, tone, central conflict
+2. The current act file in `scheduler/acts/` — what arc we're in, what needs to happen
+3. Active mission file(s) in `scheduler/missions/` — the specific objective being pursued
+4. Meta reference files (see **Meta Reference Files** below) — design guidelines and player preferences
+5. Declare scope before pulling entity files — state what you intend to read and why
+
+Session content must advance the active mission. Do not generate content that floats free of the story hierarchy.
+
+## Context and Reading Strategy
+
+Read in this order, stopping as soon as the task is satisfied:
+
+1. **Frontmatter only** — check `description`, `type`, `state`, `exists` before opening the body
+2. **Body** — only if frontmatter doesn't answer the question
+3. **Linked files** — follow `relates_to`, `known_by`, `resources`, etc. at most **1 hop** from the focal entity; go deeper only when explicitly required by the task
+
+Before pulling any files for a generation or planning task, declare scope: what you intend to read and why. This keeps context bounded and gives the user a chance to redirect.
+
+Meta files (`meta/worldbuilding-approach.md`, `meta/difficulty.md`, etc.) are read **once per task**, not re-read for each sub-task or entity created within it.
+
+Scan commands (e.g. `/inventory`) read **frontmatter only** — never the body.
+
+## Free Entity Rule
+
+Entities in `./data` with `exists: false` are **free** — available to be used in session content. Entities that get played and canonized move to `./historian` with `exists: true`.
+
+**When generating or planning content that requires an entity:**
+1. First search `./data` for a free entity (`exists: false`) of the needed type.
+2. If one exists, use it — do not invent a new one.
+3. If none exists, **stop and ask the user** before creating anything. Present the gap clearly: what type is needed, why, and ask whether they want to create one or proceed differently.
+
+Never silently generate a net-new entity during session planning or content generation. The data pool is intentional — running it low is meaningful signal, not a problem to paper over.
+
+## Meta Reference Files
+
+When generating sessions, encounters, rewards, or any world content, read these files once at the start of the task:
+
+| File | Purpose |
+|---|---|
+| `meta/worldbuilding-approach.md` | How to reason about worldbuilding — coherence, causality, consequences |
+| `meta/worldbuilding.md` | Tone, themes, setting pillars, what to avoid |
+| `meta/difficulty.md` | Encounter tiers, DC ranges, session mix |
+| `meta/rewards.md` | Gold ranges, magic item philosophy, leveling pace |
+| `meta/players/group.md` | Shared table preferences and guardrails |
+| `meta/players/*.md` (excluding template) | Per-player preferences; may add to or override group preferences |
+| `meta/references.md` | Where to look for external D&D data — API endpoints, wiki access patterns, and when to use each source |
+
+`meta/players/player-template.md` is a blank template for adding new players — do not treat it as an active preference file.
+
+## Entity Creation Protocol
+
+Every piece of content in this engine is an **entity** — a markdown file with YAML frontmatter. Before creating any entity, follow these steps in order:
+
+1. Read `meta/schemas/entity.md` — the base schema all entities must satisfy.
+2. Read the most specific schema that applies (see **Known Schemas** below). Each schema file contains the canonical file path, valid `state` values, the full frontmatter template, and a mapping from player form answers to frontmatter fields.
+3. Check `meta/types.md` — confirm the `type`/`subtype` combination is registered. Use only combinations listed there.
+4. Check `meta/tags.md` — use only tags listed in the registry. If a tag is needed that doesn't exist, add it to `meta/tags.md` first, then use it.
+5. Create the file at the canonical path defined in that schema.
+6. Populate all mandatory frontmatter fields. Use `unknown` or `"TBD"` for anything not yet known — never omit a mandatory field.
+
+If a user provides form answers (structured or freeform), use the **Form → Frontmatter Mapping** table in the schema to translate their answers into the correct fields. If required fields are missing, ask before creating the file.
+
+### Known Schemas
+
+| What the user wants to make | Schema to read |
+|---|---|
+| The campaign document | `meta/schemas/campaign.md` |
+| A story arc | `meta/schemas/act.md` |
+| A mission or quest | `meta/schemas/mission.md` |
+| A single session plan | `meta/schemas/session.md` |
+| A faction, nation, guild, or group | `meta/schemas/faction.md` |
+| A region, territory, or nation's geography | `meta/schemas/location-region.md` |
+| A city, town, or village | `meta/schemas/location-city.md` |
+| A shop, inn, or establishment | `meta/schemas/location-shop.md` |
+| A dungeon, ruin, cave, or delve | `meta/schemas/location-dungeon.md` |
+| A wilderness area, road, or named outdoor space | `meta/schemas/location-wilderness.md` |
+| An NPC | `meta/schemas/character-npc.md` |
+| A player character | `meta/schemas/character-pc.md` |
+| A magic item | `meta/schemas/item-magic.md` |
+| A historical event, battle, or disaster | `meta/schemas/event.md` |
+| A god, demigod, or divine entity | `meta/schemas/deity.md` |
+| A rumor or piece of circulating information | `meta/schemas/rumor.md` |
+| A playable or world race | `meta/schemas/race.md` |
+| A character class | `meta/schemas/class.md` |
+
+Each schema file also contains a **Player Form** section — a set of plain-language questions suitable to give directly to players when they want to create an entity.
+
+All entity files use Obsidian-compatible YAML frontmatter:
+- `relates_to`, `resources`, `known_by`, `owner`, and any other link fields must use `[[wiki-link]]` syntax so edges appear in Obsidian's graph view. Relationship annotations after the link are allowed.
+- `tags` must come from `meta/tags.md`. Never invent a tag — check the registry first.
+- `type` and `subtype` must come from `meta/types.md`. Never invent a combination.
+- `aliases` enables Obsidian to resolve alternate names to the same node.
+
+Files in `historian/` use the same schema as `data/` but add mandatory `source_session` and `confirmed_date` fields (see `meta/schemas/entity.md`). When a `data/` entity and a `historian/` entity conflict, the `historian/` entry is authoritative.
+
+## Commands
+
+### `/inventory`
+
+Defined in `.claude/commands/inventory.md`. Scans `./data` for all free entities (`exists: false`), groups them by type and subtype, lists each with importance and active status, and flags any types with zero free entities as gaps.
+
+### `/session`
+
+Defined in `.claude/commands/session.md`. Plans the next session. Reads campaign, act, and mission state to detect whether the party is mid-arc (continuation) or between arcs (transition). In transition mode, surfaces 3 hooks from three sources — unresolved historian threads, notable free data/ entities, and campaign themes/meta preferences — then asks scoping questions before generating the full session plan. Offers to write the result as a draft file in `scheduler/sessions/`.

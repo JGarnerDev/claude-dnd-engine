@@ -1,0 +1,19 @@
+---
+name: "Rao"
+type: deity
+exists: false
+state: active
+tags:
+  - deity/greater
+  - pantheon/greyhawk
+  - domain/knowledge
+domains:
+  - Knowledge
+moral_character: "Lawful Good"
+worshippers: []
+wants: "accumulate wisdom and oppose ignorance"
+importance: minor
+active: true
+symbol: "White heart"
+description: "Lawful Good deity of peace, reason, serenity; symbol: White heart."
+---
