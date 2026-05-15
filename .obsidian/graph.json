@@ -1,0 +1,106 @@
+{
+  "colorGroups": [
+    {
+      "query": "path:data/classes",
+      "color": {
+        "a": 1,
+        "rgb": 206139216
+      }
+    },
+    {
+      "query": "path:data/races",
+      "color": {
+        "a": 1,
+        "rgb": 77208225
+      }
+    },
+    {
+      "query": "path:data/deities",
+      "color": {
+        "a": 1,
+        "rgb": 255213079
+      }
+    },
+    {
+      "query": "path:data/characters/npcs",
+      "color": {
+        "a": 1,
+        "rgb": 255138101
+      }
+    },
+    {
+      "query": "path:data/characters/pcs",
+      "color": {
+        "a": 1,
+        "rgb": 239083080
+      }
+    },
+    {
+      "query": "path:data/factions",
+      "color": {
+        "a": 1,
+        "rgb": 171071188
+      }
+    },
+    {
+      "query": "path:data/locations",
+      "color": {
+        "a": 1,
+        "rgb": 102187106
+      }
+    },
+    {
+      "query": "path:data/items",
+      "color": {
+        "a": 1,
+        "rgb": 255167038
+      }
+    },
+    {
+      "query": "path:data/events",
+      "color": {
+        "a": 1,
+        "rgb": 236064122
+      }
+    },
+    {
+      "query": "path:data/rumors",
+      "color": {
+        "a": 1,
+        "rgb": 120144156
+      }
+    },
+    {
+      "query": "path:historian/sessions",
+      "color": {
+        "a": 1,
+        "rgb": 255202040
+      }
+    },
+    {
+      "query": "path:historian",
+      "color": {
+        "a": 1,
+        "rgb": 79195247
+      }
+    },
+    {
+      "query": "path:scheduler",
+      "color": {
+        "a": 1,
+        "rgb": 212225087
+      }
+    },
+    {
+      "query": "path:meta",
+      "color": {
+        "a": 1,
+        "rgb": 144164174
+      }
+    }
+  ],
+  "forces": {
+    "repel": 100,
+    "linkDistance": 0
+  }
+}
