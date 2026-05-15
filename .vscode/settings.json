@@ -1,8 +1,40 @@
 {
-  "foam.graph": {
-    "repel": 100,
-    "linkDistance": 0
-  },
+  "foam.graph.views": [
+    {
+      "name": "Default",
+      "colorBy": "directory",
+      "physics": {
+        "repel": 100,
+        "linkDistance": 0
+      },
+      "show": {
+        "tag": { "enabled": false },
+        "placeholder": { "enabled": false }
+      }
+    },
+    {
+      "name": "Journal",
+      "colorBy": "directory",
+      "physics": {
+        "repel": 100,
+        "linkDistance": 0
+      },
+      "show": {
+        "tag": { "enabled": false },
+        "placeholder": { "enabled": false }
+      },
+      "groups": [
+        {
+          "id": "journal",
+          "label": "path=journal",
+          "color": "#6bcb77",
+          "enabled": true,
+          "match": { "property": "path", "value": "journal" }
+        }
+      ]
+    }
+  ],
+
   "foam.graph.style": {
     "background": "#1e1e2e",
     "edge": "#444466",
