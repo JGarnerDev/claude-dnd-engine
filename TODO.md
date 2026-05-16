@@ -37,18 +37,18 @@ Progress tracker for getting this project ready to generate sessions and run cam
 *World-building work that requires creative input. These populate the free entity pool for session generation.*
 
 ### World Structure
-- [ ] Create at least one **Region** — the area where the campaign takes place
+- [ ] Create **Regions** — the area where the campaign takes place
 - [ ] Create a **starting city** — the home base or first major location
-- [ ] Create 2–3 **factions** — powers that shape local politics and conflict
+- [ ] Create **factions** — powers that shape local politics and conflict
 - [ ] Create key **wilderness areas** — roads, forests, or landmarks near the starting city
-- [ ] Create 1–2 **dungeons** — available adventure sites within reach
+- [ ] Create **dungeons** — available adventure sites within reach
 
 ### Characters
 - [ ] Create **PC files** for each player character (`data/characters/pcs/`)
 - [ ] Create **key NPC files** — at minimum: quest-giver, innkeeper, local authority, recurring contact
 
 ### History & Hooks
-- [ ] Create 2–3 **historical events** that shaped the current world state
+- [ ] Create **historical events** that shaped the current world state
 - [ ] Create a handful of **rumors** — in-world hooks players can discover
 - [ ] Create at least one **faction** with clear motives, tensions, and opposition
 
