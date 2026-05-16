@@ -1,4 +1,4 @@
-ï»¿---
+---
 name: "Elisabeth Durst"
 type: character
 subtype: npc
@@ -10,25 +10,25 @@ tags:
   - faction/durst-cult
   - campaign/curse-of-strahd
 
-location: "[[Death House]]"
-personality: "Consumed by jealousy. Ruthless â€” ordered the nursemaid killed and sacrificed her own infant."
+location: [[Death House]]
+personality: "Consumed by jealousy. Ruthless — ordered the nursemaid killed and sacrificed her own infant."
 livelihood: "Former cult leader and wife of Gustav Durst"
 
 # --- OPTIONAL ---
 aliases: []
 relates_to:
-  - "[[Gustav Durst]] (husband)"
-  - "[[Rose]] (daughter)"
-  - "[[Thorn]] (son)"
-  - "[[Walter Durst]] (sacrificed)"
-  - "[[The Nursemaid]] (had killed)"
+  - [[Gustav Durst]] (husband)
+  - [[Rose]] (daughter)
+  - [[Thorn]] (son)
+  - [[Walter Durst]] (sacrificed)
+  - [[The Nursemaid]] (had killed)
 importance: major
 active: false
-last_updated: "[[Session 06]]"
+  - [[Entity Name]] (relationship)
 description: "Elisabeth Durst. Gustav's wife. Discovered his affair, ordered the nursemaid killed, and sacrificed baby Walter on the basement altar. Deceased."
 
 # --- HISTORIAN ---
-source_session: "[[Session 06]]"
+  - [[Entity Name]] (relationship)
 confirmed_date: "2026-04-07"
 ---
 
@@ -36,4 +36,4 @@ confirmed_date: "2026-04-07"
 
 ## Background
 
-Wife of Gustav Durst and co-leader (or driver) of the death cult in Death House. When she discovered her husband's affair with the nursemaid and the existence of Walter, she was consumed by jealousy. She organized the sacrifice of baby Walter on the basement altar and had the nursemaid killed â€” who now haunts the house as a specter.
+Wife of Gustav Durst and co-leader (or driver) of the death cult in Death House. When she discovered her husband's affair with the nursemaid and the existence of Walter, she was consumed by jealousy. She organized the sacrifice of baby Walter on the basement altar and had the nursemaid killed — who now haunts the house as a specter.

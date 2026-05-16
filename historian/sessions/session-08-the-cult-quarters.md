@@ -1,5 +1,5 @@
-ï»¿---
-name: "Session 08 â€” The Cult Quarters"
+---
+name: "Session 08 — The Cult Quarters"
 type: session
 exists: true
 state: completed
@@ -8,22 +8,22 @@ tags:
   - campaign/curse-of-strahd
 
 session_number: 8
-mission: "[[Death House]]"
+mission: [[Death House]]
 planned_date: "2026-04-28"
 locations:
-  - "[[Death House â€” Dungeon]]"
+  - [[Death House — Dungeon]]
 key_npcs:
-  - "[[Strahd von Zarovich]] (statue)"
-  - "[[Rose]] (provides intel)"
+  - [[Strahd von Zarovich]] (statue)
+  - [[Rose]] (provides intel)
 importance: major
 active: false
 description: "Two wounded ghouls dispatched. Cult leader quarters looted. Ghast ambush. Strahd's face identified on the statue."
 
 # --- HISTORIAN ---
 played_date: "2026-04-28"
-recap: "Party found the two wounded ghouls from Session 7 in the adjacent room. Ben threw fire (missed). Party killed them. In cult leader quarters: found a footlocker with a cloak of protection, 4 healing potions, chain shirt, mess kit, flask of alchemist's fire, bullseye lantern, thieves' tools, and a yellow leather spellbook. Rose told the party that many travelers before them never returned. As party took items from the chest, Ghasts burst through the walls. Odibli was mid-changing (old and new cloak in hand, in his underwear) and fought naked. Party defeated the Ghasts. Odibli then did an Arcana check on the statue and recognized it as the same face from the fireplace in Session 3 â€” Strahd. Sensed powerful magic connecting it to another."
+recap: "Party found the two wounded ghouls from Session 7 in the adjacent room. Ben threw fire (missed). Party killed them. In cult leader quarters: found a footlocker with a cloak of protection, 4 healing potions, chain shirt, mess kit, flask of alchemist's fire, bullseye lantern, thieves' tools, and a yellow leather spellbook. Rose told the party that many travelers before them never returned. As party took items from the chest, Ghasts burst through the walls. Odibli was mid-changing (old and new cloak in hand, in his underwear) and fought naked. Party defeated the Ghasts. Odibli then did an Arcana check on the statue and recognized it as the same face from the fireplace in Session 3 — Strahd. Sensed powerful magic connecting it to another."
 entities_canonized:
-  - "[[Strahd von Zarovich]]"
+  - [[Strahd von Zarovich]]
 ---
 
 ## Session Notes
@@ -31,7 +31,7 @@ entities_canonized:
 ### Wounded Ghouls
 The two ghouls that fled in Session 7 were in the adjacent room, wounded and scared. Trying to escape. Party made quick work of them.
 
-### Cult Leader Quarters â€” Loot
+### Cult Leader Quarters — Loot
 Found in the footlocker:
 - Cloak of Protection (folded)
 - Small wooden coffer (unlocked) with **4 Potions of Healing**

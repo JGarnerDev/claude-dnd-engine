@@ -1,7 +1,7 @@
 ---
 type: meta
 player: ""         # real name or handle
-character: "[[]]"  # wiki-link to their PC entity
+character: [[]]  # wiki-link to their PC entity
 ---
 
 # Player Preferences — {Name}

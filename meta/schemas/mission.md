@@ -57,33 +57,33 @@ tags:
   - mission/
   - act/
 
-act: "[[Act Name]]"
+act: [[Act Name]]
 objective: ""
 hook: ""
 
 # --- OPTIONAL ---
 sessions:
-  - "[[Session NN - Title]]"
+  - [[Session NN - Title]]
 locations:
-  - "[[Location Name]]"
+  - [[Location Name]]
 key_npcs:
-  - "[[NPC Name]] (role)"
+  - [[NPC Name]] (role)
 obstacles: []
 success_consequences: ""
 failure_consequences: ""
 reward: ""
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 importance: major
 active: true
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 description: ""
 
 # --- HISTORIAN ONLY (mandatory when moved) ---
 # outcome: completed | failed
 # outcome_detail: ""     # what actually happened
 # sessions_played:
-#   - "[[Session NN - Title]]"
+#   - [[Session NN - Title]]
 ---
 ```
 

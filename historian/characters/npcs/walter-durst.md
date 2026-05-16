@@ -1,4 +1,4 @@
-ï»¿---
+---
 name: "Walter Durst"
 type: character
 subtype: npc
@@ -9,29 +9,29 @@ tags:
   - location/death-house
   - campaign/curse-of-strahd
 
-location: "[[Death House â€” Basement Altar]]"
-personality: "N/A â€” died as an infant"
-livelihood: "N/A â€” sacrificed as an infant"
+location: [[Death House — Basement Altar]]
+personality: "N/A — died as an infant"
+livelihood: "N/A — sacrificed as an infant"
 
 # --- OPTIONAL ---
 aliases: []
 relates_to:
-  - "[[Gustav Durst]] (father)"
-  - "[[The Nursemaid]] (birth mother)"
-  - "[[Elisabeth Durst]] (ordered sacrifice)"
+  - [[Gustav Durst]] (father)
+  - [[The Nursemaid]] (birth mother)
+  - [[Elisabeth Durst]] (ordered sacrifice)
 importance: minor
 active: false
-last_updated: "[[Session 06]]"
+  - [[Entity Name]] (relationship)
 description: "Walter Durst. Illegitimate son of Gustav Durst and the nursemaid. Sacrificed on the basement altar. Crypt found empty."
 
 # --- HISTORIAN ---
-source_session: "[[Session 06]]"
+  - [[Entity Name]] (relationship)
 confirmed_date: "2026-04-07"
 ---
 
 > **Reliability:** Thorn's account in Session 6. Confirmed.
 
-> **Reliability â€” Stillborn vs sacrificed:** Strahd's letter (Session 2) says "sired a stillborn son." Thorn's account (Session 6) implies the cult sacrificed him. These may both be true (born dead and then used ritually) or one may be inaccurate. Flag for DM.
+> **Reliability — Stillborn vs sacrificed:** Strahd's letter (Session 2) says "sired a stillborn son." Thorn's account (Session 6) implies the cult sacrificed him. These may both be true (born dead and then used ritually) or one may be inaccurate. Flag for DM.
 
 ## Background
 

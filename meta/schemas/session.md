@@ -55,20 +55,20 @@ tags:
   - mission/
 
 session_number:
-mission: "[[Mission Name]]"
+mission: [[Mission Name]]
 planned_date: ""
 
 # --- OPTIONAL ---
 locations:
-  - "[[Location Name]]"
+  - [[Location Name]]
 key_npcs:
-  - "[[NPC Name]] (role)"
+  - [[NPC Name]] (role)
 encounters: []
 loose_threads: []
 opening_scene: ""
 closing_hook: ""
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 importance: major
 active: true
 description: ""
@@ -77,9 +77,9 @@ description: ""
 # played_date: ""
 # recap: ""              # what actually happened — may differ from the plan
 # entities_canonized:    # data/ entities that became real this session
-#   - "[[Entity Name]]"
+#   - [[Entity Name]]
 # new_entities:          # net-new entities created during play
-#   - "[[Entity Name]]"
+#   - [[Entity Name]]
 # cliffhanger: ""        # what the party is left with going into next session
 ---
 ```

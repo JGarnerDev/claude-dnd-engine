@@ -1,4 +1,4 @@
-﻿---
+---
 name: "Gustav Durst"
 type: character
 subtype: npc
@@ -10,7 +10,7 @@ tags:
   - faction/durst-cult
   - campaign/curse-of-strahd
 
-location: "[[Death House]]"
+location: [[Death House]]
 personality: "Unknown. Abandoned love for madness, according to Strahd's letter."
 livelihood: "Former cult master and lord of Death House"
 
@@ -18,18 +18,18 @@ livelihood: "Former cult master and lord of Death House"
 aliases:
   - "The Master"
 relates_to:
-  - "[[Elisabeth Durst]] (wife)"
-  - "[[Rose]] (daughter)"
-  - "[[Thorn]] (son)"
-  - "[[Walter Durst]] (illegitimate son)"
-  - "[[The Nursemaid]] (had affair with)"
+  - [[Elisabeth Durst]] (wife)
+  - [[Rose]] (daughter)
+  - [[Thorn]] (son)
+  - [[Walter Durst]] (illegitimate son)
+  - [[The Nursemaid]] (had affair with)
 importance: major
 active: false
-last_updated: "[[Session 02]]"
+  - [[Entity Name]] (relationship)
 description: "Gustav Durst. Former master of Death House and cult leader. Deceased."
 
 # --- HISTORIAN ---
-source_session: "[[Session 02]]"
+  - [[Entity Name]] (relationship)
 confirmed_date: "2026-03-16"
 ---
 

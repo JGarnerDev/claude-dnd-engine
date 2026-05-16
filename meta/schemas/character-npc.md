@@ -55,7 +55,7 @@ tags:
   - region/
 
 # --- MANDATORY (npc) ---
-location: "[[Location Name]]"
+location: [[Location Name]]
 personality: ""
 livelihood: ""
 
@@ -63,23 +63,23 @@ livelihood: ""
 aliases: []
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
-owner: "[[Player Character Name]]"
+  - [[Character Name]] (partial | full)
+owner: [[Player Character Name]]
 description: ""
 
 # --- OPTIONAL (npc) ---
 goals: []
 motives: []
 allies:
-  - "[[Character or Faction Name]] (nature of relationship)"
+  - [[Character or Faction Name]] (nature of relationship)
 family:
-  - "[[Character Name]] (relation)"
+  - [[Character Name]] (relation)
 enemies:
-  - "[[Character or Faction Name]] (nature of conflict)"
+  - [[Character or Faction Name]] (nature of conflict)
 character_sheet: ""    # path to sheet file, or inline summary
 ---
 ```

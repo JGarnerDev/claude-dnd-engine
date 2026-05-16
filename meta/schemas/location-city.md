@@ -61,19 +61,19 @@ tags:
   - region/
 
 # --- MANDATORY (city) ---
-global_location: "[[Region or Area Name]]"
+global_location: [[Region or Area Name]]
 purpose: commerce | political | military | religious | other
 
 # --- OPTIONAL (entity base) ---
 aliases: []
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
-owner: "[[Player Character Name]]"
+  - [[Character Name]] (partial | full)
+owner: [[Player Character Name]]
 description: ""
 
 # --- OPTIONAL (city) ---
@@ -82,10 +82,10 @@ population: ""                 # rough descriptor or number
 composition: ""
 tensions: []
 factions:
-  - "[[Faction Name]]"
-rulership: "[[NPC Name]]"
+  - [[Faction Name]]
+rulership: [[NPC Name]]
 shops:
-  - "[[Shop Name]]"
+  - [[Shop Name]]
 ---
 ```
 

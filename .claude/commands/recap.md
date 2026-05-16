@@ -54,7 +54,7 @@ played_date: "{date from Phase 2}"
 recap: "{synthesized from DM's notes — concise, past tense, third person}"
 cliffhanger: "{from Phase 2}"
 entities_canonized:
-  - "[[Entity Name]]"   # one per entity moved to historian this session
+  - [[Entity Name]]   # one per entity moved to historian this session
 new_entities:
   - "{description}"     # one per thing invented at the table, not yet filed
 ```
@@ -69,7 +69,7 @@ For each entity flagged for canonization in Phase 3:
 
 **If the entity file is in `data/` with `exists: false`:**
 - Update `exists: true`
-- Add `source_session: "[[Session {nn}]]"`
+- Add `source_session: [[Session {nn}]]`
 - Add `confirmed_date: "{played_date}"`
 - Move the file from its `data/` path to the corresponding `historian/` path (see `meta/types.md` for the mapping)
 

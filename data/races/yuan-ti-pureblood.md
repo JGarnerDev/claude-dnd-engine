@@ -16,8 +16,8 @@ languages:
   - Draconic
 homeland: "Ruined jungle temples and serpentfolk cities"
 patron_deity:
-  - "[[Sseth]]"
-  - "[[Merrshaulk]]"
+  - [[Sseth]]
+  - [[Merrshaulk]]
 source: VGtM
 key_traits:
   - Darkvision

@@ -55,31 +55,31 @@ tags:
 
 # --- MANDATORY (faction) ---
 locations:
-  - "[[Location Name]]"
+  - [[Location Name]]
 purpose: commerce | political | military | religious | criminal | arcane | other
 
 # --- OPTIONAL (entity base) ---
 aliases: []
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
-owner: "[[Player Character Name]]"
+  - [[Character Name]] (partial | full)
+owner: [[Player Character Name]]
 description: ""
 
 # --- OPTIONAL (faction) ---
-rulership: "[[NPC Name]]"
+rulership: [[NPC Name]]
 motives: []
 tensions: []
 hierarchy: ""
 livelihood: ""
 allies:
-  - "[[Entity Name]] (nature of alliance)"
+  - [[Entity Name]] (nature of alliance)
 opposition:
-  - "[[Entity Name]] (nature of conflict)"
+  - [[Entity Name]] (nature of conflict)
 ---
 ```
 

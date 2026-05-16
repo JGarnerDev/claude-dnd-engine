@@ -15,7 +15,7 @@ languages:
   - Infernal
 homeland: "Scattered; often in cities; ancestral ties to the Nine Hells"
 patron_deity:
-  - "[[Asmodeus]]"
+  - [[Asmodeus]]
 source: PHB
 key_traits:
   - Darkvision

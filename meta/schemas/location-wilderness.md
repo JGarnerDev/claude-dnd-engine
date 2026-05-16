@@ -57,19 +57,19 @@ tags:
   - region/
 
 # --- MANDATORY (wilderness) ---
-region: "[[Region Name]]"
+region: [[Region Name]]
 terrain: forest | mountain | swamp | plains | desert | coast | road | river | other
 
 # --- OPTIONAL (entity base) ---
 aliases: []
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
-owner: "[[Player Character Name]]"
+  - [[Character Name]] (partial | full)
+owner: [[Player Character Name]]
 description: ""
 
 # --- OPTIONAL (wilderness) ---
@@ -77,7 +77,7 @@ travel_difficulty: easy | moderate | hard | treacherous
 hazards: []
 notable_features: []
 connects:
-  - "[[Location Name]]"
+  - [[Location Name]]
 hook: ""
 ---
 ```

@@ -1,4 +1,4 @@
-ï»¿---
+---
 name: "Death House"
 type: location
 subtype: dungeon
@@ -8,27 +8,27 @@ tags:
   - location/dungeon
   - campaign/curse-of-strahd
 
-location: "[[Barovia â€” Village Outskirts]]"
+location: [[Barovia — Village Outskirts]]
 origin: "Built and corrupted by the Durst family and their death cult"
-current_threat: "None â€” party cleared it in Session 10. Unknown if it repopulates."
+current_threat: "None — party cleared it in Session 10. Unknown if it repopulates."
 hook: "Rose and Thorn lured travelers inside. Cult altar required a sacrifice to allow escape."
 
 # --- OPTIONAL ---
 relates_to:
-  - "[[Gustav Durst]] (former master)"
-  - "[[Elisabeth Durst]] (former cult leader)"
-  - "[[The Nursemaid]] (haunts as specter)"
-  - "[[Rose]] (ghost, now stranded)"
-  - "[[Thorn]] (ghost, now stranded)"
-  - "[[Walter Durst]] (sacrificed in basement)"
-  - "[[Strahd von Zarovich]] (letter found inside)"
+  - [[Gustav Durst]] (former master)
+  - [[Elisabeth Durst]] (former cult leader)
+  - [[The Nursemaid]] (haunts as specter)
+  - [[Rose]] (ghost, now stranded)
+  - [[Thorn]] (ghost, now stranded)
+  - [[Walter Durst]] (sacrificed in basement)
+  - [[Strahd von Zarovich]] (letter found inside)
 importance: major
 active: false
-last_updated: "[[Session 10]]"
+  - [[Entity Name]] (relationship)
 description: "Death House. A haunted manor just outside the village of Barovia. Fully explored and escaped by the party in Session 10."
 
 # --- HISTORIAN ---
-source_session: "[[Session 01]]"
+  - [[Entity Name]] (relationship)
 confirmed_date: "2026-03-09"
 ---
 
@@ -50,7 +50,7 @@ A four-story haunted manor with a dungeon basement, just outside the village of 
 - **Nursery mirror** (Session 4): Visions of nursemaid/Gustav affair, Walter's birth, and nursemaid's murder.
 - **Walter Durst's crypt** (Session 6): Empty. Thorn revealed the full backstory.
 - **Cult leader quarters** (Session 8): Cloak of protection, 4 healing potions, chain shirt, mess kit, alchemist's fire, bullseye lantern, thieves' tools, yellow leather spellbook (spells listed in Session 8 record).
-- **Cult relics** (Session 10): 13 ritual items in niches â€” see Session 10 record.
+- **Cult relics** (Session 10): 13 ritual items in niches — see Session 10 record.
 - **Orb on statue** (Session 10): Smashed by Odibli. Contained shadow essence that he absorbed to revive the party.
 
 ## Enemies Encountered
@@ -59,7 +59,7 @@ A four-story haunted manor with a dungeon basement, just outside the village of 
 - Animated broom (Session 6)
 - Specter / Nursemaid (Session 5)
 - Grick (Session 6)
-- Ghouls x4 (Session 7) â€” 2 fled, found again Session 8
+- Ghouls x4 (Session 7) — 2 fled, found again Session 8
 - Mimic (Session 7)
 - Ghasts x? (Session 8, broke from walls)
 - Shadows (Session 9)

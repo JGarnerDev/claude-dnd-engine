@@ -17,7 +17,7 @@ languages:
   - Halfling
 homeland: "Pastoral shires, river communities, and traveled roads"
 patron_deity:
-  - "[[Yondalla]]"
+  - [[Yondalla]]
 source: PHB
 key_traits:
   - Lucky

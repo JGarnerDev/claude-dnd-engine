@@ -61,7 +61,7 @@ tags:
 domains: []
 moral_character: ""     # alignment or disposition in plain language
 worshippers:
-  - "[[Faction or Culture Name]]"
+  - [[Faction or Culture Name]]
 wants: ""
 
 # --- OPTIONAL (entity base) ---
@@ -69,11 +69,11 @@ aliases:
   - ""    # other names, titles, aspects
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
+  - [[Character Name]] (partial | full)
 description: ""
 
 # --- OPTIONAL (deity) ---
@@ -82,7 +82,7 @@ holy_day: ""
 sacred_practices: []
 myths: []
 divine_conflicts:
-  - "[[Deity Name]] (nature of conflict)"
+  - [[Deity Name]] (nature of conflict)
 ---
 ```
 

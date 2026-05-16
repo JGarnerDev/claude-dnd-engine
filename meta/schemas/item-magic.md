@@ -70,16 +70,16 @@ aliases:
   - ""
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
-owner: "[[Player Character Name]]"
+  - [[Character Name]] (partial | full)
+owner: [[Player Character Name]]
 description: ""
 
 # --- OPTIONAL (magic item) ---
-current_holder: "[[Character or Location Name]]"
+current_holder: [[Character or Location Name]]
 quirks: []
 history: []    # significant past owners or events involving this item
 ---

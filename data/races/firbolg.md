@@ -16,8 +16,8 @@ languages:
   - Giant
 homeland: "Remote forests and ancient woodland preserves"
 patron_deity:
-  - "[[Silvanus]]"
-  - "[[Mielikki]]"
+  - [[Silvanus]]
+  - [[Mielikki]]
 source: VGtM
 key_traits:
   - Firbolg Magic

@@ -56,20 +56,20 @@ tags:
 content: ""       # the rumor text as it would be heard in the world
 truth: true | false | partial | unknown
 circulating_in:
-  - "[[Location or Faction Name]]"
+  - [[Location or Faction Name]]
 
 # --- OPTIONAL (entity base) ---
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
+  - [[Character Name]] (partial | full)
 description: ""   # one-line DM summary, distinct from content
 
 # --- OPTIONAL (rumor) ---
-source: "[[Entity Name]]"     # or "unknown"
+source: [[Entity Name]]     # or unknown
 truth_detail: ""  # the real story, if different from the rumor — DM eyes only
 ---
 ```

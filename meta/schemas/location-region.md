@@ -58,28 +58,28 @@ tags:
 
 # --- MANDATORY (region) ---
 geography: ""
-controlling_faction: "[[Faction Name]]"
+controlling_faction: [[Faction Name]]
 
 # --- OPTIONAL (entity base) ---
 aliases: []
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
-owner: "[[Player Character Name]]"
+  - [[Character Name]] (partial | full)
+owner: [[Player Character Name]]
 description: ""
 
 # --- OPTIONAL (region) ---
 climate: ""
 tensions: []
 settlements:
-  - "[[City or Town Name]]"
+  - [[City or Town Name]]
 notable_features: []
 wilderness_areas:
-  - "[[Wilderness Name]]"
+  - [[Wilderness Name]]
 ---
 ```
 

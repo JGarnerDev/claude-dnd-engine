@@ -60,9 +60,9 @@ speed: 30              # base walking speed in feet
 aliases: []
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 description: ""
 
 # --- OPTIONAL (race) ---
@@ -72,7 +72,7 @@ languages:
   - Common
 homeland: ""           # region name or description; use [[wiki-link]] if a region file exists
 patron_deity:
-  - "[[Deity Name]]"
+  - [[Deity Name]]
 source: ""             # PHB, VGtM, MotM, etc.
 key_traits: []         # brief list of notable racial traits; full detail goes in the body
 ---

@@ -51,9 +51,9 @@ central_conflict: ""     # the driving tension the whole campaign ultimately res
 tone: ""                 # feel and register of the campaign
 
 # --- OPTIONAL ---
-current_act: "[[Act Name]]"
+current_act: [[Act Name]]
 acts:
-  - "[[Act Name]]"
+  - [[Act Name]]
 end_condition: ""        # what resolution looks like
 themes: []               # 2-5 recurring themes
 importance: critical

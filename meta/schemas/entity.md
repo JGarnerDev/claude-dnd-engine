@@ -24,18 +24,18 @@ aliases:
 importance: critical | major | minor | background
 active: true | false      # currently in play; false = retired/dormant but importance unchanged
 
-last_updated: "[[Session NN - Title]]"   # session where this entity was last changed
+last_updated: [[Session NN - Title]]   # session where this entity was last changed
 
 relates_to:
-  - "[[Entity Name]] (relationship)"    # wiki-link survives in Obsidian graph with annotation
+  - [[Entity Name]] (relationship)"    # wiki-link survives in Obsidian graph with annotation
 
 resources:
-  - "[[Entity Name]] (relationship)"    # material, economic, or physical resources tied to this entity
+  - [[Entity Name]] (relationship)"    # material, economic, or physical resources tied to this entity
 
 known_by:
-  - "[[Character Name]] (partial | full)"   # who knows this entity exists, and how much
+  - [[Character Name]] (partial | full)"   # who knows this entity exists, and how much
 
-owner: "[[Player Character Name]]"     # player who is narratively responsible for this entity
+owner: [[Player Character Name]]     # player who is narratively responsible for this entity
 
 description: "One-sentence summary shown in Obsidian hover previews."
 ---
@@ -51,11 +51,11 @@ Files in `historian/` must have `exists: true` and add the following mandatory f
 
 ```yaml
 # --- MANDATORY (historian only) ---
-source_session: "[[Session NN - Title]]"   # session that established this as fact
+source_session: [[Session NN - Title]]   # session that established this as fact
 confirmed_date: ""                          # in-world date or session number when canonized
 
 # --- OPTIONAL (historian only) ---
-supersedes: "[[data/path/to/entity]]"      # data/ draft this entry replaces
+supersedes: [[data/path/to/entity]]      # data/ draft this entry replaces
 ```
 
 ## Rules

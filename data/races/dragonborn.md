@@ -25,8 +25,8 @@ languages:
   - Draconic
 homeland: "Scattered; no unified homeland; often near ancient draconic ruins"
 patron_deity:
-  - "[[Bahamut]]"
-  - "[[Tiamat]]"
+  - [[Bahamut]]
+  - [[Tiamat]]
 source: PHB
 key_traits:
   - Draconic Ancestry

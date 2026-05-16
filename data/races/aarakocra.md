@@ -16,7 +16,7 @@ languages:
   - Auran
 homeland: "High mountains and the Elemental Plane of Air"
 patron_deity:
-  - "[[Akadi]]"
+  - [[Akadi]]
 source: EEPC
 key_traits:
   - Flight (50ft)

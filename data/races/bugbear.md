@@ -15,7 +15,7 @@ languages:
   - Goblin
 homeland: "Forests, caves, and ruins; serve as shock troops for goblinoid armies"
 patron_deity:
-  - "[[Hruggek]]"
+  - [[Hruggek]]
 source: VGtM
 key_traits:
   - Darkvision

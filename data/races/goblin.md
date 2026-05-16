@@ -15,7 +15,7 @@ languages:
   - Goblin
 homeland: "Caves, ruins, and the outskirts of civilized lands"
 patron_deity:
-  - "[[Maglubiyet]]"
+  - [[Maglubiyet]]
 source: VGtM
 key_traits:
   - Darkvision

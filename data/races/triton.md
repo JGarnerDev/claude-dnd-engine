@@ -15,8 +15,8 @@ languages:
   - Primordial
 homeland: "Underwater kingdoms in the depths of the ocean"
 patron_deity:
-  - "[[Deep Sashelas]]"
-  - "[[Eadro]]"
+  - [[Deep Sashelas]]
+  - [[Eadro]]
 source: VGtM
 key_traits:
   - Amphibious

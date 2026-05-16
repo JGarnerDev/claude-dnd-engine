@@ -52,7 +52,7 @@ tags:
   - act/
   - campaign/
 
-campaign: "[[Campaign Name]]"
+campaign: [[Campaign Name]]
 central_conflict: ""
 goal: ""
 opening_state: ""        # what is true at the start of this act
@@ -60,14 +60,14 @@ closing_state: ""        # what is true when this act ends
 
 # --- OPTIONAL ---
 missions:
-  - "[[Mission Name]]"
+  - [[Mission Name]]
 themes: []
 estimated_sessions:
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 importance: critical
 active: true
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 description: ""
 
 # --- HISTORIAN ONLY (mandatory when moved) ---

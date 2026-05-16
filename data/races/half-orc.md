@@ -15,8 +15,8 @@ languages:
   - Orc
 homeland: "Borderlands, frontier settlements, and orc tribal territories"
 patron_deity:
-  - "[[Gruumsh]]"
-  - "[[Tempus]]"
+  - [[Gruumsh]]
+  - [[Tempus]]
 source: PHB
 key_traits:
   - Darkvision

@@ -57,7 +57,7 @@ tags:
   - region/
 
 # --- MANDATORY (pc) ---
-player: "[[meta/players/player-name]]"   # links to meta/players/{name}.md
+player: [[meta/players/player-name]]   # links to meta/players/{name}.md
 race: ""
 class: ""
 level:
@@ -67,24 +67,24 @@ aliases:
   - ""    # nicknames, titles
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
+  - [[Character Name]] (partial | full)
 description: ""
 
 # --- OPTIONAL (pc) ---
-homeland: "[[Location Name]]"
+homeland: [[Location Name]]
 motivation: ""
 goals: []
 secrets: []
 allies:
-  - "[[Character or Faction Name]] (relationship)"
+  - [[Character or Faction Name]] (relationship)
 family:
-  - "[[Character Name]] (relation)"
+  - [[Character Name]] (relation)
 enemies:
-  - "[[Character or Faction Name]] (nature of conflict)"
+  - [[Character or Faction Name]] (nature of conflict)
 character_sheet: ""    # path to sheet file or external link
 ---
 ```

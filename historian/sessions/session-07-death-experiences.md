@@ -1,5 +1,5 @@
-ï»¿---
-name: "Session 07 â€” Death Experiences"
+---
+name: "Session 07 — Death Experiences"
 type: session
 exists: true
 state: completed
@@ -8,17 +8,17 @@ tags:
   - campaign/curse-of-strahd
 
 session_number: 7
-mission: "[[Death House]]"
+mission: [[Death House]]
 planned_date: "2026-04-14"
 locations:
-  - "[[Death House â€” Dungeon]]"
+  - [[Death House — Dungeon]]
 importance: major
 active: false
 description: "Death experience recounts from Miguel and Ben. Formation discussion. Ghoul ambush. Mimic encounter."
 
 # --- HISTORIAN ---
 played_date: "2026-04-14"
-recap: "Session opened with Miguel and Ben's death experience recounts (from Session 5 specter fight). Formation discussed and set. Party turned a corner and was ambushed by 4 ghouls emerging from the floor â€” Iggy thrown to the floor, Lucy threw Odibli away (2 damage), ghouls took out Odibli/Lucy/Iggy but Dip killed the last ghoul. 2 ghouls escaped into darkness. Long rest. Party encountered a Mimic pretending to be a door â€” adhered to all but Lucy. Odibli downed. Short rest."
+recap: "Session opened with Miguel and Ben's death experience recounts (from Session 5 specter fight). Formation discussed and set. Party turned a corner and was ambushed by 4 ghouls emerging from the floor — Iggy thrown to the floor, Lucy threw Odibli away (2 damage), ghouls took out Odibli/Lucy/Iggy but Dip killed the last ghoul. 2 ghouls escaped into darkness. Long rest. Party encountered a Mimic pretending to be a door — adhered to all but Lucy. Odibli downed. Short rest."
 cliffhanger: "Two ghouls still in the darkness. Mimic defeated but party depleted."
 ---
 
@@ -27,25 +27,25 @@ cliffhanger: "Two ghouls still in the darkness. Mimic defeated but party deplete
 ### Death Experiences
 
 **Miguel (from Session 5 death):**
-Quick experience. Suspended in the sky under overturned ink pots pouring dark cerulean ink. There was a floor above him preventing most ink from pouring down; some passed through and fell back into the sky. The longer in the in-between, the closer he floated to the ink-sky. A cloud of parchments grew larger and more violent â€” papier mache constraining him â€” until a rope of flame cut through the parchments, grabbed his ankle, and threw him back into reality.
+Quick experience. Suspended in the sky under overturned ink pots pouring dark cerulean ink. There was a floor above him preventing most ink from pouring down; some passed through and fell back into the sky. The longer in the in-between, the closer he floated to the ink-sky. A cloud of parchments grew larger and more violent — papier mache constraining him — until a rope of flame cut through the parchments, grabbed his ankle, and threw him back into reality.
 
-**Ben/Dip (from Session 5 death â€” player-written):**
+**Ben/Dip (from Session 5 death — player-written):**
 > *"I was surrounded by shrieks of madness, torment, and despair... a cacophony of sound that transitioned into the fury of a maelstrom... Hail building up against my limbs, and could feel almost seaweed touching and wrapping around my legs. As I was able to see more clearly I realized there were hands just reaching out and pulling my body down. Then, with a loud thrumming I woke up."*
 
-Full player-written account on file. Notable: hands, claws, tentacles, wings â€” many disembodied things from something much larger. This may be narratively significant.
+Full player-written account on file. Notable: hands, claws, tentacles, wings — many disembodied things from something much larger. This may be narratively significant.
 
 ### Formation Discussion
 
-Notes list formation as: **Dip â†’ Iggy â†’ Odible â†’ Lucy**
+Notes list formation as: **Dip ? Iggy ? Odible ? Lucy**
 
-> **Reliability â€” Formation conflict:** Campaign.md records the formation as "Luci â†’ Odibli â†’ Iggy â†’ Dip (front to back)," which is the reverse. The session notes don't clarify which end is front. Confirm with DM. Formation recorded here is exactly as written in session notes.
+> **Reliability — Formation conflict:** Campaign.md records the formation as "Luci ? Odibli ? Iggy ? Dip (front to back)," which is the reverse. The session notes don't clarify which end is front. Confirm with DM. Formation recorded here is exactly as written in session notes.
 
 ### Ghoul Ambush
 4 ghouls climbed out of the floor as party turned a corner.
 - Iggy thrown to the floor on emergence
-- Lucy threw Odibli to a square away from ghouls â€” he panicked, landed on his back, 2 damage
+- Lucy threw Odibli to a square away from ghouls — he panicked, landed on his back, 2 damage
 - Ghouls downed Odibli, Lucy, and Iggy in melee
-- Dip killed the final remaining ghoul â€” **Dip wins the encounter**
+- Dip killed the final remaining ghoul — **Dip wins the encounter**
 - 2 ghouls fled into darkness (fate unknown)
 - Party long rested after
 

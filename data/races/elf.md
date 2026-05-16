@@ -20,8 +20,8 @@ languages:
   - Elvish
 homeland: "Ancient forests, hidden cities, and the Feywild"
 patron_deity:
-  - "[[Corellon Larethian]]"
-  - "[[Sehanine Moonbow]]"
+  - [[Corellon Larethian]]
+  - [[Sehanine Moonbow]]
 source: PHB
 key_traits:
   - Darkvision

@@ -55,22 +55,22 @@ tags:
   - region/
 
 # --- MANDATORY (shop) ---
-city: "[[City Name]]"
-proprietor: "[[NPC Name]]"
+city: [[City Name]]
+proprietor: [[NPC Name]]
 purpose: commerce | political | front | religious | criminal | other
 
 # --- OPTIONAL (entity base) ---
 aliases: []
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 resources:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
-owner: "[[Player Character Name]]"
+  - [[Character Name]] (partial | full)
+owner: [[Player Character Name]]
 description: ""
 
 # --- OPTIONAL (shop) ---

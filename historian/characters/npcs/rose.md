@@ -1,4 +1,4 @@
-ï»¿---
+---
 name: "Rose"
 type: character
 subtype: npc
@@ -9,29 +9,29 @@ tags:
   - location/death-house
   - campaign/curse-of-strahd
 
-location: "[[Death House â€” Unknown]]"
+location: [[Death House — Unknown]]
 personality: "Grateful, gentle. Relieved when bound to Ben's scroll. Said thank you and expressed happiness to be taken along."
-livelihood: "Ghost â€” trapped in Death House"
+livelihood: "Ghost — trapped in Death House"
 
 # --- OPTIONAL ---
 aliases: []
 relates_to:
-  - "[[Thorn]] (sister)"
-  - "[[Gustav Durst]] (father)"
-  - "[[Elisabeth Durst]] (mother)"
+  - [[Thorn]] (sister)
+  - [[Gustav Durst]] (father)
+  - [[Elisabeth Durst]] (mother)
 importance: major
 active: true
-last_updated: "[[Session 10]]"
+  - [[Entity Name]] (relationship)
 description: "Rose Durst. 11-year-old ghost. Daughter of the Durst family. Bound to Ben's scroll in Session 6; stranded in Session 10."
 
 # --- HISTORIAN ---
-source_session: "[[Session 01]]"
+  - [[Entity Name]] (relationship)
 confirmed_date: "2026-03-09"
 ---
 
-> **Reliability â€” Age:** Notes say "Thorn = 8, Rose = 11." High confidence.
+> **Reliability — Age:** Notes say "Thorn = 8, Rose = 11." High confidence.
 
-> **Reliability â€” State:** Notes say Ben and Miguel "left the pages" when the mists carried the party out in Session 10. Rose and Thorn "try to fight to not be left behind." Stranded â€” fate after that point unknown.
+> **Reliability — State:** Notes say Ben and Miguel "left the pages" when the mists carried the party out in Session 10. Rose and Thorn "try to fight to not be left behind." Stranded — fate after that point unknown.
 
 ## Background
 

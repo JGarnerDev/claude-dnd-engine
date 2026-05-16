@@ -18,7 +18,7 @@ languages:
   - Gnomish
 homeland: "Rolling hills, burrow communities, and gnomish warrens"
 patron_deity:
-  - "[[Garl Glittergold]]"
+  - [[Garl Glittergold]]
 source: PHB
 key_traits:
   - Darkvision

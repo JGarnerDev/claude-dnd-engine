@@ -19,10 +19,10 @@ languages:
   - Primordial
 homeland: "Varies; near elemental nodes or descended from djinn and mortal unions"
 patron_deity:
-  - "[[Akadi]]"
-  - "[[Grumbar]]"
-  - "[[Kossuth]]"
-  - "[[Istishia]]"
+  - [[Akadi]]
+  - [[Grumbar]]
+  - [[Kossuth]]
+  - [[Istishia]]
 source: EEPC
 key_traits:
   - Constitution bonus

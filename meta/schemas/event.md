@@ -65,16 +65,16 @@ aliases:
   - ""    # other names this event is known by
 importance: critical | major | minor | background
 active: true | false
-last_updated: "[[Session NN - Title]]"
+last_updated: [[Session NN - Title]]
 relates_to:
-  - "[[Entity Name]] (relationship)"
+  - [[Entity Name]] (relationship)
 known_by:
-  - "[[Character Name]] (partial | full)"
+  - [[Character Name]] (partial | full)
 description: ""
 
 # --- OPTIONAL (event) ---
 participants:
-  - "[[Entity Name]] (role)"
+  - [[Entity Name]] (role)
 awareness: widely-known | regional | secret | forgotten | disputed
 ---
 ```
