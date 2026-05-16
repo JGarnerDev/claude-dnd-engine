@@ -135,6 +135,18 @@ All entity files use Obsidian-compatible YAML frontmatter:
 
 Files in `historian/` use the same schema as `data/` but add mandatory `source_session` and `confirmed_date` fields (see `meta/schemas/entity.md`). When a `data/` entity and a `historian/` entity conflict, the `historian/` entry is authoritative.
 
+## Graph Settings Protocol
+
+When a new type or subtype is added to `meta/types.md`, or a new entity folder is created under `data/` or `historian/`, update both graph config files to add matching color groups:
+
+1. **`.vscode/settings.json`** — add a group entry to each view in `foam.graph.views` that needs it:
+   - `Default` view: add entries for both the `data/` and `historian/` paths, with `id`, `label`, `match.property: "path"`, `match.value`, `color`, and `enabled: true`. Order general before specific (last match wins).
+   - `Canon vs Free` view: no change needed unless an entirely new top-level folder is added.
+
+2. **`.obsidian/graph.json`** — add a `colorGroups` entry for both the `data/` and `historian/` paths using the same color. RGB format: pack R, G, B as a 9-digit zero-padded decimal integer (`RRRGGGBBB`), e.g. R=77, G=208, B=225 → `77208225`.
+
+Use the same hex color in both files for consistency. Reuse an existing color if the new type belongs to an established visual category.
+
 ## Commands
 
 ### `/inventory`
