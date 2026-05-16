@@ -108,3 +108,59 @@ Progress tracker for getting this project ready to generate sessions and run cam
 - [ ] Create **first act** now that campaign document exists
 - [ ] Create **first mission(s)** once the opening act is defined
 - [ ] Draft the **first session plan** once meta configuration and starting data are in place
+
+---
+
+## Obsidian Health
+
+### 1. Rename remaining entity files to match frontmatter `name:` fields
+**Why:** Obsidian resolves `[[wikilinks]]` by filename. Kebab-case or lowercase filenames break graph edges. Fixed `data/classes/` and `data/deities/` — remaining dirs need same audit.
+
+**Dirs to audit:**
+- `data/characters/npcs/`, `data/characters/pcs/`, `data/factions/`, `data/locations/**`, `data/items/**`, `data/races/`, `data/events/`, `data/rumors/`, `data/creatures/`
+- `historian/` — all subdirs
+
+**How:** Compare `basename(file)` to frontmatter `name:` field. Rename where they differ.
+
+- [ ] `data/` dirs audited and renamed
+- [ ] `historian/` dirs audited and renamed
+
+---
+
+### 2. Fix malformed frontmatter (`--- OPTIONAL ---` pattern)
+**Why:** `--- OPTIONAL ---` inside a YAML block is a document separator — breaks Obsidian parsing. Fields after it may be silently dropped.
+
+**What to do:**
+- Audit all entity files for `--- OPTIONAL ---` inside frontmatter
+- Remove the marker; keep the fields (make them always-present with `unknown` default)
+- Fix source templates in `meta/schemas/` so new entities don't inherit the problem
+
+- [ ] Schema templates fixed
+- [ ] Existing entity files fixed
+
+---
+
+### 3. Audit tags — replace entity-ref tags with wikilinks
+**Why:** CLAUDE.md rule: don't tag things that have entity files. Tags like `faction/barovia` are dead strings with no graph edge. `[[Barovia]]` wikilink in body creates a real graph edge.
+
+**What to do:**
+- Search all files for tags matching `faction/*`, `location/*`, `campaign/*`
+- Remove tag; add `[[EntityName]]` wikilink in document body under relevant section
+- Keep categorical tags (`character/npc`, `state/alive`) — these have no entity counterpart
+
+- [ ] Audit complete
+- [ ] Entity-ref tags replaced with wikilinks
+
+---
+
+### 4. Install Obsidian community plugins
+**Why:** Rich structured frontmatter but no tooling to query or template it.
+
+- [ ] **Dataview** — query entity pools as live tables in Obsidian (replaces `/inventory` for browsing)
+  ```dataview
+  TABLE importance, state, location FROM "data/characters/npcs" WHERE exists = false SORT importance DESC
+  ```
+- [ ] **Templater** — wire `meta/schemas/` templates so new entities auto-populate mandatory frontmatter
+- [ ] **DB Folder** *(optional)* — spreadsheet view for bulk-editing `importance`, `state`, `active` fields
+
+**Install:** Obsidian → Settings → Community Plugins → Browse → search → Install → Enable.
