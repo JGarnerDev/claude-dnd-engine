@@ -8,20 +8,18 @@ exists: true
 state: missing
 tags:
   - character/npc
-  - location/death-house
-  - campaign/curse-of-strahd
 
 location: [[Death House — Unknown]]
 personality: "Grateful, gentle. Relieved when bound to Ben's scroll. Said thank you and expressed happiness to be taken along."
 livelihood: "Ghost — trapped in Death House"
 
-# 
---- OPTIONAL ---
 aliases: []
 relates_to:
   - [[Thorn]] (sister)
   - [[Gustav Durst]] (father)
   - [[Elisabeth Durst]] (mother)
+  - [[Death House]] (trapped in)
+  - [[Curse of Strahd]] (campaign)
 importance: major
 active: true
   

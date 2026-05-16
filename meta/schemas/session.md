@@ -58,7 +58,7 @@ session_number:
 mission: [[Mission Name]]
 planned_date: ""
 
-# --- OPTIONAL ---
+# Optional fields:
 locations:
   - [[Location Name]]
 key_npcs:

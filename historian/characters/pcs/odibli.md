@@ -9,7 +9,6 @@ state: active
 tags:
   - character/pc
   - player/miguel
-  - campaign/curse-of-strahd
 
 player: [[Miguel]]
 race: "Gnome"
@@ -17,12 +16,12 @@ class: "Wizard"
 background: "Unknown — likely Scholar or Sage"
 level: 3
 
-# 
---- OPTIONAL ---
 aliases:
   - "ODB"
   - "Odi"
   - "Odible"
+relates_to:
+  - [[Curse of Strahd]] (campaign)
 importance: critical
 active: true
   

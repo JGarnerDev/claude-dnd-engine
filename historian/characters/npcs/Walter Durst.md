@@ -8,20 +8,18 @@ exists: true
 state: dead
 tags:
   - character/npc
-  - location/death-house
-  - campaign/curse-of-strahd
 
 location: [[Death House — Basement Altar]]
 personality: "N/A — died as an infant"
 livelihood: "N/A — sacrificed as an infant"
 
-# 
---- OPTIONAL ---
 aliases: []
 relates_to:
   - [[Gustav Durst]] (father)
   - [[The Nursemaid]] (birth mother)
   - [[Elisabeth Durst]] (ordered sacrifice)
+  - [[Death House]] (sacrificed in)
+  - [[Curse of Strahd]] (campaign)
 importance: minor
 active: false
   

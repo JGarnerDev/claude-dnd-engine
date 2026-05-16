@@ -50,7 +50,7 @@ premise: ""              # one or two sentences: what situation do the players e
 central_conflict: ""     # the driving tension the whole campaign ultimately resolves
 tone: ""                 # feel and register of the campaign
 
-# --- OPTIONAL ---
+# Optional fields:
 current_act: [[Act Name]]
 acts:
   - [[Act Name]]

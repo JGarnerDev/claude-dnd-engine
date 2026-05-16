@@ -7,7 +7,6 @@ exists: true
 state: completed
 tags:
   - session/09
-  - campaign/curse-of-strahd
 
 session_number: 9
 mission: [[Death House]]
@@ -47,3 +46,5 @@ Then left. This was an act of intervention — Strahd saved Ben's life.
 Luci cleaned up the fight — dodging, reliable damage, MVP of the session.
 
 > Notable quote from notes: *"Odibli's 'Diesel Cougar in the Winter' (alt name for Firebolt)"*
+
+Campaign: [[Curse of Strahd]]

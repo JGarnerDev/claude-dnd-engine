@@ -7,7 +7,6 @@ exists: true
 state: completed
 tags:
   - session/07
-  - campaign/curse-of-strahd
 
 session_number: 7
 mission: [[Death House]]
@@ -54,3 +53,5 @@ Notes list formation as: **Dip ? Iggy ? Odible ? Lucy**
 
 ### Mimic
 Disguised as a door. Adhered to all party members except Lucy. Took out Odibli. Party defeated it. Short rest.
+
+Campaign: [[Curse of Strahd]]

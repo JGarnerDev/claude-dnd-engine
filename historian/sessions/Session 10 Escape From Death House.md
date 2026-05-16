@@ -7,7 +7,6 @@ exists: true
 state: completed
 tags:
   - session/10
-  - campaign/curse-of-strahd
 
 session_number: 10
 mission: [[Death House]]
@@ -86,3 +85,5 @@ Strahd met the party upon exit from Death House. Thanked and congratulated them.
 
 ### Level Up
 All party members leveled to **3**.
+
+Campaign: [[Curse of Strahd]]

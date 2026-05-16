@@ -7,7 +7,6 @@ exists: true
 state: completed
 tags:
   - session/04
-  - campaign/curse-of-strahd
 
 session_number: 4
 mission: [[Death House]]
@@ -58,3 +57,5 @@ Luci is the embodiment of light. She was ripped from her home light dimension an
 
 ### DM Note
 The specter was not triggered this session. Party approaching the attic and dungeon.
+
+Campaign: [[Curse of Strahd]]

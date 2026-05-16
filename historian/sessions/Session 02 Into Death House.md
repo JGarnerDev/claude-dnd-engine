@@ -7,7 +7,6 @@ exists: true
 state: completed
 tags:
   - session/02
-  - campaign/curse-of-strahd
 
 session_number: 2
 mission: [[Death House]]
@@ -45,3 +44,5 @@ Contained fake rituals and a letter from Strahd to the Durst family:
 
 ### DM Notes
 - Miguel's character has a thing about fireplaces — note to explore next time
+
+Campaign: [[Curse of Strahd]]

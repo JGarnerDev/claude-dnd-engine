@@ -8,15 +8,12 @@ exists: true
 state: cleared
 tags:
   - location/dungeon
-  - campaign/curse-of-strahd
 
 location: [[Barovia — Village Outskirts]]
 origin: "Built and corrupted by the Durst family and their death cult"
 current_threat: "None — party cleared it in Session 10. Unknown if it repopulates."
 hook: "Rose and Thorn lured travelers inside. Cult altar required a sacrifice to allow escape."
 
-# 
---- OPTIONAL ---
 relates_to:
   - [[Gustav Durst]] (former master)
   - [[Elisabeth Durst]] (former cult leader)
@@ -25,6 +22,7 @@ relates_to:
   - [[Thorn]] (ghost, now stranded)
   - [[Walter Durst]] (sacrificed in basement)
   - [[Strahd von Zarovich]] (letter found inside)
+  - [[Curse of Strahd]] (campaign)
 importance: major
 active: false
   

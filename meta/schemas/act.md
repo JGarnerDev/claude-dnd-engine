@@ -58,7 +58,7 @@ goal: ""
 opening_state: ""        # what is true at the start of this act
 closing_state: ""        # what is true when this act ends
 
-# --- OPTIONAL ---
+# Optional fields:
 missions:
   - [[Mission Name]]
 themes: []

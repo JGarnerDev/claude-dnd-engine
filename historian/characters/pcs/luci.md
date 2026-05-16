@@ -9,7 +9,6 @@ state: active
 tags:
   - character/pc
   - player/paul
-  - campaign/curse-of-strahd
 
 player: [[Paul]]
 race: "Aasimar (Scourge)"
@@ -17,10 +16,10 @@ class: "Unknown — inferred divine caster"
 background: "Unknown"
 level: 3
 
-# 
---- OPTIONAL ---
 aliases:
   - "Lucy"
+relates_to:
+  - [[Curse of Strahd]] (campaign)
 importance: critical
 active: true
   

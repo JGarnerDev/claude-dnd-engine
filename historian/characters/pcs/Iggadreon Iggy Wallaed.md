@@ -9,7 +9,6 @@ state: active
 tags:
   - character/pc
   - player/jeff
-  - campaign/curse-of-strahd
 
 player: [[Jeff]]
 race: "Aasimar"
@@ -17,10 +16,10 @@ class: "Bard"
 background: "Soldier"
 level: 3
 
-# 
---- OPTIONAL ---
 aliases:
   - "Iggy"
+relates_to:
+  - [[Curse of Strahd]] (campaign)
 importance: critical
 active: true
   

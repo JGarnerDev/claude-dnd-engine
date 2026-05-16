@@ -7,7 +7,6 @@ exists: true
 state: completed
 tags:
   - session/01
-  - campaign/curse-of-strahd
 
 session_number: 1
 mission: [[Death House]]
@@ -47,3 +46,5 @@ cliffhanger: "Party is inside Death House. What lies within?"
 - **Iggy (Jeff):** Aasimar Celestial, copper-red tones. Musician (violin/voice) and soldier. Worked with local militia for a year. Wants to be a hero.
 - **Luci (Paul):** Scourge Aasimar. Spins on her stool, exploring spaces, liquid gold eyes. Sole entity of the light temple. History buff with headdress from scrolls.
 - **Odibli (Miguel):** Gnome wizard, high-pitched voice. Spent life transcribing scrolls; the voyage is a bucket-list item. Jump spell (40ft, 10ft movement). Interested in fireplaces.
+
+Campaign: [[Curse of Strahd]]

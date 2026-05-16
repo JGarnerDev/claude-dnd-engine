@@ -7,7 +7,6 @@ exists: true
 state: completed
 tags:
   - session/03
-  - campaign/curse-of-strahd
 
 session_number: 3
 mission: [[Death House]]
@@ -47,3 +46,5 @@ Suit of armor attacked when Paul inspected it. Killed Miguel and Jeff (downed). 
 - Silver/gold filigree jewelry box (75 gp)
 - 3 gold rings (25 gp each)
 - Thin platinum necklace with topaz pendant (750 gp)
+
+Campaign: [[Curse of Strahd]]

@@ -122,8 +122,8 @@ Progress tracker for getting this project ready to generate sessions and run cam
 
 **How:** Compare `basename(file)` to frontmatter `name:` field. Rename where they differ.
 
-- [ ] `data/` dirs audited and renamed
-- [ ] `historian/` dirs audited and renamed
+- [x] `data/` dirs audited and renamed
+- [x] `historian/` dirs audited and renamed
 
 ---
 
@@ -135,8 +135,8 @@ Progress tracker for getting this project ready to generate sessions and run cam
 - Remove the marker; keep the fields (make them always-present with `unknown` default)
 - Fix source templates in `meta/schemas/` so new entities don't inherit the problem
 
-- [ ] Schema templates fixed
-- [ ] Existing entity files fixed
+- [x] Schema templates fixed
+- [x] Existing entity files fixed
 
 ---
 
@@ -148,8 +148,8 @@ Progress tracker for getting this project ready to generate sessions and run cam
 - Remove tag; add `[[EntityName]]` wikilink in document body under relevant section
 - Keep categorical tags (`character/npc`, `state/alive`) — these have no entity counterpart
 
-- [ ] Audit complete
-- [ ] Entity-ref tags replaced with wikilinks
+- [x] Audit complete
+- [x] Entity-ref tags replaced with wikilinks
 
 ---
 

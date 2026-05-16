@@ -8,16 +8,11 @@ exists: true
 state: dead
 tags:
   - character/npc
-  - location/death-house
-  - faction/durst-cult
-  - campaign/curse-of-strahd
 
 location: [[Death House]]
 personality: "Unknown. Abandoned love for madness, according to Strahd's letter."
 livelihood: "Former cult master and lord of Death House"
 
-# 
---- OPTIONAL ---
 aliases:
   - "The Master"
 relates_to:
@@ -26,6 +21,8 @@ relates_to:
   - [[Thorn]] (son)
   - [[Walter Durst]] (illegitimate son)
   - [[The Nursemaid]] (had affair with)
+  - [[Durst Cult]] (cult member)
+  - [[Curse of Strahd]] (campaign)
 importance: major
 active: false
   

@@ -8,20 +8,18 @@ exists: true
 state: missing
 tags:
   - character/npc
-  - location/death-house
-  - campaign/curse-of-strahd
 
 location: [[Death House — Unknown]]
 personality: "Willing to share information. Revealed Walter's backstory when asked."
 livelihood: "Ghost — trapped in Death House"
 
-# 
---- OPTIONAL ---
 aliases: []
 relates_to:
   - [[Rose]] (sister)
   - [[Gustav Durst]] (father)
   - [[Elisabeth Durst]] (mother)
+  - [[Death House]] (trapped in)
+  - [[Curse of Strahd]] (campaign)
 importance: major
 active: true
   

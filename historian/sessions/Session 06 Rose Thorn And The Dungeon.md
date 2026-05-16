@@ -7,7 +7,6 @@ exists: true
 state: completed
 tags:
   - session/06
-  - campaign/curse-of-strahd
 
 session_number: 6
 mission: [[Death House]]
@@ -66,3 +65,5 @@ Found in the dungeon — empty. Thorn explained:
 
 ### Grick Fight
 Initiative: Jeff ? Grick ? Ben ? Paul ? Miguel. Quick work.
+
+Campaign: [[Curse of Strahd]]

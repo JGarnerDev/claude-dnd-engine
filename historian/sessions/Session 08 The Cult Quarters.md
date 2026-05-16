@@ -7,7 +7,6 @@ exists: true
 state: completed
 tags:
   - session/08
-  - campaign/curse-of-strahd
 
 session_number: 8
 mission: [[Death House]]
@@ -57,3 +56,5 @@ While looting the chest, Ghasts broke through the walls. Odibli was in the proce
 
 ### Strahd's Statue
 Odibli examined the statue in the room. Arcana check: recognized the face as the same face from the fireplace (Session 3). Confirmed: the statue depicts Strahd. Sensed powerful magic connecting this statue to another entity.
+
+Campaign: [[Curse of Strahd]]

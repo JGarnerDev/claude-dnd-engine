@@ -9,7 +9,6 @@ state: active
 tags:
   - character/pc
   - player/ben
-  - campaign/curse-of-strahd
 
 player: [[Ben]]
 race: "Unknown"
@@ -17,9 +16,9 @@ class: "Unknown"
 background: "Unknown"
 level: 3
 
-# 
---- OPTIONAL ---
 aliases: []
+relates_to:
+  - [[Curse of Strahd]] (campaign)
 importance: critical
 active: true
   

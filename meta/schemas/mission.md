@@ -61,7 +61,7 @@ act: [[Act Name]]
 objective: ""
 hook: ""
 
-# --- OPTIONAL ---
+# Optional fields:
 sessions:
   - [[Session NN - Title]]
 locations:

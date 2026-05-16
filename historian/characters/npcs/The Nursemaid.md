@@ -8,21 +8,19 @@ exists: true
 state: dead
 tags:
   - character/npc
-  - location/death-house
-  - campaign/curse-of-strahd
 
 location: [[Death House — Area 15]]
 personality: "Unknown in life. In undeath: malevolent, attacks intruders."
 livelihood: "Specter — haunting Death House area 15"
 
-# 
---- OPTIONAL ---
 aliases:
   - "The Specter"
 relates_to:
   - [[Gustav Durst]] (had affair with)
   - [[Elisabeth Durst]] (killed by)
   - [[Walter Durst]] (birth mother of)
+  - [[Death House]] (haunts as specter)
+  - [[Curse of Strahd]] (campaign)
 importance: major
 active: false
   

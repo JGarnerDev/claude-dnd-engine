@@ -7,7 +7,6 @@ exists: true
 state: completed
 tags:
   - session/05
-  - campaign/curse-of-strahd
 session_number: 5
 mission: [[Death House]]
 planned_date: "2026-03-31"
@@ -66,3 +65,5 @@ Tallish, medium build. Slim. Fast moving but mysteriously slow. Hair all over â€
 ### Action Items (from notes)
 - Miguel: prepare account of death in fight against specter
 - Ben: prepare account of death in fight against specter
+
+Campaign: [[Curse of Strahd]]

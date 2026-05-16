@@ -16,7 +16,7 @@ tags:
   - type/subtype          # e.g. location/city, character/npc, faction/guild
   - region/name           # geographic or conceptual grouping
 
-# --- OPTIONAL ---
+# Optional fields:
 subtype: ""               # more specific classification (city, npc, ruin, etc.)
 aliases:
   - "Alternate Name"      # Obsidian resolves wiki-links to these names
@@ -54,7 +54,7 @@ Files in `historian/` must have `exists: true` and add the following mandatory f
 source_session: [[Session NN - Title]]   # session that established this as fact
 confirmed_date: ""                          # in-world date or session number when canonized
 
-# --- OPTIONAL (historian only) ---
+# Optional fields:
 supersedes: [[data/path/to/entity]]      # data/ draft this entry replaces
 ```
 

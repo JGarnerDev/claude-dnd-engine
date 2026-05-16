@@ -8,15 +8,13 @@ exists: true
 state: alive
 tags:
   - character/npc
-  - faction/barovia
-  - campaign/curse-of-strahd
 
 location: [[Barovia]]
 personality: "Composed, calm, ancient. Greets intruders like guests at a dinner party. Interested in the party but does not explain himself."
 livelihood: "Vampire lord and ruler of Barovia"
 
-# 
---- OPTIONAL ---
+relates_to:
+  - [[Curse of Strahd]] (campaign)
 importance: critical
 active: true
   
