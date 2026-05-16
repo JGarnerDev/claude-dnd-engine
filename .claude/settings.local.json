@@ -34,7 +34,8 @@
       "Bash(Remove-Item \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\meta\\\\schemas\\\\group.md\")",
       "Bash(Remove-Item \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\meta\\\\players\\\\group.md\")",
       "PowerShell(Rename-Item *)",
-      "Skill(obsidian-markdown)"
+      "Skill(obsidian-markdown)",
+      "Bash(grep -v \"^d.*\\\\.$\")"
     ]
   }
 }
