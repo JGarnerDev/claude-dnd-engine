@@ -10,7 +10,8 @@ Progress tracker for getting this project ready to generate sessions and run cam
 - [ ] Make a biome schema (terrain types to shape flora, fauna, and logistics of a region)
 - [ ] Make a terrain feature schema (forests, rivers, roads, or anything on a map that effects the populations around them)
 - [ ] Make a natural resource schema (what locations consume, including abrstract location, rarity, accessibility, trade)
-- [ ] Make a gameplay mechanic schema (mini games that can constitute a session/mission)
+- [ ] Make a culture schema (what certain peoples, factions, etc. from certain regions are generally shaped by)
+- [ ] Make a gameplay mechanic schema (mini games that can constitute a session/mission, make .claude\commands\session.md aware of it)
 
 ---
 
