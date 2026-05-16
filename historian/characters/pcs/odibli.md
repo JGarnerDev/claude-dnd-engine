@@ -1,21 +1,14 @@
 ---
-
-
 name: "Odibli"
 type: character
 subtype: pc
 exists: true
 state: active
-tags:
-  - character/pc
-  - player/miguel
-
 player: [[Miguel]]
-race: "Gnome"
-class: "Wizard"
-background: "Unknown -likely Scholar or Sage"
+race: [[Gnome]]
+class: [[Wizard]]
+background: "Unknown"
 level: 3
-
 aliases:
   - "ODB"
   - "Odi"
@@ -25,8 +18,7 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 importance: critical
 active: true
-  
-description: "Miguel's PC. Gnome Wizard; arcane academic with a fireplace obsession and adventuring as a bucket-list goal."
+description: "[[Miguel]]'s PC. Gnome Wizard; arcane academic with a fireplace obsession and adventuring as a bucket-list goal."
 ---
 
 
@@ -39,8 +31,7 @@ Campaign: [[Curse of Strahd]] | Player: [[Miguel]]
 
 Not described in notes beyond being a gnome with a high-pitched voice.
 
-Race: [[gnome]]
-Class: [[wizard]]
+Race: [[Gnome]] | Class: [[Wizard]] | Background: unknown
 
 ## Personality
 

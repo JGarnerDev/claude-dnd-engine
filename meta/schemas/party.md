@@ -41,8 +41,7 @@ campaign: [[Campaign Name]]
 source_session: "[[session-NN-name]]"   # session when the party formed
 confirmed_date: "unknown"               # in-world date of formation
 
-tags:
-  - campaign/curse-of-strahd
+tags: []    # party has no categorical tags — campaign relationship lives in campaign: [[Campaign Name]] field above
 ---
 ```
 

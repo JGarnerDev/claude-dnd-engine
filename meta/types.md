@@ -18,6 +18,7 @@ Authoritative list of all valid `type` / `subtype` combinations. **Before declar
 | type | subtype | Schema | `data/` path | `historian/` path |
 |---|---|---|---|---|
 | `act` | — | `meta/schemas/act.md` | `scheduler/acts/` | `historian/acts/` |
+| `background` | — | `meta/schemas/background.md` | `data/backgrounds/` | `historian/backgrounds/` |
 | `campaign` | — | `meta/schemas/campaign.md` | `scheduler/campaign.md` | — |
 | `class` | — | `meta/schemas/class.md` | `data/classes/` | `historian/classes/` |
 | `character` | `npc` | `meta/schemas/character-npc.md` | `data/characters/npcs/` | `historian/characters/npcs/` |

@@ -6,13 +6,9 @@ type: character
 subtype: pc
 exists: true
 state: active
-tags:
-  - character/pc
-  - player/ben
-
 player: [[Ben]]
-race: "Unknown"
-class: "Barbarian"
+race: [[Half Orc]]
+class: [[Barbarian]]
 background: "Unknown"
 level: 3
 
@@ -31,8 +27,7 @@ Campaign: [[Curse of Strahd]] | Player: [[Ben]] |
 
 > **Reliability - Everything:** Dip's race, class, full name, and backstory are all unconfirmed. Only nickname "Dip" appears in notes. Confirm all details with Ben and the DM.
 
-Race: [[Orc]]
-Class: [[Barbarian]]
+Class: [[Barbarian]] | Race: [[Half Orc]]
 
 ## Personality
 

@@ -59,8 +59,8 @@ Progress tracker for getting this project ready to generate sessions and run cam
 - [ ] Monsters — seed `data/creatures/` with notable monsters from the 5e API (good for dungeon population and encounter planning)
 - [ ] Magic items — seed `data/items/magic/` with canonical items from the 5e API
 - [ ] Spells — consider a `data/spells/` reference or inline on NPC/item files
-- [ ] Backgrounds — seed `data/backgrounds/` for PC/NPC creation reference
-- [ ] Classes — seed `data/classes/` for PC/NPC creation reference
+- [x] Backgrounds — seed `data/backgrounds/` for PC/NPC creation reference
+- [x] Classes — seed `data/classes/` for PC/NPC creation reference
 
 ---
 

@@ -54,7 +54,7 @@ exists: false
 state: active | dead | retired | missing | transformed
 tags:
   - character/pc
-  - region/
+  - player/          # player/jeff, player/ben, etc.
 
 # --- MANDATORY (pc) ---
 player: [[meta/players/player-name]]   # links to meta/players/{name}.md
@@ -75,6 +75,7 @@ known_by:
 description: ""
 
 # --- OPTIONAL (pc) ---
+background: ""
 homeland: [[Location Name]]
 motivation: ""
 goals: []
@@ -89,12 +90,25 @@ character_sheet: ""    # path to sheet file or external link
 ---
 ```
 
+### Body Template
+
+Every `[[wiki-link]]` in frontmatter must also appear in the body. Include a reference block near the top:
+
+```markdown
+Campaign: [[Campaign Name]] | Player: [[Player Name]]
+
+Race: [[Races]] | Class: [[Class Name]] | Background: [[Background Name]]
+```
+
+Omit any line for values that are unknown — do not create dead placeholder links.
+
 ### Form → Frontmatter Mapping
 | Form answer | Field |
 |---|---|
 | Character name | `name`, filename |
 | Your name/handle | `player` (link to their `meta/players/` file — create one if it doesn't exist) |
 | Race and class | `race`, `class`, `level` |
+| Background | `background` |
 | Where from | `homeland` |
 | Why adventuring | `motivation` |
 | What you want | `goals` |

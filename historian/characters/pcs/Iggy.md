@@ -4,16 +4,11 @@ type: character
 subtype: pc
 exists: true
 state: active
-tags:
-  - character/pc
-  - player/jeff
-
 player: [[Jeff]]
 race: "Aasimar"
 class: "Bard"
-background: "Soldier"
+background: "Entertainer"
 level: 3
-
 aliases:
   - "Iggy"
 source_session: [[Session 01 The Black Sheep Inn]]
@@ -32,8 +27,7 @@ Campaign: [[Curse of Strahd]] | Player: [[Jeff]]
 
 Copper-red tones throughout -hair, skin. Human-adjacent in looks. Celestial heritage is subtle but present.
 
-Race: [[Aasimar]]
-Class: [[Bard]]
+Race: [[Aasimar]] | Class: [[Bard]] | Background: [[Entertainer]]
 
 > **Reliability:** Confirmed from player notes and session 1 introductions.
 

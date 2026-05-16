@@ -72,6 +72,10 @@ owner: [[Player Character Name]]
 description: ""
 
 # --- OPTIONAL (npc) ---
+background: ""
+race: ""
+class: ""
+level:
 disposition: hostile | neutral | friendly | unknown
 goals: []
 motives: []
@@ -85,6 +89,18 @@ character_sheet: ""    # path to sheet file, or inline summary
 ---
 ```
 
+### Body Template
+
+Every `[[wiki-link]]` in frontmatter must also appear in the body. Include a reference block near the top:
+
+```markdown
+Location: [[Location Name]] | Campaign: [[Campaign Name]]
+
+Race: [[Race Name]] | Class: [[Class Name]] | Background: [[Background Name]]
+```
+
+Omit any line for values that are unknown — do not create dead placeholder links.
+
 ### Form → Frontmatter Mapping
 | Form answer | Field |
 |---|---|
@@ -92,6 +108,9 @@ character_sheet: ""    # path to sheet file, or inline summary
 | Location | `location` |
 | Personality | `personality` |
 | How they make a living | `livelihood` |
+| Background | `background` |
+| Race | `race` |
+| Class/level | `class`, `level` |
 | Disposition toward party | `disposition` |
 | Goals | `goals` |
 | Motives | `motives` |

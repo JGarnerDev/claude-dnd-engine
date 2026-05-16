@@ -13,13 +13,14 @@ personality: "Composed, calm, ancient. Greets intruders like guests at a dinner 
 livelihood: "Vampire lord and ruler of Barovia"
 disposition: hostile
 relates_to:
+  - [[Domain of Barovia]] (absolute ruler)
   - [[Curse of Strahd]] (campaign)
 importance: critical
 active: true
 description: "The vampire lord of Barovia. Central antagonist of the Curse of Strahd campaign."
 ---
 
-Location: [[Barovia]] | Campaign: [[Curse of Strahd]]
+Location: [[Barovia]] | Faction: [[Domain of Barovia]] (rules) | Campaign: [[Curse of Strahd]]
 
 ## Appearance
 

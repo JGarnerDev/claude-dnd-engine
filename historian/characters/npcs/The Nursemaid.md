@@ -17,8 +17,9 @@ disposition: hostile
 aliases:
   - "The Specter"
 relates_to:
+  - [[Durst Cult]] (killed by)
   - [[Gustav Durst]] (had affair with)
-  - [[Elisabeth Durst]] (killed by)
+  - [[Elisabeth Durst]] (ordered execution)
   - [[Walter Durst]] (birth mother of)
   - [[Death House]] (haunts as specter)
   - [[Curse of Strahd]] (campaign)
@@ -36,7 +37,7 @@ Location: [[Death House -Area 15]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 
-Employed as nursemaid in the Durst household. Had an affair with [[Gustav Durst]] and bore his illegitimate son, Walter. [[Walter Durst]] was born stillborn (or sacrificed immediately at birth -notes ambiguous). [[Elisabeth Durst]] discovered the affair, was consumed by jealousy, and ordered the nursemaid killed by the cult.
+Employed as nursemaid in the Durst household. Had an affair with [[Gustav Durst]] and bore his illegitimate son, Walter. [[Walter Durst]] was born stillborn (or sacrificed immediately at birth -notes ambiguous). [[Elisabeth Durst]] discovered the affair, was consumed by jealousy, and ordered the nursemaid killed by the [[Durst Cult]].
 
 The nursemaid now haunts Death House as a specter.
 

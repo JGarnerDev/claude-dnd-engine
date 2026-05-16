@@ -1,21 +1,14 @@
 ---
-
-
 name: "Luci"
 type: character
 subtype: pc
 exists: true
 state: active
-tags:
-  - character/pc
-  - player/paul
-
 player: [[Paul]]
-race: "Aasimar (Scourge)"
-class: "Unknown -inferred divine caster"
+race: [[Aasimar]]
+class: [[Monk]]
 background: "Unknown"
 level: 3
-
 aliases:
   - "Lucy"
 source_session: [[Session 01 The Black Sheep Inn]]
@@ -23,7 +16,6 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 importance: critical
 active: true
-  
 description: "Paul's PC. Scourge Aasimar in perma-wanderlust. Full name unknown."
 ---
 
@@ -41,8 +33,7 @@ Campaign: [[Curse of Strahd]] | Player: [[Paul]]
 - Elaborate headdress built from depictions in scrolls and temple walls
 - Constant restless movement -spins on a stool while listening, always exploring the space
 
-Race: [[Aasimar]]
-Class: [[Monk]]
+Race: [[Aasimar]] (Scourge) | Class: unknown (inferred divine caster — confirm with Paul)
 
 ## Personality
 

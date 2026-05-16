@@ -13,13 +13,14 @@ current_threat: "None -party cleared it in Session 10. Unknown if it repopulates
 hook: "Rose and Thorn lured travelers inside. Cult altar required a sacrifice to allow escape."
 
 relates_to:
+  - [[Durst Cult]] (operated within)
   - [[Gustav Durst]] (former master)
   - [[Elisabeth Durst]] (former cult leader)
   - [[The Nursemaid]] (haunts as specter)
   - [[Rose]] (ghost, now stranded)
   - [[Thorn]] (ghost, now stranded)
   - [[Walter Durst]] (sacrificed in basement)
-  - [[Strahd von Zarovich]] (letter found inside)
+  - [[Strahd Von Zarovich]] (letter found inside)
   - [[Curse of Strahd]] (campaign)
 importance: major
 active: false
@@ -33,7 +34,7 @@ Location: [[Barovia -Village Outskirts]] | Campaign: [[Curse of Strahd]]
 
 ## Overview
 
-A four-story haunted manor with a dungeon basement, just outside the village of Barovia. Built and operated by the Durst family, who ran a death cult within. Rose and Thorn's ghosts lured travelers inside; the house itself functioned as a trap.
+A four-story haunted manor with a dungeon basement, just outside the village of Barovia. Built and operated by the Durst family, who ran the [[Durst Cult]] within. Rose and Thorn's ghosts lured travelers inside; the house itself functioned as a trap.
 
 ## Floor Layout (as explored)
 

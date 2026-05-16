@@ -18,12 +18,10 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 |---|---|---|
 | **class** | | |
 | `class` | class entity | Entity type: playable class — flat tag, no subtype |
-| `class/bard` | character | Character is a Bard |
-| `class/wizard` | character | Character is a Wizard |
 | **creature/** | | |
 | `creature` | creature entity | Entity type: notable creature with narrative presence |
-| **campaign/** | | |
-| `campaign/curse-of-strahd` | any | Entity belongs to the Curse of Strahd campaign |
+| **background** | | |
+| `background` | background entity | Entity type: character background — flat tag, no subtype |
 | **character/** | | |
 | `character/npc` | character | Entity subtype: non-player character |
 | `character/pc` | character | Entity subtype: player character |
@@ -50,16 +48,12 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | **item/** | | |
 | `item/magic` | item entity | Entity subtype: magic item |
 | `item/mundane` | item entity | Entity subtype: mundane item with narrative significance |
-| **faction/** | | |
-| `faction/barovia` | character, location | Member or seat of the Barovia ruling faction |
-| `faction/durst-cult` | character | Member of the Durst death cult |
 | **location/** | | |
 | `location/dungeon` | location entity | Entity subtype: dungeon |
 | `location/shop` | location entity | Entity subtype: shop (covers inns, taverns, and establishments) |
 | `location/city` | location entity | Entity subtype: city or town |
 | `location/region` | location entity | Entity subtype: region or territory |
 | `location/wilderness` | location entity | Entity subtype: wilderness area |
-| `location/death-house` | non-location entity | Association: entity is tied to Death House |
 | **party** | | |
 | `party` | party entity | Entity type: adventuring party |
 | **pantheon/** | | |
@@ -73,8 +67,6 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `player/paul` | pc | Character played by Paul |
 | **race** | | |
 | `race` | race entity | Entity type: playable race — flat tag, no subtype |
-| `race/aasimar` | character | Character is an Aasimar |
-| `race/gnome` | character | Character is a Gnome |
 | **session/** | | |
 | `session/NN` | session | Identifies the session number — e.g. `session/01`, `session/11` |
 | **size/** | | |
