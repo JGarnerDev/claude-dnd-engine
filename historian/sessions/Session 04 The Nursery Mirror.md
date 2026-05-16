@@ -1,5 +1,7 @@
 ---
-name: "Session 04 — The Nursery Mirror"
+
+
+name: "Session 04 The Nursery Mirror"
 type: session
 exists: true
 state: completed
@@ -19,7 +21,8 @@ importance: major
 active: false
 description: "Floor 3 exploration. Nursery mirror visions reveal the Durst family secret. Jeff ensnared by cursed bed. Paul reveals his backstory."
 
-# --- HISTORIAN ---
+# 
+--- HISTORIAN ---
 played_date: "2026-03-30"
 recap: "Party explored floor 3. Balcony looks east over grass and forest. In the nursery, Jeff looked in the mirror and saw three visions: nursemaid and master (Gustav) kissing; a stillborn child; the nursemaid being killed by a cult in the same room. Jeff relayed the visions to Miguel. Jeff then got ensnared by the bed when he checked it (also kicked it first). Paul freed him using a sun spell. Jeff experienced a brief backstory flashback from the bed. Paul disclosed his character's backstory (scourge aasimar from the light dimension). Specter not yet triggered."
 cliffhanger: "The specter encounter is still ahead. Tension building."

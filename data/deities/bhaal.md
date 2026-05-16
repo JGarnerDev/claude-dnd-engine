@@ -1,4 +1,6 @@
 ---
+
+
 name: "Bhaal"
 type: deity
 exists: false

@@ -1,4 +1,6 @@
 ---
+
+
 name: "Gustav Durst"
 type: character
 subtype: npc
@@ -14,7 +16,8 @@ location: [[Death House]]
 personality: "Unknown. Abandoned love for madness, according to Strahd's letter."
 livelihood: "Former cult master and lord of Death House"
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 aliases:
   - "The Master"
 relates_to:
@@ -25,13 +28,9 @@ relates_to:
   - [[The Nursemaid]] (had affair with)
 importance: major
 active: false
-  - [[Entity Name]] (relationship)
+  
 description: "Gustav Durst. Former master of Death House and cult leader. Deceased."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-16"
----
 
 > **Reliability:** Name confirmed from Session 6 (Thorn's account). Other details from Strahd's letter (Session 2) and nursery mirror vision (Session 4).
 

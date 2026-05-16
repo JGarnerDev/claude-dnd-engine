@@ -1,4 +1,6 @@
 ---
+
+
 name: "Loviatar"
 type: deity
 exists: false

@@ -1,12 +1,13 @@
 ---
-name: "Session 05 — The Specter"
+
+
+name: "Session 05 The Specter"
 type: session
 exists: true
 state: completed
 tags:
   - session/05
   - campaign/curse-of-strahd
-
 session_number: 5
 mission: [[Death House]]
 planned_date: "2026-03-31"
@@ -18,7 +19,8 @@ importance: critical
 active: false
 description: "Ben (Dip) joins the party. Shazzam spell established. Specter attacks; Miguel and Ben killed; Paul sacrifices Sacred Flame permanently to revive them."
 
-# --- HISTORIAN ---
+# 
+--- HISTORIAN ---
 played_date: "2026-03-31"
 recap: "Ben joined the session as Dip, injured (3 HP). Jeff and Paul healed him for 2 HP. Shazzam spell officially established as a rule. Specter made its appearance. Sabathiel (Paul's divine connection) went silent; Jeff felt cold; Miguel saw everything blurry; Ben's wounds reopened (1 HP). Jeff detected undead energy. Paul tried to contact Sabathiel via Religion check — failed. Miguel used Minor Illusion to distract the specter for 20 seconds; Paul tried to send Sabathiel a message. Specter entered: initiative order Ben, Miguel, Specter, Paul, Jeff. Miguel immediately downed (0 HP, full dead). Paul cast Sanctuary on Miguel. Specter killed Ben outright. Paul dropped into sleep; Sabathiel revived Miguel and Ben — but Paul sacrificed Sacred Flame FOREVER as the price."
 cliffhanger: "Sacred Flame is gone. Party is depleted. The house remains."

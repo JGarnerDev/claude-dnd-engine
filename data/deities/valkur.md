@@ -1,4 +1,6 @@
 ---
+
+
 name: "Valkur"
 type: deity
 exists: false

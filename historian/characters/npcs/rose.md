@@ -1,4 +1,6 @@
 ---
+
+
 name: "Rose"
 type: character
 subtype: npc
@@ -13,7 +15,8 @@ location: [[Death House — Unknown]]
 personality: "Grateful, gentle. Relieved when bound to Ben's scroll. Said thank you and expressed happiness to be taken along."
 livelihood: "Ghost — trapped in Death House"
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 aliases: []
 relates_to:
   - [[Thorn]] (sister)
@@ -21,13 +24,10 @@ relates_to:
   - [[Elisabeth Durst]] (mother)
 importance: major
 active: true
-  - [[Entity Name]] (relationship)
+  
 description: "Rose Durst. 11-year-old ghost. Daughter of the Durst family. Bound to Ben's scroll in Session 6; stranded in Session 10."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-09"
----
+
 
 > **Reliability — Age:** Notes say "Thorn = 8, Rose = 11." High confidence.
 

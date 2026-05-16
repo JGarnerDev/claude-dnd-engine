@@ -1,4 +1,6 @@
 ---
+
+
 name: "Hextor"
 type: deity
 exists: false

@@ -1,4 +1,6 @@
 ---
+
+
 name: "The Nursemaid"
 type: character
 subtype: npc
@@ -13,7 +15,8 @@ location: [[Death House — Area 15]]
 personality: "Unknown in life. In undeath: malevolent, attacks intruders."
 livelihood: "Specter — haunting Death House area 15"
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 aliases:
   - "The Specter"
 relates_to:
@@ -22,13 +25,8 @@ relates_to:
   - [[Walter Durst]] (birth mother of)
 importance: major
 active: false
-  - [[Entity Name]] (relationship)
+  
 description: "The nursemaid of Death House. Had an affair with Gustav Durst and bore Walter. Killed by Elisabeth Durst's cult. Now haunts the house as a specter."
-
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-31"
----
 
 > **Reliability — Name:** No personal name appears in the notes. Referred to only as "the nursemaid" or "the specter." Confirm name with DM.
 

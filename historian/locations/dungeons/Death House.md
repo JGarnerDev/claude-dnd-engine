@@ -1,4 +1,6 @@
 ---
+
+
 name: "Death House"
 type: location
 subtype: dungeon
@@ -13,7 +15,8 @@ origin: "Built and corrupted by the Durst family and their death cult"
 current_threat: "None — party cleared it in Session 10. Unknown if it repopulates."
 hook: "Rose and Thorn lured travelers inside. Cult altar required a sacrifice to allow escape."
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 relates_to:
   - [[Gustav Durst]] (former master)
   - [[Elisabeth Durst]] (former cult leader)
@@ -24,13 +27,10 @@ relates_to:
   - [[Strahd von Zarovich]] (letter found inside)
 importance: major
 active: false
-  - [[Entity Name]] (relationship)
+  
 description: "Death House. A haunted manor just outside the village of Barovia. Fully explored and escaped by the party in Session 10."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-09"
----
+
 
 ## Overview
 

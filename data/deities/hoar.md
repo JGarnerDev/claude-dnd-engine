@@ -1,4 +1,6 @@
 ---
+
+
 name: "Hoar"
 type: deity
 exists: false

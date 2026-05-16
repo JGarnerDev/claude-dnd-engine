@@ -1,4 +1,6 @@
 ---
+
+
 name: "Black Sheep Inn"
 type: location
 subtype: shop
@@ -12,16 +14,14 @@ city: [[Barovia — Village Outskirts]]
 proprietor: [[Unknown — Tavern Master]]
 purpose: "Inn and tavern. Starting point before Barovia. Party earned lodging and supplies by performing."
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 importance: minor
 active: false
-  - [[Entity Name]] (relationship)
+  
 description: "Black Sheep Inn. Located just outside Barovia. Party performed here, earned supplies, then was immediately banned after Paul threw a knife into a customer."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-09"
----
+
 
 > **Reliability — Proprietor:** Notes mention "Tavern master" but give no name. Confirm with DM.
 

@@ -1,4 +1,6 @@
 ---
+
+
 name: "Luci"
 type: character
 subtype: pc
@@ -15,18 +17,16 @@ class: "Unknown — inferred divine caster"
 background: "Unknown"
 level: 3
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 aliases:
   - "Lucy"
 importance: critical
 active: true
-  - [[Entity Name]] (relationship)
+  
 description: "Paul's PC. Scourge Aasimar in perma-wanderlust. Full name unknown."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-09"
----
+
 
 > **Reliability — Name:** Only nickname/handle appears in notes. Full character name is unconfirmed. Confirm with Paul.
 
@@ -38,7 +38,8 @@ confirmed_date: "2026-03-09"
 - Elaborate headdress built from depictions in scrolls and temple walls
 - Constant restless movement — spins on a stool while listening, always exploring the space
 
-Race: [[aasimar]]
+Race: [[Aasimar]]
+Class: [[Monk]]
 
 ## Personality
 

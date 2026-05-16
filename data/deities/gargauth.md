@@ -1,4 +1,6 @@
 ---
+
+
 name: "Gargauth"
 type: deity
 exists: false

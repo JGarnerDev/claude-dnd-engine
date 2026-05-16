@@ -1,4 +1,6 @@
 ---
+
+
 name: "Nobanion"
 type: deity
 exists: false

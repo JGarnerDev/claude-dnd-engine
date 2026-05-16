@@ -1,4 +1,6 @@
 ---
+
+
 name: "Elisabeth Durst"
 type: character
 subtype: npc
@@ -14,7 +16,8 @@ location: [[Death House]]
 personality: "Consumed by jealousy. Ruthless — ordered the nursemaid killed and sacrificed her own infant."
 livelihood: "Former cult leader and wife of Gustav Durst"
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 aliases: []
 relates_to:
   - [[Gustav Durst]] (husband)
@@ -24,13 +27,10 @@ relates_to:
   - [[The Nursemaid]] (had killed)
 importance: major
 active: false
-  - [[Entity Name]] (relationship)
+  
 description: "Elisabeth Durst. Gustav's wife. Discovered his affair, ordered the nursemaid killed, and sacrificed baby Walter on the basement altar. Deceased."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-04-07"
----
+
 
 > **Reliability:** Thorn's account in Session 6. Treated as confirmed.
 

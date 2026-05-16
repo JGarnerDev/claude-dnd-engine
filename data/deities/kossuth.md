@@ -1,4 +1,6 @@
 ---
+
+
 name: "Kossuth"
 type: deity
 exists: false

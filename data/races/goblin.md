@@ -1,4 +1,6 @@
 ---
+
+
 name: "Goblin"
 type: race
 exists: false

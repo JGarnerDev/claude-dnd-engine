@@ -1,4 +1,6 @@
 ---
+
+
 name: "Nerull"
 type: deity
 exists: false

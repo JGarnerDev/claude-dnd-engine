@@ -1,4 +1,6 @@
 ---
+
+
 name: "Kord"
 type: deity
 exists: false

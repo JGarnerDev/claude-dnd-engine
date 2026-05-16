@@ -1,4 +1,6 @@
 ---
+
+
 name: "Red Knight"
 type: deity
 exists: false

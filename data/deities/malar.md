@@ -1,4 +1,6 @@
 ---
+
+
 name: "Malar"
 type: deity
 exists: false

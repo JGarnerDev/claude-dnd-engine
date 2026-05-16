@@ -1,5 +1,7 @@
 ---
-name: "Session 08 — The Cult Quarters"
+
+
+name: "Session 08 The Cult Quarters"
 type: session
 exists: true
 state: completed
@@ -19,7 +21,8 @@ importance: major
 active: false
 description: "Two wounded ghouls dispatched. Cult leader quarters looted. Ghast ambush. Strahd's face identified on the statue."
 
-# --- HISTORIAN ---
+# 
+--- HISTORIAN ---
 played_date: "2026-04-28"
 recap: "Party found the two wounded ghouls from Session 7 in the adjacent room. Ben threw fire (missed). Party killed them. In cult leader quarters: found a footlocker with a cloak of protection, 4 healing potions, chain shirt, mess kit, flask of alchemist's fire, bullseye lantern, thieves' tools, and a yellow leather spellbook. Rose told the party that many travelers before them never returned. As party took items from the chest, Ghasts burst through the walls. Odibli was mid-changing (old and new cloak in hand, in his underwear) and fought naked. Party defeated the Ghasts. Odibli then did an Arcana check on the statue and recognized it as the same face from the fireplace in Session 3 — Strahd. Sensed powerful magic connecting it to another."
 entities_canonized:

@@ -1,4 +1,6 @@
 ---
+
+
 name: "Myrkul"
 type: deity
 exists: false

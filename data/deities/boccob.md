@@ -1,4 +1,6 @@
 ---
+
+
 name: "Boccob"
 type: deity
 exists: false

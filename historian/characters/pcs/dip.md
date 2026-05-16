@@ -1,4 +1,6 @@
 ---
+
+
 name: "Dip"
 type: character
 subtype: pc
@@ -15,17 +17,14 @@ class: "Unknown"
 background: "Unknown"
 level: 3
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 aliases: []
 importance: critical
 active: true
-  - [[Entity Name]] (relationship)
+  
 description: "Ben's PC. Race, class, and full name all unconfirmed. Joined in Session 5."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-31"
----
 
 > **Reliability — Everything:** Dip's race, class, full name, and backstory are all unconfirmed. Only nickname "Dip" appears in notes. Confirm all details with Ben and the DM.
 

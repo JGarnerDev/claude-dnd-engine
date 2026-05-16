@@ -1,5 +1,7 @@
 ---
-name: "Session 06 — Rose, Thorn, and the Dungeon"
+
+
+name: "Session 06 Rose Thorn And The Dungeon"
 type: session
 exists: true
 state: completed
@@ -20,7 +22,8 @@ importance: major
 active: false
 description: "Attic explored. Rose and Thorn bound to party scrolls. Party descends to dungeon. Level up to 2. Walter Durst's backstory revealed by Thorn. Grick fight."
 
-# --- HISTORIAN ---
+# 
+--- HISTORIAN ---
 played_date: "2026-04-07"
 recap: "Animated broom fight in attic. Note found in bathroom: check the mirrors. Ben hurt himself punching the attic door (1 damage). Party found Rose and Thorn in the attic — searched dollhouse, discovered trapdoor to basement. Ben and Miguel wrote glyphs on scrolls. Rose bound to Ben's scroll (said thank you, happy to be taken). Thorn grabbed by Miguel. Paul danced with a mannequin, inspired. Descended to dungeon; leveled to 2. Paul chose Augury. Found Walter Durst's empty crypt. Thorn revealed Walter's origin story. Jeff spotted a key at well bottom; Miguel Mage Handed it; unlocked cultist chests. Grick fight (Jeff, Grick, Ben, Paul, Miguel)."
 entities_canonized:

@@ -1,4 +1,6 @@
 ---
+
+
 name: "Oghma"
 type: deity
 exists: false

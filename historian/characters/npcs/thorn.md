@@ -1,4 +1,6 @@
 ---
+
+
 name: "Thorn"
 type: character
 subtype: npc
@@ -13,7 +15,8 @@ location: [[Death House — Unknown]]
 personality: "Willing to share information. Revealed Walter's backstory when asked."
 livelihood: "Ghost — trapped in Death House"
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 aliases: []
 relates_to:
   - [[Rose]] (sister)
@@ -21,13 +24,10 @@ relates_to:
   - [[Elisabeth Durst]] (mother)
 importance: major
 active: true
-  - [[Entity Name]] (relationship)
+  
 description: "Thorn Durst. 8-year-old ghost. Son of the Durst family. Bound to Miguel's scroll in Session 6; stranded in Session 10."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-09"
----
+
 
 > **Reliability — Age:** Notes say "Thorn = 8, Rose = 11." High confidence.
 

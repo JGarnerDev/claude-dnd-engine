@@ -1,5 +1,7 @@
 ---
-name: "Yuan-Ti Pureblood"
+
+
+name: "Yuan Ti Pureblood"
 type: race
 exists: false
 state: monstrous

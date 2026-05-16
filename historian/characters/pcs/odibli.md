@@ -1,4 +1,6 @@
 ---
+
+
 name: "Odibli"
 type: character
 subtype: pc
@@ -15,20 +17,18 @@ class: "Wizard"
 background: "Unknown — likely Scholar or Sage"
 level: 3
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 aliases:
   - "ODB"
   - "Odi"
   - "Odible"
 importance: critical
 active: true
-  - [[Entity Name]] (relationship)
+  
 description: "Miguel's PC. Gnome Wizard; arcane academic with a fireplace obsession and adventuring as a bucket-list goal."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-09"
----
+
 
 > **Reliability — Name:** Notes spell the name several ways: "Odibli," "Odible," "ODB." ODB appears to be an in-table nickname. "Odibli" used in campaign record; confirm spelling with Miguel.
 

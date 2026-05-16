@@ -1,4 +1,6 @@
 ---
+
+
 name: "Jergal"
 type: deity
 exists: false

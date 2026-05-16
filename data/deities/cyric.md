@@ -1,4 +1,6 @@
 ---
+
+
 name: "Cyric"
 type: deity
 exists: false

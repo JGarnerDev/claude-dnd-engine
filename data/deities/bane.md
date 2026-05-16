@@ -1,4 +1,6 @@
 ---
+
+
 name: "Bane"
 type: deity
 exists: false

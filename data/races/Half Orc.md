@@ -1,5 +1,7 @@
 ---
-name: "Half-Orc"
+
+
+name: "Half Orc"
 type: race
 exists: false
 state: scattered

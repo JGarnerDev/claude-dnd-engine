@@ -1,5 +1,7 @@
 ---
-name: "Session 03 — The Face in the Fire"
+
+
+name: "Session 03 The Face In The Fire"
 type: session
 exists: true
 state: completed
@@ -18,7 +20,8 @@ importance: major
 active: false
 description: "Strahd appears in the fireplace of room 6. Animated armor kills Miguel and Jeff (temporarily). Jewelry found in master bedroom."
 
-# --- HISTORIAN ---
+# 
+--- HISTORIAN ---
 played_date: "2026-03-23"
 recap: "Miguel checked the fireplace in room 6 (his habit). Strahd appeared as a face in the flames — calm, composed, interested. Addressed the party without threat. Odibli sensed ancient, powerful magic. Strahd disappeared when the fire went out. Animated armor in the room attacked when Paul inspected it — killed Miguel and Jeff (downed them). Party ultimately defeated the armor. Jewelry found in master bedroom."
 cliffhanger: "Party continues deeper into Death House."

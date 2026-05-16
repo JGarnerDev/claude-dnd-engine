@@ -1,5 +1,7 @@
 ---
-name: "Strahd von Zarovich"
+
+
+name: "Strahd Von Zarovich"
 type: character
 subtype: npc
 exists: true
@@ -13,16 +15,14 @@ location: [[Barovia]]
 personality: "Composed, calm, ancient. Greets intruders like guests at a dinner party. Interested in the party but does not explain himself."
 livelihood: "Vampire lord and ruler of Barovia"
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 importance: critical
 active: true
-  - [[Entity Name]] (relationship)
+  
 description: "The vampire lord of Barovia. Central antagonist of the Curse of Strahd campaign."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-23"
----
+
 
 ## Appearance
 

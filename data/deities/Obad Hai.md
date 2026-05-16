@@ -1,5 +1,7 @@
 ---
-name: "Obad-Hai"
+
+
+name: "Obad Hai"
 type: deity
 exists: false
 state: active

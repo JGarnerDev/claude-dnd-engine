@@ -1,4 +1,6 @@
 ---
+
+
 name: "Session 01 The Black Sheep Inn"
 type: session
 exists: true
@@ -20,7 +22,8 @@ importance: major
 active: false
 description: "Party introductions at the Black Sheep Inn. Performance, supplies, ban. Arrival at Death House."
 
-# --- HISTORIAN ---
+# 
+--- HISTORIAN ---
 played_date: "2026-03-09"
 recap: "Party met at the Black Sheep Inn. Luci and Iggy performed together; tavern fed them, inspired them, and supplied them for the road. Paul threw a knife to outline a customer and hit them in the neck; Jeff healed with Healing Hands; party banned. Departed for Death House. Rose (11) and Thorn (8) spotted outside. Paul tried to climb in and fell (3 damage). Jeff kicked the door and sprained his leg (1 damage). Miguel noticed the door could just be opened."
 cliffhanger: "Party is inside Death House. What lies within?"

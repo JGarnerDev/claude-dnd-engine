@@ -1,4 +1,6 @@
 ---
+
+
 name: "Walter Durst"
 type: character
 subtype: npc
@@ -13,7 +15,8 @@ location: [[Death House — Basement Altar]]
 personality: "N/A — died as an infant"
 livelihood: "N/A — sacrificed as an infant"
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 aliases: []
 relates_to:
   - [[Gustav Durst]] (father)
@@ -21,13 +24,10 @@ relates_to:
   - [[Elisabeth Durst]] (ordered sacrifice)
 importance: minor
 active: false
-  - [[Entity Name]] (relationship)
+  
 description: "Walter Durst. Illegitimate son of Gustav Durst and the nursemaid. Sacrificed on the basement altar. Crypt found empty."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-04-07"
----
+
 
 > **Reliability:** Thorn's account in Session 6. Confirmed.
 

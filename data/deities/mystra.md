@@ -1,4 +1,6 @@
 ---
+
+
 name: "Mystra"
 type: deity
 exists: false

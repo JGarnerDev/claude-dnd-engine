@@ -1,4 +1,6 @@
 ---
+
+
 name: "Tyr"
 type: deity
 exists: false

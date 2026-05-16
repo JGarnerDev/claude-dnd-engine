@@ -1,4 +1,6 @@
 ---
+
+
 name: "Iggadreon Iggy Wallaed"
 type: character
 subtype: pc
@@ -15,25 +17,23 @@ class: "Bard"
 background: "Soldier"
 level: 3
 
-# --- OPTIONAL ---
+# 
+--- OPTIONAL ---
 aliases:
   - "Iggy"
 importance: critical
 active: true
-  - [[Entity Name]] (relationship)
+  
 description: "Jeff's PC. Gruff but light-hearted soldier-bard with copper-red Aasimar features."
 
-# --- HISTORIAN ---
-  - [[Entity Name]] (relationship)
-confirmed_date: "2026-03-09"
----
+
 
 ## Appearance
 
 Copper-red tones throughout — hair, skin. Human-adjacent in looks. Celestial heritage is subtle but present.
 
-Race: [[aasimar]]
-Class: [[bard]]
+Race: [[Aasimar]]
+Class: [[Bard]]
 
 > **Reliability:** Confirmed from player notes and session 1 introductions.
 

@@ -1,4 +1,6 @@
 ---
+
+
 name: "Mask"
 type: deity
 exists: false

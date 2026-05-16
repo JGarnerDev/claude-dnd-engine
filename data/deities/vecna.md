@@ -1,4 +1,6 @@
 ---
+
+
 name: "Vecna"
 type: deity
 exists: false

@@ -20,6 +20,8 @@ active: true
 description: "Active Curse of Strahd campaign; party at level 3 after completing Death House."
 ---
 
+> **DM note for Kellan:** This campaign file is the active campaign entity. Update the top-level fields, themes, and act structure here with your DM notes and current arc details as needed.
+
 ## Party
 
 | Player | Character | Race/Class | Status |

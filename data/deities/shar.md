@@ -1,4 +1,6 @@
 ---
+
+
 name: "Shar"
 type: deity
 exists: false
