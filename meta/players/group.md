@@ -2,7 +2,7 @@
 type: meta
 ---
 
-# Group Preferences
+# Group
 
 Shared preferences that apply to the whole table. Individual player preferences live in separate files in this folder and may add to or override these.
 

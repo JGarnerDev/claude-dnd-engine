@@ -123,6 +123,7 @@ If a user provides form answers (structured or freeform), use the **Form → Fro
 | A rumor or piece of circulating information | `meta/schemas/rumor.md` |
 | A playable or world race | `meta/schemas/race.md` |
 | A character class | `meta/schemas/class.md` |
+| A player (real-world, core or cameo) | `meta/schemas/player.md` |
 
 Each schema file also contains a **Player Form** section — a set of plain-language questions suitable to give directly to players when they want to create an entity.
 

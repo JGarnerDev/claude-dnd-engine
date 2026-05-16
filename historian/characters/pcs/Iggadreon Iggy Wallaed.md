@@ -1,6 +1,4 @@
 ---
-
-
 name: "Iggadreon Iggy Wallaed"
 type: character
 subtype: pc
@@ -24,7 +22,6 @@ importance: critical
 active: true
   
 description: "Jeff's PC. Gruff but light-hearted soldier-bard with copper-red Aasimar features."
-
 
 
 ## Appearance

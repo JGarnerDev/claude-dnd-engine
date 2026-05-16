@@ -1,10 +1,21 @@
 ---
-type: meta
-player: ""         # real name or handle
-character: [[]]  # wiki-link to their PC entity
+# --- MANDATORY ---
+name: ""
+role: core | cameo
+status: active | hiatus | retired
+
+# --- MANDATORY ---
+characters:
+  - [[PC Name]] (active | retired | dead)
+
+# --- OPTIONAL ---
+pronouns: ""
+availability: ""
+joined: [[Session NN - Title]]
+description: ""
 ---
 
-# Player Preferences — {Name}
+# {Name}
 
 ## What's Fun For Me
 <!-- Open-ended: what kinds of moments, scenes, or challenges do you enjoy most? -->
