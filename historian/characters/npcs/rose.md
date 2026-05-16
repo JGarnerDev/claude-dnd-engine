@@ -12,7 +12,7 @@ tags:
 location: [[Death House -Unknown]]
 personality: "Grateful, gentle. Relieved when bound to Ben's scroll. Said thank you and expressed happiness to be taken along."
 livelihood: "Ghost -trapped in Death House"
-
+disposition: friendly
 aliases: []
 relates_to:
   - [[Thorn]] (sister)

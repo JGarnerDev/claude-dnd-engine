@@ -8,11 +8,10 @@ exists: true
 state: dead
 tags:
   - character/npc
-
 location: [[Death House]]
 personality: "Consumed by jealousy. Ruthless — ordered the nursemaid killed and sacrificed her own infant."
 livelihood: "Former cult leader and wife of Gustav Durst"
-
+disposition: hostile
 aliases: []
 relates_to:
   - [[Gustav Durst]] (husband)

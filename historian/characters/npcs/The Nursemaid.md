@@ -12,6 +12,7 @@ tags:
 location: [[Death House -Area 15]]
 personality: "Unknown in life. In undeath: malevolent, attacks intruders."
 livelihood: "Specter -haunting Death House area 15"
+disposition: hostile
 
 aliases:
   - "The Specter"

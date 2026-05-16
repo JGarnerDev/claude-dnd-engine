@@ -11,6 +11,7 @@ tags:
 location: [[Death House -Unknown]]
 personality: "Willing to share information. Revealed Walter's backstory when asked."
 livelihood: "Ghost -trapped in Death House"
+disposition: friendly
 aliases: []
 relates_to:
   - [[Rose]] (sister)

@@ -11,6 +11,7 @@ tags:
 location: [[Barovia]]
 personality: "Composed, calm, ancient. Greets intruders like guests at a dinner party. Interested in the party but does not explain himself."
 livelihood: "Vampire lord and ruler of Barovia"
+disposition: hostile
 relates_to:
   - [[Curse of Strahd]] (campaign)
 importance: critical

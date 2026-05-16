@@ -8,11 +8,10 @@ exists: true
 state: dead
 tags:
   - character/npc
-
 location: [[Death House]]
 personality: "Unknown. Abandoned love for madness, according to Strahd's letter."
 livelihood: "Former cult master and lord of Death House"
-
+disposition: hostile
 aliases:
   - "The Master"
 relates_to:

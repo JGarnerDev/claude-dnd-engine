@@ -72,6 +72,7 @@ owner: [[Player Character Name]]
 description: ""
 
 # --- OPTIONAL (npc) ---
+disposition: hostile | neutral | friendly | unknown
 goals: []
 motives: []
 allies:
@@ -91,6 +92,7 @@ character_sheet: ""    # path to sheet file, or inline summary
 | Location | `location` |
 | Personality | `personality` |
 | How they make a living | `livelihood` |
+| Disposition toward party | `disposition` |
 | Goals | `goals` |
 | Motives | `motives` |
 | Friends | `allies` |

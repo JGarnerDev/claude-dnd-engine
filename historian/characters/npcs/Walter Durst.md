@@ -12,7 +12,7 @@ tags:
 location: [[Death House -Basement Altar]]
 personality: "N/A -died as an infant"
 livelihood: "N/A -sacrificed as an infant"
-
+disposition: unknown
 aliases: []
 relates_to:
   - [[Gustav Durst]] (father)
