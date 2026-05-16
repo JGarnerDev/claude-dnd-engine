@@ -7,11 +7,11 @@ Progress tracker for getting this project ready to generate sessions and run cam
 ## Schemas
 *These files exist as placeholders. They need actual campaign content before session generation will be meaningful.*
 
-- [ ] Make a biome schema (terrain types to shape flora, fauna, and logistics of a region)
-- [ ] Make a terrain feature schema (forests, rivers, roads, or anything on a map that effects the populations around them)
-- [ ] Make a natural resource schema (what locations consume, including abrstract location, rarity, accessibility, trade)
-- [ ] Make a culture schema (what certain peoples, factions, etc. from certain regions are generally shaped by)
-- [ ] Make a gameplay mechanic schema (mini games that can constitute a session/mission, make .claude\commands\session.md aware of it)
+- [x] Make a biome schema (terrain types to shape flora, fauna, and logistics of a region) — added `biome` enum field to `location-region.md`
+- [x] Make a terrain feature schema (forests, rivers, roads, or anything on a map that effects the populations around them) — `meta/schemas/location-terrain-feature.md`
+- [x] Make a natural resource schema (what locations consume, including abrstract location, rarity, accessibility, trade) — `meta/schemas/resource.md`
+- [x] Make a culture schema (what certain peoples, factions, etc. from certain regions are generally shaped by) — `meta/schemas/culture.md`
+- [x] Make a gameplay mechanic schema (mini games that can constitute a session/mission, make .claude\commands\session.md aware of it) — `meta/mechanics/_template.md`; session command updated
 
 ---
 

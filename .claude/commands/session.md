@@ -108,7 +108,7 @@ Using all context gathered, produce a session plan in chat. Follow the session s
 - **Closing hook** — how the session should end; the cliffhanger or question that sends players home wanting more
 - **Key locations** — where the session takes place; use `[[wiki-link]]` for any established entity
 - **Key NPCs** — who the players interact with; note if they are free (`data/`) or canon (`historian/`) entities
-- **Encounters** — any planned combat, social, or exploration encounters; note difficulty tier if relevant
+- **Encounters** — any planned combat, social, or exploration encounters; note difficulty tier if relevant. For non-standard encounter types (chase, puzzle, trade negotiation, performance, mini-game), check `meta/mechanics/` for an applicable mechanic file.
 - **Loose threads to address** — any unresolved promises, player action items, or dangling beats from previous sessions
 
 Apply the free entity rule: if the session requires an entity that doesn't exist in `data/` or `historian/`, **stop and flag it** rather than silently inventing one. Ask the DM whether to create it or proceed differently.

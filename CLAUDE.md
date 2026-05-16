@@ -126,6 +126,13 @@ If a user provides form answers (structured or freeform), use the **Form → Fro
 | A playable or world race | `meta/schemas/race.md` |
 | A character class | `meta/schemas/class.md` |
 | A player (real-world, core or cameo) | `meta/schemas/player.md` |
+| A terrain feature (river, road, mountain range, pass, lake) | `meta/schemas/location-terrain-feature.md` |
+| A natural resource (ore, timber, trade good, arcane material) | `meta/schemas/resource.md` |
+| A culture (customs, values, and practices of a people) | `meta/schemas/culture.md` |
+
+### Gameplay Mechanics
+
+Gameplay mechanics (mini-games, structured encounter types) live in `meta/mechanics/`. Use `meta/mechanics/_template.md` as the starting point for new mechanic files. These are GM design tools — they have no `type`, `exists`, or `state` fields and follow no entity protocol. The `/session` command checks `meta/mechanics/` for applicable mini-games when building non-standard encounters (chase, puzzle, trade, performance, etc.).
 
 Each schema file also contains a **Player Form** section — a set of plain-language questions suitable to give directly to players when they want to create an entity.
 
