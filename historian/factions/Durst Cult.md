@@ -5,14 +5,12 @@ exists: true
 state: dissolved
 tags:
   - faction
-
 locations:
   - [[Death House]]
 purpose: religious
 importance: major
 active: false
 description: "A death cult founded by Gustav and Elisabeth Durst in the basement of Death House. Worshipped a dark presence within the walls. Dissolved after Death House was cleared in Session 10."
-
 rulership: [[Gustav Durst]]
 motives:
   - Appease the dark presence in the walls of Death House
@@ -26,7 +24,6 @@ allies:
   - [[Domain of Barovia]] (ambient — operating within the domain, tolerated or unnoticed by Strahd)
 opposition:
   - [[The Party]] (cleared Death House, ending the cult's last remnant activity)
-
 source_session: [[Session 02 Into Death House]]
 confirmed_date: "unknown"
 supersedes: [[data/factions/Durst Cult]]

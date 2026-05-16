@@ -5,14 +5,12 @@ exists: true
 state: active
 tags:
   - faction
-
 locations:
   - [[Barovia]]
 purpose: political
 importance: critical
 active: true
 description: "The political domain of Barovia, ruled absolutely by Strahd Von Zarovich. All within the mists answer to him, whether they know it or not."
-
 rulership: [[Strahd Von Zarovich]]
 motives:
   - Maintain absolute control of the domain
@@ -24,7 +22,6 @@ hierarchy: "Absolute monarchy. Strahd is the sole authority. Below him: the Boya
 livelihood: "Taxation and tribute from the villages within the domain"
 opposition:
   - [[Durst Cult]] (historical; tolerated while useful, now defunct)
-
 source_session: [[Session 01 The Black Sheep Inn]]
 confirmed_date: "unknown"
 supersedes: [[data/factions/Barovia]]
