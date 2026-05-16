@@ -8,9 +8,9 @@ tags:
   - location/dungeon
   - campaign/curse-of-strahd
 
-location: [[Barovia — Village Outskirts]]
+location: [[Barovia â€” Village Outskirts]]
 origin: "Built and corrupted by the Durst family and their death cult"
-current_threat: "None — party cleared it in Session 10. Unknown if it repopulates."
+current_threat: "None â€” party cleared it in Session 10. Unknown if it repopulates."
 hook: "Rose and Thorn lured travelers inside. Cult altar required a sacrifice to allow escape."
 
 # --- OPTIONAL ---
@@ -50,7 +50,7 @@ A four-story haunted manor with a dungeon basement, just outside the village of 
 - **Nursery mirror** (Session 4): Visions of nursemaid/Gustav affair, Walter's birth, and nursemaid's murder.
 - **Walter Durst's crypt** (Session 6): Empty. Thorn revealed the full backstory.
 - **Cult leader quarters** (Session 8): Cloak of protection, 4 healing potions, chain shirt, mess kit, alchemist's fire, bullseye lantern, thieves' tools, yellow leather spellbook (spells listed in Session 8 record).
-- **Cult relics** (Session 10): 13 ritual items in niches — see Session 10 record.
+- **Cult relics** (Session 10): 13 ritual items in niches â€” see Session 10 record.
 - **Orb on statue** (Session 10): Smashed by Odibli. Contained shadow essence that he absorbed to revive the party.
 
 ## Enemies Encountered
@@ -59,7 +59,7 @@ A four-story haunted manor with a dungeon basement, just outside the village of 
 - Animated broom (Session 6)
 - Specter / Nursemaid (Session 5)
 - Grick (Session 6)
-- Ghouls x4 (Session 7) — 2 fled, found again Session 8
+- Ghouls x4 (Session 7) â€” 2 fled, found again Session 8
 - Mimic (Session 7)
 - Ghasts x? (Session 8, broke from walls)
 - Shadows (Session 9)

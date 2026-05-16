@@ -1,5 +1,5 @@
 ---
-name: "Session 04 — The Nursery Mirror"
+name: "Session 04 â€” The Nursery Mirror"
 type: session
 exists: true
 state: completed
@@ -11,7 +11,7 @@ session_number: 4
 mission: [[Death House]]
 planned_date: "2026-03-30"
 locations:
-  - [[Death House — Floor 3]]
+  - [[Death House â€” Floor 3]]
 key_npcs:
   - [[The Nursemaid]] (vision)
   - [[Gustav Durst]] (vision)
@@ -38,7 +38,7 @@ entities_canonized:
 ### Nursery Mirror Visions (Jeff)
 Three scenes in sequence:
 1. Nursemaid and master of the house (Gustav Durst) kissing
-2. A stillborn child born (in an adjoining room — per Jeff's relay to Miguel: "baby born in maybe an adjoining room")
+2. A stillborn child born (in an adjoining room â€” per Jeff's relay to Miguel: "baby born in maybe an adjoining room")
 3. The nursemaid killed horrifically by a cult in the same nursery room
 
 Jeff relayed to Miguel: "Couple kissed on bed. Baby born in maybe an adjoining room. Killed by the fireplace."
@@ -48,7 +48,7 @@ Jeff relayed to Miguel: "Couple kissed on bed. Baby born in maybe an adjoining r
 ### Cursed Bed
 Jeff checks and then kicks the bed. Becomes ensnared (restrained). Paul uses sun spell (unidentified) to free him. While getting out, Jeff experiences a flashback: he is a writer, musician, poet, good with a sword, a protector.
 
-> **Reliability — Flashback:** Unclear if this is Jeff's own backstory bubbling up, or a curse/imprint from the bed. DM to clarify.
+> **Reliability â€” Flashback:** Unclear if this is Jeff's own backstory bubbling up, or a curse/imprint from the bed. DM to clarify.
 
 ### Paul's Character Backstory (Session Disclosure)
 Luci is the embodiment of light. She was ripped from her home light dimension and thrown to the material plane. Without the infinite temple structure, she is in a permanent near-seasonal-disorder. A scourge aasimar who has made pacts with unnamed beings. Party does not know the details.

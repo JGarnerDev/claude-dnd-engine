@@ -30,7 +30,7 @@ confirmed_date: "2026-03-09"
 
 ## Appearance
 
-Copper-red tones throughout — hair, skin. Human-adjacent in looks. Celestial heritage is subtle but present.
+Copper-red tones throughout â€” hair, skin. Human-adjacent in looks. Celestial heritage is subtle but present.
 
 Race: [[aasimar]]
 Class: [[bard]]
@@ -43,16 +43,16 @@ Gruff but light-hearted. Wants to be a hero and get out into the world. History-
 
 ## Abilities (Noted in Play)
 
-- Violin and voice — uses music as spellwork
+- Violin and voice â€” uses music as spellwork
 - Rapier (soldier background)
 - Healing Hands (Aasimar racial)
-- **Shazzam** — triggers whenever Iggy says the word. Heals one random party member 1 HP. Cannot be suppressed. Established Session 0/1.
+- **Shazzam** â€” triggers whenever Iggy says the word. Heals one random party member 1 HP. Cannot be suppressed. Established Session 0/1.
 
 ## Backstory (from Session 1 Intro)
 
-Came to the area a year ago. Has been working with the local militia since. Wants to be a hero and adventure. Musician and soldier combined — violin and rapier. History is a real focus.
+Came to the area a year ago. Has been working with the local militia since. Wants to be a hero and adventure. Musician and soldier combined â€” violin and rapier. History is a real focus.
 
-> **Reliability:** Stated by player in Session 1. Flagged as incomplete — full backstory was listed as an action item and may not have been submitted.
+> **Reliability:** Stated by player in Session 1. Flagged as incomplete â€” full backstory was listed as an action item and may not have been submitted.
 
 ## Current Affliction
 

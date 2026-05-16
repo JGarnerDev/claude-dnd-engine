@@ -9,9 +9,9 @@ tags:
   - location/death-house
   - campaign/curse-of-strahd
 
-location: [[Death House — Basement Altar]]
-personality: "N/A — died as an infant"
-livelihood: "N/A — sacrificed as an infant"
+location: [[Death House â€” Basement Altar]]
+personality: "N/A â€” died as an infant"
+livelihood: "N/A â€” sacrificed as an infant"
 
 # --- OPTIONAL ---
 aliases: []
@@ -31,7 +31,7 @@ confirmed_date: "2026-04-07"
 
 > **Reliability:** Thorn's account in Session 6. Confirmed.
 
-> **Reliability — Stillborn vs sacrificed:** Strahd's letter (Session 2) says "sired a stillborn son." Thorn's account (Session 6) implies the cult sacrificed him. These may both be true (born dead and then used ritually) or one may be inaccurate. Flag for DM.
+> **Reliability â€” Stillborn vs sacrificed:** Strahd's letter (Session 2) says "sired a stillborn son." Thorn's account (Session 6) implies the cult sacrificed him. These may both be true (born dead and then used ritually) or one may be inaccurate. Flag for DM.
 
 ## Background
 

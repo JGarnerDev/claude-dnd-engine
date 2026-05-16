@@ -1,5 +1,5 @@
 ---
-name: "Session 10 — Escape from Death House"
+name: "Session 10 â€” Escape from Death House"
 type: session
 exists: true
 state: completed
@@ -11,8 +11,8 @@ session_number: 10
 mission: [[Death House]]
 planned_date: "2026-05-12"
 locations:
-  - [[Death House — Dungeon]]
-  - [[Barovia — Village Outskirts]]
+  - [[Death House â€” Dungeon]]
+  - [[Barovia â€” Village Outskirts]]
 key_npcs:
   - [[Strahd von Zarovich]] (greets party)
   - [[Rose]] (stranded)
@@ -23,13 +23,13 @@ description: "Odibli smashes the orb and revives the party at personal cost. Cul
 
 # --- HISTORIAN ---
 played_date: "2026-05-12"
-recap: "Dip and Iggy were dead from Session 9. Odibli felt the stolen orb was familiar, recognized something in it, and smashed it against the wall. During his long rest, he performed a ritual — absorbed shadow essence from the room, reviving the dead party members. But the cost was: Odibli's veins turned black beneath his skin. Ben now hears whispers when it is quiet. Jeff's shadow no longer matches his form and moves in the wrong direction. Party is at half max HP for the duration of their time in the dungeon. Party found 13 cult relics and catalogued the southern tunnel. In the cult ritual room, Luci sacrificed herself on the altar to save the rest of the party. The mists carried everyone away. Rose and Thorn tried to fight the departure — Ben and Miguel left the scroll pages behind, stranding both children. Strahd greeted the party outside Death House. Thanked and congratulated them. Retrieved Luci from death. Party leveled to 3."
+recap: "Dip and Iggy were dead from Session 9. Odibli felt the stolen orb was familiar, recognized something in it, and smashed it against the wall. During his long rest, he performed a ritual â€” absorbed shadow essence from the room, reviving the dead party members. But the cost was: Odibli's veins turned black beneath his skin. Ben now hears whispers when it is quiet. Jeff's shadow no longer matches his form and moves in the wrong direction. Party is at half max HP for the duration of their time in the dungeon. Party found 13 cult relics and catalogued the southern tunnel. In the cult ritual room, Luci sacrificed herself on the altar to save the rest of the party. The mists carried everyone away. Rose and Thorn tried to fight the departure â€” Ben and Miguel left the scroll pages behind, stranding both children. Strahd greeted the party outside Death House. Thanked and congratulated them. Retrieved Luci from death. Party leveled to 3."
 cliffhanger: "The party is outside Death House in Barovia proper. Strahd has greeted them. Rose and Thorn are stranded somewhere inside. The mists surround everything."
 entities_canonized:
   - [[Strahd von Zarovich]]
 new_entities:
-  - "Shadow affliction — Jeff"
-  - "Whisper affliction — Dip"
+  - "Shadow affliction â€” Jeff"
+  - "Whisper affliction â€” Dip"
 ---
 
 ## Session Notes
@@ -38,13 +38,13 @@ new_entities:
 Dip (Ben) and Iggy (Jeff) are dead from the shadows in Session 9.
 
 ### Odibli Smashes the Orb
-Odibli felt the orb pulled from the statue was familiar — recognized something in it. Smashed it against the wall.
+Odibli felt the orb pulled from the statue was familiar â€” recognized something in it. Smashed it against the wall.
 
 **DM narration of the smash:**
-> *"As you press your hands to the rune, you feel something tear inside your chest — not pain exactly, but loss. Like exhaling a breath you can never take back. Dark energy flows up through the stone floor, through the rune, and into your arms. Your veins turn black beneath your skin. The shadows the party destroyed — their essence, still lingering in the room — are pulled toward you like smoke drawn into a chimney. It passes through you and into Ben and Jeff. You feel weaker. Diminished. But their chests start moving again."*
+> *"As you press your hands to the rune, you feel something tear inside your chest â€” not pain exactly, but loss. Like exhaling a breath you can never take back. Dark energy flows up through the stone floor, through the rune, and into your arms. Your veins turn black beneath your skin. The shadows the party destroyed â€” their essence, still lingering in the room â€” are pulled toward you like smoke drawn into a chimney. It passes through you and into Ben and Jeff. You feel weaker. Diminished. But their chests start moving again."*
 
 **DM narration for Ben and Jeff waking:**
-> *"You open your eyes. The last thing you remember is the cold. You feel... present, but not whole. Like waking from a dream you can't remember but that left you unsettled. Your body responds, but everything feels slightly delayed, slightly numb. And somewhere beneath your thoughts, quiet and easy to ignore for now, there's a pull — toward something you can't name."*
+> *"You open your eyes. The last thing you remember is the cold. You feel... present, but not whole. Like waking from a dream you can't remember but that left you unsettled. Your body responds, but everything feels slightly delayed, slightly numb. And somewhere beneath your thoughts, quiet and easy to ignore for now, there's a pull â€” toward something you can't name."*
 
 ### Afflictions Onset
 - **Ben (Dip):** Hears whispers when it is quiet

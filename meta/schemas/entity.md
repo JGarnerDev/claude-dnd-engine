@@ -62,6 +62,8 @@ supersedes: [[data/path/to/entity]]      # data/ draft this entry replaces
 
 - Every entity file must open with a YAML frontmatter block (`---`).
 - `name` must match the filename (spaces replaced with hyphens, lowercase).
+- `name` must also be the entity’s exact canonical display name, with correct spelling, punctuation, and capitalization.
+- Entity names and wiki-links must contain no broken characters, stray quotes, or malformed punctuation.
 - `exists` mirrors the file's location: `data/` entities are `false`, `historian/` entities are `true`. Both must agree.
 - `relates_to`, `resources`, `known_by`, and `owner` must use `[[wiki-link]]` syntax so Obsidian graph edges are preserved. Relationship annotations after the link are allowed.
 - `tags` should follow a `category/specific` hierarchy for Obsidian nested tag support.
