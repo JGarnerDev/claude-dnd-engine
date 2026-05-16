@@ -19,6 +19,12 @@ These principles govern how Claude should think and reason during any worldbuild
 
 ### Culture
 
+- Culture needs to address five forces:
+    - environment
+    - exchange
+    - power
+    - legacy
+    - belief
 - Culture is derived from six layers that build on top of each other:
     - Survival strategies and material culture
     - Social Organization
