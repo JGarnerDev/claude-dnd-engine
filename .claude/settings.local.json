@@ -35,7 +35,23 @@
       "Bash(Remove-Item \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\meta\\\\players\\\\group.md\")",
       "PowerShell(Rename-Item *)",
       "Skill(obsidian-markdown)",
-      "Bash(grep -v \"^d.*\\\\.$\")"
+      "Bash(grep -v \"^d.*\\\\.$\")",
+      "Bash(git *)",
+      "Bash(gh auth *)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:\\Program Files\\nodejs\\node.exe\" \"C:\\Users\\Jeff\\.claude\\hooks\\template-sync-notify.js\"",
+            "timeout": 10
+          }
+        ]
+      }
     ]
   }
 }
