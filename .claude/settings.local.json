@@ -19,7 +19,15 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(gh repo *)",
       "PowerShell(irm https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1 | iex)",
-      "PowerShell($tmp = \"$env:TEMP\\\\caveman-install.ps1\"; Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1\" -OutFile $tmp; & $tmp)"
+      "PowerShell($tmp = \"$env:TEMP\\\\caveman-install.ps1\"; Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1\" -OutFile $tmp; & $tmp)",
+      "WebFetch(domain:gist.github.com)",
+      "Bash(gh gist *)",
+      "Bash(curl -s \"https://api.github.com/gists/adeec519e9c763ea62a1c80dcd26963a\")",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(f['content']\\) for f in data.get\\('files',{}\\).values\\(\\)]\")",
+      "WebFetch(domain:foambubble.github.io)",
+      "WebFetch(domain:docs.foamnotes.com)",
+      "Bash(node *)",
+      "Bash(git check-ignore *)"
     ]
   }
 }

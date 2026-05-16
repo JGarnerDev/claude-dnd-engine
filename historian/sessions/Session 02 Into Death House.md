@@ -1,6 +1,4 @@
 ---
-
-
 name: "Session 02 Into Death House"
 type: session
 exists: true

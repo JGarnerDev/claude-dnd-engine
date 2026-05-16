@@ -1,106 +1,41 @@
 {
   "colorGroups": [
-    {
-      "query": "path:data/classes",
-      "color": {
-        "a": 1,
-        "rgb": 206139216
-      }
-    },
-    {
-      "query": "path:data/races",
-      "color": {
-        "a": 1,
-        "rgb": 77208225
-      }
-    },
-    {
-      "query": "path:data/deities",
-      "color": {
-        "a": 1,
-        "rgb": 255213079
-      }
-    },
-    {
-      "query": "path:data/characters/npcs",
-      "color": {
-        "a": 1,
-        "rgb": 255138101
-      }
-    },
-    {
-      "query": "path:data/characters/pcs",
-      "color": {
-        "a": 1,
-        "rgb": 239083080
-      }
-    },
-    {
-      "query": "path:data/factions",
-      "color": {
-        "a": 1,
-        "rgb": 171071188
-      }
-    },
-    {
-      "query": "path:data/locations",
-      "color": {
-        "a": 1,
-        "rgb": 102187106
-      }
-    },
-    {
-      "query": "path:data/items",
-      "color": {
-        "a": 1,
-        "rgb": 255167038
-      }
-    },
-    {
-      "query": "path:data/events",
-      "color": {
-        "a": 1,
-        "rgb": 236064122
-      }
-    },
-    {
-      "query": "path:data/rumors",
-      "color": {
-        "a": 1,
-        "rgb": 120144156
-      }
-    },
-    {
-      "query": "path:historian/sessions",
-      "color": {
-        "a": 1,
-        "rgb": 255202040
-      }
-    },
-    {
-      "query": "path:historian",
-      "color": {
-        "a": 1,
-        "rgb": 79195247
-      }
-    },
-    {
-      "query": "path:scheduler",
-      "color": {
-        "a": 1,
-        "rgb": 212225087
-      }
-    },
-    {
-      "query": "path:meta",
-      "color": {
-        "a": 1,
-        "rgb": 144164174
-      }
-    }
+    { "query": "path:data/characters/pcs", "color": { "a": 1, "rgb": 255215000 } },
+    { "query": "path:historian/characters/pcs", "color": { "a": 1, "rgb": 255215000 } },
+    { "query": "path:data/characters/npcs", "color": { "a": 1, "rgb": 255160060 } },
+    { "query": "path:historian/characters/npcs", "color": { "a": 1, "rgb": 255160060 } },
+    { "query": "path:data/creatures", "color": { "a": 1, "rgb": 150220080 } },
+    { "query": "path:historian/creatures", "color": { "a": 1, "rgb": 150220080 } },
+    { "query": "path:data/locations", "color": { "a": 1, "rgb": 80185095 } },
+    { "query": "path:historian/locations", "color": { "a": 1, "rgb": 80185095 } },
+    { "query": "path:data/factions", "color": { "a": 1, "rgb": 160080200 } },
+    { "query": "path:historian/factions", "color": { "a": 1, "rgb": 160080200 } },
+    { "query": "path:data/events", "color": { "a": 1, "rgb": 220050070 } },
+    { "query": "path:historian/events", "color": { "a": 1, "rgb": 220050070 } },
+    { "query": "path:data/items/magic", "color": { "a": 1, "rgb": 60210205 } },
+    { "query": "path:historian/items/magic", "color": { "a": 1, "rgb": 60210205 } },
+    { "query": "path:data/items", "color": { "a": 1, "rgb": 100180215 } },
+    { "query": "path:historian/items", "color": { "a": 1, "rgb": 100180215 } },
+    { "query": "path:data/deities", "color": { "a": 1, "rgb": 255235135 } },
+    { "query": "path:historian/deities", "color": { "a": 1, "rgb": 255235135 } },
+    { "query": "path:data/rumors", "color": { "a": 1, "rgb": 140150165 } },
+    { "query": "path:historian/rumors", "color": { "a": 1, "rgb": 140150165 } },
+    { "query": "path:data/classes", "color": { "a": 1, "rgb": 195135220 } },
+    { "query": "path:historian/classes", "color": { "a": 1, "rgb": 195135220 } },
+    { "query": "path:data/races", "color": { "a": 1, "rgb": 180135090 } },
+    { "query": "path:historian/sessions", "color": { "a": 1, "rgb": 255200025 } },
+    { "query": "path:historian/missions", "color": { "a": 1, "rgb": 200140080 } },
+    { "query": "path:scheduler/missions", "color": { "a": 1, "rgb": 255140045 } },
+    { "query": "path:scheduler/acts", "color": { "a": 1, "rgb": 200075175 } },
+    { "query": "path:scheduler/campaign", "color": { "a": 1, "rgb": 240090060 } },
+    { "query": "path:scheduler", "color": { "a": 1, "rgb": 170235085 } },
+    { "query": "path:historian", "color": { "a": 1, "rgb": 60180240 } },
+    { "query": "path:meta", "color": { "a": 1, "rgb": 135155168 } }
   ],
   "forces": {
-    "repel": 100,
-    "linkDistance": 0
+    "repel": 150,
+    "linkDistance": 80,
+    "centerStrength": 0.3,
+    "linkStrength": 1
   }
 }

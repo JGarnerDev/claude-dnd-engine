@@ -1,6 +1,4 @@
 ---
-
-
 name: "Death House"
 type: location
 subtype: dungeon

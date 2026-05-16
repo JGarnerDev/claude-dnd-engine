@@ -1,6 +1,4 @@
 ---
-
-
 name: "Session 03 The Face In The Fire"
 type: session
 exists: true

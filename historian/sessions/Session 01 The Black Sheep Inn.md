@@ -1,6 +1,4 @@
 ---
-
-
 name: "Session 01 The Black Sheep Inn"
 type: session
 exists: true
