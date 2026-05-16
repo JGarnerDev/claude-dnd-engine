@@ -9,9 +9,9 @@ state: dead
 tags:
   - character/npc
 
-location: [[Death House — Area 15]]
+location: [[Death House Ã¢â‚¬â€ Area 15]]
 personality: "Unknown in life. In undeath: malevolent, attacks intruders."
-livelihood: "Specter — haunting Death House area 15"
+livelihood: "Specter Ã¢â‚¬â€ haunting Death House area 15"
 
 aliases:
   - "The Specter"
@@ -25,20 +25,23 @@ importance: major
 active: false
   
 description: "The nursemaid of Death House. Had an affair with Gustav Durst and bore Walter. Killed by Elisabeth Durst's cult. Now haunts the house as a specter."
+---
 
-> **Reliability — Name:** No personal name appears in the notes. Referred to only as "the nursemaid" or "the specter." Confirm name with DM.
+> **Reliability Ã¢â‚¬â€ Name:** No personal name appears in the notes. Referred to only as "the nursemaid" or "the specter." Confirm name with DM.
 
-> **Reliability — Identity:** Thorn revealed in Session 6 that the specter in area 15 is the nursemaid. The party encountered the specter in Session 5 before knowing this. Connection confirmed.
+> **Reliability Ã¢â‚¬â€ Identity:** Thorn revealed in Session 6 that the specter in area 15 is the nursemaid. The party encountered the specter in Session 5 before knowing this. Connection confirmed.
+
+Location: [[Death House Ã¢â‚¬â€ Area 15]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 
-Employed as nursemaid in the Durst household. Had an affair with Gustav Durst and bore his illegitimate son, Walter. Walter was born stillborn (or sacrificed immediately at birth — notes ambiguous). Elisabeth Durst discovered the affair, was consumed by jealousy, and ordered the nursemaid killed by the cult.
+Employed as nursemaid in the Durst household. Had an affair with Gustav Durst and bore his illegitimate son, Walter. Walter was born stillborn (or sacrificed immediately at birth Ã¢â‚¬â€ notes ambiguous). Elisabeth Durst discovered the affair, was consumed by jealousy, and ordered the nursemaid killed by the cult.
 
 The nursemaid now haunts Death House as a specter.
 
 ## Appearance (from Ben's Session 5 Description)
 
-Tallish, medium build. Slim. Fast moving but also mysteriously slow. Hair all over — or just blurry. Hard to make out clearly.
+Tallish, medium build. Slim. Fast moving but also mysteriously slow. Hair all over Ã¢â‚¬â€ or just blurry. Hard to make out clearly.
 
 ## Session History
 

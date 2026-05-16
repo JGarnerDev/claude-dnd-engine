@@ -27,13 +27,14 @@ importance: major
 active: false
   
 description: "Gustav Durst. Former master of Death House and cult leader. Deceased."
+---
 
 
 > **Reliability:** Name confirmed from Session 6 (Thorn's account). Other details from Strahd's letter (Session 2) and nursery mirror vision (Session 4).
 
 ## Background
 
-Lord of the Durst household and leader of the death cult that operated in Death House. Had an affair with the nursemaid, producing an illegitimate stillborn son (Walter). His wife Elisabeth discovered the affair and her jealousy helped fuel the cult's darker activities.
+Lord of the Durst household and leader of the [[Durst Cult]] that operated in [[Death House]]. Campaign: [[Curse of Strahd]]. Had an affair with the nursemaid, producing an illegitimate stillborn son (Walter). His wife Elisabeth discovered the affair and her jealousy helped fuel the cult's darker activities.
 
 Strahd's letter to the Dursts (found in Session 2) was addressed to Gustav directly: *"You abandoned love for madness, took solace in the bosom of another woman, and sired a stillborn son. Cursed by darkness? Of that I have no doubt."*
 

@@ -15,6 +15,8 @@ active: true
 description: "Placeholder act entity for Kellan to fill in DM notes, mission structure, and act goals."
 ---
 
+Campaign: [[Curse of Strahd]]
+
 # Kellan: DM Notes
 
 This act is a placeholder designed for you to record the arc, stakes, and story beats.

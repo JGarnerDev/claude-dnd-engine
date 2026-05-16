@@ -2,17 +2,20 @@
 name: "Jeff"
 role: core
 status: active
-
+group: 
+  - [[players/group]]
 characters:
   - [[Iggadreon Iggy Wallaed]] (active)
-
 pronouns: ""
 availability: ""
 joined: [[Session 01 The Black Sheep Inn]]
 description: "Core player since Session 1. Plays Iggy, the gruff soldier-bard Aasimar."
 ---
 
-# Jeff
+# Jeff 
+
+
+Group: [[players/group]] | Character: [[Iggadreon Iggy Wallaed]] | Joined: [[Session 01 The Black Sheep Inn]]
 
 ## What's Fun For Me
 <!-- Open-ended: what kinds of moments, scenes, or challenges do you enjoy most? -->

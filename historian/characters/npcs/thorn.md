@@ -9,9 +9,9 @@ state: missing
 tags:
   - character/npc
 
-location: [[Death House — Unknown]]
+location: [[Death House Ã¢â‚¬â€ Unknown]]
 personality: "Willing to share information. Revealed Walter's backstory when asked."
-livelihood: "Ghost — trapped in Death House"
+livelihood: "Ghost Ã¢â‚¬â€ trapped in Death House"
 
 aliases: []
 relates_to:
@@ -24,12 +24,15 @@ importance: major
 active: true
   
 description: "Thorn Durst. 8-year-old ghost. Son of the Durst family. Bound to Miguel's scroll in Session 6; stranded in Session 10."
+---
 
 
 
-> **Reliability — Age:** Notes say "Thorn = 8, Rose = 11." High confidence.
+> **Reliability Ã¢â‚¬â€ Age:** Notes say "Thorn = 8, Rose = 11." High confidence.
 
-> **Reliability — State:** Notes say Ben and Miguel "left the pages" when the mists carried the party out in Session 10. Stranded — fate unknown.
+> **Reliability Ã¢â‚¬â€ State:** Notes say Ben and Miguel "left the pages" when the mists carried the party out in Session 10. Stranded Ã¢â‚¬â€ fate unknown.
+
+Location: [[Death House Ã¢â‚¬â€ Unknown]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 
@@ -43,7 +46,7 @@ In Session 6, Thorn explained Walter's origins:
 - Walter was the illegitimate child of Gustav Durst and the nursemaid
 - Elisabeth Durst discovered the affair and was consumed by jealousy
 - The Durst-led cult sacrificed baby Walter on the basement altar
-- Elisabeth had the nursemaid killed — the nursemaid became the specter in area 15
+- Elisabeth had the nursemaid killed Ã¢â‚¬â€ the nursemaid became the specter in area 15
 
 ## Session History
 

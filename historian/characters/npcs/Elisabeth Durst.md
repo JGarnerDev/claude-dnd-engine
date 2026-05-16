@@ -27,10 +27,10 @@ active: false
   
 description: "Elisabeth Durst. Gustav's wife. Discovered his affair, ordered the nursemaid killed, and sacrificed baby Walter on the basement altar. Deceased."
 
-
+---
 
 > **Reliability:** Thorn's account in Session 6. Treated as confirmed.
 
 ## Background
 
-Wife of Gustav Durst and co-leader (or driver) of the death cult in Death House. When she discovered her husband's affair with the nursemaid and the existence of Walter, she was consumed by jealousy. She organized the sacrifice of baby Walter on the basement altar and had the nursemaid killed — who now haunts the house as a specter.
+Wife of Gustav Durst and co-leader (or driver) of the death cult in [[Death House]]. A member of the [[Durst Cult]]. Campaign: [[Curse of Strahd]]. When she discovered her husband's affair with the nursemaid and the existence of Walter, she was consumed by jealousy. She organized the sacrifice of baby Walter on the basement altar and had the nursemaid killed — who now haunts the house as a specter.

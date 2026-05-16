@@ -3,6 +3,8 @@ name: "Paul"
 role: core
 status: active
 
+group: [[group]]
+
 characters:
   - [[Luci]] (active)
 
@@ -13,6 +15,8 @@ description: "Core player since Session 1. Plays Luci, the restless Scourge Aasi
 ---
 
 # Paul
+
+Group: [[players/group]] | Character: [[Luci]] | Joined: [[Session 01 The Black Sheep Inn]]
 
 ## What's Fun For Me
 <!-- Open-ended: what kinds of moments, scenes, or challenges do you enjoy most? -->

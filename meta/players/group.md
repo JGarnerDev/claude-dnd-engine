@@ -1,10 +1,18 @@
 ---
 type: meta
+description: "Shared table preferences for the current campaign."
+players:
+  - [[Jeff]]
+  - [[Paul]]
+  - [[Ben]]
+  - [[Miguel]]
 ---
 
 # Group
 
 Shared preferences that apply to the whole table. Individual player preferences live in separate files in this folder and may add to or override these.
+
+Members: [[Jeff]], [[Paul]], [[Ben]], [[Miguel]]
 
 ## What the Table Enjoys
 <!-- Kinds of sessions, moments, or story beats the whole group has responded well to. -->
