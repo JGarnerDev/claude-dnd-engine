@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Entity Schema
 
 The base schema for every file in this campaign engine. All entities — regardless of type or subtype — must include this frontmatter. Type and subtype schemas extend this; they do not replace it.

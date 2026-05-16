@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Location — Dungeon Schema
 
 Extends: `entity.md`

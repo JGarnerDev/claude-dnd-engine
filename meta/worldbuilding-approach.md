@@ -1,5 +1,6 @@
 ---
 type: meta
+tags: [guideline]
 ---
 
 # Worldbuilding Approach

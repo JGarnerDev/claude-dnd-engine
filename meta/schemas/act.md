@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Act Schema
 
 An act is a story arc — a collection of thematically connected missions that build toward a major turning point. Think of it as a chapter: it has an opening state, a closing state, and a clear change between them.

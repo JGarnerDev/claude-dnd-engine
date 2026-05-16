@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Rumor Schema
 
 Extends: `entity.md`

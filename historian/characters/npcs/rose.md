@@ -33,7 +33,7 @@ description: "Rose Durst. 11-year-old ghost. Daughter of the Durst family. Bound
 
 > **Reliability -State:** Notes say Ben and Miguel "left the pages" when the mists carried the party out in Session 10. Rose and Thorn "try to fight to not be left behind." Stranded -fate after that point unknown.
 
-Location: [[Death House -Unknown]] | Campaign: [[Curse of Strahd]]
+Location: [[Death House]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 

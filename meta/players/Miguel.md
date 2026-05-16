@@ -7,6 +7,7 @@ characters:
 pronouns: ""
 availability: ""
 description: "Core player since Session 1. Plays Odibli (ODB), the bookish Gnome Wizard on his bucket-list adventure."
+tags: [guideline]
 ---
 
 # Miguel

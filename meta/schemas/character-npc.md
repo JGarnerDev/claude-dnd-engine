@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Character — NPC Schema
 
 Extends: `entity.md`

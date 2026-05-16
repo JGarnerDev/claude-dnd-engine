@@ -32,7 +32,7 @@ description: "Thorn Durst. 8-year-old ghost. Son of the Durst family. Bound to M
 
 > **Reliability -State:** Notes say Ben and Miguel "left the pages" when the mists carried the party out in Session 10. Stranded -fate unknown.
 
-Location: [[Death House -Unknown]] | Campaign: [[Curse of Strahd]]
+Location: [[Death House]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 

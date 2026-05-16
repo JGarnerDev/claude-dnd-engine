@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Mission Schema
 
 A mission is a self-contained objective — the atomic unit of story. It has a clear goal, a reason the party cares, and meaningful consequences for both success and failure. A mission typically spans one to three sessions.

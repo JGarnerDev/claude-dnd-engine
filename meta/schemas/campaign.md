@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Campaign Schema
 
 The root document of the entire campaign. There is one campaign file per campaign. It is the first thing Claude reads before any generation task and provides the overarching context that everything else serves.

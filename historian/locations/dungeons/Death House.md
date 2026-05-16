@@ -31,7 +31,7 @@ description: "Death House. A haunted manor just outside the village of Barovia. 
 
 
 
-Location: [[Barovia -Village Outskirts]] | Campaign: [[Curse of Strahd]]
+Location: [[Barovia]] | Campaign: [[Curse of Strahd]]
 
 ## Overview
 

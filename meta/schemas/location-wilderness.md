@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Location — Wilderness Schema
 
 Extends: `entity.md`

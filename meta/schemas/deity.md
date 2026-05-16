@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Deity Schema
 
 Extends: `entity.md`

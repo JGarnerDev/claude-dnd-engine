@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Character — PC Schema
 
 Extends: `entity.md`

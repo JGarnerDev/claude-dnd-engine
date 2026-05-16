@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Background Schema
 
 Extends: `entity.md`

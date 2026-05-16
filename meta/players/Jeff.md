@@ -7,6 +7,7 @@ characters:
 pronouns: ""
 availability: ""
 description: "Core player since Session 1. Plays Iggy, the gruff soldier-bard Aasimar."
+tags: [guideline]
 ---
 
 # Jeff 

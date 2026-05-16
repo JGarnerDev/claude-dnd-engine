@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Location — Region Schema
 
 Extends: `entity.md`

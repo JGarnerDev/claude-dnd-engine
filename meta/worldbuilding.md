@@ -1,5 +1,6 @@
 ---
 type: meta
+tags: [guideline]
 ---
 
 # World Building Principles

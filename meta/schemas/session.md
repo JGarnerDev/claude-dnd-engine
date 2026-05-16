@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Session Schema
 
 A session is a single play session — typically three to four hours. The session file starts as a plan in `scheduler/sessions/` and moves to `historian/sessions/` after play, updated with what actually happened.

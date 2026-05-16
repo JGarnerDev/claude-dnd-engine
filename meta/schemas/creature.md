@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Creature Schema
 
 Extends: `entity.md`

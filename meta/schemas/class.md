@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Class Schema
 
 Extends: `entity.md`

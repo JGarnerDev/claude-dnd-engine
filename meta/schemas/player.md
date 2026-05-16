@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Player Schema
 
 Covers real-world players at the table. This is **not** an in-world entity — it does not extend `entity.md` and has no `exists` or in-world `state`. Player files live in `meta/players/` and are referenced by PC files via the `player:` field.

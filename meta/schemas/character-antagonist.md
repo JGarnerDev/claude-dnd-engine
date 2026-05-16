@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Character — Antagonist Schema
 
 Extends: `entity.md`

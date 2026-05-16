@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Party Schema
 
 Covers adventuring party entities — the in-world group of PCs that forms and evolves over the campaign.

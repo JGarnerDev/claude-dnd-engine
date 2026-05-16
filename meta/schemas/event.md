@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Event Schema
 
 Extends: `entity.md`

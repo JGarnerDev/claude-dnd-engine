@@ -34,7 +34,7 @@ description: "The nursemaid of Death House. Had an affair with [[Gustav Durst]] 
 
 > **Reliability -Identity:** Thorn revealed in Session 6 that the specter in area 15 is the nursemaid. The party encountered the specter in Session 5 before knowing this. Connection confirmed.
 
-Location: [[Death House -Area 15]] | Campaign: [[Curse of Strahd]]
+Location: [[Death House]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 

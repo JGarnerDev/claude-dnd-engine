@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Race Schema
 
 Extends: `entity.md`

@@ -64,3 +64,7 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `race` | race entity | Entity type: playable race — flat tag, no subtype |
 | **session/** | | |
 | `session/NN` | session | Identifies the session number — e.g. `session/01`, `session/11` |
+| **schema** | | |
+| `schema` | schema file | Meta document: entity schema definition |
+| **guideline** | | |
+| `guideline` | meta document | Meta document: design guideline that shapes story or game decisions |

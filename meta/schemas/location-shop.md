@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Location — Shop Schema
 
 Extends: `entity.md`, `location.md` (when created)

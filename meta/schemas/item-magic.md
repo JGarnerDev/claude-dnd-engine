@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Item — Magic Schema
 
 Extends: `entity.md`

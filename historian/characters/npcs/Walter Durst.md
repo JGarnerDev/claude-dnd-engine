@@ -33,7 +33,7 @@ description: "Walter Durst. Illegitimate son of Gustav Durst and the nursemaid. 
 
 > **Reliability -Stillborn vs sacrificed:** Strahd's letter (Session 2) says "sired a stillborn son." Thorn's account (Session 6) implies the cult sacrificed him. These may both be true (born dead and then used ritually) or one may be inaccurate. Flag for DM.
 
-Location: [[Death House -Basement Altar]] | Campaign: [[Curse of Strahd]]
+Location: [[Death House]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 

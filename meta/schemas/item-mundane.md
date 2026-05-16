@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Item — Mundane Schema
 
 Extends: `entity.md`

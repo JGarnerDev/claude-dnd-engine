@@ -1,3 +1,8 @@
+---
+tags:
+  - schema
+---
+
 # Faction Schema
 
 Covers any organized group: nations, guilds, cults, gangs, political movements, etc.
