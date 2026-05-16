@@ -25,7 +25,9 @@ Authoritative list of all valid `type` / `subtype` combinations. **Before declar
 | `deity` | — | `meta/schemas/deity.md` | `data/deities/` | `historian/deities/` |
 | `event` | — | `meta/schemas/event.md` | `data/events/` | `historian/events/` |
 | `faction` | — | `meta/schemas/faction.md` | `data/factions/` | `historian/factions/` |
+| `creature` | — | `meta/schemas/creature.md` | `data/creatures/` | `historian/creatures/` |
 | `item` | `magic` | `meta/schemas/item-magic.md` | `data/items/magic/` | `historian/items/magic/` |
+| `item` | `mundane` | `meta/schemas/item-mundane.md` | `data/items/mundane/` | `historian/items/mundane/` |
 | `location` | `city` | `meta/schemas/location-city.md` | `data/locations/cities/` | `historian/locations/cities/` |
 | `location` | `dungeon` | `meta/schemas/location-dungeon.md` | `data/locations/dungeons/` | `historian/locations/dungeons/` |
 | `location` | `region` | `meta/schemas/location-region.md` | `data/locations/regions/` | `historian/locations/regions/` |

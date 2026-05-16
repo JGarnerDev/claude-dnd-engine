@@ -15,6 +15,8 @@
     { "query": "path:historian/events", "color": { "a": 1, "rgb": 220050070 } },
     { "query": "path:data/items/magic", "color": { "a": 1, "rgb": 60210205 } },
     { "query": "path:historian/items/magic", "color": { "a": 1, "rgb": 60210205 } },
+    { "query": "path:data/items/mundane", "color": { "a": 1, "rgb": 161136127 } },
+    { "query": "path:historian/items/mundane", "color": { "a": 1, "rgb": 161136127 } },
     { "query": "path:data/items", "color": { "a": 1, "rgb": 100180215 } },
     { "query": "path:historian/items", "color": { "a": 1, "rgb": 100180215 } },
     { "query": "path:data/deities", "color": { "a": 1, "rgb": 255235135 } },

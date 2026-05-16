@@ -20,6 +20,8 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `class` | class entity | Entity type: playable class — flat tag, no subtype |
 | `class/bard` | character | Character is a Bard |
 | `class/wizard` | character | Character is a Wizard |
+| **creature/** | | |
+| `creature` | creature entity | Entity type: notable creature with narrative presence |
 | **campaign/** | | |
 | `campaign/curse-of-strahd` | any | Entity belongs to the Curse of Strahd campaign |
 | **character/** | | |
@@ -45,6 +47,9 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `domain/trickery` | deity | Divine domain: Trickery |
 | `domain/twilight` | deity | Divine domain: Twilight |
 | `domain/war` | deity | Divine domain: War |
+| **item/** | | |
+| `item/magic` | item entity | Entity subtype: magic item |
+| `item/mundane` | item entity | Entity subtype: mundane item with narrative significance |
 | **faction/** | | |
 | `faction/barovia` | character, location | Member or seat of the Barovia ruling faction |
 | `faction/durst-cult` | character | Member of the Durst death cult |

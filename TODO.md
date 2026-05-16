@@ -44,8 +44,8 @@ Progress tracker for getting this project ready to generate sessions and run cam
 - [x] Act (`meta/schemas/act.md`)
 - [x] Mission (`meta/schemas/mission.md`)
 - [x] Session (`meta/schemas/session.md`)
-- [ ] Item — Mundane (for significant non-magic objects: heirlooms, quest items, relics)
-- [ ] Creature (for notable monsters with personality and recurring presence, distinct from stat blocks)
+- [x] Item — Mundane (for significant non-magic objects: heirlooms, quest items, relics)
+- [x] Creature (for notable monsters with personality and recurring presence, distinct from stat blocks)
 
 ---
 
