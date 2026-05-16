@@ -9,9 +9,9 @@ state: dead
 tags:
   - character/npc
 
-location: [[Death House Ã¢â‚¬â€ Basement Altar]]
-personality: "N/A Ã¢â‚¬â€ died as an infant"
-livelihood: "N/A Ã¢â‚¬â€ sacrificed as an infant"
+location: [[Death House -Basement Altar]]
+personality: "N/A -died as an infant"
+livelihood: "N/A -sacrificed as an infant"
 
 aliases: []
 relates_to:
@@ -30,9 +30,9 @@ description: "Walter Durst. Illegitimate son of Gustav Durst and the nursemaid. 
 
 > **Reliability:** Thorn's account in Session 6. Confirmed.
 
-> **Reliability Ã¢â‚¬â€ Stillborn vs sacrificed:** Strahd's letter (Session 2) says "sired a stillborn son." Thorn's account (Session 6) implies the cult sacrificed him. These may both be true (born dead and then used ritually) or one may be inaccurate. Flag for DM.
+> **Reliability -Stillborn vs sacrificed:** Strahd's letter (Session 2) says "sired a stillborn son." Thorn's account (Session 6) implies the cult sacrificed him. These may both be true (born dead and then used ritually) or one may be inaccurate. Flag for DM.
 
-Location: [[Death House Ã¢â‚¬â€ Basement Altar]] | Campaign: [[Curse of Strahd]]
+Location: [[Death House -Basement Altar]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 

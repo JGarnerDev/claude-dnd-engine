@@ -5,9 +5,6 @@ name: "Session 09 The Shadows"
 type: session
 exists: true
 state: completed
-tags:
-  - session/09
-
 session_number: 9
 mission: [[Death House]]
 planned_date: "2026-05-05"

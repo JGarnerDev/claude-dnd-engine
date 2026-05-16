@@ -61,7 +61,7 @@ Read frontmatter only (`name`, `type`, `subtype`, `importance`, `active`, `descr
 
 **Step 3 — Check meta preferences**
 
-Read `meta/worldbuilding.md`, `meta/players/group.md`, and any filled `meta/players/*.md` files (excluding the template). Note which sections are populated and which are blank. If all are blank, fall back to the campaign's `themes` and `tone` from `scheduler/campaign.md`.
+Read `meta/worldbuilding.md` and any filled `meta/players/*.md` files (excluding the template). Note which sections are populated and which are blank. If all are blank, fall back to the campaign's `themes` and `tone` from `scheduler/campaign.md`.
 
 **Step 4 — Present 3 hooks**
 

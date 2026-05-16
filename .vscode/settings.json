@@ -30,6 +30,7 @@
         { "id": "h-deities",        "label": "Deities (canon)",   "match": { "property": "path", "value": "historian/deities" },         "color": "#ffd54f", "enabled": true },
         { "id": "h-npcs",           "label": "NPCs (canon)",      "match": { "property": "path", "value": "historian/characters" },      "color": "#ff8a65", "enabled": true },
         { "id": "h-pcs",            "label": "PCs (canon)",       "match": { "property": "path", "value": "historian/characters/pcs" },  "color": "#ef5350", "enabled": true },
+        { "id": "h-parties",        "label": "Party (canon)",     "match": { "property": "path", "value": "historian/characters/parties" }, "color": "#ffc400", "enabled": true },
         { "id": "h-creatures",      "label": "Creatures (canon)", "match": { "property": "path", "value": "historian/creatures" },       "color": "#9ccc65", "enabled": true },
         { "id": "h-factions",       "label": "Factions (canon)",  "match": { "property": "path", "value": "historian/factions" },        "color": "#ab47bc", "enabled": true },
         { "id": "h-locations",      "label": "Locations (canon)", "match": { "property": "path", "value": "historian/locations" },       "color": "#66bb6a", "enabled": true },

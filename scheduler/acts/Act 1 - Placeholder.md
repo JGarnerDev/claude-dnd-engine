@@ -3,8 +3,6 @@ name: "Act 1 - Placeholder"
 type: act
 exists: false
 state: draft
-tags:
-  - act
 campaign: [[Curse of Strahd]]
 central_conflict: "TBD — placeholder for Kellan's DM notes"
 goal: "TBD"

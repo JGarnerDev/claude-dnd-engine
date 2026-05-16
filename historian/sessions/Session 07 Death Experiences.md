@@ -5,9 +5,6 @@ name: "Session 07 Death Experiences"
 type: session
 exists: true
 state: completed
-tags:
-  - session/07
-
 session_number: 7
 mission: [[Death House]]
 planned_date: "2026-04-14"

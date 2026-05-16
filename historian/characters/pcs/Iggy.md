@@ -1,5 +1,5 @@
 ---
-name: "Iggadreon Iggy Wallaed"
+name: "Iggy"
 type: character
 subtype: pc
 exists: true
@@ -25,11 +25,11 @@ description: "Jeff's PC. Gruff but light-hearted soldier-bard with copper-red Aa
 ---
 
 
-Campaign: [[Curse of Strahd]] | Player: [[Jeff]]
+Campaign: [[Curse of Strahd]] | Player: [[Jeff]] 
 
 ## Appearance
 
-Copper-red tones throughout Ã¢â‚¬â€ hair, skin. Human-adjacent in looks. Celestial heritage is subtle but present.
+Copper-red tones throughout -hair, skin. Human-adjacent in looks. Celestial heritage is subtle but present.
 
 Race: [[Aasimar]]
 Class: [[Bard]]
@@ -38,20 +38,20 @@ Class: [[Bard]]
 
 ## Personality
 
-Gruff but light-hearted. Wants to be a hero and get out into the world. History-focused.
+Full name: Iggadreon Iggy Wallaed. Gruff but light-hearted. Wants to be a hero and get out into the world. History-focused.
 
 ## Abilities (Noted in Play)
 
-- Violin and voice Ã¢â‚¬â€ uses music as spellwork
+- Violin and voice -uses music as spellwork
 - Rapier (soldier background)
 - Healing Hands (Aasimar racial)
-- **Shazzam** Ã¢â‚¬â€ triggers whenever Iggy says the word. Heals one random party member 1 HP. Cannot be suppressed. Established Session 0/1.
+- **Shazzam** -triggers whenever Iggy says the word. Heals one random party member 1 HP. Cannot be suppressed. Established Session 0/1.
 
 ## Backstory (from Session 1 Intro)
 
-Came to the area a year ago. Has been working with the local militia since. Wants to be a hero and adventure. Musician and soldier combined Ã¢â‚¬â€ violin and rapier. History is a real focus.
+Came to the area a year ago. Has been working with the local militia since. Wants to be a hero and adventure. Musician and soldier combined -violin and rapier. History is a real focus.
 
-> **Reliability:** Stated by player in Session 1. Flagged as incomplete Ã¢â‚¬â€ full backstory was listed as an action item and may not have been submitted.
+> **Reliability:** Stated by player in Session 1. Flagged as incomplete -full backstory was listed as an action item and may not have been submitted.
 
 ## Current Affliction
 

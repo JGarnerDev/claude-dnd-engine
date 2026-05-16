@@ -9,8 +9,8 @@ state: closed
 tags:
   - location/shop
 
-city: [[Barovia Ã¢â‚¬â€ Village Outskirts]]
-proprietor: [[Unknown Ã¢â‚¬â€ Tavern Master]]
+city: [[Barovia -Village Outskirts]]
+proprietor: [[Unknown -Tavern Master]]
 purpose: "Inn and tavern. Starting point before Barovia. Party earned lodging and supplies by performing."
 
 relates_to:
@@ -23,17 +23,17 @@ description: "Black Sheep Inn. Located just outside Barovia. Party performed her
 
 
 
-City: [[Barovia Ã¢â‚¬â€ Village Outskirts]] | Proprietor: [[Unknown Ã¢â‚¬â€ Tavern Master]] | Campaign: [[Curse of Strahd]]
+City: [[Barovia -Village Outskirts]] | Proprietor: [[Unknown -Tavern Master]] | Campaign: [[Curse of Strahd]]
 
-> **Reliability Ã¢â‚¬â€ Proprietor:** Notes mention "Tavern master" but give no name. Confirm with DM.
+> **Reliability -Proprietor:** Notes mention "Tavern master" but give no name. Confirm with DM.
 
-> **Reliability Ã¢â‚¬â€ Status:** "Closed" used here to mean the party is banned and cannot return. The inn itself is presumably still operating.
+> **Reliability -Status:** "Closed" used here to mean the party is banned and cannot return. The inn itself is presumably still operating.
 
 ## Events
 
 Session 1: The party met here before heading to Death House. Luci and Iggy performed together; the tavern went wild, bought them drinks, gave them a place to sleep, food, and supplies for the journey. All party members were inspired for the next day.
 
-Paul then threw knives at the door to outline a customer Ã¢â‚¬â€ and hit them in the neck. Jeff used Healing Hands to save the customer's life. The party was immediately banned and forced to depart.
+Paul then threw knives at the door to outline a customer -and hit them in the neck. Jeff used Healing Hands to save the customer's life. The party was immediately banned and forced to depart.
 
 ## Notes
 

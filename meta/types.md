@@ -32,6 +32,7 @@ Authoritative list of all valid `type` / `subtype` combinations. **Before declar
 | `location` | `shop` | `meta/schemas/location-shop.md` | `data/locations/shops/` | `historian/locations/shops/` |
 | `location` | `wilderness` | `meta/schemas/location-wilderness.md` | `data/locations/wilderness/` | `historian/locations/wilderness/` |
 | `mission` | — | `meta/schemas/mission.md` | `scheduler/missions/` | `historian/missions/` |
+| `party` | — | `meta/schemas/party.md` | — | `historian/characters/parties/` |
 | `race` | — | `meta/schemas/race.md` | `data/races/` | `historian/races/` |
 | `rumor` | — | `meta/schemas/rumor.md` | `data/rumors/` | `historian/rumors/` |
 | `session` | — | `meta/schemas/session.md` | `scheduler/sessions/` | `historian/sessions/` |

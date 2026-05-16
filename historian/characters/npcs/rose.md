@@ -9,9 +9,9 @@ state: missing
 tags:
   - character/npc
 
-location: [[Death House Ã¢â‚¬â€ Unknown]]
+location: [[Death House -Unknown]]
 personality: "Grateful, gentle. Relieved when bound to Ben's scroll. Said thank you and expressed happiness to be taken along."
-livelihood: "Ghost Ã¢â‚¬â€ trapped in Death House"
+livelihood: "Ghost -trapped in Death House"
 
 aliases: []
 relates_to:
@@ -28,11 +28,11 @@ description: "Rose Durst. 11-year-old ghost. Daughter of the Durst family. Bound
 
 
 
-> **Reliability Ã¢â‚¬â€ Age:** Notes say "Thorn = 8, Rose = 11." High confidence.
+> **Reliability -Age:** Notes say "Thorn = 8, Rose = 11." High confidence.
 
-> **Reliability Ã¢â‚¬â€ State:** Notes say Ben and Miguel "left the pages" when the mists carried the party out in Session 10. Rose and Thorn "try to fight to not be left behind." Stranded Ã¢â‚¬â€ fate after that point unknown.
+> **Reliability -State:** Notes say Ben and Miguel "left the pages" when the mists carried the party out in Session 10. Rose and Thorn "try to fight to not be left behind." Stranded -fate after that point unknown.
 
-Location: [[Death House Ã¢â‚¬â€ Unknown]] | Campaign: [[Curse of Strahd]]
+Location: [[Death House -Unknown]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 

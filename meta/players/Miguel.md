@@ -3,8 +3,6 @@ name: "Miguel"
 role: core
 status: active
 
-group: [[group]]
-
 characters:
   - [[Odibli]] (active)
 
@@ -16,7 +14,7 @@ description: "Core player since Session 1. Plays Odibli (ODB), the bookish Gnome
 
 # Miguel
 
-Group: [[players/group]] | Character: [[Odibli]] | Joined: [[Session 01 The Black Sheep Inn]]
+Character: [[Odibli]] | Joined: [[Session 01 The Black Sheep Inn]]
 
 ## What's Fun For Me
 <!-- Open-ended: what kinds of moments, scenes, or challenges do you enjoy most? -->

@@ -55,6 +55,8 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `location/region` | location entity | Entity subtype: region or territory |
 | `location/wilderness` | location entity | Entity subtype: wilderness area |
 | `location/death-house` | non-location entity | Association: entity is tied to Death House |
+| **party** | | |
+| `party` | party entity | Entity type: adventuring party |
 | **pantheon/** | | |
 | `pantheon/faerûnian` | deity | Belongs to the Faerûnian pantheon |
 | `pantheon/greyhawk` | deity | Belongs to the Greyhawk pantheon |

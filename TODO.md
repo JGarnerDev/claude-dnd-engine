@@ -19,7 +19,6 @@ Progress tracker for getting this project ready to generate sessions and run cam
 - [ ] `meta/worldbuilding.md` — fill in tone, themes, setting pillars, what to avoid
 - [ ] `meta/difficulty.md` — fill in party profile, encounter mix, DC ranges
 - [ ] `meta/rewards.md` — fill in gold ranges, magic item philosophy, leveling pace
-- [ ] `meta/players/group.md` — fill in shared table preferences and guardrails
 - [ ] Create per-player files in `meta/players/` (copy `player-template.md` per player)
 
 ---
@@ -96,6 +95,8 @@ Progress tracker for getting this project ready to generate sessions and run cam
 - [x] PC files created: Iggy, Luci, Odibli, Dip (reliability flags on unconfirmed details)
 - [x] NPC files created: Strahd, Rose, Thorn, Nursemaid, Gustav, Elisabeth, Walter Durst
 - [x] Location files created: Death House (dungeon, cleared), Black Sheep Inn (shop, banned)
+- [x] Party entity created: `historian/characters/parties/The Party.md` — skeleton only
+- [ ] Add detail to current party (`historian/characters/parties/The Party.md`) — formation story, reputation, goals; confirm full names and classes for Luci and Dip with DM
 - [ ] Confirm unresolved details with DM/players — see reliability notes in each file
 - [ ] Backfill additional entities invented at the table as they're confirmed
 

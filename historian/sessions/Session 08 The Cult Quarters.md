@@ -5,9 +5,6 @@ name: "Session 08 The Cult Quarters"
 type: session
 exists: true
 state: completed
-tags:
-  - session/08
-
 session_number: 8
 mission: [[Death House]]
 planned_date: "2026-04-28"

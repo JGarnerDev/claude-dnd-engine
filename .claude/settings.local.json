@@ -30,7 +30,10 @@
       "Bash(git check-ignore *)",
       "PowerShell(Remove-Item *)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\" -Recurse -Directory)",
-      "Bash(Select-Object -ExpandProperty FullName)"
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\meta\\\\schemas\\\\group.md\")",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\meta\\\\players\\\\group.md\")",
+      "PowerShell(Rename-Item *)"
     ]
   }
 }

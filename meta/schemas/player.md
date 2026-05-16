@@ -57,8 +57,6 @@ name: ""                  # real name or handle; matches filename
 role: core | cameo
 status: active | hiatus | retired
 
-# --- MANDATORY ---
-group: [[group]]                            # links to meta/players/group.md
 characters:
   - [[PC Name]] (active | retired | dead)   # all PCs this player has had
 
@@ -100,7 +98,7 @@ After the frontmatter, use these sections. All are optional — blank sections a
 ### Notes
 
 - Player files are **meta**, not entities. Do not add `type: character`, `exists:`, or any entity-schema fields.
-- **Every `[[wiki-link]]` in frontmatter must also appear in the body.** Foam only reads body links; Obsidian reads both. Use the `Group: [[group]] | Character: [[X]] | Joined: [[Session NN]]` line pattern.
+- **Every `[[wiki-link]]` in frontmatter must also appear in the body.** Foam only reads body links; Obsidian reads both. Use the `Character: [[X]] | Joined: [[Session NN]]` line pattern.
 - `characters` must use `[[wiki-link]]` syntax pointing to `data/characters/pcs/{name}.md` (or `historian/` once canonized).
 - When creating a new PC file, the `player:` field on that PC must link back to this file: `player: [[meta/players/{name}]]`.
 - `player-template.md` in `meta/players/` is the blank starter — do not treat it as an active player file.

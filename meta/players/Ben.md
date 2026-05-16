@@ -2,12 +2,8 @@
 name: "Ben"
 role: core
 status: active
-
-group: [[group]]
-
 characters:
   - [[Dip]] (active)
-
 pronouns: ""
 availability: ""
 joined: [[Session 05 The Specter]]
@@ -16,7 +12,7 @@ description: "Core player since Session 5. Plays Dip — race, class, and full n
 
 # Ben
 
-Group: [[players/group]] | Character: [[Dip]] | Joined: [[Session 05 The Specter]]
+Character: [[Dip]] | Joined: [[Session 05 The Specter]]
 
 ## What's Fun For Me
 <!-- Open-ended: what kinds of moments, scenes, or challenges do you enjoy most? -->

@@ -79,8 +79,7 @@ When generating sessions, encounters, rewards, or any world content, read these 
 | `meta/worldbuilding.md` | Tone, themes, setting pillars, what to avoid |
 | `meta/difficulty.md` | Encounter tiers, DC ranges, session mix |
 | `meta/rewards.md` | Gold ranges, magic item philosophy, leveling pace |
-| `meta/players/group.md` | Shared table preferences and guardrails |
-| `meta/players/*.md` (excluding template) | Per-player preferences; may add to or override group preferences |
+| `meta/players/*.md` (excluding template) | Per-player preferences |
 | `meta/references.md` | Where to look for external D&D data — API endpoints, wiki access patterns, and when to use each source |
 
 `meta/players/player-template.md` is a blank template for adding new players — do not treat it as an active preference file.
@@ -109,6 +108,7 @@ If a user provides form answers (structured or freeform), use the **Form → Fro
 | A story arc | `meta/schemas/act.md` |
 | A mission or quest | `meta/schemas/mission.md` |
 | A single session plan | `meta/schemas/session.md` |
+| An adventuring party (the PCs as a group) | `meta/schemas/party.md` |
 | A faction, nation, guild, or group | `meta/schemas/faction.md` |
 | A region, territory, or nation's geography | `meta/schemas/location-region.md` |
 | A city, town, or village | `meta/schemas/location-city.md` |
@@ -124,7 +124,6 @@ If a user provides form answers (structured or freeform), use the **Form → Fro
 | A playable or world race | `meta/schemas/race.md` |
 | A character class | `meta/schemas/class.md` |
 | A player (real-world, core or cameo) | `meta/schemas/player.md` |
-| The shared table preferences | `meta/schemas/group.md` |
 
 Each schema file also contains a **Player Form** section — a set of plain-language questions suitable to give directly to players when they want to create an entity.
 

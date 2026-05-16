@@ -2,6 +2,7 @@
   "colorGroups": [
     { "query": "path:data/characters/pcs", "color": { "a": 1, "rgb": 255215000 } },
     { "query": "path:historian/characters/pcs", "color": { "a": 1, "rgb": 255215000 } },
+    { "query": "path:historian/characters/parties", "color": { "a": 1, "rgb": 255196000 } },
     { "query": "path:data/characters/npcs", "color": { "a": 1, "rgb": 255160060 } },
     { "query": "path:historian/characters/npcs", "color": { "a": 1, "rgb": 255160060 } },
     { "query": "path:data/creatures", "color": { "a": 1, "rgb": 150220080 } },

@@ -119,7 +119,7 @@ Every piece of content is an entity — a markdown file with YAML frontmatter. V
 
 ### Before Session Generation
 
-1. **Fill meta files** (`meta/worldbuilding.md`, `meta/difficulty.md`, `meta/rewards.md`, `meta/players/group.md`) with table preferences and design guidelines
+1. **Fill meta files** (`meta/worldbuilding.md`, `meta/difficulty.md`, `meta/rewards.md`) with table preferences and design guidelines
 2. **Seed the free pool** (`data/`) with 5–10 key campaign entities (NPCs, locations, factions, rumors)
 3. **Define acts and missions** in `scheduler/` to frame the story progression
 

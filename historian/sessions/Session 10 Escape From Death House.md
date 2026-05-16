@@ -5,9 +5,6 @@ name: "Session 10 Escape From Death House"
 type: session
 exists: true
 state: completed
-tags:
-  - session/10
-
 session_number: 10
 mission: [[Death House]]
 planned_date: "2026-05-12"
@@ -25,19 +22,19 @@ description: "Odibli smashes the orb and revives the party at personal cost. Cul
 # 
 --- HISTORIAN ---
 played_date: "2026-05-12"
-recap: "Dip and Iggy were dead from Session 9. Odibli felt the stolen orb was familiar, recognized something in it, and smashed it against the wall. During his long rest, he performed a ritual — absorbed shadow essence from the room, reviving the dead party members. But the cost was: Odibli's veins turned black beneath his skin. Ben now hears whispers when it is quiet. Jeff's shadow no longer matches his form and moves in the wrong direction. Party is at half max HP for the duration of their time in the dungeon. Party found 13 cult relics and catalogued the southern tunnel. In the cult ritual room, Luci sacrificed herself on the altar to save the rest of the party. The mists carried everyone away. Rose and Thorn tried to fight the departure — Ben and Miguel left the scroll pages behind, stranding both children. Strahd greeted the party outside Death House. Thanked and congratulated them. Retrieved Luci from death. Party leveled to 3."
+recap: "[[Dip]] and Iggy were dead from Session 9. Odibli felt the stolen orb was familiar, recognized something in it, and smashed it against the wall. During his long rest, he performed a ritual — absorbed shadow essence from the room, reviving the dead party members. But the cost was: Odibli's veins turned black beneath his skin. Ben now hears whispers when it is quiet. Jeff's shadow no longer matches his form and moves in the wrong direction. Party is at half max HP for the duration of their time in the dungeon. Party found 13 cult relics and catalogued the southern tunnel. In the cult ritual room, Luci sacrificed herself on the altar to save the rest of the party. The mists carried everyone away. Rose and Thorn tried to fight the departure — Ben and Miguel left the scroll pages behind, stranding both children. Strahd greeted the party outside Death House. Thanked and congratulated them. Retrieved Luci from death. Party leveled to 3."
 cliffhanger: "The party is outside Death House in Barovia proper. Strahd has greeted them. Rose and Thorn are stranded somewhere inside. The mists surround everything."
 entities_canonized:
   - [[Strahd von Zarovich]]
 new_entities:
   - "Shadow affliction — Jeff"
-  - "Whisper affliction — Dip"
+  - "Whisper affliction — [[Dip]]"
 ---
 
 ## Session Notes
 
 ### Starting State
-Dip (Ben) and Iggy (Jeff) are dead from the shadows in Session 9.
+[[Dip]] (Ben) and [[Iggy]] (Jeff) are dead from the shadows in Session 9.
 
 ### Odibli Smashes the Orb
 Odibli felt the orb pulled from the statue was familiar — recognized something in it. Smashed it against the wall.
@@ -49,7 +46,7 @@ Odibli felt the orb pulled from the statue was familiar — recognized something
 > *"You open your eyes. The last thing you remember is the cold. You feel... present, but not whole. Like waking from a dream you can't remember but that left you unsettled. Your body responds, but everything feels slightly delayed, slightly numb. And somewhere beneath your thoughts, quiet and easy to ignore for now, there's a pull — toward something you can't name."*
 
 ### Afflictions Onset
-- **Ben (Dip):** Hears whispers when it is quiet
+- **[[Dip]]:** Hears whispers when it is quiet
 - **Jeff (Iggy):** Shadow does not match his form; moves in the wrong direction
 - Both stem from Odibli absorbing shadow essence through the ritual
 - Party is at **half max HP** for as long as they remain in the dungeon
