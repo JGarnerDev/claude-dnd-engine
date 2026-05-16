@@ -23,6 +23,7 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | **background** | | |
 | `background` | background entity | Entity type: character background — flat tag, no subtype |
 | **character/** | | |
+| `character/antagonist` | character | Entity subtype: antagonist NPC — hostile, active threat to the party |
 | `character/npc` | character | Entity subtype: non-player character |
 | `character/pc` | character | Entity subtype: player character |
 | **deity/** | | |

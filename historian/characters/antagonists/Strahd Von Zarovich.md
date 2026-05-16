@@ -3,11 +3,11 @@
 
 name: "Strahd Von Zarovich"
 type: character
-subtype: npc
+subtype: antagonist
 exists: true
 state: alive
 tags:
-  - character/npc
+  - character/antagonist
 location: [[Barovia]]
 personality: "Composed, calm, ancient. Greets intruders like guests at a dinner party. Interested in the party but does not explain himself."
 livelihood: "Vampire lord and ruler of Barovia"

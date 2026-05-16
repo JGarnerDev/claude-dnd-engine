@@ -117,6 +117,7 @@ If a user provides form answers (structured or freeform), use the **Form → Fro
 | A dungeon, ruin, cave, or delve | `meta/schemas/location-dungeon.md` |
 | A wilderness area, road, or named outdoor space | `meta/schemas/location-wilderness.md` |
 | An NPC | `meta/schemas/character-npc.md` |
+| An antagonist NPC (hostile, active threat) | `meta/schemas/character-antagonist.md` |
 | A player character | `meta/schemas/character-pc.md` |
 | A magic item | `meta/schemas/item-magic.md` |
 | A historical event, battle, or disaster | `meta/schemas/event.md` |
@@ -148,7 +149,7 @@ When a new type or subtype is added to `meta/types.md`, or a new entity folder i
 
 2. **`.obsidian/graph.json`** — add a `colorGroups` entry for both the `data/` and `historian/` paths using the same color. RGB format: pack R, G, B as a 9-digit zero-padded decimal integer (`RRRGGGBBB`), e.g. R=77, G=208, B=225 → `77208225`.
 
-Use the same hex color in both files for consistency. Reuse an existing color if the new type belongs to an established visual category.
+Before choosing a color, read `meta/color-theory.md` for the canonical color map. Select the hex for the matching group or subtype. Use the same hex in both config files. If no existing group fits, pick from the Available list in that file.
 
 ## Commands
 

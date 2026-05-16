@@ -3,11 +3,11 @@
 
 name: "Elisabeth Durst"
 type: character
-subtype: npc
+subtype: antagonist
 exists: true
 state: dead
 tags:
-  - character/npc
+  - character/antagonist
 location: [[Death House]]
 personality: "Consumed by jealousy. Ruthless — ordered the nursemaid killed and sacrificed her own infant."
 livelihood: "Former cult leader and wife of Gustav Durst"

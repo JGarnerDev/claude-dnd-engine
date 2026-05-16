@@ -3,11 +3,11 @@
 
 name: "Gustav Durst"
 type: character
-subtype: npc
+subtype: antagonist
 exists: true
 state: dead
 tags:
-  - character/npc
+  - character/antagonist
 location: [[Death House]]
 personality: "Unknown. Abandoned love for madness, according to Strahd's letter."
 livelihood: "Former cult master and lord of Death House"

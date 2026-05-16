@@ -21,6 +21,7 @@ Authoritative list of all valid `type` / `subtype` combinations. **Before declar
 | `background` | — | `meta/schemas/background.md` | `data/backgrounds/` | `historian/backgrounds/` |
 | `campaign` | — | `meta/schemas/campaign.md` | `scheduler/campaign.md` | — |
 | `class` | — | `meta/schemas/class.md` | `data/classes/` | `historian/classes/` |
+| `character` | `antagonist` | `meta/schemas/character-antagonist.md` | `data/characters/antagonists/` | `historian/characters/antagonists/` |
 | `character` | `npc` | `meta/schemas/character-npc.md` | `data/characters/npcs/` | `historian/characters/npcs/` |
 | `character` | `pc` | `meta/schemas/character-pc.md` | `data/characters/pcs/` | `historian/characters/pcs/` |
 | `deity` | — | `meta/schemas/deity.md` | `data/deities/` | `historian/deities/` |

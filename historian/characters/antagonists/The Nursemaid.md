@@ -3,11 +3,11 @@
 
 name: "The Nursemaid"
 type: character
-subtype: npc
+subtype: antagonist
 exists: true
 state: dead
 tags:
-  - character/npc
+  - character/antagonist
 
 location: [[Death House -Area 15]]
 personality: "Unknown in life. In undeath: malevolent, attacks intruders."
