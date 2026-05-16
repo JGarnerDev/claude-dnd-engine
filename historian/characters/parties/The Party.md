@@ -31,7 +31,7 @@ Unknown. They have not been in [[Barovia]] long enough to establish one.
 
 ## Notable Accomplishments
 
-- Cleared [[Death House]] — survived all ten sessions within its walls and escaped. Luci died on the altar and was retrieved from death by [[Strahd]].
+- Cleared [[Death House]] — survived all ten sessions within its walls and escaped. Luci died on the altar and was retrieved from death by [[Strahd Von Zarovich]].
 - [[Rose]] and [[Thorn]] (the ghost children) were left behind when the mists expelled the party.
 
 ## Active Afflictions

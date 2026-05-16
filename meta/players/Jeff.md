@@ -6,14 +6,13 @@ characters:
   - [[Iggy]] (active)
 pronouns: ""
 availability: ""
-joined: [[Session 01 The Black Sheep Inn]]
 description: "Core player since Session 1. Plays Iggy, the gruff soldier-bard Aasimar."
 ---
 
 # Jeff 
 
 
-Character: [[Iggy]] | Joined: [[Session 01 The Black Sheep Inn]]
+Character: [[Iggy]]
 
 ## What's Fun For Me
 <!-- Open-ended: what kinds of moments, scenes, or challenges do you enjoy most? -->

@@ -6,13 +6,12 @@ characters:
   - [[Dip]] (active)
 pronouns: ""
 availability: ""
-joined: [[Session 05 The Specter]]
 description: "Core player since Session 5. Plays Dip — race, class, and full name all unconfirmed."
 ---
 
 # Ben
 
-Character: [[Dip]] | Joined: [[Session 05 The Specter]]
+Character: [[Dip]]
 
 ## What's Fun For Me
 <!-- Open-ended: what kinds of moments, scenes, or challenges do you enjoy most? -->

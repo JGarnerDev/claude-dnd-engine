@@ -17,6 +17,7 @@ background: "Unknown"
 level: 3
 
 aliases: []
+source_session: [[Session 05 The Specter]]
 relates_to:
   - [[Curse of Strahd]] (campaign)
 importance: critical

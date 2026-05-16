@@ -8,13 +8,12 @@ characters:
 
 pronouns: ""
 availability: ""
-joined: [[Session 01 The Black Sheep Inn]]
 description: "Core player since Session 1. Plays Odibli (ODB), the bookish Gnome Wizard on his bucket-list adventure."
 ---
 
 # Miguel
 
-Character: [[Odibli]] | Joined: [[Session 01 The Black Sheep Inn]]
+Character: [[Odibli]]
 
 ## What's Fun For Me
 <!-- Open-ended: what kinds of moments, scenes, or challenges do you enjoy most? -->

@@ -23,7 +23,7 @@ description: "Black Sheep Inn. Located just outside Barovia. Party performed her
 
 
 
-City: [[Barovia -Village Outskirts]] | Proprietor: [[Unknown -Tavern Master]] | Campaign: [[Curse of Strahd]]
+City: [[Barovia - Village Outskirts]] | Proprietor: [[Unknown -Tavern Master]] | Campaign: [[Curse of Strahd]]
 
 > **Reliability -Proprietor:** Notes mention "Tavern master" but give no name. Confirm with DM.
 

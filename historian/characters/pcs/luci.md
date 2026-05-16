@@ -18,6 +18,7 @@ level: 3
 
 aliases:
   - "Lucy"
+source_session: [[Session 01 The Black Sheep Inn]]
 relates_to:
   - [[Curse of Strahd]] (campaign)
 importance: critical
