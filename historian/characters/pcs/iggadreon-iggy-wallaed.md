@@ -8,8 +8,6 @@ tags:
   - character/pc
   - player/jeff
   - campaign/curse-of-strahd
-  - race/aasimar
-  - class/bard
 
 player: "[[Jeff]]"
 race: "Aasimar"
@@ -33,6 +31,9 @@ confirmed_date: "2026-03-09"
 ## Appearance
 
 Copper-red tones throughout — hair, skin. Human-adjacent in looks. Celestial heritage is subtle but present.
+
+Race: [[aasimar]]
+Class: [[bard]]
 
 > **Reliability:** Confirmed from player notes and session 1 introductions.
 

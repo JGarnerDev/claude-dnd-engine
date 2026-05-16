@@ -7,6 +7,7 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 ## Rules
 
 - Tags follow `namespace/value` hierarchy for Obsidian/Foam nested tag support
+- Do not use frontmatter tags for values that correspond to existing entity documents. If a race, class, faction, location, or other entity already exists as a markdown file, reference it in the document body with `[[wiki-link]]` syntax instead of adding it as a tag.
 - `session/NN` tags increment with each session — add the new tag here when a session file is created
 
 ---

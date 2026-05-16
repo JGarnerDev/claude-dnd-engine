@@ -8,8 +8,6 @@ tags:
   - character/pc
   - player/miguel
   - campaign/curse-of-strahd
-  - race/gnome
-  - class/wizard
 
 player: "[[Miguel]]"
 race: "Gnome"
@@ -37,6 +35,9 @@ confirmed_date: "2026-03-09"
 ## Appearance
 
 Not described in notes beyond being a gnome with a high-pitched voice.
+
+Race: [[gnome]]
+Class: [[wizard]]
 
 ## Personality
 

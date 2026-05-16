@@ -126,6 +126,7 @@ Each schema file also contains a **Player Form** section — a set of plain-lang
 All entity files use Obsidian-compatible YAML frontmatter:
 - `relates_to`, `resources`, `known_by`, `owner`, and any other link fields must use `[[wiki-link]]` syntax so edges appear in Obsidian's graph view. Relationship annotations after the link are allowed.
 - `tags` must come from `meta/tags.md`. Never invent a tag — check the registry first.
+- Do not use frontmatter tags for values that correspond to existing entity documents. If a race, class, faction, location, or other entity already exists as a markdown file, reference it in the document body with `[[wiki-link]]` syntax instead of adding it as a tag.
 - `type` and `subtype` must come from `meta/types.md`. Never invent a combination.
 - `aliases` enables Obsidian to resolve alternate names to the same node.
 

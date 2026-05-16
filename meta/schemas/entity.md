@@ -65,5 +65,6 @@ supersedes: "[[data/path/to/entity]]"      # data/ draft this entry replaces
 - `exists` mirrors the file's location: `data/` entities are `false`, `historian/` entities are `true`. Both must agree.
 - `relates_to`, `resources`, `known_by`, and `owner` must use `[[wiki-link]]` syntax so Obsidian graph edges are preserved. Relationship annotations after the link are allowed.
 - `tags` should follow a `category/specific` hierarchy for Obsidian nested tag support.
+- Do not use frontmatter tags for values that already resolve to an existing entity document. Use `[[wiki-link]]` in the markdown body to reference existing races, classes, factions, locations, or other entity pages instead.
 - Never leave mandatory fields blank — use `unknown` or `"TBD"` as placeholders.
 - Valid values for `state` are defined in each type or subtype schema.

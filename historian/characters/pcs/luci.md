@@ -8,7 +8,6 @@ tags:
   - character/pc
   - player/paul
   - campaign/curse-of-strahd
-  - race/aasimar
 
 player: "[[Paul]]"
 race: "Aasimar (Scourge)"
@@ -38,6 +37,8 @@ confirmed_date: "2026-03-09"
 - Eyes: liquid gold that constantly drips from the eyelids
 - Elaborate headdress built from depictions in scrolls and temple walls
 - Constant restless movement — spins on a stool while listening, always exploring the space
+
+Race: [[aasimar]]
 
 ## Personality
 
