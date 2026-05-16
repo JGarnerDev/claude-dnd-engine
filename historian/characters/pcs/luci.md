@@ -37,7 +37,7 @@ Campaign: [[Curse of Strahd]] | Player: [[Paul]]
 - Elaborate headdress built from depictions in scrolls and temple walls
 - Constant restless movement -spins on a stool while listening, always exploring the space
 
-Race: [[Aasimar]] (Scourge) | Class: unknown (inferred divine caster — confirm with Paul)
+Race: [[Aasimar]] (Scourge) | Class: [[Monk]]
 
 ## Personality
 

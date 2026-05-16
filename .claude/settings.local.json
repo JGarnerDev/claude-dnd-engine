@@ -33,7 +33,8 @@
       "Bash(Select-Object -ExpandProperty FullName)",
       "Bash(Remove-Item \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\meta\\\\schemas\\\\group.md\")",
       "Bash(Remove-Item \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\meta\\\\players\\\\group.md\")",
-      "PowerShell(Rename-Item *)"
+      "PowerShell(Rename-Item *)",
+      "Skill(obsidian-markdown)"
     ]
   }
 }
