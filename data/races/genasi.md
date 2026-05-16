@@ -7,7 +7,6 @@ exists: false
 state: rare
 tags:
   - race
-  - size/medium
 size: Medium
 speed: 30
 typical_alignment: "Varies by elemental subrace"

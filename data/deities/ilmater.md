@@ -3,12 +3,12 @@
 
 name: "Ilmater"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/life
+  - deity
+  - deity/life
 domains:
   - Life
 moral_character: "Lawful Good"

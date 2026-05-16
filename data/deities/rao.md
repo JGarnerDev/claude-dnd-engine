@@ -3,12 +3,12 @@
 
 name: "Rao"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/knowledge
+  - deity
+  - deity/knowledge
 domains:
   - Knowledge
 moral_character: "Lawful Good"

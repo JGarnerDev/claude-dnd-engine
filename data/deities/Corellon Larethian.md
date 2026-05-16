@@ -1,13 +1,12 @@
-﻿---
+---
 name: "Corellon Larethian"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - pantheon/nonhuman
-  - domain/light
+  - deity
+  - deity/light
 domains:
   - Light
 moral_character: "Chaotic Good"

@@ -7,6 +7,7 @@ subtype: antagonist
 exists: true
 state: alive
 tags:
+  - character
   - character/antagonist
 location: [[Barovia]]
 personality: "Composed, calm, ancient. Greets intruders like guests at a dinner party. Interested in the party but does not explain himself."

@@ -55,9 +55,9 @@ subtype: dungeon
 exists: false
 state: unknown | known | active | partially-explored | cleared | repopulated | sealed
 tags:
+  - location
   - location/dungeon
   - location/dungeon/ruin   # use a more specific tag where applicable
-  - region/
 
 # --- MANDATORY (dungeon) ---
 location: [[Region or City Name]]

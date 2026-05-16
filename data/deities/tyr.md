@@ -3,12 +3,12 @@
 
 name: "Tyr"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/war
+  - deity
+  - deity/war
 domains:
   - War
 moral_character: "Lawful Good"

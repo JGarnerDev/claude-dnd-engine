@@ -3,13 +3,14 @@
 
 name: "Velsharoon"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/arcana
-  - domain/death
+  - deity
+  - deity/arcana
+  - deity
+  - deity/death
 domains:
   - Arcana
   - Death

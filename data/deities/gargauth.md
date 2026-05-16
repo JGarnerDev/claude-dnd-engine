@@ -3,13 +3,14 @@
 
 name: "Gargauth"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/knowledge
-  - domain/trickery
+  - deity
+  - deity/knowledge
+  - deity
+  - deity/trickery
 domains:
   - Knowledge
   - Trickery

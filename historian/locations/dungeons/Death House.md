@@ -5,6 +5,7 @@ subtype: dungeon
 exists: true
 state: cleared
 tags:
+  - location
   - location/dungeon
 
 location: [[Barovia -Village Outskirts]]

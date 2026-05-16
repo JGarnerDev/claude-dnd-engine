@@ -3,12 +3,12 @@
 
 name: "Milil"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/light
+  - deity
+  - deity/light
 domains:
   - Light
 moral_character: "Neutral Good"

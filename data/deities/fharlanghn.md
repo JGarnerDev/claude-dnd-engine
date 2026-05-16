@@ -3,13 +3,14 @@
 
 name: "Fharlanghn"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/knowledge
-  - domain/trickery
+  - deity
+  - deity/knowledge
+  - deity
+  - deity/trickery
 domains:
   - Knowledge
   - Trickery

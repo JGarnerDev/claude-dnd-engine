@@ -3,12 +3,12 @@
 
 name: "Istishia"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/tempest
+  - deity
+  - deity/tempest
 domains:
   - Tempest
 moral_character: "True Neutral"

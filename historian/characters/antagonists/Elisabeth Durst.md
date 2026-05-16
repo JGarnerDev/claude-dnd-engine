@@ -7,6 +7,7 @@ subtype: antagonist
 exists: true
 state: dead
 tags:
+  - character
   - character/antagonist
 location: [[Death House]]
 personality: "Consumed by jealousy. Ruthless — ordered the nursemaid killed and sacrificed her own infant."

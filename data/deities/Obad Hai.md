@@ -3,12 +3,12 @@
 
 name: "Obad Hai"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/nature
+  - deity
+  - deity/nature
 domains:
   - Nature
 moral_character: "True Neutral"

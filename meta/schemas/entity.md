@@ -14,7 +14,6 @@ state: ""                 # current in-world condition, valid values defined per
 
 tags:
   - type/subtype          # e.g. location/city, character/npc, faction/guild
-  - region/name           # geographic or conceptual grouping
 
 # Optional fields:
 subtype: ""               # more specific classification (city, npc, ruin, etc.)

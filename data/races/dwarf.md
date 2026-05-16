@@ -7,7 +7,6 @@ exists: false
 state: widespread
 tags:
   - race
-  - size/medium
 size: Medium
 speed: 25
 typical_alignment: "Typically lawful, often good"

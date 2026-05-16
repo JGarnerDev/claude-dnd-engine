@@ -7,7 +7,6 @@ exists: false
 state: regional
 tags:
   - race
-  - size/small
 size: Small
 speed: 25
 typical_alignment: "Typically good, often neutral"

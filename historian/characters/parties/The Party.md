@@ -3,6 +3,8 @@ name: "The Party"
 type: party
 exists: true
 state: active
+tags:
+  - party
 description: "The adventuring party drawn into Barovia; level 3 after clearing Death House."
 aliases: []
 members:

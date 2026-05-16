@@ -53,11 +53,11 @@ type: deity
 exists: false
 state: active | dormant | diminished | dead | imprisoned | ascended
 tags:
-  - deity/
-  - deity/greater     # greater | lesser | demigod | primordial
-  - domain/
+  - deity
+  - deity/war         # add one per domain — e.g. deity/war, deity/death, deity/trickery
 
 # --- MANDATORY (deity) ---
+tier: greater | intermediate | lesser | demigod
 domains: []
 moral_character: ""     # alignment or disposition in plain language
 worshippers:

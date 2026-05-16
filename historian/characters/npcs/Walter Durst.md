@@ -7,6 +7,7 @@ subtype: npc
 exists: true
 state: dead
 tags:
+  - character
   - character/npc
 
 location: [[Death House -Basement Altar]]

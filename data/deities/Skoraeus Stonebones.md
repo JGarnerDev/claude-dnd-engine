@@ -1,12 +1,12 @@
-﻿---
+---
 name: "Skoraeus Stonebones"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/nonhuman
-  - domain/knowledge
+  - deity
+  - deity/knowledge
 domains:
   - Knowledge
 moral_character: "True Neutral"

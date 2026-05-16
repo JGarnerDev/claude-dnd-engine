@@ -1,13 +1,12 @@
-﻿---
+---
 name: "Garl Glittergold"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - pantheon/nonhuman
-  - domain/trickery
+  - deity
+  - deity/trickery
 domains:
   - Trickery
 moral_character: "Lawful Good"

@@ -7,6 +7,7 @@ subtype: antagonist
 exists: true
 state: dead
 tags:
+  - character
   - character/antagonist
 location: [[Death House]]
 personality: "Unknown. Abandoned love for madness, according to Strahd's letter."

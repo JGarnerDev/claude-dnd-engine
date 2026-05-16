@@ -22,34 +22,32 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `creature` | creature entity | Entity type: notable creature with narrative presence |
 | **background** | | |
 | `background` | background entity | Entity type: character background — flat tag, no subtype |
-| **character/** | | |
+| **character** | | |
+| `character` | character entity | Entity type: any character (PC, NPC, or antagonist) — parent tag for all character subtypes |
 | `character/antagonist` | character | Entity subtype: antagonist NPC — hostile, active threat to the party |
 | `character/npc` | character | Entity subtype: non-player character |
 | `character/pc` | character | Entity subtype: player character |
-| **deity/** | | |
-| `deity/greater` | deity | Power tier: greater deity |
-| `deity/intermediate` | deity | Power tier: intermediate deity |
-| `deity/lesser` | deity | Power tier: lesser deity |
-| `deity/demigod` | deity | Power tier: demigod |
-| **domain/** | | |
-| `domain/arcana` | deity | Divine domain: Arcana |
-| `domain/death` | deity | Divine domain: Death |
-| `domain/forge` | deity | Divine domain: Forge |
-| `domain/grave` | deity | Divine domain: Grave |
-| `domain/knowledge` | deity | Divine domain: Knowledge |
-| `domain/life` | deity | Divine domain: Life |
-| `domain/light` | deity | Divine domain: Light |
-| `domain/nature` | deity | Divine domain: Nature |
-| `domain/order` | deity | Divine domain: Order |
-| `domain/peace` | deity | Divine domain: Peace |
-| `domain/tempest` | deity | Divine domain: Tempest |
-| `domain/trickery` | deity | Divine domain: Trickery |
-| `domain/twilight` | deity | Divine domain: Twilight |
-| `domain/war` | deity | Divine domain: War |
+| **deity** | | |
+| `deity` | deity entity | Entity type: any deity — parent tag for all deity/domain subtypes |
+| `deity/arcana` | deity | Entity type + divine domain: Arcana |
+| `deity/death` | deity | Entity type + divine domain: Death |
+| `deity/forge` | deity | Entity type + divine domain: Forge |
+| `deity/grave` | deity | Entity type + divine domain: Grave |
+| `deity/knowledge` | deity | Entity type + divine domain: Knowledge |
+| `deity/life` | deity | Entity type + divine domain: Life |
+| `deity/light` | deity | Entity type + divine domain: Light |
+| `deity/nature` | deity | Entity type + divine domain: Nature |
+| `deity/order` | deity | Entity type + divine domain: Order |
+| `deity/peace` | deity | Entity type + divine domain: Peace |
+| `deity/tempest` | deity | Entity type + divine domain: Tempest |
+| `deity/trickery` | deity | Entity type + divine domain: Trickery |
+| `deity/twilight` | deity | Entity type + divine domain: Twilight |
+| `deity/war` | deity | Entity type + divine domain: War |
 | **item/** | | |
 | `item/magic` | item entity | Entity subtype: magic item |
 | `item/mundane` | item entity | Entity subtype: mundane item with narrative significance |
-| **location/** | | |
+| **location** | | |
+| `location` | location entity | Entity type: any location — parent tag for all location subtypes |
 | `location/dungeon` | location entity | Entity subtype: dungeon |
 | `location/shop` | location entity | Entity subtype: shop (covers inns, taverns, and establishments) |
 | `location/city` | location entity | Entity subtype: city or town |
@@ -57,10 +55,6 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `location/wilderness` | location entity | Entity subtype: wilderness area |
 | **party** | | |
 | `party` | party entity | Entity type: adventuring party |
-| **pantheon/** | | |
-| `pantheon/faerûnian` | deity | Belongs to the Faerûnian pantheon |
-| `pantheon/greyhawk` | deity | Belongs to the Greyhawk pantheon |
-| `pantheon/nonhuman` | deity | Belongs to the nonhuman deity grouping |
 | **player/** | | |
 | `player/ben` | pc | Character played by Ben |
 | `player/jeff` | pc | Character played by Jeff |
@@ -70,7 +64,3 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `race` | race entity | Entity type: playable race — flat tag, no subtype |
 | **session/** | | |
 | `session/NN` | session | Identifies the session number — e.g. `session/01`, `session/11` |
-| **size/** | | |
-| `size/small` | race | Race size category: Small |
-| `size/medium` | race | Race size category: Medium |
-| `size/large` | race | Race size category: Large |

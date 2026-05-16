@@ -1,12 +1,12 @@
-﻿---
+---
 name: "Merrshaulk"
 type: deity
+tier: greater
 exists: false
 state: dormant
 tags:
-  - deity/greater
-  - pantheon/nonhuman
-  - domain/death
+  - deity
+  - deity/death
 domains:
   - Death
 moral_character: "Chaotic Evil"

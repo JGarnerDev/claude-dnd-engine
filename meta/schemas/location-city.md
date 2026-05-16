@@ -57,8 +57,8 @@ subtype: city
 exists: false
 state: thriving | stable | troubled | besieged | ruined | abandoned
 tags:
+  - location
   - location/city
-  - region/
 
 # --- MANDATORY (city) ---
 global_location: [[Region or Area Name]]

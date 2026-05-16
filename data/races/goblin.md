@@ -7,7 +7,6 @@ exists: false
 state: monstrous
 tags:
   - race
-  - size/small
 size: Small
 speed: 30
 typical_alignment: "Typically neutral evil"

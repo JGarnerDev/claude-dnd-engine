@@ -3,13 +3,14 @@
 
 name: "Shar"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/death
-  - domain/trickery
+  - deity
+  - deity/death
+  - deity
+  - deity/trickery
 domains:
   - Death
   - Trickery

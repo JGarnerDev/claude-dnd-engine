@@ -3,12 +3,12 @@
 
 name: "Nerull"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/death
+  - deity
+  - deity/death
 domains:
   - Death
 moral_character: "Neutral Evil"

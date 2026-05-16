@@ -3,13 +3,14 @@
 
 name: "Savras"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/arcana
-  - domain/knowledge
+  - deity
+  - deity/arcana
+  - deity
+  - deity/knowledge
 domains:
   - Arcana
   - Knowledge

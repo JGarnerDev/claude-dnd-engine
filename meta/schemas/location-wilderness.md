@@ -52,9 +52,9 @@ subtype: wilderness
 exists: false
 state: safe | dangerous | contested | cursed | blighted | impassable
 tags:
+  - location
   - location/wilderness
   - location/wilderness/forest   # use a more specific tag where applicable
-  - region/
 
 # --- MANDATORY (wilderness) ---
 region: [[Region Name]]

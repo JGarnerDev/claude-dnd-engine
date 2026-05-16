@@ -3,13 +3,14 @@
 
 name: "Selune"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/knowledge
-  - domain/life
+  - deity
+  - deity/knowledge
+  - deity
+  - deity/life
 domains:
   - Knowledge
   - Life

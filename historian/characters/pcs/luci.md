@@ -4,6 +4,10 @@ type: character
 subtype: pc
 exists: true
 state: active
+tags:
+  - character
+  - character/pc
+  - player/paul
 player: [[Paul]]
 race: [[Aasimar]]
 class: [[Monk]]

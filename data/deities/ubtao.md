@@ -3,13 +3,14 @@
 
 name: "Ubtao"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/knowledge
-  - domain/nature
+  - deity
+  - deity/knowledge
+  - deity
+  - deity/nature
 domains:
   - Knowledge
   - Nature

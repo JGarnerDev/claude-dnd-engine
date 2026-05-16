@@ -1,13 +1,14 @@
-﻿---
+---
 name: "Bahamut"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/nonhuman
-  - domain/life
-  - domain/war
+  - deity
+  - deity/life
+  - deity
+  - deity/war
 domains:
   - Life
   - War

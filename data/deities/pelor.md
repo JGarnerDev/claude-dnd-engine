@@ -3,13 +3,14 @@
 
 name: "Pelor"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/life
-  - domain/light
+  - deity
+  - deity/life
+  - deity
+  - deity/light
 domains:
   - Life
   - Light

@@ -3,13 +3,14 @@
 
 name: "Ulaa"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/life
-  - domain/war
+  - deity
+  - deity/life
+  - deity
+  - deity/war
 domains:
   - Life
   - War

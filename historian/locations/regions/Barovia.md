@@ -5,6 +5,7 @@ subtype: region
 exists: true
 state: occupied
 tags:
+  - location
   - location/region
 geography: "Isolated valley surrounded by the Balinok Mountains. Dense forests, mist-shrouded roads, a central river, and Castle Ravenloft looming over all."
 controlling_faction: [[Domain of Barovia]]

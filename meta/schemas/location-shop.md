@@ -50,9 +50,9 @@ subtype: shop
 exists: false
 state: open | closed | under-new-management | destroyed
 tags:
+  - location
   - location/shop
   - location/shop/inn         # use a more specific tag when applicable
-  - region/
 
 # --- MANDATORY (shop) ---
 city: [[City Name]]

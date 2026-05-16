@@ -3,12 +3,12 @@
 
 name: "Ralishaz"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/trickery
+  - deity
+  - deity/trickery
 domains:
   - Trickery
 moral_character: "Chaotic Neutral"

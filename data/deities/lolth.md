@@ -1,12 +1,12 @@
-﻿---
+---
 name: "Lolth"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/nonhuman
-  - domain/trickery
+  - deity
+  - deity/trickery
 domains:
   - Trickery
 moral_character: "Chaotic Evil"

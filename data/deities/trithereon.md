@@ -3,12 +3,12 @@
 
 name: "Trithereon"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/war
+  - deity
+  - deity/war
 domains:
   - War
 moral_character: "Chaotic Good"

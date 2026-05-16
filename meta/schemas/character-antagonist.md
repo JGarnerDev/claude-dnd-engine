@@ -51,8 +51,8 @@ subtype: antagonist
 exists: false
 state: alive | dead | missing | imprisoned | transformed
 tags:
+  - character
   - character/antagonist
-  - region/
 
 # --- MANDATORY (antagonist) ---
 location: [[Location Name]]

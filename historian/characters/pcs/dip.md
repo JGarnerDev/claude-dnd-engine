@@ -6,6 +6,10 @@ type: character
 subtype: pc
 exists: true
 state: active
+tags:
+  - character
+  - character/pc
+  - player/ben
 player: [[Ben]]
 race: [[Half Orc]]
 class: [[Barbarian]]

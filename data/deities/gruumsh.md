@@ -1,14 +1,14 @@
-﻿---
+---
 name: "Gruumsh"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - pantheon/nonhuman
-  - domain/tempest
-  - domain/war
+  - deity
+  - deity/tempest
+  - deity
+  - deity/war
 domains:
   - Tempest
   - War

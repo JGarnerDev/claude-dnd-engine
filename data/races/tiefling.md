@@ -7,7 +7,6 @@ exists: false
 state: scattered
 tags:
   - race
-  - size/medium
 size: Medium
 speed: 30
 typical_alignment: "Typically chaotic, often neutral or evil"

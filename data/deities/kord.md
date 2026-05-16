@@ -3,13 +3,14 @@
 
 name: "Kord"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/tempest
-  - domain/war
+  - deity
+  - deity/tempest
+  - deity
+  - deity/war
 domains:
   - Tempest
   - War

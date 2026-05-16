@@ -3,13 +3,14 @@
 
 name: "Lathander"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/life
-  - domain/light
+  - deity
+  - deity/life
+  - deity
+  - deity/light
 domains:
   - Life
   - Light

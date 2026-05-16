@@ -7,7 +7,6 @@ exists: false
 state: regional
 tags:
   - race
-  - size/medium
 size: Medium
 speed: 35
 typical_alignment: "Typically lawful good"

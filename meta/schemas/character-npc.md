@@ -51,8 +51,8 @@ subtype: npc
 exists: false
 state: alive | dead | missing | imprisoned | transformed
 tags:
+  - character
   - character/npc
-  - region/
 
 # --- MANDATORY (npc) ---
 location: [[Location Name]]

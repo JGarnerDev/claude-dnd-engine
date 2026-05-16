@@ -3,12 +3,12 @@
 
 name: "Malar"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/nature
+  - deity
+  - deity/nature
 domains:
   - Nature
 moral_character: "Chaotic Evil"

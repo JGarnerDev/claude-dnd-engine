@@ -1,12 +1,12 @@
-﻿---
+---
 name: "Thrym"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/nonhuman
-  - domain/war
+  - deity
+  - deity/war
 domains:
   - War
 moral_character: "Chaotic Evil"

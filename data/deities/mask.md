@@ -3,12 +3,12 @@
 
 name: "Mask"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/trickery
+  - deity
+  - deity/trickery
 domains:
   - Trickery
 moral_character: "Chaotic Neutral"

@@ -1,12 +1,12 @@
-﻿---
+---
 name: "Luthic"
 type: deity
+tier: intermediate
 exists: false
 state: active
 tags:
-  - deity/intermediate
-  - pantheon/nonhuman
-  - domain/life
+  - deity
+  - deity/life
 domains:
   - Life
 moral_character: "Lawful Evil"

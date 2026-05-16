@@ -1,13 +1,14 @@
-﻿---
+---
 name: "Surtur"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/nonhuman
-  - domain/knowledge
-  - domain/war
+  - deity
+  - deity/knowledge
+  - deity
+  - deity/war
 domains:
   - Knowledge
   - War

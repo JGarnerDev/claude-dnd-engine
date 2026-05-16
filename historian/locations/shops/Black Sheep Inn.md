@@ -7,6 +7,7 @@ subtype: shop
 exists: true
 state: closed
 tags:
+  - location
   - location/shop
 
 city: [[Barovia -Village Outskirts]]

@@ -1,12 +1,12 @@
-﻿---
+---
 name: "Yondalla"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/nonhuman
-  - domain/life
+  - deity
+  - deity/life
 domains:
   - Life
 moral_character: "Lawful Good"

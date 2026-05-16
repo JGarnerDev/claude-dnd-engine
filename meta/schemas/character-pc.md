@@ -53,6 +53,7 @@ subtype: pc
 exists: false
 state: active | dead | retired | missing | transformed
 tags:
+  - character
   - character/pc
   - player/          # player/jeff, player/ben, etc.
 

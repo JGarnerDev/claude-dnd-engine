@@ -3,13 +3,14 @@
 
 name: "Shaundakul"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/nature
-  - domain/trickery
+  - deity
+  - deity/nature
+  - deity
+  - deity/trickery
 domains:
   - Nature
   - Trickery

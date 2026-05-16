@@ -53,8 +53,8 @@ subtype: region
 exists: false
 state: stable | contested | occupied | frontier | devastated
 tags:
+  - location
   - location/region
-  - region/
 
 # --- MANDATORY (region) ---
 geography: ""

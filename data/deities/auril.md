@@ -3,13 +3,14 @@
 
 name: "Auril"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/nature
-  - domain/tempest
+  - deity
+  - deity/nature
+  - deity
+  - deity/tempest
 domains:
   - Nature
   - Tempest

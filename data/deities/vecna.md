@@ -3,13 +3,14 @@
 
 name: "Vecna"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/arcana
-  - domain/death
+  - deity
+  - deity/arcana
+  - deity
+  - deity/death
 domains:
   - Arcana
   - Death

@@ -3,12 +3,12 @@
 
 name: "Pholtus"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - domain/light
+  - deity
+  - deity/light
 domains:
   - Light
 moral_character: "Lawful Good"

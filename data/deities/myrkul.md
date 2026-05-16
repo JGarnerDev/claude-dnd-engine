@@ -3,12 +3,12 @@
 
 name: "Myrkul"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/death
+  - deity
+  - deity/death
 domains:
   - Death
 moral_character: "Neutral Evil"

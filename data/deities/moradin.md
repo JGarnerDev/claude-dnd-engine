@@ -1,13 +1,12 @@
-﻿---
+---
 name: "Moradin"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/greyhawk
-  - pantheon/nonhuman
-  - domain/knowledge
+  - deity
+  - deity/knowledge
 domains:
   - Knowledge
 moral_character: "Lawful Good"

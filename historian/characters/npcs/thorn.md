@@ -7,6 +7,7 @@ subtype: npc
 exists: true
 state: missing
 tags:
+  - character
   - character/npc
 location: [[Death House -Unknown]]
 personality: "Willing to share information. Revealed Walter's backstory when asked."

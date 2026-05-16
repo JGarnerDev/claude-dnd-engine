@@ -3,13 +3,14 @@
 
 name: "Eldath"
 type: deity
+tier: greater
 exists: false
 state: active
 tags:
-  - deity/greater
-  - pantheon/faerûnian
-  - domain/life
-  - domain/nature
+  - deity
+  - deity/life
+  - deity
+  - deity/nature
 domains:
   - Life
   - Nature
