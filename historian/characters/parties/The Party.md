@@ -23,16 +23,16 @@ Campaign: [[Curse of Strahd]]
 
 ## Formation
 
-Met at the Black Sheep Inn (Session 01) and were drawn together into Death House by the mists. United by circumstance, not by choice.
+Met at the [[Black Sheep Inn]] (Session 01) and were drawn together into [[Death House]] by the mists. United by circumstance, not by choice.
 
 ## Reputation
 
-Unknown. They have not been in Barovia long enough to establish one.
+Unknown. They have not been in [[Barovia]] long enough to establish one.
 
 ## Notable Accomplishments
 
-- Cleared [[Death House]] — survived all ten sessions within its walls and escaped. Luci died on the altar and was retrieved from death by Strahd.
-- Rose and Thorn (the ghost children) were left behind when the mists expelled the party.
+- Cleared [[Death House]] — survived all ten sessions within its walls and escaped. Luci died on the altar and was retrieved from death by [[Strahd]].
+- [[Rose]] and [[Thorn]] (the ghost children) were left behind when the mists expelled the party.
 
 ## Active Afflictions
 

@@ -90,13 +90,14 @@ Every piece of content in this engine is an **entity** — a markdown file with 
 
 1. Read `meta/schemas/entity.md` — the base schema all entities must satisfy.
 2. Read the most specific schema that applies (see **Known Schemas** below). Each schema file contains the canonical file path, valid `state` values, the full frontmatter template, and a mapping from player form answers to frontmatter fields.
-3. Check `meta/types.md` — confirm the `type`/`subtype` combination is registered. Use only combinations listed there.
-4. Check `meta/tags.md` — use only tags listed in the registry. If a tag is needed that doesn't exist, add it to `meta/tags.md` first, then use it.
+3. Check `meta/types.md` — confirm the `type`/`subtype` combination is registered. Use only combinations listed there. Create sparingly.
+4. Check `meta/tags.md` — use only tags listed in the registry. If a tag is needed that doesn't exist, add it to `meta/tags.md` first, then use it. Create sparingly if a wiki-link cannot be made.
 5. Create the file at the canonical path defined in that schema.
 5.1 Use the entity's exact canonical display name in `name:` and in all body `[[wiki-links]]`. Do not abbreviate, shorten, or alter the entity name when linking.
 5.2 Ensure entity names contain no broken characters, stray quotes, or malformed punctuation before creating the file.
 5.3 The filename (excluding `.md`) must be the human-readable, properly capitalized name that exactly matches the `name:` frontmatter field. Do not use slugs, kebab-case, lowercase, or any other transformation — the filename and the `name:` value must be identical.
 6. Populate all mandatory frontmatter fields. Use `unknown` or `"TBD"` for anything not yet known — never omit a mandatory field.
+7. Turn all named references to known entities into wiki-links in the entire document, including front matter. 
 
 If a user provides form answers (structured or freeform), use the **Form → Frontmatter Mapping** table in the schema to translate their answers into the correct fields. If required fields are missing, ask before creating the file.
 
