@@ -31,17 +31,17 @@ Low, measured. Like greeting guests at a dinner party.
 ## Appearances in Play
 
 ### Session 3 -The Fireplace
-Appeared as a face formed in the flames of fireplace room 6 in Death House. Addressed the party: *"You've come to my land uninvited, yet here you are, exploring one of its... oldest wounds. Curious. Most who enter this house do not leave. But you -you interest me. Do carry on."*
+Appeared as a face formed in the flames of fireplace room 6 in [[Death House]]. Addressed the party: *"You've come to my land uninvited, yet here you are, exploring one of its... oldest wounds. Curious. Most who enter this house do not leave. But you -you interest me. Do carry on."*
 
 Did not threaten. Did not explain himself. When asked his name, smiled slightly and said nothing. When the fireplace was attacked, the fire simply went out and the room went cold.
 
 ### Session 8 -The Statue
-The statue in the cult quarters bore his face. Odibli's Arcana check revealed powerful magic connecting the statue to another entity -the same face as from the fire.
+The statue in the cult quarters bore his face. [[Odibli]]'s Arcana check revealed powerful magic connecting the statue to another entity -the same face as from the fire.
 
 ### Session 9 -The Shadow Corridor
-Strahd froze time just before shadows would have killed Ben. Spoke directly to the party: *"The shadows cannot exist in the light. Be wary of that which you cannot see -it is deadly."* Then left. This act saved Ben's life.
+Strahd froze time just before shadows would have killed [[Dip]]. Spoke directly to the party: *"The shadows cannot exist in the light. Be wary of that which you cannot see -it is deadly."* Then left. This act saved Dip's life.
 
 ### Session 10 -Outside Death House
-Greeted the party upon their exit from Death House. Thanked and congratulated them. Retrieved Luci from death after she sacrificed herself on the altar.
+Greeted the party upon their exit from Death House. Thanked and congratulated them. Retrieved [[Luci]] from death after she sacrificed herself on the altar.
 
 > **Reliability:** All appearances confirmed from session notes. The dialogue from Session 3 and Session 9 was written by the DM in the notes, so it is high reliability. Session 10 congrats and Luci retrieval confirmed.

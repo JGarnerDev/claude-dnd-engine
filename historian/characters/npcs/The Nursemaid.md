@@ -24,7 +24,7 @@ relates_to:
 importance: major
 active: false
   
-description: "The nursemaid of Death House. Had an affair with Gustav Durst and bore Walter. Killed by Elisabeth Durst's cult. Now haunts the house as a specter."
+description: "The nursemaid of Death House. Had an affair with [[Gustav Durst]] and bore Walter. Killed by Elisabeth Durst's cult. Now haunts the house as a specter."
 ---
 
 > **Reliability -Name:** No personal name appears in the notes. Referred to only as "the nursemaid" or "the specter." Confirm name with DM.
@@ -35,7 +35,7 @@ Location: [[Death House -Area 15]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 
-Employed as nursemaid in the Durst household. Had an affair with Gustav Durst and bore his illegitimate son, Walter. Walter was born stillborn (or sacrificed immediately at birth -notes ambiguous). Elisabeth Durst discovered the affair, was consumed by jealousy, and ordered the nursemaid killed by the cult.
+Employed as nursemaid in the Durst household. Had an affair with [[Gustav Durst]] and bore his illegitimate son, Walter. [[Walter Durst]] was born stillborn (or sacrificed immediately at birth -notes ambiguous). [[Elisabeth Durst]] discovered the affair, was consumed by jealousy, and ordered the nursemaid killed by the cult.
 
 The nursemaid now haunts Death House as a specter.
 

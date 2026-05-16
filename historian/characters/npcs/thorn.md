@@ -8,11 +8,9 @@ exists: true
 state: missing
 tags:
   - character/npc
-
 location: [[Death House -Unknown]]
 personality: "Willing to share information. Revealed Walter's backstory when asked."
 livelihood: "Ghost -trapped in Death House"
-
 aliases: []
 relates_to:
   - [[Rose]] (sister)
@@ -36,14 +34,14 @@ Location: [[Death House -Unknown]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 
-Son of Gustav and Elisabeth Durst. Died in Death House as a child. His ghost lured travelers from outside alongside his sister Rose.
+Son of [[Gustav Durst]] and [[Elisabeth Durst]]. Died in [[Death House]] as a child. His ghost lured travelers from outside alongside his sister [[Rose]].
 
 Told the party he was not allowed in the dungeon by his parents.
 
 ## Key Information Revealed
 
 In Session 6, Thorn explained Walter's origins:
-- Walter was the illegitimate child of Gustav Durst and the nursemaid
+- [[Walter Durst]] was the illegitimate child of Gustav Durst and the nursemaid
 - Elisabeth Durst discovered the affair and was consumed by jealousy
 - The Durst-led cult sacrificed baby Walter on the basement altar
 - Elisabeth had the nursemaid killed -the nursemaid became the specter in area 15

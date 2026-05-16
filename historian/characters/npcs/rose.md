@@ -36,11 +36,11 @@ Location: [[Death House -Unknown]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 
-Daughter of Gustav and Elisabeth Durst. Died in Death House as a child. Her ghost (along with her brother Thorn's) lured travelers into Death House from outside.
+Daughter of [[Gustav Durst]] and [[Elisabeth Durst]]. Died in [[Death House]] as a child. Her ghost (along with her brother [[Thorn]]'s) lured travelers into Death House from outside.
 
 ## Session History
 
-- **Session 1:** Spotted outside Death House with Thorn. Ages noted (Rose = 11, Thorn = 8). Their presence drew the party inside.
-- **Session 6:** Found in the attic. Rose's ghost was bound to Ben's scroll. Said thank you, expressed she was just happy to be taken along.
+- **Session 1:** Spotted outside Death House with Thorn. Ages noted ([[Rose]] = 11, [[Thorn]] = 8). Their presence drew the party inside.
+- **Session 6:** Found in the attic. Rose's ghost was bound to Dip's scroll. Said thank you, expressed she was just happy to be taken along.
 - **Session 8:** Rose told the companions that previous travelers had entered the house and never returned.
-- **Session 10:** Tried to fight against being left behind when the mists carried the party out. Ben and Miguel left the scroll pages. Rose is stranded.
+- **Session 10:** Tried to fight against being left behind when the mists carried the party out. [[Dip]] and [[Odibli]] left the scroll pages. Rose is stranded.
