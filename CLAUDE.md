@@ -96,6 +96,7 @@ Every piece of content in this engine is an **entity** — a markdown file with 
 5. Create the file at the canonical path defined in that schema.
 5.1 Use the entity's exact canonical display name in `name:` and in all body `[[wiki-links]]`. Do not abbreviate, shorten, or alter the entity name when linking.
 5.2 Ensure entity names contain no broken characters, stray quotes, or malformed punctuation before creating the file.
+5.3 The filename (excluding `.md`) must be the human-readable, properly capitalized name that exactly matches the `name:` frontmatter field. Do not use slugs, kebab-case, lowercase, or any other transformation — the filename and the `name:` value must be identical.
 6. Populate all mandatory frontmatter fields. Use `unknown` or `"TBD"` for anything not yet known — never omit a mandatory field.
 
 If a user provides form answers (structured or freeform), use the **Form → Frontmatter Mapping** table in the schema to translate their answers into the correct fields. If required fields are missing, ask before creating the file.
