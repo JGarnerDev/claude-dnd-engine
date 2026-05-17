@@ -8,7 +8,7 @@ tags:
   - location
   - location/dungeon
 
-location: [[Barovia -Village Outskirts]]
+location: [[Barovia Village Outskirts]]
 origin: "Built and corrupted by the Durst family and their death cult"
 current_threat: "None -party cleared it in Session 10. Unknown if it repopulates."
 hook: "Rose and Thorn lured travelers inside. Cult altar required a sacrifice to allow escape."
@@ -35,7 +35,7 @@ Location: [[Barovia]] | Campaign: [[Curse of Strahd]]
 
 ## Overview
 
-A four-story haunted manor with a dungeon basement, just outside the village of Barovia. Built and operated by the Durst family, who ran the [[Durst Cult]] within. Rose and Thorn's ghosts lured travelers inside; the house itself functioned as a trap.
+A four-story haunted manor with a dungeon basement, situated on [[Barovia Village Outskirts]]. Built and operated by the Durst family, who ran the [[Durst Cult]] within. Rose and Thorn's ghosts lured travelers inside; the house itself functioned as a trap.
 
 ## Floor Layout (as explored)
 

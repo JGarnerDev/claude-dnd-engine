@@ -10,7 +10,7 @@ tags:
   - location
   - location/shop
 
-city: [[Barovia -Village Outskirts]]
+city: [[Barovia Village Outskirts]]
 proprietor: [[Unknown -Tavern Master]]
 purpose: "Inn and tavern. Starting point before Barovia. Party earned lodging and supplies by performing."
 
@@ -24,7 +24,7 @@ description: "Black Sheep Inn. Located just outside Barovia. Party performed her
 
 
 
-City: [[Barovia]] | Proprietor: [[Unknown -Tavern Master]] | Campaign: [[Curse of Strahd]]
+City: [[Barovia]] | Location: [[Barovia Village Outskirts]] | Proprietor: [[Unknown -Tavern Master]] | Campaign: [[Curse of Strahd]]
 
 > **Reliability -Proprietor:** Notes mention "Tavern master" but give no name. Confirm with DM.
 

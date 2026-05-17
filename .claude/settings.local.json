@@ -37,7 +37,9 @@
       "Skill(obsidian-markdown)",
       "Bash(grep -v \"^d.*\\\\.$\")",
       "Bash(git *)",
-      "Bash(gh auth *)"
+      "Bash(gh auth *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\scheduler\\\\sessions\" -Name \"*.md\" -ErrorAction SilentlyContinue)",
+      "Bash(Get-ChildItem *)"
     ]
   },
   "hooks": {
