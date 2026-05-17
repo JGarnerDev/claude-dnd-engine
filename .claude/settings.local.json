@@ -40,7 +40,8 @@
       "Bash(gh auth *)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\scheduler\\\\sessions\" -Name \"*.md\" -ErrorAction SilentlyContinue)",
       "Bash(Get-ChildItem *)",
-      "PowerShell(Set-Content *)"
+      "PowerShell(Set-Content *)",
+      "Bash(powershell -File scripts/location-entities.ps1 -Location \"Barovia\")"
     ]
   },
   "hooks": {
