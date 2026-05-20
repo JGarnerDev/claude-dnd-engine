@@ -6,6 +6,7 @@ README.md
 .claude/commands/session.md
 .claude/commands/recap.md
 .claude/commands/sync.md
+.claude/commands/pitch.md
 meta/schemas/*.md
 meta/entity-creation.md
 meta/graph-settings.md
