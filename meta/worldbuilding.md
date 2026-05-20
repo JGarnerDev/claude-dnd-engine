@@ -27,11 +27,16 @@ Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with
 
 ## Influences
 
+### Major
 - Lord of the Rings (depth, magic rarity, mythic weight)
 - Game of Thrones (political plots, moral complexity)
-- Warhammer (cultural richness, distinct civilizations)
 - Western genre (desert frontier, scarcity, outlaws)
 - Pirate genre (sea and sky variants)
+
+### Minor
+- Warhammer (cultural richness, distinct civilizations)
+- Redwall (tight-knit communities of smallfolk, cozy-dark contrast, simple lives interrupted by genuine menace — not anthro animals, but the texture of beloved places under threat)
+- Elden Ring (shattered ancient orders, cryptic ruins of fallen civilizations, gods who broke the world — right flavor for deep history, dead empires, places that feel like they remember something terrible)
 
 ## What Makes This World Different
 
