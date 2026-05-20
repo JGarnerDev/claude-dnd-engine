@@ -7,7 +7,7 @@ tags:
 
 Extends: `entity.md`
 
-Covers two use cases: (1) **Named creatures** — individuals with personality, recurring presence, or narrative significance. A random goblin patrol does not need a file; Strahd's named nightmare steed does. (2) **Monster archetypes** — canonical creature types available as encounter templates (e.g., Vampire Spawn, Werewolf, Dire Wolf). Set `archetype: true` on archetype files. Archetypes never move to `historian/` when used in sessions; the named instances they spawn do.
+Covers two use cases: (1) **Named creatures** — individuals with personality, recurring presence, or narrative significance. A random goblin patrol does not need a file; a named villain's mount does. (2) **Monster archetypes** — canonical creature types available as encounter templates (e.g., Vampire Spawn, Werewolf, Dire Wolf). Set `archetype: true` on archetype files. Archetypes never move to `historian/` when used in sessions; the named instances they spawn do.
 
 ---
 

@@ -46,7 +46,7 @@ These principles govern how Claude should think and reason during any worldbuild
 
 - Assign elements to specific regions, not the whole world
 - Each area should have a dominant flavor (1-2 influences max), not all influences at once
-- Magic rarity and coffee economy are world-wide; biome/genre flavors are regional
+- Some elements are world-wide (magic rules, fundamental economy); others are regional (biome, genre flavor) — check `meta/worldbuilding.md` for which is which
 - If a new location doesn't fit any listed element, that's fine — the palette is not exhaustive
 
 ## How to Apply These When Helping
