@@ -22,7 +22,7 @@ Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with
 
 - **Biome diversity:** Desert/western, open sea, sky, and dinosaur territories — each with its own pirate/frontier culture
 - **Magic is rare:** ~3/10. Universally known to exist; having it is a gift, not a learnable skill. LotR-ish — presence is significant, not routine
-- **Coffee economy:** Rare, gnome-controlled, fetches high prices, desired by everyone. A genuine geopolitical lever
+- **Coffee economy:** Rare, fetches high prices, desired by everyone. A genuine geopolitical lever. Gnomes dominate the trade historically — most brokers, roasters, and caravan operators are gnomish — but the market isn't locked. Other players exist; gnomes just got there first and stayed organized.
 - **Cultural depth over tech level:** Civilizations differ by values, history, and environment — Warhammer-style specificity
 
 ## Influences
@@ -37,7 +37,7 @@ Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with
 
 - Vertical geography matters: sky biomes are real, traversable, and inhabited
 - Dinosaurs exist and shape ecology, culture, and conflict
-- Gnome coffee monopoly is a meaningful economic and political force
+- Coffee trade is a meaningful economic and political force; gnomes are dominant but not the only players
 - Magic as innate gift creates hard social stratification between those who have it and those who don't
 
 ## Resource Palette
