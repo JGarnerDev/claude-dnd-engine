@@ -42,7 +42,7 @@ Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with
 
 ## Resource Palette
 
-`data/resources/` holds 37 resources spanning common staples to unique arcane materials. Coffee is one node in a larger economy — draw from the full pool to avoid over-indexing on any single resource.
+`data/resources/` holds 62 resources spanning common staples to unique arcane materials, including 25 finished goods (`resource_type: goods`). Coffee is one node in a larger economy — draw from the full pool to avoid over-indexing on any single resource.
 
 - **Common:** Timber, Iron Ore, Copper Ore, Stone, Clay, Salt, Grain, Fish, Fresh Water, Livestock, Wool, Hides, Coal, Hemp, Sand
 - **Uncommon:** Silver Ore, Gold Ore, Horses, Silk, Spices, Gemstones, Alchemical Herbs, Sulfur, Amber, Pearl, Obsidian, Dinosaur Bone, Dinosaur Hide
