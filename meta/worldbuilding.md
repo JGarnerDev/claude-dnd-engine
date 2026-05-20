@@ -40,6 +40,15 @@ Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with
 - Gnome coffee monopoly is a meaningful economic and political force
 - Magic as innate gift creates hard social stratification between those who have it and those who don't
 
+## Resource Palette
+
+`data/resources/` holds 37 resources spanning common staples to unique arcane materials. Coffee is one node in a larger economy — draw from the full pool to avoid over-indexing on any single resource.
+
+- **Common:** Timber, Iron Ore, Copper Ore, Stone, Clay, Salt, Grain, Fish, Fresh Water, Livestock, Wool, Hides, Coal, Hemp, Sand
+- **Uncommon:** Silver Ore, Gold Ore, Horses, Silk, Spices, Gemstones, Alchemical Herbs, Sulfur, Amber, Pearl, Obsidian, Dinosaur Bone, Dinosaur Hide
+- **Rare:** Platinum Ore, Mithral Ore, Adamantine Ore, Dragon Scales, Arcane Crystal, Sky Coral, Stormglass, Exotic Mounts
+- **Unique:** Coffee (gnome monopoly), Ioun Stone, Starfall Ore, Dragonheart
+
 ## What to Avoid
 
 <!-- To be filled in by players -->
