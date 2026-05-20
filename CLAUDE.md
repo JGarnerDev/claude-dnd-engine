@@ -55,6 +55,18 @@ Entities in `./data` with `exists: false` are **free** — available to be used 
 
 Never silently generate a net-new entity during session planning or content generation. The data pool is intentional — running it low is meaningful signal, not a problem to paper over.
 
+## New Campaign Setup
+
+Before generating any content for a new campaign, collect player worldbuilding preferences and populate `meta/worldbuilding.md`. Ask players:
+
+- Tone and inspirations (books, games, films)
+- Biomes or settings they want to explore
+- Magic: how rare, how it works, who has access
+- Notable resources, economies, or factions of interest
+- Anything they want to avoid
+
+Fill in `meta/worldbuilding.md` from their answers before proceeding to campaign, act, or entity creation. This file is the creative contract for the campaign.
+
 ## Entity Creation
 
 When creating any entity, read `meta/entity-creation.md` before proceeding. It contains the full protocol, known schemas, Obsidian frontmatter rules, and gameplay mechanics guidance.

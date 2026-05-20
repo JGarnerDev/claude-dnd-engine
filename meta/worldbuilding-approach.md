@@ -40,6 +40,15 @@ These principles govern how Claude should think and reason during any worldbuild
 - Create tensions, contradictions, and pressures that naturally generate stories.
 - Leave room for unknowns, frontiers, and discovery.
 
+## Using meta/worldbuilding.md
+
+`meta/worldbuilding.md` lists palette elements — things available in the world, not things present everywhere. When drawing from it:
+
+- Assign elements to specific regions, not the whole world
+- Each area should have a dominant flavor (1-2 influences max), not all influences at once
+- Magic rarity and coffee economy are world-wide; biome/genre flavors are regional
+- If a new location doesn't fit any listed element, that's fine — the palette is not exhaustive
+
 ## How to Apply These When Helping
 
 - Think in cause and effect.

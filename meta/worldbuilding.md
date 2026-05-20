@@ -5,22 +5,41 @@ tags: [guideline]
 
 # World Building Principles
 
+> **Base setting: standard D&D.** These notes are additives — flavors layered onto an otherwise normal D&D world. Pirates exist in a world that also has inns, merchants, dungeons, and kingdoms. Dinosaurs live in specific regions, not everywhere. No single element should dominate the world's identity. A player in a generic port town should feel like they're in D&D; a player in the right region might also encounter sky pirates. The palette enriches — it doesn't replace the foundation.
+
 ## Tone
-<!-- What's the overall feel of this campaign? (e.g. dark and gritty, high heroic, comedic, mysterious, political) -->
+
+Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with dark political complexity (GoT). Multiple distinct biomes each with strong genre flavor. Grit and cultural specificity in the Warhammer vein — not defined by technology level, but by distinct civilizations with real pressures and histories.
 
 ## Core Themes
-<!-- What big ideas does this campaign explore? List 3-5 themes. -->
-<!-- e.g. "the cost of power", "found family", "moral ambiguity of war" -->
+
+- Depth and richness over surface-level adventure
+- Political intrigue and power struggles
+- Resource scarcity and economic control
+- Exploration across radically different environments
 
 ## Setting Pillars
-<!-- 3-5 things that make this world distinct from standard D&D. -->
-<!-- e.g. "magic is rare and feared", "gods are silent and possibly dead", "the map is known — exploration is social, not geographic" -->
+
+- **Biome diversity:** Desert/western, open sea, sky, and dinosaur territories — each with its own pirate/frontier culture
+- **Magic is rare:** ~3/10. Universally known to exist; having it is a gift, not a learnable skill. LotR-ish — presence is significant, not routine
+- **Coffee economy:** Rare, gnome-controlled, fetches high prices, desired by everyone. A genuine geopolitical lever
+- **Cultural depth over tech level:** Civilizations differ by values, history, and environment — Warhammer-style specificity
 
 ## Influences
-<!-- Books, games, films, or other media that shape the world's feel. -->
+
+- Lord of the Rings (depth, magic rarity, mythic weight)
+- Game of Thrones (political plots, moral complexity)
+- Warhammer (cultural richness, distinct civilizations)
+- Western genre (desert frontier, scarcity, outlaws)
+- Pirate genre (sea and sky variants)
 
 ## What Makes This World Different
-<!-- Any major mechanical or lore departures from standard D&D assumptions. -->
+
+- Vertical geography matters: sky biomes are real, traversable, and inhabited
+- Dinosaurs exist and shape ecology, culture, and conflict
+- Gnome coffee monopoly is a meaningful economic and political force
+- Magic as innate gift creates hard social stratification between those who have it and those who don't
 
 ## What to Avoid
-<!-- Topics, tropes, or content to steer away from in generation. -->
+
+<!-- To be filled in by players -->
