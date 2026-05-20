@@ -38,10 +38,13 @@ Read the minimum needed to make the pitch feel coherent with the campaign:
 - If `--party` is set or implied: pull party info from memory (names, level, current location, afflictions if any)
 - If `--tone` not set: check `meta/worldbuilding.md` frontmatter only — grab `tone` and `themes`
 - Do not read historian, sessions, missions, or act files unless the user explicitly asks for continuity with current story
+- Always load `memory/pitch-history.md` if it exists — this lists recently generated archetypes to avoid repeating
 
 ---
 
 ## Phase 3 — Generate Pitch
+
+**Anti-archetype step (mandatory, do not skip):** Before writing each pitch, silently identify the most obvious, default version of the requested type — the first thing anyone would reach for. Then explicitly avoid it. If pitch history is loaded, treat every archetype listed there as also forbidden. The goal is for each generation to occupy different narrative space than everything that came before.
 
 Write the pitch as flowing prose. Structure depends on `--type`:
 
@@ -69,7 +72,21 @@ If `--scale brief`, compress each element to 1–3 sentences. If `--scale full`,
 
 ---
 
-## Phase 4 — Offer Next Steps
+## Phase 4 — Save Pitch History
+
+After generating, append a 2–3 word archetype summary for each pitch to `memory/pitch-history.md`. Format:
+
+```
+- {type}: {archetype summary}
+```
+
+Examples: `- antagonist: cold bureaucrat`, `- npc: exhausted magistrate`, `- dungeon: collapsed mine`.
+
+Keep the file to 15 entries max — drop the oldest if over. Create the file if it doesn't exist. Do this silently; do not mention it to the user.
+
+---
+
+## Phase 5 — Offer Next Steps
 
 After the pitch, offer one line:
 
