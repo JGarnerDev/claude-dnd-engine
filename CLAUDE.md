@@ -88,11 +88,13 @@ PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run th
 | `entity-graph.ps1` | 1-hop relations for any entity | `.\scripts\entity-graph.ps1 -Name "<name>"` |
 | `location-entities.ps1` | All historian entities near a location | `.\scripts\location-entities.ps1 -Location "<name>"` |
 | `pitch-brief.ps1` | Start of every `/pitch` | `.\scripts\pitch-brief.ps1 [-Type <type>]` |
+| `monster-lookup.ps1` | Find monsters by CR, creature type, or habitat | `.\scripts\monster-lookup.ps1 [-Type <type>] [-CRMin <n>] [-CRMax <n>] [-Habitat <name>]` |
 
 **Mandatory pre-reads replaced by scripts:**
 - Before `/session`: run `session-brief.ps1` instead of reading campaign, act, PC files individually
 - Before entity lookup: run `free-entities.ps1 -Type <type>` instead of globbing data/
 - Before scene-building at a location: run `location-entities.ps1` instead of manual grep
+- Before creature-type pitch or encounter design: run `monster-lookup.ps1` instead of globbing data/monsters/
 
 Scripts output plain text; parse with your own judgment. They read frontmatter only (except `session-brief.ps1` which also reads the last session body for cliffhanger).
 

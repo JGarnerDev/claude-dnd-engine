@@ -56,7 +56,10 @@
       "Bash(.\\\\scripts\\\\pitch-brief.ps1 -Type antagonist)",
       "Bash(.\\\\scripts\\\\free-entities.ps1)",
       "Bash(powershell -ExecutionPolicy Bypass -File scripts\\\\_list-habitats.ps1)",
-      "PowerShell(Out-Null *)"
+      "PowerShell(Out-Null *)",
+      "PowerShell(.\\\\scripts\\\\pitch-brief.ps1 -Type antagonist)",
+      "PowerShell(.\\\\scripts\\\\monster-lookup.ps1 -Type aberration -CRMax 6)",
+      "PowerShell(.\\\\scripts\\\\monster-lookup.ps1 -Habitat Cave -CRMin 2 -CRMax 8)"
     ]
   },
   "hooks": {
