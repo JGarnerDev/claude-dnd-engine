@@ -31,6 +31,7 @@ Authoritative list of all valid `type` / `subtype` combinations. **Before declar
 | `culture` | — | `meta/schemas/culture.md` | `data/cultures/` | `historian/cultures/` |
 | `item` | `magic` | `meta/schemas/item-magic.md` | `data/items/magic/` | `historian/items/magic/` |
 | `item` | `mundane` | `meta/schemas/item-mundane.md` | `data/items/mundane/` | `historian/items/mundane/` |
+| `location` | `building` | `meta/schemas/location-building.md` | `data/locations/buildings/` | `historian/locations/buildings/` |
 | `location` | `city` | `meta/schemas/location-city.md` | `data/locations/cities/` | `historian/locations/cities/` |
 | `location` | `dungeon` | `meta/schemas/location-dungeon.md` | `data/locations/dungeons/` | `historian/locations/dungeons/` |
 | `location` | `region` | `meta/schemas/location-region.md` | `data/locations/regions/` | `historian/locations/regions/` |

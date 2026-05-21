@@ -53,7 +53,8 @@
       "Bash(Remove-Item *)",
       "Bash(powershell -File scripts/pitch-brief.ps1 -Type antagonist)",
       "Bash(powershell -File \".\\\\scripts\\\\pitch-brief.ps1\" -Type \"antagonist\")",
-      "Bash(.\\\\scripts\\\\pitch-brief.ps1 -Type antagonist)"
+      "Bash(.\\\\scripts\\\\pitch-brief.ps1 -Type antagonist)",
+      "Bash(.\\\\scripts\\\\free-entities.ps1)"
     ]
   },
   "hooks": {
