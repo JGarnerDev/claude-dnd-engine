@@ -49,7 +49,11 @@
       "Bash(powershell -File scripts/free-entities.ps1 -Type faction)",
       "Bash(powershell -File scripts/free-entities.ps1 -Type npc)",
       "Bash(powershell -File scripts/free-entities.ps1 -Type antagonist)",
-      "Bash(powershell -File scripts/_create-resources.ps1)"
+      "Bash(powershell -File scripts/_create-resources.ps1)",
+      "Bash(Remove-Item *)",
+      "Bash(powershell -File scripts/pitch-brief.ps1 -Type antagonist)",
+      "Bash(powershell -File \".\\\\scripts\\\\pitch-brief.ps1\" -Type \"antagonist\")",
+      "Bash(.\\\\scripts\\\\pitch-brief.ps1 -Type antagonist)"
     ]
   },
   "hooks": {

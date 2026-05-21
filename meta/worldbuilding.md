@@ -21,7 +21,7 @@ Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with
 ## Setting Pillars
 
 - **Biome diversity:** All standard biomes exist (forests, mountains, plains, tundra, swamps, coasts). Layered on top: desert/western, open sea, sky, and dinosaur territories — each with its own pirate/frontier culture
-- **Magic is rare:** ~3/10. Universally known to exist; having it is a gift, not a learnable skill. LotR-ish — presence is significant, not routine. Creates hard social stratification between those who have it and those who don't.
+- **Magic is rare:** ~3/10. Universally known to exist, rare in practice. LotR-ish — presence is significant, not routine. Creates hard social stratification between those who have it and those who don't.
 - **Cultural depth over tech level:** Civilizations differ by values, history, and environment — Warhammer-style specificity
 
 ## World Textures
@@ -39,6 +39,7 @@ Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with
 - Western genre (desert frontier, scarcity, outlaws)
 - Pirate genre (sea and sky variants, magical or steampunk ships)
 - Elden Ring (shattered ancient orders, cryptic ruins of fallen civilizations, gods who broke the world)
+- Kill Bill / Samurai genre (honor codes and their contradictions; the ronin — skilled, masterless, morally complex; craft mastery as identity, not just capability; revenge as a pure and consuming force; stylized violence that is purposeful and ritual, never gratuitous)
 
 ### Minor
 - Warhammer 40k (planets where history has forgotten mighty ages — technology as lost inheritance, not progress)
@@ -56,4 +57,9 @@ Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with
 
 ## What to Avoid
 
-<!-- To be filled in by players -->
+- Pure grimdark without hope — nihilism contradicts the optimism texture; darkness must coexist with warmth
+- Comedy-first tone — levity and warmth belong, but the campaign is not a comedy
+- Technology beyond the steampunk ceiling — no firearms as common weapons, no industrial infrastructure
+- Generic fantasy Europe — every civilization must have distinct cultural character; bland backdrop is a failure state
+- Any single flavor dominating every scene — pirates, coffee, dinosaurs, and gothic horror are all spices, not the whole dish
+- Gothic horror as persistent default mode — Strahd is a chapter, not the world's identity; don't let it bleed forward

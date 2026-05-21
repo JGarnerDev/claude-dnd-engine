@@ -87,6 +87,7 @@ PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run th
 | `free-entities.ps1` | Find available entities by type | `.\scripts\free-entities.ps1 [-Type <type>]` |
 | `entity-graph.ps1` | 1-hop relations for any entity | `.\scripts\entity-graph.ps1 -Name "<name>"` |
 | `location-entities.ps1` | All historian entities near a location | `.\scripts\location-entities.ps1 -Location "<name>"` |
+| `pitch-brief.ps1` | Start of every `/pitch` | `.\scripts\pitch-brief.ps1 [-Type <type>]` |
 
 **Mandatory pre-reads replaced by scripts:**
 - Before `/session`: run `session-brief.ps1` instead of reading campaign, act, PC files individually
