@@ -1,7 +1,7 @@
 Generate a creative text pitch — no files, no schema, no entity creation. Pure flavor and ideas.
 
 **Arguments (all optional):**
-- `--type <value>` — what to pitch: `campaign`, `region`, `town`, `npc`, `antagonist`, `faction`, `dungeon`, `encounter`, `hook` (default: `campaign`)
+- `--type <value>` — what to pitch: `campaign`, `region`, `town`, `npc`, `antagonist`, `faction`, `dungeon`, `encounter`, `hook`, `monster` (default: `campaign`)
 - `--count <n>` — number of distinct options to present (default: 1)
 - `--tone <value>` — e.g. `dark`, `whimsical`, `political`, `horror`, `mystery`, `epic` (default: infer from campaign if readable, else ask)
 - `--setting <value>` — environmental/geographic context, e.g. `wetlands`, `mountain pass`, `port city`, `underdark` (default: infer or ask)
@@ -22,7 +22,7 @@ Output is **text only**. No YAML, no wiki-links, no file writes. Pitches are dis
 
 If no arguments are provided, ask the following before generating anything:
 
-1. **What are we pitching?** Campaign, region, town, NPC, antagonist, faction, dungeon, encounter, or something else?
+1. **What are we pitching?** Campaign, region, town, NPC, antagonist, faction, dungeon, encounter, monster, hook, or something else?
 2. **Tone?** Dark/gritty, whimsical, political, horror, mystery, epic — or describe it.
 3. **Setting or context?** Any geographic, environmental, or narrative constraints to build within?
 4. **How many options?** One focused pitch or a few to choose from?
@@ -76,7 +76,7 @@ For each selected pitch, write full prose. Structure depends on `--type`:
 
 **npc:** Name, appearance/first impression, what they want, what they hide, one memorable detail
 
-**antagonist:** Name, what they want, why they're dangerous, how they'll first appear to the party. For humanoid antagonists, include race as part of the description — it shapes perception, culture, and first impression. Vary across the moral spectrum: some antagonists should have real depth and understandable motivation; others should be straightforwardly cruel, selfish, or monstrous — and that's enough. Don't default to complexity, and don't avoid it either. Match what serves the pitch. **Also vary fundamental nature** — antagonists need not be humanoid. Creatures, beasts, or entities operating on non-human drives are equally valid and often fresher. When generating multiple antagonists, treat nature (humanoid / creature / entity) as its own axis of diversity alongside moral complexity.
+**antagonist:** Name, what they want, why they're dangerous, how they'll first appear to the party. For humanoid antagonists, include race as part of the description — it shapes perception, culture, and first impression. Vary across the moral spectrum: some antagonists should have real depth and understandable motivation; others should be straightforwardly cruel, selfish, or monstrous — and that's enough. Don't default to complexity, and don't avoid it either. Match what serves the pitch. **Also vary fundamental nature** — antagonists need not be humanoid. Creatures, beasts, or entities operating on non-human drives are equally valid and often fresher. When generating multiple antagonists, treat nature (humanoid / creature / entity) as its own axis of diversity alongside moral complexity. For creature/beast/entity antagonists: if `data/monsters/` is populated, check it for an existing archetype to anchor the pitch to — use that creature type as the base rather than inventing a new one.
 
 **faction:** Name, what they believe or control, internal tension, how they see outsiders
 
@@ -85,6 +85,8 @@ For each selected pitch, write full prose. Structure depends on `--type`:
 **encounter:** Setup, stakes, 1–2 complications, what success and failure look like
 
 **hook:** A single evocative opening scenario — where the party is, what they see, what they're about to step into
+
+**monster:** Name, creature type, what makes this variant or encounter fresh (not just "it's a zombie"), habitat or lair thumbnail, one distinctive behavioral or tactical trait, one narrative hook or complication the party might discover
 
 ---
 

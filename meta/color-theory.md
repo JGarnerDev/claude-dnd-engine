@@ -7,7 +7,8 @@
   - character/npc
 - **Antagonists** — `#ff5722` — threat, active enemies
   - character/antagonist
-- **Creatures** — `#ef5350` — danger, predator
+- **Creatures** — `#ef5350` — danger, predator (named individuals)
+- **Monsters** — `#ffa726` — orange, encounter templates (MM archetypes)
 - **Settlements** — settled locations
   - location/city — `#aed581` — open, polished, urban
   - location/building — `#4caf50` — vivid mid-green, inhabited, residential
@@ -42,7 +43,6 @@
 
 ## Available (reserved for future types)
 
-- Orange `#ffa726`
 - Deep Amber `#f57f17`
 - Yellow `#ffca28`
 - Yellow-Green `#8bc34a`

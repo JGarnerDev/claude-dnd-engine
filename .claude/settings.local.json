@@ -54,7 +54,9 @@
       "Bash(powershell -File scripts/pitch-brief.ps1 -Type antagonist)",
       "Bash(powershell -File \".\\\\scripts\\\\pitch-brief.ps1\" -Type \"antagonist\")",
       "Bash(.\\\\scripts\\\\pitch-brief.ps1 -Type antagonist)",
-      "Bash(.\\\\scripts\\\\free-entities.ps1)"
+      "Bash(.\\\\scripts\\\\free-entities.ps1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File scripts\\\\_list-habitats.ps1)",
+      "PowerShell(Out-Null *)"
     ]
   },
   "hooks": {

@@ -9,6 +9,7 @@
     { "query": "path:historian/characters",             "color": { "a": 1, "rgb": 150136 } },
     { "query": "path:data/creatures",                   "color": { "a": 1, "rgb": 239083080 } },
     { "query": "path:historian/creatures",              "color": { "a": 1, "rgb": 239083080 } },
+    { "query": "path:data/monsters",                    "color": { "a": 1, "rgb": 255167038 } },
     { "query": "path:data/locations/cities",            "color": { "a": 1, "rgb": 174213129 } },
     { "query": "path:historian/locations/cities",       "color": { "a": 1, "rgb": 174213129 } },
     { "query": "path:data/locations/shops",             "color": { "a": 1, "rgb": 085139047 } },

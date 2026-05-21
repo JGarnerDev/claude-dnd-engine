@@ -1,0 +1,22 @@
+﻿---
+name: Scout
+type: monster
+tags:
+  - monster
+  - monster/humanoid
+  - cr/0.5
+
+creature_type: humanoid
+challenge_rating: "1/2"
+
+size: medium
+alignment: any alignment
+source: Monster Manual p.349
+habitats:
+  - "[[Forest]]"
+  - "[[Mountains]]"
+description: Trained wilderness tracker. Keen Hearing and Sight; Skirmisher lets it disengage as a bonus action. Used for hunters, rangers, and Vistani outriders. Hard to pin down in open terrain.
+---
+
+Trained wilderness tracker. Keen Hearing and Sight; Skirmisher lets it disengage as a bonus action. Used for hunters, rangers, and Vistani outriders. Hard to pin down in open terrain.
+**Habitats:** [[Forest]] | [[Mountains]]

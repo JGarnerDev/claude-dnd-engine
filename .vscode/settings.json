@@ -22,6 +22,7 @@
         { "id": "events",            "label": "Events",                 "match": { "property": "path", "value": "data/events" },                    "color": "#c2185b", "enabled": true },
         { "id": "factions",          "label": "Factions",               "match": { "property": "path", "value": "data/factions" },                  "color": "#ab47bc", "enabled": true },
         { "id": "creatures",         "label": "Creatures",              "match": { "property": "path", "value": "data/creatures" },                 "color": "#ef5350", "enabled": true },
+        { "id": "monsters",          "label": "Monsters",               "match": { "property": "path", "value": "data/monsters" },                  "color": "#ffa726", "enabled": true },
         { "id": "npcs",              "label": "NPCs",                   "match": { "property": "path", "value": "data/characters" },                "color": "#009688", "enabled": true },
         { "id": "antagonists",       "label": "Antagonists",            "match": { "property": "path", "value": "data/characters/antagonists" },    "color": "#ff5722", "enabled": true },
         { "id": "pcs",               "label": "PCs",                    "match": { "property": "path", "value": "data/characters/pcs" },            "color": "#ffee58", "enabled": true },
