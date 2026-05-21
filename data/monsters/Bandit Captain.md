@@ -17,6 +17,8 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
   - "[[City]]"
-description: ""
+description: "A bandit captain is not a criminal so much as a failed lord — someone who looked at the world's indifference and decided to become its instrument."
 ---
 **Habitats:** [[Plains]] | [[Dungeon]] | [[Ruins]] | [[City]]
+
+They wear their scars like credentials. The bandit captain has usually survived enough betrayals, enough winters, enough losing sides of enough wars that the violence around them has become a kind of fluency. They are not large people, most of them. They are people who have learned that size matters less than the willingness to act first and the patience to wait for the right moment. Their clothing is a patchwork of better days — a cavalry officer's coat, a merchant's ring worn on a fighter's hand, boots that once belonged to someone who thought themselves untouchable.

@@ -16,6 +16,8 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
   - "[[Dungeon]]"
-description: ""
+description: "A creature of pure territorial fury compressed into a body the size of a loaf of bread, the badger attacks with a savagery that shames animals ten times its size."
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Dungeon]]
+
+Squat and low to the earth, the badger moves like a gray-striped shadow through root and stone. Its face is a stark mask of black and white—nature's warning painted in high contrast—and its claws, disproportionately long for its frame, have turned over enough soil to bury kingdoms. The eyes hold no curiosity, no fear, only the flat assessment of something that has decided whether you are a threat.

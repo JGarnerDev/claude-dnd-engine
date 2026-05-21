@@ -16,6 +16,8 @@ habitats:
   - "[[Jungle]]"
   - "[[Forest]]"
   - "[[Mountains]]"
-description: ""
+description: "A hulking knot of muscle and indifferent intelligence, the ape is a reminder that the world was old and wild long before civilization scratched its first mark into stone."
 ---
 **Habitats:** [[Jungle]] | [[Forest]] | [[Mountains]]
+
+They move through the canopy like dark weather — broad-shouldered, slope-browed, with eyes that hold a disquieting depth. An ape's hands are disturbingly close to a man's: thick-fingered, capable, scarred from decades of bark and stone. Up close, the smell of them is overwhelming — wet fur, crushed vegetation, the musk of an animal that fears nothing smaller than itself.
