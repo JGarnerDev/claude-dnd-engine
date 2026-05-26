@@ -16,6 +16,6 @@ habitats:
   - "[[Coastline]]"
   - "[[Swamp]]"
   - "[[Ocean]]"
-description: ""
+description: "A hag whose horror is so absolute that a single unguarded look can stop a heart — the sea hag does not merely frighten, it confronts victims with something that the human nervous system was not built to process and responds accordingly."
 ---
 **Habitats:** [[Coastline]] | [[Swamp]] | [[Ocean]]

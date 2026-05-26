@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Abyss]]"
   - "[[Forest]]"
-description: ""
+description: "A vulture-demon that uses its screech to stun and its spores to propagate misery, the vrock fights with the graceless ferocity of a creature that has no aesthetic investment in how it kills things, only in the fact that they are killed."
 ---
 **Habitats:** [[Abyss]] | [[Forest]]

@@ -14,6 +14,6 @@ alignment: unaligned
 source: Monster Manual
 habitats:
   - "[[Ocean]]"
-description: ""
+description: "An echo of an older world, the plesiosaurus moves through deep water with a slow, searching patience that predates every civilization that has ever looked into its lake and wondered what is looking back."
 ---
 **Habitats:** [[Ocean]]

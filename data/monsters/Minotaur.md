@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
-description: ""
+description: "Cursed by the gods and shaped by the labyrinth, the minotaur is a predator in the purest sense — built for enclosed spaces, fueled by rage, and stripped of everything that would make the rage negotiable."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]]

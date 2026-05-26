@@ -14,6 +14,6 @@ alignment: unaligned
 source: Monster Manual
 habitats:
   - "[[Plains]]"
-description: ""
+description: "A herbivore that has solved the predator problem through preemptive structural commitment: the rhino's charge is not a last resort but a first response, delivered by an animal that weighs enough to make the geometry of most threats irrelevant."
 ---
 **Habitats:** [[Plains]]

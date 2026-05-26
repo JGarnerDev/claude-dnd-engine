@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Feywild]]"
   - "[[Forest]]"
-description: ""
+description: "A pixie's invisibility is its default state and its mischief is its occupation — a tiny fey creature that navigates the moral space between harmless prank and genuine harm with a confidence that suggests it has not yet found the line."
 ---
 **Habitats:** [[Feywild]] | [[Forest]]

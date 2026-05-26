@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "Sea devils who view the ocean's food chain as a hierarchy they intend to dominate, sahuagin raid coastal settlements not from need but from a religious conviction that surface-dwellers are trespassing on a world that belongs to the deep."
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

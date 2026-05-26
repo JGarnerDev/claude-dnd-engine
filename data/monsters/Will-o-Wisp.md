@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Swamp]]"
   - "[[Forest]]"
-description: ""
+description: "Light without warmth, leading without destination: the will-o-wisp sustains itself on the life energy of those it lures into fatal terrain, a creature so perfectly adapted to predation through hope that it has become synonymous with the thing it simulates."
 ---
 **Habitats:** [[Swamp]] | [[Forest]]

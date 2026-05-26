@@ -16,6 +16,6 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
   - "[[Dungeon]]"
-description: ""
+description: "All the curiosity and aggression of a regular weasel, delivered at a scale where both traits have immediate structural consequences for whatever the weasel has decided to investigate."
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Dungeon]]

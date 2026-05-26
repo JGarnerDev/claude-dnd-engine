@@ -14,6 +14,6 @@ alignment: neutral evil
 source: Monster Manual
 habitats:
   - "[[Forest]]"
-description: ""
+description: "A plant that has learned that offense is better than photosynthesis, the needle blight fires volleys of thorns with a coordination that suggests the forest has decided it is no longer willing to be passive about intruders."
 ---
 **Habitats:** [[Forest]]

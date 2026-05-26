@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Plains]]"
   - "[[Ruins]]"
-description: ""
+description: "A gnoll that Yeenoghu has singled out with direct demonic attention, the Fang fights with a religious ecstasy that elevates destruction from appetite to sacrament."
 ---
 **Habitats:** [[Plains]] | [[Ruins]]

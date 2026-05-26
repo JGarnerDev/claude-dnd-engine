@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
-description: ""
+description: "The otyugh has solved the food problem by developing a palate exclusively for refuse — it lives inside the waste it eats, extending tentacles into the approaching foot traffic, an arrangement that is mutually beneficial in the specific sense that the otyugh benefits."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]]

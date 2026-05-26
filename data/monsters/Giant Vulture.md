@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Desert]]"
   - "[[Plains]]"
-description: ""
+description: "Bolder and meaner than its smaller kin, the giant vulture does not always wait for prey to finish dying — it has learned that large things can hurry the process along."
 ---
 **Habitats:** [[Desert]] | [[Plains]]

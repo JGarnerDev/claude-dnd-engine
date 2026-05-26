@@ -17,6 +17,6 @@ habitats:
   - "[[Swamp]]"
   - "[[Plains]]"
   - "[[Desert]]"
-description: ""
+description: "Small enough to be overlooked and venomous enough to be a problem if overlooked, the poisonous snake occupies a predator's niche that depends entirely on not being noticed until the decision has been made."
 ---
 **Habitats:** [[Jungle]] | [[Swamp]] | [[Plains]] | [[Desert]]

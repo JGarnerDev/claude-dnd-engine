@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
   - "[[Feywild]]"
-description: ""
+description: "An ancient tree that woke up when the forest required a voice, the treant speaks slowly because it thinks in seasons, and acts decisively when it does act because a being that has watched a forest grow for centuries does not move without certainty."
 ---
 **Habitats:** [[Forest]] | [[Feywild]]

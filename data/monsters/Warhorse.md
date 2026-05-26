@@ -16,6 +16,6 @@ habitats:
   - "[[Plains]]"
   - "[[Ruins]]"
   - "[[City]]"
-description: ""
+description: "Bred for combat and trained into it, the warhorse has been shaped by generations of selection into something that does not flee from the things that horses evolved to flee from — a confidence that requires maintenance and can, under sufficient pressure, be unlearned."
 ---
 **Habitats:** [[Plains]] | [[Ruins]] | [[City]]

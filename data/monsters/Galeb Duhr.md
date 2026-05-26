@@ -14,6 +14,6 @@ alignment: neutral
 source: Monster Manual
 habitats:
   - "[[Mountains]]"
-description: ""
+description: "A living boulder that meditates for decades between conversations, the galeb duhr experiences time so differently from humanoids that talking to one requires both parties to adjust their expectations of what a conversation is."
 ---
 **Habitats:** [[Mountains]]

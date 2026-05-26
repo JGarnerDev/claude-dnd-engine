@@ -16,6 +16,6 @@ habitats:
   - "[[Jungle]]"
   - "[[Forest]]"
   - "[[Mountains]]"
-description: ""
+description: "An ape scaled past the point where size alone is the threat: the giant ape does not need tools or tactics, only the patience of something that has never met an obstacle it could not simply pick up."
 ---
 **Habitats:** [[Jungle]] | [[Forest]] | [[Mountains]]

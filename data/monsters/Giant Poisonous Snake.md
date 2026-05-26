@@ -16,6 +16,6 @@ habitats:
   - "[[Jungle]]"
   - "[[Swamp]]"
   - "[[Desert]]"
-description: ""
+description: "All the venom of its smaller kin concentrated into a body large enough to constrict after the bite takes effect — the giant poisonous snake has stacked two different ways of killing into a single encounter."
 ---
 **Habitats:** [[Jungle]] | [[Swamp]] | [[Desert]]

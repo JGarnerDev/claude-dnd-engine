@@ -14,6 +14,6 @@ alignment: unaligned
 source: Monster Manual
 habitats:
   - "[[Tundra]]"
-description: ""
+description: "An arctic worm so metabolically hot that its body burns to the touch, the remorhaz has turned its own thermal regulation into a weapon — a creature whose interior temperature makes being swallowed worse than being bitten."
 ---
 **Habitats:** [[Tundra]]

@@ -16,6 +16,6 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
   - "[[Dungeon]]"
-description: ""
+description: "A badger with the proportional stubbornness of a much larger creature — which is to say, entirely unwilling to acknowledge that it has lost until one of you stops moving."
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Dungeon]]

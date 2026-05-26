@@ -14,6 +14,6 @@ alignment: chaotic good
 source: Monster Manual
 habitats:
   - "[[Desert]]"
-description: ""
+description: "A young brass dragon has discovered that it is the most interesting creature in any conversation it initiates, which it initiates constantly — it asks questions with the relentless curiosity of something that has not yet learned that not everyone has time for the answers."
 ---
 **Habitats:** [[Desert]]

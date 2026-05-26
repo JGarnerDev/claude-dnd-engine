@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Tundra]]"
   - "[[Mountains]]"
-description: ""
+description: "Not yet large enough to swallow a person whole, the young remorhaz compensates with the same scalding body heat as its elders — a smaller thermal event moving through arctic terrain toward the nearest warm-blooded thing."
 ---
 **Habitats:** [[Tundra]] | [[Mountains]]

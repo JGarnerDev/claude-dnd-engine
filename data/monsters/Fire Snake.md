@@ -16,6 +16,6 @@ habitats:
   - "[[Desert]]"
   - "[[Elemental Planes]]"
   - "[[Mountains]]"
-description: ""
+description: "A salamander in its larval form, the fire snake is all instinct and heat — not yet the calculating creature it will become, but already warm enough to melt the things that get too close."
 ---
 **Habitats:** [[Desert]] | [[Elemental Planes]] | [[Mountains]]

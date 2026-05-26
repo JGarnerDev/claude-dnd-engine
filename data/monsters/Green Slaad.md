@@ -14,6 +14,6 @@ alignment: chaotic neutral
 source: Monster Manual
 habitats:
   - "[[Limbo]]"
-description: ""
+description: "A large, aggressive frog-demon whose reproductive strategy is somebody else's problem: the green slaad implants its larvae in hosts and moves on, untroubled by what happens next because what happens next is not its concern."
 ---
 **Habitats:** [[Limbo]]

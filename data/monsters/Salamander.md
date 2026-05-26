@@ -16,6 +16,6 @@ habitats:
   - "[[Elemental Planes]]"
   - "[[Desert]]"
   - "[[Mountains]]"
-description: ""
+description: "Fire plane natives who enslave other creatures to work the great forges of the Elemental Plane of Fire, salamanders experience cruelty and labor as the same institution — and are deeply offended when dragged into cold environments, which they express physically."
 ---
 **Habitats:** [[Elemental Planes]] | [[Desert]] | [[Mountains]]

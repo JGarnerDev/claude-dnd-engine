@@ -16,6 +16,6 @@ habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
   - "[[Ruins]]"
-description: ""
+description: "It eats stone and metal with equal patience, which makes the gray ooze less a creature than a dissolution process that has not yet finished — everything it touches is in an earlier stage of becoming nothing."
 ---
 **Habitats:** [[Dungeon]] | [[Cave]] | [[Ruins]]

@@ -14,5 +14,5 @@ alignment: neutral
 source: Monster Manual
 habitats:
   - wherever its amulet holder commands
-description: ""
+description: "Bound to an amulet and the holder of that amulet, the shield guardian has no existence outside that relationship — it is protection externalized into a body, a construct whose only purpose is to step between its ward and whatever is coming."
 ---

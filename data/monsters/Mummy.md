@@ -16,6 +16,6 @@ habitats:
   - "[[Tomb]]"
   - "[[Desert]]"
   - "[[Ruins]]"
-description: ""
+description: "A body preserved and reanimated by ancient curses, the mummy carries its rot like a weapon — the disease it inflicts is the physical expression of the same forces that kept it from decomposing, distributed outward."
 ---
 **Habitats:** [[Tomb]] | [[Desert]] | [[Ruins]]

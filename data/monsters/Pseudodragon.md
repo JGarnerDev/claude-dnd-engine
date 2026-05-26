@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
   - "[[Ruins]]"
-description: ""
+description: "Cat-sized and telepathic, the pseudodragon chooses its companions with the selectivity of something that understands it is bestowing a privilege — and expresses displeasure through a venomous tail sting, which keeps the relationship honest."
 ---
 **Habitats:** [[Forest]] | [[Ruins]]

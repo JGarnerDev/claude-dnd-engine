@@ -16,6 +16,6 @@ habitats:
   - "[[Mountains]]"
   - "[[Coastline]]"
   - "[[Ruins]]"
-description: ""
+description: "Part deer, part bird, trailing a shadow shaped like neither — the peryton hunts humanoids for their hearts specifically, a dietary requirement so targeted it implies a curse rather than an evolution."
 ---
 **Habitats:** [[Mountains]] | [[Coastline]] | [[Ruins]]

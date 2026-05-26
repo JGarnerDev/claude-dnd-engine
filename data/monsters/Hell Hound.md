@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Nine Hells]]"
   - "[[Mountains]]"
-description: ""
+description: "A devil in dog form, the hell hound serves its infernal masters with the loyalty of a trained animal and the fire breath of something considerably more dangerous, which makes it the ideal guard for the things hell does not want found."
 ---
 **Habitats:** [[Nine Hells]] | [[Mountains]]

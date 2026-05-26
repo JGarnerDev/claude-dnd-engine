@@ -16,6 +16,6 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
   - "[[Ethereal Plane]]"
-description: ""
+description: "A spider that treats the Ethereal Plane as a tactical resource, stepping sideways out of existence to avoid attacks and back into it to deliver them — a predator that has solved the problem of being hit by occasionally not being where things can hit."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]] | [[Ethereal Plane]]

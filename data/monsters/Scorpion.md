@@ -16,6 +16,6 @@ habitats:
   - "[[Desert]]"
   - "[[Ruins]]"
   - "[[Cave]]"
-description: ""
+description: "A scorpion is older than most ecosystems it inhabits, unchanged since before the Age of Gods because the combination of armored body and ranged venom was already the answer before the question had finished being asked."
 ---
 **Habitats:** [[Desert]] | [[Ruins]] | [[Cave]]

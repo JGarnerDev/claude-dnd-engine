@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Abyss]]"
   - "[[Limbo]]"
-description: ""
+description: "Six arms, a serpent's lower body, and the tactical intelligence to use all of it simultaneously — a marilith commands demon armies not because the Abyss requires generals but because it enjoys war as an aesthetic experience."
 ---
 **Habitats:** [[Abyss]] | [[Limbo]]

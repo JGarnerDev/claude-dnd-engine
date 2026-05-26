@@ -16,6 +16,6 @@ habitats:
   - "[[Coastline]]"
   - "[[Ruins]]"
   - "[[Mountains]]"
-description: ""
+description: "Its song does not merely attract — it unmakes the will to resist, drawing victims forward with a compulsion that the harpy's appearance, once seen, makes the victim wish had simply killed them sooner."
 ---
 **Habitats:** [[Coastline]] | [[Ruins]] | [[Mountains]]

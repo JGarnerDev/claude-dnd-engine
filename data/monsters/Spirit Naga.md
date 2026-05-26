@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ruins]]"
   - "[[Dungeon]]"
-description: ""
+description: "A naga that refused the oblivion of death and came back wrong, the spirit naga carries its former identity as wreckage — enough left to be purposeful, not enough left to be anything other than a very powerful, very committed problem."
 ---
 **Habitats:** [[Ruins]] | [[Dungeon]]

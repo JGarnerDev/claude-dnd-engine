@@ -16,6 +16,6 @@ habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
   - "[[Dungeon]]"
-description: ""
+description: "A war chief has proven by survival that it is the most dangerous orc in the warband, which in orcish terms is a theology as much as a rank — the strongest leads because strength is the only form of right Gruumsh acknowledges."
 ---
 **Habitats:** [[Mountains]] | [[Plains]] | [[Dungeon]]

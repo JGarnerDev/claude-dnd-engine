@@ -16,6 +16,6 @@ habitats:
   - "[[Swamp]]"
   - "[[Ocean]]"
   - "[[Dungeon]]"
-description: ""
+description: "Its tongue is fast enough and its stomach spacious enough that the giant toad treats medium-sized creatures as a practical food category rather than an aspiration — a distinction its prey rarely appreciates in time."
 ---
 **Habitats:** [[Swamp]] | [[Ocean]] | [[Dungeon]]

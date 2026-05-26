@@ -16,6 +16,6 @@ habitats:
   - "[[Forest]]"
   - "[[Mountains]]"
   - "[[Plains]]"
-description: ""
+description: "Whatever wizard made the first owlbear is lost to history, which is appropriate — the owlbear combines an owl's aggression with a bear's mass and the result is a creature that attacks first and cannot be reasoned with, in any language, at any volume."
 ---
 **Habitats:** [[Forest]] | [[Mountains]] | [[Plains]]

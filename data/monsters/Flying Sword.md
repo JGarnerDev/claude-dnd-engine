@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
-description: ""
+description: "Purpose without thought, the flying sword executes its last command indefinitely, indifferent to circumstance or consequence, which makes it less a weapon than a very small and very persistent policy decision."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]]

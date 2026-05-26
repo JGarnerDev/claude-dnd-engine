@@ -14,6 +14,6 @@ alignment: lawful neutral
 source: Monster Manual
 habitats:
   - "[[Mechanus]]"
-description: ""
+description: "A modron with four arms for four tasks, the quadrone coordinates the smaller drones with a calm efficiency that suggests it does not experience the concept of being overwhelmed — it simply adds another arm to the problem."
 ---
 **Habitats:** [[Mechanus]]

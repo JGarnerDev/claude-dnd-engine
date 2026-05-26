@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Abyss]]"
   - "[[Ruins]]"
-description: ""
+description: "A demon of temptation and betrayal, the glabrezu uses the smaller pair of humanoid arms to offer things while the great pincers wait — it is selling something, and it has never failed to close a deal with someone who needed to believe they were getting the better end."
 ---
 **Habitats:** [[Abyss]] | [[Ruins]]

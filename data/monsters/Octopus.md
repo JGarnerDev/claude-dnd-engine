@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "Eight arms, three hearts, and a distributed intelligence that can solve puzzles, use tools, and navigate mazes — the octopus is the ocean's proof that a radically different body plan is no barrier to being clever."
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

@@ -14,6 +14,6 @@ alignment: lawful evil
 source: Monster Manual
 habitats:
   - "[[City]]"
-description: ""
+description: "A fiend wearing a king's face and sitting at the right hand of a noble, the rakshasa pursues mortal power as an end in itself — not to corrupt souls but to exercise dominion, which it finds the more satisfying evil."
 ---
 **Habitats:** [[City]]

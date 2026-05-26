@@ -14,6 +14,6 @@ alignment: unaligned
 source: Monster Manual
 habitats:
   - "[[Underdark]]"
-description: ""
+description: "A quaggoth whose mind has been replaced by myconid rapport, the spore servant moves with a placid purposefulness that is more disturbing than rage — a body doing exactly what it's told by something wearing the driver's seat."
 ---
 **Habitats:** [[Underdark]]

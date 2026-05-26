@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Tundra]]"
   - "[[Plains]]"
-description: ""
+description: "A relic of an older world that still walks through this one, the mammoth carries its tusks through the present like a declaration that size and stubbornness are a valid response to everything that has changed around it."
 ---
 **Habitats:** [[Tundra]] | [[Plains]]

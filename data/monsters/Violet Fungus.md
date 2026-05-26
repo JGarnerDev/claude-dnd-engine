@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
-description: ""
+description: "The violet fungus does not move toward prey, it waits for prey to move toward it, extending rot-tendrils with patient biochemical certainty — a reminder that in fungal terms, standing still is not the same as doing nothing."
 ---
 **Habitats:** [[Dungeon]] | [[Cave]]

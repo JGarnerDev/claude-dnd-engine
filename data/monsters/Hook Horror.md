@@ -16,6 +16,6 @@ habitats:
   - "[[Underdark]]"
   - "[[Cave]]"
   - "[[Dungeon]]"
-description: ""
+description: "In the dark caves it calls home, the hook horror communicates through clicks and clacks that carry meaning its companions understand perfectly — a creature that has built language from the sound of its own weapons, and uses both with equal precision."
 ---
 **Habitats:** [[Underdark]] | [[Cave]] | [[Dungeon]]

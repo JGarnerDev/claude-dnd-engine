@@ -14,6 +14,6 @@ alignment: lawful evil
 source: Monster Manual
 habitats:
   - "[[Nine Hells]]"
-description: ""
+description: "The spinagon serves hell's communication infrastructure as a winged messenger and aerial skirmisher, hurling spines with the enthusiasm of a creature that has found the one task it was made for and intends to perform it indefinitely."
 ---
 **Habitats:** [[Nine Hells]]

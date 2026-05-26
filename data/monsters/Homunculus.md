@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ruins]]"
   - "[[Dungeon]]"
-description: ""
+description: "A construct extension of its creator's will, the homunculus shares its master's senses across any distance, which makes it less a familiar than a piece of the wizard distributed into the world as a very small and very vulnerable spy."
 ---
 **Habitats:** [[Ruins]] | [[Dungeon]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Celestial Planes]]"
   - "[[Ruins]]"
-description: ""
+description: "A planetar does not carry divine authority — it is divine authority in a form compact enough to walk through a door, wielding a greatsword and the accumulated certainty of something that has never had reason to doubt."
 ---
 **Habitats:** [[Celestial Planes]] | [[Ruins]]

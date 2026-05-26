@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Desert]]"
   - "[[Plains]]"
-description: ""
+description: "A jackalwere moves through human settlements in human form, using the hospitality it receives to identify the most vulnerable members, then repays that hospitality in service to its lamia masters — a betrayal so fundamental it has become a vocation."
 ---
 **Habitats:** [[Desert]] | [[Plains]]

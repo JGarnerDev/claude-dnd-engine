@@ -14,6 +14,6 @@ alignment: lawful evil
 source: Monster Manual
 habitats:
   - "[[Underdark]]"
-description: ""
+description: "An illithid does not eat the body — it eats the mind, extracting the brain and with it everything that made a person a person, wearing the remains as camouflage in a society it surveys from behind humanoid faces as a long-standing strategic insult."
 ---
 **Habitats:** [[Underdark]]

@@ -14,6 +14,6 @@ alignment: lawful evil
 source: Monster Manual
 habitats:
   - "[[Nine Hells]]"
-description: ""
+description: "The apex of devil society below the archdevils themselves, the pit fiend administers hell's war machine with the absolute authority of something that has earned its position through millennia of atrocity and still views that as an achievement to build on."
 ---
 **Habitats:** [[Nine Hells]]

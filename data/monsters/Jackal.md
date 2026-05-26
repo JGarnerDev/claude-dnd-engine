@@ -16,6 +16,6 @@ habitats:
   - "[[Desert]]"
   - "[[Plains]]"
   - "[[Ruins]]"
-description: ""
+description: "Opportunistic, clever, and designed by evolution to profit from other creatures' violence, the jackal does not compete with apex predators — it waits for them to finish and then negotiates with the remains."
 ---
 **Habitats:** [[Desert]] | [[Plains]] | [[Ruins]]

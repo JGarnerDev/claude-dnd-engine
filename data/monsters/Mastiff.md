@@ -16,6 +16,6 @@ habitats:
   - "[[City]]"
   - "[[Plains]]"
   - "[[Ruins]]"
-description: ""
+description: "A dog bred for purpose rather than companionship, the mastiff applies its size and training to the work of guarding with a consistency and loyalty that makes it the most reliable creature in most situations that require reliability."
 ---
 **Habitats:** [[City]] | [[Plains]] | [[Ruins]]

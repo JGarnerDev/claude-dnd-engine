@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Abyss]]"
   - "[[Underdark]]"
-description: ""
+description: "Lolth's personal handmaidens, yochlol are shapeshifters deployed as her agents in the world above and below, wearing drow faces or spider forms depending on what the mission requires — creatures of absolute loyalty to a goddess whose primary quality is that she deserves none."
 ---
 **Habitats:** [[Abyss]] | [[Underdark]]

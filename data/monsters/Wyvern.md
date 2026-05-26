@@ -14,6 +14,6 @@ alignment: unaligned
 source: Monster Manual
 habitats:
   - "[[Mountains]]"
-description: ""
+description: "A dragon that traded forelegs for wings and intelligence for appetite, the wyvern is what remains when you strip away everything except flight and venom — a creature less impressive than its draconic cousins and considerably more indiscriminate."
 ---
 **Habitats:** [[Mountains]]

@@ -14,6 +14,6 @@ alignment: lawful good
 source: Monster Manual
 habitats:
   - "[[Mountains]]"
-description: ""
+description: "A silver dragon wyrmling has already decided to care about things: people, causes, the fate of the vulnerable — a hatchling that entered the world with a moral framework and is currently in the process of discovering how complicated acting on it is."
 ---
 **Habitats:** [[Mountains]]

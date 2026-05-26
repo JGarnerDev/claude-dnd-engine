@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
   - "[[Mountains]]"
-description: ""
+description: "The lycanthrope that has made peace with what it is, the werebear carries its curse as a protectorate rather than a burden — its transformations are controlled, its territory defended, and its goodness as reliable as the seasons it watches from its forest."
 ---
 **Habitats:** [[Forest]] | [[Mountains]]

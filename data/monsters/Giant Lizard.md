@@ -17,6 +17,6 @@ habitats:
   - "[[Swamp]]"
   - "[[Desert]]"
   - "[[Dungeon]]"
-description: ""
+description: "Ancient, cold, and patient, the giant lizard has watched the warm-blooded world rush past for millennia and concluded that the optimal strategy is to lie very still and wait for something to walk within reach."
 ---
 **Habitats:** [[Jungle]] | [[Swamp]] | [[Desert]] | [[Dungeon]]

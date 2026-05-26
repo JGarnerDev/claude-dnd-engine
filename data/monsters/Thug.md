@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[City]]"
   - "[[Coastline]]"
-description: ""
+description: "The thug is the bottom of someone else's hierarchy, doing the work that keeps the upper tiers of organized violence from having to get their hands dirty — reliable in the specific sense that what it does is simple and it does it consistently."
 ---
 **Habitats:** [[City]] | [[Coastline]]

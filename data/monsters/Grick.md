@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
-description: ""
+description: "A rubbery, beak-mouthed worm that has made the cave walls and ceiling its hunting ground, the grick is proof that a simple body plan executed perfectly is more dangerous than a complex one executed well."
 ---
 **Habitats:** [[Dungeon]] | [[Cave]]

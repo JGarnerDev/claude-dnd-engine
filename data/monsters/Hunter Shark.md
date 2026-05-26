@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "The open ocean has few creatures as precisely built for their purpose as the hunter shark — a sensory array wrapped in muscle, following the scent of blood across distances that make the concept of hiding irrelevant."
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

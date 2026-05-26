@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
   - "[[Ruins]]"
-description: ""
+description: "A red dragon twisted by prolonged exposure to the Shadowfell, the young red shadow dragon breathes fire cold enough to kill hope — a chromatic and shadow nature fused into something that burns with a flame whose light illuminates nothing."
 ---
 **Habitats:** [[Mountains]] | [[Ruins]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Jungle]]"
   - "[[Desert]]"
-description: ""
+description: "Indistinguishable from humans until examined closely, yuan-ti purebloods operate as the snake cult's face in the world above, using their near-human form to infiltrate, recruit, and position the cult's coils around institutions that don't yet know they've been entered."
 ---
 **Habitats:** [[Jungle]] | [[Desert]]

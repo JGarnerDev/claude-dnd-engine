@@ -16,6 +16,6 @@ habitats:
   - "[[Underdark]]"
   - "[[Dungeon]]"
   - "[[Far Realm]]"
-description: ""
+description: "A mass of mouths and eyes that should not coexist in one body, the gibbering mouther produces sound that unmakes concentration and secretes fluid that unmakes solid ground, as if its mere presence is an argument against the stability of things."
 ---
 **Habitats:** [[Underdark]] | [[Dungeon]] | [[Far Realm]]

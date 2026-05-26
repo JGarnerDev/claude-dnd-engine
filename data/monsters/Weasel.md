@@ -16,6 +16,6 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
   - "[[City]]"
-description: ""
+description: "Small, fast, and committed to an aggression wildly disproportionate to its body mass, the weasel has earned its reputation through a refusal to acknowledge that any opponent is larger than it can handle."
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[City]]

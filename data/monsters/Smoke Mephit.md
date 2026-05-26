@@ -16,6 +16,6 @@ habitats:
   - "[[Desert]]"
   - "[[City]]"
   - "[[Elemental Planes]]"
-description: ""
+description: "A mephit born where fire meets air in the worst possible way, the smoke mephit's breath creates blindness and its presence creates irritation — a creature that has made obscuring everything around it into its primary contribution."
 ---
 **Habitats:** [[Desert]] | [[City]] | [[Elemental Planes]]

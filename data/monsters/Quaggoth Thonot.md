@@ -14,6 +14,6 @@ alignment: chaotic neutral
 source: Monster Manual
 habitats:
   - "[[Underdark]]"
-description: ""
+description: "A rare quaggoth that has developed psionic abilities, the thonot is the Underdark's evidence that latent talent can survive even in creatures that have been broken down to near-instinct — the mind persisting where the person has not."
 ---
 **Habitats:** [[Underdark]]

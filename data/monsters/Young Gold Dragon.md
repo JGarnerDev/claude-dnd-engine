@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Plains]]"
   - "[[Mountains]]"
-description: ""
+description: "A young gold dragon carries the weight of its species' goodness before it has fully grown into it — earnest, occasionally overconfident, and absolutely certain that the right thing to do and the effective thing to do are the same thing, which is an assumption that experience will complicate."
 ---
 **Habitats:** [[Plains]] | [[Mountains]]

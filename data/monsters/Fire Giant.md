@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Desert]]"
   - "[[Mountains]]"
-description: ""
+description: "The most militaristic of giantkind, fire giants have turned their volcanic fortresses into forges and their society into an army, measuring worth entirely by what a creature can build, break, or endure."
 ---
 **Habitats:** [[Desert]] | [[Mountains]]

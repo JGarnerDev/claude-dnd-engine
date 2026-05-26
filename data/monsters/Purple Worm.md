@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Desert]]"
-description: ""
+description: "A tunnel bored through stone by appetite, the purple worm is less a creature than a digestive process operating at scale — it swallows things whole without particular malice, which makes the experience of being swallowed no less terminal."
 ---
 **Habitats:** [[Dungeon]] | [[Desert]]

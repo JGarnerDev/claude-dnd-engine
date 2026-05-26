@@ -14,6 +14,6 @@ alignment: lawful good
 source: Monster Manual
 habitats:
   - "[[Ruins]]"
-description: ""
+description: "A naga that has chosen devotion over dominion, the guardian naga binds itself to a sacred site and its accumulated divine magic to the task of keeping it — a serpent that has decided meaning matters more than freedom."
 ---
 **Habitats:** [[Ruins]]

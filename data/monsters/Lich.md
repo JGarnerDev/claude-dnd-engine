@@ -16,6 +16,6 @@ habitats:
   - "[[Ruins]]"
   - "[[Dungeon]]"
   - "[[Tomb]]"
-description: ""
+description: "An archmage who refused death on philosophical grounds, the lich has hidden its soul in a phylactery and continued working — centuries of uninterrupted study producing something that has outgrown human morality along with human mortality."
 ---
 **Habitats:** [[Ruins]] | [[Dungeon]] | [[Tomb]]

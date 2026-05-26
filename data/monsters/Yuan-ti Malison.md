@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Jungle]]"
   - "[[Desert]]"
-description: ""
+description: "A yuan-ti at the midpoint of its sacred transformation, partially serpent and committed to completing the process — the malison exists in a state of becoming that it does not experience as incomplete but as consecrated."
 ---
 **Habitats:** [[Jungle]] | [[Desert]]

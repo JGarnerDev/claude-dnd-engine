@@ -16,6 +16,6 @@ habitats:
   - "[[Jungle]]"
   - "[[Forest]]"
   - "[[Plains]]"
-description: ""
+description: "A tiger does not announce itself: it is already there when you know about it, and the moment between your awareness and its arrival is the only negotiation it intends to have."
 ---
 **Habitats:** [[Jungle]] | [[Forest]] | [[Plains]]

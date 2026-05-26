@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Plains]]"
   - "[[Desert]]"
-description: ""
+description: "A hyena at the size where the laugh becomes a warning and the pack-hunting instinct becomes a coordinated strategy — the giant hyena has not changed its approach, only its consequences."
 ---
 **Habitats:** [[Plains]] | [[Desert]]

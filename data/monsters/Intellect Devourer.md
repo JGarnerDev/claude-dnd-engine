@@ -14,6 +14,6 @@ alignment: lawful evil
 source: Monster Manual
 habitats:
   - "[[Underdark]]"
-description: ""
+description: "A brain that has eaten a brain and now wears the body, the intellect devourer is the illithid's most intimate weapon: invisible inside a skull, looking out through borrowed eyes, using a stolen life as cover for purposes the original owner would not have endorsed."
 ---
 **Habitats:** [[Underdark]]

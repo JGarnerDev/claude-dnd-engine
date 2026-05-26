@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "A shark at the scale where it has ceased to be a predator and become a pressure system: something you feel before you see it, displacing water and confidence in equal measure."
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

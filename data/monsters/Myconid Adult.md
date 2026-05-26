@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Underdark]]"
   - "[[Cave]]"
-description: ""
+description: "The myconid carries its community with it everywhere through rapport spores — a fungal consciousness that experiences solitude as an aberration and collective awareness as the default state of being a person."
 ---
 **Habitats:** [[Underdark]] | [[Cave]]

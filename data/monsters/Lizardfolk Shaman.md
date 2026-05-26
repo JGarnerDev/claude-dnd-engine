@@ -16,6 +16,6 @@ habitats:
   - "[[Swamp]]"
   - "[[Jungle]]"
   - "[[Ocean]]"
-description: ""
+description: "Where ordinary lizardfolk practice the pragmatism of predators, the shaman adds the pragmatism of prophecy: reading the swamp's omens and the spirits' moods because in the marsh, advance information is the difference between ambush and ambushed."
 ---
 **Habitats:** [[Swamp]] | [[Jungle]] | [[Ocean]]

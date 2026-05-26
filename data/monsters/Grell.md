@@ -16,6 +16,6 @@ habitats:
   - "[[Underdark]]"
   - "[[Dungeon]]"
   - "[[Cave]]"
-description: ""
+description: "A floating brain trailing paralytic tentacles, the grell hunts in utter silence, ambushing from above with the calm efficiency of a creature that has never needed to evolve past its first solution."
 ---
 **Habitats:** [[Underdark]] | [[Dungeon]] | [[Cave]]

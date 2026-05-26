@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
-description: ""
+description: "A living stalactite that has learned patience as an evolutionary strategy: the piercer hangs from cave ceilings for months between meals, dropping onto whatever passes beneath with the commitment of something that has no backup plan."
 ---
 **Habitats:** [[Dungeon]] | [[Cave]]

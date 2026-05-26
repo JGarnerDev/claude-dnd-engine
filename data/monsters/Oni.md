@@ -16,6 +16,6 @@ habitats:
   - "[[Mountains]]"
   - "[[Forest]]"
   - "[[City]]"
-description: ""
+description: "A demon giant that wears humanoid form like a costume, the oni has spent centuries learning human fear well enough to target it precisely — it does not hunt children because they are weak but because the grief of their absence is the point."
 ---
 **Habitats:** [[Mountains]] | [[Forest]] | [[City]]

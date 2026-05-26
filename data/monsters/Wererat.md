@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[City]]"
   - "[[Dungeon]]"
-description: ""
+description: "The wererat has made urban environments into hunting grounds, using human form to collect information and rat form to move through the walls of the city it parasitizes — a lycanthrope whose curse suits a creature that was already comfortable in the dark."
 ---
 **Habitats:** [[City]] | [[Dungeon]]

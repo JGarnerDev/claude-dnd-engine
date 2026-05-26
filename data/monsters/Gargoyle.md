@@ -16,6 +16,6 @@ habitats:
   - "[[Ruins]]"
   - "[[Mountains]]"
   - "[[City]]"
-description: ""
+description: "A demon bound into stone and set to watch, the gargoyle is one of architecture's cruelest jokes: the thing guarding the castle is indistinguishable from the castle's decoration until the moment it decides it isn't."
 ---
 **Habitats:** [[Ruins]] | [[Mountains]] | [[City]]

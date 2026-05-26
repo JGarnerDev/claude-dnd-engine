@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
   - "[[Mountains]]"
-description: ""
+description: "Already learning to lie before it has learned to fly well, the green dragon wyrmling treats every interaction as practice for the long game it intends to play once it is old enough to play it properly."
 ---
 **Habitats:** [[Forest]] | [[Mountains]]

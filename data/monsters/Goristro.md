@@ -14,6 +14,6 @@ alignment: chaotic evil
 source: Monster Manual
 habitats:
   - "[[Abyss]]"
-description: ""
+description: "The Abyss uses the goristro the way sieges use a battering ram — it does not need strategy or malice, only mass and momentum, and the demonic hierarchy has learned to point it at the right wall and step aside."
 ---
 **Habitats:** [[Abyss]]

@@ -14,6 +14,6 @@ alignment: lawful neutral
 source: Monster Manual
 habitats:
   - "[[Mechanus]]"
-description: ""
+description: "A three-armed modron that processes the universe in threes, the tridrone carries its portion of Mechanus's perfect order with the diligence of something that has never wondered what order is for, and never will."
 ---
 **Habitats:** [[Mechanus]]

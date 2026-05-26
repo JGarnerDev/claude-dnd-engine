@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ruins]]"
   - "[[Dungeon]]"
-description: ""
+description: "The horror of the medusa is not the stone — it is that the stone begins at the moment of eye contact, which means the only safe approach is to not look at what is trying to kill you, which is easier to say than to do."
 ---
 **Habitats:** [[Ruins]] | [[Dungeon]]

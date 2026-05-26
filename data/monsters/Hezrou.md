@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Abyss]]"
   - "[[Swamp]]"
-description: ""
+description: "A demon that fights with brute strength and the additional weapon of a stench so profound it constitutes a tactical consideration — the hezrou is muscle with theology, a body built for smashing things that happens to be demonically committed to smashing things."
 ---
 **Habitats:** [[Abyss]] | [[Swamp]]

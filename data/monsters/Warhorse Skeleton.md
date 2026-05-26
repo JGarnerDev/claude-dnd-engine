@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Plains]]"
   - "[[Dungeon]]"
-description: ""
+description: "The loyalty that made a warhorse willing to charge has been preserved in its bones without the horse — an undead mount that goes forward because it was always going forward, and death has not provided a reason to change that."
 ---
 **Habitats:** [[Plains]] | [[Dungeon]]

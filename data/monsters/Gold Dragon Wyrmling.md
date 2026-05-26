@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Plains]]"
   - "[[Mountains]]"
-description: ""
+description: "Even newly hatched, a gold dragon wyrmling moves through the world with a gravity that suggests it has already decided to be responsible for it — a small creature with the moral weight of something much older."
 ---
 **Habitats:** [[Plains]] | [[Mountains]]

@@ -14,6 +14,6 @@ alignment: chaotic evil
 source: Monster Manual
 habitats:
   - "[[Abyss]]"
-description: ""
+description: "The lowest form of demon is barely individuated at all: manes are the Abyss's background noise, chaotic evil expressed at minimal resolution, existing primarily to be consumed by larger demons on the way up."
 ---
 **Habitats:** [[Abyss]]

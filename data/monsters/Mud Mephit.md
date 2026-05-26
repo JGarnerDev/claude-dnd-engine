@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Swamp]]"
   - "[[Elemental Planes]]"
-description: ""
+description: "The least glamorous of the mephit lineages, the mud mephit is cold, slow, and deeply unpleasant to be near — a pocket of elemental entropy that experiences being annoying as a neutral condition."
 ---
 **Habitats:** [[Swamp]] | [[Elemental Planes]]

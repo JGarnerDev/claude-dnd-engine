@@ -16,6 +16,6 @@ habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
   - "[[Celestial Planes]]"
-description: ""
+description: "A winged horse with enough celestial blood to make it willful about who it carries — the pegasus does not serve, it chooses, and it has chosen to align itself with good, which means earning its trust is a test of character conducted at altitude."
 ---
 **Habitats:** [[Mountains]] | [[Plains]] | [[Celestial Planes]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Desert]]"
   - "[[Plains]]"
-description: ""
+description: "Insectoid nomads who communicate through antenna and mandible-clicks across distances no humanoid voice carries, thri-kreen experience solidarity differently than most races — their empathy is chemical, their consensus is faster, and their patience for those who communicate slowly is genuine but visibly effortful."
 ---
 **Habitats:** [[Desert]] | [[Plains]]

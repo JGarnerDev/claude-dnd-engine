@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Plains]]"
   - "[[City]]"
-description: ""
+description: "The partnership between civilization and the horse is one of the oldest in the world — the riding horse has been shaped by millennia of that partnership into something that cooperates by nature, which is a kind of trust that took generations to build."
 ---
 **Habitats:** [[Plains]] | [[City]]

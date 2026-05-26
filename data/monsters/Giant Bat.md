@@ -16,6 +16,6 @@ habitats:
   - "[[Cave]]"
   - "[[Ruins]]"
   - "[[Forest]]"
-description: ""
+description: "A bat at the scale where echolocation becomes something else entirely: the giant bat navigates darkness with a precision that makes sight seem like a rough approximation."
 ---
 **Habitats:** [[Cave]] | [[Ruins]] | [[Forest]]

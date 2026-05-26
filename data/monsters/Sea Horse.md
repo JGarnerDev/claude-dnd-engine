@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "A creature that has built locomotion and courtship into the same motion, the sea horse drifts through coral with an elegance that conceals the fact that its hunting is entirely based on being indistinguishable from the sea grass it hides in."
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

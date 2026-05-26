@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Underdark]]"
   - "[[Dungeon]]"
-description: ""
+description: "A grick that has grown large enough to graduate from cave crevices to cave chambers, the alpha has accumulated the scars and the patience of something that has eaten everything smaller than it in its territory."
 ---
 **Habitats:** [[Underdark]] | [[Dungeon]]

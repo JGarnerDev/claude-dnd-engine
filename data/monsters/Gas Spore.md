@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Underdark]]"
-description: ""
+description: "A dead beholder colonized by fungal life, the gas spore drifts through dungeons carrying spores and a passing resemblance to something much more dangerous — a reminder that even in death, certain silhouettes command attention."
 ---
 **Habitats:** [[Dungeon]] | [[Underdark]]

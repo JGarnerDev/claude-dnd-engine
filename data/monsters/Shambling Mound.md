@@ -16,6 +16,6 @@ habitats:
   - "[[Swamp]]"
   - "[[Jungle]]"
   - "[[Forest]]"
-description: ""
+description: "A mass of animated plant matter that absorbs lightning as nourishment and grows larger for it, the shambling mound moves through swamp and forest with the patient certainty of something that becomes more dangerous the more conventional approaches are applied to stopping it."
 ---
 **Habitats:** [[Swamp]] | [[Jungle]] | [[Forest]]

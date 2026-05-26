@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Coastline]]"
   - "[[Mountains]]"
-description: ""
+description: "A young bronze dragon has begun collecting information about conflicts and heroism the way other dragons collect gold — building a treasury of stories about battles and honorable conduct that it intends to act on once it decides what acting on them means."
 ---
 **Habitats:** [[Coastline]] | [[Mountains]]

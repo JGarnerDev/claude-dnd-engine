@@ -14,6 +14,6 @@ alignment: chaotic neutral
 source: Monster Manual
 habitats:
   - "[[Limbo]]"
-description: ""
+description: "The larval stage of chaos made flesh, the slaad tadpole gestates inside a living host with no awareness of the disruption it causes and no capacity to develop one — entropy that has not yet become big enough to argue with."
 ---
 **Habitats:** [[Limbo]]

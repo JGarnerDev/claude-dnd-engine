@@ -16,6 +16,6 @@ habitats:
   - "[[Jungle]]"
   - "[[Swamp]]"
   - "[[Forest]]"
-description: ""
+description: "At this scale the constrictor snake stops being a predator and starts being a geological event — it doesn't need venom, it doesn't need speed, it only needs to find something and close."
 ---
 **Habitats:** [[Jungle]] | [[Swamp]] | [[Forest]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
-description: ""
+description: "Obstinate, sure-footed, and willing to eat almost anything — the goat has turned a complete lack of specialization into a survival strategy that has outlasted more impressive creatures."
 ---
 **Habitats:** [[Mountains]] | [[Plains]]

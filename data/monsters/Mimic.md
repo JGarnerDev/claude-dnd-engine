@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
-description: ""
+description: "A predator that has solved the ambush problem perfectly: become the thing prey is already walking toward, wait, and let the assumption of safety do the hunting — the mimic does not look like a chest, it is a chest, right up until it isn't."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]]

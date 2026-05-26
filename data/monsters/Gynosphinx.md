@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Desert]]"
   - "[[Ruins]]"
-description: ""
+description: "The gynosphinx does not guard treasure — it guards knowledge, dispensing it only to those who prove themselves worthy through riddle, which is its way of saying it guards knowledge from people who would misuse it, which is most people."
 ---
 **Habitats:** [[Desert]] | [[Ruins]]

@@ -16,6 +16,6 @@ habitats:
   - "[[Mountains]]"
   - "[[Dungeon]]"
   - "[[Ruins]]"
-description: ""
+description: "Orcs honed by harder circumstances into something more disciplined and more dangerous, orogs have not abandoned orcish ferocity but have added tactical patience — the combination produces soldiers that most other humanoid armies would rather not engage."
 ---
 **Habitats:** [[Mountains]] | [[Dungeon]] | [[Ruins]]

@@ -14,6 +14,6 @@ alignment: lawful evil
 source: Monster Manual
 habitats:
   - "[[Astral Plane]]"
-description: ""
+description: "Forged in the Astral Plane and seasoned by centuries of war against the mind flayers that once enslaved their people, githyanki knights carry their silver swords and their ancestral rage with the discipline of soldiers who have decided that no victory is sufficient."
 ---
 **Habitats:** [[Astral Plane]]

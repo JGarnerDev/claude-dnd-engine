@@ -17,6 +17,6 @@ habitats:
   - "[[Forest]]"
   - "[[Ruins]]"
   - "[[City]]"
-description: ""
+description: "A spider does not think about the web it builds because the web is an extension of what it is — patient geometry deployed in the dark, waiting for the vibration that tells it the investment has paid off."
 ---
 **Habitats:** [[Dungeon]] | [[Forest]] | [[Ruins]] | [[City]]

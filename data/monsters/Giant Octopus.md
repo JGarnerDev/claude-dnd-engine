@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "Eight arms, three hearts, a distributed nervous system, and the intelligence to use all of them simultaneously — the giant octopus is the ocean's reminder that complexity does not require a spine."
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

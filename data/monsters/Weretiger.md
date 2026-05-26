@@ -16,6 +16,6 @@ habitats:
   - "[[Jungle]]"
   - "[[Plains]]"
   - "[[City]]"
-description: ""
+description: "Solitary, controlled, and more dangerous than any of its lycanthropic kin in the specific sense that it chooses when to fight — the weretiger does not transform out of anger but precision, treating the curse as a tool in the hands of something that already knew how to use it."
 ---
 **Habitats:** [[Jungle]] | [[Plains]] | [[City]]

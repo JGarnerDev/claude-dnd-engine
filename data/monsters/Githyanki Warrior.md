@@ -14,6 +14,6 @@ alignment: lawful evil
 source: Monster Manual
 habitats:
   - "[[Astral Plane]]"
-description: ""
+description: "A githyanki warrior moves through the material plane as an occupying force moves through foreign territory — with purpose, without apology, and with the quiet confidence of someone who has already decided how this ends."
 ---
 **Habitats:** [[Astral Plane]]

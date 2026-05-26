@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[City]]"
   - "[[Ruins]]"
-description: ""
+description: "A person who has spent years learning to impose their will on reality through formula and gesture — the mage's power is entirely borrowed from the laws of magic, but borrowed at scale sufficient to remind everyone else that the laws of physics are also negotiable."
 ---
 **Habitats:** [[City]] | [[Ruins]]

@@ -16,6 +16,6 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
   - "[[City]]"
-description: ""
+description: "An animated rug has one advantage over every other construct: no one is looking at the floor when they walk into a room, which means the rug has already made its most important tactical decision before anyone else has made any."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]] | [[City]]

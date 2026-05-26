@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Abyss]]"
   - "[[Ruins]]"
-description: ""
+description: "A demon bound into pure shadow, the shadow demon cannot survive bright light but thrives in the half-dark where the distinction between shadow and substance is already uncertain — a predator that the architecture of most dungeons has accidentally been building habitat for."
 ---
 **Habitats:** [[Abyss]] | [[Ruins]]

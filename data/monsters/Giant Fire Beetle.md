@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
-description: ""
+description: "Its glands glow with a persistent bioluminescence long after death, which has made the giant fire beetle simultaneously a dungeon hazard and the Underdark's most practical light source."
 ---
 **Habitats:** [[Dungeon]] | [[Cave]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Desert]]"
   - "[[Elemental Planes]]"
-description: ""
+description: "A fire elemental shaped vaguely like a person but not committed to the metaphor, the magmin sets things alight by touching them and experiences this as neutral — it is not malicious, it is simply very warm and does not understand why everything keeps catching."
 ---
 **Habitats:** [[Desert]] | [[Elemental Planes]]

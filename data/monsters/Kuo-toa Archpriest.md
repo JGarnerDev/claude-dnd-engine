@@ -14,6 +14,6 @@ alignment: neutral evil
 source: Monster Manual
 habitats:
   - "[[Underdark]]"
-description: ""
+description: "The archpriest has the highest concentration of the kuo-toa's reality-warping faith and the clearest communication with whatever their collective belief has most recently willed into existence — a priest of a god it helped create, which is a theological position with no good precedent."
 ---
 **Habitats:** [[Underdark]]

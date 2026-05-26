@@ -16,6 +16,6 @@ habitats:
   - "[[Cave]]"
   - "[[Dungeon]]"
   - "[[Mountains]]"
-description: ""
+description: "Individually cowardly and collectively dangerous, kobolds have compensated for small bodies and smaller courage with an extraordinary talent for traps, tunnels, and swarming — they do not fight enemies, they prepare environments that fight enemies for them."
 ---
 **Habitats:** [[Cave]] | [[Dungeon]] | [[Mountains]]

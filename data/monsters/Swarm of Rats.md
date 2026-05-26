@@ -16,6 +16,6 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
   - "[[City]]"
-description: ""
+description: "A swarm of rats is what happens when a population has been pushed past the threshold of individual survival into collective action — not organized, not intelligent, just more rats than the usual defenses were designed to address."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]] | [[City]]

@@ -16,6 +16,6 @@ habitats:
   - "[[Ruins]]"
   - "[[Plains]]"
   - "[[Dungeon]]"
-description: ""
+description: "At the apex of hobgoblin society stands the warlord: a tactician who has turned the entire apparatus of hobgoblin militarism into a personal instrument, and who measures success in territory taken and subordinates who have not yet tried to take the title."
 ---
 **Habitats:** [[Ruins]] | [[Plains]] | [[Dungeon]]

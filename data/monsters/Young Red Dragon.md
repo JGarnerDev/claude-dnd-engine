@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
   - "[[Desert]]"
-description: ""
+description: "A young red dragon has all its elder's arrogance and none of its patience, which makes it both more reckless and more immediately dangerous — it has not yet learned to let threats come to it, so it goes to the threats, loudly."
 ---
 **Habitats:** [[Mountains]] | [[Desert]]

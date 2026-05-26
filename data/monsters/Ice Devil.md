@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Nine Hells]]"
   - "[[Tundra]]"
-description: ""
+description: "The gelugon does not merely serve in hell's hierarchy, it administers it: cold, precise, and operating at a level of strategic patience that makes the warmer devils seem impulsive by comparison."
 ---
 **Habitats:** [[Nine Hells]] | [[Tundra]]

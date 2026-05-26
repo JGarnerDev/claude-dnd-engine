@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "A small fish with teeth outsized for its body and a social habit of swarming anything that bleeds — the quipper is individually beneath notice and collectively a reason to stop bleeding immediately."
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

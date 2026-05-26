@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ruins]]"
   - "[[City]]"
-description: ""
+description: "The arena has refined everything unnecessary out of this fighter — no ideology, no cause, just the accumulated knowledge of how to stay alive in front of a crowd that has paid to see otherwise."
 ---
 **Habitats:** [[Ruins]] | [[City]]

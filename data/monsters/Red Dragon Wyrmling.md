@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
   - "[[Desert]]"
-description: ""
+description: "Already convinced that it is the apex of creation, the red dragon wyrmling pursues this belief with a fire breath and a temper that have not yet caught up to its ambition — but are developing faster than anyone around it would prefer."
 ---
 **Habitats:** [[Mountains]] | [[Desert]]

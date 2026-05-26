@@ -14,6 +14,6 @@ alignment: unaligned
 source: Monster Manual
 habitats:
   - "[[Dungeon]]"
-description: ""
+description: "The dungeon's janitor: a perfectly transparent, corridor-shaped ooze that dissolves everything organic it engulfs and leaves stone walls clean and gleaming, an inadvertent argument for the idea that some ecological niches are too specific to be accidental."
 ---
 **Habitats:** [[Dungeon]]

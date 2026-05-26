@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "What merfolk become when the Abyss reaches up from the ocean floor — all the aquatic capability and none of the civilization, replaced by hunger and the capacity for violence at depth."
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

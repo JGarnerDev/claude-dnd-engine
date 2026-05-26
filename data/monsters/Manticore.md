@@ -16,6 +16,6 @@ habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
   - "[[Desert]]"
-description: ""
+description: "A lion's strength, a human face wearing a king's expression, and a tail that fires spikes as a ranged weapon — the manticore is an argument against the idea that predators need to choose between intimidation and efficiency."
 ---
 **Habitats:** [[Mountains]] | [[Plains]] | [[Desert]]

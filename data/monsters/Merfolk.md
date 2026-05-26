@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "Occupying the ocean's middle depths with the same ambivalence toward the surface world that the surface world has toward them, merfolk have built cultures as complex as any above the waterline that no one above it will ever visit."
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

@@ -16,6 +16,6 @@ habitats:
   - "[[Abyss]]"
   - "[[Ruins]]"
   - "[[Dungeon]]"
-description: ""
+description: "A tiny demon assigned as a familiar against its will, the quasit seethes with resentment at every task it's given and expresses this through shapeshifting into forms that make it harder to grab and delivering its venom when the opportunity presents itself."
 ---
 **Habitats:** [[Abyss]] | [[Ruins]] | [[Dungeon]]

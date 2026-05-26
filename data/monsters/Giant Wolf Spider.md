@@ -16,6 +16,6 @@ habitats:
   - "[[Dungeon]]"
   - "[[Forest]]"
   - "[[Cave]]"
-description: ""
+description: "It does not build webs to catch prey — it hunts, fast and low to the ground, with the additional capability of webbing escape routes shut once the hunt is decided."
 ---
 **Habitats:** [[Dungeon]] | [[Forest]] | [[Cave]]

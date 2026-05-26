@@ -16,6 +16,6 @@ habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
   - "[[Underdark]]"
-description: ""
+description: "A young myconid still learning the boundaries of its own rapport, the sprout extends its first spore-tendrils into the colony's shared consciousness with the tentative wonder of something discovering that it is not alone."
 ---
 **Habitats:** [[Dungeon]] | [[Cave]] | [[Underdark]]

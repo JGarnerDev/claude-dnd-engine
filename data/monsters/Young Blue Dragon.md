@@ -16,6 +16,6 @@ habitats:
   - "[[Desert]]"
   - "[[Plains]]"
   - "[[Coastline]]"
-description: ""
+description: "A young blue dragon has learned that lightning is power and that power explains itself through demonstration — it practices both the magic and the monologue, working toward the rhetorical control its older kin have perfected."
 ---
 **Habitats:** [[Desert]] | [[Plains]] | [[Coastline]]

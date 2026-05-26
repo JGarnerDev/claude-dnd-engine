@@ -14,6 +14,6 @@ alignment: unaligned
 source: Monster Manual
 habitats:
   - "[[Tomb]]"
-description: ""
+description: "The tarrasque is the question the universe poses when it wants to know whether civilization was worth building — an extinction event that wakes on a geological schedule and does not stop until it returns to dormancy, leaving the world to count what is left."
 ---
 **Habitats:** [[Tomb]]

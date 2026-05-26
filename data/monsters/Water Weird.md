@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Ruins]]"
-description: ""
+description: "An elemental spirit bound into a body of water, the water weird coils around intruders with a constrictive patience that blends perfectly with the thing it inhabits until the moment it decides not to."
 ---
 **Habitats:** [[Ocean]] | [[Ruins]]

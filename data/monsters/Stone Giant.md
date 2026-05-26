@@ -16,6 +16,6 @@ habitats:
   - "[[Mountains]]"
   - "[[Dungeon]]"
   - "[[Cave]]"
-description: ""
+description: "Stone giants live so deep in rock and so far from the surface that the sky is mythology to them — they carve art into cave walls and experience the world through stone, regarding everything above ground as a dream too loud to properly appreciate."
 ---
 **Habitats:** [[Mountains]] | [[Dungeon]] | [[Cave]]

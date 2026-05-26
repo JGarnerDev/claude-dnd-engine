@@ -14,6 +14,6 @@ alignment: neutral evil
 source: Monster Manual
 habitats:
   - "[[Underdark]]"
-description: ""
+description: "The kuo-toa's warrior caste, monitors enforce the hierarchy with a violence that is less personal than institutional — they are not angry, they are structural, which makes them harder to reason with."
 ---
 **Habitats:** [[Underdark]]

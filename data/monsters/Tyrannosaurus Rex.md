@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Jungle]]"
   - "[[Plains]]"
-description: ""
+description: "An apex predator shaped by millions of years of unchallenged dominance into something that has no concept of being outmatched — the tyrannosaurus rex processes the world as a series of things it has not yet eaten and one thing it has decided to eat now."
 ---
 **Habitats:** [[Jungle]] | [[Plains]]

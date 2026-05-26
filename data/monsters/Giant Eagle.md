@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
-description: ""
+description: "Vast-winged and sharp-eyed, giant eagles carry themselves with the gravity of creatures that have watched kingdoms rise and fall from the same mountain eyrie, and find most of the kingdoms less interesting than the wind."
 ---
 **Habitats:** [[Mountains]] | [[Plains]]

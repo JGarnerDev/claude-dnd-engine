@@ -17,6 +17,6 @@ habitats:
   - "[[Forest]]"
   - "[[Ruins]]"
   - "[[Plains]]"
-description: ""
+description: "Gruumsh's mark rides behind every orc's eye: a divine hunger for conquest and the rage that comes from knowing the world belongs to someone else — not a flaw in orc culture but its foundation, the war god's gift that never stops giving."
 ---
 **Habitats:** [[Mountains]] | [[Forest]] | [[Ruins]] | [[Plains]]

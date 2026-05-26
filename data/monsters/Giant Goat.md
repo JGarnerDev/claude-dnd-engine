@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
-description: ""
+description: "Surefooted on slopes that would defeat everything else and willing to charge anything that looks like it might be in the way, the giant goat has weaponized the stubbornness of its smaller kin at a scale that demands respect."
 ---
 **Habitats:** [[Mountains]] | [[Plains]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Underdark]]"
   - "[[Cave]]"
-description: ""
+description: "Blind since birth and built around it, the grimlock navigates the Underdark through smell, vibration, and sound with a precision that makes sight seem like a redundancy it never needed — what it cannot see, it senses, and what it senses, it does not miss."
 ---
 **Habitats:** [[Underdark]] | [[Cave]]

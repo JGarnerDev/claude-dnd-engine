@@ -16,6 +16,6 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
   - "[[Mountains]]"
-description: ""
+description: "Silent in flight and unsettlingly perceptive on the ground, the giant owl observes everything and volunteers nothing, which gives it the air of a creature that has reached conclusions about you that it finds impolite to share."
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Mountains]]

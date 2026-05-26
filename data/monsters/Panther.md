@@ -16,6 +16,6 @@ habitats:
   - "[[Jungle]]"
   - "[[Forest]]"
   - "[[Plains]]"
-description: ""
+description: "A predator built for the gap between seen and unseen: the panther uses cover the way a fencer uses footwork, closing distance through shadow and stillness until the gap is short enough that speed makes distance irrelevant."
 ---
 **Habitats:** [[Jungle]] | [[Forest]] | [[Plains]]

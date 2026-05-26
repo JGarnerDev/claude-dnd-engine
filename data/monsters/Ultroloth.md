@@ -14,6 +14,6 @@ alignment: neutral evil
 source: Monster Manual
 habitats:
   - "[[Gehenna]]"
-description: ""
+description: "The general class of yugoloth, the ultroloth commands the mercenary armies of the lower planes with a tactical intelligence and a contempt for both its employers and its troops that it considers professionally appropriate."
 ---
 **Habitats:** [[Gehenna]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
   - "[[Tundra]]"
-description: ""
+description: "The yeti's gaze freezes prey where it stands before the claws arrive, which means the last thing many of its victims see is the creature coming for them and the first thing they lose is the ability to run — a predator that has outsourced its opening move to eye contact."
 ---
 **Habitats:** [[Mountains]] | [[Tundra]]

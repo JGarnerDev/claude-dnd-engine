@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Tomb]]"
   - "[[Ruins]]"
-description: ""
+description: "A priest-ruler who refused to leave their dominion even in death, the mummy lord governs its tomb with the same divine authority it wielded in life — now amplified by centuries of accumulated hatred for everything that continued without it."
 ---
 **Habitats:** [[Tomb]] | [[Ruins]]

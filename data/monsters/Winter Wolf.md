@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Tundra]]"
   - "[[Mountains]]"
-description: ""
+description: "An intelligent wolf aligned with the frost giants who use them, the winter wolf has language, strategy, and a breath weapon, which makes the standard approach of fighting wolves — assume they're animals — the last mistake some parties make."
 ---
 **Habitats:** [[Tundra]] | [[Mountains]]

@@ -16,6 +16,6 @@ habitats:
   - "[[City]]"
   - "[[Dungeon]]"
   - "[[Ruins]]"
-description: ""
+description: "A generalist in a world of specialists, the rat has outcompeted every ecosystem it has entered through a combination of omnivory, rapid reproduction, and the willingness to live directly inside the waste products of civilizations too proud to acknowledge its presence."
 ---
 **Habitats:** [[City]] | [[Dungeon]] | [[Ruins]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Tundra]]"
   - "[[Mountains]]"
-description: ""
+description: "A young white dragon is cold, fast, and operating entirely on instinct — it hasn't had time to develop the cunning of older dragons, which means it attacks directly and continuously, relying on cold breath and savagery to close every argument it starts."
 ---
 **Habitats:** [[Tundra]] | [[Mountains]]

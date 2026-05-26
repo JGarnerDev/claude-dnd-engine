@@ -16,6 +16,6 @@ habitats:
   - "[[Ruins]]"
   - "[[Dungeon]]"
   - "[[Plains]]"
-description: ""
+description: "Where goblins are chaos in small packages, hobgoblins are law in large ones: militaristic, hierarchical, and deeply invested in the idea that discipline is the only meaningful difference between winning and losing."
 ---
 **Habitats:** [[Ruins]] | [[Dungeon]] | [[Plains]]

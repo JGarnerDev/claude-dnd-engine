@@ -16,6 +16,6 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
   - "[[Plains]]"
-description: ""
+description: "An ogre's mass and strength, reanimated without the hunger that previously gave it direction — the ogre zombie is more purposeful than the living version because someone else has given it a purpose, which is the most dangerous upgrade an ogre can receive."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]] | [[Plains]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Underdark]]"
   - "[[Cave]]"
-description: ""
+description: "The oldest and largest myconid in a colony, the sovereign has accumulated enough rapport-network that its consciousness is partially distributed across every spore it has ever shared — a creature that thinks in first-person plural and means it."
 ---
 **Habitats:** [[Underdark]] | [[Cave]]

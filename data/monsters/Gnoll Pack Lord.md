@@ -16,6 +16,6 @@ habitats:
   - "[[Plains]]"
   - "[[Ruins]]"
   - "[[Forest]]"
-description: ""
+description: "A gnoll that has survived long enough and killed enough rivals to lead, which means it is the most dangerous animal in a pack of dangerous animals — and smart enough to point that danger in a direction."
 ---
 **Habitats:** [[Plains]] | [[Ruins]] | [[Forest]]

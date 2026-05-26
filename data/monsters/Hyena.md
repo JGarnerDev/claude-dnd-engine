@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Plains]]"
   - "[[Desert]]"
-description: ""
+description: "The hyena is a more sophisticated predator than its reputation suggests: patient, socially intelligent, and capable of driving lions off their own kills — the laughter is not mockery, it is communication, which makes it stranger, not less so."
 ---
 **Habitats:** [[Plains]] | [[Desert]]

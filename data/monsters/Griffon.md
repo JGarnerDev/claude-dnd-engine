@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
-description: ""
+description: "Half eagle and half lion, the griffon has inherited the most effective hunting traits of both — the eagle's dive and the lion's grapple — which makes it one of the few creatures that can threaten prey both on the ground and in flight."
 ---
 **Habitats:** [[Mountains]] | [[Plains]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
   - "[[Cave]]"
-description: ""
+description: "A two-headed giant whose heads have spent so long disagreeing with each other that combat is almost a relief — at least both personalities can agree on hitting things."
 ---
 **Habitats:** [[Mountains]] | [[Cave]]

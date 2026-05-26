@@ -16,6 +16,6 @@ habitats:
   - "[[Jungle]]"
   - "[[Desert]]"
   - "[[Swamp]]"
-description: ""
+description: "Small, cold-blooded, and entirely committed to staying alive in a world full of things that eat it — the lizard's main survival strategy is to be faster than expected and already somewhere else when expected."
 ---
 **Habitats:** [[Jungle]] | [[Desert]] | [[Swamp]]

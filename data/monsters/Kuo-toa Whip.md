@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Underdark]]"
   - "[[Cave]]"
-description: ""
+description: "A whip serves as both divine enforcer and ritual specialist, bridging the gap between the monitor's violence and the archpriest's madness — the translation layer between faith and force."
 ---
 **Habitats:** [[Underdark]] | [[Cave]]

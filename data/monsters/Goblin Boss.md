@@ -16,6 +16,6 @@ habitats:
   - "[[Cave]]"
   - "[[Dungeon]]"
   - "[[Ruins]]"
-description: ""
+description: "A goblin that has climbed to the top of a very low hierarchy through a combination of cunning and willingness to let other goblins absorb consequences on its behalf — which is, functionally, leadership."
 ---
 **Habitats:** [[Cave]] | [[Dungeon]] | [[Ruins]]

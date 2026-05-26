@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
-description: ""
+description: "An ooze the color of old bruises that eats organic matter with patient chemical thoroughness — and if struck by lightning, splits into two smaller oozes, which has made certain wizards very regretful about their spell selection."
 ---
 **Habitats:** [[Dungeon]] | [[Cave]]

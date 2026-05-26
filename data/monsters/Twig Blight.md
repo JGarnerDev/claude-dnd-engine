@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
   - "[[Swamp]]"
-description: ""
+description: "A corrupted plant-thing that hides in underbrush and attacks at close range with splintered limbs, the twig blight is individually fragile but collectively the forest's way of ensuring that walking through it is not a passive activity."
 ---
 **Habitats:** [[Forest]] | [[Swamp]]

@@ -16,6 +16,6 @@ habitats:
   - "[[Plains]]"
   - "[[Ruins]]"
   - "[[Forest]]"
-description: ""
+description: "Touched by the demon lord Yeenoghu at the moment of their creation, gnolls do not merely hunt but desecrate, leaving ruin behind not as a side effect but as an offering — their violence is devotional."
 ---
 **Habitats:** [[Plains]] | [[Ruins]] | [[Forest]]

@@ -16,6 +16,6 @@ habitats:
   - "[[Plains]]"
   - "[[Mountains]]"
   - "[[Dungeon]]"
-description: ""
+description: "An iron bull that exhales petrification, the gorgon does not rage so much as process: it is a living siege engine that converts the landscape around it into a monument to the things that were slow to move."
 ---
 **Habitats:** [[Plains]] | [[Mountains]] | [[Dungeon]]

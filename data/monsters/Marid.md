@@ -16,6 +16,6 @@ habitats:
   - "[[Elemental Planes]]"
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "Born of elemental water and enormously proud of it, the marid is the ocean's diplomat and its tantrum in equal measure — generous when pleased, devastating when slighted, and always several rhetorical moves ahead of whoever is talking to it."
 ---
 **Habitats:** [[Elemental Planes]] | [[Ocean]] | [[Coastline]]

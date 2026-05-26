@@ -14,6 +14,6 @@ alignment: lawful evil
 source: Monster Manual
 habitats:
   - "[[Ocean]]"
-description: ""
+description: "A sahuagin through whom Sekolah's hunger speaks directly, the priestess translates the shark-god's appetite into religious law — a theology so streamlined that its central commandment is also its primary activity."
 ---
 **Habitats:** [[Ocean]]

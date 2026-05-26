@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Underdark]]"
   - "[[Dungeon]]"
-description: ""
+description: "A beetle-bodied burrower whose compound eyes produce a confusion effect on everything that meets its gaze, the umber hulk has turned its visual apparatus into a weapon and its tunnels into ambush corridors — a creature that fights best in the passages it has made."
 ---
 **Habitats:** [[Underdark]] | [[Dungeon]]

@@ -63,7 +63,13 @@
       "PowerShell(.\\\\scripts\\\\add-monster-descriptions.ps1 -Filter \"aboleth\" -Count 1)",
       "PowerShell(claude *)",
       "PowerShell(.\\\\scripts\\\\add-monster-descriptions.ps1)",
-      "Bash(python scripts/fill-descriptions-chunk-a.py)"
+      "Bash(python scripts/fill-descriptions-chunk-a.py)",
+      "Bash(xargs -I{} basename {} .md)",
+      "Bash(awk 'NR>=1 && NR<=70')",
+      "Bash(python scripts/fill-descriptions-chunk-b.py)",
+      "Bash(python scripts/fill-descriptions-chunk-c.py)",
+      "Bash(python scripts/fill-descriptions-chunk-d.py)",
+      "Bash(python scripts/fill-descriptions-chunk-e.py)"
     ]
   },
   "hooks": {

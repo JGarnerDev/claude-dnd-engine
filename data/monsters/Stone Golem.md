@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
-description: ""
+description: "Less flexible than the iron golem and more patient than any living creature, the stone golem waits in its assigned position across centuries if necessary — a construct that has resolved the problem of boredom by not experiencing it."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]]

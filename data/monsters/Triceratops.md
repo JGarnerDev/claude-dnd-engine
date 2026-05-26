@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Plains]]"
   - "[[Jungle]]"
-description: ""
+description: "A living fortification on legs, the triceratops has three horns and a neck frill designed to make every angle of approach a worse angle than the last — it does not want to fight, but it has prepared for it thoroughly."
 ---
 **Habitats:** [[Plains]] | [[Jungle]]

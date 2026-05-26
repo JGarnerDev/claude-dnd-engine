@@ -16,6 +16,6 @@ habitats:
   - "[[Underdark]]"
   - "[[Cave]]"
   - "[[Dungeon]]"
-description: ""
+description: "A stalactite with ambitions, the roper extends adhesive tendrils to drag prey into a toothed maw at its base, patient beyond most creatures' ability to conceptualize patience, operating on the certainty that everything passes through a cave eventually."
 ---
 **Habitats:** [[Underdark]] | [[Cave]] | [[Dungeon]]

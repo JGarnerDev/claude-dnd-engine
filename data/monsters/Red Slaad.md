@@ -14,6 +14,6 @@ alignment: chaotic neutral
 source: Monster Manual
 habitats:
   - "[[Limbo]]"
-description: ""
+description: "A frog-demon that implants its eggs via claw, the red slaad treats the reproductive process as an incidental consequence of combat — it is not trying to make more slaadi, it simply cannot help it."
 ---
 **Habitats:** [[Limbo]]

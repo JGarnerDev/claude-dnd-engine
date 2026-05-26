@@ -16,6 +16,6 @@ habitats:
   - "[[Swamp]]"
   - "[[Ocean]]"
   - "[[Jungle]]"
-description: ""
+description: "A crocodile that has run out of things in the water large enough to stop it, the giant crocodile has begun auditing the land as well, moving with prehistoric patience toward the next thing that wanders too close to the bank."
 ---
 **Habitats:** [[Swamp]] | [[Ocean]] | [[Jungle]]

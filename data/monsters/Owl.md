@@ -16,6 +16,6 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
   - "[[Mountains]]"
-description: ""
+description: "The owl hears the mouse before the mouse has committed to moving, hits it before it finishes moving, and is gone before anyone else in the forest has registered that anything happened — a predator so efficient it has become the symbol of things that know before they're told."
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Mountains]]

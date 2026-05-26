@@ -14,6 +14,6 @@ alignment: chaotic evil
 source: Monster Manual
 habitats:
   - "[[Abyss]]"
-description: ""
+description: "A portly pig-ape demon that serves as judge in the Abyss's soul-processing hierarchy, the nalfeshnee decides which damned souls are worth transforming into useful demons and which become fodder — a bureaucratic function it performs with genuine enthusiasm."
 ---
 **Habitats:** [[Abyss]]

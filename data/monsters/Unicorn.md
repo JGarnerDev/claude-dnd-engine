@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
   - "[[Feywild]]"
-description: ""
+description: "A divine guardian of sacred forest, the unicorn is one of the few creatures whose goodness is structural rather than chosen — it cannot be otherwise, and its power flows from that impossibility as cleanly as its healing magic flows from its horn."
 ---
 **Habitats:** [[Forest]] | [[Feywild]]

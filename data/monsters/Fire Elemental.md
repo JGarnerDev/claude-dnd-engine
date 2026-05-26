@@ -16,6 +16,6 @@ habitats:
   - "[[Elemental Planes]]"
   - "[[Desert]]"
   - "[[City]]"
-description: ""
+description: "Living combustion given direction, the fire elemental does not burn so much as propagate — each thing it touches becomes fuel, and it moves toward more fuel with the single-minded clarity of an idea that has only one conclusion."
 ---
 **Habitats:** [[Elemental Planes]] | [[Desert]] | [[City]]

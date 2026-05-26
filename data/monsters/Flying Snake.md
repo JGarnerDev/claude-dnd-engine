@@ -16,6 +16,6 @@ habitats:
   - "[[Jungle]]"
   - "[[Swamp]]"
   - "[[Ruins]]"
-description: ""
+description: "A small winged serpent with a venomous bite, the flying snake has solved the predator's oldest problem — the prey running away — with an elegance that larger hunters must find humbling."
 ---
 **Habitats:** [[Jungle]] | [[Swamp]] | [[Ruins]]

@@ -16,6 +16,6 @@ habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
   - "[[Dungeon]]"
-description: ""
+description: "An orc who has literally blinded one eye in devotion to a deity who lost his own, the Eye of Gruumsh channels Gruumsh's divine rage through the wound as a statement that pain and faith are the same thing."
 ---
 **Habitats:** [[Mountains]] | [[Plains]] | [[Dungeon]]
