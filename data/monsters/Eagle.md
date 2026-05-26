@@ -16,6 +16,6 @@ habitats:
   - "[[Mountains]]"
   - "[[Coastline]]"
   - "[[Plains]]"
-description: ""
+description: "The eagle does not share the sky; it surveys its territory from a height that converts everything below into either prey or irrelevance."
 ---
 **Habitats:** [[Mountains]] | [[Coastline]] | [[Plains]]

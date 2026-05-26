@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Coastline]]"
   - "[[Ocean]]"
-description: ""
+description: "A crab has solved the problem of existing in hostile environments by becoming, in a modest way, hostile itself."
 ---
 **Habitats:** [[Coastline]] | [[Ocean]]

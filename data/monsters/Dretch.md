@@ -14,6 +14,6 @@ alignment: chaotic evil
 source: Monster Manual
 habitats:
   - "[[Abyss]]"
-description: ""
+description: "The dretch is miserable, weak, and prolific, which is precisely what the Abyss requires: filler for gaps in the demonic hierarchy, a soldier whose only qualification is that it costs nothing to replace."
 ---
 **Habitats:** [[Abyss]]

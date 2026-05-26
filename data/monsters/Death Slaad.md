@@ -14,6 +14,6 @@ alignment: chaotic neutral
 source: Monster Manual
 habitats:
   - "[[Limbo]]"
-description: ""
+description: "At the apex of slaad-kind lives something that has absorbed so much chaos it has become a kind of dark clarity — the death slaad knows exactly what it is doing and finds it hilarious."
 ---
 **Habitats:** [[Limbo]]

@@ -14,6 +14,6 @@ alignment: lawful neutral
 source: Monster Manual
 habitats:
   - "[[Mechanus]]"
-description: ""
+description: "A duodrone processes the universe as a series of binary propositions: true or false, permitted or forbidden, self or not-self — not because it is simple, but because simplicity is what Mechanus requires of the small."
 ---
 **Habitats:** [[Mechanus]]

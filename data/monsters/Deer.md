@@ -16,6 +16,6 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
   - "[[Mountains]]"
-description: ""
+description: "Fleet, alert, and living proof that being harmless is its own form of survival — though prey animal and predator both understand this arrangement is always provisional."
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Mountains]]

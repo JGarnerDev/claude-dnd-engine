@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Nine Hells]]"
   - "[[Plains]]"
-description: ""
+description: "A fallen angel who still fights with angelic precision, the erinyes is the most dangerous thing hell produces because it remembers what goodness looks like and has chosen this anyway — which means it has no illusions left to shatter."
 ---
 **Habitats:** [[Nine Hells]] | [[Plains]]

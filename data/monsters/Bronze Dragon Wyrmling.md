@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Coastline]]"
   - "[[Mountains]]"
-description: ""
+description: "Fascinated by warfare and honor from its first breath, the bronze dragon wyrmling collects stories of battles the way other hatchlings collect shiny objects, asking pointed questions no hatchling should know to ask."
 ---
 **Habitats:** [[Coastline]] | [[Mountains]]

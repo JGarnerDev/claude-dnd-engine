@@ -16,6 +16,6 @@ habitats:
   - "[[Elemental Planes]]"
   - "[[Desert]]"
   - "[[Dungeon]]"
-description: ""
+description: "A dao does not distinguish between indentured labor and slavery — it is a collector of effort, and the gems its thralls extract from the earth are simply effort made solid."
 ---
 **Habitats:** [[Elemental Planes]] | [[Desert]] | [[Dungeon]]

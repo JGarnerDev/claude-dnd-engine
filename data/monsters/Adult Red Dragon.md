@@ -16,6 +16,6 @@ habitats:
   - "[[Mountains]]"
   - "[[Desert]]"
   - "[[Dungeon]]"
-description: ""
+description: "The most dangerous thing about an adult red dragon is not its fire — it is the absolute certainty, burning behind its eyes, that everything it surveys already belongs to it."
 ---
 **Habitats:** [[Mountains]] | [[Desert]] | [[Dungeon]]

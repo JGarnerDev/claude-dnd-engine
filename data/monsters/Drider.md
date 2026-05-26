@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Underdark]]"
   - "[[Ruins]]"
-description: ""
+description: "Lolth's punishment made manifest: a drow who failed their goddess's test, now trapped in a form that is both spider and elf and accepted fully by neither, patrolling the tunnels with the bitter rage of someone who had everything and lost it to a theological examination."
 ---
 **Habitats:** [[Underdark]] | [[Ruins]]

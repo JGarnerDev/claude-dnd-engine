@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
-description: ""
+description: "The darkmantle drops darkness before it drops itself, converting the ceiling from ambush point to hunting ground — in the dark it has manufactured, it has already won."
 ---
 **Habitats:** [[Dungeon]] | [[Cave]]

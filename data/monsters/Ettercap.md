@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
   - "[[Ruins]]"
-description: ""
+description: "The ettercap is what happens when the forest's appetite is given fingers: a web-spinning, spider-herding predator that has cultivated a whole ecology of horror in the places where travelers stop paying attention."
 ---
 **Habitats:** [[Forest]] | [[Ruins]]

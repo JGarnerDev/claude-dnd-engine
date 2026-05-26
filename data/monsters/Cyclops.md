@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Coastline]]"
   - "[[Mountains]]"
-description: ""
+description: "Solitary and melancholy, the cyclops lacks the depth perception to rule anything, which suits a creature whose chief relationship with the world is one of mutual misunderstanding."
 ---
 **Habitats:** [[Coastline]] | [[Mountains]]

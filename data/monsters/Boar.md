@@ -16,6 +16,6 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
   - "[[Mountains]]"
-description: ""
+description: "A boar does not attack because it is hungry or afraid; it attacks because you were standing in a place it has decided is its place, and this is not something it is willing to discuss."
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Mountains]]

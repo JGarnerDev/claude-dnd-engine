@@ -16,6 +16,6 @@ habitats:
   - "[[Elemental Planes]]"
   - "[[Desert]]"
   - "[[Mountains]]"
-description: ""
+description: "Born of elemental air and sovereign within it, the djinni's great tension is that it understands freedom absolutely and must spend so much of its existence deciding what to do with that understanding."
 ---
 **Habitats:** [[Elemental Planes]] | [[Desert]] | [[Mountains]]

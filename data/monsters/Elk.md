@@ -17,6 +17,6 @@ habitats:
   - "[[Plains]]"
   - "[[Mountains]]"
   - "[[Tundra]]"
-description: ""
+description: "The elk moves through wilderness like punctuation — a pause in the forest, a declaration of space, a reminder that the woods contain things that are large and fast and entirely uninterested in you."
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Mountains]] | [[Tundra]]

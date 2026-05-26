@@ -16,6 +16,6 @@ habitats:
   - "[[Jungle]]"
   - "[[Swamp]]"
   - "[[Forest]]"
-description: ""
+description: "It does not chase; it repositions and waits, and when the coils close the battle is already decided — the constrictor snake is proof that patience is a killing technique."
 ---
 **Habitats:** [[Jungle]] | [[Swamp]] | [[Forest]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
   - "[[Feywild]]"
-description: ""
+description: "Rooted to a single tree and connected through its roots to every living thing in the forest, the dryad is not protecting nature so much as she is nature, looking out through humanoid eyes and growing very tired of what she sees."
 ---
 **Habitats:** [[Forest]] | [[Feywild]]

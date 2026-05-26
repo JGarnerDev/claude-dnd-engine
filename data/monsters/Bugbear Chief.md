@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
   - "[[Dungeon]]"
-description: ""
+description: "A bugbear chief has survived longer than its competitors through a simple philosophy: hit first, hit harder, and make certain everyone who might challenge you has seen what happened to the last one who tried."
 ---
 **Habitats:** [[Forest]] | [[Dungeon]]

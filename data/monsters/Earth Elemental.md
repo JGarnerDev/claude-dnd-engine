@@ -16,6 +16,6 @@ habitats:
   - "[[Elemental Planes]]"
   - "[[Mountains]]"
   - "[[Dungeon]]"
-description: ""
+description: "Slow in the way that mountains are slow, the earth elemental does not hurry because it does not need to — it has been stone longer than you have been anything, and will be stone again after you are forgotten."
 ---
 **Habitats:** [[Elemental Planes]] | [[Mountains]] | [[Dungeon]]

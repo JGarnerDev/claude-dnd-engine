@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Nine Hells]]"
   - "[[Tundra]]"
-description: ""
+description: "Hell's interrogator-class, the bone devil finds pain not pleasurable but efficient — a precise instrument for extracting confession, compliance, or despair, whichever is most useful."
 ---
 **Habitats:** [[Nine Hells]] | [[Tundra]]

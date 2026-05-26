@@ -14,6 +14,6 @@ alignment: neutral good
 source: Monster Manual
 habitats:
   - "[[Mountains]]"
-description: ""
+description: "Cloud giants measure status in bloodline purity and treasure accumulated, and they look down on the world below in both senses: from their sky castles, and with the particular disdain of aristocrats who have never had to walk anywhere."
 ---
 **Habitats:** [[Mountains]]

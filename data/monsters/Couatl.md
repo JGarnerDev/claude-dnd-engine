@@ -16,6 +16,6 @@ habitats:
   - "[[Jungle]]"
   - "[[Ruins]]"
   - "[[Celestial Planes]]"
-description: ""
+description: "A feathered serpent of pure divine light, the couatl carries its celestial mandate like a second skin — it cannot lie, which means when it tells you the situation is dire, the situation is truly dire."
 ---
 **Habitats:** [[Jungle]] | [[Ruins]] | [[Celestial Planes]]

@@ -16,6 +16,6 @@ habitats:
   - "[[Plains]]"
   - "[[Mountains]]"
   - "[[Dungeon]]"
-description: ""
+description: "A landshark that treats the earth as water, the bulette does not distinguish between prey and obstacle — it simply accelerates toward anything warm and lets physics finish the argument."
 ---
 **Habitats:** [[Plains]] | [[Mountains]] | [[Dungeon]]

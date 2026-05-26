@@ -16,6 +16,6 @@ habitats:
   - "[[Desert]]"
   - "[[Plains]]"
   - "[[Tomb]]"
-description: ""
+description: "Two heads, one appetite, zero mercy: the death dog's bite carries disease as casually as other dogs carry affection, a two-headed argument for keeping your distance."
 ---
 **Habitats:** [[Desert]] | [[Plains]] | [[Tomb]]

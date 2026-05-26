@@ -16,6 +16,6 @@ habitats:
   - "[[Swamp]]"
   - "[[Coastline]]"
   - "[[Ruins]]"
-description: ""
+description: "A lobster-like aberration from before memory, the chuul attends to magic the way a hound attends to blood — drawn by the scent of spells, patient and ancient and very difficult to kill."
 ---
 **Habitats:** [[Swamp]] | [[Coastline]] | [[Ruins]]

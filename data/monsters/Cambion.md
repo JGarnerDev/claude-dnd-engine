@@ -16,6 +16,6 @@ habitats:
   - "[[Nine Hells]]"
   - "[[Abyss]]"
   - "[[City]]"
-description: ""
+description: "Born of fiend and mortal, the cambion carries both inheritances as weapons: it understands human desire well enough to exploit it, and has infernal patience enough to wait."
 ---
 **Habitats:** [[Nine Hells]] | [[Abyss]] | [[City]]

@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Plains]]"
   - "[[Jungle]]"
-description: ""
+description: "Four tons of social intelligence wrapped in hide thick enough to turn most weapons into a misunderstanding; the elephant's charge is not rage, it is a decision, and once made, it does not revisit it."
 ---
 **Habitats:** [[Plains]] | [[Jungle]]

@@ -14,6 +14,6 @@ alignment: neutral evil
 source: Monster Manual
 habitats:
   - "[[Underdark]]"
-description: ""
+description: "A drow elite warrior has survived the Underdark's politics as much as its monsters; the blades are just the visible part of a creature that has been sharpened by something far more dangerous than combat training."
 ---
 **Habitats:** [[Underdark]]

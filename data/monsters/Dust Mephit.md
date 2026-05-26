@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Desert]]"
   - "[[Elemental Planes]]"
-description: ""
+description: "A dust mephit is what happens when spite becomes elemental: small enough to dismiss, abrasive enough to remember, and prone to detonating in a cloud of blinding powder when the argument doesn't go its way."
 ---
 **Habitats:** [[Desert]] | [[Elemental Planes]]

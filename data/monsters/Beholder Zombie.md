@@ -16,6 +16,6 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
   - "[[Underdark]]"
-description: ""
+description: "The horror of a beholder zombie is not its power but its wrongness: all that alien ego and paranoia, reduced to a stumbling corpse with eye stalks that still twitch toward movement."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]] | [[Underdark]]

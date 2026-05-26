@@ -16,6 +16,6 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
   - "[[Underdark]]"
-description: ""
+description: "What remains when a beholder's ego refuses to accept its own death: all the paranoid intelligence and devastating eye rays, now directed at a world it resents for continuing without its permission."
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]] | [[Underdark]]

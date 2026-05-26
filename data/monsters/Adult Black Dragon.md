@@ -14,6 +14,6 @@ alignment: chaotic evil
 source: Monster Manual
 habitats:
   - "[[Swamp]]"
-description: ""
+description: "Dissolution is its religion: it rules acid-eaten ruins and festering swamps not as a hoard-keeper but as a slow-working executioner, taking pleasure in watching everything it claims slowly rot."
 ---
 **Habitats:** [[Swamp]]

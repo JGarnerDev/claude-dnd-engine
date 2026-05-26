@@ -14,6 +14,6 @@ alignment: neutral evil
 source: Monster Manual
 habitats:
   - "[[Underdark]]"
-description: ""
+description: "She does not serve Lolth so much as embody her: the cruelty, the hunger, the absolute conviction that power earned through pain is the only power worth having, channeled through divine magic and a society built entirely to reflect her approval."
 ---
 **Habitats:** [[Underdark]]

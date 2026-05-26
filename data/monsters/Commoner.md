@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[City]]"
   - "[[Plains]]"
-description: ""
+description: "No armor, no training, no particular destiny — just someone who has woken up in the wrong place at the wrong time, which is enough to make them dangerous in sufficient numbers."
 ---
 **Habitats:** [[City]] | [[Plains]]

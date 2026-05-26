@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
   - "[[Ruins]]"
-description: ""
+description: "It has had centuries to learn that direct violence is inefficient; the ancient green dragon lets mortals destroy each other, pulling strings from within its old-growth cathedral until the forest floor is littered with the bones of fools who thought they were making their own choices."
 ---
 **Habitats:** [[Forest]] | [[Ruins]]

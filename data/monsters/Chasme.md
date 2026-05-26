@@ -14,6 +14,6 @@ alignment: chaotic evil
 source: Monster Manual
 habitats:
   - "[[Abyss]]"
-description: ""
+description: "A demon-fly whose droning is less sound than a slow erasure of will, the chasme does not rush its victims — it waits for consciousness to thin and then settles."
 ---
 **Habitats:** [[Abyss]]

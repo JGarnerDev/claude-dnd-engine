@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Underdark]]"
   - "[[Dungeon]]"
-description: ""
+description: "The gray dwarves have stripped everything from their culture that could not survive the Underdark's cruelty — warmth, art, mercy — and built something that could, which is bleaker than the stone it was carved from."
 ---
 **Habitats:** [[Underdark]] | [[Dungeon]]

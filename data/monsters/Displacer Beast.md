@@ -16,6 +16,6 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
   - "[[Feywild]]"
-description: ""
+description: "The displacer beast has two bodies: the real one, which will kill you, and the projected one, designed to ensure you look in the wrong direction while the real one does it."
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Feywild]]

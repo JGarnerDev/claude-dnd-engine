@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Underdark]]"
   - "[[Cave]]"
-description: ""
+description: "The drow have built an entire civilization in the Underdark on the premise that beauty, power, and divine favor flow from Lolth's web — which means they are simultaneously the most cultured and the most dangerous thing to encounter in total darkness."
 ---
 **Habitats:** [[Underdark]] | [[Cave]]

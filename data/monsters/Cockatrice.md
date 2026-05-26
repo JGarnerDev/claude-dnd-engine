@@ -16,6 +16,6 @@ habitats:
   - "[[Plains]]"
   - "[[Forest]]"
   - "[[Ruins]]"
-description: ""
+description: "Small enough to be dismissed and terrible enough to be remembered, the cockatrice turns living things to stone not out of malice but appetite — it simply prefers its food to hold still."
 ---
 **Habitats:** [[Plains]] | [[Forest]] | [[Ruins]]

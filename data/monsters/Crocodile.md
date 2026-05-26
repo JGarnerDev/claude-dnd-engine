@@ -16,6 +16,6 @@ habitats:
   - "[[Swamp]]"
   - "[[Ocean]]"
   - "[[Jungle]]"
-description: ""
+description: "The crocodile has not changed in a hundred million years because it found a working solution: be still, be patient, be the water, and then be absolutely everything at once."
 ---
 **Habitats:** [[Swamp]] | [[Ocean]] | [[Jungle]]

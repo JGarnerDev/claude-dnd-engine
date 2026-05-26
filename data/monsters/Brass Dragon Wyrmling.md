@@ -14,6 +14,6 @@ alignment: chaotic good
 source: Monster Manual
 habitats:
   - "[[Desert]]"
-description: ""
+description: "A brass dragon wyrmling already has opinions about everything and the confidence to share them at length — the tragedy is that it is usually right, and it knows it."
 ---
 **Habitats:** [[Desert]]

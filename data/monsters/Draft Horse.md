@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Plains]]"
   - "[[City]]"
-description: ""
+description: "The architecture of civilization: roads, harvests, trade caravans, and siege engines all depend on the draft horse, which asks only for grain and a night's rest in return for bearing the world."
 ---
 **Habitats:** [[Plains]] | [[City]]

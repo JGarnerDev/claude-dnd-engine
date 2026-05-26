@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
   - "[[Ruins]]"
-description: ""
+description: "Three hungry natures in one body that have never reached agreement, the chimera is less a creature than an ongoing argument between lion, goat, and dragon about who decides when to kill things."
 ---
 **Habitats:** [[Mountains]] | [[Ruins]]

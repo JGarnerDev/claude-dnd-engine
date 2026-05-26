@@ -14,6 +14,6 @@ alignment: chaotic good
 source: Monster Manual
 habitats:
   - "[[Mountains]]"
-description: ""
+description: "A copper dragon wyrmling arrives with a prank already in mind and a backup in case the first is too obvious; getting it to stop requires either genuine laughter or something more interesting to investigate."
 ---
 **Habitats:** [[Mountains]]

@@ -62,7 +62,8 @@
       "PowerShell(.\\\\scripts\\\\monster-lookup.ps1 -Habitat Cave -CRMin 2 -CRMax 8)",
       "PowerShell(.\\\\scripts\\\\add-monster-descriptions.ps1 -Filter \"aboleth\" -Count 1)",
       "PowerShell(claude *)",
-      "PowerShell(.\\\\scripts\\\\add-monster-descriptions.ps1)"
+      "PowerShell(.\\\\scripts\\\\add-monster-descriptions.ps1)",
+      "Bash(python scripts/fill-descriptions-chunk-a.py)"
     ]
   },
   "hooks": {

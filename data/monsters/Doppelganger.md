@@ -14,6 +14,6 @@ alignment: neutral
 source: Monster Manual
 habitats:
   - "[[City]]"
-description: ""
+description: "The doppelganger is the truest predator in any social environment — it hunts identities rather than bodies, reading surface thoughts to calibrate the performance and then wearing your face to meetings you will never know you missed."
 ---
 **Habitats:** [[City]]

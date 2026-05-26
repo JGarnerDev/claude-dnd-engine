@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Nine Hells]]"
   - "[[Dungeon]]"
-description: ""
+description: "The kyton does not just bind its victims in chain — it reads them, finding the fear that lives beneath the flesh and naming it aloud as the links draw tight."
 ---
 **Habitats:** [[Nine Hells]] | [[Dungeon]]

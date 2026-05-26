@@ -16,6 +16,6 @@ habitats:
   - "[[City]]"
   - "[[Plains]]"
   - "[[Ruins]]"
-description: ""
+description: "Entirely self-possessed, faintly contemptuous of everyone around it, and capable of vanishing from a locked room — the cat is the familiar of the universe itself."
 ---
 **Habitats:** [[City]] | [[Plains]] | [[Ruins]]

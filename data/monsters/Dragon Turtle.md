@@ -15,6 +15,6 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
-description: ""
+description: "An island that moves, a siege weapon that breathes steam, an ancient creature so immense that ships have mistaken it for geography and moored against its shell — the dragon turtle has no enemies because nothing can afford to make one."
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]
