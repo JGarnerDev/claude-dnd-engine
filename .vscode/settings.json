@@ -14,6 +14,7 @@
       "name": "Default",
       "colorBy": "none",
       "groups": [
+        { "id": "feats",             "label": "Feats",                  "match": { "property": "path", "value": "data/feats" },                    "color": "#bdbdbd", "enabled": true },
         { "id": "backgrounds",       "label": "Backgrounds",            "match": { "property": "path", "value": "data/backgrounds" },               "color": "#607d8b", "enabled": true },
         { "id": "classes",           "label": "Classes",                "match": { "property": "path", "value": "data/classes" },                   "color": "#cfd8dc", "enabled": true },
         { "id": "races",             "label": "Races",                  "match": { "property": "path", "value": "data/races" },                     "color": "#90a4ae", "enabled": true },

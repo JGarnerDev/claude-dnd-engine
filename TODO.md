@@ -44,7 +44,7 @@ Progress tracker for getting this project ready to generate sessions and run cam
   - [x] Chunk 5 — Dragons, Fiends, Stragglers: Nightmare, Imp, Young Silver Dragon, Revenant, Will-o'-Wisp
 - [x] Magic items — seeded `data/items/magic/` with 4 CoS artifacts (Sunsword, Holy Symbol of Ravenkind, Icon of Ravenloft, Tome of Strahd) + 7 canonical items (Bag of Holding, Cloak of Protection, Ring of Protection, Wand of Magic Missiles, Potion of Healing, Potion of Greater Healing, Sending Stones)
 - [x] Spells — created `meta/schemas/spell.md`, registered `spell` type + 9 school tags; seeded `data/spells/` with 280 spells (42 cantrips, 60 L1, 59 L2, 46 L3, 29 L4, 43 L5, 1 L6)
-- [ ] feats
+- [x] feats — 42 PHB feats seeded in `data/feats/`; schema at `meta/schemas/feat.md`; graph color `#bdbdbd`
 - [ ] skills
 
 

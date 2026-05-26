@@ -40,6 +40,7 @@
     { "query": "path:historian/deities",                "color": { "a": 1, "rgb": 77208225 } },
     { "query": "path:data/rumors",                      "color": { "a": 1, "rgb": 161136127 } },
     { "query": "path:historian/rumors",                 "color": { "a": 1, "rgb": 161136127 } },
+    { "query": "path:data/feats",                        "color": { "a": 1, "rgb": 189189189 } },
     { "query": "path:data/backgrounds",                 "color": { "a": 1, "rgb": 96125139 } },
     { "query": "path:historian/backgrounds",            "color": { "a": 1, "rgb": 96125139 } },
     { "query": "path:data/classes",                     "color": { "a": 1, "rgb": 207216220 } },
