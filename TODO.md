@@ -30,6 +30,12 @@ Progress tracker for getting this project ready to generate sessions and run cam
 
 - [x] Monsters — CR tags added as `cr/<decimal>` (1/4→cr/0.25, etc.) on all 435 monster files via `scripts/update-monster-cr-tags.ps1`; schema and tag registry updated
 - [x] Monsters — habitats converted from plain strings to `[[wiki-link]]` relations on all 433 non-empty files via `scripts/update-monster-habitats.ps1`; 26 generic habitat archetype entities created in `data/locations/` (9 wilderness, 4 dungeon, 1 city, 12 region/plane) via `scripts/seed-habitat-archetypes.ps1`
+- [ ] Monsters — descriptions missing on 351 of 435 files (`description: ""`). Fill in 5 alphabetical batches (~70 each). For each: generate 1–2 sentence flavor descriptions and write them back.
+  - [ ] Chunk A — Adult Black Dragon → Ettercap (A–Et)
+  - [ ] Chunk B — Ettin → Grimlock (Et–G)
+  - [ ] Chunk C — Guardian Naga → Myconid Sovereign (G–My)
+  - [ ] Chunk D — Myconid Sprout → Slaad Tadpole (My–Sl)
+  - [ ] Chunk E — Smoke Mephit → Yuan-ti Pureblood (Sm–Y)
 - [x] Monsters — new `monster` type added (`data/monsters/`, schema, tags, graph config); `creature` schema cleaned up (archetype field removed). Full MM seeded via `scripts/seed-monsters.ps1` (433 total files). Hand-crafted chunks 1-5 preserved. Seed in 5 chunks by campaign relevance:
   - [x] Chunk 1 — Core Undead: Zombie, Skeleton, Ghoul, Ghast, Wight, Shadow, Specter, Wraith, Vampire Spawn
   - [x] Chunk 2 — Wilderness Beasts: Wolf, Dire Wolf, Swarm of Bats, Giant Spider, Swarm of Ravens, Brown Bear
