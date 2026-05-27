@@ -1,0 +1,151 @@
+Generate a player-facing questionnaire for designing any world entity. Output is a clean shareable markdown document — no YAML, no schema jargon. Suitable to paste into Discord, email, or a shared doc.
+
+Also handles **ingestion**: when a filled questionnaire is returned (by file, paste, or conversational message), run balance review before creating any entity. If a message or file contains a `<!-- CLAUDE-INGEST -->` block, treat it as a pending ingestion automatically — no explicit flag needed.
+
+**Arguments:**
+- `--type <type>` — entity type to create: `resource`, `npc`, `faction`, `location`, `deity`, `monster`, `magic-item`, `event`, `culture`, `race`, or any type listed in `meta/entity-creation.md` *(required unless `--ingest` is used)*
+- `--name <text>` — working or placeholder name
+- `--concept <text>` — one-sentence description of what it is
+- `--player <name>` — player filling it out (personalizes header)
+- `--output` — write to `scratch/{name}-questionnaire.md` in addition to displaying
+- `--ingest <file or "paste">` — ingestion mode: take a filled questionnaire and run balance review before creating the entity
+
+---
+
+## Generation Mode
+
+### Phase 1 — Gather Parameters
+
+If required parameters are missing, ask only what's needed:
+1. **What type of entity?** (if `--type` missing)
+2. **Working name?** (if `--name` missing)
+3. **What is it?** One sentence. (if `--concept` missing)
+4. **Who's filling it out?** (optional)
+
+Do not ask about optional parameters that have sensible defaults.
+
+---
+
+### Phase 2 — Load Schema & Check Overlaps
+
+Read `meta/entity-creation.md` to find the correct schema file for `--type`. Then read `meta/schemas/{schema}.md` — specifically the **Player Form** and **Form → Frontmatter Mapping** sections.
+
+Run `.\scripts\free-entities.ps1 -Type <type>` to get existing free entities of this type. Scan for any that share the same origin, function, or key trait as the concept. Flag overlaps silently — surface them only in the DM note (Phase 4).
+
+---
+
+### Phase 3 — Build Questionnaire
+
+Use the **Player Form** from the schema as the base. Translate all fields into plain, jargon-free English. Then add 2–4 concept-specific bonus questions tailored to `--concept` that the base form doesn't cover.
+
+Group questions loosely:
+- **Identity** — what it is, what it looks like, what it does
+- **Origin** — where it comes from, how it enters the world
+- **Economy / Power** — who controls it, what it's worth, who wants it (skip if not applicable to type)
+- **Story** — the hook, the complication, the secret
+
+Always end with a hook question: *What makes this a story element, not just background detail?*
+
+**Required vs optional labeling (mandatory):**
+
+For each question, check whether it maps to a mandatory or optional field in the schema's frontmatter template. Then label and explain it in the questionnaire:
+
+- **Required questions** — label with `*(Required)*` and add one short sentence explaining *why* this answer is needed. Keep it friendly, not bureaucratic. Example: *"This one's needed so we know where to place it on the map and who might be competing for it."*
+- **Optional questions** — label with `*(Optional)*` and add one short sentence explaining what answering it *unlocks*. Example: *"No pressure — but if you have thoughts here, it helps us build faction drama around it."*
+- **Concept-specific bonus questions** — label with `*(Your call)*` since these go beyond the schema. Frame them as creative invitations, not requirements.
+
+Write labels and explanations in a tone that feels like a collaborative creative partner, not a form. The player should feel like their input matters and that blanks are genuinely fine.
+
+---
+
+### Phase 4 — Format & Output
+
+```
+<!-- CLAUDE-INGEST
+type: entity-questionnaire
+entity_type: {type}
+action: Filled questionnaire — run ingestion mode. Do not create any entity without balance review first.
+concept: {concept}
+player: {player name if provided}
+-->
+
+# {Name} — World Design Notes
+*For {Player} — fill out what you know, leave blanks for anything undecided.*
+
+---
+
+{questions grouped by section}
+
+---
+
+*Hand back to your DM when done. No right answers — the goal is enough detail to make this real.*
+```
+
+If `--output` is set, write to `scratch/{name}-questionnaire.md` and report the path.
+
+If an overlap was found in Phase 2, append after the player-facing content:
+
+```
+---
+## ⚠ Note for DM
+
+Possible overlap with existing entity: **{Name}** — {description}. Confirm with {player} whether this is distinct, a variant, or the same thing before creating a new entity.
+```
+
+---
+
+## Ingestion Mode
+
+Triggered by `--ingest <file>`, `--ingest paste`, or automatically whenever a message or file contains a `<!-- CLAUDE-INGEST type: entity-questionnaire -->` block.
+
+### Ingest Phase 1 — Read Answers
+
+Parse the filled questionnaire. Extract what was answered and note blanks. Read `entity_type` from the CLAUDE-INGEST block to know which schema applies.
+
+---
+
+### Ingest Phase 2 — Balance Review
+
+Read `meta/worldbuilding.md` (once). Run `.\scripts\free-entities.ps1 -Type <entity_type>` for current pool.
+
+Silently assess — use findings only to inform DM questions:
+
+- **Pool saturation:** Does adding this crowd out existing entities of the same type or rarity?
+- **Faction/power balance:** Does who controls or embodies this shift world leverage in unintended ways?
+- **Flavor dominance:** Does this push one theme (a faction, an origin type, a region) too loud?
+- **Tech/faith axis:** Does this interact with the tech/faith tension? Intentional or accidental?
+- **Lore consistency:** Does anything conflict with `meta/worldbuilding.md` or historian facts?
+- **Hook weight:** Is the story hook appropriately sized, or does it threaten to dominate sessions?
+- **Overlap:** Is this distinct enough from existing entities to warrant a new file?
+
+---
+
+### Ingest Phase 3 — DM Questions
+
+```
+## Entity Ingestion Review: {Name} ({type})
+
+**What the player gave us:**
+{2–3 sentence summary}
+
+**Gaps (blank or vague answers needed for schema):**
+{list, or "none"}
+
+**Balance flags:**
+{one line per actual concern — omit clean categories}
+
+---
+
+**Before I create this entity, confirm:**
+{2–5 targeted questions based on real flags — not boilerplate}
+```
+
+If no flags: "No balance concerns. Create the entity as described?"
+
+---
+
+### Ingest Phase 4 — Create Entity
+
+Only after DM confirms. Read `meta/entity-creation.md`, then the correct schema. Map answers using the Form → Frontmatter Mapping table. Use `unknown` for mandatory blanks — never omit.
+
+Write to the canonical path defined in the schema. Confirm path when done.
