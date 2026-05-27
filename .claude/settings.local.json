@@ -28,7 +28,10 @@
       "WebFetch(domain:gist.github.com)",
       "WebFetch(domain:foambubble.github.io)",
       "WebFetch(domain:docs.foamnotes.com)",
-      "Skill(obsidian-markdown)"
+      "Skill(obsidian-markdown)",
+      "Bash(powershell -File .\\\\scripts\\\\free-entities.ps1 -Type npc)",
+      "PowerShell(Move-Item *)",
+      "Bash(.\\\\scripts\\\\free-entities.ps1 -Type npc)"
     ]
   },
   "hooks": {

@@ -18,9 +18,10 @@ Also handles **ingestion**: when a filled questionnaire is returned (by file, pa
 
 If required parameters are missing, ask only what's needed:
 1. **What type of entity?** (if `--type` missing)
-2. **Working name?** (if `--name` missing)
-3. **What is it?** One sentence. (if `--concept` missing)
-4. **Who's filling it out?** (optional)
+2. **What is it?** One sentence. (if `--concept` missing)
+3. **Who's filling it out?** (optional)
+
+If `--name` is not provided, leave naming to the player — the questionnaire's first Identity question should ask for it.
 
 Do not ask about optional parameters that have sensible defaults.
 
@@ -69,7 +70,7 @@ concept: {concept}
 player: {player name if provided}
 -->
 
-# {Name} — World Design Notes
+# {Name if provided, otherwise "Your {type}" } — World Design Notes
 *For {Player} — fill out what you know, leave blanks for anything undecided.*
 
 ---
@@ -81,7 +82,7 @@ player: {player name if provided}
 *Hand back to your DM when done. No right answers — the goal is enough detail to make this real.*
 ```
 
-If `--output` is set, write to `scratch/{name}-questionnaire.md` and report the path.
+Always write the questionnaire to `questionnaires/`. Name the file `{player}-{name}.md` if both are known, `{player}-{type}.md` if no name, or `{name}.md` if no player. Report the path when done. The `--output` flag is now a no-op (output is always written).
 
 If an overlap was found in Phase 2, append after the player-facing content:
 
