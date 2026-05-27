@@ -82,7 +82,23 @@ player: {player name if provided}
 *Hand back to your DM when done. No right answers — the goal is enough detail to make this real.*
 ```
 
-Always write the questionnaire to `questionnaires/`. Name the file `{player}-{name}.md` if both are known, `{player}-{type}.md` if no name, or `{name}.md` if no player. Report the path when done. The `--output` flag is now a no-op (output is always written).
+Always write the questionnaire to `questionnaires/`. Name the file using kebab-case (lowercase, spaces → hyphens): `{player-kebab}-{name-kebab}.md` if both are known, `{player-kebab}-{type}.md` if no name, or `{name-kebab}.md` if no player. Report the path when done. The `--output` flag is now a no-op (output is always written).
+
+**Cameo/player type rules:**
+- Filename suffix: always `cameo` (not `player`) — e.g. `jonah-carson-cameo.md`
+- INGEST block: use `entity_type: player` (cameo is a role value, not a schema type)
+- INGEST action: `Filled questionnaire — run ingestion. Write to meta/players/{Full Name}.md.`
+- Title: `# {Full Name} — Cameo Player Registration`
+- Tagline: `*For {First Name} — fill out what you know, leave blanks for anything undecided.*`
+
+**Answer areas (all questionnaire types):**
+After every question, add a blank blockquote line for the player to fill in:
+```
+**Question text** *(label)*:
+
+> 
+```
+For the archetype list, add a `*My picks:*` label followed by a blank blockquote line after the list block.
 
 If an overlap was found in Phase 2, append after the player-facing content:
 

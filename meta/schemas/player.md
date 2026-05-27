@@ -89,13 +89,11 @@ Use this exact structure when generating a player questionnaire. No schema jargo
 ## Cameo-Specific
 *(Omit this section for core players.)*
 
-**D&D experience level** — brand new, played a bit, seasoned? *(Your call — helps us calibrate how much mechanical hand-holding to build in)*:
-
 **Do you have a character concept in mind, or would you rather be handed one?** *(Your call — both are great options)*:
 
 **How do you want to enter the story?** — Already know the party? A stranger they meet? Someone with history (friendly or otherwise)? *(Your call — this is the entry point question)*:
 
-**This campaign is gothic horror — dark atmosphere, moral weight, things-that-go-bump-in-the-night. Any thoughts on how hard you want to lean into that?** *(Your call — we can keep your role lighter or go full dark)*:
+**Heavy drama or lighter moments?** — Some players want real weight and consequences; others want more levity. Both have a place. *(Your call — helps us pitch your character at the right register)*:
 
 ---
 
