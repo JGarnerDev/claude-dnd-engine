@@ -45,6 +45,8 @@ Gods are real and present — not historical figures or distant abstractions, bu
 - The most technologically advanced factions are the most hostile to faith — not because they are villains, but because their worldview is internally coherent and directly competing
 - The Remnant Tech civilization pushed this further than anyone alive has. What happened to them is unknown and should stay unknown. That shadow is load-bearing.
 
+**Captured god:** At least one high-tech faction has captured a god. Which god, its current state, and what the faction is doing with it are DM-controlled and intentionally unspecified — reveal on your terms. The world does not know. Whispers exist — fragments of rumor, unexplained divine silence, cult behavior that doesn't add up. Players may piece it together slowly. Do not establish these details in worldbuilding; establish them in play.
+
 ## Influences
 
 ### Major
