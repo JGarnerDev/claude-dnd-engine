@@ -17,6 +17,12 @@ meta/mechanics/*.md
 meta/references.md
 meta/worldbuilding-approach.md
 meta/players/player-template.md
+data/backgrounds/*.md
+data/classes/*.md
+data/feats/*.md
+data/monsters/*.md
+data/races/*.md
 data/resources/*.md
+data/spells/*.md
 .vscode/settings.json
 .obsidian/graph.json
