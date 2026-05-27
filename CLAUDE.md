@@ -112,6 +112,15 @@ Players can design world entities (resources, NPCs, factions, deities, etc.) by 
 
 This applies regardless of how the questionnaire arrives — pasted inline, referenced by path, or attached. Never skip balance review. Never create an entity directly from raw player input.
 
+## Recap Format
+
+Whenever presenting a session recap — whether via `/session` Phase 1 orientation, a direct "what's the recap" prompt, or any other context — use this two-part format:
+
+1. **Narrative prose** — 2–4 sentences, story-flavor, "previously on..." voice. Past tense, third person.
+2. **TL;DR bullets** — party status (afflictions, notable conditions), open threads, cliffhanger. One line per item.
+
+No DM brief card needed. No other formats unless explicitly requested.
+
 ## Commands
 
 - `/inventory` — `.claude/commands/inventory.md`
