@@ -16,5 +16,14 @@ habitats:
   - "[[Mountains]]"
   - "[[Ruins]]"
 description: "A red dragon twisted by prolonged exposure to the Shadowfell, the young red shadow dragon breathes fire cold enough to kill hope — a chromatic and shadow nature fused into something that burns with a flame whose light illuminates nothing."
+weaknesses: []
+resistances:
+  - "necrotic"
+immunities:
+  - "fire"
+legendary: false
+movement:
+  - "fly 80"
+  - "climb 40"
 ---
 **Habitats:** [[Mountains]] | [[Ruins]]

@@ -17,6 +17,29 @@ habitats:
   - "[[Dungeon]]"
   - "[[Forest]]"
 description: Darkness given undead form. Drains Strength with each hit — a creature reduced to 0 Strength dies and rises as a new Shadow. Vulnerable to radiant damage and sunlight.
+weaknesses: []
+resistances:
+  - "acid"
+  - "cold"
+  - "fire"
+  - "lightning"
+  - "thunder"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "necrotic"
+  - "poison"
+  - "exhaustion"
+  - "frightened"
+  - "grappled"
+  - "paralyzed"
+  - "petrified"
+  - "poisoned"
+  - "prone"
+  - "restrained"
+legendary: false
+movement: []
 ---
 
 Darkness given undead form. Drains Strength with each hit — a creature reduced to 0 Strength dies and rises as a new Shadow. Vulnerable to radiant damage and sunlight.

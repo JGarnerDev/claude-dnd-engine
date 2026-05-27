@@ -16,5 +16,16 @@ habitats:
   - "[[Underdark]]"
   - "[[Dungeon]]"
 description: "The smallest oblex, not yet large enough to maintain a simulacrum, the Spawn extends filaments toward sleeping creatures and takes the barest edge of their memories — practicing, growing, waiting to be able to wear a face."
+weaknesses:
+  - "fire"
+resistances: []
+immunities:
+  - "blinded"
+  - "charmed"
+  - "deafened"
+  - "exhaustion"
+  - "prone"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Underdark]] | [[Dungeon]]

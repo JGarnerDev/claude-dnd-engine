@@ -16,5 +16,10 @@ habitats:
   - "[[Plains]]"
   - "[[City]]"
 description: "The architecture of civilization: roads, harvests, trade caravans, and siege engines all depend on the draft horse, which asks only for grain and a night's rest in return for bearing the world."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Plains]] | [[City]]

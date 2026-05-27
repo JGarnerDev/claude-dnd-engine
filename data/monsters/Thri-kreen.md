@@ -16,5 +16,10 @@ habitats:
   - "[[Desert]]"
   - "[[Plains]]"
 description: "Insectoid nomads who communicate through antenna and mandible-clicks across distances no humanoid voice carries, thri-kreen experience solidarity differently than most races — their empathy is chemical, their consensus is faster, and their patience for those who communicate slowly is genuine but visibly effortful."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Desert]] | [[Plains]]

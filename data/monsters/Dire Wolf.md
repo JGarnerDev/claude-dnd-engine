@@ -17,6 +17,11 @@ habitats:
   - "[[Mountains]]"
   - "[[Tundra]]"
 description: Oversized wolf with Pack Tactics and a powerful bite that knocks prone. Often used as mounts by goblinoids or found running with worg packs.
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 
 Oversized wolf with Pack Tactics and a powerful bite that knocks prone. Often used as mounts by goblinoids or found running with worg packs.

@@ -18,5 +18,11 @@ habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
 description: "An observer with opinions and a long memory, the raven catalogues the world from above and acts on what it catalogues — its intelligence has made it a symbol of prophecy not because it knows the future but because it pays closer attention to the present than anything else in the forest."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 50"
 ---
 **Habitats:** [[Forest]] | [[City]] | [[Mountains]] | [[Plains]]

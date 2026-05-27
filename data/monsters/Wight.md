@@ -18,6 +18,18 @@ habitats:
   - "[[Tomb]]"
   - "[[Tundra]]"
 description: Undead warrior that drains life force with its touch. Humanoids it slays rise as zombies under its command. Resistant to nonmagical weapons not silvered.
+weaknesses: []
+resistances:
+  - "necrotic"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "poison"
+  - "exhaustion"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 
 Undead warrior that drains life force with its touch. Humanoids it slays rise as zombies under its command. Resistant to nonmagical weapons not silvered.

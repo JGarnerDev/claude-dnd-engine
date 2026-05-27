@@ -17,5 +17,10 @@ habitats:
   - "[[Ruins]]"
   - "[[Plains]]"
 description: "A warrior who has accumulated everything that experience alone can teach and still carries it forward — the veteran fights without hesitation, positions without instruction, and reads a battlefield in the time it takes someone less seasoned to find it on a map."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[City]] | [[Ruins]] | [[Plains]]

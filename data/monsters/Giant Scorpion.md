@@ -17,5 +17,10 @@ habitats:
   - "[[Plains]]"
   - "[[Ruins]]"
 description: "An arachnid that carries its killing apparatus in triplicate — two claws and a paralytic tail — the giant scorpion occupies desert and cave alike with the impartiality of a creature that has no particular preference for its venue."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Desert]] | [[Plains]] | [[Ruins]]

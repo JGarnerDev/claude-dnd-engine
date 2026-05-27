@@ -16,5 +16,14 @@ habitats:
   - "[[Far Realm]]"
   - "[[Dungeon]]"
 description: "A low-profile Far Realm predator that flows across surfaces and attacks with multiple limbs per turn, the Mangler is the Far Realm's answer to how much damage can be dealt by something that never fully enters the room."
+weaknesses: []
+resistances:
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities: []
+legendary: false
+movement:
+  - "climb 30"
 ---
 **Habitats:** [[Far Realm]] | [[Dungeon]]

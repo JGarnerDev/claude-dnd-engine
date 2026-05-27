@@ -16,5 +16,11 @@ habitats:
   - "[[Dungeon]]"
   - "[[Desert]]"
 description: "A tunnel bored through stone by appetite, the purple worm is less a creature than a digestive process operating at scale — it swallows things whole without particular malice, which makes the experience of being swallowed no less terminal."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "burrow 30"
 ---
 **Habitats:** [[Dungeon]] | [[Desert]]

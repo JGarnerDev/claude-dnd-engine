@@ -17,5 +17,10 @@ habitats:
   - "[[Forest]]"
   - "[[Ruins]]"
 description: "Cursed to silence and earthbound forever, kenku have rebuilt language entirely from mimicry — assembling meaning from stolen sounds with a precision that is almost communication, and carrying the grief of a voice they remember having but cannot find."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[City]] | [[Forest]] | [[Ruins]]

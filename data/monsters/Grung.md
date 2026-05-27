@@ -17,5 +17,13 @@ habitats:
   - "[[Swamp]]"
   - "[[Jungle]]"
 description: "A poisonous frog-person from jungle canopies with a caste system encoded in skin color, the grung arranges its entire society around the toxicity of touching it — which makes social interaction a matter of life and death in a very literal sense."
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+  - "poisoned"
+legendary: false
+movement:
+  - "climb 25"
 ---
 **Habitats:** [[Forest]] | [[Swamp]] | [[Jungle]]

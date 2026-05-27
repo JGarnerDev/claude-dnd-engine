@@ -17,5 +17,11 @@ habitats:
   - "[[Cave]]"
   - "[[Ocean]]"
 description: "Their collective madness has bent inward into something stranger than sanity: kuo-toa belief is so concentrated that it literally manifests gods, which makes their religious fervor not delusional but ontologically productive in ways that no one involved fully understands."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 30"
 ---
 **Habitats:** [[Underdark]] | [[Cave]] | [[Ocean]]

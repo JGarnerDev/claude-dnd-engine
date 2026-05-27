@@ -16,5 +16,16 @@ habitats:
   - "[[Forest]]"
   - "[[Swamp]]"
 description: "A vegepygmy variant that serves as the colony's shock troop, bristling with thorns that wound on contact and regenerating damage like the fungal mass it is — a walking briar patch with rudimentary purpose and no subtlety whatsoever."
+weaknesses:
+  - "fire"
+resistances:
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "poison"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[Swamp]]

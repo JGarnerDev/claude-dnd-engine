@@ -16,5 +16,14 @@ habitats:
   - "[[Plains]]"
   - "[[Desert]]"
 description: "A gnoll that Yeenoghu found so pleasing in life that he kept it working after death: an undead gnoll with none of the frenzy and all of the violence, useful precisely because it follows instructions the living gnolls cannot be trusted to follow."
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+  - "charmed"
+  - "exhaustion"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Plains]] | [[Desert]]

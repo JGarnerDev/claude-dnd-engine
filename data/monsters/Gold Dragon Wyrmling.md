@@ -16,5 +16,13 @@ habitats:
   - "[[Plains]]"
   - "[[Mountains]]"
 description: "Even newly hatched, a gold dragon wyrmling moves through the world with a gravity that suggests it has already decided to be responsible for it — a small creature with the moral weight of something much older."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: false
+movement:
+  - "fly 60"
+  - "swim 30"
 ---
 **Habitats:** [[Plains]] | [[Mountains]]

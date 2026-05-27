@@ -18,5 +18,12 @@ habitats:
   - "[[Mountains]]"
   - "[[Ruins]]"
 description: "Regeneration turns every wound into an inconvenience and every fight into a war of attrition — the troll does not experience pain the way prey does, only interruption, and it keeps coming back until fire or acid sends a different message."
+weaknesses:
+  - "acid"
+  - "fire"
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[Swamp]] | [[Mountains]] | [[Ruins]]

@@ -16,5 +16,11 @@ habitats:
   - "[[Coastline]]"
   - "[[Ocean]]"
 description: "An efficient predator in its element, the reef shark does not waste energy on prey it cannot catch or threats it cannot process — it simply moves, assesses, and acts, a creature that has reduced hunting to its cleanest form."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 40"
 ---
 **Habitats:** [[Coastline]] | [[Ocean]]

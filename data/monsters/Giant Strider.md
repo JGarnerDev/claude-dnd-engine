@@ -16,5 +16,11 @@ habitats:
   - "[[Desert]]"
   - "[[Mountains]]"
 description: "A fire-creature in the shape of a giant flightless bird, the Giant Strider carries its own ambient combustion everywhere it runs, burning the terrain it passes through as a side effect of being what it is."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Desert]] | [[Mountains]]

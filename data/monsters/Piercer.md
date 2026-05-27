@@ -16,5 +16,11 @@ habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
 description: "A living stalactite that has learned patience as an evolutionary strategy: the piercer hangs from cave ceilings for months between meals, dropping onto whatever passes beneath with the commitment of something that has no backup plan."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 30"
 ---
 **Habitats:** [[Dungeon]] | [[Cave]]

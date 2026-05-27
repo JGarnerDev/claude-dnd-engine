@@ -16,5 +16,13 @@ habitats:
   - "[[City]]"
   - "[[Dungeon]]"
 description: "The wererat has made urban environments into hunting grounds, using human form to collect information and rat form to move through the walls of the city it parasitizes — a lycanthrope whose curse suits a creature that was already comfortable in the dark."
+weaknesses: []
+resistances: []
+immunities:
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+legendary: false
+movement: []
 ---
 **Habitats:** [[City]] | [[Dungeon]]

@@ -16,5 +16,10 @@ habitats:
   - "[[Mountains]]"
   - "[[Forest]]"
 description: "A hobgoblin arcanist who has integrated magic into military doctrine, the Devastator treats spellcasting the way other hobgoblins treat formations — as a tool of war that requires discipline and produces results, not mystery and metaphysics."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Mountains]] | [[Forest]]

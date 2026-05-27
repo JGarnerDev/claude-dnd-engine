@@ -16,5 +16,10 @@ habitats:
   - "[[Plains]]"
   - "[[City]]"
 description: "The partnership between civilization and the horse is one of the oldest in the world — the riding horse has been shaped by millennia of that partnership into something that cooperates by nature, which is a kind of trust that took generations to build."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Plains]] | [[City]]

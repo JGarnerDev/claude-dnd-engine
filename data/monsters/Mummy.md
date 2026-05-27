@@ -17,5 +17,21 @@ habitats:
   - "[[Desert]]"
   - "[[Ruins]]"
 description: "A body preserved and reanimated by ancient curses, the mummy carries its rot like a weapon — the disease it inflicts is the physical expression of the same forces that kept it from decomposing, distributed outward."
+weaknesses:
+  - "fire"
+resistances:
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "necrotic"
+  - "poison"
+  - "charmed"
+  - "exhaustion"
+  - "frightened"
+  - "paralyzed"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Tomb]] | [[Desert]] | [[Ruins]]

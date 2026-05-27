@@ -17,5 +17,13 @@ habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
 description: "A floating brain trailing paralytic tentacles, the grell hunts in utter silence, ambushing from above with the calm efficiency of a creature that has never needed to evolve past its first solution."
+weaknesses: []
+resistances: []
+immunities:
+  - "lightning"
+  - "prone"
+legendary: false
+movement:
+  - "fly 30"
 ---
 **Habitats:** [[Underdark]] | [[Dungeon]] | [[Cave]]

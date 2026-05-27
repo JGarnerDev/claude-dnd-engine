@@ -15,5 +15,10 @@ source: Monster Manual
 habitats:
   - "[[Underdark]]"
 description: "A mind flayer that has grafted arcane study onto psionic power, the arcanist is what happens when the illithid's already devastating intellect decides to expand its available vocabulary of harm."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Underdark]]

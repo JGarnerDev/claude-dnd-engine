@@ -17,5 +17,11 @@ habitats:
   - "[[Mountains]]"
   - "[[Ruins]]"
 description: "A kobold with wings is a kobold that has solved the problem of range — it carries rocks to altitude and drops them with the precise enthusiasm of a creature that has found the one upgrade that changes everything about its tactical situation."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 30"
 ---
 **Habitats:** [[Cave]] | [[Mountains]] | [[Ruins]]

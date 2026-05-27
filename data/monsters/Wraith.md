@@ -17,6 +17,30 @@ habitats:
   - "[[Tomb]]"
   - "[[Ruins]]"
 description: Powerful incorporeal undead that corrupts life force. Creatures it slays rise as Specters under its control. Sunlight sensitivity; immune to nonmagical weapons not silvered.
+weaknesses: []
+resistances:
+  - "acid"
+  - "cold"
+  - "fire"
+  - "lightning"
+  - "thunder"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "necrotic"
+  - "poison"
+  - "charmed"
+  - "exhaustion"
+  - "grappled"
+  - "paralyzed"
+  - "petrified"
+  - "poisoned"
+  - "prone"
+  - "restrained"
+legendary: false
+movement:
+  - "fly 60"
 ---
 
 Powerful incorporeal undead that corrupts life force. Creatures it slays rise as Specters under its control. Sunlight sensitivity; immune to nonmagical weapons not silvered.

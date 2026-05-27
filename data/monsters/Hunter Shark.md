@@ -16,5 +16,11 @@ habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
 description: "The open ocean has few creatures as precisely built for their purpose as the hunter shark — a sensory array wrapped in muscle, following the scent of blood across distances that make the concept of hiding irrelevant."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 40"
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

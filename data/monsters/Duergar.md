@@ -16,5 +16,10 @@ habitats:
   - "[[Underdark]]"
   - "[[Dungeon]]"
 description: "The gray dwarves have stripped everything from their culture that could not survive the Underdark's cruelty — warmth, art, mercy — and built something that could, which is bleaker than the stone it was carved from."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Underdark]] | [[Dungeon]]

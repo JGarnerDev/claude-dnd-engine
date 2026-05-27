@@ -17,5 +17,22 @@ habitats:
   - "[[Dungeon]]"
   - "[[Tomb]]"
 description: "An archmage who refused death on philosophical grounds, the lich has hidden its soul in a phylactery and continued working — centuries of uninterrupted study producing something that has outgrown human morality along with human mortality."
+weaknesses: []
+resistances:
+  - "cold"
+  - "lightning"
+  - "necrotic"
+immunities:
+  - "poison"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+  - "charmed"
+  - "exhaustion"
+  - "frightened"
+  - "paralyzed"
+  - "poisoned"
+legendary: true
+movement: []
 ---
 **Habitats:** [[Ruins]] | [[Dungeon]] | [[Tomb]]

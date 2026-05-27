@@ -15,5 +15,11 @@ source: Monster Manual
 habitats:
   - "[[Ocean]]"
 description: "A sahuagin through whom Sekolah's hunger speaks directly, the priestess translates the shark-god's appetite into religious law — a theology so streamlined that its central commandment is also its primary activity."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 40"
 ---
 **Habitats:** [[Ocean]]

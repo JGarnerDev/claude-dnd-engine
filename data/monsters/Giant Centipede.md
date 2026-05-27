@@ -17,5 +17,11 @@ habitats:
   - "[[Cave]]"
   - "[[Ruins]]"
 description: "Fast, venomous, and deeply committed to the spaces between walls and under floors, the giant centipede is the thing that makes a building feel unsafe even after you've confirmed the room is empty."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 30"
 ---
 **Habitats:** [[Dungeon]] | [[Cave]] | [[Ruins]]

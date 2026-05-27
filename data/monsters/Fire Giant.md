@@ -16,5 +16,11 @@ habitats:
   - "[[Desert]]"
   - "[[Mountains]]"
 description: "The most militaristic of giantkind, fire giants have turned their volcanic fortresses into forges and their society into an army, measuring worth entirely by what a creature can build, break, or endure."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Desert]] | [[Mountains]]

@@ -16,5 +16,10 @@ habitats:
   - "[[Plains]]"
   - "[[Ruins]]"
 description: "A gnoll that Yeenoghu has singled out with direct demonic attention, the Fang fights with a religious ecstasy that elevates destruction from appetite to sacrament."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Plains]] | [[Ruins]]

@@ -18,6 +18,12 @@ habitats:
   - "[[Forest]]"
   - "[[Ruins]]"
 description: Ambush predator that climbs walls and ceilings freely. Web attack restrains targets; Spider Climb and Web Sense make it nearly impossible to surprise in its own lair.
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 30"
 ---
 
 Ambush predator that climbs walls and ceilings freely. Web attack restrains targets; Spider Climb and Web Sense make it nearly impossible to surprise in its own lair.

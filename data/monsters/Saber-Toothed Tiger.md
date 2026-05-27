@@ -17,5 +17,10 @@ habitats:
   - "[[Plains]]"
   - "[[Forest]]"
 description: "A relic predator from a time when everything was larger, the saber-toothed tiger has not adjusted its hunting strategy for a world that has gotten smaller — it simply applies prehistoric force to contemporary prey."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Tundra]] | [[Plains]] | [[Forest]]

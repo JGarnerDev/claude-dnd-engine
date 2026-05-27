@@ -17,6 +17,11 @@ habitats:
   - "[[City]]"
   - "[[Ruins]]"
 description: Fanatical devotee of a dark power. Dark Devotion grants advantage on saves vs. charmed and frightened. Fragile alone; dangerous in numbers with a fanatic leading them.
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 
 Fanatical devotee of a dark power. Dark Devotion grants advantage on saves vs. charmed and frightened. Fragile alone; dangerous in numbers with a fanatic leading them.

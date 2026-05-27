@@ -16,5 +16,10 @@ habitats:
   - "[[Plains]]"
   - "[[Forest]]"
 description: "A hyena-deer-badger nightmare that can mimic any voice it has ever heard and uses this talent to lure prey into isolation, the Leucrotta is proof that hearing something familiar from an unexpected direction is always worth stopping for — to check, not to approach."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Plains]] | [[Forest]]

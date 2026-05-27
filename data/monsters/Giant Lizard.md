@@ -18,5 +18,11 @@ habitats:
   - "[[Desert]]"
   - "[[Dungeon]]"
 description: "Ancient, cold, and patient, the giant lizard has watched the warm-blooded world rush past for millennia and concluded that the optimal strategy is to lie very still and wait for something to walk within reach."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 30"
 ---
 **Habitats:** [[Jungle]] | [[Swamp]] | [[Desert]] | [[Dungeon]]

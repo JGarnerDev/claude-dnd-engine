@@ -17,5 +17,10 @@ habitats:
   - "[[Cave]]"
   - "[[City]]"
 description: "A spy and assassin-priest of the rat-god Shargaas, the Red Fang moves through darkness with none of the aggression typical of orcs and all of the lethality, conducting Shargaas's work in the silence the other orc gods cannot abide."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Mountains]] | [[Cave]] | [[City]]

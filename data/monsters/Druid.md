@@ -17,5 +17,10 @@ habitats:
   - "[[Plains]]"
   - "[[Swamp]]"
 description: "The druid holds the contract between civilization and wilderness, and whenever the terms are violated — a forest burned, a river fouled, a sacred site desecrated — they arrive as the other party to renegotiate, usually accompanied by thunder."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Swamp]]

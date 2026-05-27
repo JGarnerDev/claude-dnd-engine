@@ -15,5 +15,11 @@ source: Monster Manual
 habitats:
   - "[[Coastline]]"
 description: "A crab at the scale where the claws can sever limbs and the shell can deflect steel, the giant crab has simply extended the same approach — pinch what reaches in, retreat into the water — to a size where the approach actually works."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 30"
 ---
 **Habitats:** [[Coastline]]

@@ -15,5 +15,11 @@ source: Volo's Guide to Monsters
 habitats:
   - "[[Underdark]]"
 description: "A duergar who has survived long enough and killed enough rivals to command an army, the Warlord has turned the duergar gift for holding grudges into a strategic doctrine: identify every enemy, wait for the right moment, and never forgive."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 30"
 ---
 **Habitats:** [[Underdark]]

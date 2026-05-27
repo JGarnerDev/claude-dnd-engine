@@ -16,5 +16,10 @@ habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
 description: "The simplest of giantkind in every sense: hill giants eat, sleep, fight, and argue about food, operating on an appetite so immense that they have flattened settlements not out of malice but genuine hunger."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Mountains]] | [[Plains]]

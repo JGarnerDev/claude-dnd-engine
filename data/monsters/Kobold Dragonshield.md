@@ -17,5 +17,10 @@ habitats:
   - "[[Cave]]"
   - "[[Dungeon]]"
 description: "A kobold chosen to guard its colony and infused with draconic energy from prolonged proximity to dragon lairs, the Dragonshield fights with a conviction wildly disproportionate to its size and a resistance to magic that surprises everyone who dismissed the size."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Mountains]] | [[Cave]] | [[Dungeon]]

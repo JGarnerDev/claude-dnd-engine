@@ -18,5 +18,10 @@ habitats:
   - "[[Mountains]]"
   - "[[Tundra]]"
 description: "The elk moves through wilderness like punctuation — a pause in the forest, a declaration of space, a reminder that the woods contain things that are large and fast and entirely uninterested in you."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Mountains]] | [[Tundra]]

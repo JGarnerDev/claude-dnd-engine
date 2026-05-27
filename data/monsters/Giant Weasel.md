@@ -17,5 +17,10 @@ habitats:
   - "[[Plains]]"
   - "[[Dungeon]]"
 description: "All the curiosity and aggression of a regular weasel, delivered at a scale where both traits have immediate structural consequences for whatever the weasel has decided to investigate."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Dungeon]]

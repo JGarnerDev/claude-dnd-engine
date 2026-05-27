@@ -16,5 +16,11 @@ habitats:
   - "[[Dungeon]]"
   - "[[Underdark]]"
 description: "A spider-eel hybrid from beyond the material plane that enslaves every creature it can reach, the Neogi has built an entire culture around ownership as the foundational relationship between all beings — in neogi philosophy, the only question is who owns whom."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 20"
 ---
 **Habitats:** [[Dungeon]] | [[Underdark]]

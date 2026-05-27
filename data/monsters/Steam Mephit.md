@@ -17,5 +17,15 @@ habitats:
   - "[[Desert]]"
   - "[[City]]"
 description: "Born where fire and water argue themselves into vapor, the steam mephit vents both literally and figuratively, scalding those who get too close with a breath that encodes its entire personality in thermal terms."
+weaknesses:
+  - "cold"
+resistances: []
+immunities:
+  - "fire"
+  - "poison"
+  - "poisoned"
+legendary: false
+movement:
+  - "fly 30"
 ---
 **Habitats:** [[Ocean]] | [[Desert]] | [[City]]

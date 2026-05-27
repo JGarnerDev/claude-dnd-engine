@@ -16,5 +16,10 @@ habitats:
   - "[[Plains]]"
   - "[[City]]"
 description: "Smaller than a horse, more stubborn than a mule, and more durable than both — the pony's size is consistently underestimated by everyone who has not yet tried to remove one from a place it has decided to remain."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Plains]] | [[City]]

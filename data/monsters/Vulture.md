@@ -16,5 +16,11 @@ habitats:
   - "[[Desert]]"
   - "[[Plains]]"
 description: "A vulture does not make death — it finds it, which is a more sustainable strategy than most predators employ, and one that has given the vulture an excellent education in where things end up."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 50"
 ---
 **Habitats:** [[Desert]] | [[Plains]]

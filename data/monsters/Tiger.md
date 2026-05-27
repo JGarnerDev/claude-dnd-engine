@@ -17,5 +17,10 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
 description: "A tiger does not announce itself: it is already there when you know about it, and the moment between your awareness and its arrival is the only negotiation it intends to have."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Jungle]] | [[Forest]] | [[Plains]]

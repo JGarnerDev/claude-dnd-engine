@@ -18,5 +18,10 @@ habitats:
   - "[[Ruins]]"
   - "[[Forest]]"
 description: "Small, numerous, and perpetually caught between fear and opportunism, the goblin survives by being exactly underestimated enough — smart enough to plan, chaotic enough to be unpredictable, and too plentiful to be eliminated."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Cave]] | [[Dungeon]] | [[Ruins]] | [[Forest]]

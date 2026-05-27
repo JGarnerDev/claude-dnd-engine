@@ -16,5 +16,11 @@ habitats:
   - "[[Ocean]]"
   - "[[Coastline]]"
 description: "A shark at the scale where it has ceased to be a predator and become a pressure system: something you feel before you see it, displacing water and confidence in equal measure."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 50"
 ---
 **Habitats:** [[Ocean]] | [[Coastline]]

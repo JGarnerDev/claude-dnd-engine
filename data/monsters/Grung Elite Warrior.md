@@ -17,5 +17,13 @@ habitats:
   - "[[Swamp]]"
   - "[[Jungle]]"
 description: "The warrior caste of grung society, distinguished by color and by the specific type of poison its skin produces — a soldier whose armor is itself a weapon, a function it does not distinguish from its rank."
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+  - "poisoned"
+legendary: false
+movement:
+  - "climb 25"
 ---
 **Habitats:** [[Forest]] | [[Swamp]] | [[Jungle]]

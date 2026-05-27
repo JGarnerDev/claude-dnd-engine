@@ -17,6 +17,11 @@ habitats:
   - "[[Ruins]]"
   - "[[Plains]]"
 description: Basic armed soldier or watchman. Spear and shield. Used for city watch, castle guards, and mercenaries. Reliable low-CR filler for any organized settlement or patrol.
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 
 Basic armed soldier or watchman. Spear and shield. Used for city watch, castle guards, and mercenaries. Reliable low-CR filler for any organized settlement or patrol.

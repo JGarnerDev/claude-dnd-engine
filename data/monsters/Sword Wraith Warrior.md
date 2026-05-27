@@ -17,5 +17,19 @@ habitats:
   - "[[Ruins]]"
   - "[[Tomb]]"
 description: "An undead soldier bound to a battlefield or commander by the same denied-glory curse, the Sword Wraith Warrior fights with the desperate ferocity of something that believes winning this next battle will finally resolve the question that has kept it here for centuries."
+weaknesses: []
+resistances:
+  - "necrotic"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "poison"
+  - "exhaustion"
+  - "frightened"
+  - "poisoned"
+  - "unconscious"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]] | [[Tomb]]

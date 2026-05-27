@@ -17,6 +17,14 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
 description: Mindless animated corpse driven by hunger and obedience to its creator. Relentless — reduced to 0 hp only staggers it unless the damage was significant.
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+  - "exhaustion"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 
 Mindless animated corpse driven by hunger and obedience to its creator. Relentless — reduced to 0 hp only staggers it unless the damage was significant.

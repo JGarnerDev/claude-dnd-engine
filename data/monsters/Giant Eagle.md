@@ -16,5 +16,11 @@ habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
 description: "Vast-winged and sharp-eyed, giant eagles carry themselves with the gravity of creatures that have watched kingdoms rise and fall from the same mountain eyrie, and find most of the kingdoms less interesting than the wind."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 80"
 ---
 **Habitats:** [[Mountains]] | [[Plains]]

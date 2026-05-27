@@ -16,6 +16,16 @@ habitats:
   - "[[Tomb]]"
   - "[[Underdark]]"
 description: Stronger form of ghoul. Its stench can sicken nearby creatures; paralysis works on elves too. Often leads ghoul packs.
+weaknesses: []
+resistances: []
+immunities:
+  - "necrotic"
+  - "poison"
+  - "charmed"
+  - "exhaustion"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 
 Stronger form of ghoul. Its stench can sicken nearby creatures; paralysis works on elves too. Often leads ghoul packs.

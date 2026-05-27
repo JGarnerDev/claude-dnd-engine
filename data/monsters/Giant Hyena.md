@@ -16,5 +16,10 @@ habitats:
   - "[[Plains]]"
   - "[[Desert]]"
 description: "A hyena at the size where the laugh becomes a warning and the pack-hunting instinct becomes a coordinated strategy — the giant hyena has not changed its approach, only its consequences."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Plains]] | [[Desert]]

@@ -16,6 +16,14 @@ habitats:
   - "[[Tomb]]"
   - "[[Ruins]]"
 description: Tougher variant zombie unique to Barovia. When first reduced to 0 HP, collapses but rises again at the start of its next turn with 1 HP — unless the killing blow dealt radiant damage or severed its head. Significantly more durable than a standard zombie.
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+  - "exhaustion"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 
 Tougher variant zombie unique to Barovia. When first reduced to 0 HP, collapses but rises again at the start of its next turn with 1 HP — unless the killing blow dealt radiant damage or severed its head. Significantly more durable than a standard zombie.

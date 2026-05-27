@@ -17,5 +17,11 @@ habitats:
   - "[[Ocean]]"
   - "[[Dungeon]]"
 description: "Its tongue is fast enough and its stomach spacious enough that the giant toad treats medium-sized creatures as a practical food category rather than an aspiration — a distinction its prey rarely appreciates in time."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 40"
 ---
 **Habitats:** [[Swamp]] | [[Ocean]] | [[Dungeon]]

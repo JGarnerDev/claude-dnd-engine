@@ -18,5 +18,22 @@ habitats:
   - "[[Plains]]"
   - "[[Dungeon]]"
 description: "A swarm of insects is not a creature so much as a threshold — a point at which individual insects become something qualitatively different, capable of getting into everything and enduring most of the conventional responses to it."
+weaknesses: []
+resistances:
+  - "bludgeoning"
+  - "piercing"
+  - "slashing"
+immunities:
+  - "charmed"
+  - "frightened"
+  - "grappled"
+  - "paralyzed"
+  - "petrified"
+  - "prone"
+  - "restrained"
+  - "stunned"
+legendary: false
+movement:
+  - "climb 10"
 ---
 **Habitats:** [[Forest]] | [[Swamp]] | [[Plains]] | [[Dungeon]]

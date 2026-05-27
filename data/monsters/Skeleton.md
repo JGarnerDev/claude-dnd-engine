@@ -18,6 +18,14 @@ habitats:
   - "[[Dungeon]]"
   - "[[Plains]]"
 description: Animated bones obedient to necromantic commands. Immune to cold; vulnerable to bludgeoning. Often armed with weapons from their former life.
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+  - "exhaustion"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 
 Animated bones obedient to necromantic commands. Immune to cold; vulnerable to bludgeoning. Often armed with weapons from their former life.

@@ -17,6 +17,19 @@ habitats:
   - "[[Ruins]]"
   - "[[City]]"
 description: Small devil used as a familiar or spy. Shapechanger (rat, raven, spider). Invisibility at will; Devil's Sight sees through magical darkness. Sting deals poison damage. Magic resistance makes it surprisingly durable for CR 1.
+weaknesses: []
+resistances:
+  - "cold"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "fire"
+  - "poison"
+  - "poisoned"
+legendary: false
+movement:
+  - "fly 40"
 ---
 
 Small devil used as a familiar or spy. Shapechanger (rat, raven, spider). Invisibility at will; Devil's Sight sees through magical darkness. Sting deals poison damage. Magic resistance makes it surprisingly durable for CR 1.

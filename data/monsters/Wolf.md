@@ -18,6 +18,11 @@ habitats:
   - "[[Mountains]]"
   - "[[Tundra]]"
 description: Pack hunter with Pack Tactics — gains advantage when an ally is adjacent to the target. Bite can knock prone on a failed Strength save.
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 
 Pack hunter with Pack Tactics — gains advantage when an ally is adjacent to the target. Bite can knock prone on a failed Strength save.

@@ -18,6 +18,23 @@ habitats:
   - "[[Tomb]]"
   - "[[Forest]]"
 description: Cloud of shrieking bats that can occupy another creature's space. Resistant to most damage types; immune to many conditions. Loses half its attacks when below half HP.
+weaknesses: []
+resistances:
+  - "bludgeoning"
+  - "piercing"
+  - "slashing"
+immunities:
+  - "charmed"
+  - "frightened"
+  - "grappled"
+  - "paralyzed"
+  - "petrified"
+  - "prone"
+  - "restrained"
+  - "stunned"
+legendary: false
+movement:
+  - "fly 30"
 ---
 
 Cloud of shrieking bats that can occupy another creature's space. Resistant to most damage types; immune to many conditions. Loses half its attacks when below half HP.

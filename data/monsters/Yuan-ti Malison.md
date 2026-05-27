@@ -16,5 +16,14 @@ habitats:
   - "[[Jungle]]"
   - "[[Desert]]"
 description: "A yuan-ti at the midpoint of its sacred transformation, partially serpent and committed to completing the process — the malison exists in a state of becoming that it does not experience as incomplete but as consecrated."
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+  - "charmed"
+  - "frightened"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Jungle]] | [[Desert]]

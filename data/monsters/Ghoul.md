@@ -17,6 +17,15 @@ habitats:
   - "[[Dungeon]]"
   - "[[Underdark]]"
 description: Undead that feasts on humanoid flesh. Claws can paralyze victims (except elves), making it dangerous in packs.
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+  - "charmed"
+  - "exhaustion"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 
 Undead that feasts on humanoid flesh. Claws can paralyze victims (except elves), making it dangerous in packs.

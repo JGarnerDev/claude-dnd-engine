@@ -16,5 +16,13 @@ habitats:
   - "[[Mountains]]"
   - "[[Desert]]"
 description: "A young red dragon has all its elder's arrogance and none of its patience, which makes it both more reckless and more immediately dangerous — it has not yet learned to let threats come to it, so it goes to the threats, loudly."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: false
+movement:
+  - "fly 80"
+  - "climb 40"
 ---
 **Habitats:** [[Mountains]] | [[Desert]]

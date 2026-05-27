@@ -15,5 +15,10 @@ source: Volo's Guide to Monsters
 habitats:
   - "[[Underdark]]"
 description: "A duergar cavalry specialist trained to ride giant spiders into battle, the Kavalrachni has developed a relationship with its mount that the duergar would not call trust but that functions as trust in every practical sense."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Underdark]]

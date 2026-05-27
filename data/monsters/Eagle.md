@@ -17,5 +17,11 @@ habitats:
   - "[[Coastline]]"
   - "[[Plains]]"
 description: "The eagle does not share the sky; it surveys its territory from a height that converts everything below into either prey or irrelevance."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 60"
 ---
 **Habitats:** [[Mountains]] | [[Coastline]] | [[Plains]]

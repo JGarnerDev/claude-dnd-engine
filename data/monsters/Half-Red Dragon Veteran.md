@@ -17,5 +17,11 @@ habitats:
   - "[[Ruins]]"
   - "[[Dungeon]]"
 description: "A seasoned warrior touched by draconic blood, the half-red dragon veteran carries the fire's arrogance alongside the soldier's discipline — a combination that makes it both effective and difficult to give orders to."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: false
+movement: []
 ---
 **Habitats:** [[City]] | [[Ruins]] | [[Dungeon]]

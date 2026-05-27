@@ -18,5 +18,11 @@ habitats:
   - "[[Plains]]"
   - "[[Desert]]"
 description: "Small enough to be overlooked and venomous enough to be a problem if overlooked, the poisonous snake occupies a predator's niche that depends entirely on not being noticed until the decision has been made."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 30"
 ---
 **Habitats:** [[Jungle]] | [[Swamp]] | [[Plains]] | [[Desert]]

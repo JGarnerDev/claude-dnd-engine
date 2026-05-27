@@ -17,5 +17,10 @@ habitats:
   - "[[Cave]]"
   - "[[Dungeon]]"
 description: "A kobold that has learned to convert its paucity of combat options into creative engineering, the Inventor enters battle carrying whatever improvised contraption it thought of most recently — unpredictable in ways that are interesting in retrospect and terrifying in real time."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Mountains]] | [[Cave]] | [[Dungeon]]

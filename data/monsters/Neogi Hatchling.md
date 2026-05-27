@@ -16,5 +16,11 @@ habitats:
   - "[[Dungeon]]"
   - "[[Underdark]]"
 description: "Neogi young produced from the body of an elder consumed from within by its own offspring — a birth process that establishes neogi cultural values at the earliest possible developmental stage."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 20"
 ---
 **Habitats:** [[Dungeon]] | [[Underdark]]

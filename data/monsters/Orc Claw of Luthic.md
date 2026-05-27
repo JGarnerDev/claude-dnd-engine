@@ -17,5 +17,10 @@ habitats:
   - "[[Plains]]"
   - "[[Forest]]"
 description: "A cave-mother's priest of the orc goddess Luthic, the Claw channels protection and healing through claws blessed by worship — an orc whose violence is devotional in the specific sense of defending everything behind it."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Mountains]] | [[Plains]] | [[Forest]]

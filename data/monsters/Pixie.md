@@ -16,5 +16,11 @@ habitats:
   - "[[Feywild]]"
   - "[[Forest]]"
 description: "A pixie's invisibility is its default state and its mischief is its occupation — a tiny fey creature that navigates the moral space between harmless prank and genuine harm with a confidence that suggests it has not yet found the line."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 30"
 ---
 **Habitats:** [[Feywild]] | [[Forest]]

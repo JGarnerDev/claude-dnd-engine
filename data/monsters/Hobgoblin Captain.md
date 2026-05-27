@@ -16,5 +16,10 @@ habitats:
   - "[[Ruins]]"
   - "[[Plains]]"
 description: "A hobgoblin captain has survived the hierarchy by being the kind of soldier that wins battles, which in hobgoblin culture means both the competence to outfight enemies and the ruthlessness to outmaneuver rivals."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Ruins]] | [[Plains]]

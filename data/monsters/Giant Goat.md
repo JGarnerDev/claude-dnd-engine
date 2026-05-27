@@ -16,5 +16,10 @@ habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
 description: "Surefooted on slopes that would defeat everything else and willing to charge anything that looks like it might be in the way, the giant goat has weaponized the stubbornness of its smaller kin at a scale that demands respect."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Mountains]] | [[Plains]]

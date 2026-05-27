@@ -17,5 +17,10 @@ habitats:
   - "[[Plains]]"
   - "[[Mountains]]"
 description: "The rage of a normal boar, scaled up to the point where the tusks are structural and the charge can displace the landscape — a giant boar does not modify its approach based on new information."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Mountains]]

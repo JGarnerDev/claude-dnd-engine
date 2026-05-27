@@ -16,5 +16,10 @@ habitats:
   - "[[Mountains]]"
   - "[[Plains]]"
 description: "An ogre that has been given a chain as both its weapon and its enthusiasm, the Chain Brute has developed an affection for the weapon that its hobgoblin commanders find useful and slightly alarming."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Mountains]] | [[Plains]]

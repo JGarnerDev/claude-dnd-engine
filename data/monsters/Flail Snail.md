@@ -17,5 +17,10 @@ habitats:
   - "[[Swamp]]"
   - "[[Cave]]"
 description: "An elemental creature in an iridescent shell that generates wild magic when targeted by spells, the flail snail is nature's argument against the assumption that soft-bodied animals are safe to approach."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[Swamp]] | [[Cave]]

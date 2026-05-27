@@ -16,5 +16,13 @@ habitats:
   - "[[Forest]]"
   - "[[Mountains]]"
 description: "Already learning to lie before it has learned to fly well, the green dragon wyrmling treats every interaction as practice for the long game it intends to play once it is old enough to play it properly."
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+legendary: false
+movement:
+  - "fly 60"
+  - "swim 30"
 ---
 **Habitats:** [[Forest]] | [[Mountains]]
