@@ -16,6 +16,14 @@ habitats:
   - "[[Desert]]"
   - "[[Plains]]"
 description: "A blue dragon wyrmling is not a young predator learning to hunt — it is a tyrant learning to rule, and the distinction will cost you everything."
+weaknesses: []
+resistances: []
+immunities:
+  - "lightning"
+legendary: false
+movement:
+  - "fly 60"
+  - "burrow 20"
 ---
 **Habitats:** [[Desert]] | [[Plains]]
 

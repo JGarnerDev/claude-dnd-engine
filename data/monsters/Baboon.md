@@ -16,6 +16,12 @@ habitats:
   - "[[Jungle]]"
   - "[[Plains]]"
 description: "Baboons travel in troops governed by brutal social hierarchies, and a lone traveler who stumbles into their territory learns quickly that the wilderness has its own politics — and no mercy for outsiders."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 30"
 ---
 **Habitats:** [[Jungle]] | [[Plains]]
 

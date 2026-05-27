@@ -15,6 +15,15 @@ source: Monster Manual
 habitats:
   - "[[Tundra]]"
 description: "The oldest white dragons are not merely predators but geological forces — living glaciers with memory stretching back to when the world was young and cold and merciless."
+weaknesses: []
+resistances: []
+immunities:
+  - "cold"
+legendary: true
+movement:
+  - "fly 80"
+  - "burrow 30"
+  - "swim 40"
 ---
 **Habitats:** [[Tundra]]
 

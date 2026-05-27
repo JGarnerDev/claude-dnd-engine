@@ -16,6 +16,14 @@ habitats:
   - "[[Plains]]"
   - "[[Mountains]]"
 description: "A gold dragon does not save you — it decides whether you were worth saving, and that judgment outlasts empires."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: true
+movement:
+  - "fly 80"
+  - "swim 40"
 ---
 **Habitats:** [[Plains]] | [[Mountains]]
 

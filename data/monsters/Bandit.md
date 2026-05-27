@@ -17,6 +17,11 @@ habitats:
   - "[[Forest]]"
   - "[[Ruins]]"
 description: Common criminal or highway robber. Scimitar and crossbow. Versatile stat block — also used for Vistani raiders, gang members, and desperate villagers turned outlaw.
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 
 Common criminal or highway robber. Scimitar and crossbow. Versatile stat block — also used for Vistani raiders, gang members, and desperate villagers turned outlaw.

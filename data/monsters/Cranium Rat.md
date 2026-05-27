@@ -16,5 +16,10 @@ habitats:
   - "[[City]]"
   - "[[Underdark]]"
 description: "A rat whose brain has been enhanced by mind flayer tampering into a node in a distributed psychic network — alone it is a rat; in swarms, the collective achieves an intelligence no individual possesses and does not survive dissolving back into."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[City]] | [[Underdark]]

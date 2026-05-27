@@ -16,6 +16,20 @@ habitats:
   - "[[Abyss]]"
   - "[[Jungle]]"
 description: "A demon that wears the shape of something almost-animal — almost-familiar — until it opens its mouth and the Abyss looks back."
+weaknesses: []
+resistances:
+  - "cold"
+  - "fire"
+  - "lightning"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "poison"
+  - "poisoned"
+legendary: false
+movement:
+  - "climb 40"
 ---
 **Habitats:** [[Abyss]] | [[Jungle]]
 

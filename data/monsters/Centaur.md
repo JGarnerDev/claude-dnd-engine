@@ -17,5 +17,10 @@ habitats:
   - "[[Plains]]"
   - "[[Feywild]]"
 description: "A centaur's loyalty runs to the land first, its herd second, and visitors a distant third; crossing their territory uninvited is not trespassing, it is a declaration of intent."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Feywild]]

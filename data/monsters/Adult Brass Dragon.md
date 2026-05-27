@@ -16,6 +16,14 @@ habitats:
   - "[[Desert]]"
   - "[[Ruins]]"
 description: "A brass dragon does not hoard gold — it hoards secrets, half-remembered histories, and the company of mortals too small to outlast it."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: true
+movement:
+  - "fly 80"
+  - "burrow 30"
 ---
 **Habitats:** [[Desert]] | [[Ruins]]
 

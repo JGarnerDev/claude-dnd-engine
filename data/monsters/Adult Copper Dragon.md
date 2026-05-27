@@ -15,6 +15,14 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
 description: "An ancient wit made flesh, the copper dragon collects secrets and grudges with equal enthusiasm, trading both like currency to reshape the mountain politics that mortals mistake for their own."
+weaknesses: []
+resistances: []
+immunities:
+  - "acid"
+legendary: true
+movement:
+  - "fly 80"
+  - "climb 40"
 ---
 **Habitats:** [[Mountains]]
 

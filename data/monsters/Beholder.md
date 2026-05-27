@@ -16,6 +16,13 @@ habitats:
   - "[[Dungeon]]"
   - "[[Underdark]]"
 description: "A floating sphere of paranoid genius and tyrannical will, the beholder does not merely rule its domain — it sculpts reality within it according to a mind that has never once doubted its own supremacy."
+weaknesses: []
+resistances: []
+immunities:
+  - "prone"
+legendary: true
+movement:
+  - "fly 20"
 ---
 **Habitats:** [[Dungeon]] | [[Underdark]]
 

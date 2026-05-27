@@ -17,6 +17,12 @@ habitats:
   - "[[Coastline]]"
   - "[[Plains]]"
 description: "A carrion-scenting raptor that hunts in coordinated packs, drawn to the smell of open wounds like smoke to fire."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 60"
 ---
 **Habitats:** [[Mountains]] | [[Coastline]] | [[Plains]]
 

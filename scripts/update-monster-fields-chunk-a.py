@@ -777,15 +777,20 @@ def update_file(filepath, name):
         print(f"SKIP (no data): {name}")
         return
 
-    with open(filepath, "r", encoding="utf-8") as f:
+    # Detect BOM to preserve original encoding
+    with open(filepath, "rb") as f:
+        raw = f.read(3)
+    has_bom = raw[:3] == b"\xef\xbb\xbf"
+    enc = "utf-8-sig" if has_bom else "utf-8"
+
+    with open(filepath, "r", encoding=enc) as f:
         content = f.read()
 
     if "weaknesses:" in content:
         print(f"SKIP (already updated): {name}")
         return
 
-    # Split on frontmatter delimiters
-    # Content should be: ---\n<frontmatter>\n---\n<body>
+    # Split on frontmatter delimiters; text mode converts \r\n -> \n
     match = re.match(r"^(---\n)(.*?)(\n---)(.*)", content, re.DOTALL)
     if not match:
         print(f"ERROR (no frontmatter): {name}")
@@ -799,7 +804,7 @@ def update_file(filepath, name):
     new_fields = build_new_fields(data)
     new_content = f"{prefix}{frontmatter}\n{new_fields}{separator}{body}"
 
-    with open(filepath, "w", encoding="utf-8") as f:
+    with open(filepath, "w", encoding=enc, newline="\r\n") as f:
         f.write(new_content)
 
     print(f"OK: {name}")

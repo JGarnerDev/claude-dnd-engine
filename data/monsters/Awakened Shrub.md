@@ -16,6 +16,14 @@ habitats:
   - "[[Forest]]"
   - "[[City]]"
 description: "A shrub that woke up wrong — not wise, not kind, just aware enough to resent everything that walks past it."
+weaknesses:
+  - "fire"
+resistances:
+  - "bludgeoning"
+  - "piercing"
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[City]]
 

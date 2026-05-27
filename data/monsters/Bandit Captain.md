@@ -18,6 +18,11 @@ habitats:
   - "[[Ruins]]"
   - "[[City]]"
 description: "A bandit captain is not a criminal so much as a failed lord — someone who looked at the world's indifference and decided to become its instrument."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Plains]] | [[Dungeon]] | [[Ruins]] | [[City]]
 

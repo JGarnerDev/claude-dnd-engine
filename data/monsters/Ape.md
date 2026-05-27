@@ -17,6 +17,12 @@ habitats:
   - "[[Forest]]"
   - "[[Mountains]]"
 description: "A hulking knot of muscle and indifferent intelligence, the ape is a reminder that the world was old and wild long before civilization scratched its first mark into stone."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 30"
 ---
 **Habitats:** [[Jungle]] | [[Forest]] | [[Mountains]]
 

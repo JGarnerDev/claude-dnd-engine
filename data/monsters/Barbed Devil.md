@@ -15,6 +15,18 @@ source: Monster Manual
 habitats:
   - "[[Nine Hells]]"
 description: "A barbed devil is bureaucracy made flesh — a mid-ranking enforcer of infernal contracts whose every embrace draws blood, sent topside only when someone has already signed away something precious."
+weaknesses: []
+resistances:
+  - "cold"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "fire"
+  - "poison"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Nine Hells]]
 

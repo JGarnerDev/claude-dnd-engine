@@ -15,6 +15,13 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
 description: "An ancient intelligence wearing the shape of a god, silver dragons do not save you — they observe whether you are worth saving."
+weaknesses: []
+resistances: []
+immunities:
+  - "cold"
+legendary: true
+movement:
+  - "fly 80"
 ---
 **Habitats:** [[Mountains]]
 

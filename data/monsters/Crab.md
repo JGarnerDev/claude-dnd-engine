@@ -16,5 +16,11 @@ habitats:
   - "[[Coastline]]"
   - "[[Ocean]]"
 description: "A crab has solved the problem of existing in hostile environments by becoming, in a modest way, hostile itself."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 20"
 ---
 **Habitats:** [[Coastline]] | [[Ocean]]

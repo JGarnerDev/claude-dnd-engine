@@ -17,5 +17,16 @@ habitats:
   - "[[Ruins]]"
   - "[[Celestial Planes]]"
 description: "A feathered serpent of pure divine light, the couatl carries its celestial mandate like a second skin — it cannot lie, which means when it tells you the situation is dire, the situation is truly dire."
+weaknesses: []
+resistances:
+  - "radiant"
+immunities:
+  - "psychic"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+legendary: false
+movement:
+  - "fly 90"
 ---
 **Habitats:** [[Jungle]] | [[Ruins]] | [[Celestial Planes]]

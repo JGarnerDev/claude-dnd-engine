@@ -16,6 +16,12 @@ habitats:
   - "[[City]]"
   - "[[Ruins]]"
 description: "An archmage is not merely a powerful spellcaster — they are a civilization unto themselves, ancient enough to remember when the current order of the world was someone else's ambition."
+weaknesses: []
+resistances:
+  - "damage from spells"
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[City]] | [[Ruins]]
 

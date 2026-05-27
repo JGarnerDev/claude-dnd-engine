@@ -16,6 +16,23 @@ habitats:
   - "[[Gehenna]]"
   - "[[Ruins]]"
 description: "A jackal-faced fiend of immaculate dress and corrosive intellect, the arcanaloth brokers contracts in cursed ink and collects debts measured in souls."
+weaknesses: []
+resistances:
+  - "cold"
+  - "fire"
+  - "lightning"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "acid"
+  - "poison"
+  - "charmed"
+  - "frightened"
+  - "poisoned"
+legendary: false
+movement:
+  - "fly 30"
 ---
 **Habitats:** [[Gehenna]] | [[Ruins]]
 

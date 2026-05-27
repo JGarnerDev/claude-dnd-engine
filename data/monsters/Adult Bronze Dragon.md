@@ -16,6 +16,14 @@ habitats:
   - "[[Coastline]]"
   - "[[Mountains]]"
 description: "An ancient witness to the rise and fall of coastal empires, the bronze dragon collects loyalties and secrets with the same possessive patience it applies to sunken treasure."
+weaknesses: []
+resistances: []
+immunities:
+  - "lightning"
+legendary: true
+movement:
+  - "fly 80"
+  - "swim 40"
 ---
 **Habitats:** [[Coastline]] | [[Mountains]]
 

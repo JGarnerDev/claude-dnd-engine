@@ -15,6 +15,14 @@ source: Monster Manual
 habitats:
   - "[[Swamp]]"
 description: "An ancient black dragon is not a predator — it is a patient, dissolving darkness that has outlasted kingdoms and remembers when your civilization's ancestors were nothing."
+weaknesses: []
+resistances: []
+immunities:
+  - "acid"
+legendary: true
+movement:
+  - "fly 80"
+  - "swim 40"
 ---
 **Habitats:** [[Swamp]]
 

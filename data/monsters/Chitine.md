@@ -16,5 +16,11 @@ habitats:
   - "[[Underdark]]"
   - "[[Cave]]"
 description: "Spider-humanoids created by drow priests from humanoid stock and arachnid essence, chitines weave webs and fight in expendable packs in service to a goddess who views all her creations as tools and replaces broken ones without ceremony."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 30"
 ---
 **Habitats:** [[Underdark]] | [[Cave]]

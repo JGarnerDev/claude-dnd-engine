@@ -17,6 +17,11 @@ habitats:
   - "[[Forest]]"
   - "[[Plains]]"
 description: "A warrior who has traded sanity for survival, carrying the weight of every battle that unmade them."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Tundra]] | [[Forest]] | [[Plains]]
 

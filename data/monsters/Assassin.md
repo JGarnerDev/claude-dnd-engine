@@ -15,6 +15,12 @@ source: Monster Manual
 habitats:
   - "[[City]]"
 description: "An assassin is not a monster you see — it is the last wrong decision you ever made, arriving to collect."
+weaknesses: []
+resistances:
+  - "poison"
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[City]]
 

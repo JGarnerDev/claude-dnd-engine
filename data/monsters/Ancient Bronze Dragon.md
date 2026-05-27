@@ -15,6 +15,14 @@ source: Monster Manual
 habitats:
   - "[[Coastline]]"
 description: "An ancient bronze dragon does not intervene in mortal suffering — it observes, records, and waits for the pattern it has seen a thousand times before to complete itself."
+weaknesses: []
+resistances: []
+immunities:
+  - "lightning"
+legendary: true
+movement:
+  - "fly 80"
+  - "swim 40"
 ---
 **Habitats:** [[Coastline]]
 

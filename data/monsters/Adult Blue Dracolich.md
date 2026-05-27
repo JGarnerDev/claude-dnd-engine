@@ -17,6 +17,20 @@ habitats:
   - "[[Tomb]]"
   - "[[Forest]]"
 description: "A blue dragon that refused death and now rules its domain from beyond it — patient, calculating, and stripped of the last warmth that ambition once required."
+weaknesses: []
+resistances: []
+immunities:
+  - "lightning"
+  - "poison"
+  - "charmed"
+  - "exhaustion"
+  - "frightened"
+  - "paralyzed"
+  - "poisoned"
+legendary: true
+movement:
+  - "fly 80"
+  - "burrow 30"
 ---
 **Habitats:** [[Ruins]] | [[Tomb]] | [[Forest]]
 

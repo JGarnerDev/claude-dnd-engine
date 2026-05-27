@@ -16,6 +16,23 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
 description: "A hollow suit of plate that moves without a soul inside — the last loyal soldier of a lord long dead, still keeping watch over nothing."
+weaknesses: []
+resistances:
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "poison"
+  - "psychic"
+  - "blinded"
+  - "charmed"
+  - "deafened"
+  - "exhaustion"
+  - "frightened"
+  - "paralyzed"
+  - "petrified"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Dungeon]] | [[Ruins]]
 

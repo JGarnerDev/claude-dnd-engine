@@ -17,6 +17,11 @@ habitats:
   - "[[Feywild]]"
   - "[[Plains]]"
 description: "A creature that exists in two places at once, the blink dog is less a hunter than a verdict — it appears, judges, and vanishes before you can argue your case."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[Feywild]] | [[Plains]]
 

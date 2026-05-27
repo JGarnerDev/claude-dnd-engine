@@ -17,6 +17,14 @@ habitats:
   - "[[Mountains]]"
   - "[[Ruins]]"
 description: "A green dragon does not simply kill its enemies — it collects them, threading their secrets and debts into a web of manipulation that outlasts kingdoms."
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+legendary: true
+movement:
+  - "fly 80"
+  - "swim 40"
 ---
 **Habitats:** [[Forest]] | [[Mountains]] | [[Ruins]]
 

@@ -16,6 +16,20 @@ habitats:
   - "[[Abyss]]"
   - "[[Desert]]"
 description: "A Balor is not a demon that serves — it is a catastrophe that has learned to speak."
+weaknesses: []
+resistances:
+  - "cold"
+  - "lightning"
+immunities:
+  - "fire"
+  - "poison"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+  - "poisoned"
+legendary: false
+movement:
+  - "fly 80"
 ---
 **Habitats:** [[Abyss]] | [[Desert]]
 

@@ -17,6 +17,14 @@ habitats:
   - "[[Plains]]"
   - "[[Coastline]]"
 description: "A sovereign of storm and sand who does not conquer territory so much as collect it, demanding tribute not from greed but from a cold conviction that all things beneath the sky are already his."
+weaknesses: []
+resistances: []
+immunities:
+  - "lightning"
+legendary: true
+movement:
+  - "fly 80"
+  - "burrow 30"
 ---
 **Habitats:** [[Desert]] | [[Plains]] | [[Coastline]]
 

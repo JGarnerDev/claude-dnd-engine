@@ -15,6 +15,14 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
 description: "An Ancient Copper Dragon is a god of wit and memory wearing the skin of a mountain, older than most kingdoms and far less interested in their survival than its own amusement."
+weaknesses: []
+resistances: []
+immunities:
+  - "acid"
+legendary: true
+movement:
+  - "fly 80"
+  - "climb 40"
 ---
 **Habitats:** [[Mountains]]
 

@@ -17,6 +17,12 @@ habitats:
   - "[[Ruins]]"
   - "[[Forest]]"
 description: "Bats haunt the margins of civilization, threading through collapsed towers and dripping caverns as living omens that something older than memory still breathes in the dark."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 30"
 ---
 **Habitats:** [[Cave]] | [[Ruins]] | [[Forest]]
 

@@ -15,6 +15,13 @@ source: Monster Manual
 habitats:
   - "[[Mountains]]"
 description: "An ancient silver dragon does not intervene in mortal suffering — it observes, remembers, and judges across centuries, and its mercy is as crushing as its wrath."
+weaknesses: []
+resistances: []
+immunities:
+  - "cold"
+legendary: true
+movement:
+  - "fly 80"
 ---
 **Habitats:** [[Mountains]]
 

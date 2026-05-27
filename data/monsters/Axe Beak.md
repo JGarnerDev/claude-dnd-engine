@@ -16,6 +16,11 @@ habitats:
   - "[[Plains]]"
   - "[[Tundra]]"
 description: "A towering flightless bird whose crescent-shaped beak can split a shield — and the arm behind it — with a single stroke."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Plains]] | [[Tundra]]
 

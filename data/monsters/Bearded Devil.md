@@ -16,6 +16,18 @@ habitats:
   - "[[Nine Hells]]"
   - "[[Plains]]"
 description: "A soldier of Hell's legions, the bearded devil fights not from rage but from habit — war is simply what it is, and it has been at war since before your civilization had a name."
+weaknesses: []
+resistances:
+  - "cold"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "fire"
+  - "poison"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Nine Hells]] | [[Plains]]
 

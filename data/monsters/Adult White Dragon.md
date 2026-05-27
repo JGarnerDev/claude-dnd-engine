@@ -15,6 +15,15 @@ source: Monster Manual
 habitats:
   - "[[Tundra]]"
 description: "The oldest living thing for a hundred miles in any direction, and it has never once cared that you exist."
+weaknesses: []
+resistances: []
+immunities:
+  - "cold"
+legendary: true
+movement:
+  - "fly 80"
+  - "burrow 30"
+  - "swim 30"
 ---
 **Habitats:** [[Tundra]]
 

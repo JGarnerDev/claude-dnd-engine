@@ -15,6 +15,14 @@ source: Monster Manual
 habitats:
   - "[[Forest]]"
 description: "An awakened tree does not see you as an enemy — it simply does not see you at all, and that indifference is what kills."
+weaknesses:
+  - "fire"
+resistances:
+  - "bludgeoning"
+  - "piercing"
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]]
 

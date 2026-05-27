@@ -78,7 +78,13 @@
       "Read(//mnt/c/Users/Jeff/Desktop/**)",
       "Bash(powershell.exe -File ./scripts/free-entities.ps1 -Type npc)",
       "PowerShell(.\\\\scripts\\\\pitch-brief.ps1 -Type npc)",
-      "PowerShell(Get-Content *)"
+      "PowerShell(Get-Content *)",
+      "Bash(python scripts/update-monster-fields-chunk-a.py)",
+      "Bash(python3 -c ' *)",
+      "PowerShell($bytes = [System.IO.File]::ReadAllBytes\\(\"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\data\\\\monsters\\\\Aarakocra.md\"\\) | Select-Object -First 100; [System.Text.Encoding]::UTF8.GetString\\($bytes\\) | Format-List)",
+      "PowerShell($bytes = [System.IO.File]::ReadAllBytes\\(\"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\data\\\\monsters\\\\Aarakocra.md\"\\) | Select-Object -First 10; $bytes | ForEach-Object { \"{0:X2}\" -f $_ })",
+      "PowerShell($bytes = [System.IO.File]::ReadAllBytes\\(\"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\data\\\\monsters\\\\Adult Oblex.md\"\\) | Select-Object -First 10; $bytes | ForEach-Object { \"{0:X2}\" -f $_ })",
+      "Bash(python -c ' *)"
     ]
   },
   "hooks": {

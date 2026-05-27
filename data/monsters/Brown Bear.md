@@ -17,6 +17,12 @@ habitats:
   - "[[Mountains]]"
   - "[[Tundra]]"
 description: Large predator with multiattack — claws and bite in one turn. High HP for CR 1; can grapple with claw hits. Territorial rather than malicious.
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 30"
 ---
 
 Large predator with multiattack — claws and bite in one turn. High HP for CR 1; can grapple with claw hits. Territorial rather than malicious.

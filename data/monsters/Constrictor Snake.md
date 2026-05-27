@@ -17,5 +17,11 @@ habitats:
   - "[[Swamp]]"
   - "[[Forest]]"
 description: "It does not chase; it repositions and waits, and when the coils close the battle is already decided — the constrictor snake is proof that patience is a killing technique."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 30"
 ---
 **Habitats:** [[Jungle]] | [[Swamp]] | [[Forest]]

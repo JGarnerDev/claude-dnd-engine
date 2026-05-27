@@ -17,5 +17,11 @@ habitats:
   - "[[Ocean]]"
   - "[[Jungle]]"
 description: "The crocodile has not changed in a hundred million years because it found a working solution: be still, be patient, be the water, and then be absolutely everything at once."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 30"
 ---
 **Habitats:** [[Swamp]] | [[Ocean]] | [[Jungle]]

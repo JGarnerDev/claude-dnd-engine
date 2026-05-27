@@ -17,6 +17,11 @@ habitats:
   - "[[Plains]]"
   - "[[Desert]]"
 description: "The basilisk does not hunt with malice — it simply looks, and the world hardens around it."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Dungeon]] | [[Plains]] | [[Desert]]
 

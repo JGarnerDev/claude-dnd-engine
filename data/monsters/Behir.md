@@ -17,6 +17,13 @@ habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
 description: "A lightning-blooded serpent of immense coils and too many legs, the behir is not a dragon's cousin but its contemptuous usurper — a creature that hunts the peaks not for treasure, but for dominion."
+weaknesses: []
+resistances: []
+immunities:
+  - "lightning"
+legendary: false
+movement:
+  - "climb 40"
 ---
 **Habitats:** [[Mountains]] | [[Dungeon]] | [[Cave]]
 

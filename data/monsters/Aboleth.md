@@ -17,6 +17,12 @@ habitats:
   - "[[Ocean]]"
   - "[[Underdark]]"
 description: "An immortal psychic elder from before the gods drew breath, the aboleth does not hunt — it accumulates, cataloguing every mind it has ever broken into a memory palace that predates civilization itself."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: true
+movement:
+  - "swim 40"
 ---
 **Habitats:** [[Cave]] | [[Ocean]] | [[Underdark]]
 

@@ -16,5 +16,11 @@ habitats:
   - "[[Mountains]]"
   - "[[Ruins]]"
 description: "Three hungry natures in one body that have never reached agreement, the chimera is less a creature than an ongoing argument between lion, goat, and dragon about who decides when to kill things."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 60"
 ---
 **Habitats:** [[Mountains]] | [[Ruins]]

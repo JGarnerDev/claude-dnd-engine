@@ -17,6 +17,12 @@ habitats:
   - "[[Plains]]"
   - "[[Dungeon]]"
 description: "A creature of pure territorial fury compressed into a body the size of a loaf of bread, the badger attacks with a savagery that shames animals ten times its size."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "burrow 5"
 ---
 **Habitats:** [[Forest]] | [[Plains]] | [[Dungeon]]
 

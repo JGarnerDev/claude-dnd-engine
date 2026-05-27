@@ -15,5 +15,13 @@ source: Monster Manual
 habitats:
   - "[[Desert]]"
 description: "A brass dragon wyrmling already has opinions about everything and the confidence to share them at length — the tragedy is that it is usually right, and it knows it."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: false
+movement:
+  - "fly 60"
+  - "burrow 20"
 ---
 **Habitats:** [[Desert]]

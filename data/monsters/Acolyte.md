@@ -16,6 +16,11 @@ habitats:
   - "[[Ruins]]"
   - "[[City]]"
 description: "A true believer whose faith has become indistinguishable from obedience, the acolyte is most dangerous not because of what they carry, but because of what they've surrendered."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Ruins]] | [[City]]
 

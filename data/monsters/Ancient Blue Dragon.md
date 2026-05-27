@@ -16,6 +16,14 @@ habitats:
   - "[[Desert]]"
   - "[[Plains]]"
 description: "The oldest living creditor — it remembers every kingdom that has risen on its desert, and it is still waiting to be paid."
+weaknesses: []
+resistances: []
+immunities:
+  - "lightning"
+legendary: true
+movement:
+  - "fly 80"
+  - "burrow 40"
 ---
 **Habitats:** [[Desert]] | [[Plains]]
 

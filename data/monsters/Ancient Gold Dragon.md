@@ -16,5 +16,13 @@ habitats:
   - "[[Plains]]"
   - "[[Mountains]]"
 description: "The pinnacle of dragonkind in form and moral weight, the ancient gold dragon carries the grief of every evil it failed to prevent as heavily as the legend of every evil it stopped."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: true
+movement:
+  - "fly 80"
+  - "swim 40"
 ---
 **Habitats:** [[Plains]] | [[Mountains]]

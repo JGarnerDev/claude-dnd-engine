@@ -17,5 +17,15 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
 description: "Even death did not free it from service; the bone naga guards its master's lair as a skeleton, stripped of everything except the memory of its binding and the hatred that memory keeps warm."
+weaknesses: []
+resistances: []
+immunities:
+  - "poison"
+  - "charmed"
+  - "exhaustion"
+  - "paralyzed"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Tomb]] | [[Dungeon]] | [[Ruins]]

@@ -16,6 +16,14 @@ habitats:
   - "[[Tundra]]"
   - "[[Mountains]]"
 description: "A colossus of ancient winter that does not hunt you out of hunger or malice — it hunts you because you were foolish enough to exist in its mountain."
+weaknesses:
+  - "fire"
+resistances: []
+immunities:
+  - "cold"
+legendary: false
+movement:
+  - "climb 30"
 ---
 **Habitats:** [[Tundra]] | [[Mountains]]
 

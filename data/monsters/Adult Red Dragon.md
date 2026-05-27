@@ -17,5 +17,13 @@ habitats:
   - "[[Desert]]"
   - "[[Dungeon]]"
 description: "The most dangerous thing about an adult red dragon is not its fire — it is the absolute certainty, burning behind its eyes, that everything it surveys already belongs to it."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: true
+movement:
+  - "fly 80"
+  - "climb 40"
 ---
 **Habitats:** [[Mountains]] | [[Desert]] | [[Dungeon]]

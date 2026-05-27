@@ -16,6 +16,12 @@ habitats:
   - "[[Forest]]"
   - "[[Mountains]]"
 description: "A creature of pure appetite and indifference, the black bear is one of the few things in the wilderness that does not fear what humans have built."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "climb 30"
 ---
 **Habitats:** [[Forest]] | [[Mountains]]
 

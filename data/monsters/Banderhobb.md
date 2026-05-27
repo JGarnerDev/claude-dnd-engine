@@ -17,5 +17,11 @@ habitats:
   - "[[Forest]]"
   - "[[City]]"
 description: "A shadow-frog the size of a horse that swallows people whole and retreats through darkness with the body, conjured by hags and shadow cults to perform disappearances that leave no evidence except absence."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "swim 40"
 ---
 **Habitats:** [[Swamp]] | [[Forest]] | [[City]]

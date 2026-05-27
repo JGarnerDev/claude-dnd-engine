@@ -15,6 +15,11 @@ source: Monster Manual
 habitats:
   - "[[Limbo]]"
 description: "A Blue Slaad carries its chaos like a disease — literally, seeding its kind into the bodies of those it wounds, so that every survivor becomes a future horror."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Limbo]]
 

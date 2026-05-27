@@ -16,6 +16,11 @@ habitats:
   - "[[Dungeon]]"
   - "[[Ruins]]"
 description: Cult leader with spellcasting (Inflict Wounds, Hold Person, Spiritual Weapon) and Dark Devotion. Commands lesser cultists. A credible threat at low levels when supported by a mob.
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 
 Cult leader with spellcasting (Inflict Wounds, Hold Person, Spiritual Weapon) and Dark Devotion. Commands lesser cultists. A credible threat at low levels when supported by a mob.

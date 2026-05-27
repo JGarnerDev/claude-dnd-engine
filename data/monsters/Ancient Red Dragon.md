@@ -16,6 +16,14 @@ habitats:
   - "[[Mountains]]"
   - "[[Desert]]"
 description: "An Ancient Red Dragon is not a monster to be slain but a geologic force to be survived — a living catastrophe older than the kingdoms that dare build in its shadow."
+weaknesses: []
+resistances: []
+immunities:
+  - "fire"
+legendary: true
+movement:
+  - "fly 80"
+  - "climb 40"
 ---
 **Habitats:** [[Mountains]] | [[Desert]]
 

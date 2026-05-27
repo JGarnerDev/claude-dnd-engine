@@ -16,6 +16,26 @@ habitats:
   - "[[Elemental Planes]]"
   - "[[Mountains]]"
 description: "An air elemental is not a creature that attacks — it is weather that has decided to notice you."
+weaknesses: []
+resistances:
+  - "lightning"
+  - "thunder"
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "poison"
+  - "exhaustion"
+  - "grappled"
+  - "paralyzed"
+  - "petrified"
+  - "poisoned"
+  - "prone"
+  - "restrained"
+  - "unconscious"
+legendary: false
+movement:
+  - "fly 90"
 ---
 **Habitats:** [[Elemental Planes]] | [[Mountains]]
 

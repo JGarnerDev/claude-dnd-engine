@@ -16,6 +16,17 @@ habitats:
   - "[[Elemental Planes]]"
   - "[[Mountains]]"
 description: "Azers are exiled craftsmen of elemental fire — proud, bitter, and bound by oaths older than any living civilization, toiling in furnaces they did not choose for masters they do not love."
+weaknesses: []
+resistances:
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "fire"
+  - "poison"
+  - "exhaustion"
+  - "poisoned"
+legendary: false
+movement: []
 ---
 **Habitats:** [[Elemental Planes]] | [[Mountains]]
 

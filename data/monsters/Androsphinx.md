@@ -16,6 +16,18 @@ habitats:
   - "[[Desert]]"
   - "[[Ruins]]"
 description: "An androsphinx does not guard treasure — it guards the truth, and truth is the most dangerous thing it can give you."
+weaknesses: []
+resistances:
+  - "bludgeoning from nonmagical attacks"
+  - "piercing from nonmagical attacks"
+  - "slashing from nonmagical attacks"
+immunities:
+  - "psychic"
+  - "charmed"
+  - "frightened"
+legendary: true
+movement:
+  - "fly 60"
 ---
 **Habitats:** [[Desert]] | [[Ruins]]
 

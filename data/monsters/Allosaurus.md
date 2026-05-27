@@ -16,6 +16,11 @@ habitats:
   - "[[Jungle]]"
   - "[[Plains]]"
 description: "A living relic of a world that preceded human ambition, the allosaurus hunts with the patient certainty of something that has never learned to fear."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Jungle]] | [[Plains]]
 

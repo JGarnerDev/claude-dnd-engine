@@ -16,6 +16,11 @@ habitats:
   - "[[Plains]]"
   - "[[Jungle]]"
 description: "A living siege engine of bone and club-tail, the ankylosaurus does not charge — it simply endures, and lets the world break itself against it."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Plains]] | [[Jungle]]
 

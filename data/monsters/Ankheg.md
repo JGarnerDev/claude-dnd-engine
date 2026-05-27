@@ -16,6 +16,12 @@ habitats:
   - "[[Plains]]"
   - "[[Dungeon]]"
 description: "A chitinous ambush predator that dissolves its prey from the inside out, leaving only hollow bones and scorched earth as evidence it ever passed through."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "burrow 10"
 ---
 **Habitats:** [[Plains]] | [[Dungeon]]
 

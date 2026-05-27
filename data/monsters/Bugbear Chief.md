@@ -16,5 +16,10 @@ habitats:
   - "[[Forest]]"
   - "[[Dungeon]]"
 description: "A bugbear chief has survived longer than its competitors through a simple philosophy: hit first, hit harder, and make certain everyone who might challenge you has seen what happened to the last one who tried."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement: []
 ---
 **Habitats:** [[Forest]] | [[Dungeon]]

@@ -50,12 +50,12 @@ Progress tracker for getting this project ready to generate sessions and run cam
   - [x] Chunk B — Duergar Hammerer → Guard Drake (26 monsters)
   - [x] Chunk C — Hobgoblin Devastator → Orc Red Fang of Shargaas (28 monsters)
   - [x] Chunk D — Quickling → Yuan-ti Pit Master (30 monsters)
-- [ ] Monsters — 5 new fields on all ~544 files: `weaknesses`, `resistances`, `immunities`, `legendary`, `movement`. Schema updated. Fill in 5 alphabetical chunks (~110 each). Use training knowledge for MM/VGTM stat blocks; flag uncertain values with `# unverified`.
-  - [ ] Chunk A — Aarakocra → Cult Fanatic (A–Cu)
-  - [ ] Chunk B — Death Dog → Gnoll Fang of Yeenoghu (D–Gn)
+- [ ] Monsters — 5 new fields on all ~544 files: `weaknesses`, `resistances`, `immunities`, `legendary`, `movement`. Schema updated. 439 remaining after Chunk A. Script pattern: copy `scripts/update-monster-fields-chunk-a.py`, replace `MONSTER_DATA` dict and chunk filter line (`f[:-3] <= "Cult Fanatic"`). MM files have UTF-8 BOM — script already handles both BOM and non-BOM files via `utf-8-sig` detection.
+  - [x] Chunk A — Aarakocra → Cult Fanatic (A–Cu)
+  - [ ] Chunk B — Cultist → Gnoll Fang of Yeenoghu (Cu–Gn)
   - [ ] Chunk C — Gnoll Pack Lord → Needle Blight (Go–N)
   - [ ] Chunk D — Night Hag → Scarecrow (Ni–Sc)
-  - [ ] Chunk E — Sea Hag → Yuan-ti Pureblood (Se–Y)
+  - [ ] Chunk E — Sea Hag → Zombie (Se–Z)
 - [ ] skills
 
 

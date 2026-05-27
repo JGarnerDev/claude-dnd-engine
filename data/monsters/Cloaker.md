@@ -17,5 +17,11 @@ habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
 description: "It has hung from dungeon ceilings long enough that the stalactites have stopped noticing it — the cloaker is patient in the way that only something which perfectly resembles its environment can afford to be."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 40"
 ---
 **Habitats:** [[Underdark]] | [[Dungeon]] | [[Cave]]

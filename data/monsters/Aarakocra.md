@@ -16,6 +16,12 @@ habitats:
   - "[[Mountains]]"
   - "[[Elemental Planes]]"
 description: "Wind-born messengers of elemental masters, aarakocra drift between worlds like living omens — their presence above a settlement rarely means anything good."
+weaknesses: []
+resistances: []
+immunities: []
+legendary: false
+movement:
+  - "fly 50"
 ---
 **Habitats:** [[Mountains]] | [[Elemental Planes]]
 

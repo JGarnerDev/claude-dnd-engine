@@ -16,6 +16,23 @@ habitats:
   - "[[Dungeon]]"
   - "[[Cave]]"
 description: "A mindless, hungry void wearing the shape of shadow — it does not hunt you, it simply absorbs whatever it touches, as patient and inevitable as rot."
+weaknesses: []
+resistances:
+  - "cold"
+  - "fire"
+  - "slashing"
+immunities:
+  - "acid"
+  - "lightning"
+  - "blinded"
+  - "charmed"
+  - "deafened"
+  - "exhaustion"
+  - "frightened"
+  - "prone"
+legendary: false
+movement:
+  - "climb 20"
 ---
 **Habitats:** [[Dungeon]] | [[Cave]]
 
