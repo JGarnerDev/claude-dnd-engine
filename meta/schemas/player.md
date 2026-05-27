@@ -39,6 +39,75 @@ Covers real-world players at the table. This is **not** an in-world entity — i
 
 ---
 
+## Questionnaire Template
+
+Use this exact structure when generating a player questionnaire. No schema jargon, no YAML. Sections and labels are canonical — do not reorder or rename them.
+
+```markdown
+## About You
+
+**Pronouns** *(Optional)*:
+
+**Availability** — How often could you join a session? Any scheduling constraints? *(Optional — helps us know when to build you in)*:
+
+---
+
+## How You Like to Play
+
+**Ally, obstacle, or villain** — where do you land naturally when you play a character? *(Optional — but it shapes what kind of role we build for you)*:
+
+**Power level** — do you prefer playing someone with real weight (a lord, a crime boss, a high priest), or someone street-level who operates in the shadows? *(Optional)*:
+
+**Pick any archetypes that appeal to you** *(circle or list as many as you want — optional, but the more you give us, the better the fit)*:
+
+> **Power / Political:** noble, city official, guild master, church authority, crime boss
+>
+> **Antagonist:** main villain, lieutenant, rival, corrupt official, morally grey threat
+>
+> **Social / Commerce:** merchant, information broker, innkeeper, fence, smuggler
+>
+> **Combat / Underworld:** mercenary, bounty hunter, bandit leader, assassin, monster hunter
+>
+> **Arcane / Esoteric:** sage, cult leader, oracle, artificer
+>
+> **Humble / Community:** commoner, priest, craftsperson, guide
+>
+> **Wild:** trickster, mysterious stranger, shapeshifter
+
+---
+
+## The Creative Stuff
+
+**What kind of scene do you want to be remembered for?** *(Optional — a big moment, a twist, a speech, a fight? Dream out loud.)*:
+
+**Any character type you've always wanted to try but never got to play?** *(Optional — now's your chance)*:
+
+**Anything you'd rather avoid** — content, situations, or dynamics that aren't fun for you? *(Optional — totally valid, we'll work around it)*:
+
+---
+
+## Cameo-Specific
+*(Omit this section for core players.)*
+
+**D&D experience level** — brand new, played a bit, seasoned? *(Your call — helps us calibrate how much mechanical hand-holding to build in)*:
+
+**Do you have a character concept in mind, or would you rather be handed one?** *(Your call — both are great options)*:
+
+**How do you want to enter the story?** — Already know the party? A stranger they meet? Someone with history (friendly or otherwise)? *(Your call — this is the entry point question)*:
+
+**This campaign is gothic horror — dark atmosphere, moral weight, things-that-go-bump-in-the-night. Any thoughts on how hard you want to lean into that?** *(Your call — we can keep your role lighter or go full dark)*:
+
+---
+
+**Anything else for the DM** — how you like to engage, stuff you've loved in past campaigns, etc.?
+
+---
+
+*Hand back to your DM when done.*
+```
+
+---
+
 ## Schema
 
 ### Canonical Path
