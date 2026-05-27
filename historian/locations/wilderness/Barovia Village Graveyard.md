@@ -19,9 +19,10 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 known_by:
   - [[The Party]] (partial — heading here at session end)
-description: "Barovia Village Graveyard. Source of the ghost procession witnessed in Session 11. Party headed here while drunk at session's end."
+description: "Barovia Village Graveyard. Source of nightly ghost procession — spirits of adventurers who failed to destroy Strahd. Party visited in Session 12; learned procession origin from Parriwimple; fought zombies here."
 source_session: [[Session 11 Blood of the Vine]]
 confirmed_date: "2026-05-19"
+last_updated: [[Session 12 The March of the Dead]]
 ---
 
 Global Location: [[Barovia Village]] | Campaign: [[Curse of Strahd]]
@@ -42,6 +43,16 @@ Near session's end, a ghostly procession emerged from the graveyard and passed t
 
 The nature and origin of these spirits is unknown to the party. After witnessing the procession, the party (mildly drunk) decided to investigate the graveyard.
 
+## Session 12 — Explored
+
+### Ghost Procession (explained by Parriwimple)
+
+The spirits are **not** the dead of this graveyard. They are adventurers who died trying to destroy Strahd. Every night at midnight they process from here to the castle. Every night they fail. They cannot be communicated with — Iggy's spiritual weapon, Luci's light amplification, Dip's spoken dream-recounting, and Luci's Energy Storm all had zero effect.
+
+### Zombie Attack
+
+Three undead attacked a Barovian villager at the graveyard's edge — tore his arm off, killed him. Then turned on the party. Party + Parriwimple defeated all three. One zombie's severed leg continued advancing independently.
+
 ## Status
 
-Party was en route to investigate at session end. Unexplored.
+Visited and explored. Danger: zombie attacks outside at night. Recurring phenomenon: nightly ghost procession at midnight.
