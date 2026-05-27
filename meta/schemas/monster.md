@@ -57,6 +57,11 @@ source: ""              # e.g. "Monster Manual p.298"
 stat_block: ""          # URL or "inline"
 habitats: []            # environments where typically encountered
 description: ""
+weaknesses: []          # damage vulnerabilities + special (sunlight, silver, running water)
+resistances: []         # damage resistances (e.g. "bludgeoning from nonmagical attacks")
+immunities: []          # damage immunities + condition immunities (e.g. "poison", "charmed")
+legendary: false        # true if has legendary actions or lair actions
+movement: []            # special movement with speed (e.g. "fly 60", "swim 40", "burrow 30")
 ---
 ```
 

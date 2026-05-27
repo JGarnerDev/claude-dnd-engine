@@ -74,7 +74,11 @@
       "Bash(python scripts/seed-monsters-vgtm-chunk-a.py)",
       "Bash(python scripts/seed-monsters-vgtm-chunk-b.py)",
       "Bash(python scripts/seed-monsters-vgtm-chunk-c.py)",
-      "Bash(python scripts/seed-monsters-vgtm-chunk-d.py)"
+      "Bash(python scripts/seed-monsters-vgtm-chunk-d.py)",
+      "Read(//mnt/c/Users/Jeff/Desktop/**)",
+      "Bash(powershell.exe -File ./scripts/free-entities.ps1 -Type npc)",
+      "PowerShell(.\\\\scripts\\\\pitch-brief.ps1 -Type npc)",
+      "PowerShell(Get-Content *)"
     ]
   },
   "hooks": {
