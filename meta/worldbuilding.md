@@ -24,12 +24,26 @@ Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with
 - **Magic is rare:** ~3/10. Universally known to exist, rare in practice. LotR-ish — presence is significant, not routine. Creates hard social stratification between those who have it and those who don't.
 - **Cultural depth over tech level:** Civilizations differ by values, history, and environment — Warhammer-style specificity
 
+## Gods & Religion
+
+Gods are real and present — not historical figures or distant abstractions, but beings capable of manifesting in the world now. They rarely engage in worldly affairs directly; when they do, it matters.
+
+**Religion as a live mechanic:** Founding cults, building faiths, recruiting followers, and writing doctrine are accessible to players. NPCs can do the same — religions and cults can emerge organically from play, including as consequences of player-NPC interaction. This is an active layer of the world, not background scenery.
+
 ## World Textures
 
 - **Coffee economy:** Rare, fetches high prices, desired by everyone. Gnomes dominate the trade historically — most brokers, roasters, and caravan operators are gnomish — but the market isn't locked. Other players exist; gnomes just got there first and stayed organized.
 - **Remnant technology:** A pre-history civilization left ruins and relics the present world cannot explain or replicate. Introduce sparingly — one mission or arc element at a time, never as backdrop noise. What it was, what it built, and what ended it are unknown and should stay unknown. Functional relics feel wrong, not evil — they don't behave like magic or craftsmanship. No faction controls or understands this. D&D atmosphere holds; this is just the shadow of something older underneath it.
-- **Technological ceiling:** Standard D&D is the common tone. Steampunk is the maximum technological reach for any faction — never exceeded, rarely approached.
+- **Technological ceiling:** Standard D&D is the common tone. Steampunk Dwemer is the maximum reach — rare, upper bell curve only, associated with extinct or lost civilizations. Never the common infrastructure of a living society. When it appears, it feels inherited rather than built.
 - **Optimism persists:** Wonder and warmth exist even in dark settings. Party bonds form through shared experience. Small people from small places are capable of facing a world much larger than them — and knowing it.
+
+## World Tensions
+
+**Tech/faith axis:** Technological advancement and religious devotion exist in tension — but this axis is independent from moral alignment. A highly technological faction can be altruistic, genuinely believing rational progress serves people better than divine dependency. A deeply religious faction can be machiavellian, using faith as a control mechanism. All four quadrants exist and should appear in play.
+
+- Low-tech cultures tend toward devotion; high-tech factions tend toward secularism or open antagonism toward organized religion
+- The most technologically advanced factions are the most hostile to faith — not because they are villains, but because their worldview is internally coherent and directly competing
+- The Remnant Tech civilization pushed this further than anyone alive has. What happened to them is unknown and should stay unknown. That shadow is load-bearing.
 
 ## Influences
 
@@ -63,3 +77,4 @@ Rich, layered, and politically intricate. Epic mythic depth (LotR) combined with
 - Generic fantasy Europe — every civilization must have distinct cultural character; bland backdrop is a failure state
 - Any single flavor dominating every scene — pirates, coffee, dinosaurs, and gothic horror are all spices, not the whole dish
 - Gothic horror as persistent default mode — Strahd is a chapter, not the world's identity; don't let it bleed forward
+- Tech-forward factions as default antagonists — their position on religion is ideological, not evil; portray with internal coherence and valid motives
