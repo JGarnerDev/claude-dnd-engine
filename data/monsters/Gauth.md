@@ -1,0 +1,20 @@
+---
+name: Gauth
+type: monster
+tags:
+  - monster
+  - monster/aberration
+  - cr/6
+
+creature_type: aberration
+challenge_rating: "6"
+
+size: medium
+alignment: neutral evil
+source: Volo's Guide to Monsters
+habitats:
+  - "[[Dungeon]]"
+  - "[[Underdark]]"
+description: "A lesser beholder with fewer eye rays and considerably more willingness to negotiate, the gauth is what you get when the beholder's paranoia is turned down slightly and its hunger turned up — producing something mercenary rather than sovereign."
+---
+**Habitats:** [[Dungeon]] | [[Underdark]]

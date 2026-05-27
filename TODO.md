@@ -45,6 +45,11 @@ Progress tracker for getting this project ready to generate sessions and run cam
 - [x] Magic items — seeded `data/items/magic/` with 4 CoS artifacts (Sunsword, Holy Symbol of Ravenkind, Icon of Ravenloft, Tome of Strahd) + 7 canonical items (Bag of Holding, Cloak of Protection, Ring of Protection, Wand of Magic Missiles, Potion of Healing, Potion of Greater Healing, Sending Stones)
 - [x] Spells — created `meta/schemas/spell.md`, registered `spell` type + 9 school tags; seeded `data/spells/` with 280 spells (42 cantrips, 60 L1, 59 L2, 46 L3, 29 L4, 43 L5, 1 L6)
 - [x] feats — 42 PHB feats seeded in `data/feats/`; schema at `meta/schemas/feat.md`; graph color `#bdbdbd`
+- [ ] Monsters — Volo's Guide to Monsters (~109 new stat blocks). Seed in 4 alphabetical chunks via `scripts/seed-monsters-vgtm-chunk-*.py`. CRs/types from training knowledge — verify against book if precision needed.
+  - [x] Chunk A — Adult Oblex → Drow Shadowblade (25 monsters)
+  - [x] Chunk B — Duergar Hammerer → Guard Drake (26 monsters)
+  - [x] Chunk C — Hobgoblin Devastator → Orc Red Fang of Shargaas (28 monsters)
+  - [x] Chunk D — Quickling → Yuan-ti Pit Master (30 monsters)
 - [ ] skills
 
 

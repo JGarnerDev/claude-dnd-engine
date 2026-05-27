@@ -70,7 +70,11 @@
       "Bash(python scripts/fill-descriptions-chunk-c.py)",
       "Bash(python scripts/fill-descriptions-chunk-d.py)",
       "Bash(python scripts/fill-descriptions-chunk-e.py)",
-      "Bash(python scripts/seed-feats.py)"
+      "Bash(python scripts/seed-feats.py)",
+      "Bash(python scripts/seed-monsters-vgtm-chunk-a.py)",
+      "Bash(python scripts/seed-monsters-vgtm-chunk-b.py)",
+      "Bash(python scripts/seed-monsters-vgtm-chunk-c.py)",
+      "Bash(python scripts/seed-monsters-vgtm-chunk-d.py)"
     ]
   },
   "hooks": {
