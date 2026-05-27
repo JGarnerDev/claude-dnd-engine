@@ -116,6 +116,8 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `schema` | schema file | Meta document: entity schema definition |
 | **guideline** | | |
 | `guideline` | meta document | Meta document: design guideline that shapes story or game decisions |
+| **faction/** | | |
+| `faction/guild` | faction entity | Faction subtype: organized guild or professional society |
 | **resource** | | |
 | `resource` | resource entity | Entity type: natural or economic resource |
 | **culture** | | |
