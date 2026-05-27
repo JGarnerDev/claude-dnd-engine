@@ -1,39 +1,4 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(git *)",
-      "Bash(gh pr *)",
-      "Bash(gh api *)",
-      "Bash(gh repo *)",
-      "Bash(gh gist *)",
-      "Bash(gh auth *)",
-      "Bash(node *)",
-      "Bash(Get-ChildItem *)",
-      "Bash(New-Item *)",
-      "Bash(Remove-Item *)",
-      "Bash(powershell -File scripts/ *)",
-      "Bash(powershell -ExecutionPolicy Bypass -File scripts/ *)",
-      "Bash(powershell.exe -File *)",
-      "PowerShell(New-Item *)",
-      "PowerShell(Remove-Item *)",
-      "PowerShell(Rename-Item *)",
-      "PowerShell(Set-Content *)",
-      "PowerShell(Get-Content *)",
-      "PowerShell(claude *)",
-      "PowerShell(.\\scripts\\* *)",
-      "WebFetch(domain:www.dnd5eapi.co)",
-      "WebFetch(domain:forgottenrealms.fandom.com)",
-      "WebFetch(domain:github.com)",
-      "WebFetch(domain:raw.githubusercontent.com)",
-      "WebFetch(domain:gist.github.com)",
-      "WebFetch(domain:foambubble.github.io)",
-      "WebFetch(domain:docs.foamnotes.com)",
-      "Skill(obsidian-markdown)",
-      "Bash(powershell -File .\\\\scripts\\\\free-entities.ps1 -Type npc)",
-      "PowerShell(Move-Item *)",
-      "Bash(.\\\\scripts\\\\free-entities.ps1 -Type npc)"
-    ]
-  },
   "hooks": {
     "PostToolUse": [
       {
