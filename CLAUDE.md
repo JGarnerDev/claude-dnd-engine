@@ -107,6 +107,7 @@ No DM brief card needed. No other formats unless explicitly requested.
 
 ## Commands
 
+- `/commands` — `.claude/commands/commands.md`
 - `/inventory` — `.claude/commands/inventory.md`
 - `/session` — `.claude/commands/session.md`
 - `/recap` — `.claude/commands/recap.md`
