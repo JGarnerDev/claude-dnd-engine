@@ -118,6 +118,12 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `guideline` | meta document | Meta document: design guideline that shapes story or game decisions |
 | **faction/** | | |
 | `faction/guild` | faction entity | Faction subtype: organized guild or professional society |
+| `faction/religious` | faction entity | Faction subtype: religious order or church |
+| `faction/cult` | faction entity | Faction subtype: cult or mystic sect |
+| `faction/labor` | faction entity | Faction subtype: labor class or underclass |
+| `faction/academic` | faction entity | Faction subtype: scholarly institution |
+| `faction/noble` | faction entity | Faction subtype: noble house or aristocracy |
+| `faction/administrative` | faction entity | Faction subtype: administrative authority or bureaucracy |
 | **resource** | | |
 | `resource` | resource entity | Entity type: natural or economic resource |
 | **culture** | | |

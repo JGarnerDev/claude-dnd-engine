@@ -55,6 +55,18 @@ Entities in `./data` with `exists: false` are **free** — available to be used 
 
 Never silently generate a net-new entity during session planning or content generation. The data pool is intentional — running it low is meaningful signal, not a problem to paper over.
 
+## Contribution Balance
+
+Every entity has an optional `contributed_by` field (values: `paul`, `ben`, `miguel`, `jeff`). Use this to keep player contributions roughly equal over time.
+
+**When choosing between comparable free entities of the same type**, prefer the one whose `contributed_by` player has the fewest entries in `./historian`. If contributions are unequal, note it briefly: *"Pulling from Paul's pool — Ben and Miguel are underrepresented."*
+
+**When planning a session**, if one player's entities dominate the candidate pool, flag it and suggest pulling from another player's material where the story permits.
+
+**To check current balance** at any time: run `.\scripts\contribution-balance.ps1` — shows pool vs. canonized counts per player and identifies who is next up. To see one player's available entities: `.\scripts\free-entities.ps1 -Player <name>`.
+
+Do not force balance at the expense of narrative fit. Flag the gap; let the DM decide.
+
 ## New Campaign Setup
 
 When starting a new campaign, read `meta/new-campaign-setup.md` before generating any content.
@@ -76,7 +88,8 @@ PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run th
 | `session-brief.ps1` | Start of every `/session` | `.\scripts\session-brief.ps1` |
 | `session-state.ps1` | Quick campaign/act/mission check | `.\scripts\session-state.ps1` |
 | `party-status.ps1` | PC stats + afflictions | `.\scripts\party-status.ps1` |
-| `free-entities.ps1` | Find available entities by type | `.\scripts\free-entities.ps1 [-Type <type>]` |
+| `free-entities.ps1` | Find available entities by type or player | `.\scripts\free-entities.ps1 [-Type <type>] [-Player <name>]` |
+| `contribution-balance.ps1` | Player contribution counts (pool vs. canonized) | `.\scripts\contribution-balance.ps1` |
 | `entity-graph.ps1` | 1-hop relations for any entity | `.\scripts\entity-graph.ps1 -Name "<name>"` |
 | `location-entities.ps1` | All historian entities near a location | `.\scripts\location-entities.ps1 -Location "<name>"` |
 | `pitch-brief.ps1` | Start of every `/pitch` | `.\scripts\pitch-brief.ps1 [-Type <type>]` |
