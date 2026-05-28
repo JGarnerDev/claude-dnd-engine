@@ -7,7 +7,6 @@ state: fractured
 tags:
   - faction/noble
 locations:
-  - [[Masamune]]
   - [[Paleloft]]
 purpose: political
 aliases:
@@ -31,7 +30,7 @@ opposition:
   - [[Caldera Monks]] (extraction vs. wound preservation)
 ---
 
-Aerial elites of [[Masamune]], governing floating island settlements called Islifts. The Lifted depend on [[Whatwill]] discs powering stabilisation engines beneath their islands. They call Whatwill a technical resource and its mysteries a solvable engineering problem.
+Aerial elites governing floating island settlements called Islifts. The Lifted depend on [[Whatwill]] discs powering stabilisation engines beneath their islands. They call Whatwill a technical resource and its mysteries a solvable engineering problem.
 
 Public position: the islands are stable. The engineering is sound. Religion is useful for social cohesion but technically irrelevant.
 

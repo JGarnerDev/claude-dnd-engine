@@ -27,7 +27,7 @@ charm_hook: "His name was Gault Eightfingers before the most recent accident. Be
 
 Location: [[Wattling Cross]] | Faction: [[Extraction Guilds]]
 
-Guild fracture foreman operating near [[Wattling Cross]], [[Masamune]]. Gault Sevenfingers knows which craters are lying about being spent, which surveys were measured from the wrong edge, and that the crater outside [[Wattling Cross]] has a live [[Whatwill]] pocket at seventeen fathoms that three surveys missed.
+Guild fracture foreman operating near [[Wattling Cross]]. Gault Sevenfingers knows which craters are lying about being spent, which surveys were measured from the wrong edge, and that the crater outside [[Wattling Cross]] has a live [[Whatwill]] pocket at seventeen fathoms that three surveys missed.
 
 For several months he has been hearing Kernings three to four minutes before his crew — and quietly repositioning them based on this early hearing. Has been correct six times. Has not discussed this.
 

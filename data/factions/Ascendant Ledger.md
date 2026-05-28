@@ -7,7 +7,7 @@ state: active
 tags:
   - faction/administrative
 locations:
-  - [[Masamune]]
+  - [[The World]]
 purpose: commerce
 aliases:
   - "The Ledger"
@@ -26,7 +26,7 @@ allies: []
 opposition: []
 ---
 
-The administrative claim authority of [[Masamune]]. The Ascendant Ledger registers all [[Whatwill]] extraction claims and adjudicates disputes. It has survived everything: political collapses, wars, plague, and a period of operating from a ship at sea. Every faction uses it. No faction trusts it. Both conditions are necessary for it to function.
+The administrative claim authority of [[The World]]. The Ascendant Ledger registers all [[Whatwill]] extraction claims and adjudicates disputes. It has survived everything: political collapses, wars, plague, and a period of operating from a ship at sea. Every faction uses it. No faction trusts it. Both conditions are necessary for it to function.
 
 Senior assessors know where bodies are buried — literally, in the case of fraudulent claims used as treaty collateral. Field assessors encounter impossible things and log them under technically correct headings that describe nothing.
 

@@ -29,7 +29,7 @@ charm_hook: "Has been offered premium Verdicant-processed dust twice and decline
 
 Location: [[Wattling Cross]] | Faction: [[The Mintners]]
 
-Elder Mintner of [[Masamune]], itinerant. Mira Dust-Pale is at Stage 3 [[Whatwill]] exposure — her reverie maps exceed what any Stage 2 individual could produce. She knows routes into three impact sites that Guild surveys do not show. Her last two maps proved accurate to within a quarter mile.
+Elder Mintner, itinerant. Mira Dust-Pale is at Stage 3 [[Whatwill]] exposure — her reverie maps exceed what any Stage 2 individual could produce. She knows routes into three impact sites that Guild surveys do not show. Her last two maps proved accurate to within a quarter mile.
 
 She is currently near [[Wattling Cross]], leaving small gifts near [[The Sketch Child]]'s drawing corner. She is trying to determine whether the child is receiving imagery or transmitting it — without getting close enough to disturb the signal.
 

@@ -7,7 +7,6 @@ state: active
 tags:
   - faction/labor
 locations:
-  - [[Masamune]]
   - [[Wattling Cross]]
 purpose: other
 aliases:
@@ -30,7 +29,7 @@ opposition:
   - [[Extraction Guilds]] (exploitation)
 ---
 
-The poor underclass of [[Masamune]] who scavenge [[Whatwill]] scraps after major extraction. The Wattlers know the ground better than scholars, arrive at impact sites before guild surveyors, and die without names in any official record.
+The poor underclass who scavenge [[Whatwill]] scraps after major extraction. The Wattlers know the ground better than scholars, arrive at impact sites before guild surveyors, and die without names in any official record.
 
 They have no formal ideology. Hunger outranks philosophy. But many protect Latticed children, house itinerant [[The Mintners]], and maintain the only honest casualty counts from the Bright Scramble.
 

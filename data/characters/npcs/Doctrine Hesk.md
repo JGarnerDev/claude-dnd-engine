@@ -27,7 +27,7 @@ charm_hook: "His actual given name is Doctrine — his parents were Ascendant Le
 
 Location: [[Paleloft]] | Faction: [[Ascendant Ledger]]
 
-Senior Assessor for the [[Ascendant Ledger]] in [[Masamune]]. Currently on [[Paleloft]] assessing a claim that technically overlaps the island's stabilisation disc procurement records — not yet aware this may expose [[Tessimir Vane]]'s falsified descent logs.
+Senior Assessor for the [[Ascendant Ledger]]. Currently on [[Paleloft]] assessing a claim that technically overlaps the island's stabilisation disc procurement records — not yet aware this may expose [[Tessimir Vane]]'s falsified descent logs.
 
 Knows which guild forged the Cradlemouth survey seal three years ago. Knows two active lode claims are legally hollow and one is used as treaty collateral. Knows which fracture reports have been filed at the wrong threshold to avoid mandatory logging.
 

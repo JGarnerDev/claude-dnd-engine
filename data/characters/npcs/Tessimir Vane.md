@@ -27,7 +27,7 @@ charm_hook: "Has written and deleted an evacuation recommendation for children o
 
 Location: [[Paleloft]] | Faction: [[The Lifted]]
 
-Stabilisation engineer at [[Paleloft]], a minor Islift floating 280 fathoms above the Arc coastline of [[Masamune]]. Tessimir Vane knows the island has lost four fathoms in fourteen months — the official log shows two. The stabilisation disc in the lower chamber has a hairline fracture he sealed with mineral resin and a lie.
+Stabilisation engineer at [[Paleloft]], a minor Islift floating 280 fathoms above the Arc coastline. Tessimir Vane knows the island has lost four fathoms in fourteen months — the official log shows two. The stabilisation disc in the lower chamber has a hairline fracture he sealed with mineral resin and a lie.
 
 The resin is holding. He does not know for how much longer.
 

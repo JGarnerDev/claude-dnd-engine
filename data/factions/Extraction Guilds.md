@@ -7,7 +7,6 @@ state: active
 tags:
   - faction/guild
 locations:
-  - [[Masamune]]
   - [[Kernholt]]
 purpose: commerce
 aliases:
@@ -31,7 +30,7 @@ opposition:
   - [[The Verdicants]] (sacred site conflicts)
 ---
 
-Industrial extractors of [[Whatwill]] across [[Masamune]]. Not one faction but many competing guilds operating under the [[Ascendant Ledger]] charter framework. They call Whatwill property, treat exposure as a liability to be managed, and use [[The Verdicants]] to calm workers after deadly strikes while calling religion superstition.
+Industrial extractors of [[Whatwill]] across [[The World]]. Not one faction but many competing guilds operating under the [[Ascendant Ledger]] charter framework. They call Whatwill property, treat exposure as a liability to be managed, and use [[The Verdicants]] to calm workers after deadly strikes while calling religion superstition.
 
 Public position: civilization materially depends on extraction. Someone has to do it.
 

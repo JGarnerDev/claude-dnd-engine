@@ -7,7 +7,6 @@ state: active
 tags:
   - faction/cult
 locations:
-  - [[Masamune]]
   - [[Wattling Cross]]
 purpose: religious
 aliases:
@@ -30,7 +29,7 @@ opposition:
   - [[The Lifted]] (suppression, arrest)
 ---
 
-Dust users and mystics of [[Masamune]]. The Mintners inhale [[Whatwill]] dust and describe the experience as partial travel to the Veilwake — another realm, hallucination, or crossing. Officially criminal or marginal in most jurisdictions. Unofficially hired when their maps prove accurate.
+Dust users and mystics. The Mintners inhale [[Whatwill]] dust and describe the experience as partial travel to the Veilwake — another realm, hallucination, or crossing. Officially criminal or marginal in most jurisdictions. Unofficially hired when their maps prove accurate.
 
 Public belief: dust opens something real. Addiction is not illness — it is over-familiarity with elsewhere.
 

@@ -4,7 +4,9 @@
       "Bash(powershell -File scripts/free-entities.ps1 -Type resource)",
       "Bash(.\\\\scripts\\\\pitch-brief.ps1 -Type antagonist)",
       "Bash(powershell.exe *)",
-      "Bash(powershell -File scripts/contribution-balance.ps1)"
+      "Bash(powershell -File scripts/contribution-balance.ps1)",
+      "Bash(Remove-Item *)",
+      "Bash(powershell *)"
     ]
   },
   "hooks": {

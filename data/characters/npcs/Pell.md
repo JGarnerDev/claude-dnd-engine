@@ -31,7 +31,7 @@ charm_hook: "Has turned down three factional offers to buy out Wattling Cross or
 
 Location: [[Wattling Cross]] | Faction: [[The Wattlers]]
 
-Wattler elder of [[Wattling Cross]] in [[Masamune]]. Pell has one name, missing two fingers from a fracture shard accident at fourteen, and manages the informal economy of the settlement — water rights, road tolls, keeping the Guild outriders paid off.
+Wattler elder of [[Wattling Cross]]. Pell has one name, missing two fingers from a fracture shard accident at fourteen, and manages the informal economy of the settlement — water rights, road tolls, keeping the Guild outriders paid off.
 
 She knows that [[The Sketch Child]] has been drawing the same building for six weeks with increasing detail, and that [[Mira Dust-Pale]] is leaving small gifts near the child's drawing corner. She has not decided what to do. The decision is coming.
 

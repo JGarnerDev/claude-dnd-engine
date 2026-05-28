@@ -30,7 +30,7 @@ charm_hook: "Polishes the same small unimportant pearl every evening. It is not 
 
 Location: [[Kernholt]] | Faction: [[The Verdicants]]
 
-Mirror Keeper at the [[Kernholt]] Crater Shrine in [[Masamune]]. Sable Mourne has seen the face that appears in the Kernholt pool at dusk — the same face, the same position regardless of viewing angle — in two other craters. She has not written this down.
+Mirror Keeper at the [[Kernholt]] Crater Shrine. Sable Mourne has seen the face that appears in the Kernholt pool at dusk — the same face, the same position regardless of viewing angle — in two other craters. She has not written this down.
 
 She wants authenticated sacred custody of the crater before [[Extraction Guilds]] finish mapping it as an extraction site. Has not declared it sacred despite months of anomalous activity. Some initiates believe she is waiting for something specific to happen. Others believe she is waiting for permission already denied.
 

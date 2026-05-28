@@ -8,7 +8,7 @@ state: troubled
 tags:
   - location
   - location/city
-global_location: [[Masamune]]
+global_location: [[The World]]
 purpose: commerce
 importance: background
 description: "Small permanent settlement at the northern edge of the Sunken Mirrorglass Fields — seven miles of reflective terrain where three ancient impact zones merged. Supplies scholars, Verdicant survey expeditions, Latticed pilgrims, and occasional Guild survey teams. Night watch rotated every two hours to prevent memory bleed. A Guild survey team arrived three weeks ago and has not reported back."
@@ -25,7 +25,7 @@ population: "Small, rotating"
 trade_specialty: "Mirrorglass field supply, survey logistics"
 ---
 
-Supply post at the northern edge of the Sunken Mirrorglass Fields in [[Masamune]] — where three ancient impact zones merged into seven miles of reflective terrain that navigates wrong, reflects wrong, and contaminates dreams. [[Mirrorfield Station]] has been continuously occupied for sixty years.
+Supply post at the northern edge of the Sunken Mirrorglass Fields — where three ancient impact zones merged into seven miles of reflective terrain that navigates wrong, reflects wrong, and contaminates dreams. [[Mirrorfield Station]] has been continuously occupied for sixty years.
 
 Daytime is considered safe. Extended overnight exposure causes memory bleed: watchers begin remembering experiences they have not had. Night watch rotates every two hours by agreement — a policy added after the second cycle of longer postings produced three concurrent dream contagion episodes.
 

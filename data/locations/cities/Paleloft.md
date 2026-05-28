@@ -8,7 +8,7 @@ state: troubled
 tags:
   - location
   - location/city
-global_location: [[Masamune]]
+global_location: [[The World]]
 purpose: political
 importance: background
 description: "Minor Islift floating 280 fathoms above the Arc coastline. Governed by a Lifted noble house. Famous for thin air festivals and stabilised glass architecture. Has lost four fathoms of altitude in the last year. The official log shows two. A single aging engineer named Tessimir Vane maintains both the public descent log and a private one."
@@ -25,7 +25,7 @@ population: "Small — noble house and essential staff only"
 trade_specialty: "Stabilised Whatwill glass architecture, aerial trade access"
 ---
 
-A minor Islift of [[Masamune]], floating 280 fathoms above the Arc coastline. On a clear day from the high Caldera walls, [[Paleloft]] is visible as a pale shape above the horizon. From Paleloft, the Caldera is a darkness in the landscape.
+A minor Islift floating 280 fathoms above the Arc coastline. On a clear day from the high Caldera walls, [[Paleloft]] is visible as a pale shape above the horizon. From Paleloft, the Caldera is a darkness in the landscape.
 
 Governed by a [[The Lifted]] noble house. Famous for thin air festivals and stabilised glass architecture. Currently losing altitude — four fathoms in fourteen months by the private count. The official log shows two.
 

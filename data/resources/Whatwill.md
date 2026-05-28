@@ -9,7 +9,7 @@ tags:
 resource_type: arcane
 rarity: rare
 location:
-  - [[Masamune]]
+  - [[The World]]
 aliases:
   - "'Twill"
   - "Watl"
@@ -37,7 +37,7 @@ relates_to:
 hook: "Prolonged exposure causes Latticing — crystalline biological transformation with possible collective memory access. Living lodes reportedly hum without wind and alter dreams before discovery. Kernings may not warn of incoming Showerings; they may summon them."
 ---
 
-[[Masamune]]'s defining resource. Whatwill is meteor-origin glass produced by the ancient Astra impact — semi-opaque, pearlescent, phosphorescent, containing metallic tears reactive to nitrogen on fracture.
+Resource that falls on [[The World]] from the Astra moon during unpredictable Showerings. Whatwill is meteor-origin glass produced by the ancient Astra impact — semi-opaque, pearlescent, phosphorescent, containing metallic tears reactive to nitrogen on fracture.
 
 **Forms by value:** Dust (cheap, addictive, common) → Pearls (status, ritual, reverie) → Discs (industrial, stabilisation engines) → Shards (dangerous, unstable) → Lodes (strategic, war-provoking) → Hearts (sovereign-scale, rarely seen).
 

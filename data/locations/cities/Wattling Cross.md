@@ -8,7 +8,7 @@ state: stable
 tags:
   - location
   - location/city
-global_location: [[Masamune]]
+global_location: [[The World]]
 purpose: other
 importance: background
 description: "Informal Low Belt settlement where three old extraction roads meet beneath a dormant minor Islift. Guild-abandoned after a dust contamination scandal. Wattlers stayed. Unofficial economy of dust trade, black market fracture repair, unlicensed Mintner dens, and improvised reverie circles."
@@ -23,7 +23,7 @@ composition: "Wattler families, itinerant Mintners, black market brokers, ungove
 population: "Small, fluctuating"
 ---
 
-Informal settlement of [[Masamune]]'s Low Belt, at the junction of three old extraction roads beneath a dormant minor Islift. [[Wattling Cross]] was abandoned by [[Extraction Guilds]] after a dust contamination scandal. [[The Wattlers]] stayed and built an economy out of what the guilds left behind.
+Informal Low Belt settlement at the junction of three old extraction roads beneath a dormant minor Islift. [[Wattling Cross]] was abandoned by [[Extraction Guilds]] after a dust contamination scandal. [[The Wattlers]] stayed and built an economy out of what the guilds left behind.
 
 No official administration. A collective of older Wattlers manages water rights and road tolls. Outsiders are welcome if they spend money and leave questions about the Islift unasked.
 

@@ -7,13 +7,12 @@ state: active
 tags:
   - faction/religious
 locations:
-  - [[Masamune]]
   - [[Cradlemouth]]
 purpose: religious
 aliases:
   - "Monks"
 importance: background
-description: "Anti-extraction mystics and wound-keepers associated with the Struck Side Caldera. Believe the planet was injured by the Astra impact and Whatwill is scar tissue — extraction reopens the wound. Contain the oldest observatory in Masamune and have been hearing a new sound from beneath the Caldera floor for six months."
+description: "Anti-extraction mystics and wound-keepers associated with the Struck Side Caldera. Believe the planet was injured by the Astra impact and Whatwill is scar tissue — extraction reopens the wound. Contain the oldest observatory in the world and have been hearing a new sound from beneath the Caldera floor for six months."
 motives:
   - "Understand what is rising from beneath the Caldera before anyone else acts on it"
   - "Oppose extraction as desecration"
@@ -30,13 +29,13 @@ opposition:
   - [[The Lifted]] (extraction denial)
 ---
 
-Wound-keepers of [[Masamune]]'s Caldera. The Caldera Monks believe the planet was injured by the Astra impact and [[Whatwill]] is scar tissue. Every lode removed delays healing. Every Showering is a failed healing event.
+Wound-keepers of the Caldera. The Caldera Monks believe the planet was injured by the Astra impact and [[Whatwill]] is scar tissue. Every lode removed delays healing. Every Showering is a failed healing event.
 
 Public position: leave the glass where it fell. The planet has not recovered.
 
 Secret fear: the wound is not healing because something inside does not want it closed.
 
-Based at [[Cradlemouth]] on the inner Caldera wall, where they have maintained the oldest observatory in Masamune for centuries. Six months ago they began hearing a new sound from beneath the old mirrorglass at the crater floor. They have not told any other faction. The sound is getting louder.
+Based at [[Cradlemouth]] on the inner Caldera wall, where they have maintained the oldest observatory in the world for centuries. Six months ago they began hearing a new sound from beneath the old mirrorglass at the crater floor. They have not told any other faction. The sound is getting louder.
 
 Theologically allied with [[The Verdicants]], bitterly opposed to [[The Lifted]], and tacitly supported by [[The Wattlers]] in some regions.
 

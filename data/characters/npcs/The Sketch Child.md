@@ -24,7 +24,7 @@ charm_hook: "Tears out the basement drawings before anyone wakes. Even Pell has 
 
 Location: [[Wattling Cross]] | Guardian: [[Pell]]
 
-An unnamed child in [[Wattling Cross]], [[Masamune]]. Every morning before sunrise, she draws on whatever surface is available — wall, cloth, ground — and does not remember doing it. The drawings show a consistent multi-level structure, architecturally detailed beyond her age, with an inverted orientation: ground above, building descending.
+An unnamed child in [[Wattling Cross]]. Every morning before sunrise, she draws on whatever surface is available — wall, cloth, ground — and does not remember doing it. The drawings show a consistent multi-level structure, architecturally detailed beyond her age, with an inverted orientation: ground above, building descending.
 
 She has never knowingly handled [[Whatwill]]. No documented exposure history. The nearest lode is seventeen fathoms below the road she walks to the water pump.
 

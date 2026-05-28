@@ -7,7 +7,6 @@ state: active
 tags:
   - faction/religious
 locations:
-  - [[Masamune]]
   - [[Kernholt]]
 purpose: religious
 aliases:
@@ -17,7 +16,7 @@ description: "Religious custodians of Whatwill impact sites, sacred reverie rite
 motives:
   - "Maintain sacred custody of impact sites against guild extraction"
   - "Control and interpret shared dream phenomena"
-  - "Expand sanctum network across Masamune"
+  - "Expand sanctum network across [[The World]]"
 tensions:
   - "Dream contagion growing beyond doctrinal control"
   - "Internal split between extraction-as-blasphemy and controlled-extraction factions"
@@ -30,7 +29,7 @@ opposition:
   - [[Extraction Guilds]] (extraction vs. preservation)
 ---
 
-Religious custodians of [[Whatwill]] in [[Masamune]]. The Verdicants maintain shrines at impact sites, conduct reverie rites, and interpret shared dreams as sacred memory. Their sanctums are architectural reverie machines — angled mirrors, chant wells, wind strings — designed to induce controlled exposure.
+Religious custodians of [[Whatwill]]. The Verdicants maintain shrines at impact sites, conduct reverie rites, and interpret shared dreams as sacred memory. Their sanctums are architectural reverie machines — angled mirrors, chant wells, wind strings — designed to induce controlled exposure.
 
 Public belief: Whatwill is memory made visible. Reverie is communion with the wound. Sin is forgetting wrongly.
 

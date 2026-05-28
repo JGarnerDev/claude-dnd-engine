@@ -28,7 +28,7 @@ charm_hook: "Uses only one name. When pressed on the order's formal name, has sa
 
 Location: [[Cradlemouth]] | Faction: [[Caldera Monks]]
 
-Caldera Monk at [[Cradlemouth]], [[Masamune]]. For six months, [[Brother Orn]] has been hearing a low resonance from beneath the old mirrorglass at the crater floor. It changes pitch during Kernings. Two other monks have independently confirmed it. He has reported to no outside faction.
+Caldera Monk at [[Cradlemouth]]. For six months, [[Brother Orn]] has been hearing a low resonance from beneath the old mirrorglass at the crater floor. It changes pitch during Kernings. Two other monks have independently confirmed it. He has reported to no outside faction.
 
 He holds two-hour pre-dawn vigils at the inner crater wall without a lantern. Has stopped calling this prayer entirely in the last month.
 

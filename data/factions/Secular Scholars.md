@@ -7,7 +7,7 @@ state: active
 tags:
   - faction/academic
 locations:
-  - [[Masamune]]
+  - [[The World]]
 purpose: other
 aliases:
   - "Scholars"
@@ -26,7 +26,7 @@ allies: []
 opposition: []
 ---
 
-Secular scientists and academics of [[Masamune]]. The Scholars study [[Whatwill]] as a natural phenomenon — impact chemistry, orbital mechanics, exposure neurology, resonance physics. They reject mystical interpretation while using vocabulary inherited from mystics because no scientific terminology works better.
+Secular scientists and academics. The Scholars study [[Whatwill]] as a natural phenomenon — impact chemistry, orbital mechanics, exposure neurology, resonance physics. They reject mystical interpretation while using vocabulary inherited from mystics because no scientific terminology works better.
 
 Public position: Whatwill is natural, even if not yet understood. Not every mystery is divine.
 
