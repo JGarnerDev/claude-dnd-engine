@@ -88,6 +88,16 @@ For each selected pitch, write full prose. Structure depends on `--type`:
 
 **monster:** Name, creature type, what makes this variant or encounter fresh (not just "it's a zombie"), habitat or lair thumbnail, one distinctive behavioral or tactical trait, one narrative hook or complication the party might discover
 
+**Step 3d — Source Faithfulness Note (when player resources used):**
+
+If the pitch drew on any `./data` entity with a `contributed_by` field, append a short note after the pitch output — whether brief (3a) or expanded (3c):
+
+- One line: what was pulled directly from source material
+- One line: biggest invention or unsupported inference (if any)
+- Offer: "Want the full faithfulness breakdown?"
+
+Keep it to 2–3 lines total. Skip if `--no-read` or if no player-contributed entities were referenced.
+
 ---
 
 ## Phase 4 — Save Pitch History
