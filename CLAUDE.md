@@ -55,6 +55,15 @@ Entities in `./data` with `exists: false` are **free** — available to be used 
 
 Never silently generate a net-new entity during session planning or content generation. The data pool is intentional — running it low is meaningful signal, not a problem to paper over.
 
+## Data Entity Transparency
+
+When suggesting a `./data` entity for use, always surface its gaps inline:
+
+- **Inferred detail** — anything you're filling in beyond what the file explicitly states. Flag it: *"[inferred: motivation assumed to be X]"*
+- **Missing detail** — fields relevant to the planned use that are absent from the file. List them: *"[missing: combat stats, known location]"*
+
+Do this per entity, at the point of suggestion — not as a separate section. Keep it brief; one line per gap is enough. The DM decides whether to fill gaps before play or leave them loose.
+
 ## Contribution Balance
 
 Every entity has an optional `contributed_by` field (values: `paul`, `ben`, `miguel`, `jeff`). Use this to keep player contributions roughly equal over time.
