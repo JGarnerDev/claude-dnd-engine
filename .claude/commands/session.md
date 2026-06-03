@@ -25,6 +25,9 @@ Read the following files before doing anything else. Do not generate any content
    - `meta/rewards.md` — gold ranges, magic item philosophy, leveling pace
    - `meta/players/*.md` (excluding `player-template.md`) — per-player preferences
    - `meta/references.md` — where to look for external D&D data
+   - `meta/campaign-design-preferences.md` — player-sourced event desires, antagonist archetypes, mission preferences; note which items have `Deployed: —` (not yet used)
+   - `meta/mysteries.md` — load-bearing unknowns; do not accidentally answer these in session content
+   - `meta/party-relationships.md` — PC bonds, tensions, and defining moments; use when planning scenes with PC-to-PC stakes
 
 Determine the next session number: highest session number found + 1.
 
@@ -77,6 +80,8 @@ Read frontmatter only (`name`, `type`, `subtype`, `importance`, `active`, `descr
 **Step 3 — Check meta preferences**
 
 Read `meta/worldbuilding.md` and any filled `meta/players/*.md` files (excluding the template). Note which sections are populated and which are blank. If all are blank, fall back to the campaign's `themes` and `tone` from `scheduler/campaign.md`.
+
+Also check `meta/campaign-design-preferences.md`: identify items with `Deployed: —` that haven't fired yet. If any are aging (many sessions have passed without use), flag the most relevant one as a candidate for Option C. Do not force a preference into a hook — only suggest it if the current story state creates a plausible opening.
 
 **Step 4 — Present 3 hooks**
 
@@ -180,6 +185,8 @@ Omit this block entirely if no questionnaires are filled. Do not force matches �
 ---
 
 **Apply the free entity rule:** if the session requires an entity not in `data/` or `historian/`, **stop and flag it** rather than inventing one. Ask the DM whether to create it or proceed differently.
+
+**Deployment tracking:** if a preference item from `meta/campaign-design-preferences.md` is used in this session, note it in the session plan. After the session is played and canonized via `/recap`, update that item's `Deployed:` line with a wikilink to the session file.
 
 For non-standard encounter types (chase, puzzle, trade negotiation, performance, mini-game), check `meta/mechanics/` for an applicable mechanic file before writing the scene.
 

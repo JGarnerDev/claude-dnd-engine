@@ -23,6 +23,7 @@ Ask the DM the following. Keep it conversational — rough notes are fine.
 3. **Cliffhanger** — Where did things end? What question or situation carries into next session?
 4. **State changes** — Any significant PC or NPC changes? (Deaths, level-ups, new afflictions, relationship shifts, items gained or lost.)
 5. **New entities** — Anything invented at the table that doesn't have a file yet? (NPCs named on the fly, locations described, items handed out.)
+6. **Table reaction** — What landed? Anything that fell flat or felt off? (One line is fine — this informs future planning, not canonization.)
 
 Wait for the DM's response before continuing.
 
@@ -57,6 +58,7 @@ entities_canonized:
   - [[Entity Name]]   # one per entity moved to historian this session
 new_entities:
   - "{description}"     # one per thing invented at the table, not yet filed
+table_notes: "{what landed, what didn't — from Phase 2 question 6. Omit field if no feedback given.}"
 ```
 
 Then move the file from `scheduler/sessions/` to `historian/sessions/`.
