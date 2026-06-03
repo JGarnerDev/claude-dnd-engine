@@ -13,7 +13,9 @@
       "WebFetch(domain:www.5esrd.com)",
       "Bash(Get-ChildItem \"C:\\\\Users\\\\Jeff\\\\Desktop\\\\claude-dnd-engine\\\\data\\\\resources\" -Filter \"*.md\")",
       "Bash(Measure-Object)",
-      "Bash(Select-Object -ExpandProperty Count)"
+      "Bash(Select-Object -ExpandProperty Count)",
+      "Bash(.\\\\scripts\\\\pitch-brief.ps1 -Type npc)",
+      "Bash(Get-ChildItem -Recurse -Filter \"bosco*\")"
     ]
   },
   "hooks": {
