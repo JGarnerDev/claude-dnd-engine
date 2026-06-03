@@ -34,7 +34,7 @@ new_entities:
   - "[[Doru]] — Donavich's son; vampire spawn; heard but not seen, caged below the church floor"
   - "[[The Dream Pastry Woman]] — night hag disguised as an old woman selling dream pastries; escaped to another plane with a stolen child"
   - "[[Church of the Morning Lord]] — war-worn church in Barovia Village; dedicated to the Morning Lord; Donavich's home"
-  - "[[Bosco Trashborn, the Pillager]] — Iggy's raccoon companion; pillager of domiciles, wounded a wizard, won over by one ration"
+  - "[[Bosco]] — Iggy's raccoon companion; pillager of domiciles, wounded a wizard, won over by one ration"
 ---
 
 ## Session Notes
@@ -94,7 +94,7 @@ Party agreed to take her to Vallaki, per her wishes. Ismark and Ireena went home
 
 Party tried to find the raccoon from earlier. **[[Odibli]]** cast Minor Illusion (cotton candy supply). Raccoon struck ODB for 1 claw damage. **[[Iggy]]** threw a ration; raccoon ate it. **Iggy gets raccoon companion.** ODB ate a ration in front of the raccoon, triggering a brief cold war between them.
 
-*Named by Iggy: [[Bosco Trashborn, the Pillager]].*
+*Named by Iggy: [[Bosco]].*
 
 ### The Dream Pastry Woman
 

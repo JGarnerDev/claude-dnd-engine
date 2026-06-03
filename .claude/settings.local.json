@@ -8,7 +8,9 @@
       "Bash(Remove-Item *)",
       "Bash(powershell *)",
       "Bash(.\\\\scripts\\\\pitch-brief.ps1 -Type mission)",
-      "Bash(.\\\\scripts\\\\session-brief.ps1)"
+      "Bash(.\\\\scripts\\\\session-brief.ps1)",
+      "WebSearch",
+      "WebFetch(domain:www.5esrd.com)"
     ]
   },
   "hooks": {
