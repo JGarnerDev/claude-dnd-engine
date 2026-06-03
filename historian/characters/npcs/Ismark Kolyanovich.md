@@ -8,7 +8,7 @@ tags:
   - character
   - character/npc
 
-location: [[Barovia Village]]
+location: traveling with party (en route to [[Vallaki]])
 personality: "Warm and direct — genuinely kinder than most Barovians. Impressed by competence. Carries quiet desperation for his sister's safety beneath a composed exterior."
 livelihood: "Son of the Burgomaster; now acting head of household following his father's death."
 disposition: friendly
@@ -55,7 +55,11 @@ Met the party at the [[Blood of the Vine Tavern]]. Greeted them, explained [[Ari
 
 Led the party to the [[Burgomaster's Mansion]] after the tavern meeting.
 
+## Joined the Party (Session 13)
+
+After [[Kolyan Indirovich]] was buried at the [[Church of the Morning Lord]], Ismark elected to travel with the party as a companion for the journey to [[Vallaki]]. He is now an active party member.
+
 ## Family
 
-- Father [[Kolyan Indirovich]] — died from trauma during a wolf attack on the mansion. Needs burial.
-- Sister [[Ireena Kolyana]] — primary concern; Strahd has fixated on her.
+- Father [[Kolyan Indirovich]] — buried Session 13 at the Church of the Morning Lord.
+- Sister [[Ireena Kolyana]] — primary concern; Strahd has fixated on her. Session 13 revealed she is not a blood relative of the family.

@@ -8,7 +8,7 @@ tags:
   - character
   - character/npc
 
-location: [[Burgomaster's Mansion]]
+location: traveling with party (en route to [[Vallaki]])
 personality: "Composed under grief. Steady and clear-headed despite loss. Practical — her first request was burial for her father, not flight."
 livelihood: "Daughter of the late Burgomaster. Now under her brother's protection."
 disposition: neutral
@@ -56,6 +56,14 @@ Party met Ireena at the [[Burgomaster's Mansion]] after Ismark led them there. S
 ## Known Threats
 
 [[Strahd Von Zarovich]] has fixated on Ireena. The nature of this fixation is not yet fully understood by the party, but Ismark considers it mortal danger.
+
+## Lineage Revelation (Session 13)
+
+During [[Kolyan Indirovich]]'s burial at the [[Church of the Morning Lord]], [[Father Donavich]] revealed that Ireena is **not a blood relative** of the Kolyanovich family. Ireena was visibly shocked. Donavich spoke of "trials that await her" without elaborating.
+
+## Departure
+
+Following the burial, Ireena agreed to travel to [[Vallaki]] with the party. Her brother [[Ismark Kolyanovich]] joined as a companion. Both departed [[Barovia Village]] after Session 13.
 
 ## Destination
 

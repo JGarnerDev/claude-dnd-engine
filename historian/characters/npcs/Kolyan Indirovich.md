@@ -8,7 +8,7 @@ tags:
   - character
   - character/npc
 
-location: [[Burgomaster's Mansion]]
+location: [[Church of the Morning Lord]]
 personality: "Unknown — deceased before the party arrived."
 livelihood: "Burgomaster of Barovia Village."
 disposition: unknown
@@ -34,6 +34,12 @@ Location: [[Burgomaster's Mansion]] | Campaign: [[Curse of Strahd]]
 
 ## Death
 
-Kolyan Indirovich, Burgomaster of [[Barovia Village]], died from the trauma of a wolf attack on the [[Burgomaster's Mansion]]. Wolves and other creatures assaulted the mansion; he did not survive. His body remains inside the mansion. A faint odor of decay was noted by the party.
+Kolyan Indirovich, Burgomaster of [[Barovia Village]], died from the trauma of a wolf attack on the [[Burgomaster's Mansion]]. Wolves and other creatures assaulted the mansion; he did not survive.
 
 [[Ireena Kolyana]] asked the party to help bury him. [[Odibli]] and [[Iggy]] were both eager to help.
+
+## Burial (Session 13)
+
+Kolyan was carried by the party from the [[Burgomaster's Mansion]] to the [[Church of the Morning Lord]] and buried in the churchyard. Each party member took a turn at the shovel; [[Dip]] used his hands.
+
+During the burial, [[Father Donavich]] revealed that [[Ireena Kolyana]] is not a blood relative of the Kolyanovich family.

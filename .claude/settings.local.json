@@ -6,7 +6,9 @@
       "Bash(powershell.exe *)",
       "Bash(powershell -File scripts/contribution-balance.ps1)",
       "Bash(Remove-Item *)",
-      "Bash(powershell *)"
+      "Bash(powershell *)",
+      "Bash(.\\\\scripts\\\\pitch-brief.ps1 -Type mission)",
+      "Bash(.\\\\scripts\\\\session-brief.ps1)"
     ]
   },
   "hooks": {
