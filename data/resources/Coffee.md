@@ -6,7 +6,7 @@ state: monopolized
 tags:
   - resource
 resource_type: food
-rarity: unique
+rarity: rare
 location:
   - highlands
   - jungle
