@@ -169,3 +169,135 @@ Each entry follows this structure:
 **Outcomes:** Cults form around the disruption. High-tech factions with something to hide move to suppress or discredit. Religious institutions are shaken. The world does not know what is happening — but it can feel that something is.
 
 ---
+
+## A God Walks
+- **Scale:** global
+- **Contributed by:** ai
+- **Themes:** religion, politics, war, power
+
+**Setup:** A deity physically manifests in a city — present, visible, and real. This should not be possible at this scale. The god has not explained itself.
+
+**Outcomes:** Factions immediately scramble to control access, weaponize the presence, or drive it away before anyone can agree what it means. Religious institutions fracture between reverence and fear. The city is never the same.
+
+---
+
+## The Walking Machine Emerges
+- **Scale:** regional
+- **Contributed by:** ai
+- **Themes:** remnant tech, war, ancient mystery, politics
+
+**Setup:** A colossal construct of unknown origin activates and begins moving through populated territory. It is not attacking — but it is not stopping either. No one knows who built it, what it wants, or how to stop it.
+
+**Outcomes:** Settlements in its path evacuate or are destroyed. Military forces that engage it learn whether force works. Every faction with interest in remnant tech converges. The question of who controls it — if anyone can — defines what happens next.
+
+---
+
+## Hivemind Outbreak
+- **Scale:** regional
+- **Contributed by:** ai
+- **Themes:** war, politics, espionage, alien logic
+
+**Setup:** A collective intelligence begins absorbing individuals. Early victims show subtle behavioral changes — slightly off, slightly too cooperative. By the time the pattern is obvious, it is already inside several factions.
+
+**Outcomes:** Trust collapses as factions cannot verify who is compromised. Purges begin, some accurate, some not. The hivemind continues expanding on its own logic. Containment requires agreeing on what containment even means.
+
+---
+
+## Magic Criminalized
+- **Scale:** regional
+- **Contributed by:** ai
+- **Themes:** politics, magic, war, religion
+
+**Setup:** A high-tech secular faction formally outlaws magic practice within its territory. The decree is enforced. Wizard guilds treat this as a declaration of war. Thousands of common people with minor magical abilities are caught in the middle.
+
+**Outcomes:** Guilds retaliate through clients, contracts, and direct action. Underground magic networks emerge. The faction either holds its line or fractures under pressure. The conflict defines what magic's legal status means across the region.
+
+---
+
+## A Trial That Breaks a Faction
+- **Scale:** regional
+- **Contributed by:** ai
+- **Themes:** politics, war, succession, power
+
+**Setup:** A high-profile trial opens — war crimes, heresy, or treason. The verdict could shatter whichever side loses. Evidence is contested. Witnesses disappear. Everyone with power has a reason to influence the outcome.
+
+**Outcomes:** The verdict lands and one faction absorbs the blow — or doesn't. If the faction breaks, its territory, assets, and people become contested. If it survives, it emerges radicalized.
+
+---
+
+## The Ronin Problem
+- **Scale:** regional
+- **Contributed by:** ai
+- **Themes:** war, politics, succession, honor
+
+**Setup:** A warrior order or professional guild is dissolved by decree — defunded, outlawed, or simply abandoned by its patron. Former members scatter. They are skilled, masterless, and without income.
+
+**Outcomes:** Some become mercenaries. Some become threats. Some quietly form a shadow organization waiting for leverage. The decree's author underestimated how many trained fighters it put loose in the world.
+
+---
+
+## Mass Desertion
+- **Scale:** regional
+- **Contributed by:** ai
+- **Themes:** war, politics, power, scarcity
+
+**Setup:** A major military force collapses from within. Soldiers abandon their posts en masse — driven by pay failure, moral crisis, or something they witnessed that was never reported. The collapse is fast.
+
+**Outcomes:** The power vacuum is immediate and violent. Neighboring factions move. The deserted soldiers do not disappear — they reorganize, surrender, or become a threat in their own right. Whoever held that military force held something real, and now it is gone.
+
+---
+
+## Smallfolk Seizure
+- **Scale:** local
+- **Contributed by:** ai
+- **Themes:** politics, war, power, scarcity
+
+**Setup:** A community of common people reaches a breaking point and seizes control of a local power structure — a lord's keep, a guild hall, a tax post. Against all expectations, they hold it.
+
+**Outcomes:** The world does not know what to do with this. Neighboring powers debate whether to crush it, ignore it, or use it. If it survives long enough, it becomes a symbol. Other communities watch to see what happens next.
+
+---
+
+## Ancient Map Surfaces
+- **Scale:** global
+- **Contributed by:** ai
+- **Themes:** ancient mystery, politics, trade, war
+
+**Setup:** A pre-history map emerges — authenticated or credibly claimed — showing the world looked radically different. Coastlines, territories, and sacred sites in the wrong places. Existing territorial claims rest on foundations that may not hold.
+
+**Outcomes:** Factions race to suppress, authenticate, or exploit it. Territorial disputes reopen. Religious institutions with geography-dependent doctrine face a crisis. Whoever controls the map controls the argument — for now.
+
+---
+
+## A Saint Is Murdered Publicly
+- **Scale:** regional
+- **Contributed by:** ai
+- **Themes:** religion, politics, war, power
+
+**Setup:** A beloved religious figure is assassinated in plain sight — during a sermon, a procession, or a public moment of peace. The killer's identity and motive are either unknown or immediately contested.
+
+**Outcomes:** The response fractures. Some want justice through law. Some want war. Some want to canonize the chaos the murder started. The faction that gets blamed — accurately or not — faces consequences before any investigation concludes.
+
+---
+
+## Mercenary Army Goes Rogue
+- **Scale:** regional
+- **Contributed by:** ai
+- **Themes:** war, politics, power
+
+**Setup:** A contracted military force stops obeying its employer. No defection to a rival — they simply stop. Their stated goals are opaque. They are well-equipped, experienced, and no longer anyone's problem to control.
+
+**Outcomes:** The employer is exposed and weakened. Other factions try to hire, destroy, or outmaneuver the force before it becomes entrenched. What the army actually wants — and whether it can be negotiated with — is the central question.
+
+---
+
+## River Dies
+- **Scale:** regional
+- **Contributed by:** ai
+- **Themes:** scarcity, politics, trade, war
+
+**Setup:** A major river dries up or permanently changes course — drought, magical interference, geological shift, or deliberate upstream diversion. Multiple civilizations built their economies and borders around it.
+
+**Outcomes:** Trade routes collapse. Agricultural regions face existential water scarcity. Borders drawn by the river's path are now meaningless or disputed. Whoever controls the new water source controls the region.
+
+---
