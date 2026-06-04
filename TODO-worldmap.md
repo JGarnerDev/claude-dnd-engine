@@ -11,6 +11,7 @@
 - **Mountains:** Done — ranges established with chain direction
 - **Rivers:** Done — flowing east/southeast off ranges, reach coast
 - **Lakes:** Done — placed at mountain bases and along river courses
+- **Hills:** In progress
 
 ---
 
@@ -23,6 +24,20 @@ Hills go **before biomes** — they frame the terrain shape that biome textures 
 - [ ] Steeper ranges (like the dramatic central peaks) have a narrow hill band; gentler ranges have a wider one
 - [ ] Old eroded ranges that have worn down over time become rolling hills — use this if you want ancient-feeling terrain
 - [ ] Roads and passes cut through hills, not over them — keep that in mind for later
+
+**Also consider: Plateaus**
+A plateau is a flat elevated area — like a table on top of hills. They sit above the surrounding land but aren't mountains. Good for isolated civilizations, ancient ruins, or dramatic cliff edges where the plateau drops off. Place them near ranges where the land lifts but doesn't peak into sharp ridges.
+
+---
+
+## Step 4c — Decide Climate Bands (do before biomes)
+
+This is still an open question and needs answering before Step 5. Climate band = how hot or cold each latitude is.
+
+- [ ] Is north hot or cold? Is south hot or cold? (pick one pole to be cold, or both)
+- [ ] Where is the equator roughly? — that band is always hot and wet regardless of wind
+- [ ] Mixed temperate world (most D&D settings) = hot equator, cold poles, temperate middle
+- [ ] This determines where jungle goes (equator), where tundra goes (poles), and where the temperate biomes fill in between
 
 ---
 
@@ -98,3 +113,35 @@ Do this last — it's cosmetic but makes the map feel real.
 - Deserts on the wet west side of mountains
 - A coast that's perfectly smooth with no bays, headlands, or inlets
 - Mountain clusters with no clear ridge direction (look like bumpy hills, not ranges)
+
+---
+
+## World Notes — Geography Consequences
+
+### Political
+- Separate landmasses = civilizations that developed in isolation — first contact between them is a major historical event, not gradual
+- Mountain ranges are hard political borders — kingdoms form on one side, rarely spanning both
+- Narrow sea passages between landmasses are the most fought-over territory on the map — whoever controls them controls everything
+- The right narrow island flanks a major sea lane — small nation, outsized political influence
+- The northern large continent is most likely to produce an empire that tries to dominate the others
+- Mountain passes are chokepoints — small kingdoms holding a single pass can punch far above their weight
+
+### Social
+- West coast peoples vs east coast peoples develop radically different cultures on the same landmass — wet/lush vs dry/sparse shapes values, religion, architecture, food
+- Mountain communities are insular and traditional — cut off from outside ideas
+- River valley settlements are cosmopolitan — rivers mix peoples together
+- The dramatic central peaks on the center continent are visible from enormous distances — likely sacred or feared across multiple cultures
+- Desert peoples develop nomadic or oasis-based societies, completely different from settled river farmers
+- Every landmass being an island means seafaring is universal, not specialized
+
+### Economic
+- Every major river mouth becomes a city — where interior wealth meets the sea
+- Mountain passes become toll points — whoever holds them taxes everything moving through
+- West coasts are agriculturally rich; east dry zones produce pastoral goods and desert luxury exports (minerals, rare animals, spices)
+- The internal seas are trade highways — moving between landmasses by sea is easier than crossing mountains overland
+- Desert regions must import food and export something rare — creates dependency on wetter neighbors
+- The narrow right island could be the wealthiest place on the map purely from transit fees
+
+### Big Picture
+- No single dominant trade route — several competing ones across different sea lanes
+- Produces a multipolar world: constant rivalry, proxy wars, shifting alliances rather than one empire swallowing everything
