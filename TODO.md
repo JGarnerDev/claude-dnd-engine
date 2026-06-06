@@ -4,17 +4,6 @@ Progress tracker for getting this project ready to generate sessions and run cam
 
 ---
 
-## Schemas
-*These files exist as placeholders. They need actual campaign content before session generation will be meaningful.*
-
-- [x] Make a biome schema (terrain types to shape flora, fauna, and logistics of a region) — added `biome` enum field to `location-region.md`
-- [x] Make a terrain feature schema (forests, rivers, roads, or anything on a map that effects the populations around them) — `meta/schemas/location-terrain-feature.md`
-- [x] Make a natural resource schema (what locations consume, including abrstract location, rarity, accessibility, trade) — `meta/schemas/resource.md`
-- [x] Make a culture schema (what certain peoples, factions, etc. from certain regions are generally shaped by) — `meta/schemas/culture.md`
-- [x] Make a gameplay mechanic schema (mini games that can constitute a session/mission, make .claude\commands\session.md aware of it) — `meta/mechanics/_template.md`; session command updated
-
----
-
 ## Meta Configuration
 *These files exist as placeholders. They need actual campaign content before session generation will be meaningful.*
 
@@ -28,36 +17,12 @@ Progress tracker for getting this project ready to generate sessions and run cam
 ## Data — Canonical D&D
 *Source material seeded from the 5e API or training knowledge. Forms the base creative pool.*
 
-- [x] Monsters — CR tags added as `cr/<decimal>` (1/4→cr/0.25, etc.) on all 435 monster files via `scripts/update-monster-cr-tags.ps1`; schema and tag registry updated
-- [x] Monsters — habitats converted from plain strings to `[[wiki-link]]` relations on all 433 non-empty files via `scripts/update-monster-habitats.ps1`; 26 generic habitat archetype entities created in `data/locations/` (9 wilderness, 4 dungeon, 1 city, 12 region/plane) via `scripts/seed-habitat-archetypes.ps1`
-- [x] Monsters — descriptions missing on 351 of 435 files (`description: ""`). Fill in 5 alphabetical batches (~70 each). For each: generate 1–2 sentence flavor descriptions and write them back.
-  - [x] Chunk A — Adult Black Dragon → Ettercap (A–Et)
-  - [x] Chunk B — Ettin → Grimlock (Et–G)
-  - [x] Chunk C — Guardian Naga → Myconid Sovereign (G–My)
-  - [x] Chunk D — Myconid Sprout → Slaad Tadpole (My–Sl)
-  - [x] Chunk E — Smoke Mephit → Yuan-ti Pureblood (Sm–Y)
-- [x] Monsters — new `monster` type added (`data/monsters/`, schema, tags, graph config); `creature` schema cleaned up (archetype field removed). Full MM seeded via `scripts/seed-monsters.ps1` (433 total files). Hand-crafted chunks 1-5 preserved. Seed in 5 chunks by campaign relevance:
-  - [x] Chunk 1 — Core Undead: Zombie, Skeleton, Ghoul, Ghast, Wight, Shadow, Specter, Wraith, Vampire Spawn
-  - [x] Chunk 2 — Wilderness Beasts: Wolf, Dire Wolf, Swarm of Bats, Giant Spider, Swarm of Ravens, Brown Bear
-  - [x] Chunk 3 — Humanoids & Cultists: Guard, Cultist, Cult Fanatic, Bandit, Scout, Scarecrow
-  - [x] Chunk 4 — Elite Undead & Horrors: Vampire, Strahd Zombie, Flesh Golem, Night Hag, Banshee, Death Knight
-  - [x] Chunk 5 — Dragons, Fiends, Stragglers: Nightmare, Imp, Young Silver Dragon, Revenant, Will-o'-Wisp
-- [x] Magic items — seeded `data/items/magic/` with 4 CoS artifacts (Sunsword, Holy Symbol of Ravenkind, Icon of Ravenloft, Tome of Strahd) + 7 canonical items (Bag of Holding, Cloak of Protection, Ring of Protection, Wand of Magic Missiles, Potion of Healing, Potion of Greater Healing, Sending Stones)
-- [x] Spells — created `meta/schemas/spell.md`, registered `spell` type + 9 school tags; seeded `data/spells/` with 280 spells (42 cantrips, 60 L1, 59 L2, 46 L3, 29 L4, 43 L5, 1 L6)
-- [x] feats — 42 PHB feats seeded in `data/feats/`; schema at `meta/schemas/feat.md`; graph color `#bdbdbd`
-- [ ] Monsters — Volo's Guide to Monsters (~109 new stat blocks). Seed in 4 alphabetical chunks via `scripts/seed-monsters-vgtm-chunk-*.py`. CRs/types from training knowledge — verify against book if precision needed.
-  - [x] Chunk A — Adult Oblex → Drow Shadowblade (25 monsters)
-  - [x] Chunk B — Duergar Hammerer → Guard Drake (26 monsters)
-  - [x] Chunk C — Hobgoblin Devastator → Orc Red Fang of Shargaas (28 monsters)
-  - [x] Chunk D — Quickling → Yuan-ti Pit Master (30 monsters)
-- [ ] Monsters — 5 new fields on all ~544 files: `weaknesses`, `resistances`, `immunities`, `legendary`, `movement`. Schema updated. 439 remaining after Chunk A. Script pattern: copy `scripts/update-monster-fields-chunk-a.py`, replace `MONSTER_DATA` dict and chunk filter line (`f[:-3] <= "Cult Fanatic"`). MM files have UTF-8 BOM — script already handles both BOM and non-BOM files via `utf-8-sig` detection.
-  - [x] Chunk A — Aarakocra → Cult Fanatic (A–Cu)
+- [ ] Monsters — 5 new fields on all ~544 files: `weaknesses`, `resistances`, `immunities`, `legendary`, `movement`. Schema updated. Script pattern: copy `scripts/update-monster-fields-chunk-a.py`, replace `MONSTER_DATA` dict and chunk filter line. MM files have UTF-8 BOM — script handles both BOM and non-BOM via `utf-8-sig` detection.
   - [ ] Chunk B — Cultist → Gnoll Fang of Yeenoghu (Cu–Gn)
   - [ ] Chunk C — Gnoll Pack Lord → Needle Blight (Go–N)
   - [ ] Chunk D — Night Hag → Scarecrow (Ni–Sc)
   - [ ] Chunk E — Sea Hag → Zombie (Se–Z)
-- [ ] skills
-
+- [ ] Skills
 
 ---
 
@@ -86,7 +51,6 @@ Progress tracker for getting this project ready to generate sessions and run cam
 ---
 
 ## Historian
-- [x] Party entity created: `historian/characters/parties/The Party.md` — skeleton only
 - [ ] Add detail to current party (`historian/characters/parties/The Party.md`) — formation story, reputation, goals
 - [ ] Prompt Claude with each player's backstory, allowing it to create new entities with DM's approval
 - [ ] Confirm unresolved details with DM/players — see reliability notes in each file
@@ -95,7 +59,6 @@ Progress tracker for getting this project ready to generate sessions and run cam
 ---
 
 ## Scheduler
-- [ ] Create **first act** now that campaign document exists. An act splits the whole campaign into a sort of "chapter", and has goals and leveling brackets. 
+- [ ] Create **first act** now that campaign document exists. An act splits the whole campaign into a sort of "chapter", and has goals and leveling brackets.
 - [ ] Create **first mission(s)** once the opening act is defined. A mission is a variable-sized story unit, with mini-goals that either contribute to the act, or can be completely side-quests.
 - [ ] Draft the **first session plan** once meta configuration and starting data are in place. Sessions are the times the players come together to play.
-
