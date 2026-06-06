@@ -1,16 +1,12 @@
 # World Map
 
-> **Draft — not canonical.** The world map is still in progress (see `TODO-worldmap.md`). Steps 9–11 (coastline detail, labeling, player contributions) are incomplete. Geographic positions, region names, and feature placements derived from these images are approximate and subject to change. Do not treat any detail as settled until Step 10 (Labeling) is complete.
+Labeling complete as of Jeff's naming questionnaire. Names are settled unless explicitly revised.
 
 ## Images
 
-- `world-base.jpg` — base world map (terrain, coastlines, mountains, rivers, deserts, forests)
-- `world-sky.jpg` — sky layer (orbital context visible — Slices, Islifts, Caldera position)
-- `world-land-names.jpg` — labeled land features (continents, sub-continents, mountain ranges, deserts, tundra, islands)
+- `world-land-names.jpg` — labeled land features (continents, sub-continents, mountain ranges, deserts, tundra, islands). primary orientation reference
+- `world-sky.jpg` — sky layer with Opticon's Fade labeled
 - `world-water-names.jpg` — labeled water features (oceans, seas, bays, channels)
-- `world-sky-land-names.png` — labeled sky features (Slice A, Slice B, Islift A–G)
-
-Use `world-sky.jpg` as the primary orientation reference. Use labeled variants when working on naming or placing entities.
 
 ## Grid Scale
 
@@ -28,11 +24,27 @@ Use `world-sky.jpg` as the primary orientation reference. Use labeled variants w
 
 ## Known Region Positions
 
-| Region | Col | Row | Draft |
+| Feature | Col | Row | Draft |
 |--------|-----|-----|-------|
-| River-Lake Region (TBD name) | ~5 | ~5 | `drafts/regions/river-lake-region.md` |
-
-*Add entries here as regions are defined.*
+| Erevast | ~5–10 | ~2–6 | `drafts/regions/Erevast.md` |
+| Karath Ut'll | ~2–4 | ~5–8 | `drafts/regions/Karath Ut'll.md` |
+| Hightalon | ~10–12 | ~3–5 | `drafts/regions/Hightalon.md` |
+| Solrath | ~7–9 | ~7–9 | `drafts/regions/Solrath.md` |
+| The Saltbreak Isles | ~11–12 | ~6–8 | `drafts/regions/The Saltbreak Isles.md` |
+| Oathmark | ~11 | ~2–3 | `drafts/regions/Oathmark.md` |
+| Opticon's Fade | ~1–2 | ~1–2 | `drafts/regions/Opticon's Fade.md` |
+| Ilurak Qeth | ~6–10 | ~11–13 | `drafts/regions/Ilurak Qeth.md` |
+| Gordrathi Mountains | ~5–7 | ~5–7 | `drafts/regions/Gordrathi Mountains.md` |
+| Watchwall Mountains | ~10–11 | ~4–5 | `drafts/regions/Watchwall Mountains.md` |
+| Jade Jaw Spikes | ~14–15 | ~4–6 | `drafts/regions/Jade Jaw Spikes.md` |
+| The Grey Fathers | ~8–9 | ~3–4 | `drafts/regions/The Grey Fathers.md` |
+| Azel Samarat | ~7–8 | ~6–7 | `drafts/regions/Azel Samarat.md` |
+| Ut'karr | ~2–3 | ~6–7 | `drafts/regions/Ut'karr.md` |
+| The Still Cold | ~3–11 | ~1–2 | `drafts/regions/The Still Cold.md` |
+| The Irongate | ~10–12 | ~4–5 | `drafts/regions/The Irongate.md` |
+| Essaur Bay | ~7–8 | ~8–9 | `drafts/regions/Essaur Bay.md` |
+| The Grey Crossing | ~9–10 | ~10–11 | `drafts/regions/The Grey Crossing.md` |
+| Veth's Gate | ~3–4 | ~7–8 | `drafts/regions/Veth's Gate.md` |
 
 ## Cosmology Notes
 
