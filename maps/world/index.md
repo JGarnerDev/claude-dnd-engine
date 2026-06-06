@@ -5,9 +5,12 @@
 ## Images
 
 - `world-base.jpg` — base world map (terrain, coastlines, mountains, rivers, deserts, forests)
-- `world-sky.jpg` — sky layer variant (same geography, space/orbital context visible)
+- `world-sky.jpg` — sky layer (orbital context visible — Slices, Islifts, Caldera position)
+- `world-land-names.jpg` — labeled land features (continents, sub-continents, mountain ranges, deserts, tundra, islands)
+- `world-water-names.jpg` — labeled water features (oceans, seas, bays, channels)
+- `world-sky-land-names.png` — labeled sky features (Slice A, Slice B, Islift A–G)
 
-Use `world-sky.jpg` as the primary reference for world map orientation — it includes the orbital features (Slices, Islifts, Caldera position).
+Use `world-sky.jpg` as the primary orientation reference. Use labeled variants when working on naming or placing entities.
 
 ## Grid Scale
 
