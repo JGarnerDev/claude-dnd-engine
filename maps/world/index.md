@@ -4,9 +4,8 @@ Labeling complete as of Jeff's naming questionnaire. Names are settled unless ex
 
 ## Images
 
-- `world-land-names.jpg` — labeled land features (continents, sub-continents, mountain ranges, deserts, tundra, islands). primary orientation reference
+- `world-names.jpg` — consolidated label map; all land features (continents, sub-continents, mountain ranges, deserts, tundra, islands) and water features (oceans, seas, bays, channels). primary orientation reference
 - `world-sky.jpg` — sky layer with Opticon's Fade labeled
-- `world-water-names.jpg` — labeled water features (oceans, seas, bays, channels)
 
 ## Grid Scale
 
