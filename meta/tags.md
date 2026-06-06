@@ -130,6 +130,8 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `culture` | culture entity | Entity type: shared customs, values, and practices of a people |
 | **mechanic** | | |
 | `mechanic` | mechanic file | Meta document: gameplay mechanic or structured mini-game |
+| **skill** | | |
+| `skill` | skill entity | Entity type: 5e skill — flat tag, no subtype |
 | **spell** | | |
 | `spell` | spell entity | Entity type: any 5e spell — parent tag for all spell schools |
 | `spell/abjuration` | spell entity | Spell school: abjuration |

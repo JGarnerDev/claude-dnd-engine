@@ -39,6 +39,7 @@ If a user provides form answers (structured or freeform), use the **Form → Fro
 | A rumor or piece of circulating information | `meta/schemas/rumor.md` |
 | A playable or world race | `meta/schemas/race.md` |
 | A character class | `meta/schemas/class.md` |
+| A skill (Acrobatics, Athletics, etc.) | `meta/schemas/skill.md` |
 | A player (real-world, core or cameo) | `meta/schemas/player.md` |
 | A terrain feature (river, road, mountain range, pass, lake) | `meta/schemas/location-terrain-feature.md` |
 | A natural resource (ore, timber, trade good, arcane material) | `meta/schemas/resource.md` |
