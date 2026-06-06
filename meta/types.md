@@ -45,4 +45,5 @@ Authoritative list of all valid `type` / `subtype` combinations. **Before declar
 | `resource` | — | `meta/schemas/resource.md` | `data/resources/` | `historian/resources/` |
 | `rumor` | — | `meta/schemas/rumor.md` | `data/rumors/` | `historian/rumors/` |
 | `session` | — | `meta/schemas/session.md` | `scheduler/sessions/` | `historian/sessions/` |
+| `skill` | — | `meta/schemas/skill.md` | `data/skills/` | `historian/skills/` |
 | `spell` | — | `meta/schemas/spell.md` | `data/spells/` | `historian/spells/` |

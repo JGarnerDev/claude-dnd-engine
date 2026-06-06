@@ -17,12 +17,12 @@ Progress tracker for getting this project ready to generate sessions and run cam
 ## Data — Canonical D&D
 *Source material seeded from the 5e API or training knowledge. Forms the base creative pool.*
 
-- [ ] Monsters — 5 new fields on all ~544 files: `weaknesses`, `resistances`, `immunities`, `legendary`, `movement`. Schema updated. Script pattern: copy `scripts/update-monster-fields-chunk-a.py`, replace `MONSTER_DATA` dict and chunk filter line. MM files have UTF-8 BOM — script handles both BOM and non-BOM via `utf-8-sig` detection.
-  - [ ] Chunk B — Cultist → Gnoll Fang of Yeenoghu (Cu–Gn)
-  - [ ] Chunk C — Gnoll Pack Lord → Needle Blight (Go–N)
-  - [ ] Chunk D — Night Hag → Scarecrow (Ni–Sc)
-  - [ ] Chunk E — Sea Hag → Zombie (Se–Z)
-- [ ] Skills
+- [x] Monsters — 5 new fields on all ~544 files: `weaknesses`, `resistances`, `immunities`, `legendary`, `movement`. Schema updated. Script pattern: copy `scripts/update-monster-fields-chunk-a.py`, replace `MONSTER_DATA` dict and chunk filter line. MM files have UTF-8 BOM — script handles both BOM and non-BOM via `utf-8-sig` detection.
+  - [x] Chunk B — Cultist → Gnoll Fang of Yeenoghu (Cu–Gn)
+  - [x] Chunk C — Gnoll Pack Lord → Needle Blight (Go–N)
+  - [x] Chunk D — Night Hag → Scarecrow (Ni–Sc)
+  - [x] Chunk E — Sea Hag → Zombie (Se–Z)
+- [x] Skills
 
 ---
 
