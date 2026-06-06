@@ -84,12 +84,13 @@ player: {player name if provided}
 
 Always write the questionnaire to `questionnaires/`. Name the file using kebab-case (lowercase, spaces → hyphens): `{player-kebab}-{name-kebab}.md` if both are known, `{player-kebab}-{type}.md` if no name, or `{name-kebab}.md` if no player. Report the path when done. The `--output` flag is now a no-op (output is always written).
 
-**Cameo/player type rules:**
-- Filename suffix: always `cameo` (not `player`) — e.g. `jonah-carson-cameo.md`
-- INGEST block: use `entity_type: player` (cameo is a role value, not a schema type)
+**Player type rules (cameo and patron — merged questionnaire):**
+- Filename suffix: always `player` — e.g. `jonah-carson-player.md`
+- INGEST block: use `entity_type: player`; role is determined from the filled "How do you want to participate?" answer
 - INGEST action: `Filled questionnaire — run ingestion. Write to meta/players/{Full Name}.md.`
-- Title: `# {Full Name} — Cameo Player Registration`
-- Tagline: `*For {First Name} — fill out what you know, leave blanks for anything undecided.*`
+- Title: `# {Full Name} — Player Registration`
+- Tagline: `*For {First Name} — fill out what applies to you, leave the rest blank.*`
+- Always generate the merged template from the schema (both "If Cameo" and "If Patron" sections present); the player self-selects their path
 
 **Answer areas (all questionnaire types):**
 After every question, add a blank blockquote line for the player to fill in:
