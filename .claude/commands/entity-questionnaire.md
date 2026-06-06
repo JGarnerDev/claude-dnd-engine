@@ -85,7 +85,7 @@ player: {player name if provided}
 Always write the questionnaire to `questionnaires/`. Name the file using kebab-case (lowercase, spaces → hyphens): `{player-kebab}-{name-kebab}.md` if both are known, `{player-kebab}-{type}.md` if no name, or `{name-kebab}.md` if no player. Report the path when done. The `--output` flag is now a no-op (output is always written).
 
 **Player type rules (cameo and patron — merged questionnaire):**
-- Filename suffix: always `player` — e.g. `jonah-carson-player.md`
+- Filename suffix: `cameo` when invoked as cameo, `patron` when invoked as patron, `player` if role unspecified — e.g. `jonah-carson-cameo.md`
 - INGEST block: use `entity_type: player`; role is determined from the filled "How do you want to participate?" answer
 - INGEST action: `Filled questionnaire — run ingestion. Write to meta/players/{Full Name}.md.`
 - Title: `# {Full Name} — Player Registration`
