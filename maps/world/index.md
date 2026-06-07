@@ -2,7 +2,7 @@
 
 ## Status
 
-Labeling complete as of Jeff's naming questionnaire. Names are settled unless explicitly revised.
+Updated 2026-06-07: added Bayward River, Deepwend River, Thelindra River (around Bay B); Plains A renamed to The Dustbreak Plains.
 
 ## Images
 
@@ -31,11 +31,11 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 
 | Tile | File | Cols | Rows | Key content |
 |---|---|---|---|---|
-| Northwest | `tiles/nw.png` | 1–6 | 1–5 | The Caldera, Sub Continent C, Mountains B/C/D/O/P |
+| Northwest | `tiles/nw.png` | 1–6 | 1–5 | The Caldera, Sub Continent C, Mountains B/C/D/O/P, Bayward River, Deepwend River, Thelindra River |
 | North | `tiles/n.png` | 5–12 | 1–5 | Erevast, Still Cold Sea, Tundra A, Grey Fathers, Mountains M |
 | Northeast | `tiles/ne.png` | 10–16 | 1–5 | Hightalon, Oathmark, Continent G north, Watchwall, Virethorn |
 | West | `tiles/w.png` | 1–6 | 4–9 | Karath Ut'll, Ocean A, Islands A/B, Channel F/I |
-| Center | `tiles/c.png` | 5–12 | 4–9 | Continent B, Gordrathi, Azel Samarat, Essaur Bay, Sea C |
+| Center | `tiles/c.png` | 5–12 | 4–9 | Continent B, Gordrathi, Azel Samarat, Essaur Bay, Sea C, The Dustbreak Plains |
 | East | `tiles/e.png` | 10–16 | 4–9 | Sub Continent A, Continent G, Sea B, Channel E |
 | Southwest | `tiles/sw.png` | 1–6 | 8–13 | Sea F, Continent C, Islands A/J, Channel F lower |
 | South | `tiles/s.png` | 5–12 | 8–13 | Channel H, Islands E/J, Continent E north, Mountains H |
@@ -64,6 +64,10 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 | Essaur Bay | ~7–8 | ~8–9 | `drafts/regions/Essaur Bay.md` |
 | The Grey Crossing | ~9–10 | ~10–11 | `drafts/regions/The Grey Crossing.md` |
 | Veth's Gate | ~3–4 | ~7–8 | `drafts/regions/Veth's Gate.md` |
+| The Dustbreak Plains | ~6–8 | ~5–6 | `drafts/regions/The Dustbreak Plains.md` |
+| Bayward River | ~4–5 | ~3–4 | — |
+| Deepwend River | ~5 | ~3–4 | — |
+| Thelindra River | ~5 | ~4–5 | — |
 
 ## Cosmology Notes
 
