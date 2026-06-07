@@ -27,13 +27,23 @@ When in doubt: look at the map again.
 
 Check `maps/world/` for the world map image before asking the DM to share one — it may already be on disk (`world-sky.jpg` is the primary reference). Check `maps/regions/{region-slug}/` for an existing region map.
 
-If images are not on disk, ask the DM to share:
-1. **World map** — the full planetary/continental map
-2. **Region map** — the zoomed-in area being detailed (with numbered markers if locations are in scope)
+**If no region map is on disk, attempt an automatic crop before asking the DM:**
+```
+.\scripts\map-crop.ps1 -Feature "<region-name>" -Markers
+```
+- If the feature is in the index, this saves a permanent crop to `maps/locations/<slug>-map.png` (base) and `maps/locations/<slug>-markers.png` (city markers). Use both as the region reference.
+- If the feature is not in the index, fall back to a relevant world tile (see `maps/world/index.md`). Also read the corresponding `tiles/markers-{name}.png` for dot coverage. If the tile lacks sufficient detail, run a temp crop by col/row bounds:
+  ```
+  .\scripts\map-crop.ps1 -ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n> -Markers -Temp
+  ```
+  Then read `maps/world/temp-crop.png` and `maps/world/temp-markers.png`, then delete both.
+- Only ask the DM to share an image if all automated options fail to produce a readable crop.
 
-If only one image is provided, ask which it is and request the other.
+**After obtaining the base crop, read the markers crop.** Count visible red dots — each is an unnamed, undetailed city. Note the count; it informs Phase 2 scope.
 
-Once both are shared:
+If only one image is available (world map but no region crop, or vice versa), proceed with what's on disk — note the gap and work from the world tile for geography analysis.
+
+Once map references are resolved:
 
 **Step 1a — Locate on world map.**
 Identify where the region sits. Ask the DM to point it out (grid column/row, or a landmark) if not obvious. Note position relative to mountain ranges, ocean coasts, and major landmasses.
@@ -64,7 +74,9 @@ Ask the DM: **"What needs defining in this region?"**
 
 They may want: city locations, trade routes, wilderness areas, political borders, all of the above, or something else.
 
-If the region map has no clear markers for the things that need defining, suggest: *"Add red numbered markers to the map image for each [city/location/point of interest] you want detailed — that gives us a shared reference for everything that follows."*
+**If the markers crop revealed red dots**, surface the count now: *"The city-markers layer shows N undetailed cities in this region. Do you want to work all of them, or focus on a subset?"* Dots from the markers layer serve as the base location set — the DM only needs to add numbered markers to the map image if they want locations that are **not** already marked.
+
+If no markers layer is available and the region map has no clear markers, suggest: *"Add red numbered markers to the map image for each [city/location/point of interest] you want detailed — that gives us a shared reference for everything that follows."*
 
 Once scope and markers are confirmed, **establish scale:**
 - Estimate how many world-map grid squares the region covers by comparing the region image to the world map grid. A rough fraction (0.25, 0.5, 1.0) is enough.

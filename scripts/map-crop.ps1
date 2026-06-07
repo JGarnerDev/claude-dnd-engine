@@ -2,11 +2,14 @@
 # Crop a region from world-names.png by feature name (looked up in index) or by explicit col/row.
 # Saves permanent crops to maps/locations/<slug>-map.png.
 # Saves temp crops to maps/world/temp-crop.png (caller must delete).
+# -Markers: also crop city-markers.png to same bounds -> <slug>-markers.png or temp-markers.png
 #
 # Usage:
 #   .\scripts\map-crop.ps1 -Feature "Erevast"
+#   .\scripts\map-crop.ps1 -Feature "Erevast" -Markers
 #   .\scripts\map-crop.ps1 -Feature "Erevast" -Margin 500
 #   .\scripts\map-crop.ps1 -ColMin 5 -ColMax 10 -RowMin 2 -RowMax 6
+#   .\scripts\map-crop.ps1 -ColMin 5 -ColMax 10 -RowMin 2 -RowMax 6 -Markers
 #   .\scripts\map-crop.ps1 -ColMin 5 -ColMax 10 -RowMin 2 -RowMax 6 -Output ".\maps\locations\erevast-map.png"
 
 param(
@@ -17,7 +20,8 @@ param(
     [int]$RowMax      = 0,
     [int]$Margin      = 300,
     [string]$Output   = "",
-    [switch]$Temp               # Save as temp-crop.png instead of maps/locations/
+    [switch]$Temp,              # Save as temp-crop.png instead of maps/locations/
+    [switch]$Markers            # Also crop city-markers.png to same bounds
 )
 
 $indexFile   = ".\maps\world\index.md"
@@ -86,3 +90,26 @@ crop = img.crop(($left, $top, $right, $bottom))
 crop.save(r'$absOutput')
 print(f'Saved {crop.size[0]}x{crop.size[1]}px -> $absOutput')
 "@
+
+# Optionally crop city-markers.png to same bounds
+if ($Markers) {
+    $markersSource = ".\maps\world\city-markers.png"
+    if (-not (Test-Path $markersSource)) {
+        Write-Warning "city-markers.png not found at $markersSource — skipping markers crop"
+    } else {
+        if ($Temp -or $Feature -eq "") {
+            $markersOutput = ".\maps\world\temp-markers.png"
+        } else {
+            $slug = $Feature.ToLower() -replace "[^a-z0-9]+" , "-" -replace "-+", "-" -replace "^-|-$", ""
+            $markersOutput = ".\maps\locations\$slug-markers.png"
+        }
+        $absMarkersSource = Resolve-Path $markersSource
+        python -c @"
+from PIL import Image
+img = Image.open(r'$absMarkersSource')
+crop = img.crop(($left, $top, $right, $bottom))
+crop.save(r'$markersOutput')
+print(f'Markers: {crop.size[0]}x{crop.size[1]}px -> $markersOutput')
+"@
+    }
+}
