@@ -1,4 +1,4 @@
-# monster-lookup.ps1 -- filter monsters by CR, creature type, and/or habitat
+﻿# monster-lookup.ps1 -- filter monsters by CR, creature type, and/or habitat
 # Reads frontmatter only. Replaces manual Glob + Read loops over data/monsters/.
 # Usage: .\scripts\monster-lookup.ps1 [-Type <aberration|undead|...>] [-CRMin <n>] [-CRMax <n>] [-Habitat <cave|forest|...>]
 

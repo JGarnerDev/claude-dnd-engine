@@ -1,4 +1,4 @@
-# naming-status.ps1
+﻿# naming-status.ps1
 # Scan questionnaires/world-naming.md and report named vs. unnamed entries by section.
 
 param(

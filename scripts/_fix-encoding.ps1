@@ -1,4 +1,4 @@
-# Fix encoding corruption in monster description fields.
+﻿# Fix encoding corruption in monster description fields.
 # The CR/habitat update scripts ran Get-Content without -Encoding UTF8,
 # causing UTF-8 multibyte sequences to be read as CP1252 and re-written
 # as garbled UTF-8. This script reverses the damage.

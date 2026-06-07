@@ -1,4 +1,4 @@
-# seed-monsters.ps1 - Seeds data/monsters/ with all Monster Manual templates
+﻿# seed-monsters.ps1 - Seeds data/monsters/ with all Monster Manual templates
 # Skips files that already exist. Safe to re-run.
 # Usage: .\scripts\seed-monsters.ps1 [-WhatIf]
 

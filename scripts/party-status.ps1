@@ -1,4 +1,4 @@
-# party-status.ps1 -- show all PCs from historian + afflictions from campaign file
+﻿# party-status.ps1 -- show all PCs from historian + afflictions from campaign file
 # Usage: .\scripts\party-status.ps1
 
 $root = Resolve-Path "$PSScriptRoot\.."
