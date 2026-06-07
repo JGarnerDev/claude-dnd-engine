@@ -36,7 +36,7 @@ if ($Feature -ne "") {
     $lines = Get-Content $indexFile
     $found = $false
     foreach ($line in $lines) {
-        # Match table rows: | Feature | ~colMin–colMax | ~rowMin–rowMax | ...
+        # Match table rows: | Feature | ~colMin-colMax | ~rowMin-rowMax | ...
         if ($line -match "\|\s*$([regex]::Escape($Feature))\s*\|\s*~?(\d+)[^\d]*(\d*)\s*\|\s*~?(\d+)[^\d]*(\d*)\s*\|") {
             $ColMin = [int]$matches[1]
             $ColMax = if ($matches[2] -ne "") { [int]$matches[2] } else { $ColMin }

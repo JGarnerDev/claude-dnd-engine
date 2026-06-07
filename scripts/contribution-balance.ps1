@@ -1,4 +1,4 @@
-# contribution-balance.ps1 — show contributed_by counts per player across ./data and ./historian
+# contribution-balance.ps1 -- show contributed_by counts per player across ./data and ./historian
 # Usage: .\scripts\contribution-balance.ps1
 
 $repoRoot = Resolve-Path "$PSScriptRoot\.."

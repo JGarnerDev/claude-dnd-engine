@@ -16,7 +16,7 @@ function Write-Entity {
     Write-Host "  created: $(Split-Path $path -Leaf)"
 }
 
-# ── WILDERNESS ─────────────────────────────────────────────────────────────────
+# -- WILDERNESS -----------------------------------------------------------------
 
 $wildernessDir = Join-Path $root "data\locations\wilderness"
 
@@ -33,7 +33,7 @@ tags:
   - location/wilderness/forest
 region: Various
 terrain: forest
-description: Generic forested habitat — ancient woods, dark thickets, and woodland environments.
+description: Generic forested habitat -- ancient woods, dark thickets, and woodland environments.
 ---
 
 Generic forested habitat archetype. Covers ancient forests, dark forests, haunted forests, magical groves, and woodland environments.
@@ -51,7 +51,7 @@ tags:
   - location/wilderness
 region: Various
 terrain: plains
-description: Generic open-land habitat — grasslands, savannas, fields, farmland, and rolling hills.
+description: Generic open-land habitat -- grasslands, savannas, fields, farmland, and rolling hills.
 ---
 
 Generic open-land habitat archetype. Covers grasslands, savannas, fields, farmland, and open terrain.
@@ -69,7 +69,7 @@ tags:
   - location/wilderness
 region: Various
 terrain: desert
-description: Generic arid habitat — deserts, badlands, lava fields, and sandy wastes.
+description: Generic arid habitat -- deserts, badlands, lava fields, and sandy wastes.
 ---
 
 Generic arid habitat archetype. Covers deserts, badlands, volcanic terrain, and sandy wastes.
@@ -87,7 +87,7 @@ tags:
   - location/wilderness
 region: Various
 terrain: other
-description: Generic frozen habitat — arctic wastes, tundra, glaciers, and frozen wilderness.
+description: Generic frozen habitat -- arctic wastes, tundra, glaciers, and frozen wilderness.
 ---
 
 Generic frozen habitat archetype. Covers arctic terrain, tundra, glaciers, and cold wastelands.
@@ -105,7 +105,7 @@ tags:
   - location/wilderness
 region: Various
 terrain: mountain
-description: Generic highland habitat — mountains, peaks, passes, hills, cliffs, and rocky terrain.
+description: Generic highland habitat -- mountains, peaks, passes, hills, cliffs, and rocky terrain.
 ---
 
 Generic highland habitat archetype. Covers mountains, mountain passes, high peaks, hills, cliffs, and rocky terrain.
@@ -123,7 +123,7 @@ tags:
   - location/wilderness
 region: Various
 terrain: coast
-description: Generic coastal habitat — beaches, sea cliffs, tidal pools, reefs, and shorelines.
+description: Generic coastal habitat -- beaches, sea cliffs, tidal pools, reefs, and shorelines.
 ---
 
 Generic coastal habitat archetype. Covers beaches, sea cliffs, tidal pools, coral reefs, islands, and shorelines.
@@ -141,7 +141,7 @@ tags:
   - location/wilderness
 region: Various
 terrain: other
-description: Generic aquatic habitat — oceans, seas, lakes, rivers, and underwater environments.
+description: Generic aquatic habitat -- oceans, seas, lakes, rivers, and underwater environments.
 ---
 
 Generic aquatic habitat archetype. Covers oceans, deep seas, lakes, rivers, underwater caves, and aquatic environments.
@@ -159,7 +159,7 @@ tags:
   - location/wilderness
 region: Various
 terrain: swamp
-description: Generic wetland habitat — swamps, bogs, marshes, fens, and blighted wetlands.
+description: Generic wetland habitat -- swamps, bogs, marshes, fens, and blighted wetlands.
 ---
 
 Generic wetland habitat archetype. Covers swamps, marshes, bogs, and blighted wetland environments.
@@ -177,13 +177,13 @@ tags:
   - location/wilderness
 region: Various
 terrain: other
-description: Generic tropical habitat — jungles, tropical forests, and dense equatorial wilderness.
+description: Generic tropical habitat -- jungles, tropical forests, and dense equatorial wilderness.
 ---
 
 Generic tropical habitat archetype. Covers jungles and tropical forest environments.
 '@
 
-# ── DUNGEONS ──────────────────────────────────────────────────────────────────
+# -- DUNGEONS ------------------------------------------------------------------
 
 $dungeonDir = Join-Path $root "data\locations\dungeons"
 
@@ -201,7 +201,7 @@ location: Various
 origin: Natural cavern system
 current_threat: Various
 hook: Exploration or resource extraction
-description: Generic cave habitat — natural caverns, underground chambers, and subterranean spaces.
+description: Generic cave habitat -- natural caverns, underground chambers, and subterranean spaces.
 ---
 
 Generic cave habitat archetype. Covers caves, caverns, grottos, underground lakes, and natural subterranean spaces.
@@ -221,7 +221,7 @@ location: Various
 origin: Constructed or adapted underground complex
 current_threat: Various
 hook: Exploration, rescue, or objective recovery
-description: Generic dungeon habitat — constructed underground complexes, mines, sewers, tunnels, and labyrinths.
+description: Generic dungeon habitat -- constructed underground complexes, mines, sewers, tunnels, and labyrinths.
 ---
 
 Generic dungeon habitat archetype. Covers constructed dungeons, mines, sewers, underground passages, labyrinths, and fortified subterranean complexes.
@@ -242,7 +242,7 @@ location: Various
 origin: Abandoned settlement, fortress, or temple
 current_threat: Various
 hook: Exploration, salvage, or historical investigation
-description: Generic ruins habitat — collapsed structures, haunted manors, crumbling fortresses, and abandoned temples.
+description: Generic ruins habitat -- collapsed structures, haunted manors, crumbling fortresses, and abandoned temples.
 ---
 
 Generic ruins habitat archetype. Covers ancient ruins, haunted manors, ruined fortresses, abandoned temples, and crumbling structures.
@@ -262,13 +262,13 @@ location: Various
 origin: Burial site or mortuary complex
 current_threat: Undead inhabitants
 hook: Treasure recovery or undead clearance
-description: Generic burial habitat — tombs, crypts, graveyards, mausoleums, and burial chambers.
+description: Generic burial habitat -- tombs, crypts, graveyards, mausoleums, and burial chambers.
 ---
 
 Generic burial habitat archetype. Covers tombs, crypts, graveyards, catacombs, and burial sites.
 '@
 
-# ── CITIES ────────────────────────────────────────────────────────────────────
+# -- CITIES --------------------------------------------------------------------
 
 $cityDir = Join-Path $root "data\locations\cities"
 
@@ -284,13 +284,13 @@ tags:
   - location/city
 global_location: Various
 purpose: other
-description: Generic urban habitat — cities, towns, villages, and settled population centers.
+description: Generic urban habitat -- cities, towns, villages, and settled population centers.
 ---
 
 Generic urban habitat archetype. Covers cities, towns, villages, urban districts, and settled population centers.
 '@
 
-# ── REGIONS (PLANES) ──────────────────────────────────────────────────────────
+# -- REGIONS (PLANES) ----------------------------------------------------------
 
 $regionDir = Join-Path $root "data\locations\regions"
 
@@ -304,7 +304,7 @@ state: contested
 tags:
   - location
   - location/region
-geography: A vast subterranean world beneath the surface — lightless tunnels, underground seas, and cities carved into stone.
+geography: A vast subterranean world beneath the surface -- lightless tunnels, underground seas, and cities carved into stone.
 controlling_faction: Unknown
 description: The vast subterranean world beneath the surface, home to drow, duergar, mind flayers, and other creatures of the deep.
 ---
@@ -322,12 +322,12 @@ state: stable
 tags:
   - location
   - location/region
-geography: Nine layers of lawful evil — from the frozen fields of Stygia to the burning courts of Avernus and Nessus below.
+geography: Nine layers of lawful evil -- from the frozen fields of Stygia to the burning courts of Avernus and Nessus below.
 controlling_faction: Unknown
-description: The Nine Hells of Baator — nine layers of lawful evil ruled by archdevils, dominated by Asmodeus.
+description: The Nine Hells of Baator -- nine layers of lawful evil ruled by archdevils, dominated by Asmodeus.
 ---
 
-The Nine Hells of Baator — nine layers of lawful evil ruled by archdevils and their legions. Home to devils, damned souls, and those who bargain with power.
+The Nine Hells of Baator -- nine layers of lawful evil ruled by archdevils and their legions. Home to devils, damned souls, and those who bargain with power.
 '@
 
 Write-Entity (Join-Path $regionDir "Abyss.md") @'
@@ -340,12 +340,12 @@ state: contested
 tags:
   - location
   - location/region
-geography: Infinite layers of chaotic evil — demonic realms ranging from volcanic hellscapes to endless wastelands.
+geography: Infinite layers of chaotic evil -- demonic realms ranging from volcanic hellscapes to endless wastelands.
 controlling_faction: Unknown
-description: The Infinite Layers of the Abyss — endless realms of chaotic evil ruled by demon lords.
+description: The Infinite Layers of the Abyss -- endless realms of chaotic evil ruled by demon lords.
 ---
 
-The Infinite Layers of the Abyss — endless demonic realms of chaos and destruction. Each layer is ruled (or contested) by a demon lord.
+The Infinite Layers of the Abyss -- endless demonic realms of chaos and destruction. Each layer is ruled (or contested) by a demon lord.
 '@
 
 Write-Entity (Join-Path $regionDir "Feywild.md") @'
@@ -358,12 +358,12 @@ state: stable
 tags:
   - location
   - location/region
-geography: A mirror of the mortal world suffused with wild magic — colors brighter, seasons sharper, and nature untamed.
+geography: A mirror of the mortal world suffused with wild magic -- colors brighter, seasons sharper, and nature untamed.
 controlling_faction: Unknown
-description: The Feywild — an echo of the mortal plane suffused with fey magic, emotion, and primordial nature.
+description: The Feywild -- an echo of the mortal plane suffused with fey magic, emotion, and primordial nature.
 ---
 
-The Feywild — a mirror realm of the mortal world, suffused with raw magic and fey emotion. Home to fey courts, archfey, and creatures of wild nature.
+The Feywild -- a mirror realm of the mortal world, suffused with raw magic and fey emotion. Home to fey courts, archfey, and creatures of wild nature.
 '@
 
 Write-Entity (Join-Path $regionDir "Elemental Planes.md") @'
@@ -376,12 +376,12 @@ state: contested
 tags:
   - location
   - location/region
-geography: Four elemental realms — the Plane of Fire, Air, Earth, and Water — surrounding the Elemental Chaos at their confluence.
+geography: Four elemental realms -- the Plane of Fire, Air, Earth, and Water -- surrounding the Elemental Chaos at their confluence.
 controlling_faction: Unknown
-description: The Inner Planes of elemental matter — vast realms of pure fire, air, earth, and water.
+description: The Inner Planes of elemental matter -- vast realms of pure fire, air, earth, and water.
 ---
 
-The Inner Planes — vast realms of elemental matter. The Plane of Fire blazes endlessly, the Plane of Air stretches to infinite sky, the Plane of Earth churns with stone, and the Plane of Water drowns all.
+The Inner Planes -- vast realms of elemental matter. The Plane of Fire blazes endlessly, the Plane of Air stretches to infinite sky, the Plane of Earth churns with stone, and the Plane of Water drowns all.
 '@
 
 Write-Entity (Join-Path $regionDir "Astral Plane.md") @'
@@ -394,12 +394,12 @@ state: frontier
 tags:
   - location
   - location/region
-geography: A silvery void connecting the material world to the outer planes — drifting in timeless suspension.
+geography: A silvery void connecting the material world to the outer planes -- drifting in timeless suspension.
 controlling_faction: Unknown
-description: The Astral Plane — a silver void of psychic matter connecting the Material Plane to the Outer Planes.
+description: The Astral Plane -- a silver void of psychic matter connecting the Material Plane to the Outer Planes.
 ---
 
-The Astral Plane — a silver void of psychic matter and drifting god-corpses. Githyanki roam its expanses, and travelers may find portals to any outer plane.
+The Astral Plane -- a silver void of psychic matter and drifting god-corpses. Githyanki roam its expanses, and travelers may find portals to any outer plane.
 '@
 
 Write-Entity (Join-Path $regionDir "Limbo.md") @'
@@ -412,12 +412,12 @@ state: contested
 tags:
   - location
   - location/region
-geography: An ever-shifting realm of pure chaos — matter and energy collide and reform without logic or pattern.
+geography: An ever-shifting realm of pure chaos -- matter and energy collide and reform without logic or pattern.
 controlling_faction: Unknown
-description: Limbo — the Ever-Changing Chaos, a realm of pure chaotic matter where form is temporary and reason fails.
+description: Limbo -- the Ever-Changing Chaos, a realm of pure chaotic matter where form is temporary and reason fails.
 ---
 
-Limbo — the Ever-Changing Chaos. A realm where matter and energy swirl in constant flux. Home to githzerai monasteries and slaadi, where only the strong-willed can impose form on the chaos.
+Limbo -- the Ever-Changing Chaos. A realm where matter and energy swirl in constant flux. Home to githzerai monasteries and slaadi, where only the strong-willed can impose form on the chaos.
 '@
 
 Write-Entity (Join-Path $regionDir "Gehenna.md") @'
@@ -430,12 +430,12 @@ state: stable
 tags:
   - location
   - location/region
-geography: Four volcanic mountains suspended in a void — the realm of evil neutrality where yugoloths broker their bloody contracts.
+geography: Four volcanic mountains suspended in a void -- the realm of evil neutrality where yugoloths broker their bloody contracts.
 controlling_faction: Unknown
-description: Gehenna — four volcanic mountains in a void, home to yugoloths and the neutral evil powers.
+description: Gehenna -- four volcanic mountains in a void, home to yugoloths and the neutral evil powers.
 ---
 
-Gehenna — four great volcanic mountains suspended in a void of ash and fire. Home to yugoloths who broker contracts between devils and demons, and the birthplace of mercenary evil.
+Gehenna -- four great volcanic mountains suspended in a void of ash and fire. Home to yugoloths who broker contracts between devils and demons, and the birthplace of mercenary evil.
 '@
 
 Write-Entity (Join-Path $regionDir "Celestial Planes.md") @'
@@ -448,12 +448,12 @@ state: stable
 tags:
   - location
   - location/region
-geography: The upper planes of good alignment — Mount Celestia, Elysium, Arborea, and the Beastlands among them.
+geography: The upper planes of good alignment -- Mount Celestia, Elysium, Arborea, and the Beastlands among them.
 controlling_faction: Unknown
-description: The Upper Planes — realms of good alignment, divine light, and celestial order.
+description: The Upper Planes -- realms of good alignment, divine light, and celestial order.
 ---
 
-The Upper Planes — realms of good alignment where celestials dwell and souls of the virtuous rest. Includes Mount Celestia, Elysium, Arborea, and Bytopia.
+The Upper Planes -- realms of good alignment where celestials dwell and souls of the virtuous rest. Includes Mount Celestia, Elysium, Arborea, and Bytopia.
 '@
 
 Write-Entity (Join-Path $regionDir "Far Realm.md") @'
@@ -466,12 +466,12 @@ state: frontier
 tags:
   - location
   - location/region
-geography: An alien realm beyond the outer planes — incomprehensible geometry and maddening truths lie beyond the edge of reality.
+geography: An alien realm beyond the outer planes -- incomprehensible geometry and maddening truths lie beyond the edge of reality.
 controlling_faction: Unknown
-description: The Far Realm — an alien dimension beyond the cosmology, source of aberrations and incomprehensible horror.
+description: The Far Realm -- an alien dimension beyond the cosmology, source of aberrations and incomprehensible horror.
 ---
 
-The Far Realm — an alien dimension where geometry breaks down and sanity fails. Source of aberrations, mind flayers, and cosmic horror that defies mortal comprehension.
+The Far Realm -- an alien dimension where geometry breaks down and sanity fails. Source of aberrations, mind flayers, and cosmic horror that defies mortal comprehension.
 '@
 
 Write-Entity (Join-Path $regionDir "Mechanus.md") @'
@@ -484,12 +484,12 @@ state: stable
 tags:
   - location
   - location/region
-geography: An infinite realm of interlocking clockwork — perfect order maintained by modrons under the Primus.
+geography: An infinite realm of interlocking clockwork -- perfect order maintained by modrons under the Primus.
 controlling_faction: Unknown
-description: Mechanus — the Clockwork Nirvana, a realm of perfect law and order maintained by modron hierarchies.
+description: Mechanus -- the Clockwork Nirvana, a realm of perfect law and order maintained by modron hierarchies.
 ---
 
-Mechanus — the Clockwork Nirvana. An infinite realm of interlocking gears and perfect law, governed by modrons under the Primus. Where law is absolute and chaos cannot exist.
+Mechanus -- the Clockwork Nirvana. An infinite realm of interlocking gears and perfect law, governed by modrons under the Primus. Where law is absolute and chaos cannot exist.
 '@
 
 Write-Entity (Join-Path $regionDir "Ethereal Plane.md") @'
@@ -502,12 +502,12 @@ state: frontier
 tags:
   - location
   - location/region
-geography: A misty border realm overlapping the material world — travelers move unseen through physical space.
+geography: A misty border realm overlapping the material world -- travelers move unseen through physical space.
 controlling_faction: Unknown
-description: The Ethereal Plane — a misty border realm that overlaps the material plane, used for travel, haunting, and planar transitions.
+description: The Ethereal Plane -- a misty border realm that overlaps the material plane, used for travel, haunting, and planar transitions.
 ---
 
-The Ethereal Plane — a misty border dimension that overlaps the material world. Ghosts haunt it, phase spiders stalk it, and travelers pass through physical walls unseen.
+The Ethereal Plane -- a misty border dimension that overlaps the material world. Ghosts haunt it, phase spiders stalk it, and travelers pass through physical walls unseen.
 '@
 
 Write-Host ""

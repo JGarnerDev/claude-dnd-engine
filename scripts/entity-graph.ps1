@@ -1,4 +1,4 @@
-﻿# entity-graph.ps1 — show 1-hop relation graph for a named entity
+﻿# entity-graph.ps1 -- show 1-hop relation graph for a named entity
 # Usage: .\scripts\entity-graph.ps1 -Name "Strahd Von Zarovich"
 # Searches both ./data and ./historian
 

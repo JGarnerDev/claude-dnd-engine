@@ -1,4 +1,4 @@
-# party-status.ps1 — show all PCs from historian + afflictions from campaign file
+# party-status.ps1 -- show all PCs from historian + afflictions from campaign file
 # Usage: .\scripts\party-status.ps1
 
 $root = Resolve-Path "$PSScriptRoot\.."
@@ -67,7 +67,7 @@ foreach ($file in $pcFiles) {
     Write-Host "    State: " -ForegroundColor Gray -NoNewline
     Write-Host $state -ForegroundColor $stateColor
 
-    # Affliction lookup — try by name and by known aliases
+    # Affliction lookup -- try by name and by known aliases
     $affliction = $null
     foreach ($key in $afflictions.Keys) {
         if ($key -ilike "*$name*" -or $name -ilike "*$key*") {

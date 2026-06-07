@@ -1,4 +1,4 @@
-﻿# session-state.ps1 â€” dump current campaign/act/mission/session state
+# session-state.ps1 â��" dump current campaign/act/mission/session state
 # Usage: .\scripts\session-state.ps1
 
 $root = Resolve-Path "$PSScriptRoot\.."
