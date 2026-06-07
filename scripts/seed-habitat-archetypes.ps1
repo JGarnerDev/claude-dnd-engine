@@ -1,4 +1,4 @@
-param([switch]$WhatIf)
+﻿param([switch]$WhatIf)
 
 $root   = Resolve-Path "$PSScriptRoot\.."
 $created = 0

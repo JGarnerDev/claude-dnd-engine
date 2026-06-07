@@ -1,4 +1,4 @@
-# add-monster-descriptions.ps1 -- generate monster descriptions via claude CLI
+﻿# add-monster-descriptions.ps1 -- generate monster descriptions via claude CLI
 # Skips files where description is already filled.
 # Usage: .\scripts\add-monster-descriptions.ps1 [-Filter <name>] [-Count <n>] [-DryRun]
 

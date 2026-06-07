@@ -74,7 +74,11 @@ Ask the DM: **"What needs defining in this region?"**
 
 They may want: city locations, trade routes, wilderness areas, political borders, all of the above, or something else.
 
-**If the markers crop revealed red dots**, surface the count now: *"The city-markers layer shows N undetailed cities in this region. Do you want to work all of them, or focus on a subset?"* Dots from the markers layer serve as the base location set — the DM only needs to add numbered markers to the map image if they want locations that are **not** already marked.
+**If the markers crop revealed red dots**, get an exact count:
+```
+.\scripts\count-markers.ps1 -ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n>
+```
+Then surface it: *"The city-markers layer shows N undetailed cities in this region. Do you want to work all of them, or focus on a subset?"* Dots from the markers layer serve as the base location set — the DM only needs to add numbered markers to the map image if they want locations that are **not** already marked.
 
 If no markers layer is available and the region map has no clear markers, suggest: *"Add red numbered markers to the map image for each [city/location/point of interest] you want detailed — that gives us a shared reference for everything that follows."*
 
