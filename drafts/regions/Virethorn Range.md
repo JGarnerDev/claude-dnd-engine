@@ -1,5 +1,5 @@
 ---
-name: Jade Jaw Spikes
+name: Virethorn Range
 type: location
 subtype: terrain-feature
 exists: false

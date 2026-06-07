@@ -4,7 +4,7 @@ Labeling complete as of Jeff's naming questionnaire. Names are settled unless ex
 
 ## Images
 
-- `world-names.jpg` — consolidated label map; all land features (continents, sub-continents, mountain ranges, deserts, tundra, islands) and water features (oceans, seas, bays, channels). primary orientation reference
+- `world-names.png` — consolidated label map; all land features (continents, sub-continents, mountain ranges, deserts, tundra, islands) and water features (oceans, seas, bays, channels). primary orientation reference
 - `world-sky.jpg` — sky layer with Opticon's Fade labeled
 
 ## Grid Scale
@@ -35,7 +35,7 @@ Labeling complete as of Jeff's naming questionnaire. Names are settled unless ex
 | Ilurak Qeth | ~6–10 | ~11–13 | `drafts/regions/Ilurak Qeth.md` |
 | Gordrathi Mountains | ~5–7 | ~5–7 | `drafts/regions/Gordrathi Mountains.md` |
 | Watchwall Mountains | ~10–11 | ~4–5 | `drafts/regions/Watchwall Mountains.md` |
-| Jade Jaw Spikes | ~14–15 | ~4–6 | `drafts/regions/Jade Jaw Spikes.md` |
+| Virethorn Range | ~14–15 | ~4–6 | `drafts/regions/Virethorn Range.md` |
 | The Grey Fathers | ~8–9 | ~3–4 | `drafts/regions/The Grey Fathers.md` |
 | Azel Samarat | ~7–8 | ~6–7 | `drafts/regions/Azel Samarat.md` |
 | Ut'karr | ~2–3 | ~6–7 | `drafts/regions/Ut'karr.md` |

@@ -16,11 +16,11 @@
 
 ## Step 10 — Labeling
 
-- [ ] Name the seas and oceans between landmasses
-- [ ] Name major mountain ranges
-- [ ] Name major rivers
+- [x] Name the seas and oceans between landmasses
+- [x] Name major mountain ranges
+- [x] Name major rivers (A–M+ added; unnamed but placed)
 - [ ] Name the Struck Side / Arc Side hemispheres (or leave for player discovery)
-- [ ] Name regions by biome or culture zone
+- [x] Name regions by biome or culture zone (forests, plains, deserts, tundra all labeled)
 - [ ] Add a compass rose
 
 ---
@@ -30,6 +30,35 @@
 - [ ] Jeff — Serhari (plains vine, ritual preparations, martial religion arc) — find geographic home
 - [ ] Ben — check data for map-relevant contributions
 - [ ] Miguel — check data for map-relevant contributions
+
+---
+
+## Current Pass — Map Improvements
+
+### Contrast fixes (labels exist, just hard to read)
+- [x] Invert label color on Tundra (north Erevast fringe)
+- [x] Invert label color on Azel Samarat (~Col 7–8, Row 6–7)
+
+### Plainslands — add terrain labels
+- [x] Plains east of Gordrathi Mountains (~Col 8–9, Row 6–7) — rain shadow zone, strongest candidate
+- [x] Plains interior of Sub Continent A (~Col 9–11, Row 4–6) — broad flat zone between mountain ranges
+- [x] Plains west of Hightalon (~Col 9–10, Row 3–4) — open terrain before Watchwall/Irongate
+- [x] Plains interior of Continent B (~Col 5–7, Row 7–8) — between central mountain ranges
+
+### Forest labels — add 2–3
+- [x] Forest label in Erevast interior (draft confirms "forested interior")
+- [x] Forest label in eastern jungles / Virethorn Range zone
+- [x] Forest label in south Continent B (if terrain texture confirms)
+
+### Virethorn Range
+- [x] Replace Jade Jaw Spikes label with Virethorn Range (~Col 14–15, Row 4–6)
+
+### Rivers — optional but high worldbuilding value
+- [x] Add 2–3 major unlabeled river marks draining east/southeast off mountain ranges
+- [x] River mouth cities implied by economic notes — mark key mouths
+
+### Far east (Continent H cluster)
+- [x] Add terrain character beyond continent-level labels — forest, jungle, or plains as terrain warrants
 
 ---
 
