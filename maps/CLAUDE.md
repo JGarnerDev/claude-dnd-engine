@@ -11,6 +11,7 @@ The world map lives at `maps/world/world-names.png` (8192×6144px). The Read too
 2. Remove its dot from `city-markers.png`
 3. Run `python scripts\gen-tiles.py` to regenerate both tile sets
 4. Add the city/region to the Known Region Positions table in `maps/world/index.md` if it warrants a permanent crop entry
+5. Remove the city's entry from `maps/world/city-registry.md` — add its registry ID (e.g. `C05-04a`) to the entity's `aliases:` field so existing cross-references resolve
 
 After graduation the city appears in base tile reads and no longer appears in markers tile reads. `world-names.png` is the source of truth — if a label is there, the city is canonical.
 
