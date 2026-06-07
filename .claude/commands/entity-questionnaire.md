@@ -7,6 +7,7 @@ Also handles **ingestion**: when a filled questionnaire is returned (by file, pa
 - `--name <text>` — working or placeholder name
 - `--concept <text>` — one-sentence description of what it is
 - `--player <name>` — player filling it out (personalizes header)
+- `--registry-id <id>` — city registry ID (e.g. `C05-04a`) from `maps/world/city-registry.md`; used when the entity is a pre-existing dot on the city-markers layer
 - `--output` — write to `scratch/{name}-questionnaire.md` in addition to displaying
 - `--ingest <file or "paste">` — ingestion mode: take a filled questionnaire and run balance review before creating the entity
 
@@ -68,10 +69,13 @@ entity_type: {type}
 action: Filled questionnaire — run ingestion mode. Do not create any entity without balance review first.
 concept: {concept}
 player: {player name if provided}
+registry_id: {registry ID if --registry-id provided, otherwise omit this line}
 -->
 
 # {Name if provided, otherwise "Your {type}" } — World Design Notes
 *For {Player} — fill out what you know, leave blanks for anything undecided.*
+
+{If --registry-id was provided: **Registry ID:** {id} — stable reference for this city until it has a name. Use this when cross-referencing other players' cities.}
 
 ---
 
