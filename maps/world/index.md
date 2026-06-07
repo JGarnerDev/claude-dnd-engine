@@ -1,18 +1,22 @@
 # World Map
 
+## Status
+
 Labeling complete as of Jeff's naming questionnaire. Names are settled unless explicitly revised.
 
 ## Images
 
-- `world-names.png` — consolidated label map; all land features (continents, sub-continents, mountain ranges, deserts, tundra, islands) and water features (oceans, seas, bays, channels). primary orientation reference
-- `world-sky.jpg` — sky layer with Opticon's Fade labeled
+- `world-names.png` — consolidated label map; all land features (continents, sub-continents, mountain ranges, deserts, tundra, islands, plains, rivers) and water features (oceans, seas, bays, channels). Primary orientation reference. **8192×6144px.**
+- `world-sky.jpg` — sky layer with Opticon's Fade labeled.
 
 ## Grid Scale
 
 - **1 cell = 1000km × 1000km**
-- Approximate grid dimensions: ~16 columns × ~13 rows
+- Grid dimensions: ~16 columns × ~13 rows
 - Equator: approximately row 7
 - Poles: row 1 (north), row 13 (south)
+- Cell pixel size: 512px wide × 472px tall
+- Col N left edge: (N−1) × 512px / Row N top edge: (N−1) × 472px
 
 ## Climate Rules (west-to-east winds)
 
@@ -20,6 +24,22 @@ Labeling complete as of Jeff's naming questionnaire. Names are settled unless ex
 - East-facing coasts/slopes: drier; rain shadow if mountains present
 - Rivers drain east/southeast off mountain ranges
 - West coasts: rocky cliffs, no beaches / East coasts: sandy beaches / River mouths: wide estuaries
+
+## Tile Coverage
+
+Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. Read instructions in CLAUDE.md → World Map.
+
+| Tile | File | Cols | Rows | Key content |
+|---|---|---|---|---|
+| Northwest | `tiles/nw.png` | 1–6 | 1–5 | The Caldera, Sub Continent C, Mountains B/C/D/O/P |
+| North | `tiles/n.png` | 5–12 | 1–5 | Erevast, Still Cold Sea, Tundra A, Grey Fathers, Mountains M |
+| Northeast | `tiles/ne.png` | 10–16 | 1–5 | Hightalon, Oathmark, Continent G north, Watchwall, Virethorn |
+| West | `tiles/w.png` | 1–6 | 4–9 | Karath Ut'll, Ocean A, Islands A/B, Channel F/I |
+| Center | `tiles/c.png` | 5–12 | 4–9 | Continent B, Gordrathi, Azel Samarat, Essaur Bay, Sea C |
+| East | `tiles/e.png` | 10–16 | 4–9 | Sub Continent A, Continent G, Sea B, Channel E |
+| Southwest | `tiles/sw.png` | 1–6 | 8–13 | Sea F, Continent C, Islands A/J, Channel F lower |
+| South | `tiles/s.png` | 5–12 | 8–13 | Channel H, Islands E/J, Continent E north, Mountains H |
+| Southeast | `tiles/se.png` | 10–16 | 8–13 | The Grey Crossing, Continent E, Ocean B, Sub Continent F |
 
 ## Known Region Positions
 
