@@ -126,6 +126,13 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `faction/administrative` | faction entity | Faction subtype: administrative authority or bureaucracy |
 | **resource** | | |
 | `resource` | resource entity | Entity type: natural or economic resource |
+| **route** | | |
+| `route` | route entity | Entity type: any route — parent tag for all route subtypes |
+| `route/trade` | route entity | Route subtype: commercial trade route (any medium) |
+| `route/pilgrimage` | route entity | Route subtype: religious or spiritual pilgrimage route |
+| `route/military` | route entity | Route subtype: military road or logistics corridor |
+| `route/highway` | route entity | Route subtype: major public civic thoroughfare |
+| `route/trail` | route entity | Route subtype: informal or wilderness path |
 | **culture** | | |
 | `culture` | culture entity | Entity type: shared customs, values, and practices of a people |
 | **mechanic** | | |
