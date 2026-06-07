@@ -1,4 +1,4 @@
-$habitats = @()
+﻿$habitats = @()
 Get-ChildItem "$PSScriptRoot\..\data\monsters\*.md" | ForEach-Object {
     $inHabitats = $false
     foreach ($line in (Get-Content $_.FullName)) {

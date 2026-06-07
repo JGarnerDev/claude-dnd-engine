@@ -1,4 +1,4 @@
-# region-scale.ps1 -- travel scale context for a region
+﻿# region-scale.ps1 -- travel scale context for a region
 # Usage: .\scripts\region-scale.ps1 -SpanGrids <decimal> [-WaterBody sea|river|both|none] [-Locations <n>]
 
 param(

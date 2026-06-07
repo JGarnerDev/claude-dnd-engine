@@ -14,6 +14,8 @@ The world map lives at `maps/world/world-names.png` (8192×6144px). The Read too
 
 After graduation the city appears in base tile reads and no longer appears in markers tile reads. `world-names.png` is the source of truth — if a label is there, the city is canonical.
 
+**Index maintenance:** `maps/world/index.md` → Known Region Positions is the lookup table for `map-crop.ps1 -Feature`. Add an entry whenever you identify a named feature's col/row from a tile or crop — bays, forests, plains, mountain ranges, rivers, sub-continents. One line per feature; col/row can be approximate. If a feature lacks a draft, use `—`. Update this proactively rather than waiting until a feature is formally worked.
+
 **Four hard rules:**
 1. **Read a tile before describing any feature's position.** Never infer position from geography alone — always read the label from the map.
 2. **Letter assignments come from the map, never invented.** If a section of the questionnaire needs letters (Plains A, River B, etc.), crop the relevant tile and count what's actually labeled before writing entries.

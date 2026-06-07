@@ -66,9 +66,22 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 | The Grey Crossing | ~9–10 | ~10–11 | `drafts/regions/The Grey Crossing.md` |
 | Veth's Gate | ~3–4 | ~7–8 | `drafts/regions/Veth's Gate.md` |
 | The Dustbreak Plains | ~6–8 | ~5–6 | `drafts/regions/The Dustbreak Plains.md` |
-| Bayward River | ~4–5 | ~3–4 | — |
-| Deepwend River | ~5 | ~3–4 | — |
-| Thelindra River | ~5 | ~4–5 | — |
+| Bayward River | ~4-5 | ~3-4 | — |
+| Deepwend River | ~5 | ~3-4 | — |
+| Thelindra River | ~5 | ~4-5 | — |
+| Bay B | ~5-6 | ~4-5 | — |
+| Bay F | ~7-8 | ~5-6 | — |
+| Sub Continent C | ~3-5 | ~4-6 | — |
+| Mountains B | ~4-5 | ~3-5 | — |
+| Mountains C | ~5-7 | ~2-4 | — |
+| Forest A | ~6-7 | ~4-5 | — |
+| Forest B | ~6 | ~5-6 | — |
+| Forest C | ~4-5 | ~2-3 | — |
+| Plains H | ~5 | ~3-4 | — |
+| Plains E | ~7 | ~5-6 | — |
+| Plains G | ~7-8 | ~4-5 | — |
+| Desert B | ~7-8 | ~5-7 | — |
+| Ocean A | ~1-5 | ~5-9 | — |
 
 ## Cosmology Notes
 

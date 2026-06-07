@@ -1,4 +1,4 @@
-# map-crop.ps1
+﻿# map-crop.ps1
 # Crop a region from world-names.png by feature name (looked up in index) or by explicit col/row.
 # Saves permanent crops to maps/locations/<slug>-map.png.
 # Saves temp crops to maps/world/temp-crop.png (caller must delete).
@@ -90,6 +90,8 @@ crop = img.crop(($left, $top, $right, $bottom))
 crop.save(r'$absOutput')
 print(f'Saved {crop.size[0]}x{crop.size[1]}px -> $absOutput')
 "@
+
+if ($Temp) { Write-Warning "Temp file -- delete after reading: $Output" }
 
 # Optionally crop city-markers.png to same bounds
 if (-not $Markers) { exit 0 }

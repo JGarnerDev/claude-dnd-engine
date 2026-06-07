@@ -1,4 +1,4 @@
-# session-brief.ps1 -- pre-session planning dashboard
+﻿# session-brief.ps1 -- pre-session planning dashboard
 # Replaces ~8 manual Read calls at the start of every /session invocation
 # Usage: .\scripts\session-brief.ps1
 

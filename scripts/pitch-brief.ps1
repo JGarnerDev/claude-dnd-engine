@@ -1,4 +1,4 @@
-# pitch-brief.ps1 - pre-pitch context summary
+﻿# pitch-brief.ps1 - pre-pitch context summary
 # Replaces manual reads of meta/worldbuilding.md and pitch-log/pitch-history.md
 # Usage: .\scripts\pitch-brief.ps1 [-Type <type>]
 

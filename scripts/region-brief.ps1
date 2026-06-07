@@ -1,4 +1,4 @@
-# region-brief.ps1 -- compressed summary of an existing region draft
+﻿# region-brief.ps1 -- compressed summary of an existing region draft
 # Usage: .\scripts\region-brief.ps1 [-Region <slug>]
 # Auto-detects draft if only one exists in drafts/regions/
 
