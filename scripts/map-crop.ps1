@@ -92,24 +92,28 @@ print(f'Saved {crop.size[0]}x{crop.size[1]}px -> $absOutput')
 "@
 
 # Optionally crop city-markers.png to same bounds
-if ($Markers) {
-    $markersSource = ".\maps\world\city-markers.png"
-    if (-not (Test-Path $markersSource)) {
-        Write-Warning "city-markers.png not found at $markersSource — skipping markers crop"
-    } else {
-        if ($Temp -or $Feature -eq "") {
-            $markersOutput = ".\maps\world\temp-markers.png"
-        } else {
-            $slug = $Feature.ToLower() -replace "[^a-z0-9]+" , "-" -replace "-+", "-" -replace "^-|-$", ""
-            $markersOutput = ".\maps\locations\$slug-markers.png"
-        }
-        $absMarkersSource = Resolve-Path $markersSource
-        python -c @"
+if (-not $Markers) { exit 0 }
+
+$markersSource = ".\maps\world\city-markers.png"
+if (-not (Test-Path $markersSource)) {
+    Write-Warning "city-markers.png not found - skipping markers crop"
+    exit 0
+}
+
+if ($Temp -or $Feature -eq "") {
+    $markersOutput = ".\maps\world\temp-markers.png"
+} else {
+    $mSlug = $Feature.ToLower() -replace "[^a-z0-9]+", "-"
+    $mSlug = $mSlug.Trim("-")
+    $markersOutput = ".\maps\locations\$mSlug-markers.png"
+}
+
+$absMarkersSource = Resolve-Path $markersSource
+
+python -c @"
 from PIL import Image
 img = Image.open(r'$absMarkersSource')
 crop = img.crop(($left, $top, $right, $bottom))
 crop.save(r'$markersOutput')
 print(f'Markers: {crop.size[0]}x{crop.size[1]}px -> $markersOutput')
 "@
-    }
-}
