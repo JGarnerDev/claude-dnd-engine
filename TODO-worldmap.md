@@ -68,6 +68,18 @@
 - [ ] Struck Side / Arc Side — label on map or leave as in-world knowledge?
 - [ ] Does the Caldera need an island rim or does it sit on an existing landmass?
 
+### Plains alignment (questionnaire vs. map)
+
+- [x] **Plains A** — confirmed: northwest of Azel Samarat (~col 6–7, row 5–6). Southern Erevast forest margin / desert transition. Questionnaire updated.
+- [x] **Plains B** — confirmed: southeast of Mountains M, western edge of the Irongate Sea (~col 9–10, row 4–5). Eastern Erevast. Also matches TODO's "plains west of Hightalon." Questionnaire updated.
+- [x] **Plains C** — confirmed: south of Oathmark (~col 11, row 3–4). Coastal plain between Oathmark and Hightalon/Watchwall. Questionnaire updated.
+- [x] Plains count reconciled — 5 questionnaire entries match 5 real map features. No phantom entries.
+
+### Rivers alignment (questionnaire vs. map)
+
+- [x] **River count reconciled** — confirmed via high-res map crop: Rivers A, B, C, D, E, F, G, H, I, K, M placed on map. Questionnaire updated with all confirmed rivers; descriptions corrected to match actual positions. Previous descriptions (A–G) were all fabricated from geography, not read from map.
+- [x] **Plains count reconciled** — confirmed via high-res map crop: Plains A–J placed on map. Questionnaire updated with all 10 entries. Plains D corrected to upper-right Erevast (was mislabeled as Continent B). Plains F, G, H, I, J added. Plains J = what was previously mislabeled as questionnaire Plains D (Continent B interior near Mountains F).
+
 ---
 
 ## World Notes — Geography Consequences
