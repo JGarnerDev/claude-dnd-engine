@@ -2,7 +2,7 @@
 
 ## Status
 
-Updated 2026-06-07: added Bayward River, Deepwend River, Thelindra River (around Bay B); Plains A renamed to The Dustbreak Plains.
+Updated 2026-06-07: added Bayward River, Deepwend River, Thelindra River (around Bay B); Plains A renamed to The Dustbreak Plains. Ben naming ingested — 18 features added to index.
 
 ## Images
 
@@ -83,6 +83,24 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 | Plains G | ~7-8 | ~4-5 | — |
 | Desert B | ~7-8 | ~5-7 | — |
 | Ocean A | ~1-5 | ~5-9 | — |
+| Deorum Ostium | ~11-13 | ~1-2 | `drafts/regions/Deorum Ostium.md` |
+| Skoud Sea | ~12-14 | ~2-3 | `drafts/regions/Skoud Sea.md` |
+| Witches Tit | ~6-8 | ~2 | `drafts/regions/Witches Tit.md` |
+| Frisian Bay | ~9-10 | ~3-4 | `drafts/regions/Frisian Bay.md` |
+| The Rip | ~10-11 | ~3-4 | `drafts/regions/The Rip.md` |
+| Koom Mountains | ~5-6 | ~4-5 | `drafts/regions/Koom Mountains.md` |
+| Slor Bay | ~7-8 | ~5-6 | `drafts/regions/Slor Bay.md` |
+| Sgaile Desert | ~6-7 | ~6 | `drafts/regions/Sgaile Desert.md` |
+| Loess Mountains | ~10-11 | ~6 | `drafts/regions/Loess Mountains.md` |
+| The Myriad | ~4 | ~6-7 | `drafts/regions/The Myriad.md` |
+| Fairway Sea | ~11-13 | ~6-7 | `drafts/regions/Fairway Sea.md` |
+| Bonny Islands | ~9-10 | ~6-7 | `drafts/regions/Bonny Islands.md` |
+| Klein Zand | ~8-9 | ~8 | `drafts/regions/Klein Zand.md` |
+| Torpid Channel | ~5 | ~8 | `drafts/regions/Torpid Channel.md` |
+| The Thrum | ~6-7 | ~8-9 | `drafts/regions/The Thrum.md` |
+| Iargulta | ~3-4 | ~9-10 | `drafts/regions/Iargulta.md` |
+| Mori | ~14-15 | ~8-9 | `drafts/regions/Mori.md` |
+| Parhelion Ocean | ~14-16 | ~7-10 | `drafts/regions/Parhelion Ocean.md` |
 
 ## Cosmology Notes
 
