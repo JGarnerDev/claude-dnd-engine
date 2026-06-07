@@ -88,6 +88,19 @@ When creating any entity, read `meta/entity-creation.md` before proceeding. It c
 
 When adding a new type, subtype, or entity folder, read `meta/graph-settings.md` before touching any config files.
 
+## World Map
+
+The world map lives at `maps/world/world-names.png` (8192×6144px). The Read tool downsamples it — labels are unreadable at full scale.
+
+**Always use pre-cropped tiles.** Nine tiles cover the full map with overlap: `maps/world/tiles/nw.png`, `n.png`, `ne.png`, `w.png`, `c.png`, `e.png`, `sw.png`, `s.png`, `se.png`. Read the tile that contains your area of interest. Tile coverage and key content are documented in `maps/world/index.md`.
+
+**Three hard rules:**
+1. **Read a tile before describing any feature's position.** Never infer position from geography alone — always read the label from the map.
+2. **Letter assignments come from the map, never invented.** If a section of the questionnaire needs letters (Plains A, River B, etc.), crop the relevant tile and count what's actually labeled before writing entries.
+3. **When a tile isn't precise enough**, use `.\scripts\map-crop.ps1 -Feature "<name>" -Temp` for a targeted crop. Read it, then delete `maps/world/temp-crop.png`. Pixel formula is in `maps/world/index.md` → Grid Scale if you need to crop manually via PIL.
+
+Region and location drafts can have their own permanent crop. Use `.\scripts\map-crop.ps1 -Feature "<name>"` — looks up col/row from the index and saves to `maps/locations/<slug>-map.png` automatically.
+
 ## Scripts
 
 PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run these via Bash before manual file reads — they collapse 5–10 tool calls into one.**
@@ -106,6 +119,8 @@ PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run th
 | `region-world-context.ps1` | Start of every `/region` Phase 1 — climate, wind rules, water checklist | `.\scripts\region-world-context.ps1 -Col <n> -Row <n>` |
 | `region-scale.ps1` | Start of every `/region` Phase 2 — travel times and city spacing from grid span | `.\scripts\region-scale.ps1 -SpanGrids <n> -WaterBody <sea\|river\|both\|none> [-Locations <n>]` |
 | `region-brief.ps1` | Resume a `/region` session — compressed draft summary | `.\scripts\region-brief.ps1 [-Region <slug>]` |
+| `naming-status.ps1` | Show named vs. unnamed entries in world-naming questionnaire | `.\scripts\naming-status.ps1 [-Section <name>]` |
+| `map-crop.ps1` | Crop world map by feature name or col/row; saves to `maps/locations/` | `.\scripts\map-crop.ps1 -Feature "<name>"` or `-ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n> [-Margin <px>] [-Temp]` |
 
 Scripts output plain text; parse with your own judgment. They read frontmatter only (except `session-brief.ps1` which also reads the last session body for cliffhanger).
 
