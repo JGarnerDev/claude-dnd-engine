@@ -60,6 +60,17 @@ Gameplay mechanics (mini-games, structured encounter types) live in `meta/mechan
 
 Each schema file also contains a **Player Form** section — a set of plain-language questions suitable to give directly to players when they want to create an entity.
 
+## City Registry Graduation
+
+When creating a `location-city` entity that corresponds to a dot in `maps/world/city-registry.md`:
+
+1. Look up the city's registry ID by its col/row position in `city-registry.md`
+2. Add the ID to the entity's `aliases:` field (e.g. `aliases: [C05-04a]`) so any prior cross-references resolve
+3. Remove the entry from `city-registry.md` — the city is now canonical
+4. Follow the full graduation checklist in `maps/CLAUDE.md` (label on map, dot removed, tiles regenerated)
+
+If no registry entry matches (city was newly placed, not a pre-existing dot), skip steps 1–3.
+
 ## Obsidian Frontmatter Rules
 
 All entity files use Obsidian-compatible YAML frontmatter:

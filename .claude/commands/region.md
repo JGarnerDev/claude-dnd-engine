@@ -78,7 +78,9 @@ They may want: city locations, trade routes, wilderness areas, political borders
 ```
 .\scripts\count-markers.ps1 -ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n>
 ```
-Then surface it: *"The city-markers layer shows N undetailed cities in this region. Do you want to work all of them, or focus on a subset?"* Dots from the markers layer serve as the base location set — the DM only needs to add numbered markers to the map image if they want locations that are **not** already marked.
+Then look up each dot's position in `maps/world/city-registry.md` by matching approximate col/row — surface the registry IDs alongside the count. These IDs are the stable references players use to claim and cross-reference cities before any names exist.
+
+Surface it: *"The city-markers layer shows N undetailed cities in this region with registry IDs [list]. Do you want to work all of them, or focus on a subset? I can assign IDs to players now so they can cross-reference each other's cities."* Dots from the markers layer serve as the base location set — the DM only needs to add numbered markers to the map image if they want locations that are **not** already marked.
 
 If no markers layer is available and the region map has no clear markers, suggest: *"Add red numbered markers to the map image for each [city/location/point of interest] you want detailed — that gives us a shared reference for everything that follows."*
 
@@ -213,6 +215,12 @@ For each location:
 5. End with: *What makes this a place something could go wrong?*
 
 Format: plain markdown, no YAML, no schema jargon. Suitable to paste into Discord.
+
+**Include the registry ID at the top of each questionnaire** — look it up in `maps/world/city-registry.md` by the city's col/row position. Add it as a one-liner before the first question:
+```
+**Registry ID:** C##-##x — this is your city's stable reference until it has a name.
+```
+Players use this ID to cross-reference each other's cities before either has a name. When ingested, the ID travels into the entity's `aliases:` field.
 
 Write to `questionnaires/{region}-city-{n}.md`. Report all paths when done.
 
