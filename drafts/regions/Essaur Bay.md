@@ -13,7 +13,7 @@ region:
   - "[[Erevast]]"
 scale: regional
 navigability: easy
-importance: minor
+importance: major
 description: "Warm southern bay near [[Azel Samarat]]; major mercantile hub and pilgrimage departure point; Moroccan-adjacent cultural flavor"
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: The Irongate
+name: The Irongate Sea
 type: location
 subtype: terrain-feature
 exists: false
@@ -14,7 +14,7 @@ region:
 scale: regional
 navigability: difficult
 controlled_by: unknown
-importance: minor
+importance: major
 description: "Mountain-ringed inner sea near [[Hightalon]]; dwarven-influenced; highly mercantile; channel-like with controlled approaches; toll water"
 ---
 

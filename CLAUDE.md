@@ -19,20 +19,13 @@ This engine generates D&D sessions by synthesizing creative material, campaign h
 
 ## Story Hierarchy
 
-Content is organized from largest to smallest narrative unit:
+Documented in `scheduler/CLAUDE.md` — auto-loaded when working with scheduler files.
 
-| Level | File location | Moves to historian when… |
-|---|---|---|
-| **Campaign** | `scheduler/campaign.md` | Campaign fully concludes |
-| **Act** | `scheduler/acts/{name}.md` | Act completes |
-| **Mission** | `scheduler/missions/{name}.md` | Mission resolves (success or failure) |
-| **Session** | `scheduler/sessions/session-{nn}-{name}.md` | Session is played |
+## Working Protocol
 
-Each level references the one above it and the ones below it via wiki-links. Sessions advance missions; missions build acts; acts serve the campaign.
+**Progressive disclosure:** This project uses subdirectory `CLAUDE.md` files to load domain rules only when relevant. Root CLAUDE.md stays lean. Do not load or re-derive subdirectory rules unless the task touches that domain. Trust that the right rules are in context when you need them.
 
-## Context and Reading Strategy
-
-Read in this order, stopping as soon as the task is satisfied:
+**Reading** — read in this order, stopping as soon as the task is satisfied:
 
 1. **Frontmatter only** — check `description`, `type`, `state`, `exists` before opening the body
 2. **Body** — only if frontmatter doesn't answer the question
@@ -44,37 +37,11 @@ Meta files (`meta/worldbuilding-approach.md`, `meta/difficulty.md`, etc.) are re
 
 Scan commands (e.g. `/inventory`) read **frontmatter only** — never the body.
 
-## Free Entity Rule
+**Writing** — before editing any existing file, read its frontmatter to confirm `state` and `exists`. Never overwrite without knowing current state. Before creating new content, declare what you're creating and why — same discipline as declaring read scope.
 
-Entities in `./data` with `exists: false` are **free** — available to be used in session content. Entities that get played and canonized move to `./historian` with `exists: true`.
+## Entity Selection
 
-**When generating or planning content that requires an entity:**
-1. First search `./data` for a free entity (`exists: false`) of the needed type.
-2. If one exists, use it — do not invent a new one.
-3. If none exists, **stop and ask the user** before creating anything. Present the gap clearly: what type is needed, why, and ask whether they want to create one or proceed differently.
-
-Never silently generate a net-new entity during session planning or content generation. The data pool is intentional — running it low is meaningful signal, not a problem to paper over.
-
-## Data Entity Transparency
-
-When suggesting a `./data` entity for use, always surface its gaps inline:
-
-- **Inferred detail** — anything you're filling in beyond what the file explicitly states. Flag it: *"[inferred: motivation assumed to be X]"*
-- **Missing detail** — fields relevant to the planned use that are absent from the file. List them: *"[missing: combat stats, known location]"*
-
-Do this per entity, at the point of suggestion — not as a separate section. Keep it brief; one line per gap is enough. The DM decides whether to fill gaps before play or leave them loose.
-
-## Contribution Balance
-
-Every entity has an optional `contributed_by` field (values: `paul`, `ben`, `miguel`, `jeff`). Use this to keep player contributions roughly equal over time.
-
-**When choosing between comparable free entities of the same type**, prefer the one whose `contributed_by` player has the fewest entries in `./historian`. If contributions are unequal, note it briefly: *"Pulling from Paul's pool — Ben and Miguel are underrepresented."*
-
-**When planning a session**, if one player's entities dominate the candidate pool, flag it and suggest pulling from another player's material where the story permits.
-
-**To check current balance** at any time: run `.\scripts\contribution-balance.ps1` — shows pool vs. canonized counts per player and identifies who is next up. To see one player's available entities: `.\scripts\free-entities.ps1 -Player <name>`.
-
-Do not force balance at the expense of narrative fit. Flag the gap; let the DM decide.
+Entity protocol (free entity rule, data transparency, contribution balance) documented in `data/CLAUDE.md` — auto-loaded when working with data files.
 
 ## New Campaign Setup
 
@@ -90,16 +57,7 @@ When adding a new type, subtype, or entity folder, read `meta/graph-settings.md`
 
 ## World Map
 
-The world map lives at `maps/world/world-names.png` (8192×6144px). The Read tool downsamples it — labels are unreadable at full scale.
-
-**Always use pre-cropped tiles.** Nine tiles cover the full map with overlap: `maps/world/tiles/nw.png`, `n.png`, `ne.png`, `w.png`, `c.png`, `e.png`, `sw.png`, `s.png`, `se.png`. Read the tile that contains your area of interest. Tile coverage and key content are documented in `maps/world/index.md`.
-
-**Three hard rules:**
-1. **Read a tile before describing any feature's position.** Never infer position from geography alone — always read the label from the map.
-2. **Letter assignments come from the map, never invented.** If a section of the questionnaire needs letters (Plains A, River B, etc.), crop the relevant tile and count what's actually labeled before writing entries.
-3. **When a tile isn't precise enough**, use `.\scripts\map-crop.ps1 -Feature "<name>" -Temp` for a targeted crop. Read it, then delete `maps/world/temp-crop.png`. Pixel formula is in `maps/world/index.md` → Grid Scale if you need to crop manually via PIL.
-
-Region and location drafts can have their own permanent crop. Use `.\scripts\map-crop.ps1 -Feature "<name>"` — looks up col/row from the index and saves to `maps/locations/<slug>-map.png` automatically.
+Map rules, tile protocol, and crop scripts documented in `maps/CLAUDE.md` — auto-loaded when working with map files.
 
 ## Scripts
 
