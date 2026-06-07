@@ -45,6 +45,15 @@ If a user provides form answers (structured or freeform), use the **Form → Fro
 | A natural resource (ore, timber, trade good, arcane material) | `meta/schemas/resource.md` |
 | A culture (customs, values, and practices of a people) | `meta/schemas/culture.md` |
 | A Monster Manual entry (encounter template) | `meta/schemas/monster.md` |
+| A trade route, road, sea lane, pilgrimage way, or trail | `meta/schemas/route.md` |
+
+## Trade Routes for Cities
+
+Cities with `importance: critical` or `importance: major` should have at least one route entity that names them in `origin` or `destination`. A city with no route connections is a design gap — flag it and fill it when the city becomes relevant.
+
+Cities with `importance: minor` or `importance: background` may defer. Do not create placeholder routes just to satisfy coverage; wait until narrative context makes the route meaningful.
+
+The route's `origin`/`destination` fields create the graph edge — no `routes` field is needed on the city entity itself.
 
 ## Economic Depth (Optional Fields)
 
