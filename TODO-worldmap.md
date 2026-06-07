@@ -28,7 +28,7 @@
 ## Step 11 — Player Contributions
 
 - [ ] Jeff — Serhari (plains vine, ritual preparations, martial religion arc) — find geographic home
-- [ ] Ben — check data for map-relevant contributions
+- [x] Ben — world naming questionnaire complete (18 features named)
 - [ ] Miguel — check data for map-relevant contributions
 
 ---
