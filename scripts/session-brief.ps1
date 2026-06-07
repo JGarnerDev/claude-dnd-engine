@@ -1,4 +1,4 @@
-# session-brief.ps1 — pre-session planning dashboard
+# session-brief.ps1 -- pre-session planning dashboard
 # Replaces ~8 manual Read calls at the start of every /session invocation
 # Usage: .\scripts\session-brief.ps1
 
@@ -22,7 +22,7 @@ function Get-Frontmatter($path) {
 
 function Get-FullContent($path) { Get-Content $path -Raw -Encoding UTF8 }
 
-# ── Next session number ──────────────────────────────────────────────────────
+# -- Next session number ------------------------------------------------------
 $histSessions = Get-ChildItem "$root\historian\sessions" -Filter "*.md" -ErrorAction SilentlyContinue
 $schedSessions = Get-ChildItem "$root\scheduler\sessions" -Filter "*.md" -ErrorAction SilentlyContinue
 $allSessions = @($histSessions) + @($schedSessions) | Where-Object { $_ -ne $null }
@@ -41,7 +41,7 @@ Write-Host "========================================" -ForegroundColor DarkGray
 
 Write-Host "`nNext session: #$nextNum" -ForegroundColor Yellow
 
-# ── Campaign / Act / Mission ─────────────────────────────────────────────────
+# -- Campaign / Act / Mission -------------------------------------------------
 Write-Host "`n--- STORY STATE ---" -ForegroundColor DarkGray
 
 $campaignFiles = Get-ChildItem "$root\scheduler\campaign" -Filter "*.md" -ErrorAction SilentlyContinue
@@ -67,7 +67,7 @@ if ($missionFiles) {
     Write-Host "  Missions: none active" -ForegroundColor DarkGray
 }
 
-# ── Last played session ──────────────────────────────────────────────────────
+# -- Last played session ------------------------------------------------------
 Write-Host "`n--- LAST SESSION ---" -ForegroundColor DarkGray
 
 $lastSession = $histSessions | Sort-Object Name -Descending | Select-Object -First 1
@@ -86,7 +86,7 @@ if ($lastSession) {
     }
 }
 
-# ── Party ────────────────────────────────────────────────────────────────────
+# -- Party --------------------------------------------------------------------
 Write-Host "`n--- PARTY ---" -ForegroundColor DarkGray
 
 # Load afflictions from campaign party table

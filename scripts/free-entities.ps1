@@ -1,4 +1,4 @@
-﻿# free-entities.ps1 — list all free (exists: false) entities in ./data
+﻿# free-entities.ps1 -- list all free (exists: false) entities in ./data
 # Usage: .\scripts\free-entities.ps1 [-Type npc|location|deity|etc] [-Player paul|ben|miguel|jeff]
 
 param(

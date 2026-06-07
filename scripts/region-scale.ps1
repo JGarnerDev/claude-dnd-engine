@@ -1,4 +1,4 @@
-# region-scale.ps1 — travel scale context for a region
+# region-scale.ps1 -- travel scale context for a region
 # Usage: .\scripts\region-scale.ps1 -SpanGrids <decimal> [-WaterBody sea|river|both|none] [-Locations <n>]
 
 param(
@@ -31,11 +31,11 @@ $ship    = [Math]::Round($widthKm / 150, 1)
 
 Write-Host ""
 Write-Host "========================================" -ForegroundColor DarkGray
-Write-Host "  REGION SCALE — $SpanGrids grid = ~${widthKm}km across" -ForegroundColor Cyan
+Write-Host "  REGION SCALE -- $SpanGrids grid = ~${widthKm}km across" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor DarkGray
 Write-Host ""
 Write-Host "  Mode                  Speed       Region crossing" -ForegroundColor White
-Write-Host "  ────────────────────────────────────────────────" -ForegroundColor DarkGray
+Write-Host "  ------------------------------------------------" -ForegroundColor DarkGray
 Write-Host ("  On foot               30km/day    ~$foot days") -ForegroundColor Gray
 Write-Host ("  Horseback             60km/day    ~$horse days") -ForegroundColor Gray
 
@@ -48,7 +48,7 @@ if ($WaterBody -match "sea|ocean|both") {
 }
 
 Write-Host ""
-Write-Host "── Modifiers ────────────────────────────" -ForegroundColor DarkGray
+Write-Host "-- Modifiers ----------------------------" -ForegroundColor DarkGray
 Write-Host "  Mountain crossing:      +2-3 days per major range" -ForegroundColor Gray
 Write-Host "  Dense forest (foot):    -25% speed" -ForegroundColor Gray
 Write-Host "  Deep winter (overland): halve all speeds" -ForegroundColor Gray
@@ -56,7 +56,7 @@ Write-Host "  Hostile territory:      avoid main roads; unpredictable delay" -Fo
 
 if ($Locations -gt 0) {
     Write-Host ""
-    Write-Host "── City Spacing ($Locations locations) ──────────────" -ForegroundColor DarkGray
+    Write-Host "-- City Spacing ($Locations locations) --------------" -ForegroundColor DarkGray
     $avgSpacing = [int]($widthKm / [Math]::Sqrt($Locations))
     $footDays   = [Math]::Round($avgSpacing / 30, 1)
     $horseDays  = [Math]::Round($avgSpacing / 60, 1)
