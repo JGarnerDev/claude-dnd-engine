@@ -10,4 +10,6 @@ The world map lives at `maps/world/world-names.png` (8192×6144px). The Read too
 3. **When a tile isn't precise enough**, use `.\scripts\map-crop.ps1 -Feature "<name>" -Temp` for a targeted crop. Read it, then delete `maps/world/temp-crop.png`. Pixel formula is in `maps/world/index.md` → Grid Scale if you need to crop manually via PIL.
 4. **If a feature isn't found in the primary tile, check all adjacent tiles before concluding it's absent.** Features near tile boundaries are often labeled on the neighboring tile. Never declare a feature missing after checking only one tile.
 
+**When replacing `world-names.png`**, regenerate all tiles immediately: `python scripts\gen-tiles.py`. Then read affected tiles to diff labels before updating `index.md`.
+
 Region and location drafts can have their own permanent crop. Use `.\scripts\map-crop.ps1 -Feature "<name>"` — looks up col/row from the index and saves to `maps/locations/<slug>-map.png` automatically.
