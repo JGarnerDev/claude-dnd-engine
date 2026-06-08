@@ -182,6 +182,8 @@ If no flags: "No balance concerns. Create the entity as described?"
 
 ### Ingest Phase 4 — Create Entity
 
-Only after DM confirms. Read `meta/entity-creation.md`, then the correct schema. Map answers using the Form → Frontmatter Mapping table. Use `unknown` for mandatory blanks — never omit.
+Only after DM confirms. Before writing, run `/check <entity name and concept>` to catch any historian facts that would conflict with the new entity. Surface CONFLICT results to the DM before proceeding.
+
+Read `meta/entity-creation.md`, then the correct schema. Map answers using the Form → Frontmatter Mapping table. Use `unknown` for mandatory blanks — never omit.
 
 Write to the canonical path defined in the schema. Confirm path when done.

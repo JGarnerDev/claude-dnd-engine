@@ -50,6 +50,8 @@ Report findings before proceeding:
 
 ## Phase 4 — Write the Historian Session Record
 
+Before writing, run `/check <recap summary>` to flag any historian conflicts in the DM's account. Surface CONFLICT and POSSIBLE results to the DM; do not silently canonize content that contradicts existing canon. If the DM confirms the new account supersedes old canon, note the discrepancy in `table_notes`.
+
 Update the session file with the following historian fields (do not remove any existing frontmatter fields):
 
 ```yaml

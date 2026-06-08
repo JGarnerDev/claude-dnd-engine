@@ -75,6 +75,8 @@ When there is no active mission or the arc has reached a conclusion, surface opt
 
 **Step 1 — Scan historian/ for unresolved threads**
 
+Run `/threads` for a full standalone view, or inline the same logic here:
+
 Read frontmatter only (state, description) across `historian/characters/`, `historian/locations/`, and `historian/sessions/`. Look for:
 - NPCs with `state: missing`, `state: imprisoned`, or `state: transformed`
 - PC afflictions noted in historian PC files
@@ -168,7 +170,8 @@ Each scene block contains:
 If `scope: linked`, replace the full encounter detail with a one-line reference: `→ see [[encounter-{slug}]]` and note that the encounter file will be written separately.
 
 ### NPC Quick-Reference
-One entry per key NPC appearing this session:
+One entry per key NPC appearing this session. For any NPC with historian canon, run `/voice <name>` first to ground the voice note in established characterization — do not invent fresh voice from scratch if history exists.
+
 - **Name** — `[[wiki-link]]`
 - **Motivation** — what they want right now
 - **Knows** — bullet list of information they can reveal
