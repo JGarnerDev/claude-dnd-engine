@@ -26,6 +26,12 @@ Progress tracker for getting this project ready to generate sessions and run cam
 
 ---
 
+## Optional / Stretch
+
+- [ ] **Sea currents** — layer onto maritime trade routes for mechanical depth (speed/cost variance by direction, dominant port logic, seasonal shifts). High value if naval gameplay becomes recurring; skip if routes stay background flavor.
+
+---
+
 ## Data — Campaign-Specific
 *World-building work that requires creative input. These populate the free entity pool for session generation.*
 
