@@ -56,6 +56,17 @@ Progress tracker for getting this project ready to generate sessions and run cam
 
 ---
 
+## Player Contribution Balance Check
+
+*Run before canonizing any batch of player-contributed entities. Flags power imbalances, narrative overreach, and uneven contribution counts.*
+
+- [ ] **Run `.\scripts\contribution-balance.ps1`** — confirm no player dominates the canonized pool. Target: no single player above ~40% of canonized entities.
+- [ ] **Spot-check for scope creep** — does any single contribution control too much of one domain (economy, geography, power structure)? A cluster of tightly linked entities (faction + resource + route + location) may need to be staggered across sessions rather than canonized at once.
+- [ ] **Check naming conflicts** — when multiple players have named features, confirm no two names collide and no adjacency creates an implicit narrative claim one player didn't intend.
+- [ ] **Resolve TBD fields before play** — any entity with `TBD`, `unknown`, or unassigned mandatory details should be flagged and filled before it appears in a session plan.
+
+---
+
 ## Party Worldbuilding Questions
 *DM-free session work. Each questionnaire below is a collaborative deep-dive. Fill, paste back, and the engine ingests into the relevant draft files.*
 
