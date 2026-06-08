@@ -117,3 +117,7 @@ No DM brief card needed. No other formats unless explicitly requested.
 - `/session` — `.claude/commands/session.md`
 - `/recap` — `.claude/commands/recap.md`
 - `/entity-questionnaire` — `.claude/commands/entity-questionnaire.md`
+- `/find <query>` — `.claude/commands/find.md` — semantic entity search; surfaces entities by meaning
+- `/threads` — `.claude/commands/threads.md` — surfaces forgotten/unresolved campaign threads
+- `/voice <npc name>` — `.claude/commands/voice.md` — DM voice brief grounded in established canon
+- `/check <claim>` — `.claude/commands/check.md` — contradiction check against historian before canonizing
