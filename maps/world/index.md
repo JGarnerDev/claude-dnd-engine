@@ -70,7 +70,11 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 | Bayward River | ~4-5 | ~3-4 | — |
 | Deepwend River | ~5 | ~3-4 | — |
 | Thelindra River | ~5 | ~4-5 | — |
-| Bay B | ~5-6 | ~4-5 | — |
+| Bay B (The Greymaw) | ~5-6 | ~4-5 | — |
+| Bay E (Cindermouth Bay) | ~1-2 | ~4-5 | — |
+| Mountains P | ~1-2 | ~4-5 | — |
+| Islands A | ~1-3 | ~6-8 | — |
+| The Ashreaches | ~1-2 | ~4-5 | — |
 | Bay F | ~7-8 | ~5-6 | — |
 | Sub Continent C | ~3-5 | ~4-6 | — |
 | Mountains B | ~4-5 | ~3-5 | — |
