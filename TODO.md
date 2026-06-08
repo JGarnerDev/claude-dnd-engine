@@ -56,6 +56,17 @@ Progress tracker for getting this project ready to generate sessions and run cam
 
 ---
 
+## Party Worldbuilding Questions
+*DM-free session work. Each questionnaire below is a collaborative deep-dive. Fill, paste back, and the engine ingests into the relevant draft files.*
+
+- [ ] **Calendar & History** — `questionnaires/world-history-calendar.md` — eras, year system, defining events, Glistening cycle scope, remnant ruins, tech/faith history
+- [ ] **Religion & Pantheon** — `questionnaires/world-religion.md` — named gods, portfolios, dominant faiths by region, Deorum Ostium's sealing, how divine magic works in this world
+- [ ] **Peoples & Cultures** — *(questionnaire pending)* — deep-dive on major civilizations: Karath Ut'll lizardfolk, Oathmark oath-raiders, Hightalon dwarven-industrial, arctic Ilurak Qeth peoples, Erevast heartland mix
+- [ ] **Factions — Internal Life** — *(questionnaire pending)* — internal culture, leadership, and conflict for the 5 established factions (Vitricants, Mintners, Partenariats, Lifted, Courts Superior)
+- [ ] **Magic & the Arcane** — `questionnaires/world-magic.md` — how magic is acquired, guild structure and leverage, unlicensed casters, arcane vs. divine, remnant tech shadow
+
+---
+
 ## Historian
 - [ ] Add detail to current party (`historian/characters/parties/The Party.md`) — formation story, reputation, goals
 - [ ] Prompt Claude with each player's backstory, allowing it to create new entities with DM's approval
