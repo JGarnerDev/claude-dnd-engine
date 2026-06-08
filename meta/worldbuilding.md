@@ -32,7 +32,7 @@ Gods are real and present — not historical figures or distant abstractions, bu
 
 ## World Textures
 
-- **Coffee economy:** Rare, fetches high prices, desired by everyone. Gnomes dominate the trade historically — most brokers, roasters, and caravan operators are gnomish — but the market isn't locked. Other players exist; gnomes just got there first and stayed organized.
+- **Coffee economy:** Controlled by five rival noble houses (Gilgane, Westane, Rogarre, Tomsen, Apostol), each holding one irreplaceable link in the chain. The scarcity is manufactured — every bean is sterilized before sale. In-world names: ashwake (growers), the Black (trade). See `data/resources/coffee.md`.
 - **Remnant technology:** A pre-history civilization left ruins and relics the present world cannot explain or replicate. Introduce sparingly — one mission or arc element at a time, never as backdrop noise. What it was, what it built, and what ended it are unknown and should stay unknown. Functional relics feel wrong, not evil — they don't behave like magic or craftsmanship. No faction controls or understands this. D&D atmosphere holds; this is just the shadow of something older underneath it.
 - **Technological ceiling:** Standard D&D is the common tone. Steampunk Dwemer is the maximum reach — rare, upper bell curve only, associated with extinct or lost civilizations. Never the common infrastructure of a living society. When it appears, it feels inherited rather than built.
 - **Optimism persists:** Wonder and warmth exist even in dark settings. Party bonds form through shared experience. Small people from small places are capable of facing a world much larger than them — and knowing it.
@@ -69,7 +69,7 @@ Gods are real and present — not historical figures or distant abstractions, bu
 
 - **Common:** Timber, Iron Ore, Copper Ore, Stone, Clay, Salt, Grain, Fish, Fresh Water, Livestock, Wool, Hides, Coal, Hemp, Sand, Ale, Grapes, Stonecap Mushroom
 - **Uncommon:** Silver Ore, Gold Ore, Horses, Silk, Spices, Gemstones, Alchemical Herbs, Sulfur, Amber, Pearl, Obsidian, Dinosaur Bone, Dinosaur Hide, Whatwill
-- **Rare:** Platinum Ore, Mithral Ore, Adamantine Ore, Dragon Scales, Arcane Crystal, Sky Coral, Stormglass, Exotic Mounts, Serhari, Plate Armor, Coffee (gnome monopoly)
+- **Rare:** Platinum Ore, Mithral Ore, Adamantine Ore, Dragon Scales, Arcane Crystal, Sky Coral, Stormglass, Exotic Mounts, Serhari, Plate Armor, Coffee (five-house monopoly)
 - **Unique:** Ioun Stone, Starfall Ore, Dragonheart
 
 ## What to Avoid
