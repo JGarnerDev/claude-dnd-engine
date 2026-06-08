@@ -82,8 +82,12 @@ PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run th
 | `naming-status.ps1` | Show named vs. unnamed entries in world-naming questionnaire | `.\scripts\naming-status.ps1 [-Section <name>]` |
 | `map-crop.ps1` | Crop world map by feature name or col/row; saves to `maps/locations/` | `.\scripts\map-crop.ps1 -Feature "<name>"` or `-ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n> [-Margin <px>] [-Temp]` |
 | `gen-tiles.py` | Regenerate all 9 world map tiles from `world-names.png` after replacing the source image | `python scripts\gen-tiles.py` |
+| `index-entities.py` | Build/rebuild the semantic vector index (run after adding new entities) | `py -3.10 scripts\index-entities.py [--reset]` |
+| `semantic-search.ps1` | Semantic similarity search — find entities by meaning, not keywords | `.\scripts\semantic-search.ps1 -Query "<text>" [-Type <type>] [-Subtype <sub>] [-Exists true\|false] [-Source data\|historian\|scheduler] [-K <n>]` |
 
 Scripts output plain text; parse with your own judgment. They read frontmatter only (except `session-brief.ps1` which also reads the last session body for cliffhanger).
+
+**Semantic index:** `vector-index/` (gitignored, rebuilt from source). Build once with `py -3.10 scripts\index-entities.py`, re-run after bulk entity additions. Use `semantic-search.ps1` to surface entities by thematic relevance — betrayal arcs, forgotten NPCs, callback hooks, contradiction checks.
 
 ## Player Entity Submissions
 

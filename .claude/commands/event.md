@@ -38,7 +38,13 @@ If AI generation is needed (pool empty or sparse, `--ai` flag, or specific descr
 
 ## Phase 3 — Select or Generate
 
-**From pool:** Randomly select entries. If `--scale` is set, filter first. For mixed-scale requests without a flag, ensure variety — aim for at least one local, one regional, one global when count ≥ 3.
+**From pool:**
+- **Specific description mode** (text description provided): run semantic search on that description to surface the most relevant pool entries before deciding on generation vs. pool use:
+  ```powershell
+  .\scripts\semantic-search.ps1 -Query "<event description>" -K 5
+  ```
+  Prefer pool matches with score > 0.40 over AI generation — the pool exists to be used. If no strong matches, proceed to AI generation.
+- **Random mode** (no description): randomly select entries. If `--scale` is set, filter first. For mixed-scale requests without a flag, ensure variety — aim for at least one local, one regional, one global when count ≥ 3.
 
 **AI generation:** Ground events in campaign worldbuilding. Apply the same anti-archetype discipline as `/pitch` — avoid obvious defaults. Each event should feel specific to *this* world, not generic fantasy. When drawing on player-contributed lore, note which player's material shaped it.
 

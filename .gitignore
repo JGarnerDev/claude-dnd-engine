@@ -3,3 +3,4 @@
 pitch-log/
 questionnaires/*
 !questionnaires/.gitkeep
+vector-index/

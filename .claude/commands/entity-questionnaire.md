@@ -32,7 +32,15 @@ Do not ask about optional parameters that have sensible defaults.
 
 Read `meta/entity-creation.md` to find the correct schema file for `--type`. Then read `meta/schemas/{schema}.md` — specifically the **Player Form** and **Form → Frontmatter Mapping** sections.
 
-Run `.\scripts\free-entities.ps1 -Type <type>` to get existing free entities of this type. Scan for any that share the same origin, function, or key trait as the concept. Flag overlaps silently — surface them only in the DM note (Phase 4).
+Run `.\scripts\free-entities.ps1 -Type <type>` to get existing free entities of this type. Scan for any that share the same origin, function, or key trait as the concept.
+
+Also run semantic search on the concept to catch cross-type duplicates — entities that serve the same narrative role under a different type:
+
+```powershell
+.\scripts\semantic-search.ps1 -Query "<concept text>" -K 5
+```
+
+Flag any result with score > 0.40 as a potential overlap regardless of type. Surface all overlaps silently — only in the DM note (Phase 4).
 
 ---
 
@@ -128,7 +136,13 @@ Parse the filled questionnaire. Extract what was answered and note blanks. Read 
 
 ### Ingest Phase 2 — Balance Review
 
-Read `meta/worldbuilding.md` (once). Run `.\scripts\free-entities.ps1 -Type <entity_type>` for current pool.
+Read `meta/worldbuilding.md` (once). Run `.\scripts\free-entities.ps1 -Type <entity_type>` for current pool. Also run semantic search on the entity name and concept to detect cross-type thematic conflicts:
+
+```powershell
+.\scripts\semantic-search.ps1 -Query "<entity name> <concept summary>" -K 5
+```
+
+Results with score > 0.40 of a different type are potential hidden duplicates — assess under the **Overlap** dimension below.
 
 Silently assess — use findings only to inform DM questions:
 

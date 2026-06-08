@@ -37,6 +37,14 @@ After reading, state aloud:
 - What the last session ended on (cliffhanger or final recap note)
 - What the next session number will be
 
+Then run semantic search on the cliffhanger or active mission hook to surface historian entities the story may be ready to revisit:
+
+```powershell
+.\scripts\semantic-search.ps1 -Query "<cliffhanger or mission hook text>" -Source historian -K 5
+```
+
+Note any results with score > 0.35 — these are callback candidates. Do not force them into the plan; use only if they fit naturally.
+
 ---
 
 ## Phase 2 — Mode Detection
@@ -73,9 +81,15 @@ Read frontmatter only (state, description) across `historian/characters/`, `hist
 - Stranded or abandoned entities called out in session recaps (e.g. Rose and Thorn)
 - Cliffhangers from any recent session that were never resolved
 
-**Step 2 — Scan data/ for notable free entities**
+**Step 2 — Find free entities**
 
-Read frontmatter only (`name`, `type`, `subtype`, `importance`, `active`, `description`) across all of `data/`. Filter to `exists: false`, `active: true`, `importance: major` or `critical`. These are entities ready to enter play.
+Run semantic search using the themes of the current session direction (from cliffhanger, mission hook, or chosen thread):
+
+```powershell
+.\scripts\semantic-search.ps1 -Query "<themes from cliffhanger or direction>" -Exists false -K 8
+```
+
+This surfaces thematically matching pool entities regardless of importance level. Also read frontmatter only (`name`, `type`, `subtype`, `importance`, `active`, `description`) across `data/` and filter to `exists: false`, `active: true`, `importance: major` or `critical` for high-priority entities the semantic search may not rank highly. Combine both lists — semantic results for thematic fit, frontmatter scan for importance-flagged entities.
 
 **Step 3 — Check meta preferences**
 
