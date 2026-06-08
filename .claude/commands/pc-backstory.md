@@ -44,7 +44,13 @@ Surface gaps after the proposed diff, grouped by severity:
 
 Backstory ingestion often introduces entities (locations, deities, NPCs, factions) that don't have files yet. These are player-confirmed canon — they skip the balance review flow used for `/entity-questionnaire` submissions. But they still require reading `meta/entity-creation.md` for schema before any file is written.
 
-After proposing the PC file diff (step 4 above), also identify any new entities referenced in the backstory and categorize them:
+After proposing the PC file diff (step 4 above), identify any new entities referenced in the backstory. Before treating them as new, run semantic search on each referenced entity's description to check if it already exists under a different name:
+
+```powershell
+.\scripts\semantic-search.ps1 -Query "<entity description from backstory>" -K 3
+```
+
+Any result with score > 0.45 is a likely match — surface it to the DM before creating a new file. Then categorize remaining genuinely new entities:
 
 - **Canonized past/present entities** (locations, deities, factions that existed or still exist) → create in `historian/` with `exists: true`; use `state: destroyed` / `state: active` as appropriate
 - **Potential future entities** (antagonists with unknown fate, unresolved plot threads) → create in `data/` with `exists: false` as free entities available for future sessions
