@@ -29,7 +29,7 @@
 
 - [ ] Jeff — Serhari (plains vine, ritual preparations, martial religion arc) — find geographic home
 - [x] Ben — world naming questionnaire complete (18 features named)
-- [ ] Miguel — check data for map-relevant contributions
+- [x] Miguel — 20 entities ingested (19 named features + Ashreaches); see below for map label updates needed
 
 ---
 
@@ -59,6 +59,40 @@
 
 ### Far east (Continent H cluster)
 - [x] Add terrain character beyond continent-level labels — forest, jungle, or plains as terrain warrants
+
+---
+
+## Miguel's Map Label Updates
+
+Replace placeholder labels with Miguel's canonical names:
+
+- [ ] Continent B → **Caldrath**
+- [ ] Continent E → **The Pale Reach**
+- [ ] Sub Continent A → **The Narrows**
+- [ ] Sub Continent C → **The Greyback**
+- [ ] Mountains B → **The Stormwall**
+- [ ] Mountains F → **The Broken Back**
+- [ ] Mountains H → **The Pale Spire**
+- [ ] Mountains M → **The Divide**
+- [ ] Desert E → **The Cinder Plain**
+- [ ] Desert G → **The Hidden Desert**
+- [ ] Islands E → **The Pale Isles**
+- [ ] Islands H → **The Warm Isles**
+- [ ] Islift C → **The Hearth**
+- [ ] Islift F → **The Landing**
+- [ ] Sea C → **The Amber Sea**
+- [ ] Bay B → **The Greymaw**
+- [ ] Bay E → **Cindermouth Bay**
+- [ ] Channel B → **Merchant's Run**
+- [ ] Channel H → **The Southern Throat**
+- [ ] **Islands A — add volcanic peak** (Option B, confirmed): Add a volcanic mountain feature to the center-north of Islands A. Small crater + ash-slope texture. This is the geological source for The Ashreaches coffee terraces. Ash falling into Bay E (Cindermouth Bay) should be visually explained by this peak.
+  - Target position: center-north of Islands A, above the Bay E coastline (~col 1–2, row ~5)
+  - Style: match The Caldera's volcanic texture but smaller — one peak, not a full caldera
+  - No coastline edits needed — terrain texture only
+  - Label optional: can leave unnamed (feature of The Ashreaches) or assign a name later
+- [ ] **Place The Ashreaches label** on Islands A, on the slopes between the new volcanic peak and Bay E
+- [ ] Name **Mountains P** (volcanic range on Struck Side adjacent to The Caldera — separate from the Ashreaches)
+- [ ] Name **Islands A** (western ocean island chain below Channel I)
 
 ---
 
