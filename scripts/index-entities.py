@@ -143,9 +143,23 @@ def main():
             if indexed % 100 == 0:
                 print(f"  {indexed} indexed...")
 
+    commit = "unknown"
+    try:
+        import subprocess
+        result = subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True, cwd=ROOT)
+        if result.returncode == 0:
+            commit = result.stdout.strip()
+    except Exception:
+        pass
+
+    stamp_file = ROOT / 'vector-index' / '.index-built'
+    from datetime import datetime, timezone
+    stamp_file.write_text(f"{datetime.now(timezone.utc).isoformat()}\n{commit}\n", encoding='utf-8')
+
     print(f"\nDone. Indexed: {indexed} | Skipped: {skipped}")
     print(f"Total in collection: {collection.count()}")
     print(f"Index: {index_dir}")
+    print(f"Stamp: {stamp_file}")
 
 
 if __name__ == '__main__':
