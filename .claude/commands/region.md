@@ -178,10 +178,18 @@ Run:
 
 **Scope:** Phase 6 covers NPCs, factions, and events only. Do NOT re-anchor resources — those were handled in Phase 4. If a resource was already attached in Phase 4, carry it forward; do not list it again as a candidate entity.
 
-For each location in the draft, scan the entity pool for:
+For each location in the draft, run semantic search on the location's geographic role and terrain description to surface non-obvious pool fits:
+
+```powershell
+.\scripts\semantic-search.ps1 -Query "<location role and terrain description>" -K 6
+```
+
+Treat results with score > 0.35 as additional anchoring candidates. Then also scan the free-entities output directly for:
 - NPCs whose background fits the location's role or terrain
 - Factions headquartered there or with obvious strategic interest
 - Events that could be seeded at this location
+
+Combine both sources — semantic results for thematic fit, free-entities output for explicit type filtering.
 
 Prioritize player-contributed entities. Flag if one player's material dominates the anchoring candidates — include the contribution balance output. Flag if Miguel or Ben have no pool at all and note that their entities can't be balanced here.
 

@@ -40,6 +40,14 @@ Additional reads:
 - If `--tone` is explicitly set: skip the script's tone output; use the provided value instead
 - Do not read historian, sessions, missions, or act files unless the user explicitly asks for continuity with current story
 
+Run semantic search to surface thematically matching pool entities that could seed the pitch:
+
+```powershell
+.\scripts\semantic-search.ps1 -Query "<type> <tone> <setting>" -Exists false -K 5
+```
+
+Scan results for contributed entities (`contributed_by` field) — prefer these as source material. Others may inspire names, details, or hooks. Do not force results into the pitch; use only what genuinely fits.
+
 ---
 
 ## Phase 3 — Generate Pitch

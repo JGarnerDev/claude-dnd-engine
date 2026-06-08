@@ -35,7 +35,11 @@ For each entity listed in `locations` and `key_npcs` in the session plan:
 
 1. Check `historian/` — if it already exists there, confirm its current state is still accurate given what happened.
 2. Check `data/` — if it exists there with `exists: false`, flag it for canonization.
-3. If it exists in neither place, flag it as a **missing entity** — do not silently create it.
+3. If it exists in neither place, run semantic search as a fuzzy fallback — the entity may exist under a different name than the session plan used:
+   ```powershell
+   .\scripts\semantic-search.ps1 -Query "<entity name and any known description>" -K 3
+   ```
+   Any result with score > 0.45 is a likely match — confirm with DM before assuming missing. If no match found, flag as a **missing entity** — do not silently create it.
 
 Report findings before proceeding:
 - Entities to canonize: [list]
