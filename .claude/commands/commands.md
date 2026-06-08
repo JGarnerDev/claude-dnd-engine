@@ -12,6 +12,10 @@ Commands to list:
 - `/entity-questionnaire [--type <type>]` — generate a player-facing entity design questionnaire; also handles ingestion when a filled questionnaire is returned
 - `/event [count|description] [--scale local|regional|global] [--add] [--from-pool] [--ai]` — generate world events from pool or AI; use `--add` to contribute new events
 - `/region [--region <name>] [--draft <file>] [--city <n>]` — detail a world region: geography analysis → draft doc → entity anchoring → city questionnaires
+- `/find <query> [--type <type>] [--source historian|data|scheduler] [--exists true|false] [-k <n>]` — semantic similarity search; surfaces entities by meaning, not keywords
+- `/threads [-k <n>]` — surface forgotten or unresolved campaign threads; combines state-based scan with semantic ranking against current story state
+- `/voice <npc name>` — build a DM voice brief for an NPC; grounds new dialogue in established canon
+- `/check <claim> [--source historian|data|both]` — check a proposed fact or recap against historian for contradictions
 - `/sync` — sync shareable engine files to the template repo
 - `pc-backstory` (auto-triggered) — ingest raw PC backstory text into a proper historian file
 - `entity-ingest` (auto-triggered) — ingest a filled player entity questionnaire after balance review
