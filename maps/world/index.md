@@ -2,12 +2,12 @@
 
 ## Status
 
-Updated 2026-06-07: added Bayward River, Deepwend River, Thelindra River (around Bay B); Plains A renamed to The Dustbreak Plains. Ben naming ingested — 18 features added to index.
+Updated 2026-06-09: Miguel naming ingested — 19 surface features renamed/added; world-sky.jpg replaced with world-sky.png — Slice A, The Hearth, The Landing added to sky layer.
 
 ## Images
 
 - `world-names.png` — consolidated label map; all land features (continents, sub-continents, mountain ranges, deserts, tundra, islands, plains, rivers) and water features (oceans, seas, bays, channels). Primary orientation reference. **8192×6144px.**
-- `world-sky.jpg` — sky layer with Opticon's Fade labeled.
+- `world-sky.png` — sky layer with Opticon's Fade, Slice A, The Hearth (Islift C), The Landing (Islift F), and other air-situated features labeled.
 - `city-registry.md` — stable ID index for all 378 unnamed city markers. IDs survive until a city graduates (is named). Use for player assignments and cross-references.
 - `city-markers.png` — transparent PNG overlay; red dots mark cities that exist in the world but are unnamed and undetailed. No labels. Tiled as `tiles/markers-{name}.png`. Use alongside base tiles to see undetailed cities in any area.
 
