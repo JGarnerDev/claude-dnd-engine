@@ -26,11 +26,16 @@ When a sparse `./data` or `./historian` entity is selected as a **key story elem
 
 **Sparse** means any of: `description` under ~15 words, no `personality` field, no `motivation` field, or body text that is a single sentence or absent.
 
+**Proximity tiers — calibrate depth to how close the party is:**
+
+- **Approaching** — entity appears in an active mission's `obstacles` or is likely to be key within 1–2 sessions, but is not key *this* session. Light elaboration: personality hook + motivation only. One-line flag; one-line draft if delegated.
+- **Immediate** — entity is a key NPC, central location, or primary faction *this* session. Full elaboration: motivation, personality hook, one secret, one complication.
+
 **Protocol:**
 
-1. Flag it to the DM: *"[Name] is underwritten — missing [fields]. I can draft an elaboration (motivation, personality hook, one secret, one complication), or you can write it yourself. Your call."*
+1. Flag it to the DM with the tier: *"[Name] is underwritten — [Approaching / Immediate]. Missing [fields]. I can draft [a light sketch / full elaboration], or you can write it yourself. Your call."*
 2. **Wait for the DM's response.** Do not propose content until asked to.
-3. If the DM delegates: draft the elaboration as a clearly labeled proposal block. Wait for confirm, tweak, or reject before touching the file.
+3. If the DM delegates: draft the elaboration as a clearly labeled proposal block, scoped to the tier. Wait for confirm, tweak, or reject before touching the file.
 4. If the DM writes it: wait; do not fill in parallel.
 5. On approval: write the elaboration back to the entity file immediately so detail accumulates across sessions.
 
