@@ -10,7 +10,8 @@ tags:
   - location/region
 geography: "Western desert peninsula entirely consumed by arid terrain; cut off from the east by water"
 controlling_faction: unknown
-importance: major
+
+biome: desert
 description: "Inhabited desert continent; decentralized lizard-people tribes and dinosaurs; no central government; deep lizard-tongue naming tradition"
 ---
 

@@ -10,7 +10,8 @@ tags:
   - location/region
 geography: "Far north; small, isolated; arctic; rumored last site the gods touched before sealing the world from the ethereal"
 controlling_faction: unknown
-importance: major
+
+biome: arctic
 description: "The Gods' Door; all-religion pilgrimage site; monks carve continuously into ice; pilgrims required to add their own carving; incantations rumored in deep unvisited chambers"
 ---
 
