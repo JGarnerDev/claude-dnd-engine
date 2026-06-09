@@ -10,7 +10,8 @@ tags:
   - location/region
 geography: "Large upper-center forested continent with rivers and tundra to the north"
 controlling_faction: unknown
-importance: major
+
+biome: [temperate-forest, tundra]
 description: "Mixed-race civilized heartland; ancient neutral name predating any single culture's claim"
 ---
 

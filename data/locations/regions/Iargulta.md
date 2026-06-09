@@ -10,7 +10,8 @@ tags:
   - location/region
 geography: "Southwestern island cluster; mountainous; volcanic proximity; isolated from main world"
 controlling_faction: unknown
-importance: minor
+
+biome: volcanic
 description: "Remote volcanic island cluster; soil seeded by Astra impact ash; known for exceptional lemons; isolated and self-sufficient"
 ---
 

@@ -10,7 +10,8 @@ tags:
   - location/region
 geography: "Elevated claw-shaped sub-continent; mountain-backed by [[Watchwall Mountains]]; north-facing"
 controlling_faction: unknown
-importance: major
+
+biome: alpine
 description: "Dwarven-influenced industrial sub-continent; sky pirates, steampunk craft, trade guilds, mage guilds; the claw formation defines its geography and identity"
 ---
 
