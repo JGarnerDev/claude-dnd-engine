@@ -53,26 +53,26 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 
 | Feature | Col | Row | Draft |
 |--------|-----|-----|-------|
-| Erevast | ~5–10 | ~2–6 | `drafts/regions/Erevast.md` |
-| Karath Ut'll | ~2–4 | ~5–8 | `drafts/regions/Karath Ut'll.md` |
-| Hightalon | ~10–12 | ~3–5 | `drafts/regions/Hightalon.md` |
-| Solrath | ~7–9 | ~7–9 | `drafts/regions/Solrath.md` |
-| The Saltbreak Isles | ~11–12 | ~6–8 | `drafts/regions/The Saltbreak Isles.md` |
-| Oathmark | ~11 | ~2–3 | `drafts/regions/Oathmark.md` |
-| Opticon's Fade | ~1–2 | ~1–2 | `drafts/regions/Opticon's Fade.md` |
-| Ilurak Qeth | ~6–10 | ~11–13 | `drafts/regions/Ilurak Qeth.md` |
-| Gordrathi Mountains | ~5–7 | ~5–7 | `drafts/regions/Gordrathi Mountains.md` |
-| Watchwall Mountains | ~10–11 | ~4–5 | `drafts/regions/Watchwall Mountains.md` |
-| Virethorn Range | ~14–15 | ~4–6 | `drafts/regions/Virethorn Range.md` |
-| The Grey Fathers | ~8–9 | ~3–4 | `drafts/regions/The Grey Fathers.md` |
-| Azel Samarat | ~7–8 | ~6–7 | `drafts/regions/Azel Samarat.md` |
-| Ut'karr | ~2–3 | ~6–7 | `drafts/regions/Ut'karr.md` |
-| The Still Cold | ~3–11 | ~1–2 | `drafts/regions/The Still Cold.md` |
-| The Irongate | ~10–12 | ~4–5 | `drafts/regions/The Irongate.md` |
-| Essaur Bay | ~7–8 | ~8–9 | `drafts/regions/Essaur Bay.md` |
-| The Grey Crossing | ~9–10 | ~10–11 | `drafts/regions/The Grey Crossing.md` |
-| Veth's Gate | ~3–4 | ~7–8 | `drafts/regions/Veth's Gate.md` |
-| The Dustbreak Plains | ~6–8 | ~5–6 | `drafts/regions/The Dustbreak Plains.md` |
+| Erevast | ~5–10 | ~2–6 | `data/locations/regions/Erevast.md` |
+| Karath Ut'll | ~2–4 | ~5–8 | `data/locations/regions/Karath Ut'll.md` |
+| Hightalon | ~10–12 | ~3–5 | `data/locations/regions/Hightalon.md` |
+| Solrath | ~7–9 | ~7–9 | `data/locations/regions/Solrath.md` |
+| The Saltbreak Isles | ~11–12 | ~6–8 | `data/locations/regions/The Saltbreak Isles.md` |
+| Oathmark | ~11 | ~2–3 | `data/locations/regions/Oathmark.md` |
+| Opticon's Fade | ~1–2 | ~1–2 | `data/locations/regions/Opticon's Fade.md` |
+| Ilurak Qeth | ~6–10 | ~11–13 | `data/locations/regions/Ilurak Qeth.md` |
+| Gordrathi Mountains | ~5–7 | ~5–7 | `data/locations/terrain-features/Gordrathi Mountains.md` |
+| Watchwall Mountains | ~10–11 | ~4–5 | `data/locations/terrain-features/Watchwall Mountains.md` |
+| Virethorn Range | ~14–15 | ~4–6 | `data/locations/terrain-features/Virethorn Range.md` |
+| The Grey Fathers | ~8–9 | ~3–4 | `data/locations/terrain-features/The Grey Fathers.md` |
+| Azel Samarat | ~7–8 | ~6–7 | `data/locations/terrain-features/Azel Samarat.md` |
+| Ut'karr | ~2–3 | ~6–7 | `data/locations/terrain-features/Ut'karr.md` |
+| The Still Cold | ~3–11 | ~1–2 | `data/locations/terrain-features/The Still Cold.md` |
+| The Irongate Sea | ~10–12 | ~4–5 | `data/locations/terrain-features/The Irongate Sea.md` |
+| Essaur Bay | ~7–8 | ~8–9 | `data/locations/terrain-features/Essaur Bay.md` |
+| The Grey Crossing | ~9–10 | ~10–11 | `data/locations/terrain-features/The Grey Crossing.md` |
+| Veth's Gate | ~3–4 | ~7–8 | `data/locations/terrain-features/Veth's Gate.md` |
+| The Dustbreak Plains | ~6–8 | ~5–6 | — |
 | Bayward River | ~4-5 | ~3-4 | — |
 | Deepwend River | ~5 | ~3-4 | — |
 | Thelindra River | ~5 | ~4-5 | — |
@@ -93,24 +93,24 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 | Plains G | ~7-8 | ~4-5 | — |
 | Desert B | ~7-8 | ~5-7 | — |
 | Ocean A | ~1-5 | ~5-9 | — |
-| Deorum Ostium | ~11-13 | ~1-2 | `drafts/regions/Deorum Ostium.md` |
-| Skoud Sea | ~12-14 | ~2-3 | `drafts/regions/Skoud Sea.md` |
-| Witches Tit | ~6-8 | ~2 | `drafts/regions/Witches Tit.md` |
-| Frisian Bay | ~9-10 | ~3-4 | `drafts/regions/Frisian Bay.md` |
-| The Rip | ~10-11 | ~3-4 | `drafts/regions/The Rip.md` |
-| Koom Mountains | ~5-6 | ~4-5 | `drafts/regions/Koom Mountains.md` |
-| Slor Bay | ~7-8 | ~5-6 | `drafts/regions/Slor Bay.md` |
-| Sgaile Desert | ~6-7 | ~6 | `drafts/regions/Sgaile Desert.md` |
-| Loess Mountains | ~10-11 | ~6 | `drafts/regions/Loess Mountains.md` |
-| The Myriad | ~4 | ~6-7 | `drafts/regions/The Myriad.md` |
-| Fairway Sea | ~11-13 | ~6-7 | `drafts/regions/Fairway Sea.md` |
-| Bonny Islands | ~9-10 | ~6-7 | `drafts/regions/Bonny Islands.md` |
-| Klein Zand | ~8-9 | ~8 | `drafts/regions/Klein Zand.md` |
-| Torpid Channel | ~5 | ~8 | `drafts/regions/Torpid Channel.md` |
-| The Thrum | ~6-7 | ~8-9 | `drafts/regions/The Thrum.md` |
-| Iargulta | ~3-4 | ~9-10 | `drafts/regions/Iargulta.md` |
-| Mori | ~14-15 | ~8-9 | `drafts/regions/Mori.md` |
-| Parhelion Ocean | ~14-16 | ~7-10 | `drafts/regions/Parhelion Ocean.md` |
+| Deorum Ostium | ~11-13 | ~1-2 | `data/locations/regions/Deorum Ostium.md` |
+| Skoud Sea | ~12-14 | ~2-3 | `data/locations/terrain-features/Skoud Sea.md` |
+| Witch's Tit | ~6-8 | ~2 | `data/locations/terrain-features/Witch's Tit.md` |
+| Frisian Bay | ~9-10 | ~3-4 | `data/locations/terrain-features/Frisian Bay.md` |
+| The Rip | ~10-11 | ~3-4 | `data/locations/terrain-features/The Rip.md` |
+| Koom Mountains | ~5-6 | ~4-5 | `data/locations/terrain-features/Koom Mountains.md` |
+| Slor Bay | ~7-8 | ~5-6 | `data/locations/terrain-features/Slor Bay.md` |
+| Sgaile Desert | ~6-7 | ~6 | `data/locations/terrain-features/Sgaile Desert.md` |
+| Loess Mountains | ~10-11 | ~6 | `data/locations/terrain-features/Loess Mountains.md` |
+| The Myriad | ~4 | ~6-7 | `data/locations/terrain-features/The Myriad.md` |
+| Fairway Sea | ~11-13 | ~6-7 | `data/locations/terrain-features/Fairway Sea.md` |
+| Bonny Islands | ~9-10 | ~6-7 | `data/locations/terrain-features/Bonny Islands.md` |
+| Klein Zand | ~8-9 | ~8 | `data/locations/terrain-features/Klein Zand.md` |
+| Torpid Channel | ~5 | ~8 | `data/locations/terrain-features/Torpid Channel.md` |
+| The Thrum | ~6-7 | ~8-9 | `data/locations/terrain-features/The Thrum.md` |
+| Iargulta | ~3-4 | ~9-10 | `data/locations/regions/Iargulta.md` |
+| Mori | ~14-15 | ~8-9 | `data/locations/regions/Mori.md` |
+| Parhelion Ocean | ~14-16 | ~7-10 | `data/locations/terrain-features/Parhelion Ocean.md` |
 
 ## Cosmology Notes
 
