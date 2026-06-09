@@ -29,11 +29,18 @@ $climateBand = switch ($distFromEquator) {
 
 # -- Wind exposure -------------------------------------------------------------
 $colPct = $Col / $TotalCols
-$windNote = switch ($colPct) {
-    { $_ -le 0.25 } { "Western coast -- direct ocean exposure; maximum moisture, frequent storms" }
-    { $_ -le 0.45 } { "Western interior -- good moisture unless blocked by mountain ranges" }
-    { $_ -le 0.65 } { "Central interior -- moisture depends on local mountain barriers; drier than west" }
-    default          { "Eastern zone -- likely drier; western ranges may cast rain shadow here" }
+$windNote = if ($colPct -le 0.25) {
+    # Western coast: moisture character varies by latitude
+    if     ($distFromEquator -le 1) { "Tropical western coast -- warm and humid year-round; distinct wet/dry seasons, not persistent grey" }
+    elseif ($distFromEquator -le 2) { "Subtropical western coast -- Mediterranean pattern: hot dry summers, mild wet winters; sunny, not grey" }
+    elseif ($distFromEquator -le 3) { "Warm temperate western coast -- mild, maritime; reliable year-round moisture; can be overcast but not cold" }
+    else                             { "Temperate/cold western coast -- direct ocean exposure; maximum moisture, frequent storms; grey skies common" }
+} elseif ($colPct -le 0.45) {
+    "Western interior -- good moisture unless blocked by mountain ranges"
+} elseif ($colPct -le 0.65) {
+    "Central interior -- moisture depends on local mountain barriers; drier than west"
+} else {
+    "Eastern zone -- likely drier; western ranges may cast rain shadow here"
 }
 
 # -- Position in km ------------------------------------------------------------
@@ -77,7 +84,11 @@ Write-Host ""
 Write-Host "-- Wind & Moisture ----------------------" -ForegroundColor DarkGray
 Write-Host "  $windNote" -ForegroundColor Gray
 Write-Host "  Prevailing direction: West -> East" -ForegroundColor Gray
-Write-Host "  West-facing slopes/coasts:  wet, lush, frequent storms" -ForegroundColor Gray
+if ($distFromEquator -le 2) {
+    Write-Host "  West-facing slopes/coasts:  warm and moist; wet season distinct from dry; NOT persistently grey" -ForegroundColor Gray
+} else {
+    Write-Host "  West-facing slopes/coasts:  wet, lush, frequent storms; overcast common" -ForegroundColor Gray
+}
 Write-Host "  East-facing slopes/coasts:  drier; rain shadow if mountains present" -ForegroundColor Gray
 Write-Host ""
 Write-Host "-- Rivers -------------------------------" -ForegroundColor DarkGray
@@ -85,7 +96,11 @@ Write-Host "  Drain east/southeast off mountain ranges" -ForegroundColor Gray
 Write-Host "  Lakes form at mountain bases and along river courses" -ForegroundColor Gray
 Write-Host ""
 Write-Host "-- Coast Type (if applicable) -----------" -ForegroundColor DarkGray
-Write-Host "  West-facing:       rocky cliffs, sea stacks, no beaches" -ForegroundColor Gray
+if ($distFromEquator -le 2) {
+    Write-Host "  West-facing (tropical/subtropical):  warm water; beaches possible; rocky headlands between bays" -ForegroundColor Gray
+} else {
+    Write-Host "  West-facing (temperate/cold):  rocky cliffs, sea stacks, no beaches" -ForegroundColor Gray
+}
 Write-Host "  East-facing/bays:  calmer, sandy beaches" -ForegroundColor Gray
 Write-Host "  River mouths:      wide muddy estuaries" -ForegroundColor Gray
 Write-Host "  Polar coasts:      fjords" -ForegroundColor Gray

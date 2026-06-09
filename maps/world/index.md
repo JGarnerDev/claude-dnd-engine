@@ -22,10 +22,16 @@ Updated 2026-06-09: Miguel naming ingested — 19 surface features renamed/added
 
 ## Climate Rules (west-to-east winds)
 
-- West-facing coasts/slopes: wet, lush, frequent storms
+- West-facing coasts/slopes vary by latitude:
+  - Tropical (dist ≤1 from equator row 7): warm and humid; wet/dry seasons; NOT persistently grey
+  - Subtropical (dist 2): Mediterranean pattern — hot dry summers, mild wet winters; sunny, not grey
+  - Warm temperate (dist 3): mild maritime; reliable moisture; can be overcast but not cold
+  - Temperate/cold (dist ≥4): maximum moisture, frequent storms; grey skies common
 - East-facing coasts/slopes: drier; rain shadow if mountains present
 - Rivers drain east/southeast off mountain ranges
-- West coasts: rocky cliffs, no beaches / East coasts: sandy beaches / River mouths: wide estuaries
+- West coasts (tropical/subtropical): warm water, beaches possible, rocky headlands between bays
+- West coasts (temperate/cold): rocky cliffs, sea stacks, no beaches
+- East coasts: sandy beaches / River mouths: wide estuaries
 
 ## Tile Coverage
 
