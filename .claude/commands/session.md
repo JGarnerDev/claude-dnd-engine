@@ -176,7 +176,15 @@ If `scope: linked`, replace the full encounter detail with a one-line reference:
 
 ### Elaboration Check
 
-Before writing NPC and location detail, check every key `./data` and `./historian` entity in this session against the elaboration protocol in `data/CLAUDE.md`. Historian entities can be just as sparse as data entities — canonized does not mean ready for detailed play. For each sparse key entity: flag it and ask the DM whether to draft elaboration or let them write it. **Do not fill gaps silently.** Resolve all elaboration decisions before continuing to NPC Quick-Reference.
+Before writing NPC and location detail, check every key `./data` and `./historian` entity in this session against the elaboration protocol in `data/CLAUDE.md`. Historian entities can be just as sparse as data entities — canonized does not mean ready for detailed play. For each sparse key entity: flag it with the **Immediate** tier and ask the DM whether to draft elaboration or let them write it. **Do not fill gaps silently.** Resolve all elaboration decisions before continuing to NPC Quick-Reference.
+
+### Approaching Entity Check
+
+After the Elaboration Check, scan the active mission's `obstacles` field for entity references not already covered above. For each sparse entity named there that is **not** key this session but plausibly key within 1–2 sessions:
+
+- Flag it as **Approaching** (light elaboration tier — see `data/CLAUDE.md`): *"[Name] appears in the mission's obstacles and is sparse. Consider a light sketch (personality + motivation) before they become immediate."*
+
+Do not block session generation on these. They are lead-time flags — the DM can defer or delegate at any point.
 
 ### NPC Quick-Reference
 One entry per key NPC appearing this session. For any NPC with historian canon, run `/voice <name>` first to ground the voice note in established characterization — do not invent fresh voice from scratch if history exists.
