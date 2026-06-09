@@ -34,7 +34,7 @@ Progress tracker for getting this project ready to generate sessions and run cam
 - [ ] Add label **The Grey Reaches** — Islift B (left cluster, mid-altitude)
 - [ ] Rename "The Hearth" (Islift C) → **Darkling's Perch** on world-sky.png (Paul's name wins; 2026-06-09)
 - [ ] Add label **The Hearth** — Islift G (Miguel; reassigned from Islift C; nearest-to-surface right cluster)
-- [ ] Add/verify **Islift D, E, F, G** labels once names are assigned (currently unnamed in questionnaire)
+- [ ] Add/verify **Islift D, E, F** labels once names are assigned (currently unnamed in questionnaire)
 - [ ] Update `maps/world/index.md` Status line after any sky layer edits
 
 ---
