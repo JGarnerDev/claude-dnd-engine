@@ -80,6 +80,7 @@ For each entity flagged for canonization in Phase 3:
 - Add `source_session: [[Session {nn}]]`
 - Add `confirmed_date: "{played_date}"`
 - Move the file from its `data/` path to the corresponding `historian/` path (see `meta/types.md` for the mapping)
+- **Elaboration check:** if the moved entity has no `personality` or `motivation` field, offer a minimal elaboration prompt — *"[Name] just became real. Want a personality hook and motivation sketched now while it's fresh?"* If yes, draft immediately (one-pass, Approaching tier from `data/CLAUDE.md`) and write back to the historian file before continuing. Do not do this silently.
 
 **If the entity has a state change:**
 - Update the relevant field (`state`, `location`, `last_updated`, etc.) in its `historian/` file
