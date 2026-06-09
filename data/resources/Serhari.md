@@ -11,7 +11,9 @@ tags:
 resource_type: alchemical
 rarity: rare
 location:
-  - unknown
+  - Plains F (southern margin)
+  - The Dustbreak Plains (Gordrathi foothills margin)
+  - Plains J (Caldrath interior, near The Broken Back)
 
 # --- OPTIONAL (entity base) ---
 aliases:

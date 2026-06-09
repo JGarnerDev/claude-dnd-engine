@@ -27,7 +27,7 @@
 
 ## Step 11 — Player Contributions
 
-- [ ] Jeff — Serhari (plains vine, ritual preparations, martial religion arc) — find geographic home
+- [x] Jeff — Serhari (plains vine, ritual preparations) — find geographic home
 - [x] Ben — world naming questionnaire complete (18 features named)
 - [x] Miguel — 20 entities ingested (19 named features + Ashreaches); see below for map label updates needed
 
