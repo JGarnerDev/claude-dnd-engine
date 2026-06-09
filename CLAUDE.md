@@ -139,11 +139,11 @@ No DM brief card needed. No other formats unless explicitly requested.
 
 ## Commands
 
-- `/commands` — `.claude/commands/commands.md`
-- `/inventory` — `.claude/commands/inventory.md`
-- `/session` — `.claude/commands/session.md`
-- `/recap` — `.claude/commands/recap.md`
-- `/entity-questionnaire` — `.claude/commands/entity-questionnaire.md`
+- `/commands` — `.claude/commands/commands.md` — list all available slash commands with descriptions
+- `/inventory` — `.claude/commands/inventory.md` — scan all entities in `./data` and report what's in the pool
+- `/session` — `.claude/commands/session.md` — plan the next session from campaign state, threads, and scheduler
+- `/recap` — `.claude/commands/recap.md` — canonize a played session and write it to historian
+- `/entity-questionnaire` — `.claude/commands/entity-questionnaire.md` — generate a player-facing questionnaire to design a new world entity
 - `/find <query>` — `.claude/commands/find.md` — semantic entity search; surfaces entities by meaning
 - `/threads` — `.claude/commands/threads.md` — surfaces forgotten/unresolved campaign threads
 - `/voice <npc name>` — `.claude/commands/voice.md` — DM voice brief grounded in established canon
