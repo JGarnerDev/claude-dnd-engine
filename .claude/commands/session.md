@@ -18,7 +18,10 @@ Read the following files before doing anything else. Do not generate any content
 2. `scheduler/acts/` — any file with `state: active`; note its goal and current mission list
 3. `scheduler/missions/` — any file with `state: active`; note objective, hook, obstacles, and last_updated session
 4. `historian/sessions/` — find the highest-numbered session file; read its `cliffhanger`, `recap`, and any `new_entities`
-5. Meta reference files (read once; do not re-read per sub-task):
+5. Lore files (read once; do not re-read per sub-task) — scan frontmatter only unless a specific lore domain is directly relevant to the session:
+   - `data/lore/` — world history, magic rules, religion, calendar; use to ground historian entity detail and ensure new content fits established world facts; treat `state: draft` sections as open questions, not settled canon
+
+6. Meta reference files (read once; do not re-read per sub-task):
    - `meta/worldbuilding-approach.md` — how to reason about worldbuilding: coherence, causality, consequences
    - `meta/worldbuilding.md` — tone, themes, setting pillars, what to avoid
    - `meta/difficulty.md` — encounter tiers, DC ranges, session mix
