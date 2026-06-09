@@ -1,5 +1,6 @@
 ---
 name: "Session 09 The Shadows"
+campaign: strahd
 type: session
 exists: true
 state: completed

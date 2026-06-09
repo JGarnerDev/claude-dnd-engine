@@ -1,5 +1,6 @@
 ---
 name: "Session 12 The March of the Dead"
+campaign: strahd
 type: session
 exists: true
 state: completed

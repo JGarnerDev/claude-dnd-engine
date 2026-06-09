@@ -2,6 +2,7 @@
 
 
 name: "Gustav Durst"
+campaign: strahd
 type: character
 subtype: antagonist
 exists: true

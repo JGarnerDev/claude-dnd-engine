@@ -1,5 +1,6 @@
 ---
 name: "Session 05 The Specter"
+campaign: strahd
 type: session
 exists: true
 state: completed

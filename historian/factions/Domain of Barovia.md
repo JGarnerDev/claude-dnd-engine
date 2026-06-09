@@ -1,5 +1,6 @@
 ---
 name: "Domain of Barovia"
+campaign: strahd
 type: faction
 exists: true
 state: active

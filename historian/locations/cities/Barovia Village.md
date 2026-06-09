@@ -1,5 +1,6 @@
 ---
 name: "Barovia Village"
+campaign: strahd
 type: location
 subtype: city
 exists: true

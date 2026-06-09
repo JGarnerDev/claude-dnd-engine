@@ -1,5 +1,6 @@
 ---
 name: "Church of the Morning Lord"
+campaign: strahd
 type: location
 subtype: building
 exists: true

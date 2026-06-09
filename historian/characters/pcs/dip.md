@@ -2,6 +2,7 @@
 
 
 name: "Dip"
+campaign: strahd
 type: character
 subtype: pc
 exists: true

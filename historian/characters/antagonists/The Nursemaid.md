@@ -2,6 +2,7 @@
 
 
 name: "The Nursemaid"
+campaign: strahd
 type: character
 subtype: antagonist
 exists: true

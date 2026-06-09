@@ -1,5 +1,6 @@
 ---
 name: "Durst Cult"
+campaign: strahd
 type: faction
 exists: true
 state: dissolved
