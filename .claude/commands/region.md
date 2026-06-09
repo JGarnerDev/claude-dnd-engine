@@ -118,7 +118,7 @@ Before writing, run:
 
 Reference these inline when suggesting resources and diplomatic context. Use `[[EntityName]]` wikilink syntax. Label player-contributed entities: *([player]'s resource)*. Do not force a fit.
 
-Write `drafts/regions/{region}.md`.
+Write `data/locations/regions/{region}.md`.
 
 **Draft structure:**
 
@@ -152,7 +152,7 @@ Report the file path when done, then pause for DM review.
 
 Prompt:
 
-> Review `drafts/regions/{region}.md`. Use this checklist:
+> Review `data/locations/regions/{region}.md`. Use this checklist:
 > - Terrain reads correct for each location?
 > - Zone groupings make sense?
 > - Water body type and connection confirmed?

@@ -1,13 +1,13 @@
 ﻿# region-brief.ps1 -- compressed summary of an existing region draft
 # Usage: .\scripts\region-brief.ps1 [-Region <slug>]
-# Auto-detects draft if only one exists in drafts/regions/
+# Auto-detects draft if only one exists in data/locations/regions/
 
 param(
     [string]$Region = ""
 )
 
 $root      = Resolve-Path "$PSScriptRoot\.."
-$draftsDir = Join-Path $root "drafts\regions"
+$draftsDir = Join-Path $root "data\locations\regions"
 
 # -- Find draft file -----------------------------------------------------------
 if ($Region) {
