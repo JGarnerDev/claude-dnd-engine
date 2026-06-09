@@ -1,5 +1,6 @@
 ---
 name: "Gertrude"
+campaign: strahd
 type: character
 subtype: npc
 exists: true

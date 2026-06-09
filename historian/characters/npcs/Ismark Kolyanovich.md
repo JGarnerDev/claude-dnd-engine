@@ -1,5 +1,6 @@
 ---
 name: "Ismark Kolyanovich"
+campaign: strahd
 type: character
 subtype: npc
 exists: true

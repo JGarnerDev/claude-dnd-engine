@@ -1,5 +1,6 @@
 ---
 name: "Bildrath's Mercantile"
+campaign: strahd
 type: location
 subtype: shop
 exists: true

@@ -1,5 +1,6 @@
 ---
 name: "Session 06 Rose Thorn And The Dungeon"
+campaign: strahd
 type: session
 exists: true
 state: completed

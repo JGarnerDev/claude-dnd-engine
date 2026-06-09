@@ -1,5 +1,6 @@
 ---
 name: "Session 03 The Face In The Fire"
+campaign: strahd
 type: session
 exists: true
 state: completed

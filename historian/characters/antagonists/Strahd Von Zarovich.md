@@ -2,6 +2,7 @@
 
 
 name: "Strahd Von Zarovich"
+campaign: strahd
 type: character
 subtype: antagonist
 exists: true

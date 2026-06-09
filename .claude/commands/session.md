@@ -85,6 +85,8 @@ Read frontmatter only (state, description) across `historian/characters/`, `hist
 
 **Step 2 — Find free entities**
 
+First identify the active campaign from `scheduler/campaign.md`. When surfacing entities, exclude historian entities tagged `campaign: strahd` unless the active campaign is Strahd or the DM explicitly requests a crossover. Untagged data entities are campaign-agnostic and always eligible.
+
 Run semantic search using the themes of the current session direction (from cliffhanger, mission hook, or chosen thread):
 
 ```powershell
@@ -168,6 +170,10 @@ Each scene block contains:
 - **Transition** — one line on what triggers the move to the next scene or a likely detour
 
 If `scope: linked`, replace the full encounter detail with a one-line reference: `→ see [[encounter-{slug}]]` and note that the encounter file will be written separately.
+
+### Elaboration Check
+
+Before writing NPC and location detail, check every key `./data` and `./historian` entity in this session against the elaboration protocol in `data/CLAUDE.md`. Historian entities can be just as sparse as data entities — canonized does not mean ready for detailed play. For each sparse key entity: flag it and ask the DM whether to draft elaboration or let them write it. **Do not fill gaps silently.** Resolve all elaboration decisions before continuing to NPC Quick-Reference.
 
 ### NPC Quick-Reference
 One entry per key NPC appearing this session. For any NPC with historian canon, run `/voice <name>` first to ground the voice note in established characterization — do not invent fresh voice from scratch if history exists.

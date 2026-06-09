@@ -1,5 +1,6 @@
 ---
 name: "Barovia Village Outskirts"
+campaign: strahd
 type: location
 subtype: wilderness
 exists: true

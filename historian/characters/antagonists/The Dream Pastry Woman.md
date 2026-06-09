@@ -1,5 +1,6 @@
 ---
 name: "The Dream Pastry Woman"
+campaign: strahd
 type: character
 subtype: antagonist
 exists: true

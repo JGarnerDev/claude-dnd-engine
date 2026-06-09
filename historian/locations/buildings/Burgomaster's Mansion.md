@@ -1,5 +1,6 @@
 ---
 name: "Burgomaster's Mansion"
+campaign: strahd
 type: location
 subtype: building
 exists: true

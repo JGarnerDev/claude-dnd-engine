@@ -1,5 +1,6 @@
 ---
 name: "Session 02 Into Death House"
+campaign: strahd
 type: session
 exists: true
 state: completed

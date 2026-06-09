@@ -1,5 +1,6 @@
 ---
 name: "Session 13 Dream Pastries"
+campaign: strahd
 type: session
 exists: true
 state: completed

@@ -1,5 +1,6 @@
 ---
 name: "Session 04 The Nursery Mirror"
+campaign: strahd
 type: session
 exists: true
 state: completed

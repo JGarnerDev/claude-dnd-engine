@@ -1,5 +1,6 @@
 ---
 name: "Barovia"
+campaign: strahd
 type: location
 subtype: region
 exists: true

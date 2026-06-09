@@ -1,5 +1,6 @@
 ---
 name: "Session 08 The Cult Quarters"
+campaign: strahd
 type: session
 exists: true
 state: completed

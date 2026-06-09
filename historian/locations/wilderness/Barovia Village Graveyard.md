@@ -1,5 +1,6 @@
 ---
 name: "Barovia Village Graveyard"
+campaign: strahd
 type: location
 subtype: wilderness
 exists: true

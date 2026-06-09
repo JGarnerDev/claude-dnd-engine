@@ -1,5 +1,6 @@
 ---
 name: "Session 07 Death Experiences"
+campaign: strahd
 type: session
 exists: true
 state: completed

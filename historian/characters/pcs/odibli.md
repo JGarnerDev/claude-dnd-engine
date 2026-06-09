@@ -1,5 +1,6 @@
 ---
 name: "Odibli"
+campaign: strahd
 type: character
 subtype: pc
 exists: true

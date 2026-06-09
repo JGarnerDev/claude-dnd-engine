@@ -1,5 +1,6 @@
 ---
 name: "Blood of the Vine Tavern"
+campaign: strahd
 type: location
 subtype: shop
 exists: true

@@ -1,5 +1,6 @@
 ---
 name: "Death House"
+campaign: strahd
 type: location
 subtype: dungeon
 exists: true

@@ -1,5 +1,6 @@
 ---
 name: "Luci"
+campaign: strahd
 type: character
 subtype: pc
 exists: true

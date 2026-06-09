@@ -1,5 +1,6 @@
 ---
 name: "Arik"
+campaign: strahd
 type: character
 subtype: npc
 exists: true

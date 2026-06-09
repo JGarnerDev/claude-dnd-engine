@@ -43,6 +43,20 @@ Scan commands (e.g. `/inventory`) read **frontmatter only** — never the body.
 
 Entity protocol (free entity rule, data transparency, contribution balance) documented in `data/CLAUDE.md` — auto-loaded when working with data files.
 
+## Campaign Separation
+
+This repo spans two campaigns: `strahd` (Curse of Strahd, sessions 1–present) and a future homebrew new world (name TBD). The transition will be a narrative device — a deliberate story beat, not a soft drift.
+
+**`campaign` field** — historian and scheduler entities carry `campaign: strahd` or `campaign: <new-world-name>`. Data entities are campaign-agnostic by default (no tag) unless they are explicitly tied to one world.
+
+**Session planning rules:**
+- Identify the active campaign from `scheduler/campaign.md`
+- Do not pull `campaign: strahd` entities into new-world sessions unless the DM explicitly requests a crossover
+- Strahd-tagged entities are still visible and searchable — they just don't surface automatically in new-world content
+- Crossover is always allowed when the DM asks for it (throwbacks, callbacks, deliberate bleed)
+
+**New entities** created during or after the world transition should carry the new-world campaign tag. Entities created now, during seeding, are untagged (agnostic) unless clearly Strahd-specific.
+
 ## New Campaign Setup
 
 When starting a new campaign, read `meta/new-campaign-setup.md` before generating any content.
@@ -103,6 +117,17 @@ Scripts output plain text; parse with your own judgment. They read frontmatter o
 
 Read `.claude/commands/pc-backstory.md` for the full ingestion flow, gap analysis, and entity sourcing rules. **Do not write anything until DM confirms.**
 
+## Campaign Transition Detection
+
+**Trigger:** Any message containing language that suggests the party is leaving the current campaign context. Watch for:
+- Leaving/ending the current campaign: "leaving Strahd", "done with Strahd", "finished with Barovia", "we're out of Barovia", "end of the Strahd arc"
+- Starting fresh: "new world", "new campaign", "clean slate", "starting the homebrew", "transition"
+- Narrative clean-slate signals: "the portal closes", "we're through", "no going back"
+
+These phrases may appear casually — do not trigger on obvious metaphor or out-of-game chatter. When in doubt, ask once: *"Is the campaign transitioning to the new world? I can walk you through the handoff if so."*
+
+If confirmed, read `.claude/commands/transition.md` and follow the full transition flow. Do not make any changes until the DM confirms each step.
+
 ## Recap Format
 
 Whenever presenting a session recap — whether via `/session` Phase 1 orientation, a direct "what's the recap" prompt, or any other context — use this two-part format:
@@ -123,3 +148,4 @@ No DM brief card needed. No other formats unless explicitly requested.
 - `/threads` — `.claude/commands/threads.md` — surfaces forgotten/unresolved campaign threads
 - `/voice <npc name>` — `.claude/commands/voice.md` — DM voice brief grounded in established canon
 - `/check <claim>` — `.claude/commands/check.md` — contradiction check against historian before canonizing
+- `/transition` — `.claude/commands/transition.md` — guided campaign transition flow; also auto-triggered by language cues

@@ -1,5 +1,6 @@
 ---
 name: "Session 01 The Black Sheep Inn"
+campaign: strahd
 type: session
 exists: true
 state: completed
