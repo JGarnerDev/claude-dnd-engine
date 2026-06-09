@@ -26,6 +26,15 @@ Progress tracker for getting this project ready to generate sessions and run cam
 
 ---
 
+## Map — World Layer (label renames from Miguel's correction, 2026-06-09)
+*Manually edited by user — Claude cannot write to image files.*
+
+- [ ] Rename "The Greyback" → **Solmara** (sub-continent label)
+- [ ] Rename "The Stormwall" → **Ardenwall** (mountain range label)
+- [ ] Rename "The Greymaw" → **Calenmere** (bay label)
+
+---
+
 ## Map — Sky Layer (`world-sky.png`)
 *Manually edited by user — Claude cannot write to image files.*
 
