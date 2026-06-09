@@ -1,5 +1,6 @@
 ---
 name: "Vallaki"
+campaign: strahd
 type: location
 subtype: city
 exists: true

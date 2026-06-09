@@ -2,6 +2,7 @@
 
 
 name: "Black Sheep Inn"
+campaign: strahd
 type: location
 subtype: shop
 exists: true

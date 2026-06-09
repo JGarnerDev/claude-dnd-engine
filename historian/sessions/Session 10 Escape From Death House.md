@@ -1,5 +1,6 @@
 ---
 name: "Session 10 Escape From Death House"
+campaign: strahd
 type: session
 exists: true
 state: completed

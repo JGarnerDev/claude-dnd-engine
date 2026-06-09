@@ -1,5 +1,6 @@
 ---
 name: "Session 11 Blood of the Vine"
+campaign: strahd
 type: session
 exists: true
 state: completed

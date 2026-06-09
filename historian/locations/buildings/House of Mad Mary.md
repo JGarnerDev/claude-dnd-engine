@@ -1,5 +1,6 @@
 ---
 name: "House of Mad Mary"
+campaign: strahd
 type: location
 subtype: building
 exists: true

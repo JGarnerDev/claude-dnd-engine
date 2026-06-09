@@ -1,5 +1,6 @@
 ---
 name: "Mirabel"
+campaign: strahd
 type: character
 subtype: npc
 exists: true

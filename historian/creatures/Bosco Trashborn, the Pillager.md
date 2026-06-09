@@ -1,5 +1,6 @@
 ---
 name: "Bosco Trashborn, the Pillager"
+campaign: strahd
 type: creature
 exists: true
 state: alive
