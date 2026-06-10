@@ -1,5 +1,5 @@
 ---
-name: "Bosco Trashborn, the Pillager"
+name: "Bosco"
 campaign: strahd
 type: creature
 exists: true
@@ -14,7 +14,7 @@ alignment: unaligned
 location: traveling with party (en route to [[Vallaki]])
 stat_block: "inline"
 aliases:
-  - "Bosco"
+  - "Bosco Trashborn, the Pillager"
 importance: major
 active: true
 owner: [[Iggy]]
