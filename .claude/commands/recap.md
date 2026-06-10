@@ -4,6 +4,8 @@ Canonize a played session. Closes the loop on the session lifecycle: gathers wha
 
 ## Phase 1 — Identify the Played Session
 
+First check `recaps/inbox/` for a notes file — if one exists, it is the DM's raw account of the played session and usually identifies which session it was. Read it now; it feeds Phase 2.
+
 Check `scheduler/sessions/` for any file with `state: draft`.
 
 - If exactly one draft session exists, use it. State its name and session number.
@@ -16,7 +18,9 @@ Read the session file fully: note `session_number`, `mission`, `locations`, `key
 
 ## Phase 2 — Gather What Happened
 
-Ask the DM the following. Keep it conversational — rough notes are fine.
+**If an inbox notes file was found in Phase 1:** mine it for all six answers below first, then ask the DM only what the notes don't answer — in one batched message. Do not re-ask anything the notes already cover.
+
+Otherwise, ask the DM the following. Keep it conversational — rough notes are fine.
 
 1. **Date played** — What date was the session?
 2. **Recap** — What actually happened? Walk me through it. (Free-form; DM can paste notes or speak informally.)
@@ -99,6 +103,10 @@ Read `scheduler/campaign.md`. Propose updates to the `## Current State` section 
 - Any active afflictions or ongoing conditions
 - Any resolved or newly opened threads
 
+**Preference tracking:** check the session plan's DM notes for deployed or seeded items from `meta/campaign-design-preferences.md`. Update the item's `Deployed:` line (wikilink to the session) or add/update its `Seeded:` line (wikilink + one-phrase breadcrumb note). This closes the loop `/session` opens — if it isn't done here, it never happens.
+
+**Mystery registration:** if the session plan or the DM's notes flag a new load-bearing unknown (e.g. a "register in mysteries.md after play" note), propose the `meta/mysteries.md` entry now.
+
 Present the proposed changes and ask for confirmation before writing.
 
 ---
@@ -107,10 +115,12 @@ Present the proposed changes and ask for confirmation before writing.
 
 Report what was done:
 
-- Session file: moved to `historian/sessions/session-{nn}-{name}.md`
+- Session file: moved to `historian/sessions/Session {NN} {Name}.md` (filename = exact display name, per `meta/schemas/entity.md`)
 - Entities canonized: [list with paths]
 - Entities with state updates: [list]
 - Missing entities still needing files: [list]
 - Campaign state: updated / no changes needed
+- Preference `Deployed:`/`Seeded:` lines updated: [list, or none]
+- Inbox notes file deleted: [yes / n/a]
 
 If any action items remain (unconfirmed entities, meta files to update), list them explicitly.
