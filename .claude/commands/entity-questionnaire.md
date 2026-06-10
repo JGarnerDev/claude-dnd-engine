@@ -78,6 +78,7 @@ action: Filled questionnaire — run ingestion mode. Do not create any entity wi
 concept: {concept}
 player: {player name if provided}
 registry_id: {registry ID if --registry-id provided, otherwise omit this line}
+filled: false
 -->
 
 # {Name if provided, otherwise "Your {type}" } — World Design Notes
@@ -131,6 +132,8 @@ Triggered by `--ingest <file>`, `--ingest paste`, or automatically whenever a me
 ### Ingest Phase 1 — Read Answers
 
 Parse the filled questionnaire. Extract what was answered and note blanks. Read `entity_type` from the CLAUDE-INGEST block to know which schema applies.
+
+If the file lives in `questionnaires/` and has real answers, set `filled: true` in its `CLAUDE-INGEST` block now (add the line if the file predates the marker). `/session` cameo detection and other scans rely on this marker — template `> ` blockquote heuristics false-positive, and `questionnaires/` is gitignored so ripgrep-based tools can't see it (use POSIX grep via Bash).
 
 ---
 

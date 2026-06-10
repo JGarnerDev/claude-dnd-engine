@@ -31,6 +31,7 @@ Contract for what a correct, efficient `/session` run looks like. The command do
 1. **Phase 1 orientation statement** — act, mission, cliffhanger, next session number. Recap follows the two-part recap format (narrative prose + TL;DR bullets). Informational; no question unless mode is ambiguous.
 2. **Phase 3B hook choice** — TRANSITION only. Exactly 3 labeled options, 2–4 sentences each. Wait.
 3. **Phase 4 scoping + elaboration** — one batched message: length, shape, depth/scope if not given as args, elaboration decisions for sparse key entities, at most one hook-specific extra question. Wait once. Splitting into multiple messages is a finding.
+   - **3b (conditional):** if the DM delegates drafting, one additional draft-approval message is required by the elaboration protocol — all delegated drafts batched into that single message. More than one draft round trip is a finding.
 4. **Free entity rule stops** — required entity missing from `data/` and `historian/`: stop and flag.
 5. **Phase 6 write offer** — "save as `state: draft`?"
 

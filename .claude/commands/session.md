@@ -126,6 +126,8 @@ Also check `meta/campaign-design-preferences.md` (conditional-tier file — TRAN
 
 Present exactly three options. Label their source so the DM knows where each came from. Keep each hook to 2–4 sentences — enough to understand the direction, not a full plan.
 
+**Option B fallback:** if the free pool has no genuine fit for the active campaign (best semantic score below ~0.30 and no importance-flagged entity that matches tone), do not force a weak pool entity into Option B. Substitute a second historian thread or reference-catalog material and label it honestly (*from: historian/fallback — pool has no campaign fit*). Note the pool gap to the DM — it is meaningful signal.
+
 Format:
 
 > **Option A — [Short title]** *(from: historian/unresolved)*
@@ -161,6 +163,8 @@ After the hook is chosen (or confirmed in CONTINUATION mode), do the **Elaborati
 Do not ask questions that the established context already answers. Do not split these into multiple messages.
 
 Wait for the DM's response before continuing.
+
+**Checkpoint 3b — draft approval (conditional).** If the DM delegates any elaboration drafting, the elaboration protocol (`data/CLAUDE.md`) requires drafts to come back for confirm/tweak/reject before any file is written. This is one additional wait — batch **all** delegated drafts (elaborations, new entities) into a single approval message. Do not send drafts one at a time.
 
 ---
 
@@ -203,7 +207,7 @@ Each scene block contains:
 If `scope: linked`, replace the full encounter detail with a one-line reference: `→ see [[encounter-{slug}]]` and note that the encounter file will be written separately.
 
 ### NPC Quick-Reference
-One entry per key NPC appearing this session. For canon NPCs, run `/voice <name>` first — **capped at the 2–3 NPCs carrying the most dialogue this session**. Remaining canon NPCs get voice notes from their file's frontmatter and description only; do not run `/voice` for every NPC. Never invent fresh voice from scratch where history exists.
+One entry per key NPC appearing this session. For canon NPCs, run `/voice <name>` first — **capped at the 2–3 NPCs carrying the most dialogue this session**. Skip `/voice` entirely for any NPC whose file was already read in full earlier in this run — derive the voice note from the in-context `personality`/`charm_hook` fields and body instead; a sub-command re-reading the same files adds nothing. Remaining canon NPCs get voice notes from their file's frontmatter and description only. Never invent fresh voice from scratch where history exists.
 
 - **Name** — `[[wiki-link]]`
 - **Motivation** — what they want right now
@@ -227,7 +231,13 @@ These are lead-time flags, never blockers — the DM can defer or delegate at an
 
 ### Cameo Candidates
 
-Detect filled questionnaires with a **single search, not per-file reads**: grep `questionnaires/` for the pattern `^> \S` (answer lines with actual text), files-with-matches mode. Intersect the hits with cameo questionnaires (`entity_type: player` in the `CLAUDE-INGEST` block, or `-cameo` filenames).
+Detect filled questionnaires with a **single search, not per-file reads**. Two constraints discovered in audit: `questionnaires/` is gitignored, so ripgrep-based search tools silently return nothing — use POSIX grep via Bash; and questionnaire templates contain `> ` option lists, so blockquote-text heuristics false-positive on blank templates. Use the explicit marker instead:
+
+```bash
+grep -l "^filled: true" questionnaires/*.md
+```
+
+(`filled:` lives in each questionnaire's `CLAUDE-INGEST` block — `false` at generation, flipped to `true` at return/ingestion. Files without the marker predate it: treat as unfilled unless the DM says otherwise.) Intersect the hits with cameo questionnaires (`entity_type: player` in the `CLAUDE-INGEST` block, or `-cameo` filenames).
 
 For each filled cameo questionnaire, compare:
 - `preferred_alignment` against the role and disposition of NPCs in this session
@@ -260,9 +270,9 @@ After presenting the plan, ask:
 
 If yes:
 1. Read `meta/schemas/session.md` to confirm the frontmatter template
-2. Determine path based on scope:
-   - `scope: inline` → write `scheduler/sessions/session-{nn}-{name}.md`
-   - `scope: linked` → create folder `scheduler/sessions/session-{nn}-{name}/`; write main file as `scheduler/sessions/session-{nn}-{name}/session-{nn}-{name}.md`; write each encounter as `scheduler/sessions/session-{nn}-{name}/encounter-{slug}.md`
+2. Determine path based on scope (filename = exact display name, matching canon precedent — e.g. `Session 14 The Road Remembers.md`):
+   - `scope: inline` → write `scheduler/sessions/Session {NN} {Name}.md`
+   - `scope: linked` → create folder `scheduler/sessions/Session {NN} {Name}/`; write main file as `Session {NN} {Name}.md` inside it; write each encounter as `Encounter {Name}.md`
 3. Populate all mandatory frontmatter fields from the plan above
 4. Write the full body (Orientation, Scenes, NPC Quick-Reference, Contingencies, Closing) into the main file
 5. Leave historian-only fields commented out (they are filled after play)

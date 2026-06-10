@@ -94,6 +94,7 @@ def main():
 
     indexed = 0
     skipped = 0
+    indexed_ids = set()
 
     for dir_name in args.dirs:
         dir_path = ROOT / dir_name
@@ -139,9 +140,20 @@ def main():
                 }]
             )
             indexed += 1
+            indexed_ids.add(doc_id)
 
             if indexed % 100 == 0:
                 print(f"  {indexed} indexed...")
+
+    # Prune orphans: upsert never removes docs for deleted/renamed files, so stale
+    # entries linger and pollute search results. Only safe on a full default run —
+    # a partial --dirs run would wrongly delete the other dirs' docs.
+    if set(args.dirs) == {'data', 'historian', 'scheduler'}:
+        existing = set(collection.get(include=[])['ids'])
+        stale = existing - indexed_ids
+        if stale:
+            collection.delete(ids=list(stale))
+            print(f"Pruned {len(stale)} orphaned docs (deleted/renamed files).")
 
     commit = "unknown"
     try:
