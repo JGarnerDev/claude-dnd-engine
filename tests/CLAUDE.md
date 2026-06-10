@@ -26,6 +26,16 @@ A command audit executes (or dry-runs) a slash command and measures it against i
 4. Score against rubric. Append new findings to `gaps.md` with severity and a concrete fix.
 5. Do **not** edit the command doc in the same pass. Findings first, DM approves, then fix.
 
+## Persona Harness
+
+Interactive commands (/session, /region) are audited against a **persona agent** standing in for the DM, so the main thread can execute the command end-to-end without real user input. Personas live in `commands/<command>/personas/<name>.md` and must stay stable across runs — changing a persona invalidates before/after comparisons.
+
+Hard-won rules (see `runs/2026-06-09-session.md`, findings H1/H2):
+
+- Spawn personas with the HARD CONSTRAINTS header from the persona file, verbatim. Subagents inherit repo CLAUDE.md and will hijack the command's planner role without it.
+- One fresh spawn per checkpoint (`SendMessage` is not available in this harness). The spawn prompt carries a short running summary of decisions so far — that summary is the persona's only memory.
+- Model: haiku. Verify `tool_uses: 0` on every spawn result; any tool use is a role break — discard and respawn.
+
 ## Fixture Rules
 
 If an audit needs frozen sample entities, put them in `commands/<command>/fixtures/`. Constraints:

@@ -82,8 +82,8 @@ These entities are player-confirmed canon for their character's history. They do
 ## Rules
 
 - Every entity file must open with a YAML frontmatter block (`---`).
-- `name` must match the filename (spaces replaced with hyphens, lowercase).
-- `name` must also be the entity’s exact canonical display name, with correct spelling, punctuation, and capitalization.
+- The filename (excluding `.md`) must equal the `name` field **exactly** — the human-readable display name with correct spelling, punctuation, and capitalization. No slugs, kebab-case, or lowercase transformations (ruling 2026-06-10; matches canon precedent, e.g. `Session 13 Dream Pastries.md`).
+- `name` must be the entity’s exact canonical display name.
 - Entity names and wiki-links must contain no broken characters, stray quotes, or malformed punctuation.
 - `exists` records whether the entity is a **real/canon thing in the world**, not where the file lives:
   - `historian/` entities are **always** `exists: true` (canonized fact).
