@@ -23,8 +23,16 @@ function Get-Frontmatter($path) {
     return $fm
 }
 
+# Emoji via codepoints — literal emoji in this file break under PS 5.1's ANSI read of BOM-less .ps1
+$d20     = [char]::ConvertFromUtf32(0x1F3B2)   # 🎲
+$dragon  = [char]::ConvertFromUtf32(0x1F409)   # 🐉
+$scroll  = [char]::ConvertFromUtf32(0x1F4DC)   # 📜
+$crown   = [char]::ConvertFromUtf32(0x1F451)   # 👑
+try { [Console]::OutputEncoding = [Text.Encoding]::UTF8 } catch {}
+
 Write-Host "`n========================================" -ForegroundColor DarkGray
-Write-Host "  DM TODO BRIEF" -ForegroundColor Cyan
+Write-Host "  $d20 DM TODO BRIEF $dragon" -ForegroundColor Cyan
+Write-Host "  $scroll quests, debts, and loose ends" -ForegroundColor DarkCyan
 Write-Host "========================================" -ForegroundColor DarkGray
 
 # -- 1. Uncanonized sessions + recap inbox -------------------------------------
@@ -188,4 +196,6 @@ if (Test-Path $prefFile) {
     Write-Host "  $undeployed of $total items not yet deployed; $seeded seeded" -ForegroundColor White
 }
 
-Write-Host "`n========================================`n" -ForegroundColor DarkGray
+Write-Host "`n========================================" -ForegroundColor DarkGray
+Write-Host "  $crown All hail the DM $crown" -ForegroundColor Yellow
+Write-Host "========================================`n" -ForegroundColor DarkGray
