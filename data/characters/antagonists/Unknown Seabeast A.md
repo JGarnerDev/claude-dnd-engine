@@ -45,4 +45,6 @@ No one has sought it deliberately and returned to report why.
 
 ---
 
+*Names and aliases are flavor suggestions — rename or replace freely.*
+
 *Design notes (remove when defined): Intentionally underdefined. Moby Dick + eldritch + Warhammer chaos vibes. Religious dread among sailors. True nature, motivation, and form TBD.*

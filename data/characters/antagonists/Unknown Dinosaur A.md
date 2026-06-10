@@ -41,6 +41,8 @@ Large. The divergence from known dinosaur fauna is documented but not yet charac
 
 ---
 
+*Names and aliases are flavor suggestions — rename or replace freely.*
+
 *Design notes (remove when defined): Dinosaur, specific type TBD. Different from ordinary fauna — options, pick one or combine:*
 - *Eldritch mutation: wrong number of limbs, extra joints, eyes that don't track correctly*
 - *Unnatural intelligence: coordinated behavior, memory of specific hunters, possible speech*
