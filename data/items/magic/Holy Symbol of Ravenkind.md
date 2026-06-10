@@ -2,7 +2,7 @@
 name: "Holy Symbol of Ravenkind"
 type: item
 subtype: magic
-exists: false
+exists: true
 state: identified
 tags:
   - item/magic

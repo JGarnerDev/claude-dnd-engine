@@ -2,7 +2,7 @@
 name: "Ring of Protection"
 type: item
 subtype: magic
-exists: false
+exists: true
 state: identified
 tags:
   - item/magic

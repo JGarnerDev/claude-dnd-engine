@@ -2,7 +2,7 @@
 name: "Sending Stones"
 type: item
 subtype: magic
-exists: false
+exists: true
 state: identified
 tags:
   - item/magic
