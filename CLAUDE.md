@@ -85,6 +85,7 @@ PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run th
 |---|---|---|
 | `session-brief.ps1` | Start of every `/session` | `.\scripts\session-brief.ps1` |
 | `session-state.ps1` | Quick campaign/act/mission check | `.\scripts\session-state.ps1` |
+| `todo-brief.ps1` | Start of every `/todo` — all DM action-item signals in one call | `.\scripts\todo-brief.ps1` |
 | `party-status.ps1` | PC stats + afflictions | `.\scripts\party-status.ps1` |
 | `free-entities.ps1` | Find available entities by type or player | `.\scripts\free-entities.ps1 [-Type <type>] [-Player <name>]` |
 | `contribution-balance.ps1` | Player contribution counts (pool vs. canonized) | `.\scripts\contribution-balance.ps1` |
@@ -158,3 +159,4 @@ No DM brief card needed. No other formats unless explicitly requested.
 - `/voice <npc name>` — `.claude/commands/voice.md` — DM voice brief grounded in established canon
 - `/check <claim>` — `.claude/commands/check.md` — contradiction check against historian before canonizing
 - `/transition` — `.claude/commands/transition.md` — guided campaign transition flow; also auto-triggered by language cues
+- `/todo` — `.claude/commands/todo.md` — plain-language DM dashboard of everything needing attention or action

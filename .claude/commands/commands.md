@@ -16,6 +16,7 @@ Commands to list:
 - `/threads [-k <n>]` — surface forgotten or unresolved campaign threads; combines state-based scan with semantic ranking against current story state
 - `/voice <npc name>` — build a DM voice brief for an NPC; grounds new dialogue in established canon
 - `/check <claim> [--source historian|data|both]` — check a proposed fact or recap against historian for contradictions
+- `/todo` — plain-language DM dashboard: outstanding player questionnaires, drafts, sessions awaiting recap, housekeeping
 - `/sync` — sync shareable engine files to the template repo
 - `pc-backstory` (auto-triggered) — ingest raw PC backstory text into a proper historian file
 - `entity-ingest` (auto-triggered) — ingest a filled player entity questionnaire after balance review
