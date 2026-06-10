@@ -1,6 +1,6 @@
 Give the DM a plain-language summary of everything that needs attention or action — outstanding player questionnaires, unfinished drafts, sessions awaiting canonization, engine housekeeping.
 
-**Audience note: the output is for a DM, not an engine operator.** No frontmatter jargon, no file paths unless the DM would open the file, no internal terms (`exists: false`, "canonize" → say "make official", "stale index" → say "search needs a refresh"). Every line says *what* and *why it matters* in one sentence.
+**Audience note: the output is for a DM, not an engine operator.** The DM's name appears in the script header (`DM: <name>` — sourced from the active campaign's `dm:` field; currently Kellan). Address them by name where it reads naturally, and never list the DM as someone to "chase" — 🙋 chasing is for players; the DM's own creative calls are just stated as theirs. No frontmatter jargon, no file paths unless the DM would open the file, no internal terms (`exists: false`, "canonize" → say "make official", "stale index" → say "search needs a refresh"). Every line says *what* and *why it matters* in one sentence.
 
 ---
 
@@ -24,7 +24,7 @@ Three groups, in this order. One line per item: plain-language what + why it mat
 
 **Tag every item with who can act**, so the DM sees at a glance what to delegate to Claude vs. chase in person:
 - 🤖 — Claude can do it now; name the command or script ("say *do 2* and I'll rebuild the search index")
-- 🙋 — needs a human: a player filling something in, the DM making a creative call, or manual work outside the engine (image edits)
+- 🙋 — needs a human: a player filling something in, the DM making a creative call (name them — "Kellan decides"), or manual work outside the engine (image edits)
 - 🤝 — joint: Claude drafts or runs the mechanics, but the DM must decide or approve (session plans, canonization, ingesting questionnaires)
 
 Judge honestly: anything requiring taste, approval, or table knowledge is 🤝 at best, not 🤖. Pure script runs, index rebuilds, validation, drafting from existing answers are 🤖.

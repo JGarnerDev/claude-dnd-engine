@@ -1,6 +1,7 @@
 ---
 name: "Curse of Strahd"
 type: campaign
+dm: "Kellan"
 exists: false
 state: active
 premise: "The party has been drawn into Barovia, a land of perpetual mist and dread ruled by the vampire lord Strahd von Zarovich. There is no leaving until Strahd is dealt with."

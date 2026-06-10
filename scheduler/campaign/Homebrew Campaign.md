@@ -3,6 +3,7 @@ name: "Homebrew Campaign"
 aliases:
   - "New World Campaign"
 type: campaign
+dm: "Kellan"
 exists: false
 state: draft
 campaign: homebrew
