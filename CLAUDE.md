@@ -57,6 +57,10 @@ This repo spans two campaigns: `strahd` (Curse of Strahd, sessions 1–present) 
 
 **New entities** created during or after the world transition should carry the new-world campaign tag. Entities created now, during seeding, are untagged (agnostic) unless clearly Strahd-specific.
 
+## Command Audits
+
+`tests/` holds command audit specs, rubrics, and run logs — engine QA, not campaign content. Read `tests/CLAUDE.md` before running or writing a command audit. Files in `tests/` are never entities; they are excluded from `validate.ps1` and the semantic index.
+
 ## New Campaign Setup
 
 When starting a new campaign, read `meta/new-campaign-setup.md` before generating any content.
