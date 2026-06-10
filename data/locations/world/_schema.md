@@ -1,7 +1,7 @@
 ---
 # World-Scale Location Entity Schema
 # Seed entries here ONLY after the world map is finalized (Step 10 — Labeling complete)
-# See: TODO-worldmap.md
+# See: todo-worldmap.md
 #
 # Required fields:
 #   name          — descriptive working name (proper nouns come from Step 10 labeling)

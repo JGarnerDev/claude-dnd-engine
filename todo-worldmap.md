@@ -64,35 +64,57 @@
 
 ## Miguel's Map Label Updates
 
-Replace placeholder labels with Miguel's canonical names:
+Replace placeholder labels with Miguel's canonical names.
+**Verified against tiles 2026-06-10** — the 2026-06-08 image replacement landed nearly all of these:
 
-- [ ] Continent B → **Caldrath**
-- [ ] Continent E → **The Pale Reach**
-- [ ] Sub Continent A → **The Narrows**
-- [ ] Sub Continent C → **The Greyback**
-- [ ] Mountains B → **The Stormwall**
-- [ ] Mountains F → **The Broken Back**
-- [ ] Mountains H → **The Pale Spire**
-- [ ] Mountains M → **The Divide**
-- [ ] Desert E → **The Cinder Plain**
-- [ ] Desert G → **The Hidden Desert**
-- [ ] Islands E → **The Pale Isles**
-- [ ] Islands H → **The Warm Isles**
-- [ ] Islift C → **The Hearth**
-- [ ] Islift F → **The Landing**
-- [ ] Sea C → **The Amber Sea**
-- [ ] Bay B → **The Greymaw**
-- [ ] Bay E → **Cindermouth Bay**
-- [ ] Channel B → **Merchant's Run**
-- [ ] Channel H → **The Southern Throat**
-- [ ] **Islands A — add volcanic peak** (Option B, confirmed): Add a volcanic mountain feature to the center-north of Islands A. Small crater + ash-slope texture. This is the geological source for The Ashreaches coffee terraces. Ash falling into Bay E (Cindermouth Bay) should be visually explained by this peak.
-  - Target position: center-north of Islands A, above the Bay E coastline (~col 1–2, row ~5)
-  - Style: match The Caldera's volcanic texture but smaller — one peak, not a full caldera
-  - No coastline edits needed — terrain texture only
-  - Label optional: can leave unnamed (feature of The Ashreaches) or assign a name later
-- [ ] **Place The Ashreaches label** on Islands A, on the slopes between the new volcanic peak and Bay E
-- [ ] Name **Mountains P** (volcanic range on Struck Side adjacent to The Caldera — separate from the Ashreaches)
-- [ ] Name **Islands A** (western ocean island chain below Channel I)
+- [x] Continent B → **Caldrath**
+- [x] Continent E → **The Pale Reach**
+- [x] Sub Continent A → **The Narrows**
+- [x] Sub Continent C → **The Greyback** *(superseded — now renames to Solmara, see Label Corrections below)*
+- [x] Mountains B → **The Stormwall** *(superseded — now renames to Ardenwall, see Label Corrections below)*
+- [x] Mountains F → **The Broken Back**
+- [x] Mountains H → **The Pale Spire**
+- [x] Mountains M → **The Divide**
+- [x] Desert E → **The Cinder Plain**
+- [x] Desert G → **The Hidden Desert**
+- [x] Islands E → **The Pale Isles**
+- [x] Islands H → **The Warm Isles**
+- [x] Islift C → **The Hearth** *(superseded — now renames to Darkling's Perch, see Sky Layer below)*
+- [x] Islift F → **The Landing**
+- [x] Sea C → **The Amber Sea**
+- [x] Bay B → **The Greymaw** *(superseded — now renames to Calenmere, see Label Corrections below)*
+- [x] Bay E → **Cindermouth Bay**
+- [ ] Channel B → **Merchant's Run** — **label not located 2026-06-10.** No "Channel B" or "Merchant's Run" found on any tile (saw Channels C, E, I, J). Entity file says: channel between The Narrows and an eastern island, southern approach, pairs with a northern channel ("Lower Gate" pairing). Candidate area: around The Narrows / Sub Continent E (~cols 11–13, rows 4–6) — Channel C sits there, still placeholder. Needs DM to locate/confirm which strait this is before labeling.
+- [x] Channel H → **The Southern Throat**
+- [x] **Islands A — volcanic peak added** — crater + lava texture visible center-north of Islands A (verified 2026-06-10 crop)
+- [x] **The Ashreaches label placed** on Islands A slopes between the peak and Cindermouth Bay
+- [ ] Name **Mountains P** (volcanic range on Struck Side adjacent to The Caldera — separate from the Ashreaches) — still placeholder 2026-06-10
+- [ ] Name **Islands A** (western ocean island chain below Channel I) — still placeholder 2026-06-10
+
+---
+
+## Label Corrections — World Layer (Miguel's correction, 2026-06-09)
+
+*Manually edited by user — Claude cannot write to image files. Verified against `tiles/nw.png` 2026-06-10: all three old labels still on map.*
+
+- [ ] Rename "The Greyback" → **Solmara** (sub-continent label) — nw tile, ~col 4–5, row 4
+- [ ] Rename "The Stormwall" → **Ardenwall** (mountain range label) — nw tile, ~col 4, row 4–5
+- [ ] Rename "The Greymaw" → **Calenmere** (bay label) — nw tile, ~col 5–6, row 4–5
+- [ ] After edits: run `python scripts\gen-tiles.py`, then update `maps/world/index.md` Known Region Positions (Bay B entry) and Status line
+
+---
+
+## Sky Layer (`world-sky.png`)
+
+*Manually edited by user — Claude cannot write to image files. Verified against `world-sky.png` 2026-06-10: all renames still pending. Whole sky cluster sits top-left, ~cols 2–4, rows 2–4 (Opticon's Fade at top, Slice A at bottom) — all five edits doable in one pass.*
+
+- [ ] Rename "Slice A" → **The Stellar Daughter** (Paul's name, ingested 2026-06-09)
+- [ ] Rename "Islift A" → **Arclight's Seat** (far left cluster, low altitude)
+- [ ] Rename "Islift B" → **The Grey Reaches** (left cluster, mid-altitude)
+- [ ] Rename "The Hearth" (Islift C) → **Darkling's Perch** (Paul's name wins; 2026-06-09)
+- [ ] Rename "Islift G" → **The Hearth** (Miguel; reassigned from Islift C; nearest-to-surface right cluster)
+- [ ] Add/verify **Islift D, E** labels once names are assigned (currently unnamed in questionnaire) — Islift F already labeled **The Landing** on map ✓
+- [ ] Update `maps/world/index.md` Status line after any sky layer edits
 
 ---
 

@@ -10,9 +10,9 @@ Give the DM a plain-language summary of everything that needs attention or actio
 .\scripts\todo-brief.ps1
 ```
 
-This collects: uncanonized/pending sessions, recap inbox files, **no-plan-for-next-game-night warning** (game night is Tuesday — sourced from the campaign's Rules Decisions), open threads (characters missing/imprisoned/transformed), graph health (validate error count), index staleness, unchecked `todo.md` items, questionnaire fill states, draft lore/acts/missions, and undeployed design preferences. **Do not re-read the underlying files** — the script output is the complete signal set. Read a file only if the DM asks a follow-up about a specific item.
+This collects: uncanonized/pending sessions, recap inbox files, **no-plan-for-next-game-night warning** (game night is Tuesday — sourced from the campaign's Rules Decisions), open threads (characters missing/imprisoned/transformed), graph health (validate error count), index staleness, unchecked todo items (`todo.md` plus topic files like `todo-worldmap.md`; `todo-dashboard.md` is output, never a source), questionnaire fill states, draft lore/acts/missions, and undeployed design preferences. **Do not re-read the underlying files** — the script output is the complete signal set. Read a file only if the DM asks a follow-up about a specific item.
 
-**Stale-checklist cross-check:** while translating `todo.md` items, flag any that look already done against other signals in the same script output — e.g. a lore file listed as no-longer-draft while its fill-it item sits unchecked, or a "create X" item where X now exists. Present those as *"possibly done — confirm and check off"* rather than as open work. Do not check items off yourself.
+**Stale-checklist cross-check:** while translating todo-file items, flag any that look already done against other signals in the same script output — e.g. a lore file listed as no-longer-draft while its fill-it item sits unchecked, or a "create X" item where X now exists. Present those as *"possibly done — confirm and check off"* rather than as open work. Do not check items off yourself.
 
 **Graph health phrasing:** report the validate count in plain words, and if the errors are the known placeholder world names (world still under construction), say so — "19 broken references, all expected placeholder names" — rather than raising alarm.
 
@@ -46,7 +46,7 @@ Judge honestly: anything requiring taste, approval, or table knowledge is 🤝 a
 - Draft world docs pending questionnaire answers
 - Map label work (manual image edits)
 - Unused design wishlist count ("N story ideas from the group still waiting for their moment")
-- Anything else from todo.md, summarized — collapse long sections to "N items about X" rather than listing every line
+- Anything else from the todo files, summarized — collapse long sections to "N items about X" rather than listing every line
 
 ## Step 3 — Write the dashboard file
 
