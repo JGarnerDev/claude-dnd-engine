@@ -16,7 +16,7 @@ Linked files (`relates_to`, `known_by`, `resources`, ...) followed at most 1 hop
 
 ## 4. Declared scope
 
-Before pulling files for generation/planning, the command declares what it will read and why, giving the DM a redirect window. Silent bulk reads are failures.
+Before pulling files for generation/planning, the command declares what it will read and why, giving the DM a redirect window. Per-phase declarations count — a single upfront whole-run declaration is not required (amended 2026-06-10 after three runs). Silent bulk reads are failures.
 
 ## 5. Meta read-once
 

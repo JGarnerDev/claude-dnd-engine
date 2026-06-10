@@ -9,6 +9,8 @@ Player-sourced design desires. Not world facts — what the group wants to *expe
 
 **Deployment tracking:** each item has a *Deployed:* line. Update it with a wikilink to the session or mission where it fired. `—` means not yet used. At act transitions, check what's aging out and seed it into the next arc.
 
+**Seeding:** an item can be *seeded* — a deliberate breadcrumb placed in play (a detail, a rumor, a banded crow) without the item itself firing. Add a *Seeded:* line under the item with a wikilink to the session and a one-phrase note of what the breadcrumb was. Seeded items are not deployed: the aging check should treat them as alive, not stalled, and session planning should know the breadcrumb exists before placing another.
+
 ## Desired Major Events
 
 Story beats the group wants — as instigators, arc consequences, or background crises. Specifics (who, where, when) are DM-controlled.
