@@ -41,6 +41,33 @@ Write-Host "========================================" -ForegroundColor DarkGray
 
 Write-Host "`nNext session: #$nextNum" -ForegroundColor Yellow
 
+# -- Uncanonized sessions: planned date passed, no historian record ------------
+$today = (Get-Date).Date
+$histNums = @{}
+foreach ($s in $histSessions) {
+    $fm = Get-Frontmatter $s.FullName
+    if ($fm['session_number']) { $histNums[[string]$fm['session_number']] = $true }
+}
+$uncanonized = @()
+foreach ($s in $schedSessions) {
+    $fm = Get-Frontmatter $s.FullName
+    if (@('draft', 'planned') -notcontains $fm['state']) { continue }
+    if (-not $fm['planned_date'] -or $fm['planned_date'] -eq 'null') { continue }
+    $pd = [datetime]::MinValue
+    if (-not [datetime]::TryParse([string]$fm['planned_date'], [ref]$pd)) { continue }
+    if ($pd.Date -lt $today -and -not $histNums.ContainsKey([string]$fm['session_number'])) {
+        $uncanonized += "  ! #$($fm['session_number']) '$($fm['name'])' planned $($fm['planned_date']) - played but not canonized? Run /recap."
+    }
+}
+$inbox = Get-ChildItem "$root\recaps\inbox" -Filter "*.md" -ErrorAction SilentlyContinue | Where-Object { $_.Name -ne '.gitkeep' }
+foreach ($f in $inbox) {
+    $uncanonized += "  ! Notes waiting in recaps/inbox/$($f.Name) - run /recap to canonize."
+}
+if ($uncanonized.Count) {
+    Write-Host "`n--- UNCANONIZED SESSIONS ---" -ForegroundColor Red
+    $uncanonized | ForEach-Object { Write-Host $_ -ForegroundColor Red }
+}
+
 # -- Campaign / Act / Mission -------------------------------------------------
 Write-Host "`n--- STORY STATE ---" -ForegroundColor DarkGray
 
