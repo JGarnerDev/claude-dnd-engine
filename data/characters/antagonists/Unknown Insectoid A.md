@@ -47,4 +47,4 @@ They have not been provoked without response. They have also not been the first 
 
 *Names and aliases are flavor suggestions — rename or replace freely.*
 
-*Design notes (remove when defined): Hive intelligence, alien logic. Not evil — different. Goals coherent from their frame, opaque from ours. Communication possible but not yet achieved. First-strike behavior TBD. Scale TBD — could be a scouting colony or a civilization. Keep underdefined.*
+*Design notes (remove when defined): Hive intelligence, alien logic. Not evil — different. Goals coherent from their frame, opaque from ours. Communication possible but not yet achieved. First-strike behavior TBD. Scale TBD — could be a scouting colony or a civilization.*

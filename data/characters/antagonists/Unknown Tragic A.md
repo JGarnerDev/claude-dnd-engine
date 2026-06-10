@@ -47,4 +47,4 @@ Their goals are not irrational. That is the problem.
 
 *Names and aliases are flavor suggestions — rename or replace freely.*
 
-*Design notes (remove when defined): Sephiroth archetype — beautiful tragic villain, god complex, once comprehensible. Origin of corruption TBD. True name Sorath is a placeholder. Specific power level, class, and history TBD. Must remain sympathetic enough that the party feels the cost of stopping them. Keep underdefined.*
+*Design notes (remove when defined): Sephiroth archetype — beautiful tragic villain, god complex, once comprehensible. Origin of corruption TBD. True name Sorath is a placeholder. Specific power level, class, and history TBD. Must remain sympathetic enough that the party feels the cost of stopping them.*

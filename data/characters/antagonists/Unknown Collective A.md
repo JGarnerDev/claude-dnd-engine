@@ -47,4 +47,4 @@ The name *Velhareth* appears in the oldest accounts. Whether it named itself or 
 
 *Names and aliases are flavor suggestions — rename or replace freely.*
 
-*Design notes (remove when defined): Fantasy Borg — assimilation-focused hivemind. Not evil in its own frame. Absorbed entities may persist in some form. Origin TBD. Scale TBD. What triggers absorption vs. non-absorption TBD. Keep underdefined.*
+*Design notes (remove when defined): Fantasy Borg — assimilation-focused hivemind. Not evil in its own frame. Absorbed entities may persist in some form. Origin TBD. Scale TBD. What triggers absorption vs. non-absorption TBD.*

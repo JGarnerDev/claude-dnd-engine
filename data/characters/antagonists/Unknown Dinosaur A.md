@@ -50,5 +50,3 @@ Large. The divergence from known dinosaur fauna is documented but not yet charac
 - *Undead/skeletal: partially animate remains, driven by something other than hunger*
 - *Arcane origin: escaped experiment, ward-beast gone feral, bound to a location or object*
 - *Pack context: this is the apex of something larger — a named leader among a dinosaur population*
-
-*Keep underdefined until needed.*
