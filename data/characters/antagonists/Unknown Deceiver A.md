@@ -47,4 +47,4 @@ The product has never been confirmed to work. It has also never been confirmed t
 
 *Names and aliases are flavor suggestions — rename or replace freely.*
 
-*Design notes (remove when defined): Snakeoil salesman archetype. Charismatic deceiver — hard to stop because people want to believe. Product TBD. True motive TBD — could be purely mercenary, could be ideological, could be working for something larger. Whether he believes his own pitch is intentionally unresolved. Keep underdefined.*
+*Design notes (remove when defined): Snakeoil salesman archetype. Charismatic deceiver — hard to stop because people want to believe. Product TBD. True motive TBD — could be purely mercenary, could be ideological, could be working for something larger. Whether he believes his own pitch is intentionally unresolved.*

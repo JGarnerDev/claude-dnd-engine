@@ -45,4 +45,4 @@ The consistent detail is speed. There is no warning period. It was not there, an
 
 *Names and aliases are flavor suggestions — rename or replace freely.*
 
-*Design notes (remove when defined): Sky predator. Type TBD. Scale TBD — could be enormous or merely very large. Intelligence level TBD. Religious dimension possible among sky-faring peoples. Keep underdefined.*
+*Design notes (remove when defined): Sky predator. Type TBD. Scale TBD — could be enormous or merely very large. Intelligence level TBD. Religious dimension possible among sky-faring peoples.*
