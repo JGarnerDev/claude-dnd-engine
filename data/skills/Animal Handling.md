@@ -1,7 +1,7 @@
 ---
 name: "Animal Handling"
 type: skill
-exists: false
+exists: true
 state: available
 tags:
   - skill

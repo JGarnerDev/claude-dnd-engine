@@ -2,7 +2,7 @@
 name: "Bag of Holding"
 type: item
 subtype: magic
-exists: false
+exists: true
 state: identified
 tags:
   - item/magic

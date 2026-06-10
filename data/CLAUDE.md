@@ -4,6 +4,8 @@
 
 Entities in `./data` with `exists: false` are **free** — available to be used in session content. Entities that get played and canonized move to `./historian` with `exists: true`.
 
+**Carve-out — reference catalogs are not the free pool.** Core D&D / published material (monsters, spells, deities, official items, feats, races, classes, backgrounds, skills) carries `exists: true` even while living in `./data`, because those things are real in the world and are a *reusable reference library*, not one-time creative drafts. They are not "free entities," do not get consumed or moved to historian on use, and do not count toward contribution balance. The Free Entity Rule below applies only to homebrew creative-pool entities (`exists: false`). Encounter/lookup tooling (e.g. `monster-lookup.ps1`) reads the catalog directly and ignores `exists`.
+
 **When generating or planning content that requires an entity:**
 1. First search `./data` for a free entity (`exists: false`) of the needed type.
 2. If one exists, use it — do not invent a new one.
