@@ -44,4 +44,6 @@ Whether waking it requires something external, or only time, is unknown.
 
 ---
 
+*Names and aliases are flavor suggestions — rename or replace freely.*
+
 *Design notes (remove when defined): MGS vibes — walking fortress, ancient deterrent. Dormant/buried; resurrection hook TBD. Leg count TBD (2/4/6). Crew ambiguity intentional. Origin civilization TBD. Keep underdefined.*
