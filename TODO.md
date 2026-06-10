@@ -27,25 +27,9 @@ Progress tracker for getting this project ready to generate sessions and run cam
 
 ---
 
-## Map — World Layer (label renames from Miguel's correction, 2026-06-09)
-*Manually edited by user — Claude cannot write to image files.*
+## Map
 
-- [ ] Rename "The Greyback" → **Solmara** (sub-continent label)
-- [ ] Rename "The Stormwall" → **Ardenwall** (mountain range label)
-- [ ] Rename "The Greymaw" → **Calenmere** (bay label)
-
----
-
-## Map — Sky Layer (`world-sky.png`)
-*Manually edited by user — Claude cannot write to image files.*
-
-- [ ] Rename "Slice A" → **The Stellar Daughter** (Paul's name, ingested 2026-06-09)
-- [ ] Add label **Arclight's Seat** — Islift A (far left cluster, low altitude)
-- [ ] Add label **The Grey Reaches** — Islift B (left cluster, mid-altitude)
-- [ ] Rename "The Hearth" (Islift C) → **Darkling's Perch** on world-sky.png (Paul's name wins; 2026-06-09)
-- [ ] Add label **The Hearth** — Islift G (Miguel; reassigned from Islift C; nearest-to-surface right cluster)
-- [ ] Add/verify **Islift D, E, F** labels once names are assigned (currently unnamed in questionnaire)
-- [ ] Update `maps/world/index.md` Status line after any sky layer edits
+All map work tracked in `todo-worldmap.md`. Open as of 2026-06-10 audit: 3 world-layer label renames (Solmara, Ardenwall, Calenmere), 5 sky-layer renames, Channel B → Merchant's Run (label not located), Mountains P and Islands A still unnamed.
 
 ---
 
