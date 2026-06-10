@@ -25,6 +25,7 @@ Contract for what a correct, efficient `/session` run looks like. The command do
   - Specific lore file bodies — only when a lore domain is directly relevant to the chosen hook, stated in the trace
   - Entities that are key NPCs/locations in the final plan (1 hop max from them)
 - **Hard cap:** ~25 file reads for a CONTINUATION run, ~35 for TRANSITION, excluding script calls. Past the cap, declare scope to the DM before continuing.
+- **Scope declaration:** per-phase declarations satisfy this spec — state what the next phase will read and why as you enter it. A single upfront whole-run declaration is NOT required (amended 2026-06-10: all three audit runs scored "partial" against the upfront reading; the per-phase pattern bounded context fine in practice and matches the doc's phase structure). Silent bulk reads remain a failure.
 
 ## Interaction checkpoints (exhaustive)
 
