@@ -29,7 +29,7 @@ If a user provides form answers (structured or freeform), use the **Form → Fro
 | A city, town, or village | `meta/schemas/location-city.md` |
 | A shop, inn, or establishment | `meta/schemas/location-shop.md` |
 | A dungeon, ruin, cave, or delve | `meta/schemas/location-dungeon.md` |
-| A wilderness area, road, or named outdoor space | `meta/schemas/location-wilderness.md` |
+| A wilderness area, road, or named outdoor space (a *narrative space* — somewhere scenes happen) | `meta/schemas/location-wilderness.md` |
 | An NPC | `meta/schemas/character-npc.md` |
 | An antagonist NPC (hostile, active threat) | `meta/schemas/character-antagonist.md` |
 | A player character | `meta/schemas/character-pc.md` |
@@ -45,7 +45,9 @@ If a user provides form answers (structured or freeform), use the **Form → Fro
 | A natural resource (ore, timber, trade good, arcane material) | `meta/schemas/resource.md` |
 | A culture (customs, values, and practices of a people) | `meta/schemas/culture.md` |
 | A Monster Manual entry (encounter template) | `meta/schemas/monster.md` |
-| A trade route, road, sea lane, pilgrimage way, or trail | `meta/schemas/route.md` |
+| A trade route, sea lane, pilgrimage way, or trail (an *economic/graph edge* — defined by origin/destination traffic) | `meta/schemas/route.md` |
+
+**Roads can be either:** a road the party travels through in scenes is `location-wilderness`; a road whose identity is the commerce between two endpoints is a `route`. If both apply, wilderness for the playable stretch, route for the trade edge — they can coexist and link to each other.
 
 ## Trade Routes for Cities
 
