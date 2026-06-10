@@ -28,6 +28,7 @@ $d20     = [char]::ConvertFromUtf32(0x1F3B2)   # 🎲
 $dragon  = [char]::ConvertFromUtf32(0x1F409)   # 🐉
 $scroll  = [char]::ConvertFromUtf32(0x1F4DC)   # 📜
 $crown   = [char]::ConvertFromUtf32(0x1F451)   # 👑
+$horns   = [char]::ConvertFromUtf32(0x1F918)   # 🤘
 try { [Console]::OutputEncoding = [Text.Encoding]::UTF8 } catch {}
 
 Write-Host "`n========================================" -ForegroundColor DarkGray
@@ -197,5 +198,5 @@ if (Test-Path $prefFile) {
 }
 
 Write-Host "`n========================================" -ForegroundColor DarkGray
-Write-Host "  $crown All hail the DM $crown" -ForegroundColor Yellow
+Write-Host "  $horns $crown All hail the DM $crown $horns" -ForegroundColor Yellow
 Write-Host "========================================`n" -ForegroundColor DarkGray

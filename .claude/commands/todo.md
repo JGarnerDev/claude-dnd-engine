@@ -20,6 +20,15 @@ This collects: uncanonized/pending sessions, recap inbox files, **no-plan-for-ne
 
 Three groups, in this order. One line per item: plain-language what + why it matters. Skip empty groups silently.
 
+**Number every item sequentially across all groups (1, 2, 3… — do not restart per group)** so the DM can reference items in conversation ("tell me more about 7", "do 3"). When the DM refers to an item by number in a follow-up, resolve it against the numbering from your most recent /todo output.
+
+**Tag every item with who can act**, so the DM sees at a glance what to delegate to Claude vs. chase in person:
+- 🤖 — Claude can do it now; name the command or script ("say *do 2* and I'll rebuild the search index")
+- 🙋 — needs a human: a player filling something in, the DM making a creative call, or manual work outside the engine (image edits)
+- 🤝 — joint: Claude drafts or runs the mechanics, but the DM must decide or approve (session plans, canonization, ingesting questionnaires)
+
+Judge honestly: anything requiring taste, approval, or table knowledge is 🤝 at best, not 🤖. Pure script runs, index rebuilds, validation, drafting from existing answers are 🤖.
+
 **🔴 Do soon** — things that block or degrade the next session:
 - No plan drafted for the next game night (the single most urgent line when it appears)
 - Sessions played but never written up (memory fades — historian drifts from the table)
@@ -39,10 +48,14 @@ Three groups, in this order. One line per item: plain-language what + why it mat
 - Unused design wishlist count ("N story ideas from the group still waiting for their moment")
 - Anything else from todo.md, summarized — collapse long sections to "N items about X" rather than listing every line
 
-## Step 3 — Close with one suggestion
+## Step 3 — Write the dashboard file
+
+After presenting the list in chat, write the same content to `todo-dashboard.md` at the repo root (overwrite every run — it is a snapshot, not a log). Same numbering, same wording, plus a first line noting the generation date: `*Generated 2026-06-10 by /todo*`. This file is disposable output, not an entity — no frontmatter. Number references in conversation resolve against this file when chat history is unavailable.
+
+## Step 4 — Close with one suggestion
 
 End with a single "if you do one thing today" line — the highest-leverage item, chosen by judgment: an uncanonized session beats everything; otherwise whichever blank file or pending questionnaire most affects the next session.
 
 Keep total output under ~30 lines. The DM should read it in one glance, not scroll.
 
-Open with a one-line themed header (🎲 something fun, vary it run to run) and always close with exactly: **👑 All hail the DM 👑**
+Open with a one-line themed header (🎲 something fun, vary it run to run) and always close with exactly: **🤘 👑 All hail the DM 👑 🤘**
