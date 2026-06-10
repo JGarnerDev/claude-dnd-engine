@@ -66,7 +66,7 @@ The [[Church of the Morning Lord]] was battle-scarred — claw marks, fire damag
 
 From below: *"Father, I'm starving!"*
 
-- **[[Obible]]** asked if he'd been praying for the creature below
+- **[[Odibli]]** asked if he'd been praying for the creature below
 - Donavich explained: his son **[[Doru]]** and several other Barovians tried to storm Castle Ravenloft. Doru came back a vampire spawn — bound to his vampire lord, lesser abilities, cannot create new spawn. It's been a little more than a year.
 - **[[Dip]]** asked: does he want Doru back, or gone? Donavich answered with anger: *back.*
 - **[[Luci]]** and **[[Odibli]]** combined minds — recalled that vampire spawn are attached to their lords; restoring one to humanity likely requires the death of the vampire lord. Donavich confirmed: the vampire is Strahd.
