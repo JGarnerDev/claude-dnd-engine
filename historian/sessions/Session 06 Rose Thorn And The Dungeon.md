@@ -8,8 +8,8 @@ session_number: 6
 mission: [[Death House]]
 planned_date: "2026-04-07"
 locations:
-  - [[Death House — Attic]]
-  - [[Death House — Dungeon]]
+  - [[Death House]]
+  - [[Death House]]
 key_npcs:
   - [[Rose]] (bound)
   - [[Thorn]] (bound)

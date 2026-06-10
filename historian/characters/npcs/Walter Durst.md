@@ -11,7 +11,7 @@ tags:
   - character
   - character/npc
 
-location: [[Death House -Basement Altar]]
+location: [[Death House]]
 personality: "N/A -died as an infant"
 livelihood: "N/A -sacrificed as an infant"
 disposition: unknown

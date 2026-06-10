@@ -1,5 +1,7 @@
 ---
 name: "World Religion"
+aliases:
+  - "World Religion"
 type: lore
 subtype: religion
 exists: false

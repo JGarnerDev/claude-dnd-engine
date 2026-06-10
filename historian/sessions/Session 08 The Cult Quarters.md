@@ -8,7 +8,7 @@ session_number: 8
 mission: [[Death House]]
 planned_date: "2026-04-28"
 locations:
-  - [[Death House — Dungeon]]
+  - [[Death House]]
 key_npcs:
   - [[Strahd von Zarovich]] (statue)
   - [[Rose]] (provides intel)
