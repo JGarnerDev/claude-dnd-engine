@@ -31,9 +31,17 @@ $crown   = [char]::ConvertFromUtf32(0x1F451)   # 👑
 $horns   = [char]::ConvertFromUtf32(0x1F918)   # 🤘
 try { [Console]::OutputEncoding = [Text.Encoding]::UTF8 } catch {}
 
+# DM name comes from the active campaign's frontmatter (dm: field)
+$dmName = $null
+foreach ($c in (Get-ChildItem "$root\scheduler\campaign" -Filter "*.md" -ErrorAction SilentlyContinue)) {
+    $cfm = Get-Frontmatter $c.FullName
+    if ($cfm['active'] -eq 'true' -and $cfm['dm']) { $dmName = $cfm['dm']; break }
+}
+
 Write-Host "`n========================================" -ForegroundColor DarkGray
 Write-Host "  $d20 DM TODO BRIEF $dragon" -ForegroundColor Cyan
 Write-Host "  $scroll quests, debts, and loose ends" -ForegroundColor DarkCyan
+if ($dmName) { Write-Host "  DM: $dmName" -ForegroundColor DarkCyan }
 Write-Host "========================================" -ForegroundColor DarkGray
 
 # -- 1. Uncanonized sessions + recap inbox -------------------------------------
