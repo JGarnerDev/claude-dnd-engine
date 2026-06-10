@@ -46,6 +46,6 @@ description: "Active Curse of Strahd campaign; party at level 3 after completing
 - **Shazzam!** — A spell for Iggy that triggers whenever he says the word. Randomly heals someone 1 point. Cannot be suppressed.
 - **Sacred Flame** — Permanently sacrificed by Luci (Session 5) to revive Miguel and Ben after the specter encounter. Gone for the rest of the campaign.
 - **Default formation** — Luci → Odibli → Iggy → Dip (front to back)
-- **Session schedule** — Every Monday, 7:30–9:30 PM. Quorum = 3 players; play proceeds if one is absent, someone runs the absent player's character.
+- **Session schedule** — Every Tuesday, 7:30–9:30 PM (moved from Mondays, June 2026). Quorum = 3 players; play proceeds if one is absent, someone runs the absent player's character.
 - **Feats** — Standard ASI or feat at ASI levels. Free feat at level 1.
 - **Potions** — Bonus action to drink yourself; Action to feed to someone; Action to throw at someone.
