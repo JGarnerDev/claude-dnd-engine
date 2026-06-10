@@ -140,21 +140,26 @@ if (Test-Path $stamp) {
     Write-Host "  Never built - run: py -3.10 scripts\index-entities.py" -ForegroundColor Red
 }
 
-# -- 3. Unchecked todo.md items --------------------------------------------------
-Write-Host "`n--- TODO.MD (unchecked) ---" -ForegroundColor DarkGray
-$todoFile = Get-ChildItem "$root" -Filter "todo.md" -ErrorAction SilentlyContinue | Select-Object -First 1
-if ($todoFile) {
-    $section = ""
-    foreach ($line in (Get-Content $todoFile.FullName -Encoding UTF8)) {
-        if ($line -match '^##\s+(.*)') { $section = $Matches[1].Trim(); continue }
-        if ($line -match '^\s*-\s+\[ \]\s+(.*)') {
-            $item = $Matches[1].Trim()
-            if ($item.Length -gt 110) { $item = $item.Substring(0, 107) + "..." }
-            Write-Host "  [$section] $item" -ForegroundColor White
+# -- 3. Unchecked todo items (todo.md + topic files like todo-worldmap.md) -------
+# todo-dashboard.md is /todo output, not a source -- always excluded.
+Write-Host "`n--- TODO FILES (unchecked) ---" -ForegroundColor DarkGray
+$todoFiles = Get-ChildItem "$root" -Filter "todo*.md" -File -ErrorAction SilentlyContinue |
+    Where-Object { $_.Name -ne "todo-dashboard.md" }
+if ($todoFiles) {
+    foreach ($todoFile in $todoFiles) {
+        Write-Host "  == $($todoFile.Name) ==" -ForegroundColor DarkGray
+        $section = ""
+        foreach ($line in (Get-Content $todoFile.FullName -Encoding UTF8)) {
+            if ($line -match '^##\s+(.*)') { $section = $Matches[1].Trim(); continue }
+            if ($line -match '^\s*-\s+\[ \]\s+(.*)') {
+                $item = $Matches[1].Trim()
+                if ($item.Length -gt 110) { $item = $item.Substring(0, 107) + "..." }
+                Write-Host "  [$section] $item" -ForegroundColor White
+            }
         }
     }
 } else {
-    Write-Host "  (no todo.md found)" -ForegroundColor DarkGray
+    Write-Host "  (no todo files found)" -ForegroundColor DarkGray
 }
 
 # -- 4. Questionnaires ------------------------------------------------------------
