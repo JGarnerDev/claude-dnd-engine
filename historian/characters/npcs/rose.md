@@ -11,7 +11,7 @@ tags:
   - character
   - character/npc
 
-location: [[Death House -Unknown]]
+location: [[Death House]]
 personality: "Grateful, gentle. Relieved when bound to Ben's scroll. Said thank you and expressed happiness to be taken along."
 livelihood: "Ghost -trapped in Death House"
 disposition: friendly

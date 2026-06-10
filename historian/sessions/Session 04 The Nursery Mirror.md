@@ -8,7 +8,7 @@ session_number: 4
 mission: [[Death House]]
 planned_date: "2026-03-30"
 locations:
-  - [[Death House — Floor 3]]
+  - [[Death House]]
 key_npcs:
   - [[The Nursemaid]] (vision)
   - [[Gustav Durst]] (vision)

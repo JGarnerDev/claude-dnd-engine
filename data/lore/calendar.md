@@ -1,5 +1,7 @@
 ---
 name: "World Calendar"
+aliases:
+  - "World Calendar"
 type: lore
 subtype: calendar
 exists: false

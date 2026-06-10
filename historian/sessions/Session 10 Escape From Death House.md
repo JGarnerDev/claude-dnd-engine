@@ -8,8 +8,8 @@ session_number: 10
 mission: [[Death House]]
 planned_date: "2026-05-12"
 locations:
-  - [[Death House — Dungeon]]
-  - [[Barovia — Village Outskirts]]
+  - [[Death House]]
+  - [[Barovia Village Outskirts]]
 key_npcs:
   - [[Strahd von Zarovich]] (greets party)
   - [[Rose]] (stranded)
