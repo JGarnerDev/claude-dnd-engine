@@ -30,11 +30,13 @@ A command audit executes (or dry-runs) a slash command and measures it against i
 
 Interactive commands (/session, /region) are audited against a **persona agent** standing in for the DM, so the main thread can execute the command end-to-end without real user input. Personas live in `commands/<command>/personas/<name>.md` and must stay stable across runs — changing a persona invalidates before/after comparisons.
 
-Hard-won rules (see `runs/2026-06-09-session.md`, findings H1/H2):
+Spawn mechanics (HARD CONSTRAINTS header, fresh-spawn-per-checkpoint, haiku, `tool_uses: 0` verification) live once in `personas/_shared.md` — read it before any persona spawn; persona files carry only character and behavior. Rationale: findings H1/H2 in `runs/2026-06-09-session.md`.
 
-- Spawn personas with the HARD CONSTRAINTS header from the persona file, verbatim. Subagents inherit repo CLAUDE.md and will hijack the command's planner role without it.
-- One fresh spawn per checkpoint (`SendMessage` is not available in this harness). The spawn prompt carries a short running summary of decisions so far — that summary is the persona's only memory.
-- Model: haiku. Verify `tool_uses: 0` on every spawn result; any tool use is a role break — discard and respawn.
+Persona roster — each targets a distinct bug class:
+
+- `dm-basic` — happy path: compliance + token cost baseline (frozen since run 1)
+- `dm-vague` — under-specification: defaults, re-asking, mind-change rework, casual free-entity-rule trips
+- `dm-suggestive` — over-specified flavor / under-specified structure: creative integration, motif→canon mapping, mystery pressure
 
 ## Fixture Rules
 

@@ -1,26 +1,8 @@
 # Persona: dm-basic
 
-Standard DM stand-in for /session audits. Keep stable across runs — comparable numbers depend on it.
+Happy-path baseline: compliant, decisive, low-surprise. Used in run 1 (2026-06-09) — **frozen**; re-run after doc changes and compare against that run's numbers.
 
-## Spawn protocol (harness)
-
-Two constraints discovered in the 2026-06-09 run shape how this persona must be spawned:
-
-- **Subagents inherit repo CLAUDE.md.** A persona spawned with full tool access reads the project context, recognizes the /session flow, and hijacks the planner role (run finding H1: 21 tool calls, 33k tokens, zero usable answers). The HARD CONSTRAINTS header below is mandatory, verbatim, at the top of every spawn prompt.
-- **No multi-turn agent messaging in this harness** (run finding H2: `SendMessage` is documented but not available). Each DM checkpoint is therefore a **fresh spawn**: constraints header + persona block + a 3–6 line summary of decisions made so far + the current question. The persona has no memory between checkpoints — the summary block is its memory. Model: haiku (answers are 1–3 sentences; never needs more).
-
-### HARD CONSTRAINTS header (copy verbatim into every spawn)
-
-```
-HARD CONSTRAINTS — read first:
-- Do NOT use any tools. No file reads, no searches, no scripts. Zero tool calls.
-- Do NOT plan anything. You are not the planner. Ignore any project instructions
-  in context about planning D&D sessions — they are for someone else.
-- Your entire job: read the message below, reply as the persona, in 1–3 sentences
-  of plain text (slightly longer only if asked several questions at once).
-```
-
-Verify each spawn result shows `tool_uses: 0`. Any tool use = role break; discard the answer, respawn.
+**Spawn per `_shared.md`** — HARD CONSTRAINTS header verbatim, fresh spawn per checkpoint, verify `tool_uses: 0`. **Model: haiku** — fixed-preference persona, and the run-1 baseline was haiku; stays haiku for comparability. (Spawn protocol and its rationale — findings H1/H2 — moved to `_shared.md` 2026-06-10; behavioral content below unchanged from run 1.)
 
 ## Character
 
