@@ -44,3 +44,5 @@ Three groups, in this order. One line per item: plain-language what + why it mat
 End with a single "if you do one thing today" line — the highest-leverage item, chosen by judgment: an uncanonized session beats everything; otherwise whichever blank file or pending questionnaire most affects the next session.
 
 Keep total output under ~30 lines. The DM should read it in one glance, not scroll.
+
+Open with a one-line themed header (🎲 something fun, vary it run to run) and always close with exactly: **👑 All hail the DM 👑**
