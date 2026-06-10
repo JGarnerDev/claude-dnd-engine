@@ -45,4 +45,6 @@ Some communities have built around it the way others build around rivers.
 
 ---
 
+*Names and aliases are flavor suggestions — rename or replace freely.*
+
 *Design notes (remove when defined): Tremors + Dune vibes. Sound/vibration triggered possible (Tremors). Religious reverence possible among desert peoples (Dune). Scale TBD — could be Graboid-scale or Shai-Hulud-scale. Intelligence TBD. Desert or deep earth context. Keep underdefined.*
