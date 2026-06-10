@@ -8,7 +8,7 @@ session_number: 9
 mission: [[Death House]]
 planned_date: "2026-05-05"
 locations:
-  - [[Death House — Dungeon]]
+  - [[Death House]]
 key_npcs:
   - [[Strahd von Zarovich]] (intervention)
 party: [[The Party]]

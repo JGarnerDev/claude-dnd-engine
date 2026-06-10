@@ -1,5 +1,7 @@
 ---
 name: "World History"
+aliases:
+  - "World History"
 type: lore
 subtype: history
 exists: false

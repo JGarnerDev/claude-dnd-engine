@@ -8,7 +8,7 @@ session_number: 7
 mission: [[Death House]]
 planned_date: "2026-04-14"
 locations:
-  - [[Death House — Dungeon]]
+  - [[Death House]]
 party: [[The Party]]
 importance: major
 active: false

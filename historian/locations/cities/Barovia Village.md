@@ -37,7 +37,7 @@ factions:
   - [[Domain of Barovia]]
 rulership: "Unknown — see reliability note"
 shops:
-  - "[[Blood on the Vine Tavern]] (unconfirmed at table)"
+  - "[[Blood of the Vine Tavern]] (unconfirmed at table)"
 
 source_session: [[Session 10 Escape From Death House]]
 confirmed_date: "Session 10"

@@ -10,7 +10,7 @@ state: missing
 tags:
   - character
   - character/npc
-location: [[Death House -Unknown]]
+location: [[Death House]]
 personality: "Willing to share information. Revealed Walter's backstory when asked."
 livelihood: "Ghost -trapped in Death House"
 disposition: friendly

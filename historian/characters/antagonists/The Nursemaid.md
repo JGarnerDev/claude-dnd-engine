@@ -11,7 +11,7 @@ tags:
   - character
   - character/antagonist
 
-location: [[Death House -Area 15]]
+location: [[Death House]]
 personality: "Unknown in life. In undeath: malevolent, attacks intruders."
 livelihood: "Specter -haunting Death House area 15"
 disposition: hostile
