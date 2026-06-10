@@ -74,7 +74,7 @@ function Get-Links($text) {
 }
 
 $allMd = Get-ChildItem $repo -Recurse -Filter *.md -File |
-    Where-Object { $_.FullName -notmatch '[\\/](\.obsidian|\.git|node_modules)[\\/]' }
+    Where-Object { $_.FullName -notmatch '[\\/](\.obsidian|\.git|node_modules|tests)[\\/]' }
 
 # Resolution universe: every file basename (any .md is a valid link target in Obsidian) + entity aliases.
 $targets = @{}

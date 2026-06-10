@@ -12,35 +12,47 @@ If `--depth` or `--scope` are not provided, ask in Phase 4.
 
 ## Phase 1 — Orient
 
-Read the following files before doing anything else. Do not generate any content yet.
+Do not generate any content yet.
 
-1. `scheduler/campaign.md` — tone, central conflict, current act
-2. `scheduler/acts/` — any file with `state: active`; note its goal and current mission list
-3. `scheduler/missions/` — any file with `state: active`; note objective, hook, obstacles, and last_updated session
-4. `historian/sessions/` — find the highest-numbered session file; read its `cliffhanger`, `recap`, and any `new_entities`
-5. Lore files (read once; do not re-read per sub-task) — scan frontmatter only unless a specific lore domain is directly relevant to the session:
-   - `data/lore/` — world history, magic rules, religion, calendar; use to ground historian entity detail and ensure new content fits established world facts; treat `state: draft` sections as open questions, not settled canon
+**Step 1 — Run the dashboard script:**
 
-6. Meta reference files (read once; do not re-read per sub-task):
-   - `meta/worldbuilding-approach.md` — how to reason about worldbuilding: coherence, causality, consequences
-   - `meta/worldbuilding.md` — tone, themes, setting pillars, what to avoid
-   - `meta/difficulty.md` — encounter tiers, DC ranges, session mix
-   - `meta/rewards.md` — gold ranges, magic item philosophy, leveling pace
-   - `meta/players/*.md` (excluding `player-template.md`) — per-player preferences
-   - `meta/references.md` — where to look for external D&D data
-   - `meta/campaign-design-preferences.md` — player-sourced event desires, antagonist archetypes, mission preferences; note which items have `Deployed: —` (not yet used)
-   - `meta/mysteries.md` — load-bearing unknowns; do not accidentally answer these in session content
-   - `meta/party-relationships.md` — PC bonds, tensions, and defining moments; use when planning scenes with PC-to-PC stakes
+```powershell
+.\scripts\session-brief.ps1
+```
 
-Determine the next session number: highest session number found + 1.
+It reports: next session number, campaign/act/mission names and states, last session summary + cliffhanger + played date, and the party roster with afflictions. Do not manually re-read anything it already covers.
 
-After reading, state aloud:
+**Step 2 — Index staleness check.** Read `vector-index/.index-built` (line 1: ISO timestamp, line 2: commit SHA), then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag: *"Semantic index stale since `<sha[:7]>` — run `py -3.10 scripts\index-entities.py`."* If the file is missing, prompt to build. Never rebuild automatically — the searches in this command degrade silently on a stale index, so the DM should decide.
+
+**Step 3 — Targeted manual reads** (only what the script doesn't cover):
+
+1. Active mission file body (`state: active` in `scheduler/missions/`) — objective, hook, obstacles, last_updated session
+2. Last session file — `new_entities` and recap detail (cliffhanger and summary already came from the script)
+3. `scheduler/campaign.md` body — tone, central conflict, themes
+4. `data/lore/` — frontmatter scan only; open a lore body only when that domain is directly relevant to this session; treat `state: draft` sections as open questions, not settled canon
+
+**Step 4 — Meta reference files.** Each is read **once per run**, never re-read per sub-task. Tiered — do not read a conditional file unless its trigger applies:
+
+Always:
+- `meta/difficulty.md` — encounter tiers, DC ranges, session mix
+- `meta/worldbuilding.md` — tone, themes, setting pillars, what to avoid
+- `meta/mysteries.md` — load-bearing unknowns; do not accidentally answer these in session content
+
+Conditional:
+- `meta/rewards.md` — only if the session will include treasure, magic items, or a level-up
+- `meta/players/*.md` (excluding `player-template.md`) — TRANSITION mode, roleplay-heavy shape, or the hook centers on a specific player's PC
+- `meta/party-relationships.md` — only when planning scenes with PC-to-PC stakes
+- `meta/campaign-design-preferences.md` — TRANSITION mode, or a CONTINUATION session that introduces a new antagonist, event, or mission element; note which items have `Deployed: —` (not yet used)
+- `meta/worldbuilding-approach.md` — only when the session creates new world detail (new locations, factions, lore-adjacent content)
+- `meta/references.md` — only when an external D&D stat lookup is needed
+
+**Step 5 — State the orientation aloud**, using the two-part recap format from root CLAUDE.md (narrative prose first, then TL;DR bullets):
 - What the current act is (or "no act defined yet")
 - What active mission(s) exist (or "no active mission")
 - What the last session ended on (cliffhanger or final recap note)
 - What the next session number will be
 
-Then run semantic search on the cliffhanger or active mission hook to surface historian entities the story may be ready to revisit:
+**Step 6 — Callback search** on the cliffhanger or active mission hook, to surface historian entities the story may be ready to revisit:
 
 ```powershell
 .\scripts\semantic-search.ps1 -Query "<cliffhanger or mission hook text>" -Source historian -K 5
@@ -96,13 +108,19 @@ Run semantic search using the themes of the current session direction (from clif
 .\scripts\semantic-search.ps1 -Query "<themes from cliffhanger or direction>" -Exists false -K 8
 ```
 
-This surfaces thematically matching pool entities regardless of importance level. Also read frontmatter only (`name`, `type`, `subtype`, `importance`, `active`, `description`) across `data/` and filter to `exists: false`, `active: true`, `importance: major` or `critical` for high-priority entities the semantic search may not rank highly. Combine both lists — semantic results for thematic fit, frontmatter scan for importance-flagged entities.
+Then surface importance-flagged entities the semantic search may not rank highly:
+
+```powershell
+.\scripts\free-entities.ps1
+```
+
+Filter its output to `importance: major` or `critical` with `active: true`. Combine both lists — semantic results for thematic fit, script output for importance-flagged entities. Do not manually sweep `data/` frontmatter; the script replaces that.
 
 **Step 3 — Check meta preferences**
 
-Read `meta/worldbuilding.md` and any filled `meta/players/*.md` files (excluding the template). Note which sections are populated and which are blank. If all are blank, fall back to the campaign's `themes` and `tone` from `scheduler/campaign.md`.
+Use `meta/worldbuilding.md` (already read in Phase 1) and read any filled `meta/players/*.md` files (excluding the template) if not already read. Note which sections are populated and which are blank. If all are blank, fall back to the campaign's `themes` and `tone` from `scheduler/campaign.md`.
 
-Also check `meta/campaign-design-preferences.md`: identify items with `Deployed: —` that haven't fired yet. If any are aging (many sessions have passed without use), flag the most relevant one as a candidate for Option C. Do not force a preference into a hook — only suggest it if the current story state creates a plausible opening.
+Also check `meta/campaign-design-preferences.md` (conditional-tier file — TRANSITION is its trigger): identify items with `Deployed: —` that haven't fired yet. If any are aging (many sessions have passed without use), flag the most relevant one as a candidate for Option C. Do not force a preference into a hook — only suggest it if the current story state creates a plausible opening.
 
 **Step 4 — Present 3 hooks**
 
@@ -125,24 +143,34 @@ Wait for the DM's response before continuing.
 
 ---
 
-## Phase 4 — Scoping Questions
+## Phase 4 — Scoping + Elaboration (one message)
 
-After the hook is chosen (or confirmed in CONTINUATION mode), ask targeted questions before generating the plan. Tailor to what's genuinely unknown. Always ask:
+After the hook is chosen (or confirmed in CONTINUATION mode), do the **Elaboration Check first**, then ask all questions in a single batched message.
+
+**Elaboration Check (before generating anything):** identify the session's likely key NPCs and locations from the hook, mission, and callback candidates. Check every key `./data` and `./historian` entity against the elaboration protocol in `data/CLAUDE.md`. Historian entities can be just as sparse as data entities — canonized does not mean ready for detailed play. **Do not fill gaps silently.** Sparse key entities are flagged at the **Immediate** tier and resolved via the batched questions below — before any scene is written, so elaboration answers can't invalidate finished scenes.
+
+**Batched questions — one message, wait once:**
 
 1. **Session length** — Short (~1.5 hr), Standard (~2 hr), or Long (~2.5 hr+)?
 2. **Session shape** — Roleplay-heavy, combat-heavy, exploration-heavy, or balanced?
 3. **Depth** — (only if `--depth` not provided) `narrated` (read-aloud blockquotes for key moments) or `notes` (DM bullet notes only)?
 4. **Scope** — (only if `--scope` not provided) `inline` (single file) or `linked` (folder with separate encounter files)?
+5. **Elaboration decisions** — for each sparse key entity: draft the elaboration, or leave it to the DM?
+6. At most **one** hook-specific question, only if something genuinely warrants it (e.g. "Is the party expected to find Strahd's location this session, or is that still a mystery to preserve?").
 
-Add one more question only if something specific about the hook warrants it (e.g. "Is the party expected to find Strahd's location this session, or is that still a mystery to preserve?").
-
-Do not ask questions that the established context already answers.
+Do not ask questions that the established context already answers. Do not split these into multiple messages.
 
 Wait for the DM's response before continuing.
 
 ---
 
 ## Phase 5 — Generate Session Plan
+
+**Pre-step:** run the party dashboard for the Orientation paragraph and encounter balance:
+
+```powershell
+.\scripts\party-status.ps1
+```
 
 Using all context gathered, produce a session plan in chat.
 
@@ -158,7 +186,7 @@ Using all context gathered, produce a session plan in chat.
 **Body structure — produce the following sections in order:**
 
 ### Orientation
-- One-paragraph party state: current location, known afflictions, resources expended, mood/tone coming out of the last session
+- One-paragraph party state: current location, known afflictions, resources expended, mood/tone coming out of the last session (sourced from `party-status.ps1` and the last session recap)
 - Bullet list: any unresolved `new_entities` from the last session that need acknowledgment
 
 ### Scenes
@@ -174,20 +202,8 @@ Each scene block contains:
 
 If `scope: linked`, replace the full encounter detail with a one-line reference: `→ see [[encounter-{slug}]]` and note that the encounter file will be written separately.
 
-### Elaboration Check
-
-Before writing NPC and location detail, check every key `./data` and `./historian` entity in this session against the elaboration protocol in `data/CLAUDE.md`. Historian entities can be just as sparse as data entities — canonized does not mean ready for detailed play. For each sparse key entity: flag it with the **Immediate** tier and ask the DM whether to draft elaboration or let them write it. **Do not fill gaps silently.** Resolve all elaboration decisions before continuing to NPC Quick-Reference.
-
-### Approaching Entity Check
-
-After the Elaboration Check, scan the active mission's `obstacles` field for entity references not already covered above. For each sparse entity named there that is **not** key this session but plausibly key within 1–2 sessions:
-
-- Flag it as **Approaching** (light elaboration tier — see `data/CLAUDE.md`): *"[Name] appears in the mission's obstacles and is sparse. Consider a light sketch (personality + motivation) before they become immediate."*
-
-Do not block session generation on these. They are lead-time flags — the DM can defer or delegate at any point.
-
 ### NPC Quick-Reference
-One entry per key NPC appearing this session. For any NPC with historian canon, run `/voice <name>` first to ground the voice note in established characterization — do not invent fresh voice from scratch if history exists.
+One entry per key NPC appearing this session. For canon NPCs, run `/voice <name>` first — **capped at the 2–3 NPCs carrying the most dialogue this session**. Remaining canon NPCs get voice notes from their file's frontmatter and description only; do not run `/voice` for every NPC. Never invent fresh voice from scratch where history exists.
 
 - **Name** — `[[wiki-link]]`
 - **Motivation** — what they want right now
@@ -201,11 +217,19 @@ One entry per key NPC appearing this session. For any NPC with historian canon, 
 - How to land the closing hook (specific DM move or line)
 - What to leave unresolved going into the next session
 
+### Approaching Entities
+
+Scan the active mission's `obstacles` field for entity references not already covered by the Phase 4 Elaboration Check. For each sparse entity named there that is **not** key this session but plausibly key within 1–2 sessions:
+
+- Flag it as **Approaching** (light elaboration tier — see `data/CLAUDE.md`): *"[Name] appears in the mission's obstacles and is sparse. Consider a light sketch (personality + motivation) before they become immediate."*
+
+These are lead-time flags, never blockers — the DM can defer or delegate at any point. Omit the section if nothing qualifies.
+
 ### Cameo Candidates
 
-After building the session plan, scan `questionnaires/` for filled cameo files. A file is "filled" if any `> ` answer lines contain actual text (not just blank `> `).
+Detect filled questionnaires with a **single search, not per-file reads**: grep `questionnaires/` for the pattern `^> \S` (answer lines with actual text), files-with-matches mode. Intersect the hits with cameo questionnaires (`entity_type: player` in the `CLAUDE-INGEST` block, or `-cameo` filenames).
 
-For each filled questionnaire, compare:
+For each filled cameo questionnaire, compare:
 - `preferred_alignment` against the role and disposition of NPCs in this session
 - `preferred_archetypes` against NPC archetypes and scene types
 
