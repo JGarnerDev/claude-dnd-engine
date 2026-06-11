@@ -39,6 +39,15 @@ if ($campaignFile) {
     }
 }
 
+# Latest played session number -- staleness baseline for level_confirmed
+$latestSession = 0
+$sessionFiles = Get-ChildItem "$root\historian\sessions" -Filter "*.md" -ErrorAction SilentlyContinue
+foreach ($sf in $sessionFiles) {
+    $sfm = Get-Frontmatter $sf.FullName
+    $n = 0
+    if ([int]::TryParse($sfm['session_number'], [ref]$n) -and $n -gt $latestSession) { $latestSession = $n }
+}
+
 # Load all PCs
 $pcFiles = Get-ChildItem "$root\historian\characters\pcs" -Filter "*.md" -ErrorAction SilentlyContinue | Sort-Object Name
 
@@ -64,6 +73,16 @@ foreach ($file in $pcFiles) {
     Write-Host "`n  $name" -ForegroundColor White -NoNewline
     Write-Host " ($player)" -ForegroundColor Gray
     Write-Host ("    {0} {1}, Level {2}" -f $race, $class, $level) -ForegroundColor White
+
+    # Level staleness -- level_confirmed must match the latest played session
+    if ($state -eq 'active' -and $latestSession -gt 0) {
+        $confirmed = 0
+        if (-not [int]::TryParse($fm['level_confirmed'], [ref]$confirmed)) {
+            Write-Host "    LEVEL STALE: no level_confirmed stamp (latest session: $latestSession)" -ForegroundColor Red
+        } elseif ($confirmed -lt $latestSession) {
+            Write-Host "    LEVEL STALE: confirmed at session $confirmed, latest is $latestSession" -ForegroundColor Red
+        }
+    }
     Write-Host "    State: " -ForegroundColor Gray -NoNewline
     Write-Host $state -ForegroundColor $stateColor
 

@@ -34,7 +34,7 @@ It reports: next session number, campaign/act/mission names and states, last ses
 **Step 4 — Meta reference files.** Each is read **once per run**, never re-read per sub-task. Tiered — do not read a conditional file unless its trigger applies:
 
 Always:
-- `meta/difficulty.md` — encounter tiers, DC ranges, session mix
+- `meta/difficulty.md` — two-axis difficulty spectrum (attrition × lethality), Non-Combat Stakes, DC ranges. Note the frontmatter defaults here, but **do not resolve tiers yet** — the picks happen in Phase 4, after the story hook is chosen, so the difficulty answer can push back on the story (and vice versa). Exception: tiers given in the DM's prompt are settled immediately. The combat axes apply only if the session ends up planning combat — for a roleplay-only shape they sit inert and Non-Combat Stakes is the operative difficulty guidance.
 - `meta/worldbuilding.md` — tone, themes, setting pillars, what to avoid
 - `meta/mysteries.md` — load-bearing unknowns; do not accidentally answer these in session content
 
@@ -47,6 +47,8 @@ Conditional:
 - `meta/references.md` — only when an external D&D stat lookup is needed
 
 **Step 5 — State the orientation aloud**, using the two-part recap format from root CLAUDE.md (narrative prose first, then TL;DR bullets):
+- Party level and size (from PC frontmatter `level` fields — `party-status.ps1` or a quick frontmatter scan) — ask the DM to confirm or correct; the confirmed level feeds the RTD math in `meta/difficulty.md`. If any PC's `level_confirmed` is older than the last played session number (party-status flags this as LEVEL STALE), call it out explicitly — it means a `/recap` skipped the level question and a level-up may have been missed
+- Rest Clock state (from the session brief): rounds and short rests since the last long rest. If the brief shows REST CLOCK STALE or NOT INITIALIZED, reconstruct it with the DM now — two questions ("when did they last long rest? roughly how many rounds since?"), write the answers back to the campaign file's `### Rest Clock` block with the current stamp, then continue
 - What the current act is (or "no act defined yet")
 - What active mission(s) exist (or "no active mission")
 - What the last session ended on (cliffhanger or final recap note)
@@ -154,11 +156,12 @@ After the hook is chosen (or confirmed in CONTINUATION mode), do the **Elaborati
 **Batched questions — one message, wait once:**
 
 1. **Session length** — Short (~1.5 hr), Standard (~2 hr), or Long (~2.5 hr+)?
-2. **Session shape** — Roleplay-heavy, combat-heavy, exploration-heavy, or balanced?
-3. **Depth** — (only if `--depth` not provided) `narrated` (read-aloud blockquotes for key moments) or `notes` (DM bullet notes only)?
-4. **Scope** — (only if `--scope` not provided) `inline` (single file) or `linked` (folder with separate encounter files)?
-5. **Elaboration decisions** — for each sparse key entity: draft the elaboration, or leave it to the DM?
-6. At most **one** hook-specific question, only if something genuinely warrants it (e.g. "Is the party expected to find Strahd's location this session, or is that still a mystery to preserve?").
+2. **Session shape** — Roleplay-only (no combat planned), roleplay-heavy, combat-heavy, exploration-heavy, or balanced?
+3. **Difficulty** — attrition and lethality tiers for the adventuring day (`meta/difficulty.md`; moot if shape is roleplay-only). Don't ask cold: propose tiers that fit the chosen hook, note the frontmatter defaults, and **flag any discrepancy** between what the story implies and what the defaults say (a boss confrontation on soft lethality, a dungeon crawl on light attrition, a hook that ignores a nearly-spent Rest Clock). The DM's answer settles it — and may reshape the story beats, not just the encounter math. Skip the question entirely only if the DM's prompt already specified tiers.
+4. **Depth** — (only if `--depth` not provided) `narrated` (read-aloud blockquotes for key moments) or `notes` (DM bullet notes only)?
+5. **Scope** — (only if `--scope` not provided) `inline` (single file) or `linked` (folder with separate encounter files)?
+6. **Elaboration decisions** — for each sparse key entity: draft the elaboration, or leave it to the DM?
+7. At most **one** hook-specific question, only if something genuinely warrants it (e.g. "Is the party expected to find Strahd's location this session, or is that still a mystery to preserve?").
 
 Do not ask questions that the established context already answers. Do not split these into multiple messages.
 
@@ -182,7 +185,7 @@ Using all context gathered, produce a session plan in chat.
 - **Session name** — propose a name (the DM can change it)
 - **Key locations** — use `[[wiki-link]]` to entities in `historian/locations/` or `data/locations/` only; not factions (e.g., `[[Domain of Barovia]]` is a faction; the region is `[[Barovia]]`)
 - **Key NPCs** — note if free (`data/`) or canon (`historian/`)
-- **Encounters** — list planned encounters; note difficulty tier if relevant
+- **Encounters** — for a roleplay-only shape, write `none planned` and stop; never invent encounters to satisfy a budget. Otherwise, list planned encounters sized to the resolved attrition tier (encounter count, round budget) and lethality tier (CR targets, tactics note per encounter); sanity-check with RTD math per `meta/difficulty.md`. The attrition budget belongs to the **adventuring day**, not the session: subtract the Rest Clock's rounds-since-long-rest from the tier budget and size to the remainder. If the remainder is near zero, the long rest is the content — plan it as a scene, or flag that pushing past budget bumps effective lethality a tier
 - **Loose threads** — unresolved promises, player action items, or dangling beats from prior sessions
 - **Opening scene** — where the party is, what's immediately in front of them
 - **Closing hook** — the cliffhanger or question that sends players home wanting more

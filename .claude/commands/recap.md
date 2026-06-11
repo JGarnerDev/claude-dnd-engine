@@ -25,9 +25,10 @@ Otherwise, ask the DM the following. Keep it conversational — rough notes are 
 1. **Date played** — What date was the session?
 2. **Recap** — What actually happened? Walk me through it. (Free-form; DM can paste notes or speak informally.)
 3. **Cliffhanger** — Where did things end? What question or situation carries into next session?
-4. **State changes** — Any significant PC or NPC changes? (Deaths, level-ups, new afflictions, relationship shifts, items gained or lost.)
-5. **New entities** — Anything invented at the table that doesn't have a file yet? (NPCs named on the fly, locations described, items handed out.)
-6. **Table reaction** — What landed? Anything that fell flat or felt off? (One line is fine — this informs future planning, not canonization.)
+4. **State changes** — Any significant PC or NPC changes? (Deaths, level-ups, new afflictions, relationship shifts, items gained or lost.) Always confirm levels explicitly — state the current party level from PC frontmatter and ask "still correct?" rather than waiting for the DM to volunteer a level-up.
+5. **Rests & rounds** — Did the party take a long rest at any point (especially before the cliffhanger)? Any short rests? Roughly how many rounds of combat were fought? (Rough estimates are fine — this feeds the Rest Clock, which only needs to distinguish fresh from half-spent from running-on-fumes. Zero rounds is a normal answer for a roleplay-only session; the clock still gets restamped.) Any notable resource burns worth recording (big spells gone, hit dice low)?
+6. **New entities** — Anything invented at the table that doesn't have a file yet? (NPCs named on the fly, locations described, items handed out.)
+7. **Table reaction** — What landed? Anything that fell flat or felt off? (One line is fine — this informs future planning, not canonization.)
 
 Wait for the DM's response before continuing.
 
@@ -68,7 +69,7 @@ entities_canonized:
   - [[Entity Name]]   # one per entity moved to historian this session
 new_entities:
   - "{description}"     # one per thing invented at the table, not yet filed
-table_notes: "{what landed, what didn't — from Phase 2 question 6. Omit field if no feedback given.}"
+table_notes: "{what landed, what didn't — from Phase 2 question 7. Omit field if no feedback given.}"
 ```
 
 Then move the file from `scheduler/sessions/` to `historian/sessions/`.
@@ -89,6 +90,8 @@ For each entity flagged for canonization in Phase 3:
 **If the entity has a state change:**
 - Update the relevant field (`state`, `location`, `last_updated`, etc.) in its `historian/` file
 
+**Level restamp (every recap, even with no level-up):** for each active PC in `historian/characters/pcs/`, set `level_confirmed: {session_number}` — updating `level` first if the DM reported a change in Phase 2. The stamp records "level verified as of session N"; skipping it is what makes levels go silently stale.
+
 **If an entity is missing (no file anywhere):**
 - Do not create it silently. Flag it clearly:
   > "**[Entity Name]** was referenced in this session but has no file. Create it now? If yes, I'll read `meta/entity-creation.md` first."
@@ -102,6 +105,11 @@ Read `scheduler/campaign.md`. Propose updates to the `## Current State` section 
 - New party location
 - Any active afflictions or ongoing conditions
 - Any resolved or newly opened threads
+
+**Rest Clock (every recap, never skipped):** update the `### Rest Clock` block from Phase 2's rests-and-rounds answer, then restamp the header to `(as of: Session {NN})` even if nothing changed — the stamp is what `session-brief.ps1` checks for staleness:
+- Long rest taken → reset: new `Last long rest` anchor, rounds and short rests to 0, clear notable burns
+- No long rest → add this session's rounds to `Rounds of combat since`, increment `Short rests since`, append notable burns
+- DM unsure → record best estimate marked `(~estimate)`; never leave the old numbers standing unstamped
 
 **Preference tracking:** check the session plan's DM notes for deployed or seeded items from `meta/campaign-design-preferences.md`. Update the item's `Deployed:` line (wikilink to the session) or add/update its `Seeded:` line (wikilink + one-phrase breadcrumb note). This closes the loop `/session` opens — if it isn't done here, it never happens.
 
