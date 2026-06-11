@@ -1,4 +1,5 @@
 ﻿# session-brief.ps1 -- pre-session planning dashboard
+# consumers: CLAUDE.md, .claude/commands/recap.md, .claude/commands/session.md, meta/difficulty.md, tests/commands/session/spec.md -- update these if usage, flags, or output format change.
 # Replaces ~8 manual Read calls at the start of every /session invocation
 # Usage: .\scripts\session-brief.ps1
 

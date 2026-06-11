@@ -1,4 +1,5 @@
 ﻿# region-world-context.ps1 -- geographic rules for a world map grid position
+# consumers: CLAUDE.md, .claude/commands/region.md -- update these if usage, flags, or output format change.
 # Usage: .\scripts\region-world-context.ps1 -Col <n> -Row <n>
 # Grid assumption: ~16 cols x 13 rows, 1000km per cell, equator at row 7, poles at rows 1 and 13
 

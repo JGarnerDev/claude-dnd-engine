@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# consumers: CLAUDE.md, README.md, .claude/commands/session.md, .claude/commands/transition.md -- update these if usage, flags, or output format change.
 """
 index-entities.py -- Build/update the Chroma vector index from entity markdown files.
 Usage: python scripts/index-entities.py [--dirs data historian scheduler] [--reset]

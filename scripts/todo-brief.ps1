@@ -1,4 +1,5 @@
 # todo-brief.ps1 -- DM action-item dashboard. Backbone of the /todo command.
+# consumers: CLAUDE.md, .claude/commands/todo.md -- update these if usage, flags, or output format change.
 # Collects every mechanical "needs attention" signal in one call:
 #   uncanonized sessions, recap inbox, index staleness, unchecked todo.md items,
 #   questionnaire fill states, draft files, undeployed design preferences.
