@@ -29,6 +29,8 @@ Three groups, in this order. One line per item: plain-language what + why it mat
 
 Judge honestly: anything requiring taste, approval, or table knowledge is 🤝 at best, not 🤖. Pure script runs, index rebuilds, validation, drafting from existing answers are 🤖.
 
+**Map work is delegable:** when a 🙋 item is manual map or image work (world map labels, region/city maps, derivatives), remind the DM that Jeff (player, original world-builder) can take it — *unless* the map is a secret players should only see when discovered in play. Phrase it as an option, not an assignment: "hand to Jeff if it's not a spoiler — say the word and I'll draft a request sheet from `maps/map-request-template.md`."
+
 **🔴 Do soon** — things that block or degrade the next session:
 - No plan drafted for the next game night (the single most urgent line when it appears)
 - Sessions played but never written up (memory fades — historian drifts from the table)
