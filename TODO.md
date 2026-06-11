@@ -29,7 +29,7 @@ Progress tracker for getting this project ready to generate sessions and run cam
 
 ## Map
 
-All map work tracked in `todo-worldmap.md`. Open as of 2026-06-10 audit: 3 world-layer label renames (Solmara, Ardenwall, Calenmere), 5 sky-layer renames, Channel B → Merchant's Run (label not located), Mountains P and Islands A still unnamed.
+All map work tracked in `todo-worldmap.md`. As of 2026-06-10: all label renames done and ingested (world + sky). Open: names from Paul (Mountains P, Islands A, plus unassigned Islift D/E, Channel B), compass rose, Struck/Arc Side decision.
 
 ---
 

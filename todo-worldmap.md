@@ -84,7 +84,8 @@ Replace placeholder labels with Miguel's canonical names.
 - [x] Sea C → **The Amber Sea**
 - [x] Bay B → **The Greymaw** *(superseded — now renames to Calenmere, see Label Corrections below)*
 - [x] Bay E → **Cindermouth Bay**
-- [ ] Channel B → **Merchant's Run** — **label not located 2026-06-10.** No "Channel B" or "Merchant's Run" found on any tile (saw Channels C, E, I, J). Entity file says: channel between The Narrows and an eastern island, southern approach, pairs with a northern channel ("Lower Gate" pairing). Candidate area: around The Narrows / Sub Continent E (~cols 11–13, rows 4–6) — Channel C sits there, still placeholder. Needs DM to locate/confirm which strait this is before labeling.
+- [x] **Merchant's Run** — label on map (se tile, strait between Continent F and Mori, ~col 12–13, row 9; confirmed by DM + tile read 2026-06-10)
+- [x] **Merchant's Run placement vs. canon mismatch — resolved 2026-06-10.** Map won per protocol: entity `region` corrected to [[Mori]], description re-anchored to the Continent F ↔ Mori strait (DM approved). Consequence: questionnaire's **Channel B** (Narrows southern approach, pairs with Channel C) is still unnamed — back in the naming pool.
 - [x] Channel H → **The Southern Throat**
 - [x] **Islands A — volcanic peak added** — crater + lava texture visible center-north of Islands A (verified 2026-06-10 crop)
 - [x] **The Ashreaches label placed** on Islands A slopes between the peak and Cindermouth Bay
@@ -95,26 +96,26 @@ Replace placeholder labels with Miguel's canonical names.
 
 ## Label Corrections — World Layer (Miguel's correction, 2026-06-09)
 
-*Manually edited by user — Claude cannot write to image files. Verified against `tiles/nw.png` 2026-06-10: all three old labels still on map.*
+*New ground image ingested 2026-06-10, all three renames verified on regenerated nw tile:*
 
-- [ ] Rename "The Greyback" → **Solmara** (sub-continent label) — nw tile, ~col 4–5, row 4
-- [ ] Rename "The Stormwall" → **Ardenwall** (mountain range label) — nw tile, ~col 4, row 4–5
-- [ ] Rename "The Greymaw" → **Calenmere** (bay label) — nw tile, ~col 5–6, row 4–5
-- [ ] After edits: run `python scripts\gen-tiles.py`, then update `maps/world/index.md` Known Region Positions (Bay B entry) and Status line
+- [x] Rename "The Greyback" → **Solmara** (sub-continent label)
+- [x] Rename "The Stormwall" → **Ardenwall** (mountain range label)
+- [x] Rename "The Greymaw" → **Calenmere** (bay label)
+- [x] Tiles regenerated (`gen-tiles.py`), `index.md` positions (Solmara, Ardenwall, Calenmere) and Status line updated (2026-06-10)
 
 ---
 
 ## Sky Layer (`world-sky.png`)
 
-*Manually edited by user — Claude cannot write to image files. Verified against `world-sky.png` 2026-06-10: all renames still pending. Whole sky cluster sits top-left, ~cols 2–4, rows 2–4 (Opticon's Fade at top, Slice A at bottom) — all five edits doable in one pass.*
+*New sky image ingested 2026-06-10, all five renames verified at full res:*
 
-- [ ] Rename "Slice A" → **The Stellar Daughter** (Paul's name, ingested 2026-06-09)
-- [ ] Rename "Islift A" → **Arclight's Seat** (far left cluster, low altitude)
-- [ ] Rename "Islift B" → **The Grey Reaches** (left cluster, mid-altitude)
-- [ ] Rename "The Hearth" (Islift C) → **Darkling's Perch** (Paul's name wins; 2026-06-09)
-- [ ] Rename "Islift G" → **The Hearth** (Miguel; reassigned from Islift C; nearest-to-surface right cluster)
-- [ ] Add/verify **Islift D, E** labels once names are assigned (currently unnamed in questionnaire) — Islift F already labeled **The Landing** on map ✓
-- [ ] Update `maps/world/index.md` Status line after any sky layer edits
+- [x] Rename "Slice A" → **The Stellar Daughter** (Paul)
+- [x] Rename "Islift A" → **Arclight's Seat** (far left cluster, low altitude)
+- [x] Rename "Islift B" → **The Grey Reaches** (left cluster, mid-altitude)
+- [x] Rename "The Hearth" (Islift C) → **Darkling's Perch** (Paul's name wins; 2026-06-09)
+- [x] Rename "Islift G" → **The Hearth** (Miguel; reassigned from Islift C; nearest-to-surface right cluster)
+- [ ] Add **Islift D, E** labels once names are assigned (still unnamed in questionnaire) — Islift F already labeled **The Landing** ✓
+- [x] Update `maps/world/index.md` Status line (2026-06-10)
 
 ---
 
