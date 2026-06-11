@@ -1,4 +1,4 @@
----
+﻿---
 name: "Luci"
 campaign: strahd
 type: character
@@ -14,6 +14,7 @@ race: [[Aasimar]]
 class: [[Monk]]
 background: "Unknown"
 level: 3
+level_confirmed: 13
 aliases:
   - "Lucy"
 source_session: [[Session 01 The Black Sheep Inn]]

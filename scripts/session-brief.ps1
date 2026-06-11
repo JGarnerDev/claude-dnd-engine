@@ -28,10 +28,12 @@ $schedSessions = Get-ChildItem "$root\scheduler\sessions" -Filter "*.md" -ErrorA
 $allSessions = @($histSessions) + @($schedSessions) | Where-Object { $_ -ne $null }
 
 $maxNum = 0
+$latestPlayed = 0   # historian sessions only -- staleness baseline
 foreach ($s in $allSessions) {
     $fm = Get-Frontmatter $s.FullName
     $n = [int]($fm['session_number'] -replace '[^0-9]', '')
     if ($n -gt $maxNum) { $maxNum = $n }
+    if ($n -gt $latestPlayed -and $histSessions -and $histSessions.FullName -contains $s.FullName) { $latestPlayed = $n }
 }
 $nextNum = $maxNum + 1
 
@@ -110,6 +112,35 @@ if ($lastSession) {
     }
     if ($body -match 'played_date:\s*"?([^"\r\n]+)"?') {
         Write-Host "  Played: $($Matches[1])" -ForegroundColor DarkGray
+    }
+}
+
+# -- Rest clock ----------------------------------------------------------------
+Write-Host "`n--- REST CLOCK ---" -ForegroundColor DarkGray
+
+$activeCampaign = $null
+foreach ($f in $campaignFiles) {
+    $fm = Get-Frontmatter $f.FullName
+    if ($fm['state'] -eq 'active') { $activeCampaign = $f; break }
+}
+if (-not $activeCampaign) { $activeCampaign = $campaignFiles | Select-Object -First 1 }
+
+if ($activeCampaign) {
+    $content = Get-FullContent $activeCampaign.FullName
+    if ($content -match '### Rest Clock \(as of:? Session (\d+)\)\r?\n([\s\S]+?)(\r?\n##|\r?\n###|\z)') {
+        $clockSession = [int]$Matches[1]
+        $clockBlock = $Matches[2]
+        foreach ($line in ($clockBlock -split "`n")) {
+            $line = $line.TrimEnd("`r")
+            if ($line -match '^- (.+)$') { Write-Host "  $($Matches[1])" -ForegroundColor White }
+        }
+        if ($clockSession -lt $latestPlayed) {
+            Write-Host "  ! REST CLOCK STALE: as of Session $clockSession, latest played is $latestPlayed - reconstruct with DM before encounter planning." -ForegroundColor Red
+        }
+    } elseif ($content -match '### Rest Clock') {
+        Write-Host "  ! REST CLOCK NOT INITIALIZED - reconstruct with DM before encounter planning." -ForegroundColor Red
+    } else {
+        Write-Host "  ! No Rest Clock section in campaign Current State - add one (see meta/difficulty.md)." -ForegroundColor Red
     }
 }
 

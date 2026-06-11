@@ -1,4 +1,4 @@
----
+﻿---
 name: "Odibli"
 campaign: strahd
 type: character
@@ -14,6 +14,7 @@ race: [[Gnome]]
 class: [[Wizard]]
 background: "Unknown"
 level: 3
+level_confirmed: 13
 aliases:
   - "ODB"
   - "Odi"

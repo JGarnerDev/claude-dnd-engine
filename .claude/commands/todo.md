@@ -10,7 +10,7 @@ Give the DM a plain-language summary of everything that needs attention or actio
 .\scripts\todo-brief.ps1
 ```
 
-This collects: uncanonized/pending sessions, recap inbox files, **no-plan-for-next-game-night warning** (game night is Tuesday — sourced from the campaign's Rules Decisions), open threads (characters missing/imprisoned/transformed), graph health (validate error count), index staleness, unchecked todo items (`todo.md` plus topic files like `todo-worldmap.md`; `todo-dashboard.md` is output, never a source), questionnaire fill states, draft lore/acts/missions, and undeployed design preferences. **Do not re-read the underlying files** — the script output is the complete signal set. Read a file only if the DM asks a follow-up about a specific item.
+This collects: uncanonized/pending sessions, recap inbox files, **no-plan-for-next-game-night warning** (game night is Tuesday — sourced from the campaign's Rules Decisions), open threads (characters missing/imprisoned/transformed), party state staleness (level stamps and the Rest Clock — translate as "character levels / the party's rest tracker haven't been confirmed since session N; next session's encounter math leans on them"), graph health (validate error count), index staleness, unchecked todo items (`todo.md` plus topic files like `todo-worldmap.md`; `todo-dashboard.md` is output, never a source), questionnaire fill states, draft lore/acts/missions, and undeployed design preferences. **Do not re-read the underlying files** — the script output is the complete signal set. Read a file only if the DM asks a follow-up about a specific item.
 
 **Stale-checklist cross-check:** while translating todo-file items, flag any that look already done against other signals in the same script output — e.g. a lore file listed as no-longer-draft while its fill-it item sits unchecked, or a "create X" item where X now exists. Present those as *"possibly done — confirm and check off"* rather than as open work. Do not check items off yourself.
 
@@ -34,6 +34,7 @@ Judge honestly: anything requiring taste, approval, or table knowledge is 🤝 a
 - Sessions played but never written up (memory fades — historian drifts from the table)
 - Notes sitting in the recap inbox
 - A search index that needs a refresh (story suggestions quietly get worse without it)
+- Stale party state (LEVEL STALE / REST CLOCK flags) — encounter difficulty is computed from these, so a stale value means the next plan may be balanced for the wrong party (🤝 — two quick questions at the next /session or /recap settles it)
 
 **🟡 Waiting on people** — things the DM should chase, with names:
 - Questionnaires waiting on specific players (name the player, say what the questionnaire designs)
