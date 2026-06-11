@@ -1,4 +1,5 @@
 ﻿# location-entities.ps1 -- find all historian entities at or near a location
+# consumers: CLAUDE.md -- update these if usage, flags, or output format change.
 # Hop 0: direct location/region/relates_to match
 # Hops 1-N: BFS via all frontmatter entity-name references
 # Usage: .\scripts\location-entities.ps1 -Location "Barovia Village" [-Depth 3]

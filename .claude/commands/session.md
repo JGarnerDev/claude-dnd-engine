@@ -28,7 +28,7 @@ It reports: next session number, campaign/act/mission names and states, last ses
 
 1. Active mission file body (`state: active` in `scheduler/missions/`) — objective, hook, obstacles, last_updated session
 2. Last session file — `new_entities` and recap detail (cliffhanger and summary already came from the script)
-3. `scheduler/campaign.md` body — tone, central conflict, themes
+3. Active campaign file body (`state: active` in `scheduler/campaign/`) — tone, central conflict, themes
 4. `data/lore/` — frontmatter scan only; open a lore body only when that domain is directly relevant to this session; treat `state: draft` sections as open questions, not settled canon
 
 **Step 4 — Meta reference files.** Each is read **once per run**, never re-read per sub-task. Tiered — do not read a conditional file unless its trigger applies:
@@ -102,7 +102,7 @@ Read frontmatter only (state, description) across `historian/characters/`, `hist
 
 **Step 2 — Find free entities**
 
-First identify the active campaign from `scheduler/campaign.md`. When surfacing entities, exclude historian entities tagged `campaign: strahd` unless the active campaign is Strahd or the DM explicitly requests a crossover. Untagged data entities are campaign-agnostic and always eligible.
+First identify the active campaign (`state: active` file in `scheduler/campaign/`). When surfacing entities, exclude historian entities tagged `campaign: strahd` unless the active campaign is Strahd or the DM explicitly requests a crossover. Untagged data entities are campaign-agnostic and always eligible.
 
 Run semantic search using the themes of the current session direction (from cliffhanger, mission hook, or chosen thread):
 
@@ -120,7 +120,7 @@ Filter its output to `importance: major` or `critical` with `active: true`. Comb
 
 **Step 3 — Check meta preferences**
 
-Use `meta/worldbuilding.md` (already read in Phase 1) and read any filled `meta/players/*.md` files (excluding the template) if not already read. Note which sections are populated and which are blank. If all are blank, fall back to the campaign's `themes` and `tone` from `scheduler/campaign.md`.
+Use `meta/worldbuilding.md` (already read in Phase 1) and read any filled `meta/players/*.md` files (excluding the template) if not already read. Note which sections are populated and which are blank. If all are blank, fall back to the `themes` and `tone` in the active campaign file (already read in Phase 1).
 
 Also check `meta/campaign-design-preferences.md` (conditional-tier file — TRANSITION is its trigger): identify items with `Deployed: —` that haven't fired yet. If any are aging (many sessions have passed without use), flag the most relevant one as a candidate for Option C. Do not force a preference into a hook — only suggest it if the current story state creates a plausible opening.
 

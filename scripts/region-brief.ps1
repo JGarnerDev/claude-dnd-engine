@@ -1,4 +1,5 @@
 ﻿# region-brief.ps1 -- compressed summary of an existing region draft
+# consumers: CLAUDE.md, .claude/commands/region.md -- update these if usage, flags, or output format change.
 # Usage: .\scripts\region-brief.ps1 [-Region <slug>]
 # Auto-detects draft if only one exists in data/locations/regions/
 
