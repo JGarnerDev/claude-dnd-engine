@@ -1,34 +1,35 @@
-*Generated 2026-06-10 by /todo*
+*Generated 2026-06-11 by /todo*
 
 **Who acts:** 🤖 Claude can do it — just say "do N" · 🙋 needs a person · 🤝 Claude drafts, Kellan decides
 
-# 🎲 DM Dashboard — Kellan's table
+# 🎲 The Mists Demand Bookkeeping — Kellan's table
 
-## 🔴 Do soon
+**🔴 Do soon**
 
-1. 🤝 **No plan for Tuesday's game (June 16)** — nothing drafted; say "do 1" and Claude runs `/session` with Kellan.
-2. ✅ **Search refreshed** — rebuilt 2026-06-10; 756 entities indexed, 1 stale entry pruned.
+1. 🤝 **No plan for Tuesday's game (June 16, 5 days out).** Nothing drafted — say *do 1* and we'll run /session together.
+2. 🤝 **The party's rest tracker was just installed and is empty.** Encounter pacing math leans on it; two quick questions at the next /session or recap fills it in.
+3. 🤖 **Search needs a refresh** — 3 batches of changes since last build; story suggestions quietly degrade. Say *do 3*.
 
-## 🟡 Waiting on people
+**🟡 Waiting on people**
 
-3. 🙋 **Ben** — witchweed questionnaire (designs his contributed plant/resource). Once it's back, Claude ingests it (🤝).
-4. 🙋 **Kellan (as contributor)** — exotic mounts questionnaire. Same deal — Claude ingests on return.
-5. 🙋 **Whole table** — five world-naming sheets still out (Ben, Kellan, Miguel, Paul + master sheet).
-6. 🤝 **Kellan's three world questionnaires** — history & calendar, religion, magic. Claude fills the four blank lore docs the moment his answers exist.
-7. 🤝 **Blank prep files** — difficulty, rewards, 4 player profiles. Claude can interview Kellan and draft them; the answers are his to give.
+4. 🙋 **Ben** — witchweed questionnaire still blank (designs his plant contribution).
+5. 🙋 **Kellan** — exotic mounts questionnaire, his own design to fill when ready.
+6. 🙋 **Ben, Kellan, Miguel, Paul** — world place-naming sheets all still out.
+7. 🤝 **Three world deep-dives** (calendar & history, religion, magic) await group sessions — four draft lore docs sit empty until then.
+8. 🙋 **All 4 player profile files are blank** — sessions personalize to player tastes once filled.
+9. 🤝 **Difficulty guide got a big rebuild today** — still needs DC numbers, non-combat stakes, and a party power note from Kellan.
+10. 🙋 **Rewards guide blank** — treasure and leveling stay generic D&D until filled.
 
-## ⚪ Backlog
+**⚪ Backlog**
 
-8. 🤖 **5 open Strahd threads** — Doru transformed; Gertrude, Rose, Thorn, Dream Pastry Woman missing. Claude runs `/threads` for the full picture anytime.
-9. 🤖 **19 broken cross-references** — all expected placeholder world names. Claude can run the full validation report on request.
-10. 🙋 **Map label edits** — 3 world-map renames + 7 sky-layer labels. Manual image editing; Claude can only regenerate tiles afterward (`gen-tiles.py`).
-11. 🤝 **New-world content gaps** — regions, starting city, factions, NPCs, dungeons, rumors, PC files. Claude generates drafts; Kellan approves what enters the world.
-12. 🤝 **Scheduler** — first act is a placeholder awaiting Kellan's notes; missions and session plan undrafted. Claude drafts once the act has substance.
-13. 🤝 **15 story ideas** from the group waiting for their moment. Claude can pitch where each could land; Kellan picks.
-14. 🤖 **Pre-play checks** — balance check ✅ ran 2026-06-10 (clean — nothing canonized yet; Ben's pool lightest at 18). Naming-conflict and TBD sweeps are script/scan work Claude runs when the naming sheets return.
+11. **Open threads:** the night hag is loose with a stolen child; Doru waits beneath the church; Rose & Thorn stranded; Gertrude missing — /threads for the full picture.
+12. **19 broken references** — all expected placeholder world names, no alarm.
+13. **~11 new-world buildout items** (regions, starting city, factions, key NPCs…) — some may already be done via recent map/region work; worth an audit pass.
+14. **Map labels:** Mountains P, Islands A, two sky islands, compass rose, Struck/Arc Side call.
+15. **15 story ideas from the group** still waiting for their moment.
+16. **Historian backfill:** party formation story, player backstories, table inventions (4 items).
+17. **Act 1 and first missions** still placeholders.
 
----
+**If you do one thing today:** item 1 — game night is five days away and the table needs a plan.
 
-**If you do one thing today:** say "do 1" — draft Tuesday's session plan.
-
-**🤘 👑 All hail the DM 👑 🤘**
+🤘 👑 All hail the DM 👑 🤘
