@@ -42,10 +42,11 @@ For the party PCs and companions confirmed as crossing: update their historian f
 
 ## Phase 4 — Update Campaign File
 
-Read `scheduler/campaign.md`. Propose updates:
-- `name` → new campaign name
-- `description` → brief new world premise (ask DM for 1–2 sentences)
-- `tone`, `themes` → ask if these are changing or carrying over
+Campaign files live in `scheduler/campaign/` — one per campaign. Read both the concluding campaign file (`state: active`) and the successor file (`state: draft`). Propose updates:
+- Concluding campaign: `state` → `completed`, then move to historian per the scheduler lifecycle
+- Successor campaign: `state` → `active`
+- Successor `description` → brief new world premise (ask DM for 1–2 sentences)
+- Successor `tone`, `themes` → ask if these are changing or carrying over
 - Reset or archive active act/mission references
 
 Do not write until DM approves the proposed content.

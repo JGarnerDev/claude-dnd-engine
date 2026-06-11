@@ -1,4 +1,5 @@
 ﻿# party-status.ps1 -- show all PCs from historian + afflictions from campaign file
+# consumers: CLAUDE.md, .claude/commands/session.md, meta/difficulty.md, tests/commands/session/spec.md -- update these if usage, flags, or output format change.
 # Usage: .\scripts\party-status.ps1
 
 $root = Resolve-Path "$PSScriptRoot\.."

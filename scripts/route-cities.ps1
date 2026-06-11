@@ -1,4 +1,5 @@
 # route-cities.ps1 -- find all cities served by a given trade route
+# consumers: CLAUDE.md, meta/schemas/location-city.md -- update these if usage, flags, or output format change.
 # Searches data/ and historian/ city files for a routes field match
 # Usage: .\scripts\route-cities.ps1 -Route "The Irongate Road"
 

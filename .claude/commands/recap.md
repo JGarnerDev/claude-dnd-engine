@@ -101,7 +101,7 @@ For each entity flagged for canonization in Phase 3:
 
 ## Phase 6 — Update Campaign State
 
-Read `scheduler/campaign.md`. Propose updates to the `## Current State` section to reflect:
+Read the active campaign file (`state: active` in `scheduler/campaign/`). Propose updates to the `## Current State` section to reflect:
 - New party location
 - Any active afflictions or ongoing conditions
 - Any resolved or newly opened threads

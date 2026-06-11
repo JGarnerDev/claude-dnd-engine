@@ -6,7 +6,7 @@ Content is organized from largest to smallest narrative unit:
 
 | Level | File location | Moves to historian when… |
 |---|---|---|
-| **Campaign** | `scheduler/campaign.md` | Campaign fully concludes |
+| **Campaign** | `scheduler/campaign/{name}.md` — exactly one `state: active` at a time | Campaign fully concludes |
 | **Act** | `scheduler/acts/{name}.md` | Act completes |
 | **Mission** | `scheduler/missions/{name}.md` | Mission resolves (success or failure) |
 | **Session** | `scheduler/sessions/session-{nn}-{name}.md` | Session is played |

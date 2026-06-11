@@ -1,4 +1,5 @@
 ï»¿# session-state.ps1 Ã¢‚¬" dump current campaign/act/mission/session state
+# consumers: CLAUDE.md, .claude/commands/threads.md -- update these if usage, flags, or output format change.
 # Usage: .\scripts\session-state.ps1
 
 $root = Resolve-Path "$PSScriptRoot\.."
