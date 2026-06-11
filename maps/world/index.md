@@ -2,7 +2,7 @@
 
 ## Status
 
-Updated 2026-06-09: Miguel naming ingested — 19 surface features renamed/added; world-sky.jpg replaced with world-sky.png — Slice A, The Hearth, The Landing added to sky layer.
+Updated 2026-06-10: both layers ingested. Sky — The Stellar Daughter (was Slice A), Arclight's Seat (Islift A), The Grey Reaches (Islift B), Darkling's Perch (Islift C, was The Hearth), The Hearth (Islift G); Islift D/E remain placeholders. World — Solmara (was The Greyback), Ardenwall (was The Stormwall), Calenmere (was The Greymaw); tiles regenerated.
 
 ## Images
 
@@ -76,14 +76,14 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 | Bayward River | ~4-5 | ~3-4 | — |
 | Deepwend River | ~5 | ~3-4 | — |
 | Thelindra River | ~5 | ~4-5 | — |
-| Bay B (The Greymaw) | ~5-6 | ~4-5 | — |
+| Calenmere (Bay B) | ~5-6 | ~4-5 | `data/locations/terrain-features/Calenmere.md` |
 | Bay E (Cindermouth Bay) | ~1-2 | ~4-5 | — |
 | Mountains P | ~1-2 | ~4-5 | — |
 | Islands A | ~1-3 | ~6-8 | — |
 | The Ashreaches | ~1-2 | ~4-5 | — |
 | Bay F | ~7-8 | ~5-6 | — |
-| Sub Continent C | ~3-5 | ~4-6 | — |
-| Mountains B | ~4-5 | ~3-5 | — |
+| Solmara (Sub Continent C) | ~3-5 | ~4-6 | `data/locations/regions/Solmara.md` |
+| Ardenwall (Mountains B) | ~4-5 | ~3-5 | `data/locations/terrain-features/Ardenwall.md` |
 | Mountains C | ~5-7 | ~2-4 | — |
 | Forest A | ~6-7 | ~4-5 | — |
 | Forest B | ~6 | ~5-6 | — |
@@ -111,6 +111,7 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 | Iargulta | ~3-4 | ~9-10 | `data/locations/regions/Iargulta.md` |
 | Mori | ~14-15 | ~8-9 | `data/locations/regions/Mori.md` |
 | Parhelion Ocean | ~14-16 | ~7-10 | `data/locations/terrain-features/Parhelion Ocean.md` |
+| Merchant's Run | ~12-13 | ~9 | `data/locations/terrain-features/Merchant's Run.md` |
 
 ## Cosmology Notes
 
