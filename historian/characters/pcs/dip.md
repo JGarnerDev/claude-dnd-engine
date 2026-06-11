@@ -1,4 +1,4 @@
----
+﻿---
 
 
 name: "Dip"
@@ -16,6 +16,7 @@ race: [[Half Orc]]
 class: [[Barbarian]]
 background: "Unknown"
 level: 3
+level_confirmed: 13
 
 aliases: []
 source_session: [[Session 05 The Specter]]

@@ -107,6 +107,50 @@ if ($threadHits) {
     Write-Host "  (none)" -ForegroundColor DarkGray
 }
 
+# -- 1b2. Party state staleness (level stamps + rest clock) ----------------------
+Write-Host "`n--- PARTY STATE ---" -ForegroundColor DarkGray
+$latestPlayed = 0
+foreach ($k in $histNums.Keys) {
+    $n = 0
+    if ([int]::TryParse($k, [ref]$n) -and $n -gt $latestPlayed) { $latestPlayed = $n }
+}
+$partyFlags = 0
+if ($latestPlayed -gt 0) {
+    foreach ($pc in (Get-ChildItem "$root\historian\characters\pcs" -Filter "*.md" -ErrorAction SilentlyContinue)) {
+        $fm = Get-Frontmatter $pc.FullName
+        if ($fm['state'] -ne 'active') { continue }
+        $confirmed = 0
+        if (-not [int]::TryParse($fm['level_confirmed'], [ref]$confirmed)) {
+            Write-Host "  LEVEL STALE: $($fm['name']) has no level_confirmed stamp (latest session: $latestPlayed)" -ForegroundColor Red
+            $partyFlags++
+        } elseif ($confirmed -lt $latestPlayed) {
+            Write-Host "  LEVEL STALE: $($fm['name']) confirmed at session $confirmed, latest is $latestPlayed" -ForegroundColor Red
+            $partyFlags++
+        }
+    }
+}
+$activeCampaign = $null
+foreach ($c in (Get-ChildItem "$root\scheduler\campaign" -Filter "*.md" -ErrorAction SilentlyContinue)) {
+    $cfm = Get-Frontmatter $c.FullName
+    if ($cfm['state'] -eq 'active') { $activeCampaign = $c; break }
+}
+if ($activeCampaign) {
+    $cRaw = Get-Content $activeCampaign.FullName -Raw -Encoding UTF8
+    if ($cRaw -match '### Rest Clock \(as of:? Session (\d+)\)') {
+        if ([int]$Matches[1] -lt $latestPlayed) {
+            Write-Host "  REST CLOCK STALE: as of Session $($Matches[1]), latest played is $latestPlayed - reconstruct at next /session or /recap" -ForegroundColor Red
+            $partyFlags++
+        }
+    } elseif ($cRaw -match '### Rest Clock') {
+        Write-Host "  REST CLOCK NOT INITIALIZED - reconstruct at next /session or /recap" -ForegroundColor Red
+        $partyFlags++
+    } else {
+        Write-Host "  No Rest Clock section in campaign Current State (see meta/difficulty.md)" -ForegroundColor Yellow
+        $partyFlags++
+    }
+}
+if (-not $partyFlags) { Write-Host "  (clean)" -ForegroundColor DarkGray }
+
 # -- 1c. Graph health ------------------------------------------------------------
 Write-Host "`n--- GRAPH HEALTH ---" -ForegroundColor DarkGray
 $vOut = powershell -NoProfile -File "$PSScriptRoot\validate.ps1" -Quiet 2>&1

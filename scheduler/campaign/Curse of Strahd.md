@@ -1,4 +1,4 @@
----
+﻿---
 name: "Curse of Strahd"
 type: campaign
 dm: "Kellan"
@@ -41,6 +41,15 @@ description: "Active Curse of Strahd campaign; party at level 3 after completing
 - Iggy's shadow does not match his form and moves in the wrong direction.
 - Dip hears whispers when it is quiet.
 - Both afflictions stem from Odibli absorbing shadow essence to revive dead party members in Session 10.
+
+### Rest Clock (as of: never recorded)
+
+Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number.
+
+- Last long rest: unknown — clock introduced after Session 13; reconstruct with DM
+- Rounds of combat since: unknown
+- Short rests since: unknown
+- Notable burns: unknown
 
 ## Rules Decisions
 
