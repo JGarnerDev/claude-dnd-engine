@@ -232,4 +232,6 @@ Players use this ID to cross-reference each other's cities before either has a n
 
 Write to `questionnaires/{region}-city-{n}.md`. Report all paths when done.
 
+After reporting paths, add one closing line: when a player returns a filled questionnaire, the DM just pastes it (or drops the file back) — the `CLAUDE-INGEST` block triggers ingestion automatically, no command needed.
+
 If `--city <n>` was provided, generate only that location's questionnaire.

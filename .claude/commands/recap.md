@@ -146,6 +146,8 @@ Report what was done:
 
 If any action items remain (unconfirmed entities, meta files to update), list them explicitly.
 
+A recap always writes indexed files (the session record, plus any canonized entities), so the semantic index is now stale. End the summary with one line: "Semantic index is now stale — run `py -3.10 scripts/index-entities.py` when convenient." Do not rebuild it yourself.
+
 ---
 
 ## Phase 8 — Offer the Player-Facing Recap
