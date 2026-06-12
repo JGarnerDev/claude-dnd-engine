@@ -36,6 +36,7 @@ All map work tracked in `todo-worldmap.md`. As of 2026-06-10: all label renames 
 ## Optional / Stretch
 
 - [ ] **Sea currents** — layer onto maritime trade routes for mechanical depth (speed/cost variance by direction, dominant port logic, seasonal shifts). High value if naval gameplay becomes recurring; skip if routes stay background flavor.
+- [ ] **Private player→DM questionnaires** — players may want to submit secret backstory/motivation content that only Kellan (DM) sees. Current questionnaire flow assumes everything passes through the shared repo. No flow built yet — needs a private submission channel and a place for DM-only material.
 
 ---
 

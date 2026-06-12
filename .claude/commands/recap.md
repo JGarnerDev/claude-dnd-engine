@@ -57,6 +57,14 @@ Report findings before proceeding:
 
 Before writing, run `/check <recap summary>` to flag any historian conflicts in the DM's account. Surface CONFLICT and POSSIBLE results to the DM; do not silently canonize content that contradicts existing canon. If the DM confirms the new account supersedes old canon, note the discrepancy in `table_notes`.
 
+**Reliability flags:** in this session record and in any historian content written during this recap (Phase 5 included), add a `> **Reliability:**` blockquote whenever:
+- a detail is inferred rather than stated in the notes
+- the source used a nickname or abbreviation instead of a confirmed name
+- two sources conflict with each other
+- the notes are ambiguous about mechanics vs. fiction
+
+End each flag with an explicit "Confirm with DM" or "Confirm with [player name]" so it's clear who verifies it. Err on the side of flagging — unconfirmed details are cheap to mark now and expensive to untangle later.
+
 Update the session file with the following historian fields (do not remove any existing frontmatter fields):
 
 ```yaml
