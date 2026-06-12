@@ -75,4 +75,4 @@ Omit the seeds section if nothing is seeded. Flag any seed older than ~5 session
 
 End with:
 
-> "Any of these worth pulling into the next session?"
+> "Any of these worth pulling into the next session? `/session` picks threads up automatically — flag any here you want weighted in, or want deliberately left alone."
