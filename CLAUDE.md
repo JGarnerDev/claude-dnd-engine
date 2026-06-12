@@ -10,6 +10,8 @@ This file provides operational guidance to Claude Code (claude.ai/code) for work
 
 This engine generates D&D sessions by synthesizing creative material, campaign history, design principles, and session planning into coherent, playable content.
 
+**Roles:** Kellan is the DM. Jeff and the other players contribute creative material as seeds for him. Generation rules for this split live in `meta/worldbuilding-approach.md`.
+
 ## Folder Roles
 
 - `./data` — Creative source material (lore, worldbuilding, inspiration). Informational "food" that shapes story flavor and content, but is not authoritative.
@@ -38,6 +40,10 @@ Meta files (`meta/worldbuilding-approach.md`, `meta/difficulty.md`, etc.) are re
 Scan commands (e.g. `/inventory`) read **frontmatter only** — never the body.
 
 **Writing** — before editing any existing file, read its frontmatter to confirm `state` and `exists`. Never overwrite without knowing current state. Before creating new content, declare what you're creating and why — same discipline as declaring read scope.
+
+## Placeholder Files
+
+Blank or incomplete files (meta templates, draft lore, unfilled player files) are intentional placeholders the group fills later. When an audit or task surfaces one, the only required action is ensuring `todo.md` has an entry for filling it, with a note on what degrades until then. Don't flag them as defects, don't propose detection heuristics or workarounds to skip them, and don't score them as gaps beyond the todo entry.
 
 ## Entity Selection
 
@@ -115,6 +121,10 @@ Scripts output plain text; parse with your own judgment. They read frontmatter o
 
 **Index staleness check:** At the start of any session, read `vector-index/.index-built` (line 1: ISO timestamp, line 2: git commit SHA). Then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag it: "Semantic index stale since `<sha[:7]>` — run `py -3.10 scripts\index-entities.py`." Ignore commits that touch only non-indexed files (`CLAUDE.md`, `README.md`) — the indexer skips them, so they cannot stale the index. Do not rebuild automatically; prompt the user. If `.index-built` is missing, index has never been built — prompt to run it.
 
+## Stamp Pattern
+
+Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, the campaign Rest Clock header. Use this pattern for any new state that can go silently stale.
+
 ## Player Entity Submissions
 
 **Auto-ingestion trigger:** If any message, pasted content, or file contains a `<!-- CLAUDE-INGEST type: entity-questionnaire -->` block, treat it as a filled player questionnaire awaiting ingestion. Read `.claude/commands/entity-ingest.md` for the full flow. Never create an entity directly from raw player input.
@@ -141,6 +151,10 @@ Read `.claude/commands/pc-backstory.md` for the full ingestion flow, gap analysi
 These phrases may appear casually — do not trigger on obvious metaphor or out-of-game chatter. When in doubt, ask once: *"Is the campaign transitioning to the new world? I can walk you through the handoff if so."*
 
 If confirmed, read `.claude/commands/transition.md` and follow the full transition flow. Do not make any changes until the DM confirms each step.
+
+## Output Style
+
+No markdown tables in chat responses or generated campaign documents — use bullet lists with inline formatting instead. Existing tables inside instruction files (like the scripts table in this file) are exempt.
 
 ## Recap Format
 
