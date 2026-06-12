@@ -50,7 +50,7 @@ Master checklist lives in `todo.md`; this list tracks only the files that must b
 - [ ] `meta/players/` — all 4 core player files (Jeff, Ben, Miguel, Paul) are blank templates
 
 ### Outstanding player questionnaires
-- [ ] `questionnaires/ben-witchweed.md` — Ben's plant/resource entity
+- [x] `questionnaires/ben-witchweed.md` — Ben's plant/resource entity → ingested 2026-06-12 as [[Fargrsh]] + [[The Deorful Domas]]
 - [ ] `questionnaires/kellan-exotic-mounts.md` — Kellan's mounts entity
 
 ### Starting content (data pool)
