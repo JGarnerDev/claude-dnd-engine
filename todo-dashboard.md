@@ -12,7 +12,7 @@
 
 ## 🟡 Waiting on people
 
-4. 🙋 Ben — witchweed questionnaire still blank.
+4. ✅ Ben — witchweed answered & ingested (2026-06-12: Fargrsh resource + Deorful Domas faction created; "Witchweed" kept as folktale alias). Remaining gaps deliberately vague — DM elaborates in play; no followup needed.
 5. 🙋 Kellan — your exotic mounts questionnaire awaits your own answers.
 6. 🙋 The party — three world questionnaires open (history & calendar, magic, religion); four draft lore docs sit half-written until those answers come in.
 7. 🙋 Two world-naming sheets have no assigned owner — Kellan decides who fills them.
