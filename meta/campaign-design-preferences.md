@@ -53,7 +53,7 @@ Structures the group enjoys. Use as a palette, not a formula.
   - *Deployed: —*
 - **Assassinations and guerrilla warfare** — occupied or oppressed territory; the party as underground resistance fighting a force they can't beat head-on. Sabotage, targeted elimination, operating in the shadows of a dominant power. The enemy controls the streets; the party controls the cracks.
   - *Deployed: —*
-- **Gorilla warfare** — literal gorillas *and* guerrilla tactics. Deliberate. Comedic chaos is the point. Tonal release valve — not a failure of tone, but a conscious break from it.
+- **Gorilla warfare** — literal gorillas *with* guerrilla tactics. Deliberate. Comedic chaos is the point. The gorillas introduce themselves verbatim as "gorilla guerillas" (though they have a different name for their faction) after intense lore building. Tonal release valve — not a failure of tone, but a conscious break from it.
   - *Deployed: —*
 
 ## Session Preferences
