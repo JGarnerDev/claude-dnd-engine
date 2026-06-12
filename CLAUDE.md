@@ -158,6 +158,10 @@ If confirmed, read `.claude/commands/transition.md` and follow the full transiti
 
 No markdown tables in chat responses or generated campaign documents — use bullet lists with inline formatting instead. Existing tables inside instruction files (like the scripts table in this file) are exempt.
 
+## Followup Suggestions
+
+When a task reaches a natural endpoint, suggest at most **one** followup command — and only when the current state actually warrants it (e.g. entities just written → index rebuild; gap surfaced → fill command). Name the command and the reason in a single line: "Run `/x` to <reason>." Never append a boilerplate suggestion tail to every response; no state signal, no suggestion. Command files may specify their own closing suggestions — those take precedence.
+
 ## Recap Format
 
 Whenever presenting a session recap — whether via `/session` Phase 1 orientation, a direct "what's the recap" prompt, or any other context — use this two-part format:
