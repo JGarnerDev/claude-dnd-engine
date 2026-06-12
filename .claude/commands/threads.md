@@ -33,6 +33,8 @@ Scan `historian/` frontmatter for entities with unresolved states:
 
 Note each entity's name, type, and state.
 
+**Pending seeds scan:** read `meta/literary-devices.md` and `meta/campaign-design-preferences.md`. Collect every item with a `Seeded:` line that has not yet paid off (twists/preferences still showing `Deployed: —`; devices whose seed note has no payoff stamp). For each, note the item name, what was planted (the seed note), the session it was planted in, and how many sessions have passed since. A planted seed is a thread by definition — the table saw the breadcrumb even if nobody named it.
+
 ---
 
 ## Phase 3 — Semantic Ranking
@@ -65,6 +67,11 @@ Format:
 
 **Pool candidates ready to enter play:**
 - [Name] (type) score=X.XXX — one-line note on thematic fit
+
+**Pending seeds (planted, not yet paid off):**
+- [Item] (device/twist/preference, scale) — seeded in [[Session NN]], {n} sessions ago: {seed note}. One-line note on whether current story state offers a payoff opening.
+
+Omit the seeds section if nothing is seeded. Flag any seed older than ~5 sessions as aging — candidate for pay-off, re-seed, or deliberate retirement at the next act transition.
 
 End with:
 

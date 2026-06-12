@@ -44,6 +44,7 @@ Conditional:
 - `meta/party-relationships.md` — only when planning scenes with PC-to-PC stakes
 - `meta/campaign-design-preferences.md` — TRANSITION mode, or a CONTINUATION session that introduces a new antagonist, event, or mission element; note which items have `Deployed: —` (not yet used)
 - `meta/worldbuilding-approach.md` — only when the session creates new world detail (new locations, factions, lore-adjacent content)
+- `meta/literary-devices.md` — only when constructing hooks or scenes (Phase 3 onward); a palette of devices (reusable, `Last used:`) and twists (one-shot, `Deployed:`); both can carry pending `Seeded:` lines. Entries are scale-tagged (`scene`–`campaign`) — suggest at most one per session, never force, respect scale
 - `meta/references.md` — only when an external D&D stat lookup is needed
 
 **Step 5 — State the orientation aloud**, using the two-part recap format from root CLAUDE.md (narrative prose first, then TL;DR bullets):
@@ -123,6 +124,14 @@ Filter its output to `importance: major` or `critical` with `active: true`. Comb
 Use `meta/worldbuilding.md` (already read in Phase 1) and read any filled `meta/players/*.md` files (excluding the template) if not already read. Note which sections are populated and which are blank. If all are blank, fall back to the `themes` and `tone` in the active campaign file (already read in Phase 1).
 
 Also check `meta/campaign-design-preferences.md` (conditional-tier file — TRANSITION is its trigger): identify items with `Deployed: —` that haven't fired yet. If any are aging (many sessions have passed without use), flag the most relevant one as a candidate for Option C. Do not force a preference into a hook — only suggest it if the current story state creates a plausible opening.
+
+Also check `meta/literary-devices.md`: if the story state creates a natural opening for one device or twist, name it as a light suggestion alongside the hooks (e.g. *"this hook would support a cold open"* or *"the patron thread is ripe for The patron's true face"*). At most one suggestion; skip silently when nothing fits. Twist suggestions must pass the file's safety check (no contradiction with historian canon, no accidental answer to a `meta/mysteries.md` unknown). Avoid devices whose `Last used:` points at the immediately previous session.
+
+Respect the `Scale:` tags when picking:
+- `scene`/`session`-scale entries are the default pool for session suggestions
+- `mission`-scale entries fire only when this session creates or launches a mission — they shape the mission's structure, not one session's beats
+- `arc`/`campaign`-scale entries fire only when the session sits at an act boundary or opens a new act; their cost is runway — committing means placing `Seeded:` breadcrumbs over multiple sessions before the payoff
+- **Pending seeds outrank new suggestions:** before proposing anything new, check for `Seeded:` lines (devices and twists both) whose payoff this session could land or advance. Paying off a planted seed is almost always better than planting another.
 
 **Step 4 — Present 3 hooks**
 
@@ -257,7 +266,7 @@ Omit this block entirely if no questionnaires are filled. Do not force matches �
 
 **Apply the free entity rule:** if the session requires an entity not in `data/` or `historian/`, **stop and flag it** rather than inventing one. Ask the DM whether to create it or proceed differently.
 
-**Deployment tracking:** if a preference item from `meta/campaign-design-preferences.md` is used in this session, note it in the session plan. After the session is played and canonized via `/recap`, update that item's `Deployed:` line with a wikilink to the session file.
+**Deployment tracking:** if a preference item from `meta/campaign-design-preferences.md` or a device/twist from `meta/literary-devices.md` is used in this session, note it in the session plan. After the session is played and canonized via `/recap`, update that item's `Deployed:` line (or a device's `Last used:` line) with a wikilink to the session file.
 
 For non-standard encounter types (chase, puzzle, trade negotiation, performance, mini-game), check `meta/mechanics/` for an applicable mechanic file before writing the scene.
 
