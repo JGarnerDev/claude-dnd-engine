@@ -121,7 +121,7 @@ Filter its output to `importance: major` or `critical` with `active: true`. Comb
 
 **Step 3 — Check meta preferences**
 
-Use `meta/worldbuilding.md` (already read in Phase 1) and read any filled `meta/players/*.md` files (excluding the template) if not already read. Note which sections are populated and which are blank. If all are blank, fall back to the `themes` and `tone` in the active campaign file (already read in Phase 1).
+Use `meta/worldbuilding.md` (already read in Phase 1). Player files in `meta/players/` carry identity and character links only — no preference sections — so group-level desires come from `meta/campaign-design-preferences.md`; fall back to the `themes` and `tone` in the active campaign file (already read in Phase 1) for anything not covered.
 
 Also check `meta/campaign-design-preferences.md` (conditional-tier file — TRANSITION is its trigger): identify items with `Deployed: —` that haven't fired yet. If any are aging (many sessions have passed without use), flag the most relevant one as a candidate for Option C. Do not force a preference into a hook — only suggest it if the current story state creates a plausible opening.
 
