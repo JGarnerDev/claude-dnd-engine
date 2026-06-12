@@ -4,21 +4,7 @@
 
 $root = Resolve-Path "$PSScriptRoot\.."
 
-function Get-Frontmatter($path) {
-    $lines = Get-Content $path -Raw -Encoding UTF8
-    if ($lines -notmatch '(?s)^---\r?\n(.+?)\r?\n---') { return @{} }
-    $block = $Matches[1]
-    $fm = @{}
-    foreach ($line in ($block -split "`n")) {
-        $line = $line.TrimEnd("`r")
-        if ($line -match '^(\w[\w_]*):\s*\[\[([^\]]+)\]\]') {
-            $fm[$Matches[1].Trim()] = $Matches[2].Trim()
-        } elseif ($line -match '^(\w[\w_]*):\s*"?([^"#\r\n]*)"?\s*$') {
-            $fm[$Matches[1].Trim()] = $Matches[2].Trim()
-        }
-    }
-    return $fm
-}
+. "$PSScriptRoot\lib\common.ps1"
 
 # Load afflictions from campaign party table
 $afflictions = @{}

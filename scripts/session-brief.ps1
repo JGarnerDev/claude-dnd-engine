@@ -5,21 +5,7 @@
 
 $root = Resolve-Path "$PSScriptRoot\.."
 
-function Get-Frontmatter($path) {
-    $lines = Get-Content $path -Raw -Encoding UTF8
-    if ($lines -notmatch '(?s)^---\r?\n(.+?)\r?\n---') { return @{} }
-    $block = $Matches[1]
-    $fm = @{}
-    foreach ($line in ($block -split "`n")) {
-        $line = $line.TrimEnd("`r")
-        if ($line -match '^(\w[\w_]*):\s*\[\[([^\]]+)\]\]') {
-            $fm[$Matches[1].Trim()] = $Matches[2].Trim()
-        } elseif ($line -match '^(\w[\w_]*):\s*"?([^"#\r\n]*)"?\s*$') {
-            $fm[$Matches[1].Trim()] = $Matches[2].Trim()
-        }
-    }
-    return $fm
-}
+. "$PSScriptRoot\lib\common.ps1"
 
 function Get-FullContent($path) { Get-Content $path -Raw -Encoding UTF8 }
 
@@ -43,6 +29,9 @@ Write-Host "  SESSION BRIEF" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor DarkGray
 
 Write-Host "`nNext session: #$nextNum" -ForegroundColor Yellow
+if ($nextNum % 5 -eq 0) {
+    Write-Host "  MILESTONE: session #$nextNum - worth marking at the table." -ForegroundColor Magenta
+}
 
 # -- Uncanonized sessions: planned date passed, no historian record ------------
 $today = (Get-Date).Date
@@ -143,14 +132,23 @@ if ($activeCampaign) {
     } else {
         Write-Host "  ! No Rest Clock section in campaign Current State - add one (see meta/difficulty.md)." -ForegroundColor Red
     }
+
+    # Current State header carries the same stamp pattern as the Rest Clock
+    if ($content -match '## Current State \(after Session (\d+)\)') {
+        if ([int]$Matches[1] -lt $latestPlayed) {
+            Write-Host "  ! CURRENT STATE STALE: header says Session $($Matches[1]), latest played is $latestPlayed - update and restamp at next /recap." -ForegroundColor Red
+        }
+    } elseif ($content -match '## Current State') {
+        Write-Host "  ! Current State header has no '(after Session N)' stamp - restamp at next /recap." -ForegroundColor Yellow
+    }
 }
 
 # -- Party --------------------------------------------------------------------
 Write-Host "`n--- PARTY ---" -ForegroundColor DarkGray
 
-# Load afflictions from campaign party table
+# Load afflictions from the active campaign's party table
 $afflictions = @{}
-$campaignFile = $campaignFiles | Select-Object -First 1
+$campaignFile = $activeCampaign
 if ($campaignFile) {
     $content = Get-FullContent $campaignFile.FullName
     if ($content -match '## Party\r?\n([\s\S]+?)(\r?\n##|\z)') {
@@ -181,6 +179,19 @@ foreach ($file in $pcFiles) {
     }
     $suffix = if ($affliction -and $affliction -notmatch '^Alive$') { " ! $affliction" } else { "" }
     Write-Host ("  {0} ({1}) - {2} {3} L{4}{5}" -f $name, $fm['player'], $fm['race'], $fm['class'], $fm['level'], $suffix) -ForegroundColor White
+}
+
+# -- Design preference drought (literary devices excluded: homebrew-era tools) --
+$prefFile = "$root\meta\campaign-design-preferences.md"
+if (Test-Path $prefFile) {
+    $raw = Get-Content $prefFile -Raw -Encoding UTF8
+    $total    = ([regex]::Matches($raw, '(?m)^\s*-\s*\*Deployed:')).Count
+    $deployed = ([regex]::Matches($raw, '(?m)^\s*-\s*\*Deployed:[^\r\n]*\[\[')).Count
+    $seeded   = ([regex]::Matches($raw, '(?m)^\s*-\s*\*Seeded:')).Count
+    if ($total - $deployed -gt 0) {
+        Write-Host "`n--- PREFERENCES ---" -ForegroundColor DarkGray
+        Write-Host "  $($total - $deployed) of $total group wishlist items not yet deployed; $seeded seeded ($latestPlayed sessions played)" -ForegroundColor White
+    }
 }
 
 Write-Host "`n========================================`n" -ForegroundColor DarkGray

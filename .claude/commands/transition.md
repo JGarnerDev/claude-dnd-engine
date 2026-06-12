@@ -43,10 +43,10 @@ For the party PCs and companions confirmed as crossing: update their historian f
 ## Phase 4 — Update Campaign File
 
 Campaign files live in `scheduler/campaign/` — one per campaign. Read both the concluding campaign file (`state: active`) and the successor file (`state: draft`). Propose updates:
-- Concluding campaign: `state` → `completed`, then move to historian per the scheduler lifecycle
-- Successor campaign: `state` → `active`
+- Concluding campaign: `state` → `completed` and `active` → `false`, then move to `historian/campaign/` (create the folder on first use — read `meta/graph-settings.md` before adding it, and work with Kellan to fill the historian-side fields as he starts using them)
+- Successor campaign: `state` → `active` and `active` → `true` (both fields must flip — scripts key on `state`, but the `active` boolean exists in the frontmatter and must not contradict it)
 - Successor `description` → brief new world premise (ask DM for 1–2 sentences)
-- Successor `tone`, `themes` → ask if these are changing or carrying over
+- Successor `tone`, `themes` → ask if these are changing or carrying over. **Tone reset:** before writing these, read `meta/worldbuilding.md`'s "What to Avoid" list — it explicitly forbids gothic horror bleeding forward (Strahd is a chapter, not the world's identity). Check the proposed tone/themes against every avoid-list item and flag any carry-over that violates one.
 - Reset or archive active act/mission references
 
 Do not write until DM approves the proposed content.
