@@ -8,21 +8,7 @@
 
 $root = Resolve-Path "$PSScriptRoot\.."
 
-function Get-Frontmatter($path) {
-    $lines = Get-Content $path -Raw -Encoding UTF8
-    if ($lines -notmatch '(?s)^---\r?\n(.+?)\r?\n---') { return @{} }
-    $block = $Matches[1]
-    $fm = @{}
-    foreach ($line in ($block -split "`n")) {
-        $line = $line.TrimEnd("`r")
-        if ($line -match '^(\w[\w_]*):\s*\[\[([^\]]+)\]\]') {
-            $fm[$Matches[1].Trim()] = $Matches[2].Trim()
-        } elseif ($line -match '^(\w[\w_]*):\s*"?([^"#\r\n]*)"?\s*$') {
-            $fm[$Matches[1].Trim()] = $Matches[2].Trim()
-        }
-    }
-    return $fm
-}
+. "$PSScriptRoot\lib\common.ps1"
 
 # Emoji via codepoints — literal emoji in this file break under PS 5.1's ANSI read of BOM-less .ps1
 $d20     = [char]::ConvertFromUtf32(0x1F3B2)   # 🎲
@@ -36,7 +22,7 @@ try { [Console]::OutputEncoding = [Text.Encoding]::UTF8 } catch {}
 $dmName = $null
 foreach ($c in (Get-ChildItem "$root\scheduler\campaign" -Filter "*.md" -ErrorAction SilentlyContinue)) {
     $cfm = Get-Frontmatter $c.FullName
-    if ($cfm['active'] -eq 'true' -and $cfm['dm']) { $dmName = $cfm['dm']; break }
+    if ($cfm['state'] -eq 'active' -and $cfm['dm']) { $dmName = $cfm['dm']; break }
 }
 
 Write-Host "`n========================================" -ForegroundColor DarkGray
@@ -154,7 +140,8 @@ if (-not $partyFlags) { Write-Host "  (clean)" -ForegroundColor DarkGray }
 
 # -- 1c. Graph health ------------------------------------------------------------
 Write-Host "`n--- GRAPH HEALTH ---" -ForegroundColor DarkGray
-$vOut = powershell -NoProfile -File "$PSScriptRoot\validate.ps1" -Quiet 2>&1
+# *>&1 captures Write-Host (information stream) -- plain 2>&1 lets it leak to the console
+$vOut = & "$PSScriptRoot\validate.ps1" -Quiet *>&1
 $vLine = $vOut | Where-Object { $_ -match 'Errors:\s*(\d+)' } | Select-Object -Last 1
 if ($vLine -match 'Errors:\s*(\d+)') {
     $errCount = [int]$Matches[1]
@@ -253,6 +240,15 @@ if (Test-Path $prefFile) {
     $undeployed = $total - $deployed
     $seeded   = ([regex]::Matches($raw, '(?m)^\s*-\s*\*Seeded:')).Count
     Write-Host "  $undeployed of $total items not yet deployed; $seeded seeded" -ForegroundColor White
+    # Aging check fires every 5th played session (act transitions are too rare a trigger)
+    $latestPlayed = 0
+    foreach ($k in $histNums.Keys) {
+        $n = 0
+        if ([int]::TryParse($k, [ref]$n) -and $n -gt $latestPlayed) { $latestPlayed = $n }
+    }
+    if ($latestPlayed -gt 0 -and $latestPlayed % 5 -eq 0 -and $undeployed -gt 0) {
+        Write-Host "  AGING CHECK DUE: session $latestPlayed milestone - review undeployed items; seed or retire what's stalling" -ForegroundColor Yellow
+    }
 }
 
 Write-Host "`n========================================" -ForegroundColor DarkGray

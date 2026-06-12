@@ -140,3 +140,13 @@ Report what was done:
 - Inbox notes file deleted: [yes / n/a]
 
 If any action items remain (unconfirmed entities, meta files to update), list them explicitly.
+
+---
+
+## Phase 8 — Offer the Player-Facing Recap
+
+After the summary, offer once:
+
+> "Want a player-facing 'previously on…' blurb for the group chat?"
+
+If yes, render a short message from the canonized recap: 3–5 sentences of narrative prose in the "previously on" voice (past tense, third person), closing on the cliffhanger as a teaser. **Spoiler-safe:** include only what the players witnessed at the table — no DM-side information, no `Reliability` flags, no mechanics, no unrevealed entity names. Output as a single copy-paste block in chat; no file is written.

@@ -21,6 +21,10 @@ function Rel($p) { $p.Replace($repo + [IO.Path]::DirectorySeparatorChar, "") }
 $sources = @()
 $sources += Get-Item (Join-Path $repo 'CLAUDE.md') -ErrorAction SilentlyContinue
 $sources += Get-Item (Join-Path $repo 'README.md') -ErrorAction SilentlyContinue
+# todo*.md are instruction-adjacent: they reference scripts and meta files that get renamed.
+# todo-dashboard.md is /todo output, not a source.
+$sources += Get-ChildItem (Join-Path $repo 'todo*.md') -File -ErrorAction SilentlyContinue |
+    Where-Object { $_.Name -ne 'todo-dashboard.md' }
 foreach ($glob in @('.claude\commands\*.md', 'meta\*.md', 'meta\*\*.md', 'tests\*.md', 'tests\*\*.md', 'tests\*\*\*.md', '*\CLAUDE.md')) {
     $sources += Get-ChildItem (Join-Path $repo $glob) -File -ErrorAction SilentlyContinue
 }

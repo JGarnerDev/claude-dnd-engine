@@ -15,6 +15,7 @@ Commands to list:
 - `/find <query> [--type <type>] [--source historian|data|scheduler] [--exists true|false] [-k <n>]` — semantic similarity search; surfaces entities by meaning, not keywords
 - `/threads [-k <n>]` — surface forgotten or unresolved campaign threads; combines state-based scan with semantic ranking against current story state
 - `/voice <npc name>` — build a DM voice brief for an NPC; grounds new dialogue in established canon
+- `/rumor [count] [theme]` — surface rumors from the pool as session-opener flavor; read-only
 - `/check <claim> [--source historian|data|both]` — check a proposed fact or recap against historian for contradictions
 - `/todo` — plain-language DM dashboard: outstanding player questionnaires, drafts, sessions awaiting recap, housekeeping
 - `/sync` — sync shareable engine files to the template repo

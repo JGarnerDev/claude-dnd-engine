@@ -24,16 +24,16 @@ Extract: current cliffhanger (or most recent historian session cliffhanger), act
 
 ## Phase 2 — State-Based Scan
 
-Scan `historian/` frontmatter for entities with unresolved states:
-- `state: missing`
-- `state: imprisoned`
-- `state: transformed`
-- `state: unknown`
-- Characters with `disposition: hostile` who have no recent session reference
+Run:
+```powershell
+.\scripts\threads-brief.ps1
+```
 
-Note each entity's name, type, and state.
+It collects, in one call: historian entities in unresolved states (`missing`, `imprisoned`, `transformed`, `unknown`, `stranded`, `captured`), living characters with `disposition: hostile`, and pending `Seeded:` lines from `meta/literary-devices.md` and `meta/campaign-design-preferences.md`. Do not manually sweep historian frontmatter or re-read the two meta files — the script output is the complete Phase 2 signal set.
 
-**Pending seeds scan:** read `meta/literary-devices.md` and `meta/campaign-design-preferences.md`. Collect every item with a `Seeded:` line that has not yet paid off (twists/preferences still showing `Deployed: —`; devices whose seed note has no payoff stamp). For each, note the item name, what was planted (the seed note), the session it was planted in, and how many sessions have passed since. A planted seed is a thread by definition — the table saw the breadcrumb even if nobody named it.
+Apply judgment to the raw output:
+- For hostile characters, drop any with a recent session reference — only surface ones the story has forgotten.
+- For each pending seed, note the session it was planted in and how many sessions have passed since. A planted seed is a thread by definition — the table saw the breadcrumb even if nobody named it.
 
 ---
 
