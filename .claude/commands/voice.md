@@ -7,7 +7,7 @@ Build a voice brief for an NPC — grounds new dialogue and characterization in 
 
 ## Behavior
 
-Read-only. No generation, no file writes. Output is a compact DM reference card for playing the NPC.
+Read-only by default. Output is a compact DM reference card for playing the NPC. The only write this command may perform is the Phase 6 voice cache, and only with DM approval.
 
 ---
 
@@ -71,3 +71,15 @@ Use as texture only. Do not copy voice patterns wholesale.
 ```
 
 Keep each field to one line or a short bullet list. This is a DM reference card, not prose.
+
+---
+
+## Phase 6 — Offer to Cache the Brief
+
+**Skip silently if the NPC's file already has a `## Voice` section** — in that case Phase 2 read it and this run should have built on it, noting any drift between the cached brief and newer session evidence.
+
+Otherwise, offer once:
+
+> "Save this brief into [Name]'s file as a `## Voice` section? Future /voice calls (and /session NPC quick-reference) become a single file read."
+
+If yes: append the brief verbatim as a `## Voice` section at the end of the NPC's file (historian or data — wherever it lives), preceded by a one-line stamp: `*Cached by /voice after Session {latest played NN}; regenerate if the character shifts.*` Do not modify frontmatter. If no: leave the brief in chat only.

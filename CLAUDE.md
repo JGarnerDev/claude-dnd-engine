@@ -92,6 +92,8 @@ PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run th
 | `session-brief.ps1` | Start of every `/session` | `.\scripts\session-brief.ps1` |
 | `session-state.ps1` | Quick campaign/act/mission check | `.\scripts\session-state.ps1` |
 | `todo-brief.ps1` | Start of every `/todo` — all DM action-item signals in one call | `.\scripts\todo-brief.ps1` |
+| `inventory-brief.ps1` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `.\scripts\inventory-brief.ps1 [-Type <type>]` |
+| `threads-brief.ps1` | Start of every `/threads` Phase 2 — unresolved states, hostiles, pending seeds | `.\scripts\threads-brief.ps1` |
 | `party-status.ps1` | PC stats + afflictions | `.\scripts\party-status.ps1` |
 | `free-entities.ps1` | Find available entities by type or player | `.\scripts\free-entities.ps1 [-Type <type>] [-Player <name>]` |
 | `contribution-balance.ps1` | Player contribution counts (pool vs. canonized) | `.\scripts\contribution-balance.ps1` |
@@ -110,7 +112,7 @@ PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run th
 | `index-entities.py` | Build/rebuild the semantic vector index (run after adding new entities) | `py -3.10 scripts\index-entities.py [--reset]` |
 | `semantic-search.ps1` | Semantic similarity search — find entities by meaning, not keywords | `.\scripts\semantic-search.ps1 -Query "<text>" [-Type <type>] [-Subtype <sub>] [-Exists true\|false] [-Source data\|historian\|scheduler] [-K <n>]` |
 | `validate.ps1` | Graph integrity check — dangling `[[links]]`, missing/invalid `exists`/`name`/`type`, broken canon. Run before canonizing or after bulk edits | `.\scripts\validate.ps1 [-Scope all\|links\|frontmatter] [-Quiet]` |
-| `validate-refs.ps1` | Instruction-file reference lint — finds path refs in CLAUDE.md files, commands, meta, and tests that point at renamed/deleted files. Run after renaming, moving, or deleting any instruction file or script | `.\scripts\validate-refs.ps1 [-Quiet]` |
+| `validate-refs.ps1` | Instruction-file reference lint — finds path refs in CLAUDE.md files, commands, meta, tests, and todo files that point at renamed/deleted files. Run after renaming, moving, or deleting any instruction file or script | `.\scripts\validate-refs.ps1 [-Quiet]` |
 | `refs.ps1` | Reverse dependency lookup — every file:line that references a target file. Run before renaming a file or changing a script's flags/output format, then update what it lists | `.\scripts\refs.ps1 -Target <path-or-filename>` |
 
 **Script dependents:** each consumed script carries a `# consumers:` header line listing the instruction files that reference it. When changing a script's usage, flags, or output format, update those files in the same change.
@@ -175,6 +177,7 @@ No DM brief card needed. No other formats unless explicitly requested.
 - `/find <query>` — `.claude/commands/find.md` — semantic entity search; surfaces entities by meaning
 - `/threads` — `.claude/commands/threads.md` — surfaces forgotten/unresolved campaign threads
 - `/voice <npc name>` — `.claude/commands/voice.md` — DM voice brief grounded in established canon
+- `/rumor [count] [theme]` — `.claude/commands/rumor.md` — surface pool rumors as session-opener flavor; read-only
 - `/check <claim>` — `.claude/commands/check.md` — contradiction check against historian before canonizing
 - `/transition` — `.claude/commands/transition.md` — guided campaign transition flow; also auto-triggered by language cues
 - `/todo` — `.claude/commands/todo.md` — plain-language DM dashboard of everything needing attention or action

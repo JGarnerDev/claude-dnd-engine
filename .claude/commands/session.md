@@ -20,7 +20,7 @@ Do not generate any content yet.
 .\scripts\session-brief.ps1
 ```
 
-It reports: next session number, campaign/act/mission names and states, last session summary + cliffhanger + played date, and the party roster with afflictions. Do not manually re-read anything it already covers.
+It reports: next session number (with a milestone flag every 5th session — worth marking at the table), campaign/act/mission names and states, last session summary + cliffhanger + played date, Rest Clock state, Current State stamp staleness, the party roster with afflictions, and the design-preference drought counter (undeployed/seeded wishlist items). Do not manually re-read anything it already covers.
 
 **Step 2 — Index staleness check.** Read `vector-index/.index-built` (line 1: ISO timestamp, line 2: commit SHA), then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag: *"Semantic index stale since `<sha[:7]>` — run `py -3.10 scripts\index-entities.py`."* If the file is missing, prompt to build. Never rebuild automatically — the searches in this command degrade silently on a stale index, so the DM should decide.
 
@@ -30,6 +30,7 @@ It reports: next session number, campaign/act/mission names and states, last ses
 2. Last session file — `new_entities` and recap detail (cliffhanger and summary already came from the script)
 3. Active campaign file body (`state: active` in `scheduler/campaign/`) — tone, central conflict, themes
 4. `data/lore/` — frontmatter scan only; open a lore body only when that domain is directly relevant to this session; treat `state: draft` sections as open questions, not settled canon
+5. Table feedback — one grep, no file reads: `grep -A2 "table_notes:" historian/sessions/*.md | tail -20` (last 2–3 sessions' worth). What landed and what fell flat at recent sessions should bias scene design — more of what the table loved, less of what dragged. This is also the live check on the player-agency principle: if recent notes suggest choices aren't landing as consequential, weight the plan toward visible consequences of past party decisions.
 
 **Step 4 — Meta reference files.** Each is read **once per run**, never re-read per sub-task. Tiered — do not read a conditional file unless its trigger applies:
 
