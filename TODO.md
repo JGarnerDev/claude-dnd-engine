@@ -8,10 +8,11 @@ Progress tracker for getting this project ready to generate sessions and run cam
 *These files exist as placeholders. They need actual campaign content before session generation will be meaningful.*
 
 - [x] `meta/worldbuilding.md` — fill in tone, themes, setting pillars, what to avoid
-- [ ] `meta/difficulty.md` — **mostly resolved 2026-06-11:** rebuilt as two-axis spectrum (attrition × lethality) with frontmatter defaults, Rest Clock tracking in campaign Current State, level/rest staleness checks, and `/session` Phase 4 difficulty pick after hook selection. Still blank: Skill Challenge DC numbers, Non-Combat Stakes (now load-bearing for roleplay-only sessions), party power-level note
+- [x] `meta/difficulty.md` — **resolved 2026-06-11, confirmed:** rebuilt as two-axis spectrum (attrition × lethality) with frontmatter defaults, Rest Clock tracking in campaign Current State, level/rest staleness checks, and `/session` Phase 4 difficulty pick after hook selection
+- [ ] `meta/difficulty.md` remaining gaps — fill Skill Challenge DC numbers, Non-Combat Stakes (load-bearing for roleplay-only sessions), and the party power-level note
 - [ ] `meta/rewards.md` — fill in gold ranges, magic item philosophy, leveling pace *(still blank as of 2026-06-10)*
 - [x] Create per-player files in `meta/players/` (copy `player-template.md` per player)
-- [ ] Fill per-player files in `meta/players/` — all 4 core files (Jeff, Ben, Miguel, Paul) are blank templates; cameo files (Tyler Miller, Elijah Fisch) have `preferred_alignment`/`preferred_archetypes` empty. Until filled, session generation uses campaign tone/themes only.
+- [x] ~~Fill per-player files in `meta/players/`~~ — **obsolete 2026-06-11:** preference sections removed from player files by Jeff; cameo files (Tyler Miller, Elijah Fisch) deleted. Session generation draws on campaign tone/themes and `campaign-design-preferences.md` instead.
 
 ---
 
