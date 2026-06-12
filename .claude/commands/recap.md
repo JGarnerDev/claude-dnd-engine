@@ -105,6 +105,11 @@ For each entity flagged for canonization in Phase 3:
   > "**[Entity Name]** was referenced in this session but has no file. Create it now? If yes, I'll read `meta/entity-creation.md` first."
 - Wait for DM confirmation before creating anything.
 
+**Improvised minor settlements & roads** (hamlets, villages, waystations, connecting tracks the party visited — usually surfacing via Phase 2's new-entities question or a travel-leg stop in the session plan):
+- These follow the Settlement & Road Tiers section of `meta/entity-creation.md`: DM-created canon, written **directly to `historian/`** with `exists: true`, `source_session`, `confirmed_date` — no `data/` pool detour, no registry ID.
+- Apply the promotion ladder before creating any road file: a road the party merely traveled stays narration in the recap; a stop on an existing route becomes a `waypoints:` line on that route; only a road with real play weight gets its own entity.
+- A settlement the party only passed through without consequence can also stay as recap narration — confirm with the DM whether it earned a file.
+
 ---
 
 ## Phase 6 — Update Campaign State
