@@ -119,7 +119,7 @@ Read the active campaign file (`state: active` in `scheduler/campaign/`). Propos
 - No long rest → add this session's rounds to `Rounds of combat since`, increment `Short rests since`, append notable burns
 - DM unsure → record best estimate marked `(~estimate)`; never leave the old numbers standing unstamped
 
-**Preference tracking:** check the session plan's DM notes for deployed or seeded items from `meta/campaign-design-preferences.md`. Update the item's `Deployed:` line (wikilink to the session) or add/update its `Seeded:` line (wikilink + one-phrase breadcrumb note). This closes the loop `/session` opens — if it isn't done here, it never happens.
+**Preference tracking:** check the session plan's DM notes for deployed or seeded items from `meta/campaign-design-preferences.md`, and for devices or twists from `meta/literary-devices.md`. Update the item's `Deployed:` line (wikilink to the session), its `Seeded:` line (wikilink + one-phrase breadcrumb note — devices and twists both seed), or a device's `Last used:` line. When a session *pays off* a seeded device, stamp `Last used:` with this session and mark the seed note paid (e.g. `→ paid off [[Session NN]]`) so `/threads` stops surfacing it. Note the scale the item was used at if it differs from the obvious one. This closes the loop `/session` opens — if it isn't done here, it never happens.
 
 **Mystery registration:** if the session plan or the DM's notes flag a new load-bearing unknown (e.g. a "register in mysteries.md after play" note), propose the `meta/mysteries.md` entry now.
 
