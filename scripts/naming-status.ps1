@@ -31,6 +31,10 @@ foreach ($line in $lines) {
     elseif ($line -match "^\*\*Name:\*\*\s+(.+)$") {
         $named.Add([PSCustomObject]@{ Section = $currentSection; Entry = $currentEntry; Name = $matches[1].Trim() })
     }
+    elseif ($line -match "^- (.+?) => \*\*(.+?)\*\*") {
+        # Locked reference list (Part 2): "- <Entry> => **<Name>** *(attrib)*"
+        $named.Add([PSCustomObject]@{ Section = $currentSection; Entry = $matches[1].Trim(); Name = $matches[2].Trim() })
+    }
 }
 
 # Apply section filter
