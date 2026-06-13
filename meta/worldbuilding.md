@@ -51,26 +51,75 @@ Gods are real and present — not historical figures or distant abstractions, bu
 ## Influences
 
 ### Major
-- Lord of the Rings (depth, magic rarity, mythic weight)
-- Game of Thrones (political plots, moral complexity)
-- Western genre (desert frontier, scarcity, outlaws)
-- Pirate genre (sea and sky variants, magical or steampunk ships)
-- Elden Ring (shattered ancient orders, cryptic ruins of fallen civilizations, gods who broke the world)
-- Kill Bill / Samurai genre (honor codes and their contradictions; the ronin — skilled, masterless, morally complex; craft mastery as identity, not just capability; revenge as a pure and consuming force; stylized violence that is purposeful and ritual, never gratuitous)
+- **Lord of the Rings**
+    - Mythic weight and deep time
+    - Magic rare enough to feel significant
+    - A world older than its inhabitants, where small folk carry its fate
+- **Game of Thrones**
+    - Political plots over clean heroes
+    - Competing houses with real pressures and histories
+    - Moral complexity — every faction believes itself justified, few are simply evil
+- **Western genre**
+    - Desert frontier as lived space
+    - Scarcity drives conflict
+    - Outlaws, lawmen, vigilante justice, and the stranger riding in
+    - Honor and violence on the edge of civilization
+- **Pirate genre**
+    - Sea and sky variants alike
+    - Magical or steampunk ships
+    - Frontier culture of crews, captains, and stolen fortunes beyond any kingdom's reach
+- **Elden Ring**
+    - Shattered ancient orders and cryptic ruins of fallen civilizations
+    - Gods who broke the world
+    - Cosmology pieced together from fragments, not handed to the player
+- **Kill Bill / Samurai genre**
+    - Honor codes and their contradictions
+    - The masterless ronin — skilled, morally complex
+    - Craft mastery as identity
+    - Revenge as a pure, consuming, ritual force
 
 ### Minor
-- Warhammer 40k (planets where history has forgotten mighty ages — technology as lost inheritance, not progress)
-- Redwall (tight-knit communities of smallfolk, cozy-dark contrast, simple lives interrupted by genuine menace — not anthro animals, but the texture of beloved places under threat)
-- Grandia (optimism as survival — wonder persists despite darkness; party bonds form through shared experience, not exposition; small people from small places facing a world much larger than them)
+- **Warhammer 40k**
+    - Worlds where history has forgotten mighty ages
+    - Technology as lost inheritance, not progress
+    - The present living atop the unexplained shadow of something far greater that fell
+- **Redwall**
+    - Tight-knit communities of smallfolk; cozy-dark contrast
+    - Simple lives interrupted by genuine menace
+    - The texture of beloved places under threat — not anthropomorphic animals
+- **Grandia**
+    - Optimism as survival; wonder persisting despite darkness
+    - Party bonds formed through shared experience, not exposition
+    - Small people from small places facing a world much larger than them
+- **Metal Gear Solid**
+    - Shadow factions weaponizing power that should never be controlled
+    - Soldiers and agents as pawns of unseen systems; loyalty turned against itself
+    - Information control and buried truth; what the world is told versus what is real
+
+### The vibe — power as character design
+
+Something a lot of these influences share, worth soaking up rather than enforcing: **the most memorable powerful characters feel designed, not statted.** The Elden Ring demigods, the GoT power players, Kill Bill's assassins, the MGS bosses — each lands as a singular figure rather than a stronger version of a generic template. None of the below is a checklist; they're the flavors that tend to be in the water when a powerful character really sticks. Reach for whichever ones the story wants, ignore the rest:
+
+- **Named identity over archetype** — a figure with a name and a reputation people have opinions about, more than "the bandit lord."
+- **A signature motif** — a visual, weapon, power, or ritual that feels theirs. Power that *looks* like something tends to stick.
+- **A code or ideology** — wanting and believing something; strength in service of a worldview the party can argue with, not just a threat.
+- **A flaw or contradiction** — the crack that makes the power human: a debt, a grief, an honor bound too tight, a fear they can't admit.
+- **Power felt personally, not numerically** — dread that comes from who they are and what they've done, ideally landing before initiative is ever rolled.
+
+The loose aim: a powerful character who's memorable the moment they're named, not just the moment their stat block shows up. A plain stat block with a good reason behind it is completely fine.
 
 ## Resource Palette
 
 `data/resources/` holds 70 resources spanning common staples to unique arcane materials, including 25 finished goods (`resource_type: goods`). Coffee is one node in a larger economy — draw from the full pool to avoid over-indexing on any single resource.
 
-- **Common:** Timber, Iron Ore, Copper Ore, Stone, Clay, Salt, Grain, Fish, Fresh Water, Livestock, Wool, Hides, Coal, Hemp, Sand, Ale, Grapes, Stonecap Mushroom
-- **Uncommon:** Silver Ore, Gold Ore, Horses, Silk, Spices, Gemstones, Alchemical Herbs, Sulfur, Amber, Pearl, Obsidian, Dinosaur Bone, Dinosaur Hide, Whatwill
-- **Rare:** Platinum Ore, Mithral Ore, Adamantine Ore, Dragon Scales, Arcane Crystal, Sky Coral, Stormglass, Exotic Mounts, Serhari, Plate Armor, Coffee (five-house monopoly)
+- **Common:** Timber, Iron Ore, Copper Ore, Stone, Clay, Salt, Grain, Fish, Fresh Water, Livestock, Wool, Hides, Coal, Hemp, Sand, Ale, Grapes, Stonecap Mushroom\*
+- **Uncommon:** Silver Ore, Gold Ore, Horses, Silk, Spices, Gemstones, Alchemical Herbs, Sulfur, Amber, Pearl, Obsidian, Dinosaur Bone, Dinosaur Hide, Whatwill\*
+- **Rare:** Platinum Ore, Mithral Ore, Adamantine Ore, Dragon Scales, Arcane Crystal, Sky Coral, Stormglass, Exotic Mounts, Serhari\*, Fargrsh\*, Plate Armor, Coffee\* (five-house monopoly)
 - **Unique:** Ioun Stone, Starfall Ore, Dragonheart
+
+\* **World-specific** — authored to this world's economy, not generic D&D baseline. These do **not** sync to the template; everything else in `data/resources/` does. They are the resources that give this world its identity.
+
+**Hard rule — world-specific resources must be named here.** Any resource excluded from template sync via a `!data/resources/<name>.md` line in `.template-sync` must appear in the lists above (marked `*`), placed by its `rarity`. The two lists are kept in lockstep: when a world-specific resource is created or ingested, add the `!` exclusion line *and* this palette entry in the same change. A world-specific resource missing from either is a defect, not a placeholder. (Player authorship — `contributed_by` — does not by itself make a resource world-specific. Generic staples carry no `contributed_by` even if a player drafted them; reserve that field for genuine creative seeds, which are world-specific and excluded from sync.)
 
 ## What to Avoid
 
