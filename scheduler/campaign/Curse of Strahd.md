@@ -44,9 +44,12 @@ description: "Active Curse of Strahd campaign; party at level 3 after completing
 
 ### Rest Clock (as of: never recorded)
 
-Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number.
+Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` → Long Rest Rules).
 
-- Last long rest: unknown — clock introduced after Session 13; reconstruct with DM
+- In-world time now: unknown — reconstruct with DM
+- Last long rest (in-world): unknown — clock introduced after Session 13; reconstruct with DM
+- Hours since last long rest: unknown
+- Long rest available: unknown (needs ≥24h since last + safe location + no PC at 0 HP)
 - Rounds of combat since: unknown
 - Short rests since: unknown
 - Notable burns: unknown
