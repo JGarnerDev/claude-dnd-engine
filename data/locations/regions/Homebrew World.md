@@ -36,7 +36,8 @@ relates_to:
   - "[[The Pale Isles]] (surface — islands)"
   - "[[The Warm Isles]] (surface — islands)"
   - "[[The Saltbreak Isles]] (surface — islands)"
-  - "[[Islands A]] (surface — islands)"
+  - "[[Watler's Way]] (surface — islands)"
+  - "[[Caldera's Brace]] (surface — islands)"
   - "[[The Landing]] (sky — islift)"
   - "[[The Hearth]] (sky — islift)"
   - "[[Arclight's Seat]] (sky — islift)"
@@ -80,7 +81,8 @@ Landmasses, sub-continents, and island chains on the world map (`maps/world/worl
 - [[The Pale Isles]] — cold scattered islands halfway to the ice
 - [[The Warm Isles]] — relatively warm islands off the southwestern reach
 - [[The Saltbreak Isles]] — pirate-dominated crossroads with no formal law
-- [[Islands A]] — frontier island chain in the western ocean *(provisional map letter, awaiting name)*
+- [[Watler's Way]] — frontier island chain in the western ocean; Watler-haunted after every Showering
+- [[Caldera's Brace]] — volcanic islands at the eastern wrap-seam edge, magma-splash ejecta from the Caldera
 
 ## Sky and orbital regions
 

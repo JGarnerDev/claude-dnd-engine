@@ -30,6 +30,7 @@
 - [x] Jeff — Serhari (plains vine, ritual preparations) — find geographic home
 - [x] Ben — world naming questionnaire complete (18 features named)
 - [x] Miguel — 20 entities ingested (19 named features + Ashreaches); see below for map label updates needed
+- [x] Paul — world naming answers ingested 2026-06-13 (6 features: Crystalline Vast, Tempered Parting, The Great Carve, Hell's Reign, Watler's Way, Caldera's Brace); see Paul's section below for map label work
 
 ---
 
@@ -89,8 +90,27 @@ Replace placeholder labels with Miguel's canonical names.
 - [x] Channel H → **The Southern Throat**
 - [x] **Islands A — volcanic peak added** — crater + lava texture visible center-north of Islands A (verified 2026-06-10 crop)
 - [x] **The Ashreaches label placed** on Islands A slopes between the peak and Cindermouth Bay
-- [ ] Name **Mountains P** (volcanic range on Struck Side adjacent to The Caldera — separate from the Ashreaches) — still placeholder 2026-06-10
-- [ ] Name **Islands A** (western ocean island chain below Channel I) — still placeholder 2026-06-10
+- [x] Name **Mountains P** → **Hell's Reign** (Paul, 2026-06-13) — entity created
+- [x] Name **Islands A** → **Watler's Way** (Paul, 2026-06-13) — entity renamed
+
+---
+
+## Paul's Map Label Updates (answers ingested 2026-06-13)
+
+Entities created/renamed in `data/`. Map tiles **not yet updated** — these are placeholder map letters awaiting labels on `world-names.png`:
+
+- [ ] **Ocean A** → **Crystalline Vast** (western ocean; phosphorescent on Showering nights)
+- [ ] **Channel I** → **Tempered Parting** (was placeholder-labeled "Channel I"; far-left, separates Watler's Way from Struck Side)
+- [ ] **Mountains O** → **The Great Carve** (outer rim of the Caldera's Struck Side)
+- [ ] **Mountains P** → **Hell's Reign** (inner crater wall, deeper into Struck Side)
+- [ ] **Islands A** → **Watler's Way** (western volcanic chain; hosts the Ashreaches)
+- [ ] **Islands D** → **Caldera's Brace** (far-right / eastern wrap-seam edge; magma-splash ejecta — note this is the *same meridian* as the Caldera per the projection wrap)
+
+### Deferred — `/region` detailing
+The 4 newly-created stubs are **name-only** (`exists: false`, body flagged "awaits /region pass"). Degrades until detailed: no geography, settlements, encounters, or routes for the western Struck Side waters / Struck Side ranges / eastern ejecta islands.
+
+- [ ] `/region` pass — western Struck Side (Crystalline Vast, Great Carve, Hell's Reign, Watler's Way cluster)
+- [ ] `/region` pass — Caldera's Brace / eastern Parhelion Ocean edge
 
 ---
 
