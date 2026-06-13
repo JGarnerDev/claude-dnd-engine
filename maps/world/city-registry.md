@@ -1,10 +1,6 @@
 # City Registry
 
-Stable references for all unnamed city markers. IDs persist until a city is named and graduated.
-
-**ID format:** `C{col}-{row}{letter}` — col/row are map grid cells (1-indexed), letter disambiguates within the same cell.
-
-**Graduation:** when a city earns a canonical name, remove its entry here and add its label to `world-names.png`. The ID becomes an alias.
+Stable references for all unnamed city markers — this world's data. ID format and graduation rules are structural: see `maps/CLAUDE.md` → **City Marker ID Format** and **City graduation**.
 
 **Total undetailed cities:** 378
 

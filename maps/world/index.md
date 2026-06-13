@@ -11,27 +11,9 @@ Updated 2026-06-10: both layers ingested. Sky — The Stellar Daughter (was Slic
 - `city-registry.md` — stable ID index for all 378 unnamed city markers. IDs survive until a city graduates (is named). Use for player assignments and cross-references.
 - `city-markers.png` — transparent PNG overlay; red dots mark cities that exist in the world but are unnamed and undetailed. No labels. Tiled as `tiles/markers-{name}.png`. Use alongside base tiles to see undetailed cities in any area.
 
-## Grid Scale
+## Conventions
 
-- **1 cell = 1000km × 1000km**
-- Grid dimensions: ~16 columns × ~13 rows
-- Equator: approximately row 7
-- Poles: row 1 (north), row 13 (south)
-- Cell pixel size: 512px wide × 472px tall
-- Col N left edge: (N−1) × 512px / Row N top edge: (N−1) × 472px
-
-## Climate Rules (west-to-east winds)
-
-- West-facing coasts/slopes vary by latitude:
-  - Tropical (dist ≤1 from equator row 7): warm and humid; wet/dry seasons; NOT persistently grey
-  - Subtropical (dist 2): Mediterranean pattern — hot dry summers, mild wet winters; sunny, not grey
-  - Warm temperate (dist 3): mild maritime; reliable moisture; can be overcast but not cold
-  - Temperate/cold (dist ≥4): maximum moisture, frequent storms; grey skies common
-- East-facing coasts/slopes: drier; rain shadow if mountains present
-- Rivers drain east/southeast off mountain ranges
-- West coasts (tropical/subtropical): warm water, beaches possible, rocky headlands between bays
-- West coasts (temperate/cold): rocky cliffs, sea stacks, no beaches
-- East coasts: sandy beaches / River mouths: wide estuaries
+Grid scale (cell size, pixel formula), the west-to-east climate model, and the city marker ID format are structural engine rules — they live in `maps/CLAUDE.md` (Grid Scale / Climate Rules / City Marker ID Format). This file holds only this world's data.
 
 ## Tile Coverage
 
