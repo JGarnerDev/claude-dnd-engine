@@ -97,7 +97,7 @@ After you play a session:
 | Folder | Role |
 |---|---|
 | `./data/` | Free entity pool — creative material available for session generation |
-| `./historian/` | Authoritative record of campaign history — what actually happened |
+| `./historian/` | Authoritative record of campaign history and world — what actually happened and what actually exists |
 | `./meta/` | Design principles, table preferences, schemas, and decision frameworks |
 | `./scheduler/` | Active story layer — campaign doc, acts, missions, and session plans |
 | `./meta/schemas/` | Entity file templates and frontmatter specifications |
