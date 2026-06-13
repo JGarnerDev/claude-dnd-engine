@@ -15,6 +15,7 @@
 # Root
 CLAUDE.md
 README.md
+.template-sync
 
 # Commands — all slash commands
 .claude/commands/check.md
