@@ -31,7 +31,7 @@ Draft root document for the campaign that follows [[Curse of Strahd]]. The party
 
 ## Setup TODO
 
-Master checklist lives in `todo.md`; this list tracks only the files that must be completed before this campaign can start.
+Master checklist is the `/todo` dashboard (`todo-dashboard.md`); this list tracks only the files that must be completed before this campaign can start.
 
 ### Name the world and campaign
 - [ ] `questionnaires/world-naming.md` — general naming questionnaire (includes the world's name)
