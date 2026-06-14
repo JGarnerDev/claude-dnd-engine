@@ -10,7 +10,7 @@ Give the DM a plain-language summary of everything that needs attention or actio
 .\scripts\todo-brief.ps1
 ```
 
-This collects: uncanonized/pending sessions, recap inbox files, **no-plan-for-next-game-night warning** (game night is Tuesday — sourced from the campaign's Rules Decisions), open threads (characters missing/imprisoned/transformed), party state staleness (level stamps and the Rest Clock — translate as "character levels / the party's rest tracker haven't been confirmed since session N; next session's encounter math leans on them"), graph health (validate error count), index staleness, unchecked topic-todo items (topic files like `todo-worldmap.md`; `todo-dashboard.md` is output, never a source), **world buildout gaps** (the `--- WORLD BUILDOUT ---` block: empty entity types like PCs/events/rumors, and scheduler structure — placeholder-only act, no missions), questionnaire fill states, draft lore/acts/missions, and undeployed design preferences (with an AGING CHECK line every 5th played session — when it appears, surface it as a 🤝 item: review the group wishlist together, seed or retire what's stalling). **Do not re-read the underlying files** — the script output is the complete signal set. Read a file only if the DM asks a follow-up about a specific item.
+This collects: uncanonized/pending sessions, recap inbox files, **no-plan-for-next-game-night warning** (game night is Tuesday — sourced from the campaign's Rules Decisions), open threads (characters missing/imprisoned/transformed), party state staleness (level stamps and the Rest Clock — translate as "character levels / the party's rest tracker haven't been confirmed since session N; next session's encounter math leans on them"), **spotlight flags** (the `--- SPOTLIGHT ---` block: an overdue character whose arc hasn't been in the sun lately, and any PC with no story hooks on file — translate as "Mara's backstory hasn't driven a scene in a while; consider leaning her way next session" and "Kuro has no story hooks captured yet — a backstory pass would let the planner feature him"; silent before 3 sessions), graph health (validate error count), index staleness, unchecked topic-todo items (topic files like `todo-worldmap.md`; `todo-dashboard.md` is output, never a source), **world buildout gaps** (the `--- WORLD BUILDOUT ---` block: empty entity types like PCs/events/rumors, and scheduler structure — placeholder-only act, no missions), questionnaire fill states, draft lore/acts/missions, and undeployed design preferences (with an AGING CHECK line every 5th played session — when it appears, surface it as a 🤝 item: review the group wishlist together, seed or retire what's stalling). **Do not re-read the underlying files** — the script output is the complete signal set. Read a file only if the DM asks a follow-up about a specific item.
 
 There is no separate master-checklist file. Derivable "create regions/factions/PCs/…" work surfaces automatically from the WORLD BUILDOUT scan; genuinely-manual items (stretch ideas, historian backfill, pre-canon checks) live as backlog items inside `todo-dashboard.md` itself and are preserved across runs by the merge in Step 3.
 
@@ -31,6 +31,7 @@ Three groups, in this order. One line per item: plain-language what + why it mat
 Format per line: `N. <emoji> **<Person>** — <what + why>`
 
 **Tag every item with who can act**, so the DM sees at a glance what to delegate to Claude vs. chase in person:
+
 - 🤖 — Claude can do it now; name the command or script ("say *do 2* and I'll rebuild the search index")
 - 🙋 — needs a human: a player filling something in, the DM making a creative call (name them — "Kellan decides"), or manual work outside the engine (image edits)
 - 🤝 — joint: Claude drafts or runs the mechanics, but the DM must decide or approve (session plans, canonization, ingesting questionnaires)
@@ -41,6 +42,7 @@ Judge honestly: anything requiring taste, approval, or table knowledge is 🤝 a
 **Map work is delegable:** when a 🙋 item is manual map or image work (world map labels, region/city maps, derivatives), remind the DM that Jeff (player, original world-builder) can take it — *unless* the map is a secret players should only see when discovered in play. Phrase it as an option, not an assignment: "hand to Jeff if it's not a spoiler — say the word and I'll draft a request sheet from `maps/map-request-template.md`."
 
 **🔴 Do soon** — things that block or degrade the next session:
+
 - No plan drafted for the next game night (the single most urgent line when it appears)
 - Sessions played but never written up (memory fades — historian drifts from the table)
 - Notes sitting in the recap inbox
@@ -48,12 +50,15 @@ Judge honestly: anything requiring taste, approval, or table knowledge is 🤝 a
 - Stale party state (LEVEL STALE / REST CLOCK flags) — encounter difficulty is computed from these, so a stale value means the next plan may be balanced for the wrong party (🤝 — two quick questions at the next /session or /recap settles it)
 
 **🟡 Waiting on people** — things the DM should chase, with names:
+
 - Questionnaires waiting on specific players (name the player, say what the questionnaire designs)
 - Filled questionnaires ready to be made official
 - Blank preference/difficulty files (say what improves once filled — e.g. "encounters are generic D&D math until difficulty.md is filled")
 
 **⚪ Backlog** — worth knowing, nothing urgent:
+
 - Open story threads (name the characters in plain terms — "the night hag is still out there with the child"; suggest /threads if the list is long)
+- Spotlight rotation (🤝): an overdue character whose arc hasn't driven a scene lately — frame as a lean for the next /session, not a chore ("consider giving Mara the spotlight next session"). A PC with no story hooks on file is 🤝 too — "run a backstory pass on Kuro so the planner can feature him"
 - Broken cross-references beyond the expected placeholders
 - Draft world docs pending questionnaire answers
 - Map label work (manual image edits)
