@@ -31,6 +31,7 @@
 - [x] Ben — world naming questionnaire complete (18 features named)
 - [x] Miguel — 20 entities ingested (19 named features + Ashreaches); see below for map label updates needed
 - [x] Paul — world naming answers ingested 2026-06-13 (6 features: Crystalline Vast, Tempered Parting, The Great Carve, Hell's Reign, Watler's Way, Caldera's Brace); see Paul's section below for map label work
+- [x] Kellan — world naming questionnaire ingested 2026-06-14 (17 features); see Kellan's section below for map label work
 
 ---
 
@@ -114,6 +115,42 @@ The 4 newly-created stubs are **name-only** (`exists: false`, body flagged "awai
 
 ---
 
+## Kellan's Map Label Updates (answers ingested 2026-06-14)
+
+Entities created in `data/`. Map tiles **not yet updated** — these are placeholder map letters awaiting labels on `world-names.png` (ground) and `world-sky.png` (islifts):
+
+- [ ] **Continent F** → **Kethara** (lower-right arid landmass)
+- [ ] **Continent G** → **Greywood** (eastern forested island-continent)
+- [ ] **Sub Continent E** → **The Reach** (upper-right, faces main continent)
+- [ ] **Mountains G** → **The Scorched Rim** (southern range of Kethara)
+- [ ] **Mountains I** → **The Greymast** (eastern spine of The Reach)
+- [ ] **Mountains K** → **The Elderspine** (Greywood southern forest range)
+- [ ] **Mountains Q** → **The Ashwall** (Continent C volcanic range)
+- [ ] **Desert F** → **The Amber Plain** (center-right, The Narrows area)
+- [ ] **Islands I** → **The Pale Shore** (upper-right, north of The Reach)
+- [ ] **Islands J** → **The Westward Stones** (lower-left, near Continent C/D)
+- [ ] **Sea F** → **The Ashen Sea** (southwest volcanic sea)
+- [ ] **Bay D** → **The Maw** (Greywood west coast)
+- [ ] **Channel C** → **The Collar** (northern approach between main continent and Greywood)
+- [ ] **Channel E** → **The Ember Strait** (far right of Greywood, volcanic island across)
+- [ ] **Channel J** → **The Rift** (lower-center gap in main continent)
+- [ ] **Islift D** → **The Watcher** (upper-left, high altitude) — on `world-sky.png`
+- [ ] **Islift E** → **The Companion** (upper center-right, paired with The Watcher) — on `world-sky.png`
+
+### Deferred — `/region` detailing
+
+All 17 entities are **name-only** (`exists: false`, body flagged "awaits /region pass"). Degrades until detailed: no geography, settlements, encounters, or routes.
+
+- [ ] `/region` pass — Kethara (Continent F) + The Scorched Rim
+- [ ] `/region` pass — Greywood (Continent G) + The Elderspine + The Maw + The Ember Strait
+- [ ] `/region` pass — The Reach (Sub Continent E) + The Greymast
+- [ ] `/region` pass — northern waters (The Pale Shore, The Collar)
+- [ ] `/region` pass — southwestern waters (The Ashen Sea, The Westward Stones)
+- [ ] `/region` pass — sky layer (The Watcher, The Companion)
+- [ ] Continent C needs naming before The Ashwall's region link can be resolved
+
+---
+
 ## Label Corrections — World Layer (Miguel's correction, 2026-06-09)
 
 *New ground image ingested 2026-06-10, all three renames verified on regenerated nw tile:*
@@ -134,7 +171,7 @@ The 4 newly-created stubs are **name-only** (`exists: false`, body flagged "awai
 - [x] Rename "Islift B" → **The Grey Reaches** (left cluster, mid-altitude)
 - [x] Rename "The Hearth" (Islift C) → **Darkling's Perch** (Paul's name wins; 2026-06-09)
 - [x] Rename "Islift G" → **The Hearth** (Miguel; reassigned from Islift C; nearest-to-surface right cluster)
-- [ ] Add **Islift D, E** labels once names are assigned (still unnamed in questionnaire) — Islift F already labeled **The Landing** ✓
+- [x] Add **Islift D, E** labels once names are assigned — **The Watcher** (D, Kellan), **The Companion** (E, Kellan); Islift F already labeled **The Landing** ✓
 - [x] Update `maps/world/index.md` Status line (2026-06-10)
 
 ---

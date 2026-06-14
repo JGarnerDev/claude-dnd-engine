@@ -58,6 +58,23 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 | Bayward River | ~4-5 | ~3-4 | — |
 | Deepwend River | ~5 | ~3-4 | — |
 | Thelindra River | ~5 | ~4-5 | — |
+| Kethara | ~11–15 | ~9–13 | `data/locations/regions/Kethara.md` |
+| Greywood | ~12–16 | ~2–9 | `data/locations/regions/Greywood.md` |
+| The Reach | ~13–16 | ~3–6 | `data/locations/regions/The Reach.md` |
+| The Watcher | ~1–3 | ~1–3 | `data/locations/regions/The Watcher.md` |
+| The Companion | ~7–9 | ~1–3 | `data/locations/regions/The Companion.md` |
+| The Scorched Rim | ~12–15 | ~11–13 | `data/locations/terrain-features/The Scorched Rim.md` |
+| The Greymast | ~14–16 | ~3–5 | `data/locations/terrain-features/The Greymast.md` |
+| The Elderspine | ~13–15 | ~6–9 | `data/locations/terrain-features/The Elderspine.md` |
+| The Ashwall | ~2–4 | ~9–12 | `data/locations/terrain-features/The Ashwall.md` |
+| The Amber Plain | ~9–12 | ~5–8 | `data/locations/terrain-features/The Amber Plain.md` |
+| The Pale Shore | ~14–16 | ~1–2 | `data/locations/terrain-features/The Pale Shore.md` |
+| The Westward Stones | ~2–5 | ~9–12 | `data/locations/terrain-features/The Westward Stones.md` |
+| The Ashen Sea | ~2–6 | ~8–12 | `data/locations/terrain-features/The Ashen Sea.md` |
+| The Maw | ~13–14 | ~5–7 | `data/locations/terrain-features/The Maw.md` |
+| The Collar | ~12–13 | ~2–4 | `data/locations/terrain-features/The Collar.md` |
+| The Ember Strait | ~15–16 | ~5–7 | `data/locations/terrain-features/The Ember Strait.md` |
+| The Rift | ~7–9 | ~8–10 | `data/locations/terrain-features/The Rift.md` |
 | Calenmere (Bay B) | ~5-6 | ~4-5 | `data/locations/terrain-features/Calenmere.md` |
 | Bay E (Cindermouth Bay) | ~1-2 | ~4-5 | — |
 | Mountains P | ~1-2 | ~4-5 | — |
