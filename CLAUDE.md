@@ -56,6 +56,7 @@ This repo spans two campaigns: `strahd` (Curse of Strahd, sessions 1–present) 
 **`campaign` field** — historian and scheduler entities carry `campaign: strahd` or `campaign: <new-world-name>`. Data entities are campaign-agnostic by default (no tag) unless they are explicitly tied to one world.
 
 **Session planning rules:**
+
 - Identify the active campaign from `scheduler/campaign/` — the campaign file with `state: active`
 - Do not pull `campaign: strahd` entities into new-world sessions unless the DM explicitly requests a crossover
 - Strahd-tagged entities are still visible and searchable — they just don't surface automatically in new-world content
@@ -138,6 +139,7 @@ Recurring engine idiom for drift-prone state: stamp the state with the marker it
 ## PC Backstory Ingestion
 
 **Trigger:** Any of the following activate this flow:
+
 - A file is placed in `historian/characters/pcs/` that lacks proper PC frontmatter (`exists: true`, `type: character`, `subtype: pc`)
 - A message or pasted content contains raw backstory text that names a known PC
 
@@ -146,6 +148,7 @@ Read `.claude/commands/pc-backstory.md` for the full ingestion flow, gap analysi
 ## Campaign Transition Detection
 
 **Trigger:** Any message containing language that suggests the party is leaving the current campaign context. Watch for:
+
 - Leaving/ending the current campaign: "leaving Strahd", "done with Strahd", "finished with Barovia", "we're out of Barovia", "end of the Strahd arc"
 - Starting fresh: "new world", "new campaign", "clean slate", "starting the homebrew", "transition"
 - Narrative clean-slate signals: "the portal closes", "we're through", "no going back"
@@ -158,9 +161,21 @@ If confirmed, read `.claude/commands/transition.md` and follow the full transiti
 
 No markdown tables in chat responses or generated campaign documents — use bullet lists with inline formatting instead. Existing tables inside instruction files (like the scripts table in this file) are exempt.
 
+## Markdown Linting
+
+Rules live in `.markdownlint.json` (root). A pre-commit hook auto-fixes staged `.md` and re-stages — so don't hand-format or run a lint pass after small edits; the hook handles whitespace-class rules (blank lines, indent, trailing spaces) mechanically.
+
+Only three rules can't be auto-fixed — write with these reflexes so the hook never has to surface them:
+
+- Tag every fenced code block with a language (` ```powershell `, ` ```text `, ` ```json `) — never a bare ` ``` ` (MD040)
+- Use real `###` headings, never bold text as a pseudo-heading (MD036)
+- Backtick `` `<placeholders>` `` so angle brackets aren't parsed as inline HTML (MD033)
+
+Run an explicit `markdownlint-cli2 "*.md" "**/*.md" "!node_modules/**"` pass only after **bulk** generation (many entities/docs at once), where one systemic mistake repeats — not after routine single-file edits.
+
 ## Followup Suggestions
 
-When a task reaches a natural endpoint, suggest at most **one** followup command — and only when the current state actually warrants it (e.g. entities just written → index rebuild; gap surfaced → fill command). Name the command and the reason in a single line: "Run `/x` to <reason>." Never append a boilerplate suggestion tail to every response; no state signal, no suggestion. Command files may specify their own closing suggestions — those take precedence.
+When a task reaches a natural endpoint, suggest at most **one** followup command — and only when the current state actually warrants it (e.g. entities just written → index rebuild; gap surfaced → fill command). Name the command and the reason in a single line: "Run `/x` to `<reason>`." Never append a boilerplate suggestion tail to every response; no state signal, no suggestion. Command files may specify their own closing suggestions — those take precedence.
 
 ## Recap Format
 
