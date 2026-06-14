@@ -21,10 +21,19 @@ def build_url(image_id: str, width: int, height: int) -> str:
 def fetch_image(image_id: str, width: int = 8192, height: int = 6144) -> bytes:
     """Fetch a map image from Inkarnate's CDN by ID. Returns raw image bytes."""
     url = build_url(image_id, width, height)
-    with urllib.request.urlopen(url, timeout=60) as response:
-        status = getattr(response, "status", None)
-        if status is not None and status != 200:
-            raise RuntimeError(
-                f"Failed to fetch image '{image_id}': HTTP {status}"
-            )
-        return response.read()
+    try:
+        with urllib.request.urlopen(url, timeout=60) as response:
+            status = getattr(response, "status", None)
+            if status is not None and status != 200:
+                raise RuntimeError(
+                    f"Failed to fetch image '{image_id}': HTTP {status}"
+                )
+            return response.read()
+    except urllib.error.HTTPError as exc:
+        raise RuntimeError(
+            f"Failed to fetch image '{image_id}': HTTP {exc.code}"
+        ) from exc
+    except urllib.error.URLError as exc:
+        raise RuntimeError(
+            f"Failed to fetch image '{image_id}': {exc.reason}"
+        ) from exc

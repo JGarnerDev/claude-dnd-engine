@@ -80,6 +80,20 @@ class TestFetchImage(unittest.TestCase):
 
         self.assertIn("width=8192,height=6144", captured["url"])
 
+    def test_http_error_raises_with_id_and_status(self):
+        def fake_urlopen(url, timeout=None):
+            raise inkarnate_fetch.urllib.error.HTTPError(
+                url=url, code=404, msg="Not Found", hdrs=None, fp=io.BytesIO(b"")
+            )
+
+        with mock.patch.object(inkarnate_fetch.urllib.request, "urlopen", fake_urlopen):
+            with self.assertRaises(RuntimeError) as ctx:
+                inkarnate_fetch.fetch_image("missing/map.png")
+
+        message = str(ctx.exception)
+        self.assertIn("missing/map.png", message)
+        self.assertIn("404", message)
+
 
 if __name__ == "__main__":
     unittest.main()
