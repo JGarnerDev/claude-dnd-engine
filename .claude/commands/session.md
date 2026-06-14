@@ -1,6 +1,7 @@
 Plan the next session.
 
 **Arguments (optional):**
+
 - `--depth narrated` — key scenes include read-aloud blockquote narration
 - `--depth notes` — DM-facing bullet notes only
 - `--scope inline` — full session in a single file
@@ -20,7 +21,7 @@ Do not generate any content yet.
 .\scripts\session-brief.ps1
 ```
 
-It reports: next session number (with a milestone flag every 5th session — worth marking at the table), campaign/act/mission names and states, last session summary + cliffhanger + played date, Rest Clock state, Current State stamp staleness, the party roster with afflictions, and the design-preference drought counter (undeployed/seeded wishlist items). Do not manually re-read anything it already covers.
+It reports: next session number (with a milestone flag every 5th session — worth marking at the table), campaign/act/mission names and states, last session summary + cliffhanger + played date, Rest Clock state, Current State stamp staleness, the party roster with afflictions, and the design-preference drought counter (undeployed/seeded wishlist items), and the spotlight readout (lifetime balance, recent trend, overdue PC, missing-hooks flags — from `spotlight-balance.ps1`; says "insufficient history" before 3 sessions). Do not manually re-read anything it already covers.
 
 **Step 2 — Index staleness check.** Read `vector-index/.index-built` (line 1: ISO timestamp, line 2: commit SHA), then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag: *"Semantic index stale since `<sha[:7]>` — run `py -3.10 scripts\index-entities.py`."* If the file is missing, prompt to build. Never rebuild automatically — the searches in this command degrade silently on a stale index, so the DM should decide.
 
@@ -35,11 +36,13 @@ It reports: next session number (with a milestone flag every 5th session — wor
 **Step 4 — Meta reference files.** Each is read **once per run**, never re-read per sub-task. Tiered — do not read a conditional file unless its trigger applies:
 
 Always:
+
 - `meta/difficulty.md` — two-axis difficulty spectrum (attrition × lethality), Non-Combat Stakes, DC ranges. Note the frontmatter defaults here, but **do not resolve tiers yet** — the picks happen in Phase 4, after the story hook is chosen, so the difficulty answer can push back on the story (and vice versa). Exception: tiers given in the DM's prompt are settled immediately. The combat axes apply only if the session ends up planning combat — for a roleplay-only shape they sit inert and Non-Combat Stakes is the operative difficulty guidance.
 - `meta/worldbuilding.md` — tone, themes, setting pillars, what to avoid
 - `meta/mysteries.md` — load-bearing unknowns; do not accidentally answer these in session content
 
 Conditional:
+
 - `meta/rewards.md` — only if the session will include treasure, magic items, or a level-up
 - `meta/players/*.md` (excluding `player-template.md`) — TRANSITION mode, roleplay-heavy shape, or the hook centers on a specific player's PC
 - `meta/party-relationships.md` — only when planning scenes with PC-to-PC stakes
@@ -49,6 +52,7 @@ Conditional:
 - `meta/references.md` — only when an external D&D stat lookup is needed
 
 **Step 5 — State the orientation aloud**, using the two-part recap format from root CLAUDE.md (narrative prose first, then TL;DR bullets):
+
 - Party level and size (from PC frontmatter `level` fields — `party-status.ps1` or a quick frontmatter scan) — ask the DM to confirm or correct; the confirmed level feeds the RTD math in `meta/difficulty.md`. If any PC's `level_confirmed` is older than the last played session number (party-status flags this as LEVEL STALE), call it out explicitly — it means a `/recap` skipped the level question and a level-up may have been missed
 - Rest Clock state (from the session brief): in-world time now, rounds and short rests since the last long rest, and whether a long rest is currently available. If the brief shows REST CLOCK STALE or NOT INITIALIZED, reconstruct it with the DM now — three questions ("what's the in-world date/time? when did they last long rest? roughly how many rounds since?"), write the answers back to the campaign file's `### Rest Clock` block with the current stamp, then continue
 - Long-rest availability (`meta/difficulty.md` → Long Rest Rules): compute from the clock — a long rest is offerable only if ≥24 in-world hours have passed since the last one started, the party can reach a safe spot for 8 uninterrupted hours, and no PC is at 0 HP. State this plainly ("party long-rested ~14h ago — no fresh reset available this session without 10h more in-world") so it shapes pacing before any beats are written
@@ -56,6 +60,7 @@ Conditional:
 - What active mission(s) exist (or "no active mission")
 - What the last session ended on (cliffhanger or final recap note)
 - What the next session number will be
+- Spotlight state (from the brief, once ≥3 sessions): lifetime balance and recent trend (whether the campaign owes spotlight or agnostic material this week), the overdue PC if any, and any PC flagged as missing hooks. State it as a lean, never a mandate — it biases hook selection in Phase 3, it doesn't dictate it
 
 **Step 6 — Callback search** on the cliffhanger or active mission hook, to surface historian entities the story may be ready to revisit:
 
@@ -82,10 +87,12 @@ If the mode is ambiguous, default to TRANSITION and say so — the DM can redire
 The session advances the active mission. Proceed directly to Phase 4.
 
 Keep the following in scope:
+
 - Active mission: objective, hook, listed obstacles
 - Last session cliffhanger
 - Key NPCs and locations already established in the mission or recent sessions
 - Any unresolved `new_entities` from the last session (things invented at the table that should be revisited)
+- **Spotlight opportunities** (once ≥3 sessions): if the brief named an overdue PC and the trend owes spotlight, thread one of that PC's open/seeded `spotlight_hooks:` into the mission — a 1–2 line opportunity, never a forced detour (same shaping as Phase 3B; lean agnostic instead if the trend says so)
 
 ---
 
@@ -98,6 +105,7 @@ When there is no active mission or the arc has reached a conclusion, surface opt
 Run `/threads` for a full standalone view, or inline the same logic here:
 
 Read frontmatter only (state, description) across `historian/characters/`, `historian/locations/`, and `historian/sessions/`. Look for:
+
 - NPCs with `state: missing`, `state: imprisoned`, or `state: transformed`
 - PC afflictions noted in historian PC files
 - Stranded or abandoned entities called out in session recaps (e.g. Rose and Thorn)
@@ -129,7 +137,10 @@ Also check `meta/campaign-design-preferences.md` (conditional-tier file — TRAN
 
 Also check `meta/literary-devices.md`: if the story state creates a natural opening for one device or twist, name it as a light suggestion alongside the hooks (e.g. *"this hook would support a cold open"* or *"the patron thread is ripe for The patron's true face"*). At most one suggestion; skip silently when nothing fits. Twist suggestions must pass the file's safety check (no contradiction with historian canon, no accidental answer to a `meta/mysteries.md` unknown). Avoid devices whose `Last used:` points at the immediately previous session.
 
+**Spotlight hooks (once ≥3 sessions):** if the brief flagged an overdue, present, normal-appetite PC and the trend owes spotlight material, read that PC's open/seeded `spotlight_hooks:` and shape **Option C** around one that fits the story state. Surface 1–2 candidates, not a mandate. No hooks → surface *"[Name] has no spotlight hooks — needs a backstory pass"* instead. If the trend says lean agnostic, bias all three hooks toward `party-centric`/`world` and skip the spotlight push this session.
+
 Respect the `Scale:` tags when picking:
+
 - `scene`/`session`-scale entries are the default pool for session suggestions
 - `mission`-scale entries fire only when this session creates or launches a mission — they shape the mission's structure, not one session's beats
 - `arc`/`campaign`-scale entries fire only when the session sits at an act boundary or opens a new act; their cost is runway — committing means placing `Seeded:` breadcrumbs over multiple sessions before the payoff
@@ -193,6 +204,7 @@ Wait for the DM's response before continuing.
 Using all context gathered, produce a session plan in chat.
 
 **Frontmatter fields to populate:**
+
 - **Session name** — propose a name (the DM can change it)
 - **Key locations** — use `[[wiki-link]]` to entities in `historian/locations/` or `data/locations/` only; not factions (e.g., `[[Domain of Barovia]]` is a faction; the region is `[[Barovia]]`)
 - **Key NPCs** — note if free (`data/`) or canon (`historian/`)
@@ -204,15 +216,18 @@ Using all context gathered, produce a session plan in chat.
 **Body structure — produce the following sections in order:**
 
 ### Orientation
+
 - One-paragraph party state: current location, known afflictions, resources expended, mood/tone coming out of the last session (sourced from `party-status.ps1` and the last session recap)
 - Bullet list: any unresolved `new_entities` from the last session that need acknowledgment
 
 ### Scenes
+
 One `#### Scene N — [Title]` block per beat. Scale count to session length (Short: 3–4, Standard: 4–6, Long: 6–8).
 
 **Travel legs:** if the plan moves the party overland or by water between known points, size the leg first — world map scale is 1 grid cell = 1000km; paces are foot 30km/day, horse 60, river barge 80 down / 30 up, ship 150 (per `scripts/region-scale.ps1`). A leg's duration advances the in-world clock — track days/hours elapsed across the session so the Rest Clock's `In-world time now` and the long-rest gate stay correct, and note where on the route the 24-hour window reopens (the party can long-rest at the first safe stop past that point — see `meta/difficulty.md` → Long Rest Rules). Then derive 1–3 stops from geography alone (river crossings, passes, day's-walk spacing — same map-first principle as `/region`), using working labels, not proper nouns, unless the DM names them. Only stops that serve the session (a scene, an encounter, a rest) become scene blocks; the rest is narration. **Never enumerate every settlement a realistic road would have** — at this scale that's one per travel day, and almost none deserve files. Stops live in the session plan as scheduler content (`exists: false`); `/recap` canonizes only the ones the party actually visits, per the Settlement & Road Tiers section of `meta/settlements.md`.
 
 Each scene block contains:
+
 - **Trigger** — what causes this scene to begin (party action, NPC move, time passing)
 - **Location** — `[[wiki-link]]`; one-line description of what the space looks/feels like
 - **NPCs present** — name, one-line goal for this scene, one-line voice note (how they talk/carry themselves)
@@ -223,6 +238,7 @@ Each scene block contains:
 If `scope: linked`, replace the full encounter detail with a one-line reference: `→ see [[encounter-{slug}]]` and note that the encounter file will be written separately.
 
 ### NPC Quick-Reference
+
 One entry per key NPC appearing this session. For canon NPCs, run `/voice <name>` first — **capped at the 2–3 NPCs carrying the most dialogue this session**. Skip `/voice` entirely for any NPC whose file was already read in full earlier in this run — derive the voice note from the in-context `personality`/`charm_hook` fields and body instead; a sub-command re-reading the same files adds nothing. Remaining canon NPCs get voice notes from their file's frontmatter and description only. Never invent fresh voice from scratch where history exists.
 
 - **Name** — `[[wiki-link]]`
@@ -231,9 +247,11 @@ One entry per key NPC appearing this session. For canon NPCs, run `/voice <name>
 - **Voice** — one sentence on speech pattern, demeanor, tells
 
 ### Contingencies
+
 2–3 likely detours the party might take. For each: what triggers it, how to handle it without derailing the session, how to redirect.
 
 ### Closing
+
 - How to land the closing hook (specific DM move or line)
 - What to leave unresolved going into the next session
 
@@ -247,7 +265,7 @@ These are lead-time flags, never blockers — the DM can defer or delegate at an
 
 ### Cameo Candidates
 
-Detect filled questionnaires with a **single search, not per-file reads**. Two constraints discovered in audit: `questionnaires/` is gitignored, so ripgrep-based search tools silently return nothing — use POSIX grep via Bash; and questionnaire templates contain `> ` option lists, so blockquote-text heuristics false-positive on blank templates. Use the explicit marker instead:
+Detect filled questionnaires with a **single search, not per-file reads**. Two constraints discovered in audit: `questionnaires/` is gitignored, so ripgrep-based search tools silently return nothing — use POSIX grep via Bash; and questionnaire templates contain `>` option lists, so blockquote-text heuristics false-positive on blank templates. Use the explicit marker instead:
 
 ```bash
 grep -l "^filled: true" questionnaires/*.md
@@ -256,12 +274,14 @@ grep -l "^filled: true" questionnaires/*.md
 (`filled:` lives in each questionnaire's `CLAUDE-INGEST` block — `false` at generation, flipped to `true` at return/ingestion. Files without the marker predate it: treat as unfilled unless the DM says otherwise.) Intersect the hits with cameo questionnaires (`entity_type: player` in the `CLAUDE-INGEST` block, or `-cameo` filenames).
 
 For each filled cameo questionnaire, compare:
+
 - `preferred_alignment` against the role and disposition of NPCs in this session
 - `preferred_archetypes` against NPC archetypes and scene types
 
 Surface up to 3 strong matches as a short block:
 
 > **Cameo Candidates**
+>
 > - **{Name}** — fits [{NPC or role}] ({one-line reason based on their stated preferences})
 
 Omit this block entirely if no questionnaires are filled. Do not force matches — only surface genuinely good fits. If nothing fits well, skip silently.
@@ -285,6 +305,7 @@ After presenting the plan, ask:
 > "Should I save this as a session file with `state: draft`?"
 
 If yes:
+
 1. Read `meta/schemas/session.md` to confirm the frontmatter template
 2. Determine path based on scope (filename = exact display name, matching canon precedent — e.g. `Session 14 The Road Remembers.md`):
    - `scope: inline` → write `scheduler/sessions/Session {NN} {Name}.md`
@@ -292,5 +313,6 @@ If yes:
 3. Populate all mandatory frontmatter fields from the plan above
 4. Write the full body (Orientation, Scenes, NPC Quick-Reference, Contingencies, Closing) into the main file
 5. Leave historian-only fields commented out (they are filled after play)
+6. **Spotlight commitment:** if the plan builds a scene on a PC's `spotlight_hooks:` entry, advance that entry's `status` from `open → seeded` on the PC file (it becomes `paid` later, at `/recap`, when the beat lands). Only seed hooks the plan actually commits to — surfacing one as an option in Phase 3 is not a commitment.
 
 If no: leave the plan in chat for the DM to use or adapt manually.
