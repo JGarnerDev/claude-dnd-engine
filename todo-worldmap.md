@@ -37,28 +37,34 @@
 ## Current Pass — Map Improvements
 
 ### Contrast fixes (labels exist, just hard to read)
+
 - [x] Invert label color on Tundra (north Erevast fringe)
 - [x] Invert label color on Azel Samarat (~Col 7–8, Row 6–7)
 
 ### Plainslands — add terrain labels
+
 - [x] Plains east of Gordrathi Mountains (~Col 8–9, Row 6–7) — rain shadow zone, strongest candidate
 - [x] Plains interior of Sub Continent A (~Col 9–11, Row 4–6) — broad flat zone between mountain ranges
 - [x] Plains west of Hightalon (~Col 9–10, Row 3–4) — open terrain before Watchwall/Irongate
 - [x] Plains interior of Continent B (~Col 5–7, Row 7–8) — between central mountain ranges
 
 ### Forest labels — add 2–3
+
 - [x] Forest label in Erevast interior (draft confirms "forested interior")
 - [x] Forest label in eastern jungles / Virethorn Range zone
 - [x] Forest label in south Continent B (if terrain texture confirms)
 
 ### Virethorn Range
+
 - [x] Replace Jade Jaw Spikes label with Virethorn Range (~Col 14–15, Row 4–6)
 
 ### Rivers — optional but high worldbuilding value
+
 - [x] Add 2–3 major unlabeled river marks draining east/southeast off mountain ranges
 - [x] River mouth cities implied by economic notes — mark key mouths
 
 ### Far east (Continent H cluster)
+
 - [x] Add terrain character beyond continent-level labels — forest, jungle, or plains as terrain warrants
 
 ---
@@ -97,7 +103,7 @@ Replace placeholder labels with Miguel's canonical names.
 
 ## Paul's Map Label Updates (answers ingested 2026-06-13)
 
-Entities created/renamed in `data/`. Map tiles **not yet updated** — these are placeholder map letters awaiting labels on `world-names.png`:
+Entities created/renamed in `data/`. Map tiles **not yet updated** — these are placeholder map letters awaiting labels on the `world-names.webp` master (add in Inkarnate, re-export, update the `maps/sources.tsv` url, `fetch-maps.ps1 -Force`, then `gen-tiles.py`):
 
 - [ ] **Ocean A** → **Crystalline Vast** (western ocean; phosphorescent on Showering nights)
 - [ ] **Channel I** → **Tempered Parting** (was placeholder-labeled "Channel I"; far-left, separates Watler's Way from Struck Side)
@@ -107,6 +113,7 @@ Entities created/renamed in `data/`. Map tiles **not yet updated** — these are
 - [ ] **Islands D** → **Caldera's Brace** (far-right / eastern wrap-seam edge; magma-splash ejecta — note this is the *same meridian* as the Caldera per the projection wrap)
 
 ### Deferred — `/region` detailing
+
 The 4 newly-created stubs are **name-only** (`exists: false`, body flagged "awaits /region pass"). Degrades until detailed: no geography, settlements, encounters, or routes for the western Struck Side waters / Struck Side ranges / eastern ejecta islands.
 
 - [ ] `/region` pass — western Struck Side (Crystalline Vast, Great Carve, Hell's Reign, Watler's Way cluster)
@@ -125,7 +132,7 @@ The 4 newly-created stubs are **name-only** (`exists: false`, body flagged "awai
 
 ---
 
-## Sky Layer (`world-sky.png`)
+## Sky Layer (`world-sky.webp`)
 
 *New sky image ingested 2026-06-10, all five renames verified at full res:*
 
@@ -162,6 +169,7 @@ The 4 newly-created stubs are **name-only** (`exists: false`, body flagged "awai
 ## World Notes — Geography Consequences
 
 ### Political
+
 - Separate landmasses = civilizations developed in isolation — first contact is a major historical event, not gradual
 - Mountain ranges are hard political borders — kingdoms form on one side, rarely spanning both
 - Narrow sea passages are the most fought-over territory — whoever controls them controls everything
@@ -170,6 +178,7 @@ The 4 newly-created stubs are **name-only** (`exists: false`, body flagged "awai
 - Mountain passes are chokepoints — small kingdoms holding one can punch far above their weight
 
 ### Social
+
 - West coast vs east coast peoples develop radically different cultures on the same landmass
 - Mountain communities are insular and traditional
 - River valley settlements are cosmopolitan — rivers mix peoples
@@ -180,6 +189,7 @@ The 4 newly-created stubs are **name-only** (`exists: false`, body flagged "awai
 - Islifts cast periodic shadows — feared or celebrated depending on culture
 
 ### Economic
+
 - Every major river mouth becomes a city
 - Mountain passes become toll points
 - West coasts agriculturally rich; east dry zones produce pastoral goods and luxury exports

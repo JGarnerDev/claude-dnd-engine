@@ -9,10 +9,12 @@ Updated YYYY-MM-DD: base layer ingested, N features named, tiles generated. -->
 
 ## Images
 
-<!-- List only the layers this campaign actually has. Drop lines you don't use. -->
-- `world-names.png` — base label layer; all land + water features and every named label. Source of truth. **{W}×{H}px.**
-- `world-sky.png` — optional sky layer (floating/aerial features). Edited manually; surface scripts ignore it.
-- `city-markers.png` — transparent overlay; red dots = unnamed, undetailed cities. Tiled as `tiles/markers-{name}.png`.
+<!-- List only the layers this campaign actually has. Drop lines you don't use. Masters live in
+maps/world/masters/ (gitignored, fetched from the CDN via scripts/fetch-maps.ps1; urls in maps/sources.tsv).
+Resolution is derived per-image at run time -- no fixed pixel size to record. -->
+- `masters/world-names.webp` — base label layer; all land + water features and every named label. Source of truth. Tiled as `tiles/{nw,n,...}.png`.
+- `masters/world-sky.webp` — optional sky layer (floating/aerial features). Separate export; surface scripts ignore it. Tiled as `tiles/sky-{name}.png`.
+- `masters/city-markers.webp` — flattened base+dots export; red dots = unnamed, undetailed cities. Tiled as `tiles/markers-{name}.png`.
 - `city-registry.md` — stable IDs for every undetailed marker. See `maps/CLAUDE.md` → City Marker ID Format.
 
 ## Biome Census

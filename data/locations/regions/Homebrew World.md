@@ -60,7 +60,7 @@ This world is **separate and distinct from the Curse of Strahd campaign**. Barov
 
 ## Surface regions
 
-Landmasses, sub-continents, and island chains on the world map (`maps/world/world-names.png`):
+Landmasses, sub-continents, and island chains on the world map (`maps/world/masters/world-names.webp`):
 
 - [[Solmara]] — warm, forested sub-continent on the western edge
 - [[Erevast]] — mixed-race civilized heartland
@@ -86,7 +86,7 @@ Landmasses, sub-continents, and island chains on the world map (`maps/world/worl
 
 ## Sky and orbital regions
 
-Air-situated features live on the sky layer (`maps/world/world-sky.png`), not the surface map:
+Air-situated features live on the sky layer (`maps/world/masters/world-sky.webp`), not the surface map:
 
 - [[The Landing]] — lowest, most accessible eastern islift; primary sky–surface interface
 - [[The Hearth]] — lowest right-side islift cluster, first-contact point in the east

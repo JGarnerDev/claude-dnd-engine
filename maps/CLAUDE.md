@@ -1,33 +1,61 @@
 # World Map
 
-The world map lives at `maps/world/world-names.png` (8192×6144px). The Read tool downsamples it — labels are unreadable at full scale.
+### Master images live in `maps/world/masters/` and are fetched, not committed
 
-**Two separate map files — ground vs. sky:**
-- `maps/world/world-names.png` — all surface features: continents, mountains, rivers, plains, seas, cities, etc.
-- `maps/world/world-sky.png` — all air-situated features: Islifts, Slices, and anything else floating above the surface. These are **not** in `world-names.png` and are updated separately. When labeling sky features (e.g. Islift names), the user must edit `world-sky.png` manually. Scripts and crops that pull from `world-names.png` will not show sky features.
+The three world masters are large Inkarnate WebP exports. **No map images are committed** — the masters are gitignored and fetched on demand, and the tiles/crops are generated locally from them. The only committed map artifact is the manifest `maps/sources.tsv`.
 
-**Always use pre-cropped tiles.** Nine tiles cover the full map with overlap: `maps/world/tiles/nw.png`, `n.png`, `ne.png`, `w.png`, `c.png`, `e.png`, `sw.png`, `s.png`, `se.png`. Read the tile that contains your area of interest. Tile coverage and key content are documented in `maps/world/index.md`.
+**Cold-start sequence (fresh clone has no images):**
 
-**City markers layer:** `maps/world/city-markers.png` is a transparent PNG (same 8192×6144px as `world-names.png`) with red dots marking cities that exist in the world but are unnamed and undetailed. Dots carry no labels — they mean "work needed here." Tiles of this layer live in `maps/world/tiles/markers-{nw,n,...}.png` (regenerate with `gen-tiles.py`). Read a markers tile alongside the base tile to see which cities in an area are undetailed. Use `map-crop.ps1 -Markers` to crop both layers for a specific region at once.
+1. `.\scripts\fetch-maps.ps1` — pull masters into `maps/world/masters/`. `-List` shows present/missing; `-Force` re-downloads. It rejects non-image / truncated responses, so a stale CDN url fails loudly instead of corrupting the pipeline.
+2. `python scripts\gen-tiles.py` — slice masters into `maps/world/tiles/` (creates the dir).
+
+Until both run, `map-crop.ps1` and `count-markers.ps1` will stop with a guard error telling you to fetch (`scripts/map-common.ps1` → `Require-Master`). **A revoked/expired CDN url means no master and no tiles — there is no committed fallback.** If `fetch-maps.ps1` rejects a url, re-export the map in Inkarnate and update `maps/sources.tsv` (re-export workflow below).
+
+- The masters can be **any resolution** — Inkarnate picks the export size. Never assume a pixel size. Every script derives cell size from the master's actual `img.size` at run time (`cellW = W/16`, `cellH = H/13`).
+- The Read tool downsamples large images, so master labels are unreadable at full scale — always read a pre-cropped tile.
+
+**Three master images — ground, sky, markers:**
+
+- `maps/world/masters/world-names.webp` — all surface features: continents, mountains, rivers, plains, seas, cities, etc.
+- `maps/world/masters/world-sky.webp` — all air-situated features: Islifts, Slices, and anything else floating above the surface. These are **not** in `world-names.webp`. Tiled separately as `sky-{nw,n,...}.png`; scripts that pull from `world-names.webp` will not show sky features.
+- `maps/world/masters/city-markers.webp` — a **flattened base+dots export**: the full surface map with red dots burned in over it (not a transparent overlay). Red dots mark cities that exist but are unnamed and undetailed — they mean "work needed here."
+
+**Always use pre-cropped tiles.** Nine tiles per master cover the full map with overlap. Read the tile that contains your area of interest. Tile coverage and key content are documented in `maps/world/index.md`.
+
+- Base: `maps/world/tiles/{nw,n,ne,w,c,e,sw,s,se}.png`
+- Markers: `maps/world/tiles/markers-{nw,...}.png` — read alongside the base tile to see which cities in an area are undetailed
+- Sky: `maps/world/tiles/sky-{nw,...}.png` — read for air-situated features
+
+Use `map-crop.ps1 -Markers` to crop the base and markers layers for a region at once. Regenerate every tile set with `python scripts\gen-tiles.py`.
+
+### Editing a master (re-export workflow)
+
+Masters are not edited in-repo — they are edited in Inkarnate and re-exported. To change the map (add a label, move a marker, edit sky features):
+
+1. Edit the map in Inkarnate and re-export it. **The CDN url changes on every re-export.**
+2. Copy the new `cdn2.inkarnate.com/...?disposition=attachment` url into the matching row of `maps/sources.tsv`.
+3. Run `.\scripts\fetch-maps.ps1 -Force` to pull the new master into `maps/world/masters/`.
+4. Run `python scripts\gen-tiles.py` to regenerate all tiles, then read the affected tiles to diff labels before updating `index.md`.
 
 **City graduation — when a city is named and detailed:**
-1. Add its label to `world-names.png` (the authority for all named, canonical features)
-2. Remove its dot from `city-markers.png`
-3. Run `python scripts\gen-tiles.py` to regenerate both tile sets
-4. Add the city/region to the Known Region Positions table in `maps/world/index.md` if it warrants a permanent crop entry
-5. Remove the city's entry from `maps/world/city-registry.md` — add its registry ID (e.g. `C05-04a`) to the entity's `aliases:` field so existing cross-references resolve
 
-After graduation the city appears in base tile reads and no longer appears in markers tile reads. `world-names.png` is the source of truth — if a label is there, the city is canonical.
+1. In Inkarnate, add its label to the world map and remove its dot from the markers map, then re-export both and update their `sources.tsv` urls (re-export workflow above)
+2. Run `.\scripts\fetch-maps.ps1 -Force` then `python scripts\gen-tiles.py` to refresh masters and tiles
+3. Add the city/region to the Known Region Positions table in `maps/world/index.md` if it warrants a permanent crop entry
+4. Remove the city's entry from `maps/world/city-registry.md` — add its registry ID (e.g. `C05-04a`) to the entity's `aliases:` field so existing cross-references resolve
+
+After graduation the city appears in base tile reads and no longer appears in markers tile reads. `world-names.webp` is the source of truth — if a label is there, the city is canonical.
 
 **Index maintenance:** `maps/world/index.md` → Known Region Positions is the lookup table for `map-crop.ps1 -Feature`. Add an entry whenever you identify a named feature's col/row from a tile or crop — bays, forests, plains, mountain ranges, rivers, sub-continents. One line per feature; col/row can be approximate. If a feature lacks a draft, use `—`. Update this proactively rather than waiting until a feature is formally worked.
 
 **Four hard rules:**
+
 1. **Read a tile before describing any feature's position.** Never infer position from geography alone — always read the label from the map.
 2. **Letter assignments come from the map, never invented.** If a section of the questionnaire needs letters (Plains A, River B, etc.), crop the relevant tile and count what's actually labeled before writing entries.
 3. **When a tile isn't precise enough**, use `.\scripts\map-crop.ps1 -Feature "<name>" -Temp` for a targeted crop. Read it, then delete `maps/world/temp-crop.png`. Pixel formula is in the **Grid Scale** section below if you need to crop manually via PIL.
 4. **If a feature isn't found in the primary tile, check all adjacent tiles before concluding it's absent.** Features near tile boundaries are often labeled on the neighboring tile. Never declare a feature missing after checking only one tile.
 
-**When replacing `world-names.png`**, regenerate all tiles immediately: `python scripts\gen-tiles.py`. Then read affected tiles to diff labels before updating `index.md`.
+**When a master changes**, follow the re-export workflow above — update the `sources.tsv` url, `fetch-maps.ps1 -Force`, then `gen-tiles.py` to regenerate every tile, and read affected tiles to diff labels before updating `index.md`.
 
 Region and location drafts can have their own permanent crop. Use `.\scripts\map-crop.ps1 -Feature "<name>"` — looks up col/row from the index and saves to `maps/locations/<slug>-map.png` automatically.
 
@@ -39,14 +67,16 @@ To hand work off, copy `maps/map-request-template.md` to `questionnaires/jeff-ma
 
 ## Grid Scale
 
-**Structural (always true):** places are addressed by a 1-indexed column/row grid laid over `world-names.png`. A cell's pixel box is `cellW × cellH`; left edge of col N = `(N−1) × cellW`, top edge of row N = `(N−1) × cellH`. Cell distance (km) drives all `/region` travel-time and city-spacing math.
+**Structural (always true):** places are addressed by a 1-indexed column/row grid laid over `world-names.webp`. A cell's pixel box is `cellW × cellH`; left edge of col N = `(N−1) × cellW`, top edge of row N = `(N−1) × cellH`. Cell distance (km) drives all `/region` travel-time and city-spacing math.
 
-**Per-world values — set at setup, not universal.** The numbers below are the template's defaults, i.e. *one campaign's choice* — a new world picks its own (see `meta/new-campaign-setup.md` → Map & geography setup). These four scripts **hardcode** the same numbers: `map-crop.ps1`, `count-markers.ps1`, `region-scale.ps1`, `region-world-context.ps1`. Changing a world's scale means updating this section **and** those scripts together.
+**Cell pixel size is never hardcoded.** It is derived per-image from the master's actual resolution at run time: `cellW = imageWidth / 16`, `cellH = imageHeight / 13`. `map-crop.ps1`, `count-markers.ps1`, and `gen-tiles.py` all open the master and read `img.size` before computing crop boxes, so any export resolution works without edits. Re-exporting at a different size needs no script change.
 
-- Distance per cell: **1000km × 1000km**
-- Grid dimensions: ~16 columns × ~13 rows
+**Per-world values — set at setup, not universal.** The grid count and the per-cell distance are *one campaign's choice* — a new world picks its own (see `meta/new-campaign-setup.md` → Map & geography setup). Only the **km-per-cell** distance is hardcoded, in `region-scale.ps1` and `region-world-context.ps1` (`$GRID_KM`); changing a world's scale means updating this section **and** those two scripts together.
+
+- Distance per cell: **1000km × 1000km** (`$GRID_KM`)
+- Grid dimensions: ~16 columns × ~13 rows (the `16 × 13` divisor used to derive cell pixels)
 - Equator row: ~7 / Poles: row 1 (north), row 13 (south)
-- Cell pixel size: 512px wide × 472px tall (depends on the base image resolution)
+- Cell pixel size: derived at run time from the master's resolution (not a fixed number)
 
 ## Climate Rules
 

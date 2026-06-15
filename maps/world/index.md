@@ -6,10 +6,12 @@ Updated 2026-06-10: both layers ingested. Sky — The Stellar Daughter (was Slic
 
 ## Images
 
-- `world-names.png` — consolidated label map; all land features (continents, sub-continents, mountain ranges, deserts, tundra, islands, plains, rivers) and water features (oceans, seas, bays, channels). Primary orientation reference. **8192×6144px.**
-- `world-sky.png` — sky layer with Opticon's Fade, Slice A, The Hearth (Islift C), The Landing (Islift F), and other air-situated features labeled.
+Masters live in `maps/world/masters/` (gitignored, fetched from the Inkarnate CDN via `.\scripts\fetch-maps.ps1`; manifest `maps/sources.tsv`). Resolution is whatever the export is — scripts derive cell size from each master's actual `img.size`.
+
+- `masters/world-names.webp` — consolidated label map; all land features (continents, sub-continents, mountain ranges, deserts, tundra, islands, plains, rivers) and water features (oceans, seas, bays, channels). Primary orientation reference. Tiled as `tiles/{nw,n,...}.png`.
+- `masters/world-sky.webp` — sky layer with Opticon's Fade, Slice A, The Hearth (Islift C), The Landing (Islift F), and other air-situated features labeled. Tiled as `tiles/sky-{nw,...}.png`.
 - `city-registry.md` — stable ID index for all 378 unnamed city markers. IDs survive until a city graduates (is named). Use for player assignments and cross-references.
-- `city-markers.png` — transparent PNG overlay; red dots mark cities that exist in the world but are unnamed and undetailed. No labels. Tiled as `tiles/markers-{name}.png`. Use alongside base tiles to see undetailed cities in any area.
+- `masters/city-markers.webp` — flattened base+dots export; red dots over the surface map mark cities that exist but are unnamed and undetailed. No labels. Tiled as `tiles/markers-{nw,...}.png`. Use alongside base tiles to see undetailed cities in any area.
 
 ## Conventions
 

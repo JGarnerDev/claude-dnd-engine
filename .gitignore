@@ -5,3 +5,13 @@ questionnaires/*
 !questionnaires/.gitkeep
 vector-index/
 tasks/*
+
+# No map images in git. Masters are fetched from the Inkarnate CDN
+# (scripts/fetch-maps.ps1, manifest maps/sources.tsv, committed); tiles and crops are
+# generated locally (scripts/gen-tiles.py, scripts/map-crop.ps1). Cold-start sequence:
+# fetch-maps.ps1 -> gen-tiles.py.
+maps/**/*.png
+maps/**/*.webp
+maps/**/*.jpg
+maps/**/*.jpeg
+maps/**/*.gif

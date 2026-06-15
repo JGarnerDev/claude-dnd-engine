@@ -1,0 +1,9 @@
+# Map source manifest — local_path <TAB> inkarnate_cdn_url
+# Images listed here are gitignored and fetched on demand by scripts/fetch-maps.ps1.
+# Master images live in maps/world/masters/ (the whole dir is gitignored); markdown
+# and small read-tiles stay committed elsewhere under maps/.
+# When you re-export a map in Inkarnate, the CDN url changes — update it here.
+# Lines starting with # and blank lines are ignored.
+maps/world/masters/world-names.webp	https://cdn2.inkarnate.com/4829506-33ebc92a-650d-11f1-916e-62080cd436f4?disposition=attachment
+maps/world/masters/world-sky.webp	https://cdn2.inkarnate.com/4829506-dcb347d2-6836-11f1-8b1c-e61f2674a2e9?disposition=attachment
+maps/world/masters/city-markers.webp	https://cdn2.inkarnate.com/4829506-e14730e0-6833-11f1-90f7-e61f2674a2e9?disposition=attachment

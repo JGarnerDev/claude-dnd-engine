@@ -1,4 +1,4 @@
-<!-- SKELETON — copy to maps/world/city-registry.md and fill once city-markers.png exists. Delete these HTML comments as you go. ID format and graduation rules are structural: see maps/CLAUDE.md → City Marker ID Format and City graduation. -->
+<!-- SKELETON — copy to maps/world/city-registry.md and fill once city-markers.webp has been fetched into maps/world/masters/. Delete these HTML comments as you go. ID format and graduation rules are structural: see maps/CLAUDE.md → City Marker ID Format and City graduation. -->
 
 # City Registry
 

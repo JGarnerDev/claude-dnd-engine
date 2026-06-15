@@ -41,18 +41,20 @@ DM's read on bonds, tensions, and shared history between PCs. Not canon history 
 The engine runs mapless (theater-of-the-mind, or a module's own map) — but a world map keeps travel, adjacency, and `/region` math consistent. Ask the DM up front, before any region or city work:
 
 - **Providing a map at all?** If no, skip this step entirely — pool entities don't need coordinates. If yes, continue.
-- **Which layers, and when** — `world-names.png` (base, required), `world-sky.png` (optional aerial), `city-markers.png` (optional undetailed-city dots). Note which exist now vs. coming later; build only from what's present.
-- **World & grid scale** — real-world distance per cell, grid dimensions (cols × rows), equator row, pole rows, base image pixel size. Record these in `maps/CLAUDE.md` → Grid Scale (and update the hardcoded numbers in the map scripts if they differ from the template defaults).
+- **Which layers, and when** — `world-names.webp` (base, required), `world-sky.webp` (optional aerial), `city-markers.webp` (optional flattened base+dots export). Note which exist now vs. coming later; build only from what's present. Masters are fetched from a CDN, not committed (see below).
+- **World & grid scale** — real-world distance per cell, grid dimensions (cols × rows), equator row, pole rows. Record these in `maps/CLAUDE.md` → Grid Scale. Cell *pixel* size is derived per-image at run time, so only the km-per-cell distance (`$GRID_KM` in `region-scale.ps1` / `region-world-context.ps1`) is hardcoded — update it if it differs from the template default.
 - **Biome census** — what biomes / climate zones the world contains and roughly where. Captured into the **Biome Census** section of `index.md` below; it feeds `/region` and entity generation.
 
-**Build from skeletons (do not pre-fill, do not ship a foreign world's data):** once the layers are placed in `maps/world/`, build this world's data files from the synced skeletons:
+**Fetch the masters (not committed):** map masters are large binaries pulled on demand from the Inkarnate CDN. For each layer, paste its `cdn2.inkarnate.com/...?disposition=attachment` url into `maps/sources.tsv`, then run `.\scripts\fetch-maps.ps1` to download them into `maps/world/masters/` (gitignored).
 
-1. Copy `maps/world/index-template.md` → `maps/world/index.md`; fill Status, Images, Biome Census, and grid pixel size. Leave Tile Coverage / Known Region Positions to populate as features are read.
+**Build from skeletons (do not pre-fill, do not ship a foreign world's data):** once the masters are fetched, build this world's data files from the synced skeletons:
+
+1. Copy `maps/world/index-template.md` → `maps/world/index.md`; fill Status, Images, Biome Census. Leave Tile Coverage / Known Region Positions to populate as features are read.
 2. Copy `maps/world/city-registry-template.md` → `maps/world/city-registry.md` (only if a markers layer exists).
-3. Run `python scripts\gen-tiles.py` to slice every layer into the nine legible tiles.
+3. Run `python scripts\gen-tiles.py` to slice every layer into the nine legible tiles (plus `markers-*` / `sky-*` sets).
 4. Read the tiles to fill Tile Coverage and seed Known Region Positions.
 
-The skeletons and `maps/CLAUDE.md` are the only map files that ship in the template; `index.md`, `city-registry.md`, and all `.png` layers are this world's data and are never shipped pre-filled.
+The skeletons, `maps/CLAUDE.md`, and `maps/sources.tsv` are the map files that ship in the template; `index.md`, `city-registry.md`, all fetched `.webp` masters, and every generated tile/crop are this world's data and are never committed or shipped pre-filled (no map images live in git).
 
 ---
 
