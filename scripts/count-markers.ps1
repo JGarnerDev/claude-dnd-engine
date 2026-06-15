@@ -14,7 +14,8 @@ param(
     [int]$ColMax     = 0,
     [int]$RowMin     = 0,
     [int]$RowMax     = 0,
-    [int]$Margin     = 112
+    [int]$Margin     = 112,
+    [int]$MinArea    = -1       # -1 = auto (~0.0006 of a grid cell; scales with resolution). Drops sub-dot specks (lava flecks / webp noise).
 )
 
 . "$PSScriptRoot\map-common.ps1"
@@ -63,6 +64,7 @@ $Lc3 = "left   = max(0, round(($ColMin - 1) * cw) - $Margin)"
 $Lc4 = "top    = max(0, round(($RowMin - 1) * ch) - $Margin)"
 $Lc5 = "right  = min(W, round($ColMax * cw) + $Margin)"
 $Lc6 = "bottom = min(H, round($RowMax * ch) + $Margin)"
+$Lc7 = "min_area = ($MinArea) if ($MinArea) >= 0 else max(6, round(cw * ch * 0.0006))"
 $L3  = "crop = img.crop((left, top, right, bottom))"
 $L4  = 'w, h = crop.size'
 $L5  = 'pixels = crop.load()'
@@ -76,19 +78,21 @@ $L12 = 'count = 0'
 $L13 = 'while red:'
 $L14 = '    start = next(iter(red))'
 $L15 = '    stack = [start]'
+$L15b= '    size = 0'
 $L16 = '    while stack:'
 $L17 = '        p = stack.pop()'
 $L18 = '        if p not in red: continue'
 $L19 = '        red.discard(p)'
+$L19b= '        size += 1'
 $L20 = '        x, y = p'
 $L21 = '        for dx, dy in [(-1,0),(1,0),(0,-1),(0,1),(-1,-1),(-1,1),(1,-1),(1,1)]:'
 $L22 = '            nx, ny = x+dx, y+dy'
 $L23 = '            if 0 <= nx < w and 0 <= ny < h:'
 $L24 = '                stack.append((nx, ny))'
-$L25 = '    count += 1'
+$L25 = '    if size >= min_area: count += 1'
 $L26 = 'print(count)'
 
-@($L1,$L2,$Lc1,$Lc2,$Lc3,$Lc4,$Lc5,$Lc6,$L3,$L4,$L5,$L6,$L7,$L8,$L9,$L10,$L11,$L12,$L13,$L14,$L15,$L16,$L17,$L18,$L19,$L20,$L21,$L22,$L23,$L24,$L25,$L26) | Set-Content -Path $pyTmp -Encoding utf8
+@($L1,$L2,$Lc1,$Lc2,$Lc3,$Lc4,$Lc5,$Lc6,$Lc7,$L3,$L4,$L5,$L6,$L7,$L8,$L9,$L10,$L11,$L12,$L13,$L14,$L15,$L15b,$L16,$L17,$L18,$L19,$L19b,$L20,$L21,$L22,$L23,$L24,$L25,$L26) | Set-Content -Path $pyTmp -Encoding utf8
 
 $result = python $pyTmp
 Remove-Item $pyTmp
