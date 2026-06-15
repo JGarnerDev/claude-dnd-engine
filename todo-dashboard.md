@@ -20,7 +20,7 @@
 3. 🙋 **The party** — Three world questionnaires open (history & calendar, magic, religion); four lore drafts stay half-written until those come in.
 4. 🙋 **Kellan** — Difficulty has gaps (skill-check DCs, non-combat stakes, party power-level note) and rewards is blank (gold, item philosophy, leveling pace); encounters and loot stay generic D&D math until filled. (Not a questionnaire — a meta call.)
 5. 🙋 **Kellan** — Historian backfill: flesh out The Party (formation, reputation, goals), confirm unresolved player details, prompt PC backstories, backfill entities invented at the table.
-6. 🙋 **The party** — Where do we start? Pick a starting region (48 exist but undetailed). Once chosen, say the word and I'll `/region` it: starting city, local peoples & factions, and per-city player questionnaires in one pass.
+6. 🙋 **The party** — After Strahd: where do we start in the new world? Pick a starting region (48 exist but undetailed). Once chosen, say the word and I'll `/region` it: starting city, local peoples & factions, and per-city player questionnaires in one pass. (Not urgent — the Strahd arc runs first.)
 
 ## ⚪ Backlog
 
