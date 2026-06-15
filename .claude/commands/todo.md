@@ -30,6 +30,8 @@ Three groups, in this order. One line per item: plain-language what + why it mat
 
 Format per line: `N. <emoji> **<Person>** — <what + why>`
 
+**Project access — command-running tasks go to Kellan.** Kellan is the only person with direct access to this project. Any task that requires running a command, script, or slash command *inside the engine* (index rebuilds, `/region`, `/session`, validation, questionnaire ingestion, canonization) is therefore his to trigger — never assign it to a player or to "anyone." 🤖 still marks work Claude executes, but the human who invokes it is Kellan, so address the "say *do N*" prompt to him. Only tasks doable **outside** the engine stay with players: filling a shared questionnaire sheet, manual map/image edits, creative or table input. When unsure whether a task needs project access, default it to Kellan. "**anyone**" is reserved for pure ⚪ FYI lines that no one need act on — never for a task that runs a command.
+
 **Tag every item with who can act**, so the DM sees at a glance what to delegate to Claude vs. chase in person:
 
 - 🤖 — Claude can do it now; name the command or script ("say *do 2* and I'll rebuild the search index")
