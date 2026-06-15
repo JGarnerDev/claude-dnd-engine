@@ -6,6 +6,10 @@
 # Saves temp crops to maps/world/temp-crop.png (caller must delete).
 # -Markers: also crop city-markers.webp to same bounds -> <slug>-markers.png or temp-markers.png
 #
+# WARNING: keep -Output inside maps/. .gitignore covers maps/**/*.{png,webp,...} but NOT
+# arbitrary paths elsewhere. A crop written outside maps/ can be committed by accident --
+# never commit generated images.
+#
 # Usage:
 #   .\scripts\map-crop.ps1 -Feature "Erevast"
 #   .\scripts\map-crop.ps1 -Feature "Erevast" -Markers

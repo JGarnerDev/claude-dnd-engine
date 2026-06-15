@@ -4,6 +4,8 @@
 
 The three world masters are large Inkarnate WebP exports. **No map images are committed** — the masters are gitignored and fetched on demand, and the tiles/crops are generated locally from them. The only committed map artifact is the manifest `maps/sources.tsv`.
 
+> **Never commit generated images.** The `.gitignore` blankets `maps/**/*.{png,webp,jpg,jpeg,gif}`, so every default output path is covered automatically. The one gap: `map-crop.ps1 -Output <path>` lets you write a crop *outside* `maps/`, which the ignore rules do not catch. Always keep `-Output` inside `maps/` (the default `maps/locations/` is correct). If you ever crop elsewhere, `git status` it before any commit and discard it — image files do not belong in version control.
+
 **Cold-start sequence (fresh clone has no images):**
 
 1. `.\scripts\fetch-maps.ps1` — pull masters into `maps/world/masters/`. `-List` shows present/missing; `-Force` re-downloads. It rejects non-image / truncated responses, so a stale CDN url fails loudly instead of corrupting the pipeline.
