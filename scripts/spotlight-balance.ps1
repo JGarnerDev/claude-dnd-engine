@@ -127,11 +127,27 @@ foreach ($r in ($rows | Sort-Object Turns, Name)) {
     Write-Host ("  {0,-20} {1,5} turns{2}" -f $r.Name, $r.Turns, $tag) -ForegroundColor $color
 }
 
-# Overdue = fewest windowed turns among present, normal-appetite PCs
+# Overdue = fewest windowed turns among present, normal-appetite PCs.
+#
+# All-zeros guard: if NO eligible PC has any turns, the ledger has no real
+# spotlight data in the window yet. Ranking an all-zero tie just sorts by name
+# and fabricates a meaningless "overdue" PC (this is why early runs flagged the
+# first PC alphabetically). Suppress the flag until at least one >= beat
+# spotlight is actually recorded.
+#
+# NOTE FOR KELLAN: this readout stays silent until you deliberately plan a
+# spotlight into a session and it gets tagged as a `beats:` line at /recap. It
+# is intentionally NOT reconstructed from past sessions -- those character
+# moments were player-reactive, not DM-built spotlights, so backfilling them
+# would mislead this metric. Once you start planning spotlights, the flag
+# tracks itself. Ask Claude to elaborate if this isn't clear.
 $eligible = $rows | Where-Object { $_.Appetite -ne 'low' -and $_.Seen }
-$overdue = $eligible | Sort-Object Turns, Name | Select-Object -First 1
-if ($overdue) {
+$maxTurns = ($eligible | Measure-Object -Property Turns -Maximum).Maximum
+if ($eligible -and $maxTurns -gt 0) {
+    $overdue = $eligible | Sort-Object Turns, Name | Select-Object -First 1
     Write-Host ("`n  Overdue: {0} ({1} turns - fewest among present, normal-appetite PCs)" -f $overdue.Name, $overdue.Turns) -ForegroundColor Green
+} elseif ($eligible) {
+    Write-Host "`n  no structural spotlight data yet - starts once a planned spotlight beat is recorded." -ForegroundColor DarkGray
 }
 
 # -- Missing hooks ------------------------------------------------------------

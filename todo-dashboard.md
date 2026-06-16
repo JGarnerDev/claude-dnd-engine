@@ -1,42 +1,31 @@
-*Generated 2026-06-14 by /todo*
+*Generated 2026-06-15 by /todo*
 
 **Who acts:**
 
-- 🤖 Claude can do it — just say "do N"
-- 🤝 Claude drafts, Kellan decides
-- 🙋 needs a person
-- ❓ possibly done, confirm
-- ⚪ just FYI, no action
-
-# 🎲 Two days to Tuesday, the table awaits 🐉
+- 🤖 — Claude can do it now (name the command)
+- 🙋 — needs a human (player input, DM creative call, manual work)
+- 🤝 — joint: Claude drafts/runs, DM decides or approves
+- ⚪ — FYI only, no action needed right now
+- ❓ — owner unclear
 
 ## 🔴 Do soon
 
-1. 🤝 **Kellan** — No plan for Tuesday's game (June 16, 2 days away); say *do 1* and I'll run `/session` with you.
-2. 🤝 **Kellan** — The party's rest tracker was never set up, so encounter math leans on nothing and a plan could be balanced for the wrong party. Two quick questions at `/session` or `/recap` settles it.
+1. 🤝 **Kellan** — no plan drafted for Tuesday's game night (1 day out); run /session before the table sits down.
+2. 🤝 **Kellan** — the party's rest tracker was never set up; next session's encounter math leans on it, so settle it at /session.
 
 ## 🟡 Waiting on people
 
-3. 🙋 **The party** — Three world questionnaires open (history & calendar, magic, religion); four lore drafts stay half-written until those come in.
-4. 🙋 **Kellan** — Difficulty has gaps (skill-check DCs, non-combat stakes, party power-level note) and rewards is blank (gold, item philosophy, leveling pace); encounters and loot stay generic D&D math until filled. (Not a questionnaire — a meta call.)
-5. 🙋 **Kellan** — Historian backfill: flesh out The Party (formation, reputation, goals), confirm unresolved player details, prompt PC backstories, backfill entities invented at the table.
-6. 🙋 **The party** — After Strahd: where do we start in the new world? Pick a starting region (48 exist but undetailed). Once chosen, say the word and I'll `/region` it: starting city, local peoples & factions, and per-city player questionnaires in one pass. (Not urgent — the Strahd arc runs first.)
+1. 🙋 **The party** — five world questionnaires sit unfilled (history/calendar, magic, religion, naming, Struck/Arc Side); the matching lore docs stay blank until they're answered.
 
 ## ⚪ Backlog
 
-7. 🤝 **Kellan** — Region passes queued from the new map names: Kethara, Greywood, The Reach, northern/southwestern waters, the sky layer, plus Paul's Struck Side (western waters + Caldera's Brace). All name-only until detailed — no geography, settlements, or routes.
-8. 🤝 **Kellan** (seeds as the starting area firms up) — Empty entity types: no PCs, events, or rumors yet (rest of the pool is seeded — 48 regions, 13 factions, 18 wilderness, 5 dungeons). PCs come from player backstories; events & rumors seed naturally — but the seeding runs in-engine, so it's yours to trigger.
-9. 🤝 **Kellan** — Scheduler is bare: only a placeholder Act 1, no missions. Needs real act notes and a first mission before session planning has structure to hang on.
-10. 🤝 **Kellan** — Pre-canon checks for when you batch player entities: contribution balance (no player above ~40%), scope creep, naming collisions, leftover TBD fields.
-11. 🤝 **Kellan** — Spotlight tracking is live but no PC has story hooks yet (Dip is overdue; Dip, Iggy, Luci, Odibli all empty). The backstory passes in item 5 pull double duty — each fear/wound/goal becomes a hook the planner can feature. No new work beyond item 5.
-12. 🙋 **Jeff** — Paint the new names onto the world map: Kellan's ~20 (Kethara, Greywood, The Reach, the ranges, seas, channels, plus sky islands The Watcher & The Companion) + Paul's 6 + older pending (hemisphere names, compass rose). Hand to Jeff if none are spoilers — say the word and I'll draft a request sheet.
-13. 🙋 **The party** — Still-unnamed features have no sheet owner: **Continent C** (still blocks The Ashwall's region link), **Channel B**, 8 rivers (A, B, C, F, H, I, K, M), 8 plains (B, C, D, F, G, H, I, J). Master sheet `world-naming.md` holds the prompts.
-14. 🙋 **The party** — No party name yet — still just "The Party." Not urgent, but worth a nudge; say the word and I'll pitch options grounded in the characters and campaign.
-15. ⚪ **anyone** (revisit if a thread resurfaces) — Five Strahd threads still dangling: Doru transformed; Gertrude, Rose, Thorn, the Dream Pastry Woman all missing. Kellan can run `/threads` for the full picture when one resurfaces.
-16. ⚪ **anyone** (when one turns central) — Faction internal-life deep-dives (Vitricants, Mintners, Partenariats, Lifted, Courts Superior) — none needed up front. When one turns central, Kellan spins it up via `/entity-questionnaire`.
-17. ⚪ **anyone** (FYI) — 15 group story ideas still waiting their moment; stretch ideas: sea currents on trade routes, private player→DM questionnaires.
-18. ⚪ **anyone** (FYI) — Spotlight ledger starts blank: the played sessions carry no beat tags, so balance/rotation read "insufficient history" for now. Every `/recap` from here tags beats automatically; backfilling old sessions isn't worth it.
-
-**If you do one thing today:** *do 1* — draft Tuesday's session. Everything else can wait, game night can't.
-
-🤘 👑 All hail the DM 👑 🤘
+1. ⚪ **anyone** (open threads) — the Dream Pastry Woman, Gertrude, Rose, and Thorn are still missing and Doru is transformed; run /threads for the full picture.
+2. 🤝 **The party** — Dip, Iggy, Luci, and Odibli have no backstory hooks on file; a backstory pass lets the planner feature them.
+3. 🙋 **The party** — the group is still just called "The Party"; pick a name.
+4. 🤝 **Kellan** — only a placeholder act exists and no missions are defined; needs real act notes and mission structure.
+5. ⚪ **anyone** (FYI) — no PCs, events, or rumors created yet (world still under construction).
+6. 🙋 **Jeff** — worldmap labels: name the Struck/Arc Side hemispheres and add a compass rose (hand to Jeff if it's not a player-discovery spoiler — say the word and I'll draft a request sheet).
+7. 🤝 **Kellan** — nine map regions still need /region detailing passes (western Struck Side, Kethara, Greywood, The Reach, northern/southwestern waters, sky layer, and more).
+8. ⚪ **anyone** (FYI) — lore drafts for calendar, history, magic, and religion are parked pending questionnaire answers.
+9. ⚪ **anyone** (FYI) — 14 broken cross-references, all expected placeholder world names under construction.
+10. ⚪ **anyone** (FYI) — 15 group design ideas still waiting for their moment in a session.
