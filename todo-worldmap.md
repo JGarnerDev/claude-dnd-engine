@@ -106,12 +106,12 @@ Replace placeholder labels with Miguel's canonical names.
 
 Entities created/renamed in `data/`. Map tiles **not yet updated** — these are placeholder map letters awaiting labels on the `world-names.webp` master (add in Inkarnate, re-export, update the `maps/sources.tsv` url, `fetch-maps.ps1 -Force`, then `gen-tiles.py`):
 
-- [ ] **Ocean A** → **Crystalline Vast** (western ocean; phosphorescent on Showering nights)
-- [ ] **Channel I** → **Tempered Parting** (was placeholder-labeled "Channel I"; far-left, separates Watler's Way from Struck Side)
-- [ ] **Mountains O** → **The Great Carve** (outer rim of the Caldera's Struck Side)
-- [ ] **Mountains P** → **Hell's Reign** (inner crater wall, deeper into Struck Side)
-- [ ] **Islands A** → **Watler's Way** (western volcanic chain; hosts the Ashreaches)
-- [ ] **Islands D** → **Caldera's Brace** (far-right / eastern wrap-seam edge; magma-splash ejecta — note this is the *same meridian* as the Caldera per the projection wrap)
+- [x] **Ocean A** → **Crystalline Vast** (western ocean; phosphorescent on Showering nights) — painted, verified on tile 2026-06-15
+- [x] **Channel I** → **Tempered Parting** (was placeholder-labeled "Channel I"; far-left, separates Watler's Way from Struck Side) — painted, verified 2026-06-15
+- [x] **Mountains O** → **The Great Carve** (outer rim of the Caldera's Struck Side) — painted, verified 2026-06-15
+- [x] **Mountains P** → **Hell's Reign** (inner crater wall, deeper into Struck Side) — painted, verified 2026-06-15
+- [x] **Islands A** → **Watler's Way** (western volcanic chain; hosts the Ashreaches) — painted, verified 2026-06-15
+- [x] **Islands D** → **Caldera's Brace** (far-right / eastern wrap-seam edge; magma-splash ejecta — note this is the *same meridian* as the Caldera per the projection wrap) — painted, verified 2026-06-15
 
 ### Deferred — `/region` detailing
 
@@ -126,23 +126,23 @@ The 4 newly-created stubs are **name-only** (`exists: false`, body flagged "awai
 
 Entities created in `data/`. Map tiles **not yet updated** — these are placeholder map letters awaiting labels on `world-names.png` (ground) and `world-sky.png` (islifts):
 
-- [ ] **Continent F** → **Kethara** (lower-right arid landmass)
-- [ ] **Continent G** → **Greywood** (eastern forested island-continent)
-- [ ] **Sub Continent E** → **The Reach** (upper-right, faces main continent)
-- [ ] **Mountains G** → **The Scorched Rim** (southern range of Kethara)
-- [ ] **Mountains I** → **The Greymast** (eastern spine of The Reach)
-- [ ] **Mountains K** → **The Elderspine** (Greywood southern forest range)
-- [ ] **Mountains Q** → **The Ashwall** (Continent C volcanic range)
-- [ ] **Desert F** → **The Amber Plain** (center-right, The Narrows area)
-- [ ] **Islands I** → **The Pale Shore** (upper-right, north of The Reach)
-- [ ] **Islands J** → **The Westward Stones** (lower-left, near Continent C/D)
-- [ ] **Sea F** → **The Ashen Sea** (southwest volcanic sea)
-- [ ] **Bay D** → **The Maw** (Greywood west coast)
-- [ ] **Channel C** → **The Collar** (northern approach between main continent and Greywood)
-- [ ] **Channel E** → **The Ember Strait** (far right of Greywood, volcanic island across)
-- [ ] **Channel J** → **The Rift** (lower-center gap in main continent)
-- [ ] **Islift D** → **The Watcher** (upper-left, high altitude) — on `world-sky.png`
-- [ ] **Islift E** → **The Companion** (upper center-right, paired with The Watcher) — on `world-sky.png`
+- [x] **Continent F** → **Kethara** (lower-right arid landmass) — painted, verified se tile 2026-06-15
+- [x] **Continent G** → **Greywood** (eastern forested island-continent) — painted, verified e tile 2026-06-15
+- [x] **Sub Continent E** → **The Reach** (upper-right, faces main continent) — painted, verified e tile 2026-06-15
+- [x] **Mountains G** → **The Scorched Rim** (southern range of Kethara) — painted, verified se tile 2026-06-15
+- [x] **Mountains I** → **The Greymast** (eastern spine of The Reach) — painted, verified e tile 2026-06-15
+- [x] **Mountains K** → **The Elderspine** (Greywood southern forest range) — painted, verified se tile 2026-06-15
+- [x] **Mountains Q** → **The Ashwall** (Continent C volcanic range) — painted 2026-06-15 (region link still blocked — Continent C unnamed)
+- [x] **Desert F** → **The Amber Plain** (center-right, The Narrows area) — painted, verified e tile 2026-06-15
+- [x] **Islands I** → **The Pale Shore** (upper-right, north of The Reach) — painted 2026-06-15
+- [x] **Islands J** → **The Westward Stones** (lower-left, near Continent C/D) — painted 2026-06-15
+- [x] **Sea F** → **The Ashen Sea** (southwest volcanic sea) — painted 2026-06-15
+- [x] **Bay D** → **The Maw** (Greywood west coast) — painted, verified e tile 2026-06-15
+- [x] **Channel C** → **The Collar** (northern approach between main continent and Greywood) — painted, verified e tile 2026-06-15
+- [x] **Channel E** → **The Ember Strait** (far right of Greywood, volcanic island across) — painted, verified e tile 2026-06-15
+- [x] **Channel J** → **The Rift** (lower-center gap in main continent) — painted, verified se tile 2026-06-15
+- [x] **Islift D** → **The Watcher** (upper-left, high altitude) — on `world-sky.png` — painted, verified sky crop 2026-06-15
+- [x] **Islift E** → **The Companion** (upper center-right, paired with The Watcher) — on `world-sky.png` — painted, verified sky crop 2026-06-15
 
 ### Deferred — `/region` detailing
 
