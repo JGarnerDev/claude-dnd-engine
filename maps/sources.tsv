@@ -4,6 +4,6 @@
 # and small read-tiles stay committed elsewhere under maps/.
 # When you re-export a map in Inkarnate, the CDN url changes — update it here.
 # Lines starting with # and blank lines are ignored.
-maps/world/masters/world-names.webp	https://cdn2.inkarnate.com/4829506-9c50ef2e-6902-11f1-8143-e29ef16624f7?disposition=attachment
+maps/world/masters/world-names.webp	https://cdn2.inkarnate.com/4829506-730a7d26-6928-11f1-9602-e61f2674a2e9?disposition=attachment
 maps/world/masters/world-sky.webp	https://cdn2.inkarnate.com/4829506-eb7ddc6a-6902-11f1-911d-e29ef16624f7?disposition=attachment
 maps/world/masters/city-markers.webp	https://cdn2.inkarnate.com/4829506-e14730e0-6833-11f1-90f7-e61f2674a2e9?disposition=attachment
