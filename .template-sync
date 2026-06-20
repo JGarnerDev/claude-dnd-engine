@@ -6,8 +6,9 @@
 #   meta/mysteries.md                — campaign load-bearing unknowns; create fresh per campaign
 #   meta/campaign-design-preferences.md — this group's wishlist; create fresh per campaign
 #   meta/party-relationships.md      — this party's bonds; create fresh per campaign
+#   meta/calendar.md                 — this world's months/epoch; built from meta/calendar-template.md per campaign
 #   data/factions/*, data/locations/*, data/routes/*, data/lore/*, data/characters/*
-#   data/items/magic/*               — contains Strahd-specific items
+#   data/items/magic/*               — may contain campaign-specific items
 #   data/world-events-pool.md        — campaign event pool
 #   historian/*, scheduler/*, maps/* (except maps/CLAUDE.md and the structural scaffolds below:
 #     maps/map-request-template.md, maps/world/index-template.md, maps/world/city-registry-template.md)
@@ -19,6 +20,7 @@ CLAUDE.md
 README.md
 .template-sync
 .markdownlint.json
+.gitignore
 
 # Git hooks — pre-commit Markdown auto-format (paired with scripts/setup-hooks.ps1)
 .githooks/pre-commit
@@ -40,12 +42,14 @@ README.md
 .claude/commands/session.md
 .claude/commands/sync.md
 .claude/commands/threads.md
+.claude/commands/timeline.md
 .claude/commands/todo.md
 .claude/commands/transition.md
 .claude/commands/voice.md
 
 # Meta — engine protocol and structural guidelines
 meta/schemas/*.md
+meta/calendar-template.md
 meta/character-focus.md
 meta/entity-creation.md
 meta/graph-settings.md
@@ -80,6 +84,9 @@ tests/rubrics/principles.md
 tests/commands/session/spec.md
 
 # Data — standard D&D reference catalogs
+# NOTE: spell/monster bodies are copied wholesale. Keep their commentary campaign-neutral
+# in the source repo before syncing — do not let campaign proper nouns (NPC names, place
+# names, module names) leak into these reference files, or they ship into the template.
 data/backgrounds/*.md
 data/classes/*.md
 data/deities/*.md
@@ -94,11 +101,7 @@ data/spells/*.md
 # These are homebrew or world-economy entries that belong to this campaign, not the engine.
 # A new campaign should create its own world resources from scratch.
 # Add a line here whenever a new world-specific resource lands in data/resources/.
-!data/resources/Coffee.md          # five-house monopoly; this world's economy
-!data/resources/Fargrsh.md         # Ben's contributed resource
-!data/resources/Serhari.md         # Jeff's contributed resource
-!data/resources/Stonecap Mushroom.md  # world-specific flora
-!data/resources/Whatwill.md        # world-specific material
+#!data/resources/Example.md        # example: a player-contributed, world-specific resource to exclude
 
 # Scripts — all engine scripts and shared library
 scripts/lib/common.ps1
@@ -110,6 +113,7 @@ scripts/gen-tiles.py
 scripts/index-entities.py
 scripts/inventory-brief.ps1
 scripts/location-entities.ps1
+scripts/map-common.ps1
 scripts/map-crop.ps1
 scripts/monster-lookup.ps1
 scripts/naming-status.ps1
@@ -127,10 +131,19 @@ scripts/session-state.ps1
 scripts/setup-hooks.ps1
 scripts/spotlight-balance.ps1
 scripts/threads-brief.ps1
+scripts/timeline-data.ps1
+scripts/timeline-gantt.ps1
 scripts/todo-brief.ps1
 scripts/validate-refs.ps1
 scripts/validate.ps1
 
+# Charting app — timeline/swimlane chart engine (TS + Vite)
+# Whole tree is shareable engine infrastructure (components, helpers, specs,
+# build config, lockfile). Demo page is template-only debugging scaffolding.
+app/**
+!app/pages/demo/**
+
 # IDE / graph config
 .vscode/settings.json
+.vscode/extensions.json
 .obsidian/graph.json
