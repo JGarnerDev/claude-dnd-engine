@@ -32,27 +32,28 @@ description: "Active Curse of Strahd campaign; party at level 3 after completing
 
 > **Reliability note:** Character full names for Luci and Dip are unconfirmed — only nicknames/handles appear in the notes. Character classes for Luci and Dip are inferred from abilities observed in play. Confirm with DM.
 
-## Current State (after Session 10)
+## Current State (as of: Session 14)
 
-- Party level: **3**
-- Location: Just outside Death House, Barovia. Strahd greeted them upon exit.
-- Death House: **Completed and escaped.** Lucy sacrificed herself on the altar; Strahd retrieved her from death.
-- Rose and Thorn: **Stranded.** Ben and Miguel left the pages behind when the mists carried the party out.
+- Party level: **3** (confirmed Session 14)
+- Location: On the road to [[Vallaki]], at a waterfall beside a chasm and river. Took the short bridge path; **Strahd's carriage waits ahead on the bridge.**
+- Companions: [[Ireena Kolyana]] and [[Ismark Kolyanovich]] travel with the party; [[Bosco]] rides with Iggy (learned "Sit").
+- **Madame Eva's tarokka reading received** at the [[Tser Pool Encampment]] — the five Fortunes of Ravenloft now map the campaign's treasures, ally, and enemy. See [[Session 14 The Tarokka Reading]].
 - Iggy's shadow does not match his form and moves in the wrong direction.
-- Dip hears whispers when it is quiet.
-- Both afflictions stem from Odibli absorbing shadow essence to revive dead party members in Session 10.
+- Dip hears whispers when it is quiet. **Open thread:** Eva says "a part of Dip remains in the land of the dead" — meaning left for Kellan to define.
+- Both shadow/whisper afflictions stem from Odibli absorbing shadow essence to revive dead party members in Session 10.
+- Rose and Thorn: **Stranded.** Ben and Miguel left the pages behind when the mists carried the party out of Death House.
 
-### Rest Clock (as of: never recorded)
+### Rest Clock (as of: Session 14)
 
 Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` → Long Rest Rules).
 
-- In-world time now: unknown — reconstruct with DM
-- Last long rest (in-world): unknown — clock introduced after Session 13; reconstruct with DM
-- Hours since last long rest: unknown
-- Long rest available: unknown (needs ≥24h since last + safe location + no PC at 0 HP)
-- Rounds of combat since: unknown
-- Short rests since: unknown
-- Notable burns: unknown
+- In-world time now: morning–midday, the day after the camp, on the road ~half a day from Vallaki (~estimate; clock first anchored this session)
+- Last long rest (in-world): overnight at the [[Tser Pool Encampment]]
+- Hours since last long rest: ~6–8h (~estimate)
+- Long rest available: no — <24h since last long rest and not in a safe spot (open road, Strahd's carriage ahead)
+- Rounds of combat since: 0 (roleplay/travel session)
+- Short rests since: 0
+- Notable burns: none
 
 ## Rules Decisions
 

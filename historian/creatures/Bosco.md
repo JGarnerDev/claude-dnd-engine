@@ -18,7 +18,7 @@ aliases:
 importance: major
 active: true
 owner: [[Iggy]]
-last_updated: [[Session 13 Dream Pastries]]
+last_updated: [[Session 14 The Tarokka Reading]]
 relates_to:
   - [[Iggy]] (companion; bonded over a ration)
   - [[Odibli]] (cold war — Odibli ate a ration in front of him)
@@ -88,3 +88,7 @@ Grey-black fur gone slightly ragged at the edges — but thicker and better-kept
 Odibli then ate a ration directly in front of Bosco. Deliberately, or obliviously — the intent is unclear. Bosco registered it either way.
 
 The grievances are layered: deception first, then provocation. Bosco does not distinguish between the two. Both are on the ledger. The cold war persists into the road to Vallaki.
+
+## Training (Session 14)
+
+At the [[Tser Pool Encampment]], [[Iggy]] began training Bosco over long rests — "Sit, stay, come." So far **only "Sit" learned.** Iggy also fed him and sang an ode to him before the Vistani, charming the camp.

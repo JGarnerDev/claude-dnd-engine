@@ -9,36 +9,48 @@ tags:
   - character
   - character/npc
 
-location: "West of Barovia Village — exact location unknown"
-personality: "Unknown. Known only by reputation as a fortune teller."
-livelihood: "Fortune teller."
-disposition: unknown
-aliases: []
+location: "[[Tser Pool Encampment]] — her tent, on the road west of Barovia Village"
+personality: "Cryptic and commanding. A seer who deals only in riddles — gives no more than she means to."
+livelihood: "Fortune teller / seer."
+disposition: ambiguous
+aliases: ["the crone"]
 importance: major
 active: true
 relates_to:
   - [[Alenka]] (knows of her; recommended her to party)
+  - [[Tser Pool Encampment]] (her tent stands here)
   - [[Barovia Village]] (lives west of here)
+  - [[The Party]] (read their tarokka, Session 14)
   - [[Curse of Strahd]] (campaign)
 known_by:
-  - [[The Party]] (partial — heard of her from Alenka)
-description: "Madame Eva. Fortune teller. Lives west of Barovia Village. Recommended to the party by Alenka."
+  - [[The Party]] (met; received her tarokka reading, Session 14)
+description: "Seer and fortune teller dwelling at the Tser Pool Encampment west of Barovia Village. Was expecting the party when they arrived in Session 14 and laid a five-card tarokka reading — the Fortunes of Ravenloft — pointing them to a holy symbol, a sword of sunlight, an ally, and where Strahd may be found. Answers only in riddles."
 source_session: [[Session 11 Blood of the Vine]]
 confirmed_date: "2026-05-19"
+last_updated: [[Session 14 The Tarokka Reading]]
 
 race: "unknown"
 ---
 
-Location: West of [[Barovia Village]] | Campaign: [[Curse of Strahd]]
+Location: [[Tser Pool Encampment]], west of [[Barovia Village]] | Campaign: [[Curse of Strahd]]
 
-Known by reputation. [[Alenka]] at the [[Blood of the Vine Tavern]] recommended the party visit her.
+[[Alenka]] at the [[Blood of the Vine Tavern]] first recommended the party visit her. They met her in Session 14 at the [[Tser Pool Encampment]].
 
 ## Known Information
 
-- Fortune teller
-- Lives west of [[Barovia Village]] — on or near the road the party must travel to reach [[Vallaki]]
-- Considered worth seeking out by locals
+- Seer and fortune teller; keeps her tent at the [[Tser Pool Encampment]] on the road to [[Vallaki]]
+- Was expecting the party — *"At last you have arrived."*
+- Reads the tarokka; gives knowledge only in riddles
+- Greeted each PC with a pointed remark: Dip's death-shadows, Lucy's "someone fallen silent," Iggy's music, Odibli's "what you once found in the fireplaces"
 
-## Party Knowledge
+## The Tarokka Reading (Session 14)
 
-Party has not met Madame Eva as of Session 11. Known only through [[Alenka]]'s recommendation. Likely encounter on the road west.
+Five Fortunes of Ravenloft, as Eva delivered them — see [[Session 14 The Tarokka Reading]] for full text:
+
+- **Dictator** — knowledge of the ancient; *a throne fit for a king*
+- **Mercenary** — a holy symbol of great hope; *with the dead, under mountains of gold coins*
+- **Paladin** — a sword of sunlight; *a sleeping prince, servant of light and brother of darkness*
+- **Marionette** — an ally; *a man of music, a man with two heads, in a place of great hunger and sorrow*
+- **Broken One** — the enemy; *he haunts the tomb of the man he envied above all*
+
+To Dip she said, intensely, that *a part of him remains in the land of the dead.*

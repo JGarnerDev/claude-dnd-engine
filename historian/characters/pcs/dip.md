@@ -16,7 +16,7 @@ race: [[Half Orc]]
 class: [[Barbarian]]
 background: "Unknown"
 level: 3
-level_confirmed: 13
+level_confirmed: 14
 
 aliases: []
 source_session: [[Session 05 The Specter]]
@@ -51,7 +51,7 @@ Not revealed in notes as of Session 10.
 ## Death Experience (Session 7, Player-Written)
 
 > *"I was surrounded by shrieks of madness, torment, and despair. The sounds transformed into a cacophony of sound, that when it transitioned into the fury of a maelstrom... winds whipped my face and soon the storm turned into ice as it melted my flesh... I felt something latch onto my legs and pull me down... it was hands, claws, tentacles, wings, a slew of different things, disembodied but at once a part of something much larger... The embrace transferred from a feeling of dread and demise into one of hope, lost memories finding a ledge to grasp onto... A shrill piercing sound and a burst of light, that felt tainted exploded through the limbs and wrenched me from the depths of this ocean back into a place filled with quickly becoming familiar faces."*
-> 
+>
 > -Dip, written account
 
 > **Note:** The death experience description is notably different from Miguel's. Where Miguel's was clean and quick, Dip's involved "something much larger" pulling him down -multiple hands, claws, tentacles, wings. This may be narratively significant.

@@ -14,7 +14,7 @@ race: "Aasimar"
 class: "Bard"
 background: "Entertainer"
 level: 3
-level_confirmed: 13
+level_confirmed: 14
 aliases:
   - "Iggy"
 source_session: [[Session 01 The Black Sheep Inn]]
@@ -27,7 +27,7 @@ description: "Jeff's PC. Gruff but light-hearted soldier-bard with copper-red Aa
 ---
 
 
-Campaign: [[Curse of Strahd]] | Player: [[Jeff]] 
+Campaign: [[Curse of Strahd]] | Player: [[Jeff]]
 
 ## Appearance
 

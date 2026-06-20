@@ -14,7 +14,7 @@ race: [[Aasimar]]
 class: [[Monk]]
 background: "Unknown"
 level: 3
-level_confirmed: 13
+level_confirmed: 14
 aliases:
   - "Lucy"
 source_session: [[Session 01 The Black Sheep Inn]]
