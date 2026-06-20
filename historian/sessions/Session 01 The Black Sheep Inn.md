@@ -5,6 +5,7 @@ type: session
 exists: true
 state: completed
 session_number: 1
+in_world_end_date: "0735-10-20"
 mission: [[Death House]]
 planned_date: "2026-03-09"
 locations:
@@ -28,18 +29,21 @@ cliffhanger: "Party is inside Death House. What lies within?"
 ## Session Notes
 
 ### Black Sheep Inn
+
 - [[Iggy|Iggy]] and [[Luci]] performed together — tavern went wild, drinks, lodging, food, supplies, and inspiration for the next day
 - [[Luci]] tried to throw a knife to outline a customer — hit them in the neck
 - [[Iggy|Iggy]]: Healing Hands on the stabbed customer (saved their life)
 - Party immediately banned; forced to depart
 
 ### Arrival at Death House
+
 - Rose = 11, Thorn = 8 — spotted outside
 - [[Luci]] tried to climb the outside, slipped, fell — 3 damage
 - [[Iggy|Iggy]] tried to kick the door, sprained his leg — 1 damage
 - [[Odibli]] noticed it could just be opened; walked in
 
 ### Character Introductions
+
 - **[[Iggy|Iggy]]:** Aasimar Celestial, copper-red tones. Musician (violin/voice) and soldier. Worked with local militia for a year. Wants to be a hero.
 - **[[Luci]]:** Scourge Aasimar. Spins on her stool, exploring spaces, liquid gold eyes. Sole entity of the light temple. History buff with headdress from scrolls.
 - **[[Odibli]]:** Gnome wizard, high-pitched voice. Spent life transcribing scrolls; the voyage is a bucket-list item. Jump spell (40ft, 10ft movement). Interested in fireplaces.

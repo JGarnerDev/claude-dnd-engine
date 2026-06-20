@@ -5,6 +5,7 @@ type: session
 exists: true
 state: completed
 session_number: 5
+in_world_end_date: "0735-10-24"
 mission: [[Death House]]
 planned_date: "2026-03-31"
 locations:
@@ -31,12 +32,15 @@ new_entities:
 ## Session Notes
 
 ### Dip Joins
+
 [[Dip]] introduced. Arrives injured at 3 HP. [[Iggy|Iggy]] and [[Luci]] heal him for 2 HP (now at 3 HP — or 1 HP short of max; unclear).
 
 ### Shazzam Rule Established
+
 Shazzam is a spell for [[Iggy|Iggy]]. Triggers the instant he says the word, whether intended or not. Heals someone randomly for 1 HP.
 
 ### Specter Approach
+
 - [[Luci]]'s connection to Sabathiel (divine contact) goes silent
 - [[Iggy|Iggy]] becomes extremely cold
 - [[Odibli]] sees everyone very blurry
@@ -45,9 +49,11 @@ Shazzam is a spell for [[Iggy|Iggy]]. Triggers the instant he says the word, whe
 - [[Luci]]: Religion check — fails. All is silent.
 
 ### Odibli's Minor Illusion
+
 Breaks the specter's oppressive presence for ~20 seconds. [[Luci]] attempts to send Sabathiel a message before being cut off.
 
 ### Specter Combat
+
 **Initiative:** [[Dip]] → [[Odibli]] → Specter → [[Luci]] → [[Iggy|Iggy]]
 
 - [[Odibli]] immediately downed (reduced to 0 HP) on first hit — "full dead"
@@ -58,9 +64,11 @@ Breaks the specter's oppressive presence for ~20 seconds. [[Luci]] attempts to s
 - **Price:** [[Luci]] permanently sacrifices Sacred Flame. Gone for the rest of the campaign.
 
 ### Specter Description ([[Dip]]'s Account)
+
 Tallish, medium build. Slim. Fast moving but mysteriously slow. Hair all over — or just blurry. Hard to see clearly.
 
 ### Action Items (from notes)
+
 - [[Odibli]]: prepare account of death in fight against specter
 - [[Dip]]: prepare account of death in fight against specter
 

@@ -134,3 +134,14 @@
   pointer-events: none; /* clicks fall through to the marker (open source) */
 }
 .chart-swim-marker.is-minor .chart-swim-label { color: var(--chart-muted); }
+
+/* History toggle (hosted in the settings panel): a labelled checkbox that reveals
+   pre-campaign deep history, hidden by default so the Campaign view stays party-scoped. */
+.chart-swim-deephistory {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--chart-text);
+  cursor: pointer;
+}

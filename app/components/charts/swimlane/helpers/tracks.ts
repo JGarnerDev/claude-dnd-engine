@@ -13,6 +13,8 @@ import type { CategoryConfig, ParsedTrack, TimelineEvent, TrackCategory } from '
 export const DEFAULT_CATEGORIES: CategoryConfig[] = [
   { key: 'party', label: 'Party', colorVar: '--track-party', collapsed: false },
   { key: 'character', label: 'Characters', colorVar: '--track-character', collapsed: false },
+  { key: 'npc', label: 'NPCs', colorVar: '--track-npc', collapsed: false },
+  { key: 'antagonist', label: 'Antagonists', colorVar: '--track-antagonist', collapsed: false },
   { key: 'faction', label: 'Factions', colorVar: '--track-faction', collapsed: true },
   { key: 'continent', label: 'Continents', colorVar: '--track-continent', collapsed: true },
   { key: 'world', label: 'World', colorVar: '--track-world', collapsed: false },

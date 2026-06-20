@@ -84,9 +84,10 @@ function Add-Weight($obj, $fm) {
 
 $script:warnFallback = 0
 
-# Lazy name -> type map across the three graph layers, so the event auto-fan can
-# tell a participant faction from an NPC and route it to the right lane category.
-# Built once (entity scan is cheap relative to per-beat lookups) and cached.
+# Lazy name -> { type; subtype } map across the three graph layers, so the event
+# auto-fan can tell a participant faction from an NPC from an antagonist and route
+# it to the right lane category. Built once (entity scan is cheap relative to
+# per-beat lookups) and cached.
 $script:NameType = $null
 function Get-NameTypeMap {
     if ($null -ne $script:NameType) { return $script:NameType }
@@ -97,11 +98,31 @@ function Get-NameTypeMap {
         foreach ($f in Get-ChildItem $dir -Recurse -Filter '*.md' -ErrorAction SilentlyContinue) {
             $fm = Get-Frontmatter $f.FullName
             $n = $fm['name']; $t = $fm['type']
-            if ($n -and $t -and -not $map.ContainsKey($n)) { $map[$n] = $t }
+            if ($n -and $t -and -not $map.ContainsKey($n)) {
+                $map[$n] = @{ type = $t; subtype = $fm['subtype'] }
+            }
         }
     }
     $script:NameType = $map
     $map
+}
+
+# Lane category for an auto-fanned participant: factions -> faction; characters
+# split by subtype (npc -> npc, antagonist -> antagonist, else character/PC).
+# Returns $null for types that don't get their own lane.
+function Get-LaneCategory($info) {
+    if (-not $info) { return $null }
+    switch ($info.type) {
+        'faction' { return 'faction' }
+        'character' {
+            switch ($info.subtype) {
+                'npc'        { return 'npc' }
+                'antagonist' { return 'antagonist' }
+                default      { return 'character' }
+            }
+        }
+    }
+    return $null
 }
 
 # Resolve the lane(s) a world event plots on (meta/events.md "Track conventions"):
@@ -116,10 +137,8 @@ function Resolve-EventTracks($fm) {
     $tracks = @()
     foreach ($k in '_list_participants', '_list_relates_to') {
         foreach ($name in @($fm[$k] | Where-Object { $_ })) {
-            switch ($map[$name]) {
-                'faction'   { $tracks += "faction:$name" }
-                'character' { $tracks += "character:$name" }
-            }
+            $cat = Get-LaneCategory $map[$name]
+            if ($cat) { $tracks += "${cat}:$name" }
         }
     }
     $tracks = @($tracks | Select-Object -Unique)

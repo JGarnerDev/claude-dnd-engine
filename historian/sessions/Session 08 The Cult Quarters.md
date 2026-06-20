@@ -5,6 +5,7 @@ type: session
 exists: true
 state: completed
 session_number: 8
+in_world_end_date: "0735-10-27"
 mission: [[Death House]]
 planned_date: "2026-04-28"
 locations:
@@ -28,10 +29,13 @@ entities_canonized:
 ## Session Notes
 
 ### Wounded Ghouls
+
 The two ghouls that fled in Session 7 were in the adjacent room, wounded and scared. Trying to escape. Party made quick work of them.
 
 ### Cult Leader Quarters — Loot
+
 Found in the footlocker:
+
 - Cloak of Protection (folded)
 - Small wooden coffer (unlocked) with **4 Potions of Healing**
 - Chain shirt
@@ -46,12 +50,15 @@ Found in the footlocker:
 > **Reliability:** Item list taken directly from DM session notes. High confidence.
 
 ### Rose's Intel
+
 [[Rose]] told the party that many previous travelers entered Death House and never came back.
 
 ### Ghast Ambush
+
 While looting the chest, Ghasts broke through the walls. [[Odibli]] was in the process of swapping cloaks (old and new cloak in hand, in his underwear at the time). He fought naked.
 
 ### Strahd's Statue
+
 [[Odibli]] examined the statue in the room. Arcana check: recognized the face as the same face from the fireplace (Session 3). Confirmed: the statue depicts [[Strahd von Zarovich]]. Sensed powerful magic connecting this statue to another entity.
 
 Campaign: [[Curse of Strahd]]

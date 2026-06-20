@@ -5,6 +5,7 @@ type: session
 exists: true
 state: completed
 session_number: 6
+in_world_end_date: "0735-10-25"
 mission: [[Death House]]
 planned_date: "2026-04-07"
 locations:
@@ -34,11 +35,13 @@ entities_canonized:
 ## Session Notes
 
 ### Attic
+
 - Animated broom fight: [[Dip]], Broom, [[Luci]], [[Odibli]], [[Iggy|Iggy]]
 - Note in bathroom: "check the mirrors"
 - [[Dip]] tried to punch the attic door open — hurt himself for 1 point
 
 ### Rose and Thorn Found
+
 - Searched the dollhouse, discovered trapped door to basement
 - [[Dip]] and [[Odibli]] wrote glyphs on blank scrolls to bind the ghosts
 - **[[Rose]]** (11) bound to [[Dip]]'s scroll — said thank you, happy to be taken along, will help
@@ -46,10 +49,13 @@ entities_canonized:
 - [[Luci]] danced with a mannequin and was inspired
 
 ### Level Up (to Level 2)
+
 - [[Luci]] chose **Augury** as new spell ability
 
 ### Walter Durst's Crypt
+
 Found in the dungeon — empty. Thorn explained:
+
 - Walter was the illegitimate child of Gustav Durst and the nursemaid
 - Elisabeth Durst discovered the affair and was consumed by jealousy
 - The Durst-led cult sacrificed baby Walter on the basement altar
@@ -57,10 +63,12 @@ Found in the dungeon — empty. Thorn explained:
 - Thorn says his parents would not allow him in the dungeon
 
 ### Key and Cultist Chests
+
 - [[Iggy|Iggy]] spotted a key at the bottom of the well
 - [[Odibli]] Mage Handed the key — unlocked all the cultist chests
 
 ### Grick Fight
+
 Initiative: [[Iggy|Iggy]] → Grick → [[Dip]] → [[Luci]] → [[Odibli]]. Quick work.
 
 Campaign: [[Curse of Strahd]]

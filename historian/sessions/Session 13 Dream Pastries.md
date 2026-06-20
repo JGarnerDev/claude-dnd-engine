@@ -5,6 +5,7 @@ type: session
 exists: true
 state: completed
 session_number: 13
+in_world_end_date: "0735-11-01"
 mission: "[[Act 1 - Placeholder]]"
 planned_date: null
 played_date: "2026-06-02"

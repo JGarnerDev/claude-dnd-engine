@@ -5,6 +5,7 @@ type: session
 exists: true
 state: completed
 session_number: 9
+in_world_end_date: "0735-10-28"
 mission: [[Death House]]
 planned_date: "2026-05-05"
 locations:
@@ -25,9 +26,11 @@ recap: "Iggy tried to move through the room and was immediately killed by two sh
 ## Session Notes
 
 ### Iggy Killed by Shadows
+
 [[Iggy]] attempted to move through a room. Two shadows hit him with opportunity attacks, reducing his Strength to 0. He was killed.
 
 ### Strahd Intervenes
+
 Froze time just before the shadows would have caught [[Dip]]. Addressed the party directly:
 
 *"The shadows cannot exist in the light. Be wary of that which you cannot see — it is deadly."*
@@ -35,11 +38,13 @@ Froze time just before the shadows would have caught [[Dip]]. Addressed the part
 Then left. This was an act of intervention — Strahd saved [[Dip]]'s life.
 
 ### Dip Killed Twice
+
 1. After Strahd left, [[Dip]] ran from the shadows and was killed by necrotic damage.
 2. [[Odibli]] threw a healing potion to revive [[Dip]].
 3. [[Dip]] tried to hit a shadow — missed. Shadow counterattacked and reduced [[Dip]]'s Strength to 0. [[Dip]] killed again.
 
 ### Luci Kills All Shadows
+
 [[Luci]] cleaned up the fight — dodging, reliable damage, MVP of the session.
 
 > Notable quote from notes: *"Odibli's 'Diesel Cougar in the Winter' (alt name for Firebolt)"*

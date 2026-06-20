@@ -29,10 +29,18 @@ Favor inclusion. Use `importance:` to scale how loud a beat draws (`major` bolds
 
 ## Track conventions
 
-A beat's `track` is `category` or `category:member`. Shipped categories (`app/components/charts/swimlane/helpers/tracks.ts`): `party`, `character`, `faction`, `continent`, `world`. A lane appears once a beat references it.
+A beat's `track` is `category` or `category:member`. Shipped categories (`app/components/charts/swimlane/helpers/tracks.ts`): `party`, `character` (PCs), `npc`, `antagonist`, `faction`, `continent`, `world`. A lane appears once a beat references it. The character family is split by entity **subtype** — PCs → `character`, `subtype: npc` → `npc`, `subtype: antagonist` → `antagonist` — so the Campaign view's lanes don't lump every named person under one "Characters" heading. The auto-fan derives this split from the participant's subtype automatically.
 
-- **Explicit wins.** Set `track:` on the event to place it exactly (e.g. `track: faction:The Partenariats`).
-- **Auto-fan fallback.** When an event has **no** explicit `track`, the extractor fans it onto member lanes derived from its `participants` / `relates_to` (factions → `faction:<name>`, NPCs → `character:<name>`); failing that it lands on `world:<campaign>`. Curate when you care, automatic when you don't.
+- **Prefer explicit single-owner `track:`.** Give every event **one** owning lane (`character:<pc>`, `npc:<name>`, `antagonist:<name>`, `faction:<name>`, `party`, or `world:<campaign>`) so it plots exactly once. Choose the entity with primary ownership of the beat — a PC for their own choice, the NPC or antagonist for their act, a faction for a group beat (e.g. *Ireena Is Not a Blood Relative* → `faction:The Kolyanovich Family`). World-scale beats → `world:<campaign>`.
+- **Tabs & the campaign floor.** The **World** tab plots everything on one axis; the **Campaign** (swimlane) tab locks its left edge to the first session beat, so pre-campaign deep history (e.g. a `world:` beat dated before session 1) is hidden there by default. A DM-only **History** toggle in the Campaign settings reveals it — breaking the lock is a deliberate choice, so leave it locked unless the DM asks.
+- **Auto-fan fallback (only when `track:` is empty).** With no explicit `track`, the extractor fans the event onto a lane for **every** faction/NPC in `participants` / `relates_to` — which **multi-plots one event across several lanes** (duplicates). Use this only when you actually want a beat mirrored on each participant's lane; otherwise set a single-owner `track:`.
+
+## Dating events (`timeline_date`)
+
+Every event needs a numeric `timeline_date` (`YYYY-MM-DD`) to plot — the chart sort key. The prose `date:` is for humans; `timeline_date` is for the math.
+
+- **Strahd campaign — synthetic Barovian anchor.** Barovia has no fixed present-year in the module, so the engine uses a **synthetic anchor**: the party's arrival = **`0735-10-20`** (autumn mist-season; year is an engine-chosen placeholder, not module canon). The axis advances **one in-world day per session** (a charting convenience for legible spacing, not a literal claim about in-world duration — the Death House delve was shorter): S1 `10-20`, S2 `10-21`, … S14 `0735-11-02`. **A session carries `in_world_end_date`** (read by the extractor before any real-world `played_date`) so its dot plots on the in-world axis, not at 2026; **each promoted event takes its source session's date** so events sit beside the session that contains them. Same-session beats share a date; the chart handles ties.
+- **World-history / deep-time (Whatwill et al.)** — relative "millennia ago" dates need a chosen epoch before they sort. That calendar decision is a separate gated task; until then, deep-time events may omit `timeline_date` (they won't plot) rather than guess.
 
 ## Canon-pending (unratified lore)
 

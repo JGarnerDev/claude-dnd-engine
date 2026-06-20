@@ -5,6 +5,7 @@ type: session
 exists: true
 state: completed
 session_number: 10
+in_world_end_date: "0735-10-29"
 mission: [[Death House]]
 planned_date: "2026-05-12"
 locations:
@@ -34,9 +35,11 @@ new_entities:
 ## Session Notes
 
 ### Starting State
+
 [[Dip]] and [[Iggy]] are dead from the shadows in Session 9.
 
 ### Odibli Smashes the Orb
+
 [[Odibli]] felt the orb pulled from the statue was familiar — recognized something in it. Smashed it against the wall.
 
 **DM narration of the smash:**
@@ -46,12 +49,14 @@ new_entities:
 > *"You open your eyes. The last thing you remember is the cold. You feel... present, but not whole. Like waking from a dream you can't remember but that left you unsettled. Your body responds, but everything feels slightly delayed, slightly numb. And somewhere beneath your thoughts, quiet and easy to ignore for now, there's a pull — toward something you can't name."*
 
 ### Afflictions Onset
+
 - **[[Dip]]:** Hears whispers when it is quiet
 - **[[Iggy]]:** Shadow does not match his form; moves in the wrong direction
 - Both stem from [[Odibli]] absorbing shadow essence through the ritual
 - Party is at **half max HP** for as long as they remain in the dungeon
 
 ### Cult Relics (13 Items in Niches)
+
 1. Small mummified yellow goblin's hand on a rope loop
 2. Knife carved from human bone
 3. Dagger with rat's skull set into the pommel
@@ -67,20 +72,25 @@ new_entities:
 13. Small wooden coffer with a dire wolf's withered tongue
 
 ### Southern Tunnel
+
 Slopes downward at 20 degrees into murky water. Ends at a rusty portcullis.
 
 ### Luci's Sacrifice
+
 In the cult ritual room, [[Luci]] sacrificed herself on the altar. This saved the rest of the party. The mists then carried the party away.
 
 ### Rose and Thorn Stranded
+
 [[Rose]] and [[Thorn]] tried to fight against being left behind as the mists rose. [[Dip]] and [[Odibli]] left their scroll pages behind. Both children were stranded.
 
 > Notable mention from session notes: "Rose and Thorn for taking one for the team."
 
 ### Strahd Greets the Party
+
 [[Strahd von Zarovich]] met the party upon exit from Death House. Thanked and congratulated them. Retrieved [[Luci]] from death.
 
 ### Level Up
+
 All party members leveled to **3**.
 
 Campaign: [[Curse of Strahd]]

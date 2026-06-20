@@ -5,6 +5,7 @@ type: session
 exists: true
 state: completed
 session_number: 3
+in_world_end_date: "0735-10-22"
 mission: [[Death House]]
 planned_date: "2026-03-23"
 locations:
@@ -28,6 +29,7 @@ entities_canonized:
 ## Session Notes
 
 ### Strahd Fireplace Appearance (Room 6)
+
 [[Odibli]] checked the fireplace (his habit). A face formed in the flames — handsome, pale, sharp features, dark eyes that reflected but contained no warmth. Fire did not flicker when he spoke. Voice came from everywhere in the room, low and measured.
 
 Strahd's words: *"You've come to my land uninvited, yet here you are, exploring one of its... oldest wounds. Curious. Most who enter this house do not leave. But you — you interest me. Do carry on."*
@@ -37,9 +39,11 @@ Did not threaten. Did not explain himself. When asked who he was, smiled slightl
 [[Odibli]]: Arcana check — sensed ancient and powerful magic.
 
 ### Animated Armor Fight
+
 Suit of armor attacked when [[Luci]] inspected it. Downed [[Odibli]] and [[Iggy|Iggy]]. Party defeated it.
 
 ### Loot — Master Bedroom
+
 - Silver/gold filigree jewelry box (75 gp)
 - 3 gold rings (25 gp each)
 - Thin platinum necklace with topaz pendant (750 gp)

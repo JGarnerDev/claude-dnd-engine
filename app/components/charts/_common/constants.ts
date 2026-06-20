@@ -9,10 +9,12 @@ export const ZOOM_FACTOR = 1.5; // multiply/divide per zoom-in/out step
 export const ZOOM_MAX = 8; // floor for deepest zoom = 8× the fit density (sparse timelines)
 // For dense/long timelines, 8× of a tiny fit density still can't despace beats.
 // render.ts raises the cap so zoom can reach ~this many px between adjacent beats.
-export const TARGET_PX_PER_BEAT = 36;
+export const TARGET_PX_PER_BEAT = 96;
 // Deepest zoom also guarantees you can get this close: one calendar month fills
-// at least this fraction of the viewport width at maximum zoom (both views).
-export const MONTH_VIEW_FRAC = 0.6;
+// at least this fraction of the viewport width at maximum zoom (both views). >1
+// lets a single month grow wider than the viewport so day-granular spans (a
+// session-by-session campaign) can spread their beats apart instead of stacking.
+export const MONTH_VIEW_FRAC = 1.4;
 export const MARGIN = 80; // left/right gutter inside the canvas, in px. >= LABEL_W/2 so an edge beat's centered label never spills past the canvas bound
 export const EDGE_PAD = 0.05; // breathing room before first / after last beat, as a fraction of span
 

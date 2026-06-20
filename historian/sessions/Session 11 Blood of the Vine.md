@@ -5,6 +5,7 @@ type: session
 exists: true
 state: completed
 session_number: 11
+in_world_end_date: "0735-10-30"
 mission: "[[Act 1 - Placeholder]]"
 planned_date: null
 played_date: "2026-05-19"
@@ -57,9 +58,11 @@ new_entities:
 ## Session Notes
 
 ### Entering Barovia Village
+
 Party exited [[Death House]]. Village: hushed, grim, villagers scared and subdued.
 
 ### Blood of the Vine Tavern
+
 Party followed villagers' whispers to [[Blood of the Vine Tavern]].
 
 - **[[Arik]]** — bartender; resentful, cold
@@ -68,6 +71,7 @@ Party followed villagers' whispers to [[Blood of the Vine Tavern]].
 - **Quest offered:** escort his sister [[Ireena Kolyana]] to Vallaki (2–3 days west); Strahd has taken a dangerous liking to her
 
 ### House of Mad Mary
+
 On the way to Ireena, party passed the [[House of Mad Mary]]. Crying from inside.
 
 - **[[Mad Mary]]** — clutching a doll, inconsolable
@@ -75,6 +79,7 @@ On the way to Ireena, party passed the [[House of Mad Mary]]. Crying from inside
 - Doll tag: **"Is No Fun, Is No Blinsky!"**
 
 ### Burgomaster's Mansion
+
 Exterior: damaged. Interior: mansion-like. Faint odor of decay. Father's body in next room.
 
 - **[[Ireena Kolyana]]** — wolves and creatures attacked the mansion; her father **[[Kolyan Indirovich]]** died from the trauma
@@ -83,12 +88,14 @@ Exterior: damaged. Interior: mansion-like. Faint odor of decay. Father's body in
 - [[Dip]] asked if [[Rose]] and [[Thorn]] also needed this — Odibli: "They're past the veil."
 
 ### Bildrath's Mercantile
+
 - Bought shield for [[Iggy]]
 - **[[Bildrath Cantemir]]** — exorbitant prices; [[Dip]] cursed him
 - **[[Parriwimple]]** — large figure emerged from the shop when Bildrath called for him
 - Party and Bildrath now mutually hostile (especially Bildrath/Dip)
 
 ### Evening at the Tavern
+
 Party returned, got mildly drunk.
 
 - [[Iggy]] played music; [[Arik]] and the bar owners ([[Alenka]], [[Mirabel]], [[Sorvia]]) enjoyed it; Arik nearly cried, remembering the joy of music
@@ -97,10 +104,13 @@ Party returned, got mildly drunk.
 - [[Alenka]] recommended visiting **[[Madame Eva]]**, a fortune teller who lives west
 
 ### Dip's Raccoon Prank
+
 Dip vandalized Bildrath's shop on the way home: found a raccoon, threw a biscuit inside the shop. Ruckus heard. Bildrath hollered for "Parriwimple." Parriwimple emerged. Party successfully stealthed away.
 
 ### Ghost Procession
+
 A procession passed through the village — eerie green spectral figures emerging from the graveyard:
+
 - Doughty women with greatswords
 - Woodwise men with slender bows
 - Dwarves with glittering axes

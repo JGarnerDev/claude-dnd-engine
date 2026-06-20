@@ -5,6 +5,7 @@ type: session
 exists: true
 state: completed
 session_number: 7
+in_world_end_date: "0735-10-26"
 mission: [[Death House]]
 planned_date: "2026-04-14"
 locations:
@@ -40,7 +41,9 @@ Notes list formation as: **[[Dip]] → [[Iggy]] → [[Odibli]] → [[Luci]]**
 > **Reliability — Formation conflict:** Campaign.md records the formation as "Luci → Odibli → Iggy → Dip (front to back)," which is the reverse. The session notes don't clarify which end is front. Confirm with DM. Formation recorded here is exactly as written in session notes.
 
 ### Ghoul Ambush
+
 4 ghouls climbed out of the floor as party turned a corner.
+
 - [[Iggy]] thrown to the floor on emergence
 - [[Luci]] threw [[Odibli]] to a square away from ghouls — he panicked, landed on his back, 2 damage
 - Ghouls downed [[Odibli]], [[Luci]], and [[Iggy]] in melee
@@ -49,6 +52,7 @@ Notes list formation as: **[[Dip]] → [[Iggy]] → [[Odibli]] → [[Luci]]**
 - Party long rested after
 
 ### Mimic
+
 Disguised as a door. Adhered to all party members except [[Luci]]. Took out [[Odibli]]. Party defeated it. Short rest.
 
 Campaign: [[Curse of Strahd]]

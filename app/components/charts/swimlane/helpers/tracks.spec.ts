@@ -71,6 +71,8 @@ describe('buildTrackTree', () => {
     expect(DEFAULT_CATEGORIES.map((c) => c.key)).toEqual([
       'party',
       'character',
+      'npc',
+      'antagonist',
       'faction',
       'continent',
       'world',

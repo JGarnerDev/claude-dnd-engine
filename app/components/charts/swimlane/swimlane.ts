@@ -8,7 +8,7 @@ import './swimlane.css';
 import { DEFAULT_CALENDAR } from '../_common/helpers/calendar.js';
 import { computeSwimlaneFrom } from './helpers/swimlane-layout.js';
 import { indexEvents, spanYearsOf } from '../_common/helpers/axis.js';
-import { buildTrackTree, DEFAULT_CATEGORIES } from './helpers/tracks.js';
+import { buildTrackTree, parseTrack, DEFAULT_CATEGORIES } from './helpers/tracks.js';
 import { makeMatcher, trackList, audienceList } from '../_common/helpers/filters.js';
 import { buildFilterBar } from '../_common/components/filterbar.js';
 import { DM_AUDIENCE } from '../_common/constants.js';
@@ -232,34 +232,39 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
   // that actually has children — see computeSwimlane).
   const collapsed = new Set(DEFAULT_CATEGORIES.filter((c) => c.collapsed).map((c) => c.key));
 
-  // Sort + day-index every event exactly once; every zoom/collapse layout reuses
-  // it (only the scale and row stacking change downstream).
-  const idx = indexEvents(data.events, cal);
-  if (idx.events.length === 0) {
+  // Sort + day-index the full set once to find the campaign floor: the earliest
+  // session (party) beat. The Campaign view locks its left edge there so
+  // pre-campaign deep history (world events before session 1) is hidden unless the
+  // DM opts in via the History toggle. The lock only bites when a party beat exists
+  // AND something precedes it — otherwise the full set is shown unchanged.
+  const fullIdx = indexEvents(data.events, cal);
+  if (fullIdx.events.length === 0) {
     const empty = document.createElement('div');
     empty.className = 'chart-empty';
     empty.textContent = 'No events to show.';
     container.appendChild(empty);
     return { eventCount: 0, rowCount: 0, contentWidth: 0, controls: [], getState: () => ({ ...DEFAULT_STATE }) };
   }
+  const partyIdxs = fullIdx.events.filter((e) => parseTrack(e.track).category === 'party').map((e) => e._idx);
+  const campaignFloor = partyIdxs.length ? Math.min(...partyIdxs) : null;
+  const hasPreCampaign = campaignFloor !== null && fullIdx.events.some((e) => e._idx < campaignFloor);
+  let showDeepHistory = false;
+  const visibleEvents = (): TimelineEvent[] =>
+    showDeepHistory || campaignFloor === null
+      ? data.events
+      : fullIdx.events.filter((e) => e._idx >= campaignFloor);
 
-  // Track tree depends only on events (+ config) — zoom- and collapse-invariant.
-  // Build it once and feed every layout; collapse just re-stacks the rows.
-  const tree = buildTrackTree(data.events);
-
-  // span is density-invariant — derive it from the indexed events, no probe layout.
-  const spanYears = spanYearsOf(idx);
-  // Fit so the gutter + canvas exactly fill the viewport at zoom 1. The extra
-  // -2px slack absorbs contentWidth's Math.ceil rounding so gutter + canvas can't
-  // round a hair past the viewport and trigger a phantom horizontal scrollbar.
-  const fitDensity = Math.max(1, (viewportWidth - GUTTER_W - MARGIN * 2 - 2) / spanYears);
-  // Allow zooming until one month fills ~MONTH_VIEW_FRAC of the canvas area (the
-  // viewport minus the gutter), like the world view.
-  const canvasWidth = Math.max(1, viewportWidth - GUTTER_W);
   const monthsPerYear = cal.months.length || 12;
-  const maxZoom = Math.max(ZOOM_MAX, (MONTH_VIEW_FRAC * canvasWidth * monthsPerYear) / fitDensity);
-  // A loaded view seeds the zoom (clamped to this data's range, decision H); else fit.
-  let zoomLevel = initialState ? clampZoom(initialState.zoomLevel, maxZoom) : 1;
+  // Event subset, index, tree, fit density and max zoom all depend on the
+  // deep-history toggle, so rebuildForEvents() (re)derives them — once at mount and
+  // again whenever the toggle flips. zoomLevel survives a toggle (re-clamped). The
+  // filter bar / controls are built once over the full set so they stay stable.
+  let idx = fullIdx;
+  let tree = buildTrackTree(data.events);
+  let fitDensity = 1;
+  let maxZoom = ZOOM_MAX;
+  let zoomLevel = 1;
+  let firstBuild = true;
   const api: SwimApi = {
     eventCount: 0,
     rowCount: 0,
@@ -357,6 +362,42 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
     draw();
   }
 
+  // (Re)derive the event-dependent state for the current deep-history setting, then
+  // redraw. Runs at mount and whenever the History toggle flips. Resets the layout
+  // cache (the index/tree changed) and re-clamps zoom to the new span's max.
+  function rebuildForEvents() {
+    const events = visibleEvents();
+    idx = indexEvents(events, cal);
+    tree = buildTrackTree(events);
+    const spanYears = spanYearsOf(idx);
+    fitDensity = Math.max(1, (viewportWidth - GUTTER_W - MARGIN * 2 - 2) / spanYears);
+    const canvasWidth = Math.max(1, viewportWidth - GUTTER_W);
+    maxZoom = Math.max(ZOOM_MAX, (MONTH_VIEW_FRAC * canvasWidth * monthsPerYear) / fitDensity);
+    // First mount seeds zoom from a loaded view; a toggle keeps the live zoom.
+    zoomLevel = firstBuild && initialState ? clampZoom(initialState.zoomLevel, maxZoom) : Math.min(zoomLevel, maxZoom);
+    firstBuild = false;
+    layoutCache.clear();
+    draw();
+  }
+
+  // The History toggle (only shown when there's pre-campaign history to reveal):
+  // checked = include deep history before session 1; default off (locked).
+  function buildDeepHistoryToggle(): HTMLElement {
+    const wrap = document.createElement('label');
+    wrap.className = 'chart-swim-deephistory';
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = showDeepHistory;
+    cb.addEventListener('change', () => {
+      showDeepHistory = cb.checked;
+      rebuildForEvents();
+    });
+    const text = document.createElement('span');
+    text.textContent = 'Show pre-campaign history';
+    wrap.append(cb, text);
+    return wrap;
+  }
+
   function anchorAt(clientX?: number) {
     const vw = swim.clientWidth || viewportWidth;
     const left = swim.getBoundingClientRect?.().left || 0;
@@ -411,9 +452,10 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
     { label: 'Search', node: search },
     { label: 'Filter', node: chips },
     ...(audience ? [{ label: 'Known by', node: audience }] : []),
+    ...(hasPreCampaign ? [{ label: 'History', node: buildDeepHistoryToggle() }] : []),
   ];
   container.append(filterBar, swim);
-  draw();
+  rebuildForEvents();
   // Restore a loaded view's pan after the seeded draw (browser clamps over-range).
   if (initialState) swim.scrollLeft = initialState.scrollLeft;
   enablePan(swim);
