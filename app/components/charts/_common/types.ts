@@ -34,6 +34,7 @@ export interface TimelineEvent {
   draft?: boolean; // canon-pending (exists:false): rendered distinct (dashed/translucent); -Full exports only
   knownBy?: string[]; // character names who know this beat (drives the per-character "Known by" viewpoint)
   session?: boolean; // a play session: the world view draws it as a time-range band (date = its end), not an on-axis dot. The swimlane ignores this and treats it as a normal beat.
+  campaign?: string; // campaign slug (e.g. 'strahd'); absent = agnostic (shows under every campaign). Drives pages/home's campaign selector.
 }
 
 // Act/mission span bar. Extracted by the generator; render consumes it in M4.
@@ -43,10 +44,21 @@ export interface Span {
   label: string;
   track?: string;
   source?: string;
+  campaign?: string; // campaign slug; absent = agnostic (see TimelineEvent.campaign)
+}
+
+// A known campaign (type:campaign entity), for pages/home's campaign selector.
+// slug matches the per-beat `campaign` tag; label is the display name; active marks
+// the campaign the page defaults to. Listed even when it has no dated beats yet.
+export interface Campaign {
+  slug: string;
+  label: string;
+  active: boolean;
 }
 
 export interface TimelineData {
   calendar?: Calendar | null;
+  campaigns?: Campaign[];
   events: TimelineEvent[];
   spans?: Span[];
 }
@@ -228,6 +240,7 @@ export interface SwimLayout {
   rows: SwimRow[];
   items: SwimItem[]; // individual dots (sparse buckets); dense ones roll into bars
   bars: SwimBar[]; // per-row density histogram
+  sessionBands: SessionBand[]; // play sessions as full-height columns behind the lanes
 }
 
 // The viewport element carries a flag set by enablePan so the click handler can

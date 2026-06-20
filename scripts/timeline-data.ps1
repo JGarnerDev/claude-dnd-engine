@@ -82,6 +82,38 @@ function Add-Weight($obj, $fm) {
     elseif ($imp -eq 'minor') { $obj['minor'] = $true }
 }
 
+# campaign tag -> beat (slug). Wikilink-wrapped values ([[Name]]) are unwrapped;
+# agnostic beats (no campaign field) carry none, so the app's campaign selector
+# shows them under every campaign. Drives pages/home's campaign filter.
+function Add-Campaign($obj, $fm) {
+    $c = $fm['campaign']
+    if ($c) { $obj['campaign'] = ($c -replace '\[\[|\]\]', '').Trim() }
+}
+
+# Known campaigns (type:campaign entities under scheduler/ + historian/), for the
+# app's campaign selector. Each carries its slug (the `campaign` field, matching the
+# per-beat tag), display label (name), and whether it's the active campaign. Listed
+# even when a campaign has no dated beats yet -- the selector then shows the empty
+# state for it.
+function Get-Campaigns {
+    $out = @()
+    foreach ($sub in 'scheduler\campaign', 'historian\campaign') {
+        $dir = Join-Path $Root $sub
+        if (-not (Test-Path $dir)) { continue }
+        foreach ($f in Get-ChildItem $dir -Recurse -Filter '*.md' -ErrorAction SilentlyContinue) {
+            $fm = Get-Frontmatter $f.FullName
+            if ($fm['type'] -ne 'campaign') { continue }
+            $slug = if ($fm['campaign']) { ($fm['campaign'] -replace '\[\[|\]\]', '').Trim() } else { '' }
+            $out += [ordered]@{
+                slug   = $slug
+                label  = $fm['name']
+                active = (("$($fm['active'])".Trim().ToLower() -eq 'true') -or ($fm['state'] -eq 'active'))
+            }
+        }
+    }
+    @($out)
+}
+
 $script:warnFallback = 0
 
 # Lazy name -> { type; subtype } map across the three graph layers, so the event
@@ -180,6 +212,7 @@ function Get-EventBeats {
                 # it; secret beats stay DM-only regardless.
                 if ($kb.Count -gt 0) { $beat['knownBy'] = @($kb) }
                 Add-Weight $beat $fm
+                Add-Campaign $beat $fm
                 if ($kw.Count -gt 0) { $beat['keywords'] = @($kw) }
                 $out += [PSCustomObject]@{ Beat = $beat; Sort = Get-BeatSort $beat.date }
             }
@@ -212,6 +245,7 @@ function Get-SessionBeats {
             source  = Get-RelSource $f.FullName $Root
         }
         Add-Weight $beat $fm
+        Add-Campaign $beat $fm
         $kw = Get-Keywords $fm
         if ($kw.Count -gt 0) { $beat['keywords'] = @($kw) }
         $out += [PSCustomObject]@{ Beat = $beat; Sort = Get-BeatSort $date }
@@ -245,6 +279,7 @@ function Get-ChronicleBeats {
             }
             if ($flags -match '\bmajor\b') { $beat['major'] = $true }
             elseif ($flags -match '\bminor\b') { $beat['minor'] = $true }
+            Add-Campaign $beat $fm
             $out += [PSCustomObject]@{ Beat = $beat; Sort = Get-BeatSort $date }
         }
     }
@@ -262,13 +297,15 @@ function Get-Spans {
             $fm = Get-Frontmatter $f.FullName
             if (-not $fm['timeline_start']) { continue }
             if ((Test-Secret $fm) -and -not $Full) { continue }
-            $out += [PSCustomObject]@{
+            $span = [ordered]@{
                 start  = $fm['timeline_start']
                 end    = if ($fm['timeline_end']) { $fm['timeline_end'] } else { $fm['timeline_start'] }
                 label  = $fm['name']
                 track  = if ($fm['track']) { $fm['track'] } else { 'party' }
                 source = (Get-RelSource $f.FullName $Root)
             }
+            Add-Campaign $span $fm
+            $out += $span
         }
     }
     @($out)
@@ -293,9 +330,10 @@ if ($cal -and $cal.Months.Count -gt 0) {
 }
 
 $data = [ordered]@{
-    calendar = $calJson
-    events   = @($events)
-    spans    = @($spans)
+    calendar  = $calJson
+    campaigns = @(Get-Campaigns)
+    events    = @($events)
+    spans     = @($spans)
 }
 
 # -Compress keeps it a single line so the sentinel swap is a clean one-liner.

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { deriveSessionBands } from './bands.js';
-import type { IndexedEvent } from '../../_common/helpers/axis.js';
+import type { IndexedEvent } from './axis.js';
 
 // A trivial 1:1 scale so x positions equal day indices — keeps the assertions
 // about band geometry readable.

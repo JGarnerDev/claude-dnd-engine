@@ -85,4 +85,85 @@ describe('renderTimelineView', () => {
       expect(container.querySelector('.chart-canvas')).toBeFalsy();
     }
   });
+
+  it('shows no campaign selector when the graph knows no campaigns', () => {
+    renderTimelineView(container, data); // no `campaigns`
+    expect(container.querySelector('.chart-campaign-select')).toBeFalsy();
+  });
+
+  describe('campaign selector', () => {
+    const multi: TimelineData = {
+      calendar: null,
+      campaigns: [
+        { slug: 'strahd', label: 'Curse of Strahd', active: true },
+        { slug: 'homebrew', label: 'Homebrew Campaign', active: false },
+      ],
+      events: [
+        { date: '1340-02-15', label: 'War begins', track: 'world', campaign: 'strahd' },
+        { date: '1341-06-01', label: 'A timeless myth', track: 'world' }, // agnostic
+      ],
+    };
+    const pick = () => container.querySelector<HTMLSelectElement>('.chart-campaign-select')!;
+
+    it('mounts a selector defaulting to the active campaign', () => {
+      renderTimelineView(container, multi);
+      const sel = pick();
+      expect(sel).toBeTruthy();
+      expect(sel.value).toBe('strahd');
+      const opts = [...sel.options].map((o) => o.textContent);
+      expect(opts).toEqual(['Curse of Strahd', 'Homebrew Campaign']);
+    });
+
+    it('renders the active campaign plus agnostic beats, not other campaigns', () => {
+      renderTimelineView(container, multi);
+      const labels = [...container.querySelectorAll<HTMLElement>('.chart-marker')].map((m) => m.dataset.label);
+      expect(labels).toContain('War begins'); // strahd
+      expect(labels).toContain('A timeless myth'); // agnostic — shows under every campaign
+    });
+
+    it('scopes out other campaigns when one is selected, keeping agnostic beats', () => {
+      renderTimelineView(container, multi);
+      const sel = pick();
+      sel.value = 'homebrew';
+      sel.dispatchEvent(new Event('change'));
+      // Homebrew has no own dated beats, but the agnostic beat still shows.
+      const labels = [...container.querySelectorAll<HTMLElement>('.chart-marker')].map((m) => m.dataset.label);
+      expect(labels).toEqual(['A timeless myth']);
+      expect(labels).not.toContain('War begins');
+    });
+
+    it('renders the chart empty state when a campaign has no visible beats', () => {
+      const strahdOnly: TimelineData = {
+        calendar: null,
+        campaigns: multi.campaigns,
+        events: [{ date: '1340-02-15', label: 'War begins', track: 'world', campaign: 'strahd' }],
+      };
+      renderTimelineView(container, strahdOnly);
+      pick().value = 'homebrew';
+      pick().dispatchEvent(new Event('change'));
+      expect(container.querySelector('.chart-canvas')).toBeFalsy();
+      expect(container.querySelector('.chart-empty')).toBeTruthy();
+      // Header + selector stay so the DM can switch back.
+      expect(container.querySelector('.chart-campaign-select')).toBeTruthy();
+    });
+
+    it('Campaign (tracks) view spans all campaigns regardless of the selector', () => {
+      renderTimelineView(container, multi);
+      const sel = pick();
+      sel.value = 'homebrew'; // would scope the World view to agnostic-only
+      sel.dispatchEvent(new Event('change'));
+      tab('Campaign').click();
+      const labels = [...container.querySelectorAll<HTMLElement>('.chart-swim-marker')].map((m) => m.dataset.label);
+      expect(labels).toContain('War begins'); // strahd beat still shows on the cross-campaign view
+      expect(labels).toContain('A timeless myth');
+    });
+
+    it('hides the selector on the Campaign view and shows it on World', () => {
+      renderTimelineView(container, multi, 'tracks');
+      expect(pick().hidden).toBe(true);
+      tab('World').click();
+      expect(pick().hidden).toBe(false);
+    });
+
+  });
 });

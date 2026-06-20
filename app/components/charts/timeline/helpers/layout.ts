@@ -7,7 +7,7 @@ import { DEFAULT_CALENDAR } from '../../_common/helpers/calendar.js';
 import { computeAxisFrom, indexEvents } from '../../_common/helpers/axis.js';
 import type { IndexedEvents } from '../../_common/helpers/axis.js';
 import { clusterBeats } from '../../_common/helpers/cluster.js';
-import { deriveSessionBands } from './bands.js';
+import { deriveSessionBands } from '../../_common/helpers/bands.js';
 import { layoutLabels } from './labels.js';
 import { weightOf } from '../../_common/helpers/weight.js';
 import { PX_PER_YEAR, AXIS_GAP, TIER_H, MIN_CANVAS_HEIGHT, BAR_MAX_H, CLUSTER_OFF_GAP, LABEL_MAX_TIERS, LABEL_BOX_PAD, WORLD_RIGHT_PAD } from '../../_common/constants.js';

@@ -12,7 +12,8 @@ aliases:
   - "the Impact"
   - "the Striking"
 date: "6.7433 millennia ago"
-timeline_date: ""        # deep-time — needs a numeric epoch before it can plot (gated by the calendar decision)
+# timeline_date is year 0 of the homebrew reckoning: the Impact is the epoch anchor, counting forward. Prose date: stays the human label.
+timeline_date: "0"
 outcome: "The astral body Astra struck the Struck Side of the dwarf planetoid, fused briefly, then separated in a pirouette — gouging the Caldera, dislodging the Arc Side's islands, and spinning trillions of glass shards into orbit."
 consequences:
   - "Gouged the Caldera into the Struck Side — a fiery hellscape no expedition has fully plumbed."

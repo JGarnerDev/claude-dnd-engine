@@ -1,0 +1,39 @@
+/* Campaign selector (campaign-select.ts): a compact dropdown in the header action
+   cluster, styled to sit alongside the Save/Load/Settings island buttons. Uses the
+   shared theme tokens from components/charts/_common/common.css. */
+.chart-campaign-select {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 30px;
+  padding: 0 26px 0 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--chart-text);
+  background-color: var(--chart-surface);
+  /* Caret drawn as a background SVG so it tracks the text color. */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%2394a3b8' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 9px center;
+  border: 1px solid var(--chart-axis);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.chart-campaign-select:hover {
+  color: var(--chart-text);
+  border-color: var(--chart-muted);
+}
+.chart-campaign-select:focus-visible {
+  outline: 2px solid var(--chart-muted);
+  outline-offset: 1px;
+}
+/* Hidden on the Campaign (tracks) view — that view spans every campaign, so the
+   filter doesn't apply there. (Override the flex parent's default visibility.) */
+.chart-campaign-select[hidden] {
+  display: none;
+}
+/* The native option list paints with OS colors; pin readable ones for dark mode. */
+.chart-campaign-select option {
+  color: #f1f5f9;
+  background: #1e293b;
+}

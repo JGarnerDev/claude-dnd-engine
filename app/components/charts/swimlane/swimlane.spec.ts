@@ -168,6 +168,36 @@ describe('renderSwimlane', () => {
     expect(api.eventCount).toBeLessThan(40);
   });
 
+  it('refits the canvas to the container width when it resizes', async () => {
+    // happy-dom reports clientWidth 0 and never fires ResizeObserver, so drive both
+    // by hand: a mutable clientWidth getter + a captured observer callback.
+    let width = 800;
+    Object.defineProperty(container, 'clientWidth', { configurable: true, get: () => width });
+    let fire: (() => void) | null = null;
+    const RealRO = globalThis.ResizeObserver;
+    globalThis.ResizeObserver = class {
+      constructor(cb: () => void) {
+        fire = cb;
+      }
+      observe() {}
+      disconnect() {}
+      unobserve() {}
+    } as unknown as typeof ResizeObserver;
+
+    try {
+      const api = renderSwimlane(container, data);
+      const before = api.contentWidth;
+      width = 1600; // container grew
+      fire!();
+      await flush(); // observer coalesces into a rAF
+      // Fit density tracks width, so the level-1 canvas grows with the viewport
+      // (no dead space on the right) instead of staying at the mount width.
+      expect(api.contentWidth).toBeGreaterThan(before);
+    } finally {
+      globalThis.ResizeObserver = RealRO;
+    }
+  });
+
   it('getState() snapshots the live query and track selection', () => {
     const api = renderSwimlane(container, data);
     const search = container.querySelector<HTMLInputElement>('.chart-search')!;

@@ -16,8 +16,8 @@ import { clampZoom, resolveTracks, serializeState, DEFAULT_STATE } from '../_com
 import type { SettingsSection } from '../_common/components/settingspanel.js';
 import { enablePan, enableWheelZoom, enableMarkerInteraction } from '../_common/components/controls.js';
 import { barHeightFor } from '../_common/helpers/cluster.js';
-import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, GUTTER_W, SWIM_TOP_PAD, MONTH_VIEW_FRAC, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT } from '../_common/constants.js';
-import type { ChartState, PanViewport, SwimBar, SwimItem, SwimLayout, SwimRow, TimelineEvent, Tick, TimelineData, ZoomKind } from '../_common/types.js';
+import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, GUTTER_W, SWIM_TOP_PAD, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT } from '../_common/constants.js';
+import type { ChartState, PanViewport, SessionBand, SwimBar, SwimItem, SwimLayout, SwimRow, TimelineEvent, Tick, TimelineData, ZoomKind } from '../_common/types.js';
 
 // Per-row bar height for a member count (swimlane sizing — fits inside a row).
 const swimBarHeight = (count: number): number => barHeightFor(count, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT);
@@ -85,6 +85,32 @@ function positionDot(
   }
 }
 
+// A session column: a full-height band passing through every lane, behind the
+// dots (z 0). Sessions aren't a lane here — this is their only presence on the
+// Campaign view. The name pins to the top of the column (truncated to its width).
+// Carries the same data-* as the world view's bands and is matched by controls.ts'
+// interaction selector, so the shared hover tooltip / click-to-open path works.
+// (It deliberately does NOT reuse the world view's `chart-band` class — all chart
+// CSS is bundled into one document, so that class's axis-box geometry would bleed.)
+function buildSessionBand(band: SessionBand, i: number): HTMLDivElement {
+  const el = document.createElement('div');
+  // Zebra parity so adjacent columns read as distinct lanes-wide bands.
+  el.className = 'chart-swim-sband' + (i % 2 ? ' is-alt' : '') + (band.major ? ' is-major' : '');
+  el.style.left = `${band.x0}px`;
+  el.style.width = `${Math.max(1, band.x1 - band.x0)}px`;
+  el.dataset.label = band.label;
+  el.dataset.track = 'session'; // tooltip meta label
+  if (band.source) {
+    el.dataset.source = band.source;
+    el.classList.add('has-source');
+  }
+  const label = document.createElement('div');
+  label.className = 'chart-swim-sband-label';
+  label.textContent = band.major ? `★ ${band.label}` : band.label;
+  el.appendChild(label);
+  return el;
+}
+
 function tickNodesFor(tick: Tick): [HTMLDivElement, HTMLDivElement] {
   const line = document.createElement('div');
   line.className = 'chart-swim-grid';
@@ -149,6 +175,9 @@ function buildCanvas(layout: SwimLayout, events: readonly TimelineEvent[], match
   canvas.style.height = `${layout.totalHeight}px`;
 
   for (const tick of layout.ticks) canvas.append(...tickNodesFor(tick));
+  // Session columns sit behind the lanes (z 0) — append before the row bands and
+  // dots so those paint over them.
+  layout.sessionBands.forEach((band, i) => canvas.appendChild(buildSessionBand(band, i)));
   // Faint row bands so dots read as sitting on a lane.
   for (const row of layout.rows) {
     const band = document.createElement('div');
@@ -222,9 +251,14 @@ function buildGutter(rows: SwimRow[], height: number, onToggle: (category: strin
   return gutter;
 }
 
+// The container carries the live ResizeObserver between renders so a re-render
+// (tab switch back to Campaign) can disconnect the prior one instead of stacking.
+type ResizeHost = HTMLElement & { _swimResizeObs?: ResizeObserver };
+
 export function renderSwimlane(container: HTMLElement, data: TimelineData, initialState?: ChartState): SwimApi {
   const cal = data.calendar || DEFAULT_CALENDAR;
-  const viewportWidth = container.clientWidth || 800;
+  let viewportWidth = container.clientWidth || 800;
+  (container as ResizeHost)._swimResizeObs?.disconnect();
   container.innerHTML = '';
   container.classList.add('chart-root');
 
@@ -260,7 +294,10 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
   // again whenever the toggle flips. zoomLevel survives a toggle (re-clamped). The
   // filter bar / controls are built once over the full set so they stay stable.
   let idx = fullIdx;
-  let tree = buildTrackTree(data.events);
+  // Sessions render as full-height columns, not as a lane — so they're kept out of
+  // the track tree. The Party lane then vanishes on its own (presence-derived) when
+  // sessions are its only members. rebuildForEvents() rebuilds the tree the same way.
+  let tree = buildTrackTree(data.events.filter((e) => !e.session));
   let fitDensity = 1;
   let maxZoom = ZOOM_MAX;
   let zoomLevel = 1;
@@ -362,22 +399,56 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
     draw();
   }
 
+  // Derive the width-dependent scale: fit density (zoom level 1 = the whole span
+  // fills the viewport) and the max-zoom cap. Both depend on viewportWidth, so this
+  // re-runs whenever the width changes (mount, history toggle, resize). The live
+  // zoom is re-clamped to the new cap; the first mount seeds it from a loaded view.
+  function recomputeScale() {
+    const spanYears = spanYearsOf(idx);
+    fitDensity = Math.max(1, (viewportWidth - GUTTER_W - MARGIN * 2 - 2) / spanYears);
+    const canvasWidth = Math.max(1, viewportWidth - GUTTER_W);
+    // Reach month ticks (a month fills ~MONTH_VIEW_FRAC of the canvas) and, one
+    // tier finer, day ticks (a day fills ~DAY_VIEW_FRAC) — so a day-spaced campaign
+    // can spread to per-day resolution, matching the world view.
+    const monthDensity = MONTH_VIEW_FRAC * canvasWidth * monthsPerYear;
+    const dayDensity = DAY_VIEW_FRAC * canvasWidth * idx.daysPerYear;
+    maxZoom = Math.max(ZOOM_MAX, monthDensity / fitDensity, dayDensity / fitDensity);
+    zoomLevel = firstBuild && initialState ? clampZoom(initialState.zoomLevel, maxZoom) : Math.min(zoomLevel, maxZoom);
+  }
+
   // (Re)derive the event-dependent state for the current deep-history setting, then
   // redraw. Runs at mount and whenever the History toggle flips. Resets the layout
   // cache (the index/tree changed) and re-clamps zoom to the new span's max.
   function rebuildForEvents() {
     const events = visibleEvents();
     idx = indexEvents(events, cal);
-    tree = buildTrackTree(events);
-    const spanYears = spanYearsOf(idx);
-    fitDensity = Math.max(1, (viewportWidth - GUTTER_W - MARGIN * 2 - 2) / spanYears);
-    const canvasWidth = Math.max(1, viewportWidth - GUTTER_W);
-    maxZoom = Math.max(ZOOM_MAX, (MONTH_VIEW_FRAC * canvasWidth * monthsPerYear) / fitDensity);
-    // First mount seeds zoom from a loaded view; a toggle keeps the live zoom.
-    zoomLevel = firstBuild && initialState ? clampZoom(initialState.zoomLevel, maxZoom) : Math.min(zoomLevel, maxZoom);
+    tree = buildTrackTree(events.filter((e) => !e.session));
+    recomputeScale();
     firstBuild = false;
     layoutCache.clear();
     draw();
+  }
+
+  // Refit the canvas to the live viewport width. The fit density (zoom level 1 =
+  // whole span fills the viewport) is derived from a width measurement, and that
+  // measurement goes stale two ways: the initial container.clientWidth is read
+  // before swim (and its scrollbar) exist, so it can be off; and a later
+  // window/container resize changes it outright. Either way the canvas keeps the
+  // old width — overflow + clipped edges when it shrank, dead space to the right
+  // (canvas narrower than swim) when it grew. Measure swim.clientWidth (the true
+  // scroll viewport, gutter included), recompute the scale, and redraw. keepAnchor
+  // holds the on-screen center fixed (a live resize); without it the scroll is
+  // left as-is (initial refit / saved-view restore). Returns whether a refit ran.
+  // No-op when unchanged or detached (a stale observer after a tab switch away).
+  function refit(keepAnchor: boolean): boolean {
+    const w = swim.clientWidth || container.clientWidth;
+    if (!w || w === viewportWidth || !swim.isConnected) return false;
+    const anchor = keepAnchor ? anchorAt() : undefined;
+    viewportWidth = w;
+    recomputeScale();
+    layoutCache.clear();
+    draw(anchor);
+    return true;
   }
 
   // The History toggle (only shown when there's pre-campaign history to reveal):
@@ -456,11 +527,39 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
   ];
   container.append(filterBar, swim);
   rebuildForEvents();
+  // The width read at the top (container.clientWidth, before swim was in the DOM)
+  // can be stale; now that swim is mounted, refit to its true viewport width so
+  // zoom-level-1 fills the canvas instead of leaving dead space to the right.
+  refit(false);
   // Restore a loaded view's pan after the seeded draw (browser clamps over-range).
   if (initialState) swim.scrollLeft = initialState.scrollLeft;
   enablePan(swim);
   enableWheelZoom(swim, zoomWheel);
   enableMarkerInteraction(swim, (source) => window.open(source, '_blank'));
+
+  // One more refit after the browser settles layout, in case the synchronous read
+  // above still ran pre-layout. draw() leaves scroll untouched when not anchored,
+  // but replaceChildren can reset it, so reapply the current scroll across it.
+  requestAnimationFrame(() => {
+    const keepScroll = swim.scrollLeft;
+    if (refit(false)) swim.scrollLeft = keepScroll;
+  });
+
+  // Track the live viewport width so zoom-level-1 always fits after a resize.
+  // Coalesce a resize drag's many callbacks into one redraw per frame. The
+  // observer is stashed on the container so the next render disconnects it.
+  if (typeof ResizeObserver !== 'undefined') {
+    let resizeRaf = 0;
+    const obs = new ResizeObserver(() => {
+      if (resizeRaf) return;
+      resizeRaf = requestAnimationFrame(() => {
+        resizeRaf = 0;
+        refit(true); // keep the on-screen center fixed across a live resize
+      });
+    });
+    obs.observe(container);
+    (container as ResizeHost)._swimResizeObs = obs;
+  }
   return api;
 }
 

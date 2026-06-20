@@ -10,7 +10,7 @@ import { computeLayoutFrom } from './helpers/layout.js';
 import { layoutLabels } from './helpers/labels.js';
 import { barHeightFor } from '../_common/helpers/cluster.js';
 import { indexEvents, spanYearsOf } from '../_common/helpers/axis.js';
-import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, TARGET_PX_PER_BEAT, MONTH_VIEW_FRAC, ZOOM_UPSCALE_FROM, ITEM_SCALE_MAX, WORLD_RIGHT_PAD } from '../_common/constants.js';
+import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, TARGET_PX_PER_BEAT, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, ZOOM_UPSCALE_FROM, ITEM_SCALE_MAX, WORLD_RIGHT_PAD } from '../_common/constants.js';
 import { AXIS_GAP, TIER_H, LABEL_BOX_PAD, LABEL_MIN_TIERS, LABEL_TIER_CEIL } from '../_common/constants.js';
 import { LABEL_GAP, LABEL_MAX_SHIFT, LABEL_GAP_SPREAD, LABEL_SHIFT_SPREAD, LABEL_LIFT, BAND_MIN_PX } from '../_common/constants.js';
 import { enablePan, enableWheelZoom, enableMarkerInteraction } from '../_common/components/controls.js';
@@ -198,7 +198,10 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
   // month at that fraction is MONTH_VIEW_FRAC·viewportWidth·monthsPerYear.
   const monthsPerYear = cal.months.length || 12;
   const monthDensity = MONTH_VIEW_FRAC * viewportWidth * monthsPerYear;
-  const maxZoom = Math.max(ZOOM_MAX, targetDensity / fitDensity, monthDensity / fitDensity);
+  // One tier finer: guarantee the zoom can reach day-granular ticks (a day fills
+  // ~DAY_VIEW_FRAC of the viewport). dayWidth = pxPerYear / daysPerYear.
+  const dayDensity = DAY_VIEW_FRAC * viewportWidth * idx.daysPerYear;
+  const maxZoom = Math.max(ZOOM_MAX, targetDensity / fitDensity, monthDensity / fitDensity, dayDensity / fitDensity);
   // A loaded view seeds the zoom (clamped to this data's range, decision H); else fit.
   let zoomLevel = initialState ? clampZoom(initialState.zoomLevel, maxZoom) : 1;
   const api: TimelineApi = {

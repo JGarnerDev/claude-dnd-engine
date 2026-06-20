@@ -15,6 +15,13 @@ export const TARGET_PX_PER_BEAT = 96;
 // lets a single month grow wider than the viewport so day-granular spans (a
 // session-by-session campaign) can spread their beats apart instead of stacking.
 export const MONTH_VIEW_FRAC = 1.4;
+// One step finer than MONTH_VIEW_FRAC: the deepest zoom also guarantees you can
+// reach day-granular ticks, where one calendar day fills at least this fraction
+// of the viewport width (both views). dayWidth = pxPerYear / daysPerYear, so the
+// density that puts a day at that fraction is DAY_VIEW_FRAC·viewportWidth·daysPerYear.
+// Sized so a day clears MIN_TICK_PX comfortably on a normal viewport, letting a
+// session-by-session campaign spread to per-day ticks instead of stopping at months.
+export const DAY_VIEW_FRAC = 0.12;
 export const MARGIN = 80; // left/right gutter inside the canvas, in px. >= LABEL_W/2 so an edge beat's centered label never spills past the canvas bound
 export const EDGE_PAD = 0.05; // breathing room before first / after last beat, as a fraction of span
 // World view extends its right edge further than EDGE_PAD so the axis max sits at

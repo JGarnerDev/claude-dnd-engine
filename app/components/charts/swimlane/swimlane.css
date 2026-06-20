@@ -90,6 +90,45 @@
 }
 .chart-swim-band.is-child { background: rgba(255, 255, 255, 0.02); }
 
+/* Session columns (sband): each play session as a full-height band passing through
+   every lane, behind the dots (z 0). Sessions aren't a lane on this view — this is
+   their only presence. A faint party-tinted fill + a left divider read it as a
+   column; the name pins to the top strip (below the year/month tick labels, which
+   sit at top:6 — see SWIM_TOP_PAD=40 in constants.ts) and clips to the column
+   width. Mirrors the world view's .chart-band tint, extended the full height. */
+.chart-swim-sband {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border-left: 1px solid color-mix(in srgb, var(--track-party) 30%, transparent);
+  background-color: color-mix(in srgb, var(--track-party) 14%, transparent);
+  z-index: 0;
+  transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+/* Zebra: alternate columns drop to a barer fill so each session reads distinctly. */
+.chart-swim-sband.is-alt { background-color: color-mix(in srgb, var(--track-party) 5%, transparent); }
+.chart-swim-sband.has-source { cursor: pointer; }
+.chart-swim-sband:hover { background-color: color-mix(in srgb, var(--track-party) 22%, transparent); }
+.chart-swim-sband.is-major {
+  border-left-width: 2px;
+  border-left-color: var(--track-party);
+}
+.chart-swim-sband-label {
+  position: absolute;
+  top: 22px; /* clear the tick labels (top:6) inside SWIM_TOP_PAD (40px) */
+  left: 5px;
+  right: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  line-height: 1;
+  color: var(--chart-muted);
+  pointer-events: none; /* clicks fall through to the band (open source) */
+}
+.chart-swim-sband.is-major .chart-swim-sband-label { color: var(--chart-text); }
+
 /* Per-row density bars (LOD): a short column centered on the row, height ∝ count
    (set inline), colored by the row's track. Click to zoom into the cluster. */
 .chart-swim-bar {

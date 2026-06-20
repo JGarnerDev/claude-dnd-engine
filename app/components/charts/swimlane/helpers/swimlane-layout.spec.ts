@@ -194,4 +194,37 @@ describe('computeSwimlane', () => {
     expect(hi.bars).toHaveLength(0);
     expect(hi.items).toHaveLength(40); // every beat individual
   });
+
+  // --- sessions render as full-height columns, not as a lane ------------------
+  const withSessions: TimelineEvent[] = [
+    { date: '1340', label: 'S1', track: 'party', session: true },
+    { date: '1342', label: 'S2', track: 'party', session: true, major: true },
+    { date: '1344', label: 'S3', track: 'party', session: true },
+    { date: '1341', label: 'beat', track: 'character:Mara' },
+  ];
+
+  it('lifts sessions out of the lanes — no party row, no session dots', () => {
+    const out = computeSwimlane(withSessions);
+    expect(out.rows.some((r) => r.key === 'party')).toBe(false);
+    expect(out.items.some((i) => i.session)).toBe(false);
+    expect(out.items.map((i) => i.label)).toEqual(['beat']); // only the non-session beat is a dot
+  });
+
+  it('derives one session band per session, with the major flag carried', () => {
+    const out = computeSwimlane(withSessions);
+    expect(out.sessionBands.map((b) => b.label)).toEqual(['S1', 'S2', 'S3']);
+    expect(out.sessionBands.find((b) => b.label === 'S2')!.major).toBe(true);
+    // Bands abut (centered, edges at the midpoints to neighbours) and read left→right.
+    out.sessionBands.forEach((b) => expect(b.x1).toBeGreaterThan(b.x0));
+  });
+
+  it('keeps a non-session party beat on the party lane', () => {
+    const out = computeSwimlane([
+      { date: '1340', label: 'S1', track: 'party', session: true },
+      { date: '1341', label: 'plain', track: 'party' }, // no session flag → still a lane dot
+    ]);
+    expect(out.rows.some((r) => r.key === 'party')).toBe(true);
+    expect(out.items.map((i) => i.label)).toEqual(['plain']);
+    expect(out.sessionBands.map((b) => b.label)).toEqual(['S1']);
+  });
 });

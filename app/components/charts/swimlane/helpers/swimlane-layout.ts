@@ -8,6 +8,7 @@ import { computeAxisFrom, indexEvents } from '../../_common/helpers/axis.js';
 import type { IndexedEvents } from '../../_common/helpers/axis.js';
 import { weightOf } from '../../_common/helpers/weight.js';
 import { clusterBeats, barHeightFor } from '../../_common/helpers/cluster.js';
+import { deriveSessionBands } from '../../_common/helpers/bands.js';
 import { buildTrackTree } from './tracks.js';
 import {
   ROW_H,
@@ -77,7 +78,10 @@ export function computeSwimlane(
   pxPerYear: number = PX_PER_YEAR,
   config?: CategoryConfig[],
 ): SwimLayout {
-  return computeSwimlaneFrom(indexEvents(rawEvents, cal), buildTrackTree(rawEvents, config), collapsed, cal, pxPerYear);
+  // Sessions render as columns, not lanes (see computeSwimlaneFrom) — keep them out
+  // of the track tree so they never spawn a row. The renderer filters identically.
+  const tree = buildTrackTree(rawEvents.filter((e) => !e.session), config);
+  return computeSwimlaneFrom(indexEvents(rawEvents, cal), tree, collapsed, cal, pxPerYear);
 }
 
 // Zoom/collapse step: takes the pre-indexed events and the prebuilt track tree
@@ -93,7 +97,7 @@ export function computeSwimlaneFrom(
 ): SwimLayout {
   const axis = computeAxisFrom(idx, cal, pxPerYear);
   if (axis.isEmpty) {
-    return { isEmpty: true, contentWidth: 0, totalHeight: SWIM_TOP_PAD + SWIM_BOTTOM_PAD, spanYears: 0, ticks: [], rows: [], items: [], bars: [] };
+    return { isEmpty: true, contentWidth: 0, totalHeight: SWIM_TOP_PAD + SWIM_BOTTOM_PAD, spanYears: 0, ticks: [], rows: [], items: [], bars: [], sessionBands: [] };
   }
 
   const rows = buildRows(tree, collapsed);
@@ -101,7 +105,14 @@ export function computeSwimlaneFrom(
   const centerOf = new Map(rows.map((r) => [r.key, r.centerY]));
   const colorOf = new Map(rows.map((r) => [r.key, r.colorVar]));
 
-  const events = axis.events; // sorted ascending by time
+  // Sessions aren't beats on a lane here — they're full-height columns drawn
+  // behind every lane (deriveSessionBands centers each on its session, edges at
+  // the midpoints to its neighbours). So split them out: rows/dots/bars are built
+  // from the non-session beats only (the tree the renderer passes in already omits
+  // the party lane), and the sessions feed the band derivation off the same axis.
+  const sessions = axis.events.filter((e) => e.session);
+  const sessionBands = deriveSessionBands(sessions, axis.xOf, axis.daysPerYear);
+  const events = axis.events.filter((e) => !e.session); // sorted ascending by time
   const xs = events.map((e) => axis.xOf(e._idx));
   const keyOf = events.map((e) => rowKeyFor(e.track, rowKeys));
 
@@ -185,5 +196,5 @@ export function computeSwimlaneFrom(
   }
 
   const totalHeight = (rows.length ? rows[rows.length - 1].y + ROW_H : SWIM_TOP_PAD) + SWIM_BOTTOM_PAD;
-  return { isEmpty: false, contentWidth: axis.contentWidth, totalHeight, spanYears: axis.spanYears, ticks: axis.ticks, rows, items, bars };
+  return { isEmpty: false, contentWidth: axis.contentWidth, totalHeight, spanYears: axis.spanYears, ticks: axis.ticks, rows, items, bars, sessionBands };
 }

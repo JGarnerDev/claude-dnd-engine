@@ -155,9 +155,12 @@ function Get-DateParts($s) {
 }
 
 # A [datetime] mermaid can plot. Rough by design (custom calendars approximate to Gregorian).
+# Year is clamped to >=1: [datetime]'s minimum year is 1, so an epoch-anchored or
+# pre-epoch date (year 0 or negative) would throw. The proxy is orientation-only, so
+# pinning such years to 1 is harmless -- Get-DateSortKey keeps the true year for ordering.
 function Get-PlotDate($s) {
     $d = Get-DateParts $s
-    [datetime]::new($d.Year, $d.Month, $d.Day)
+    [datetime]::new([math]::Max(1, $d.Year), $d.Month, $d.Day)
 }
 
 # Numeric sort key honoring graded precision (missing month/day sort to start).

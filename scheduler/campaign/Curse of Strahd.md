@@ -1,6 +1,7 @@
 ﻿---
 name: "Curse of Strahd"
 type: campaign
+campaign: strahd
 dm: "Kellan"
 exists: false
 state: active

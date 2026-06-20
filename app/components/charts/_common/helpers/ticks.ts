@@ -1,5 +1,6 @@
 // Responsive axis ticks (pure). Picks tick granularity from the pixel density so
-// labels stay readable at any zoom: month ticks when deeply zoomed in, single
+// labels stay readable at any zoom: day ticks at the deepest zoom, month ticks
+// when deeply zoomed in, single
 // years at mid zoom, and multi-year steps (2/5/10/25…) when zoomed out far enough
 // that yearly ticks would crowd below MIN_TICK_PX. One source for both the world
 // view and the swimlane (both go through computeAxis).
@@ -22,12 +23,19 @@ export function yearStepFor(pxPerYear: number): number {
   return step;
 }
 
+// contentWidth clips ticks to the canvas: the year/month loops walk whole calendar
+// years (firstYear→lastYear), so a sub-year data domain (e.g. one month, scaled to
+// fill the canvas) would otherwise place the other months' ticks far past the
+// canvas edge — inflating scrollWidth and leaving dead space. A tick shows only when
+// its x lands within [0, contentWidth] (margins included, so an edge label in the
+// inset still shows). Defaults to Infinity so pure callers/tests stay unclipped.
 export function buildTicks(
   minIdx: number,
   maxIdx: number,
   cal: Calendar,
   pxPerYear: number,
   xOf: (idx: number) => number,
+  contentWidth: number = Infinity,
 ): Tick[] {
   const { daysPerYear } = calendarTables(cal);
   const monthsPerYear = cal.months.length;
@@ -35,6 +43,26 @@ export function buildTicks(
   const lastYear = Math.floor(maxIdx / daysPerYear);
   const yearLabel = (y: number) => (cal.epochLabel ? `${y} ${cal.epochLabel}` : `${y}`);
   const ticks: Tick[] = [];
+  const push = (idx: number, label: string) => {
+    const x = xOf(idx);
+    if (x >= 0 && x <= contentWidth) ticks.push({ label, x });
+  };
+
+  // Day granularity — finest tier, only when a single day is wide enough to label.
+  // The first day of the year carries the year number, the first day of each month
+  // the month name, and every other day its day-of-month number.
+  if (daysPerYear > 0 && pxPerYear / daysPerYear >= MIN_TICK_PX) {
+    for (let y = firstYear; y <= lastYear; y++) {
+      let dayAcc = y * daysPerYear;
+      for (let m = 0; m < monthsPerYear; m++) {
+        for (let d = 0; d < cal.months[m].days; d++) {
+          push(dayAcc, m === 0 && d === 0 ? yearLabel(y) : d === 0 ? cal.months[m].name : `${d + 1}`);
+          dayAcc += 1;
+        }
+      }
+    }
+    return ticks;
+  }
 
   // Month granularity — only when an average month is wide enough to label. The
   // first month of each year carries the year number; the rest the month name.
@@ -42,7 +70,7 @@ export function buildTicks(
     for (let y = firstYear; y <= lastYear; y++) {
       let dayAcc = y * daysPerYear;
       for (let m = 0; m < monthsPerYear; m++) {
-        ticks.push({ label: m === 0 ? yearLabel(y) : cal.months[m].name, x: xOf(dayAcc) });
+        push(dayAcc, m === 0 ? yearLabel(y) : cal.months[m].name);
         dayAcc += cal.months[m].days;
       }
     }
@@ -53,7 +81,7 @@ export function buildTicks(
   const step = yearStepFor(pxPerYear);
   for (let y = firstYear; y <= lastYear; y++) {
     if ((((y % step) + step) % step) !== 0) continue; // keep multiples of step (negatives too)
-    ticks.push({ label: yearLabel(y), x: xOf(y * daysPerYear) });
+    push(y * daysPerYear, yearLabel(y));
   }
   return ticks;
 }

@@ -81,10 +81,12 @@ export function enableMarkerInteraction(viewport: PanViewport, onOpen: (source: 
   tip.append(title, meta);
   document.body.appendChild(tip);
 
-  // Both on-axis beat dots and the session bands behind them carry the same
-  // data-* (label/date/track/source) and share this hover + click-to-open path.
+  // Beat dots (both charts), the world view's axis-straddling session bands
+  // (.chart-band) and the swimlane's full-height session columns (.chart-swim-sband)
+  // all carry the same data-* (label/date/track/source) and share this hover +
+  // click-to-open path.
   const markerAt = (e: Event): HTMLElement | null =>
-    (e.target as Element | null)?.closest<HTMLElement>('.chart-marker, .chart-band') ?? null;
+    (e.target as Element | null)?.closest<HTMLElement>('.chart-marker, .chart-band, .chart-swim-sband') ?? null;
 
   viewport.addEventListener('mouseover', (e) => {
     const m = markerAt(e);

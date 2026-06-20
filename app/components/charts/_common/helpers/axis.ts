@@ -96,7 +96,7 @@ export function computeAxisFrom(
   const xOf = (i: number) => MARGIN + scale(i);
 
   // Tick granularity adapts to the current density (months / years / multi-year).
-  const ticks: Tick[] = buildTicks(minIdx, maxIdx, cal, pxPerYear, xOf);
+  const ticks: Tick[] = buildTicks(minIdx, maxIdx, cal, pxPerYear, xOf, contentWidth);
 
   return { isEmpty: false, events, daysPerYear, minIdx, maxIdx, contentWidth, spanYears, xOf, ticks };
 }
