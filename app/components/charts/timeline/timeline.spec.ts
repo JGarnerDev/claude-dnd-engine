@@ -41,6 +41,60 @@ describe('renderTimeline', () => {
     expect(container.querySelectorAll('.chart-marker')).toHaveLength(3);
   });
 
+  it('renders sessions as bands (not dots) and opens their source on click', () => {
+    const withSessions: TimelineData = {
+      calendar: null,
+      events: [
+        { date: '1340-01-01', label: 'S1 The Inn', track: 'party', session: true, source: 'historian/sessions/s1.md' },
+        { date: '1340-02-01', label: 'A world beat', track: 'world' },
+        { date: '1340-03-01', label: 'S2 Death House', track: 'party', session: true },
+      ],
+    };
+    renderTimeline(container, withSessions);
+    const bands = [...container.querySelectorAll<HTMLElement>('.chart-band')];
+    expect(bands).toHaveLength(2);
+    // sessions don't render as on-axis dots
+    expect(container.querySelectorAll('.chart-marker')).toHaveLength(1);
+    expect(bands.map((b) => b.dataset.label)).toEqual(['S1 The Inn', 'S2 Death House']);
+
+    // a source-backed band is clickable and opens its note
+    let opened = '';
+    window.open = ((url?: string) => {
+      opened = url ?? '';
+      return null;
+    }) as typeof window.open;
+    const sourced = container.querySelector<HTMLElement>('.chart-band.has-source')!;
+    sourced.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    expect(opened).toBe('historian/sessions/s1.md');
+  });
+
+  it('hides session bands too narrow to read (zoomed-out slivers)', () => {
+    // Two sessions on the same in-world date collapse to ~0-width bands; the gate
+    // drops them rather than render unreadable slivers.
+    const coincident: TimelineData = {
+      calendar: null,
+      events: [
+        { date: '1340-06-01', label: 'S1', track: 'party', session: true },
+        { date: '1340-06-01', label: 'S2', track: 'party', session: true },
+      ],
+    };
+    renderTimeline(container, coincident);
+    expect(container.querySelectorAll('.chart-band')).toHaveLength(0);
+  });
+
+  it('shows session bands once they are wide enough', () => {
+    // Sessions two years apart make wide bands even at fit zoom.
+    const spread: TimelineData = {
+      calendar: null,
+      events: [
+        { date: '1340-06-01', label: 'S1', track: 'party', session: true },
+        { date: '1342-06-01', label: 'S2', track: 'party', session: true },
+      ],
+    };
+    renderTimeline(container, spread);
+    expect(container.querySelectorAll('.chart-band').length).toBeGreaterThan(0);
+  });
+
   it('gives each marker a dot, leader, and label', () => {
     renderTimeline(container, data);
     for (const marker of container.querySelectorAll('.chart-marker')) {

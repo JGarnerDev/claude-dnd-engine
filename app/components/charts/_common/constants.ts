@@ -17,6 +17,12 @@ export const TARGET_PX_PER_BEAT = 96;
 export const MONTH_VIEW_FRAC = 1.4;
 export const MARGIN = 80; // left/right gutter inside the canvas, in px. >= LABEL_W/2 so an edge beat's centered label never spills past the canvas bound
 export const EDGE_PAD = 0.05; // breathing room before first / after last beat, as a fraction of span
+// World view extends its right edge further than EDGE_PAD so the axis max sits at
+// least 50% past the latest beat (the newest session) — headroom for sessions to
+// come instead of jamming the latest one against the canvas edge. A fraction of
+// the beat span added on the RIGHT only (left keeps EDGE_PAD). Swimlane keeps the
+// symmetric EDGE_PAD.
+export const WORLD_RIGHT_PAD = 0.5;
 
 // Label box geometry (mirrors .chart-label in timeline/timeline.css). Labels occupy a fixed
 // slot so lane assignment needs no DOM measurement (works under happy-dom too).
@@ -38,6 +44,18 @@ export const LABEL_TIER_CEIL = 14;
 // slants to bridge the gap). Lets crowded labels claim adjacent empty axis space
 // instead of dropping; bounded so the leader stays short enough to read.
 export const LABEL_MAX_SHIFT = LABEL_W;
+// As the world view zooms in there's more empty axis to spread into, so the label
+// packer relaxes at deeper zoom: the min horizontal gap grows by up to
+// LABEL_GAP_SPREAD px, and the slide allowance grows by up to LABEL_SHIFT_SPREAD×
+// LABEL_MAX_SHIFT — so a crowded fan of labels spreads out instead of stacking.
+// Both ramp on zoom progress (0 at fit → 1 at max); see timeline.ts labelOpts().
+export const LABEL_GAP_SPREAD = 56;
+export const LABEL_SHIFT_SPREAD = 1.5;
+// Extra px the whole label stack lifts off the axis at full zoom (ramps with zoom
+// progress). Longer leaders read clearly once session bands appear, instead of
+// labels crowding the axis line. Stays within the canvas's reserved half-height
+// (LABEL_BOX_PAD + a tier of slack), so it never clips. See timeline.ts.
+export const LABEL_LIFT = 44;
 // Vertical padding (label box height-ish) added per side when sizing the canvas
 // and when converting viewport height -> tier budget. Mirrors the +28 the
 // half-height math reserves above the outermost tier.
@@ -75,6 +93,12 @@ export const BAR_FULL_COUNT = 50;
 // resolvable — so drop the bars entirely and render every beat as its own marker
 // (coincident-date beats just overlap). Below this, dense buckets roll into bars.
 export const CLUSTER_OFF_GAP = 14; // avg px/beat at or above which clustering turns off
+
+// Session bands are an overview-only distraction when they shrink to slivers (a
+// campaign whose session dates cluster collapses every band to a few px when
+// zoomed out). Hide any band narrower than this; zooming in widens them past the
+// threshold and they reappear — so bands only show once they're wide enough to read.
+export const BAND_MIN_PX = 28;
 
 // Deep-zoom upscale: as zoom approaches its maximum, grow markers so they're easy
 // to see and click. The scale stays 1× until the zoom reaches the last stretch of

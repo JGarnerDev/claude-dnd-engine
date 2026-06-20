@@ -205,10 +205,11 @@ function Get-SessionBeats {
         if (-not $date) { continue }
         $num = ($fm['session_number'] -replace '[^0-9]', '')
         $beat = [ordered]@{
-            date   = $date
-            label  = if ($num) { "S$num $($fm['name'])" } else { $fm['name'] }
-            track  = 'party'
-            source = Get-RelSource $f.FullName $Root
+            date    = $date
+            label   = if ($num) { "S$num $($fm['name'])" } else { $fm['name'] }
+            track   = 'party'
+            session = $true   # world view renders sessions as range bands, not dots; the swimlane still treats them as ordinary party-track beats
+            source  = Get-RelSource $f.FullName $Root
         }
         Add-Weight $beat $fm
         $kw = Get-Keywords $fm

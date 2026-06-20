@@ -81,15 +81,22 @@ export function enableMarkerInteraction(viewport: PanViewport, onOpen: (source: 
   tip.append(title, meta);
   document.body.appendChild(tip);
 
+  // Both on-axis beat dots and the session bands behind them carry the same
+  // data-* (label/date/track/source) and share this hover + click-to-open path.
   const markerAt = (e: Event): HTMLElement | null =>
-    (e.target as Element | null)?.closest<HTMLElement>('.chart-marker') ?? null;
+    (e.target as Element | null)?.closest<HTMLElement>('.chart-marker, .chart-band') ?? null;
 
   viewport.addEventListener('mouseover', (e) => {
     const m = markerAt(e);
     if (!m) return;
     const { label, date, track, source } = m.dataset;
     title.textContent = label ?? '';
-    meta.textContent = source ? `${date} · ${track} · click to open` : `${date} · ${track}`;
+    // A band spans a range (no single date); build the meta from whatever parts
+    // exist so a dot reads "date · track · click to open" and a band just "session
+    // · click to open".
+    const parts = [date, track].filter(Boolean);
+    if (source) parts.push('click to open');
+    meta.textContent = parts.join(' · ');
     tip.hidden = false;
   });
 

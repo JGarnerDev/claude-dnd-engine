@@ -10,15 +10,16 @@ import { computeLayoutFrom } from './helpers/layout.js';
 import { layoutLabels } from './helpers/labels.js';
 import { barHeightFor } from '../_common/helpers/cluster.js';
 import { indexEvents, spanYearsOf } from '../_common/helpers/axis.js';
-import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, TARGET_PX_PER_BEAT, MONTH_VIEW_FRAC, ZOOM_UPSCALE_FROM, ITEM_SCALE_MAX } from '../_common/constants.js';
+import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, TARGET_PX_PER_BEAT, MONTH_VIEW_FRAC, ZOOM_UPSCALE_FROM, ITEM_SCALE_MAX, WORLD_RIGHT_PAD } from '../_common/constants.js';
 import { AXIS_GAP, TIER_H, LABEL_BOX_PAD, LABEL_MIN_TIERS, LABEL_TIER_CEIL } from '../_common/constants.js';
+import { LABEL_GAP, LABEL_MAX_SHIFT, LABEL_GAP_SPREAD, LABEL_SHIFT_SPREAD, LABEL_LIFT, BAND_MIN_PX } from '../_common/constants.js';
 import { enablePan, enableWheelZoom, enableMarkerInteraction } from '../_common/components/controls.js';
 import { makeMatcher, trackList, audienceList } from '../_common/helpers/filters.js';
 import { buildFilterBar } from '../_common/components/filterbar.js';
 import { DM_AUDIENCE } from '../_common/constants.js';
 import { clampZoom, resolveTracks, serializeState, DEFAULT_STATE } from '../_common/helpers/viewstate.js';
 import type { SettingsSection } from '../_common/components/settingspanel.js';
-import type { ChartState, DensityBar, Layout, LayoutItem, PanViewport, Side, Tick, TimelineData, TimelineEvent, ZoomKind } from '../_common/types.js';
+import type { ChartState, DensityBar, Layout, LayoutItem, PanViewport, SessionBand, Side, Tick, TimelineData, TimelineEvent, ZoomKind } from '../_common/types.js';
 
 // Mutable handle returned to the caller; tests read these counts. `controls` are
 // the chrome nodes (zoom toolbar, filter bar) for the host to hoist into its
@@ -119,6 +120,25 @@ function styleBar(el: HTMLElement, bar: DensityBar, events: readonly TimelineEve
   return count;
 }
 
+// A session band: a rounded range box straddling the axis behind the beats that
+// fall inside its span. The session name isn't drawn on the axis (it would crowd
+// the beat labels) — it surfaces on hover via the shared tooltip, and a
+// source-backed band opens its note on click. The dots sit above the band
+// (higher z-index), so they keep their own hover/click in the overlap.
+function buildBand(band: SessionBand): HTMLDivElement {
+  const el = document.createElement('div');
+  el.className = 'chart-band' + (band.major ? ' is-major' : '');
+  el.style.left = `${band.x0}px`;
+  el.style.width = `${Math.max(1, band.x1 - band.x0)}px`;
+  el.dataset.label = band.label;
+  el.dataset.track = 'session'; // tooltip meta label
+  if (band.source) {
+    el.dataset.source = band.source;
+    el.classList.add('has-source');
+  }
+  return el;
+}
+
 function buildTick(tick: Tick): [HTMLDivElement, HTMLDivElement] {
   const line = document.createElement('div');
   line.className = 'chart-tick';
@@ -161,7 +181,9 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
 
   // span + beat density are density-invariant, so derive them from the indexed
   // events without laying out a full chart first.
-  const spanYears = spanYearsOf(idx);
+  // Match the world layout's asymmetric domain (extra right headroom) so the
+  // fit-zoom density sizes the whole padded axis, not just the symmetric span.
+  const spanYears = spanYearsOf(idx, WORLD_RIGHT_PAD);
   // Fit density: px/year that makes the whole span exactly fill the viewport.
   // Zoom level 1 == fit (whole timeline visible); zooming multiplies from here,
   // so every step changes the layout and reset always returns to full view.
@@ -226,6 +248,23 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
   // — a lone hit on an empty axis regains its label instead of staying a bare dot.
   // Only side/offset (vertical lane) and the bare flag change; x is untouched, so
   // the time scale never shifts. eventCount = matching individuals + bar members.
+  // Zoom progress 0 (fit) → 1 (max). Drives the label spreading below.
+  function zoomProgress() {
+    return maxZoom > 1 ? Math.min(1, (zoomLevel - 1) / (maxZoom - 1)) : 0;
+  }
+
+  // Deeper zoom opens up empty axis, so the label packer is allowed a wider min
+  // gap and a longer slide — a crowded fan of labels spreads out horizontally
+  // instead of stacking into tiers.
+  function labelOpts() {
+    const p = zoomProgress();
+    return {
+      maxTiers,
+      gap: LABEL_GAP + p * LABEL_GAP_SPREAD,
+      maxShift: LABEL_MAX_SHIFT * (1 + p * LABEL_SHIFT_SPREAD),
+    };
+  }
+
   function applyVisibility() {
     if (!currentLayout) return;
     const match = makeMatcher(filterState);
@@ -234,14 +273,17 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
     const { showLabel, side, offset, shift } = layoutLabels(
       items.map((it) => ({ x: it.x, major: !!it.major })),
       visible,
-      { maxTiers },
+      labelOpts(),
     );
+    // Lift the whole stack off the axis at deeper zoom so leaders are long enough
+    // to read once the session bands appear behind the dots.
+    const lift = zoomProgress() * LABEL_LIFT;
     let count = 0;
     items.forEach((_, i) => {
       const node = markerNodes[i];
       if (node) {
         node.classList.toggle('chart-hidden', !visible[i]);
-        placeMarker(node, side[i], offset[i], shift[i], showLabel[i]);
+        placeMarker(node, side[i], offset[i] + lift, shift[i], showLabel[i]);
       }
       if (visible[i]) count++;
     });
@@ -300,6 +342,13 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
     const axis = document.createElement('div');
     axis.className = 'chart-axis';
     canvas.appendChild(axis);
+
+    // Session bands sit behind the beats (background layer) — append before ticks
+    // and markers so dots/labels paint over them. Skip any too narrow to read at
+    // this zoom (they reappear as you zoom in and they widen past BAND_MIN_PX).
+    for (const band of layout.sessionBands) {
+      if (band.x1 - band.x0 >= BAND_MIN_PX) canvas.appendChild(buildBand(band));
+    }
 
     for (const tick of layout.ticks) canvas.append(...buildTick(tick));
 

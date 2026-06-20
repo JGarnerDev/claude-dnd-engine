@@ -35,11 +35,13 @@ export function indexEvents(rawEvents: TimelineEvent[], cal: Calendar = DEFAULT_
 }
 
 // Padded domain → span in years. Density-invariant, so the renderer can size the
-// fit-zoom and max-zoom without computing a full layout first.
-export function spanYearsOf(idx: IndexedEvents): number {
+// fit-zoom and max-zoom without computing a full layout first. rightPad is the
+// after-last-beat breathing fraction (left always EDGE_PAD); world view passes
+// WORLD_RIGHT_PAD for extra headroom, others keep the symmetric EDGE_PAD.
+export function spanYearsOf(idx: IndexedEvents, rightPad: number = EDGE_PAD): number {
   if (idx.events.length === 0) return 0;
-  const pad = (idx.maxIdx - idx.minIdx || idx.daysPerYear) * EDGE_PAD;
-  return Math.max(1, (idx.maxIdx + pad - (idx.minIdx - pad)) / idx.daysPerYear);
+  const span = idx.maxIdx - idx.minIdx || idx.daysPerYear;
+  return Math.max(1, (idx.maxIdx + span * rightPad - (idx.minIdx - span * EDGE_PAD)) / idx.daysPerYear);
 }
 
 export interface Axis {
@@ -61,8 +63,9 @@ export function computeAxis(
   rawEvents: TimelineEvent[],
   cal: Calendar = DEFAULT_CALENDAR,
   pxPerYear: number = PX_PER_YEAR,
+  rightPad: number = EDGE_PAD,
 ): Axis {
-  return computeAxisFrom(indexEvents(rawEvents, cal), cal, pxPerYear);
+  return computeAxisFrom(indexEvents(rawEvents, cal), cal, pxPerYear, rightPad);
 }
 
 // Zoom step: takes the pre-indexed (sorted, day-indexed) events and recomputes
@@ -71,6 +74,7 @@ export function computeAxisFrom(
   idx: IndexedEvents,
   cal: Calendar = DEFAULT_CALENDAR,
   pxPerYear: number = PX_PER_YEAR,
+  rightPad: number = EDGE_PAD,
 ): Axis {
   const { events, daysPerYear, minIdx, maxIdx } = idx;
 
@@ -78,12 +82,13 @@ export function computeAxisFrom(
     return { isEmpty: true, events: [], daysPerYear, minIdx: 0, maxIdx: 0, contentWidth: 0, spanYears: 0, xOf: () => MARGIN, ticks: [] };
   }
 
-  // Pad the date domain by EDGE_PAD of its span on each side so the first and
-  // last beats sit inset from the canvas edges. Single-event timelines fall back
-  // to a year of padding so the lone beat lands centered (no divide-by-zero).
-  const pad = (maxIdx - minIdx || daysPerYear) * EDGE_PAD;
-  const domMin = minIdx - pad;
-  const domMax = maxIdx + pad;
+  // Pad the date domain so the first and last beats sit inset from the canvas
+  // edges. Left is always EDGE_PAD of the span; right uses rightPad (world view
+  // passes WORLD_RIGHT_PAD for >= 50% headroom past the latest beat). Single-event
+  // timelines fall back to a year of span so the lone beat doesn't divide by zero.
+  const span = maxIdx - minIdx || daysPerYear;
+  const domMin = minIdx - span * EDGE_PAD;
+  const domMax = maxIdx + span * rightPad;
 
   const spanYears = Math.max(1, (domMax - domMin) / daysPerYear);
   const contentWidth = Math.ceil(spanYears * pxPerYear) + MARGIN * 2;

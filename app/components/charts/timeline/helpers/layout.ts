@@ -7,9 +7,10 @@ import { DEFAULT_CALENDAR } from '../../_common/helpers/calendar.js';
 import { computeAxisFrom, indexEvents } from '../../_common/helpers/axis.js';
 import type { IndexedEvents } from '../../_common/helpers/axis.js';
 import { clusterBeats } from '../../_common/helpers/cluster.js';
+import { deriveSessionBands } from './bands.js';
 import { layoutLabels } from './labels.js';
 import { weightOf } from '../../_common/helpers/weight.js';
-import { PX_PER_YEAR, AXIS_GAP, TIER_H, MIN_CANVAS_HEIGHT, BAR_MAX_H, CLUSTER_OFF_GAP, LABEL_MAX_TIERS, LABEL_BOX_PAD } from '../../_common/constants.js';
+import { PX_PER_YEAR, AXIS_GAP, TIER_H, MIN_CANVAS_HEIGHT, BAR_MAX_H, CLUSTER_OFF_GAP, LABEL_MAX_TIERS, LABEL_BOX_PAD, WORLD_RIGHT_PAD } from '../../_common/constants.js';
 import type { Calendar, DensityBar, Layout, TimelineEvent } from '../../_common/types.js';
 
 // pxPerYear is the axis density (driven by the zoom control); higher = stretched.
@@ -21,8 +22,9 @@ export function computeLayout(
   cal: Calendar = DEFAULT_CALENDAR,
   pxPerYear: number = PX_PER_YEAR,
   maxTiers: number = LABEL_MAX_TIERS,
+  rightPad: number = WORLD_RIGHT_PAD,
 ): Layout {
-  return computeLayoutFrom(indexEvents(rawEvents, cal), cal, pxPerYear, maxTiers);
+  return computeLayoutFrom(indexEvents(rawEvents, cal), cal, pxPerYear, maxTiers, rightPad);
 }
 
 // Zoom step: lays out from pre-indexed events (sorted/day-indexed once by the
@@ -33,14 +35,20 @@ export function computeLayoutFrom(
   cal: Calendar = DEFAULT_CALENDAR,
   pxPerYear: number = PX_PER_YEAR,
   maxTiers: number = LABEL_MAX_TIERS,
+  rightPad: number = WORLD_RIGHT_PAD,
 ): Layout {
-  const axis = computeAxisFrom(idx, cal, pxPerYear);
+  const axis = computeAxisFrom(idx, cal, pxPerYear, rightPad);
   if (axis.isEmpty) {
-    return { isEmpty: true, contentWidth: 0, canvasHeight: MIN_CANVAS_HEIGHT, items: [], bars: [], ticks: [], laneCount: 0, spanYears: 0 };
+    return { isEmpty: true, contentWidth: 0, canvasHeight: MIN_CANVAS_HEIGHT, items: [], bars: [], sessionBands: [], ticks: [], laneCount: 0, spanYears: 0 };
   }
 
-  const { events, xOf } = axis;
-  const xs = events.map((e) => xOf(e._idx));
+  const { events, daysPerYear, xOf } = axis;
+  // Sessions render as background time-range bands (the beats fall inside them),
+  // not as on-axis dots — so split them out before the dot/cluster/label pass.
+  const sessions = events.filter((e) => e.session);
+  const beats = events.filter((e) => !e.session);
+  const sessionBands = deriveSessionBands(sessions, xOf, daysPerYear);
+  const xs = beats.map((e) => xOf(e._idx));
 
   // LOD: roll crowded beats into below-axis density bars (height ∝ count). But
   // clustering is an overview device only — once the timeline is zoomed in enough
@@ -51,11 +59,11 @@ export function computeLayoutFrom(
   // already in time order.
   // Average spacing across the actual beat extent (not contentWidth, which counts
   // empty padding) — a tight cluster of N beats reads as crowded even on a wide axis.
-  const avgGap = events.length > 1 ? (xs[xs.length - 1] - xs[0]) / (events.length - 1) : Infinity;
+  const avgGap = beats.length > 1 ? (xs[xs.length - 1] - xs[0]) / (beats.length - 1) : Infinity;
   const { individuals, bars } =
     avgGap < CLUSTER_OFF_GAP
-      ? clusterBeats(events.map((e, i) => ({ x: xs[i], major: !!e.major })))
-      : { individuals: events.map((_, i) => i), bars: [] as DensityBar[] };
+      ? clusterBeats(beats.map((e, i) => ({ x: xs[i], major: !!e.major })))
+      : { individuals: beats.map((_, i) => i), bars: [] as DensityBar[] };
 
   // Priority, capped label gate + lane packing over the individuals (all visible
   // here — the renderer re-runs layoutLabels over the filter-matching subset when
@@ -65,7 +73,7 @@ export function computeLayoutFrom(
   // on-axis dots (hover still shows the text) and consume no collision lane. The
   // full-set layout here is the worst case, so it sets the (locked) canvas height.
   const { showLabel, side: sideOf, offset: offsetOf, shift: shiftOf, laneCount } = layoutLabels(
-    individuals.map((ei) => ({ x: xs[ei], major: !!events[ei].major })),
+    individuals.map((ei) => ({ x: xs[ei], major: !!beats[ei].major })),
     individuals.map(() => true),
     { maxTiers },
   );
@@ -76,7 +84,7 @@ export function computeLayoutFrom(
   const canvasHeight = Math.max(MIN_CANVAS_HEIGHT, halfHeight * 2, (AXIS_GAP + BAR_MAX_H + LABEL_BOX_PAD) * 2);
 
   const items = individuals.map((ei, k) => {
-    const e = events[ei];
+    const e = beats[ei];
     return {
       ...e,
       x: xs[ei],
@@ -90,5 +98,5 @@ export function computeLayoutFrom(
     };
   });
 
-  return { isEmpty: false, contentWidth: axis.contentWidth, canvasHeight, items, bars, ticks: axis.ticks, laneCount: maxLane + 1, spanYears: axis.spanYears };
+  return { isEmpty: false, contentWidth: axis.contentWidth, canvasHeight, items, bars, sessionBands, ticks: axis.ticks, laneCount: maxLane + 1, spanYears: axis.spanYears };
 }

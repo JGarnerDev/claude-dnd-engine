@@ -47,6 +47,35 @@
   color: var(--chart-muted);
 }
 
+/* Session bands: a play session drawn as a quiet time-range box straddling the
+   axis, behind the beats that fall in its span. z-index 0 keeps it under the dots
+   (z 2) and labels (z 3); the dots paint over it and keep their own hover/click in
+   the overlap, while the band picks up hover/click in the gaps between dots. The
+   name shows on hover (no on-axis text, which would crowd the beat labels). A
+   flat party-tinted fill + soft border read it as a span, not a point. */
+.chart-band {
+  position: absolute;
+  top: 50%;
+  height: 26px;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  border: 1px solid color-mix(in srgb, var(--track-party) 38%, transparent);
+  border-radius: 8px;
+  background-color: color-mix(in srgb, var(--track-party) 10%, transparent);
+  z-index: 0;
+  transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+.chart-band.has-source { cursor: pointer; }
+.chart-band:hover {
+  border-color: color-mix(in srgb, var(--track-party) 85%, transparent);
+  background-color: color-mix(in srgb, var(--track-party) 15%, transparent);
+}
+/* Major-session band: a firmer, fully-party-coloured frame. */
+.chart-band.is-major {
+  border-width: 1.5px;
+  border-color: var(--track-party);
+}
+
 /* Markers anchor on the center axis (base in _common/common.css); on the world
    view the dot sits on the axis and a leader rises/drops --chart-offset px to
    the label. Source-backed beats also make the label clickable. */

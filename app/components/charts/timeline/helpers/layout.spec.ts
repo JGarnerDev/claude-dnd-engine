@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { computeLayout } from './layout.js';
+import { MARGIN } from '../../_common/constants.js';
 import type { TimelineEvent } from '../../_common/types.js';
 
 const events: TimelineEvent[] = [
@@ -53,13 +54,38 @@ describe('computeLayout', () => {
     expect(out.items).toHaveLength(0);
   });
 
+  it('renders sessions as bands, not dots, and keeps other beats as items', () => {
+    const mixed: TimelineEvent[] = [
+      { date: '1340-01-01', label: 'S1', track: 'party', session: true },
+      { date: '1340-02-01', label: 'a beat', track: 'world' },
+      { date: '1340-03-01', label: 'S2', track: 'party', session: true },
+    ];
+    const out = computeLayout(mixed);
+    expect(out.sessionBands.map((b) => b.label)).toEqual(['S1', 'S2']);
+    expect(out.items.map((i) => i.label)).toEqual(['a beat']); // sessions excluded from dots
+    // every band ends at or before it starts is wrong — bands have positive width
+    for (const b of out.sessionBands) expect(b.x1).toBeGreaterThan(b.x0);
+  });
+
+  it('still defines the time domain from sessions even when they are bands', () => {
+    const onlySessions: TimelineEvent[] = [
+      { date: '1340-01-01', label: 'S1', session: true },
+      { date: '1342-01-01', label: 'S2', session: true },
+    ];
+    const out = computeLayout(onlySessions);
+    expect(out.items).toHaveLength(0);
+    expect(out.sessionBands).toHaveLength(2);
+    expect(out.spanYears).toBeGreaterThan(2); // the 2yr session span still drives the axis
+  });
+
   it('drives content width purely from density (no viewport floor)', () => {
     const narrow = computeLayout(events, undefined, 80);
     const wide = computeLayout(events, undefined, 320);
     expect(wide.contentWidth).toBeGreaterThan(narrow.contentWidth);
-    // span ~2.35yr: at low density content is well under any sane viewport,
-    // proving the old max(viewport, …) clamp is gone.
-    expect(narrow.contentWidth).toBeLessThan(400);
+    // span ~2.35yr (+ the world right-pad headroom): at low density content is
+    // still well under any sane viewport, proving the old max(viewport, …) clamp
+    // is gone.
+    expect(narrow.contentWidth).toBeLessThan(600);
   });
 
   it('keeps item x positions proportional to density', () => {
@@ -72,20 +98,22 @@ describe('computeLayout', () => {
     expect(computeLayout(events).spanYears).toBeGreaterThan(2);
   });
 
-  it('insets the first and last beats ~5% from the canvas edges', () => {
+  it('insets the first beat and extends the right edge >=50% of the beat span past the last', () => {
     const out = computeLayout(events, undefined, 200);
     const xs = out.items.map((i) => i.x);
-    const firstGap = xs[0];
-    const lastGap = out.contentWidth - xs[xs.length - 1];
-    // First/last sit well off the edges, near symmetric (allow the fixed margin).
-    expect(firstGap).toBeGreaterThan(out.contentWidth * 0.04);
-    expect(lastGap).toBeGreaterThan(out.contentWidth * 0.04);
-    expect(Math.abs(firstGap - lastGap)).toBeLessThan(2);
+    const beatSpan = xs[xs.length - 1] - xs[0];
+    const firstGap = xs[0]; // left inset: MARGIN + EDGE_PAD of the span
+    const lastGap = out.contentWidth - xs[xs.length - 1]; // MARGIN + WORLD_RIGHT_PAD of the span
+    // Left stays a modest EDGE_PAD inset; right carries the headroom for sessions
+    // to come — the axis max sits at least 50% of the beat span past the latest.
+    expect(firstGap - MARGIN).toBeLessThan(beatSpan * 0.2);
+    expect(lastGap - MARGIN).toBeGreaterThanOrEqual(beatSpan * 0.5 - 1);
+    expect(lastGap).toBeGreaterThan(firstGap * 2);
   });
 
-  it('centers a single beat', () => {
+  it('puts a single beat left of center, leaving right-edge headroom', () => {
     const out = computeLayout([{ date: '1340-06-01', label: 'lone' }], undefined, 200);
-    expect(out.items[0].x).toBeCloseTo(out.contentWidth / 2, 0);
+    expect(out.items[0].x).toBeLessThan(out.contentWidth / 2);
   });
 
   // Density gating: crowded beats drop their labels (bare on-axis dots) and only

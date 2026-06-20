@@ -33,6 +33,7 @@ export interface TimelineEvent {
   secret?: boolean; // DM-only beat: only the DM viewpoint shows it; characters never do
   draft?: boolean; // canon-pending (exists:false): rendered distinct (dashed/translucent); -Full exports only
   knownBy?: string[]; // character names who know this beat (drives the per-character "Known by" viewpoint)
+  session?: boolean; // a play session: the world view draws it as a time-range band (date = its end), not an on-axis dot. The swimlane ignores this and treats it as a normal beat.
 }
 
 // Act/mission span bar. Extracted by the generator; render consumes it in M4.
@@ -87,12 +88,25 @@ export interface DensityBar {
   members: number[]; // indices into the (sorted) event set, for tooltip
 }
 
+// A session band: the world view draws each play session as a horizontal range
+// straddling the axis (beats fall inside it) rather than as a dot. Sessions store
+// only an end date, so a band's left edge is the previous session's end (derived
+// in bands.ts — no extra data). x0/x1 are canvas px.
+export interface SessionBand {
+  x0: number;
+  x1: number;
+  label: string;
+  major: boolean;
+  source?: string;
+}
+
 export interface Layout {
   isEmpty: boolean;
   contentWidth: number;
   canvasHeight: number;
   items: LayoutItem[]; // individual markers: majors + sparse beats (dense ones roll into bars)
   bars: DensityBar[]; // density histogram for crowded buckets
+  sessionBands: SessionBand[]; // play sessions drawn as time-range bands behind the beats
   ticks: Tick[];
   laneCount: number;
   spanYears: number;
