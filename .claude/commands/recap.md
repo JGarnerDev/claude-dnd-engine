@@ -158,6 +158,20 @@ For each entity flagged for canonization in Phase 3:
 
 ---
 
+## Phase 5.5 — Promote Significant Beats to Events
+
+The home-page charts (`npm run home`) are a player/DM journal plotted from `type: event` entities. After canonizing entities, scan this session's beats for ones worth a standalone event on the timeline.
+
+Apply the **hybrid promotion rule** (`meta/events.md` — read it once if not already in context): a beat earns its own event if **either** it changed canon (a death, pact, location lost/founded, faction shift a later session will reference) **or** it was simply memorable at the table (a great fight, betrayal, clutch reveal). Favor inclusion; low-stakes-but-fun beats ride as `importance: minor`.
+
+- Draw candidates from the Phase 2.5 tagged beats and the Phase 2 recap. Propose them as a short list — **do not write any event file without DM confirmation.**
+- For each confirmed beat, create a `type: event` entity per `meta/schemas/event.md` in **`historian/events/`** with `exists: true`, `campaign: {active campaign}`, `source_session: [[Session {nn}]]`, and a numeric **`timeline_date`** (from the session's `in_world_end_date`, else flag that the in-world date is unknown). Set `participants`/`relates_to` to the NPCs/factions involved — the extractor auto-fans the beat onto their Party-tab lanes; set an explicit `track:` only to override.
+- Mark a beat `secret: true` (via `state: secret`) only if it's DM-only knowledge the party doesn't have.
+
+Skip silently if no beat clears the bar — not every session mints an event.
+
+---
+
 ## Phase 6 — Update Campaign State
 
 Read the active campaign file (`state: active` in `scheduler/campaign/`). Propose updates to the `## Current State` section to reflect:

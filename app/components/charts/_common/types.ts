@@ -31,6 +31,7 @@ export interface TimelineEvent {
   source?: string;
   keywords?: string[];
   secret?: boolean; // DM-only beat: only the DM viewpoint shows it; characters never do
+  draft?: boolean; // canon-pending (exists:false): rendered distinct (dashed/translucent); -Full exports only
   knownBy?: string[]; // character names who know this beat (drives the per-character "Known by" viewpoint)
 }
 

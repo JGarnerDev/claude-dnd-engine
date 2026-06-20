@@ -71,6 +71,16 @@
 /* Weight: major = larger dot, minor = smaller + dimmed */
 .chart-marker.is-major .chart-dot { width: 15px; height: 15px; }
 .chart-marker.is-minor .chart-dot { width: 8px; height: 8px; opacity: 0.7; }
+/* Draft (canon-pending, exists:false): hollow + dashed ring, translucent — DM-only
+   beats awaiting ratification. Only present in -Full (home-page) exports. */
+.chart-marker.is-draft .chart-dot {
+  background: transparent;
+  border-style: dashed;
+  box-shadow: 0 0 0 1px var(--chart-axis);
+  opacity: 0.6;
+}
+.chart-marker.is-draft .chart-label,
+.chart-marker.is-draft .chart-swim-label { opacity: 0.6; font-style: italic; }
 
 /* Scrollbars (both scroll containers): slim, faded at rest, brighter on hover
    and brightest while dragging the thumb. WebKit + Firefox. */

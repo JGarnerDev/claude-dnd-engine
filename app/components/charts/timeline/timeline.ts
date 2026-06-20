@@ -61,6 +61,7 @@ function buildMarker(item: LayoutItem, visible: boolean): HTMLDivElement {
   const marker = document.createElement('div');
   let cls = `chart-marker ${item.weight}`;
   if (item.source) cls += ' has-source';
+  if (item.draft) cls += ' is-draft';
   if (!visible) cls += ' chart-hidden';
   marker.className = cls;
   marker.style.left = `${item.x}px`;

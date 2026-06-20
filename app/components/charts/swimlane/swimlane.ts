@@ -48,6 +48,7 @@ function createDot(item: SwimItem): HTMLDivElement {
     marker.dataset.source = item.source;
     marker.classList.add('has-source');
   }
+  if (item.draft) marker.classList.add('is-draft');
   const dot = document.createElement('div');
   dot.className = 'chart-dot';
   dot.style.background = `var(${item.colorVar})`;

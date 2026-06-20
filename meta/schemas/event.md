@@ -9,6 +9,8 @@ Extends: `entity.md`
 
 Covers named historical events that shaped the present: battles, disasters, treaties, founding moments, divine interventions, catastrophes. Events are causes — use them to explain why the world is the way it is.
 
+For *what qualifies* as an event, the promotion rule, and how events surface on the home-page charts, see `meta/events.md` — this file is the frontmatter mechanics only.
+
 ---
 
 ## Player Form
@@ -34,9 +36,11 @@ Covers named historical events that shaped the present: battles, disasters, trea
 ## Schema
 
 ### Canonical Path
+
 `data/events/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `recent` | Within living memory |
@@ -61,9 +65,16 @@ tags:
   - region/
 
 # --- MANDATORY (event) ---
-date: ""              # in-world date, era, or relative time
+date: ""              # in-world date, era, or relative time (human/prose)
+timeline_date: ""     # numeric YYYY-MM-DD plot key — the chart sort/position key.
+                      # Required to appear on the timeline; needs a numeric epoch
+                      # (see meta/calendar.md). Omit only for events with no fixable date.
 outcome: ""
 consequences: []      # what about the present world exists because of this
+track: ""             # OPTIONAL placement override: "category" or "category:member"
+                      # (e.g. "faction:The Partenariats"). Empty => extractor auto-fans
+                      # onto participant/relates_to lanes, else world:<campaign>.
+                      # See meta/events.md "Track conventions".
 
 # --- OPTIONAL (entity base) ---
 aliases:
@@ -85,12 +96,17 @@ awareness: widely-known | regional | secret | forgotten | disputed
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |
-| When | `date` |
+| When | `date` (prose) + `timeline_date` (numeric `YYYY-MM-DD`) |
 | What happened | `description` + body prose |
 | Who was involved | `participants` |
 | Outcome | `outcome` |
 | Consequences | `consequences` |
 | How well known | `awareness`, `state` |
+
+### Canon-pending
+
+Lore the DM hasn't ratified (e.g. player-contributed homebrew) is ingested with `exists: false` — an *out-of-world* "not yet confirmed canon" status, distinct from `state: disputed` (an *in-world* "accounts conflict" quality). The extractor drops `exists: false` events from player-safe exports and shows them only under `-Full` as **draft** beats. Flip `exists: true` to ratify. See `meta/events.md`.

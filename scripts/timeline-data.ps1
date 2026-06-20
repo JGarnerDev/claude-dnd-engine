@@ -84,6 +84,50 @@ function Add-Weight($obj, $fm) {
 
 $script:warnFallback = 0
 
+# Lazy name -> type map across the three graph layers, so the event auto-fan can
+# tell a participant faction from an NPC and route it to the right lane category.
+# Built once (entity scan is cheap relative to per-beat lookups) and cached.
+$script:NameType = $null
+function Get-NameTypeMap {
+    if ($null -ne $script:NameType) { return $script:NameType }
+    $map = @{}
+    foreach ($layer in 'data', 'historian', 'scheduler') {
+        $dir = Join-Path $Root $layer
+        if (-not (Test-Path $dir)) { continue }
+        foreach ($f in Get-ChildItem $dir -Recurse -Filter '*.md' -ErrorAction SilentlyContinue) {
+            $fm = Get-Frontmatter $f.FullName
+            $n = $fm['name']; $t = $fm['type']
+            if ($n -and $t -and -not $map.ContainsKey($n)) { $map[$n] = $t }
+        }
+    }
+    $script:NameType = $map
+    $map
+}
+
+# Resolve the lane(s) a world event plots on (meta/events.md "Track conventions"):
+#   explicit `track:` wins -> use it verbatim;
+#   else auto-fan onto member lanes from participants/relates_to whose target is a
+#        faction (-> faction:<name>) or character/npc (-> character:<name>);
+#   else fall back to the campaign-prefixed world lane (world:<campaign>).
+# Returns one or more track strings; a beat is emitted per track.
+function Resolve-EventTracks($fm) {
+    if ($fm['track']) { return @($fm['track']) }
+    $map = Get-NameTypeMap
+    $tracks = @()
+    foreach ($k in '_list_participants', '_list_relates_to') {
+        foreach ($name in @($fm[$k] | Where-Object { $_ })) {
+            switch ($map[$name]) {
+                'faction'   { $tracks += "faction:$name" }
+                'character' { $tracks += "character:$name" }
+            }
+        }
+    }
+    $tracks = @($tracks | Select-Object -Unique)
+    if ($tracks.Count -gt 0) { return $tracks }
+    $campaign = if ($fm['campaign']) { $fm['campaign'] } else { '' }
+    if ($campaign) { @("world:$campaign") } else { @('world') }
+}
+
 # -- world events: type:event with a timeline_date -----------------------------
 function Get-EventBeats {
     $dirs = @('data\events', 'historian\events') | ForEach-Object { Join-Path $Root $_ }
@@ -96,23 +140,30 @@ function Get-EventBeats {
             if (-not $fm['timeline_date']) { continue }
             $isSecret = Test-Secret $fm
             if ($isSecret -and -not $Full) { continue }
-            $beat = [ordered]@{
-                date   = $fm['timeline_date']
-                label  = $fm['name']
-                track  = if ($fm['track']) { $fm['track'] } else { 'world' }  # D7: explicit track wins
-                source = Get-RelSource $f.FullName $Root
-            }
-            if ($isSecret) { $beat['secret'] = $true }  # DM-only: only the DM viewpoint shows it
-            # Characters who know this beat (known_by, wikilinks already unwrapped +
-            # the (partial|full) suffix stripped) -> the per-character "Known by"
-            # chips. Emitted on every beat: on non-secret beats it scopes who sees
-            # it; secret beats stay DM-only regardless.
+            # Canon-pending (exists:false): out-of-world "not yet ratified". Dropped
+            # from player-safe exports; under -Full it rides as a `draft` beat.
+            $isDraft = ("$($fm['exists'])".Trim().ToLower() -eq 'false')
+            if ($isDraft -and -not $Full) { continue }
             $kb = @($fm['_list_known_by'] | Where-Object { $_ })
-            if ($kb.Count -gt 0) { $beat['knownBy'] = @($kb) }
-            Add-Weight $beat $fm
             $kw = Get-Keywords $fm
-            if ($kw.Count -gt 0) { $beat['keywords'] = @($kw) }
-            $out += [PSCustomObject]@{ Beat = $beat; Sort = Get-BeatSort $beat.date }
+            foreach ($track in Resolve-EventTracks $fm) {
+                $beat = [ordered]@{
+                    date   = $fm['timeline_date']
+                    label  = $fm['name']
+                    track  = $track
+                    source = Get-RelSource $f.FullName $Root
+                }
+                if ($isSecret) { $beat['secret'] = $true }  # DM-only: only the DM viewpoint shows it
+                if ($isDraft) { $beat['draft'] = $true }     # canon-pending: rendered distinct, -Full only
+                # Characters who know this beat (known_by, wikilinks already unwrapped +
+                # the (partial|full) suffix stripped) -> the per-character "Known by"
+                # chips. Emitted on every beat: on non-secret beats it scopes who sees
+                # it; secret beats stay DM-only regardless.
+                if ($kb.Count -gt 0) { $beat['knownBy'] = @($kb) }
+                Add-Weight $beat $fm
+                if ($kw.Count -gt 0) { $beat['keywords'] = @($kw) }
+                $out += [PSCustomObject]@{ Beat = $beat; Sort = Get-BeatSort $beat.date }
+            }
         }
     }
     $out
