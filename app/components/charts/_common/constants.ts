@@ -23,6 +23,13 @@ export const MONTH_VIEW_FRAC = 1.4;
 // session-by-session campaign spread to per-day ticks instead of stopping at months.
 export const DAY_VIEW_FRAC = 0.12;
 export const MARGIN = 80; // left/right gutter inside the canvas, in px. >= LABEL_W/2 so an edge beat's centered label never spills past the canvas bound
+// Tick labels are centered on their x (translateX(-50%)); a tick sitting flush at a
+// canvas edge would spill its label past the bound and trip the horizontal
+// scrollbar. The axis clips the tick band this many px in from BOTH edges so the
+// first/last tick label keeps equal breathing room from each view edge. Sized to
+// ~half the widest tick label at the 12px tick font (a long month name), well under
+// the MARGIN gutter so a near-edge year tick still shows.
+export const TICK_LABEL_PAD = 40;
 export const EDGE_PAD = 0.05; // breathing room before first / after last beat, as a fraction of span
 // World view extends its right edge further than EDGE_PAD so the axis max sits at
 // least 50% past the latest beat (the newest session) — headroom for sessions to

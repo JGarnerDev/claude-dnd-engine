@@ -6,6 +6,7 @@
 // settingspanel.css.
 
 import './settingspanel.css';
+import { joinPopoverGroup } from './popovers.js';
 
 // One labelled group inside the panel (e.g. "Zoom" → the toolbar node).
 export interface SettingsSection {
@@ -41,17 +42,19 @@ export function mountSettingsPanel(host: HTMLElement): SettingsHandle {
     btn.setAttribute('aria-expanded', String(open));
   };
 
+  // Joins the shared popover group: opening the gear closes Save/Load (and vice
+  // versa), and an outside click / Escape closes all.
+  const member = joinPopoverGroup(() => setOpen(false));
+
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
-    setOpen(!panel.classList.contains('is-open'));
+    const willOpen = !panel.classList.contains('is-open');
+    member.announceOpen();
+    setOpen(willOpen);
   });
 
-  // Outside click + Escape close. Clicks inside the panel keep it open.
+  // Clicks inside the panel keep it open.
   panel.addEventListener('click', (e) => e.stopPropagation());
-  document.addEventListener('click', () => setOpen(false));
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') setOpen(false);
-  });
 
   host.append(btn, panel);
 

@@ -26,9 +26,16 @@ export function yearStepFor(pxPerYear: number): number {
 // contentWidth clips ticks to the canvas: the year/month loops walk whole calendar
 // years (firstYear→lastYear), so a sub-year data domain (e.g. one month, scaled to
 // fill the canvas) would otherwise place the other months' ticks far past the
-// canvas edge — inflating scrollWidth and leaving dead space. A tick shows only when
-// its x lands within [0, contentWidth] (margins included, so an edge label in the
-// inset still shows). Defaults to Infinity so pure callers/tests stay unclipped.
+// canvas edge — inflating scrollWidth and leaving dead space.
+//
+// inset pulls the live tick band in from BOTH canvas edges by that many px (the
+// caller passes the MARGIN gutter): a tick shows only when its x lands within
+// [inset, contentWidth - inset]. Tick labels are centered (translateX(-50%)), so a
+// tick sitting flush at the canvas edge would spill its label past the bound and
+// trip the horizontal scrollbar; clipping to the gutter keeps the first/last label
+// the same comfortable distance from each view edge (MARGIN >= half a label, see
+// constants). Defaults: contentWidth Infinity + inset 0 so pure callers/tests stay
+// unclipped.
 export function buildTicks(
   minIdx: number,
   maxIdx: number,
@@ -36,6 +43,7 @@ export function buildTicks(
   pxPerYear: number,
   xOf: (idx: number) => number,
   contentWidth: number = Infinity,
+  inset: number = 0,
 ): Tick[] {
   const { daysPerYear } = calendarTables(cal);
   const monthsPerYear = cal.months.length;
@@ -45,7 +53,7 @@ export function buildTicks(
   const ticks: Tick[] = [];
   const push = (idx: number, label: string) => {
     const x = xOf(idx);
-    if (x >= 0 && x <= contentWidth) ticks.push({ label, x });
+    if (x >= inset && x <= contentWidth - inset) ticks.push({ label, x });
   };
 
   // Day granularity — finest tier, only when a single day is wide enough to label.

@@ -71,4 +71,13 @@ describe('buildTicks', () => {
     const ticks = buildTicks(0, 0, DEFAULT_CALENDAR, 720, identity, 100);
     expect(ticks.map((t) => t.x)).toEqual([0, 30, 60, 90]);
   });
+
+  it('insets the tick band from both edges so edge labels do not spill', () => {
+    // Same month walk, but a 20px inset pulls the live band in from both canvas
+    // edges: ticks at x=0 (left edge) and x=90 (within 20px of contentWidth=100) are
+    // dropped so their centered labels can't overflow the bound; only 30 and 60 keep
+    // the full label-pad of breathing room on each side.
+    const ticks = buildTicks(0, 0, DEFAULT_CALENDAR, 720, identity, 100, 20);
+    expect(ticks.map((t) => t.x)).toEqual([30, 60]);
+  });
 });

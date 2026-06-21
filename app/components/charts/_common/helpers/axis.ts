@@ -3,7 +3,7 @@
 // content width, and year ticks — this is the one source for all of it.
 
 import { parseDate, calendarTables, dayIndexWith, createScale, DEFAULT_CALENDAR } from './calendar.js';
-import { PX_PER_YEAR, MARGIN, EDGE_PAD } from '../constants.js';
+import { PX_PER_YEAR, MARGIN, EDGE_PAD, TICK_LABEL_PAD } from '../constants.js';
 import { buildTicks } from './ticks.js';
 import type { Calendar, Tick, TimelineEvent } from '../types.js';
 
@@ -96,7 +96,10 @@ export function computeAxisFrom(
   const xOf = (i: number) => MARGIN + scale(i);
 
   // Tick granularity adapts to the current density (months / years / multi-year).
-  const ticks: Tick[] = buildTicks(minIdx, maxIdx, cal, pxPerYear, xOf, contentWidth);
+  // Clip the tick band a label-pad in from both edges so the first/last tick label
+  // keeps equal breathing room from each canvas edge and never spills past the bound
+  // (which would trip the horizontal scrollbar).
+  const ticks: Tick[] = buildTicks(minIdx, maxIdx, cal, pxPerYear, xOf, contentWidth, TICK_LABEL_PAD);
 
   return { isEmpty: false, events, daysPerYear, minIdx, maxIdx, contentWidth, spanYears, xOf, ticks };
 }

@@ -41,6 +41,46 @@ describe('renderTimeline', () => {
     expect(container.querySelectorAll('.chart-marker')).toHaveLength(3);
   });
 
+  it('refits the canvas to the container width when it resizes', async () => {
+    // happy-dom reports clientWidth 0 and never fires ResizeObserver, so drive both
+    // by hand: a mutable clientWidth getter + a captured observer callback.
+    let width = 800;
+    Object.defineProperty(container, 'clientWidth', { configurable: true, get: () => width });
+    let fire: (() => void) | null = null;
+    const RealRO = globalThis.ResizeObserver;
+    globalThis.ResizeObserver = class {
+      constructor(cb: () => void) {
+        fire = cb;
+      }
+      observe() {}
+      disconnect() {}
+      unobserve() {}
+    } as unknown as typeof ResizeObserver;
+
+    try {
+      const api = renderTimeline(container, data);
+      const before = api.contentWidth;
+      width = 1600; // container grew
+      fire!();
+      await flush(); // observer coalesces into a rAF
+      // Fit density tracks width, so the level-1 canvas grows with the viewport
+      // (no dead space on the right) instead of staying at the mount width.
+      expect(api.contentWidth).toBeGreaterThan(before);
+    } finally {
+      globalThis.ResizeObserver = RealRO;
+    }
+  });
+
+  it('sizes the fit-zoom canvas to stay within the viewport width', () => {
+    let width = 900;
+    Object.defineProperty(container, 'clientWidth', { configurable: true, get: () => width });
+    const api = renderTimeline(container, data);
+    // contentWidth must not exceed the viewport at zoom 1 — both MARGIN gutters
+    // stay visible, no horizontal scroll / clipped right edge. (min-width:100%
+    // backfills the small undershoot the -2 safety leaves.)
+    expect(api.contentWidth).toBeLessThanOrEqual(width);
+  });
+
   it('renders sessions as bands (not dots) and opens their source on click', () => {
     const withSessions: TimelineData = {
       calendar: null,

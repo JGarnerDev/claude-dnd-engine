@@ -158,10 +158,16 @@ function buildEmpty(text: string): HTMLDivElement {
   return empty;
 }
 
+// The container carries the live ResizeObserver between renders so a re-render
+// (tab/campaign switch back to World) can disconnect the prior one instead of
+// stacking. Mirrors the swimlane's ResizeHost.
+type ResizeHost = HTMLElement & { _tlResizeObs?: ResizeObserver };
+
 export function renderTimeline(container: HTMLElement, data: TimelineData, initialState?: ChartState): TimelineApi {
   const cal = data.calendar || DEFAULT_CALENDAR;
-  const viewportWidth = container.clientWidth || 800;
+  let viewportWidth = container.clientWidth || 800;
   const viewportHeight = container.clientHeight || 600;
+  (container as ResizeHost)._tlResizeObs?.disconnect();
   // Label lane budget from the actual vertical room: how many TIER_H tiers fit in
   // each half of the viewport (×2 for the above + below stacks), clamped so a short
   // panel keeps a usable minimum and a very tall one can't tile an absurd wall.
@@ -179,31 +185,17 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
     return { eventCount: 0, contentWidth: 0, laneCount: 0, controls: [], getState: () => ({ ...DEFAULT_STATE }) };
   }
 
-  // span + beat density are density-invariant, so derive them from the indexed
-  // events without laying out a full chart first.
-  // Match the world layout's asymmetric domain (extra right headroom) so the
-  // fit-zoom density sizes the whole padded axis, not just the symmetric span.
-  const spanYears = spanYearsOf(idx, WORLD_RIGHT_PAD);
-  // Fit density: px/year that makes the whole span exactly fill the viewport.
-  // Zoom level 1 == fit (whole timeline visible); zooming multiplies from here,
-  // so every step changes the layout and reset always returns to full view.
-  const fitDensity = Math.max(1, (viewportWidth - MARGIN * 2) / spanYears);
-  // Deepest zoom adapts to beat density: dense/long timelines need a higher cap
-  // than 8× of a tiny fit density to spread beats to ~TARGET_PX_PER_BEAT apart.
-  // Sparse timelines keep the ZOOM_MAX floor.
-  const beatsPerYear = idx.events.length / spanYears;
-  const targetDensity = beatsPerYear * TARGET_PX_PER_BEAT;
-  // Also guarantee you can zoom until one month fills ~MONTH_VIEW_FRAC of the
-  // viewport: monthWidth = pxPerYear / monthsPerYear, so the density that puts a
-  // month at that fraction is MONTH_VIEW_FRAC·viewportWidth·monthsPerYear.
-  const monthsPerYear = cal.months.length || 12;
-  const monthDensity = MONTH_VIEW_FRAC * viewportWidth * monthsPerYear;
-  // One tier finer: guarantee the zoom can reach day-granular ticks (a day fills
-  // ~DAY_VIEW_FRAC of the viewport). dayWidth = pxPerYear / daysPerYear.
-  const dayDensity = DAY_VIEW_FRAC * viewportWidth * idx.daysPerYear;
-  const maxZoom = Math.max(ZOOM_MAX, targetDensity / fitDensity, monthDensity / fitDensity, dayDensity / fitDensity);
-  // A loaded view seeds the zoom (clamped to this data's range, decision H); else fit.
-  let zoomLevel = initialState ? clampZoom(initialState.zoomLevel, maxZoom) : 1;
+  // Scale state derived from the viewport width: fit density (zoom level 1 = the
+  // whole padded span fills the viewport), the max-zoom cap, and the locked canvas
+  // height. recomputeScale() re-derives all three — at mount and on every refit,
+  // since the first width read is stale (taken before the viewport+scrollbar exist)
+  // and the container can later resize. zoomLevel survives a refit (re-clamped).
+  let zoomLevel = 1;
+  let firstBuild = true;
+  let fitDensity = 1;
+  let maxZoom = ZOOM_MAX;
+  let canvasHeight = 0;
+
   const api: TimelineApi = {
     eventCount: 0,
     contentWidth: 0,
@@ -216,8 +208,8 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
 
   // Memoize the layout per density. Filtering never changes geometry (see
   // applyVisibility), so a layout is computed at most once per distinct zoom
-  // level and reused across redraws — the fit layout below is the first cache
-  // entry, reused verbatim by the initial draw() at zoomLevel 1.
+  // level and reused across redraws — the fit layout (built by recomputeScale)
+  // is the first cache entry, reused verbatim by the initial draw() at zoom 1.
   const layoutCache = new Map<number, Layout>();
   const layoutAt = (pxPerYear: number): Layout => {
     let layout = layoutCache.get(pxPerYear);
@@ -228,10 +220,37 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
     return layout;
   };
 
-  // Lock canvas height to the fit-zoom layout. Lanes only ever decrease as we
-  // zoom in (events spread, fewer collisions), so fit is the tallest — pinning
-  // it keeps the page from reflowing and the scrollbar from jumping on zoom.
-  const canvasHeight = layoutAt(fitDensity).canvasHeight;
+  // Derive the width-dependent scale. Runs at mount and on every refit (resize /
+  // stale-measurement correction), so it must read the live viewportWidth.
+  function recomputeScale() {
+    // Match the world layout's asymmetric domain (extra right headroom) so the
+    // fit-zoom density sizes the whole padded axis, not just the symmetric span.
+    const spanYears = spanYearsOf(idx, WORLD_RIGHT_PAD);
+    // Fit density: px/year that makes the whole padded span fill the viewport at
+    // zoom level 1. The -2 keeps contentWidth a hair under the viewport so both
+    // MARGIN gutters stay visible — no 1px overflow / clipped right edge from the
+    // ceil in contentWidth (CSS min-width:100% backfills the tiny undershoot).
+    fitDensity = Math.max(1, (viewportWidth - MARGIN * 2 - 2) / spanYears);
+    // Deepest zoom adapts to beat density: dense/long timelines need a higher cap
+    // than 8× of a tiny fit density to spread beats to ~TARGET_PX_PER_BEAT apart.
+    // Sparse timelines keep the ZOOM_MAX floor.
+    const beatsPerYear = idx.events.length / spanYears;
+    const targetDensity = beatsPerYear * TARGET_PX_PER_BEAT;
+    // Also guarantee you can zoom until one month fills ~MONTH_VIEW_FRAC of the
+    // viewport (monthWidth = pxPerYear / monthsPerYear) and, one tier finer, until
+    // a day fills ~DAY_VIEW_FRAC (dayWidth = pxPerYear / daysPerYear).
+    const monthsPerYear = cal.months.length || 12;
+    const monthDensity = MONTH_VIEW_FRAC * viewportWidth * monthsPerYear;
+    const dayDensity = DAY_VIEW_FRAC * viewportWidth * idx.daysPerYear;
+    maxZoom = Math.max(ZOOM_MAX, targetDensity / fitDensity, monthDensity / fitDensity, dayDensity / fitDensity);
+    // Lock canvas height to the fit-zoom layout. Lanes only ever decrease as we
+    // zoom in (events spread, fewer collisions), so fit is the tallest — pinning
+    // it keeps the page from reflowing and the scrollbar from jumping on zoom.
+    canvasHeight = layoutAt(fitDensity).canvasHeight;
+    // First mount seeds zoom from a loaded view (clamped to this data's range,
+    // decision H); a later refit just re-clamps the live zoom to the new cap.
+    zoomLevel = firstBuild && initialState ? clampZoom(initialState.zoomLevel, maxZoom) : Math.min(zoomLevel, maxZoom);
+  }
 
   const viewport = document.createElement('div') as PanViewport;
   viewport.className = 'chart-viewport';
@@ -397,6 +416,27 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
     return { frac, x };
   }
 
+  // Refit the canvas to the live viewport width. The fit density (zoom level 1 =
+  // whole span fills the viewport) is derived from a width measurement, and that
+  // measurement goes stale two ways: the initial container.clientWidth is read
+  // before the viewport (and its scrollbar) exist, so it can be off; and a later
+  // window/container resize changes it outright. Either way the canvas keeps the
+  // old width — overflow + a clipped right gutter when it shrank, dead space when
+  // it grew. Measure the true scroll viewport, recompute the scale, redraw.
+  // keepAnchor holds the on-screen center fixed (a live resize); without it the
+  // scroll is left as-is (initial refit / saved-view restore). Returns whether a
+  // refit ran. No-op when unchanged or detached (a stale observer after a switch).
+  function refit(keepAnchor: boolean): boolean {
+    const w = viewport.clientWidth || container.clientWidth;
+    if (!w || w === viewportWidth || !viewport.isConnected) return false;
+    const anchor = keepAnchor ? anchorAt() : undefined;
+    viewportWidth = w;
+    layoutCache.clear();
+    recomputeScale();
+    draw(anchor);
+    return true;
+  }
+
   function applyZoom(kind: ZoomKind) {
     if (kind === 'in') zoomLevel = Math.min(maxZoom, zoomLevel * ZOOM_FACTOR);
     else zoomLevel = Math.max(1, zoomLevel / ZOOM_FACTOR);
@@ -448,13 +488,44 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
     ...(audience ? [{ label: 'Known by', node: audience }] : []),
   ];
   container.append(filterBar, viewport);
+  recomputeScale();
+  firstBuild = false;
   draw();
+  // container.clientWidth was read before the viewport (and its scrollbar) existed,
+  // so it can be stale; now that the viewport is mounted, refit to its true width
+  // so zoom-level-1 fills the canvas exactly instead of overflowing / clipping the
+  // right gutter.
+  refit(false);
   // Restore a loaded view's pan after the seeded draw — the browser clamps an
   // over-range value to the content width automatically (fail soft).
   if (initialState) viewport.scrollLeft = initialState.scrollLeft;
   enablePan(viewport);
   enableWheelZoom(viewport, zoomWheel);
   enableMarkerInteraction(viewport, (source) => window.open(source, '_blank'));
+
+  // One more refit after the browser settles layout, in case the synchronous read
+  // above still ran pre-layout. draw() leaves scroll untouched when not anchored,
+  // but replaceChildren can reset it, so reapply the current scroll across it.
+  requestAnimationFrame(() => {
+    const keepScroll = viewport.scrollLeft;
+    if (refit(false)) viewport.scrollLeft = keepScroll;
+  });
+
+  // Track the live viewport width so zoom-level-1 always fits after a resize.
+  // Coalesce a resize drag's many callbacks into one redraw per frame. The
+  // observer is stashed on the container so the next render disconnects it.
+  if (typeof ResizeObserver !== 'undefined') {
+    let resizeRaf = 0;
+    const obs = new ResizeObserver(() => {
+      if (resizeRaf) return;
+      resizeRaf = requestAnimationFrame(() => {
+        resizeRaf = 0;
+        refit(true); // keep the on-screen center fixed across a live resize
+      });
+    });
+    obs.observe(container);
+    (container as ResizeHost)._tlResizeObs = obs;
+  }
 
   return api;
 }

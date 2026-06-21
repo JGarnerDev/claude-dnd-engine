@@ -7,6 +7,7 @@
 // with savedviews.css.
 
 import './savedviews.css';
+import { joinPopoverGroup } from './popovers.js';
 import { listViews, saveView, deleteView } from '../helpers/viewstore.js';
 import type { ChartState, SavedView } from '../types.js';
 
@@ -18,10 +19,9 @@ export interface SavedViewsCallbacks {
 }
 
 export function mountSavedViews(host: HTMLElement, cb: SavedViewsCallbacks): void {
-  // Each button owns a popover; opening one closes the others (and the document
-  // click / Escape closes all). Closers are registered as each island mounts.
-  const closers: Array<(open: boolean) => void> = [];
-
+  // Each button owns a popover and joins the shared popover group, so opening one
+  // closes the other (and the settings gear), and an outside click / Escape
+  // closes all.
   function makeIsland(title: string, svg: string, onOpen?: () => void): { popover: HTMLDivElement; setOpen: (open: boolean) => void } {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -39,12 +39,12 @@ export function mountSavedViews(host: HTMLElement, cb: SavedViewsCallbacks): voi
       btn.classList.toggle('is-active', open);
       btn.setAttribute('aria-expanded', String(open));
     };
-    closers.push(setOpen);
+    const member = joinPopoverGroup(() => setOpen(false));
 
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const willOpen = !popover.classList.contains('is-open');
-      for (const c of closers) c(false);
+      member.announceOpen();
       setOpen(willOpen);
       if (willOpen) onOpen?.();
     });
@@ -162,13 +162,6 @@ export function mountSavedViews(host: HTMLElement, cb: SavedViewsCallbacks): voi
       list.append(row);
     }
   }
-
-  document.addEventListener('click', () => {
-    for (const c of closers) c(false);
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') for (const c of closers) c(false);
-  });
 }
 
 // Inline SVGs so the artifact stays dependency-free (no icon font / asset).
