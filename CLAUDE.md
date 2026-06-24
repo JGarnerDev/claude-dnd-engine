@@ -76,6 +76,10 @@ When starting a new campaign, read `meta/new-campaign-setup.md` before generatin
 
 When creating any entity, read `meta/entity-creation.md` before proceeding. It contains the full protocol, known schemas, Obsidian frontmatter rules, and gameplay mechanics guidance.
 
+## Affinity
+
+PC/NPC files carry an optional `affinity:` field — a per-target liking score (integer −10..+10) toward specific characters, distinct from `relates_to` and `disposition`. When working with character sentiment (proposing nudges, reading relationships, backfilling), read `meta/affinity.md` once per task for scale, bands, scope, and frontmatter shape. `/recap` proposes nudges; `scripts/entity-graph.ps1` reads them.
+
 ## Graph Configuration
 
 When adding a new type, subtype, or entity folder, read `meta/graph-settings.md` before touching any config files.

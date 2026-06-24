@@ -95,6 +95,8 @@ family:
 enemies:
   - [[Character or Faction Name]] (nature of conflict)
 character_sheet: ""    # path to sheet file or external link
+affinity:
+  - [[Character Name]] (n)   # optional: per-target liking, integer -10..+10; see meta/affinity.md. Subject->target; absence = neutral (0)
 
 # --- OPTIONAL (spotlight — see meta/character-focus.md) ---
 spotlight: normal          # normal | low. low = tactics-first player, never flagged "overdue"

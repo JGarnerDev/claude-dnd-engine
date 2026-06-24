@@ -20,6 +20,34 @@ function Get-WikiLinks($text) {
     return $links | Sort-Object -Unique
 }
 
+# Map an affinity integer (-10..10) to its band label + display color. See meta/affinity.md.
+function Get-AffinityBand($n) {
+    if ($n -le -6)    { return @{ Label = 'hostile'; Color = 'Red' } }
+    elseif ($n -le -1) { return @{ Label = 'cool';    Color = 'DarkYellow' } }
+    elseif ($n -eq 0)  { return @{ Label = 'neutral'; Color = 'Gray' } }
+    elseif ($n -le 5)  { return @{ Label = 'warm';    Color = 'Green' } }
+    else               { return @{ Label = 'devoted'; Color = 'Cyan' } }
+}
+
+# Parse "affinity:" list items from a raw frontmatter block into [target, int] pairs.
+# Get-Frontmatter drops the paren suffix, so the int is parsed here from the raw lines.
+# Line-by-line scan: enter on the affinity key, collect indented "- [[Name]] (n)" items,
+# exit on the next top-level key (avoids regex dotall over-consumption).
+function Get-AffinityEntries($fmBlock) {
+    $entries = @()
+    $inBlock = $false
+    foreach ($line in ($fmBlock -split "`n")) {
+        $line = $line.TrimEnd("`r")
+        if ($line -match '^affinity:\s*$') { $inBlock = $true; continue }
+        if (-not $inBlock) { continue }
+        if ($line -match '^\S') { break }   # next top-level key ends the block
+        if ($line -match '\[\[([^\]|]+)(?:\|[^\]]*)?\]\]\s*\(\s*(-?\d+)\s*\)') {
+            $entries += [PSCustomObject]@{ Target = $Matches[1].Trim(); Value = [int]$Matches[2] }
+        }
+    }
+    return $entries
+}
+
 # Find target file
 $allFiles = $searchDirs | ForEach-Object { Get-ChildItem "$root\$_" -Recurse -Filter "*.md" }
 $target = $allFiles | Where-Object { $_.BaseName -ieq $Name } | Select-Object -First 1
@@ -64,6 +92,19 @@ if ($content -match '(?s)^---\r?\n(.+?)\r?\n---') {
             } else {
                 Write-Host "    -> [[$link]] (not found)" -ForegroundColor DarkGray
             }
+        }
+    }
+}
+
+# Affinity block: per-target liking with band (see meta/affinity.md)
+if ($content -match '(?s)^---\r?\n(.+?)\r?\n---') {
+    $affEntries = @(Get-AffinityEntries $Matches[1])
+    if ($affEntries.Count -gt 0) {
+        Write-Host "`n  Affinity (toward):" -ForegroundColor Yellow
+        foreach ($a in ($affEntries | Sort-Object Value -Descending)) {
+            $band = Get-AffinityBand $a.Value
+            $sign = if ($a.Value -gt 0) { "+$($a.Value)" } else { "$($a.Value)" }
+            Write-Host "    -> [[$($a.Target)]] ($sign, $($band.Label))" -ForegroundColor $band.Color
         }
     }
 }

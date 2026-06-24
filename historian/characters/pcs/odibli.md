@@ -22,6 +22,9 @@ aliases:
 source_session: [[Session 01 The Black Sheep Inn]]
 relates_to:
   - [[Curse of Strahd]] (campaign)
+affinity:
+  - [[Sergei Rubelgerd]] (4)
+  - [[Luci]] (2)
 importance: critical
 active: true
 description: "[[Miguel]]'s PC. Gnome Wizard; arcane academic with a fireplace obsession and adventuring as a bucket-list goal."

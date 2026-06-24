@@ -144,6 +144,8 @@ For each entity flagged for canonization in Phase 3:
 
 **Spotlight hook advance (from Phase 2.5):** for each hook flagged as landed, edit that PC's `spotlight_hooks:` entry from `status: seeded` to `status: paid`. Only advance hooks whose beat actually paid off this session — a seeded hook that didn't land stays `seeded` and carries forward. Do not invent or add hooks here; new hooks come only from `.claude/commands/pc-backstory.md`.
 
+**Affinity nudges (from Phase 2 relationship shifts):** translate this session's relationship shifts into proposed affinity changes and surface them as a confirm-list before writing — `subject → target, ±n, one-line reason` (e.g. `Dip → Ireena +2 — shielded her from the specter`). Scope is PC↔NPC and PC↔PC only. Suggested magnitudes: ±1 minor, ±2–3 notable, ±4–6 major, ±7–10 defining/rare. On DM approval, add or update the `[[Target]] (n)` entry in each **subject's** `affinity:` frontmatter field — clamping the result to −10..+10. Affinity is bi-directional and not mirrored: only write a reverse entry if the session evidenced the target's feeling too. Propose nothing for pairs with no shift this session; never invent a number. Full rules in `meta/affinity.md`.
+
 **If an entity is missing (no file anywhere):**
 
 - Do not create it silently. Flag it clearly:

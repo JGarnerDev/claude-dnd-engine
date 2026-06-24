@@ -20,6 +20,9 @@ aliases:
 source_session: [[Session 01 The Black Sheep Inn]]
 relates_to:
   - [[Curse of Strahd]] (campaign)
+affinity:
+  - [[Odibli]] (2)
+  - [[Dip]] (2)
 importance: critical
 active: true
 description: "Paul's PC. Scourge Aasimar in perma-wanderlust. Full name unknown."

@@ -24,6 +24,8 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 known_by:
   - [[The Party]] (partial)
+affinity:
+  - [[The Party]] (3)
 description: "Ismark Kolyanovich. Human veteran. Son of the late Burgomaster Kolyan Indirovich. Wants the party to escort his sister Ireena to Vallaki for her safety."
 source_session: [[Session 11 Blood of the Vine]]
 confirmed_date: "2026-05-19"

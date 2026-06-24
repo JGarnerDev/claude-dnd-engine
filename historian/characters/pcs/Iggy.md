@@ -20,6 +20,8 @@ aliases:
 source_session: [[Session 01 The Black Sheep Inn]]
 relates_to:
   - [[Curse of Strahd]] (campaign)
+affinity:
+  - [[Bosco]] (3)
 importance: critical
 active: true
   

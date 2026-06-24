@@ -24,6 +24,8 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 known_by:
   - [[The Party]] (partial)
+affinity:
+  - [[The Party]] (2)
 description: "Ireena Kolyana. Daughter of the late Burgomaster. Strahd has fixated on her. Ismark wants the party to escort her to Vallaki."
 source_session: [[Session 11 Blood of the Vine]]
 confirmed_date: "2026-05-19"

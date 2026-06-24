@@ -34,9 +34,11 @@ Covers any non-player character: townsfolk, antagonists, merchants, quest-givers
 ## Schema
 
 ### Canonical Path
+
 `data/characters/npcs/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `alive` | Living and active |
@@ -94,6 +96,8 @@ character_sheet: ""    # path to sheet file, or inline summary
 charm_hook: ""         # optional: one specific flaw, habit, fear, or absurdity that makes players want to root for them
 sells:
   - [[Resource or Good Name]]  # optional: specific goods/services this NPC trades in; use only when economically relevant
+affinity:
+  - [[Player Character Name]] (n)   # optional: per-target liking, integer -10..+10; see meta/affinity.md. Subject->target; absence = neutral (0)
 ---
 ```
 
@@ -112,6 +116,7 @@ Omit any line for values that are unknown — do not create dead placeholder lin
 For `disposition: friendly` or `importance: major` NPCs, consider a `charm_hook` — one specific detail (flaw, habit, fear, absurdity) that makes players want to root for them rather than just use them.
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

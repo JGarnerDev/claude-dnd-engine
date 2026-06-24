@@ -22,6 +22,8 @@ aliases: []
 source_session: [[Session 05 The Specter]]
 relates_to:
   - [[Curse of Strahd]] (campaign)
+affinity:
+  - [[Luci]] (2)
 importance: critical
 active: true
   
