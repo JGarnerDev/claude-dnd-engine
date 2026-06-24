@@ -143,7 +143,7 @@ def render_lines(section=False):
         t = turns.get(p['Name'], 0.0)
         seen = p['Name'] in present_in_window
         rows.append({'Name': p['Name'], 'Turns': t, 'Appetite': p['Appetite'], 'Seen': seen})
-    for r in sorted(rows, key=lambda r: (r['Turns'], str(r['Name'] or ''))):
+    for r in sorted(rows, key=lambda r: (r['Turns'], str(r['Name'] or '').lower())):
         if r['Appetite'] == 'low':
             tag = " [low appetite - excluded]"
         elif not r['Seen']:
@@ -170,7 +170,7 @@ def render_lines(section=False):
     eligible = [r for r in rows if r['Appetite'] != 'low' and r['Seen']]
     max_turns = max((r['Turns'] for r in eligible), default=0)
     if eligible and max_turns > 0:
-        overdue = sorted(eligible, key=lambda r: (r['Turns'], str(r['Name'] or '')))[0]
+        overdue = sorted(eligible, key=lambda r: (r['Turns'], str(r['Name'] or '').lower()))[0]
         lines.append(("\n  Overdue: {0} ({1} turns - fewest among present, normal-appetite PCs)".format(
             overdue['Name'], _fmt_num(overdue['Turns'])), 'green'))
     elif eligible:

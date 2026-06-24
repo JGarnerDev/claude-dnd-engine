@@ -26,7 +26,7 @@ def main():
     # -- Unresolved states ----------------------------------------------------
     cwrite("\n--- UNRESOLVED STATES (historian) ---", 'darkgray')
     found = False
-    for f in sorted((ROOT / 'historian').rglob('*.md')):
+    for f in sorted((ROOT / 'historian').rglob('*.md'), key=lambda f: str(f).lower()):
         text = f.read_text(encoding='utf-8')
         m = STATE_RE.search(text)
         if not m:
@@ -44,7 +44,7 @@ def main():
     chars_dir = ROOT / 'historian' / 'characters'
     found = False
     if chars_dir.exists():
-        for f in sorted(chars_dir.rglob('*.md')):
+        for f in sorted(chars_dir.rglob('*.md'), key=lambda f: str(f).lower()):
             text = f.read_text(encoding='utf-8')
             if not HOSTILE_RE.search(text):
                 continue

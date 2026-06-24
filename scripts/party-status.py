@@ -31,7 +31,7 @@ def main():
     # Load afflictions from campaign party table
     afflictions = {}
     campaign_dir = ROOT / 'scheduler' / 'campaign'
-    campaign_file = next(iter(sorted(campaign_dir.glob('*.md'))), None) if campaign_dir.exists() else None
+    campaign_file = next(iter(sorted(campaign_dir.glob('*.md'), key=lambda f: f.name.lower())), None) if campaign_dir.exists() else None
     if campaign_file:
         content = campaign_file.read_text(encoding='utf-8')
         m = re.search(r'## Party\r?\n([\s\S]+?)(\r?\n##|\Z)', content)
@@ -55,7 +55,7 @@ def main():
                 latest_session = n
 
     pcs_dir = ROOT / 'historian' / 'characters' / 'pcs'
-    pc_files = sorted(pcs_dir.glob('*.md')) if pcs_dir.exists() else []
+    pc_files = sorted(pcs_dir.glob('*.md'), key=lambda f: f.name.lower()) if pcs_dir.exists() else []
     if not pc_files:
         cwrite("No PCs found in historian/characters/pcs", 'red')
         sys.exit(1)

@@ -49,9 +49,9 @@ def main():
     cwrite("========================================", 'darkgray')
 
     total = 0
-    for key in sorted(groups):
+    for key in sorted(groups, key=str.lower):
         cwrite(f"\n  {key} ({len(groups[key])})", 'yellow')
-        for line in sorted(groups[key]):
+        for line in sorted(groups[key], key=str.lower):
             cwrite(line, 'white')
         total += len(groups[key])
     cwrite(f"\n  Total free entities: {total}", 'cyan')

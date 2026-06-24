@@ -54,7 +54,7 @@ def main():
         cwrite(f"    - [[{route}]]", 'darkgray')
         return
 
-    results.sort(key=lambda r: (IMPORTANCE_ORDER.get(r['Importance'], 4), str(r['Name'] or '')))
+    results.sort(key=lambda r: (IMPORTANCE_ORDER.get(r['Importance'], 4), str(r['Name'] or '').lower()))
 
     cwrite("")
     cwrite(f"=== Cities served by: {route} ({len(results)} found) ===", 'cyan')

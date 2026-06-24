@@ -47,11 +47,11 @@ def main():
         cwrite(f"No free entities found{suffix}.")
         return
 
-    types = sorted({r['Type'] for r in results}, key=lambda t: (t is None, t))
+    types = sorted({r['Type'] for r in results}, key=lambda t: (t is None, str(t or '').lower()))
     for t in types:
         group = [r for r in results if r['Type'] == t]
         cwrite(f"\n=== {t} ({len(group)}) ===", 'cyan')
-        for r in sorted(group, key=lambda r: (str(r['Importance'] or ''), str(r['Name'] or ''))):
+        for r in sorted(group, key=lambda r: (str(r['Importance'] or '').lower(), str(r['Name'] or '').lower())):
             sub = f"/{r['Subtype']}" if r['Subtype'] else ""
             by = f" [{r['ContributedBy']}]" if r['ContributedBy'] else ""
             cwrite(f"  [{r['Importance']}] {r['Name']}{sub}{by}", 'white')

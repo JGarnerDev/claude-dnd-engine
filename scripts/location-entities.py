@@ -107,11 +107,11 @@ def main():
                 'File': rel,
             })
 
-        types = sorted({r['Type'] for r in hop_results}, key=lambda t: (t is None, t))
+        types = sorted({r['Type'] for r in hop_results}, key=lambda t: (t is None, str(t or '').lower()))
         for t in types:
             group = [r for r in hop_results if r['Type'] == t]
             cwrite(f"\n  [{t}]", 'yellow')
-            for r in sorted(group, key=lambda r: (str(r['Importance'] or ''), str(r['Name'] or ''))):
+            for r in sorted(group, key=lambda r: (str(r['Importance'] or '').lower(), str(r['Name'] or '').lower())):
                 sub = f"/{r['Subtype']}" if r['Subtype'] else ""
                 exists_color = 'green' if r['Exists'] == 'true' else 'darkyellow'
                 cwrite("    {0}{1} - {2}".format(r['Name'], sub, r['State']), exists_color)

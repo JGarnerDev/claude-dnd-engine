@@ -19,8 +19,12 @@ AFFINITY_ITEM_RE = re.compile(r'\[\[([^\]|]+)(?:\|[^\]]*)?\]\]\s*\(\s*(-?\d+)\s*
 
 
 def get_wiki_links(text):
-    links = {m.group(1).strip() for m in WIKI_RE.finditer(text)}
-    return sorted(links)
+    # PowerShell's `Sort-Object -Unique` is case-insensitive on both dedup and order.
+    seen = {}
+    for m in WIKI_RE.finditer(text):
+        link = m.group(1).strip()
+        seen.setdefault(link.lower(), link)
+    return sorted(seen.values(), key=str.lower)
 
 
 def get_affinity_band(n):

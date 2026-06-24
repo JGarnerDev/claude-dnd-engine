@@ -98,12 +98,12 @@ def main():
             cwrite(f"  Current act note: {fm['current_act']}", 'darkgray')
 
     acts_dir = ROOT / 'scheduler' / 'acts'
-    for f in sorted(acts_dir.glob('*.md')) if acts_dir.exists() else []:
+    for f in (sorted(acts_dir.glob('*.md'), key=lambda f: f.name.lower()) if acts_dir.exists() else []):
         fm = get_frontmatter(f)
         cwrite("  Act: {0} [{1}]".format(fm.get('name'), fm.get('state')), 'white')
 
     missions_dir = ROOT / 'scheduler' / 'missions'
-    mission_files = sorted(missions_dir.glob('*.md')) if missions_dir.exists() else []
+    mission_files = sorted(missions_dir.glob('*.md'), key=lambda f: f.name.lower()) if missions_dir.exists() else []
     if mission_files:
         for f in mission_files:
             fm = get_frontmatter(f)
@@ -113,7 +113,7 @@ def main():
 
     # -- Last played session --------------------------------------------------
     cwrite("\n--- LAST SESSION ---", 'darkgray')
-    last_session = sorted(hist_sessions, key=lambda f: f.name, reverse=True)[0] if hist_sessions else None
+    last_session = sorted(hist_sessions, key=lambda f: f.name.lower(), reverse=True)[0] if hist_sessions else None
     if last_session:
         fm = get_frontmatter(last_session)
         cwrite("  #{0}: {1}".format(fm.get('session_number'), fm.get('name')), 'white')
@@ -189,7 +189,7 @@ def main():
                         afflictions[char_name] = cols[3]
 
     pcs_dir = ROOT / 'historian' / 'characters' / 'pcs'
-    pc_files = sorted(pcs_dir.glob('*.md')) if pcs_dir.exists() else []
+    pc_files = sorted(pcs_dir.glob('*.md'), key=lambda f: f.name.lower()) if pcs_dir.exists() else []
     for f in pc_files:
         fm = get_frontmatter(f)
         name = fm.get('name')

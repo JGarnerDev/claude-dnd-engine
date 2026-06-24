@@ -22,8 +22,9 @@ def show_entity(label, fm, path):
 
 
 def md_files(rel_dir):
+    # PowerShell `Sort-Object Name` is case-insensitive.
     d = ROOT / rel_dir
-    return sorted(d.glob('*.md')) if d.exists() else []
+    return sorted(d.glob('*.md'), key=lambda f: f.name.lower()) if d.exists() else []
 
 
 def main():
@@ -59,7 +60,10 @@ def main():
     else:
         cwrite("\n[SESSIONS] none planned in scheduler", 'darkgray')
 
-    hist_sessions = sorted(md_files('historian/sessions'), reverse=True)
+    hist_sessions = sorted(
+        (ROOT / 'historian' / 'sessions').glob('*.md'),
+        key=lambda f: f.name.lower(), reverse=True) \
+        if (ROOT / 'historian' / 'sessions').exists() else []
     if hist_sessions:
         last = hist_sessions[0]
         show_entity("LAST PLAYED SESSION", get_frontmatter(last), last)
