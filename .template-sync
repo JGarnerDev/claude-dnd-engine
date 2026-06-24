@@ -139,9 +139,8 @@ scripts/validate.ps1
 
 # Charting app — timeline/swimlane chart engine (TS + Vite)
 # Whole tree is shareable engine infrastructure (components, helpers, specs,
-# build config, lockfile). Demo page is template-only debugging scaffolding.
+# the home DM-tool page, config, lockfile).
 app/**
-!app/pages/demo/**
 
 # IDE / graph config
 .vscode/settings.json

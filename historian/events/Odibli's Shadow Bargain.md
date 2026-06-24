@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "Day 3 in Barovia (escape from Death House)"
 timeline_date: "0735-10-29"
+daypart: afternoon
+order: 1
 track: "character:Odibli"
 outcome: "Odibli smashed the cult's orb and absorbed shadow essence to revive the fallen party — at a lasting personal cost."
 consequences:

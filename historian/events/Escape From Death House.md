@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "Day 3 in Barovia (the mists)"
 timeline_date: "0735-10-29"
+daypart: evening
+order: 3
 track: "party"
 outcome: "The mists carried the party out of Death House into Barovia proper, where Strahd greeted them. The party reached level 3."
 consequences:

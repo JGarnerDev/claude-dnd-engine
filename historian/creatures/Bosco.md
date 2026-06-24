@@ -26,6 +26,9 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 known_by:
   - [[The Party]] (full)
+affinity:
+  - [[Iggy]] (5)
+  - [[Odibli]] (-3)
 description: "Survived Barovia on spite and instinct. Reads people better than most humanoids, fights harder than his size suggests, holds grudges like treasure, and — rarely, genuinely — does something quietly kind. Iggy witnessed the pillaging, wrote the ballad, then went and found him."
 source_session: [[Session 13 Dream Pastries]]
 confirmed_date: "2026-06-02"

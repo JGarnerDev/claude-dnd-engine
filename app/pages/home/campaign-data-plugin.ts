@@ -1,9 +1,8 @@
 // Vite plugin: feed pages/home the LIVE campaign graph instead of fixtures.
 //
-// It runs scripts/timeline-data.ps1 -JsonOnly (the same extractor the shipped
-// artifact uses) and exposes the result as the virtual module
-// `virtual:campaign-data`. -JsonOnly returns before the HTML-injection step, so
-// no `npm run build:timeline` shell is needed — pure read of entity frontmatter.
+// It runs scripts/timeline-data.ps1 (a pure JSON extractor that reads entity
+// frontmatter and writes the data blob to stdout) and exposes the result as the
+// virtual module `virtual:campaign-data`. No build step or HTML shell.
 //
 // In `vite dev` it also watches the three graph layers (data/ historian/
 // scheduler/); editing any .md re-extracts and full-reloads the page. So the DM
@@ -25,16 +24,14 @@ const GRAPH_DIRS = ['data', 'historian', 'scheduler'];
 // -Full so secret beats reach the DM's own home page (tagged `secret: true`, plus
 // each beat's `knownBy`). The chart's "Known by" filter defaults to no viewpoint
 // (everything shows, secrets included — this is the DM's tool); the DM picks a
-// character to scope it to what that character knows for a player-safe glance. The
-// shipped artifact stays player-safe — only this local DM-side page opts into the
-// full set.
+// character to scope it to what that character knows for a player-safe glance.
 function extract(repoRoot: string): string {
   const script = resolve(repoRoot, 'scripts', 'timeline-data.ps1');
   const exe = process.platform === 'win32' ? 'powershell.exe' : 'pwsh';
   try {
     const out = execFileSync(
       exe,
-      ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', script, '-JsonOnly', '-Full', '-Root', repoRoot],
+      ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', script, '-Full', '-Root', repoRoot],
       { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 },
     );
     return rewriteSources(out.trim() || 'null', repoRoot);
@@ -45,9 +42,9 @@ function extract(repoRoot: string): string {
   }
 }
 
-// The extractor writes `source` as `../../<rel>` — tuned for the shipped
-// artifact's home in historian/timeline/. The dev server is rooted at
-// pages/home, so those don't resolve. Rewrite them to `/@fs/<abs>` URLs that
+// The extractor writes `source` as `../../<rel>` (relative to historian/timeline/).
+// The dev server is rooted at pages/home, so those don't resolve. Rewrite them to
+// `/@fs/<abs>` URLs that
 // Vite serves (repoRoot is in server.fs.allow), so click-to-open hits the real
 // .md. Untouched when JSON is null/empty.
 function rewriteSources(json: string, repoRoot: string): string {

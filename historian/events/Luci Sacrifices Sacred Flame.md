@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "Day 2 in Barovia (the Death House delve)"
 timeline_date: "0735-10-24"
+daypart: afternoon
+order: 2
 track: "character:Luci"
 outcome: "A specter killed Odibli and Dip; Luci permanently sacrificed her Sacred Flame to revive them both."
 consequences:

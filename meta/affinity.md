@@ -6,7 +6,7 @@ Affinity is a lightweight, per-target sentiment score: how much one character li
 
 - An **integer −10..+10** held *by* a subject *toward* a target, measuring liking/sentiment.
 - Distinct from `relates_to` (a structural graph link) and from an NPC's `disposition` (a general stance toward the world/party). Affinity is **per-target** and finer-grained.
-- **Scope:** tracked for **PC↔NPC** and **PC↔PC** pairs, plus **PC→creature-companion** (a named pet/animal a PC keeps). NPC↔NPC is out of scope.
+- **Scope:** tracked for **PC↔NPC** and **PC↔PC** pairs, plus **PC↔creature-companion** (a named pet/animal a PC keeps — affinity flows both directions; a companion holds affinity toward its owner, other PCs, and the party). NPC↔NPC is out of scope.
 
 ## Storage
 
@@ -47,6 +47,8 @@ The band lets the DM read stance without memorizing numbers. The raw number is a
 ## Adjustment surface
 
 `/recap` is the structured path. When canonizing a session it translates the Phase 2 "relationship shifts" answer into **proposed** affinity nudges (`subject → target, ±n, one-line reason`), surfaces them as a confirm-list, and writes only what the DM approves — clamping to the range. Manual edits remain possible but are not the primary flow. No staleness stamp — affinity is soft by nature.
+
+**Band-crossing → timeline.** A nudge is just a scalar update, not a timeline event — the *beat* that caused it earns the event, not the number. But when a nudge moves a pair into a **different band** (e.g. neutral→warm, cool→hostile; an unrecorded prior counts as neutral), that crossing is a relationship turning point. `/recap` flags the causing beat as an automatic event-promotion candidate in Phase 5.5 so it always reaches the campaign chart. This keeps the timeline relationship-aware without plotting every minor ±1 — only band changes surface, and the DM still confirms.
 
 ## Read surface
 

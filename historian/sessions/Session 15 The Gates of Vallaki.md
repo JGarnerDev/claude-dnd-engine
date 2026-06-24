@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-06-23"
+in_world_end_date: "0735-11-03"
 mission: "Escort Ireena to Vallaki"
 locations:
   - [[Barovia]]

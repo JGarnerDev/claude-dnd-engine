@@ -2,7 +2,7 @@
 // swimlane layout (track rows) need the same date→x mapping, domain padding,
 // content width, and year ticks — this is the one source for all of it.
 
-import { parseDate, calendarTables, dayIndexWith, createScale, DEFAULT_CALENDAR } from './calendar.js';
+import { parseDate, calendarTables, dayIndexWith, createScale, DEFAULT_CALENDAR, DAYPART_WINDOWS } from './calendar.js';
 import { PX_PER_YEAR, MARGIN, EDGE_PAD, TICK_LABEL_PAD } from '../constants.js';
 import { buildTicks } from './ticks.js';
 import type { Calendar, Tick, TimelineEvent } from '../types.js';
@@ -27,11 +27,57 @@ export function indexEvents(rawEvents: TimelineEvent[], cal: Calendar = DEFAULT_
   // per-event index is then O(1) (no month loop, no daysPerYear recompute).
   const tables = calendarTables(cal);
   const daysPerYear = tables.daysPerYear;
-  const events: IndexedEvent[] = rawEvents
-    .map((e) => ({ ...e, _idx: dayIndexWith(parseDate(e.date), tables) }))
-    .sort((a, b) => a._idx - b._idx);
+  const events: IndexedEvent[] = rawEvents.map((e) => ({ ...e, _idx: dayIndexWith(parseDate(e.date), tables) }));
+  // Add a sub-day fraction to coincident-day beats that opted in (daypart/order)
+  // so they no longer share an x. Done before the sort: the fraction becomes part
+  // of _idx, so ordering by _idx orders within the day too.
+  applySubDayOffsets(events);
+  events.sort((a, b) => a._idx - b._idx);
   if (events.length === 0) return { events, daysPerYear, minIdx: 0, maxIdx: 0 };
   return { events, daysPerYear, minIdx: events[0]._idx, maxIdx: events[events.length - 1]._idx };
+}
+
+// Spread same-day beats within their calendar day by sub-day `daypart` + `order`,
+// mutating `_idx` in place (adds a fraction in [-0.5, 0.5) to the integer day
+// index). The fraction is CENTERED on the day: a beat's session band is centered
+// on its session's day index and spans ±half the gap to each neighbour (see
+// deriveSessionBands), so beats must straddle the day point to stay inside the
+// band — pushing them all into [0,1) would spill the afternoon/evening half past
+// the band's right edge.
+//
+// Only beats carrying a daypart or order opt in — a beat with neither keeps the
+// bare integer index (day center), so world/historical beats stay put and a lone
+// dated beat is unaffected. Within a day, beats are bucketed by daypart window (an
+// unknown/absent daypart falls in the full-day window), then ordered by `order`
+// and spread evenly inside the window. Distinct windows never overlap, so
+// cross-daypart beats can't collide; the even spread inside a window keeps
+// same-daypart beats apart.
+function applySubDayOffsets(events: IndexedEvent[]): void {
+  const byDay = new Map<number, IndexedEvent[]>();
+  for (const e of events) {
+    if (e.daypart == null && e.order == null) continue; // opt-in only
+    const arr = byDay.get(e._idx);
+    if (arr) arr.push(e);
+    else byDay.set(e._idx, [e]);
+  }
+  for (const group of byDay.values()) {
+    const buckets = new Map<string, IndexedEvent[]>();
+    for (const e of group) {
+      const key = e.daypart && DAYPART_WINDOWS[e.daypart] ? e.daypart : '';
+      const b = buckets.get(key);
+      if (b) b.push(e);
+      else buckets.set(key, [e]);
+    }
+    for (const [key, bucket] of buckets) {
+      const [start, end] = key ? DAYPART_WINDOWS[key] : [0, 1];
+      bucket.sort((a, b) => (a.order ?? 0) - (b.order ?? 0) || a.label.localeCompare(b.label));
+      bucket.forEach((e, k) => {
+        // window position in [0,1), then recenter to [-0.5, 0.5) so beats straddle
+        // the day point and stay within the session band centered on it.
+        e._idx += start + ((k + 1) / (bucket.length + 1)) * (end - start) - 0.5;
+      });
+    }
+  }
 }
 
 // Padded domain → span in years. Density-invariant, so the renderer can size the

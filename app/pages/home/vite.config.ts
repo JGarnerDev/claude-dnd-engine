@@ -1,10 +1,9 @@
 // Dev config for pages/home — the user-facing timeline view fed by the LIVE
-// campaign graph (vs pages/demo, which is the fixture-driven dev harness).
+// campaign graph.
 //
 // `npm run home` -> vite serves this with the campaign-data plugin, which runs
 // scripts/timeline-data.ps1 under the hood and hot-reloads on entity edits.
-// No build step: this page is a local DM tool, not a shipped artifact (the
-// shipped artifact stays the self-contained HTML from vite.config.js).
+// No build step: this page is a local DM tool, run live via the dev server.
 
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';

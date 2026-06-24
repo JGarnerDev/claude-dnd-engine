@@ -1,30 +1,24 @@
-# timeline-data.ps1 -- extract the timeline data blob and inject it into the
-# self-contained HTML artifact (M2 of the timeline-view overhaul).
-# consumers: .claude/commands/timeline.md, CLAUDE.md (scripts table)
+# timeline-data.ps1 -- extract the timeline data blob as JSON for the home page.
+# consumers: app/pages/home/campaign-data-plugin.ts
 #
-# Reads entity frontmatter (events, sessions, acts, chronicle beats) and builds
-# the JSON shape app/components/charts/timeline/timeline.js consumes:
-#   { calendar:{epochLabel,months:[{name,days}]}, events:[...], spans:[...] }
-# Then rewrites the data sentinel inside the prebuilt shell
-# (app/pages/demo/dist/timeline.html, produced by `npm run
-# build:timeline`) and writes the result to historian/timeline/timeline.html.
+# Reads entity frontmatter (events, sessions, acts, chronicle beats) and writes
+# the JSON shape the charts consume to stdout:
+#   { calendar:{epochLabel,months:[{name,days}]}, campaigns:[...], events:[...], spans:[...] }
+# `npm run home` runs it via campaign-data-plugin.ts and serves the result as the
+# virtual module `virtual:campaign-data`; the dev server re-runs it on any graph
+# .md change. No node, no build step, no HTML artifact.
 #
-# No node needed here -- the JS/CSS are already bundled into the shell; this only
-# swaps the data line. Secret events are dropped entirely in the default
-# (player-safe) export so they can't leak from the artifact; with -Full they are
-# emitted carrying `secret: true` (only the DM viewpoint shows them). Every beat
-# with a known_by also carries `knownBy`, which drives the chart's "Known by"
-# viewpoint filter -- pick a character to scope the chart to what they know.
+# Secret events are dropped from the default (player-safe) JSON so they can't
+# leak; with -Full they are emitted carrying `secret: true` (only the DM viewpoint
+# shows them). Every beat with a known_by also carries `knownBy`, which drives the
+# chart's "Known by" viewpoint filter -- pick a character to scope the chart to
+# what they know.
 #
-# Usage: .\scripts\timeline-data.ps1 [-Full] [-JsonOnly] [-Root <repo root>]
+# Usage: .\scripts\timeline-data.ps1 [-Full] [-Root <repo root>]
 
 param(
     [switch]$Full,
-    [switch]$JsonOnly,
-    [string]$Root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path,
-    # Prebuilt single-file shell to inject into. Defaults to this repo's own
-    # built artifact; override to preview another repo's data through it.
-    [string]$Shell = ''
+    [string]$Root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 )
 
 . (Join-Path $PSScriptRoot 'lib\common.ps1')
@@ -47,10 +41,6 @@ function Get-BeatSort($s) {
     $m = if ($p.Count -ge 2) { [int]$p[1] } else { 0 }
     $d = if ($p.Count -ge 3) { [int]$p[2] } else { 0 }
     $y * 10000 + $m * 100 + $d
-}
-
-function Write-NoBom($path, $text) {
-    [System.IO.File]::WriteAllText($path, $text, (New-Object System.Text.UTF8Encoding $false))
 }
 
 function Test-Secret($fm) {
@@ -88,6 +78,17 @@ function Add-Weight($obj, $fm) {
 function Add-Campaign($obj, $fm) {
     $c = $fm['campaign']
     if ($c) { $obj['campaign'] = ($c -replace '\[\[|\]\]', '').Trim() }
+}
+
+# Sub-day placement -> beat. `daypart` (dawn|morning|midday|afternoon|evening|
+# night|late) and `order` (intra-day sequence int) spread coincident-day beats so
+# they don't stack on one x; render's applySubDayOffsets (axis.ts) consumes them.
+# Both optional; absent => beat sits at day start (current behavior).
+function Add-SubDay($obj, $fm) {
+    if ($fm['daypart']) { $obj['daypart'] = "$($fm['daypart'])".Trim() }
+    if ($fm['order'] -ne $null -and "$($fm['order'])".Trim() -ne '') {
+        $obj['order'] = [int]("$($fm['order'])".Trim())
+    }
 }
 
 # Known campaigns (type:campaign entities under scheduler/ + historian/), for the
@@ -213,6 +214,7 @@ function Get-EventBeats {
                 if ($kb.Count -gt 0) { $beat['knownBy'] = @($kb) }
                 Add-Weight $beat $fm
                 Add-Campaign $beat $fm
+                Add-SubDay $beat $fm
                 if ($kw.Count -gt 0) { $beat['keywords'] = @($kw) }
                 $out += [PSCustomObject]@{ Beat = $beat; Sort = Get-BeatSort $beat.date }
             }
@@ -254,6 +256,7 @@ function Get-SessionBeats {
 }
 
 # -- chronicle beats: a `chronicle:` list of "category | member | date | label | flags"
+#    flags may carry sub-day placement tokens: `daypart=evening order=3`.
 #    embedded in an entity. Track = "category:member" (D7). Scoped to the canon
 #    layers (historian/scheduler) where /recap writes beats -- a repo-wide scan
 #    is slow and trips on non-entity markdown. ----------------------------------
@@ -279,6 +282,9 @@ function Get-ChronicleBeats {
             }
             if ($flags -match '\bmajor\b') { $beat['major'] = $true }
             elseif ($flags -match '\bminor\b') { $beat['minor'] = $true }
+            # Sub-day placement rides in the flags field: `daypart=evening order=3`.
+            if ($flags -match '\bdaypart=(\w+)') { $beat['daypart'] = $Matches[1] }
+            if ($flags -match '\border=(\d+)') { $beat['order'] = [int]$Matches[1] }
             Add-Campaign $beat $fm
             $out += [PSCustomObject]@{ Beat = $beat; Sort = Get-BeatSort $date }
         }
@@ -336,34 +342,13 @@ $data = [ordered]@{
     spans     = @($spans)
 }
 
-# -Compress keeps it a single line so the sentinel swap is a clean one-liner.
+# -Compress keeps it a single line. Written to stdout; campaign-data-plugin.ts
+# captures stdout, so the warnFallback hint goes to stderr instead -- it must
+# never land in the JSON the plugin parses.
 $json = $data | ConvertTo-Json -Depth 8 -Compress
 
-if ($JsonOnly) { Write-Output $json; return }
-
-# -- inject into the prebuilt shell --------------------------------------------
-$shell = if ($Shell) { $Shell } else { Join-Path $Root 'app\pages\demo\dist\timeline.html' }
-if (-not (Test-Path $shell)) {
-    Write-Error "Shell not built: $shell`nRun ``npm run build:timeline`` first."
-    exit 1
-}
-$html = [System.IO.File]::ReadAllText($shell)
-$pattern = '/\*TL_DATA_START\*/.*?/\*TL_DATA_END\*/'
-if ($html -notmatch $pattern) {
-    Write-Error "Data sentinel not found in $shell -- was the shell rebuilt from timeline.html?"
-    exit 1
-}
-$replacement = "/*TL_DATA_START*/$json/*TL_DATA_END*/"
-$evaluator = [System.Text.RegularExpressions.MatchEvaluator] { param($m) $replacement }
-$html = [regex]::Replace($html, $pattern, $evaluator)
-
-$outDir = Join-Path $Root 'historian\timeline'
-New-Item -ItemType Directory -Force -Path $outDir | Out-Null
-$outFile = Join-Path $outDir 'timeline.html'
-Write-NoBom $outFile $html
-
-Write-Host "Wrote interactive timeline to $outFile"
-Write-Host "  events: $($events.Count)   spans: $($spans.Count)   mode: $(if ($Full) { 'FULL (incl. secret beats, DM-viewpoint only)' } else { 'player-safe' })"
 if ($script:warnFallback -gt 0) {
-    Write-Host "  note: $($script:warnFallback) session(s) have no in_world_end_date -- plotted by real-world played/planned_date. Backfill in_world_end_date for a true in-world axis."
+    [Console]::Error.WriteLine("note: $($script:warnFallback) session(s) have no in_world_end_date -- plotted by real-world played/planned_date. Backfill in_world_end_date for a true in-world axis.")
 }
+
+Write-Output $json

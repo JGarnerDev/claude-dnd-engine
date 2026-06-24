@@ -15,6 +15,25 @@ export const DEFAULT_CALENDAR: Calendar = {
   months: Array.from({ length: 12 }, (_, i) => ({ name: `Month ${i + 1}`, days: 30 })),
 };
 
+// Sub-day "daypart" tiers. Each owns a fraction window of the day (0..1) so
+// same-day beats spread by time-of-day and never share an x: a morning beat sits
+// left of an evening one. Windows partition the day and don't overlap, so two
+// beats in different dayparts can't collide; within one window, `order` spreads
+// them evenly. applySubDayOffsets (axis.ts) recenters these windows to [-0.5,0.5)
+// around the day point, so beats straddle their session (which the session band
+// is centered on). A beat with no daypart keeps the bare day index, so
+// world/historical beats are untouched — only opted-in session beats spread. Keys
+// are the only valid `daypart` values.
+export const DAYPART_WINDOWS: Record<string, [number, number]> = {
+  dawn:      [0.00, 0.14],
+  morning:   [0.14, 0.36],
+  midday:    [0.36, 0.50],
+  afternoon: [0.50, 0.68],
+  evening:   [0.68, 0.82],
+  night:     [0.82, 0.93],
+  late:      [0.93, 1.00],
+};
+
 // Parse "YYYY[-MM[-DD]]" -> { year, month, day }. Missing parts default to 1.
 // Negative (pre-epoch) years allowed: "-300-02-01".
 export function parseDate(str: string): DateParts {

@@ -101,6 +101,7 @@ Update the session file with the following historian fields (do not remove any e
 exists: true
 state: completed
 played_date: "{date from Phase 2}"
+in_world_end_date: "{in-world calendar date the session ended, e.g. 0735-11-03 — set this always}"
 recap: "{synthesized from DM's notes — concise, past tense, third person}"
 cliffhanger: "{from Phase 2}"
 entities_canonized:
@@ -114,6 +115,8 @@ beats:                  # from Phase 2.5 tagging pass; omit if cold-start not ye
 pcs_present:            # PCs at the table this session — from the Phase 2.5 attendance check
   - "PC Name"
 ```
+
+**Always set `in_world_end_date`** (the in-world calendar date the session ended, from Phase 2's timing). The campaign timeline plots sessions by this field; without it the chart falls back to the real-world `played_date` and the session lands in the wrong era, far from the in-world cluster. Derive it from the prior session's date plus the days elapsed this session, or from any event dated during the session. Flag to the DM if the in-world date can't be determined.
 
 Write `beats:` as one quoted line per tagged beat in the `classification: weight` form (see
 `meta/schemas/session.md` → Spotlight Beats). Write `pcs_present:` as the DM-confirmed list of
@@ -144,7 +147,9 @@ For each entity flagged for canonization in Phase 3:
 
 **Spotlight hook advance (from Phase 2.5):** for each hook flagged as landed, edit that PC's `spotlight_hooks:` entry from `status: seeded` to `status: paid`. Only advance hooks whose beat actually paid off this session — a seeded hook that didn't land stays `seeded` and carries forward. Do not invent or add hooks here; new hooks come only from `.claude/commands/pc-backstory.md`.
 
-**Affinity nudges (from Phase 2 relationship shifts):** translate this session's relationship shifts into proposed affinity changes and surface them as a confirm-list before writing — `subject → target, ±n, one-line reason` (e.g. `Dip → Ireena +2 — shielded her from the specter`). Scope is PC↔NPC and PC↔PC only. Suggested magnitudes: ±1 minor, ±2–3 notable, ±4–6 major, ±7–10 defining/rare. On DM approval, add or update the `[[Target]] (n)` entry in each **subject's** `affinity:` frontmatter field — clamping the result to −10..+10. Affinity is bi-directional and not mirrored: only write a reverse entry if the session evidenced the target's feeling too. Propose nothing for pairs with no shift this session; never invent a number. Full rules in `meta/affinity.md`.
+**Affinity nudges (from Phase 2 relationship shifts):** translate this session's relationship shifts into proposed affinity changes and surface them as a confirm-list before writing — `subject → target, ±n, one-line reason` (e.g. `Dip → Ireena +2 — shielded her from the specter`). Scope is PC↔NPC, PC↔PC, and PC↔creature-companion. Suggested magnitudes: ±1 minor, ±2–3 notable, ±4–6 major, ±7–10 defining/rare. On DM approval, add or update the `[[Target]] (n)` entry in each **subject's** `affinity:` frontmatter field — clamping the result to −10..+10. Affinity is bi-directional and not mirrored: only write a reverse entry if the session evidenced the target's feeling too. Propose nothing for pairs with no shift this session; never invent a number. Full rules in `meta/affinity.md`.
+
+For each confirmed nudge, check whether it **crosses a band** — the new value lands in a different band than the prior value (bands: hostile −10..−6, cool −5..−1, neutral 0, warm +1..+5, devoted +6..+10; an unrecorded prior value is 0/neutral). A crossing is a relationship turning point (the party *started* to trust someone, a grudge tipped into open hostility). Note every crossing and carry the list to Phase 5.5 — the beat that caused it is an automatic event-promotion candidate there.
 
 **If an entity is missing (no file anywhere):**
 
@@ -167,8 +172,10 @@ The home-page charts (`npm run home`) are a player/DM journal plotted from `type
 Apply the **hybrid promotion rule** (`meta/events.md` — read it once if not already in context): a beat earns its own event if **either** it changed canon (a death, pact, location lost/founded, faction shift a later session will reference) **or** it was simply memorable at the table (a great fight, betrayal, clutch reveal). Favor inclusion; low-stakes-but-fun beats ride as `importance: minor`.
 
 - Draw candidates from the Phase 2.5 tagged beats and the Phase 2 recap. Propose them as a short list — **do not write any event file without DM confirmation.**
+- **Add every affinity band-crossing beat from the Affinity-nudges step** as a candidate here (a relationship that tipped into a new band is a turning point worth the timeline). Set `participants` to the subject and target so it fans onto their lanes; mark `importance: minor` unless the beat is independently major. The DM may still veto — the crossing only guarantees it surfaces.
 - For each confirmed beat, create a `type: event` entity per `meta/schemas/event.md` in **`historian/events/`** with `exists: true`, `campaign: {active campaign}`, `source_session: [[Session {nn}]]`, and a numeric **`timeline_date`** (from the session's `in_world_end_date`, else flag that the in-world date is unknown). Set `participants`/`relates_to` to the NPCs/factions involved — the extractor auto-fans the beat onto their Party-tab lanes; set an explicit `track:` only to override.
 - Mark a beat `secret: true` (via `state: secret`) only if it's DM-only knowledge the party doesn't have.
+- **Set `order` + `daypart` on every minted beat** so this session's events don't stack on one timeline point (they all share the session's `timeline_date`). Walk the confirmed beats in narrative order: `order` = 1, 2, 3… in that order. `daypart` = the time-of-day the beat happened, *inferred from the notes* (the DM won't have noted it): cues like "that night"/"at dawn"/"dusk", or activity (burial/funeral → `morning`; daytime travel → `morning`/`afternoon`; a long rest advances to the next `dawn`; an ambush or sleep scene → `night`). No cue → inherit the previous beat's daypart; the first beat defaults to `morning`. Daypart only moves forward within the session. Valid values: `dawn|morning|midday|afternoon|evening|night|late`. (See `meta/events.md` "Dating events".)
 
 Skip silently if no beat clears the bar — not every session mints an event.
 
