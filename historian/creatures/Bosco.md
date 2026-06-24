@@ -11,14 +11,14 @@ creature_type: beast
 challenge_rating: "0"
 size: tiny
 alignment: unaligned
-location: traveling with party (en route to [[Vallaki]])
+location: [[Vallaki]] (with the party)
 stat_block: "inline"
 aliases:
   - "Bosco Trashborn, the Pillager"
 importance: major
 active: true
 owner: [[Iggy]]
-last_updated: [[Session 14 The Tarokka Reading]]
+last_updated: [[Session 15 The Gates of Vallaki]]
 relates_to:
   - [[Iggy]] (companion; bonded over a ration)
   - [[Odibli]] (cold war — Odibli ate a ration in front of him)

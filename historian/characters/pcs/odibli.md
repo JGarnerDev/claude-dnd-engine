@@ -14,7 +14,7 @@ race: [[Gnome]]
 class: [[Wizard]]
 background: "Unknown"
 level: 3
-level_confirmed: 14
+level_confirmed: 15
 aliases:
   - "ODB"
   - "Odi"

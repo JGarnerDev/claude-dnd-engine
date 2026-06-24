@@ -33,28 +33,31 @@ description: "Active Curse of Strahd campaign; party at level 3 after completing
 
 > **Reliability note:** Character full names for Luci and Dip are unconfirmed — only nicknames/handles appear in the notes. Character classes for Luci and Dip are inferred from abilities observed in play. Confirm with DM.
 
-## Current State (as of: Session 14)
+## Current State (as of: Session 15)
 
-- Party level: **3** (confirmed Session 14)
-- Location: On the road to [[Vallaki]], at a waterfall beside a chasm and river. Took the short bridge path; **Strahd's carriage waits ahead on the bridge.**
-- Companions: [[Ireena Kolyana]] and [[Ismark Kolyanovich]] travel with the party; [[Bosco]] rides with Iggy (learned "Sit").
+- Party level: **3** (confirmed Session 15)
+- Location: Inside [[Vallaki]] — past the grim, wolf-head-spiked gates; guards admitted the party on Ireena and Ismark's recognition. A festival is coming in a few days and **fun is mandatory.**
+- Companions: [[Ireena Kolyana]] and [[Ismark Kolyanovich]] travel with the party; [[Bosco]] rides with Iggy (learned "Sit"); [[Sergei Rubelgerd]], a dog Odibli bought and named at the Vallaki market.
+- **Open thread — Strahd's carriage:** Session 14 ended with Strahd's carriage waiting on the bridge ahead. Session 15's notes never address it (the party took the hills, was looped back by the mists, then took the road to Vallaki). Whether that encounter happened off-notes, was avoided, or is still pending is unresolved. **Confirm with DM.**
+- **Open thread — the night hag's windmill:** [[Old Bonegrinder]], a windmill on the road, is believed to be a night hag's lair ([[The Dream Pastry Woman]]); the party chose to equip in Vallaki before confronting her. Left unfought.
+- **The mists:** Odibli judged the fog "a law of this plane" — not curse, not spell. It actively looped the party back to the bridge they'd already crossed when they tried the hill shortcut.
 - **Madame Eva's tarokka reading received** at the [[Tser Pool Encampment]] — the five Fortunes of Ravenloft now map the campaign's treasures, ally, and enemy. See [[Session 14 The Tarokka Reading]].
 - Iggy's shadow does not match his form and moves in the wrong direction.
-- Dip hears whispers when it is quiet. **Open thread:** Eva says "a part of Dip remains in the land of the dead" — meaning left for Kellan to define.
+- Dip hears whispers when it is quiet, and lost a small toe to his own axe in Session 15. **Open thread:** Eva says "a part of Dip remains in the land of the dead" — meaning left for Kellan to define.
 - Both shadow/whisper afflictions stem from Odibli absorbing shadow essence to revive dead party members in Session 10.
 - Rose and Thorn: **Stranded.** Ben and Miguel left the pages behind when the mists carried the party out of Death House.
 
-### Rest Clock (as of: Session 14)
+### Rest Clock (as of: Session 15)
 
 Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` → Long Rest Rules).
 
-- In-world time now: morning–midday, the day after the camp, on the road ~half a day from Vallaki (~estimate; clock first anchored this session)
+- In-world time now: late day / evening, arrived inside [[Vallaki]] (~estimate)
 - Last long rest (in-world): overnight at the [[Tser Pool Encampment]]
-- Hours since last long rest: ~6–8h (~estimate)
-- Long rest available: no — <24h since last long rest and not in a safe spot (open road, Strahd's carriage ahead)
+- Hours since last long rest: ~12–16h (~estimate; no long rest taken this session)
+- Long rest available: not yet — <24h since last long rest. Now in a safe-ish walled town, so the gate will open on time once 24h elapses (e.g. an overnight at the Vallaki inn).
 - Rounds of combat since: 0 (roleplay/travel session)
 - Short rests since: 0
-- Notable burns: none
+- Notable burns: Odibli cast speak with animals twice (the raven, then naming Sergei)
 
 ## Rules Decisions
 

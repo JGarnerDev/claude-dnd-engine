@@ -16,7 +16,7 @@ race: [[Half Orc]]
 class: [[Barbarian]]
 background: "Unknown"
 level: 3
-level_confirmed: 14
+level_confirmed: 15
 
 aliases: []
 source_session: [[Session 05 The Specter]]
@@ -67,3 +67,4 @@ Hears whispers when it is quiet. Onset: Session 10, after Odibli absorbed shadow
 - **Session 8:** Threw fire at wounded ghouls (missed)
 - **Session 9:** Killed by necrotic damage from shadows; revived by Miguel's thrown healing potion; downed again by shadow reducing Strength to 0
 - **Session 10:** Revived by Odibli's shadow ritual; half max HP in dungeon; affliction onset; leveled to 3
+- **Session 15:** Lost a small toe to his own axe while trying to clear grass from the stuck cart; Odibli failed to recover it with mage hand. No assumed mechanical effect — confirm with DM.
