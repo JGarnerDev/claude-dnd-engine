@@ -8,11 +8,11 @@ Contract for what a correct, efficient `/session` run looks like. The command do
 
 ## Required scripts (before any manual file reads)
 
-1. `scripts/session-brief.ps1` — root CLAUDE.md mandates it at start of every `/session`. Covers campaign, active act/mission, last-session cliffhanger. Manual reads duplicating its output are rubric-1 failures.
+1. `scripts/session-brief.py` — root CLAUDE.md mandates it at start of every `/session`. Covers campaign, active act/mission, last-session cliffhanger. Manual reads duplicating its output are rubric-1 failures.
 2. Index staleness check — read `vector-index/.index-built`, run the `git log` comparison, flag if stale. Prompt only; never rebuild.
-3. `scripts/party-status.ps1` — Phase 5 pre-step; feeds the Orientation party-state paragraph and encounter balance without opening PC files.
+3. `scripts/party-status.py` — Phase 5 pre-step; feeds the Orientation party-state paragraph and encounter balance without opening PC files.
 4. `scripts/semantic-search.ps1` — Phase 1 callback search (cliffhanger/hook query, `-Source historian -K 5`); again in Phase 3B Step 2 if TRANSITION (`-Exists false -K 8`).
-5. `scripts/free-entities.ps1` — TRANSITION Step 2 importance-flagged scan, instead of a manual frontmatter sweep of all of `data/`.
+5. `scripts/free-entities.py` — TRANSITION Step 2 importance-flagged scan, instead of a manual frontmatter sweep of all of `data/`.
 
 ## Read budget
 

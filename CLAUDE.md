@@ -78,7 +78,7 @@ When creating any entity, read `meta/entity-creation.md` before proceeding. It c
 
 ## Affinity
 
-PC/NPC files carry an optional `affinity:` field — a per-target liking score (integer −10..+10) toward specific characters, distinct from `relates_to` and `disposition`. When working with character sentiment (proposing nudges, reading relationships, backfilling), read `meta/affinity.md` once per task for scale, bands, scope, and frontmatter shape. `/recap` proposes nudges; `scripts/entity-graph.ps1` reads them.
+PC/NPC files carry an optional `affinity:` field — a per-target liking score (integer −10..+10) toward specific characters, distinct from `relates_to` and `disposition`. When working with character sentiment (proposing nudges, reading relationships, backfilling), read `meta/affinity.md` once per task for scale, bands, scope, and frontmatter shape. `/recap` proposes nudges; `scripts/entity-graph.py` reads them.
 
 ## Graph Configuration
 
@@ -90,24 +90,24 @@ Map rules, tile protocol, and crop scripts documented in `maps/CLAUDE.md` — au
 
 ## Scripts
 
-PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run these via Bash before manual file reads — they collapse 5–10 tool calls into one.**
+Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these via Bash before manual file reads — they collapse 5–10 tool calls into one.** (Scripts are being migrated from PowerShell to Python 3.10; both extensions appear in the table during the transition.)
 
 | Script | When to use | Usage |
 |---|---|---|
-| `session-brief.ps1` | Start of every `/session` | `.\scripts\session-brief.ps1` |
-| `session-state.ps1` | Quick campaign/act/mission check | `.\scripts\session-state.ps1` |
-| `todo-brief.ps1` | Start of every `/todo` — all DM action-item signals in one call | `.\scripts\todo-brief.ps1` |
-| `inventory-brief.ps1` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `.\scripts\inventory-brief.ps1 [-Type <type>]` |
-| `threads-brief.ps1` | Start of every `/threads` Phase 2 — unresolved states, hostiles, pending seeds | `.\scripts\threads-brief.ps1` |
-| `party-status.ps1` | PC stats + afflictions | `.\scripts\party-status.ps1` |
-| `spotlight-balance.ps1` | Character-focus ledger — spotlight/agnostic balance, rotation, overdue PC, missing hooks (see `meta/character-focus.md`) | `.\scripts\spotlight-balance.ps1 [-Section]` |
-| `free-entities.ps1` | Find available entities by type or player | `.\scripts\free-entities.ps1 [-Type <type>] [-Player <name>]` |
+| `session-brief.py` | Start of every `/session` | `python scripts/session-brief.py` |
+| `session-state.py` | Quick campaign/act/mission check | `python scripts/session-state.py` |
+| `todo-brief.py` | Start of every `/todo` — all DM action-item signals in one call | `python scripts/todo-brief.py` |
+| `inventory-brief.py` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `python scripts/inventory-brief.py [--type <type>]` |
+| `threads-brief.py` | Start of every `/threads` Phase 2 — unresolved states, hostiles, pending seeds | `python scripts/threads-brief.py` |
+| `party-status.py` | PC stats + afflictions | `python scripts/party-status.py` |
+| `spotlight-balance.py` | Character-focus ledger — spotlight/agnostic balance, rotation, overdue PC, missing hooks (see `meta/character-focus.md`) | `python scripts/spotlight-balance.py [--section]` |
+| `free-entities.py` | Find available entities by type or player | `python scripts/free-entities.py [--type <type>] [--player <name>]` |
 | `contribution-balance.ps1` | Player contribution counts (pool vs. canonized) | `.\scripts\contribution-balance.ps1` |
-| `entity-graph.ps1` | 1-hop relations for any entity | `.\scripts\entity-graph.ps1 -Name "<name>"` |
-| `location-entities.ps1` | All historian entities near a location | `.\scripts\location-entities.ps1 -Location "<name>"` |
+| `entity-graph.py` | 1-hop relations for any entity | `python scripts/entity-graph.py --name "<name>"` |
+| `location-entities.py` | All historian entities near a location | `python scripts/location-entities.py --location "<name>"` |
 | `pitch-brief.ps1` | Start of every `/pitch` | `.\scripts\pitch-brief.ps1 [-Type <type>]` |
 | `monster-lookup.ps1` | Find monsters by CR, creature type, or habitat | `.\scripts\monster-lookup.ps1 [-Type <type>] [-CRMin <n>] [-CRMax <n>] [-Habitat <name>]` |
-| `route-cities.ps1` | Find all cities served by a trade route (uses city `routes` field) | `.\scripts\route-cities.ps1 -Route "<route name>"` |
+| `route-cities.py` | Find all cities served by a trade route (uses city `routes` field) | `python scripts/route-cities.py --route "<route name>"` |
 | `count-markers.ps1` | Count undetailed cities (red dots) in a map region | `.\scripts\count-markers.ps1 -Feature "<name>"` or `-ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n>` |
 | `region-world-context.ps1` | Start of every `/region` Phase 1 — climate, wind rules, water checklist | `.\scripts\region-world-context.ps1 -Col <n> -Row <n>` |
 | `region-scale.ps1` | Start of every `/region` Phase 2 — travel times and city spacing from grid span | `.\scripts\region-scale.ps1 -SpanGrids <n> -WaterBody <sea\|river\|both\|none> [-Locations <n>]` |
@@ -124,7 +124,7 @@ PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run th
 
 **Script dependents:** each consumed script carries a `# consumers:` header line listing the instruction files that reference it. When changing a script's usage, flags, or output format, update those files in the same change.
 
-Scripts output plain text; parse with your own judgment. They read frontmatter only (except `session-brief.ps1` which also reads the last session body for cliffhanger).
+Scripts output plain text; parse with your own judgment. They read frontmatter only (except `session-brief.py` which also reads the last session body for cliffhanger).
 
 **Semantic index:** `vector-index/` (gitignored, rebuilt from source). Build once with `py -3.10 scripts\index-entities.py`, re-run after bulk entity additions. Use `semantic-search.ps1` to surface entities by thematic relevance — betrayal arcs, forgotten NPCs, callback hooks, contradiction checks.
 
@@ -140,7 +140,7 @@ Recurring engine idiom for drift-prone state: stamp the state with the marker it
 
 ## Session Notes Ingestion (Recap Inbox)
 
-**Auto-ingestion trigger:** any markdown file in `recaps/inbox/` is raw session notes awaiting canonization — the DM drops rough notes there after play. When one exists at session start (`session-brief.ps1` flags it, along with any session whose `planned_date` has passed with no historian record), offer to run `/recap` using that file as the what-happened notes. Never canonize without the DM walking the `/recap` flow; after canonization completes, delete the inbox file — its content lives in the historian record.
+**Auto-ingestion trigger:** any markdown file in `recaps/inbox/` is raw session notes awaiting canonization — the DM drops rough notes there after play. When one exists at session start (`session-brief.py` flags it, along with any session whose `planned_date` has passed with no historian record), offer to run `/recap` using that file as the what-happened notes. Never canonize without the DM walking the `/recap` flow; after canonization completes, delete the inbox file — its content lives in the historian record.
 
 ## PC Backstory Ingestion
 

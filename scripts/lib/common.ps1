@@ -1,8 +1,8 @@
-# common.ps1 -- shared helpers dot-sourced by the scripts in scripts/.
-# consumers: scripts/entity-graph.ps1, scripts/free-entities.ps1, scripts/location-entities.ps1,
-#   scripts/party-status.ps1, scripts/route-cities.ps1, scripts/session-brief.ps1,
-#   scripts/session-state.ps1, scripts/todo-brief.ps1, scripts/inventory-brief.ps1,
-#   scripts/threads-brief.ps1, scripts/spotlight-balance.ps1, scripts/timeline-gantt.ps1
+# common.ps1 -- shared helpers dot-sourced by the remaining PowerShell scripts.
+# consumers: scripts/timeline-data.ps1, scripts/timeline-gantt.ps1
+# -- The frontmatter/spotlight cluster moved to lib/common.py; only the timeline
+#    scripts still source this. Calendar helpers below are mirrored in lib/common.py.
+#    Convert the timeline scripts to drop this file entirely (tracked in #5).
 # -- update those scripts if a function signature or output shape changes here.
 
 # Parse YAML-ish frontmatter into a hashtable.

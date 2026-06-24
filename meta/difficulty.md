@@ -12,14 +12,14 @@ Difficulty is a two-axis spectrum. **Attrition** and **lethality** are independe
 **Both axes describe combat, and combat is optional.** A session shaped roleplay-only is a valid plan, not a degenerate case of these axes — never invent encounters to fill a budget. For such a session the axes sit inert (the picks carry forward unused, the Rest Clock accrues zero rounds and still gets restamped at recap), and the operative difficulty dial is **Non-Combat Stakes** below.
 
 ## Party Profile
-- **Level & size:** derived live, never hard-coded here. Source of truth is the `level` field in each PC's frontmatter (`historian/characters/pcs/`), surfaced by `party-status.ps1`. During `/session` orientation, state the derived level and party size and ask the DM to confirm. Each PC also carries `level_confirmed: <session number>` — restamped by every `/recap` — and `party-status.ps1` prints a LEVEL STALE warning when the stamp lags the latest played session, catching level-ups that missed canonization.
+- **Level & size:** derived live, never hard-coded here. Source of truth is the `level` field in each PC's frontmatter (`historian/characters/pcs/`), surfaced by `party-status.py`. During `/session` orientation, state the derived level and party size and ask the DM to confirm. Each PC also carries `level_confirmed: <session number>` — restamped by every `/recap` — and `party-status.py` prints a LEVEL STALE warning when the stamp lags the latest played session, catching level-ups that missed canonization.
 - **General power level:** <!-- are they optimized, casual, somewhere in between? -->
 
 ## Axis 1: Attrition
 
 How much of the party's resource budget the adventuring day spends. 5e baseline assumption: 6–8 medium/hard encounters per long rest at ~3 rounds each — roughly **18–24 rounds of combat per long rest** — with ~2 short rests. Spell slots, hit dice, and HP are tuned to drain across that full day; a single fight on full resources lets the party nova and trivializes it.
 
-**The budget belongs to the adventuring day, not the session.** Sessions are table-time slices; a session can open mid-day with the party already depleted. The live count of rounds and short rests since the last long rest is the **Rest Clock** — `### Rest Clock` block in the active campaign file's Current State, updated by every `/recap`, staleness-flagged by `session-brief.ps1`. When planning, remaining budget = tier budget − rounds on the clock. A depleted party also fights as if lethality were one tier higher — pushing past budget is a deliberate difficulty escalation, not a rounding error.
+**The budget belongs to the adventuring day, not the session.** Sessions are table-time slices; a session can open mid-day with the party already depleted. The live count of rounds and short rests since the last long rest is the **Rest Clock** — `### Rest Clock` block in the active campaign file's Current State, updated by every `/recap`, staleness-flagged by `session-brief.py`. When planning, remaining budget = tier budget − rounds on the clock. A depleted party also fights as if lethality were one tier higher — pushing past budget is a deliberate difficulty escalation, not a rounding error.
 
 Tiers (rounds of combat per long rest):
 

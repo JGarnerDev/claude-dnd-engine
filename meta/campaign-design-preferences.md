@@ -13,7 +13,7 @@ Player-sourced design desires. Not world facts — what the group wants to *expe
 
 **Cross-campaign seeding is explicitly allowed:** most items here target the homebrew world, but a breadcrumb may be planted during the Strahd campaign for a payoff after the transition. A seed planted in Barovia that pays off in the new world is a strong transition stitch — `/session` may suggest one when the story offers a natural opening.
 
-**Aging cadence:** the aging check runs every 5th played session (`todo-brief.ps1` prints an AGING CHECK line) and at act transitions. Review undeployed items; seed or consciously retire what's stalling.
+**Aging cadence:** the aging check runs every 5th played session (`todo-brief.py` prints an AGING CHECK line) and at act transitions. Review undeployed items; seed or consciously retire what's stalling.
 
 ## Desired Major Events
 

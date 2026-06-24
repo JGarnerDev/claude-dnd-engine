@@ -115,7 +115,7 @@ Written at `/recap` from the per-scene tagging pass; absent on the pre-play plan
 of the session is tagged — touches included — so the balance ratio isn't biased.
 
 Each beat is **one quoted list entry** in the compact form `classification: weight` (a flat
-string, not a nested YAML map — the script parsers in `scripts/lib/common.ps1` read lists,
+string, not a nested YAML map — the script parsers in `scripts/lib/common.py` read lists,
 not maps):
 
 ```text

@@ -182,7 +182,7 @@ Read the active campaign file (`state: active` in `scheduler/campaign/`). Propos
 - Any active afflictions or ongoing conditions
 - Any resolved or newly opened threads
 
-**Rest Clock (every recap, never skipped):** update the `### Rest Clock` block from Phase 2's rests-and-rounds answer, then restamp the header to `(as of: Session {NN})` even if nothing changed — the stamp is what `session-brief.ps1` checks for staleness:
+**Rest Clock (every recap, never skipped):** update the `### Rest Clock` block from Phase 2's rests-and-rounds answer, then restamp the header to `(as of: Session {NN})` even if nothing changed — the stamp is what `session-brief.py` checks for staleness:
 
 - Always update `In-world time now` to where the party ends, and recompute `Hours since last long rest` and `Long rest available` (≥24h since last + safe location + no PC at 0 HP) from it — these drive the long-rest gate in `meta/difficulty.md`
 - Long rest taken → reset: new `Last long rest (in-world)` anchor, `Hours since last long rest` to 0, rounds and short rests to 0, clear notable burns
