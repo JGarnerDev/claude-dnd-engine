@@ -80,7 +80,7 @@ def main():
         cwrite(f"Entity not found: '{name}'", 'red')
         sys.exit(1)
 
-    content = target.read_text(encoding='utf-8')
+    content = target.read_text(encoding='utf-8').lstrip('﻿')
     fm = get_frontmatter(target)
     rel = str(target.relative_to(ROOT))
 
