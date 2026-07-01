@@ -14,14 +14,14 @@ When you plan a session, the engine reads the campaign state and asks "what's th
 
 ## Setup
 
-**Requires:** Python 3.10+, Claude Code (claude.ai/code), and — for now — PowerShell (see [Running the scripts](#running-the-scripts) below; the remaining `.ps1` helpers are being migrated to Python).
+**Requires:** [uv](https://docs.astral.sh/uv/) (provisions Python 3.14 automatically — no separate Python install needed), Claude Code (claude.ai/code), and — for now — PowerShell (see [Running the scripts](#running-the-scripts) below; the remaining `.ps1` helpers are being migrated to Python).
 
-```powershell
-# Install Python dependency
-py -3.10 -m pip install -r requirements.txt
+```bash
+# Install Python dependencies (uv provisions Python 3.14 automatically if needed)
+uv sync
 
 # Build the semantic search index (~17s first run, downloads 79MB ONNX model)
-py -3.10 scripts\index-entities.py
+uv run scripts/index-entities.py
 
 # Enable auto-formatting of Markdown on commit (one time per clone)
 .\scripts\setup-hooks.ps1
@@ -33,58 +33,44 @@ The index is stored locally in `vector-index/` (gitignored) and must be built on
 
 The helper scripts in `./scripts/` are being migrated from PowerShell (`.ps1`) to Python (`.py`) so the engine runs on macOS and Linux without installing PowerShell. The migration is in progress — **during the transition the engine needs both runtimes installed:**
 
-- **Python 3.10+** — runs every `.py` script (and is already required for the semantic index).
+- **[uv](https://docs.astral.sh/uv/)** — runs every `.py` script via `uv run`; provisions Python 3.14 automatically, no manual interpreter install needed.
 - **PowerShell** — runs the `.ps1` scripts not yet converted. Once all scripts are Python, this requirement goes away.
 
 The scripts table in `CLAUDE.md` shows each script's current extension and exact invocation.
 
-#### Windows
+#### All platforms
 
-1. **Install Python 3.10+.** Download from [python.org/downloads](https://www.python.org/downloads/) and, in the installer, check **"Add python.exe to PATH"**. This installs the **Python Launcher** (`py`).
-2. **Run a `.py` script.** The docs use the cross-platform form:
-
-   ```text
-   python scripts\session-brief.py
-   ```
-
-   If `python` on your machine isn't 3.10+ (check with `python --version`), use the launcher to pin the version explicitly — it does the same thing:
+1. **Install [uv](https://docs.astral.sh/uv/getting-started/installation/).**
+2. **Run a `.py` script** — the same command works on Windows, macOS, and Linux:
 
    ```text
-   py -3.10 scripts\session-brief.py
+   uv run scripts/session-brief.py
    ```
 
-3. **Run a `.ps1` script** (the not-yet-migrated ones) exactly as before:
+3. **Run a `.ps1` script** (the not-yet-migrated ones) — Windows:
 
    ```powershell
    .\scripts\validate.ps1
    ```
 
-> Forward slashes work on Windows too — `python scripts/session-brief.py` is fine. The docs use whichever reads cleanest.
+   macOS/Linux, via [PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell):
 
-#### macOS / Linux
-
-1. **Install Python 3.10+** (e.g. `brew install python@3.12` on macOS, or your distro's package manager). There is no `py` launcher on these platforms — use `python3` if `python` is unversioned:
-
-   ```text
-   python3 scripts/session-brief.py
+   ```bash
+   pwsh ./scripts/validate.ps1
    ```
-
-2. The `.ps1` scripts require [PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) until they're converted. Run them with `pwsh ./scripts/validate.ps1`.
 
 #### What changed from the `.ps1` versions
 
 The converted scripts are drop-in replacements with two surface differences:
 
-- **Invocation:** `.\scripts\foo.ps1` → `python scripts/foo.py`.
-- **Flags:** PowerShell's `-Name`/`-Type` style → Python's `--name`/`--type` (lowercase, double-dash). For example, `.\scripts\free-entities.ps1 -Type faction` is now `python scripts/free-entities.py --type faction`.
+- **Invocation:** `.\scripts\foo.ps1` → `uv run scripts/foo.py`.
+- **Flags:** PowerShell's `-Name`/`-Type` style → Python's `--name`/`--type` (lowercase, double-dash). For example, `.\scripts\free-entities.ps1 -Type faction` is now `uv run scripts/free-entities.py --type faction`.
 
 Everything else is identical by design: same printed output (the slash commands parse it, so the format is preserved line-for-line), same frontmatter-only reads, same exit codes.
 
 ### Markdown formatting
 
 Entity files, commands, and docs are Markdown. A `.markdownlint.json` at the repo root defines the rules (tuned for Obsidian — long lines and frontmatter-first files are allowed). `scripts\setup-hooks.ps1` points git at `.githooks/` and installs `markdownlint-cli2@0.13.0` (the exact pin that runs on node 18). After that, a pre-commit hook auto-fixes staged `.md` files and re-stages the changes — you never format by hand. The hook is non-blocking: if a rule can't be auto-fixed (e.g. a code fence missing a language), the commit still goes through. To format the whole repo on demand: `markdownlint-cli2 --fix "*.md" "**/*.md" "!node_modules/**"`.
-
-> **Note:** `py -3.10` is the Windows Python Launcher syntax. If `py` is not available, use the full path to your Python 3.10 executable.
 
 ### Why the semantic index?
 
@@ -247,11 +233,11 @@ Blank fields are fine — deliberate elaboration space, not gaps. Fill what you 
 - `maps/world/masters/city-markers.webp` — a **flattened base+dots export**: your surface map with red dots burned in marking cities that exist but aren't named/detailed yet ("work needed here" pins). A city "graduates" by adding its label to the base map and removing its dot in Inkarnate, then re-exporting both.
 - `maps/world/city-registry.md` — stable text IDs (e.g. `C05-04a`) per undetailed marker, so you can assign/cross-reference a city before it's named.
 
-*Add a layer:* paste its CDN url into `maps/sources.tsv`, run `.\scripts\fetch-maps.ps1`, then `python scripts\gen-tiles.py`. Re-exported a map? Update its url, `.\scripts\fetch-maps.ps1 -Force`, re-tile.
+*Add a layer:* paste its CDN url into `maps/sources.tsv`, run `.\scripts\fetch-maps.ps1`, then `uv run scripts/gen-tiles.py`. Re-exported a map? Update its url, `.\scripts\fetch-maps.ps1 -Force`, re-tile.
 
 *Build the text data files from skeletons, not by hand:* `maps/world/index.md` (world data — Status, Images, **Biome Census**, tile coverage, feature positions) and `maps/world/city-registry.md` are copied from `index-template.md` / `city-registry-template.md` and filled once your layers are fetched. The biome census — what biomes exist and roughly where — is captured at setup and feeds `/region` and entity generation. See `meta/new-campaign-setup.md` → Map & geography setup.
 
-*Tiles:* the Read tool downsamples a large image until labels are unreadable, so nothing reads the full master directly. `python scripts\gen-tiles.py` slices each layer into **nine overlapping, legible tiles** (`tiles/nw.png … se.png`, plus `markers-*.png` and `sky-*.png`). **No map images are committed** — neither masters nor tiles. Cold-start a clone with `fetch-maps.ps1` then `gen-tiles.py`; re-run `gen-tiles.py` after any re-export. Tiles are regenerated, never hand-edited. (Trade-off: with nothing in git, a revoked CDN url leaves no fallback — re-export and update `maps/sources.tsv` if a fetch fails.)
+*Tiles:* the Read tool downsamples a large image until labels are unreadable, so nothing reads the full master directly. `uv run scripts/gen-tiles.py` slices each layer into **nine overlapping, legible tiles** (`tiles/nw.png … se.png`, plus `markers-*.png` and `sky-*.png`). **No map images are committed** — neither masters nor tiles. Cold-start a clone with `fetch-maps.ps1` then `gen-tiles.py`; re-run `gen-tiles.py` after any re-export. Tiles are regenerated, never hand-edited. (Trade-off: with nothing in git, a revoked CDN url leaves no fallback — re-export and update `maps/sources.tsv` if a fetch fails.)
 
 *Scale (your call):* places are addressed by a column/row grid over the map, but **what a cell represents is yours** — pick a real-world distance per cell and set it in `maps/CLAUDE.md` → Grid Scale (the template uses ~16×13 cells at 1000km each, just one campaign's choice). That scale drives `/region` travel-time and city-spacing math, so set it before detailing regions and keep the base image at full resolution.
 
@@ -267,7 +253,7 @@ Blank fields are fine — deliberate elaboration space, not gaps. Fill what you 
 
 No need to map the whole campaign — one active act with a mission or two lets `/session` detect where you are (mid-mission vs. at a clean break) and surface coherent hooks.
 
-**5. Build the semantic index.** If skipped during Setup, run `py -3.10 scripts\index-entities.py` once the pool has entities — it powers callback surfacing, forgotten-entity discovery, and `/recap` contradiction checks. Re-run after bulk additions.
+**5. Build the semantic index.** If skipped during Setup, run `uv run scripts/index-entities.py` once the pool has entities — it powers callback surfacing, forgotten-entity discovery, and `/recap` contradiction checks. Re-run after bulk additions.
 
 Minimum viable prep: one active `campaign`, an active act, a handful of seeded entities. Everything else sharpens output — start thin, enrich as you play.
 
