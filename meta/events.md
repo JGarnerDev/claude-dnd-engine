@@ -1,6 +1,6 @@
 # Events & the Timeline Journal
 
-How events become entities and how they surface on the home-page charts (`app/`, `npm run home`). This is the single source for what an *event* is; the schema (`meta/schemas/event.md`) holds the frontmatter mechanics, the extractor (`scripts/timeline-data.ps1`) reads them, and `/recap` mints them.
+How events become entities and how they surface on the home-page charts (`app/`, `npm run home`). This is the single source for what an *event* is; the schema (`meta/schemas/event.md`) holds the frontmatter mechanics, the extractor (`scripts/timeline-data.py`) reads them, and `/recap` mints them.
 
 ## What an event is
 

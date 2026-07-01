@@ -8,7 +8,7 @@ Generate the campaign's history gantt charts — a **world-history** timeline (e
 
 ## Behavior
 
-This command runs `scripts/timeline-gantt.ps1`, which reads entity frontmatter and **overwrites** three files in `historian/timeline/`:
+This command runs `scripts/timeline-gantt.py`, which reads entity frontmatter and **overwrites** three files in `historian/timeline/`:
 
 - `world-history.md` — one gantt of dated world events
 - `party-history.md` — one gantt of session milestones + act spans
@@ -33,12 +33,12 @@ Axes are **independent** — world history may span millennia, party history mon
 
 ## Phase 1 — Run
 
-```powershell
-.\scripts\timeline-gantt.ps1            # player-safe (secret events hidden)
-.\scripts\timeline-gantt.ps1 -Full      # include secret events
+```text
+python scripts/timeline-gantt.py           # player-safe (secret events hidden)
+python scripts/timeline-gantt.py --full    # include secret events
 ```
 
-Map `--full` → `-Full`.
+Pass `--full` straight through.
 
 ---
 
