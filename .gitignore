@@ -1,6 +1,10 @@
 .template-sync.local
 .claude/settings.local.json
 pitch-log/
+
+# Python bytecode caches from the helper scripts in scripts/
+__pycache__/
+*.pyc
 questionnaires/*
 !questionnaires/.gitkeep
 vector-index/

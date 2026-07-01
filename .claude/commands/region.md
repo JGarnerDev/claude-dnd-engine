@@ -112,9 +112,9 @@ After analysis, state the working labels and marker count with a brief summary o
 ## Phase 4 — Draft Document
 
 Before writing, run:
-- `.\scripts\free-entities.ps1 -Type resource` — note player-contributed resources; attach to cities whose terrain plausibly produces them
-- `.\scripts\free-entities.ps1 -Type faction` — note player-contributed factions; attach to cities whose role or terrain fits their interest
-- `.\scripts\free-entities.ps1 -Type location` — note player-contributed regions or wilderness areas that overlap geographically
+- `python scripts/free-entities.py --type resource` — note player-contributed resources; attach to cities whose terrain plausibly produces them
+- `python scripts/free-entities.py --type faction` — note player-contributed factions; attach to cities whose role or terrain fits their interest
+- `python scripts/free-entities.py --type location` — note player-contributed regions or wilderness areas that overlap geographically
 
 Reference these inline when suggesting resources and diplomatic context. Use `[[EntityName]]` wikilink syntax. Label player-contributed entities: *([player]'s resource)*. Do not force a fit.
 
@@ -169,10 +169,10 @@ Apply all corrections before moving on. Do not proceed to Phase 6 until the DM c
 ## Phase 6 — Entity Anchoring
 
 Run:
-```
-.\scripts\free-entities.ps1 -Type character
-.\scripts\free-entities.ps1 -Type faction
-.\scripts\free-entities.ps1 -Type event
+```text
+python scripts/free-entities.py --type character
+python scripts/free-entities.py --type faction
+python scripts/free-entities.py --type event
 .\scripts\contribution-balance.ps1
 ```
 

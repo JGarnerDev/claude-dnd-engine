@@ -137,7 +137,7 @@ feature is inert.
 ## How the Engine Uses This
 
 - **`/session` Phase 1** carries a spotlight readout next to the drought counter — lifetime
-  balance, recent trend (≥ 4 sessions), and the overdue PC — via `spotlight-balance.ps1`.
+  balance, recent trend (≥ 4 sessions), and the overdue PC — via `spotlight-balance.py`.
 - **`/session` planning** reads `spotlight_hooks:`, surfaces opportunities, and marks a hook
   `open → seeded` when the plan commits to it. Honors "never force."
 - **`/recap`** runs a per-scene tagging pass: classify + weight **every** beat (touches

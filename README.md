@@ -14,7 +14,7 @@ When you plan a session, the engine reads the campaign state and asks "what's th
 
 ## Setup
 
-**Requires:** Python 3.10, PowerShell, Claude Code (claude.ai/code)
+**Requires:** Python 3.10+, Claude Code (claude.ai/code), and — for now — PowerShell (see [Running the scripts](#running-the-scripts) below; the remaining `.ps1` helpers are being migrated to Python).
 
 ```powershell
 # Install Python dependency
@@ -28,6 +28,57 @@ py -3.10 scripts\index-entities.py
 ```
 
 The index is stored locally in `vector-index/` (gitignored) and must be built on each new clone. Re-run `index-entities.py` after bulk entity additions. Individual entity changes don't require a full rebuild — run with `--reset` only if the index feels stale.
+
+### Running the scripts
+
+The helper scripts in `./scripts/` are being migrated from PowerShell (`.ps1`) to Python (`.py`) so the engine runs on macOS and Linux without installing PowerShell. The migration is in progress — **during the transition the engine needs both runtimes installed:**
+
+- **Python 3.10+** — runs every `.py` script (and is already required for the semantic index).
+- **PowerShell** — runs the `.ps1` scripts not yet converted. Once all scripts are Python, this requirement goes away.
+
+The scripts table in `CLAUDE.md` shows each script's current extension and exact invocation.
+
+#### Windows
+
+1. **Install Python 3.10+.** Download from [python.org/downloads](https://www.python.org/downloads/) and, in the installer, check **"Add python.exe to PATH"**. This installs the **Python Launcher** (`py`).
+2. **Run a `.py` script.** The docs use the cross-platform form:
+
+   ```text
+   python scripts\session-brief.py
+   ```
+
+   If `python` on your machine isn't 3.10+ (check with `python --version`), use the launcher to pin the version explicitly — it does the same thing:
+
+   ```text
+   py -3.10 scripts\session-brief.py
+   ```
+
+3. **Run a `.ps1` script** (the not-yet-migrated ones) exactly as before:
+
+   ```powershell
+   .\scripts\validate.ps1
+   ```
+
+> Forward slashes work on Windows too — `python scripts/session-brief.py` is fine. The docs use whichever reads cleanest.
+
+#### macOS / Linux
+
+1. **Install Python 3.10+** (e.g. `brew install python@3.12` on macOS, or your distro's package manager). There is no `py` launcher on these platforms — use `python3` if `python` is unversioned:
+
+   ```text
+   python3 scripts/session-brief.py
+   ```
+
+2. The `.ps1` scripts require [PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) until they're converted. Run them with `pwsh ./scripts/validate.ps1`.
+
+#### What changed from the `.ps1` versions
+
+The converted scripts are drop-in replacements with two surface differences:
+
+- **Invocation:** `.\scripts\foo.ps1` → `python scripts/foo.py`.
+- **Flags:** PowerShell's `-Name`/`-Type` style → Python's `--name`/`--type` (lowercase, double-dash). For example, `.\scripts\free-entities.ps1 -Type faction` is now `python scripts/free-entities.py --type faction`.
+
+Everything else is identical by design: same printed output (the slash commands parse it, so the format is preserved line-for-line), same frontmatter-only reads, same exit codes.
 
 ### Markdown formatting
 

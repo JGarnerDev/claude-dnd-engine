@@ -6,7 +6,7 @@ Players design world entities via `/entity-questionnaire`. Filled questionnaires
 
 1. Parse answers from the filled content
 2. Read `entity_type` from the CLAUDE-INGEST block
-3. Run balance review — `meta/worldbuilding.md` + `free-entities.ps1 -Type <entity_type>`
+3. Run balance review — `meta/worldbuilding.md` + `free-entities.py --type <entity_type>`
 4. Present DM with a review summary and targeted questions
 5. Create the entity only after explicit DM confirmation
 

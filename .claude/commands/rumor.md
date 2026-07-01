@@ -14,8 +14,8 @@ Output is **text only**. Surfacing a rumor does not consume it — the pool enti
 
 ## Phase 1 — Pull from the Pool
 
-```powershell
-.\scripts\inventory-brief.ps1 -Type rumor
+```text
+python scripts/inventory-brief.py --type rumor
 ```
 
 If a theme was given, also rank by relevance:

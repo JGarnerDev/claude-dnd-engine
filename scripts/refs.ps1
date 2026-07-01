@@ -8,7 +8,7 @@
 # `.\scripts\foo.ps1`, `scripts/foo.ps1`, and plain `foo.ps1` mentions).
 #
 # Usage: .\scripts\refs.ps1 -Target <path-or-filename>
-#   e.g. .\scripts\refs.ps1 -Target scripts/session-brief.ps1
+#   e.g. .\scripts\refs.ps1 -Target scripts/session-brief.py
 #        .\scripts\refs.ps1 -Target meta/entity-creation.md
 
 param(

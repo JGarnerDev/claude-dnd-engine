@@ -17,11 +17,11 @@ Do not generate any content yet.
 
 **Step 1 — Run the dashboard script:**
 
-```powershell
-.\scripts\session-brief.ps1
+```text
+python scripts/session-brief.py
 ```
 
-It reports: next session number (with a milestone flag every 5th session — worth marking at the table), campaign/act/mission names and states, last session summary + cliffhanger + played date, Rest Clock state, Current State stamp staleness, the party roster with afflictions, and the design-preference drought counter (undeployed/seeded wishlist items), and the spotlight readout (lifetime balance, recent trend, overdue PC, missing-hooks flags — from `spotlight-balance.ps1`; says "insufficient history" before 3 sessions). Do not manually re-read anything it already covers.
+It reports: next session number (with a milestone flag every 5th session — worth marking at the table), campaign/act/mission names and states, last session summary + cliffhanger + played date, Rest Clock state, Current State stamp staleness, the party roster with afflictions, and the design-preference drought counter (undeployed/seeded wishlist items), and the spotlight readout (lifetime balance, recent trend, overdue PC, missing-hooks flags — from `spotlight-balance.py`; says "insufficient history" before 3 sessions). Do not manually re-read anything it already covers.
 
 **Step 2 — Index staleness check.** Read `vector-index/.index-built` (line 1: ISO timestamp, line 2: commit SHA), then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag: *"Semantic index stale since `<sha[:7]>` — run `py -3.10 scripts\index-entities.py`."* If the file is missing, prompt to build. Never rebuild automatically — the searches in this command degrade silently on a stale index, so the DM should decide.
 
@@ -53,7 +53,7 @@ Conditional:
 
 **Step 5 — State the orientation aloud**, using the two-part recap format from root CLAUDE.md (narrative prose first, then TL;DR bullets):
 
-- Party level and size (from PC frontmatter `level` fields — `party-status.ps1` or a quick frontmatter scan) — ask the DM to confirm or correct; the confirmed level feeds the RTD math in `meta/difficulty.md`. If any PC's `level_confirmed` is older than the last played session number (party-status flags this as LEVEL STALE), call it out explicitly — it means a `/recap` skipped the level question and a level-up may have been missed
+- Party level and size (from PC frontmatter `level` fields — `party-status.py` or a quick frontmatter scan) — ask the DM to confirm or correct; the confirmed level feeds the RTD math in `meta/difficulty.md`. If any PC's `level_confirmed` is older than the last played session number (party-status flags this as LEVEL STALE), call it out explicitly — it means a `/recap` skipped the level question and a level-up may have been missed
 - Rest Clock state (from the session brief): in-world time now, rounds and short rests since the last long rest, and whether a long rest is currently available. If the brief shows REST CLOCK STALE or NOT INITIALIZED, reconstruct it with the DM now — three questions ("what's the in-world date/time? when did they last long rest? roughly how many rounds since?"), write the answers back to the campaign file's `### Rest Clock` block with the current stamp, then continue
 - Long-rest availability (`meta/difficulty.md` → Long Rest Rules): compute from the clock — a long rest is offerable only if ≥24 in-world hours have passed since the last one started, the party can reach a safe spot for 8 uninterrupted hours, and no PC is at 0 HP. State this plainly ("party long-rested ~14h ago — no fresh reset available this session without 10h more in-world") so it shapes pacing before any beats are written
 - What the current act is (or "no act defined yet")
@@ -123,8 +123,8 @@ Run semantic search using the themes of the current session direction (from clif
 
 Then surface importance-flagged entities the semantic search may not rank highly:
 
-```powershell
-.\scripts\free-entities.ps1
+```text
+python scripts/free-entities.py
 ```
 
 Filter its output to `importance: major` or `critical` with `active: true`. Combine both lists — semantic results for thematic fit, script output for importance-flagged entities. Do not manually sweep `data/` frontmatter; the script replaces that.
@@ -197,8 +197,8 @@ Wait for the DM's response before continuing.
 
 **Pre-step:** run the party dashboard for the Orientation paragraph and encounter balance:
 
-```powershell
-.\scripts\party-status.ps1
+```text
+python scripts/party-status.py
 ```
 
 Using all context gathered, produce a session plan in chat.
@@ -217,7 +217,7 @@ Using all context gathered, produce a session plan in chat.
 
 ### Orientation
 
-- One-paragraph party state: current location, known afflictions, resources expended, mood/tone coming out of the last session (sourced from `party-status.ps1` and the last session recap)
+- One-paragraph party state: current location, known afflictions, resources expended, mood/tone coming out of the last session (sourced from `party-status.py` and the last session recap)
 - Bullet list: any unresolved `new_entities` from the last session that need acknowledgment
 
 ### Scenes

@@ -2,13 +2,13 @@ Scan the free entity pool in `./data` and produce an inventory report.
 
 **Step 1 — Run the inventory script (no manual file reads):**
 
-```powershell
-.\scripts\inventory-brief.ps1
+```text
+python scripts/inventory-brief.py
 ```
 
 It scans every markdown file under `data/`, keeps only free entities (`exists: false`), and prints them grouped by `type`/`subtype` with `importance`, `active`, and `contributed_by` inline — plus a **GAPS** section listing pool types with zero free entities. Reference catalogs (`exists: true` — monsters, spells, deities, etc.) are excluded automatically. Do not re-read the underlying files; the script output is the complete signal set. Open an entity file only if the user asks a follow-up about a specific one.
 
-A `-Type <type>` flag filters to one type group (e.g. `.\scripts\inventory-brief.ps1 -Type faction`).
+A `--type <type>` flag filters to one type group (e.g. `python scripts/inventory-brief.py --type faction`).
 
 **Step 2 — Present the report:**
 
