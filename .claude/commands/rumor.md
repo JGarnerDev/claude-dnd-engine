@@ -15,7 +15,7 @@ Output is **text only**. Surfacing a rumor does not consume it — the pool enti
 ## Phase 1 — Pull from the Pool
 
 ```text
-python scripts/inventory-brief.py --type rumor
+uv run scripts/inventory-brief.py --type rumor
 ```
 
 If a theme was given, also rank by relevance:

@@ -32,7 +32,7 @@ Do not ask about optional parameters that have sensible defaults.
 
 Read `meta/entity-creation.md` to find the correct schema file for `--type`. Then read `meta/schemas/{schema}.md` — specifically the **Player Form** and **Form → Frontmatter Mapping** sections.
 
-Run `python scripts/free-entities.py --type <type>` to get existing free entities of this type. Scan for any that share the same origin, function, or key trait as the concept.
+Run `uv run scripts/free-entities.py --type <type>` to get existing free entities of this type. Scan for any that share the same origin, function, or key trait as the concept.
 
 Also run semantic search on the concept to catch cross-type duplicates — entities that serve the same narrative role under a different type:
 
@@ -139,7 +139,7 @@ If the file lives in `questionnaires/` and has real answers, set `filled: true` 
 
 ### Ingest Phase 2 — Balance Review
 
-Read `meta/worldbuilding.md` (once). Run `python scripts/free-entities.py --type <entity_type>` for current pool. Also run semantic search on the entity name and concept to detect cross-type thematic conflicts:
+Read `meta/worldbuilding.md` (once). Run `uv run scripts/free-entities.py --type <entity_type>` for current pool. Also run semantic search on the entity name and concept to detect cross-type thematic conflicts:
 
 ```powershell
 .\scripts\semantic-search.ps1 -Query "<entity name> <concept summary>" -K 5

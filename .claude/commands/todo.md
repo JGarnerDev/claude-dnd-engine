@@ -7,7 +7,7 @@ Give the DM a plain-language summary of everything that needs attention or actio
 ## Step 1 — Gather signals (one script call, no manual reads)
 
 ```text
-python scripts/todo-brief.py
+uv run scripts/todo-brief.py
 ```
 
 This collects: uncanonized/pending sessions, recap inbox files, **no-plan-for-next-game-night warning** (game night is Tuesday — sourced from the campaign's Rules Decisions), open threads (characters missing/imprisoned/transformed), party state staleness (level stamps and the Rest Clock — translate as "character levels / the party's rest tracker haven't been confirmed since session N; next session's encounter math leans on them"), **spotlight flags** (the `--- SPOTLIGHT ---` block: an overdue character whose arc hasn't been in the sun lately, and any PC with no story hooks on file — translate as "Mara's backstory hasn't driven a scene in a while; consider leaning her way next session" and "Kuro has no story hooks captured yet — a backstory pass would let the planner feature him"; silent before 3 sessions), graph health (validate error count), index staleness, unchecked topic-todo items (topic files like `todo-worldmap.md`; `todo-dashboard.md` is output, never a source), **world buildout gaps** (the `--- WORLD BUILDOUT ---` block: empty entity types like PCs/events/rumors, and scheduler structure — placeholder-only act, no missions), questionnaire fill states, draft lore/acts/missions, and undeployed design preferences (with an AGING CHECK line every 5th played session — when it appears, surface it as a 🤝 item: review the group wishlist together, seed or retire what's stalling). **Do not re-read the underlying files** — the script output is the complete signal set. Read a file only if the DM asks a follow-up about a specific item.
