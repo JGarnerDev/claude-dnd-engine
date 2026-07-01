@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "~Day 13 in Barovia (windmill on the Vallaki road)"
 timeline_date: "0735-11-03"
+daypart: afternoon
+order: 2
 track: "antagonist:The Dream Pastry Woman"
 source_session: "[[Session 15 The Gates of Vallaki]]"
 outcome: "A raven warned the party away from a dilapidated windmill; Bosco's nose tied the place to the dream-pastry hag. The party marked it her lair and chose to equip in Vallaki before any confrontation."

@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "~Day 13 in Barovia (Vallaki market)"
 timeline_date: "0735-11-03"
+daypart: evening
+order: 4
 track: "character:Odibli"
 source_session: "[[Session 15 The Gates of Vallaki]]"
 outcome: "Odibli bought a dog at the Vallaki market and named it Sergei Rubelgerd via speak with animals; Sergei accepted the name and joined the party."

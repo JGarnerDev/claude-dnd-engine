@@ -96,6 +96,7 @@ PowerShell scripts in `./scripts/` replace repetitive multi-file reads. **Run th
 |---|---|---|
 | `session-brief.ps1` | Start of every `/session` | `.\scripts\session-brief.ps1` |
 | `session-state.ps1` | Quick campaign/act/mission check | `.\scripts\session-state.ps1` |
+| `version-check.ps1` | Session start / before a bump — flag engine changes since the last version bump (see `meta/versioning.md`) | `.\scripts\version-check.ps1` |
 | `todo-brief.ps1` | Start of every `/todo` — all DM action-item signals in one call | `.\scripts\todo-brief.ps1` |
 | `inventory-brief.ps1` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `.\scripts\inventory-brief.ps1 [-Type <type>]` |
 | `threads-brief.ps1` | Start of every `/threads` Phase 2 — unresolved states, hostiles, pending seeds | `.\scripts\threads-brief.ps1` |
@@ -128,11 +129,17 @@ Scripts output plain text; parse with your own judgment. They read frontmatter o
 
 **Semantic index:** `vector-index/` (gitignored, rebuilt from source). Build once with `py -3.10 scripts\index-entities.py`, re-run after bulk entity additions. Use `semantic-search.ps1` to surface entities by thematic relevance — betrayal arcs, forgotten NPCs, callback hooks, contradiction checks.
 
+**Version orientation:** At the start of any session, read root `VERSION` and the top entry or two of `CHANGELOG.md`, and orient the DM/agent: "Engine v`<x.y.z>` — since last worked here: `<recent changelog highlights>`." Run `.\scripts\version-check.ps1` to surface whether engine files changed without a version bump (non-blocking — a flag means "decide whether this cleared the bump bar," not "something broke"). Bump rules and the procedure live in `meta/versioning.md` — read it once per task when bumping.
+
 **Index staleness check:** At the start of any session, read `vector-index/.index-built` (line 1: ISO timestamp, line 2: git commit SHA). Then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag it: "Semantic index stale since `<sha[:7]>` — run `py -3.10 scripts\index-entities.py`." Ignore commits that touch only non-indexed files (`CLAUDE.md`, `README.md`) — the indexer skips them, so they cannot stale the index. Do not rebuild automatically; prompt the user. If `.index-built` is missing, index has never been built — prompt to run it.
 
 ## Stamp Pattern
 
-Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, the campaign Rest Clock header. Use this pattern for any new state that can go silently stale.
+Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, the campaign Rest Clock header, the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
+
+## Versioning
+
+The project carries a single semver `MAJOR.MINOR.PATCH` in root `VERSION`; notable engine changes are logged in `CHANGELOG.md`. The version tells collaborators and their Claude agents *what important thing changed* — not that there was activity. Routine campaign content (new entities, canonized sessions) stays below the bump bar and is not versioned. When a change clears the bar (engine behavior/interaction/view changes, or structural/retcon content changes), bump `VERSION` and prepend a `CHANGELOG.md` entry. Full tier rules and the bump procedure: `meta/versioning.md` (read once per task when bumping).
 
 ## Player Entity Submissions
 

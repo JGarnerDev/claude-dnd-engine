@@ -28,6 +28,8 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 known_by:
   - [[The Party]] (full)
+affinity:
+  - [[Odibli]] (3)
 description: "A dog bought at the Vallaki market with the party pitching in. Odibli passed an animal handling check to ride him, then named him Sergei Rubelgerd via speak with animals. Sergei accepted the name, declared he would be a good boy, and asked for snacks."
 personality: "Eager, agreeable, food-motivated. Wants to be a good boy. Will negotiate for snacks."
 goals:

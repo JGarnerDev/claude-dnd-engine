@@ -61,6 +61,23 @@ Timeline entries sort by a numeric key derived from the date, honoring graded pr
 
 How complete a timeline date is: `year` | `month` | `day` (`Get-DatePrecision` = segment count). The gantt renders precision as **bar width** — a year-only date spans the whole year, a month-precise date spans the month, a full date is a one-day milestone. Uncertainty shows as width; the chart never fakes precision it lacks.
 
+## Sub-day placement (`daypart` + `order`)
+
+Below `day` sits an optional sub-day tier so beats sharing one calendar day (every event minted at a single session's `timeline_date`) spread out instead of stacking on one point. `timeline_date` stays `YYYY-MM-DD` — sub-day rides on two **sibling fields**, both optional:
+
+- **`daypart`** — coarse time-of-day, one of `dawn | morning | midday | afternoon | evening | night | late`. Each owns a non-overlapping fraction window of the day (`DAYPART_WINDOWS` in `app/components/charts/_common/helpers/calendar.ts`), so a morning beat plots left of an evening one. This is *approximate by design* — it's the honest "roughly when," not a faked clock time.
+- **`order`** — 1-based intra-day sequence. Tiebreaks beats that share a daypart so two same-daypart beats never land on the same x. `/recap` assigns it in narrative order.
+
+```yaml
+timeline_date: "0735-11-01"
+daypart: morning
+order: 2
+```
+
+- **Interactive timeline only.** The renderer (`indexEvents` → `applySubDayOffsets` in `axis.ts`) folds daypart+order into a fractional day index, spreading same-day beats within the day; zoom in and the morning/evening clusters separate. The mermaid `/timeline` gantt is day-granular and ignores sub-day.
+- **Opt-in.** A beat with neither field keeps the bare day index (day start), so world/historical and big single-date events are untouched — only session beats that carry the fields spread.
+- **Chronicle rows** carry it in the flags field: `… | daypart=evening order=3`.
+
 ## Proxy date (rendering only)
 
 Mermaid's `gantt` uses a Gregorian date engine. `Get-PlotDate` maps a timeline date onto a real `[datetime]` (clamped to ≤12 months / ≤28 days so any custom calendar still yields a valid Gregorian date) that mermaid plots **roughly proportional** — orientation, not true scale. The real in-world date rides on the task label. For spans too large to tick, `/timeline` switches to compressed-sequence mode: synthetic evenly-spaced proxy dates, blank axis, real date in the label. Proxy dates are an internal rendering detail — never written back to entity files.

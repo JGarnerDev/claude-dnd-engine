@@ -89,6 +89,11 @@ known_by:
 description: ""
 
 # --- OPTIONAL (event) ---
+daypart: ""           # sub-day tier: dawn|morning|midday|afternoon|evening|night|late.
+                      # Spreads same-day beats on the interactive timeline so events
+                      # minted at one session's date don't stack. See meta/calendar-template.md.
+order:                # 1-based intra-day sequence; tiebreaks beats sharing a daypart.
+                      # /recap assigns it in narrative order. Omit for big single-date events.
 participants:
   - [[Entity Name]] (role)
 awareness: widely-known | regional | secret | forgotten | disputed

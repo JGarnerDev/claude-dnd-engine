@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "~Day 13 in Barovia (Vallaki gates)"
 timeline_date: "0735-11-03"
+daypart: afternoon
+order: 3
 track: "party"
 source_session: "[[Session 15 The Gates of Vallaki]]"
 outcome: "The party passed Vallaki's wolf-head-spiked gates; guards admitted them on Ireena and Ismark's recognition, warning of a coming festival where fun is mandatory."
