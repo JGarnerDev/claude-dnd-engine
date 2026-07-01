@@ -36,6 +36,19 @@ def is_secret(fm) -> bool:
     return ci_eq(fm.get('state'), 'secret') or ci_eq(fm.get('awareness'), 'secret')
 
 
+def dedupe_ci(items: list) -> list:
+    """Order-preserving case-insensitive dedup, keeping first-seen casing.
+    Mirror of PowerShell Select-Object -Unique (which folds case)."""
+    seen = set()
+    out = []
+    for it in items:
+        key = it.lower()
+        if key not in seen:
+            seen.add(key)
+            out.append(it)
+    return out
+
+
 def get_beat_sort(s: str) -> int:
     """Unclamped chronological sort key for the JSON array. (common.py's
     get_date_sort_key clamps day<=28 for date safety, which ties days 29-31.
@@ -63,14 +76,7 @@ def get_keywords(fm) -> list:
         for v in fm.get(k, []) or []:
             if v:
                 names.append(v)
-    # unique, order-preserving (PowerShell Select-Object -Unique keeps first-seen)
-    seen = set()
-    out = []
-    for n in names:
-        if n not in seen:
-            seen.add(n)
-            out.append(n)
-    return out
+    return dedupe_ci(names)
 
 
 def add_weight(obj: dict, fm) -> None:
@@ -170,12 +176,7 @@ def resolve_event_tracks(fm, name_types: _NameTypeCache) -> list:
             cat = get_lane_category(name_map.get(name))
             if cat:
                 tracks.append(f"{cat}:{name}")
-    seen = set()
-    uniq = []
-    for t in tracks:
-        if t not in seen:
-            seen.add(t)
-            uniq.append(t)
+    uniq = dedupe_ci(tracks)
     if uniq:
         return uniq
     campaign = fm.get('campaign') or ''
@@ -289,9 +290,9 @@ def collect_chronicle_beats(root: Path) -> list:
                     'track': f"{category}:{member}" if member else category,
                     'source': get_rel_source(f, root),
                 }
-                if re.search(r'\bmajor\b', flags):
+                if re.search(r'\bmajor\b', flags, re.IGNORECASE):
                     beat['major'] = True
-                elif re.search(r'\bminor\b', flags):
+                elif re.search(r'\bminor\b', flags, re.IGNORECASE):
                     beat['minor'] = True
                 add_campaign(beat, fm)
                 out.append({'beat': beat, 'sort': get_beat_sort(date)})
