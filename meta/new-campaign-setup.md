@@ -51,7 +51,7 @@ The engine runs mapless (theater-of-the-mind, or a module's own map) — but a w
 
 1. Copy `maps/world/index-template.md` → `maps/world/index.md`; fill Status, Images, Biome Census. Leave Tile Coverage / Known Region Positions to populate as features are read.
 2. Copy `maps/world/city-registry-template.md` → `maps/world/city-registry.md` (only if a markers layer exists).
-3. Run `python scripts\gen-tiles.py` to slice every layer into the nine legible tiles (plus `markers-*` / `sky-*` sets).
+3. Run `uv run scripts/gen-tiles.py` to slice every layer into the nine legible tiles (plus `markers-*` / `sky-*` sets).
 4. Read the tiles to fill Tile Coverage and seed Known Region Positions.
 
 The skeletons, `maps/CLAUDE.md`, and `maps/sources.tsv` are the map files that ship in the template; `index.md`, `city-registry.md`, all fetched `.webp` masters, and every generated tile/crop are this world's data and are never committed or shipped pre-filled (no map images live in git).
