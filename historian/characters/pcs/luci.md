@@ -14,7 +14,7 @@ race: [[Aasimar]]
 class: [[Monk]]
 background: "Unknown"
 level: 3
-level_confirmed: 15
+level_confirmed: 16
 aliases:
   - "Lucy"
 source_session: [[Session 01 The Black Sheep Inn]]
@@ -67,3 +67,4 @@ Was shunted from the light dimension to the astral plane, then to the material p
 - **Session 7:** Threw Odibli away from ghouls (he took 2 damage); downed in ghoul melee; Mimic did NOT adhere to her
 - **Session 9:** Killed all shadows; MVP of the session
 - **Session 10:** Sacrificed herself on the cult altar to save the party; mists carried party away; Strahd retrieved her from death; leveled to 3
+- **Session 16:** At the [[Blue Water Inn]], told the room of her radiant celestial home — [[Danika]] quipped she might out-tell the resident bard [[Rictavio]]; danced with [[Bosco]] during the crowd-winning set.
