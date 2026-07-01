@@ -9,12 +9,12 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite, get_frontmatter
+from lib.common import ROOT, ci_contains, cwrite, get_frontmatter
 
 IMPORTANCE_ORDER = {'critical': 0, 'major': 1, 'minor': 2, 'background': 3, '-': 4}
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description='Cities served by a trade route')
     parser.add_argument('--route', required=True)
     args = parser.parse_args()
@@ -35,7 +35,7 @@ def main():
             route_list = fm.get('_list_routes')
             if not route_list:
                 continue
-            if not any(route in r for r in route_list):
+            if not any(ci_contains(r, route) for r in route_list):
                 continue
             results.append({
                 'Name': fm.get('name'),
@@ -54,7 +54,8 @@ def main():
         cwrite(f"    - [[{route}]]", 'darkgray')
         return
 
-    results.sort(key=lambda r: (IMPORTANCE_ORDER.get(r['Importance'], 4), str(r['Name'] or '').lower()))
+    results.sort(key=lambda r: (IMPORTANCE_ORDER.get(str(r['Importance']).lower(), 4),
+                                 str(r['Name'] or '').lower()))
 
     cwrite("")
     cwrite(f"=== Cities served by: {route} ({len(results)} found) ===", 'cyan')

@@ -14,17 +14,18 @@ import argparse
 import re
 import sys
 from pathlib import Path
+from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (
-    ROOT, color, get_frontmatter, get_played_spotlight_sessions,
-    get_spotlight_rotation,
+    ROOT, ci_eq, color, fmt_num, get_frontmatter, get_played_spotlight_sessions,
+    get_spotlight_rotation, read_text_no_bom,
 )
 
 HOOK_RE = re.compile(r'(?m)^\s*-\s*hook:')
 
 
-def _balance(session_set):
+def _balance(session_set: list) -> Optional[dict]:
     spot = 0
     all_ = 0
     for s in session_set:
@@ -37,7 +38,7 @@ def _balance(session_set):
     return {'spot': spot, 'all': all_, 'ratio': spot / all_}
 
 
-def render_lines(section=False):
+def render_lines(section: bool = False) -> list:
     """Build the spotlight readout as a list of (text, color_name) tuples."""
     lines = []
 
@@ -62,9 +63,9 @@ def render_lines(section=False):
     if pcs_dir.exists():
         for f in pcs_dir.glob('*.md'):
             fm = get_frontmatter(f)
-            if fm.get('state') and fm.get('state') != 'active':
+            if fm.get('state') and not ci_eq(fm.get('state'), 'active'):
                 continue
-            raw = f.read_text(encoding='utf-8')
+            raw = read_text_no_bom(f)
             hook_count = len(HOOK_RE.findall(raw))
             appetite = fm['spotlight'].strip() if fm.get('spotlight') else 'normal'
             pcs.append({
@@ -87,7 +88,7 @@ def render_lines(section=False):
         lines.append((
             "  insufficient history - spotlight balance not yet meaningful "
             "({0} of {1} sessions played).".format(played_count, cold_start), 'yellow'))
-        no_hooks = [p for p in pcs if p['Appetite'] != 'low' and p['Hooks'] == 0]
+        no_hooks = [p for p in pcs if not ci_eq(p['Appetite'], 'low') and p['Hooks'] == 0]
         for p in no_hooks:
             lines.append((f"  ! {p['Name']} has no spotlight hooks - needs a backstory pass.", 'yellow'))
         if not section:
@@ -144,14 +145,15 @@ def render_lines(section=False):
         seen = p['Name'] in present_in_window
         rows.append({'Name': p['Name'], 'Turns': t, 'Appetite': p['Appetite'], 'Seen': seen})
     for r in sorted(rows, key=lambda r: (r['Turns'], str(r['Name'] or '').lower())):
-        if r['Appetite'] == 'low':
+        is_low = ci_eq(r['Appetite'], 'low')
+        if is_low:
             tag = " [low appetite - excluded]"
         elif not r['Seen']:
             tag = " [absent this window]"
         else:
             tag = ""
-        clr = 'darkgray' if (r['Appetite'] == 'low' or not r['Seen']) else 'white'
-        lines.append(("  {0:<20} {1:>5} turns{2}".format(r['Name'], _fmt_num(r['Turns']), tag), clr))
+        clr = 'darkgray' if (is_low or not r['Seen']) else 'white'
+        lines.append(("  {0:<20} {1:>5} turns{2}".format(r['Name'], fmt_num(r['Turns']), tag), clr))
 
     # Overdue = fewest windowed turns among present, normal-appetite PCs.
     #
@@ -167,17 +169,17 @@ def render_lines(section=False):
     # moments were player-reactive, not DM-built spotlights, so backfilling them
     # would mislead this metric. Once you start planning spotlights, the flag
     # tracks itself. Ask Claude to elaborate if this isn't clear.
-    eligible = [r for r in rows if r['Appetite'] != 'low' and r['Seen']]
+    eligible = [r for r in rows if not ci_eq(r['Appetite'], 'low') and r['Seen']]
     max_turns = max((r['Turns'] for r in eligible), default=0)
     if eligible and max_turns > 0:
         overdue = sorted(eligible, key=lambda r: (r['Turns'], str(r['Name'] or '').lower()))[0]
         lines.append(("\n  Overdue: {0} ({1} turns - fewest among present, normal-appetite PCs)".format(
-            overdue['Name'], _fmt_num(overdue['Turns'])), 'green'))
+            overdue['Name'], fmt_num(overdue['Turns'])), 'green'))
     elif eligible:
         lines.append(("\n  no structural spotlight data yet - starts once a planned spotlight beat is recorded.", 'darkgray'))
 
     # -- Missing hooks --------------------------------------------------------
-    no_hooks = [p for p in pcs if p['Appetite'] != 'low' and p['Hooks'] == 0]
+    no_hooks = [p for p in pcs if not ci_eq(p['Appetite'], 'low') and p['Hooks'] == 0]
     if no_hooks:
         lines.append(("\n--- MISSING HOOKS ---", 'darkgray'))
         for p in no_hooks:
@@ -188,19 +190,12 @@ def render_lines(section=False):
     return lines
 
 
-def _fmt_num(n):
-    """Match PowerShell's float rendering: 1.0 -> '1', 0.5 -> '0.5'."""
-    if n == int(n):
-        return str(int(n))
-    return str(n)
-
-
-def emit(lines):
+def emit(lines: list) -> None:
     for text, clr in lines:
         print(color(text, clr) if clr else text)
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description='Character-focus spotlight ledger')
     parser.add_argument('--section', action='store_true',
                         help='compact subsection form for embedding in session-brief.py')

@@ -10,15 +10,16 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite, get_frontmatter
+from lib.common import ROOT, ci_eq, cwrite, get_frontmatter, read_text_no_bom
 
-STATE_RE = re.compile(r'^state:\s*(missing|imprisoned|transformed|unknown|stranded|captured)\s*$', re.M)
-HOSTILE_RE = re.compile(r'^disposition:\s*hostile\s*$', re.M)
+STATE_RE = re.compile(r'^state:\s*(missing|imprisoned|transformed|unknown|stranded|captured)\s*$', re.M | re.I)
+HOSTILE_RE = re.compile(r'^disposition:\s*hostile\s*$', re.M | re.I)
 ITEM_RE = re.compile(r'^-\s+\*\*([^*]+)\*\*')
 SEED_RE = re.compile(r'^\s*-\s*\*Seeded:\s*(.+?)\*?\s*$')
+PAID_OFF_RE = re.compile(r'paid off', re.I)
 
 
-def main():
+def main() -> None:
     cwrite("\n========================================", 'darkgray')
     cwrite("  THREADS BRIEF", 'cyan')
     cwrite("========================================", 'darkgray')
@@ -27,7 +28,7 @@ def main():
     cwrite("\n--- UNRESOLVED STATES (historian) ---", 'darkgray')
     found = False
     for f in sorted((ROOT / 'historian').rglob('*.md'), key=lambda f: str(f).lower()):
-        text = f.read_text(encoding='utf-8')
+        text = read_text_no_bom(f)
         m = STATE_RE.search(text)
         if not m:
             continue
@@ -45,11 +46,11 @@ def main():
     found = False
     if chars_dir.exists():
         for f in sorted(chars_dir.rglob('*.md'), key=lambda f: str(f).lower()):
-            text = f.read_text(encoding='utf-8')
+            text = read_text_no_bom(f)
             if not HOSTILE_RE.search(text):
                 continue
             fm = get_frontmatter(f)
-            if fm.get('state') == 'dead':
+            if ci_eq(fm.get('state'), 'dead'):
                 continue
             found = True
             name = fm.get('name') or f.stem
@@ -65,14 +66,14 @@ def main():
         if not meta_file.exists():
             continue
         item_name = "?"
-        for line in meta_file.read_text(encoding='utf-8').split('\n'):
+        for line in read_text_no_bom(meta_file).split('\n'):
             line = line.rstrip('\r')
             mi = ITEM_RE.match(line)
             if mi:
                 item_name = mi.group(1).strip()
                 continue
             ms = SEED_RE.match(line)
-            if ms and 'paid off' not in line:
+            if ms and not PAID_OFF_RE.search(line):
                 src = meta_file.stem
                 cwrite(f"  {item_name} ({src}): {ms.group(1).strip()}", 'yellow')
                 seed_count += 1

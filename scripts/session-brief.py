@@ -8,29 +8,17 @@
 import importlib
 import re
 import sys
-from datetime import date, datetime
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite, get_frontmatter
+from lib.common import (ROOT, ci_eq, cwrite, digits_int, fmt_num, get_frontmatter,
+                        parse_party_table, read_text_no_bom, try_parse_date)
 
 spotlight = importlib.import_module('spotlight-balance')
 
 
-def _digits_int(s):
-    return int(re.sub(r'[^0-9]', '', str(s or '')) or 0)
-
-
-def _try_parse_date(s):
-    for fmt in ('%Y-%m-%d', '%m/%d/%Y', '%Y/%m/%d', '%d-%m-%Y'):
-        try:
-            return datetime.strptime(str(s).strip(), fmt).date()
-        except (TypeError, ValueError):
-            continue
-    return None
-
-
-def main():
+def main() -> None:
     hist_dir = ROOT / 'historian' / 'sessions'
     sched_dir = ROOT / 'scheduler' / 'sessions'
     hist_sessions = list(hist_dir.glob('*.md')) if hist_dir.exists() else []
@@ -42,7 +30,7 @@ def main():
     latest_played = 0
     for s in all_sessions:
         fm = get_frontmatter(s)
-        n = _digits_int(fm.get('session_number'))
+        n = digits_int(fm.get('session_number'))
         if n > max_num:
             max_num = n
         if n > latest_played and s.resolve() in hist_full:
@@ -67,11 +55,12 @@ def main():
     uncanonized = []
     for s in sched_sessions:
         fm = get_frontmatter(s)
-        if fm.get('state') not in ('draft', 'planned'):
+        state = str(fm.get('state') or '').lower()
+        if state not in ('draft', 'planned'):
             continue
-        if not fm.get('planned_date') or fm.get('planned_date') == 'null':
+        if not fm.get('planned_date') or ci_eq(fm.get('planned_date'), 'null'):
             continue
-        pd = _try_parse_date(fm['planned_date'])
+        pd = try_parse_date(fm['planned_date'])
         if not pd:
             continue
         if pd < today and str(fm.get('session_number')) not in hist_nums:
@@ -119,7 +108,7 @@ def main():
         cwrite("  #{0}: {1}".format(fm.get('session_number'), fm.get('name')), 'white')
         if fm.get('description'):
             cwrite(f"  Summary: {fm['description']}", 'gray')
-        body = last_session.read_text(encoding='utf-8')
+        body = read_text_no_bom(last_session)
         m = re.search(r'cliffhanger:\s*"([^"]+)"', body)
         if m:
             cwrite(f"  Cliffhanger: {m.group(1)}", 'darkyellow')
@@ -131,14 +120,14 @@ def main():
     cwrite("\n--- REST CLOCK ---", 'darkgray')
     active_campaign = None
     for f in campaign_files:
-        if get_frontmatter(f).get('state') == 'active':
+        if ci_eq(get_frontmatter(f).get('state'), 'active'):
             active_campaign = f
             break
     if not active_campaign and campaign_files:
         active_campaign = campaign_files[0]
 
+    content = read_text_no_bom(active_campaign) if active_campaign else ''
     if active_campaign:
-        content = active_campaign.read_text(encoding='utf-8')
         m = re.search(r'### Rest Clock \(as of:? Session (\d+)\)\r?\n([\s\S]+?)(\r?\n##|\r?\n###|\Z)', content)
         if m:
             clock_session = int(m.group(1))
@@ -152,10 +141,10 @@ def main():
             if hm:
                 hrs = float(hm.group(1))
                 if hrs >= 24:
-                    cwrite(f"  > Long rest TIME GATE met ({_fmt_hrs(hrs)} h >= 24) - offerable if location is safe and no PC at 0 HP.", 'green')
+                    cwrite(f"  > Long rest TIME GATE met ({fmt_num(hrs)} h >= 24) - offerable if location is safe and no PC at 0 HP.", 'green')
                 else:
                     cwrite("  ! Long rest NOT available: only {0} h since last (needs 24) - {1} h more in-world before a fresh reset.".format(
-                        _fmt_hrs(hrs), _fmt_hrs(24 - hrs)), 'red')
+                        fmt_num(hrs), fmt_num(24 - hrs)), 'red')
             else:
                 cwrite("  ! Long rest availability UNKNOWN - 'Hours since last long rest' not numeric; reconstruct with DM.", 'yellow')
             if clock_session < latest_played:
@@ -176,17 +165,10 @@ def main():
     cwrite("\n--- PARTY ---", 'darkgray')
     afflictions = {}
     if active_campaign:
-        content = active_campaign.read_text(encoding='utf-8')
-        m = re.search(r'## Party\r?\n([\s\S]+?)(\r?\n##|\Z)', content)
-        if m:
-            for line in m.group(1).split('\n'):
-                line = line.rstrip('\r')
-                if line.startswith('|') and not line.startswith('|---') \
-                        and not re.match(r'^\| ?Player', line):
-                    cols = [c.strip() for c in line.split('|') if c != '']
-                    if len(cols) >= 4:
-                        char_name = re.sub(r'\[\[|\]\]', '', cols[1]).replace('"', '')
-                        afflictions[char_name] = cols[3]
+        for cols in parse_party_table(active_campaign):
+            if len(cols) >= 4:
+                char_name = re.sub(r'\[\[|\]\]', '', cols[1]).replace('"', '')
+                afflictions[char_name] = cols[3]
 
     pcs_dir = ROOT / 'historian' / 'characters' / 'pcs'
     pc_files = sorted(pcs_dir.glob('*.md'), key=lambda f: f.name.lower()) if pcs_dir.exists() else []
@@ -205,7 +187,7 @@ def main():
     # -- Design preference drought --------------------------------------------
     pref_file = ROOT / 'meta' / 'campaign-design-preferences.md'
     if pref_file.exists():
-        raw = pref_file.read_text(encoding='utf-8')
+        raw = read_text_no_bom(pref_file)
         total = len(re.findall(r'(?m)^\s*-\s*\*Deployed:', raw))
         deployed = len(re.findall(r'(?m)^\s*-\s*\*Deployed:[^\r\n]*\[\[', raw))
         seeded = len(re.findall(r'(?m)^\s*-\s*\*Seeded:', raw))
@@ -217,12 +199,6 @@ def main():
     spotlight.emit(spotlight.render_lines(section=True))
 
     cwrite("\n========================================\n", 'darkgray')
-
-
-def _fmt_hrs(n):
-    if n == int(n):
-        return str(int(n))
-    return str(n)
 
 
 if __name__ == '__main__':

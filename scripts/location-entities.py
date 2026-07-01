@@ -11,10 +11,10 @@ from collections import deque
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite, get_frontmatter
+from lib.common import ROOT, ci_eq, cwrite, get_frontmatter
 
 
-def get_all_refs(fm):
+def get_all_refs(fm: dict) -> list:
     refs = []
     for key, val in fm.items():
         if key.startswith('_list_'):
@@ -24,7 +24,7 @@ def get_all_refs(fm):
     return refs
 
 
-def matches_location(fm, loc):
+def matches_location(fm: dict, loc: str) -> bool:
     loc_lower = loc.lower()
     for key in ('location', 'region'):
         v = fm.get(key)
@@ -37,7 +37,7 @@ def matches_location(fm, loc):
     return False
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description='Historian entities at or near a location')
     parser.add_argument('--location', required=True)
     parser.add_argument('--depth', type=int, default=3)
@@ -113,7 +113,7 @@ def main():
             cwrite(f"\n  [{t}]", 'yellow')
             for r in sorted(group, key=lambda r: (str(r['Importance'] or '').lower(), str(r['Name'] or '').lower())):
                 sub = f"/{r['Subtype']}" if r['Subtype'] else ""
-                exists_color = 'green' if r['Exists'] == 'true' else 'darkyellow'
+                exists_color = 'green' if ci_eq(r['Exists'], 'true') else 'darkyellow'
                 cwrite("    {0}{1} - {2}".format(r['Name'], sub, r['State']), exists_color)
                 if r['Desc']:
                     cwrite(f"      {r['Desc']}", 'darkgray')

@@ -9,48 +9,28 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (
-    ROOT, cwrite, get_frontmatter, get_played_spotlight_sessions,
-    get_spotlight_rotation,
+    ROOT, ci_eq, cwrite, fmt_num, get_frontmatter, get_played_spotlight_sessions,
+    get_spotlight_rotation, parse_party_table, try_int,
 )
 
 
-def _try_int(s):
-    try:
-        return int(str(s).strip())
-    except (TypeError, ValueError):
-        return None
-
-
-def _fmt_num(n):
-    if n == int(n):
-        return str(int(n))
-    return str(n)
-
-
-def main():
+def main() -> None:
     # Load afflictions from campaign party table
     afflictions = {}
     campaign_dir = ROOT / 'scheduler' / 'campaign'
     campaign_file = next(iter(sorted(campaign_dir.glob('*.md'), key=lambda f: f.name.lower())), None) if campaign_dir.exists() else None
     if campaign_file:
-        content = campaign_file.read_text(encoding='utf-8')
-        m = re.search(r'## Party\r?\n([\s\S]+?)(\r?\n##|\Z)', content)
-        if m:
-            for line in m.group(1).split('\n'):
-                line = line.rstrip('\r')
-                if line.startswith('|') and not line.startswith('|---') \
-                        and not re.match(r'^\| ?Player', line):
-                    cols = [c.strip() for c in line.split('|') if c != '']
-                    if len(cols) >= 4:
-                        char_name = re.sub(r'\[\[|\]\]', '', cols[1]).replace('"', '')
-                        afflictions[char_name] = cols[3]
+        for cols in parse_party_table(campaign_file):
+            if len(cols) >= 4:
+                char_name = re.sub(r'\[\[|\]\]', '', cols[1]).replace('"', '')
+                afflictions[char_name] = cols[3]
 
     # Latest played session number -- staleness baseline for level_confirmed
     latest_session = 0
     sessions_dir = ROOT / 'historian' / 'sessions'
     if sessions_dir.exists():
         for sf in sessions_dir.glob('*.md'):
-            n = _try_int(get_frontmatter(sf).get('session_number'))
+            n = try_int(get_frontmatter(sf).get('session_number'))
             if n is not None and n > latest_session:
                 latest_session = n
 
@@ -84,14 +64,14 @@ def main():
         state = fm.get('state')
         desc = fm.get('description')
 
-        state_color = 'green' if state == 'active' else 'red' if state == 'dead' else 'yellow'
+        state_color = 'green' if ci_eq(state, 'active') else 'red' if ci_eq(state, 'dead') else 'yellow'
 
         cwrite(f"\n  {name}", 'white', end='')
         cwrite(f" ({player})", 'gray')
         cwrite("    {0} {1}, Level {2}".format(race, cls, level), 'white')
 
-        if state == 'active' and latest_session > 0:
-            confirmed = _try_int(fm.get('level_confirmed'))
+        if ci_eq(state, 'active') and latest_session > 0:
+            confirmed = try_int(fm.get('level_confirmed'))
             if confirmed is None:
                 cwrite(f"    LEVEL STALE: no level_confirmed stamp (latest session: {latest_session})", 'red')
             elif confirmed < latest_session:
@@ -115,7 +95,7 @@ def main():
             seen = name in rotation['present']
             note = "" if seen else " (absent this window)"
             cwrite("    Spotlight: {0} rotation turns over last {1} sessions{2}".format(
-                _fmt_num(t), rot_window, note), 'darkcyan')
+                fmt_num(t), rot_window, note), 'darkcyan')
 
         if desc:
             cwrite(f"    {desc}", 'darkgray')

@@ -3,15 +3,14 @@
 # consumers: CLAUDE.md, .claude/commands/threads.md -- update these if usage, flags, or output format change.
 # Usage: python scripts/session-state.py
 
-import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite, get_frontmatter
+from lib.common import ROOT, ci_eq, cwrite, get_frontmatter, parse_party_table
 
 
-def show_entity(label, fm, path):
+def show_entity(label: str, fm: dict, path) -> None:
     rel = str(Path(path).relative_to(ROOT))
     cwrite(f"\n[{label}]", 'cyan')
     cwrite(f"  Name:  {fm.get('name', '')}", 'white')
@@ -21,20 +20,20 @@ def show_entity(label, fm, path):
     cwrite(f"  File:  {rel}", 'darkgray')
 
 
-def md_files(rel_dir):
+def md_files(rel_dir: str) -> list:
     # PowerShell `Sort-Object Name` is case-insensitive.
     d = ROOT / rel_dir
     return sorted(d.glob('*.md'), key=lambda f: f.name.lower()) if d.exists() else []
 
 
-def main():
+def main() -> None:
     campaign_files = list((ROOT / 'scheduler' / 'campaign').glob('*.md')) \
         if (ROOT / 'scheduler' / 'campaign').exists() else []
 
     if campaign_files:
         for f in campaign_files:
             fm = get_frontmatter(f)
-            if fm.get('state') == 'active':
+            if ci_eq(fm.get('state'), 'active'):
                 show_entity("CAMPAIGN", fm, f)
     else:
         cwrite("\n[CAMPAIGN] none found", 'darkgray')
@@ -70,18 +69,13 @@ def main():
 
     campaign_file = campaign_files[0] if campaign_files else None
     if campaign_file:
-        content = Path(campaign_file).read_text(encoding='utf-8')
-        m = re.search(r'## Party\r?\n([\s\S]+?)(\r?\n##|\Z)', content)
-        if m:
+        rows = parse_party_table(campaign_file)
+        if rows:
             cwrite("\n[PARTY]", 'cyan')
-            party_block = m.group(1).strip()
-            for line in party_block.split('\n'):
-                line = line.rstrip('\r')
-                if line.startswith('|') and not line.startswith('|---'):
-                    cols = [c.strip() for c in line.split('|') if c != '']
-                    if cols and cols[0] != 'Player':
-                        cwrite("  {0}: {1} ({2}) - {3}".format(
-                            cols[0], cols[1], cols[2], cols[3]), 'white')
+            for cols in rows:
+                if len(cols) >= 4:
+                    cwrite("  {0}: {1} ({2}) - {3}".format(
+                        cols[0], cols[1], cols[2], cols[3]), 'white')
 
     cwrite("")
 

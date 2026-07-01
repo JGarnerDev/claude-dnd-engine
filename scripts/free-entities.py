@@ -8,10 +8,10 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite, get_frontmatter
+from lib.common import ROOT, ci_eq, cwrite, get_frontmatter
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description='List free (exists: false) entities in ./data')
     parser.add_argument('--type', default='')
     parser.add_argument('--player', default='')
@@ -21,11 +21,11 @@ def main():
     results = []
     for f in data_dir.rglob('*.md'):
         fm = get_frontmatter(f)
-        if fm.get('exists') != 'false':
+        if not ci_eq(fm.get('exists'), 'false'):
             continue
-        if args.type and fm.get('type') != args.type:
+        if args.type and not ci_eq(fm.get('type'), args.type):
             continue
-        if args.player and fm.get('contributed_by') != args.player:
+        if args.player and not ci_eq(fm.get('contributed_by'), args.player):
             continue
         results.append({
             'Name': fm.get('name'),

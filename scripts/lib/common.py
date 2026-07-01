@@ -9,7 +9,18 @@ consumers: scripts/entity-graph.py, scripts/free-entities.py, scripts/location-e
 import os
 import re
 import sys
+from datetime import date, datetime
 from pathlib import Path
+from typing import Optional
+
+
+# -- Output encoding ----------------------------------------------------------
+# On Windows, non-tty stdout (every captured/piped run -- the agent's path) is
+# encoded with the locale codepage (cp1252), which crashes on emoji and mangles
+# non-ASCII. Force UTF-8 once so the em-dash and 🎲/🐉 glyphs round-trip. Mirrors
+# the `[Console]::OutputEncoding = UTF8` the PowerShell originals set.
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
 
 
 # -- Repo root + script-path resolution ---------------------------------------
@@ -29,7 +40,7 @@ _ANSI = {
 _USE_COLOR = sys.stdout.isatty() and not os.environ.get('NO_COLOR')
 
 
-def color(text, name):
+def color(text: str, name: str) -> str:
     """Wrap text in an ANSI color (matching a PowerShell -ForegroundColor name)."""
     if not _USE_COLOR:
         return text
@@ -39,11 +50,23 @@ def color(text, name):
     return f"\033[{code}m{text}\033[0m"
 
 
-def cwrite(text='', name=None, end='\n'):
+def cwrite(text: str = '', name: str = None, end: str = '\n') -> None:
     """Print one line, optionally colored. Mirror of Write-Host."""
     if name:
         text = color(text, name)
     print(text, end=end)
+
+
+# -- File reading -------------------------------------------------------------
+# A UTF-8 BOM breaks `^`-anchored / first-line regex matches (frontmatter fence,
+# cliffhanger, thread-state), so every reader strips it here rather than each
+# script remembering to.
+def read_text_no_bom(path) -> str:
+    """Read a file as UTF-8 with any leading BOM stripped."""
+    raw = Path(path).read_text(encoding='utf-8')
+    if raw and raw[0] == '﻿':
+        raw = raw[1:]
+    return raw
 
 
 # -- Frontmatter --------------------------------------------------------------
@@ -54,16 +77,18 @@ _LIST_WIKI_RE = re.compile(r'^\s+-\s+\[\[([^\]]+)\]\]')
 _LIST_PLAIN_RE = re.compile(r'^\s+-\s+"?([^"#\r\n]+)"?\s*$')
 
 
-def get_frontmatter(path):
-    """Parse YAML-ish frontmatter into a dict.
+def get_frontmatter(path) -> dict:
+    """Parse a file's YAML-ish frontmatter into a dict. See get_frontmatter_from_text."""
+    return get_frontmatter_from_text(read_text_no_bom(path))
+
+
+def get_frontmatter_from_text(raw: str) -> dict:
+    """Parse YAML-ish frontmatter from already-read text (no second disk read).
 
     Scalars: fm['key']. Wikilink scalars are unwrapped and alias-stripped
     ([[Name|alias]] -> Name). List items (plain or wikilink) accumulate under
     fm['_list_<key>'].
     """
-    raw = Path(path).read_text(encoding='utf-8')
-    if raw and raw[0] == '﻿':
-        raw = raw[1:]
     m = _FM_BLOCK_RE.search(raw)
     if not m:
         return {}
@@ -92,6 +117,89 @@ def get_frontmatter(path):
     return fm
 
 
+# -- Comparison helpers -------------------------------------------------------
+# PowerShell's -eq/-ne/-like/-match fold case by default; these restore that at
+# comparison time (values keep their original case for display).
+def ci_eq(a, b) -> bool:
+    """Case-insensitive equality, matching PowerShell -eq. None-safe."""
+    if a is None or b is None:
+        return a is b
+    return str(a).lower() == str(b).lower()
+
+
+def ci_contains(haystack, needle) -> bool:
+    """Case-insensitive substring test, matching PowerShell -like '*needle*'."""
+    if haystack is None or needle is None:
+        return False
+    return str(needle).lower() in str(haystack).lower()
+
+
+# -- Numeric coercion + formatting --------------------------------------------
+_DIGITS_RE = re.compile(r'[^0-9]')
+
+
+def digits_int(s, default: int = 0) -> int:
+    """Int from a string after stripping non-digits (e.g. 'S12' -> 12)."""
+    stripped = _DIGITS_RE.sub('', str(s or ''))
+    return int(stripped) if stripped else default
+
+
+def try_int(s) -> Optional[int]:
+    """Int if s is a clean integer string, else None (mirror of [int]::TryParse)."""
+    try:
+        return int(str(s).strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def fmt_num(n: float) -> str:
+    """Render a float as an int when whole (1.0 -> '1', 0.5 -> '0.5')."""
+    return str(int(n)) if float(n).is_integer() else str(n)
+
+
+# -- Date parsing -------------------------------------------------------------
+_DATE_FORMATS = ('%Y-%m-%d', '%m/%d/%Y', '%Y/%m/%d', '%d-%m-%Y',
+                 '%Y-%m-%dT%H:%M', '%Y-%m-%dT%H:%M:%S', '%B %d, %Y', '%B %d %Y')
+
+
+def try_parse_date(s) -> Optional[date]:
+    """Parse a planned_date string to a date, or None. Broadened toward
+    PowerShell [datetime]::TryParse (ISO datetimes + 'July 1, 2026' forms)."""
+    if not s:
+        return None
+    text = str(s).strip()
+    for fmt in _DATE_FORMATS:
+        try:
+            return datetime.strptime(text, fmt).date()
+        except ValueError:
+            continue
+    return None
+
+
+# -- Party table --------------------------------------------------------------
+_PARTY_BLOCK_RE = re.compile(r'## Party\r?\n([\s\S]+?)(\r?\n##|\Z)')
+
+
+def parse_party_table(campaign_file) -> list:
+    """Parse the '## Party' markdown table into a list of column-lists (one per
+    PC row, header and separator excluded). Rows with <4 cells are kept as-is;
+    callers guard on length. Returns [] when there is no Party section."""
+    content = read_text_no_bom(campaign_file)
+    m = _PARTY_BLOCK_RE.search(content)
+    if not m:
+        return []
+    rows = []
+    for line in m.group(1).split('\n'):
+        line = line.rstrip('\r')
+        if not line.startswith('|') or line.startswith('|---'):
+            continue
+        cols = [c.strip() for c in line.split('|') if c != '']
+        if not cols or ci_eq(cols[0], 'Player'):
+            continue
+        rows.append(cols)
+    return rows
+
+
 # -- Spotlight ledger helpers (meta/character-focus.md) -----------------------
 # Shared by spotlight-balance.py and party-status.py so the rotation tally has
 # one source.
@@ -112,7 +220,7 @@ class Beat:
         self.value = value
 
 
-def parse_spotlight_beat(s):
+def parse_spotlight_beat(s: str) -> Optional['Beat']:
     """Parse one beat token '<class>(<PCs>): <weight>' -> Beat, or None if malformed."""
     m = _BEAT_RE.match(s)
     if not m:
@@ -134,7 +242,7 @@ class PlayedSession:
         self.has_presence = has_presence
 
 
-def get_played_spotlight_sessions(root):
+def get_played_spotlight_sessions(root) -> list:
     """Collect played sessions (historian/sessions, recursive) with parsed beats +
     attendance. Returns a list of PlayedSession sorted by num ascending.
     """
@@ -143,7 +251,7 @@ def get_played_spotlight_sessions(root):
     if sessions_dir.exists():
         for f in sessions_dir.rglob('*.md'):
             fm = get_frontmatter(f)
-            if fm.get('type') != 'session':
+            if not ci_eq(fm.get('type'), 'session'):
                 continue
             beats = []
             for b in fm.get('_list_beats', []):
@@ -151,7 +259,7 @@ def get_played_spotlight_sessions(root):
                 if parsed:
                     beats.append(parsed)
             present = list(fm.get('_list_pcs_present', []))
-            num = int(re.sub(r'[^0-9]', '', fm.get('session_number', '') or '') or 0)
+            num = digits_int(fm.get('session_number', ''))
             out.append(PlayedSession(
                 num=num,
                 name=fm.get('name'),
@@ -162,7 +270,7 @@ def get_played_spotlight_sessions(root):
     return sorted(out, key=lambda s: s.num)
 
 
-def get_spotlight_rotation(sessions, window, active_names):
+def get_spotlight_rotation(sessions: list, window: int, active_names: list) -> dict:
     """Windowed per-PC rotation tally: solo >= beat = 1.0, shared >= beat = 0.5 each,
     present-only, touches excluded. Returns dict with keys 'turns' (name->float),
     'present' (name->bool), 'fallback' (bool). active_names feeds the fallback when a
@@ -214,7 +322,7 @@ class Calendar:
 _INT_RE = re.compile(r'^-?\d+$')
 
 
-def get_calendar(root):
+def get_calendar(root) -> Calendar:
     """Read the campaign calendar (falls back to the synced template)."""
     path = Path(root) / 'meta' / 'calendar.md'
     if not path.exists():
@@ -229,14 +337,14 @@ def get_calendar(root):
     return Calendar(months, epoch, fm.get('year_suffix'), year_days)
 
 
-def get_date_precision(s):
+def get_date_precision(s) -> Optional[str]:
     """Precision of a timeline_date string: 'year' | 'month' | 'day' | None."""
     if not s:
         return None
     return {1: 'year', 2: 'month', 3: 'day'}.get(len(s.split('-')))
 
 
-def get_date_parts(s):
+def get_date_parts(s: str) -> tuple:
     """Split a timeline_date into clamped (year, month, day) ints (clamped so
     custom calendars with >12 months / long months still produce a valid date)."""
     p = s.split('-')
@@ -246,20 +354,19 @@ def get_date_parts(s):
     return y, m, d
 
 
-def get_plot_date(s):
+def get_plot_date(s: str) -> date:
     """A date object that can be plotted. Year clamped to >=1 (date's minimum)."""
-    from datetime import date as _date
     y, m, d = get_date_parts(s)
-    return _date(max(1, y), m, d)
+    return date(max(1, y), m, d)
 
 
-def get_date_sort_key(s):
+def get_date_sort_key(s: str) -> int:
     """Numeric sort key honoring graded precision (missing month/day sort first)."""
     y, m, d = get_date_parts(s)
     return y * 10000 + m * 100 + d
 
 
-def get_precision_duration(s, cal):
+def get_precision_duration(s: str, cal: Calendar) -> str:
     """Bar duration string by precision: year -> whole year, month -> that month,
     day -> milestone (0d)."""
     prec = get_date_precision(s)
@@ -279,7 +386,7 @@ _AXIS_STEPS = [
 ]
 
 
-def get_axis_config(min_date, max_date):
+def get_axis_config(min_date: date, max_date: date) -> dict:
     """Tick-count axis resolver: target ~10 ticks, snap to a mermaid-safe value.
     Returns dict with 'tick_interval', 'axis_format', 'days'."""
     span_days = max(1, (max_date - min_date).days)

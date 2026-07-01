@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite, get_frontmatter
+from lib.common import ROOT, ci_contains, ci_eq, cwrite, get_frontmatter
 
 # Pool types checked in the gaps section (reference data like class/race/deity excluded)
 POOL_TYPES = [
@@ -21,7 +21,7 @@ POOL_TYPES = [
 ]
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description='Free entity pool inventory')
     parser.add_argument('--type', default='')
     args = parser.parse_args()
@@ -31,12 +31,12 @@ def main():
         if f.name == 'CLAUDE.md':
             continue
         fm = get_frontmatter(f)
-        if fm.get('exists') != 'false':
+        if not ci_eq(fm.get('exists'), 'false'):
             continue
         key = f"{fm['type']}/{fm['subtype']}" if fm.get('subtype') else str(fm.get('type') or '')
         if not key or key == '/':
             key = '(untyped)'
-        if args.type and args.type not in key:
+        if args.type and not ci_contains(key, args.type):
             continue
         name = fm.get('name') or f.stem
         imp = fm.get('importance') or '-'

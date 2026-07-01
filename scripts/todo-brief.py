@@ -14,44 +14,30 @@ import importlib
 import re
 import subprocess
 import sys
-from datetime import date, datetime
+from datetime import date, timedelta
 from pathlib import Path
+from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, color, cwrite, get_frontmatter
+from lib.common import (ROOT, ci_eq, color, cwrite, get_frontmatter,
+                        read_text_no_bom, try_int, try_parse_date)
 
 spotlight = importlib.import_module('spotlight-balance')
 
 D20, DRAGON, SCROLL, CROWN, HORNS = '🎲', '🐉', '📜', '👑', '🤘'
 
 
-def _try_int(s):
-    try:
-        return int(str(s).strip())
-    except (TypeError, ValueError):
-        return None
-
-
-def _try_parse_date(s):
-    for fmt in ('%Y-%m-%d', '%m/%d/%Y', '%Y/%m/%d', '%d-%m-%Y'):
-        try:
-            return datetime.strptime(str(s).strip(), fmt).date()
-        except (TypeError, ValueError):
-            continue
-    return None
-
-
-def _glob(rel, pattern='*.md'):
+def _glob(rel: str, pattern: str = '*.md') -> list:
     d = ROOT / rel
     return list(d.glob(pattern)) if d.exists() else []
 
 
-def main():
+def main() -> None:
     # DM name from the active campaign's frontmatter
     dm_name = None
     for c in _glob('scheduler/campaign'):
         cfm = get_frontmatter(c)
-        if cfm.get('state') == 'active' and cfm.get('dm'):
+        if ci_eq(cfm.get('state'), 'active') and cfm.get('dm'):
             dm_name = cfm['dm']
             break
 
@@ -77,9 +63,9 @@ def main():
     session_flags = 0
     for s in sched_sessions:
         fm = get_frontmatter(s)
-        if fm.get('state') not in ('draft', 'planned'):
+        if str(fm.get('state') or '').lower() not in ('draft', 'planned'):
             continue
-        pd = _try_parse_date(fm['planned_date']) if fm.get('planned_date') and fm['planned_date'] != 'null' else None
+        pd = try_parse_date(fm['planned_date']) if fm.get('planned_date') and not ci_eq(fm['planned_date'], 'null') else None
         has_date = pd is not None
         if has_date and pd < today and str(fm.get('session_number')) not in hist_nums:
             cwrite(f"  UNCANONIZED: #{fm.get('session_number')} '{fm.get('name')}' planned {fm.get('planned_date')}", 'red')
@@ -94,14 +80,14 @@ def main():
     future_plans = 0
     for s in sched_sessions:
         fm = get_frontmatter(s)
-        if fm.get('state') not in ('draft', 'planned'):
+        if str(fm.get('state') or '').lower() not in ('draft', 'planned'):
             continue
-        pd = _try_parse_date(fm['planned_date']) if fm.get('planned_date') and fm['planned_date'] != 'null' else None
+        pd = try_parse_date(fm['planned_date']) if fm.get('planned_date') and not ci_eq(fm['planned_date'], 'null') else None
         if pd is None or pd >= today:
             future_plans += 1
     if not future_plans:
         days_until = (1 - today.weekday() + 7) % 7  # Tuesday == weekday 1
-        next_game = (today + _days(days_until)).strftime('%Y-%m-%d')
+        next_game = (today + timedelta(days=days_until)).strftime('%Y-%m-%d')
         when = f"TONIGHT ({next_game})" if days_until == 0 else f"Tuesday {next_game} ({days_until} day(s) away)"
         cwrite(f"  NO PLAN: next game is {when} - nothing drafted. Run /session.", 'red')
         session_flags += 1
@@ -113,7 +99,7 @@ def main():
     thread_re = re.compile(r'^state:\s*(missing|imprisoned|transformed|stranded|captured)\s*$', re.M)
     thread_hits = []
     for f in (ROOT / 'historian').rglob('*.md'):
-        m = thread_re.search(f.read_text(encoding='utf-8'))
+        m = thread_re.search(read_text_no_bom(f))
         if m:
             thread_hits.append((f, m.group(1)))
     if thread_hits:
@@ -125,14 +111,14 @@ def main():
 
     # -- 1b2. Party state staleness -------------------------------------------
     cwrite("\n--- PARTY STATE ---", 'darkgray')
-    latest_played = max((_try_int(k) or 0 for k in hist_nums), default=0)
+    latest_played = max((try_int(k) or 0 for k in hist_nums), default=0)
     party_flags = 0
     if latest_played > 0:
         for pc in _glob('historian/characters/pcs'):
             fm = get_frontmatter(pc)
-            if fm.get('state') != 'active':
+            if not ci_eq(fm.get('state'), 'active'):
                 continue
-            confirmed = _try_int(fm.get('level_confirmed'))
+            confirmed = try_int(fm.get('level_confirmed'))
             if confirmed is None:
                 cwrite(f"  LEVEL STALE: {fm.get('name')} has no level_confirmed stamp (latest session: {latest_played})", 'red')
                 party_flags += 1
@@ -141,11 +127,11 @@ def main():
                 party_flags += 1
     active_campaign = None
     for c in _glob('scheduler/campaign'):
-        if get_frontmatter(c).get('state') == 'active':
+        if ci_eq(get_frontmatter(c).get('state'), 'active'):
             active_campaign = c
             break
     if active_campaign:
-        c_raw = active_campaign.read_text(encoding='utf-8')
+        c_raw = read_text_no_bom(active_campaign)
         m = re.search(r'### Rest Clock \(as of:? Session (\d+)\)', c_raw)
         if m:
             if int(m.group(1)) < latest_played:
@@ -193,7 +179,7 @@ def main():
     cwrite("\n--- INDEX ---", 'darkgray')
     stamp = ROOT / 'vector-index' / '.index-built'
     if stamp.exists():
-        lines = stamp.read_text(encoding='utf-8').splitlines()
+        lines = read_text_no_bom(stamp).splitlines()
         sha = lines[1] if len(lines) > 1 else ''
         commits = _git_log_since(sha)
         if commits:
@@ -211,7 +197,7 @@ def main():
         for todo_file in todo_files:
             cwrite(f"  == {todo_file.name} ==", 'darkgray')
             section = ""
-            for line in todo_file.read_text(encoding='utf-8').split('\n'):
+            for line in read_text_no_bom(todo_file).split('\n'):
                 hm = re.match(r'^##\s+(.*)', line)
                 if hm:
                     section = hm.group(1).strip()
@@ -272,7 +258,7 @@ def main():
     q_files = _glob('questionnaires')
     if q_files:
         for q in q_files:
-            raw = q.read_text(encoding='utf-8')
+            raw = read_text_no_bom(q)
             pm = re.search(r'(?m)^player:\s*(.+)$', raw)
             player = pm.group(1).strip() if pm else "?"
             if re.search(r'(?m)^filled:\s*true', raw):
@@ -288,7 +274,7 @@ def main():
     for rel in ('data/lore', 'scheduler/acts', 'scheduler/missions'):
         for f in _glob(rel):
             fm = get_frontmatter(f)
-            if fm.get('state') == 'draft':
+            if ci_eq(fm.get('state'), 'draft'):
                 cwrite(f"  {f.relative_to(ROOT)} - {fm.get('description')}", 'white')
                 draft_count += 1
     if not draft_count:
@@ -298,7 +284,7 @@ def main():
     cwrite("\n--- DESIGN PREFERENCES ---", 'darkgray')
     pref_file = ROOT / 'meta' / 'campaign-design-preferences.md'
     if pref_file.exists():
-        raw = pref_file.read_text(encoding='utf-8')
+        raw = read_text_no_bom(pref_file)
         total = len(re.findall(r'(?m)^\s*-\s*\*Deployed:', raw))
         deployed = len(re.findall(r'(?m)^\s*-\s*\*Deployed:[^\r\n]*\[\[', raw))
         undeployed = total - deployed
@@ -312,12 +298,7 @@ def main():
     cwrite("========================================\n", 'darkgray')
 
 
-def _days(n):
-    from datetime import timedelta
-    return timedelta(days=n)
-
-
-def _validate_error_count():
+def _validate_error_count() -> Optional[int]:
     """Error count from validate.py if present (built in a later PR), else None."""
     try:
         validate = importlib.import_module('validate')
@@ -332,7 +313,7 @@ def _validate_error_count():
         return None
 
 
-def _git_log_since(sha):
+def _git_log_since(sha: str) -> list:
     if not sha:
         return []
     try:
