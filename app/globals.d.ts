@@ -5,7 +5,7 @@ import type { TimelineData } from './components/charts/timeline/types';
 
 declare global {
   interface Window {
-    // Data blob injected by scripts/timeline-data.ps1 into the built shell.
+    // Data blob injected by scripts/timeline-data.py into the built shell.
     __TL_DATA__?: TimelineData | null;
   }
 }
