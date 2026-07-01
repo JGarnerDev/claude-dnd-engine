@@ -14,7 +14,7 @@ race: "Aasimar"
 class: "Bard"
 background: "Entertainer"
 level: 3
-level_confirmed: 15
+level_confirmed: 16
 aliases:
   - "Iggy"
 source_session: [[Session 01 The Black Sheep Inn]]
@@ -68,3 +68,4 @@ Shadow does not match Iggy's form and moves in the wrong direction. Onset: Sessi
 - **Session 7:** Thrown to floor by ghouls emerging; downed by ghoul melee
 - **Session 9:** Killed by shadows (Strength reduced to 0)
 - **Session 10:** Revived by Odibli's shadow ritual; half max HP for duration in dungeon; affliction onset; leveled to 3
+- **Session 16:** At the [[Blue Water Inn]], turned [[Bosco]]'s dance into a crowd-winning "for Bosco!" moment and spun a gold-dragon-turned-raccoon tale into a viol jig. Earlier at the Vallaki market, traded a platinum necklace for thieves' tools and hide armor. **Reliability:** the trade is recorded from the notes; confirm the item details against Iggy's sheet.

@@ -137,6 +137,8 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `culture` | culture entity | Entity type: shared customs, values, and practices of a people |
 | **mechanic** | | |
 | `mechanic` | mechanic file | Meta document: gameplay mechanic or structured mini-game |
+| **mission** | | |
+| `mission` | mission entity | Entity type: a self-contained objective (quest) |
 | **skill** | | |
 | `skill` | skill entity | Entity type: 5e skill — flat tag, no subtype |
 | **spell** | | |

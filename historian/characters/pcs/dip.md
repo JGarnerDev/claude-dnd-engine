@@ -16,7 +16,7 @@ race: [[Half Orc]]
 class: [[Barbarian]]
 background: "Unknown"
 level: 3
-level_confirmed: 15
+level_confirmed: 16
 
 aliases: []
 source_session: [[Session 05 The Specter]]
@@ -70,3 +70,4 @@ Hears whispers when it is quiet. Onset: Session 10, after Odibli absorbed shadow
 - **Session 9:** Killed by necrotic damage from shadows; revived by Miguel's thrown healing potion; downed again by shadow reducing Strength to 0
 - **Session 10:** Revived by Odibli's shadow ritual; half max HP in dungeon; affliction onset; leveled to 3
 - **Session 15:** Lost a small toe to his own axe while trying to clear grass from the stuck cart; Odibli failed to recover it with mage hand. No assumed mechanical effect — confirm with DM.
+- **Session 16:** Made a jovial entrance at the [[Blue Water Inn]] (audibly calling the patrons "less than stellar company"); performed an interpretive dance and rolled a natural 1, crashing into tables to jeers; later followed [[Urwin]] into the kitchen.

@@ -33,11 +33,16 @@ description: "Active Curse of Strahd campaign; party at level 3 after completing
 
 > **Reliability note:** Character full names for Luci and Dip are unconfirmed — only nicknames/handles appear in the notes. Character classes for Luci and Dip are inferred from abilities observed in play. Confirm with DM.
 
-## Current State (as of: Session 15)
+## Current State (as of: Session 16)
 
-- Party level: **3** (confirmed Session 15)
-- Location: Inside [[Vallaki]] — past the grim, wolf-head-spiked gates; guards admitted the party on Ireena and Ismark's recognition. A festival is coming in a few days and **fun is mandatory.**
-- Companions: [[Ireena Kolyana]] and [[Ismark Kolyanovich]] travel with the party; [[Bosco]] rides with Iggy (learned "Sit"); [[Sergei Rubelgerd]], a dog Odibli bought and named at the Vallaki market.
+- Party level: **3** (confirmed Session 16)
+- Location: Inside [[Vallaki]], lodged at the [[Blue Water Inn]] — the party performed for a hostile crowd, won it, and were gifted a free night by the innkeeper [[Danika]]. They took the night as a **long rest** and wake the next morning. A themed festival is still coming in a few days and **fun is mandatory.**
+- Companions: [[Ireena Kolyana]] and [[Ismark Kolyanovich]] travel with the party; [[Bosco]] rides with Iggy (learned "Sit") and stole the show at the inn; [[Sergei Rubelgerd]], Odibli's dog — a Tibetan Mastiff from the Zeatchean Steppes whose tale of his lost friend **Tidak** (taken by the fog) moved the whole bar.
+- **Open thread — the wine wizard:** [[Danika]] asked the party to find the missing "wizard of wine" behind the Blue Water Inn's overdue wine shipments. See [[Find the Wine Wizard]].
+- **Open thread — the Burgomaster's madness:** dissenters [[Karl]] and [[Nikolai]] describe [[The Burgomaster of Vallaki]] as obsessed with mandatory happiness — themed festivals on pain of imprisonment or worse. The town repeats an eerie mantra: "all will be well in Vallaki." **The party has not met the Burgomaster.**
+- **Open thread — Rictavio:** the extravagant bard [[Rictavio]] boasted of slaying a dragon but evaded [[Odibli]]'s questions; Odibli mistrusts him. His story doesn't hold up.
+- **Next beat:** [[Ismark Kolyanovich]] and [[Ireena Kolyana]] want to visit a church in the morning.
+- Contacts for hire: wolf-hunters [[Szoldar Szoldarovich]] and [[Yevgeni Krushkin]] offered guiding/information — 5 gp a day, tidbits for drinks.
 - **Open thread — Strahd's carriage:** Session 14 ended with Strahd's carriage waiting on the bridge ahead. Session 15's notes never address it (the party took the hills, was looped back by the mists, then took the road to Vallaki). Whether that encounter happened off-notes, was avoided, or is still pending is unresolved. **Confirm with DM.**
 - **Open thread — the night hag's windmill:** [[Old Bonegrinder]], a windmill on the road, is believed to be a night hag's lair ([[The Dream Pastry Woman]]); the party chose to equip in Vallaki before confronting her. Left unfought.
 - **The mists:** Odibli judged the fog "a law of this plane" — not curse, not spell. It actively looped the party back to the bridge they'd already crossed when they tried the hill shortcut.
@@ -47,17 +52,17 @@ description: "Active Curse of Strahd campaign; party at level 3 after completing
 - Both shadow/whisper afflictions stem from Odibli absorbing shadow essence to revive dead party members in Session 10.
 - Rose and Thorn: **Stranded.** Ben and Miguel left the pages behind when the mists carried the party out of Death House.
 
-### Rest Clock (as of: Session 15)
+### Rest Clock (as of: Session 16)
 
 Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` → Long Rest Rules).
 
-- In-world time now: late day / evening, arrived inside [[Vallaki]] (~estimate)
-- Last long rest (in-world): overnight at the [[Tser Pool Encampment]]
-- Hours since last long rest: ~12–16h (~estimate; no long rest taken this session)
-- Long rest available: not yet — <24h since last long rest. Now in a safe-ish walled town, so the gate will open on time once 24h elapses (e.g. an overnight at the Vallaki inn).
-- Rounds of combat since: 0 (roleplay/travel session)
+- In-world time now: morning, waking at the [[Blue Water Inn]] in [[Vallaki]] after an overnight (~estimate)
+- Last long rest (in-world): overnight at the [[Blue Water Inn]], Session 16 (the free night gifted by [[Danika]])
+- Hours since last long rest: ~0–2h (just woke)
+- Long rest available: not yet — a long rest was just taken; the 24h gate reopens after ~24h. Safe location (walled town, inn).
+- Rounds of combat since: 0 (roleplay session — no combat)
 - Short rests since: 0
-- Notable burns: Odibli cast speak with animals twice (the raven, then naming Sergei)
+- Notable burns: Odibli cast speak with animals once (to voice Sergei's tale); reset on the long rest
 
 ## Rules Decisions
 
