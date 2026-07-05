@@ -125,9 +125,9 @@ After analysis, state the working labels and marker count with a brief summary o
 
 Before writing, run:
 
-- `python scripts/free-entities.py --type resource` — note player-contributed resources; attach to cities whose terrain plausibly produces them
-- `python scripts/free-entities.py --type faction` — note player-contributed factions; attach to cities whose role or terrain fits their interest
-- `python scripts/free-entities.py --type location` — note player-contributed regions or wilderness areas that overlap geographically
+- `uv run scripts/free-entities.py --type resource` — note player-contributed resources; attach to cities whose terrain plausibly produces them
+- `uv run scripts/free-entities.py --type faction` — note player-contributed factions; attach to cities whose role or terrain fits their interest
+- `uv run scripts/free-entities.py --type location` — note player-contributed regions or wilderness areas that overlap geographically
 
 Reference these inline when suggesting resources and diplomatic context. Use `[[EntityName]]` wikilink syntax. Label player-contributed entities: *([player]'s resource)*. Do not force a fit.
 
@@ -185,9 +185,9 @@ Apply all corrections before moving on. Do not proceed to Phase 6 until the DM c
 Run:
 
 ```text
-python scripts/free-entities.py --type character
-python scripts/free-entities.py --type faction
-python scripts/free-entities.py --type event
+uv run scripts/free-entities.py --type character
+uv run scripts/free-entities.py --type faction
+uv run scripts/free-entities.py --type event
 .\scripts\contribution-balance.ps1
 ```
 
@@ -196,7 +196,7 @@ python scripts/free-entities.py --type event
 For each location in the draft, run semantic search on the location's geographic role and terrain description to surface non-obvious pool fits:
 
 ```text
-python scripts/semantic-search.py "<location role and terrain description>" -k 6
+uv run scripts/semantic-search.py "<location role and terrain description>" -k 6
 ```
 
 Treat results with score > 0.35 as additional anchoring candidates. Then also scan the free-entities output directly for:

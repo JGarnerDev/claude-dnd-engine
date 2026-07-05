@@ -69,7 +69,7 @@ For each entity listed in `locations` and `key_npcs` in the session plan:
 3. If it exists in neither place, run semantic search as a fuzzy fallback — the entity may exist under a different name than the session plan used:
 
    ```text
-   python scripts/semantic-search.py "<entity name and any known description>" -k 3
+   uv run scripts/semantic-search.py "<entity name and any known description>" -k 3
    ```
 
    Any result with score > 0.45 is a likely match — confirm with DM before assuming missing. If no match found, flag as a **missing entity** — do not silently create it.
@@ -211,7 +211,7 @@ Report what was done:
 
 If any action items remain (unconfirmed entities, meta files to update), list them explicitly.
 
-A recap always writes indexed files (the session record, plus any canonized entities), so the semantic index is now stale. End the summary with one line: "Semantic index is now stale — run `py -3.10 scripts/index-entities.py` when convenient." Do not rebuild it yourself.
+A recap always writes indexed files (the session record, plus any canonized entities), so the semantic index is now stale. End the summary with one line: "Semantic index is now stale — run `uv run scripts/index-entities.py` when convenient." Do not rebuild it yourself.
 
 ---
 

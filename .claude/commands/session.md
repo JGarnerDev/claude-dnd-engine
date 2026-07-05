@@ -18,12 +18,12 @@ Do not generate any content yet.
 **Step 1 — Run the dashboard script:**
 
 ```text
-python scripts/session-brief.py
+uv run scripts/session-brief.py
 ```
 
 It reports: next session number (with a milestone flag every 5th session — worth marking at the table), campaign/act/mission names and states, last session summary + cliffhanger + played date, Rest Clock state, Current State stamp staleness, the party roster with afflictions, and the design-preference drought counter (undeployed/seeded wishlist items), and the spotlight readout (lifetime balance, recent trend, overdue PC, missing-hooks flags — from `spotlight-balance.py`; says "insufficient history" before 3 sessions). Do not manually re-read anything it already covers.
 
-**Step 2 — Index staleness check.** Read `vector-index/.index-built` (line 1: ISO timestamp, line 2: commit SHA), then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag: *"Semantic index stale since `<sha[:7]>` — run `py -3.10 scripts\index-entities.py`."* If the file is missing, prompt to build. Never rebuild automatically — the searches in this command degrade silently on a stale index, so the DM should decide.
+**Step 2 — Index staleness check.** Read `vector-index/.index-built` (line 1: ISO timestamp, line 2: commit SHA), then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag: *"Semantic index stale since `<sha[:7]>` — run `uv run scripts/index-entities.py`."* If the file is missing, prompt to build. Never rebuild automatically — the searches in this command degrade silently on a stale index, so the DM should decide.
 
 **Step 3 — Targeted manual reads** (only what the script doesn't cover):
 
@@ -65,7 +65,7 @@ Conditional:
 **Step 6 — Callback search** on the cliffhanger or active mission hook, to surface historian entities the story may be ready to revisit:
 
 ```text
-python scripts/semantic-search.py "<cliffhanger or mission hook text>" --source historian -k 5
+uv run scripts/semantic-search.py "<cliffhanger or mission hook text>" --source historian -k 5
 ```
 
 Note any results with score > 0.35 — these are callback candidates. Do not force them into the plan; use only if they fit naturally.
@@ -118,13 +118,13 @@ First identify the active campaign (`state: active` file in `scheduler/campaign/
 Run semantic search using the themes of the current session direction (from cliffhanger, mission hook, or chosen thread):
 
 ```text
-python scripts/semantic-search.py "<themes from cliffhanger or direction>" --exists false -k 8
+uv run scripts/semantic-search.py "<themes from cliffhanger or direction>" --exists false -k 8
 ```
 
 Then surface importance-flagged entities the semantic search may not rank highly:
 
 ```text
-python scripts/free-entities.py
+uv run scripts/free-entities.py
 ```
 
 Filter its output to `importance: major` or `critical` with `active: true`. Combine both lists — semantic results for thematic fit, script output for importance-flagged entities. Do not manually sweep `data/` frontmatter; the script replaces that.
@@ -198,7 +198,7 @@ Wait for the DM's response before continuing.
 **Pre-step:** run the party dashboard for the Orientation paragraph and encounter balance:
 
 ```text
-python scripts/party-status.py
+uv run scripts/party-status.py
 ```
 
 Using all context gathered, produce a session plan in chat.

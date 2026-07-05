@@ -9,7 +9,7 @@ The three world masters are large Inkarnate WebP exports. **No map images are co
 **Cold-start sequence (fresh clone has no images):**
 
 1. `.\scripts\fetch-maps.ps1` — pull masters into `maps/world/masters/`. `-List` shows present/missing; `-Force` re-downloads. It rejects non-image / truncated responses, so a stale CDN url fails loudly instead of corrupting the pipeline.
-2. `python scripts\gen-tiles.py` — slice masters into `maps/world/tiles/` (creates the dir).
+2. `uv run scripts/gen-tiles.py` — slice masters into `maps/world/tiles/` (creates the dir).
 
 Until both run, `map-crop.ps1` and `count-markers.ps1` will stop with a guard error telling you to fetch (`scripts/map-common.ps1` → `Require-Master`). **A revoked/expired CDN url means no master and no tiles — there is no committed fallback.** If `fetch-maps.ps1` rejects a url, re-export the map in Inkarnate and update `maps/sources.tsv` (re-export workflow below).
 
@@ -28,7 +28,7 @@ Until both run, `map-crop.ps1` and `count-markers.ps1` will stop with a guard er
 - Markers: `maps/world/tiles/markers-{nw,...}.png` — read alongside the base tile to see which cities in an area are undetailed
 - Sky: `maps/world/tiles/sky-{nw,...}.png` — read for air-situated features
 
-Use `map-crop.ps1 -Markers` to crop the base and markers layers for a region at once. Regenerate every tile set with `python scripts\gen-tiles.py`.
+Use `map-crop.ps1 -Markers` to crop the base and markers layers for a region at once. Regenerate every tile set with `uv run scripts/gen-tiles.py`.
 
 ### Editing a master (re-export workflow)
 
@@ -37,12 +37,12 @@ Masters are not edited in-repo — they are edited in Inkarnate and re-exported.
 1. Edit the map in Inkarnate and re-export it. **The CDN url changes on every re-export.**
 2. Copy the new `cdn2.inkarnate.com/...?disposition=attachment` url into the matching row of `maps/sources.tsv`.
 3. Run `.\scripts\fetch-maps.ps1 -Force` to pull the new master into `maps/world/masters/`.
-4. Run `python scripts\gen-tiles.py` to regenerate all tiles, then read the affected tiles to diff labels before updating `index.md`.
+4. Run `uv run scripts/gen-tiles.py` to regenerate all tiles, then read the affected tiles to diff labels before updating `index.md`.
 
 **City graduation — when a city is named and detailed:**
 
 1. In Inkarnate, add its label to the world map and remove its dot from the markers map, then re-export both and update their `sources.tsv` urls (re-export workflow above)
-2. Run `.\scripts\fetch-maps.ps1 -Force` then `python scripts\gen-tiles.py` to refresh masters and tiles
+2. Run `.\scripts\fetch-maps.ps1 -Force` then `uv run scripts/gen-tiles.py` to refresh masters and tiles
 3. Add the city/region to the Known Region Positions table in `maps/world/index.md` if it warrants a permanent crop entry
 4. Remove the city's entry from `maps/world/city-registry.md` — add its registry ID (e.g. `C05-04a`) to the entity's `aliases:` field so existing cross-references resolve
 

@@ -16,13 +16,13 @@ Output is **text only**. Surfacing a rumor does not consume it — the pool enti
 ## Phase 1 — Pull from the Pool
 
 ```text
-python scripts/inventory-brief.py --type rumor
+uv run scripts/inventory-brief.py --type rumor
 ```
 
 If a theme was given, also rank by relevance:
 
 ```text
-python scripts/semantic-search.py "<theme>" --type rumor -k 5
+uv run scripts/semantic-search.py "<theme>" --type rumor -k 5
 ```
 
 Respect campaign separation: skip `campaign: strahd`-tagged rumors when the active campaign is not Strahd, and vice versa. Untagged rumors are always eligible.

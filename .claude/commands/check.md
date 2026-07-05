@@ -17,7 +17,7 @@ Read-only. No generation, no file writes. Output is a conflict report — CLEAR,
 ## Phase 1 — Run Semantic Search
 
 ```text
-python scripts/semantic-search.py "<claim text>" --source <source> -k <k>
+uv run scripts/semantic-search.py "<claim text>" --source <source> -k <k>
 ```
 
 ---

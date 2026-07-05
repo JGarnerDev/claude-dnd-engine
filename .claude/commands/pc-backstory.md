@@ -70,7 +70,7 @@ Backstory ingestion often introduces entities (locations, deities, NPCs, faction
 After proposing the PC file diff (step 4 above), identify any new entities referenced in the backstory. Before treating them as new, run semantic search on each referenced entity's description to check if it already exists under a different name:
 
 ```text
-python scripts/semantic-search.py "<entity description from backstory>" -k 3
+uv run scripts/semantic-search.py "<entity description from backstory>" -k 3
 ```
 
 Any result with score > 0.45 is a likely match — surface it to the DM before creating a new file. Then categorize remaining genuinely new entities:

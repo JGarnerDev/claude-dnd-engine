@@ -90,24 +90,24 @@ Map rules, tile protocol, and crop scripts documented in `maps/CLAUDE.md` — au
 
 ## Scripts
 
-Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these via Bash before manual file reads — they collapse 5–10 tool calls into one.** (Scripts are being migrated from PowerShell to Python 3.10; both extensions appear in the table during the transition.)
+Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these via Bash before manual file reads — they collapse 5–10 tool calls into one.** (Scripts are being migrated from PowerShell to Python 3.14, run via `uv run`; both extensions appear in the table during the transition.)
 
 | Script | When to use | Usage |
 |---|---|---|
-| `session-brief.py` | Start of every `/session` | `python scripts/session-brief.py` |
-| `session-state.py` | Quick campaign/act/mission check | `python scripts/session-state.py` |
-| `todo-brief.py` | Start of every `/todo` — all DM action-item signals in one call | `python scripts/todo-brief.py` |
-| `inventory-brief.py` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `python scripts/inventory-brief.py [--type <type>]` |
-| `threads-brief.py` | Start of every `/threads` Phase 2 — unresolved states, hostiles, pending seeds | `python scripts/threads-brief.py` |
-| `party-status.py` | PC stats + afflictions | `python scripts/party-status.py` |
-| `spotlight-balance.py` | Character-focus ledger — spotlight/agnostic balance, rotation, overdue PC, missing hooks (see `meta/character-focus.md`) | `python scripts/spotlight-balance.py [--section]` |
-| `free-entities.py` | Find available entities by type or player | `python scripts/free-entities.py [--type <type>] [--player <name>]` |
+| `session-brief.py` | Start of every `/session` | `uv run scripts/session-brief.py` |
+| `session-state.py` | Quick campaign/act/mission check | `uv run scripts/session-state.py` |
+| `todo-brief.py` | Start of every `/todo` — all DM action-item signals in one call | `uv run scripts/todo-brief.py` |
+| `inventory-brief.py` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `uv run scripts/inventory-brief.py [--type <type>]` |
+| `threads-brief.py` | Start of every `/threads` Phase 2 — unresolved states, hostiles, pending seeds | `uv run scripts/threads-brief.py` |
+| `party-status.py` | PC stats + afflictions | `uv run scripts/party-status.py` |
+| `spotlight-balance.py` | Character-focus ledger — spotlight/agnostic balance, rotation, overdue PC, missing hooks (see `meta/character-focus.md`) | `uv run scripts/spotlight-balance.py [--section]` |
+| `free-entities.py` | Find available entities by type or player | `uv run scripts/free-entities.py [--type <type>] [--player <name>]` |
 | `contribution-balance.ps1` | Player contribution counts (pool vs. canonized) | `.\scripts\contribution-balance.ps1` |
-| `entity-graph.py` | 1-hop relations for any entity | `python scripts/entity-graph.py --name "<name>"` |
-| `location-entities.py` | All historian entities near a location | `python scripts/location-entities.py --location "<name>"` |
+| `entity-graph.py` | 1-hop relations for any entity | `uv run scripts/entity-graph.py --name "<name>"` |
+| `location-entities.py` | All historian entities near a location | `uv run scripts/location-entities.py --location "<name>"` |
 | `pitch-brief.ps1` | Start of every `/pitch` | `.\scripts\pitch-brief.ps1 [-Type <type>]` |
 | `monster-lookup.ps1` | Find monsters by CR, creature type, or habitat | `.\scripts\monster-lookup.ps1 [-Type <type>] [-CRMin <n>] [-CRMax <n>] [-Habitat <name>]` |
-| `route-cities.py` | Find all cities served by a trade route (uses city `routes` field) | `python scripts/route-cities.py --route "<route name>"` |
+| `route-cities.py` | Find all cities served by a trade route (uses city `routes` field) | `uv run scripts/route-cities.py --route "<route name>"` |
 | `count-markers.ps1` | Count undetailed cities (red dots) in a map region | `.\scripts\count-markers.ps1 -Feature "<name>"` or `-ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n>` |
 | `region-world-context.ps1` | Start of every `/region` Phase 1 — climate, wind rules, water checklist | `.\scripts\region-world-context.ps1 -Col <n> -Row <n>` |
 | `region-scale.ps1` | Start of every `/region` Phase 2 — travel times and city spacing from grid span | `.\scripts\region-scale.ps1 -SpanGrids <n> -WaterBody <sea\|river\|both\|none> [-Locations <n>]` |
@@ -115,9 +115,9 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 | `naming-status.ps1` | Show named vs. unnamed entries in world-naming questionnaire | `.\scripts\naming-status.ps1 [-Section <name>]` |
 | `map-crop.ps1` | Crop world map by feature name or col/row; saves to `maps/locations/` | `.\scripts\map-crop.ps1 -Feature "<name>"` or `-ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n> [-Margin <px>] [-Temp]` |
 | `fetch-maps.ps1` | Pull gitignored master map images from the Inkarnate CDN (manifest `maps/sources.tsv`) into `maps/world/masters/`. Run after a clone, or with `-Force` after updating a manifest url | `.\scripts\fetch-maps.ps1 [-Force] [-List]` |
-| `gen-tiles.py` | Regenerate all world map tiles (base, markers, sky) from the masters in `maps/world/masters/` after fetching a new export. Cell size is derived from each master's actual resolution | `python scripts\gen-tiles.py` |
-| `index-entities.py` | Build/rebuild the semantic vector index (run after adding new entities) | `py -3.10 scripts\index-entities.py [--reset]` |
-| `semantic-search.py` | Semantic similarity search — find entities by meaning, not keywords | `python scripts/semantic-search.py "<text>" [--type <type>] [--subtype <sub>] [--exists true\|false] [--source data\|historian\|scheduler] [-k <n>]` |
+| `gen-tiles.py` | Regenerate all world map tiles (base, markers, sky) from the masters in `maps/world/masters/` after fetching a new export. Cell size is derived from each master's actual resolution | `uv run scripts/gen-tiles.py` |
+| `index-entities.py` | Build/rebuild the semantic vector index (run after adding new entities) | `uv run scripts/index-entities.py [--reset]` |
+| `semantic-search.py` | Semantic similarity search — find entities by meaning, not keywords | `uv run scripts/semantic-search.py "<text>" [--type <type>] [--subtype <sub>] [--exists true\|false] [--source data\|historian\|scheduler] [-k <n>]` |
 | `validate.ps1` | Graph integrity check — dangling `[[links]]`, missing/invalid `exists`/`name`/`type`, broken canon. Run before canonizing or after bulk edits | `.\scripts\validate.ps1 [-Scope all\|links\|frontmatter] [-Quiet]` |
 | `validate-refs.ps1` | Instruction-file reference lint — finds path refs in CLAUDE.md files, commands, meta, tests, and todo files that point at renamed/deleted files. Run after renaming, moving, or deleting any instruction file or script | `.\scripts\validate-refs.ps1 [-Quiet]` |
 | `refs.ps1` | Reverse dependency lookup — every file:line that references a target file. Run before renaming a file or changing a script's flags/output format, then update what it lists | `.\scripts\refs.ps1 -Target <path-or-filename>` |
@@ -126,9 +126,9 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 
 Scripts output plain text; parse with your own judgment. They read frontmatter only (except `session-brief.py` which also reads the last session body for cliffhanger).
 
-**Semantic index:** `vector-index/` (gitignored, rebuilt from source). Build once with `py -3.10 scripts\index-entities.py`, re-run after bulk entity additions. Use `semantic-search.py` to surface entities by thematic relevance — betrayal arcs, forgotten NPCs, callback hooks, contradiction checks.
+**Semantic index:** `vector-index/` (gitignored, rebuilt from source). Build once with `uv run scripts/index-entities.py`, re-run after bulk entity additions. Use `semantic-search.py` to surface entities by thematic relevance — betrayal arcs, forgotten NPCs, callback hooks, contradiction checks.
 
-**Index staleness check:** At the start of any session, read `vector-index/.index-built` (line 1: ISO timestamp, line 2: git commit SHA). Then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag it: "Semantic index stale since `<sha[:7]>` — run `py -3.10 scripts\index-entities.py`." Ignore commits that touch only non-indexed files (`CLAUDE.md`, `README.md`) — the indexer skips them, so they cannot stale the index. Do not rebuild automatically; prompt the user. If `.index-built` is missing, index has never been built — prompt to run it.
+**Index staleness check:** At the start of any session, read `vector-index/.index-built` (line 1: ISO timestamp, line 2: git commit SHA). Then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag it: "Semantic index stale since `<sha[:7]>` — run `uv run scripts/index-entities.py`." Ignore commits that touch only non-indexed files (`CLAUDE.md`, `README.md`) — the indexer skips them, so they cannot stale the index. Do not rebuild automatically; prompt the user. If `.index-built` is missing, index has never been built — prompt to run it.
 
 ## Stamp Pattern
 

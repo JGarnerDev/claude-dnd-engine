@@ -34,12 +34,12 @@ Do not ask about optional parameters that have sensible defaults.
 
 Read `meta/entity-creation.md` to find the correct schema file for `--type`. Then read `meta/schemas/{schema}.md` — specifically the **Player Form** and **Form → Frontmatter Mapping** sections.
 
-Run `python scripts/free-entities.py --type <type>` to get existing free entities of this type. Scan for any that share the same origin, function, or key trait as the concept.
+Run `uv run scripts/free-entities.py --type <type>` to get existing free entities of this type. Scan for any that share the same origin, function, or key trait as the concept.
 
 Also run semantic search on the concept to catch cross-type duplicates — entities that serve the same narrative role under a different type:
 
 ```text
-python scripts/semantic-search.py "<concept text>" -k 5
+uv run scripts/semantic-search.py "<concept text>" -k 5
 ```
 
 Flag any result with score > 0.40 as a potential overlap regardless of type. Surface all overlaps silently — only in the DM note (Phase 4).
@@ -145,10 +145,10 @@ If the file lives in `questionnaires/` and has real answers, set `filled: true` 
 
 ### Ingest Phase 2 — Balance Review
 
-Read `meta/worldbuilding.md` (once). Run `python scripts/free-entities.py --type <entity_type>` for current pool. Also run semantic search on the entity name and concept to detect cross-type thematic conflicts:
+Read `meta/worldbuilding.md` (once). Run `uv run scripts/free-entities.py --type <entity_type>` for current pool. Also run semantic search on the entity name and concept to detect cross-type thematic conflicts:
 
 ```text
-python scripts/semantic-search.py "<entity name> <concept summary>" -k 5
+uv run scripts/semantic-search.py "<entity name> <concept summary>" -k 5
 ```
 
 Results with score > 0.40 of a different type are potential hidden duplicates — assess under the **Overlap** dimension below.

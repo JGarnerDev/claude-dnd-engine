@@ -45,7 +45,7 @@ If AI generation is needed (pool empty or sparse, `--ai` flag, or specific descr
 - **Specific description mode** (text description provided): run semantic search on that description to surface the most relevant pool entries before deciding on generation vs. pool use:
 
   ```text
-  python scripts/semantic-search.py "<event description>" -k 5
+  uv run scripts/semantic-search.py "<event description>" -k 5
   ```
 
   Prefer pool matches with score > 0.40 over AI generation — the pool exists to be used. If no strong matches, proceed to AI generation.

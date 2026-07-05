@@ -14,7 +14,7 @@ Find campaign entities by semantic similarity. Pure RAG query — no generation,
 ## Phase 1 — Run Query
 
 ```text
-python scripts/semantic-search.py "<query>" [--type <type>] [--subtype <subtype>] [--source <source>] [--exists <exists>] [-k <k>]
+uv run scripts/semantic-search.py "<query>" [--type <type>] [--subtype <subtype>] [--source <source>] [--exists <exists>] [-k <k>]
 ```
 
 ---
