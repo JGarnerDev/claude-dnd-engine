@@ -1,6 +1,6 @@
 // Shared types for the timeline view. Pure type declarations — no runtime code,
 // so importers use `import type`. The render JSON contract (TimelineData) is the
-// shape scripts/timeline-data.ps1 emits and build-entry consumes.
+// shape scripts/timeline-data.py emits and build-entry consumes.
 
 export interface Month {
   name: string;

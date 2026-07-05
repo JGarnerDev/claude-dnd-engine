@@ -2,7 +2,7 @@
 // — never ships. `npm run build:timeline` bundles the timeline modules + CSS
 // into ONE offline HTML (no CDN, no separate assets) via singlefile, emitting
 // components/charts/timeline/dist/timeline.html. That shell carries a data
-// sentinel; scripts/timeline-data.ps1 injects the real campaign JSON into it.
+// sentinel; scripts/timeline-data.py injects the real campaign JSON into it.
 //
 // Vitest reads vitest.config.js separately, so this only affects `vite`/`vite build`.
 import { defineConfig } from 'vite';

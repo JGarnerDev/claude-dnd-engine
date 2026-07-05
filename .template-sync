@@ -104,7 +104,7 @@ data/spells/*.md
 #!data/resources/Example.md        # example: a player-contributed, world-specific resource to exclude
 
 # Scripts — all engine scripts and shared library
-scripts/lib/common.ps1
+scripts/lib/common.py
 scripts/contribution-balance.ps1
 scripts/count-markers.ps1
 scripts/entity-graph.ps1
@@ -131,8 +131,8 @@ scripts/session-state.ps1
 scripts/setup-hooks.ps1
 scripts/spotlight-balance.ps1
 scripts/threads-brief.ps1
-scripts/timeline-data.ps1
-scripts/timeline-gantt.ps1
+scripts/timeline-data.py
+scripts/timeline-gantt.py
 scripts/todo-brief.ps1
 scripts/validate-refs.ps1
 scripts/validate.ps1

@@ -2,7 +2,7 @@
 // campaign graph (vs pages/demo, which is the fixture-driven dev harness).
 //
 // `npm run home` -> vite serves this with the campaign-data plugin, which runs
-// scripts/timeline-data.ps1 under the hood and hot-reloads on entity edits.
+// scripts/timeline-data.py under the hood and hot-reloads on entity edits.
 // No build step: this page is a local DM tool, not a shipped artifact (the
 // shipped artifact stays the self-contained HTML from vite.config.js).
 

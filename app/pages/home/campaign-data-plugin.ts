@@ -1,8 +1,8 @@
 // Vite plugin: feed pages/home the LIVE campaign graph instead of fixtures.
 //
-// It runs scripts/timeline-data.ps1 -JsonOnly (the same extractor the shipped
+// It runs scripts/timeline-data.py --json-only (the same extractor the shipped
 // artifact uses) and exposes the result as the virtual module
-// `virtual:campaign-data`. -JsonOnly returns before the HTML-injection step, so
+// `virtual:campaign-data`. --json-only returns before the HTML-injection step, so
 // no `npm run build:timeline` shell is needed — pure read of entity frontmatter.
 //
 // In `vite dev` it also watches the three graph layers (data/ historian/
@@ -20,29 +20,43 @@ const RESOLVED_ID = '\0' + VIRTUAL_ID;
 // invalidates the cached extraction.
 const GRAPH_DIRS = ['data', 'historian', 'scheduler'];
 
-// Run the PowerShell extractor and return its JSON text (or 'null' on failure —
-// the page then renders its empty state rather than crashing the dev server).
-// -Full so secret beats reach the DM's own home page (tagged `secret: true`, plus
+// Python interpreter candidates, in order. $PYTHON overrides; else try `python3`
+// (the norm on macOS/Linux, which often ship no bare `python`) then `python`
+// (Windows / venvs). The first that runs the script wins.
+const PYTHON_CANDIDATES = [process.env.PYTHON, 'python3', 'python'].filter(
+  (x): x is string => Boolean(x),
+);
+
+// Run the extractor and return its JSON text (or 'null' on failure — the page
+// then renders its empty state rather than crashing the dev server).
+// --full so secret beats reach the DM's own home page (tagged `secret: true`, plus
 // each beat's `knownBy`). The chart's "Known by" filter defaults to no viewpoint
 // (everything shows, secrets included — this is the DM's tool); the DM picks a
 // character to scope it to what that character knows for a player-safe glance. The
 // shipped artifact stays player-safe — only this local DM-side page opts into the
 // full set.
 function extract(repoRoot: string): string {
-  const script = resolve(repoRoot, 'scripts', 'timeline-data.ps1');
-  const exe = process.platform === 'win32' ? 'powershell.exe' : 'pwsh';
-  try {
-    const out = execFileSync(
-      exe,
-      ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', script, '-JsonOnly', '-Full', '-Root', repoRoot],
-      { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 },
-    );
-    return rewriteSources(out.trim() || 'null', repoRoot);
-  } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err);
-    console.error(`[campaign-data] timeline-data.ps1 failed:\n${msg}`);
-    return 'null';
+  const script = resolve(repoRoot, 'scripts', 'timeline-data.py');
+  const args = [script, '--json-only', '--full', '--root', repoRoot];
+  let lastErr = '';
+  for (const exe of PYTHON_CANDIDATES) {
+    try {
+      const out = execFileSync(exe, args, {
+        encoding: 'utf8',
+        maxBuffer: 64 * 1024 * 1024,
+      });
+      return rewriteSources(out.trim() || 'null', repoRoot);
+    } catch (err) {
+      // ENOENT: this interpreter isn't on PATH — try the next candidate. Any
+      // other error is the script itself failing, so stop and surface it.
+      const code = (err as { code?: string }).code;
+      lastErr = err instanceof Error ? err.message : String(err);
+      if (code === 'ENOENT') continue;
+      break;
+    }
   }
+  console.error(`[campaign-data] timeline-data.py failed:\n${lastErr}`);
+  return 'null';
 }
 
 // The extractor writes `source` as `../../<rel>` — tuned for the shipped

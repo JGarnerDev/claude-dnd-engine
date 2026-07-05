@@ -2,7 +2,8 @@
 consumers: scripts/entity-graph.py, scripts/free-entities.py, scripts/location-entities.py,
   scripts/party-status.py, scripts/route-cities.py, scripts/session-brief.py,
   scripts/session-state.py, scripts/todo-brief.py, scripts/inventory-brief.py,
-  scripts/threads-brief.py, scripts/spotlight-balance.py
+  scripts/threads-brief.py, scripts/spotlight-balance.py,
+  scripts/timeline-gantt.py, scripts/timeline-data.py
 -- update those scripts if a function signature or output shape changes here.
 """
 
@@ -303,10 +304,9 @@ def get_spotlight_rotation(sessions: list, window: int, active_names: list) -> d
 
 
 # -- Calendar + timeline helpers (meta/calendar.md) ---------------------------
-# Mirror of the calendar block in lib/common.ps1, for the timeline scripts'
-# eventual Python conversion (tracked in #5). True scale is NOT a goal -- these
-# support rough orientation: ordering + display + a plottable date. A
-# timeline_date is a flat string "YYYY[-MM[-DD]]".
+# Consumed by the timeline scripts (timeline-gantt.py, timeline-data.py). True
+# scale is NOT a goal -- these support rough orientation: ordering + display +
+# a plottable date. A timeline_date is a flat string "YYYY[-MM[-DD]]".
 
 
 class Calendar:

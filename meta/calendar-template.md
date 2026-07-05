@@ -30,7 +30,7 @@ weekdays:
 
 Skeleton for the campaign calendar. **Copy this file to `meta/calendar.md` and rename the months/epoch for your world** (see `meta/new-campaign-setup.md`). This template is engine material — it ships Gregorian-shaped so the engine works out of the box; the *live* campaign calendar lives in the unsynced `meta/calendar.md`.
 
-The months, epoch, and labels live in frontmatter so `scripts/lib/common.ps1` can read them. This file is the canonical home for the calendar contract below — `meta/calendar.md` carries only the per-world values and points back here.
+The months, epoch, and labels live in frontmatter so `scripts/lib/common.py` can read them. This file is the canonical home for the calendar contract below — `meta/calendar.md` carries only the per-world values and points back here.
 
 ## Timeline date
 
@@ -44,18 +44,18 @@ timeline_date: "1342"         # year-only    (year precision)
 
 - **The year segment is mandatory.** Month and day are optional, and graded precision is the point — an event known only to a year is *more honestly* recorded as `"1342"` than a guessed day.
 - `month` is the **1-based index** into the frontmatter `months` list, not a name — so renaming months never breaks stored dates. `"1342-05"` means the 5th month, whatever it's called.
-- A flat string (not a nested YAML map) because the frontmatter parser in `scripts/lib/common.ps1` reads scalars and lists, not nested maps. The helpers split on `-` (`Get-DatePrecision`, `Get-DateParts`).
+- A flat string (not a nested YAML map) because the frontmatter parser in `scripts/lib/common.py` reads scalars and lists, not nested maps. The helpers split on `-` (`get_date_precision`, `get_date_parts`).
 - The free-text `date:` prose field on events (e.g. "300 years ago", "before the Sundering") stays as the human label. `timeline_date` is the machine coordinate; they coexist.
 
 ## Ordering
 
 Timeline entries sort by a numeric key derived from the date, honoring graded precision.
 
-- **Sort key** = `year*10000 + month*100 + day` (`Get-DateSortKey` in `scripts/lib/common.ps1`). Stable ordering across mixed-precision dates.
+- **Sort key** = `year*10000 + month*100 + day` (`get_date_sort_key` in `scripts/lib/common.py`). Stable ordering across mixed-precision dates.
 - **Partial-date resolution:** a missing `month` resolves to the start of the year (month 1, day 1); a missing `day` resolves to the start of the month (day 1). So a year-only date anchors at that year's first day.
-- The sort key composites the calendar-relative year directly — `epoch_year` and `year_suffix` are display-only (applied by `Get-Calendar` when labelling), not folded into ordering.
+- The sort key composites the calendar-relative year directly — `epoch_year` and `year_suffix` are display-only (applied by `get_calendar` when labelling), not folded into ordering.
 
-`scripts/lib/common.ps1` owns the date helpers (`Get-DatePrecision`, `Get-DateParts`, `Get-DateSortKey`, `Get-PlotDate`). Nothing else recomputes them — callers reference the helpers.
+`scripts/lib/common.py` owns the date helpers (`get_date_precision`, `get_date_parts`, `get_date_sort_key`, `get_plot_date`). Nothing else recomputes them — callers reference the helpers.
 
 ## Precision
 
