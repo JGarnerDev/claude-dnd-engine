@@ -15,7 +15,7 @@ Read-only. No generation, no file writes. Surfaces what the campaign is forgetti
 
 Run:
 ```text
-python scripts/session-state.py
+uv run scripts/session-state.py
 ```
 
 Extract: current cliffhanger (or most recent historian session cliffhanger), active mission hook, current act goal. This becomes the semantic anchor for relevance ranking.
@@ -26,7 +26,7 @@ Extract: current cliffhanger (or most recent historian session cliffhanger), act
 
 Run:
 ```text
-python scripts/threads-brief.py
+uv run scripts/threads-brief.py
 ```
 
 It collects, in one call: historian entities in unresolved states (`missing`, `imprisoned`, `transformed`, `unknown`, `stranded`, `captured`), living characters with `disposition: hostile`, and pending `Seeded:` lines from `meta/literary-devices.md` and `meta/campaign-design-preferences.md`. Do not manually sweep historian frontmatter or re-read the two meta files — the script output is the complete Phase 2 signal set.

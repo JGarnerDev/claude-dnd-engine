@@ -50,4 +50,4 @@ The band lets the DM read stance without memorizing numbers. The raw number is a
 
 ## Read surface
 
-`python scripts/entity-graph.py --name "<entity>"` prints an **Affinity** block under the entity's relations: each recorded target with its number and band.
+`uv run scripts/entity-graph.py --name "<entity>"` prints an **Affinity** block under the entity's relations: each recorded target with its number and band.

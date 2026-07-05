@@ -81,6 +81,6 @@ Every entity has an optional `contributed_by` field (values: `paul`, `ben`, `mig
 
 **When planning a session**, if one player's entities dominate the candidate pool, flag it and suggest pulling from another player's material where the story permits.
 
-**To check current balance** at any time: run `.\scripts\contribution-balance.ps1` — shows pool vs. canonized counts per player and identifies who is next up. To see one player's available entities: `python scripts/free-entities.py --player <name>`.
+**To check current balance** at any time: run `.\scripts\contribution-balance.ps1` — shows pool vs. canonized counts per player and identifies who is next up. To see one player's available entities: `uv run scripts/free-entities.py --player <name>`.
 
 Do not force balance at the expense of narrative fit. Flag the gap; let the DM decide.

@@ -68,7 +68,7 @@ Ask the DM: "Should I create the new Act 1 scaffold now, or wait until Kellan is
 ## Phase 6 — Index and Wrap Up
 
 After all file changes are confirmed and written:
-1. Remind the DM to rebuild the semantic index: `py -3.10 scripts\index-entities.py`
+1. Remind the DM to rebuild the semantic index: `uv run scripts/index-entities.py`
 2. Summarize what changed: entities retagged, campaign file updated, new act scaffolded
 3. Note any Strahd entities the DM flagged as potential crossovers but left unresolved — list them as open items
 

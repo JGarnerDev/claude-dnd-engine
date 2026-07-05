@@ -5,6 +5,9 @@ pitch-log/
 # Python bytecode caches from the helper scripts in scripts/
 __pycache__/
 *.pyc
+
+# uv-managed virtual environment
+.venv/
 questionnaires/*
 !questionnaires/.gitkeep
 vector-index/

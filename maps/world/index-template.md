@@ -23,7 +23,7 @@ Resolution is derived per-image at run time -- no fixed pixel size to record. --
 
 ## Tile Coverage
 
-<!-- Fill after running `python scripts\gen-tiles.py` and reading each tile. Nine overlapping tiles cover the full map; Cols/Rows are this world's grid. Key content = the named features a tile contains. -->
+<!-- Fill after running `uv run scripts/gen-tiles.py` and reading each tile. Nine overlapping tiles cover the full map; Cols/Rows are this world's grid. Key content = the named features a tile contains. -->
 
 | Tile | File | Cols | Rows | Key content |
 |---|---|---|---|---|
