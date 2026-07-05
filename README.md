@@ -24,7 +24,7 @@ py -3.10 -m pip install -r requirements.txt
 py -3.10 scripts\index-entities.py
 
 # Enable auto-formatting of Markdown on commit (one time per clone)
-.\scripts\setup-hooks.ps1
+python scripts/setup-hooks.py
 ```
 
 The index is stored locally in `vector-index/` (gitignored) and must be built on each new clone. Re-run `index-entities.py` after bulk entity additions. Individual entity changes don't require a full rebuild — run with `--reset` only if the index feels stale.
@@ -82,7 +82,7 @@ Everything else is identical by design: same printed output (the slash commands 
 
 ### Markdown formatting
 
-Entity files, commands, and docs are Markdown. A `.markdownlint.json` at the repo root defines the rules (tuned for Obsidian — long lines and frontmatter-first files are allowed). `scripts\setup-hooks.ps1` points git at `.githooks/` and installs `markdownlint-cli2@0.13.0` (the exact pin that runs on node 18). After that, a pre-commit hook auto-fixes staged `.md` files and re-stages the changes — you never format by hand. The hook is non-blocking: if a rule can't be auto-fixed (e.g. a code fence missing a language), the commit still goes through. To format the whole repo on demand: `markdownlint-cli2 --fix "*.md" "**/*.md" "!node_modules/**"`.
+Entity files, commands, and docs are Markdown. A `.markdownlint.json` at the repo root defines the rules (tuned for Obsidian — long lines and frontmatter-first files are allowed). `python scripts/setup-hooks.py` points git at `.githooks/` and installs `markdownlint-cli2@0.13.0` (the exact pin that runs on node 18). After that, a pre-commit hook auto-fixes staged `.md` files and re-stages the changes — you never format by hand. The hook is non-blocking: if a rule can't be auto-fixed (e.g. a code fence missing a language), the commit still goes through. To format the whole repo on demand: `markdownlint-cli2 --fix "*.md" "**/*.md" "!node_modules/**"`.
 
 > **Note:** `py -3.10` is the Windows Python Launcher syntax. If `py` is not available, use the full path to your Python 3.10 executable.
 
@@ -101,10 +101,10 @@ The vector index adds semantic similarity search over all entity bodies. Use cas
 
 Query it directly:
 
-```powershell
-.\scripts\semantic-search.ps1 -Query "betrayal and political intrigue" -Type character -Source historian
-.\scripts\semantic-search.ps1 -Query "ancient ritual site" -Type location -Exists false -K 10
-.\scripts\semantic-search.ps1 -Query "merchant with a secret"
+```text
+python scripts/semantic-search.py "betrayal and political intrigue" --type character --source historian
+python scripts/semantic-search.py "ancient ritual site" --type location --exists false -k 10
+python scripts/semantic-search.py "merchant with a secret"
 ```
 
 ---
@@ -316,6 +316,6 @@ For detailed procedures on:
 
 **To add a player preference:** Create a file in `meta/players/{player-name}.md` (copy `meta/players/player-template.md`)
 
-**To format Markdown:** Nothing to do — the pre-commit hook from `.\scripts\setup-hooks.ps1` auto-fixes staged `.md` on commit. Format everything on demand with `markdownlint-cli2 --fix "*.md" "**/*.md" "!node_modules/**"`
+**To format Markdown:** Nothing to do — the pre-commit hook from `python scripts/setup-hooks.py` auto-fixes staged `.md` on commit. Format everything on demand with `markdownlint-cli2 --fix "*.md" "**/*.md" "!node_modules/**"`
 
 **To browse the vault visually (optional):** The engine runs entirely through slash commands — no editor required. But entities use Obsidian-style frontmatter and `[[wikilinks]]`, so the repo opens cleanly as an [Obsidian](https://obsidian.md) vault or a [Foam](https://foambubble.github.io/foam/) workspace in VS Code. Either gives you a clickable graph view of the entity web. This is a nice-to-have for exploring relationships, not a setup step.

@@ -43,7 +43,7 @@ Additional reads:
 Run semantic search to surface thematically matching pool entities that could seed the pitch:
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<type> <tone> <setting>" -Exists false -K 5
+python scripts/semantic-search.py "<type> <tone> <setting>" --exists false -k 5
 ```
 
 Scan results for contributed entities (`contributed_by` field) — prefer these as source material. Others may inspire names, details, or hooks. Do not force results into the pitch; use only what genuinely fits.

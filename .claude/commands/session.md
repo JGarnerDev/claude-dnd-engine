@@ -65,7 +65,7 @@ Conditional:
 **Step 6 — Callback search** on the cliffhanger or active mission hook, to surface historian entities the story may be ready to revisit:
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<cliffhanger or mission hook text>" -Source historian -K 5
+python scripts/semantic-search.py "<cliffhanger or mission hook text>" --source historian -k 5
 ```
 
 Note any results with score > 0.35 — these are callback candidates. Do not force them into the plan; use only if they fit naturally.
@@ -118,7 +118,7 @@ First identify the active campaign (`state: active` file in `scheduler/campaign/
 Run semantic search using the themes of the current session direction (from cliffhanger, mission hook, or chosen thread):
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<themes from cliffhanger or direction>" -Exists false -K 8
+python scripts/semantic-search.py "<themes from cliffhanger or direction>" --exists false -k 8
 ```
 
 Then surface importance-flagged entities the semantic search may not rank highly:

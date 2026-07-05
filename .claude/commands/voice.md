@@ -16,7 +16,7 @@ Read-only by default. Output is a compact DM reference card for playing the NPC.
 Search `historian/` then `data/` for the NPC by name. Check `aliases` field if exact match fails. If still not found:
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<npc name>" -Type character -K 3
+python scripts/semantic-search.py "<npc name>" --type character -k 3
 ```
 
 Confirm match with DM if ambiguous.
@@ -38,7 +38,7 @@ Read the NPC's full file. Extract:
 Find sessions where this NPC appeared or was referenced:
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<npc name> <personality summary>" -Source historian -K 5
+python scripts/semantic-search.py "<npc name> <personality summary>" --source historian -k 5
 ```
 
 For results with score > 0.40, read the NPC quick-reference section of those session files for established voice notes.
@@ -50,7 +50,7 @@ For results with score > 0.40, read the NPC quick-reference section of those ses
 Surface similar NPCs for texture reference — same archetype or disposition:
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<personality summary>" -Type character -Source historian -K 4
+python scripts/semantic-search.py "<personality summary>" --type character --source historian -k 4
 ```
 
 Use as texture only. Do not copy voice patterns wholesale.

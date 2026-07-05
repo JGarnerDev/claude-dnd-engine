@@ -16,7 +16,7 @@ Read-only. No generation, no file writes. Output is a conflict report — CLEAR,
 ## Phase 1 — Run Semantic Search
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<claim text>" -Source <source> -K <k>
+python scripts/semantic-search.py "<claim text>" --source <source> -k <k>
 ```
 
 ---

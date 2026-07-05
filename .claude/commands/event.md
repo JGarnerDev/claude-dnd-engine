@@ -41,7 +41,7 @@ If AI generation is needed (pool empty or sparse, `--ai` flag, or specific descr
 **From pool:**
 - **Specific description mode** (text description provided): run semantic search on that description to surface the most relevant pool entries before deciding on generation vs. pool use:
   ```powershell
-  .\scripts\semantic-search.ps1 -Query "<event description>" -K 5
+  python scripts/semantic-search.py "<event description>" -k 5
   ```
   Prefer pool matches with score > 0.40 over AI generation — the pool exists to be used. If no strong matches, proceed to AI generation.
 - **Random mode** (no description): randomly select entries. If `--scale` is set, filter first. For mixed-scale requests without a flag, ensure variety — aim for at least one local, one regional, one global when count ≥ 3.

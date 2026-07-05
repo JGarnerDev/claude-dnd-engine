@@ -39,7 +39,7 @@ When a sparse `./data` or `./historian` entity is selected as a **key story elem
 2. **Wait for the DM's response.** Do not propose content until asked to.
 3. If the DM delegates: before drafting, run two uniqueness checks:
    - **Trait registry** — read `meta/trait-registry.md`, scan the matching entity-type section for occupied trait slots. If overlap found: *"[trait] already occupied by [[Name]] — pushing a different direction."*
-   - **Semantic search** — run `.\scripts\semantic-search.ps1 -Query "<proposed elaboration direction>" -Source historian -K 5`. Flag any result with score > 0.4 as a thematic collision; adjust the draft to avoid it.
+   - **Semantic search** — run `python scripts/semantic-search.py "<proposed elaboration direction>" --source historian -k 5`. Flag any result with score > 0.4 as a thematic collision; adjust the draft to avoid it.
    - **Batch check** — when several drafts are produced in the same pass, check them against *each other* before presenting: registry and search only see pre-existing content, so same-batch siblings can silently share a motif (e.g. two ledger-keepers drafted minutes apart). Same rule as hierarchical children: batch-mates should be as distinct as unrelated entities.
 
    Then draft the elaboration as a clearly labeled proposal block, scoped to the tier. Wait for confirm, tweak, or reject before touching the file.

@@ -1,7 +1,7 @@
 #!/bin/sh
 # Auto-format staged Markdown with markdownlint before commit.
 # Non-blocking: fixes what it can, re-stages the result, never aborts the commit.
-# Setup: run `.\scripts\setup-hooks.ps1` once per clone (sets core.hooksPath).
+# Setup: run `python scripts/setup-hooks.py` once per clone (sets core.hooksPath).
 # Requires global binary: npm i -g markdownlint-cli2@0.13.0 (node 18 needs this exact pin).
 
 tmp=$(mktemp)

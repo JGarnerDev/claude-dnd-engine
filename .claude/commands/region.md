@@ -181,7 +181,7 @@ python scripts/free-entities.py --type event
 For each location in the draft, run semantic search on the location's geographic role and terrain description to surface non-obvious pool fits:
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<location role and terrain description>" -K 6
+python scripts/semantic-search.py "<location role and terrain description>" -k 6
 ```
 
 Treat results with score > 0.35 as additional anchoring candidates. Then also scan the free-entities output directly for:

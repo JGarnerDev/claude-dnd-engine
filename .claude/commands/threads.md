@@ -42,13 +42,13 @@ Apply judgment to the raw output:
 Run semantic search using the story anchor from Phase 1:
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<cliffhanger + mission hook text>" -Source historian -K <k>
+python scripts/semantic-search.py "<cliffhanger + mission hook text>" --source historian -k <k>
 ```
 
 Then run against pool to surface free entities the story may be ready to use:
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<cliffhanger + mission hook text>" -Exists false -K 5
+python scripts/semantic-search.py "<cliffhanger + mission hook text>" --exists false -k 5
 ```
 
 ---

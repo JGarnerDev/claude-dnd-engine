@@ -13,7 +13,7 @@ Find campaign entities by semantic similarity. Pure RAG query — no generation,
 ## Phase 1 — Run Query
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<query>" [-Type <type>] [-Subtype <subtype>] [-Source <source>] [-Exists <exists>] [-K <k>]
+python scripts/semantic-search.py "<query>" [--type <type>] [--subtype <subtype>] [--source <source>] [--exists <exists>] [-k <k>]
 ```
 
 ---

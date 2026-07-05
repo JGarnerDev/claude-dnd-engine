@@ -37,7 +37,7 @@ Run `python scripts/free-entities.py --type <type>` to get existing free entitie
 Also run semantic search on the concept to catch cross-type duplicates — entities that serve the same narrative role under a different type:
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<concept text>" -K 5
+python scripts/semantic-search.py "<concept text>" -k 5
 ```
 
 Flag any result with score > 0.40 as a potential overlap regardless of type. Surface all overlaps silently — only in the DM note (Phase 4).
@@ -142,7 +142,7 @@ If the file lives in `questionnaires/` and has real answers, set `filled: true` 
 Read `meta/worldbuilding.md` (once). Run `python scripts/free-entities.py --type <entity_type>` for current pool. Also run semantic search on the entity name and concept to detect cross-type thematic conflicts:
 
 ```powershell
-.\scripts\semantic-search.ps1 -Query "<entity name> <concept summary>" -K 5
+python scripts/semantic-search.py "<entity name> <concept summary>" -k 5
 ```
 
 Results with score > 0.40 of a different type are potential hidden duplicates — assess under the **Overlap** dimension below.
