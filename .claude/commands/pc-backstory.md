@@ -69,7 +69,7 @@ Backstory ingestion often introduces entities (locations, deities, NPCs, faction
 
 After proposing the PC file diff (step 4 above), identify any new entities referenced in the backstory. Before treating them as new, run semantic search on each referenced entity's description to check if it already exists under a different name:
 
-```powershell
+```text
 python scripts/semantic-search.py "<entity description from backstory>" -k 3
 ```
 

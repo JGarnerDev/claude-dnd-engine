@@ -68,7 +68,7 @@ For each entity listed in `locations` and `key_npcs` in the session plan:
 2. Check `data/` — if it exists there with `exists: false`, flag it for canonization.
 3. If it exists in neither place, run semantic search as a fuzzy fallback — the entity may exist under a different name than the session plan used:
 
-   ```powershell
+   ```text
    python scripts/semantic-search.py "<entity name and any known description>" -k 3
    ```
 

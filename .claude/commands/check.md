@@ -1,6 +1,7 @@
 Check a proposed fact, recap summary, or entity detail against historian canon for contradictions.
 
 **Arguments:**
+
 - `<claim>` — text to check (required); sentence, paragraph, or bullet list
 - `--source historian|data|both` — scope of the check (default: historian)
 - `-k <n>` — number of candidates to surface (default: 6)
@@ -15,7 +16,7 @@ Read-only. No generation, no file writes. Output is a conflict report — CLEAR,
 
 ## Phase 1 — Run Semantic Search
 
-```powershell
+```text
 python scripts/semantic-search.py "<claim text>" --source <source> -k <k>
 ```
 
