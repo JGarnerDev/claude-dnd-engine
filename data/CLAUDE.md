@@ -4,7 +4,7 @@
 
 Entities in `./data` with `exists: false` are **free** — available to be used in session content. Entities that get played and canonized move to `./historian` with `exists: true`.
 
-**Carve-out — reference catalogs are not the free pool.** Core D&D / published material (monsters, spells, deities, official items, feats, races, classes, backgrounds, skills) carries `exists: true` even while living in `./data`, because those things are real in the world and are a *reusable reference library*, not one-time creative drafts. They are not "free entities," do not get consumed or moved to historian on use, and do not count toward contribution balance. The Free Entity Rule below applies only to homebrew creative-pool entities (`exists: false`). Encounter/lookup tooling (e.g. `monster-lookup.ps1`) reads the catalog directly and ignores `exists`.
+**Carve-out — reference catalogs are not the free pool.** Core D&D / published material (monsters, spells, deities, official items, feats, races, classes, backgrounds, skills) carries `exists: true` even while living in `./data`, because those things are real in the world and are a *reusable reference library*, not one-time creative drafts. They are not "free entities," do not get consumed or moved to historian on use, and do not count toward contribution balance. The Free Entity Rule below applies only to homebrew creative-pool entities (`exists: false`). Encounter/lookup tooling (e.g. `monster-lookup.py`) reads the catalog directly and ignores `exists`.
 
 **When generating or planning content that requires an entity:**
 1. First search `./data` for a free entity (`exists: false`) of the needed type.
@@ -81,6 +81,6 @@ Every entity has an optional `contributed_by` field (values: `paul`, `ben`, `mig
 
 **When planning a session**, if one player's entities dominate the candidate pool, flag it and suggest pulling from another player's material where the story permits.
 
-**To check current balance** at any time: run `.\scripts\contribution-balance.ps1` — shows pool vs. canonized counts per player and identifies who is next up. To see one player's available entities: `uv run scripts/free-entities.py --player <name>`.
+**To check current balance** at any time: run `uv run scripts/contribution-balance.py` — shows pool vs. canonized counts per player and identifies who is next up. To see one player's available entities: `uv run scripts/free-entities.py --player <name>`.
 
 Do not force balance at the expense of narrative fit. Flag the gap; let the DM decide.

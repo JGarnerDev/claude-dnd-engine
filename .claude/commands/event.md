@@ -31,7 +31,7 @@ Three modes:
 Always read `data/world-events-pool.md`.
 
 If AI generation is needed (pool empty or sparse, `--ai` flag, or specific description provided):
-- Run `.\scripts\pitch-brief.ps1` for campaign tone and themes
+- Run `uv run scripts/pitch-brief.py` for campaign tone and themes
 - Note any player-contributed material relevant to the event's scale or type
 
 ---

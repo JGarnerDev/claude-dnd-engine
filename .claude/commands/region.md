@@ -173,7 +173,7 @@ Run:
 uv run scripts/free-entities.py --type character
 uv run scripts/free-entities.py --type faction
 uv run scripts/free-entities.py --type event
-.\scripts\contribution-balance.ps1
+uv run scripts/contribution-balance.py
 ```
 
 **Scope:** Phase 6 covers NPCs, factions, and events only. Do NOT re-anchor resources — those were handled in Phase 4. If a resource was already attached in Phase 4, carry it forward; do not list it again as a candidate entity.
