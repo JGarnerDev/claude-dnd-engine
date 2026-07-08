@@ -6,6 +6,8 @@ Used during elaboration drafting to prevent slot collisions within each entity t
 
 ## NPCs
 
+- [[Kranken Hammershaft]] — Brasky-legend bard, every NPC invents contradictory lore
+
 ## Factions
 
 ## Locations
