@@ -24,7 +24,7 @@ def _parse_coord(s, default: int = 0) -> int:
     Matches PowerShell ``[int]($val -replace '[^0-9.]','')`` which keeps the
     decimal point before casting, so "3.5" rounds to 4 rather than becoming 35.
     """
-    stripped = _COORD_RE.sub('', str(s or ''))
+    stripped = _COORD_RE.sub('', str(s) if s is not None else '')
     try:
         return int(round(float(stripped))) if stripped else default
     except ValueError:

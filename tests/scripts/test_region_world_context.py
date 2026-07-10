@@ -118,6 +118,6 @@ def test_world_entity_fractional_coord(tmp_path):
         "---\nname: Midpoint Sea\nworld_col: 3.5\nworld_row: 5.5\ndescription: A sea at the grid midpoint\n---\n",
         encoding="utf-8",
     )
-    # col=4, row=6 is adjacent to the rounded (4, 6) position → within dist 2
+    # "3.5" and "5.5" both round to 4 and 6 respectively; col=4, row=6 is the same cell → dist=0
     lines = rwc.render(4, 6, world_dir=world_dir)
     assert any("Midpoint Sea" in l for l in lines)
