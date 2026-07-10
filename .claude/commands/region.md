@@ -28,13 +28,13 @@ When in doubt: look at the map again.
 Check `maps/world/` for the world map image before asking the DM to share one — it may already be on disk (`world-sky.jpg` is the primary reference). Check `maps/regions/{region-slug}/` for an existing region map.
 
 **If no region map is on disk, attempt an automatic crop before asking the DM:**
-```
-.\scripts\map-crop.ps1 -Feature "<region-name>" -Markers
+```text
+uv run scripts/map-crop.py --feature "<region-name>" --markers
 ```
 - If the feature is in the index, this saves a permanent crop to `maps/locations/<slug>-map.png` (base) and `maps/locations/<slug>-markers.png` (city markers). Use both as the region reference.
 - If the feature is not in the index, fall back to a relevant world tile (see `maps/world/index.md`). Also read the corresponding `tiles/markers-{name}.png` for dot coverage. If the tile lacks sufficient detail, run a temp crop by col/row bounds:
-  ```
-  .\scripts\map-crop.ps1 -ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n> -Markers -Temp
+  ```text
+  uv run scripts/map-crop.py --col-min <n> --col-max <n> --row-min <n> --row-max <n> --markers --temp
   ```
   Then read `maps/world/temp-crop.png` and `maps/world/temp-markers.png`, then delete both.
 - Only ask the DM to share an image if all automated options fail to produce a readable crop.
@@ -75,8 +75,8 @@ Ask the DM: **"What needs defining in this region?"**
 They may want: city locations, trade routes, wilderness areas, political borders, all of the above, or something else.
 
 **If the markers crop revealed red dots**, get an exact count:
-```
-.\scripts\count-markers.ps1 -ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n>
+```text
+uv run scripts/count-markers.py --col-min <n> --col-max <n> --row-min <n> --row-max <n>
 ```
 Then look up each dot's position in `maps/world/city-registry.md` by matching approximate col/row — surface the registry IDs alongside the count. These IDs are the stable references players use to claim and cross-reference cities before any names exist.
 

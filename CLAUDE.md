@@ -108,13 +108,13 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 | `pitch-brief.py` | Start of every `/pitch` | `uv run scripts/pitch-brief.py [--type <type>]` |
 | `monster-lookup.py` | Find monsters by CR, creature type, or habitat | `uv run scripts/monster-lookup.py [--type <type>] [--cr-min <n>] [--cr-max <n>] [--habitat <name>]` |
 | `route-cities.py` | Find all cities served by a trade route (uses city `routes` field) | `uv run scripts/route-cities.py --route "<route name>"` |
-| `count-markers.ps1` | Count undetailed cities (red dots) in a map region | `.\scripts\count-markers.ps1 -Feature "<name>"` or `-ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n>` |
+| `count-markers.py` | Count undetailed cities (red dots) in a map region | `uv run scripts/count-markers.py --feature "<name>"` or `--col-min <n> --col-max <n> --row-min <n> --row-max <n>` |
 | `region-world-context.ps1` | Start of every `/region` Phase 1 — climate, wind rules, water checklist | `.\scripts\region-world-context.ps1 -Col <n> -Row <n>` |
 | `region-scale.ps1` | Start of every `/region` Phase 2 — travel times and city spacing from grid span | `.\scripts\region-scale.ps1 -SpanGrids <n> -WaterBody <sea\|river\|both\|none> [-Locations <n>]` |
 | `region-brief.ps1` | Resume a `/region` session — compressed draft summary | `.\scripts\region-brief.ps1 [-Region <slug>]` |
 | `naming-status.py` | Show named vs. unnamed entries in world-naming questionnaire | `uv run scripts/naming-status.py [--section <name>]` |
-| `map-crop.ps1` | Crop world map by feature name or col/row; saves to `maps/locations/` | `.\scripts\map-crop.ps1 -Feature "<name>"` or `-ColMin <n> -ColMax <n> -RowMin <n> -RowMax <n> [-Margin <px>] [-Temp]` |
-| `fetch-maps.ps1` | Pull gitignored master map images from the Inkarnate CDN (manifest `maps/sources.tsv`) into `maps/world/masters/`. Run after a clone, or with `-Force` after updating a manifest url | `.\scripts\fetch-maps.ps1 [-Force] [-List]` |
+| `map-crop.py` | Crop world map by feature name or col/row; saves to `maps/locations/` | `uv run scripts/map-crop.py --feature "<name>"` or `--col-min <n> --col-max <n> --row-min <n> --row-max <n> [--margin <px>] [--temp]` |
+| `fetch-maps.py` | Pull gitignored master map images from the Inkarnate CDN (manifest `maps/sources.tsv`) into `maps/world/masters/`. Run after a clone, or with `--force` after updating a manifest url | `uv run scripts/fetch-maps.py [--force] [--list]` |
 | `gen-tiles.py` | Regenerate all world map tiles (base, markers, sky) from the masters in `maps/world/masters/` after fetching a new export. Cell size is derived from each master's actual resolution | `uv run scripts/gen-tiles.py` |
 | `index-entities.py` | Build/rebuild the semantic vector index (run after adding new entities) | `uv run scripts/index-entities.py [--reset]` |
 | `semantic-search.ps1` | Semantic similarity search — find entities by meaning, not keywords | `.\scripts\semantic-search.ps1 -Query "<text>" [-Type <type>] [-Subtype <sub>] [-Exists true\|false] [-Source data\|historian\|scheduler] [-K <n>]` |

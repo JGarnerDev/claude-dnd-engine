@@ -6,7 +6,7 @@ Updated 2026-06-10: both layers ingested. Sky — The Stellar Daughter (was Slic
 
 ## Images
 
-Masters live in `maps/world/masters/` (gitignored, fetched from the Inkarnate CDN via `.\scripts\fetch-maps.ps1`; manifest `maps/sources.tsv`). Resolution is whatever the export is — scripts derive cell size from each master's actual `img.size`.
+Masters live in `maps/world/masters/` (gitignored, fetched from the Inkarnate CDN via `uv run scripts/fetch-maps.py`; manifest `maps/sources.tsv`). Resolution is whatever the export is — scripts derive cell size from each master's actual `img.size`.
 
 - `masters/world-names.webp` — consolidated label map; all land features (continents, sub-continents, mountain ranges, deserts, tundra, islands, plains, rivers) and water features (oceans, seas, bays, channels). Primary orientation reference. Tiled as `tiles/{nw,n,...}.png`.
 - `masters/world-sky.webp` — sky layer with Opticon's Fade, Slice A, The Hearth (Islift C), The Landing (Islift F), and other air-situated features labeled. Tiled as `tiles/sky-{nw,...}.png`.
