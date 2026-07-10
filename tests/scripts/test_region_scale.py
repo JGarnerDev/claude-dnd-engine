@@ -75,3 +75,11 @@ def test_modifiers_always_present():
     lines = rs.render(0.5)
     assert any("Mountain crossing" in l for l in lines)
     assert any("Dense forest" in l for l in lines)
+
+
+def test_city_spacing_rounds_not_truncates():
+    # locations=8: 1000/sqrt(8)=353.55… → round=354, truncate=353. Regression for int(round(...)).
+    lines = rs.render(1.0, locations=8)
+    spacing_lines = [l for l in lines if "Avg spacing" in l]
+    assert spacing_lines
+    assert "354km" in spacing_lines[0]

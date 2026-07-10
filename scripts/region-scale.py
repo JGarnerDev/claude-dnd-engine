@@ -28,7 +28,7 @@ def build_output(span_grids: float, water_body: str = "none", locations: int = 0
         ]
         return lines
 
-    width_km = int(span_grids * GRID_KM)
+    width_km = int(round(span_grids * GRID_KM))
     foot = round(width_km / 30, 1)
     horse = round(width_km / 60, 1)
     barge_d = round(width_km / 80, 1)
@@ -65,7 +65,7 @@ def build_output(span_grids: float, water_body: str = "none", locations: int = 0
     ]
 
     if locations > 0:
-        avg_spacing = int(width_km / math.sqrt(locations))
+        avg_spacing = int(round(width_km / math.sqrt(locations)))
         foot_days = round(avg_spacing / 30, 1)
         horse_days = round(avg_spacing / 60, 1)
         lines += [

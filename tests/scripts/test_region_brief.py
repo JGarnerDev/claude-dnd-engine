@@ -145,10 +145,16 @@ def test_map_images_listed(tmp_path):
     maps_dir = tmp_path / "maps" / "regions" / "thornmarch"
     maps_dir.mkdir(parents=True)
     (maps_dir / "overview.jpg").write_bytes(b"")
-    lines = rb.render(p)
-    # Maps section shouldn't be present because maps_dir is under tmp_path, not ROOT
-    # (render() uses ROOT to find maps; this test just checks it doesn't crash)
-    assert isinstance(lines, list)
+    lines = rb.render(p, maps_dir=maps_dir)
+    assert any("overview.jpg" in l for l in lines)
+
+
+def test_map_section_absent_when_no_maps_dir(tmp_path):
+    p = tmp_path / "thornmarch.md"
+    p.write_text(DRAFT_WITH_ZONES, encoding="utf-8")
+    # Pass a non-existent maps_dir so the maps section is skipped entirely
+    lines = rb.render(p, maps_dir=tmp_path / "nonexistent")
+    assert not any("overview.jpg" in l for l in lines)
 
 
 def test_find_draft_auto_detect(tmp_path):

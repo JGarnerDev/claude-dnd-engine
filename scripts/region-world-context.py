@@ -6,13 +6,29 @@
 
 import argparse
 import math
+import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite, digits_int, get_frontmatter_from_text, read_text_no_bom
+from lib.common import ROOT, cwrite, get_frontmatter_from_text, read_text_no_bom
 
 GRID_KM = 1000
+
+_COORD_RE = re.compile(r'[^0-9.]')
+
+
+def _parse_coord(s, default: int = 0) -> int:
+    """Parse a grid coordinate, supporting fractional values (rounds to nearest int).
+
+    Matches PowerShell ``[int]($val -replace '[^0-9.]','')`` which keeps the
+    decimal point before casting, so "3.5" rounds to 4 rather than becoming 35.
+    """
+    stripped = _COORD_RE.sub('', str(s or ''))
+    try:
+        return int(round(float(stripped))) if stripped else default
+    except ValueError:
+        return default
 
 
 def climate_band(dist_from_equator: int) -> str:
@@ -57,8 +73,8 @@ def nearby_world_entities(col: int, row: int, world_dir: Path) -> list:
         except OSError:
             continue
         fm = get_frontmatter_from_text(raw)
-        e_col = digits_int(fm.get("world_col", ""), 0)
-        e_row = digits_int(fm.get("world_row", ""), 0)
+        e_col = _parse_coord(fm.get("world_col", ""), 0)
+        e_row = _parse_coord(fm.get("world_row", ""), 0)
         if e_col > 0 and e_row > 0:
             dist = math.sqrt((col - e_col) ** 2 + (row - e_row) ** 2)
             if dist <= 2:

@@ -98,7 +98,8 @@ def phases_complete(content: str, draft_file: Path, questionnaires_dir: Path) ->
     return done
 
 
-def build_output(draft_file: Path, questionnaires_dir: Path = None) -> list:
+def build_output(draft_file: Path, questionnaires_dir: Path = None,
+                 maps_dir: Path = None) -> list:
     """Return list of (text, color_name) tuples for the full brief."""
     if questionnaires_dir is None:
         questionnaires_dir = ROOT / "questionnaires"
@@ -114,7 +115,8 @@ def build_output(draft_file: Path, questionnaires_dir: Path = None) -> list:
 
     name_display = fm.get("name") or draft_file.stem
     slug = draft_file.stem
-    maps_dir = ROOT / "maps" / "regions" / slug
+    if maps_dir is None:
+        maps_dir = ROOT / "maps" / "regions" / slug
 
     lines = [
         ("", None),
@@ -153,7 +155,10 @@ def build_output(draft_file: Path, questionnaires_dir: Path = None) -> list:
 
     # Map files
     if maps_dir.exists():
-        rel = str(maps_dir.relative_to(ROOT))
+        try:
+            rel = str(maps_dir.relative_to(ROOT))
+        except ValueError:
+            rel = str(maps_dir)
         lines.append((f"-- Maps ({rel}) ------------", "darkgray"))
         images = sorted(f for f in maps_dir.iterdir()
                         if f.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"})
@@ -171,9 +176,10 @@ def build_output(draft_file: Path, questionnaires_dir: Path = None) -> list:
     return lines
 
 
-def render(draft_file: Path, questionnaires_dir: Path = None) -> list:
+def render(draft_file: Path, questionnaires_dir: Path = None,
+           maps_dir: Path = None) -> list:
     """Return rendered plain-text lines (no color, for test assertions)."""
-    return [text for text, _ in build_output(draft_file, questionnaires_dir)]
+    return [text for text, _ in build_output(draft_file, questionnaires_dir, maps_dir)]
 
 
 def main():
