@@ -73,7 +73,7 @@ To hand work off, copy `maps/map-request-template.md` to `questionnaires/jeff-ma
 
 **Cell pixel size is never hardcoded.** It is derived per-image from the master's actual resolution at run time: `cellW = imageWidth / 16`, `cellH = imageHeight / 13`. `map-crop.ps1`, `count-markers.ps1`, and `gen-tiles.py` all open the master and read `img.size` before computing crop boxes, so any export resolution works without edits. Re-exporting at a different size needs no script change.
 
-**Per-world values — set at setup, not universal.** The grid count and the per-cell distance are *one campaign's choice* — a new world picks its own (see `meta/new-campaign-setup.md` → Map & geography setup). Only the **km-per-cell** distance is hardcoded, in `region-scale.ps1` and `region-world-context.ps1` (`$GRID_KM`); changing a world's scale means updating this section **and** those two scripts together.
+**Per-world values — set at setup, not universal.** The grid count and the per-cell distance are *one campaign's choice* — a new world picks its own (see `meta/new-campaign-setup.md` → Map & geography setup). Only the **km-per-cell** distance is hardcoded, in `region-scale.py` and `region-world-context.py` (`GRID_KM`); changing a world's scale means updating this section **and** those two scripts together.
 
 - Distance per cell: **1000km × 1000km** (`$GRID_KM`)
 - Grid dimensions: ~16 columns × ~13 rows (the `16 × 13` divisor used to derive cell pixels)
@@ -84,7 +84,7 @@ To hand work off, copy `maps/map-request-template.md` to `questionnaires/jeff-ma
 
 **Structural (the method):** derive a region's climate, coastline, and drainage from three inputs — its latitude (distance from the equator row), the world's prevailing wind direction, and which way a coast/slope faces relative to that wind. Windward coasts are wet; leeward coasts are dry (rain shadow behind mountains); maritime latitudes are mild, high latitudes stormy/grey.
 
-**Per-world model — confirm or replace at setup.** The default below assumes an **Earth-like world with west-to-east prevailing winds and the equator near row 7**. A world with different prevailing winds, multiple suns, magical climate, or no clear latitude bands needs its own model here — and `region-world-context.ps1` encodes this default, so update the script if you change it. Capture the world's actual biomes in `maps/world/index.md` → Biome Census and reconcile them against whatever model you keep here.
+**Per-world model — confirm or replace at setup.** The default below assumes an **Earth-like world with west-to-east prevailing winds and the equator near row 7**. A world with different prevailing winds, multiple suns, magical climate, or no clear latitude bands needs its own model here — and `region-world-context.py` encodes this default, so update the script if you change it. Capture the world's actual biomes in `maps/world/index.md` → Biome Census and reconcile them against whatever model you keep here.
 
 *Default model (west-to-east winds, equator row 7; latitude = distance from row 7):*
 
