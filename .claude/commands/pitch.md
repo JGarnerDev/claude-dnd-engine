@@ -34,7 +34,7 @@ If some arguments are provided, only ask about what's missing and genuinely ambi
 
 ## Phase 2 — Read Context (unless `--no-read`)
 
-Run `.\scripts\pitch-brief.ps1 -Type <type>` — this replaces manual reads of `meta/worldbuilding.md` and `pitch-log/pitch-history.md`. It outputs tone, themes, and history filtered to the requested type only.
+Run `uv run scripts/pitch-brief.py --type <type>` — this replaces manual reads of `meta/worldbuilding.md` and `pitch-log/pitch-history.md`. It outputs tone, themes, and history filtered to the requested type only.
 
 Additional reads:
 

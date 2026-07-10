@@ -12,6 +12,7 @@ Difficulty is a two-axis spectrum. **Attrition** and **lethality** are independe
 **Both axes describe combat, and combat is optional.** A session shaped roleplay-only is a valid plan, not a degenerate case of these axes — never invent encounters to fill a budget. For such a session the axes sit inert (the picks carry forward unused, the Rest Clock accrues zero rounds and still gets restamped at recap), and the operative difficulty dial is **Non-Combat Stakes** below.
 
 ## Party Profile
+
 - **Level & size:** derived live, never hard-coded here. Source of truth is the `level` field in each PC's frontmatter (`historian/characters/pcs/`), surfaced by `party-status.py`. During `/session` orientation, state the derived level and party size and ask the DM to confirm. Each PC also carries `level_confirmed: <session number>` — restamped by every `/recap` — and `party-status.py` prints a LEVEL STALE warning when the stamp lags the latest played session, catching level-ups that missed canonization.
 - **General power level:** <!-- are they optimized, casual, somewhere in between? -->
 
@@ -59,7 +60,7 @@ Tiers:
 
 1. Resolve the two tier picks **after the story hook is chosen** (`/session` Phase 4 scoping): DM prompt override > DM's scoping answer > frontmatter defaults. Propose tiers that fit the hook and flag discrepancies both ways — a story whose implied intensity contradicts the picked tiers gets reshaped or the tiers get changed, never silently bent. If the session shape is roleplay-only, skip steps 2–4 — plan against Non-Combat Stakes instead, and the Rest Clock simply carries forward unchanged.
 2. **Attrition tier** sets the round budget for the adventuring day; subtract the Rest Clock's rounds-since-long-rest to get this session's budget. Near-zero remainder means the long rest is the content — plan it as a scene (interrupted rests included), or push past budget as a deliberate lethality bump.
-3. **Lethality tier** sets CR targets and statblock selection (via `monster-lookup.ps1`), plus a tactics note in each encounter writeup (focus fire? kill-confirm? retreat triggers?).
+3. **Lethality tier** sets CR targets and statblock selection (via `monster-lookup.py`), plus a tactics note in each encounter writeup (focus fire? kill-confirm? retreat triggers?).
 4. Sanity-check with RTD math against the Party Profile above — XP-threshold tables (DMG 2014) run inaccurate at high levels and against optimized parties. Use the XP budget as a first pass only; tune by RTD and rounds-per-rest.
 
 ## Skill Challenge DCs

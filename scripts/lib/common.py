@@ -3,7 +3,9 @@ consumers: scripts/entity-graph.py, scripts/free-entities.py, scripts/location-e
   scripts/party-status.py, scripts/route-cities.py, scripts/session-brief.py,
   scripts/session-state.py, scripts/todo-brief.py, scripts/inventory-brief.py,
   scripts/threads-brief.py, scripts/spotlight-balance.py,
-  scripts/timeline-gantt.py, scripts/timeline-data.py
+  scripts/timeline-gantt.py, scripts/timeline-data.py,
+  scripts/monster-lookup.py, scripts/naming-status.py, scripts/pitch-brief.py,
+  scripts/contribution-balance.py
 -- update those scripts if a function signature or output shape changes here.
 """
 
