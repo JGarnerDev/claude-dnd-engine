@@ -59,7 +59,7 @@ Tiers:
 
 1. Resolve the two tier picks **after the story hook is chosen** (`/session` Phase 4 scoping): DM prompt override > DM's scoping answer > frontmatter defaults. Propose tiers that fit the hook and flag discrepancies both ways — a story whose implied intensity contradicts the picked tiers gets reshaped or the tiers get changed, never silently bent. If the session shape is roleplay-only, skip steps 2–4 — plan against Non-Combat Stakes instead, and the Rest Clock simply carries forward unchanged.
 2. **Attrition tier** sets the round budget for the adventuring day; subtract the Rest Clock's rounds-since-long-rest to get this session's budget. Near-zero remainder means the long rest is the content — plan it as a scene (interrupted rests included), or push past budget as a deliberate lethality bump.
-3. **Lethality tier** sets CR targets and statblock selection (via `monster-lookup.ps1`), plus a tactics note in each encounter writeup (focus fire? kill-confirm? retreat triggers?).
+3. **Lethality tier** sets CR targets and statblock selection (via `monster-lookup.py`), plus a tactics note in each encounter writeup (focus fire? kill-confirm? retreat triggers?).
 4. Sanity-check with RTD math against the Party Profile above — XP-threshold tables (DMG 2014) run inaccurate at high levels and against optimized parties. Use the XP budget as a first pass only; tune by RTD and rounds-per-rest.
 
 ## Skill Challenge DCs
