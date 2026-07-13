@@ -14,6 +14,7 @@ location:
   - Plains F (southern margin)
   - The Dustbreak Plains (Gordrathi foothills margin)
   - Plains J (Caldrath interior, near The Broken Back)
+  - Plains H (western margin, under the Ardenwall foothills)
 
 # --- OPTIONAL (entity base) ---
 aliases:
@@ -52,11 +53,13 @@ Plains peoples and their trading partners have known Serhari for generations. It
 ## Effects
 
 ### Solhari (Amber)
+
 - **Low dose:** Warmth and social ease — advantage on Persuasion and Performance checks, disadvantage on Insight.
 - **Higher dose:** Ecstatic states — ritual dancing, euphoria — plus advantage on saving throws against Frightened.
 - **Overdose:** DC 12 Constitution save or Unconscious for 1d4 hours (stable, no lasting harm).
 
 ### Vaelthari (White)
+
 Structural logic becomes transparent. Consequence chains extend far forward. The emotional content of what people say becomes static — filtered out automatically, because it interferes with pattern recognition. A practiced mind uses this. An untrained one cannot stop running the implications.
 
 Practitioners call this state the Morath. The name predates the white preparation — it describes the condition itself, not the method of reaching it.
@@ -65,6 +68,7 @@ Practitioners call this state the Morath. The name predates the white preparatio
 - **Untrained users:** Same window, but every considered action cascades into consequence chains the user cannot stop running. Disadvantage on Wisdom saving throws for the duration; DM discretion on action paralysis severity.
 
 ### the hidden third way
+
 The vine itself, consumed raw during the annual crest. Cannot be prepared in advance; requires being present in the plains at dawn during the cascade. Effect left to DM discretion — possible directions include genuine involuntary prophecy, perception of the land's memory, the Morath, or complete clarity of one's own nature. Masters know this form exists. Most never speak of it.
 
 ---
@@ -74,6 +78,7 @@ The vine itself, consumed raw during the annual crest. Cannot be prepared in adv
 DM-tracked, never disclosed directly to players. The character learns something has shifted through fiction — a practitioner's offhand observation, a change in how the Morath feels, a difference in duration or aftermath.
 
 **Tally**
+
 - First use under a plains practitioner's guidance: +2
 - Subsequent guided use: +1
 - Solo use (any): +1
