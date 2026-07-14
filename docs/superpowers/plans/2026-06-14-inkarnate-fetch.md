@@ -13,6 +13,7 @@
 ### Task 1: `build_url` — construct the CDN URL
 
 **Files:**
+
 - Create: `scripts/inkarnate-fetch.py`
 - Test: `scripts/test_inkarnate_fetch.py`
 
@@ -96,6 +97,7 @@ git commit -m "feat: add build_url for inkarnate image helper"
 ### Task 2: `fetch_image` — happy path returns bytes
 
 **Files:**
+
 - Modify: `scripts/inkarnate-fetch.py`
 - Test: `scripts/test_inkarnate_fetch.py`
 
@@ -216,6 +218,7 @@ git commit -m "feat: fetch_image returns image bytes from inkarnate"
 ### Task 3: `fetch_image` — error path raises with ID and status
 
 **Files:**
+
 - Modify: `scripts/inkarnate-fetch.py`
 - Test: `scripts/test_inkarnate_fetch.py`
 
@@ -291,6 +294,7 @@ git commit -m "feat: fetch_image raises with id and status on failure"
 ## Self-Review
 
 **Spec coverage:**
+
 - `build_url` (testable URL construction) → Task 1. ✓
 - `fetch_image` returns bytes, configurable dims with full-res default → Task 2. ✓
 - URL form matches spec exactly → Tasks 1 & 2 assert the literal string. ✓

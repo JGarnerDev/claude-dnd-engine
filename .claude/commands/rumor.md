@@ -1,6 +1,7 @@
 Surface a rumor — a quick session-opener or tavern-talk beat pulled from the rumor pool. Read-only flavor tool; no entity creation, no file writes.
 
 **Arguments (all optional):**
+
 - `[count]` — number of rumors to surface (default: 1)
 - `[theme]` — if text is provided, bias selection toward that theme (e.g. `/rumor the church`, `/rumor 2 strange lights`)
 
@@ -20,8 +21,8 @@ uv run scripts/inventory-brief.py --type rumor
 
 If a theme was given, also rank by relevance:
 
-```powershell
-.\scripts\semantic-search.ps1 -Query "<theme>" -Type rumor -K 5
+```text
+uv run scripts/semantic-search.py "<theme>" --type rumor -k 5
 ```
 
 Respect campaign separation: skip `campaign: strahd`-tagged rumors when the active campaign is not Strahd, and vice versa. Untagged rumors are always eligible.
