@@ -29,7 +29,7 @@
 
 ### Key parity gotchas (discovered in exploration)
 
-- Monster habitats are stored as **quoted wikilinks**: `- "[[Mountains]]"`. `common.get_frontmatter` routes these through its plain-list branch, so `_list_habitats` yields `['[[Mountains]]', ...]` with brackets intact. The port must strip `[[ ]]` (and any `|alias`) to match the PowerShell display (`Mountains`). A local `_clean_wikilink` helper does this.
+- Monster habitats are stored as **quoted wikilinks**: `  - "[[Mountains]]"`. `common.get_frontmatter` routes these through its plain-list branch, so `_list_habitats` yields `['[[Mountains]]', ...]` with brackets intact. The port must strip `[[ ]]` (and any `|alias`) to match the PowerShell display (`Mountains`). A local `_clean_wikilink` helper does this.
 - `challenge_rating` is a quoted fraction string like `"1/4"`; `common.get_frontmatter` unwraps the quotes to `1/4`. Parse fractions to floats (`0.25`), plain numbers to floats, unparseable to `-1.0` (excluded).
 - `contribution-balance` display rows are only the fixed players + `(none)`. Unknown contributors inflate the totals but get **no row** — replicate faithfully (rows need not sum to TOTAL).
 - Monster files carry a UTF-8 BOM; `common.get_frontmatter` already strips it.
@@ -39,12 +39,10 @@
 ### Task 0: pytest scaffolding
 
 **Files:**
-
 - Modify: `pyproject.toml`
 - Create: `tests/scripts/conftest.py`
 
 **Interfaces:**
-
 - Produces: `uv run pytest` runnable; autouse color-disable fixture for all `tests/scripts/*`.
 
 - [ ] **Step 1: Add pytest dev dependency**
@@ -103,12 +101,10 @@ git commit -m "test: add pytest dev dependency and scripts test scaffolding"
 ### Task 1: Port `monster-lookup`
 
 **Files:**
-
 - Create: `scripts/monster-lookup.py`
 - Test: `tests/scripts/test_monster_lookup.py`
 
 **Interfaces:**
-
 - Produces:
   - `parse_cr(cr_str) -> float`
   - `find_monsters(monsters_dir, type_filter='', cr_min=0.0, cr_max=30.0, habitat='') -> list[dict]` (dict keys: `Name, CR, CRNum, CreatureType, Habitats`)
@@ -334,12 +330,10 @@ git commit -m "feat(scripts): port monster-lookup to python with regression test
 ### Task 2: Port `naming-status`
 
 **Files:**
-
 - Create: `scripts/naming-status.py`
 - Test: `tests/scripts/test_naming_status.py`
 
 **Interfaces:**
-
 - Produces:
   - `parse_naming(text) -> tuple[list[dict], list[dict]]` → `(named, unnamed)`; named dicts `{Section, Entry, Name}`, unnamed dicts `{Section, Entry}`
   - `render(named, unnamed, section='') -> list[str]`
@@ -538,12 +532,10 @@ git commit -m "feat(scripts): port naming-status to python with regression tests
 ### Task 3: Port `pitch-brief`
 
 **Files:**
-
 - Create: `scripts/pitch-brief.py`
 - Test: `tests/scripts/test_pitch_brief.py`
 
 **Interfaces:**
-
 - Produces:
   - `worldbuilding_lines(wb_path) -> list[str]` (tone + themes, or `(worldbuilding.md not found)`)
   - `history_lines(hist_path, type_filter='') -> list[str]`
@@ -731,12 +723,10 @@ git commit -m "feat(scripts): port pitch-brief to python with regression tests"
 ### Task 4: Port `contribution-balance`
 
 **Files:**
-
 - Create: `scripts/contribution-balance.py`
 - Test: `tests/scripts/test_contribution_balance.py`
 
 **Interfaces:**
-
 - Produces:
   - `PLAYERS = ["paul", "ben", "miguel", "jeff"]`
   - `count_contributions(folder) -> dict[str, int]` (players + `(none)` preseeded to 0; unknown contributors added)
@@ -904,13 +894,11 @@ git commit -m "feat(scripts): port contribution-balance to python with regressio
 ### Task 5: Update references, common.py header, and delete `.ps1`
 
 **Files:**
-
 - Modify: `scripts/lib/common.py` (header `consumers:` list)
 - Modify: `CLAUDE.md`, `meta/difficulty.md`, `data/CLAUDE.md`, `.claude/commands/event.md`, `.claude/commands/pitch.md`, `.claude/commands/region.md`
 - Delete: `scripts/monster-lookup.ps1`, `scripts/naming-status.ps1`, `scripts/pitch-brief.ps1`, `scripts/contribution-balance.ps1`
 
 **Interfaces:**
-
 - Consumes: the four new `.py` scripts and their new flag names from Tasks 1-4.
 
 - [ ] **Step 1: Update the `CLAUDE.md` scripts table rows**
@@ -927,7 +915,6 @@ Replace the four rows (currently referencing `.ps1`) with `uv run` + dashed flag
 - [ ] **Step 2: Update prose doc references**
 
 Repoint each remaining reference (drop the leading `.\`, switch to `uv run scripts/<name>.py`):
-
 - `meta/difficulty.md:62` — `monster-lookup.ps1` → `monster-lookup.py`.
 - `data/CLAUDE.md:7` — `monster-lookup.ps1` → `monster-lookup.py`.
 - `data/CLAUDE.md:84` — `.\scripts\contribution-balance.ps1` → `uv run scripts/contribution-balance.py`.
@@ -970,5 +957,4 @@ git commit -m "docs+chore: repoint refs to ported python scripts and remove ps1 
 4. `uv run scripts/pitch-brief.py --type npc` — tone/themes + `Pitch history: none`.
 5. `uv run scripts/naming-status.py; echo $?` — `Not found:` on stderr, exit 1 (no questionnaire yet).
 6. `grep` from Task 5 Step 5 — no lingering `.ps1` references.
-
 ```
