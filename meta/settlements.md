@@ -4,7 +4,7 @@ Domain rules for creating and managing settlements (cities, towns, villages, ham
 
 ## Settlement & Road Tiers (Minor Places)
 
-The world map's scale governs everything here: **1 grid cell = 1000km × 1000km**, and foot pace is ~30km/day (see `scripts/region-scale.ps1`). Map dots and registry IDs mark *major* cities only. At this scale a realistic world has a hamlet or waystation roughly every day's walk along any maintained road — thousands of settlements the map cannot and should not show. **Map silence is not world absence** (same principle as `/region`), and the inverse holds too: world presence does not demand an entity file.
+The world map's scale governs everything here: **1 grid cell = 1000km × 1000km**, and foot pace is ~30km/day (see `scripts/region-scale.py`). Map dots and registry IDs mark *major* cities only. At this scale a realistic world has a hamlet or waystation roughly every day's walk along any maintained road — thousands of settlements the map cannot and should not show. **Map silence is not world absence** (same principle as `/region`), and the inverse holds too: world presence does not demand an entity file.
 
 **Settlement tiers** — no new schema or subtype. Towns, villages, and hamlets all use `location-city` (`subtype: city`), distinguished by convention:
 - Town / large village → `importance: minor`, `population` free-text (e.g. `"~800, market town"`)

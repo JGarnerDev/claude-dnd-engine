@@ -19,7 +19,7 @@ When in doubt: look at the map again.
 **Arguments:**
 
 - `--region <name>` — region name used for file naming (kebab-case); prompted if missing
-- `--draft <file>` — skip Phases 1–3; run `.\scripts\region-brief.ps1 -Region <file>` to restore context, then resume at Phase 4 or later
+- `--draft <file>` — skip Phases 1–3; run `uv run scripts/region-brief.py --region <file>` to restore context, then resume at Phase 4 or later
 - `--city <n>` — jump directly to Phase 7 for a single numbered city questionnaire
 
 ---
@@ -56,7 +56,7 @@ Identify where the region sits. Ask the DM to point it out (grid column/row, or 
 **Step 1b — Run world context script.**
 
 ```
-.\scripts\region-world-context.ps1 -Col <n> -Row <n>
+uv run scripts/region-world-context.py --col <n> --row <n>
 ```
 
 This outputs climate band, wind/moisture rules, coast type expectations, a water body checklist, and any known world entities near that position.
@@ -97,7 +97,7 @@ If no markers layer is available and the region map has no clear markers, sugges
 Once scope and markers are confirmed, **establish scale:**
 
 - Estimate how many world-map grid squares the region covers by comparing the region image to the world map grid. A rough fraction (0.25, 0.5, 1.0) is enough.
-- Run: `.\scripts\region-scale.ps1 -SpanGrids <n> -WaterBody <sea|river|both|none> -Locations <marker count>`
+- Run: `uv run scripts/region-scale.py --span-grids <n> --water-body <sea|river|both|none> --locations <marker count>`
 - State the result: *"This region is roughly [X]km across. Nearest-neighbor cities are approximately [Y] days apart on foot / [Z] days by ship."* This informs questionnaire questions and diplomatic feasibility.
 
 Do not proceed until the DM has confirmed scope, markers, and scale.

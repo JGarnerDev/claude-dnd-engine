@@ -10,7 +10,7 @@
 #   exists        — always "true" (these are real world facts, not free entities)
 #   world_col     — grid column on the world map (approximate center for large features)
 #   world_row     — grid row on the world map (approximate center for large features)
-#   description   — one sentence; used by region-world-context.ps1 output
+#   description   — one sentence; used by region-world-context.py output
 #
 # Optional fields:
 #   world_col_2   — second reference point for elongated features (e.g. a mountain range)
@@ -18,7 +18,7 @@
 #   contributed_by — paul | ben | miguel | jeff (if a player named or designed this feature)
 #   known_by      — wikilinks to factions or entities whose lore is tied to this feature
 #
-# Queried by: scripts/region-world-context.ps1
+# Queried by: scripts/region-world-context.py
 #   Entities within 2 grid squares of the requested col/row are surfaced.
 #
 # Upgrade path for existing world-scale entities:
