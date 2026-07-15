@@ -16,7 +16,7 @@ race: [[Half Orc]]
 class: [[Barbarian]]
 background: "Unknown"
 level: 3
-level_confirmed: 17
+level_confirmed: 18
 
 aliases: []
 source_session: [[Session 05 The Specter]]
