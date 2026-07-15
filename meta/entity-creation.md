@@ -68,6 +68,10 @@ are derived from backstory by `.claude/commands/pc-backstory.md`, and `spotlight
 `normal`. Field shapes in `meta/schemas/character-pc.md`; semantics in
 `meta/character-focus.md`.
 
+## Class Graduations (Characters)
+
+When creating or elaborating any character entity (NPC, antagonist, PC) whose class is known or implied, read `meta/classes/{class}.md` — one file per class, pattern explained in `meta/classes/_overview.md`. Place the character on the class pyramid **before** assigning traits: tier drives social standing, rarity, institutional ties, and how the world reads them. Defaults: middle tier for working NPCs, bottom tier for texture; top tier is DM-controlled and never assigned during generation. Read only the class file(s) the task touches.
+
 ## Gameplay Mechanics
 
 Gameplay mechanics (mini-games, structured encounter types) live in `meta/mechanics/`. Use `meta/mechanics/_template.md` as the starting point for new mechanic files. These are GM design tools — they have no `type`, `exists`, or `state` fields and follow no entity protocol. The `/session` command checks `meta/mechanics/` for applicable mini-games when building non-standard encounters (chase, puzzle, trade, performance, etc.).

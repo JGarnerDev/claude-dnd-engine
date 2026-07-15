@@ -29,4 +29,7 @@
 8. ⚪ **anyone** (FYI) — lore drafts for calendar, history, magic, and religion are parked pending questionnaire answers.
 9. ⚪ **anyone** (FYI) — 14 broken cross-references, all expected placeholder world names under construction.
 10. ⚪ **anyone** (FYI) — 15 group design ideas still waiting for their moment in a session.
-11. 🤝 **Jeff** (engine QA) — `.template-sync` manifest lists deleted PowerShell scripts (`scripts/lib/common.ps1`, `scripts/timeline-data.ps1`, `scripts/timeline-gantt.ps1`, removed in the PS→Python migration) and omits their `.py` replacements. Manifest has drifted across every migration group; needs one cleanup sweep to drop the dangling `.ps1` entries and add the ported `.py` files. Surfaced reviewing PR #10 (2026-07-01).
+11. 🙋 **Paul/Kellan** — [[The Templar Triumvirate]] has three tower-guilds (marble, onyx, malachite) but no school portfolios assigned; each tower's limited set of magic schools is an open elaboration slot. Faction reads as generic until split.
+12. 🤝 **anyone** — [[Tassad]] (the tri-tower + suspended saucer complex) is referenced as the Triumvirate's seat but has no location entity yet; spawn one when a region hosts it.
+13. 🙋 **Paul/Kellan** — [[Grand Archon]] exists only as a titled seat (no name, race, personality, or sheet); fill the person when the office matters at the table.
+14. 🤝 **Jeff** (engine QA) — `.template-sync` manifest lists deleted PowerShell scripts (`scripts/lib/common.ps1`, `scripts/timeline-data.ps1`, `scripts/timeline-gantt.ps1`, removed in the PS→Python migration) and omits their `.py` replacements. Manifest has drifted across every migration group; needs one cleanup sweep to drop the dangling `.ps1` entries and add the ported `.py` files. Surfaced reviewing PR #10 (2026-07-01).
