@@ -22,7 +22,7 @@ README.md
 .markdownlint.json
 .gitignore
 
-# Git hooks — pre-commit Markdown auto-format (paired with scripts/setup-hooks.ps1)
+# Git hooks — pre-commit Markdown auto-format (paired with scripts/setup-hooks.py)
 .githooks/pre-commit
 
 # Commands — all slash commands
@@ -121,15 +121,14 @@ scripts/naming-status.ps1
 scripts/party-status.ps1
 scripts/pitch-brief.ps1
 scripts/refs.ps1
-scripts/region-brief.ps1
-scripts/region-scale.ps1
-scripts/region-world-context.ps1
+scripts/region-brief.py
+scripts/region-scale.py
+scripts/region-world-context.py
 scripts/route-cities.ps1
-scripts/semantic-search.ps1
 scripts/semantic-search.py
 scripts/session-brief.ps1
 scripts/session-state.ps1
-scripts/setup-hooks.ps1
+scripts/setup-hooks.py
 scripts/spotlight-balance.ps1
 scripts/threads-brief.ps1
 scripts/timeline-data.py

@@ -5,7 +5,8 @@ consumers: scripts/entity-graph.py, scripts/free-entities.py, scripts/location-e
   scripts/threads-brief.py, scripts/spotlight-balance.py,
   scripts/timeline-gantt.py, scripts/timeline-data.py,
   scripts/monster-lookup.py, scripts/naming-status.py, scripts/pitch-brief.py,
-  scripts/contribution-balance.py
+  scripts/contribution-balance.py, scripts/region-world-context.py,
+  scripts/region-scale.py, scripts/region-brief.py
 -- update those scripts if a function signature or output shape changes here.
 """
 

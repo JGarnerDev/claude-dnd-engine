@@ -64,8 +64,8 @@ Conditional:
 
 **Step 6 — Callback search** on the cliffhanger or active mission hook, to surface historian entities the story may be ready to revisit:
 
-```powershell
-.\scripts\semantic-search.ps1 -Query "<cliffhanger or mission hook text>" -Source historian -K 5
+```text
+uv run scripts/semantic-search.py "<cliffhanger or mission hook text>" --source historian -k 5
 ```
 
 Note any results with score > 0.35 — these are callback candidates. Do not force them into the plan; use only if they fit naturally.
@@ -117,8 +117,8 @@ First identify the active campaign (`state: active` file in `scheduler/campaign/
 
 Run semantic search using the themes of the current session direction (from cliffhanger, mission hook, or chosen thread):
 
-```powershell
-.\scripts\semantic-search.ps1 -Query "<themes from cliffhanger or direction>" -Exists false -K 8
+```text
+uv run scripts/semantic-search.py "<themes from cliffhanger or direction>" --exists false -k 8
 ```
 
 Then surface importance-flagged entities the semantic search may not rank highly:
@@ -224,7 +224,7 @@ Using all context gathered, produce a session plan in chat.
 
 One `#### Scene N — [Title]` block per beat. Scale count to session length (Short: 3–4, Standard: 4–6, Long: 6–8).
 
-**Travel legs:** if the plan moves the party overland or by water between known points, size the leg first — world map scale is 1 grid cell = 1000km; paces are foot 30km/day, horse 60, river barge 80 down / 30 up, ship 150 (per `scripts/region-scale.ps1`). A leg's duration advances the in-world clock — track days/hours elapsed across the session so the Rest Clock's `In-world time now` and the long-rest gate stay correct, and note where on the route the 24-hour window reopens (the party can long-rest at the first safe stop past that point — see `meta/difficulty.md` → Long Rest Rules). Then derive 1–3 stops from geography alone (river crossings, passes, day's-walk spacing — same map-first principle as `/region`), using working labels, not proper nouns, unless the DM names them. Only stops that serve the session (a scene, an encounter, a rest) become scene blocks; the rest is narration. **Never enumerate every settlement a realistic road would have** — at this scale that's one per travel day, and almost none deserve files. Stops live in the session plan as scheduler content (`exists: false`); `/recap` canonizes only the ones the party actually visits, per the Settlement & Road Tiers section of `meta/settlements.md`.
+**Travel legs:** if the plan moves the party overland or by water between known points, size the leg first — world map scale is 1 grid cell = 1000km; paces are foot 30km/day, horse 60, river barge 80 down / 30 up, ship 150 (per `scripts/region-scale.py`). A leg's duration advances the in-world clock — track days/hours elapsed across the session so the Rest Clock's `In-world time now` and the long-rest gate stay correct, and note where on the route the 24-hour window reopens (the party can long-rest at the first safe stop past that point — see `meta/difficulty.md` → Long Rest Rules). Then derive 1–3 stops from geography alone (river crossings, passes, day's-walk spacing — same map-first principle as `/region`), using working labels, not proper nouns, unless the DM names them. Only stops that serve the session (a scene, an encounter, a rest) become scene blocks; the rest is narration. **Never enumerate every settlement a realistic road would have** — at this scale that's one per travel day, and almost none deserve files. Stops live in the session plan as scheduler content (`exists: false`); `/recap` canonizes only the ones the party actually visits, per the Settlement & Road Tiers section of `meta/settlements.md`.
 
 Each scene block contains:
 

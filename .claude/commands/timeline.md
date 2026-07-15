@@ -34,8 +34,8 @@ Axes are **independent** — world history may span millennia, party history mon
 ## Phase 1 — Run
 
 ```text
-python scripts/timeline-gantt.py           # player-safe (secret events hidden)
-python scripts/timeline-gantt.py --full    # include secret events
+uv run scripts/timeline-gantt.py           # player-safe (secret events hidden)
+uv run scripts/timeline-gantt.py --full    # include secret events
 ```
 
 Pass `--full` straight through.

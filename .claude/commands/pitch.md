@@ -1,6 +1,7 @@
 Generate a creative text pitch — no files, no schema, no entity creation. Pure flavor and ideas.
 
 **Arguments (all optional):**
+
 - `--type <value>` — what to pitch: `campaign`, `region`, `town`, `npc`, `antagonist`, `faction`, `dungeon`, `encounter`, `hook`, `monster` (default: `campaign`)
 - `--count <n>` — number of distinct options to present (default: 1)
 - `--tone <value>` — e.g. `dark`, `whimsical`, `political`, `horror`, `mystery`, `epic` (default: infer from campaign if readable, else ask)
@@ -36,14 +37,15 @@ If some arguments are provided, only ask about what's missing and genuinely ambi
 Run `uv run scripts/pitch-brief.py --type <type>` — this replaces manual reads of `meta/worldbuilding.md` and `pitch-log/pitch-history.md`. It outputs tone, themes, and history filtered to the requested type only.
 
 Additional reads:
+
 - If `--party` is set or implied: pull party info from memory (names, level, current location, afflictions if any)
 - If `--tone` is explicitly set: skip the script's tone output; use the provided value instead
 - Do not read historian, sessions, missions, or act files unless the user explicitly asks for continuity with current story
 
 Run semantic search to surface thematically matching pool entities that could seed the pitch:
 
-```powershell
-.\scripts\semantic-search.ps1 -Query "<type> <tone> <setting>" -Exists false -K 5
+```text
+uv run scripts/semantic-search.py "<type> <tone> <setting>" --exists false -k 5
 ```
 
 Scan results for contributed entities (`contributed_by` field) — prefer these as source material. Others may inspire names, details, or hooks. Do not force results into the pitch; use only what genuinely fits.
@@ -67,6 +69,7 @@ When generating multiple pitches, make them meaningfully distinct — different 
 **Step 3b — Expansion prompt:**
 
 After summaries, ask:
+
 - If `--count 1`: "Want the full version?"
 - If `--count` > 1: "Which to expand? (numbers, 'all', or skip)"
 

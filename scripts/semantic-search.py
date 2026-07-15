@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """
 semantic-search.py -- Query the Chroma vector index for semantically similar entities.
-Usage: python scripts/semantic-search.py "betrayal and political intrigue" [--type character] [-k 5]
+Usage: python scripts/semantic-search.py "betrayal and political intrigue" [--type character] [--subtype npc] [--exists true] [--source historian] [-k 5]
+Requires index built first: python scripts/index-entities.py
 """
+# consumers: CLAUDE.md, README.md, .claude/commands/{check,entity-questionnaire,event,find,pc-backstory,pitch,recap,region,rumor,session,threads,voice}.md, tests/commands/session/spec.md, data/CLAUDE.md -- update these if usage, flags, or output format change.
 
 import argparse
 import sys
