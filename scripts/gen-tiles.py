@@ -22,7 +22,7 @@ os.makedirs(out, exist_ok=True)   # tiles/ is not committed; create it on a cold
 def tile_image(src_path, prefix=""):
     if not os.path.exists(src_path):
         print(f"Skipping {os.path.basename(src_path)} — master not found. "
-              f"Fetch masters first: .\\scripts\\fetch-maps.ps1")
+              f"Fetch masters first: uv run scripts/fetch-maps.py")
         return
     img = Image.open(src_path)
     W, H = img.size

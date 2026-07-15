@@ -10,7 +10,7 @@ Updated YYYY-MM-DD: base layer ingested, N features named, tiles generated. -->
 ## Images
 
 <!-- List only the layers this campaign actually has. Drop lines you don't use. Masters live in
-maps/world/masters/ (gitignored, fetched from the CDN via scripts/fetch-maps.ps1; urls in maps/sources.tsv).
+maps/world/masters/ (gitignored, fetched from the CDN via scripts/fetch-maps.py; urls in maps/sources.tsv).
 Resolution is derived per-image at run time -- no fixed pixel size to record. -->
 - `masters/world-names.webp` — base label layer; all land + water features and every named label. Source of truth. Tiled as `tiles/{nw,n,...}.png`.
 - `masters/world-sky.webp` — optional sky layer (floating/aerial features). Separate export; surface scripts ignore it. Tiled as `tiles/sky-{name}.png`.
@@ -39,7 +39,7 @@ Resolution is derived per-image at run time -- no fixed pixel size to record. --
 
 ## Known Region Positions
 
-<!-- Lookup table for `map-crop.ps1 -Feature` and `count-markers.ps1` — KEEP THIS HEADER AND COLUMN FORMAT; the scripts parse it. One row per named feature; col/row approximate is fine; use — when a feature has no draft yet. Grow proactively as you identify features in tiles. -->
+<!-- Lookup table for `map-crop.py --feature` and `count-markers.py` — KEEP THIS HEADER AND COLUMN FORMAT; the scripts parse it. One row per named feature; col/row approximate is fine; use — when a feature has no draft yet. Grow proactively as you identify features in tiles. -->
 
 | Feature | Col | Row | Draft |
 |--------|-----|-----|-------|

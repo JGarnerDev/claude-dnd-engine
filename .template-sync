@@ -106,15 +106,16 @@ data/spells/*.md
 # Scripts — all engine scripts and shared library
 scripts/lib/common.py
 scripts/contribution-balance.ps1
-scripts/count-markers.ps1
+scripts/count-markers.py
 scripts/entity-graph.ps1
+scripts/fetch-maps.py
 scripts/free-entities.ps1
 scripts/gen-tiles.py
 scripts/index-entities.py
 scripts/inventory-brief.ps1
 scripts/location-entities.ps1
-scripts/map-common.ps1
-scripts/map-crop.ps1
+scripts/lib/map_common.py
+scripts/map-crop.py
 scripts/monster-lookup.ps1
 scripts/naming-status.ps1
 scripts/party-status.ps1
