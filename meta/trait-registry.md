@@ -10,6 +10,15 @@ Used during elaboration drafting to prevent slot collisions within each entity t
 
 ## Factions
 
+- [[Nadirium]] — arcane school that reads the past out of deep stone
+- [[Vaskgrath]] — dwarf/human mining confederation, toll war, sealed holds
+- [[The Marrow Concord]] — three-power frontier accord tilted by settler tide
+
 ## Locations
 
+- [[Solenne]] — growing human settler port, tilts the Concord's balance
+
 ## Other
+
+- [[The Orrow]] — elvish forest people; logging = deicide by delay
+- [[The Sesh'kar]] — reclusive lizardfolk, Orrowan's first people

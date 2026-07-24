@@ -117,6 +117,7 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | **guideline** | | |
 | `guideline` | meta document | Meta document: design guideline that shapes story or game decisions |
 | **faction/** | | |
+| `faction/nation` | faction entity | Faction subtype: a sovereign polity or nation-state (its government and political identity) |
 | `faction/guild` | faction entity | Faction subtype: organized guild or professional society |
 | `faction/religious` | faction entity | Faction subtype: religious order or church |
 | `faction/cult` | faction entity | Faction subtype: cult or mystic sect |

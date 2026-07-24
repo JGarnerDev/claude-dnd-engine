@@ -85,7 +85,7 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 | Bay F | ~7-8 | ~5-6 | — |
 | Solmara (Sub Continent C) | ~3-5 | ~4-6 | `data/locations/regions/Solmara.md` |
 | Ardenwall (Mountains B) | ~4-5 | ~3-5 | `data/locations/terrain-features/Ardenwall.md` |
-| Mountains C | ~5-7 | ~2-4 | — |
+| Orngrath (Mountains C) | ~5-7 | ~2-4 | `data/locations/terrain-features/Orngrath.md` |
 | Forest A | ~6-7 | ~4-5 | — |
 | Forest B | ~6 | ~5-6 | — |
 | Forest C | ~4-5 | ~2-3 | — |
