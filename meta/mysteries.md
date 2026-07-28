@@ -19,6 +19,9 @@ When generating content that brushes against a mystery, treat it as a shadow —
 - **Remnant tech origin** — a pre-history civilization left ruins and relics the present world cannot explain or replicate. What it was, what it built, and what ended it are unknown and should stay unknown. Functional relics feel wrong, not evil. No faction controls or understands this.
   - *Revealed: —*
 
+- **What is Izek Strazni** *(strahd)* — Vallaki's guard captain has a grotesquely deformed, dark-magic arm (elongated nails, barbs) and carries a hollow, longing air. Diluted holy water spilled on him in Session 18 had **no effect** — so he is not a straightforward undead/fiend the party can read. What he is, where the arm comes from, and what he longs for are DM-controlled. Partial evidence: the arm, the immunity, the hollowness. See [[Izek Strazni]].
+  - *Revealed: —*
+
 ---
 
 ## How to Add a Mystery
