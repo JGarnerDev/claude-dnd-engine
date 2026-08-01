@@ -51,7 +51,12 @@ Entity protocol (free entity rule, data transparency, contribution balance) docu
 
 ## Campaign Separation
 
-This repo spans two campaigns: `strahd` (Curse of Strahd, sessions 1–present) and a future homebrew new world (name TBD). The transition will be a narrative device — a deliberate story beat, not a soft drift.
+This repo spans two campaigns: `strahd` (Curse of Strahd) and a homebrew new world (name TBD). The group **alternates** between them like TV seasons — swapping back and forth, not a one-way handoff. The party of characters persists across both worlds and shifts between them via a shallow in-narrative device (a deliberate story beat, not a soft drift). The two worlds stay mostly separate.
+
+**Engine role differs by campaign:**
+
+- **`strahd`** — record-only. Kellan DMs and plans Strahd sessions *outside* this repo. Here, the engine only canonizes what was played: `/recap` → historian. Do **not** run `/session` planning for Strahd, and do not expect scheduler planning artifacts for it.
+- **`homebrew`** — full engine. The active-DM (Jeff first, then rotating) plans and records here: `/session` planning, scheduler acts/missions, plus `/recap` canonization.
 
 **`campaign` field** — historian and scheduler entities carry `campaign: strahd` or `campaign: <new-world-name>`. Data entities are campaign-agnostic by default (no tag) unless they are explicitly tied to one world.
 
@@ -62,7 +67,7 @@ This repo spans two campaigns: `strahd` (Curse of Strahd, sessions 1–present) 
 - Strahd-tagged entities are still visible and searchable — they just don't surface automatically in new-world content
 - Crossover is always allowed when the DM asks for it (throwbacks, callbacks, deliberate bleed)
 
-**New entities** created during or after the world transition should carry the new-world campaign tag. Entities created now, during seeding, are untagged (agnostic) unless clearly Strahd-specific.
+**New entities** created during a homebrew season carry that world's campaign tag. Entities created now, during seeding, are untagged (agnostic) unless clearly Strahd-specific. Because seasons alternate, a swap is never final — the party will return to the other world later, so preserve the shared party roster across every swap.
 
 ## Command Audits
 
@@ -153,15 +158,15 @@ Read `.claude/commands/pc-backstory.md` for the full ingestion flow, gap analysi
 
 ## Campaign Transition Detection
 
-**Trigger:** Any message containing language that suggests the party is leaving the current campaign context. Watch for:
+**Trigger:** Any message suggesting the party is swapping campaigns — in **either** direction (campaigns alternate like seasons). Watch for:
 
-- Leaving/ending the current campaign: "leaving Strahd", "done with Strahd", "finished with Barovia", "we're out of Barovia", "end of the Strahd arc"
-- Starting fresh: "new world", "new campaign", "clean slate", "starting the homebrew", "transition"
-- Narrative clean-slate signals: "the portal closes", "we're through", "no going back"
+- Pausing the current campaign: "leaving Strahd", "done with Strahd for now", "wrapping the Strahd season", "we're out of Barovia", "pausing the homebrew", "back to Strahd"
+- Starting/resuming the other: "new world", "new campaign", "starting the homebrew", "next season", "returning to Barovia", "resume Strahd", "swap campaigns", "transition"
+- Narrative swap signals: "the portal closes", "we step through", "the mists take us"
 
-These phrases may appear casually — do not trigger on obvious metaphor or out-of-game chatter. When in doubt, ask once: *"Is the campaign transitioning to the new world? I can walk you through the handoff if so."*
+These phrases may appear casually — do not trigger on obvious metaphor or out-of-game chatter. When in doubt, ask once: *"Is this a campaign season-swap? I can walk you through the handoff if so."*
 
-If confirmed, read `.claude/commands/transition.md` and follow the full transition flow. Do not make any changes until the DM confirms each step.
+If confirmed, read `.claude/commands/transition.md` and follow the full flow. Do not make any changes until the DM confirms each step.
 
 ## Output Style
 
@@ -204,6 +209,6 @@ No DM brief card needed. No other formats unless explicitly requested.
 - `/voice <npc name>` — `.claude/commands/voice.md` — DM voice brief grounded in established canon
 - `/rumor [count] [theme]` — `.claude/commands/rumor.md` — surface pool rumors as session-opener flavor; read-only
 - `/check <claim>` — `.claude/commands/check.md` — contradiction check against historian before canonizing
-- `/transition` — `.claude/commands/transition.md` — guided campaign transition flow; also auto-triggered by language cues
+- `/transition` — `.claude/commands/transition.md` — guided campaign season-swap flow (bidirectional Strahd ↔ homebrew); also auto-triggered by language cues
 - `/todo` — `.claude/commands/todo.md` — plain-language DM dashboard of everything needing attention or action
 - `/idea [rough idea] [--build]` — `.claude/commands/idea.md` — develop a rough engine idea into a grounded, executable change via the staged idea-process flow; read-only until `--build`
