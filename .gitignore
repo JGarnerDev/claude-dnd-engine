@@ -8,6 +8,11 @@ __pycache__/
 
 # uv-managed virtual environment
 .venv/
+
+# Private workshop: scratch notes for building the homebrew campaign.
+# Never committed — drafts, session-building notes, character/lore sketches
+# live here until they graduate into data/ or scheduler/ on a real branch.
+workshop/
 questionnaires/*
 !questionnaires/.gitkeep
 vector-index/
