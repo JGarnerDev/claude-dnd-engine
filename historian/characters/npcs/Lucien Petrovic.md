@@ -49,3 +49,11 @@ Lucien Petrovic is the priest of the [[Church of St. Andril]] in [[Vallaki]], a 
 The party came to Lucien seeking shelter from [[Strahd]] for [[Ireena Kolyana]]. He revealed that the church's sacred saint's bones — which granted the building a boon of protection — had been **stolen**. He knows of the [[Old Bonegrinder|hag coven]] but told the party the bones themselves would be useless against a hag. When the party's investigation turned toward his altar boy [[Yeska]], Lucien insisted firmly on the boy's innocence. Pressed for ways to fight the threats around Vallaki, he could offer only old wives' tales.
 
 > **Reliability:** Lucien's claim that the saint's bones are "useless" against the hag is his own assertion, not independently verified. Confirm with DM.
+
+## The Bones Recovered (Session 19)
+
+When [[Izek Strazni]] captured the party after they burned down [[Henrik]]'s coffin shop, Lucien **intervened** — declaring they had saved the town by finding the church's stolen saint's bones, and that they were free to go. He then **took the bones himself**.
+
+The party read an **ulterior urgency** in his haste to return the relics to the [[Church of St. Andril]] right away — a curiosity or motive of his own beyond simple duty. A thread to pull later.
+
+> **Reliability:** Lucien's "ulterior motive" is the party's inference from perception checks, not anything he stated. What he actually wants with the bones is unknown. Confirm with DM.

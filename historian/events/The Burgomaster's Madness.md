@@ -21,7 +21,7 @@ last_updated: "[[Session 16 The Blue Water Inn]]"
 participants:
   - [[Karl]] (dissenter, informant)
   - [[Nikolai]] (dissenter, informant)
-  - [[The Burgomaster of Vallaki]] (subject)
+  - [[Vargas Vallakovich|the Burgomaster]] (subject)
 relates_to:
   - [[Vallaki]] (concerns)
   - [[Blue Water Inn]] (revealed at)

@@ -15,8 +15,8 @@ player: [[Ben]]
 race: [[Half Orc]]
 class: [[Barbarian]]
 background: "Unknown"
-level: 3
-level_confirmed: 18
+level: 4
+level_confirmed: 20
 
 aliases: []
 source_session: [[Session 05 The Specter]]

@@ -42,3 +42,11 @@ A grim wolf-hunter who works the land around [[Vallaki]] with his partner [[Szol
 ## First Encounter (Session 16)
 
 Together with [[Szoldar Szoldarovich]], greeted the party at the [[Blue Water Inn]], praised the performance, and offered guiding and information — 5 gp for a day, bits of information for drinks.
+
+## Hired (Session 19)
+
+Hired with [[Szoldar Szoldarovich]] for the day (**10 gp**) during the raid on [[Henrik]]'s coffin shop. One hunter made too much noise inside, helping trigger the fire and flight; afterward the pair talked the enraged crowd down, arguing the party was not at fault.
+
+> **Reliability:** Day-rate logged as 10 gp here vs. 5 gp/day at first offer; which hunter made the noise is unspecified. Confirm with DM.
+
+> **Table note:** The two wolf-hunters were a real-life cameo of the group's friends **Sam and Samara**. The one-to-one mapping (which hunter is which friend) is not fixed. Confirm with DM.

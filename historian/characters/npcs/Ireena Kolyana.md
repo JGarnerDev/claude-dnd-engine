@@ -17,8 +17,9 @@ aliases: []
 importance: critical
 active: true
 relates_to:
-  - [[Ismark Kolyanovich]] (brother)
-  - [[Kolyan Indirovich]] (deceased father)
+  - [[Ismark Kolyanovich]] (adoptive brother)
+  - [[Kolyan Indirovich]] (adoptive father, deceased)
+  - [[Izek Strazni]] (blood brother — revealed Session 19)
   - [[Strahd Von Zarovich]] (fixated on her)
   - [[Burgomaster's Mansion]] (home)
   - [[Curse of Strahd]] (campaign)
@@ -63,6 +64,12 @@ Party met Ireena at the [[Burgomaster's Mansion]] after Ismark led them there. S
 ## Lineage Revelation (Session 13)
 
 During [[Kolyan Indirovich]]'s burial at the [[Church of the Morning Lord]], [[Father Donavich]] revealed that Ireena is **not a blood relative** of the Kolyanovich family. Ireena was visibly shocked. Donavich spoke of "trials that await her" without elaborating.
+
+## Her True Origin (Session 19)
+
+The open question from Session 13 — if not a Kolyanovich, then who? — was answered in [[Session 19 The Burning of the Coffin Shop]]. The party noticed Ireena and the Vallaki guard captain **[[Izek Strazni]]** share the same face, and before the priest [[Lucien Petrovic]] the truth surfaced: **Ireena and Izek are blood siblings.** She was born a **Strazni** and adopted into the Kolyanovich family. Izek, born without a soul, had forgotten he had a sister at all.
+
+> **Reliability:** This is consistent with — and resolves — the Session 13 revelation that Ireena is not a blood Kolyanovich. The full history of the Strazni siblings, and how Ireena came to be adopted, is not yet established. Confirm with DM.
 
 ## Departure
 

@@ -37,7 +37,7 @@ entities_canonized:
   - [[Nikolai]]
   - [[Brom]]
   - [[Bray]]
-  - [[The Burgomaster of Vallaki]]
+  - [[Vargas Vallakovich|the Burgomaster]]
 new_entities:
   - "Tidak — Sergei's lost best friend, a humanoid taken by the fog in the Zeatchean Steppes. Told in-fiction through Sergei's tale; recorded as lore on Sergei's file, no standalone entity yet."
 table_notes: "The performance montage landed big — Bosco's crowd-win ('for Bosco!') and Sergei's tearjerker tale of Tidak were the highlights. Rictavio's evasiveness successfully planted party suspicion. The 'all will be well in Vallaki' mantra registered as intended-eerie."

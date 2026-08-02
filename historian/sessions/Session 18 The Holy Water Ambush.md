@@ -18,7 +18,7 @@ key_npcs:
   - [[Lucien Petrovic]]
   - [[Rictavio]]
   - [[Izek Strazni]]
-  - [[The Burgomaster of Vallaki]]
+  - [[Vargas Vallakovich|the Burgomaster]]
 recap: "Planning their move against the vampire spawn and the stolen bones, the party first returned to the Church of St. Andril, where the priest Lucien Petrovic — convinced the spawn holding the saint's bones signals a deeper plot — pressed the urgency of killing them and recovering the relic, and armed each party member with a vial of holy water. At the Blue Water Inn, Odibli buttered up Rictavio for his autograph before asking after the bones, but Rictavio sharply warned him to keep quiet about such dangerous talk, and Iggy's gentler approach drew no aid either. Directed by the town guards to the Burgomaster and to guard captain Izek Strazni, the party found Izek in the town square overseeing preparations for the coming Blazing Sun festival — a creepy, hollow figure with a grotesquely dark-magic arm who dismissed their warnings, refused any joint stand against the spawn, and threatened them if they broke the law. Suspicious, Luci contrived to spill diluted holy water on him with Iggy faking a trip to cover her; Izek was unaffected. The party then returned to Henrik the coffinmaker's house and built a plan: heat oil in a cauldron, split into an oil team and a bone-stealing team, quietly scout the two upstairs doors, then signal 'go' — the bone-stealers snatch the relic while the oil team flings holy water into the hot oil to burst holy steam over the spawn. But they opened the wrong door first, and their investigations woke the vampires."
 cliffhanger: "The ambush is blown before it begins: the party opened the wrong upstairs door in Henrik's shop and woke the six vampire spawn — oil half-heated, holy water in hand, plan wrecked, and a fight now on their hands."
 entities_canonized:
@@ -60,7 +60,7 @@ At the [[Blue Water Inn]], [[Odibli]] flattered [[Rictavio]] for his autograph b
 
 ### Izek in the town square
 
-The party turned to the town guards, who referred them up to [[The Burgomaster of Vallaki]] and to the guard captain **[[Izek Strazni]]**, said to be around the town square.
+The party turned to the town guards, who referred them up to [[Vargas Vallakovich|the Burgomaster]] and to the guard captain **[[Izek Strazni]]**, said to be around the town square.
 
 There they found preparations and proclamations for the upcoming festival — the next one being the **Blazing Sun** party — with Izek and his guards replacing the party signs. Izek looked deeply unsettling: one of his arms was **unnatural**, marked by dark magic — elongated nails, barbs, heavy deformity — and he carried a **hollowness and a longing air**. He was uncaring about the party and their problem. When they floated luring the vampires to him for a combined battle if he didn't believe them, he remained reluctant even to consider it, and left with a flat threat to deal harshly with them if they broke the law.
 

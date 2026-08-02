@@ -42,3 +42,11 @@ A grim wolf-hunter who works the land around [[Vallaki]] with his partner [[Yevg
 ## First Encounter (Session 16)
 
 Greeted the party from a table at the [[Blue Water Inn]], said they had liked the performance, and offered a service: guides and information about the land — 5 gp for a day, bits of information for drinks.
+
+## Hired (Session 19)
+
+The party hired Szoldar and [[Yevgeni Krushkin]] for the day (**10 gp**) during the raid on [[Henrik]]'s coffin shop. One of the hunters made too much noise inside, helping trigger the fire and flight — but afterward the hunters worked the enraged crowd, arguing the blaze was not the party's fault.
+
+> **Reliability:** The day-rate is logged as 10 gp here vs. 5 gp/day at first offer, and which hunter made the noise is not specified. Confirm with DM.
+
+> **Table note:** The two wolf-hunters were a real-life cameo of the group's friends **Sam and Samara**. The one-to-one mapping (which hunter is which friend) is not fixed. Confirm with DM.

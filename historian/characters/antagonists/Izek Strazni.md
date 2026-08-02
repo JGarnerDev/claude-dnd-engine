@@ -18,7 +18,9 @@ source_session: [[Session 18 The Holy Water Ambush]]
 confirmed_date: "2026-07-14"
 relates_to:
   - [[Vallaki]] (guard captain of)
-  - [[The Burgomaster of Vallaki]] (serves as guard captain)
+  - [[Vargas Vallakovich|the Burgomaster]] (serves as guard captain)
+  - [[Ireena Kolyana]] (blood sister — revealed Session 19)
+  - [[Lake Zarovich]] (lost his arm here)
   - [[Curse of Strahd]] (campaign)
 known_by:
   - [[The Party]] (partial)
@@ -34,7 +36,7 @@ Location: [[Vallaki]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 
-Izek Strazni is the captain of the town guard in [[Vallaki]], serving under [[The Burgomaster of Vallaki]]. When the party sought help against the vampire spawn, the town guards referred them to the Burgomaster and to Izek, who was found in the town square overseeing his guardsmen as they replaced the festival signage.
+Izek Strazni is the captain of the town guard in [[Vallaki]], serving under [[Vargas Vallakovich|the Burgomaster]]. When the party sought help against the vampire spawn, the town guards referred them to the Burgomaster and to Izek, who was found in the town square overseeing his guardsmen as they replaced the festival signage.
 
 ## First Encounter (Session 18)
 
@@ -45,3 +47,11 @@ He was wholly uncaring about the party's problem with the vampire spawn and relu
 Suspecting him, [[Luci]] contrived to spill diluted **holy water** on him (with [[Iggy]] aiding the deception by faking a trip). Izek was **unaffected** — the holy water did nothing to him.
 
 > **Reliability:** Izek's race, class, and the source of his deformed arm and longing are not established in the notes — only observed impressions (dark magic, hollowness). The holy-water test confirms only that he is not affected by it, not what he is. Confirm with DM.
+
+## The Sibling Reveal (Session 19)
+
+After the party burned down [[Henrik]]'s coffin shop, Izek bound them and paraded them to the Burgomaster — angry, but he would not kill them. At the [[Burgomaster's Mansion|mansion]] the party learned that **[[Lake Zarovich]]** is where Izek **lost his arm**, and noticed that Izek and **[[Ireena Kolyana]] share the same face**.
+
+Before the priest [[Lucien Petrovic]], the truth came out: **Izek and Ireena are siblings.** Izek was **born without a soul** — the reason he had forgotten her — which pays off the hollow, longing air he carried since Session 18. He does not know what magic made his deformed arm, and is at peace with it.
+
+> **Reliability:** How Izek lost his arm at Lake Zarovich, what replaced it, and how his soullessness relates to Strahd are all unestablished. Confirm with DM.

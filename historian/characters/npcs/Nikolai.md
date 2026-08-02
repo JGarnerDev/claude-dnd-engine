@@ -18,7 +18,7 @@ importance: minor
 active: true
 relates_to:
   - [[Karl]] (drinking companion, fellow dissenter)
-  - [[The Burgomaster of Vallaki]] (opposes)
+  - [[Vargas Vallakovich|the Burgomaster]] (opposes)
   - [[Blue Water Inn]] (met here)
   - [[Vallaki]] (lives here)
   - [[Curse of Strahd]] (campaign)

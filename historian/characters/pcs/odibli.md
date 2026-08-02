@@ -13,8 +13,8 @@ player: [[Miguel]]
 race: [[Gnome]]
 class: [[Wizard]]
 background: "Unknown"
-level: 3
-level_confirmed: 18
+level: 4
+level_confirmed: 20
 aliases:
   - "ODB"
   - "Odi"

@@ -50,3 +50,9 @@ The party deceived their way into Henrik's shop, and he spilled what he knew:
 - The stolen saint's bones specifically grant a **boon of protection** to the [[Church of St. Andril]] — the reason they were taken matters.
 
 > **Reliability:** "Vasili van Holtz" is Henrik's report of Strahd's alias (module-adjacent spelling; likely Strahd von Zarovich in disguise). The count of six vampire spawn is Henrik's claim — the party has not verified it by sight. Confirm with DM.
+
+## The Shop Burns (Session 19)
+
+In [[Session 19 The Burning of the Coffin Shop]], the party recovered the stolen bones from the upstairs of Henrik's shop and then **torched the building** to escape. It was left a **smoking heap of rubble**, and the party glimpsed **additional bodies** inside as it burned.
+
+> **Reliability:** Henrik's own fate in the fire is not stated in the notes, nor whether the six vampire spawn were destroyed by it. The extra bodies are unexplained. Confirm with DM.
