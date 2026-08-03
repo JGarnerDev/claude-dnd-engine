@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = "==3.13.*"
+# dependencies = ["chromadb>=1.5,<2"]
+# ///
+# NOTE: pinned to Python 3.13 via PEP-723 because chromadb depends on the Pydantic V1
+# compat layer, which Pydantic dropped on Python 3.14+ (chroma-core/chroma #5996, #6546).
+# The rest of the repo stays on 3.14; `uv run` builds an isolated 3.13 env for this script.
 """
 semantic-search.py -- Query the Chroma vector index for semantically similar entities.
 Usage: python scripts/semantic-search.py "betrayal and political intrigue" [--type character] [--subtype npc] [--exists true] [--source historian] [-k 5]
