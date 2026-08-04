@@ -21,7 +21,9 @@ When you plan a session, the engine reads the campaign state and asks "what's th
 uv sync
 
 # Build the semantic search index (~17s first run, downloads 79MB ONNX model)
-uv run scripts/index-entities.py
+# Run under Python 3.13 — chromadb depends on the Pydantic V1 layer, which Pydantic
+# dropped on Python 3.14+ (chroma-core/chroma #5996). Same flag for semantic-search.py.
+uv run --python 3.13 scripts/index-entities.py
 
 # Enable auto-formatting of Markdown on commit (one time per clone)
 uv run scripts/setup-hooks.py
