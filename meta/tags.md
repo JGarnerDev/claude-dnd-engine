@@ -125,6 +125,7 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `faction/academic` | faction entity | Faction subtype: scholarly institution |
 | `faction/noble` | faction entity | Faction subtype: noble house or aristocracy |
 | `faction/administrative` | faction entity | Faction subtype: administrative authority or bureaucracy |
+| `faction/mercenary` | faction entity | Faction subtype: mercenary company, warband, or raider band |
 | **resource** | | |
 | `resource` | resource entity | Entity type: natural or economic resource |
 | **route** | | |
