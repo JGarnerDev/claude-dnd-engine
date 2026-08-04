@@ -34,3 +34,5 @@ Location: [[Outer-Coast Port]] | Also known at: [[Storm Coast Harbor]]
 A foreign shipmaster who runs the southwest lane past [[The Myriad]] more often than trade explains, hails Red's [[Outer-Coast Port]] correctly every time, and once — only once, in a blow — put in at a [[Storm Coast Harbor]] cove he had no business knowing. He carries [[Coffee]] up the lane, officially. He's known, liked, and useful to both coasts, which is exactly why nobody on either has asked the obvious question.
 
 *Unresolved:* who he actually carries for, and which of the two coasts finds out first.
+
+*DM note:* Oshin shares the "knows more than he says" archetype with [[Garryn Vale]] and [[Sella Corran]] — differentiate, don't run all three as neutral withholders. Steer: Oshin is the natural warm one — the friend who buys the round and remembers your name. Play him openly likeable so the trio isn't three cold ambiguities; the menace stays under the charm, not on the surface.

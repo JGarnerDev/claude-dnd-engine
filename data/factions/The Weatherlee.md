@@ -59,3 +59,5 @@ What the lee-folk tell outsiders is that the storm cliffs are haunted — that t
 *Unresolved:* whether the haunting is only a good lie, or whether generations of dying on the same cliffs for the same glass have made it, by now, a little bit true.
 
 *Twist option left live:* **Green as storm-blooded** — goliath stock or storm-touched genasi in the oldest cove families, giving the Stormglass a "the cliffs chose us" dimension. Written weathered and flat so the storm-blood can be the *deepest* families, switched on later without rewriting anyone.
+
+*DM note:* like the rest of the basin, the Lee runs uniformly grim and flat. When running Green, break the cold once — a cove wedding weathered-in for a week, a captain who laughs, a Tide-Word gathering that turns to a feast. A coast players will want to return to needs one bright spot against the storm, and one clear ally-face among the raiders.

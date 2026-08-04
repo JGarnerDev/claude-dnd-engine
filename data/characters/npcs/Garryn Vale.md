@@ -36,3 +36,5 @@ Location: [[Outer-Coast Port]] | Overlord: [[The Ardvellyn Reach]]
 Red's coast-governor at [[Outer-Coast Port]] — sent down from the [[Highland Seat]] to run the coffee wharf, and chosen, as always, from a house the Seat wouldn't grieve to lose. He has been down at the water long enough to understand that the money, the ships, and the actual future of [[The Ardvellyn Reach]] are all *here*, not on the rock — and to notice that the Seat picked him precisely because he was disposable.
 
 *Unresolved:* whether he stays loyal to the mountain that threw him away, or becomes the first Reachfolk to say out loud that the coast is the country.
+
+*DM note:* Garryn, [[Sella Corran]] and [[Oshin Marr]] all run one archetype — the quiet watcher who knows the true worth and hasn't picked a side (his second ledger, her knot-cord tally, his secret cove). Don't play all three as neutral withholders. Steer: Garryn is the readiest to commit — break him toward the coast to give the party one clear ally against Red.

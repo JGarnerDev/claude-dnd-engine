@@ -34,3 +34,5 @@ Location: [[Storm Coast Harbor]] | Coast: [[The Weatherlee]]
 A [[The Weatherlee|Weatherlee]] woman who works the storm cliffs of [[Storm Coast Harbor]] for [[Stormglass]] and has quietly kept a tally her whole life — how much forms, how much the sea takes, how much leaves through the back door and to whom. She believes the haunting story less than anyone alive and is therefore the most valuable and most dangerous person on the coast: the only one who knows what the cliffs are actually worth.
 
 *Unresolved:* whether she's kept the tally to protect the coast or to sell it.
+
+*DM note:* Sella shares the "secret ledger-keeper" archetype with [[Garryn Vale]] and [[Oshin Marr]] — differentiate at the table, don't run all three as neutral withholders. Steer: let Sella be the coast's clear *threat* — the one whose count could get everyone killed — so she reads distinct from Garryn the ally and Oshin the wildcard.

@@ -68,3 +68,5 @@ Red's claim to the peninsula coast is old, written, and completely untested belo
 *Unresolved:* whether the strait forts answer to the Seat, hold for the coast-towns, or quietly hold for themselves.
 
 *Twist option left live:* **Red as a dwarven realm proper** — flip the ratio, dwarves the majority, the Ridge-Council a clan-moot, the peninsula claim an ancestral-stone claim. Written human-led with a strong dwarven ore-bloc so the twist stays a door.
+
+*DM note:* the whole basin reads one temperature — dry, bitter, withholding, cold stone and cold water. Great prose, but monochrome at the table. When running Red, plant a warm counterweight: a loud generous clan-head, a passes-garrison festival, humor in the wool valleys. Give the party at least one Reachfolk face to *like* against all the resentment.
