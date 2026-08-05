@@ -106,6 +106,7 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | **player/** | | |
 | `player/ben` | pc | Character played by Ben |
 | `player/jeff` | pc | Character played by Jeff |
+| `player/kellan` | pc | Character played by Kellan |
 | `player/miguel` | pc | Character played by Miguel |
 | `player/paul` | pc | Character played by Paul |
 | **race** | | |
