@@ -60,3 +60,13 @@ After the party burned down [[Henrik]]'s coffin shop to recover the church's sto
 Exploring the [[Burgomaster's Mansion]], the party discovered the Burgomaster's son **[[Viktor Vallakovich]]** in the attic — the one behind the disappearances, experimenting on the missing townsfolk. After the party subdued Viktor, Vargas believed their account and **waived the 600 gp penalty** for the coffin shop in exchange for their **silence** about Viktor. The party kept Viktor's spells and books.
 
 > **Reliability:** Whether Vargas already knew of Viktor's experiments, or was genuinely blindsided, is not established — only that he chose to bury it. Confirm with DM.
+
+## Sessions 21-23 -The Festival and the Coup He Never Heard About
+
+At the **Festival of the Blazing Sun**, Vargas failed repeatedly to light the **wicker sun**. A citizen laughed and was **arrested on the spot**; [[Iggy]] claimed the laugh for one of his own jokes, told it to the crowd, and got the man released. Vargas forced the crowd into a chant of **"all will be well,"** got flustered, and **declared the festival a huge success** while the effigy still would not burn. [[Luci]] and [[Odibli]] then lit it with **oil and a cantrip**, to the town's genuine delight.
+
+Meanwhile **[[Lady Fiona Wachter]]** was courting the party for a **coup against him** — she wanted the regency and wanted **[[Izek Strazni]]** dead. The party accepted her offer intending to betray it, warned [[Ireena Kolyana]], and days later killed Fiona and [[The Wachter Cult]] beneath her own house.
+
+The party then **told Vargas they had saved the day.**
+
+> **Reliability:** How much of Fiona's plot, her cult, or her death the party actually disclosed to Vargas is not recorded — only that they reported saving the day. Whether he knows a noble house was wiped out in his town, or that it was aimed at his seat, is open. Confirm with DM.

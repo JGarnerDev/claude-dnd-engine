@@ -14,7 +14,7 @@ race: [[Aasimar]]
 class: [[Monk]]
 background: "Unknown"
 level: 4
-level_confirmed: 20
+level_confirmed: 25
 aliases:
   - "Lucy"
 source_session: [[Session 01 The Black Sheep Inn]]
@@ -23,6 +23,7 @@ relates_to:
 affinity:
   - [[Odibli]] (2)
   - [[Dip]] (2)
+  - [[Ireena Kolyana]] (2)
 importance: critical
 active: true
 description: "Paul's PC. Scourge Aasimar in perma-wanderlust. Full name unknown."
@@ -68,3 +69,7 @@ Was shunted from the light dimension to the astral plane, then to the material p
 - **Session 9:** Killed all shadows; MVP of the session
 - **Session 10:** Sacrificed herself on the cult altar to save the party; mists carried party away; Strahd retrieved her from death; leveled to 3
 - **Session 16:** At the [[Blue Water Inn]], told the room of her radiant celestial home — [[Danika]] quipped she might out-tell the resident bard [[Rictavio]]; danced with [[Bosco]] during the crowd-winning set.
+
+## Affinity notes
+
+Luci brought [[Ireena Kolyana]] the whole of Lady Wachter's plot and was met with a warning to research before acting rashly. She travels with [[Odibli]] and [[Dip]].

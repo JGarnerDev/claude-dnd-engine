@@ -14,7 +14,7 @@ race: "Aasimar"
 class: "Bard"
 background: "Entertainer"
 level: 4
-level_confirmed: 20
+level_confirmed: 25
 aliases:
   - "Iggy"
 source_session: [[Session 01 The Black Sheep Inn]]
@@ -22,6 +22,7 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 affinity:
   - [[Bosco]] (3)
+  - [[Lady Fiona Wachter]] (-4)
 importance: critical
 active: true
   
@@ -69,3 +70,7 @@ Shadow does not match Iggy's form and moves in the wrong direction. Onset: Sessi
 - **Session 9:** Killed by shadows (Strength reduced to 0)
 - **Session 10:** Revived by Odibli's shadow ritual; half max HP for duration in dungeon; affliction onset; leveled to 3
 - **Session 16:** At the [[Blue Water Inn]], turned [[Bosco]]'s dance into a crowd-winning "for Bosco!" moment and spun a gold-dragon-turned-raccoon tale into a viol jig. Earlier at the Vallaki market, traded a platinum necklace for thieves' tools and hide armor. **Reliability:** the trade is recorded from the notes; confirm the item details against Iggy's sheet.
+
+## Affinity notes
+
+Iggy pressed [[Lady Fiona Wachter]] for anything concrete behind her coup, got nothing but secrecy, and later walked out of her cult chamber on a pretext — the move that started the fight that killed her. He rides with [[Bosco]].

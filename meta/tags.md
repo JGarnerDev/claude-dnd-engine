@@ -49,6 +49,7 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `cr/22` | monster | Challenge Rating 22 |
 | `cr/23` | monster | Challenge Rating 23 |
 | `cr/24` | monster | Challenge Rating 24 |
+| `cr/26` | monster | Challenge Rating 26 |
 | `cr/30` | monster | Challenge Rating 30 |
 | **monster/** | | |
 | `monster` | monster entity | Entity type: Monster Manual template (encounter archetype) |
@@ -65,6 +66,7 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `monster/giant` | monster entity | Creature type: giant |
 | `monster/ooze` | monster entity | Creature type: ooze |
 | `monster/plant` | monster entity | Creature type: plant |
+| `monster/celestial` | monster entity | Creature type: celestial |
 | `monster/other` | monster entity | Creature type: other |
 | **background** | | |
 | `background` | background entity | Entity type: character background — flat tag, no subtype |
@@ -101,6 +103,8 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `location/region` | location entity | Entity subtype: region or territory |
 | `location/wilderness` | location entity | Entity subtype: wilderness area |
 | `location/terrain-feature` | location entity | Entity subtype: terrain feature (river, road, mountain range, pass, etc.) |
+| `location/dungeon/ruin` | location entity | Dungeon sub-kind: ruin |
+| `location/wilderness/forest` | location entity | Wilderness sub-kind: forest |
 | **party** | | |
 | `party` | party entity | Entity type: adventuring party |
 | **player/** | | |
@@ -111,12 +115,17 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | **race** | | |
 | `race` | race entity | Entity type: playable race — flat tag, no subtype |
 | **session/** | | |
+| `session` | session entity | Entity type: play session — parent tag for all session tags |
 | `session/NN` | session | Identifies the session number — e.g. `session/01`, `session/11`, `session/13` |
 | **schema** | | |
 | `schema` | schema file | Meta document: entity schema definition |
+| **feat** | | |
+| `feat` | feat entity | Entity type: character feat — flat tag, no subtype |
 | **guideline** | | |
 | `guideline` | meta document | Meta document: design guideline that shapes story or game decisions |
 | **faction/** | | |
+| `faction` | faction entity | Entity type: any faction — parent tag for all faction subtypes |
+| `faction/family` | faction entity | Faction subtype: family, bloodline, or household |
 | `faction/nation` | faction entity | Faction subtype: nation, state, or sovereign polity |
 | `faction/guild` | faction entity | Faction subtype: organized guild or professional society |
 | `faction/religious` | faction entity | Faction subtype: religious order or church |
@@ -153,3 +162,29 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `spell/illusion` | spell entity | Spell school: illusion |
 | `spell/necromancy` | spell entity | Spell school: necromancy |
 | `spell/transmutation` | spell entity | Spell school: transmutation |
+| **event/** | | |
+| `event` | event entity | Entity type: any event — parent tag for all event subtypes |
+| `event/battle` | event entity | Event subtype: battle or armed engagement |
+| `event/crime` | event entity | Event subtype: crime, murder, or theft |
+| `event/disaster` | event entity | Event subtype: disaster or catastrophe |
+| `event/discovery` | event entity | Event subtype: discovery of a place, thing, or truth |
+| `event/founding` | event entity | Event subtype: founding of a settlement, order, or institution |
+| `event/loss` | event entity | Event subtype: a death, disappearance, or thing lost |
+| `event/meeting` | event entity | Event subtype: a first meeting, parley, or negotiation |
+| `event/omen` | event entity | Event subtype: omen, portent, or sign |
+| `event/pact` | event entity | Event subtype: pact, oath, bargain, or alliance sworn |
+| `event/prophecy` | event entity | Event subtype: prophecy or foretelling |
+| `event/revelation` | event entity | Event subtype: a secret or identity revealed |
+| `event/sacrifice` | event entity | Event subtype: a sacrifice made or demanded |
+| `event/travel` | event entity | Event subtype: a journey, crossing, or arrival |
+| `event/turning-point` | event entity | Event subtype: a decisive shift in the campaign's direction |
+| **region/** | | |
+| `region/barovia` | any entity | Located in or belonging to the region of Barovia |
+| `region/calenmere` | any entity | Located in or belonging to the Calenmere region |
+| **lore/** | | |
+| `lore` | lore document | World lore reference document — parent tag for all lore subtypes |
+| `lore/calendar` | lore document | Lore subtype: calendar and timekeeping |
+| `lore/geography` | lore document | Lore subtype: world geography |
+| `lore/history` | lore document | Lore subtype: world history |
+| `lore/magic` | lore document | Lore subtype: magic and the arcane |
+| `lore/religion` | lore document | Lore subtype: religion and pantheons |

@@ -4,6 +4,8 @@ campaign: strahd
 type: character
 subtype: npc
 exists: true
+source_session: [[Session 16 The Blue Water Inn]]
+confirmed_date: "2026-06-30"
 state: alive
 tags:
   - character
@@ -16,8 +18,12 @@ disposition: friendly
 aliases: []
 importance: major
 active: true
+last_updated: [[Session 24 The Vampire Hunter]]
 relates_to:
   - [[Blue Water Inn]] (proprietor, bartender)
+  - [[Wizard of Wines]] (source of her overdue shipments)
+  - [[Davian Martikov]] (the winery's proprietor)
+  - [[Van Richten's Tower]] (landmark she gave for the missing wine)
   - [[Urwin]] (husband)
   - [[Brom]] (son)
   - [[Bray]] (son)
@@ -36,6 +42,7 @@ goals:
   - "Keep the inn running and the wine flowing"
 motives:
   - "The wine shipments are overdue and the 'wizard of wine' is late"
+  - "Directed the party past Ravenriver, near Van Richten's tower (Session 24)"
 ---
 
 Location: [[Blue Water Inn]] | Campaign: [[Curse of Strahd]]
@@ -49,3 +56,16 @@ Bartender and co-owner of the [[Blue Water Inn]] in [[Vallaki]], which she runs 
 ## First Encounter (Session 16)
 
 Summoned the party to the bar, irritated, and had [[Rictavio]] test whether they were "good performers." After the party won the room, she thanked them, gave them a free night's lodging and stew, and told them wine shipments were overdue — the "wizard of wine" who usually ships it is late. She asked the party to find him (see [[Find the Wine Wizard]]).
+
+## Session 24 -Directions to the Wine
+
+After the vampire ambush and [[Rictavio]]'s rescue, the party returned to the tavern for more on the **missing wine shipment**. Danika placed it **past Ravenriver, and nearby [[Van Richten's Tower]]** — the directions that led the party across the [[Luna River]] and the [[Raven River]] to the [[Wizard of Wines]] and [[Davian Martikov]].
+
+> **Reliability:** Danika gave the tower as a landmark in the same session Rictavio revealed himself as **Rudolph van Richten**. Whether she knows the connection — or knows who her resident bard really is — is unaddressed. Confirm with DM.
+
+## Sources
+
+Recorded in [[Session 24 The Vampire Hunter]].  
+Known to / linked with [[The Party]].
+
+First recorded in [[Session 16 The Blue Water Inn]].

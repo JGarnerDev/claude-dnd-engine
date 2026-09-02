@@ -14,7 +14,7 @@ race: [[Gnome]]
 class: [[Wizard]]
 background: "Unknown"
 level: 4
-level_confirmed: 20
+level_confirmed: 25
 aliases:
   - "ODB"
   - "Odi"
@@ -25,7 +25,7 @@ relates_to:
 affinity:
   - [[Sergei Rubelgerd]] (4)
   - [[Luci]] (2)
-  - [[Rictavio]] (-2)
+  - [[Rictavio]] (3)
 importance: critical
 active: true
 description: "[[Miguel]]'s PC. Gnome Wizard; arcane academic with a fireplace obsession and adventuring as a bucket-list goal."
@@ -74,3 +74,7 @@ Habit of looking in fireplaces: professional reflex from a career of looking for
 - **Session 9:** Revived Ben with thrown healing potion
 - **Session 10:** Smashed the orb; absorbed shadow essence; veins turned black; healed Dip and Iggy via ritual; party at half max HP; leveled to 3
 - **Session 16:** At the [[Blue Water Inn]], cast speak with animals to let [[Sergei Rubelgerd]] tell the room his story of lost friend Tidak (the bar wept); interrogated the bard [[Rictavio]] on his dragon-slaying boast, caught the evasion, and came away mistrustful
+
+## Affinity notes
+
+Odibli mistrusted [[Rictavio]] from their first meeting — until Rictavio drove off the vampires that had downed the whole party and stabilized them. He keeps [[Sergei Rubelgerd]] and travels with [[Luci]].

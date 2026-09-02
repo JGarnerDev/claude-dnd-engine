@@ -78,3 +78,11 @@ Following the burial, Ireena agreed to travel to [[Vallaki]] with the party. Her
 ## Destination
 
 [[Vallaki]] — a walled town 2–3 days west of [[Barovia Village]]. Ismark believes she will be safer there.
+
+## Session 22 -Luci's Warning
+
+At the [[Church of St. Andril]], [[Luci]] told Ireena that **[[Lady Fiona Wachter]] wanted [[Izek Strazni]] killed**, that the party was not inclined to do it, and that Fiona wanted the **regency of Vallaki** from [[Vargas Vallakovich|the Burgomaster]]. Luci advised that Izek **lay low**, and shared her own history — that the **worship of light does not bode well**, and has led to **mass ritual suicide** before. The Burgomaster, she argued, is heading that way.
+
+Ireena was **more sympathetic to the Burgomaster** and unconvinced. She warned that **many actors in this village may have bad intentions**, and that the party should **do their research before committing to anything rash**. She stressed that Vargas is a **good man** and **against [[Strahd Von Zarovich|Strahd]]**, despite being a little crazy — good motives, bad execution.
+
+> **Reliability:** Whether Ireena passed Luci's warning on to Izek — her newly revealed blood brother — is unrecorded, as is whether she learned Fiona died two days later. Confirm with DM.

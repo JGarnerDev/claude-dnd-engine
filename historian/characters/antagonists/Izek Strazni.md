@@ -16,8 +16,12 @@ importance: major
 active: true
 source_session: [[Session 18 The Holy Water Ambush]]
 confirmed_date: "2026-07-14"
+last_updated: [[Session 23 The Cult in the Cellar]]
 relates_to:
   - [[Vallaki]] (guard captain of)
+  - [[Lady Fiona Wachter]] (marked him for death; now dead herself)
+  - [[The Wachter Cult]] (wanted him killed)
+  - [[Rictavio]] (hunting him over the loosed tiger)
   - [[Vargas Vallakovich|the Burgomaster]] (serves as guard captain)
   - [[Ireena Kolyana]] (blood sister — revealed Session 19)
   - [[Lake Zarovich]] (lost his arm here)
@@ -55,3 +59,19 @@ After the party burned down [[Henrik]]'s coffin shop, Izek bound them and parade
 Before the priest [[Lucien Petrovic]], the truth came out: **Izek and Ireena are siblings.** Izek was **born without a soul** — the reason he had forgotten her — which pays off the hollow, longing air he carried since Session 18. He does not know what magic made his deformed arm, and is at peace with it.
 
 > **Reliability:** How Izek lost his arm at Lake Zarovich, what replaced it, and how his soullessness relates to Strahd are all unestablished. Confirm with DM.
+
+## Sessions 21-23 -Marked, and Misdirected
+
+Izek led the guard response to the tiger loosed at the Blazing Sun festival. [[Luci]] deceived him about the direction and **split half his search party** away from [[Rictavio]]'s position.
+
+Later the party gave him **Rictavio's name** as the man responsible — with another false direction. Izek was **determined to destroy Rictavio** without much interest in investigation or trial. The party said nothing about [[Karl]] and [[Nikolai]].
+
+He does not know that **[[Lady Fiona Wachter]] asked the party to kill him**, that they accepted the job with no intention of doing it, or that she and [[The Wachter Cult]] died in her cellar days later. [[Luci]] told **[[Ireena Kolyana]]** about the plot and advised that Izek **lay low**; whether that warning ever reached him is unrecorded.
+
+> **Reliability:** Fiona never gave a reason for wanting Izek dead — the party accepted her offer specifically to find out, and she died before they asked. Whether Izek was an obstacle to her coup, a personal grudge, or something tied to his arm is entirely open. Confirm with DM.
+
+## Sources
+
+Recorded in [[Session 18 The Holy Water Ambush]].  
+Recorded in [[Session 23 The Cult in the Cellar]].  
+Known to / linked with [[The Party]].

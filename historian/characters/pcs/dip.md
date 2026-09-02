@@ -16,7 +16,7 @@ race: [[Half Orc]]
 class: [[Barbarian]]
 background: [[Sage]]
 level: 4
-level_confirmed: 20
+level_confirmed: 25
 
 aliases: []
 source_session: [[Session 05 The Specter]]
@@ -28,6 +28,7 @@ relates_to:
   - [[The Hamlet Raiders]] (destroyed his home)
 affinity:
   - [[Luci]] (2)
+  - [[Lady Fiona Wachter]] (-5)
 importance: critical
 active: true
 spotlight: normal
@@ -99,3 +100,7 @@ Hears whispers when it is quiet. Onset: Session 10, after Odibli absorbed shadow
 - **Session 10:** Revived by Odibli's shadow ritual; half max HP in dungeon; affliction onset; leveled to 3
 - **Session 15:** Lost a small toe to his own axe while trying to clear grass from the stuck cart; Odibli failed to recover it with mage hand. No assumed mechanical effect — confirm with DM.
 - **Session 16:** Made a jovial entrance at the [[Blue Water Inn]] (audibly calling the patrons "less than stellar company"); performed an interpretive dance and rolled a natural 1, crashing into tables to jeers; later followed [[Urwin]] into the kitchen.
+
+## Affinity notes
+
+Dip was the one [[Lady Fiona Wachter]] chose to draw out, and the one who killed her and her imp in her own cellar. He fights alongside [[Luci]].
