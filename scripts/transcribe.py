@@ -59,6 +59,20 @@ AUDIO_EXTS = {'.aac', '.m4a', '.mp3', '.wav', '.flac', '.ogg', '.opus', '.webm',
 # model's own context, so the name list is capped and priority-ordered (PCs first).
 MAX_PROMPT_NAMES = 48
 
+# Seconds of silence that end a speaker's paragraph, at render time.
+PARAGRAPH_GAP = 15.0
+
+# Seconds of silence that split one Whisper segment into separate utterances.
+#
+# This is the load-bearing one. vad_filter strips the silence out of a track, and
+# faster-whisper then decodes the *concatenated* speech in 30-second windows and maps
+# the timestamps back to original time. For a player who says four scattered things
+# across six minutes, all four land in one decode window and come back as a single
+# segment stamped at the first -- so the transcript claims they said all of it at once,
+# six minutes before some of it happened. Word timestamps are the only way back to real
+# time, so we ask for them and re-cut each segment wherever the speaker actually paused.
+SEGMENT_SPLIT_GAP = 2.0
+
 # Per-speaker tracks are mostly silence, and Whisper hallucinates filler into silence.
 # These are the stock hallucinations it emits on empty audio.
 HALLUCINATIONS = {
@@ -334,6 +348,35 @@ def _hms(sec: float) -> str:
     return '%d:%02d:%02d' % (sec // 3600, (sec % 3600) // 60, sec % 60)
 
 
+def split_on_pauses(seg) -> list:
+    """One Whisper segment -> [(start, end, text), ...], cut where the speaker paused.
+
+    Each piece is stamped from its own words, so an utterance is dated when it was
+    actually said rather than when the segment that swallowed it began. Falls back to
+    the segment as-is if word timestamps are missing, which keeps an older cache and
+    any model that declines to emit them working.
+    """
+    words = getattr(seg, 'words', None)
+    if not words:
+        return [(seg.start, seg.end, seg.text.strip())]
+
+    out, cur = [], []
+    for w in words:
+        if cur and (w.start - cur[-1].end) > SEGMENT_SPLIT_GAP:
+            out.append(cur)
+            cur = []
+        cur.append(w)
+    if cur:
+        out.append(cur)
+
+    pieces = []
+    for group in out:
+        text = ''.join(w.word for w in group).strip()
+        if text:
+            pieces.append((group[0].start, group[-1].end, text))
+    return pieces
+
+
 def transcribe_track(model, path: Path, lang: str, prompt: str) -> dict:
     """One audio file -> {'duration': float, 'segments': [{start, end, text}]}.
 
@@ -347,6 +390,7 @@ def transcribe_track(model, path: Path, lang: str, prompt: str) -> dict:
         vad_filter=True,
         vad_parameters={'min_silence_duration_ms': 800, 'speech_pad_ms': 300},
         beam_size=5,
+        word_timestamps=True,               # required to re-cut segments; see SEGMENT_SPLIT_GAP
         condition_on_previous_text=False,   # stops one hallucination cascading down the track
     )
     out = []
@@ -355,11 +399,14 @@ def transcribe_track(model, path: Path, lang: str, prompt: str) -> dict:
         if not text or text.lower() in HALLUCINATIONS:
             continue
         # Low confidence plus high no-speech is the signature of invented speech in silence.
+        # Judged on the whole segment, before it is cut into utterances.
         if s.no_speech_prob > 0.7 and s.avg_logprob < -0.8:
             continue
-        out.append({'start': s.start, 'end': s.end, 'text': text})
+        for start, end, chunk in split_on_pauses(s):
+            out.append({'start': start, 'end': end, 'text': chunk})
         if len(out) % 50 == 0:
-            cwrite('\r      ' + str(len(out)) + ' segments  (' + _hms(s.end) + ')', 'darkgray', end='')
+            cwrite('\r      ' + str(len(out)) + ' utterances  (' + _hms(s.end) + ')', 'darkgray', end='')
+    out.sort(key=lambda u: u['start'])
     return {'duration': info.duration, 'segments': out}
 
 
@@ -383,6 +430,7 @@ def render(slug: str, tracks: list, results: dict, meta: dict, vocab: dict, do_f
     words = 0
     cur_spk = None
     cur_start = 0.0
+    cur_end = 0.0
     buf = []
 
     def flush():
@@ -396,12 +444,18 @@ def render(slug: str, tracks: list, results: dict, meta: dict, vocab: dict, do_f
         lines.append('**[' + _hms(cur_start) + '] ' + cur_spk + ':** ' + text)
         lines.append('')
 
-    for start, _end, speaker, text in merged:
-        if speaker != cur_spk:
+    # A paragraph continues only while the same speaker keeps talking without a real
+    # pause. A speaker change ends it, and so does PARAGRAPH_GAP of silence -- the
+    # second test is what keeps a block's timestamp honest, since the segments in one
+    # block can otherwise be minutes apart.
+    for start, end, speaker, text in merged:
+        if speaker != cur_spk or (start - cur_end) > PARAGRAPH_GAP:
             flush()
             cur_spk, cur_start, buf = speaker, start, [text]
-        else:
+            cur_end = end          # reset: the gap is measured within a paragraph,
+        else:                      # never against the one that just ended
             buf.append(text)
+            cur_end = max(cur_end, end)
     flush()
 
     dur = max((results[str(p)]['duration'] for _, p in tracks), default=0)

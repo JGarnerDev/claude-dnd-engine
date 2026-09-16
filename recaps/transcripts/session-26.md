@@ -1,6 +1,6 @@
 ---
 transcript_of: "session-26"
-generated: "2026-09-16T10:07:31-04:00"
+generated: "2026-09-16T10:56:15-04:00"
 model: "large-v3"
 device: "cuda (float16)"
 duration: "2:24:54"
@@ -159,7 +159,9 @@ tracks:
 
 **[0:24:16] Ben (Dip):** gonna holler out to this lady or this person or whoever and be like what are you doing here who are you do you know anything about the blights that are outside that are just ravaging us and not in a fun way oh okay yeah sure all right sweet um wait if you're a druid and you know
 
-**[0:24:57] Kellan (DM):** well what was it that you did to antagonize them they don't attack or nothing she seems to consider this for a minute and says well it seems you come to the right place uh they won't come inside they uh are only to keep the ground safe there are uh security if you will what brings you here anyways though i wouldn't have expected to see travelers coming all the way like this um okay uh please pause for one second i'm just looking something up
+**[0:24:57] Kellan (DM):** well what was it that you did to antagonize them they don't attack or nothing
+
+**[0:25:22] Kellan (DM):** she seems to consider this for a minute and says well it seems you come to the right place uh they won't come inside they uh are only to keep the ground safe there are uh security if you will what brings you here anyways though i wouldn't have expected to see travelers coming all the way like this um okay uh please pause for one second i'm just looking something up
 
 **[0:25:59] Jeff (Iggy):** Who wants to take this one? He's going to clarify that the White Wizard sent us here.
 
@@ -367,7 +369,11 @@ tracks:
 
 **[0:45:42] Kellan (DM):** Big five.
 
-**[0:45:44] Ben (Dip):** Big five. Classic Miguel. Just leaving when it gets important, you know? The fuck? Yeah. It was literally right when you were like, I need five minutes, so, like, Kellen was like, oh, Miguel, it's your turn. And you didn't answer, so... Yeah. No, it's all good.
+**[0:45:44] Ben (Dip):** Big five. Classic Miguel. Just leaving when it gets important, you know?
+
+**[0:55:04] Ben (Dip):** The fuck?
+
+**[0:58:11] Ben (Dip):** Yeah. It was literally right when you were like, I need five minutes, so, like, Kellen was like, oh, Miguel, it's your turn. And you didn't answer, so... Yeah. No, it's all good.
 
 **[0:58:40] Miguel (Odibli):** god it's real sorry i had to get uh Tylenol for my mom all right um okay okay cool yeah um so i'm
 
@@ -503,7 +509,9 @@ tracks:
 
 **[1:11:10] Miguel (Odibli):** sadly. Oh, good.
 
-**[1:11:13] Kellan (DM):** than your armor class? Let's go. Oh my god, roll 20. How is it that you are this messed up today? Jeff, is 13 a hit?
+**[1:11:13] Kellan (DM):** than your armor class? Let's go. Oh my god, roll 20. How is it that you are this messed up today? Jeff,
+
+**[1:12:01] Kellan (DM):** is 13 a hit?
 
 **[1:12:04] Paul (Luci):** fuck go fuck i think it's i think it's time to storm off my classic classic double action
 
@@ -561,7 +569,9 @@ tracks:
 
 **[1:19:50] Paul (Luci):** interface either i can't paste an uh uh an object oh well anyways it's in discord now
 
-**[1:19:55] Miguel (Odibli):** King idiots. Roll20's got to be better. Is it still the druid turn now?
+**[1:19:55] Miguel (Odibli):** King idiots. Roll20's got to be better.
+
+**[1:20:24] Miguel (Odibli):** Is it still the druid turn now?
 
 **[1:20:32] Kellan (DM):** Okay, cool. So, almost there. Cool, yeah. So, the druid cast Shalag, which is
 
@@ -1133,13 +1143,17 @@ tracks:
 
 **[2:20:40] Kellan (DM):** Very good. It's yours.
 
-**[2:20:42] Ben (Dip):** Nice. Holy shit. Oh, thanks.
+**[2:20:42] Ben (Dip):** Nice.
+
+**[2:20:58] Ben (Dip):** Holy shit. Oh, thanks.
 
 **[2:21:01] Kellan (DM):** Wow. There is a magic in the air. Something, it seems, is able to control these blights. They're not natural, and they also are not, how can I put it, like, they don't exist of their own accord.
 
 **[2:21:35] Miguel (Odibli):** air can i quote like in a way sniff it out like toucan sam and have an idea like where the source of said magic could be okay okay so there's another one around here um well i don't i'll
 
-**[2:21:52] Kellan (DM):** You're not able to exactly identify where it is, but it seems like a druidic magic, as the flavor of magic. So you assume that there must be another druid, at least one, who is powerful enough to animate and control all of these quigs. What next? There is a lot of wine in this room. You could taste.
+**[2:21:52] Kellan (DM):** You're not able to exactly identify where it is, but it seems like a druidic magic, as the flavor of magic. So you assume that there must be another druid, at least one, who is powerful enough to animate and control all of these quigs.
+
+**[2:22:37] Kellan (DM):** What next? There is a lot of wine in this room. You could taste.
 
 **[2:22:46] Miguel (Odibli):** have a slurp okay i'm gonna die okay it's poisoned oh amazing um
 
