@@ -17,9 +17,10 @@ aliases:
   - "The Winery"
 importance: major
 active: true
-last_updated: [[Session 25 The Wizard of Wines]]
+last_updated: [[Session 26 The Poisoned Casks]]
 relates_to:
   - [[Davian Martikov]] (proprietor)
+  - [[The Winery Druid]] (poisoned its casks from within; killed here)
   - [[Baba Lysaga]] (her druids besiege it)
   - [[Danika]] (its overdue shipments sent the party here)
   - [[Blue Water Inn]] (the customer waiting on the wine)
@@ -54,9 +55,18 @@ Scouting the assault, the party counted **three main doors and a loading area.**
 
 > **Reliability:** [[Iggy]]'s Insight said there is more to the winery's quarrel with the druids than Davian admitted, so the siege's cause is not settled. What killed Odibli's familiar in one stroke is unidentified. `state: closed` reflects the halted deliveries, not a confirmed shutdown. Confirm with DM.
 
+## Inside the winery (Session 26)
+
+The party fought through the blights and barricaded themselves in the **fermentation room** — a two-story chamber holding **four casks**, each eight feet wide and twelve feet tall, under rafters where **scores of ravens** roost.
+
+[[The Winery Druid]] was on the balcony above the westernmost cask, **emptying a flask of thick syrup into the wine**. She was killed there by [[Dip]]. See [[The Winery Druid Falls]].
+
+**Every cask in this room is poisoned.** The druidic magic animating the blights **outlived her**, meaning at least one more druid is still somewhere in the building. The ravens in the rafters fought on the party's side throughout — see [[The Ravens Take the Winery's Side]].
+
 ## Sources
 
 Known to / linked with [[Blue Water Inn]].  
 Recorded in [[Session 25 The Wizard of Wines]].  
+Recorded in [[Session 26 The Poisoned Casks]].  
 Known to / linked with [[The Party]].  
 Known to / linked with [[Van Richten's Tower]].

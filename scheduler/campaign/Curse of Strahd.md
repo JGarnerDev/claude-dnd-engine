@@ -28,15 +28,16 @@ description: "Active Curse of Strahd campaign; party at level 4, at the Wizard o
 |---|---|---|---|
 | Jeff | Iggadreon "Iggy" Wallaed | Aasimar (Celestial), Bard/Soldier | Alive — shadow affliction (shadow moves wrong) |
 | Paul | Luci | Aasimar (Scourge) | Alive — sacrificed Sacred Flame permanently; retrieved from death by Strahd |
-| Miguel | Odibli (also "ODB") | Gnome Wizard | Alive |
+| Miguel | Odibli (also "ODB") | Gnome Wizard | Alive — poisoned (drank from a tainted cask, Session 26) |
 | Ben | Dip | Half-Orc Barbarian/Sage | Alive — whisper affliction (hears whispers in silence) |
 
 > **Reliability note:** Character full names for Luci and Dip are unconfirmed — only nicknames/handles appear in the notes. Character classes for Luci and Dip are inferred from abilities observed in play. Confirm with DM.
 
-## Current State (as of: Session 25)
+## Current State (as of: Session 26)
 
-- Party level: **4** (confirmed Session 25)
-- Location: at the **[[Wizard of Wines]]**, a vineyard south of the [[Raven River]] — mid-approach on the winery, **five [[Needle Blight|needle blights]] attacking**. In-world roughly **Day ~14 in Barovia (~estimate)**, daylight.
+- Party level: **4** (confirmed Session 26)
+- Location: inside the **[[Wizard of Wines]]** — the two-story **fermentation room**, barricaded and cleared of blights, its four great casks poisoned. In-world roughly **Day ~14 in Barovia (~estimate)**, daylight.
+- **Resolved — the needle blight assault:** the party broke off the fight at the winery's edge and got inside, [[Luci]] vaulting a window and [[Odibli]] incinerating a blight on a natural 20 as the doors shut.
 - **Resolved — the Blazing Sun festival:** held and survived. [[Vargas Vallakovich]] could not light the wicker sun, arrested a laughing citizen (freed by [[Iggy]]'s joke), forced a chant of "all will be well," and declared it a success anyway; [[Luci]] and [[Odibli]] lit the effigy with oil and a cantrip.
 - **Resolved — the loosed tiger:** [[Rictavio's Saber-Toothed Tiger]] escaped its cage-cart during the festival. [[Odibli]] spoke with it and lured it back in with a summoned frog. [[Luci]] misdirected [[Izek Strazni]]'s search party.
 - **Resolved — Lady Fiona Wachter:** she courted the party for a **coup**, asking them to kill Izek. They accepted intending to betray it, broke into her cellar, fought eight skeletons, and found **[[The Wachter Cult]]** around a black pentagram. **[[Dip]] killed Fiona and her imp [[Majesto]].** The circle died with her.
@@ -51,8 +52,13 @@ description: "Active Curse of Strahd campaign; party at level 4, at the Wizard o
 - **Open thread — the Keepers of the Feather:** anti-Strahd group in Vallaki, named by Van Richten as possible allies. The party has a name and nothing else.
 - **Open thread — Strahd's wolf at the Raven River:** [[The Raven River Wolf]] serves Strahd and was posted to stop **a group of four adventurers** from going **west** across the crossing. Strahd knows their number. **What is west is unknown.**
 - **Open thread — the skeleton rider:** [[The Skeleton Rider]] passed the party at the [[Luna River]], ignored [[Odibli]] entirely, and rode south into the forest. Never identified.
-- **Active mission — the missing wine:** [[Danika]] placed it past Ravenriver near [[Van Richten's Tower]]. The party reached the [[Wizard of Wines]], where **[[Davian Martikov]]** says **druids** have stopped his deliveries.
+- **Active mission — the missing wine (changed):** the wine is found, and **every cask in the winery is poisoned**. [[The Winery Druid]] was emptying a flask of thick syrup into them when the party walked in. The mission is no longer recovery but **remedy** — the party's own idea is to find **a priest** to cleanse it and save the townsfolk.
 - **Open thread — Baba Lysaga:** named by Davian as the druids' leader. Dark sorceress; "Ravenbane," "our mother," "servant of the night." **Midwife to Strahd's mother** — brought him into the world and directed his life. Reported not present at the winery.
+- **Resolved — the druid inside the winery:** [[The Winery Druid]] is **dead**, killed by [[Dip]] in a single greataxe turn. She never named who she served. See [[The Winery Druid Falls]].
+- **Open thread — the second druid:** killing her did **not** stop the blights. [[Odibli]] read **druidic magic still hanging in the air** afterward — the blights are not natural and "do not exist of their own accord." At least one more druid, powerful enough to animate and command them all, is **still somewhere in the winery**, unlocated.
+- **Open thread — the poisoned wine:** [[Odibli]] drank from a cask to confirm it and is **poisoned**. [[Luci]] bottled about a **quarter cask** for inspection. The party holds **the druid's flask** — read as a magic potion, otherwise unidentified.
+- **Open thread — the winery's ravens:** scores of them roosted in the rafters and **came down to fight the blights on the party's side**, unasked and unexplained. [[Iggy]] glimpsed one snatching needle blights during the retreat and dismissed it. See [[The Ravens Take the Winery's Side]]. No connection to the [[Keepers of the Feather]] is established.
+- **Open thread — the necklace of human teeth:** taken from the druid's body by [[Dip]]. Unexamined.
 - **Open thread — what the winery did:** Davian claims the druids are just jealous and he does not know why. [[Iggy]]'s Insight says **there is more to the story.**
 - **Open thread — what killed Odibli's familiar:** his scouting bird sensed animals inside the winery and was then destroyed by **something strange**. Still in there.
 - **Open thread — the "wheel" augury:** [[Luci]] cast Augury on the loading-dock approach and got **"wheel"** — not a standard result. Unresolved.
@@ -65,18 +71,20 @@ description: "Active Curse of Strahd campaign; party at level 4, at the Wizard o
 - Madame Eva's tarokka reading still maps the campaign's treasures, ally, and enemy — see [[Session 14 The Tarokka Reading]].
 - Rose and Thorn: **Stranded.**
 
-### Rest Clock (as of: Session 25)
+### Rest Clock (as of: Session 26)
 
 Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` → Long Rest Rules).
 
-- In-world time now: daylight at the [[Wizard of Wines]], roughly **Day ~14 in Barovia (~estimate)** — mid-approach on the winery, five needle blights engaging
-- Last long rest (in-world): **taken in Session 24**, outside Vallaki, after [[Rictavio]] drove off the vampires and stabilized the party — new anchor
-- Hours since last long rest: **~12–18 (~estimate)** — the rest, the return to the tavern, then the road south across two rivers to the vineyard
-- Long rest available: **no** — inside the 24h gate, and the party is in contact with hostiles
-- Rounds of combat since: **0 completed** — the needle blight fight is the first since the rest and is unresolved at the session cutoff
-- Short rests since: **0 (~estimate)** — none recorded in the notes
-- Notable burns: [[Odibli]]'s **familiar destroyed** at the winery; [[Luci]] spent **Augury** on the loading-dock approach and healed the winery folk before the assault. Spell slots after the Session 24 rest are otherwise unrecorded — confirm with DM.
+- In-world time now: daylight inside the [[Wizard of Wines]] fermentation room, roughly **Day ~14 in Barovia (~estimate)** — perhaps **30 minutes** on from the Session 25 cutoff, the fight over and the body searched
+- Last long rest (in-world): **taken in Session 24**, outside Vallaki, after [[Rictavio]] drove off the vampires and stabilized the party — unchanged
+- Hours since last long rest: **~13–19 (~estimate)** — the Session 25 approach plus this session's fight
+- Long rest available: **no** — inside the 24h gate, [[Odibli]] is poisoned, and a second druid is still unaccounted for in the building
+- Rounds of combat since: **~14 (~estimate)** — the tail of the needle blight fight plus the long twig blight fight; counted from turn cycles, not tracked at the table
+- Short rests since: **0 (~estimate)** — none taken
+- Notable burns: [[Odibli]] — **Chromatic Orb ×2**, **Acid Splash**, firebolts, dropped to ~10 HP, and is now **poisoned**; [[Iggy]] — **Faerie Fire** (concentration), **two Bardic Inspiration dice**, **Healing Word**, a self-heal, and **no Lucky used since the last long rest** (stated on the record); [[Luci]] — **2+ focus points** on Step of the Wind; [[Dip]] — **raged**. Carried from Session 25: Odibli's **familiar destroyed**, Luci's **Augury** spent.
 
+> **Reliability:** Session 26's round count and in-world elapsed time are estimates derived from a machine transcript, not numbers tracked at the table. [[Luci]] also spent what the source calls a **warlock spell slot** on Hellish Rebuke, which her recorded level-4 Monk build does not account for — confirm with Paul.
+>
 > **Reliability:** In-world dating is estimated throughout. The notes give no explicit dates, and the day count carried forward from Session 20 was already flagged as an estimate. Rounds of combat across Sessions 21–24 were not counted; the pre-rest total is moot since the Session 24 long rest reset the clock. Confirm with DM.
 
 ## Rules Decisions
