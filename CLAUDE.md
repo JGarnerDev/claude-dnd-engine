@@ -100,6 +100,7 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 | Script | When to use | Usage |
 |---|---|---|
 | `session-brief.py` | Start of every `/session` | `uv run scripts/session-brief.py` |
+| `transcribe.py` | Turn a session recording into a speaker-labeled transcript. Multi-track (one file per speaker) needs no diarization; biases decoding toward canon names | `uv run scripts/transcribe.py [--session <n>] [--list] [--force]` |
 | `session-state.py` | Quick campaign/act/mission check | `uv run scripts/session-state.py` |
 | `todo-brief.py` | Start of every `/todo` — all DM action-item signals in one call | `uv run scripts/todo-brief.py` |
 | `inventory-brief.py` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `uv run scripts/inventory-brief.py [--type <type>]` |
@@ -146,6 +147,28 @@ Recurring engine idiom for drift-prone state: stamp the state with the marker it
 ## Session Notes Ingestion (Recap Inbox)
 
 **Auto-ingestion trigger:** any markdown file in `recaps/inbox/` is raw session notes awaiting canonization — the DM drops rough notes there after play. When one exists at session start (`session-brief.py` flags it, along with any session whose `planned_date` has passed with no historian record), offer to run `/recap` using that file as the what-happened notes. Never canonize without the DM walking the `/recap` flow; after canonization completes, delete the inbox file — its content lives in the historian record.
+
+## Session Recordings (Audio)
+
+The group records sessions instead of taking notes. Audio lands in `recaps/audio/` — either a folder of per-speaker tracks (`recaps/audio/session-26/`, Craig-style multi-track) or a single mixed file. Audio is gitignored; it stays on the DM's machine.
+
+The pipeline is three steps, each with a human checkpoint:
+
+1. `uv run scripts/transcribe.py --session <n>` → `recaps/transcripts/session-<n>.md` — machine transcript, speaker-labeled, committed as the record of what was said
+2. `/transcript <n>` → `recaps/inbox/session-<n>.md` — digested notes shaped for `/recap`'s Phase 2 questions
+3. `/recap` → historian — canonization, DM-supervised as always
+
+**Auto-detection trigger:** a folder or audio file in `recaps/audio/` with no matching transcript in `recaps/transcripts/` is an untranscribed recording. Offer `/transcript <n> --transcribe`; never start a transcription run unprompted — a four-hour session is 15–25 minutes of GPU time.
+
+**A transcript is a source, not canon.** It mishears proper nouns, drops quiet speakers, and cannot tell a joke from a plan. Everything derived from one carries confidence marks (`(?)`, `(??)`) into the inbox note, and the DM resolves them during `/recap`. Never canonize straight from a transcript.
+
+Optional `recaps/audio/<session>/speakers.tsv` maps a track filename stem to a display name (`eljeffe0024` → `Jeff`), so Discord handles don't end up as speaker labels.
+
+**Resolving unknown handles:** a Craig handle that doesn't obviously map to a player is usually identifiable from the audio itself — a player self-identifying ("my name is Odibli"), or class vocabulary that matches exactly one PC (rage/reckless/greataxe → the barbarian; ki/Step of the Wind → the monk). Confirm the mapping, write it into `speakers.tsv`, then re-run `transcribe.py` — the per-track cache makes a relabel instant, with no re-decoding. Note the evidence in a comment in the file so the next person doesn't re-derive it.
+
+**Long runs must be detached.** A transcription launched with the Bash tool's background mode dies when the Claude Code process restarts, losing the whole run. For a full session, launch it detached so it survives — on Windows, `Start-Process` with `-RedirectStandardOutput`/`-RedirectStandardError` into `recaps/transcripts/.cache/<session>/` — then watch the log. The per-track JSON cache means an interrupted run resumes without redoing finished tracks.
+
+**Sharing a digest outside the repo:** `/transcript` Phase 6 covers publishing the inbox note as a Google-Docs-pasteable artifact — light theme only, top heading `H3`, Docs-available typefaces. Read it before building one.
 
 ## PC Backstory Ingestion
 
@@ -210,5 +233,6 @@ No DM brief card needed. No other formats unless explicitly requested.
 - `/rumor [count] [theme]` — `.claude/commands/rumor.md` — surface pool rumors as session-opener flavor; read-only
 - `/check <claim>` — `.claude/commands/check.md` — contradiction check against historian before canonizing
 - `/transition` — `.claude/commands/transition.md` — guided campaign season-swap flow (bidirectional Strahd ↔ homebrew); also auto-triggered by language cues
+- `/transcript [session] [--transcribe]` — `.claude/commands/transcript.md` — digest a session recording's transcript into `recaps/inbox/` notes ready for `/recap`
 - `/todo` — `.claude/commands/todo.md` — plain-language DM dashboard of everything needing attention or action
 - `/idea [rough idea] [--build]` — `.claude/commands/idea.md` — develop a rough engine idea into a grounded, executable change via the staged idea-process flow; read-only until `--build`

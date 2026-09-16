@@ -28,3 +28,16 @@ maps/**/*.jpg
 maps/**/*.jpeg
 maps/**/*.gif
 app/node_modules
+# Session recordings. Audio is large and binary -- it stays on the DM's machine; the
+# transcript in recaps/transcripts/ is the committed record of what was said.
+# .cache/ holds per-track JSON so a rerun re-merges without re-transcribing (regenerable).
+# Directories are re-included first: git cannot un-ignore a file inside an excluded
+# directory, so `!recaps/audio/**/` is what lets the speakers.tsv rule below apply.
+recaps/audio/**
+!recaps/audio/**/
+!recaps/audio/.gitkeep
+# speakers.tsv is config, not audio -- the handle-to-name map is worth keeping.
+!recaps/audio/**/speakers.tsv
+recaps/transcripts/.cache/
+# Craig download bundles, in case one lands in the repo root before it is unpacked.
+craig-*.zip

@@ -13,7 +13,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (ROOT, ci_eq, cwrite, digits_int, fmt_num, get_frontmatter,
-                        parse_party_table, read_text_no_bom, try_parse_date)
+                        parse_party_table, pending_recordings, read_text_no_bom,
+                        try_parse_date)
 
 spotlight = importlib.import_module('spotlight-balance')
 
@@ -71,6 +72,10 @@ def main() -> None:
     inbox = [f for f in inbox_dir.glob('*.md') if f.name != '.gitkeep'] if inbox_dir.exists() else []
     for f in inbox:
         uncanonized.append(f"  ! Notes waiting in recaps/inbox/{f.name} - run /recap to canonize.")
+    for slug, n_tracks in pending_recordings(ROOT):
+        tracks = f"{n_tracks} tracks" if n_tracks != 1 else "single file"
+        uncanonized.append(
+            f"  ! Recording '{slug}' ({tracks}) has no transcript - run /transcript {slug} --transcribe.")
     if uncanonized:
         cwrite("\n--- UNCANONIZED SESSIONS ---", 'red')
         for u in uncanonized:

@@ -4,7 +4,8 @@
 # uses: scripts/spotlight-balance.py (render_lines) for the spotlight ledger flags;
 #       scripts/validate.py (count_errors) for graph health, when present.
 # Collects every mechanical "needs attention" signal in one call:
-#   uncanonized sessions, recap inbox, index staleness, unchecked topic-todo items,
+#   uncanonized sessions, recap inbox, untranscribed recordings, index staleness,
+#   unchecked topic-todo items,
 #   world buildout gaps (empty entity types, scheduler structure),
 #   questionnaire fill states, draft files, undeployed design preferences.
 # Output is raw signals; /todo translates them to plain DM language.
@@ -20,7 +21,7 @@ from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (ROOT, ci_eq, color, cwrite, get_frontmatter,
-                        read_text_no_bom, try_int, try_parse_date)
+                        pending_recordings, read_text_no_bom, try_int, try_parse_date)
 
 spotlight = importlib.import_module('spotlight-balance')
 
@@ -75,6 +76,10 @@ def main() -> None:
         session_flags += 1
     for f in _glob('recaps/inbox'):
         cwrite(f"  INBOX NOTES: recaps/inbox/{f.name} awaiting /recap", 'red')
+        session_flags += 1
+    for slug, n_tracks in pending_recordings(ROOT):
+        tracks = f"{n_tracks} tracks" if n_tracks != 1 else "single file"
+        cwrite(f"  UNTRANSCRIBED RECORDING: recaps/audio/{slug} ({tracks}) -- /transcript {slug} --transcribe", 'red')
         session_flags += 1
 
     future_plans = 0

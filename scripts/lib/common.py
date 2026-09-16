@@ -6,7 +6,7 @@ consumers: scripts/entity-graph.py, scripts/free-entities.py, scripts/location-e
   scripts/timeline-gantt.py, scripts/timeline-data.py,
   scripts/monster-lookup.py, scripts/naming-status.py, scripts/pitch-brief.py,
   scripts/contribution-balance.py, scripts/region-world-context.py,
-  scripts/region-scale.py, scripts/region-brief.py
+  scripts/region-scale.py, scripts/region-brief.py, scripts/transcribe.py
 -- update those scripts if a function signature or output shape changes here.
 """
 
@@ -119,6 +119,37 @@ def get_frontmatter_from_text(raw: str) -> dict:
             if current_key:
                 fm.setdefault(f'_list_{current_key}', []).append(mlp.group(1).strip())
     return fm
+
+
+# -- Session recordings -------------------------------------------------------
+# The group records sessions instead of taking notes (see CLAUDE.md -> Session
+# Recordings). A recording in recaps/audio/ with no matching transcript is an
+# untranscribed session; both briefs surface it, so the check lives here once.
+AUDIO_EXTS = {'.aac', '.m4a', '.mp3', '.wav', '.flac', '.ogg', '.opus', '.webm', '.mp4', '.mkv'}
+
+
+def pending_recordings(root) -> list:
+    """Recordings awaiting transcription. Returns [(slug, track_count), ...].
+
+    A folder of per-speaker tracks counts its audio files; a single mixed file counts 1.
+    """
+    audio_dir = Path(root) / 'audio' if Path(root).name == 'recaps' else Path(root) / 'recaps' / 'audio'
+    out_dir = audio_dir.parent / 'transcripts'
+    if not audio_dir.exists():
+        return []
+    pending = []
+    for p in sorted(audio_dir.iterdir()):
+        if p.name.startswith('.'):
+            continue
+        if p.is_dir():
+            slug, n = p.name, len([q for q in p.iterdir() if q.suffix.lower() in AUDIO_EXTS])
+        elif p.suffix.lower() in AUDIO_EXTS:
+            slug, n = p.stem, 1
+        else:
+            continue
+        if not (out_dir / (slug + '.md')).exists():
+            pending.append((slug, n))
+    return pending
 
 
 # -- Comparison helpers -------------------------------------------------------

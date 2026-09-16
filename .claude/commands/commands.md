@@ -7,6 +7,7 @@ Commands to list:
 - `/commands` — show this list
 - `/session [--depth narrated|notes] [--scope inline|linked]` — plan the next session
 - `/recap` — canonize a played session; moves it to historian and audits entities
+- `/transcript [session] [--transcribe] [--quotes-only]` — digest a session recording's transcript into `recaps/inbox/` notes ready for `/recap`; `--transcribe` runs the audio through Whisper first
 - `/inventory` — report all free entities in `./data` grouped by type, with gaps
 - `/pitch [--type <type>] [--count <n>]` — generate a creative flavor pitch (no files created)
 - `/entity-questionnaire [--type <type>]` — generate a player-facing entity design questionnaire; also handles ingestion when a filled questionnaire is returned

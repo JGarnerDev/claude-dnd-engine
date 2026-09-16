@@ -139,6 +139,31 @@ After you play a session:
 4. Moves the session file from `scheduler/` to `historian/`
 5. Updates PC/NPC states and campaign state
 
+### Transcribe a Recorded Session
+
+The group records sessions instead of taking notes. Drop the recording in `recaps/audio/` — a folder of per-speaker tracks (Craig-style multi-track) or a single mixed file — then:
+
+```text
+uv run scripts/transcribe.py --session 26
+/transcript 26
+/recap
+```
+
+1. `transcribe.py` runs Whisper locally on the GPU and writes a `session-26.md` transcript into `recaps/transcripts/`, speaker-labeled and timestamped. Multi-track needs no speaker diarization — each file *is* a speaker. Decoding is biased toward canon names pulled from your entity frontmatter, so "Strahd" doesn't come back as "Strad"
+2. `/transcript` digests that transcript into a matching note in `recaps/inbox/` — session notes shaped for `/recap`'s questions, with anything inferred or unclear explicitly marked
+3. `/recap` canonizes it as usual, with you resolving the marked items
+
+Audio is gitignored and stays on your machine; the transcript is committed as the record behind the canon.
+
+First run downloads the Whisper model (~3 GB) and the CUDA runtime wheels. A four-hour five-track session takes roughly 15–25 minutes on a mid-range GPU, and falls back to CPU (much slower) if CUDA isn't available.
+
+Optional: a `speakers.tsv` in the audio folder maps track filenames to real names, so Discord handles don't become speaker labels.
+
+```text
+eljeffe0024    Jeff
+akumakel       Kellan (DM)
+```
+
 ---
 
 ## Project Structure
@@ -150,6 +175,7 @@ After you play a session:
 | `./meta/` | Design principles, table preferences, schemas, and decision frameworks |
 | `./scheduler/` | Active story layer — campaign doc, acts, missions, and session plans |
 | `./meta/schemas/` | Entity file templates and frontmatter specifications |
+| `./recaps/` | Session recordings pipeline — `audio/` (gitignored), `transcripts/`, and the `inbox/` of notes awaiting `/recap` |
 
 ## Story Hierarchy
 
@@ -268,10 +294,11 @@ Minimum viable prep: one active `campaign`, an active act, a handful of seeded e
 
 ### After Playing
 
-1. Run `/recap` to canonize what happened
-2. Session file moves from `scheduler/` to `historian/` with play metadata
-3. Entities used are moved from `data/` to `historian/`
-4. Campaign state is updated automatically
+1. If the session was recorded, run `uv run scripts/transcribe.py --session <n>` then `/transcript <n>` to turn the audio into notes
+2. Run `/recap` to canonize what happened
+3. Session file moves from `scheduler/` to `historian/` with play metadata
+4. Entities used are moved from `data/` to `historian/`
+5. Campaign state is updated automatically
 
 ---
 
