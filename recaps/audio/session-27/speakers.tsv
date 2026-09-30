@@ -1,0 +1,17 @@
+# Craig handle -> display name used in the transcript.
+# Format: <audio filename stem><TAB><Display Name>
+# Handles carried over from session-26/speakers.tsv (same Discord guild, same
+# players); track numbers differ per recording, so stems are renumbered here.
+#
+# SHARED MIC: Paul has no track of his own this session -- he played from Jeff's
+# place and spoke through Jeff's microphone. Jeff says so on the record at
+# [0:13:26]: "Paul is speaking through my microphone as well, so there's two of
+# our voices." Track 1 therefore carries BOTH Jeff (Iggy) and Paul (Luci), and
+# nothing in it can be attributed to one of them on voice alone -- the label is
+# deliberately both names. Confirmed mislabels in the first pass: monk-only lines
+# ("I'm a monk", "I'm going to do a flurry", "activate some monk focus") are Paul.
+# Split them by content during /transcript, with (?) marks for the DM to resolve.
+1-eljeffe0024	Jeff (Iggy) + Paul (Luci)
+2-memphis5626	Ben (Dip)
+3-dynamicpenny	Miguel (Odibli)
+4-akumakel	Kellan (DM)

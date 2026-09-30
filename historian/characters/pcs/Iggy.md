@@ -14,7 +14,7 @@ race: "Aasimar"
 class: "Bard"
 background: "Entertainer"
 level: 4
-level_confirmed: 26
+level_confirmed: 27
 aliases:
   - "Iggy"
 source_session: [[Session 01 The Black Sheep Inn]]

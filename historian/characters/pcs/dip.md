@@ -16,7 +16,7 @@ race: [[Half Orc]]
 class: [[Barbarian]]
 background: [[Sage]]
 level: 4
-level_confirmed: 26
+level_confirmed: 27
 
 aliases: []
 source_session: [[Session 05 The Specter]]
