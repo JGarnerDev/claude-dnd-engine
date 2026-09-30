@@ -101,6 +101,7 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 |---|---|---|
 | `session-brief.py` | Start of every `/session` | `uv run scripts/session-brief.py` |
 | `transcribe.py` | Turn a session recording into a speaker-labeled transcript. Multi-track (one file per speaker) needs no diarization; biases decoding toward canon names | `uv run scripts/transcribe.py [--session <n>] [--list] [--force]` |
+| `diarize-track.py` | Split one track that carries two speakers (two players sharing a mic). Embeds each cached utterance with ECAPA-TDNN, clusters by voice, names clusters from DM turn-anchors + class vocabulary | `uv run scripts/diarize-track.py --session <n> --track <stem> --speakers "A,B" [--dry-run]` |
 | `session-state.py` | Quick campaign/act/mission check | `uv run scripts/session-state.py` |
 | `todo-brief.py` | Start of every `/todo` — all DM action-item signals in one call | `uv run scripts/todo-brief.py` |
 | `inventory-brief.py` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `uv run scripts/inventory-brief.py [--type <type>]` |
@@ -165,6 +166,13 @@ The pipeline is three steps, each with a human checkpoint:
 Optional `recaps/audio/<session>/speakers.tsv` maps a track filename stem to a display name (`eljeffe0024` → `Jeff`), so Discord handles don't end up as speaker labels.
 
 **Resolving unknown handles:** a Craig handle that doesn't obviously map to a player is usually identifiable from the audio itself — a player self-identifying ("my name is Odibli"), or class vocabulary that matches exactly one PC (rage/reckless/greataxe → the barbarian; ki/Step of the Wind → the monk). Confirm the mapping, write it into `speakers.tsv`, then re-run `transcribe.py` — the per-track cache makes a relabel instant, with no re-decoding. Note the evidence in a comment in the file so the next person doesn't re-derive it.
+
+**Shared microphones.** One track normally means one speaker, which is why the pipeline needs no diarization. When two players sit together and share a mic, that assumption breaks and every line on that track is falsely attributed to the track's owner. Handle it in two steps:
+
+1. Set the track's `speakers.tsv` label to **both** names (`Jeff (Iggy) + Paul (Luci)`) so nothing is attributed to one player on no evidence, and record in a comment how you know
+2. Optionally run `uv run scripts/diarize-track.py --session <n> --track <stem> --speakers "A,B"` to split it by voice. It writes `.cache/<slug>/<stem>.speakers.json`, which the next `transcribe.py` run stamps onto each utterance — cache-only, no re-decode
+
+Do not try to split a shared track by reading the text. Measured on session 27, class vocabulary plus DM turn-anchors attribute only ~20% of utterances; the rest is `"yeah"` and `"that misses"`, identical between two players. The voice is the signal, the words are not. Lines the split leaves unresolved keep the joint label, and the DM settles them at `/recap`.
 
 **Long runs must be detached.** A transcription launched with the Bash tool's background mode dies when the Claude Code process restarts, losing the whole run. For a full session, launch it detached so it survives — on Windows, `Start-Process` with `-RedirectStandardOutput`/`-RedirectStandardError` into `recaps/transcripts/.cache/<session>/` — then watch the log. The per-track JSON cache means an interrupted run resumes without redoing finished tracks.
 

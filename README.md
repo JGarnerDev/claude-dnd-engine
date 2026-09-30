@@ -159,6 +159,15 @@ First run downloads the Whisper model (~3 GB) and the CUDA runtime wheels. A fou
 
 Optional: a `speakers.tsv` in the audio folder maps track filenames to real names, so Discord handles don't become speaker labels.
 
+**If two players share one microphone** (one of them is at the other's house), label that track with both names in `speakers.tsv` so no line is falsely attributed, then optionally split it by voice:
+
+```text
+uv run scripts/diarize-track.py --session 27 --track 1-eljeffe0024 --speakers "Jeff (Iggy),Paul (Luci)"
+uv run scripts/transcribe.py --session 27
+```
+
+The first command embeds each already-transcribed utterance with ECAPA-TDNN, clusters the voiceprints, and names each cluster from evidence in the room — the DM calling a player by name, and class vocabulary only one character would use. It writes a sidecar that the second command stamps onto the transcript; re-merging reads the cache, so nothing is re-decoded. Utterances too short or too ambiguous to call keep the joint label rather than a guess. First run downloads the ECAPA model (~80 MB) and a CPU torch wheel.
+
 ```text
 eljeffe0024    Jeff
 akumakel       Kellan (DM)

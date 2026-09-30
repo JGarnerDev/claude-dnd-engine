@@ -422,7 +422,10 @@ def render(slug: str, tracks: list, results: dict, meta: dict, vocab: dict, do_f
     merged = []
     for speaker, path in tracks:
         for s in results[str(path)]['segments']:
-            merged.append((s['start'], s['end'], speaker, s['text']))
+            # A shared-microphone track carries two players, so diarize-track.py may have
+            # stamped a per-utterance speaker. Fall back to the track label, which for such
+            # a track is deliberately both names -- an unresolved line stays honestly joint.
+            merged.append((s['start'], s['end'], s.get('speaker') or speaker, s['text']))
     merged.sort(key=lambda r: r[0])
 
     tally = {}
@@ -470,8 +473,19 @@ def render(slug: str, tracks: list, results: dict, meta: dict, vocab: dict, do_f
         'tracks:',
     ]
     for speaker, path in tracks:
-        n = len(results[str(path)]['segments'])
-        fm.append('  - "' + speaker + ': ' + path.name + ' (' + str(n) + ' segments)"')
+        segs = results[str(path)]['segments']
+        fm.append('  - "' + speaker + ': ' + path.name + ' (' + str(len(segs)) + ' segments)"')
+        # A diarized track reports its split, so the frontmatter shows who actually spoke
+        # rather than implying one voice held the whole track.
+        split = {}
+        for s in segs:
+            if s.get('speaker'):
+                split[s['speaker']] = split.get(s['speaker'], 0) + 1
+        if split:
+            parts = sorted(split.items(), key=lambda kv: -kv[1])
+            fm.append('    # diarized: ' + ', '.join(k + ' ' + str(v) for k, v in parts)
+                      + ((', unresolved ' + str(len(segs) - sum(split.values())))
+                         if len(segs) > sum(split.values()) else ''))
     fm += ['---', '']
 
     head = [
@@ -572,6 +586,33 @@ def main() -> None:
         results[str(path)] = res
         cwrite('\r      ' + str(len(res['segments'])) + ' segments  (' + _hms(res['duration']) +
                ' audio, ' + ('%.0f' % (time.time() - t0)) + 's)   ', 'green')
+
+    # A track shared by two players can carry a diarization sidecar from
+    # diarize-track.py: one speaker name per cached utterance. Stamp those onto the
+    # segments so render() can label each line individually. Missing sidecar, or a
+    # null entry inside one, leaves the track label alone.
+    for speaker, path in tracks:
+        side = cache / (path.stem + '.speakers.json')
+        if not side.exists():
+            continue
+        try:
+            data = json.loads(side.read_text(encoding='utf-8'))
+        except ValueError:
+            cwrite('  ! ' + side.name + ' is not valid JSON -- ignoring it', 'yellow')
+            continue
+        labels = data.get('labels') or []
+        segs = results[str(path)]['segments']
+        if len(labels) != len(segs):
+            cwrite('  ! ' + side.name + ' has ' + str(len(labels)) + ' labels for '
+                   + str(len(segs)) + ' utterances -- stale, ignoring it. Re-run '
+                   'diarize-track.py.', 'yellow')
+            continue
+        for seg, who in zip(segs, labels):
+            if who:
+                seg['speaker'] = who
+        named = sum(1 for x in labels if x)
+        cwrite('  diarized: ' + path.stem + ' -> ' + str(named) + '/' + str(len(segs))
+               + ' utterances attributed', 'darkcyan')
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     doc = render(slug, tracks, results, meta, build_vocab(names), not args.no_fixup)

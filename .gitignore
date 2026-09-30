@@ -41,3 +41,6 @@ recaps/audio/**
 recaps/transcripts/.cache/
 # Craig download bundles, in case one lands in the repo root before it is unpacked.
 craig-*.zip
+# Downloaded model weights (ECAPA speaker embeddings for diarize-track.py). Fetched on
+# first run, same as the Whisper model -- rebuilt from upstream, never committed.
+.models/

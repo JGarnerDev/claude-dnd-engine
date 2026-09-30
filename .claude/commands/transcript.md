@@ -33,6 +33,13 @@ uv run scripts/transcribe.py --list
 
 Read the transcript's frontmatter only at this stage. Report to the DM: session slug, duration, word count, speaker list, and any name fixups the script applied. If `device` reads `cpu`, mention it — a CPU run is far slower and slightly less accurate, and the DM may want to rerun on GPU.
 
+**A track labelled with two names is a shared microphone** (`Jeff (Iggy) + Paul (Luci)`) — two players sat together and spoke through one mic, so the track cannot be split on voice alone by the transcriber. Check the frontmatter for a `# diarized:` line under that track:
+
+- **Present** — `diarize-track.py` has split it by voiceprint and each line carries one name. Treat those labels as strong but not certain, and keep `(?)` on any attribution that decides something mechanical (who cast what, who took damage)
+- **Absent** — every line on that track is genuinely ambiguous between the two players. Attribute by content only where a line is decisive (class vocabulary, the DM naming someone in the preceding line) and mark everything else `(?)`. Do **not** guess from turn order alone; measured on session 27, text-side signals resolve only ~20% of such a track
+
+Either way, flag to the DM that one player's participation is voice-invisible, because participation feeds `spotlight-balance.py` and the rotation ledger. A player who shared a mic looks absent to every downstream script until `/recap` writes the session record with both PCs present.
+
 Cross-check the speaker list against the active campaign's party roster. If a speaker label looks like a raw filename rather than a person (`Track 2`, `1699999999`), tell the DM they can fix it permanently with a `speakers.tsv` in the audio folder, then proceed using the labels as-is.
 
 ---
