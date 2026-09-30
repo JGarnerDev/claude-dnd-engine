@@ -1,6 +1,5 @@
 ﻿---
 name: "Iggy"
-campaign: strahd
 type: character
 subtype: pc
 exists: true
