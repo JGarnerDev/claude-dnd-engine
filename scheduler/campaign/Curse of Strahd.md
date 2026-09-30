@@ -4,7 +4,7 @@ type: campaign
 campaign: strahd
 dm: "Kellan"
 exists: false
-state: active
+state: paused
 premise: "The party has been drawn into Barovia, a land of perpetual mist and dread ruled by the vampire lord Strahd von Zarovich. There is no leaving until Strahd is dealt with."
 central_conflict: "Strahd von Zarovich — ancient vampire, lord of Barovia, and master of the mists — holds the land in an eternal grip. The party must find a way to defeat him or escape."
 tone: "Gothic horror with moments of dark humor. Mix of roleplay and tactical combat. More serious than light, but not grimdark."
@@ -16,7 +16,7 @@ themes:
   - "Death and what lies beyond"
 end_condition: "Strahd defeated and Barovia freed from the mists — or the party escapes, if that proves possible"
 importance: critical
-active: true
+active: false
 description: "Curse of Strahd campaign, paused mid-quest at the end of Session 28; party at level 4, owing Davian Martikov three stolen seeds, and currently out of Barovia entirely via the portal relic."
 ---
 

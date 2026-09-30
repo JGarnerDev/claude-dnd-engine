@@ -1,8 +1,9 @@
 ---
 name: "Find the Wine Wizard"
 type: mission
+campaign: strahd
 exists: false
-state: active
+state: paused
 tags:
   - mission
 
@@ -20,7 +21,7 @@ relates_to:
   - [[Blue Water Inn]] (the wine's destination)
   - [[Curse of Strahd]] (campaign)
 importance: major
-active: true
+active: false
 last_updated: [[Session 16 The Blue Water Inn]]
 description: "Danika's overdue wine shipment — the 'wizard of wine' who supplies the Blue Water Inn is late. The party has been asked to find him."
 ---

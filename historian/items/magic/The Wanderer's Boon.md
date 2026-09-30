@@ -1,6 +1,5 @@
 ---
 name: "The Wanderer's Boon"
-campaign: strahd
 type: item
 subtype: magic
 exists: true
