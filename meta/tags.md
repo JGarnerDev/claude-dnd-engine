@@ -144,6 +144,8 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `route/military` | route entity | Route subtype: military road or logistics corridor |
 | `route/highway` | route entity | Route subtype: major public civic thoroughfare |
 | `route/trail` | route entity | Route subtype: informal or wilderness path |
+| **rumor** | | |
+| `rumor` | rumor entity | Entity type: circulating information — flat tag, no subtype |
 | **culture** | | |
 | `culture` | culture entity | Entity type: shared customs, values, and practices of a people |
 | **mechanic** | | |
