@@ -14,12 +14,12 @@ item_type: staff
 rarity: unknown
 attunement: "Any creature; [[Odibli]] carried it briefly but never completed attunement"
 origin: "Unknown. Carried by one of [[Baba Lysaga's Druids]] at the [[Wizard of Wines]], who claimed it in Druidic as his own source of authority over nature. Whether Baba Lysaga made it, gave it, or it predates her is unestablished."
-effect: "Animated and sustained every blight in the winery — when the staff broke, all of them withered and died at once. Carried a property the party called Blight Bane: while attuned, blights and evil plant creatures do not regard the bearer as hostile. Odibli also read a risk of short-term madness attached to attacking with it."
+effect: "Animated and sustained the blights at the winery. When it broke, every blight that could HEAR it withered and died at once — Session 28 established the reach as the building itself: the blights outside the walls were unharmed and ambushed the party on their way out. Carried a property the party called Blight Bane: while attuned, blights and evil plant creatures do not regard the bearer as hostile. Odibli also read a risk of short-term madness attached to attacking with it."
 aliases:
   - "The staff of the black branch"
 importance: major
 active: false
-last_updated: [[Session 27 The Vampire Staff]]
+last_updated: [[Session 28 The Wereravens' Gift]]
 relates_to:
   - [[Wizard of Wines]] (the blights it animated infested this place)
   - [[Baba Lysaga's Druids]] (carried by one of their number)
@@ -73,3 +73,11 @@ Kellan noted aloud that the scream **carried through the cellar** and wondered w
 
 - [[Session 26 The Poisoned Casks]] — its existence inferred but not located: Odibli read druidic magic animating the blights from a source he could not find
 - [[Session 27 The Vampire Staff]] — found, identified, carried, and destroyed
+
+## Its Reach (Session 28)
+
+Session 27 closed on an open question: when the staff broke, its scream killed every blight in the cellar and reverberated through the room, and Kellan wondered aloud whether the sound carried past the thick stone walls.
+
+It did not. The party walked out of the cleared building and were ambushed on the grounds by the blights that had been waiting outside, entirely unharmed — see [[The Blight Ambush at the Winery]]. [[Odibli]] had called it correctly in character before the fight began: the staff screams and kills the blights, but they have to *hear* it to die.
+
+The staff's reach was the building. Whatever blights [[Baba Lysaga's Druids]] fielded beyond it, including any at [[Yester Hill]], are still standing.

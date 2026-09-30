@@ -14,7 +14,7 @@ race: "Aasimar"
 class: "Bard"
 background: "Entertainer"
 level: 4
-level_confirmed: 27
+level_confirmed: 28
 aliases:
   - "Iggy"
 source_session: [[Session 01 The Black Sheep Inn]]
@@ -22,6 +22,7 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 affinity:
   - [[Bosco]] (3)
+  - [[Davian Martikov]] (1)
   - [[Lady Fiona Wachter]] (-4)
 importance: critical
 active: true
@@ -74,3 +75,5 @@ Shadow does not match Iggy's form and moves in the wrong direction. Onset: Sessi
 ## Affinity notes
 
 Iggy pressed [[Lady Fiona Wachter]] for anything concrete behind her coup, got nothing but secrecy, and later walked out of her cult chamber on a pretext — the move that started the fight that killed her. He rides with [[Bosco]].
+
+[[Davian Martikov]] (1) — warm but not personal. Iggy read more to Davian's story back in Session 25 and got the whole of it in Session 28, wereravens included, without ever having to press for it.

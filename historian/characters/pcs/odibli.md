@@ -14,7 +14,7 @@ race: [[Gnome]]
 class: [[Wizard]]
 background: "Unknown"
 level: 4
-level_confirmed: 27
+level_confirmed: 28
 aliases:
   - "ODB"
   - "Odi"
@@ -24,6 +24,7 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 affinity:
   - [[Sergei Rubelgerd]] (4)
+  - [[Davian Martikov]] (3)
   - [[Luci]] (2)
   - [[Rictavio]] (3)
 importance: critical
@@ -78,3 +79,5 @@ Habit of looking in fireplaces: professional reflex from a career of looking for
 ## Affinity notes
 
 Odibli mistrusted [[Rictavio]] from their first meeting — until Rictavio drove off the vampires that had downed the whole party and stabilized them. He keeps [[Sergei Rubelgerd]] and travels with [[Luci]].
+
+[[Davian Martikov]] (3) — cast the poison and disease off him at the winery in Session 28, clearing both the tainted cask and the brown mold in one gesture, then handed him [[The Wanderer's Boon]] to read and carry.

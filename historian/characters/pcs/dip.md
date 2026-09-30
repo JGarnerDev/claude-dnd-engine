@@ -16,7 +16,7 @@ race: [[Half Orc]]
 class: [[Barbarian]]
 background: [[Sage]]
 level: 4
-level_confirmed: 27
+level_confirmed: 28
 
 aliases: []
 source_session: [[Session 05 The Specter]]
@@ -28,6 +28,7 @@ relates_to:
   - [[The Hamlet Raiders]] (destroyed his home)
 affinity:
   - [[Luci]] (2)
+  - [[Davian Martikov]] (3)
   - [[Lady Fiona Wachter]] (-5)
 importance: critical
 active: true
@@ -104,3 +105,5 @@ Hears whispers when it is quiet. Onset: Session 10, after Odibli absorbed shadow
 ## Affinity notes
 
 Dip was the one [[Lady Fiona Wachter]] chose to draw out, and the one who killed her and her imp in her own cellar. He fights alongside [[Luci]].
+
+[[Davian Martikov]] (3) — Dip asked him outright to cure the mushroom-spore infection from the mold cave in Session 28 and he did it without hesitating, having just done the same for [[Odibli]].

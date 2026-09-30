@@ -11,18 +11,19 @@ tags:
 source_session: [[Session 27 The Vampire Staff]]
 confirmed_date: "2026-09-22"
 location: [[Wizard of Wines]]
-personality: "Dry and unbothered, with a scout's habit of understating things. Hops from foot to foot when pleased, gives credit where it is due, and declines flatly to carry a message he was not sent to carry."
+personality: "Dry and unbothered, with a scout's habit of understating things. Hops from foot to foot when pleased, gives credit where it is due, and declines flatly to carry a message he was not sent to carry — or to explain a family secret that was not his to give away."
 livelihood: "One of a murder of ravens dispatched from the [[Blue Water Inn]] to keep watch over the [[Wizard of Wines]] and report back if matters got out of hand."
 disposition: friendly
 aliases: []
 importance: minor
 active: true
-last_updated: [[Session 27 The Vampire Staff]]
+last_updated: [[Session 28 The Wereravens' Gift]]
 relates_to:
   - [[Wizard of Wines]] (posted there on watch)
   - [[Blue Water Inn]] (dispatched from)
   - [[Davian Martikov]] (answered his call)
   - [[Keepers of the Feather]] (near-certain affiliation — see Reliability)
+  - [[The Martikovs Are Wereravens]] (what he would not explain in Session 27)
   - [[Odibli]] (spoke with him via Speak with Animals)
   - [[Curse of Strahd]] (campaign)
 known_by:
@@ -67,3 +68,9 @@ Asked why Davian can command ravens at all, he shifted on his feet and said they
 - [[Blue Water Inn]] — dispatched from there
 - [[Keepers of the Feather]] — near-certain affiliation, unconfirmed at the table
 - [[Odibli]] — the only party member who can speak with him, and only while the spell lasts
+
+## What He Would Not Say (Session 28)
+
+Asked in Session 27 why [[Davian Martikov]] could command ravens, Dustin shifted on his feet and told [[Odibli]] to ask Davian. Session 28 explains the evasion: there is no commanding involved, because the ravens *are* the Martikovs. See [[The Martikovs Are Wereravens]].
+
+Which makes Dustin a Martikov, dispatched from his own family's inn to watch his own family's vineyard — and the secret he declined to hand over a family one rather than merely a professional one.

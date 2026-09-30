@@ -14,7 +14,7 @@ race: [[Aasimar]]
 class: [[Monk]]
 background: "Unknown"
 level: 4
-level_confirmed: 27
+level_confirmed: 28
 aliases:
   - "Lucy"
 source_session: [[Session 01 The Black Sheep Inn]]
@@ -22,6 +22,7 @@ relates_to:
   - [[Curse of Strahd]] (campaign)
 affinity:
   - [[Odibli]] (2)
+  - [[Davian Martikov]] (1)
   - [[Dip]] (2)
   - [[Ireena Kolyana]] (2)
 importance: critical
@@ -73,3 +74,5 @@ Was shunted from the light dimension to the astral plane, then to the material p
 ## Affinity notes
 
 Luci brought [[Ireena Kolyana]] the whole of Lady Wachter's plot and was met with a warning to research before acting rashly. She travels with [[Odibli]] and [[Dip]].
+
+[[Davian Martikov]] (1) — Luci ran eighty feet out of a live fight to reach him for help in Session 28, and he turned out to have been sending the ravens all along.

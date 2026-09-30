@@ -18,9 +18,10 @@ disposition: friendly
 aliases: []
 importance: major
 active: true
-last_updated: [[Session 24 The Vampire Hunter]]
+last_updated: [[Session 28 The Wereravens' Gift]]
 relates_to:
   - [[Blue Water Inn]] (proprietor, bartender)
+  - [[The Martikovs Are Wereravens]] (married into the family)
   - [[Wizard of Wines]] (source of her overdue shipments)
   - [[Davian Martikov]] (the winery's proprietor)
   - [[Van Richten's Tower]] (landmark she gave for the missing wine)
@@ -69,3 +70,9 @@ Recorded in [[Session 24 The Vampire Hunter]].
 Known to / linked with [[The Party]].
 
 First recorded in [[Session 16 The Blue Water Inn]].
+
+## She Married Into a Wereraven Family (Session 28)
+
+[[Davian Martikov]]'s confession at the winery establishes that the Martikovs are all wereravens — see [[The Martikovs Are Wereravens]]. Danika is married to [[Urwin]], Davian's son, which makes the [[Blue Water Inn]] a Martikov house and the ravens dispatched from it family business. Whether she is a wereraven herself was never asked: Davian said *everyone in our line*, and she married in rather than being born to it.
+
+The overdue wine shipments she sent the party to chase in Session 16 were, it turns out, her father-in-law's.
