@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.2.1] — 2026-10-01
+
+### Fixed
+
+- `Halsby.md`'s `campaign: homebrew` tag was invisible to every script. `get_frontmatter` in `scripts/lib/common.py` only accepts a scalar line that ends immediately after its value — an inline `#` comment makes the whole line fail to match, so the field is **silently dropped** while still looking correct in the file and in Obsidian. The campaign-separation tag the comment was explaining was the thing the comment broke. Comments moved to full lines above their fields; `level: 4` now parses too.
+
+### Added
+
+- `meta/entity-creation.md` → Obsidian Frontmatter Rules: never put an inline `#` comment on a frontmatter scalar; put the note on its own full line above the field.
+
 ## [0.2.0] — 2026-10-01
 
 ### Added

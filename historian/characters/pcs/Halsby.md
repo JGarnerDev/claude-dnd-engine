@@ -1,8 +1,9 @@
 ---
 name: "Halsby"
-campaign: homebrew   # deliberate: Kellan DMs the Strahd season, so Halsby only holds a
-                     # player seat in homebrew. The other four PCs are campaign-agnostic
-                     # because they persist across both worlds. See the campaign Party table.
+# deliberate: Kellan DMs the Strahd season, so Halsby only holds a player seat in
+# homebrew. The other four PCs are campaign-agnostic because they persist across both
+# worlds. See the campaign Party table.
+campaign: homebrew
 type: character
 subtype: pc
 exists: true
@@ -16,7 +17,10 @@ source_session: "player backstory (Halsby)"
 confirmed_date: "pre-campaign"
 race: "TBD"
 class: "Sorcerer (Shadow Magic)"
-level:
+# level ruled 2026-10-01: party stays at 4 on the homebrew crossing, no level-up on
+# arrival. No level_confirmed stamp until he is actually played -- party-status.py flags
+# him STALE by design; Session 1's /recap stamps it.
+level: 4
 background: "TBD"
 aliases:
   - "Halsby"
