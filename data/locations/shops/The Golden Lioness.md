@@ -4,18 +4,21 @@ type: location
 subtype: shop
 exists: false
 state: open
+campaign: homebrew
 tags:
   - location
   - location/shop
-city: unknown
+city: [[Ashford]]
 proprietor: [[Sable Wren]]
 purpose: commerce
 aliases: []
 importance: major
-description: "Tiefling-owned microbrewery and pub; warm, well-crafted, reputedly the safest building in the city."
+description: "Tiefling-owned microbrewery and pub in Ashford; warm, well-crafted, reputedly the safest building in town. Half-old and half-new — an established characterful core plus a newly built brewery wing not yet open."
 contributed_by: jeff
 relates_to:
   - [[Sable Wren]] (proprietor)
+  - "[[Ashford]] (the town it stands in)"
+  - "[[Aashal-Groon Mellenegon Borak]] (the deep-water being beneath; the cellar spring drops into his aquifer)"
   - [[Lok Thuliaga]] (staff — security)
   - [[Bree Tealeaf]] (staff — bartender)
   - [[Oswin]] (regular performer)
@@ -23,7 +26,7 @@ customers: "Working locals, occasional families, small tradespeople; also draws 
 specialty: "Stonecap mushroom dishes, pot pies, rotisserie. Signature ales: Lioness's Pride, The Standing, Pale Crossing, Embertide, Ironhold, The Mistake."
 ---
 
-> **Missing: city** — world map not yet established. Fill in when settled.
+The town's brewery and pub, on a corner in **[[Ashford]]**.
 
 Staff: [[Sable Wren]] (proprietor), [[Lok Thuliaga]] (security), [[Bree Tealeaf]] (bartender)
 
@@ -35,9 +38,17 @@ Two-storey corner building, narrow frontage but wider inside than it looks. Warm
 
 Inside: long bar, low ceiling, mismatched chairs — comfortable in an accumulated way, not designed. Central hearth always burning; everything slightly warm. Music stage in one corner, nothing fancy. Walls covered in years of posted notices, sketches, a few mounted antlers. [[Bree Tealeaf]] knows what every one of them means.
 
+### The new wing
+
+Everything above is the old half. Built onto it, and freshly finished, is a **brewery wing
+that has not opened yet** — new timber, bare walls, no notices on them, crates still roped
+shut and casks only just delivered to the yard. None of the old building's accumulated
+character has reached it. None of the old building's uncanny safety, either, as far as
+anyone can tell. It is the undefended half, and it is the half worth taking.
+
 ## Staff
 
-**[[Sable Wren]]** — tiefling warlock, proprietor. Got the building by doing a favor: hired to exorcise something, made friends with it instead. Patron: ancient hearth spirit (unnamed), tied to fire, shelter, and gathering places. The patron nudged her to this location; she stopped asking why.
+**[[Sable Wren]]** — tiefling warlock, proprietor. Got the building by doing a favor: hired to exorcise something, made friends with it instead. Patron: **[[Aashal-Groon Mellenegon Borak]]**, called **Asher** — a singular ancient deep-water being in the aquifer the cellar spring drops into. The patron nudged her to this location; she stopped asking why.
 
 **[[Lok Thuliaga]]** — goliath, security and heavy work. Left something behind before settling here. Doesn't talk about it. The way he watches a room isn't just bouncer instinct.
 
@@ -66,8 +77,17 @@ Working locals, occasional families, small tradespeople — not wealthy. Also dr
 
 ## Origin
 
-[[Sable Wren]] was hired to exorcise something from the building. She made friends with it instead and received the building as payment.
+[[Sable Wren]] was hired to exorcise something from the building. The thing was in the water
+— **[[Aashal-Groon Mellenegon Borak]]**, down where the cellar spring runs out into the deep
+aquifer. She talked to him instead of banishing him, and received the building as payment.
+The arrangement has held ever since: he gets a clean well used for life and some company, the
+Lioness gets the cleanest water in a town whose river is turning bad, and Sable can bless and
+charge deep-water for brewing.
 
 ## Story Hook
 
-The Lioness is the safest place in the city — something about Sable's arrangement with the building makes it genuinely protected. The party may not realize this until something bad can't follow them through the door. Also: whatever [[Lok Thuliaga]] and [[Bree Tealeaf]] left behind will find them eventually.
+The Lioness is the safest place in town — something about Sable's arrangement makes the old
+half genuinely protected. The party may not realize this until something bad can't follow them
+through the door. The new wing is not covered by it. Also: the safest building in Ashford is
+sitting directly on top of a monster, and whatever [[Lok Thuliaga]] and [[Bree Tealeaf]] left
+behind will find them eventually.

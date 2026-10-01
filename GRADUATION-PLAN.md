@@ -35,16 +35,27 @@ unresolved until a `/region` pass.
 
 ### Stage 2 — the Golden Lioness layer
 
-- [ ] `data/locations/shops/The Golden Lioness.md` — fill `city: unknown` → `Ashford`,
-      drop the "Missing: city" callout
-- [ ] Add the **renovation layer** (C10/R2): old characterful core stays true, plus a new
-      brewery wing built-but-not-open. **Add, do not strip** — the existing pool character
-      is Jeff's contribution and stays
-- [ ] Patron swap: hearth spirit → **Asher** in both the Lioness and `Sable Wren.md`; the
-      pact, tenure, and uncanny safety stay true, only the patron's nature reskins
-- [ ] **Decision needed (Jeff):** `Asher` is a novel `patron` type. Either register
-      `patron` in `meta/types.md` + both graph configs per `meta/graph-settings.md`, or
-      fold him under the existing `deity` type. Do not invent the type silently.
+- [x] **Type decided (Jeff, 2026-10-01): minor deity.** Filed as `type: deity`,
+      `tier: lesser` (the schema's enum has no `minor`), at the canonical deity path. No
+      new type, so `meta/types.md` and the two graph configs are untouched and
+      `meta/graph-settings.md` never comes into play
+- [x] `data/deities/Aashal-Groon Mellenegon Borak.md` — `aliases: [Asher, the Red Beneath]`,
+      `importance: major` (he gates the F17 brewhouse loop and carries the trust beat, so
+      narrative weight stays high even at `tier: lesser`)
+- [x] `data/locations/shops/The Golden Lioness.md` — `city: unknown` → `[[Ashford]]`,
+      `campaign: homebrew` added, "Missing: city" callout dropped
+- [x] Renovation layer added as a **new `### The new wing` section** (C10/R2). Nothing in
+      the old description, staff, brews, kitchen, or regulars was cut — the undefended-new-half
+      framing is layered on top of Jeff's pool text, not over it
+- [x] Patron swap done in the Lioness (staff block, Origin, Story Hook) and in
+      `Sable Wren.md`. Pact, tenure, and the uncanny safety of the old half all stay true;
+      only the patron's nature reskins, and the safety explicitly does **not** extend to the
+      new wing
+- [x] `meta/trait-registry.md` — entries added for Ashford and Asher
+
+Known warning, not a defect: `validate.ps1` flags the new deity as
+`reference-catalog type 'deity' is exists:false`. `Orrowan` — the other homebrew deity —
+carries the identical warning. `exists: false` is correct for ungraduated-to-canon content.
 
 ### Stage 3 — the people
 

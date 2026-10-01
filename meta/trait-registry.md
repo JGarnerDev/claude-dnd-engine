@@ -17,8 +17,10 @@ Used during elaboration drafting to prevent slot collisions within each entity t
 ## Locations
 
 - [[Solenne]] — growing human settler port, tilts the Concord's balance
+- [[Ashford]] — ford-town bled by raiders its own lord can't stop
 
 ## Other
 
 - [[The Orrow]] — elvish forest people; logging = deicide by delay
 - [[The Sesh'kar]] — reclusive lizardfolk, Orrowan's first people
+- [[Aashal-Groon Mellenegon Borak]] — lonely deep-water being; fouled water eats his memory
