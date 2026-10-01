@@ -24,6 +24,8 @@ export interface DateParts {
 // relates_to/participants) so a beat is findable by a name not in its label.
 export interface TimelineEvent {
   date: string;
+  daypart?: string; // sub-day tier (dawn|morning|midday|afternoon|evening|night|late). Spreads same-day beats within the day; absent = day start. See calendar.ts DAYPART_WINDOWS.
+  order?: number; // intra-day sequence (1-based). Tiebreaks beats sharing a daypart so coincident-date beats never share an x. Recap-assigned.
   label: string;
   track?: string;
   major?: boolean;

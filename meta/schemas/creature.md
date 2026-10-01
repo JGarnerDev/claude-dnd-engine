@@ -36,9 +36,11 @@ Covers **named creatures** — individuals with personality, recurring presence,
 ## Schema
 
 ### Canonical Path
+
 `data/creatures/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `alive` | Active in the world |
@@ -89,10 +91,13 @@ enemies:
 tactics: ""         # brief combat or behavioral notes
 weaknesses: ""      # narrative or mechanical vulnerabilities
 stat_block: ""      # path to external stat block, or "inline" if appended to body
+affinity:           # only for party companions; per-target liking, integer -10..+10; see meta/affinity.md
+  - [[Owner or PC Name]] (n)
 ---
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

@@ -101,6 +101,22 @@ def add_campaign(obj: dict, fm) -> None:
         obj['campaign'] = _unwrap_wikilink(c)
 
 
+# Sub-day placement -> beat. `daypart` (dawn|morning|midday|afternoon|evening|
+# night|late) and `order` (intra-day sequence int) spread coincident-day beats so
+# they don't stack on one x; render's applySubDayOffsets (axis.ts) consumes them.
+# Both optional; absent => beat sits at day start (current behavior).
+def add_sub_day(obj: dict, fm) -> None:
+    daypart = fm.get('daypart')
+    if daypart and str(daypart).strip():
+        obj['daypart'] = str(daypart).strip()
+    order = fm.get('order')
+    if order is not None and str(order).strip():
+        try:
+            obj['order'] = int(str(order).strip())
+        except ValueError:
+            pass
+
+
 def get_campaigns(root: Path) -> list:
     """Known campaigns (type:campaign under scheduler/ + historian/), for the app's
     campaign selector. Each carries slug, display label, and whether it's active."""
@@ -221,6 +237,7 @@ def collect_event_beats(root: Path, full: bool, name_types: _NameTypeCache) -> l
                     beat['knownBy'] = list(kb)
                 add_weight(beat, fm)
                 add_campaign(beat, fm)
+                add_sub_day(beat, fm)
                 if kw:
                     beat['keywords'] = list(kw)
                 out.append({'beat': beat, 'sort': get_beat_sort(beat['date'])})
@@ -294,6 +311,13 @@ def collect_chronicle_beats(root: Path) -> list:
                     beat['major'] = True
                 elif re.search(r'\bminor\b', flags, re.IGNORECASE):
                     beat['minor'] = True
+                # Sub-day placement rides in the flags field: `daypart=evening order=3`.
+                m_dp = re.search(r'\bdaypart=(\w+)', flags, re.IGNORECASE)
+                if m_dp:
+                    beat['daypart'] = m_dp.group(1)
+                m_or = re.search(r'\border=(\d+)', flags, re.IGNORECASE)
+                if m_or:
+                    beat['order'] = int(m_or.group(1))
                 add_campaign(beat, fm)
                 out.append({'beat': beat, 'sort': get_beat_sort(date)})
     return out
