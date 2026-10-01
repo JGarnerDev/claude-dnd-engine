@@ -7,6 +7,11 @@ Used during elaboration drafting to prevent slot collisions within each entity t
 ## NPCs
 
 - [[Kranken Hammershaft]] — Brasky-legend bard, every NPC invents contradictory lore
+- [[Lord Corren Cael]] — honest lord, cannot hate the house his grandfather died for
+- [[Mara Tull]] — sheriff, buried both children, carries it as steel
+- [[Richmond Ellesine]] — smith, only living witness, telling it costs him
+- [[Silas Crubb]] — mayor-merchant, affable tangents that always land on a number
+- [[Elowen Rimetusk]] — working wizard whose power outlasted her memory
 
 ## Factions
 
@@ -24,3 +29,11 @@ Used during elaboration drafting to prevent slot collisions within each entity t
 - [[The Orrow]] — elvish forest people; logging = deicide by delay
 - [[The Sesh'kar]] — reclusive lizardfolk, Orrowan's first people
 - [[Aashal-Groon Mellenegon Borak]] — lonely deep-water being; fouled water eats his memory
+
+## Antagonists
+
+- [[Lady Sorcha Marlow]] — widow-ruler collecting a debt she thinks is owed
+- [[Harrow Bane]] — banditry run as a company; matched boots, family at home
+- [[Jorn]] — circle-exile whose loyalty is the crew, not the cause
+- [[Wick]] — guild-sanctioned hunter using raiders as cover
+- [[Nella]] — debt-collared marksman working off a notched tally

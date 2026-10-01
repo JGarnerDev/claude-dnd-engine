@@ -19,10 +19,12 @@ Stages are ordered by what unblocks what. `[ ]` open · `[~]` in progress · `[x
 
 ### Stage 1 — Ashford (unblocks the validate errors)
 
-- [ ] `data/locations/cities/Ashford.md` — `location/city`, `exists: false`,
-      `campaign: homebrew`, `state: troubled`, `global_location: [[Stonemarch]]`
-- [ ] Verify the 4 dangling `[[Ashford]]` links resolve (House Cael, House Marlow,
-      Stonemarch, Duskwater) — `.\scripts\validate.ps1 -Scope links`
+- [x] `data/locations/cities/Ashford.md` — `location/city`, `exists: false`,
+      `campaign: homebrew`, `state: troubled`, `global_location: [[Stonemarch]]`.
+      Landed in `c8b092e`
+- [x] The 4 dangling `[[Ashford]]` links resolve. `validate.ps1` is down to 15 errors,
+      all of them the pre-existing placeholder-geography class (todo item 46) — none
+      from this act
 
 Facts that must survive the write: riverside borderlands town on the small tributary
 feeding the red/purple border-river · named for its **ford** (the southern crossing, and
@@ -61,10 +63,26 @@ carries the identical warning. `exists: false` is correct for ungraduated-to-can
 
 Lords and antagonists first (the feud spine), then the townsfolk who speak in Session 1.
 
-- [ ] `Lord Corren Cael` · `Lady Sorcha Marlow`
-- [ ] `Harrow Bane` + lieutenants `Jorn`, `Wick`, `Nella` (antagonist schema)
-- [ ] `Mara Tull` (sheriff) · `Richmond Ellesine` (smith) · `Silas Crubb` (logistics) ·
-      `Elowen Rimetusk` (old mage)
+- [x] `data/characters/npcs/Lord Corren Cael.md` ·
+      `data/characters/antagonists/Lady Sorcha Marlow.md`
+- [x] `data/characters/antagonists/` — `Harrow Bane`, `Jorn`, `Wick`, `Nella`, each with
+      `human_detail` filled per the antagonist schema's "fill it regardless of
+      importance"
+- [x] `data/characters/npcs/` — `Mara Tull`, `Richmond Ellesine`, `Silas Crubb`,
+      `Elowen Rimetusk`
+- [x] Ashford's role-only mentions became real wikilinks (the Stage 1 deferral), plus
+      `rulership: [[Silas Crubb]]` and six new `relates_to` edges
+- [x] Class pyramids placed before traits, per `meta/entity-creation.md`: Jorn at the
+      druid working tier but disowned by the institution that defines it · Wick at the
+      warlock broker tier with the deliberate wrinkle that a guild *does* sanction him ·
+      Nella at the ranger working tier, come up through the poacher grade · Elowen a
+      working wizard, which is more than a ford-town should have. No top-tier
+      assignments — those stay DM-controlled
+- [x] `meta/trait-registry.md` — five NPC lines, plus a new `## Antagonists` section
+      with five more. The file had no antagonist section before, and characters belong
+      under neither Factions nor Other
+- [x] `validate.ps1` reports **zero** errors and **zero** warnings against any of the
+      nine new files
 
 ### Already on master — do not redo
 
@@ -73,7 +91,8 @@ Cherry-picked from `feat/redwater-act1-graduation` on 2026-10-01 (`ff62992`):
 
 ### Closing out
 
-- [ ] `.\scripts\validate.ps1` clean
+- [x] `.\scripts\validate.ps1` — 15 errors, every one of them pre-existing placeholder
+      geography; nothing from this branch
 - [ ] `uv run scripts/index-entities.py` — reindex, restamp `.index-built`
 - [ ] `uv run scripts/version-check.py` — decide whether this clears the bump bar
       (`meta/versioning.md`); structural content graduation plausibly does

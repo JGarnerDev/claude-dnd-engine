@@ -17,8 +17,15 @@ purpose: commerce
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
+rulership: [[Silas Crubb]]
 relates_to:
   - "[[Stonemarch]] (the fief it sits in)"
+  - "[[Lord Corren Cael]] (its lord, who cannot cover his own ground)"
+  - "[[Mara Tull]] (its sheriff, and most of its actual defense)"
+  - "[[Silas Crubb]] (its mayor and general-goods merchant)"
+  - "[[Richmond Ellesine]] (its blacksmith, and the living witness to the feud)"
+  - "[[Elowen Rimetusk]] (its old mage)"
+  - "[[Harrow Bane]] (the name behind the raids)"
   - "[[House Cael]] (its lord's house)"
   - "[[House Marlow]] (the rival house whose deniable raiders bleed it)"
   - "[[Duskwater]] (the neighbouring fief the raiders come out of, overland)"
@@ -48,19 +55,19 @@ so does everything else.
 
 It is frontier country in the western sense: lawless margins, hard travel, a day's ride
 between anywhere, and homesteads that learn to defend themselves because nobody else will.
-Lord Cael is Ashford's lord and means well enough, but he is bound to a distant crown and
-cannot cover his own ground. What covers the town instead is a sheriff with too few hands,
-an old town mage whose power has outlasted her mind, and whoever happens to be standing
-there.
+**[[Lord Corren Cael]]** is Ashford's lord and means well enough, but he is bound to a
+distant crown and cannot cover his own ground. What covers the town instead is
+**[[Mara Tull]]**, a sheriff with too few hands; **[[Elowen Rimetusk]]**, an old town mage
+whose power has outlasted her mind; and whoever happens to be standing there.
 
 ## The bleeding
 
 Ashford is preyed on — raids on stock and stores, and the extortion that rides along behind
 them. The raiders present as independent bandits, and the town mostly talks about them that
-way. They are not. They are on a leash held by **[[House Marlow]]** out of neighbouring
-**[[Duskwater]]**, run overland from the southeast and across Ashford's own ford, through
-enough intermediaries that no order exists on paper and the house can disavow the whole
-business. The grievance underneath it is two generations old and belongs to the two houses,
+way. They are not. They are **[[Harrow Bane]]**'s band, on a leash held by **[[House Marlow]]** out of
+neighbouring **[[Duskwater]]**, run overland from the southeast and across Ashford's own
+ford, through enough intermediaries that no order exists on paper and the house can disavow
+the whole business. The grievance underneath it is two generations old and belongs to the two houses,
 not the town — but Ashford is where the bill lands.
 
 This is discoverable, not announced. Townsfolk know pieces: a name they are afraid of, a
@@ -69,11 +76,12 @@ feud comes apart in your hands. Don't dig and Ashford is simply a place being ro
 
 ## Living here
 
-The town stays alive by being useful to everyone and loyal to no one in public. Its mayor
-is also its general-goods merchant, and keeps both roles carefully neutral — he trades with
-whoever pays and has never been seen favouring one house over the other. The smith is of
-the old war generation and chose the forge over the fight; he was there for the thing the
-two houses are still arguing about, and will say so to anyone who respects good work.
+The town stays alive by being useful to everyone and loyal to no one in public.
+**[[Silas Crubb]]** is both its mayor and its general-goods merchant, and keeps both roles
+carefully neutral — he trades with whoever pays and has never been seen favouring one house
+over the other. **[[Richmond Ellesine]]**, the smith, is of the old war generation and chose
+the forge over the fight; he was there for the thing the two houses are still arguing about,
+and will say so to anyone who respects good work.
 
 Composition follows the surrounding region — no notable deviation from the frontier mix.
 
