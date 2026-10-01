@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# naming-status.py -- named vs. unnamed entries in questionnaires/world-naming.md
+# naming-status.py -- named vs. unnamed entries in questionnaires/world/naming/world-naming.md
 # consumers: CLAUDE.md -- update these if usage, flags, or output format change.
 # Usage: uv run scripts/naming-status.py [--section <name>]
 
@@ -83,7 +83,7 @@ def main():
     parser.add_argument("--section", default="")
     args = parser.parse_args()
 
-    path = ROOT / "questionnaires" / "world-naming.md"
+    path = ROOT / "questionnaires" / "world" / "naming" / "world-naming.md"
     if not path.exists():
         print(f"Not found: {path}", file=sys.stderr)
         sys.exit(1)

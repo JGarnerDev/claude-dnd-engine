@@ -14,7 +14,7 @@ geography: "The entire homebrew setting — multiple continents and sub-continen
 controlling_faction: unknown
 importance: critical
 biome: [temperate-forest, desert, tundra, coastal, aerial]
-description: "Draft world-root of the homebrew campaign — the whole setting that contains its continents, seas, skies, and the powers that vie across them. True name TBD, pending the world-naming questionnaires."
+description: "Draft world-root of the homebrew campaign — the whole setting that contains its continents, seas, skies, and the powers that vie across them. True name TBD, pending the naming questionnaire."
 relates_to:
   - "[[Homebrew Campaign]] (campaign played in this world)"
   - "[[Solmara]] (surface — sub-continent)"
@@ -54,7 +54,7 @@ relates_to:
 
 The world-root entity for the **homebrew campaign** — the top-level setting that every continent, sea, sky-island, faction, and trade route in `data/` ultimately belongs to. Factions and resources that operate "across the world" link here via the alias **The World**.
 
-**Draft status:** this entity stays in `state: draft` until the world receives its true name from the world-naming questionnaires (`questionnaires/world-naming*.md`). When named, rename this file and `name:` field to match, keeping "Homebrew World" and "The World" as aliases.
+**Draft status:** this entity stays in `state: draft` until the world receives its true name from the naming questionnaire (`questionnaires/world/naming/`). When named, rename this file and `name:` field to match, keeping "Homebrew World" and "The World" as aliases.
 
 This world is **separate and distinct from the Curse of Strahd campaign**. Barovia and its mists belong to `campaign: strahd`; this setting is `campaign: homebrew`. The two do not bleed together except where the DM deliberately stages a crossover. The campaign played in this world is [[Homebrew Campaign]].
 

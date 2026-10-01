@@ -11,12 +11,12 @@ tags:
   - lore
   - lore/calendar
 importance: major
-description: "Pending — awaiting answers from world-history-calendar questionnaire"
+description: "Pending — awaiting answers from questionnaires/world/history/"
 relates_to:
   - "[[World History]]"
 ---
 
-*Placeholder — populate from `questionnaires/world-history-calendar.md` answers.*
+*Placeholder — populate from the answers under `questionnaires/world/history/calendar/` and `questionnaires/world/history/calendar-proposal/`. A full draft proposal with three options awaits a pick: [[Calendar Proposal]].*
 
 ## Year Structure
 

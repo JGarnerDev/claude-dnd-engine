@@ -98,11 +98,11 @@ filled: false
 *Hand back to your DM when done. No right answers — the goal is enough detail to make this real.*
 ```
 
-Always write the questionnaire to `questionnaires/`. Name the file using kebab-case (lowercase, spaces → hyphens): `{player-kebab}-{name-kebab}.md` if both are known, `{player-kebab}-{type}.md` if no name, or `{name-kebab}.md` if no player. Report the path when done. The `--output` flag is now a no-op (output is always written).
+Always write the questionnaire to `questionnaires/`, inside the topic subfolder it belongs to (`questionnaires/world/<topic>/`, `questionnaires/<region-slug>/<topic>/`) — the tree is grouped by topic, not flat. Name the file using kebab-case (lowercase, spaces → hyphens): `{name-kebab}.md`, or `{type}.md` if there is no name. Report the path when done. The `--output` flag is now a no-op (output is always written).
 
 **Player type rules (cameo and patron — merged questionnaire):**
 
-- Filename suffix: `cameo` when invoked as cameo, `patron` when invoked as patron, `player` if role unspecified — e.g. `jonah-carson-cameo.md`
+- Filename suffix: `cameo` when invoked as cameo, `patron` when invoked as patron, `player` if role unspecified — e.g. `cameos/jonah-carson-cameo.md`
 - INGEST block: use `entity_type: player`; role is determined from the filled "How do you want to participate?" answer
 - INGEST action: `Filled questionnaire — run ingestion. Write to meta/players/{Full Name}.md.`
 - Title: `# {Full Name} — Player Registration`
@@ -139,7 +139,9 @@ Triggered by `--ingest <file>`, `--ingest paste`, or automatically whenever a me
 
 Parse the filled questionnaire. Extract what was answered and note blanks. Read `entity_type` from the CLAUDE-INGEST block to know which schema applies.
 
-If the file lives in `questionnaires/` and has real answers, set `filled: true` in its `CLAUDE-INGEST` block now (add the line if the file predates the marker). `/session` cameo detection and other scans rely on this marker — template `>` blockquote heuristics false-positive, and `questionnaires/` is gitignored so ripgrep-based tools can't see it (use POSIX grep via Bash).
+If the file lives in `questionnaires/` and has real answers, set `filled: true` in its `CLAUDE-INGEST` block now (add the line if the file predates the marker). `/session` cameo detection and other scans rely on this marker — template `>` blockquote heuristics false-positive, and `questionnaires/` is gitignored so ripgrep-based tools can't see it (use POSIX grep via Bash, recursively — the tree has topic subfolders).
+
+One-question-per-file entries in the world-design tree are different: they carry `status: open|answered|reference` frontmatter rather than a `CLAUDE-INGEST` block. Flip `status:` to `answered` instead of setting `filled:`.
 
 ---
 

@@ -11,14 +11,14 @@ tags:
   - lore
   - lore/religion
 importance: major
-description: "Pending — awaiting answers from world-religion questionnaire"
+description: "Pending — awaiting answers from questionnaires/world/religion/"
 relates_to:
   - "[[World History]]"
   - "[[Deorum Ostium]] (last site gods touched before the Sealing)"
   - "[[Azel Samarat]] (pan-cultural sacred site; belongs to no religion)"
 ---
 
-*Placeholder — populate from `questionnaires/world-religion.md` answers.*
+*Placeholder — populate from the answers under `questionnaires/world/religion/`.*
 
 ## The Pantheon
 

@@ -92,7 +92,12 @@ def phases_complete(content: str, draft_file: Path, questionnaires_dir: Path) ->
         done.append("Phase 6 (anchoring)")
     if questionnaires_dir.exists():
         slug = draft_file.stem
-        q_count = len(list(questionnaires_dir.glob(f"{slug}-city-*.md")))
+        # questionnaires/ is grouped into topic subfolders -- walk it, don't flat-glob.
+        # Current layout is <region-slug>/cities/city-<n>.md; the older flat spelling
+        # was <region-slug>-city-<n>.md. Count both so old regions still register.
+        found = set(questionnaires_dir.rglob(f"{slug}-city-*.md"))
+        found |= set((questionnaires_dir / slug / "cities").glob("city-*.md"))
+        q_count = len(found)
         if q_count > 0:
             done.append(f"Phase 7 ({q_count} questionnaires)")
     return done

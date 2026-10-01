@@ -29,12 +29,14 @@ When in doubt: look at the map again.
 Check `maps/world/` for the world map image before asking the DM to share one — it may already be on disk (`world-sky.jpg` is the primary reference). Check `maps/regions/{region-slug}/` for an existing region map.
 
 **If no region map is on disk, attempt an automatic crop before asking the DM:**
+
 ```text
 uv run scripts/map-crop.py --feature "<region-name>" --markers
 ```
 
 - If the feature is in the index, this saves a permanent crop to `maps/locations/<slug>-map.png` (base) and `maps/locations/<slug>-markers.png` (city markers). Use both as the region reference.
 - If the feature is not in the index, fall back to a relevant world tile (see `maps/world/index.md`). Also read the corresponding `tiles/markers-{name}.png` for dot coverage. If the tile lacks sufficient detail, run a temp crop by col/row bounds:
+
   ```text
   uv run scripts/map-crop.py --col-min <n> --col-max <n> --row-min <n> --row-max <n> --markers --temp
   ```
@@ -81,6 +83,7 @@ Ask the DM: **"What needs defining in this region?"**
 They may want: city locations, trade routes, wilderness areas, political borders, all of the above, or something else.
 
 **If the markers crop revealed red dots**, get an exact count:
+
 ```text
 uv run scripts/count-markers.py --col-min <n> --col-max <n> --row-min <n> --row-max <n>
 ```
@@ -247,7 +250,7 @@ Format: plain markdown, no YAML, no schema jargon. Suitable to paste into Discor
 
 Players use this ID to cross-reference each other's cities before either has a name. When ingested, the ID travels into the entity's `aliases:` field.
 
-Write to `questionnaires/{region}-city-{n}.md`. Report all paths when done.
+Write to `questionnaires/{region}/cities/city-{n}.md`. Report all paths when done. *(`region-brief.py` also counts the older flat `{region}-city-{n}.md` spelling, found recursively.)*
 
 After reporting paths, add one closing line: when a player returns a filled questionnaire, the DM just pastes it (or drops the file back) — the `CLAUDE-INGEST` block triggers ingestion automatically, no command needed.
 

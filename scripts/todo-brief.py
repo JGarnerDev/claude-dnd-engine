@@ -259,19 +259,50 @@ def main() -> None:
             cwrite("  PARTY UNNAMED: still called 'The Party' - encourage the group to pick a name", 'yellow')
 
     # -- 4. Questionnaires ----------------------------------------------------
+    # questionnaires/ is one-question-per-file, grouped in topic subfolders, so this
+    # walks the tree (rglob) rather than a flat glob. See scripts/questions-brief.py
+    # for the detailed breakdown; this is the dashboard summary only.
     cwrite("\n--- QUESTIONNAIRES ---", 'darkgray')
-    q_files = _glob('questionnaires')
-    if q_files:
-        for q in q_files:
-            raw = read_text_no_bom(q)
-            pm = re.search(r'(?m)^player:\s*(.+)$', raw)
-            player = pm.group(1).strip() if pm else "?"
-            if re.search(r'(?m)^filled:\s*true', raw):
-                cwrite(f"  READY TO INGEST: {q.name} (player: {player})", 'yellow')
-            else:
-                cwrite(f"  Waiting on player: {q.name} (player: {player})", 'white')
-    else:
+    qdir = ROOT / 'questionnaires'
+    q_files = sorted(qdir.rglob('*.md')) if qdir.exists() else []
+    open_by_area, answered, required_open = {}, 0, 0
+    legacy = []
+    for q in q_files:
+        if q.name == 'README.md':
+            continue
+        fm = get_frontmatter(q)
+        status = str(fm.get('status') or '').strip().lower()
+        if not status:
+            # Pre-split questionnaire: whole-file CLAUDE-INGEST block with a `filled:` marker.
+            raw_q = read_text_no_bom(q)
+            if re.search(r'(?m)^filled:\s*true', raw_q):
+                legacy.append((q, True))
+            elif re.search(r'(?m)^<!-- CLAUDE-INGEST', raw_q):
+                legacy.append((q, False))
+            continue
+        if status == 'answered':
+            answered += 1
+        elif status == 'open':
+            area = str(fm.get('topic') or '').split('/')[0] or '(untopiced)'
+            open_by_area[area] = open_by_area.get(area, 0) + 1
+            if str(fm.get('priority') or '').strip().lower() == 'required':
+                required_open += 1
+    total_open = sum(open_by_area.values())
+    if total_open:
+        areas = ', '.join(f"{a} {n}" for a, n in sorted(open_by_area.items()))
+        cwrite(f"  {total_open} open questions ({areas}); {answered} answered", 'white')
+        if required_open:
+            cwrite(f"  {required_open} of them are REQUIRED - something downstream is blocked", 'yellow')
+        cwrite("  run: uv run scripts/questions-brief.py --required --list", 'darkgray')
+    elif not legacy:
         cwrite("  (none outstanding)", 'darkgray')
+    for q, filled in legacy:
+        rel = q.relative_to(ROOT)
+        if filled:
+            cwrite(f"  READY TO INGEST: {rel}", 'yellow')
+        else:
+            cwrite(f"  Awaiting answers: {rel}", 'white')
+
 
     # -- 5. Draft files -------------------------------------------------------
     cwrite("\n--- DRAFTS ---", 'darkgray')

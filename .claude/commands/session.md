@@ -268,10 +268,10 @@ These are lead-time flags, never blockers — the DM can defer or delegate at an
 Detect filled questionnaires with a **single search, not per-file reads**. Two constraints discovered in audit: `questionnaires/` is gitignored, so ripgrep-based search tools silently return nothing — use POSIX grep via Bash; and questionnaire templates contain `>` option lists, so blockquote-text heuristics false-positive on blank templates. Use the explicit marker instead:
 
 ```bash
-grep -l "^filled: true" questionnaires/*.md
+grep -rl "^filled: true" questionnaires/
 ```
 
-(`filled:` lives in each questionnaire's `CLAUDE-INGEST` block — `false` at generation, flipped to `true` at return/ingestion. Files without the marker predate it: treat as unfilled unless the DM says otherwise.) Intersect the hits with cameo questionnaires (`entity_type: player` in the `CLAUDE-INGEST` block, or `-cameo` filenames).
+(`filled:` lives in each questionnaire's `CLAUDE-INGEST` block — `false` at generation, flipped to `true` at return/ingestion. Files without the marker predate it: treat as unfilled unless the DM says otherwise.) `questionnaires/` is grouped into topic subfolders, so the search must recurse — a flat `questionnaires/*.md` glob now matches nothing. The one-question-per-file world-design tree carries `status:`/`topic:`/`priority:` frontmatter instead of a `CLAUDE-INGEST` block and is not cameo material; `uv run scripts/questions-brief.py` reports on it. Intersect the hits with cameo questionnaires (`entity_type: player` in the `CLAUDE-INGEST` block, or `-cameo` filenames).
 
 For each filled cameo questionnaire, compare:
 

@@ -105,6 +105,7 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 | `session-state.py` | Quick campaign/act/mission check | `uv run scripts/session-state.py` |
 | `todo-brief.py` | Start of every `/todo` — all DM action-item signals in one call | `uv run scripts/todo-brief.py` |
 | `inventory-brief.py` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `uv run scripts/inventory-brief.py [--type <type>]` |
+| `questions-brief.py` | Open world-design questions in `questionnaires/`, counted by topic and priority. The tree is one question per file in topic subfolders, and gitignored — ripgrep tools can't see it | `uv run scripts/questions-brief.py [--topic <prefix>] [--required] [--list]` |
 | `threads-brief.py` | Start of every `/threads` Phase 2 — unresolved states, hostiles, pending seeds | `uv run scripts/threads-brief.py` |
 | `party-status.py` | PC stats + afflictions | `uv run scripts/party-status.py` |
 | `spotlight-balance.py` | Character-focus ledger — spotlight/agnostic balance, rotation, overdue PC, missing hooks (see `meta/character-focus.md`) | `uv run scripts/spotlight-balance.py [--section]` |

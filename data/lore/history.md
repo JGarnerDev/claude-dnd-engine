@@ -11,7 +11,7 @@ tags:
   - lore
   - lore/history
 importance: major
-description: "Pending — awaiting answers from world-history-calendar questionnaire"
+description: "Pending — awaiting answers from questionnaires/world/history/"
 relates_to:
   - "[[World Calendar]]"
   - "[[Deorum Ostium]] (gods sealing the world from the ethereal)"
@@ -19,20 +19,24 @@ relates_to:
   - "[[Ilurak Qeth]] (buried unknown)"
 ---
 
-*Placeholder — populate from `questionnaires/world-history-calendar.md` answers.*
+*Placeholder — populate from the answers under `questionnaires/world/history/` (eras, gods-and-sealing, primordial, present-day, shape-of-history) and `questionnaires/world/whatwill-timeline/`.*
 
 ## Timeline
 
 ### The Primordial Age
+
 *Pre-civilization. The Gordrathi Mountains were named by something non-human. The peoples of Ilurak Qeth predate written record.*
 
 ### The Gods' Sealing
+
 *Date and cause pending. Last documented at [[Deorum Ostium]] — the last site the gods touched before withdrawing from the ethereal.*
 
 ### The Defining Before/After Event
+
 *Pending questionnaire answers — the cultural "year zero" that divides old history from recent.*
 
 ### The Present Era — [Name Pending]
+
 *Pending questionnaire answers.*
 
 ## Recent History (Last Generation)

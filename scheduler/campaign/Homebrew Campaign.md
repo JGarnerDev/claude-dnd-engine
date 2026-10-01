@@ -39,16 +39,16 @@ Master checklist is the `/todo` dashboard (`todo-dashboard.md`); this list track
 
 ### Name the world and campaign
 
-- [ ] `questionnaires/world-naming.md` — general naming questionnaire (includes the world's name)
-- [ ] `questionnaires/world-naming-ben.md`, `world-naming-kellan.md`, `world-naming-miguel.md`, `world-naming-paul.md` — per-player naming sheets
+- [ ] `questionnaires/world/naming/world-naming.md` — general naming questionnaire (includes the world's name). Not created yet; `scripts/naming-status.py` reads this path
+  *(Per-player naming sheets are no longer planned — `questionnaires/` is a single DM-facing tree with no name designations.)*
 - [ ] Rename `data/locations/regions/Homebrew World.md` and this file once the name lands
 
 ### Fill the lore drafts (blocked on questionnaires)
 
-- [ ] `data/lore/calendar.md` — awaiting `questionnaires/world-history-calendar.md`
-- [ ] `data/lore/history.md` — awaiting `questionnaires/world-history-calendar.md`
+- [ ] `data/lore/calendar.md` — awaiting `questionnaires/world/history/calendar/` + `calendar-proposal/`
+- [ ] `data/lore/history.md` — awaiting `questionnaires/world/history/`
 - [ ] `data/lore/magic.md` — awaiting `questionnaires/world-magic.md`
-- [ ] `data/lore/religion.md` — awaiting `questionnaires/world-religion.md`
+- [ ] `data/lore/religion.md` — awaiting `questionnaires/world/religion/`
 
 ### Meta configuration
 
