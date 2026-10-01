@@ -9,7 +9,18 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import ROOT, color, fmt_num, get_frontmatter
 
-PLAYERS = ["paul", "ben", "miguel", "jeff"]
+# Derived from meta/players/ so a new player (file + `contributed_by` tag) shows up
+# without editing this script -- a hardcoded list silently dropped Kellan's rows.
+def _players() -> list:
+    d = ROOT / "meta" / "players"
+    if not d.exists():
+        return []
+    return sorted(
+        f.stem.lower() for f in d.glob("*.md") if f.stem.lower() != "player-template"
+    )
+
+
+PLAYERS = _players()
 
 
 def count_contributions(folder):

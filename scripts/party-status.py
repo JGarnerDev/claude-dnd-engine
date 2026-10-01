@@ -18,7 +18,14 @@ def main() -> None:
     # Load afflictions from campaign party table
     afflictions = {}
     campaign_dir = ROOT / 'scheduler' / 'campaign'
-    campaign_file = next(iter(sorted(campaign_dir.glob('*.md'), key=lambda f: f.name.lower())), None) if campaign_dir.exists() else None
+    # The ACTIVE campaign, not the first filename alphabetically -- 'Curse of Strahd.md'
+    # sorts ahead of 'Homebrew Campaign.md', so the old pick read the paused season's
+    # party table. Same selection session-brief.py uses.
+    campaign_files = sorted(campaign_dir.glob('*.md'), key=lambda f: f.name.lower()) if campaign_dir.exists() else []
+    campaign_file = next(
+        (f for f in campaign_files if ci_eq(get_frontmatter(f).get('state'), 'active')),
+        next(iter(campaign_files), None),
+    )
     if campaign_file:
         for cols in parse_party_table(campaign_file):
             if len(cols) >= 4:
