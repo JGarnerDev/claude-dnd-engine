@@ -18,6 +18,8 @@
 # Root
 CLAUDE.md
 README.md
+VERSION
+CHANGELOG.md
 .template-sync
 .markdownlint.json
 .gitignore
@@ -55,6 +57,7 @@ meta/entity-creation.md
 meta/graph-settings.md
 meta/types.md
 meta/tags.md
+meta/versioning.md
 meta/color-theory.md
 meta/mechanics/*.md
 meta/references.md
@@ -136,6 +139,7 @@ scripts/timeline-gantt.py
 scripts/todo-brief.ps1
 scripts/validate-refs.ps1
 scripts/validate.ps1
+scripts/version-check.py
 
 # Charting app — timeline/swimlane chart engine (TS + Vite)
 # Whole tree is shareable engine infrastructure (components, helpers, specs,

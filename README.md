@@ -2,6 +2,8 @@
 
 A structured, version-controlled system for generating and tracking D&D campaign sessions using creative synthesis, campaign history, and design principles.
 
+**Engine version:** `0.2.0` — see [CHANGELOG.md](./CHANGELOG.md) for notable changes and [`meta/versioning.md`](./meta/versioning.md) for the bump rules.
+
 ## What This Is
 
 This engine generates sessions for the **Curse of Strahd** campaign by synthesizing three layers:

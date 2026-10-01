@@ -128,6 +128,7 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 | `semantic-search.py` | Semantic similarity search — find entities by meaning, not keywords | `uv run scripts/semantic-search.py "<text>" [--type <type>] [--subtype <sub>] [--exists true\|false] [--source data\|historian\|scheduler] [-k <n>]` |
 | `validate.ps1` | Graph integrity check — dangling `[[links]]`, missing/invalid `exists`/`name`/`type`, broken canon. Run before canonizing or after bulk edits | `.\scripts\validate.ps1 [-Scope all\|links\|frontmatter] [-Quiet]` |
 | `validate-refs.ps1` | Instruction-file reference lint — finds path refs in CLAUDE.md files, commands, meta, tests, and todo files that point at renamed/deleted files. Run after renaming, moving, or deleting any instruction file or script | `.\scripts\validate-refs.ps1 [-Quiet]` |
+| `version-check.py` | Session start / before a bump — flag engine changes since the last version bump (see `meta/versioning.md`) | `uv run scripts/version-check.py` |
 | `refs.ps1` | Reverse dependency lookup — every file:line that references a target file. Run before renaming a file or changing a script's flags/output format, then update what it lists | `.\scripts\refs.ps1 -Target <path-or-filename>` |
 
 **Script dependents:** each consumed script carries a `# consumers:` header line listing the instruction files that reference it. When changing a script's usage, flags, or output format, update those files in the same change.
@@ -140,7 +141,13 @@ Scripts output plain text; parse with your own judgment. They read frontmatter o
 
 ## Stamp Pattern
 
-Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, the campaign Rest Clock header. Use this pattern for any new state that can go silently stale.
+Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, the campaign Rest Clock header, the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
+
+## Versioning
+
+The project carries a single semver `MAJOR.MINOR.PATCH` in root `VERSION`; notable engine changes are logged in `CHANGELOG.md`. The version tells collaborators and their Claude agents *what important thing changed* — not that there was activity. Routine campaign content (new entities, canonized sessions) stays below the bump bar and is not versioned. When a change clears the bar (engine behavior/interaction/view changes, or structural/retcon content changes), bump `VERSION` and prepend a `CHANGELOG.md` entry. Full tier rules and the bump procedure: `meta/versioning.md` (read once per task when bumping).
+
+**Version orientation:** At the start of any session, read root `VERSION` and the top entry or two of `CHANGELOG.md`, and orient the DM/agent: "Engine v`<x.y.z>` — since last worked here: `<recent changelog highlights>`." Run `uv run scripts/version-check.py` to surface whether engine files changed without a version bump (non-blocking — a flag means "decide whether this cleared the bump bar," not "something broke").
 
 ## Player Entity Submissions
 
