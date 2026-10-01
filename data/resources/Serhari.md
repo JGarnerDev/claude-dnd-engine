@@ -25,7 +25,7 @@ contributed_by: jeff
 description: "A plains vine with two ritual preparations — Vaelthari (white, clarity and prediction) and Solhari (amber, warmth and euphoria) — culturally controlled by plains peoples and coveted by arcane institutions."
 
 # --- OPTIONAL (resource) ---
-controlled_by: unknown
+controlled_by: "[[The Grey Mothers]] (cultural keepers; a wizard guild holds only the harvest contract)"
 trade_value: high
 accessibility: restricted
 hook: "A mage institution moves on plains territory to monopolize the white preparation; someone is dosed with Vaelthari without consent; the plant stops seeding; a significant patch is discovered near ruins."
@@ -52,11 +52,13 @@ Plains peoples and their trading partners have known Serhari for generations. It
 ## Effects
 
 ### Solhari (Amber)
+
 - **Low dose:** Warmth and social ease — advantage on Persuasion and Performance checks, disadvantage on Insight.
 - **Higher dose:** Ecstatic states — ritual dancing, euphoria — plus advantage on saving throws against Frightened.
 - **Overdose:** DC 12 Constitution save or Unconscious for 1d4 hours (stable, no lasting harm).
 
 ### Vaelthari (White)
+
 Structural logic becomes transparent. Consequence chains extend far forward. The emotional content of what people say becomes static — filtered out automatically, because it interferes with pattern recognition. A practiced mind uses this. An untrained one cannot stop running the implications.
 
 Practitioners call this state the Morath. The name predates the white preparation — it describes the condition itself, not the method of reaching it.
@@ -65,6 +67,7 @@ Practitioners call this state the Morath. The name predates the white preparatio
 - **Untrained users:** Same window, but every considered action cascades into consequence chains the user cannot stop running. Disadvantage on Wisdom saving throws for the duration; DM discretion on action paralysis severity.
 
 ### the hidden third way
+
 The vine itself, consumed raw during the annual crest. Cannot be prepared in advance; requires being present in the plains at dawn during the cascade. Effect left to DM discretion — possible directions include genuine involuntary prophecy, perception of the land's memory, the Morath, or complete clarity of one's own nature. Masters know this form exists. Most never speak of it.
 
 ---
@@ -74,6 +77,7 @@ The vine itself, consumed raw during the annual crest. Cannot be prepared in adv
 DM-tracked, never disclosed directly to players. The character learns something has shifted through fiction — a practitioner's offhand observation, a change in how the Morath feels, a difference in duration or aftermath.
 
 **Tally**
+
 - First use under a plains practitioner's guidance: +2
 - Subsequent guided use: +1
 - Solo use (any): +1
@@ -89,7 +93,7 @@ DM-tracked, never disclosed directly to players. The character learns something 
 
 ## Cultivation
 
-Primarily wild harvested. A small number of rare masters actively tend specific patches — protecting them, timing the harvest, reading when Serhari will seed. This knowledge is not widely held and is not written down.
+Primarily wild harvested. A small number of rare masters actively tend specific patches — protecting them, timing the harvest, reading when Serhari will seed. This knowledge is not widely held and is not written down. On the plains of the Calenmere basin, these keepers are [[The Grey Mothers]] — the eldest women of each village, holding the lore matrilineally in living memory. Their decentralization is the cultural gate the arcane institutions have never passed.
 
 ---
 
