@@ -33,6 +33,20 @@ Draft root document for the homebrew campaign that alternates with [[Curse of St
 
 > **Naming note:** "Homebrew Campaign" is a placeholder. When the world is named via the naming questionnaires, rename this file and the `name:` field; keep the placeholder as an alias.
 
+## Party
+
+Five PCs this season. The four who crossed from Barovia persist across both worlds; **Halsby is homebrew-only** — Kellan DMs the Strahd season, so he can only hold a player seat here. That is why Halsby's file carries `campaign: homebrew` while the other four are deliberately campaign-agnostic (see `todo-dashboard.md` item 16).
+
+| Player | Character | Race/Class | Status |
+|---|---|---|---|
+| Jeff | Iggadron "Iggy" Wallaed | Aasimar (Celestial), Bard 3 / Paladin 1 | Alive — shadow affliction, dormant in this world |
+| Paul | Luci | Aasimar (Scourge) Monk | Alive — sacrificed Sacred Flame permanently |
+| Miguel | Odibli (also "ODB") | Gnome Wizard | Alive — poison cured by Davian Martikov, Session 28 |
+| Ben | Dip | Half-Orc Barbarian/Sage | Alive — whisper affliction, dormant in this world |
+| Kellan | Halsby | TBD, Sorcerer (Shadow Magic) | Joins at Session 1 — race/background TBD, level pending the item 2 ruling |
+
+> **Reliability:** carried over from the Strahd roster plus the Session 28 seam pass. Afflictions cross **dormant** (the mists fed them; away, they are muted) — `workshop/first-homebrew-act/notes/the-seam.md`. Odibli's poison and Dip's mold were cured on screen and are gone; do not reuse them. Party level is unset pending the starting-level ruling.
+
 ## Setup TODO
 
 Master checklist is the `/todo` dashboard (`todo-dashboard.md`); this list tracks only the files that must be completed before this campaign can start.

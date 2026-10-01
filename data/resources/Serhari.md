@@ -14,6 +14,7 @@ location:
   - Plains F (southern margin)
   - The Dustbreak Plains (Gordrathi foothills margin)
   - Plains J (Caldrath interior, near The Broken Back)
+  - Plains H (western margin, under the Ardenwall foothills)
 
 # --- OPTIONAL (entity base) ---
 aliases:
