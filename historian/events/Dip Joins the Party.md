@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "Day 2 in Barovia (the Death House delve)"
 timeline_date: "0735-10-24"
+daypart: afternoon
+order: 1
 track: "character:Dip"
 outcome: "Dip joined the party during the Death House delve."
 consequences:

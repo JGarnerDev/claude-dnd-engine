@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "Day 3 in Barovia (escape from Death House)"
 timeline_date: "0735-10-29"
+daypart: afternoon
+order: 2
 track: "npc:Rose"
 outcome: "When the mists carried the party out of Death House, the scroll-pages binding Rose and Thorn were left behind."
 consequences:

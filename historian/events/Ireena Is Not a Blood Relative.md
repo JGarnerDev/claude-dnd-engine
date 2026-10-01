@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "Day 5 in Barovia (Church of the Morning Lord)"
 timeline_date: "0735-11-01"
+daypart: morning
+order: 2
 track: "faction:The Kolyanovich Family"
 outcome: "At the burial, Ireena learned she is not a blood relative of the Kolyanovich family."
 consequences:

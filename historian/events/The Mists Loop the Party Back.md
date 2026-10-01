@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "~Day 13 in Barovia (the burial hills on the Vallaki road)"
 timeline_date: "0735-11-03"
+daypart: morning
+order: 1
 track: "party"
 source_session: "[[Session 15 The Gates of Vallaki]]"
 outcome: "Trying to shortcut over the burial hills, the party was enveloped by the fog and deposited back at the bridge they had already crossed."

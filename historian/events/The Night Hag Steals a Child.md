@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "Day 5 in Barovia (Church of the Morning Lord)"
 timeline_date: "0735-11-01"
+daypart: midday
+order: 3
 track: "antagonist:The Dream Pastry Woman"
 outcome: "A night hag revealed herself at the church and escaped with a stolen child."
 consequences:

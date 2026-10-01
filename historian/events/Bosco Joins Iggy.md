@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "Day 5 in Barovia (Barovia village)"
 timeline_date: "0735-11-01"
+daypart: afternoon
+order: 4
 track: "character:Iggy"
 outcome: "Iggy gained a raccoon companion, Bosco, who took to the road with the party."
 consequences:

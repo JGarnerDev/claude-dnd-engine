@@ -10,6 +10,8 @@ tags:
   - region/barovia
 date: "Day 5 in Barovia (Church of the Morning Lord)"
 timeline_date: "0735-11-01"
+daypart: morning
+order: 1
 track: "npc:Doru"
 outcome: "The party learned that Father Donavich's son Doru is a vampire spawn imprisoned below the church."
 consequences:
