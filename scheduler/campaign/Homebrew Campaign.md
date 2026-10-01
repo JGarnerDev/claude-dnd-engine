@@ -43,7 +43,7 @@ Five PCs this season. The four who crossed from Barovia persist across both worl
 | Paul | Luci | Aasimar (Scourge) Monk | Alive — sacrificed Sacred Flame permanently |
 | Miguel | Odibli (also "ODB") | Gnome Wizard | Alive — poison cured by Davian Martikov, Session 28 |
 | Ben | Dip | Half-Orc Barbarian/Sage | Alive — whisper affliction, dormant in this world |
-| Kellan | Halsby | TBD, Sorcerer (Shadow Magic) | Joins at Session 1 — race/background TBD, level pending the item 2 ruling |
+| Kellan | Halsby | TBD, Sorcerer (Shadow Magic) | Joins at Session 1 — race/background TBD; level 4 per the 2026-10-01 ruling, stamps at Session 1's `/recap` |
 
 > **Reliability:** carried over from the Strahd roster plus the Session 28 seam pass. Afflictions cross **dormant** (the mists fed them; away, they are muted) — `workshop/first-homebrew-act/notes/the-seam.md`. Odibli's poison and Dip's mold were cured on screen and are gone; do not reuse them. Party level is unset pending the starting-level ruling.
 
