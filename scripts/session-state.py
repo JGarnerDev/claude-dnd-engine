@@ -67,7 +67,12 @@ def main() -> None:
         last = hist_sessions[0]
         show_entity("LAST PLAYED SESSION", get_frontmatter(last), last)
 
-    campaign_file = campaign_files[0] if campaign_files else None
+    # The party table must come from the ACTIVE campaign, not whichever file globs first --
+    # alphabetically that is Curse of Strahd, so the paused campaign's roster was winning.
+    campaign_file = next(
+        (f for f in campaign_files if ci_eq(get_frontmatter(f).get('state'), 'active')),
+        campaign_files[0] if campaign_files else None,
+    )
     if campaign_file:
         rows = parse_party_table(campaign_file)
         if rows:
