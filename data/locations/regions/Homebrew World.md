@@ -16,7 +16,7 @@ importance: critical
 biome: [temperate-forest, desert, tundra, coastal, aerial]
 description: "Draft world-root of the homebrew campaign — the whole setting that contains its continents, seas, skies, and the powers that vie across them. True name TBD, pending the naming questionnaire."
 relates_to:
-  - "[[Homebrew Campaign]] (campaign played in this world)"
+  - "[[Redwater]] (campaign played in this world)"
   - "[[Solmara]] (surface — sub-continent)"
   - "[[Erevast]] (surface — region)"
   - "[[Caldrath]] (surface — region)"
@@ -56,7 +56,7 @@ The world-root entity for the **homebrew campaign** — the top-level setting th
 
 **Draft status:** this entity stays in `state: draft` until the world receives its true name from the naming questionnaire (`questionnaires/world/naming/`). When named, rename this file and `name:` field to match, keeping "Homebrew World" and "The World" as aliases.
 
-This world is **separate and distinct from the Curse of Strahd campaign**. Barovia and its mists belong to `campaign: strahd`; this setting is `campaign: homebrew`. The two do not bleed together except where the DM deliberately stages a crossover. The campaign played in this world is [[Homebrew Campaign]].
+This world is **separate and distinct from the Curse of Strahd campaign**. Barovia and its mists belong to `campaign: strahd`; this setting is `campaign: homebrew`. The two do not bleed together except where the DM deliberately stages a crossover. The campaign played in this world is [[Redwater]].
 
 ## Surface regions
 

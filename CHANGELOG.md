@@ -6,6 +6,23 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.3.0] — 2026-10-01
+
+### Added
+
+- **`scheduler/acts/Act 1 - The Hearth at Ashford.md`** — the first homebrew act, filled from the workshop design. The Cael–Marlow feud is the `central_conflict` but runs as discoverable backdrop; the spine is the Golden Lioness foothold and its three-tick stake ladder (10% → 25% → 40%). Carries the act-level difficulty curve (5/10 → 8/10 with opt-in escalation), which lives here and deliberately **not** in the campaign-agnostic `meta/difficulty.md`. Four designed sessions inside the season's eight slots. Missions are still unwritten.
+- The Act 1 entity spine, graduated out of `workshop/` into `data/`: [[Ashford]] as a city, [[Aashal-Groon Mellenegon Borak]] ("Asher") as a `tier: lesser` deity, the two feuding lords, Harrow Bane's band, and the four Ashford townsfolk. The Golden Lioness gained `city: Ashford` and an unopened brewery wing **added on top of** its existing character.
+
+### Changed
+
+- **`scheduler/campaign/Homebrew Campaign.md` → `scheduler/campaign/Redwater.md`.** The campaign is named Redwater, after the red/purple border-river the opening act turns on. `"Homebrew Campaign"` is kept as an alias, so existing `[[Homebrew Campaign]]` links still resolve — nothing needs updating. The **world** is still unnamed; that rename, when it comes, applies to `data/locations/regions/Homebrew World.md`.
+- Sable Wren's patron reskinned from the unnamed hearth spirit to Asher, the deep-water being under Ashford. Her pact, her tenure, and how she got the building are unchanged.
+
+### Fixed
+
+- **`Act 1 - Placeholder` was retagged `campaign: strahd`.** The 2026-09-30 `/transition` run retagged it `homebrew` on the assumption it would become the first homebrew act — but four Strahd historian sessions (11–14) and the paused mission `Find the Wine Wizard` reference it as their act, so a homebrew tag pointed five Strahd records at a homebrew act. The file is now explicitly a Strahd stand-in, and the homebrew act is a separate file. No Strahd record was edited; their links still resolve.
+- **`scripts/session-state.py` reported the wrong party.** It read the party table from `campaign_files[0]` — whichever campaign file globs first, which alphabetically is `Curse of Strahd.md` — so `[PARTY]` listed the paused campaign's four PCs instead of the active campaign's five, omitting Halsby entirely. It now picks the file with `state: active`. Same class of bug as `9fbdbaa`, which fixed it in `session-brief.py` and left this script alone.
+
 ## [0.2.1] — 2026-10-01
 
 ### Fixed

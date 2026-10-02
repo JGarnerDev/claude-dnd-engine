@@ -1,6 +1,7 @@
 ---
-name: "Homebrew Campaign"
+name: "Redwater"
 aliases:
+  - "Homebrew Campaign"
   - "New World Campaign"
 type: campaign
 dm: "Jeff"
@@ -18,20 +19,20 @@ themes:
   - "Small people facing a vast world"
 importance: critical
 active: true
-description: "Active campaign document for the first homebrew season, opened 2026-09-30 when the party left Barovia via the Wanderer's Boon. Jeff DMs. World name still TBD pending world naming."
+description: "Active campaign document for the first homebrew season — named Redwater for the red/purple border-river the opening act turns on. Opened 2026-09-30 when the party left Barovia via the Wanderer's Boon. Jeff DMs. The *world* name is still TBD pending world naming; Redwater names the campaign, not the planet."
 relates_to:
   - "[[Homebrew World]] (setting)"
   - "[[Curse of Strahd]] (predecessor campaign)"
-  - "[[Act 1 - Placeholder]] (first act, placeholder)"
+  - "[[Act 1 - The Hearth at Ashford]] (first act)"
 ---
 
-# Homebrew Campaign
+# Redwater
 
 Draft root document for the homebrew campaign that alternates with [[Curse of Strahd]] like TV seasons. The party carries across both worlds and shifts between them via a deliberate narrative device — a story beat, not a soft drift (see `.claude/commands/transition.md` for the season-swap flow). Jeff DMs the first homebrew season; the homebrew DM rotates thereafter. Unlike Strahd (planned outside this repo, record-only here), homebrew uses the full engine — planning and recording both happen here.
 
-**Status: active** as of 2026-09-30 — the season swap ran via `/transition`, pausing [[Curse of Strahd]]. The party arrived through [[The Wanderer's Boon]], the relic [[Davian Martikov]] gave them in Session 28; it is now campaign-agnostic and is also the route back to Barovia. The setting is [[Homebrew World]] — still awaiting its true name. The first act exists only as [[Act 1 - Placeholder]], now retagged to this campaign.
+**Status: active** as of 2026-09-30 — the season swap ran via `/transition`, pausing [[Curse of Strahd]]. The party arrived through [[The Wanderer's Boon]], the relic [[Davian Martikov]] gave them in Session 28; it is now campaign-agnostic and is also the route back to Barovia. The setting is [[Homebrew World]] — still awaiting its true name. The first act is [[Act 1 - The Hearth at Ashford]].
 
-> **Naming note:** "Homebrew Campaign" is a placeholder. When the world is named via the naming questionnaires, rename this file and the `name:` field; keep the placeholder as an alias.
+> **Naming note:** the *campaign* is named — **Redwater**, after the red/purple border-river — and `"Homebrew Campaign"` is kept as an alias so older links resolve. The **world** is still unnamed: when the naming questionnaires land, rename `data/locations/regions/Homebrew World.md`, not this file.
 
 ## Party
 
@@ -55,7 +56,7 @@ Master checklist is the `/todo` dashboard (`todo-dashboard.md`); this list track
 
 - [ ] `questionnaires/world/naming/world-naming.md` — general naming questionnaire (includes the world's name). Not created yet; `scripts/naming-status.py` reads this path
   *(Per-player naming sheets are no longer planned — `questionnaires/` is a single DM-facing tree with no name designations.)*
-- [ ] Rename `data/locations/regions/Homebrew World.md` and this file once the name lands
+- [ ] Rename `data/locations/regions/Homebrew World.md` once the world name lands. *(This file is done — renamed to Redwater 2026-10-01.)*
 
 ### Fill the lore drafts (blocked on questionnaires)
 
@@ -77,17 +78,17 @@ Master checklist is the `/todo` dashboard (`todo-dashboard.md`); this list track
 
 ### Starting content (data pool)
 
-- [ ] Starting city entity — home base, with inn, mundane shop, magic shop (each chains to an NPC)
-- [ ] Faction entities — at least one with clear motives, tensions, opposition
-- [ ] Key NPC files — quest-giver, innkeeper, local authority, recurring contact
+- [x] Starting city entity — [[Ashford]], graduated 2026-10-01 with [[The Golden Lioness]] as its pub. A dedicated mundane shop and magic shop are still unmade; [[Silas Crubb]] covers general goods as an NPC, and there is no magic shop in a town this size by design
+- [x] Faction entities — [[House Cael]] and [[House Marlow]], the two sides of the Act 1 feud
+- [x] Key NPC files — [[Sable Wren]] (the offer), [[Mara Tull]] (local authority), [[Silas Crubb]], [[Richmond Ellesine]], [[Elowen Rimetusk]], [[Lord Corren Cael]], and the antagonist side: [[Lady Sorcha Marlow]], [[Harrow Bane]], [[Jorn]], [[Wick]], [[Nella]]
 - [ ] Wilderness areas and dungeons near the starting city
 - [ ] Historical events and rumors
 - [ ] PC files for each character (`data/characters/pcs/`)
 
 ### Story structure
 
-- [x] Fill in this file — premise, central conflict, tone, and themes written 2026-09-30 from the Whatwill cosmology; `end_condition` still open pending Act 1
-- [ ] `scheduler/acts/Act 1 - Placeholder.md` — homebrew DM (Jeff, first season) to fill DM notes, mission structure, act goals
+- [x] Fill in this file — premise, central conflict, tone, and themes written 2026-09-30 from the Whatwill cosmology; `end_condition` still open pending Act 1. **`central_conflict` deliberately untouched:** Act 1 runs the Cael–Marlow feud while the campaign file still reads "Control of Whatwill", and reconciling the two is a pinned group discussion, not a decision to make here
+- [x] `scheduler/acts/Act 1 - The Hearth at Ashford.md` — written 2026-10-01: the Cael–Marlow feud as backdrop, the Golden Lioness foothold as the spine, four designed sessions inside eight slots
 - [ ] First mission(s) once the opening act is defined
 - [ ] First session plan once meta configuration and starting data are in place
 
