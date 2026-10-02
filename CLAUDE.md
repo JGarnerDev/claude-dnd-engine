@@ -17,6 +17,7 @@ This engine generates D&D sessions by synthesizing creative material, campaign h
 - `./data` — Creative source material (lore, worldbuilding, inspiration). Informational "food" that shapes story flavor and content, but is not authoritative.
 - `./historian` — The authoritative record of the campaign. Past and current in-world facts (events, NPCs, locations, outcomes) live here. When `data` and `historian` conflict, `historian` wins.
 - `./meta` — Principles, guidelines, and rules governing the campaign design (e.g. challenge/reward balance, pacing, tone). These govern *how* sessions are constructed, not *what* happened.
+- `./spitball` — Loose story ideas, captured without commitment and kept searchable so they can be mined later. **Never canon**, never a source of fact; excluded from `validate.ps1`'s link check so an idea may name things that do not exist. See `meta/spitball.md`.
 - `./scheduler` — The active story layer. Contains the campaign document, acts, missions, and session plans. Files here have `exists: false` and move to `historian/` when completed or played.
 
 ## Story Hierarchy
@@ -85,6 +86,19 @@ When creating any entity, read `meta/entity-creation.md` before proceeding. It c
 
 PC/NPC files carry an optional `affinity:` field — a per-target liking score (integer −10..+10) toward specific characters, distinct from `relates_to` and `disposition`. When working with character sentiment (proposing nudges, reading relationships, backfilling), read `meta/affinity.md` once per task for scale, bands, scope, and frontmatter shape. `/recap` proposes nudges; `scripts/entity-graph.py` reads them.
 
+## Spitballs
+
+`spitball/` holds loose story ideas — things that might become an act, a session, an encounter, a twist, or nothing. Filed by `/spitball`, usually from a phone over `claude remote-control`, so the capture rule is **file first, develop second**: the idea hits disk on the first turn, before any riffing, and follow-up turns update that same file. Do not interrogate the DM for fields — infer `subtype`, `campaign` and `target`, and be wrong cheaply. **One exception to file-first:** a bare entity name (`/spitball Nella`) is a lookup, not an idea — answer with about four lines on where that entity stands, ask what to explore, and write nothing until the next message. **A spitball is never canon** and is never consulted by `/recap`, `/check`, `/voice` or anything else that speaks about what is true. Read `meta/spitball.md` once per task when writing, developing or mining them.
+
+## Flow Graphs
+
+An act can carry a **flow graph set** — a folder of mermaid maps, one graph per file, showing the
+act's sessions, the beats inside each, the real branches, and which beats are committed enough to
+run. Every node prints a commitment marker and its own id (`[x]`/`[-]`/`[?]` plus `S1_EXAMPLE`), so
+beats can be named in conversation and found with a grep. When building or editing one, read
+`meta/flow-graphs.md` once per task. **Never flip a node to `[x]` on your own judgment** — the
+engine proposes, the DM commits. Built by `/flow`; coverage reported by `scripts/flow-status.py`.
+
 ## Graph Configuration
 
 When adding a new type, subtype, or entity folder, read `meta/graph-settings.md` before touching any config files.
@@ -106,9 +120,11 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 | `todo-brief.py` | Start of every `/todo` — all DM action-item signals in one call | `uv run scripts/todo-brief.py` |
 | `inventory-brief.py` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `uv run scripts/inventory-brief.py [--type <type>]` |
 | `questions-brief.py` | Open world-design questions in `questionnaires/`, counted by topic and priority. The tree is one question per file in topic subfolders, and gitignored — ripgrep tools can't see it | `uv run scripts/questions-brief.py [--topic <prefix>] [--required] [--list]` |
+| `spitball-brief.py` | The spitball pile filtered by frontmatter — target act, kind, campaign, state, heat (see `meta/spitball.md`) | `uv run scripts/spitball-brief.py [--target <slug>] [--subtype <kind>] [--campaign <name>] [--state <state>] [--min-heat <n>] [--all] [--count]` |
 | `threads-brief.py` | Start of every `/threads` Phase 2 — unresolved states, hostiles, pending seeds | `uv run scripts/threads-brief.py` |
 | `party-status.py` | PC stats + afflictions | `uv run scripts/party-status.py` |
 | `spotlight-balance.py` | Character-focus ledger — spotlight/agnostic balance, rotation, overdue PC, missing hooks (see `meta/character-focus.md`) | `uv run scripts/spotlight-balance.py [--section]` |
+| `flow-status.py` | Commitment coverage for flow graph sets — committed/draft/open counts, committed beats sitting downstream of uncommitted work, id/label mismatches (see `meta/flow-graphs.md`) | `uv run scripts/flow-status.py [--set <path>] [--blockers] [--quiet]` |
 | `free-entities.py` | Find available entities by type or player | `uv run scripts/free-entities.py [--type <type>] [--player <name>]` |
 | `contribution-balance.py` | Player contribution counts (pool vs. canonized) | `uv run scripts/contribution-balance.py` |
 | `entity-graph.py` | 1-hop relations for any entity | `uv run scripts/entity-graph.py --name "<name>"` |
@@ -137,7 +153,7 @@ Scripts output plain text; parse with your own judgment. They read frontmatter o
 
 **Semantic index:** `vector-index/` (gitignored, rebuilt from source). Build once with `uv run scripts/index-entities.py`, re-run after bulk entity additions. Use `semantic-search.py` to surface entities by thematic relevance — betrayal arcs, forgotten NPCs, callback hooks, contradiction checks.
 
-**Index staleness check:** At the start of any session, read `vector-index/.index-built` (line 1: ISO timestamp, line 2: git commit SHA). Then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag it: "Semantic index stale since `<sha[:7]>` — run `uv run scripts/index-entities.py`." Ignore commits that touch only non-indexed files (`CLAUDE.md`, `README.md`) — the indexer skips them, so they cannot stale the index. Do not rebuild automatically; prompt the user. If `.index-built` is missing, index has never been built — prompt to run it.
+**Index staleness check:** At the start of any session, read `vector-index/.index-built` (line 1: ISO timestamp, line 2: git commit SHA). Then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/ spitball/`. If any commits appear, flag it: "Semantic index stale since `<sha[:7]>` — run `uv run scripts/index-entities.py`." Ignore commits that touch only non-indexed files (`CLAUDE.md`, `README.md`) — the indexer skips them, so they cannot stale the index. Do not rebuild automatically; prompt the user. If `.index-built` is missing, index has never been built — prompt to run it.
 
 ## Stamp Pattern
 
@@ -252,3 +268,5 @@ No DM brief card needed. No other formats unless explicitly requested.
 - `/transcript [session] [--transcribe]` — `.claude/commands/transcript.md` — digest a session recording's transcript into `recaps/inbox/` notes ready for `/recap`
 - `/todo` — `.claude/commands/todo.md` — plain-language DM dashboard of everything needing attention or action
 - `/idea [rough idea] [--build]` — `.claude/commands/idea.md` — develop a rough engine idea into a grounded, executable change via the staged idea-process flow; read-only until `--build`
+- `/spitball [idea|entity] [--list] [--promote <file>] [--assign <file> <target>] [--state <file> <state>]` — `.claude/commands/spitball.md` — capture a loose story idea without committing to it; files immediately, phone-friendly, mined later. A bare entity name instead reminds you where that entity stands, then asks what to explore
+- `/flow [act] [--session <n>] [--status]` — `.claude/commands/flow.md` — build or refresh an act's flow graph set: bird's-eye mermaid maps of what happens when, which branches the party may take, and which beats are committed enough to run

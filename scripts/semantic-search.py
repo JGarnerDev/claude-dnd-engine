@@ -28,7 +28,7 @@ def main():
     parser.add_argument('--type', default='', help='Filter by entity type (character, location, faction, etc.)')
     parser.add_argument('--subtype', default='', help='Filter by entity subtype')
     parser.add_argument('--exists', default='', choices=['true', 'false', ''], help='Filter by exists status')
-    parser.add_argument('--source', default='', choices=['data', 'historian', 'scheduler', ''],
+    parser.add_argument('--source', default='', choices=['data', 'historian', 'scheduler', 'spitball', ''],
                         help='Filter by source directory')
     parser.add_argument('-k', type=int, default=8, help='Number of results (default: 8)')
     args = parser.parse_args()

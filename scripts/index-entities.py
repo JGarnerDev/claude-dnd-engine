@@ -9,7 +9,7 @@
 # consumers: CLAUDE.md, README.md, .claude/commands/session.md, .claude/commands/transition.md -- update these if usage, flags, or output format change.
 """
 index-entities.py -- Build/update the Chroma vector index from entity markdown files.
-Usage: python scripts/index-entities.py [--dirs data historian scheduler] [--reset]
+Usage: python scripts/index-entities.py [--dirs data historian scheduler spitball] [--reset]
 """
 
 import argparse
@@ -77,7 +77,7 @@ def should_skip(md_file, rel_path):
 
 def main():
     parser = argparse.ArgumentParser(description='Index entity markdown files into Chroma vector store')
-    parser.add_argument('--dirs', nargs='+', default=['data', 'historian', 'scheduler'])
+    parser.add_argument('--dirs', nargs='+', default=['data', 'historian', 'scheduler', 'spitball'])
     parser.add_argument('--reset', action='store_true', help='Delete and rebuild index from scratch')
     args = parser.parse_args()
 
@@ -163,7 +163,7 @@ def main():
     # Prune orphans: upsert never removes docs for deleted/renamed files, so stale
     # entries linger and pollute search results. Only safe on a full default run —
     # a partial --dirs run would wrongly delete the other dirs' docs.
-    if set(args.dirs) == {'data', 'historian', 'scheduler'}:
+    if set(args.dirs) == {'data', 'historian', 'scheduler', 'spitball'}:
         existing = set(collection.get(include=[])['ids'])
         stale = existing - indexed_ids
         if stale:

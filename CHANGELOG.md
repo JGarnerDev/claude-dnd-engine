@@ -6,6 +6,34 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.7.0] — 2026-10-02
+
+### Added
+
+- **`/spitball` — non-committal story idea capture.** `.claude/commands/spitball.md` files a loose idea the moment it is spoken, develops it as far as interest carries, and keeps it searchable for later mining. Built for a phone over `claude remote-control`: the capture rule is **file first, develop second** — the file hits disk on the first turn, before any riffing, so a dropped connection costs nothing, and follow-up turns update that same file. The command is forbidden from interrogating the DM for fields; it infers `subtype`, `campaign` and `target` and is wrong cheaply.
+- **`spitball/` — a new tracked folder role.** One folder per target act, keyed to the act's full slug rather than a bare `act-1/` (both campaigns currently have an Act 1), plus `unassigned/` for ideas with no home yet. Tracked in git, unlike `workshop/` and `pitch-log/`, because the whole point is reading them back months later from a different machine.
+- **Entity mode.** `/spitball <entity name>` is a lookup rather than a capture: it answers with about four lines on where that entity currently stands — what it is, its situation, the two or three relations that matter, anything unresolved — plus a line naming any spitballs or flow-graph nodes that already reference it, then asks one open question and stops. Nothing is written; the *next* message is the idea, filed with the entity pre-populated in `relates_to`. A name inside a proposition (`what if Nella turns on Bane`) is still an idea, and ties are broken toward filing.
+- **`meta/spitball.md`** — frontmatter schema, the five-state lifecycle (`raw` / `developed` / `used` / `parked` / `killed`), the capture rule, and the honesty rules. Nothing is ever deleted: a killed idea is cheaper to keep than to re-think.
+- **`scripts/spitball-brief.py`** — the pile filtered by frontmatter: target act, kind, campaign, state, heat. Hides `used` and `killed` by default so the live pile is not buried.
+- **Mining routes, all four live.** Spitballs are indexed with `source_dir: spitball` so `semantic-search.py --source spitball` finds them by meaning; `/session` Phase 1 and `/flow` Phase 1 surface the ideas aimed at the act being planned, as candidates only; and `/spitball --promote` lands an idea in the act's flow graph as a `[?]` **open** node — becoming a node is not approval.
+
+### Changed
+
+- `scripts/validate.ps1` — `spitball/` excluded from the link check. Half-formed ideas are expected to name things that do not exist; that is the point of them, and without the exclusion every spitball would break graph validation.
+- `scripts/index-entities.py` — `spitball` added to the default `--dirs` and to the orphan-prune guard set.
+- `scripts/semantic-search.py` — `spitball` added to `--source` choices, so canon searches can also deliberately exclude it. **A spitball must never surface as if it were canon.**
+- `meta/flow-graphs.md` — seventh node class `fail` (dusty red, dashed) for designed setbacks and fail floors. Previously these took the grey `open` class, which means *undesigned* — miscoloring documented work as a gap.
+
+## [0.6.0] — 2026-10-02
+
+### Added
+
+- **`/flow` — act flow graph sets.** `.claude/commands/flow.md` builds or refreshes a folder of mermaid maps for an act: an act spine with one subgraph per session, one graph per designed session, and a payoff-slots graph for undesigned room. Branches are drawn where the design actually forks, fail states route back into the spine instead of dead-ending, and inferred material is marked rather than presented as designed. Regeneration preserves existing markers by node id.
+- **`meta/flow-graphs.md` — the conventions.** Id scheme, the seven node classes with their exact `classDef` lines, drawing rules, and honesty rules. Previously these lived only inside one gitignored workshop folder's README, so they could not survive a clone or be reused for a second act.
+- **Commitment markers.** Every flow graph node prints `[x]` committed / `[-]` draft / `[?]` open before its id, so the chart doubles as a readiness tracker. `[x]` requires a four-part gate: the DM said so, backing notes exist, no open upstream, and the beat is repo-conformant. **The engine never self-commits** — it proposes, the DM flips. Each graph file ends with a commitment ledger naming the backing source for every committed beat.
+- **Node ids are printed in the labels.** A node's visible first line is its literal mermaid node id (`S1_EXAMPLE`), which makes a beat nameable in conversation and findable with a grep — the id is otherwise invisible in a rendered diagram.
+- **`scripts/flow-status.py`** — commitment coverage per graph, plus two integrity checks: committed beats sitting downstream of uncommitted work, and labels whose printed id does not match the mermaid node id. Discovers sets repo-wide, or scans one with `--set`.
+
 ## [0.5.0] — 2026-10-01
 
 ### Changed

@@ -70,6 +70,17 @@ uv run scripts/semantic-search.py "<cliffhanger or mission hook text>" --source 
 
 Note any results with score > 0.35 — these are callback candidates. Do not force them into the plan; use only if they fit naturally.
 
+### Spitballs aimed at this act
+
+Pull the loose ideas filed for the act being planned:
+
+```text
+uv run scripts/spitball-brief.py --target <act-slug>
+uv run scripts/spitball-brief.py --target unassigned --campaign <campaign>
+```
+
+List what comes back as **candidates only** — a spitball is not canon and has not been approved (see `meta/spitball.md`). Surface them so the DM can reach for one; never adopt one into the plan unprompted. If an idea gets used, set its `state: used`.
+
 ---
 
 ## Phase 2 — Mode Detection
