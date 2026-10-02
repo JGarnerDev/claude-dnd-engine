@@ -4,7 +4,7 @@ tags: [guideline]
 character: Dip
 player: Ben
 bracket: "levels 4-5"
-composition: "1 weapon, 1 armor, 3 misc"
+composition: "3 weapons, 3 armor, 3 misc"
 ---
 
 # Loot Options — Dip (Ben)
@@ -15,8 +15,8 @@ Half-Orc Barbarian · Sage background (narrative) · level 4 · `level_confirmed
 
 ## The options
 
-- **weapons/** — [[Pilgrim's Wrap]] (Uncommon)
-- **armor/** — [[Second Hands]] (Uncommon, attunement)
+- **weapons/** — [[Pilgrim's Wrap]] (Uncommon) · [[The Counterweight Toe]] (Common) · [[The Recited Edge]] (Uncommon)
+- **armor/** — [[Second Hands]] (Uncommon, attunement) · [[Walked-Out Boots]] (Common) · [[Shrine Leathers]] (Uncommon)
 - **misc/** — [[The Empty Reliquary]] (Common) · [[Quiet-Hours Bead]] (Common) · [[The Scorched Hearthstone]] (Common)
 
 ## What these are built on

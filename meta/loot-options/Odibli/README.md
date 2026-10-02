@@ -4,7 +4,7 @@ tags: [guideline]
 character: Odibli
 player: Miguel
 bracket: "levels 4-5"
-composition: "1 weapon, 1 armor, 3 misc"
+composition: "3 weapons, 3 armor, 3 misc"
 ---
 
 # Loot Options — Odibli (Miguel)
@@ -15,8 +15,8 @@ Gnome Wizard · level 4 · `level_confirmed: 28`
 
 ## The options
 
-- **weapons/** — [[The Annotated Staff]] (Uncommon)
-- **armor/** — [[The Inkproof Overrobe]] (Common)
+- **weapons/** — [[The Annotated Staff]] (Uncommon) · [[The Red-Ink Stylus]] (Common) · [[The Astral Sling]] (Uncommon)
+- **armor/** — [[The Inkproof Overrobe]] (Common) · [[The Folio Bracers]] (Common) · [[The Spine-Bound Coat]] (Uncommon)
 - **misc/** — [[The Flue Ledger]] (Common) · [[Diesel Cougar]] (Common) · [[Astral Chalk]] (Uncommon)
 
 ## What these are built on
@@ -38,5 +38,5 @@ Gnome Wizard · level 4 · `level_confirmed: 28`
 - **Spelling.** A standing flag on the sheet: notes spell him Odibli, Odible, and ODB, with "Odibli" used in the record and spelling unconfirmed with Miguel. Nothing here is inscribed; keep it that way until confirmed.
 - **His background is `Unknown`** and his full name has never been established. No option here depends on either.
 - His sheet has **no `spotlight_hooks`** (dashboard item 20 lists him and Luci as the two still missing them). Items do not fix that — the backstory pass does.
-- **Check [[The Inkproof Overrobe]] against whatever he is already wearing.** If Mage Armor is a regular prepared spell, AC 11 + Dex is worse than what he casts and the robe becomes a pocket organiser, which is fine but should not count as his reward.
+- **Check [[The Inkproof Overrobe]] and [[The Spine-Bound Coat]] against whatever he is already wearing.** Both grant AC 11 + Dex and both fill the same slot — pick one, not both. If Mage Armor is a regular prepared spell, AC 11 + Dex is worse than what he casts, and the Overrobe becomes a pocket organiser while the Coat becomes a pure escape button. Either is fine; neither should count as his reward on the AC alone.
 - **No attunement needed anywhere on this sheet.**

@@ -4,7 +4,7 @@ tags: [guideline]
 character: Halsby
 player: Kellan
 bracket: "levels 4-5"
-composition: "1 weapon, 1 armor, 3 misc"
+composition: "3 weapons, 3 armor, 3 misc"
 ---
 
 # Loot Options — Halsby (Kellan)
@@ -15,8 +15,8 @@ Shadow Magic Sorcerer · race and background `TBD` · level 4 · no `level_confi
 
 ## The options
 
-- **weapons/** — [[The Nightfall Dagger]] (Uncommon)
-- **armor/** — [[The Grey Mantle]] (Uncommon, attunement)
+- **weapons/** — [[The Nightfall Dagger]] (Uncommon) · [[The Ferryman's Pole]] (Common) · [[The Tallied Sling]] (Uncommon)
+- **armor/** — [[The Grey Mantle]] (Uncommon, attunement) · [[The Unlit Hood]] (Common) · [[The Stated Price]] (Uncommon)
 - **misc/** — [[The Mourning Ledger]] (Common) · [[Cold Wick]] (Common) · [[Counting Beads]] (Common)
 
 ## What these are built on
@@ -43,4 +43,4 @@ Mechanically the important sentence on his sheet is this one: *he can light a wi
 - **He has no table history as this PC.** Every player read above comes from how he wrote the backstory and from the fact that he DMs, not from observed play. That is a thinner evidence base than the other four sheets and should be held more loosely — expect to revise this file after he has actually played two sessions.
 - **One attunement slot used, and only on [[The Grey Mantle]].** He has room, but a sorcerer's slots fill fast at tier 2; do not stack another attuned item on him in the same stretch.
 - **Two gods, one letter apart.** `Shar` is Halsby's greater death deity, `state: active`. `Sah` is Iggy's diminished knowledge-and-grave deity, `state: diminished`. Both are load-bearing for a PC backstory and they are not the same god. Do not let an item description blur them.
-- **None of these five adds damage output.** Two add conditional AC, one adds a conditional +1 to hit with a dagger. That is deliberate: he joins an existing party as a fifth body, and encounter math tuned for the party as it stood should not be moved by his arrival gift.
+- **Nothing on this sheet adds damage output.** Three add conditional AC or damage reduction, one adds a conditional +1 to hit with a dagger, and the sling trades its damage rider for information. That is deliberate: he joins an existing party as a fifth body, and encounter math tuned for the party as it stood should not be moved by his arrival gift.

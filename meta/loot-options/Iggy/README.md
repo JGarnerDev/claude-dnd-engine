@@ -4,7 +4,7 @@ tags: [guideline]
 character: Iggy
 player: Jeff
 bracket: "levels 4-5"
-composition: "1 weapon, 1 armor, 3 misc"
+composition: "3 weapons, 3 armor, 3 misc"
 ---
 
 # Loot Options — Iggy (Jeff)
@@ -15,8 +15,8 @@ Aasimar Bard 3 / Paladin 1 · Entertainer · level 4 · `level_confirmed: 28`
 
 ## The options
 
-- **weapons/** — [[The Half-Beat]] (Uncommon)
-- **armor/** — [[The Papered Hide]] (Common)
+- **weapons/** — [[The Half-Beat]] (Uncommon) · [[The Ovation]] (Common) · [[The Dissonant Pommel]] (Uncommon)
+- **armor/** — [[The Papered Hide]] (Common) · [[The Front-of-House Gorget]] (Common) · [[The Roadworn Gambeson]] (Uncommon)
 - **misc/** — [[The Second String]] (Common) · [[Titleplate of the Named]] (Common) · [[The Shazzam Bell]] (Common)
 
 ## What these are built on
@@ -35,7 +35,7 @@ Aasimar Bard 3 / Paladin 1 · Entertainer · level 4 · `level_confirmed: 28`
 
 ## Caveats
 
-- **Jeff is the DM.** He is choosing from a menu written for his own PC, which is unavoidable in a rotating-DM group but worth naming — if anything here looks generous, this is the one sheet in the folder with nobody independent checking it. Having another player pick which of the five he gets is a cheap fix.
+- **Jeff is the DM.** He is choosing from a menu written for his own PC, which is unavoidable in a rotating-DM group but worth naming — if anything here looks generous, this is the one sheet in the folder with nobody independent checking it. Having another player pick which one he gets is a cheap fix.
 - Iggy is the **overdue PC on rotation** — 2 spotlight turns over the last 4 sessions against the other PCs' 4.
 - [[The Second String]] and [[The Shazzam Bell]] assume the viol and the rapier survive in his hands. Both are carried items with no entity files.
 - **No attunement anywhere on this sheet**, deliberately — he is a half-caster with two classes' worth of bookkeeping already.

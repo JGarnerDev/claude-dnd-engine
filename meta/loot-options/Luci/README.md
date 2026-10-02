@@ -4,7 +4,7 @@ tags: [guideline]
 character: Luci
 player: Paul
 bracket: "levels 4-5"
-composition: "1 weapon, 1 armor, 3 misc"
+composition: "3 weapons, 3 armor, 3 misc"
 ---
 
 # Loot Options — Luci (Paul)
@@ -15,8 +15,8 @@ Aasimar (Scourge) Monk · level 4 · `level_confirmed: 28`
 
 ## The options
 
-- **weapons/** — [[The Returning Knife]] (Uncommon)
-- **armor/** — [[The Scroll-Built Headdress]] (Uncommon, attunement)
+- **weapons/** — [[The Returning Knife]] (Uncommon) · [[The Borrowed Flame]] (Common) · [[Moatlight Wraps]] (Uncommon)
+- **armor/** — [[The Scroll-Built Headdress]] (Uncommon, attunement) · [[Restless Sandals]] (Common) · [[The Temple-Wall Bracers]] (Uncommon)
 - **misc/** — [[The Spent Candle]] (Common) · [[The Goldtrack Veil]] (Common) · [[Thrower's Sash]] (Uncommon)
 
 ## What these are built on
@@ -29,13 +29,13 @@ Aasimar (Scourge) Monk · level 4 · `level_confirmed: 28`
 
 **First item:** [[The Spent Candle]]. If one item in this entire folder goes out first, make it this one — it is the oldest unacknowledged sacrifice at the table and it costs the economy nothing.
 
-**The budgeted Uncommon:** three of the five are Uncommon here, so this is a real choice. [[The Returning Knife]] rewards how he plays, [[The Scroll-Built Headdress]] keeps him alive while he plays that way, [[Thrower's Sash]] changes everyone else's fight. Knife is safest, Headdress is kindest, Sash is biggest.
+**The budgeted Uncommon:** most of this sheet is Uncommon, so this is a real choice. [[The Returning Knife]] rewards how he plays, [[The Scroll-Built Headdress]] keeps him alive while he plays that way, [[Thrower's Sash]] changes everyone else's fight. Knife is safest, Headdress is kindest, Sash is biggest.
 
 **Hold for last:** [[Thrower's Sash]], for the reason in its own notes.
 
 ## Caveats
 
-- **Her class read is thin.** The sheet carries a standing reliability flag: class was never stated explicitly, she has had access to Sacred Flame and Augury (cleric-side), and Monk is recorded with "could be Cleric, Paladin, or custom build — confirm with DM/Paul" on the file. **[[The Returning Knife]], [[The Scroll-Built Headdress]] and [[Thrower's Sash]] all assume a monk** (unarmored AC, flurry as a bonus action, thrown weapon). Confirm the build with Paul before spending any of the three, or reprice the Sash off a short rest instead of flurry.
+- **Her class read is thin.** The sheet carries a standing reliability flag: class was never stated explicitly, she has had access to Sacred Flame and Augury (cleric-side), and Monk is recorded with "could be Cleric, Paladin, or custom build — confirm with DM/Paul" on the file. **[[The Returning Knife]], [[The Scroll-Built Headdress]], [[Thrower's Sash]], [[Moatlight Wraps]] and [[Restless Sandals]] all assume a monk** (unarmored AC, flurry as a bonus action, martial-arts unarmed strikes, thrown weapon). Confirm the build with Paul before spending any of the three, or reprice the Sash off a short rest instead of flurry.
 - **Full name unknown.** Nothing here is inscribed.
 - Her sheet has **no `spotlight_hooks`** (dashboard item 20 lists her and Odibli as the two still missing them). Items are not a substitute for that backstory pass — they just give her something to hold while it is pending.
 - One attunement slot used, on the Headdress. She has room.
