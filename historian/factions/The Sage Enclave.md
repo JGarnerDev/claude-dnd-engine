@@ -8,7 +8,7 @@ tags:
   - faction/religious
 subtype: religious
 locations:
-  - [[Homebrew World]]
+  - [[Aethryn]]
 purpose: religious
 importance: minor
 active: true
@@ -26,7 +26,7 @@ hierarchy: "Loose community of spiritual folk and sages; specifics unknown"
 description: "A secluded order of spiritual sages that took Dip in after his wandering years and taught him planar communion, meditation, and the ways of the sage."
 ---
 
-Campaign: [[Homebrew Campaign]] | World: [[Homebrew World]]
+Campaign: [[Homebrew Campaign]] | World: [[Aethryn]]
 
 > **Reliability:** Sourced from [[Dip]]'s player backstory (Ben), pre-campaign. Player-authoritative for Dip's history. Name is a placeholder pending a naming pass.
 

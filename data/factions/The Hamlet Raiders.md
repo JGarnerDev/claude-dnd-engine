@@ -8,7 +8,7 @@ tags:
   - faction/mercenary
 subtype: mercenary
 locations:
-  - [[Homebrew World]]
+  - [[Aethryn]]
 purpose: military
 importance: major
 active: false
@@ -26,7 +26,7 @@ opposition:
 description: "The warband that infiltrated Dip's home hamlet under a mask of friendship, then attempted to slaughter it — triggering the fire that destroyed the town and, Dip believes, took his twin sister."
 ---
 
-World: [[Homebrew World]] | Campaign: [[Homebrew Campaign]]
+World: [[Aethryn]] | Campaign: [[Homebrew Campaign]]
 
 > **Reliability:** Sourced from [[Dip]]'s player backstory (Ben), pre-campaign. Identity, employer, and current fate all unknown — free pool entity (`exists: false`) for a future session. Name is a placeholder pending design.
 

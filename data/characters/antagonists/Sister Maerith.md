@@ -10,7 +10,7 @@ tags:
   - character
   - character/antagonist
 
-location: [[Homebrew World]]
+location: [[Aethryn]]
 personality: "Unhurried, veiled, and mild. States terrible things without pressure and without any apparent interest in whether you believe her. Patient the way an owner is patient."
 livelihood: "Sharran priestess of [[The Nightveil]]"
 disposition: hostile
@@ -35,7 +35,7 @@ human_detail: "She visited Halsby's grandmother on dark-moon nights when he was 
 description: "The veiled woman from Halsby's childhood and his grandmother's funeral — a Sharran of the Nightveil who has not aged in twenty years, and who offered Halsby the answers he craves at a price she declined to name."
 ---
 
-Location: [[Homebrew World]] (Corveth and the towns downwind of the shadow-wound)
+Location: [[Aethryn]] (Corveth and the towns downwind of the shadow-wound)
 
 Sister Maerith is the veiled woman [[Halsby]] remembers from dark-moon visits in childhood — *an
 old friend from home*, his grandmother called her — who appeared again, unaged, at the

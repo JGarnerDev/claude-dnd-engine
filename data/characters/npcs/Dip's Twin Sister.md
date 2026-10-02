@@ -8,7 +8,7 @@ state: missing
 tags:
   - character
   - character/npc
-location: [[Homebrew World]]
+location: [[Aethryn]]
 personality: "Unknown — never described. To be developed with Ben."
 livelihood: "Unknown"
 race: "[[Half Orc]]"
@@ -24,7 +24,7 @@ family:
 description: "Dip's twin sister, presumed dead in the hamlet fire. Dip refuses to believe she died and takes her absence from his guiding visions as proof she still exists on this realm."
 ---
 
-Location: [[Homebrew World]] | Campaign: [[Homebrew Campaign]]
+Location: [[Aethryn]] | Campaign: [[Homebrew Campaign]]
 
 Race: [[Half Orc]]
 

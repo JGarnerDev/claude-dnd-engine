@@ -19,9 +19,9 @@ themes:
   - "Small people facing a vast world"
 importance: critical
 active: true
-description: "Active campaign document for the first homebrew season — named Redwater for the red/purple border-river the opening act turns on. Opened 2026-09-30 when the party left Barovia via the Wanderer's Boon. Jeff DMs. The *world* name is still TBD pending world naming; Redwater names the campaign, not the planet."
+description: "Active campaign document for the first homebrew season — named Redwater for the red/purple border-river the opening act turns on. Opened 2026-09-30 when the party left Barovia via the Wanderer's Boon. Jeff DMs. The *world* is Aethryn, named 2026-10-01; Redwater names the campaign, not the planet."
 relates_to:
-  - "[[Homebrew World]] (setting)"
+  - "[[Aethryn]] (setting — the world)"
   - "[[Curse of Strahd]] (predecessor campaign)"
   - "[[Act 1 - The Hearth at Ashford]] (first act)"
 ---
@@ -30,9 +30,9 @@ relates_to:
 
 Draft root document for the homebrew campaign that alternates with [[Curse of Strahd]] like TV seasons. The party carries across both worlds and shifts between them via a deliberate narrative device — a story beat, not a soft drift (see `.claude/commands/transition.md` for the season-swap flow). Jeff DMs the first homebrew season; the homebrew DM rotates thereafter. Unlike Strahd (planned outside this repo, record-only here), homebrew uses the full engine — planning and recording both happen here.
 
-**Status: active** as of 2026-09-30 — the season swap ran via `/transition`, pausing [[Curse of Strahd]]. The party arrived through [[The Wanderer's Boon]], the relic [[Davian Martikov]] gave them in Session 28; it is now campaign-agnostic and is also the route back to Barovia. The setting is [[Homebrew World]] — still awaiting its true name. The first act is [[Act 1 - The Hearth at Ashford]].
+**Status: active** as of 2026-09-30 — the season swap ran via `/transition`, pausing [[Curse of Strahd]]. The party arrived through [[The Wanderer's Boon]], the relic [[Davian Martikov]] gave them in Session 28; it is now campaign-agnostic and is also the route back to Barovia. The setting is [[Aethryn]], named 2026-10-01. The first act is [[Act 1 - The Hearth at Ashford]].
 
-> **Naming note:** the *campaign* is named — **Redwater**, after the red/purple border-river — and `"Homebrew Campaign"` is kept as an alias so older links resolve. The **world** is still unnamed: when the naming questionnaires land, rename `data/locations/regions/Homebrew World.md`, not this file.
+> **Naming note:** campaign and world are named separately and both are now settled. The *campaign* is **Redwater**, after the red/purple border-river, with `"Homebrew Campaign"` kept as an alias so older links resolve. The *world* is **Aethryn** (AITH-rin; Greek *aithēr* "upper air" + Welsh *bryn* "hill"), named 2026-10-01 — `data/locations/regions/Aethryn.md`, keeping `"Homebrew World"` and `"The World"` as aliases. Multiple campaigns may run in Aethryn; Redwater is only the first.
 
 ## Party
 
@@ -54,9 +54,10 @@ Master checklist is the `/todo` dashboard (`todo-dashboard.md`); this list track
 
 ### Name the world and campaign
 
-- [ ] `questionnaires/world/naming/world-naming.md` — general naming questionnaire (includes the world's name). Not created yet; `scripts/naming-status.py` reads this path
+- [x] World named **Aethryn** 2026-10-01, decided directly with the DM rather than through the questionnaire. `data/locations/regions/Homebrew World.md` → `data/locations/regions/Aethryn.md`, `state: draft` lifted to `stable`.
+- [x] Campaign named **Redwater** 2026-10-01. *(This file — renamed from `Homebrew Campaign.md`.)*
+- [ ] `questionnaires/world/naming/world-naming.md` — the remaining naming entries (regions, factions, provisional map labels). Still not created; `scripts/naming-status.py` reads this path and errors until it exists. The world's own name no longer waits on it.
   *(Per-player naming sheets are no longer planned — `questionnaires/` is a single DM-facing tree with no name designations.)*
-- [ ] Rename `data/locations/regions/Homebrew World.md` once the world name lands. *(This file is done — renamed to Redwater 2026-10-01.)*
 
 ### Fill the lore drafts (blocked on questionnaires)
 

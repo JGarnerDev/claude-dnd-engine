@@ -51,14 +51,14 @@ Entity protocol (free entity rule, data transparency, contribution balance) docu
 
 ## Campaign Separation
 
-This repo spans two campaigns: `strahd` (Curse of Strahd) and a homebrew new world (name TBD). The group **alternates** between them like TV seasons — swapping back and forth, not a one-way handoff. The party of characters persists across both worlds and shifts between them via a shallow in-narrative device (a deliberate story beat, not a soft drift). The two worlds stay mostly separate.
+This repo spans two campaigns: `strahd` (Curse of Strahd) and `homebrew` — the world **Aethryn**, where the campaign **Redwater** is the first season. The group **alternates** between them like TV seasons — swapping back and forth, not a one-way handoff. The party of characters persists across both worlds and shifts between them via a shallow in-narrative device (a deliberate story beat, not a soft drift). The two worlds stay mostly separate.
 
 **Engine role differs by campaign:**
 
 - **`strahd`** — record-only. Kellan DMs and plans Strahd sessions *outside* this repo. Here, the engine only canonizes what was played: `/recap` → historian. Do **not** run `/session` planning for Strahd, and do not expect scheduler planning artifacts for it.
 - **`homebrew`** — full engine. The active-DM (Jeff first, then rotating) plans and records here: `/session` planning, scheduler acts/missions, plus `/recap` canonization.
 
-**`campaign` field** — historian and scheduler entities carry `campaign: strahd` or `campaign: <new-world-name>`. Data entities are campaign-agnostic by default (no tag) unless they are explicitly tied to one world.
+**`campaign` field** — historian and scheduler entities carry `campaign: strahd` or `campaign: homebrew`. The value names the **season axis**, not the world or the campaign document: everything set in Aethryn is tagged `homebrew` regardless of which campaign runs there, so a second Aethryn campaign after Redwater reuses the same tag. Data entities are campaign-agnostic by default (no tag) unless they are explicitly tied to one world.
 
 **Session planning rules:**
 

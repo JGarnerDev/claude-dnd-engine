@@ -8,7 +8,7 @@ state: ruined
 tags:
   - location
   - location/city
-global_location: [[Homebrew World]]
+global_location: [[Aethryn]]
 purpose: other
 importance: background
 active: false
@@ -23,7 +23,7 @@ population: "Small hamlet; most perished in the fire, a handful escaped"
 description: "The small hamlet where Dip was born and shunned; destroyed by fire after raiders infiltrated it, when the tavern keeper torched his own roost to trap them and the blaze spread."
 ---
 
-Location: [[Homebrew World]] | Campaign: [[Homebrew Campaign]]
+Location: [[Aethryn]] | Campaign: [[Homebrew Campaign]]
 
 > **Reliability:** Sourced from [[Dip]]'s player backstory (Ben), pre-campaign. Player-authoritative for Dip's history. Name is a placeholder pending a naming pass.
 
@@ -37,6 +37,6 @@ Strangers arrived friendly and earned the town's trust, then turned — [[The Ha
 
 ## Open Questions (for the DM / Ben)
 
-- The hamlet's name and where it sits in the [[Homebrew World]].
+- The hamlet's name and where it sits in the [[Aethryn]].
 - Who the raiders were sent by, and why this hamlet.
 - Whether any other survivors remain, and where they went.

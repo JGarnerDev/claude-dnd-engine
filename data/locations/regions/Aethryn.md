@@ -1,11 +1,12 @@
 ---
-name: Homebrew World
+name: Aethryn
 aliases:
   - "The World"
+  - "Homebrew World"
 type: location
 subtype: region
 exists: false
-state: draft
+state: stable
 campaign: homebrew
 tags:
   - location
@@ -14,7 +15,7 @@ geography: "The entire homebrew setting — multiple continents and sub-continen
 controlling_faction: unknown
 importance: critical
 biome: [temperate-forest, desert, tundra, coastal, aerial]
-description: "Draft world-root of the homebrew campaign — the whole setting that contains its continents, seas, skies, and the powers that vie across them. True name TBD, pending the naming questionnaire."
+description: "Aethryn — world-root of the homebrew campaign: the whole setting that contains its continents, seas, skies, and the powers that vie across them. Named 2026-10-01; 'Homebrew World' and 'The World' remain aliases."
 relates_to:
   - "[[Redwater]] (campaign played in this world)"
   - "[[Solmara]] (surface — sub-continent)"
@@ -50,11 +51,11 @@ relates_to:
   - "[[Astra]] (celestial body)"
 ---
 
-# Homebrew World
+# Aethryn
 
 The world-root entity for the **homebrew campaign** — the top-level setting that every continent, sea, sky-island, faction, and trade route in `data/` ultimately belongs to. Factions and resources that operate "across the world" link here via the alias **The World**.
 
-**Draft status:** this entity stays in `state: draft` until the world receives its true name from the naming questionnaire (`questionnaires/world/naming/`). When named, rename this file and `name:` field to match, keeping "Homebrew World" and "The World" as aliases.
+**Name:** **Aethryn** (AITH-rin), chosen 2026-10-01 — Greek *aithēr* "upper air" + Welsh *bryn* "hill." The adjective is **Aethryn** (unchanged) and compounds read naturally as place-prefixes (*the Aethryn Reach*). The prior working label `Homebrew World` and the cross-world alias `The World` are both kept as aliases, so older `[[Homebrew World]]` links still resolve. The *campaign* played here is named separately — [[Redwater]].
 
 This world is **separate and distinct from the Curse of Strahd campaign**. Barovia and its mists belong to `campaign: strahd`; this setting is `campaign: homebrew`. The two do not bleed together except where the DM deliberately stages a crossover. The campaign played in this world is [[Redwater]].
 

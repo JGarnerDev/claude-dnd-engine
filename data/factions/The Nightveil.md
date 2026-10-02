@@ -8,7 +8,7 @@ state: active
 tags:
   - faction/cult
 locations:
-  - [[Homebrew World]]
+  - [[Aethryn]]
 purpose: religious
 importance: major
 aliases:
@@ -33,7 +33,7 @@ tensions:
 opposition: []
 ---
 
-Location: [[Homebrew World]] (active in and around Corveth, near the shadow-wound)
+Location: [[Aethryn]] (active in and around Corveth, near the shadow-wound)
 
 The Nightveil is a secretive order of [[Shar]], the Lady of Loss. Their devotion is the giving
 away of things in the dark — loss offered freely — and they run it as a long, patient harvest.

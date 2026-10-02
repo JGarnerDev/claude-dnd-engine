@@ -8,7 +8,7 @@ state: active
 tags:
   - faction/noble
 locations:
-  - [[Homebrew World]]
+  - [[Aethryn]]
 purpose: political
 importance: major
 aliases:
@@ -25,7 +25,7 @@ tensions:
   - A living heir is both a claim on the house and a liability to it
 ---
 
-Location: [[Homebrew World]] (Corveth, in Sarmene)
+Location: [[Aethryn]] (Corveth, in Sarmene)
 
 House Bleth is one of the oldest merchant-noble families of **Corveth**, of the **Old Charter**
 caste — the elder mercantile line that, during the occupation, climbed *toward* the shadow power

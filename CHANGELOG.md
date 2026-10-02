@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.5.0] — 2026-10-01
+
+### Changed
+
+- **The world is named: `data/locations/regions/Homebrew World.md` → `data/locations/regions/Aethryn.md`.** **Aethryn** (AITH-rin) — Greek *aithēr* "upper air" + Welsh *bryn* "hill" — chosen 2026-10-01 from a shortlist built on Latin/Greek/Germanic/Welsh roots, deliberately carrying **no** tie to the Whatwill cosmology so the name commits the setting to no biome, faction, or founding event. `"Homebrew World"` and `"The World"` are both kept as aliases, so existing `[[Homebrew World]]` links still resolve; the nine entities that used the old link were repointed to `[[Aethryn]]` anyway. The entity's `state: draft` — held only until the world had a name — is lifted to `stable`.
+- **World and campaign names are separate layers.** **Aethryn** is the world; **Redwater** is the first campaign run in it. A later season in the same world gets its own campaign document and does not rename the world.
+- **`campaign:` field clarified in `CLAUDE.md`** — the value is the **season axis** (`strahd` / `homebrew`), not the world name and not the campaign document. Everything set in Aethryn stays tagged `homebrew` no matter which campaign runs there, so the 46 existing `campaign: homebrew` entities were left untouched by the rename. This replaces the old `campaign: <new-world-name>` wording, which implied a repo-wide retag on naming day.
+- `scheduler/campaign/Redwater.md` — naming note rewritten (both layers now settled), setting link repointed, and the "Name the world and campaign" checklist closed except for the still-missing naming questionnaire.
+- `todo-dashboard.md` — item 19 (world has no name) deleted per the open-items-only rule. Item 26 rewritten: `questionnaires/world/naming/world-naming.md` still does not exist and `naming-status.py` still errors, but what it owes now is the *remaining* naming work (regions, factions, provisional map labels), not the world's own name.
+
 ## [0.4.0] — 2026-10-01
 
 ### Added
