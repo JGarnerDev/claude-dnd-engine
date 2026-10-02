@@ -6,6 +6,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.4.0] — 2026-10-01
+
+### Added
+
+- **`meta/rewards.md` filled.** The file was a blank template; every section now carries real rules. Gold is stated as **party totals** calibrated to five PCs at level 4–5 (minor 10–50 gp · standard session 100–250 · major 300–700 · exceptional 1,000–2,500), with a ×2.5-per-tier scaling rule and the base-building numbers (250–500 gp/room, ~25 gp/PC/downtime) named as the anchors they were tuned against. Magic items are scarce-but-present with a Common ceiling and ~one Uncommon per PC per act, strict RAW attunement, and no magic shops — permanent items come from loot, payoff, or a station the party built. Narrative rewards carry a recordability test: if it can't be written into an entity's frontmatter, it was flavour, not a reward.
+- **Leveling system decided: hybrid milestone with an announced track** (Jeff, 2026-10-01). The DM decides *when* a level lands and paces it on the fly; naming the next trigger out loud is the part that is **not** optional. No XP bookkeeping, so a roleplay-only session can still level the party. Soft band of 2–4 sessions per level at tier 1–2. This is the standing answer to the Session-28 levelling complaint, and it pairs with the deliberate level-4 hold on arrival — when a level is held, loot carries the weight, and a held level with no item compensation is the failure mode the file names outright.
+- **`meta/loot-options/`** — a five-option item menu per PC (Iggy, Dip, Luci, Odibli, Halsby) — one folder per character, with `weapons/`, `armor/` and `misc/` subfolders and **one item per file**, each carrying `class`/`form`/`rarity`/`attunement` frontmatter so the folder can be filtered or scripted without parsing prose. The character's own `README.md` holds the character and player read, pick order, and caveats. Each character gets **one weapon, one piece of armor, three misc**, and every option is stamped for the current **levels 4–5** bracket with rarity, attunement, and an **At 6–8** scaling line. **Items carry no plot** — nothing is tied to a location, NPC, faction, or open thread, so the story picks items rather than items committing the story; where an item comes from is a session-planning decision and is deliberately not recorded. Every option is argued from the character's sheet and the player's observed table behavior, since `meta/players/` is still blank templates. **Not canon and not entities** — `meta/` is outside the entity dirs, so nothing here is validated, indexed, or in the world until it is handed over at the table and canonized.
+
 ## [0.3.0] — 2026-10-01
 
 ### Added
