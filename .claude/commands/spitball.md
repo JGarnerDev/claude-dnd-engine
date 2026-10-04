@@ -23,6 +23,29 @@ lifecycle, and the honesty rules. Everything below assumes it.
 
 ---
 
+## Reading style — plain language, numbered
+
+Every reply in a spitball conversation is read on a phone, so it follows these rules. They apply to
+chat output **and** to the body of the filed idea.
+
+1. **Plain words.** Short sentences. Say "the party lands in the brewery," not "arrival
+   vector coincides with the brewery wing." No jargon, node ids, or internal shorthand in chat
+   unless the DM used them first
+2. **Number everything that is a list.** Options, ideas, open questions, next steps — `1.`, `2.`,
+   `3.`. The DM answers by number ("push 3", "kill 2", "1 and 4"), so numbers must stay stable: never
+   renumber a list the DM has already seen. New items continue the count
+3. **One idea per number, one or two sentences each.** Lead with the idea in bold or a few words,
+   then the "so what"
+4. **Cap a list at about six.** More than that is a wall of text on a small screen
+5. **Name what is invented.** Mark invented parts as "(new)" and parts drawn from existing material
+   as "(from canon)" so the DM can tell at a glance
+6. **End with one numbered or yes/no question** the DM can answer in a few characters
+7. **A rephrase request means rewrite for clarity** — redo the earlier text in plain language and
+   numbering, in chat and in the file. This is the one time Phase 5's "append, don't rewrite" gives
+   way
+
+---
+
 ## Phase 1 — Which mode
 
 Two shapes of input, and they behave differently:
@@ -54,15 +77,15 @@ Run:
 uv run scripts/entity-graph.py --name "<entity>"
 ```
 
-Then compress what it returns into **about four lines** — this is a phone screen, and the script's
-raw output is far too long to paste:
+Then compress what it returns into **about four numbered lines**, in plain language — this is a
+phone screen, and the script's raw output is far too long to paste:
 
-- what it is — type/subtype, and `state` if it carries one
-- where it stands right now, in one sentence: the current situation, not the full backstory
-- the two or three relations that actually matter, named, not the whole list
-- anything unresolved or pending that a new idea would most plausibly attach to
+1. what it is — type/subtype, and `state` if it carries one
+2. where it stands right now, in one sentence: the current situation, not the full backstory
+3. the two or three relations that actually matter, named, not the whole list
+4. anything unresolved or pending that a new idea would most plausibly attach to
 
-Add one more line **only if** either applies:
+Add a fifth numbered line **only if** either applies:
 
 - spitballs already exist for it — check `relates_to` matches via
   `uv run scripts/spitball-brief.py --all` and name them, so you do not re-file an idea you
@@ -99,12 +122,13 @@ guessed `campaign` beats a lost one; note the guess in the body.
 
 ## Phase 4 — Confirm, in a few lines
 
-Phone screens are small. The confirmation is:
+Phone screens are small. Follow the reading-style rules above. The confirmation is a short
+numbered list:
 
-- the path written
-- the expansion, two to four sentences
-- one line of frontmatter worth seeing: subtype, campaign, target
-- a single short offer to push further
+1. the path written
+2. the expansion, two to four plain sentences
+3. one line of frontmatter worth seeing: subtype, campaign, target
+4. a single short question or offer to push further
 
 No tables, no headers, no summary of what you just did. If something was guessed, say which field
 in four words so it can be corrected in four more.
@@ -119,7 +143,11 @@ a second file for the same idea unless the DM is clearly starting a new one.
 - Bump `updated` on every edit
 - Move `state: raw` → `developed` once the body has real substance
 - Set `heat` only when the DM expresses a reaction — "ooh", "meh", "this one's great". Never ask
-- Append rather than rewrite, so the idea's evolution stays visible
+- Append rather than rewrite, so the idea's evolution stays visible — except when the DM asks to
+  rephrase, then rewrite for plain language and numbering
+- Number new ideas and options in the file and in chat, continuing the count so the DM can say
+  "push 3" and mean the same thing in both
+- Reply to a riff with a numbered list of what changed or what you are proposing, then one question
 
 When the DM gives a second unrelated idea, that is a new file. When they push on the current one,
 it is the same file.
@@ -144,8 +172,9 @@ Run the brief and present it compactly:
 uv run scripts/spitball-brief.py [--target <slug>] [--subtype <kind>] [--campaign <name>] [--state <state>] [--min-heat <n>]
 ```
 
-On a phone, group by target and show one line per idea: name, subtype, heat, one-clause
-description. Nothing more unless asked.
+On a phone, group by target and show one numbered line per idea: name, subtype, heat, one-clause
+description in plain words. Keep numbers continuous across groups so the DM can say "promote 4".
+Nothing more unless asked.
 
 ---
 

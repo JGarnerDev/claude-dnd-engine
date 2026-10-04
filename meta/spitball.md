@@ -109,6 +109,14 @@ Corollaries:
 - **Never block on a missing field.** `heat` unset, `target: unassigned`, a vague `subtype` — all
   fine. A filed rough idea beats a perfect unfiled one.
 
+## Writing style
+
+Spitballs are read on a phone, so the file body follows the same rules as the chat: plain words,
+short sentences, and **numbered** ideas and open questions so the DM can refer to them by number.
+Mark invented parts "(new)" and parts drawn from existing material "(from canon)". Never renumber an
+item the DM has already seen; new items continue the count. Full rules: the "Reading style" section
+of `.claude/commands/spitball.md`.
+
 ## Mining
 
 The pile only pays off if it is read back. Four routes, all live:
