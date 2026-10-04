@@ -9,6 +9,7 @@ form: "candle"
 rarity: common
 attunement: false
 bracket: "levels 4-5"
+status: draft
 ---
 
 # The Spent Candle

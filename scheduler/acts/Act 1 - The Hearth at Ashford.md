@@ -97,10 +97,55 @@ Act-level, and deliberately not in `meta/difficulty.md` — this curve belongs t
 - **Opt-in escalation throughout.** The party can take harder content for bigger reward; the
   base-building ally call-ins are the pressure valve on the ramp.
 
-Loot carries the progression weight this act, because the party does **not** level on arrival
-— they start and stay at 4 for a while. Magic items are scarce-but-present, Common ceiling
-with a few Uncommon as payoffs, and some of them personalised to a specific PC as a spotlight
-beat.
+Loot carries a large share of the progression weight this act. The rules for it are in
+`## Loot` below.
+
+## Loot
+
+This section overrides `meta/rewards.md` for Act 1, as that file allows. Decided 2026-10-04 by
+Jeff (questions 1–16 of `questionnaires/redwater/act-1-loot.md`). Questions 17–27, on Session 29
+and later, are still open.
+
+### Levels
+
+- **The whole party reaches level 5 before the December finale**, ideally before the last
+  session's big fight. They start at 4.
+- **Levels are given one PC at a time**, at a moment the DM judges climactic, rather than as a
+  party-wide tick. The DM is trying this out and will adjust it if it plays badly.
+- **Tension with `meta/rewards.md`, still unresolved:** that file requires the next level's
+  trigger to be announced before it lands, because an unannounced level reads as arbitrary.
+  One way to keep both rules: name a PC's coming moment when it is set, and keep only the exact
+  timing a surprise. The DM has not ruled on this.
+
+### Items
+
+- **The party is under-equipped. Good, cool items are overdue,** and items are the main way the
+  party grows this act.
+- **One personalised item per PC** across the act, as a floor.
+- **Five Uncommons** (one per PC) **plus one Rare.** The Rare is not assigned yet. Ideas are
+  wanted for a Rare per PC *and* a shared party Rare, and the pick comes from those.
+- **Handout order and sources are open.** They get decided once the items are chosen, or when
+  a story moment suggests one. Where there is no good source, create a moment or an enemy for
+  the item instead of letting it drop from nowhere.
+- **Every item arrives with a history of at most three sentences**: who made it, who carried
+  it, where it was found. The menus in `meta/loot-options/` stay plot-free, and the history is
+  attached at the moment it is handed over.
+- **Clues back to the feud are decided item by item.** A raider's gear *may* carry a Marlow or
+  Duskwater mark, but no item gets one by default.
+- **Surprise handouts.** Players never see their menus. The DM picks and the item just turns up.
+- **Session 29's Common goes to Dip,** not Iggy. Iggy is the DM's own PC, and Ben is the one who
+  pushed on levelling. Iggy's item lands later in the act.
+
+### Gold and consumables
+
+- **What gold is for:** the party decides, and building at the Lioness is actively encouraged
+  (250–500 gp a room). Coin never buys stake percentage. Stake is earned by deeds only.
+- **Shops:** Ashford sells healing potions at a raised price until the raids stop. No scrolls.
+- **Ale:** the Lioness's regular brews are not magical. Magical brews are something
+  [[Sable Wren]] deliberately makes and sells, once the brewhouse is running on Asher's water.
+  Session 29 can hint at this, but grants nothing.
+- **Gear carried out of Barovia works normally** in Aethryn. Only things bound to Barovia's
+  curse go quiet: the afflictions, and [[The Wanderer's Boon]].
 
 ## Open
 
@@ -108,6 +153,10 @@ beat.
   raid and the pursuit). Sessions 3–4 — the cell and the flush, convergence night — still
   exist only as workshop beat sheets and need their own mission artifacts. The real Session 1
   plan comes from `/session`.
+- **The act's length no longer matches this file.** Jeff doubts the act fits in 10 sessions and
+  wants story ahead of speed (loot questionnaire, question 3). `estimated_sessions: 4` and the
+  `## Shape` section above still describe four designed sessions plus about four spare slots.
+  Reshape them once the season-length vote happens, and don't do it before then.
 - **The campaign-level conflict is unreconciled on purpose.** [[Redwater]] still reads
   `central_conflict: "Control of Whatwill"` while this act runs a local feud with no Whatwill
   content. That is a pinned group discussion, not a problem to solve in this file. The cheap

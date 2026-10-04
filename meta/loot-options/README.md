@@ -20,7 +20,7 @@ meta/loot-options/
     misc/
 ```
 
-**One item per file.** Each item file carries its own frontmatter — `character`, `player`, `item`, `class`, `form`, `rarity`, `attunement`, `bracket` — so the folder can be filtered or scripted on later without parsing prose. The body is fixed at four sections: what it does, why this character, why this player, and what it becomes at 6–8.
+**One item per file.** Each item file carries its own frontmatter — `character`, `player`, `item`, `class`, `form`, `rarity`, `attunement`, `bracket`, `status` — so the folder can be filtered or scripted on later without parsing prose. The body is fixed at four sections: what it does, why this character, why this player, and what it becomes at 6–8.
 
 The character `README.md` holds everything that is about the *person* rather than any one object, and links the nine items by name.
 
@@ -31,6 +31,30 @@ The character `README.md` holds everything that is about the *person* rather tha
 This is deliberate: **the story picks the items, not the other way round.** An item with a hook baked into it quietly commits the campaign to resolving that hook, and nine such items per PC commits it forty-five times over. A sheet of plot-free items stays usable whatever the season turns out to be about — any of them can be dropped into any scene, from any source, and a DM who wants an item to mean something can attach meaning at the moment of handing it over, which is the right time to decide.
 
 Practical consequence: **where an item comes from is not written down here.** That is a session-planning decision, not a property of the object.
+
+## Draft or confirmed
+
+Every item file carries `status:` in its frontmatter:
+
+- **`status: draft`**: an idea. It is the default, and what every item is until the DM picks it.
+- **`status: confirmed`**: the DM has committed this item to a specific handout. Add
+  `confirmed_for: "Session NN Name"` naming the session it lands in. Confirmed still does not
+  mean canon. The item enters the world only when it is handed over at the table and
+  canonized through `/recap`.
+
+**Only the DM flips an item to `confirmed`.** Recommending an item, listing it as the best fit,
+or finding it a perfect match does not confirm it. The engine never makes that flip on its own
+judgment.
+
+**A draft item is never named outside `meta/loot-options/`.** That covers session plans, flow
+graphs, missions, acts, the todo dashboard, questionnaires, task notes, and anything else
+written to disk. Refer to a draft by its character and slot instead: "a Common from Dip's
+folder", "one of Iggy's misc options". A name in a plan reads as a decision, and gets carried
+forward as one. Naming items is fine in chat with the DM while picking, because a pick happens
+in conversation. Writing a pick down outside this folder waits until the DM confirms it.
+
+Once an item is confirmed, plans may name it, and should cite `confirmed_for` so the link
+between item and session can be found in both directions.
 
 ## Composition
 

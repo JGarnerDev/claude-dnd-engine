@@ -9,6 +9,7 @@ form: "dagger"
 rarity: common
 attunement: false
 bracket: "levels 4-5"
+status: draft
 ---
 
 # The Borrowed Flame

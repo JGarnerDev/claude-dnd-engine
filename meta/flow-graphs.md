@@ -189,6 +189,9 @@ These graphs get planned off, so they must not overstate what exists:
   it owes, not as invented beats.
 - **Open levers belong to their owner.** A beat waiting on a player's backstory is `[?]` and stays
   `[?]` until that player fills it. Do not propose answers for them.
+- **Loot nodes name only confirmed items.** A reward node says whose item it is and what slot,
+  such as "a Common from Dip's folder". It names a specific item only once that item's file in
+  `meta/loot-options/` reads `status: confirmed`. A named draft in a label reads as a decision.
 - **Contradicted canon wins.** When a graph disagrees with the historian, the graph is wrong. Redraw
   it and say so in the file's open-items list.
 

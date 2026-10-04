@@ -260,25 +260,17 @@ detail is the entire budget for tonight.
 **Gold:** ~120–180 gp party total — the remnant's pocket coin, the big one's purse, salvage from
 the wing. Standard session band per `meta/rewards.md` (100–250), about 25–35 gp a head.
 
-**Item — one, Common. The pick is the DM's call, not the planner's** (`meta/loot-options/`).
-Recommended:
+**Item — one, Common, for Dip. Which one is still the DM's call** (`meta/loot-options/Dip/`).
+Decided 2026-10-04 in `questionnaires/redwater/act-1-loot.md`, question 8: the session's item
+goes to Dip, because Ben is the player who pushed on levelling, and the DM's own PC should not
+be paid first. Iggy keeps his spotlight beat in scene 5. Only the item moves to later in the
+act. The item is drawn from the Commons in `meta/loot-options/Dip/`. None of them is named
+here until the DM confirms one there (`status: confirmed`), because every item in that folder
+is a draft idea until then.
 
-- **The Second String** (Common, viol string, no attunement) — *"gut that is not local to
-  anywhere. It keeps sounding a half-beat after he stops playing."* Once per short rest, when
-  Iggy grants Bardic Inspiration he may also make one Insight or History check with advantage.
-  Common is the right tier for a raid; Uncommon is act-payoff and should not fire in Session 1.
-  It is personalised to the overdue PC, and a string that belongs nowhere, found in a world he
-  did not choose to arrive in, is the right object for the viol hook.
-  - **Caveat:** the loot menu is deliberately plot-free so the session picks the item rather
-    than the item committing the session. Pairing this with the viol hook attaches it to Iggy's
-    Threnai arc — his own backstory rather than a world commitment, so probably fine. For a
-    clean version, hand it over as a good string with an odd sustain and say nothing about the
-    song.
-- Alternatives if Iggy should not be spotlighted here: **The Dissonant Pommel** (Uncommon — too
-  strong for tonight), or something from Dip's or Halsby's folders, since a debut is its own
-  kind of spotlight.
-- Full menu available: Iggy's folder holds 3 weapons (The Dissonant Pommel, The Half-Beat,
-  The Ovation), 3 armor, 3 misc. The Second String sits in `misc/`, not `weapons/`.
+Handing it over follows the act's loot rules (see the act file's `## Loot`): a surprise, never
+picked off a menu in front of the player, and with a history of at most three sentences
+attached. Where it is found (question 19) is still open.
 
 **Narrative rewards** — all recordable as frontmatter, per the file's own test:
 
@@ -286,10 +278,11 @@ Recommended:
 - [[Sable Wren]]'s `disposition` and `affinity` toward the party
 - Standing with Ashford — [[Mara Tull]] and [[Silas Crubb]] both shift on how the raid was handled
 
-**Levelling: nobody levels.** Per `meta/rewards.md`, a held level requires the DM to say so out
-loud and name the next trigger. Ben pushed on exactly this in Session 28, so this is the
-sentence that answers him: say at the table that the stake ladder's next tick is the trigger,
-and hand over the item in the same breath.
+**Levelling: nobody levels tonight.** For this season, levels come **one PC at a time**, at a
+moment the DM judges climactic, with the whole party at 5 before the December finale fight (act
+`## Loot`). Ben pushed on levelling in Session 28. Say at the table that levels are coming, and
+hand Dip his item in the same breath. Whether to name each PC's trigger ahead of time is an open
+question (question 22, and see the act file).
 
 ## NPC Quick-Reference
 

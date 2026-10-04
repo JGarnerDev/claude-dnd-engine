@@ -9,6 +9,7 @@ form: "rapier pommel"
 rarity: uncommon
 attunement: false
 bracket: "levels 4-5"
+status: draft
 ---
 
 # The Dissonant Pommel

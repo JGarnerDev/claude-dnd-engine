@@ -9,6 +9,7 @@ form: "wooden bead"
 rarity: common
 attunement: false
 bracket: "levels 4-5"
+status: draft
 ---
 
 # Quiet-Hours Bead

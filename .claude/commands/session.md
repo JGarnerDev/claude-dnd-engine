@@ -43,7 +43,7 @@ Always:
 
 Conditional:
 
-- `meta/rewards.md` — only if the session will include treasure, magic items, or a level-up
+- `meta/rewards.md` — only if the session will include treasure, magic items, or a level-up. If it draws on `meta/loot-options/`, name only `status: confirmed` items in the plan, and refer to drafts by character and slot ("a Common from Dip's folder")
 - `meta/players/*.md` (excluding `player-template.md`) — TRANSITION mode, roleplay-heavy shape, or the hook centers on a specific player's PC
 - `meta/party-relationships.md` — only when planning scenes with PC-to-PC stakes
 - `meta/campaign-design-preferences.md` — TRANSITION mode, or a CONTINUATION session that introduces a new antagonist, event, or mission element; note which items have `Deployed: —` (not yet used)

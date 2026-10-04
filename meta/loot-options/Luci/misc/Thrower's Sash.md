@@ -9,6 +9,7 @@ form: "sash"
 rarity: uncommon
 attunement: false
 bracket: "levels 4-5"
+status: draft
 ---
 
 # Thrower's Sash

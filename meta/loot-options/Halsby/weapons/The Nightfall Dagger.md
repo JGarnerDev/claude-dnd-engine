@@ -9,6 +9,7 @@ form: "dagger"
 rarity: uncommon
 attunement: false
 bracket: "levels 4-5"
+status: draft
 ---
 
 # The Nightfall Dagger

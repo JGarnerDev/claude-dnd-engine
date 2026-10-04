@@ -9,6 +9,7 @@ form: "greataxe wrap"
 rarity: uncommon
 attunement: false
 bracket: "levels 4-5"
+status: draft
 ---
 
 # Pilgrim's Wrap

@@ -36,7 +36,7 @@ Anchors these numbers are tuned against:
 
 **Coin is not the default payout.** Where a reward would be a dull pile of gold, pay a favor, a contact, a deed, or an unlock instead — see *Narrative Rewards*.
 
-**Specific items for specific PCs:** `meta/loot-options/` holds a folder per PC (`weapons/`, `armor/`, `misc/`, one item per file) totalling nine options each — three weapons, three pieces of armor, three misc — stamped for the party's current level bracket and argued from each character's sheet and each player's observed table behavior. Those items carry **no plot**: nothing in them is tied to a location, NPC, or open thread, so a session picks the item that fits the scene rather than an item committing the campaign to a hook. Nothing in that folder is canon; it is a menu, not an inventory of things that exist.
+**Specific items for specific PCs:** `meta/loot-options/` holds a folder per PC (`weapons/`, `armor/`, `misc/`, one item per file) totalling nine options each — three weapons, three pieces of armor, three misc — stamped for the party's current level bracket and argued from each character's sheet and each player's observed table behavior. Those items carry **no plot**: nothing in them is tied to a location, NPC, or open thread, so a session picks the item that fits the scene rather than an item committing the campaign to a hook. Nothing in that folder is canon; it is a menu, not an inventory of things that exist. Each item carries `status: draft | confirmed`, and **a draft item is never named outside that folder**. Plans refer to it by character and slot until the DM confirms it. See *Draft or confirmed* in `meta/loot-options/README.md`.
 
 ## Magic Items
 

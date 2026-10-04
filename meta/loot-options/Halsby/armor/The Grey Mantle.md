@@ -9,6 +9,7 @@ form: "mantle, light"
 rarity: uncommon
 attunement: true
 bracket: "levels 4-5"
+status: draft
 ---
 
 # The Grey Mantle

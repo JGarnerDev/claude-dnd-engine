@@ -9,6 +9,7 @@ form: "hearthstone"
 rarity: common
 attunement: false
 bracket: "levels 4-5"
+status: draft
 ---
 
 # The Scorched Hearthstone

@@ -9,6 +9,7 @@ form: "casting sleeve"
 rarity: common
 attunement: false
 bracket: "levels 4-5"
+status: draft
 ---
 
 # Diesel Cougar

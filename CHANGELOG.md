@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.9.0] — 2026-10-04
+
+### Added
+
+- **Loot menu items are `draft` or `confirmed`.** Every item file in `meta/loot-options/` now carries `status: draft`. The DM flips an item to `confirmed`, and adds `confirmed_for: "Session NN Name"`, once it is committed to a specific handout. Confirmed is still not canon; that happens at `/recap`. All 45 existing items start at `draft`.
+- **A draft item is never named outside `meta/loot-options/`.** Plans, flow graphs, missions, acts, the todo dashboard, questionnaires and notes refer to a draft by character and slot ("a Common from Dip's folder"). A name in a plan reads as a decision and gets carried forward as one. Only the DM confirms an item; a recommendation does not. Written into `meta/loot-options/README.md` (the canonical home), `meta/rewards.md`, the `/session` reading list, and `meta/flow-graphs.md`'s honesty rules.
+- **Act-level loot rules for Act 1.** `scheduler/acts/Act 1 - The Hearth at Ashford.md` gained `## Loot`, which overrides `meta/rewards.md` for the act: the party reaches level 5 by the December finale with levels granted one PC at a time, five Uncommons plus one Rare, surprise handouts, and an item history of at most three sentences. The clash between per-PC levels and the rewards file's announce-the-trigger rule is recorded as unresolved.
+
+### Changed
+
+- `scheduler/sessions/Session 29 The Mistake/`: the raid's Common now goes to Dip, not Iggy, and names no item until one is confirmed. The Second String is no longer the recommendation. Iggy keeps his viol spotlight beat.
+
 ## [0.8.0] — 2026-10-04
 
 ### Added
