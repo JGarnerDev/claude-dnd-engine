@@ -15,13 +15,15 @@ tags:
 player: [[Kellan]]
 source_session: "player backstory (Halsby)"
 confirmed_date: "pre-campaign"
-race: "TBD"
+race: "Half-Elf"
 class: "Sorcerer (Shadow Magic)"
 # level ruled 2026-10-01: party stays at 4 on the homebrew crossing, no level-up on
 # arrival. No level_confirmed stamp until he is actually played -- party-status.py flags
 # him STALE by design; Session 1's /recap stamps it.
 level: 4
-background: "TBD"
+background: "Haunted One"
+# Roll20 sheet (2026-10-04) is the mechanical source of truth.
+character_sheet: "Roll20 — Halsby (Sorcerer 4, Shadow Sorcery)"
 aliases:
   - "Halsby"
   - "Rivalen Bleth"
@@ -59,12 +61,18 @@ spotlight_hooks:
     status: open
   - hook: "he learns his grandmother kept him alive as a sacrifice, not a concealment"
     status: open
+  - hook: "a particular melody forces his other face to the surface"
+    status: open
+  - hook: "his living shadow acts on its own will at the worst moment"
+    status: open
 description: "Kellan's PC. Shadow-magic sorcerer raised inside a Sharran mourning-rite he never knew was worship; gives only the single alias 'Halsby' and never a first name."
 ---
 
 Campaign: [[Homebrew Campaign]] | Player: [[Kellan]]
 
-Class: Sorcerer (Shadow Magic) | Faith: Sharran, unknowingly since childhood — see [[Shar]]
+Race: [[Half Elf]] | Class: [[Sorcerer]] (Shadow Magic) | Background: Haunted One | Alignment: Chaotic Evil
+
+Faith: Sharran, unknowingly since childhood — see [[Shar]]
 
 > **Re-skin note:** This backstory was authored in Forgotten Realms terms. Per DM direction,
 > the **religion/cosmology is kept as-is** (Shar, the Sharran rite, the Shadowfell). **Locations
@@ -160,6 +168,38 @@ any angle. He has tested this over a hundred times, written down the results, an
 *(It is a piece of the foundation of the fallen flying city — the underside a city was never
 meant to touch. He doesn't know that.)* **Mechanically: his sorcerous focus.**
 
+## Character Sheet (Roll20)
+
+Sorcerer 4 (Shadow Sorcery) · Half-Elf · Haunted One · Chaotic Evil · Medium, 30 ft.
+
+- **Defenses:** AC 12, HP 26, Hit Dice 4d6, initiative +2, passive Perception 11. Immune to magical sleep.
+- **Ability scores:** STR 10, DEX 14, CON 14 (save +4), INT 8, WIS 12, CHA 17 (save +5).
+- **Skills:** Deception +5, Intimidation +5, Persuasion +5, Insight +3, Survival +3, Arcana +1.
+- **Spellcasting:** CHA; save DC 13, spell attack +5. Slots: 4 × 1st, 3 × 2nd. 4 sorcery points.
+- **Senses:** Darkvision 120 ft, Blindsight 10 ft; sees normally through his own magical Darkness.
+- **Languages:** Common, Elvish, Celestial.
+- **Proficiencies:** simple weapons; Three-Dragon Ante set.
+
+### Spells
+
+- **Cantrips:** Fire Bolt, Mage Hand, Shocking Grasp, Prestidigitation, Elementalism.
+- **1st:** Bane, Inflict Wounds (Shadow Spells), Shield, Chromatic Orb, Magic Missile, Ice Knife.
+- **2nd:** Darkness, Pass without Trace (Shadow Spells), Gust of Wind, Alter Self, Dragon's Breath, Invisibility.
+
+### Features
+
+- **Shadow Sorcery — Power of Shadow:** Eyes of the Dark (above); **Strength of the Grave** — dropped to 0 HP but not killed outright, a CHA save (DC 5 + damage taken) leaves him at CHA mod + sorcerer level instead, once per long rest.
+- **Innate Sorcery** (2/long rest), **Font of Magic**, **Metamagic:** Subtle Spell, Twinned Spell.
+
+### Dark Gifts (feats)
+
+- **Living Shadow.** His shadow is animate, ever-present, and sometimes acts on its own will. Grasping Shadow: component-free Mage Hand. Lengthened Strike: +10 ft reach on a melee attack, as the shadow stretches (2/long rest). **Ominous Will:** on a natural 1 on any d20 Test he makes a WIS save (DC 15) or is Incapacitated, then rolls the Shadow's Will table for what his body does next turn — wander, attack a random creature in reach, or fall prone.
+- **Second Skin.** Another side of him most people never see. Alternate Form: Alter Self once per long rest, no slot, components, or concentration. **Involuntary Change:** after hearing *a particular melody*, he makes a CHA save (DC 15) at the start of his next turn or changes on the spot — stunned instead if the free use is spent. The melody is unnamed.
+
+### Gear
+
+Dagger ×2, spear, crowbar ×2, 15 torches, 2 tinderboxes, 4 flasks of oil, holy water, caltrops, rope, mirror, signal whistle, 2 waterskins, 10 days of rations, traveler's clothes, Three-Dragon Ante set, 42 gp. Arcane focus listed on the sheet as a crystal — the black shard (see **The Object**).
+
 ## Abilities (Noted in Play)
 
 - Shadow Magic sorcery — the dark answers cheaply; fire and light cost him disproportionately.
@@ -203,6 +243,8 @@ pass, Kellan-editable:
 - **"Rivalen"** — surfaces only when someone who knows what it means says it to him. Free to leave
   loaded at any level.
 - **The fade clock** — the order's lever; he has already seen where it ends.
+- **The melody** (Second Skin) — whatever tune forces the change is unnamed. A dark-moon hymn, something his grandmother hummed, a Sharran chant: DM's to choose.
+- **The living shadow** (Living Shadow) — the shard casts no shadow; *he* casts one that acts on its own will. Two shadows, opposite problems.
 
 ---
 
@@ -222,7 +264,4 @@ pass, Kellan-editable:
 
 ## Gaps — pending Kellan
 
-- **Race** *(mandatory)* — "shadow-blooded" is not a 5e race. Shadar-kai? Human (shadow-touched variant)? Custom lineage?
-- **Background** *(mandatory field, currently TBD)*
-- **Starting level** — homebrew start level.
-- **Appearance** — none given.
+- **Appearance** — none given (sheet's appearance box carries only faith and size).

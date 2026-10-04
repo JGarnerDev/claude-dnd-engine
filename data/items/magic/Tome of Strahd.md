@@ -16,8 +16,12 @@ active: true
 description: "Strahd's personal diary — an artifact containing his private confession and hidden weaknesses."
 relates_to:
   - "[[Strahd von Zarovich]] (author)"
+  - "[[Odibli]] (transcribed a fragment at the Citadel; DM-only: the copying woke him)"
+  - "[[The Citadel]] (held a fragment)"
 ---
 
 The Tome of Strahd is the personal diary of [[Strahd von Zarovich]], written in his own hand across generations. It contains his private confession: the pact with death, the murder of his brother Sergei, his obsession with Tatyana, and the deliberate choice that made him what he is.
 
 For a party willing to read carefully, it is one of the most valuable sources of intelligence on Strahd's true nature — and the key to understanding his weaknesses.
+
+A fragment of the Tome reached [[The Citadel]], where [[Odibli]] was transcribing it when he heard the distant voice that called him into Barovia. The unfinished transcription stays at the Citadel.
