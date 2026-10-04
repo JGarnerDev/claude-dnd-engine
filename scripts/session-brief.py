@@ -12,9 +12,9 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import (ROOT, ci_eq, cwrite, digits_int, fmt_num, get_frontmatter,
-                        parse_party_table, pending_recordings, read_text_no_bom,
-                        try_parse_date)
+from lib.common import (ROOT, ci_eq, cwrite, digits_int, entity_md_files, fmt_num,
+                        get_frontmatter, parse_party_table, pending_recordings,
+                        read_text_no_bom, try_parse_date)
 
 spotlight = importlib.import_module('spotlight-balance')
 
@@ -22,27 +22,42 @@ spotlight = importlib.import_module('spotlight-balance')
 def main() -> None:
     hist_dir = ROOT / 'historian' / 'sessions'
     sched_dir = ROOT / 'scheduler' / 'sessions'
-    hist_sessions = list(hist_dir.glob('*.md')) if hist_dir.exists() else []
-    sched_sessions = list(sched_dir.glob('*.md')) if sched_dir.exists() else []
+    # Sessions are a folder each, so both of these recurse -- see entity_md_files.
+    hist_sessions = entity_md_files(hist_dir)
+    sched_sessions = entity_md_files(sched_dir)
     hist_full = {f.resolve() for f in hist_sessions}
     all_sessions = hist_sessions + sched_sessions
 
     max_num = 0
     latest_played = 0
+    pending_plans = {}
     for s in all_sessions:
         fm = get_frontmatter(s)
         n = digits_int(fm.get('session_number'))
         if n > max_num:
             max_num = n
-        if n > latest_played and s.resolve() in hist_full:
-            latest_played = n
-    next_num = max_num + 1
+        if s.resolve() in hist_full:
+            if n > latest_played:
+                latest_played = n
+        elif str(fm.get('state') or '').lower() in ('draft', 'planned'):
+            pending_plans[n] = (fm.get('name'), str(fm.get('state')).lower())
+
+    # The next session is the first unplayed one. A planned-but-unplayed scheduler
+    # artifact IS that session - don't skip past it to max+1.
+    unplayed = sorted(n for n in pending_plans if n > latest_played)
+    next_num = unplayed[0] if unplayed else max_num + 1
+    existing_plan = pending_plans.get(next_num)
 
     cwrite("\n========================================", 'darkgray')
     cwrite("  SESSION BRIEF", 'cyan')
     cwrite("========================================", 'darkgray')
 
     cwrite(f"\nNext session: #{next_num}", 'yellow')
+    if existing_plan:
+        cwrite(f"  Plan exists: '{existing_plan[0]}' [{existing_plan[1]}]", 'white')
+        if len(unplayed) > 1:
+            cwrite("  Also planned ahead: " + ", ".join(
+                f"#{n}" for n in unplayed[1:]), 'darkgray')
     if next_num % 5 == 0:
         cwrite(f"  MILESTONE: session #{next_num} - worth marking at the table.", 'magenta')
 
@@ -159,12 +174,12 @@ def main() -> None:
         else:
             cwrite("  ! No Rest Clock section in campaign Current State - add one (see meta/difficulty.md).", 'red')
 
-        m = re.search(r'## Current State \(after Session (\d+)\)', content)
+        m = re.search(r'## Current State \((?:after|as of:) Session (\d+)\)', content)
         if m:
             if int(m.group(1)) < latest_played:
                 cwrite(f"  ! CURRENT STATE STALE: header says Session {m.group(1)}, latest played is {latest_played} - update and restamp at next /recap.", 'red')
         elif re.search(r'## Current State', content):
-            cwrite("  ! Current State header has no '(after Session N)' stamp - restamp at next /recap.", 'yellow')
+            cwrite("  ! Current State header has no '(after Session N)' / '(as of: Session N)' stamp - restamp at next /recap.", 'yellow')
 
     # -- Party ----------------------------------------------------------------
     cwrite("\n--- PARTY ---", 'darkgray')

@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import (ROOT, ci_eq, color, cwrite, get_frontmatter,
+from lib.common import (ROOT, ci_eq, color, cwrite, entity_md_files, get_frontmatter,
                         pending_recordings, read_text_no_bom, try_int, try_parse_date)
 
 spotlight = importlib.import_module('spotlight-balance')
@@ -29,6 +29,9 @@ D20, DRAGON, SCROLL, CROWN, HORNS = '🎲', '🐉', '📜', '👑', '🤘'
 
 
 def _glob(rel: str, pattern: str = '*.md') -> list:
+    # Sessions are a folder each, so the default pattern recurses.
+    if pattern == '*.md':
+        return entity_md_files(ROOT / rel)
     d = ROOT / rel
     return list(d.glob(pattern)) if d.exists() else []
 

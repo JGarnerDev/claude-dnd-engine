@@ -123,7 +123,7 @@ Write `beats:` as one quoted line per tagged beat in the `classification: weight
 PCs who were at the table (the Phase 2.5 attendance check). Omit both fields when the Phase 2.5
 pass was skipped for cold-start.
 
-Then move the file from `scheduler/sessions/` to `historian/sessions/`.
+Then move the session's whole folder from `scheduler/sessions/` to `historian/sessions/` — the plan, its `_flow.md` chart, and any encounter files travel together.
 
 ---
 

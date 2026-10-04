@@ -6,6 +6,35 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.8.0] — 2026-10-04
+
+### Added
+
+- **Every session gets its own folder.** `scheduler/sessions/Session {NN} {Name}/` holds the plan as `Session {NN} {Name}.md`, its flow chart as `_flow.md`, and (for `scope: linked`) its encounter files. The whole folder moves to `historian/sessions/` at `/recap`. Previously only `scope: linked` sessions got a folder and inline ones were a bare file. The main file keeps its folder's name, so `[[Session {NN} {Name}]]` resolves either way. **Breaking for anything that globbed `scheduler/sessions/*.md` one level deep** — see Fixed.
+- **`_flow.md` — a per-session flow chart in the repo.** A mermaid graph of one session's scenes, forks and fail paths, living beside the plan it maps and travelling with it into the historian. Not an entity: the `_` prefix keeps it out of `validate.ps1`'s entity checks and the semantic index, and it carries no frontmatter. It is a graduated snapshot of the matching file in the act's flow graph set, which stays the live source and the one `flow-status.py` reads; `/flow --session <n>` regenerates the pair.
+- **`entity_md_files()` in `scripts/lib/common.py`** — recursive entity discovery that skips `_*` and `CLAUDE.md`, matching the exclusions `validate.ps1` already applied. Every script reading a session directory now goes through it.
+- **A plain-language rule for flow graph labels.** Node labels are written as sentences carrying the runnable detail — the roll, the DC, the round count, who wants what — and branch edges are labelled with the choice in the words a player would use. A node reading `casks or Sable?` is a worse map than one that says two bandits are walking the last cask to a cart while the big one is two rounds from dragging Sable out the door. Recorded in `meta/flow-graphs.md` alongside the snapshot convention.
+- **`scheduler/missions/The Stolen Casks.md`** — Act 1's opening mission, covering act sessions 1 and 2 (campaign sessions 29 and 30). The Golden Lioness's undelivered ale is carried off during the raid the party lands in; the party runs the cart down before it reaches a Duskwater fence. Both outcome branches are filled, and Nella escapes both times by design.
+- **`scheduler/sessions/Session 29 The Mistake/`** — the first homebrew session plan, for Tuesday 2026-10-06. Five scenes, `state: draft`. Numbered **29 continuous**, not "Session 1": act-relative numbering is shorthand only, and a second "Session 1" would collide with Strahd's and break `session-brief.py`'s counter.
+- **Rest Clock initialised for Redwater.** `scheduler/campaign/Redwater.md` gained `## Current State (after Session 28)` with a `### Rest Clock (as of: Session 28)` block. The 2026-10-01 long-rest ruling makes it determinate — the transit *is* the rest — so the clock opens at 0 rounds, 0 short rests, freshly rested, with the 24-hour gate restarting at the transit. The clock was initialised at the season swap, not carried across it; Barovia's rounds stay in `Curse of Strahd.md` for when that season resumes.
+
+### Changed
+
+- `meta/schemas/session.md` — canonical paths rewritten for the folder layout; scene blocks are `### Scene N — [Title]`, not `####`. The old spec nested `####` under `##` and tripped MD001 on every session file, and MD001 is not in the pre-commit hook's auto-fixable set, so the prescribed layout could never pass lint.
+- `.claude/commands/session.md` — always creates the session folder; offers `_flow.md` alongside the plan.
+- `.claude/commands/recap.md` — moves the session's whole folder to `historian/`, not just the file.
+- `.claude/commands/flow.md` — Phase 4 mirrors each designed session's graph into its session folder, with the graduation ask spelled out for sets living under a gitignored working directory.
+- `scripts/session-brief.py` — the `## Current State` stamp check now accepts `(after Session N)` **and** `(as of: Session N)`. The two campaign files had drifted to different spellings and only one could satisfy the regex.
+- `scheduler/acts/Act 1 - The Hearth at Ashford.md` — `campaign: [[Redwater]]` → `campaign: homebrew`, matching the documented season-axis rule. The Redwater edge survives through `relates_to`. Its `## Open` section no longer claims the missions are unwritten.
+- `historian/characters/pcs/Iggy.md` — the viol hook ("decode the unfinished final song trapped in the viol") moved `open` → `seeded`, because the Session 29 plan commits a beat to it. Becomes `paid` at `/recap` if it lands.
+- `todo-dashboard.md` — item 15 is down to the loot pick; the mission and session plan it asked for now exist.
+
+### Fixed
+
+- **`session-brief.py` reported the wrong next session.** It computed `max(session_number) + 1` across both session directories, so a planned-but-unplayed scheduler artifact pushed the counter past itself — with Session 29 drafted and Session 28 the last played, the brief announced "Next session: #30" and flagged a false milestone. It now reports the first *unplayed* session and names its existing plan.
+- **Four scripts globbed session directories one level deep** and found nothing once sessions moved into folders: `session-brief.py`, `session-state.py`, `todo-brief.py`, `party-status.py`. All four now use `entity_md_files()`. `timeline-data.py`, `timeline-gantt.py` and `get_played_spotlight_sessions()` already recursed.
+- `meta/loot-options/` is not short of items. A prior audit recorded Iggy's folder as holding 1 weapon against the documented 3; all five PC folders are full at 3 weapons / 3 armor / 3 misc. The Second String sits in `misc/`, not `weapons/`.
+
 ## [0.7.0] — 2026-10-02
 
 ### Added

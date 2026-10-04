@@ -7,7 +7,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, ci_eq, cwrite, get_frontmatter, parse_party_table
+from lib.common import (ROOT, ci_eq, cwrite, entity_md_files, get_frontmatter,
+                        parse_party_table)
 
 
 def show_entity(label: str, fm: dict, path) -> None:
@@ -21,9 +22,9 @@ def show_entity(label: str, fm: dict, path) -> None:
 
 
 def md_files(rel_dir: str) -> list:
-    # PowerShell `Sort-Object Name` is case-insensitive.
-    d = ROOT / rel_dir
-    return sorted(d.glob('*.md'), key=lambda f: f.name.lower()) if d.exists() else []
+    # Case-insensitive like PowerShell `Sort-Object Name`, and recursive because
+    # sessions are a folder each.
+    return entity_md_files(ROOT / rel_dir)
 
 
 def main() -> None:
@@ -59,10 +60,7 @@ def main() -> None:
     else:
         cwrite("\n[SESSIONS] none planned in scheduler", 'darkgray')
 
-    hist_sessions = sorted(
-        (ROOT / 'historian' / 'sessions').glob('*.md'),
-        key=lambda f: f.name.lower(), reverse=True) \
-        if (ROOT / 'historian' / 'sessions').exists() else []
+    hist_sessions = list(reversed(md_files('historian/sessions')))
     if hist_sessions:
         last = hist_sessions[0]
         show_entity("LAST PLAYED SESSION", get_frontmatter(last), last)

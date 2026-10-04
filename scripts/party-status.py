@@ -9,8 +9,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (
-    ROOT, ci_eq, cwrite, fmt_num, get_frontmatter, get_played_spotlight_sessions,
-    get_spotlight_rotation, parse_party_table, try_int,
+    ROOT, ci_eq, cwrite, entity_md_files, fmt_num, get_frontmatter,
+    get_played_spotlight_sessions, get_spotlight_rotation, parse_party_table, try_int,
 )
 
 
@@ -36,7 +36,7 @@ def main() -> None:
     latest_session = 0
     sessions_dir = ROOT / 'historian' / 'sessions'
     if sessions_dir.exists():
-        for sf in sessions_dir.glob('*.md'):
+        for sf in entity_md_files(sessions_dir):
             n = try_int(get_frontmatter(sf).get('session_number'))
             if n is not None and n > latest_session:
                 latest_session = n

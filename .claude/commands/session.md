@@ -233,7 +233,7 @@ Using all context gathered, produce a session plan in chat.
 
 ### Scenes
 
-One `#### Scene N — [Title]` block per beat. Scale count to session length (Short: 3–4, Standard: 4–6, Long: 6–8).
+One `### Scene N — [Title]` block per beat. Scale count to session length (Short: 3–4, Standard: 4–6, Long: 6–8).
 
 **Travel legs:** if the plan moves the party overland or by water between known points, size the leg first — world map scale is 1 grid cell = 1000km; paces are foot 30km/day, horse 60, river barge 80 down / 30 up, ship 150 (per `scripts/region-scale.py`). A leg's duration advances the in-world clock — track days/hours elapsed across the session so the Rest Clock's `In-world time now` and the long-rest gate stay correct, and note where on the route the 24-hour window reopens (the party can long-rest at the first safe stop past that point — see `meta/difficulty.md` → Long Rest Rules). Then derive 1–3 stops from geography alone (river crossings, passes, day's-walk spacing — same map-first principle as `/region`), using working labels, not proper nouns, unless the DM names them. Only stops that serve the session (a scene, an encounter, a rest) become scene blocks; the rest is narration. **Never enumerate every settlement a realistic road would have** — at this scale that's one per travel day, and almost none deserve files. Stops live in the session plan as scheduler content (`exists: false`); `/recap` canonizes only the ones the party actually visits, per the Settlement & Road Tiers section of `meta/settlements.md`.
 
@@ -319,8 +319,9 @@ If yes:
 
 1. Read `meta/schemas/session.md` to confirm the frontmatter template
 2. Determine path based on scope (filename = exact display name, matching canon precedent — e.g. `Session 14 The Road Remembers.md`):
-   - `scope: inline` → write `scheduler/sessions/Session {NN} {Name}.md`
-   - `scope: linked` → create folder `scheduler/sessions/Session {NN} {Name}/`; write main file as `Session {NN} {Name}.md` inside it; write each encounter as `Encounter {Name}.md`
+   - Always create the folder `scheduler/sessions/Session {NN} {Name}/` and write the plan inside it as `Session {NN} {Name}.md`
+   - `scope: linked` → also write each encounter into that folder as `Encounter {Name}.md`
+   - Offer to add `_flow.md`, the session's mermaid flow chart, in the same folder — see `meta/flow-graphs.md` and `/flow --session {NN}`
 3. Populate all mandatory frontmatter fields from the plan above
 4. Write the full body (Orientation, Scenes, NPC Quick-Reference, Contingencies, Closing) into the main file
 5. Leave historian-only fields commented out (they are filled after play)

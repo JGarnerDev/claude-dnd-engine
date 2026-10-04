@@ -4,7 +4,7 @@ name: "Act 1 - The Hearth at Ashford"
 type: act
 exists: false
 state: planned
-campaign: [[Redwater]]
+campaign: homebrew
 central_conflict: "The Cael–Marlow feud, run as backdrop rather than headline. House Marlow bleeds House Cael's border trade through deniable land raiders, and Ashford is where the bill lands. The party's fight is never with the two houses — it is with the raids, which are the feud's bill arriving at their door."
 goal: "Turn five unhomed strangers into people with a home worth defending. Mechanically: grow Sable Wren's provisional foothold at the Golden Lioness from a 10% stake into a 40% stake and a working brewhouse, by deeds rather than coin."
 opening_state: "The party arrives clean. Odibli triggered the Wanderer's Boon voluntarily at the winery — Davian's gift, not a curse — so there is no hag, no mark, and nothing chasing them through. They land in Ashford mid-raid: Nella's crew has already taken half the Golden Lioness's new-wing casks and gone, Wick's crew has hit the far side of town, and the leftovers are shaking Sable Wren down. Five PCs at level 4, Halsby among them. No money, no standing, no allies, and a relic in Odibli's hand that does not work yet."
@@ -104,8 +104,10 @@ beat.
 
 ## Open
 
-- **Missions are not written yet.** The beat sheets exist as workshop drafts; the scheduler
-  mission artifacts and the real Session 1 plan come from `/session`.
+- **First mission written; the rest are not.** [[The Stolen Casks]] covers Sessions 1–2 (the
+  raid and the pursuit). Sessions 3–4 — the cell and the flush, convergence night — still
+  exist only as workshop beat sheets and need their own mission artifacts. The real Session 1
+  plan comes from `/session`.
 - **The campaign-level conflict is unreconciled on purpose.** [[Redwater]] still reads
   `central_conflict: "Control of Whatwill"` while this act runs a local feud with no Whatwill
   content. That is a pinned group discussion, not a problem to solve in this file. The cheap

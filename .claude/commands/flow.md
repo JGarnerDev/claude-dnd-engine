@@ -101,6 +101,20 @@ One file per graph, under the act's working directory:
 - `NN-session-<n>-<slug>.md` — `flowchart TD`, one per designed session
 - a final `NN-payoff-slots.md` if the season has slots the act has not designed into
 
+**Then mirror each designed session's graph into its session folder**, if a scheduler artifact
+exists for it:
+
+```text
+scheduler/sessions/Session {NN} {Name}/_flow.md
+```
+
+One graph per file, the session's own, with a short header naming the upstream set and the plan it
+maps. This is the copy the DM reads at the table and the copy `/recap` carries into `historian/`;
+the set under the act directory stays the live source. `--session <n>` regenerates exactly that
+pair — the set file and its snapshot. Writing the snapshot into a tracked path is a graduation
+step when the set lives under a gitignored working directory: **ask first**, per
+`workshop/CLAUDE.md`.
+
 Each session file opens with its date if known, its difficulty rating, and any rulings baked into
 the drawing. Each closes with 2–4 sentences of prose that reference node ids directly — the prose
 exists to explain *why* a branch is shaped that way, not to restate the labels.

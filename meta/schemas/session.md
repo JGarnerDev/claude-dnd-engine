@@ -37,16 +37,25 @@ A session is a single play session — typically three to four hours. The sessio
 
 Filenames use the exact display name, matching `name:` per `entity.md` (e.g. `Session 13 Dream Pastries.md`).
 
-**Inline** (single file):
-`scheduler/sessions/Session {NN} {Name}.md`
-Moves to `historian/sessions/Session {NN} {Name}.md` after play.
+**Every session gets its own folder**, inline or linked:
 
-**Linked** (folder):
-`scheduler/sessions/Session {NN} {Name}/Session {NN} {Name}.md` — main file
-`scheduler/sessions/Session {NN} {Name}/Encounter {Name}.md` — one per encounter
-Entire folder moves to `historian/sessions/Session {NN} {Name}/` after play.
+`scheduler/sessions/Session {NN} {Name}/Session {NN} {Name}.md` — the plan
+`scheduler/sessions/Session {NN} {Name}/_flow.md` — the session's mermaid flow chart
+`scheduler/sessions/Session {NN} {Name}/Encounter {Name}.md` — one per encounter, `scope: linked` only
 
-The main file always uses the same `Session {NN} {Name}` naming convention regardless of scope.
+The entire folder moves to `historian/sessions/Session {NN} {Name}/` after play. The main file
+always uses the same `Session {NN} {Name}` naming convention, matching its folder, so
+`[[Session {NN} {Name}]]` resolves whether the file sits in a folder or not.
+
+**`_flow.md` is not an entity.** It is a derived view of the plan — the session's beats, forks and
+fail paths as a mermaid graph, written in plain sentences for reading at the table. The `_` prefix
+is what keeps it out of `validate.ps1`'s entity checks and the semantic index; it carries no
+frontmatter. Conventions for the graph itself live in `meta/flow-graphs.md`, and it is a graduated
+snapshot of the act's flow graph set — regenerate with `/flow --session {NN}` rather than
+hand-editing both copies.
+
+Scripts that read sessions must **recurse** (`entity_md_files` in `scripts/lib/common.py`), since
+one level of globbing no longer finds anything.
 
 ### Valid State Values
 
@@ -152,11 +161,12 @@ all active PCs as present and says so.
 
 ### Body Structure (pre-play)
 
-The body is the DM-facing runnable document. Sections in order:
+The body is the DM-facing runnable document. Each section below is a real `##` heading;
+scene blocks nest under `## Scenes` as `###`. Sections in order:
 
 **Orientation** — party state paragraph (location, afflictions, resources, tone coming out of last session); bullet list of unresolved `new_entities` from the last session.
 
-**Scenes** — one `#### Scene N — [Title]` block per beat. Count scales to length (Short: 3–4, Standard: 4–6, Long: 6–8). Each block:
+**Scenes** — one `### Scene N — [Title]` block per beat. Count scales to length (Short: 3–4, Standard: 4–6, Long: 6–8). Each block:
 
 - **Trigger** — what starts the scene
 - **Location** — `[[wiki-link]]`; one-line description

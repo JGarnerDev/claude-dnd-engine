@@ -61,6 +61,24 @@ def cwrite(text: str = '', name: str = None, end: str = '\n') -> None:
     print(text, end=end)
 
 
+# -- Entity file discovery ----------------------------------------------------
+def entity_md_files(base) -> list:
+    """Every entity .md under `base`, recursive, sorted case-insensitively by filename.
+
+    Sessions get a folder each (`scheduler/sessions/Session 29 The Mistake/...`), so every
+    consumer has to recurse rather than glob one level. Names starting with `_` are derived
+    views -- flow charts, scratch -- and are never entities; this is the same exclusion
+    `validate.ps1` applies.
+    """
+    base = Path(base)
+    if not base.exists():
+        return []
+    return sorted(
+        (f for f in base.rglob('*.md')
+         if not f.name.startswith('_') and f.name != 'CLAUDE.md'),
+        key=lambda f: f.name.lower())
+
+
 # -- File reading -------------------------------------------------------------
 # A UTF-8 BOM breaks `^`-anchored / first-line regex matches (frontmatter fence,
 # cliffhanger, thread-state), so every reader strips it here rather than each

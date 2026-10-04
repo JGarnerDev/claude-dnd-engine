@@ -48,6 +48,28 @@ Five PCs this season. The four who crossed from Barovia persist across both worl
 
 > **Reliability:** carried over from the Strahd roster plus the Session 28 seam pass. Afflictions cross **dormant** (the mists fed them; away, they are muted) — `workshop/first-homebrew-act/notes/the-seam.md`. Odibli's poison and Dip's mold were cured on screen and are gone; do not reuse them. Party level is unset pending the starting-level ruling.
 
+## Current State (after Session 28)
+
+The party arrived in [[Ashford]] through [[The Wanderer's Boon]] and has not yet played a
+session in this world. [[Act 1 - The Hearth at Ashford]] is the live act;
+[[The Stolen Casks]] is the opening mission, and [[Session 29 The Mistake]] is planned for
+2026-10-06. Nothing in Aethryn is canon yet — every entity the first session touches still
+carries `exists: false` until `/recap` graduates it.
+
+### Rest Clock (as of: Session 28)
+
+Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` -> Long Rest Rules).
+
+- In-world time now: **working label "Day 1, Ashford reckoning"** — deliberately not a date. Aethryn has no settled calendar (`questionnaires/world/history/`, `data/lore/calendar-proposal.md` both open), so no in-world date is asserted until those land
+- Last long rest (in-world): **the transit itself.** Per the DM ruling of 2026-10-01, passing through [[The Wanderer's Boon]] counts as a long rest, told to the party in fiction as they teleport rather than announced as a mechanic
+- Hours since last long rest: 0 — the party arrives rested
+- Long rest available: **not for ~24 in-world hours** from arrival. The 24-hour gate restarts at the transit, so Session 29 has no second reset in it
+- Rounds of combat since: **0**
+- Short rests since: **0**
+- Notable burns: **none carried.** The transit cleared the Barovian ledger — all slots, hit dice and HP restored. Afflictions cross **dormant** ([[Iggy]]'s shadow, [[Dip]]'s whispers). [[Odibli]]'s poisonings and Dip's spore infection were cured on screen by [[Davian Martikov]] in Session 28 and are **gone — do not reuse them.** Permanent losses that do persist: Luci's **Sacred Flame**, sacrificed permanently, and Odibli's **familiar**, destroyed in Session 25
+
+> **Reliability:** this clock was **initialized at the season swap**, not carried across it — exactly the reset the paused [[Curse of Strahd]] clock suggested considering. Barovia's ~35 rounds and ~17-24 hours-since figures are retired with that campaign and are not inherited here; they remain in `scheduler/campaign/Curse of Strahd.md` for when the Strahd season resumes. The header stamp reads Session 28 because that is the last played session of either campaign; Session 29's `/recap` is the first to restamp it from actual homebrew play.
+
 ## Setup TODO
 
 Master checklist is the `/todo` dashboard (`todo-dashboard.md`); this list tracks only the files that must be completed before this campaign can start.

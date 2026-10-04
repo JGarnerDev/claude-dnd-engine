@@ -37,7 +37,7 @@ spotlight_hooks:
   - hook: "Recover the fragmented memory of Threnai's fall — courier war, then the Corrector's ideology and the Returned, then the Failed Intervention and Sah's rescue"
     status: open
   - hook: "Decode the unfinished final song trapped in the viol"
-    status: open
+    status: seeded
   - hook: "Face a Returned and recognize the corruption he witnessed during the war"
     status: open
   - hook: "Confront the Correctors — the death-denial cult active on the Material Plane"

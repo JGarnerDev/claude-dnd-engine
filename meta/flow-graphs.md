@@ -37,6 +37,23 @@ compete for width. Splitting is the whole reason the set exists as a folder.
 Publish one only when it is being handed to someone outside the repo, and even then the repo file
 stays the source.
 
+### The per-session snapshot
+
+A planned session also carries its own chart, in its own folder:
+
+```text
+scheduler/sessions/Session {NN} {Name}/_flow.md
+```
+
+That file is the session's graph only — not the act spine, not the other sessions — and it travels
+with the plan when `/recap` moves the folder to `historian/`. It is a **graduated snapshot** of the
+matching file in the act's set, so the set stays the live source and the one `flow-status.py`
+reads. The `_` prefix keeps it out of `validate.ps1`'s entity checks and the semantic index; it
+carries no frontmatter and is never an entity.
+
+Because there are two copies, they drift. Regenerate the snapshot with `/flow --session {NN}`
+rather than hand-editing both, and never let the snapshot be the only place a marker moved.
+
 ## Node ids
 
 **Every node prints its own id in its label, and the printed id is the literal mermaid node id.**

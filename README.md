@@ -194,7 +194,7 @@ akumakel       Kellan (DM)
 Campaign (scheduler/campaign/*.md)
   ├── Act (scheduler/acts/*.md)
   │     ├── Mission (scheduler/missions/*.md)
-  │     │     └── Session (scheduler/sessions/*.md) ← moves to historian/ when played
+  │     │     └── Session (scheduler/sessions/<session>/*.md) ← folder moves to historian/ when played
 ```
 
 Each level references the one above and the ones below via wiki-links. When a session is played, its file moves from `scheduler/sessions/` to `historian/sessions/` with historian metadata.
