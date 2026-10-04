@@ -86,7 +86,7 @@ flowchart TD
     S1_OFFER["[-] S1_OFFER<br/>The offer, and it is a deal rather than charity<br/>10 percent of the Lioness now, for tonight's deed<br/>Grows to 25 then 40 percent by deeds, never by coin<br/>One favour owed per time they help the town<br/>Building out a room runs 250 to 500 gp<br/>Have these numbers on a card so it lands concrete"]
     S1_ODIBLI["[-] S1_ODIBLI<br/>Odibli is handed a stake in a brewery<br/>Session 28's table notes say his plan to conquer Vallaki<br/>through the power of good wine got real buy-in<br/>Hand it straight to Miguel and do not explain the joke"]
     S1_IGGY["[-] S1_IGGY<br/>Iggy plays the room he just saved — his spotlight beat<br/>He is overdue, 2 rotation turns against everyone else's 4<br/>Seeds his open hook, the unfinished song trapped in the viol<br/>One or two lines only, and no resolution"]
-    S1_LOOT["[?] S1_LOOT<br/>OPEN: which Common item Dip gets out of the raid<br/>Decided: the item goes to Dip, not Iggy, and arrives as a surprise<br/>Drawn from the Commons in meta/loot-options/Dip, none confirmed yet<br/>Nobody levels tonight. Say levels are coming, one PC at a time,<br/>and hand Dip the item in the same breath"]
+    S1_LOOT["[-] S1_LOOT<br/>The Earshot Crystals, one per PC, taken off the raiders<br/>Touch to speak, words only, to one holder you can see<br/>or to all holders within 300 ft. Confirmed by Jeff<br/>The raiders wore them and never used them, so they are a mystery<br/>Never say the twist: Nella and a few of her crew kept theirs<br/>Nobody levels tonight. Say levels are coming, one PC at a time"]
     S1_BOON["[-] S1_BOON<br/>Close on the relic doing nothing at all<br/>Odibli takes the stone out and it is warm as a pocketed<br/>pebble and completely dead<br/>Without this beat the season reads as a detour<br/>instead of the errand the relic sent them on"]
     S1_WREN --> S1_OFFER --> S1_ODIBLI --> S1_IGGY --> S1_LOOT --> S1_BOON
   end
@@ -118,9 +118,9 @@ flowchart TD
   class S1_FIGHT,S1_CASKS,S1_SABLE,S1_MORALE combat
   class S1_REPLAY,S1_REST,S1_STEADY,S1_READ,S1_SCATTER,S1_MIDRAID,S1_PARLEY,S1_SCARE,S1_TRICK,S1_TOWN,S1_WREN social
   class S1_STANCE,S1_ENGAGE,S1_FORK,S1_OUTS decision
-  class S1_DEED,S1_OFFER stake
+  class S1_DEED,S1_OFFER,S1_LOOT stake
   class S1_NELLA,S1_NAMES,S1_BOON,S1_ODIBLI,S1_IGGY seed
-  class S1_GUEST,S1_LOOT,S1_BANNER open
+  class S1_GUEST,S1_BANNER open
   class S1_BOTCH fail
 ```
 

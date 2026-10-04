@@ -64,6 +64,13 @@ She is not loyal and believes in none of it. She is working off a number, which 
 cleanest resolution lever in the band — buy the debt out, or show her that Bane never had any
 intention of releasing her, and she can walk away from the crew instead of to a rope.
 
+## The crystals
+
+Every raider in her crew wears an **Earshot Crystal**, one per head, all cut from one stone. The
+crew never uses them. When the party loots theirs in Session 1, Nella keeps her own, and so do a
+few of the crew who got away. Any message the party sends to "all" within 300 ft of her, she
+hears, and she can answer. She sits on that through many fights before it comes out.
+
 ## The three meetings
 
 - **Session 1.** She runs the raid on **[[The Golden Lioness]]**'s new wing, leaves with half

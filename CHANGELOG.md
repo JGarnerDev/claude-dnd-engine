@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.10.0] — 2026-10-04
+
+### Added
+
+- **`meta/loot-options/Party/` holds shared party items**, one copy per PC. It has no README and sits outside the nine-per-character composition rule. Item files use `character: Party` and `player: all`. Documented in `meta/loot-options/README.md`.
+- **The Earshot Crystals** (`Party/misc/`), the first party item, `status: confirmed` for Session 29: touch-to-speak telepathy, words only and past language, to one holder in sight or to "all" holders within 300 ft, with unlimited use. Common, per crystal.
+
+### Changed
+
+- `scheduler/sessions/Session 29 The Mistake/`: the session's item is now the Earshot Crystals, looted from Nella's raiders, who carry them but never use them. Nella and a few of her crew keep theirs and can overhear "all" messages, a hidden twist revealed only after many fights with her. Dip's Common is removed, and no personalised item lands in Session 29. The act's `## Loot`, the `S1_LOOT` flow node (now `[-]`), `The Stolen Casks`, `Nella` and todo item 15 follow suit.
+
 ## [0.9.0] — 2026-10-04
 
 ### Added

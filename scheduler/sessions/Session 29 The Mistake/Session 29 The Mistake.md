@@ -157,6 +157,8 @@ multiattack, mace +4 for 5). Raw 225 XP, ×2 group multiplier → **~450 adjuste
 - The big one is working Sable over at the bar. Ignored about two rounds, he drags her out as
   leverage.
 - The remaining three screen the runners.
+- **Each raider wears a small cloudy crystal on a cord. None of them uses it.** Do not draw
+  attention to it in the fight. These are the Earshot Crystals (see `## Rewards`).
 - **The party cannot cover both ends.** That is the scene — chase the cask or save Sable.
 - Break the big one (killed, frightened, or talked down) → surviving bandits make **DC 12 WIS**;
   failures flee and drop what they carry.
@@ -260,17 +262,34 @@ detail is the entire budget for tonight.
 **Gold:** ~120–180 gp party total — the remnant's pocket coin, the big one's purse, salvage from
 the wing. Standard session band per `meta/rewards.md` (100–250), about 25–35 gp a head.
 
-**Item — one, Common, for Dip. Which one is still the DM's call** (`meta/loot-options/Dip/`).
-Decided 2026-10-04 in `questionnaires/redwater/act-1-loot.md`, question 8: the session's item
-goes to Dip, because Ben is the player who pushed on levelling, and the DM's own PC should not
-be paid first. Iggy keeps his spotlight beat in scene 5. Only the item moves to later in the
-act. The item is drawn from the Commons in `meta/loot-options/Dip/`. None of them is named
-here until the DM confirms one there (`status: confirmed`), because every item in that folder
-is a draft idea until then.
+**Item: the Earshot Crystals, one per PC.** Confirmed by Jeff on 2026-10-04
+(`meta/loot-options/Party/misc/Earshot Crystals.md`, `confirmed_for` this session). It is a
+Common and spends none of the act's Uncommon budget. No personalised item lands tonight.
 
-Handing it over follows the act's loot rules (see the act file's `## Loot`): a surprise, never
-picked off a menu in front of the player, and with a history of at most three sentences
-attached. Where it is found (question 19) is still open.
+- **What they do, at the table:** touch your crystal to speak telepathically, words only and
+  past any language, to one holder you can see or to "all" holders within 300 ft. Listeners
+  only need to carry theirs. Unlimited use.
+- **Where they're found:** on the raiders, a crystal on a cord around every neck. They come
+  off the fallen and out of what fleeing bandits drop. If fewer than five fall, the big one
+  carries a pouch of spares.
+- **They arrive as a mystery.** The raiders weren't using them because they thought the yard
+  was already secured. If anyone asks, that is the whole answer. Nothing in the fight explains
+  them. The players work out what they do by handling them. Touching one is enough to find out.
+- **History (say it, at most three sentences):** *Every raider wore one, identical and cloudy,
+  and not one of them was seen to use it.* Nothing about who made them or why. That stays
+  unsaid.
+
+**The twist, never said at the table:** [[Nella]] kept her crystal, and so did a few of her crew
+who got away. Any time the party sends to "all" within 300 ft of one of them, they hear every
+word. They can answer too.
+
+- **It is a long fuse.** There will be many fights with Nella before it is revealed. She sits on
+  it, and nobody on her side lets it slip in that time. Her escapes must still read as her own
+  skill, never as something she overheard.
+- **When it is revealed is open**, and well after this mission.
+- **The way out is built in.** Messages to one holder you can see stay private, and re-cutting
+  the crystals at a workshop the party builds closes the set. Either way, the fix pushes them
+  toward base-building at the Lioness.
 
 **Narrative rewards** — all recordable as frontmatter, per the file's own test:
 
@@ -280,9 +299,9 @@ attached. Where it is found (question 19) is still open.
 
 **Levelling: nobody levels tonight.** For this season, levels come **one PC at a time**, at a
 moment the DM judges climactic, with the whole party at 5 before the December finale fight (act
-`## Loot`). Ben pushed on levelling in Session 28. Say at the table that levels are coming, and
-hand Dip his item in the same breath. Whether to name each PC's trigger ahead of time is an open
-question (question 22, and see the act file).
+`## Loot`). Ben pushed on levelling in Session 28, so say at the table that levels are coming.
+Whether to name each PC's trigger ahead of time is an open question (question 22, and see the
+act file).
 
 ## NPC Quick-Reference
 

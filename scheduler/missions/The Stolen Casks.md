@@ -94,6 +94,10 @@ as independent bandits without being wrong about anything that matters to them.
 
 ## Notes
 
+- **The party loots Earshot Crystals off the raiders in Session 1, and Nella kept hers.** The
+  twist that she can overhear "all" messages is a long fuse, revealed well after this mission.
+  Nothing in either session reveals it, and her Session 2 escape is her own skill, not
+  something she overheard. See the Session 29 plan's `## Rewards`.
 - **Session 1 is planned as [[Session 29 The Mistake]]**, 2026-10-06. Numbering is continuous
   across both campaigns rather than restarting per season, so the act's "Session 1" is
   act-relative shorthand. The pursuit session is not written yet.

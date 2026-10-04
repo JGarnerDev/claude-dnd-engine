@@ -133,8 +133,10 @@ and later, are still open.
 - **Clues back to the feud are decided item by item.** A raider's gear *may* carry a Marlow or
   Duskwater mark, but no item gets one by default.
 - **Surprise handouts.** Players never see their menus. The DM picks and the item just turns up.
-- **Session 29's Common goes to Dip,** not Iggy. Iggy is the DM's own PC, and Ben is the one who
-  pushed on levelling. Iggy's item lands later in the act.
+- **Session 29's item is shared: the Earshot Crystals,** one per PC (confirmed,
+  `meta/loot-options/Party/misc/Earshot Crystals.md`). They are a Common, so they spend none of
+  the Uncommon budget. No personalised item lands in Session 29; when each PC's item lands is
+  paced later.
 
 ### Gold and consumables
 

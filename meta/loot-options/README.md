@@ -18,7 +18,11 @@ meta/loot-options/
     weapons/
     armor/
     misc/
+  Party/
+    misc/              <- items shared by the whole party, one copy per PC
 ```
+
+**`Party/` holds shared items**, one copy per PC. It has no README and sits outside the nine-per-character composition rule. Its item files use `character: Party` and `player: all`, and the two "why" sections argue for the party and the table instead of one character and one player.
 
 **One item per file.** Each item file carries its own frontmatter — `character`, `player`, `item`, `class`, `form`, `rarity`, `attunement`, `bracket`, `status` — so the folder can be filtered or scripted on later without parsing prose. The body is fixed at four sections: what it does, why this character, why this player, and what it becomes at 6–8.
 
