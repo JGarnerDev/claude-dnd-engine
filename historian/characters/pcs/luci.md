@@ -35,7 +35,7 @@ Campaign: [[Curse of Strahd]] | Player: [[Paul]]
 
 > **Reliability -Name:** Only nickname/handle appears in notes. Full character name is unconfirmed. Confirm with Paul.
 
-> **Reliability -Class:** Class not stated explicitly. Has access to Sacred Flame (cleric cantrip), Augury (2nd-level divination spell). Likely Cleric, but could be Paladin or custom build. Confirm with DM/Paul.
+> **Reliability -Class:** Primarily a [[Monk]] (confirmed by Jeff). Early play showed Sacred Flame and Augury, which Monk doesn't grant. Their source (multiclass, pact, or homebrew) is unconfirmed. Confirm with Paul.
 
 ## Appearance
 
