@@ -18,6 +18,7 @@ Gnome Wizard · level 4 · `level_confirmed: 28`
 - **weapons/** — [[The Annotated Staff]] (Uncommon) · [[The Red-Ink Stylus]] (Common) · [[The Astral Sling]] (Uncommon)
 - **armor/** — [[The Inkproof Overrobe]] (Common) · [[The Folio Bracers]] (Common) · [[The Spine-Bound Coat]] (Uncommon)
 - **misc/** — [[The Flue Ledger]] (Common) · [[Diesel Cougar]] (Common) · [[Astral Chalk]] (Uncommon)
+- **Confirmed for Act 1 (session TBD):** [[The Unfinished Binding]] (Uncommon, misc). It is from [[Elowen Rimetusk]], so it is the one item here with a giver and a plot. It is a fourth misc item and it spends his Act 1 Uncommon, so Astral Chalk and the Annotated Staff wait for a later act.
 
 ## What these are built on
 

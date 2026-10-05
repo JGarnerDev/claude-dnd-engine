@@ -61,3 +61,11 @@ them the truth about how bad it is without either panicking or minimising.
 She has noticed things about the raiders — that they are kitted alike, that they withdraw too
 cleanly, that this is not what independent bandits look like. She has no one to report it to
 who will act.
+
+## Her children (DM-only)
+
+Her son and daughter did not die in battle. They were in the company
+**[[Elowen Rimetusk]]** moved in one translocation when it was surrounded, and they never
+arrived. Mara believes they died in the war, and does not know Elowen was there. Elowen's
+help is a repayment Mara has never been told about. Whether the children are still somewhere
+in between is deliberately unanswered.

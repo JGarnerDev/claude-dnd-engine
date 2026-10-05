@@ -27,6 +27,7 @@ relates_to:
   - "[[House Cael]] (the feud's losing side, and Ashford's nominal protector)"
   - "[[House Marlow]] (the hand behind the raids)"
   - "[[Harrow Bane]] (the band the party actually fights)"
+  - "[[Elowen Rimetusk]] (Odibli's scene and item; committed, session TBD)"
   - "[[The Wanderer's Boon]] (the relic that put them here and has not reopened)"
 description: "The first homebrew act. Five strangers land in a riverside ford-town mid-raid and are offered a share in the one building worth defending. The Cael–Marlow feud explains why Ashford bleeds, but the act is about the Golden Lioness: defend it, earn into it, and discover somewhere along the way that you live here now."
 ---
@@ -137,6 +138,20 @@ and later, are still open.
   `meta/loot-options/Party/misc/Earshot Crystals.md`). They are a Common, so they spend none of
   the Uncommon budget. No personalised item lands in Session 29; when each PC's item lands is
   paced later.
+- **Odibli's Uncommon: the Unfinished Binding** (confirmed for this act, session TBD,
+  `meta/loot-options/Odibli/misc/The Unfinished Binding.md`). It comes from
+  [[Elowen Rimetusk]] and only through her scene, below.
+
+### Committed, not yet scheduled
+
+These are decided and must land somewhere in this act. Fit them into a session when the story
+makes room. Check this list whenever `/session` plans an Act 1 session.
+
+- **Elowen and Odibli.** [[Elowen Rimetusk]] gets a proper look at Odibli and almost sees that
+  there are two of him. Drifting in and out of lucidity, she asks a three-part favor (a sealed
+  letter for [[Mara Tull]], to deliver "the day I don't come back"; find where the missing
+  went; find the rest of her). Then she gives him the Unfinished Binding. The full scene and
+  her secret are in her file. It needs a quiet moment between fights, not a combat beat.
 
 ### Gold and consumables
 

@@ -16,12 +16,12 @@ personality: "Not fully present. Drifts in and out of lucidity — courteous and
 livelihood: "The old mage of Ashford; helps the sheriff defend the town when she is lucid."
 
 # --- OPTIONAL (entity base) ---
-importance: minor
+importance: major
 active: true
 relates_to:
-  - [[Mara Tull]] (aids her defense of Ashford)
+  - [[Mara Tull]] (aids her defense of Ashford; secretly, it is a debt)
   - "[[Ashford]] (the town she has ended up defending)"
-description: "Ashford's old, senile mage — a half-orc wizard whose power has outlasted her fading mind. Formidable on her lucid days and absent on the others, and the only real magic the town has when the raiders come."
+description: "Ashford's old, senile mage — a half-orc wizard whose power has outlasted her fading mind. In the war she moved a whole surrounded company in one translocation; part of her mind never arrived, and neither did Mara Tull's two children. She stands beside Mara as a repayment Mara knows nothing about."
 
 # --- OPTIONAL (npc) ---
 race: "[[Half Orc]]"
@@ -29,8 +29,9 @@ class: "[[Wizard]]"
 disposition: friendly
 goals:
   - "Be present when it matters, which is not something she can promise"
+  - "Keep Mara Tull standing — the only repayment she can make"
 motives:
-  - "Habit, decency, and whatever she still remembers about why she settled here"
+  - "Guilt she has never spoken aloud, and whatever she still remembers about why she settled here"
 allies:
   - [[Mara Tull]] (the sheriff she stands beside)
 charm_hook: "A soft elven given name carried over an orcish battle-name — and half the time she cannot recall which war the second one is from."
@@ -55,3 +56,45 @@ matter and never often enough to count on.
 
 Her name is a soft elven given name carried over an orcish battle-name. Half the time she
 cannot recall which war the second one is from, and she says so without distress.
+
+## The translocation (DM-only)
+
+In the war her company was cut off and surrounded. She moved all of them at once in a single
+translocation, far past what a working-tier wizard should be able to cast. The soldiers she
+moved gave her the battle-name. She cannot remember what it means, because the part of her that
+would know never arrived.
+
+Not all of her came through. Part of her mind is still in transit, and that gap is the
+senility: her lucid hours are when more of her has caught up, her absent ones are when she has
+slid back toward wherever she was going. After that she was no use to a guild, and a ford-town
+asked no questions.
+
+Not all of the company came through either. **[[Mara Tull]]**'s son and daughter were in it,
+and they never arrived. Mara believes they died in the war. Elowen knows exactly where they were
+last, and has never told her. Standing beside Mara is a repayment Mara does not know she is
+receiving.
+
+She has worn the same grey linen wrap on her casting hand ever since, inscribed in faded guild
+script. The tail end of the spell — the order to *move them* — is woven into it and never
+finished running. Under it, her fingers move half a second behind her.
+
+## Odibli, and the favor
+
+When she first gets a proper look at **Odibli**, something in her lines up: she can almost see
+that there are two of him. *"You're not all here either. No — you're all here. It's the other
+one who isn't."* She talks to him in mixed lucidity, as one displaced person to another — he
+is the first she has met who is split the way she is.
+
+She asks him a favor, in three pieces that come out across her lucid and absent stretches:
+
+- **A letter.** Sealed, for Mara: *"If I go all the way — the day I don't come back — give this
+  to her."* It is her confession. Whether the party opens it is theirs to decide.
+- **Find the missing.** *"You know the way between. If you ever find where they went, tell
+  Mara. Not me."*
+- **Find the rest of her.** *"And if you find the rest of me, bring it back."*
+
+Then she unwinds the wrap and gives it to him: the
+[Unfinished Binding](../../../meta/loot-options/Odibli/misc/The%20Unfinished%20Binding.md).
+Giving it away changes nothing about her — she is no sharper and no worse for it.
+
+Whether Mara's children are still somewhere in between is deliberately unanswered.

@@ -11,7 +11,7 @@ Used during elaboration drafting to prevent slot collisions within each entity t
 - [[Mara Tull]] — sheriff, buried both children, carries it as steel
 - [[Richmond Ellesine]] — smith, only living witness, telling it costs him
 - [[Silas Crubb]] — mayor-merchant, affable tangents that always land on a number
-- [[Elowen Rimetusk]] — working wizard whose power outlasted her memory
+- [[Elowen Rimetusk]] — mind half-lost in her own war translocation; guilt toward Mara
 
 ## Factions
 
