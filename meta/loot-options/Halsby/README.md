@@ -16,6 +16,7 @@ Shadow Magic Sorcerer · race and background `TBD` · level 4 · no `level_confi
 ## The options
 
 - **weapons/** — [[The Nightfall Dagger]] (Uncommon) · [[The Ferryman's Pole]] (Common) · [[The Tallied Sling]] (Uncommon)
+- **Outside the menu:** [[The Shadowless Spear]] (Uncommon, `status: confirmed`, promised in Session 29). His own spear and shard, remade. It spends his act Uncommon, and it is the one item here that adds damage.
 - **armor/** — [[The Grey Mantle]] (Uncommon, attunement) · [[The Unlit Hood]] (Common) · [[The Stated Price]] (Uncommon)
 - **misc/** — [[The Mourning Ledger]] (Common) · [[Cold Wick]] (Common) · [[Counting Beads]] (Common)
 

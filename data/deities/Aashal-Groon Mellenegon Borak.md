@@ -31,10 +31,10 @@ relates_to:
   - "[[Sable Wren]] (his warlock — the one mortal who talked instead of exorcising)"
   - "[[The Golden Lioness]] (its cellar spring drops into his aquifer)"
   - "[[Ashford]] (the town above him; the fords whose blood he tastes)"
-description: "A singular ancient deep-water being in the aquifer beneath Ashford — no kin, no species, read as aboleth crossed with a great red slaad. Sable Wren's warlock patron, telepathic and lonely. The water is how he remembers, so the Cael–Marlow feud's blood is not only fouling his home, it is eating his mind. His crimson hide was the river's original red, now slandered by the killing."
+description: "A singular ancient deep-water being in the aquifer beneath Ashford — no kin, no species, read as aboleth crossed with a great red slaad. Sable Wren's warlock patron, telepathic and lonely. The water is how he remembers, so the Cael–Marlow feud's blood is not only fouling his home, it is eating his mind. The river once ran clear blue-green, his own color; it runs red only with the feud's blood, and the name Redwater is a scar."
 
 # --- OPTIONAL (deity) ---
-symbol: "A slit-eyed crimson bulk under still water; practically, a cup of water drawn clean in a town where the river runs bad"
+symbol: "A slit-eyed blue-green bulk under still water; practically, a cup of water drawn clean in a town where the river runs bad"
 sacred_practices:
   - "Keeping one well, spring, or taproom neutral ground — feud-split neighbours drinking the same clean water"
   - "Bringing him a true story, told aloud over the water, so the telling is remembered"
@@ -48,8 +48,9 @@ species, nothing else like him anywhere. His true name is a pressure behind the 
 he gives it, which is why **[[Sable Wren]]** clipped it down to **Asher** in the first week
 and never went back.
 
-He reads as an aboleth crossed with a great red slaad: a vast frog-and-eel bulk, warty
-crimson-and-slate hide under a sheen of mucus, a broad amphibian maw, stacked slit eyes,
+He reads as an aboleth crossed with a great red slaad (the red slaad's build, not its color): a vast frog-and-eel bulk, warty
+blue-green-and-slate hide under a sheen of mucus, a broad amphibian maw, stacked slit eyes
+that burn green and leak smoke,
 trailing sensory tendrils. He is amphibious — the deep water is his, but he can haul himself
 into open air. He does not speak aloud. He speaks mind to mind, in a voice too large for the
 skull it arrives in.
@@ -81,9 +82,13 @@ so the feud is not merely poisoning his home, it is eating his mind. That gives 
 personal stake in a conflict he otherwise stands entirely outside of, and it is why he will
 trade with surface agents at all.
 
-There is a smaller insult underneath the large one. The river's red was once *his* — an
-ancient mineral, his own dye in the deep. The war's blood-red is layered on top of it, and
-he resents the confusion of the two. The name **Redwater** is, to him, a slander.
+There is a smaller insult underneath the large one. The river was never red. It ran clear
+blue-green, his own color, lit from the deep. It runs red now only because of the feud's
+blood, and the name **Redwater** is a scar the killing gave it. He remembers the river's
+older, clean name, and does not give it away.
+
+When he reaches up through the water to ride an animal, its eyes burn his green and leak
+smoke. Anyone who has met him once knows the sign.
 
 Where the water has turned, his blessing is already withdrawing: sick fish, bad water,
 stretches that have gone wrong for no reason the townsfolk can name. It is discoverable

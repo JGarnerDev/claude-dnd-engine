@@ -11,7 +11,7 @@ or regenerate this one with `/flow --session 29`.
 
 Legend: rust is combat · parchment is social · lantern-yellow diamond is a real fork · green is a
 share tick or payoff · blue is a thread planted · dashed dusty red is a designed setback · dashed
-grey is undecided. Markers: `[x]` committed, `[-]` draft, `[?]` open. Boxes are the five scenes.
+grey is undecided. Markers: `[x]` committed, `[-]` draft, `[?]` open. Boxes are the scenes.
 
 **Tuesday 2026-10-06.** This is **Session 29** in the campaign's continuous numbering — "Session 1"
 is act-relative shorthand only. The written plan is
@@ -25,7 +25,9 @@ Rulings baked in: the transit through the Boon **counts as a long rest**, told i
 party teleports; the party **stays at level 4**; the roster is **5 bandits plus one big one**,
 which is the statblock's documented assumption for 5 PCs at level 4, Halsby included.
 
-The five boxes are the five scenes of the written plan, in order.
+The boxes are the scenes of the written plan, in order. Scene 1b, Halsby's intro, starts on its
+own with no arrow into it. It runs alongside the transit, not after it, and joins the spine at
+the fight.
 
 ```mermaid
 flowchart TD
@@ -33,6 +35,21 @@ flowchart TD
     S1_REPLAY["[-] S1_REPLAY<br/>Replay the last thirty seconds of Session 28<br/>Hands joined, Odibli's hand on the stone,<br/>the light climbing past blinding"]
     S1_REST["[-] S1_REST<br/>The long rest happens here, inside the transit<br/>Full HP, every slot, hit dice back, afflictions go quiet<br/>Tell them in fiction — never announce it as a rules call"]
     S1_REPLAY --> S1_REST
+  end
+
+  subgraph S1_HALSBY["Scene 1b · The Green Eyes — Halsby's intro"]
+    S1_WOODS["[x] S1_WOODS<br/>Halsby on the road to Bay-Head Hub, on the Nightveil's errand<br/>An animal Kellan picks stops him on the path<br/>Green eyes leaking smoke, a voice inside his head<br/>Asher is riding it, and does not give his name"]
+    S1_ASK["[x] S1_ASK<br/>The ask: save Sable at the brewery in Ashford, now<br/>and later help her with one more thing<br/>The offer: protection from the fade, as the Shadowless Spear<br/>Halsby keeps his spear and shard the whole time"]
+    S1_SNAKE{"[x] S1_SNAKE<br/>Does he spot the snake hidden nearby?<br/>Within 10 ft his blindsight finds it<br/>Otherwise Stealth 14 against passive Perception 11"}
+    S1_HAGGLE["[x] S1_HAGGLE<br/>He calls out the threat and bargains<br/>Persuasion or Intimidation DC 13<br/>Success: the spear comes in 1 to 2 sessions, not 3 to 4"]
+    S1_ANSWER{"[x] S1_ANSWER<br/>Does he take the deal?"}
+    S1_BITE["[x] S1_BITE<br/>He refuses, and the snake bites<br/>Poisoned until he drinks the antidote<br/>No damage, no death. The deal now adds the antidote"]
+    S1_DEAL["[x] S1_DEAL<br/>The deal stands: save Sable now, help her later<br/>Asher could fuse the spear in two minutes<br/>He waits because the spear is his leverage"]
+    S1_WOODS --> S1_ASK --> S1_SNAKE
+    S1_SNAKE -->|"he spots it"| S1_HAGGLE --> S1_ANSWER
+    S1_SNAKE -->|"he misses it"| S1_ANSWER
+    S1_ANSWER -->|"yes"| S1_DEAL
+    S1_ANSWER -->|"no"| S1_BITE --> S1_DEAL
   end
 
   subgraph SC2["Scene 2 · Somewhere You Can Gather Strength"]
@@ -87,11 +104,14 @@ flowchart TD
     S1_ODIBLI["[-] S1_ODIBLI<br/>Odibli is handed a stake in a brewery<br/>Session 28's table notes say his plan to conquer Vallaki<br/>through the power of good wine got real buy-in<br/>Hand it straight to Miguel and do not explain the joke"]
     S1_IGGY["[-] S1_IGGY<br/>Iggy plays the room he just saved — his spotlight beat<br/>He is overdue, 2 rotation turns against everyone else's 4<br/>Seeds his open hook, the unfinished song trapped in the viol<br/>One or two lines only, and no resolution"]
     S1_LOOT["[-] S1_LOOT<br/>The Earshot Crystals, one per PC, taken off the raiders<br/>Touch to speak, words only, to one holder you can see<br/>or to all holders within 300 ft. Confirmed by Jeff<br/>The raiders wore them and never used them, so they are a mystery<br/>Never say the twist: Nella and a few of her crew kept theirs<br/>Nobody levels tonight. Say levels are coming, one PC at a time"]
+    S1_ANTIDOTE["[-] S1_ANTIDOTE<br/>Only if Halsby was bitten: Sable already has the antidote<br/>A cup from her cellar spring, and no explanation<br/>Do not let her name Asher here"]
     S1_BOON["[-] S1_BOON<br/>Close on the relic doing nothing at all<br/>Odibli takes the stone out and it is warm as a pocketed<br/>pebble and completely dead<br/>Without this beat the season reads as a detour<br/>instead of the errand the relic sent them on"]
     S1_WREN --> S1_OFFER --> S1_ODIBLI --> S1_IGGY --> S1_LOOT --> S1_BOON
   end
 
   S1_REST --> S1_STANCE
+  S1_DEAL -->|"he reaches the yard as the light comes down"| S1_FIGHT
+  S1_BITE -.->|"if bitten"| S1_ANTIDOTE
   S1_ENGAGE -->|"they step in"| S1_FIGHT
   S1_ENGAGE -->|"they hang back and let it happen"| S1_BOTCH
   S1_BOTCH -->|"the setback raises what the base-building is worth"| S1_DEED
@@ -116,12 +136,12 @@ flowchart TD
   classDef fail fill:#EFE2E2,stroke:#A3736E,color:#4A2C29,stroke-dasharray:4 3
 
   class S1_FIGHT,S1_CASKS,S1_SABLE,S1_MORALE combat
-  class S1_REPLAY,S1_REST,S1_STEADY,S1_READ,S1_SCATTER,S1_MIDRAID,S1_PARLEY,S1_SCARE,S1_TRICK,S1_TOWN,S1_WREN social
-  class S1_STANCE,S1_ENGAGE,S1_FORK,S1_OUTS decision
-  class S1_DEED,S1_OFFER,S1_LOOT stake
+  class S1_WOODS,S1_ASK,S1_HAGGLE,S1_REPLAY,S1_REST,S1_STEADY,S1_READ,S1_SCATTER,S1_MIDRAID,S1_PARLEY,S1_SCARE,S1_TRICK,S1_TOWN,S1_WREN social
+  class S1_SNAKE,S1_ANSWER,S1_STANCE,S1_ENGAGE,S1_FORK,S1_OUTS decision
+  class S1_DEAL,S1_ANTIDOTE,S1_DEED,S1_OFFER,S1_LOOT stake
   class S1_NELLA,S1_NAMES,S1_BOON,S1_ODIBLI,S1_IGGY seed
   class S1_GUEST,S1_BANNER open
-  class S1_BOTCH fail
+  class S1_BITE,S1_BOTCH fail
 ```
 
 The two anchors are the fight in `S1_FIGHT` and the offer in `S1_OFFER`. Everything between them is
@@ -140,5 +160,17 @@ deepens the setback and makes the share worth more, it does not end the session'
 
 ## Commitment ledger
 
-Nothing committed yet. Every node in this file is `[-]` draft or `[?]` open — see the commit gate
-in `meta/flow-graphs.md`. Entries land here as the DM approves beats one at a time.
+Approved by Jeff on 2026-10-04 ("make all of this official"). The backing note for each is
+Scene 1b of `Session 29 The Mistake.md`, plus `meta/loot-options/Halsby/weapons/The Shadowless
+Spear.md` (`status: confirmed`) for the reward. The scene has no upstream, so it clears the gate
+while the rest of the session is still draft.
+
+- `S1_WOODS` — Scene 1b, The talker; approved 2026-10-04
+- `S1_ASK` — Scene 1b, The ask and The offer; approved 2026-10-04
+- `S1_SNAKE` — Scene 1b, The snake; approved 2026-10-04
+- `S1_HAGGLE` — Scene 1b, The fork; approved 2026-10-04
+- `S1_ANSWER` — Scene 1b, The fork; approved 2026-10-04
+- `S1_BITE` — Scene 1b, The fork; approved 2026-10-04
+- `S1_DEAL` — Scene 1b, The catch, and `## Rewards`; approved 2026-10-04
+
+`S1_ANTIDOTE` stays `[-]`, because it sits in Scene 5 behind draft beats.

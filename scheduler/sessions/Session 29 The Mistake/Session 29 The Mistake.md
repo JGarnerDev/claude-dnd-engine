@@ -23,13 +23,14 @@ key_npcs:
   - "[[Silas Crubb]] (data — mayor; what the stolen delivery was worth)"
   - "the big one (nameless by design — the raid's focus-fire target)"
   - "[[Nella]] (offscreen — already gone with the ale; do not let the party catch her)"
+  - "[[Aashal-Groon Mellenegon Borak]] (data — Asher, riding two animals in the woods; Halsby's bargain)"
 encounters:
   - "The New Wing — 5x Bandit (CR 1/8) + 1x the big one (reskinned Thug, CR 1/2). ~450 adjusted XP, 3-5 rounds. Tension is a timer and an objective, not attrition: two bandits haul the last cask toward a cart while the big one shakes Sable down, and the party cannot cover both ends. Tactics: keep the raiders on their jobs — all six converging on the party is RTD 1 and silently becomes Dangerous. Morale DC 12 WIS when the big one drops."
 loose_threads:
   - "Three seeds owed to [[Davian Martikov]] — two from [[Baba Lysaga]], one from the druids of [[Yester Hill]]. Barovia-side; acknowledged in one line, not pursued"
   - "[[The Wanderer's Boon]] is inert in Odibli's hand and must be shown to be inert this session"
   - "Luci's energy storm feature (Session 28 new_entity) — name and mechanics still unrecorded"
-  - "[[Halsby]] has race and background TBD, and no in-fiction reason to be in Ashford yet"
+  - "[[Halsby]]'s reason to be in Ashford is settled (Scene 1b, Asher's bargain). Still open: what the order doesn't like at Bay-Head Hub, and the later job he owes Sable"
 difficulty_attrition: light
 difficulty_lethality: standard
 depth: narrated
@@ -42,7 +43,9 @@ relates_to:
   - "[[Redwater]] (campaign)"
   - "[[Session 28 The Wereravens' Gift]] (replayed in the cold open)"
   - "[[The Wanderer's Boon]] (brought them here; stays inert)"
-  - "[[Aashal-Groon Mellenegon Borak]] (Asher — Sable's patron, named but not met)"
+  - "[[Aashal-Groon Mellenegon Borak]] (Asher — Sable's patron; the party never meets him, Halsby bargains with him through two animals)"
+  - "[[Halsby]] (joins in Scene 1b)"
+  - "[[The Nightveil]] (sent Halsby on the road)"
 importance: critical
 active: true
 description: "The first homebrew session. The party arrives mid-raid beside the Golden Lioness, saves Sable Wren or the last cask but not both, and is offered a provisional share in the one building in Ashford worth defending. Named for Sable's bestselling ale, which she has never explained."
@@ -50,7 +53,7 @@ description: "The first homebrew session. The party arrives mid-raid beside the 
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
 
-**Shape:** balanced · **Length:** standard (~2 hr, 5 scenes) · **Attrition:** light · **Lethality:** standard
+**Shape:** balanced · **Length:** standard (~2 hr, 5 scenes plus Halsby's short intro) · **Attrition:** light · **Lethality:** standard
 
 ## Orientation
 
@@ -61,8 +64,13 @@ whole. Coming out of Session 28 the mood is curiosity rather than dread: nobody 
 place would make them stronger. They own no money, no standing, and one relic that has
 stopped working.
 
-- **[[Halsby]] joins here.** Kellan needs race and background before Tuesday; Halsby's
-  `level_confirmed` stamps at this session's `/recap`, which clears the LEVEL STALE flag.
+- **[[Halsby]] joins here,** through his own short intro (Scene 1b). His race and background
+  are on his PC file now (Half-Elf, Haunted One). Halsby's `level_confirmed` stamps at this
+  session's `/recap`, which clears the LEVEL STALE flag.
+- **Tell Kellan before Tuesday, and only this:** Halsby is on the road for the Nightveil.
+  [[Sister Maerith]] sent him to the bay's big harbor city (Bay-Head Hub, dot 6, not named yet)
+  to find out what, or who, is behind a rumor the order dislikes. The job is expected to take
+  months. **Do not tell him** about the animals, Asher, or the bargain.
 - Session 28 left three unresolved `new_entities`: Baba Lysaga's scarecrow constructs
   (offscreen), **Luci's energy storm feature** (Paul posted it to Discord; name and mechanics
   unrecorded), and Davian's marked map. All three are Barovia-side — none need acknowledgment
@@ -107,6 +115,60 @@ false date.
 - **Transition:** the light drops and there is a man-shaped shadow going past them at a run,
   carrying a cask.
 
+### Scene 1b — The Green Eyes
+
+- **Trigger:** right after Scene 1, while the light still holds the other four in the transit.
+  Cut away to Halsby. *Meanwhile, a few miles off...*
+- **Location:** the woods off the road to Bay-Head Hub, a few miles from [[Ashford]]. A stream
+  that feeds the aquifer under the town runs nearby, and that is how Asher reaches here.
+- **NPCs present:** **Asher** ([[Aashal-Groon Mellenegon Borak]]), riding two animals at once.
+  Halsby has never heard of him, and Asher does not give his name.
+
+Halsby's first scene, and the only one that is his alone. Keep it to about ten minutes.
+
+**Beats:**
+
+- **The talker.** An animal steps onto the path and stops him. **Kellan picks what kind.** Its
+  eyes burn green and leak smoke, and it speaks into his head, mind to mind.
+- **The snake.** A second animal, a snake, waits in cover near him with the same eyes. Asher
+  rides both. It acts only if Halsby refuses.
+  - **Spotting it:** within 10 ft, his blindsight finds it automatically. Farther out, it is
+    hidden at Stealth 14 against his passive Perception 11. Place it at 15 ft unless you want
+    him to have the edge.
+- **The ask.** A woman named Sable is being robbed and beaten at a brewery in Ashford, right
+  now. Go and save her. Later, help her with one more thing, and Asher will say when. *(What
+  that later job is: decided later.)*
+- **The offer.** **Protection from the fade.** He knows exactly what Halsby is losing and how
+  fast. The visible proof: the spear and the shard he carries, made into one weapon that
+  holds the fade off ([[The Shadowless Spear]], see `## Rewards`).
+- **The catch, if Halsby works it out.** Asher can fuse the spear in about two minutes. He
+  holds off because the unfinished spear keeps Halsby around until the second job is done. It
+  is leverage, and Halsby reads leverage for a living. Let him see it.
+- **Halsby keeps the shard and the spear the whole time.** Nothing is taken from him.
+
+**The fork:**
+
+- **He spots the snake → he can bargain.** Calling out the threat gives him leverage.
+  Persuasion or Intimidation (+5 either way), DC 13. Success: the spear comes within **1–2
+  sessions** instead of 3–4.
+- **He accepts.** The deal stands as offered. The spear comes in **3–4 sessions**.
+- **He refuses.** The snake bites. **Poisoned** until he drinks the antidote (disadvantage on
+  attacks, his spell attacks included, and on ability checks; saving throws are unaffected).
+  It does no damage and does not kill. The deal now adds **the antidote**, which is waiting at
+  the Lioness. He can still refuse after the bite. Then he walks into the fight poisoned, and
+  Sable has the antidote anyway.
+
+> *"It is standing in the middle of the path as if it has been waiting there all morning, and
+> it is looking at you the way nothing on four legs should. Its eyes are green, a deep-water
+> green, and smoke curls up off them like breath on a cold day. The voice does not come from
+> its mouth. It comes from behind your own eyes, too large for the space. **You are thinning,**
+> it says. **I can stop that. There is a woman in the town below who is about to be hurt. Go.**"*
+
+- **Never name the fade for him.** Kellan's file calls it that, but the table never has. Asher
+  says *thinning*, which is the word Halsby uses for it.
+- **Transition:** Halsby comes out of the trees above the Lioness's yard just as a pillar of
+  light comes down in it. He sees five strangers land, then Scene 2.
+
 ### Scene 2 — Somewhere You Can Gather Strength
 
 - **Trigger:** immediate, same breath as Scene 1.
@@ -124,6 +186,10 @@ nothing and nobody crossed with them, and there is no hag to escape.
   round of arriving badly, clears immediately after.
 - **Read** (WIS / INT / Perception) — take in the yard mid-arrival. Success: initiative edge,
   or one raider caught flat-footed. Failure: nothing — you were busy not falling over.
+
+**Halsby does not roll a stance.** He arrived on foot, at the yard's edge, and he already
+knows why he is there: Sable is the target. He starts at the edge nearest the wing's doorway.
+If he is poisoned, he fights poisoned.
 
 Scatter on the fail spread, exactly as the statblock expects: some PCs start in the yard near
 the cask-runners, some near the wing's doorway where Sable is. **That split is a positioning
@@ -246,6 +312,9 @@ detail is the entire budget for tonight.
   hearth, a rescued room, a town that needs cheering: he plays. Seeds his open hook *"decode the
   unfinished final song trapped in the viol"* — in a world that is neither Barovia nor Threnai,
   the unfinished part sits differently. One or two lines, **no resolution.**
+- **The antidote, if Halsby was bitten.** Sable already has it: a cup from her cellar spring.
+  She does not explain how she knew to have it ready. *Do not let her name Asher here.* The
+  party should leave knowing she has a patron, not that he went fishing for a fifth.
 - **The Barovia debt, one line.** Odibli still has [[The Wanderer's Boon]]. It is warm, it is
   inert, it does nothing. Without this line the season reads as a detour instead of the errand
   the relic sent them on.
@@ -290,6 +359,17 @@ word. They can answer too.
 - **The way out is built in.** Messages to one holder you can see stay private, and re-cutting
   the crystals at a workshop the party builds closes the set. Either way, the fix pushes them
   toward base-building at the Lioness.
+
+**Item, promised and not handed over: [[The Shadowless Spear]].** Confirmed by Jeff on
+2026-10-04 (`meta/loot-options/Halsby/weapons/The Shadowless Spear.md`, `confirmed_for` this
+session). Halsby's own spear and shard, fused: +1, his spellcasting focus, holds off the fade
+while he carries it, and reaches 15 ft in dim light or darkness. Uncommon, so it spends his act
+Uncommon.
+
+- **Tonight it is only a promise,** made in Scene 1b. Asher fuses it in about two minutes when
+  he chooses to: in **1–2 sessions** if Halsby bargained well, otherwise **3–4**.
+- **Until then the fade runs as normal.** His dark-moon rite holds it off six to eight days at a
+  time, as it always has.
 
 **Narrative rewards** — all recordable as frontmatter, per the file's own test:
 
@@ -354,10 +434,13 @@ act file).
 - **They go straight at the feud.** Give the next rung — someone is paying these men — and stop.
   Harrow Bane's name comes from the town, not from a corpse. The leash is discoverable across
   the act, never handed over in session one.
-- **Halsby has no reason to be there.** The one genuine structural gap: four PCs arrive by relic
-  and the fifth is already in Ashford. Easiest answer is that he was in the old core when the
-  wing was hit — a Sharran shadow-sorcerer passing through a border town is self-explaining, and
-  it puts him in the fight from round one. **Clear with Kellan before Tuesday.**
+- **Halsby kills the animals, or walks off toward Bay-Head Hub.** He can. The talker drops dead
+  the moment it is hit, and its eyes go dark. The snake bites first if he turns his back.
+  Asher tries once more, through a bird, a fox, anything nearby. If Halsby still walks, let him
+  go: the poison sends him back to Ashford within the hour, because the antidote is only at the
+  Lioness. The deal is waiting there, worse for him.
+- **The talk runs long.** It is Kellan's first scene, so let it breathe. Even so, cut at ten
+  minutes. The raid will not wait, and Asher knows it.
 
 ## Closing
 
@@ -373,6 +456,11 @@ Land it on the relic, not the fight.
 really bleeds · whether the Boon ever opens again.
 
 ## Engine notes
+
+- **Halsby's intro came from a spitball:**
+  `spitball/act-1-the-hearth-at-ashford/halsby-intro-green-eyed-animal.md` (`state: used`).
+  Two blanks are parked there for later: what the order dislikes at Bay-Head Hub, and the
+  later job Halsby owes Sable.
 
 - **Deployment tracking:** *in medias res* is used here (`meta/literary-devices.md`). At
   `/recap`, set its `Last used:` to [[Session 29 The Mistake]].
