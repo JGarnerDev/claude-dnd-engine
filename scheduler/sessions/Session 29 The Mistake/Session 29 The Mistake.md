@@ -90,6 +90,9 @@ Each scene's prose is filed under `#### S1_ID` headings, one per flow-chart node
 session runner shows it as one dropdown per card, in flow order. Prose above the first
 node heading is the scene's setup.
 
+**Sample lines and read-aloud boxes are guidance, not script.** They set the voice and the
+beat. Improvise from them, cut them, or say them in your own words.
+
 ### Scene 1 — The Last Thirty Seconds
 
 - **Trigger:** session open, before any description of Ashford.
@@ -100,6 +103,10 @@ node heading is the scene's setup.
 
 - Replay the exact beat Kellan cut on: hand-in-hand, Odibli's hand on the stone, light rising
   past blinding.
+
+> *"The vines. The cold. Davian's hand still raised in something between a blessing and a
+> warning. Odibli's palm flat on the stone, and every one of you holding on to someone. The
+> light starts in the stone and does not stay there."*
 
 #### S1_REST — The long rest happens here, inside the transit
 
@@ -157,6 +164,20 @@ Halsby's first scene, and the only one that is his alone. Keep it to about ten m
   holds the fade off ([[The Shadowless Spear]], see `## Rewards`).
 - **Halsby keeps the shard and the spear the whole time.** Nothing is taken from him.
 
+**Asher's voice.** Lonely and very old. The water is how he remembers, so he speaks in short
+weights, like someone who has not talked to anyone in a long time and is not sure how. He is
+not cruel. He is just bad at asking. Sample lines:
+
+- **The ask:** *"The brewery with the fire that does not go out. They are taking her. Go now,
+  and I will remember that you did."*
+- **The offer:** *"The spear on your back. The splinter you keep close. I can make them one
+  thing. While you hold it, you stop thinning."*
+- **The later job:** *"And after, when I say so, you help her once more. Once."*
+- **If asked who he is:** *"I am under the town. I was under it before it was a town."* He gives
+  no name.
+- **If asked why Halsby:** *"You were on the road. You were thinning. I do not get many who
+  are both."*
+
 #### S1_SNAKE — Does he spot the snake hidden nearby?
 
 - **The snake.** A second animal, a snake, waits in cover near him with the same eyes. Asher
@@ -164,12 +185,18 @@ Halsby's first scene, and the only one that is his alone. Keep it to about ten m
   - **Spotting it:** within 10 ft, his blindsight finds it automatically. Farther out, it is
     hidden at Stealth 14 against his passive Perception 11. Place it at 15 ft unless you want
     him to have the edge.
+  - **What his blindsight finds:** a long body in the bracken, coiled loose and not cold the way
+    a snake ought to be. It is warm as a hand, and perfectly still. If he gets eyes on it, the
+    same green, the same smoke, lower to the ground.
 
 #### S1_HAGGLE — He calls out the threat and bargains
 
 - **He spots the snake → he can bargain.** Calling out the threat gives him leverage.
   Persuasion or Intimidation (+5 either way), DC 13. Success: the spear comes within **1–2
   sessions** instead of 3–4.
+- **When he names the snake:** *"It was only to be sure of you."* No apology, and no denial.
+- **Success:** a long pause, the smoke thickening. *"…Sooner, then."*
+- **Failure:** *"It is a fair offer. It is the offer."*
 
 #### S1_ANSWER — Does he take the deal?
 
@@ -182,12 +209,16 @@ Halsby's first scene, and the only one that is his alone. Keep it to about ten m
   It does no damage and does not kill. The deal now adds **the antidote**, which is waiting at
   the Lioness. He can still refuse after the bite. Then he walks into the fight poisoned, and
   Sable has the antidote anyway.
+- **After the bite:** *"I am sorry. I am not good at asking."* Then, plainly: *"The cure is
+  with her. So am I, in a way."*
 
 #### S1_DEAL — The deal stands: save Sable now, help her later
 
 - **The catch, if Halsby works it out.** Asher can fuse the spear in about two minutes. He
   holds off because the unfinished spear keeps Halsby around until the second job is done. It
   is leverage, and Halsby reads leverage for a living. Let him see it.
+  - **The tell:** if Halsby asks how long the fusing takes: *"It would take me no time at
+    all."* A pause. *"Later."*
 - **Transition:** Halsby comes out of the trees above the Lioness's yard just as a pillar of
   light comes down in it. He sees five strangers land, then Scene 2.
 
@@ -203,6 +234,13 @@ the same mechanical job the Descent did in a third of the time. **The Grab lever
 nothing and nobody crossed with them, and there is no hag to escape.
 
 #### S1_STANCE — Each player picks how their character lands
+
+> *"The man with the cask is already past you, boots slapping, not even looking back. The light
+> is still coming down around you and you are still in the air inside it. Below: a dirt yard,
+> a cart at the far edge with a figure in scorched cuffs leaning on it, a man up on a stack of
+> crates with a crossbow, and a half-built building with smoke pouring out of a hole in its
+> wall. Someone in there is shouting orders. You have about one heartbeat to decide how you
+> come down."*
 
 **Beats** — each PC picks one stance, one roll, DC 12:
 
@@ -222,6 +260,12 @@ If he is poisoned, he fights poisoned.
 
 - **Read** (WIS / INT / Perception) — take in the yard mid-arrival. Success: initiative edge,
   or one raider caught flat-footed. Failure: nothing — you were busy not falling over.
+  - **What a successful Read notices** (one each, pick or let the player choose):
+    - The crossbowman is slow to reload. He winds it like a man who learned last week.
+    - The big one, inside the wing, has stopped dead and is staring straight up at the light.
+    - The figure at the cart is patting an empty scroll case, the way you pat for lost keys.
+    - The cart's brake is off. One good shove and it rolls.
+    - Everyone wears the same cloudy stone on a cord. Nobody touches it. (Flavour only.)
 
 #### S1_SCATTER — Nobody lands facing the same way, so the party starts split
 
@@ -295,6 +339,15 @@ Raw 250 XP, ×2 group multiplier → **~500 adjusted**.
 - **Each raider wears a small cloudy crystal on a cord. None of them uses it.** Do not draw
   attention to it in the fight. These are the Earshot Crystals (see `## Rewards`).
 
+**Sample lines in the fight:**
+
+- **The big one (flat fact, never shouted):** *"She comes with me. You don't."* · *"Stay
+  down."* · *"Your turn's next."*
+- **The hedge-mage, on the second *burning hands*:** *"That's not what the man said it'd
+  do!"* He bought it cheap and it shows.
+- **The crossbowman, to the runners:** *"Move! Move the bloody barrel!"*
+- **The cask-haulers, blocked:** *"We're not paid for this bit."*
+
 **Lethality note — the one number that matters.** All six attackers focused on one PC is ~30
 damage a round against ~30 average HP: **RTD 1, which is Dangerous — a tier above the pick.**
 The objective split is what holds it at Standard: with two bandits on the cask and the big one
@@ -328,6 +381,12 @@ wrong — and on current table notes, it will.
 - **Freeing her:** cutting her bonds is an action, and pulling the gag is free once she is
   loose. A freed Sable acts on her own turn from the next round (*eldritch blast*), so freeing
   her early is a real tactical win, not just a rescue.
+- **While gagged, she still plays.** She doesn't struggle, but she signals. A jerk of the chin
+  at the crossbowman, two fingers tapped toward the mage, a long look at the cart's brake. A
+  player who watches her gets a free hint.
+- **When the gag comes off.** Her regular-customer voice is the payoff, as if nothing unusual
+  is happening: *"Evening. Give me one moment, I'll be right with you."* Then *eldritch blast*.
+- **To the big one, later in the fight:** *"You've a tab here now. I keep very good books."*
 
 #### S1_OUTS — Talking the raid down works too, and is encouraged
 
@@ -367,16 +426,26 @@ wrong — and on current table notes, it will.
 
 - Break the big one (killed, frightened, or talked down) → surviving bandits make **DC 12 WIS**;
   failures flee and drop what they carry.
+- **The break:** someone yells *"Nobody said fighting!"*, the cask hits the dirt, and the yard
+  empties in three directions. The mage goes for the cart, if it is still there.
 
 #### S1_BOTCH — Worst case, and it is still not a death
 
 **Fail-forward, not death:** botched, the big one hauls Sable off, still bound, and more stock walks. Deeper
 setback, rescue hook, higher base-building stakes. **No PC death in the premiere.**
 
+> *"The back door bangs open and shut, and then there's just the sound of a horse being whipped
+> hard, going away. Sable's not on the floor any more. Out in the yard, wheel ruts and a dropped
+> cord where the last cask used to be."*
+
 #### S1_LOOT — Right after the fight, in the yard, before the town arrives
 
 - **Loot, right here:** as soon as the fight resolves, the party searches the yard: the crystals
   and the coin (see `## Rewards`). Then the town arrives.
+- **First touch of a crystal.** It is cold, then suddenly not. Whatever the holder was thinking
+  in words, the word they were halfway through, arrives in the head of the nearest crystal
+  holder without going through anyone's ears. Let the players find it by accident if you can:
+  wait for someone to mutter something while holding one.
 - **Transition:** the last raider breaks and runs, or the cart rolls. Either way the yard goes
   quiet and there is a hole in the stock.
 
@@ -401,8 +470,27 @@ setback, rescue hook, higher base-building stakes. **No PC death in the premiere
   its own fights. Mara comes from the ford with a wounded deputy; Silas from his store, which was
   also hit. They didn't abandon the Lioness; they couldn't reach it. (The raiders' jeers about
   cowardly neighbours were wrong, and the town's arrival quietly proves it.)
+
+> *"They come up the road in ones and twos, not running. Nobody runs who's already done their
+> running tonight. A woman with a sheriff's star has a deputy's arm over her shoulder and his
+> blood down her side. Behind her, a big soft man in a shop apron with a burn on one sleeve,
+> looking at the yard the way a merchant looks at a spilled order."*
+
 - **Their first read on the party:** five strangers held the one place the town couldn't get to.
   Mara is grateful and wary in the same breath.
+- **Mara, sample lines** (says each thing once):
+  - *"You five. I'm not asking you to put those down. I'm asking you not to make me count
+    them."*
+  - *"You held the one door I couldn't reach. I'll thank you for it tonight and find out who
+    you are tomorrow."*
+  - On Lord Cael: *"Lord Cael writes a very good letter. I've a drawer full."*
+  - To the wounded deputy, not looking at him: *"Sit. That's not a request."*
+- **Silas, sample tangent.** It wanders, and it always lands on a number:
+  *"Funny thing about rope. Everybody needs it, nobody budgets for it. My father used to say a
+  town's only as good as its rope, which I always thought was a hanging joke, but no, he meant
+  fences… anyway. That delivery was worth* `<a big number>`*, and she'd paid me* `<about half>`
+  *of it."* Set the figures at the table. Canon doesn't fix them yet, and they get recorded at
+  `/recap`.
 - Mara is honest about the arithmetic: [[Lord Corren Cael]] writes letters, and she has too few
   hands.
 - Silas can be the one who mentions, in passing, what the stolen delivery was worth — and that
@@ -420,6 +508,20 @@ setback, rescue hook, higher base-building stakes. **No PC death in the premiere
   and nothing more.
 - *If the party pushes hard on the boots →* give the next rung only: someone is paying these
   men. Stop there.
+
+**How each name lands, as guidance:**
+
+- **Wick**, told secondhand by a villager: *"Elf. Had a mark on his hand like a brand, but
+  neat, like someone did it with paperwork. Never raised his voice. Looked at the houses like
+  he was counting the shutters."* (The shutters are a faint hint at his vampire hunt. Drop the
+  line if that feels too early.)
+- **Harrow Bane** lands as a silence, not as information. Someone mutters *"Bane's lot,"* the
+  talk stops, and Mara says *"Not in the street."* That is all of it.
+- **The boots:** Mara turns a dead raider's foot over with her own boot. *"Third crew this
+  season that calls itself independent. Same cobbler."* Then stop.
+- **Nella**, as a face and a direction: *"Woman on the cart seat, bow across her knees, cool as
+  you like. Had a stick she kept cutting notches in. Took the southeast track, and the ruts are
+  deep, so she's not hauling air."*
 
 **Do not front-load the feud.** It is a reward for curiosity across the whole act. One boot
 detail is the entire budget for tonight.
@@ -468,6 +570,7 @@ detail is the entire budget for tonight.
   Vallaki through the power of good wine got real buy-in from the whole table. He has just been
   offered a stake in a brewery. Hand it to Miguel directly — **do not explain the joke**, just
   let Sable ask whether any of them knows anything about drink.
+  - Sample: *"Any of you know drink? Not drinking it. Knowing it."*
 
 #### S1_IGGY — Iggy plays the room he just saved — his spotlight beat
 
@@ -487,6 +590,13 @@ detail is the entire budget for tonight.
        because Sah is good and diminished.)*
     4. **The fire eases** back to normal. Sable, mid-pour, glances once at the floor toward her
        cellar spring, and says nothing.
+
+       > *"The room's carrying the tune now, badly and loudly, the way rooms do. And then the
+       > viol goes somewhere nobody follows. A few bars none of you have heard, not sad exactly,
+       > more like the middle of a sentence. The hearth stops flickering. It doesn't dim. It just
+       > holds, steady as a painted flame, for exactly as long as the phrase does. Then the song
+       > stops, the fire breathes again, and Sable, mid-pour, glances once at the floor."*
+
     5. **Dip's moment: tell Ben privately** (note or whisper). Ben decides what Dip shares. Dip
        rolls Wisdom (Insight), or Intelligence (Religion) if Ben argues for his Sage training:
        - **Under 15:** a lurch of nested wrongness, layers inside layers, then gone.
@@ -500,6 +610,11 @@ detail is the entire budget for tonight.
 - **The antidote, if Halsby was bitten.** Sable already has it: a cup from her cellar spring.
   She does not explain how she knew to have it ready. *Do not let her name Asher here.* The
   party should leave knowing she has a patron, not that he went fishing for a fifth.
+- **Sample.** She answers the question asked, not the one implied:
+  - Halsby: *"How did you know?"*
+  - Sable: *"It's spring water. Drink all of it."*
+  - If he pushes: *"I know a great many things about this town. Most of them are about
+    plumbing."*
 
 #### S1_BOON — Close on the relic doing nothing at all
 
@@ -616,6 +731,8 @@ in `meta/rewards.md`).
   fight. Let it play: Sable is dragged off, the stock goes, and the town's first read on them is
   "they watched." Mara comes to *them* instead, much colder. The mission still runs; the Stake
   offer becomes something they earn back rather than something handed over.
+  - **Colder Mara, sample:** *"You were standing right there."* A beat. *"I've buried better
+    people for less. Don't leave town until I've decided what you are."*
 - **They go straight at the feud.** Give the next rung — someone is paying these men — and stop.
   Harrow Bane's name comes from the town, not from a corpse. The leash is discoverable across
   the act, never handed over in session one.

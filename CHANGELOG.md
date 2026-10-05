@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.13.0] — 2026-10-05
+
+### Added
+
+- **Description & Dialogue Pass in `/session`.** It runs when a plan is saved to `scheduler/`, and again when the DM confirms a draft as `planned`. The pass walks every scene and flow node and fills the thin spots: a read-aloud box before any choice the players make from what they see, 2–4 sample lines per speaking NPC (plus their replies to likely pushes and to each branch outcome), what a discovery feels like, how each planted name gets said, lines for the enemies mid-fight, and a line for each contingency whose tone changes. Everything it adds is marked as guidance for the DM to improvise from, not a script. It is grounded in the entity files, leaves unset canon as `<placeholders>`, and files each addition under the existing node heading so the session runner shows it on the right card. Session 29's plan got the first pass.
+
 ## [0.12.0] — 2026-10-05
 
 ### Added
