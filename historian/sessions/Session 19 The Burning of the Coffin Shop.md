@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-07-28"
+in_world_end_date: "0735-11-07"
 mission: "Destroy the vampire spawn nesting in Henrik's shop, recover the church's stolen saint's bones, and survive the fallout"
 locations:
   - [[Vallaki]]

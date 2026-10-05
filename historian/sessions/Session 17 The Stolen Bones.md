@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-07-07"
+in_world_end_date: "0735-11-05"
 mission: "Seek shelter for Ireena at the church; recover the stolen saint's bones"
 locations:
   - [[Vallaki]]

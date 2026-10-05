@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-09-22"
+in_world_end_date: "0735-11-10"
 mission: "Clear the Wizard of Wines of the druids poisoning it and find the source animating the blights"
 locations:
   - [[Wizard of Wines]]

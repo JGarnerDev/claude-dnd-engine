@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-07-14"
+in_world_end_date: "0735-11-05"
 mission: "Gather help and supplies against the vampire spawn nesting above Henrik's shop, and recover the stolen saint's bones"
 locations:
   - [[Vallaki]]

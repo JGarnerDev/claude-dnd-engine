@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-09-01"
+in_world_end_date: "0735-11-10"
 mission: "Find the missing wine shipment and break the siege on the winery"
 locations:
   - [[Wizard of Wines]]

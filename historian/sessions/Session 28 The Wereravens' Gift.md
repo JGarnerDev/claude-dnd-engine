@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-09-29"
+in_world_end_date: "0735-11-10"
 mission: "Clear the last of the blights, report the winery's state to Davian Martikov, and learn why the druids came"
 locations:
   - [[Wizard of Wines]]

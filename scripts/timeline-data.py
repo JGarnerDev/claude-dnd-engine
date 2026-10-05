@@ -246,24 +246,43 @@ def collect_event_beats(root: Path, full: bool, name_types: _NameTypeCache) -> l
 
 def collect_session_beats(root: Path) -> tuple:
     """Party sessions: in_world_end_date, falling back to played/planned_date.
-    Returns (beats, fallback_count)."""
+    Returns (beats, fallback_count).
+
+    The real-world fallback is only for a campaign with no in-world session dates
+    at all (a fresh template). Once a campaign has any, mixing real-world dates in
+    would stretch its axis from year ~700 to 2026 and crush every beat, so a session
+    missing in_world_end_date instead inherits the previous session's in-world date
+    (by session_number) and is reported on stderr for backfill."""
     out = []
     fallback = 0
     dir_path = root / 'historian' / 'sessions'
     if not dir_path.exists():
         return out, fallback
+    rows = []
     for f in sorted(dir_path.rglob('*.md')):
         fm = get_frontmatter(f)
-        if not ci_eq(fm.get('type'), 'session'):
-            continue
+        if ci_eq(fm.get('type'), 'session'):
+            rows.append((digits_int(fm.get('session_number'), default=0), f, fm))
+    rows.sort(key=lambda r: r[0])
+    in_world_campaigns = {_unwrap_wikilink(fm.get('campaign') or '')
+                          for _, _, fm in rows if fm.get('in_world_end_date')}
+    last_in_world = {}  # campaign slug -> last seen in_world_end_date
+    carried = []
+    for num, f, fm in rows:
+        camp = _unwrap_wikilink(fm.get('campaign') or '')
         date = fm.get('in_world_end_date')
-        if not date:
+        if date:
+            last_in_world[camp] = date
+        elif camp in in_world_campaigns:
+            date = last_in_world.get(camp)
+            if date:
+                carried.append(f"S{num}" if num else fm.get('name'))
+        else:
             date = fm.get('played_date') or fm.get('planned_date')
             if date:
                 fallback += 1
         if not date:
             continue
-        num = digits_int(fm.get('session_number'), default=0)
         beat = {
             'date': date,
             'label': f"S{num} {fm.get('name')}" if num else fm.get('name'),
@@ -277,6 +296,9 @@ def collect_session_beats(root: Path) -> tuple:
         if kw:
             beat['keywords'] = list(kw)
         out.append({'beat': beat, 'sort': get_beat_sort(date)})
+    if carried:
+        sys.stderr.write(f"timeline-data: no in_world_end_date on {', '.join(carried)} -- placed at the "
+                         f"previous session's in-world date. Backfill the field (written by /recap).\n")
     return out, fallback
 
 

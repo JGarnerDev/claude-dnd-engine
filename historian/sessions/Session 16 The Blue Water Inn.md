@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-06-30"
+in_world_end_date: "0735-11-03"
 mission: "Settle into Vallaki; win the town's welcome"
 locations:
   - [[Vallaki]]

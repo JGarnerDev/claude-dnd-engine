@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-08-25"
+in_world_end_date: "0735-11-09"
 mission: "Keep the meeting with Rictavio, then ride out after the missing wine"
 locations:
   - [[Vallaki]]

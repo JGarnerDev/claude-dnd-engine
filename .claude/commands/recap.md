@@ -116,7 +116,7 @@ pcs_present:            # PCs at the table this session — from the Phase 2.5 a
   - "PC Name"
 ```
 
-**Always set `in_world_end_date`** (the in-world calendar date the session ended, from Phase 2's timing). The campaign timeline plots sessions by this field; without it the chart falls back to the real-world `played_date` and the session lands in the wrong era, far from the in-world cluster. Derive it from the prior session's date plus the days elapsed this session, or from any event dated during the session. Flag to the DM if the in-world date can't be determined.
+**Always set `in_world_end_date`** (the in-world calendar date the session ended, from Phase 2's timing). The campaign timeline plots sessions by this field; without it the extractor pins the session to the previous session's in-world date and warns (it only falls back to the real-world `played_date` for a campaign with no in-world session dates at all). Derive it from the prior session's date plus the days elapsed this session, or from any event dated during the session. Flag to the DM if the in-world date can't be determined.
 
 Write `beats:` as one quoted line per tagged beat in the `classification: weight` form (see
 `meta/schemas/session.md` → Spotlight Beats). Write `pcs_present:` as the DM-confirmed list of

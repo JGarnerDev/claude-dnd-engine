@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-07-29"
+in_world_end_date: "0735-11-07"
 mission: "Answer the Burgomaster's summons and work off the debt for burning down the coffin shop"
 locations:
   - [[Vallaki]]

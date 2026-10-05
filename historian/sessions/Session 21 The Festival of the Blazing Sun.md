@@ -8,6 +8,7 @@ state: completed
 tags:
   - session
 played_date: "2026-08-04"
+in_world_end_date: "0735-11-08"
 mission: "Survive the Burgomaster's mandatory festival, and find out who loosed the tiger"
 locations:
   - [[Vallaki]]
