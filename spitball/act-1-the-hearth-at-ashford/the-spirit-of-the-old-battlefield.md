@@ -23,6 +23,8 @@ relates_to:
   - "[[The Golden Lioness]]"
 ---
 
+> Spitball documents may be deleted at any time - do not rely on linking them. If the information seems important, suggest relocating it.
+
 ## The idea
 
 Part of Act 1 ties the present feud back to the old war fought on this land. A tortured spirit, in
@@ -34,7 +36,7 @@ Numbering was cleaned up on 2026-10-04 at the DM's request. These numbers are th
 
 ## Core
 
-1. **Asher picks Dip (new).** Dip's Sage Enclave training lets him feel weak spots between planes
+1. **Asher picks Dip (new).** Dip's Sage Enclave training lets them feel weak spots between planes
    (from canon, backstory). Asher wants that sense, not the barbarian's axe.
 2. **Jorn's reason (new, built on canon).** Jorn hates the fouling of the river and wants the feud's
    war kept off his sacred stretch of wild (from canon). A woken spirit would be the perfect guard

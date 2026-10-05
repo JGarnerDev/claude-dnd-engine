@@ -79,12 +79,19 @@ relates_to:
 
 - **`raw`** — filed, barely developed. The default on creation.
 - **`developed`** — riffed on; has enough substance to be planned from.
-- **`used`** — mined into a real plan. Kept, not deleted: it records where a beat came from.
+- **`used`** — mined into a real plan. The plan must carry the substance itself, not a link back here.
 - **`parked`** — good, not now. Deliberately set aside rather than forgotten.
 - **`killed`** — rejected. Kept so it is not re-proposed, with a line saying why it died.
 
-Nothing is ever deleted. A killed idea is cheaper to keep than to re-think, and the reason it died
-is often more useful than the idea was.
+**Spitball documents may be deleted at any time - do not rely on linking them. If the information seems important, suggest relocating it.** Every spitball file carries that line as a blockquote right under its frontmatter.
+
+- **Never link to a spitball** from canon, plans, player files, `/todo`, or anywhere else outside
+  `spitball/`. A link breaks the moment the file goes.
+- **Relocate, don't point.** When something in a spitball starts to matter (a plan uses it, a
+  player is cast for it, a todo depends on it), copy the substance to where it belongs and suggest
+  doing so to the DM.
+- Keeping `killed` ideas is still useful (it stops re-proposals), but nothing may depend on one
+  surviving.
 
 ## The capture rule
 
@@ -136,6 +143,9 @@ Promotion is the only path from `spitball/` into planning structure, and it stil
 never `[x]`. An idea becoming a node is not the DM approving it.
 
 ## Honesty rules
+
+- **Do not depend on a spitball existing.** See the rule under Lifecycle: no links in, and
+  relocate anything important.
 
 - **Attribute nothing to canon.** When developing an idea, say plainly which parts are invented
   here and which are drawn from existing material.

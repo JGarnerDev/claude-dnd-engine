@@ -111,7 +111,8 @@ Before riffing, before reading anything beyond what is already in context:
 2. **Pick the folder.** The target act's slug folder, or `unassigned/` when there is no obvious
    home. Most ideas are `unassigned/`; that is the designed outcome, not a failure.
 3. **Write the file** with full frontmatter, `state: raw`, `heat` omitted unless the DM volunteered
-   a reaction, and a body holding the expansion.
+   a reaction, and a body holding the expansion. The body opens with this blockquote, verbatim:
+   `> Spitball documents may be deleted at any time - do not rely on linking them. If the information seems important, suggest relocating it.`
 4. **Expand briefly** — two to four sentences that make the idea concrete enough to recognise in
    three months. Name the beat, the hook, or the image at its centre. Do not write a design doc.
 
@@ -189,7 +190,8 @@ The only path from `spitball/` into planning structure.
    a planning artifact; it is not a capture action
 4. Add the node as `[?]` **open** — never `[-]`, never `[x]`. An idea becoming a node is not the DM
    approving it
-5. Set the spitball's `state: used` and record the node id in its frontmatter and body
+5. Set the spitball's `state: used` and record the node id in its frontmatter and body. The node
+   must carry the idea's substance itself, never a link to the spitball, which may be deleted
 
 ---
 

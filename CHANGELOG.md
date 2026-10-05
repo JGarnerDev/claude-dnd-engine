@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.16.0] — 2026-10-05
+
+### Changed
+
+- **Spitballs may be deleted at any time.** This reverses the old "nothing is ever deleted" rule in `meta/spitball.md`. Nothing outside `spitball/` may link to a spitball: canon, plans, player files and `/todo` must carry the substance themselves, and anything important gets relocated (suggest it to the DM). Every spitball now opens with that instruction as a blockquote. `/spitball` writes it into new files, and `--promote` copies the idea into the flow node instead of linking back. Stated in `CLAUDE.md`, `meta/spitball.md`, `spitball/README.md` and the command. **Breaking for anything that links into `spitball/`.** The existing links (Session 29's plan, MacLeod's player file, `/todo` item 69) were replaced with the content itself.
+
 ## [0.15.0] — 2026-10-05
 
 ### Added

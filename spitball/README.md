@@ -22,8 +22,9 @@ uv run scripts/spitball-brief.py --target unassigned  # the homeless pile
 uv run scripts/spitball-brief.py --count              # totals by state and kind
 ```
 
-Used and killed ideas are hidden by default; pass `--all` to see them. Nothing is ever deleted — a
-dead idea is cheaper to keep than to re-think, and why it died is often worth more than the idea.
+Used and killed ideas are hidden by default; pass `--all` to see them.
+
+> Spitball documents may be deleted at any time - do not rely on linking them. If the information seems important, suggest relocating it.
 
 By meaning rather than by field:
 
