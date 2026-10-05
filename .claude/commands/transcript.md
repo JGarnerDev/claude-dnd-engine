@@ -151,11 +151,39 @@ Then: "Run `/recap` to canonize this — it will pick the note up from `recaps/i
 
 ---
 
-## Phase 6 — Shareable Export (only when asked)
+## Phase 6 — Party Notes for Google Drive (only when asked)
 
-The DM sometimes wants the digest as a document to share with the table — pasted into **Google Docs**. Do this only on request; the inbox note is the default deliverable.
+**Trigger:** the DM asks for "google drive notes", "drive notes", "notes for the party", or otherwise wants the session as a document to share with the table — pasted into **Google Docs**. Do this only on request; the inbox note is the default deliverable.
 
-Publish the digest as an HTML artifact, then hand over the URL with the instruction to open it, select all, copy, and paste. Do **not** suggest "paste without formatting" — the formatting is the deliverable.
+**The audience is the players.** Write as if every player will read it, because they will. The inbox note is a DM document; this is not a copy of it. Build it fresh from the ledger, keeping only what the characters experienced at the table.
+
+### No spoilers
+
+Leave out anything the party did not see, hear, or learn in play:
+
+- DM asides, rules talk, and out-of-character planning chatter ("I'll have her show up next week", "he's actually lying")
+- NPC secrets, true motives, hidden allegiances, and anything the party has not discovered — even when the transcript, historian, or scheduler makes it plain
+- Names the party never learned. Use what the characters would call them ("the hooded woman at the gate")
+- Links to historian, scheduler, or spitball entities, the contradiction check, and every `(??)` item that turns on DM-side knowledge
+- Hints about what comes next, foreshadowing, or "this will matter later"
+
+When unsure whether the party knows something, leave it out and list it for the DM in the hand-off message, not in the document.
+
+### No conclusions
+
+Report what happened; let the party interpret it:
+
+- What an NPC said is a claim, not a fact: "Asher said the debt was paid", never "the debt was paid"
+- No motives, no reading of NPC intent, no "this suggests" or "it seems that"
+- Party theories stay attributed to whoever voiced them: "Iggy suspects the crystals are being overheard". Never promote one to the narrative
+- Open questions are listed as the party left them, unanswered and unranked
+- Use the characters' names, not the players', in narration
+
+Keep transcription doubt light: a `(?)` after a misheard name or an unclear "who did it" is fine and invites players to correct it. Drop the `(??)` mark and its legend entirely.
+
+### Publishing
+
+Publish the notes as an HTML artifact, then hand over the URL with the instruction to open it, select all, copy, and paste. Do **not** suggest "paste without formatting" — the formatting is the deliverable. In the hand-off message (not the document), list anything held back as a possible spoiler, so the DM can add it back if it was in fact revealed.
 
 Google Docs keeps headings, bold, italics, text color, highlight color, lists, blockquotes, links, and horizontal rules. It discards grid and flex layout, backgrounds on containers, left accent bars, and `::before` content. Build the hierarchy out of what survives, not out of boxes and panels.
 
@@ -164,7 +192,7 @@ Four rules, learned the hard way:
 - **Light theme only — no dark variant.** The clipboard carries the `body` background. A dark-themed page drops a black block into a white document while Docs discards the light text colors sitting on it. Set the ground to pure `#FFFFFF` so it pastes invisibly onto Doc paper, and state every color explicitly.
 - **Top heading is `H3`.** The digest nests under the host document's own hierarchy, so it must start below it. Sections are `H4`, subsections `H5`. Scale the type to match — a heading that is semantically `H3` but visually the largest thing on the page fights the Doc's real headings above it.
 - **Pick typefaces that exist in the Google Docs font menu** so the identity survives instead of falling back to Arial. Spectral, Lora, and IBM Plex Mono are all in both Google Fonts and Docs, and pair well for this material.
-- **Give the confidence markers the color system.** `(?)` and `(??)` become colored inline spans — text color plus highlight both survive the paste. Resolving them is what the document is *for*, so they should be findable at a scroll. Include a short legend near the top explaining both marks.
+- **Keep the `(?)` marks quiet.** Color them as a muted inline span so players can spot a name to correct, but don't make them the document's focus. No legend needed beyond one line: "`(?)` means the recording was unclear; tell the DM if you remember it differently."
 
 ---
 

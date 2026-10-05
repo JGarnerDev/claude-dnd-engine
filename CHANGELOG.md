@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.11.0] — 2026-10-04
+
+### Changed
+
+- **"Google Drive notes" are written for the players.** `/transcript` Phase 6 now builds party-facing notes when the DM asks for "google drive notes": nothing the characters didn't experience at the table (no DM asides, NPC secrets, unlearned names, or foreshadowing), and no conclusions drawn for the party (NPC statements reported as claims, theories credited to whoever voiced them, open questions left open). Possible spoilers are listed for the DM in the hand-off message, not in the document. The `(??)` mark and its legend are dropped from the export. The root `CLAUDE.md` pointer is updated to match.
+
 ## [0.10.0] — 2026-10-04
 
 ### Added

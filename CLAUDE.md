@@ -200,7 +200,7 @@ Do not try to split a shared track by reading the text. Measured on session 27, 
 
 **Long runs must be detached.** A transcription launched with the Bash tool's background mode dies when the Claude Code process restarts, losing the whole run. For a full session, launch it detached so it survives — on Windows, `Start-Process` with `-RedirectStandardOutput`/`-RedirectStandardError` into `recaps/transcripts/.cache/<session>/` — then watch the log. The per-track JSON cache means an interrupted run resumes without redoing finished tracks.
 
-**Sharing a digest outside the repo:** `/transcript` Phase 6 covers publishing the inbox note as a Google-Docs-pasteable artifact — light theme only, top heading `H3`, Docs-available typefaces. Read it before building one.
+**Google Drive notes:** when the DM asks for "google drive notes" (or notes to share with the table), read `/transcript` Phase 6 first. They are written **for the players to read**: no spoilers, no conclusions drawn for the party, and they are built fresh from the ledger, not copied from the DM-facing inbox note. Published as a Google-Docs-pasteable artifact: light theme only, top heading `H3`, Docs-available typefaces.
 
 ## PC Backstory Ingestion
 
