@@ -9,12 +9,14 @@ tags:
   - character/pc
   - player/jeff
 player: [[Jeff]]
-race: "Aasimar"
-class: "Bard 3 / Paladin 1"
+race: "Aasimar (Protector)"
+class: "Bard 3 (College of Valor) / Paladin 1"
 background: "Entertainer"
 homeland: [[Threnai]]
 level: 4
 level_confirmed: 28
+# Roll20 sheet (2026-10-05) is the mechanical source of truth.
+character_sheet: "Roll20 — Iggadron \"Iggy\" Wallaed (Bard 3 Valor / Paladin 1)"
 aliases:
   - "Iggy"
   - "Iggadron Wallaed"
@@ -82,7 +84,7 @@ He is disturbed by echoes of his home plane's fall even when he can't name the c
 - Violin and voice -uses music as spellwork
 - Rapier (soldier background)
 - Healing Hands (Aasimar racial)
-- **Shazzam** -triggers whenever Iggy says the word. Heals one random party member 1 HP. Cannot be suppressed. Established Session 0/1.
+- **Shazzam** -triggers whenever Iggy says the word. Heals one random party member 1 HP. Cannot be suppressed. Established Session 0/1. Sheet limits it to **once per long rest** — the first utterance each day fires, intended or not.
 - Fought as a soldier in an urban guard on Threnai — effective at breaching and close-quarters work; offense-first, stabilize/heal allies a close second.
 - As a Paladin, his smite reads as a "good"/radiant aura with an eldritch dissonance beneath — observers feel reassurance and unease at once.
 
@@ -138,6 +140,47 @@ A corruption Iggy witnessed once in the war and now recognizes with dread. The C
 Names Iggy murmurs while tuning — comrades and figures of Threnai, half-remembered. Kept as text only (no NPC files):
 
 Aurelion Thane the Dawnbound · Seraphiel Vorn · Caelion Marr the Bridge-Holder · Luminor Vex · Ithuriel Kane the Unbroken Oath · Valerion Dusk · Elion Var the River's Witness · Thamiel Crest · Aurex Solenne the Gilded Ash · Cadrion Vale · Halcyon Reth the Still Horizon · Orimiel Voss · Caelum Ryn the Skyforged · Azurion Keth · Liora Venn the Gentle Blade · Serion Dhal · Aethros Mire the Knife in Smoke · Velior Ashen · Zophiel Tarn the Broken Halo · Elarion Quill · Caelis Thorn the Grave-Thread · Uriel Nox · Aurel Vire
+
+## Character Sheet (Roll20)
+
+Bard 3 (College of Valor) / Paladin 1 · Protector Aasimar · Entertainer · Chaotic Good · Medium.
+
+- **Defenses:** AC 16 (hide armor + shield), HP 32, Hit Dice 3d8 + 1d10, initiative +2, passive Perception 13. Resistant to radiant and necrotic damage.
+- **Ability scores:** STR 10, DEX 15 (save +4), CON 15, INT 10, WIS 14, CHA 18 (save +6).
+- **Skills:** Performance +8, Persuasion +8, Deception +5, Intimidation +5, Acrobatics +4; Jack of All Trades on the rest.
+- **Spellcasting:** CHA; save DC 14, spell attack +6. Slots: 4 × 1st, 2 × 2nd.
+- **Senses:** Darkvision 60 ft (Aasimar). The sheet's darkvision field reads 0, a sheet error that Jeff confirmed on 2026-10-05.
+- **Languages:** Common.
+- **Proficiencies:** simple and martial weapons; light and medium armor, shields; lute, bagpipes, viol.
+
+### Spells
+
+- **Cantrips:** Minor Illusion, Vicious Mockery, Light.
+- **1st:** Dissonant Whispers, Bless, Charm Person, Healing Word, Faerie Fire, Command, Searing Smite (Paladin).
+- **2nd:** Heat Metal.
+
+### Features
+
+- **Bard:** Bardic Inspiration (d6, CHA-mod uses; Valor lets it add to weapon damage or AC), Expertise, Jack of All Trades, Song of Rest.
+- **Paladin:** Lay On Hands (5-HP pool), Weapon Mastery (Longsword — Sap, Whip — Slow).
+- **Protector Aasimar — Radiant Soul:** once per long rest, luminous wings for 1 minute, 30 ft flight, extra radiant damage equal to his level once per turn.
+- **Healing Hands** (1/long rest) and **Shazzam** (1/long rest — see Abilities).
+- **Feat:** Lucky (3 luck points).
+
+### Gear
+
+Rapier, silver shortsword, dagger, light crossbow, heavy crossbow, hand crossbow, 60 bolts, hide armor, leather armor, shield, the viol, 2 costumes, disguise kit, thieves' tools, healing potion, holy water, scrolls of Bless and Protection from Poison, deck of cards, torch, 5 candles, rations, bedroll, waterskin.
+
+**Keys and papers:**
+
+- **The Wine Wizard keys** (two, "mk 1" and "mk 2") — the two keys from the winery's upper floor, Session 27.
+- **Deed to the Durst House** — title to [[Death House]].
+- **Deed to a windmill**.
+- **Signed will of the Durst parents**.
+
+> **Reliability:** The deeds and the will are on Iggy's sheet, the source of truth, but no session record logs when they were found. Most likely picked up in [[Death House]]. In the published adventure, the windmill deed is to [[Old Bonegrinder]], but the sheet does not say which windmill.
+
+**Coin:** 131 gp, 130 ep (the Strahd-stamped coins from Session 27), 409 sp.
 
 ## Current Affliction
 

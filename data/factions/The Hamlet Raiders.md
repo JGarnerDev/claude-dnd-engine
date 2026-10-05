@@ -23,7 +23,7 @@ tensions:
 hierarchy: "A warband capable of infiltration and deception; specifics unknown"
 opposition:
   - [[Dip]] (survivor seeking to uncover and confront them)
-description: "The warband that infiltrated Dip's home hamlet under a mask of friendship, then attempted to slaughter it — triggering the fire that destroyed the town and, Dip believes, took his twin sister."
+description: "The warband that infiltrated Dip's home hamlet under a mask of friendship, then attempted to slaughter it — triggering the fire that destroyed the town and, Dip believes, took their twin sister."
 ---
 
 World: [[Aethryn]] | Campaign: [[Homebrew Campaign]]

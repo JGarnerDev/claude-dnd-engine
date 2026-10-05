@@ -79,7 +79,7 @@ The calm was a setup. Skittering broke out from every direction at once and blig
 
 [[Davian Martikov]] came out to meet them; [[Adrian Martikov]] and [[Elvir Martikov]] had already fled back to him overwhelmed by the exterior blights and could not say what had happened inside. The party reported the druids dead, the staff destroyed, the ravens fighting on their side, and every cask of wine poisoned. Davian took the wine badly — *"that'll mean that we can't ship anyone out"* — but said they would look for a way to save the batch.
 
-He then cast poison and disease off [[Odibli]], lifting both the tainted-cask poisoning from Session 26 and the brown-mold spores from Session 27 in one gesture. [[Dip]] asked for the same on the grounds that his own mushroom-spore infection was *"a serious health hazard"*, and got it, with a parting shot: *"shouldn't have that many boars in your basement."*
+He then cast poison and disease off [[Odibli]], lifting both the tainted-cask poisoning from Session 26 and the brown-mold spores from Session 27 in one gesture. [[Dip]] asked for the same on the grounds that their own mushroom-spore infection was *"a serious health hazard"*, and got it, with a parting shot: *"shouldn't have that many boars in your basement."*
 
 Then Davian said the party had earned the real history, and gave it:
 

@@ -50,7 +50,7 @@ These were the blights that **survived**. When [[Odibli]] destroyed [[The Vampir
 
 **[[Odibli]]** opened with Shatter across roughly seven blights for 9–20 damage each, then took a needle for 9 piercing and hit 0 HP — his fourth drop in two sessions, and by now the table's running joke.
 
-**[[Dip]]** switched off a rage he had already spent, bellowed across the grounds for [[Davian Martikov]] — *"we have vanquished all the druids, but we need help with these blights"* — and cleaved blights down two at a time.
+**[[Dip]]** switched off a rage they had already spent, bellowed across the grounds for [[Davian Martikov]] — *"we have vanquished all the druids, but we need help with these blights"* — and cleaved blights down two at a time.
 
 **Raven swarms** began arriving off the winery's upper floor in answer to that shout, taking a blight at a time and accounting for roughly half the kills.
 

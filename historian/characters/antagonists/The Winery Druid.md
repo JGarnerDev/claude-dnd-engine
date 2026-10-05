@@ -21,7 +21,7 @@ last_updated: [[Session 26 The Poisoned Casks]]
 relates_to:
   - [[Wizard of Wines]] (poisoned its casks from within)
   - [[Baba Lysaga]] (presumed to serve her, unconfirmed)
-  - [[Dip]] (killed by him)
+  - [[Dip]] (killed by them)
   - [[Twig Blight]] (commanded them)
   - [[Curse of Strahd]] (campaign)
 known_by:

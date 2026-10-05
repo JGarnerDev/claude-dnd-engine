@@ -41,6 +41,6 @@ Kolyan Indirovich, Burgomaster of [[Barovia Village]], died from the trauma of a
 
 ## Burial (Session 13)
 
-Kolyan was carried by the party from the [[Burgomaster's Mansion]] to the [[Church of the Morning Lord]] and buried in the churchyard. Each party member took a turn at the shovel; [[Dip]] used his hands.
+Kolyan was carried by the party from the [[Burgomaster's Mansion]] to the [[Church of the Morning Lord]] and buried in the churchyard. Each party member took a turn at the shovel; [[Dip]] used their hands.
 
 During the burial, [[Father Donavich]] revealed that [[Ireena Kolyana]] is not a blood relative of the Kolyanovich family.

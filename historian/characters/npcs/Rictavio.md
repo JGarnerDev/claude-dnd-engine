@@ -59,7 +59,7 @@ An extravagantly dressed half-elf bard, friend to [[Danika]] and a resident at t
 
 ## First Encounter (Session 16)
 
-[[Danika]] asked him to gauge whether the party were "good performers." He led with a boast about slaying a dragon and selling the great treasure. [[Odibli]] pressed for details; Rictavio evaded, and Odibli came away mistrusting him. During the party's set, Rictavio gestured for [[Dip]] to stop his disastrous (natural-1) interpretive dance.
+[[Danika]] asked him to gauge whether the party were "good performers." He led with a boast about slaying a dragon and selling the great treasure. [[Odibli]] pressed for details; Rictavio evaded, and Odibli came away mistrusting him. During the party's set, Rictavio gestured for [[Dip]] to stop their disastrous (natural-1) interpretive dance.
 
 ## Session 24 -Rudolph van Richten
 

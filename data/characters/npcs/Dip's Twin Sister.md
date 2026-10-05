@@ -21,7 +21,7 @@ relates_to:
   - [[Dip's Home Hamlet]] (lost here in the blaze)
 family:
   - [[Dip]] (twin brother)
-description: "Dip's twin sister, presumed dead in the hamlet fire. Dip refuses to believe she died and takes her absence from his guiding visions as proof she still exists on this realm."
+description: "Dip's twin sister, presumed dead in the hamlet fire. Dip refuses to believe she died and takes her absence from their guiding visions as proof she still exists on this realm."
 ---
 
 Location: [[Aethryn]] | Campaign: [[Homebrew Campaign]]
@@ -36,10 +36,10 @@ Race: [[Half Orc]]
 
 ## The Hook
 
-In Dip's visions, many hands guide and push him along. His sister's hands are neither leading nor helping — and he takes that very absence as proof she still exists on this realm in some form. Her true fate is open: alive somewhere, an echo across the planes Dip is attuned to, or genuinely gone and the hands he seeks are a grief-shaped hope. A DM decision.
+In Dip's visions, many hands guide and push them along. Their sister's hands are neither leading nor helping — and they take that very absence as proof she still exists on this realm in some form. Her true fate is open: alive somewhere, an echo across the planes Dip is attuned to, or genuinely gone and the hands he seeks are a grief-shaped hope. A DM decision.
 
 ## Open Questions (for the DM / Ben)
 
 - Her name and whether she survived.
 - If alive: where, as what, and whether she remembers Dip.
-- Her connection, if any, to the "guiding hands" in Dip's visions and his Session 7 death account.
+- Her connection, if any, to the "guiding hands" in Dip's visions and their Session 7 death account.

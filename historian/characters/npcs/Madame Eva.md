@@ -53,4 +53,4 @@ Five Fortunes of Ravenloft, as Eva delivered them — see [[Session 14 The Tarok
 - **Marionette** — an ally; *a man of music, a man with two heads, in a place of great hunger and sorrow*
 - **Broken One** — the enemy; *he haunts the tomb of the man he envied above all*
 
-To Dip she said, intensely, that *a part of him remains in the land of the dead.*
+To Dip she said, intensely, that *a part of them remains in the land of the dead.*

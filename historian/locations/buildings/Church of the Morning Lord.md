@@ -48,7 +48,7 @@ A trap door in the main hall leads to a cellar where [[Doru]], Donavich's son tu
 
 ## Churchyard
 
-[[Kolyan Indirovich]], late Burgomaster of Barovia Village, was buried in the churchyard during Session 13. Each party member took a turn at the shovel; [[Dip]] used his hands.
+[[Kolyan Indirovich]], late Burgomaster of Barovia Village, was buried in the churchyard during Session 13. Each party member took a turn at the shovel; [[Dip]] used their hands.
 
 ## First Visit (Session 13)
 

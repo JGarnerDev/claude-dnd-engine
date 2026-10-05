@@ -9,12 +9,15 @@ tags:
   - character/pc
   - player/miguel
 player: [[Miguel]]
-race: [[Gnome]]
-class: [[Wizard]]
-background: "Unknown"
+race: "Gnome (Forest)"
+class: "Wizard (Evoker)"
+background: [[Sage]]
 level: 4
 level_confirmed: 28
+# Roll20 sheet (2026-10-05) is the mechanical source of truth.
+character_sheet: "Roll20 — Odibli Spannerbranch (Wizard 4, Evoker)"
 aliases:
+  - "Odibli Spannerbranch"
   - "ODB"
   - "Odi"
   - "Odible"
@@ -71,14 +74,14 @@ spotlight_hooks:
     status: open
   - hook: "he learns he is the copy"
     status: open
-description: "[[Miguel]]'s PC. Gnome Wizard; forty years a Citadel scribe, called into Barovia by a distant voice. Unknown to him, he is a deathless copy of the original, and the voice was Strahd."
+description: "[[Miguel]]'s PC. Odibli Spannerbranch, forest gnome Evoker; forty years a Citadel scribe, called into Barovia by a distant voice. Unknown to him, he is a deathless copy of the original, and the voice was Strahd."
 ---
 
 Campaign: [[Curse of Strahd]] | Player: [[Miguel]]
 
-Race: [[Gnome]] | Class: [[Wizard]] | Home: [[The Citadel]]
+Race: [[Gnome]] (Forest) | Class: [[Wizard]] (Evoker) | Background: [[Sage]] | Alignment: Lawful Neutral | Home: [[The Citadel]]
 
-> **Reliability:** Backstory sections are sourced from Miguel's player backstory (`Odibli-backstory-short`, ingested 2026-10-04) and are player-authoritative for Odibli's history. That document confirms the spelling "Odibli"; "ODB" and "Odible" are table nicknames and mishearings.
+> **Reliability:** Backstory sections are sourced from Miguel's player backstory (`Odibli-backstory-short`, ingested 2026-10-04) and are player-authoritative for Odibli's history. That document confirms the spelling "Odibli"; "ODB" and "Odible" are table nicknames and mishearings. Full name **Odibli Spannerbranch**, and the mechanics below, from Miguel's Roll20 sheet (2026-10-05), the source of truth.
 
 ## Appearance
 
@@ -134,9 +137,40 @@ The notes don't cross a clean wire. They thread a living, dangerous in-between p
 
 This is why he checks every fireplace. It is also how [[Strahd von Zarovich]] first showed his face to the party: in the hearth of room 6 of Death House, when Odibli looked in out of habit ([[Session 03 The Face In The Fire]], [[Strahd in the Fireplace]]).
 
+## Character Sheet (Roll20)
+
+Wizard 4 (Evoker) · Forest Gnome · Sage · Lawful Neutral · Small, 30 ft. Pronouns he/him.
+
+- **Defenses:** AC 14, HP 22, Hit Dice 4d6, initiative +0, passive Perception 12. Gnomish Cunning: advantage on INT, WIS, and CHA saves.
+- **Ability scores:** STR 9, DEX 11, CON 13, INT 20 (save +7), WIS 14 (save +4), CHA 15.
+- **Skills:** Arcana +9 (Scholar expertise), History +7, Religion +7, Investigation +5, Nature +5, Insight +4.
+- **Spellcasting:** INT; save DC 15, spell attack +7. Slots: 4 × 1st, 3 × 2nd.
+- **Senses:** Darkvision 60 ft.
+- **Languages:** Celestial, Common, Gnomish.
+- **Proficiencies:** simple weapons; calligrapher's supplies.
+
+### Spells
+
+- **Cantrips:** Fire Bolt, Shocking Grasp, Mage Hand, Acid Splash, True Strike, Minor Illusion (Forest Gnome), Prestidigitation.
+- **1st:** Chromatic Orb, Magic Missile, Mage Armor, Find Familiar, Hideous Laughter, Speak with Animals (Forest Gnome; free casts equal to proficiency bonus per long rest).
+- **2nd:** Hold Person, Shatter.
+
+### Features
+
+- **Wizard:** Arcane Recovery, Ritual Adept, Scholar (Arcana expertise).
+- **Evoker:** Evocation Savant, Potent Cantrip (half damage on a missed or saved cantrip).
+- **Feats:** Magic Initiate (Wizard), Ability Score Improvement.
+
+### Gear
+
+- **Journal / spellbook**, plus the **Ghastly Spellbook** ("found it amongst the Ghasts in the basement"), the yellow leather spellbook looted from the cult leader's quarters in Session 8, during the ghast ambush.
+- **Cloak of Protection**: the cloak he was mid-swap into when the ghasts broke out, Session 8.
+- **Wizard Wine Ink**: the wine-made label ink from [[Davian Martikov]]'s press, Session 27.
+- Quarterstaff, 2 daggers, alchemist's fire, healing potion, robe, lamp, 7 flasks of oil, ink and ink pen, 10 sheets of parchment, book, tinderbox, backpack. No coin.
+
 ## Abilities (Noted in Play)
 
-- **Jump** - 40 ft jump by spending 10 ft of movement
+- **Jump** - 40 ft jump by spending 10 ft of movement. Not on the current sheet; no longer prepared or no longer in the book.
 - **Minor Illusion** - used in Session 5 to distract the specter (bought ~20 seconds)
 - **Mage Hand** - retrieved key from bottom of well in Session 6
 - **Firebolt** - self-named "Diesel Cougar in the Winter"

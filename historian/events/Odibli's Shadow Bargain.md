@@ -15,7 +15,7 @@ order: 1
 track: "character:Odibli"
 outcome: "Odibli smashed the cult's orb and absorbed shadow essence to revive the fallen party — at a lasting personal cost."
 consequences:
-  - "Origin of Iggy's shadow affliction (his shadow moves wrong) and Dip's whisper affliction (he hears whispers in silence)."
+  - "Origin of Iggy's shadow affliction (his shadow moves wrong) and Dip's whisper affliction (they hear whispers in silence)."
   - "The party survived Death House only because of Odibli's bargain."
 importance: major
 last_updated: "[[Session 10 Escape From Death House]]"

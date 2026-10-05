@@ -1,4 +1,4 @@
-﻿---
+---
 name: "Luci"
 type: character
 subtype: pc
@@ -9,16 +9,20 @@ tags:
   - character/pc
   - player/paul
 player: [[Paul]]
-race: [[Aasimar]]
-class: [[Monk]]
-background: "Unknown"
+race: "Aasimar (Scourge)"
+class: "Monk 2 / Warlock 1 / Transcendent 1"
+background: "Astral Drifter"
 level: 4
 level_confirmed: 28
+# Roll20 sheet (2026-10-05) is the mechanical source of truth.
+character_sheet: "Roll20 — Lucitania (Monk 2 / Warlock 1 / Transcendent 1)"
 aliases:
   - "Lucy"
+  - "Lucitania"
 source_session: [[Session 01 The Black Sheep Inn]]
 relates_to:
   - [[Curse of Strahd]] (campaign)
+  - "Sabathiel (warlock patron; Written in the Stars)"
 affinity:
   - [[Odibli]] (2)
   - [[Davian Martikov]] (1)
@@ -26,40 +30,97 @@ affinity:
   - [[Ireena Kolyana]] (2)
 importance: critical
 active: true
-description: "Paul's PC. Scourge Aasimar in perma-wanderlust. Full name unknown."
+spotlight: normal
+spotlight_hooks:
+  - hook: "learn whether she was ever truly in the sun temple, or only remembers it through genetic memory"
+    status: open
+  - hook: "put a name to the disembodied radiant voice that guides her: Sabathiel, or something else"
+    status: open
+  - hook: "trace the vanished sun worshippers who abandoned the temple and wrote its dead language"
+    status: open
+  - hook: "the Void Serpent that shattered the temple surfaces again"
+    status: open
+  - hook: "the time she lost drifting in the Astral Sea, 113 years she did not live, catches up with her"
+    status: open
+description: "Paul's PC. Lucitania, a Scourge Aasimar monk-warlock-psion who woke in an abandoned sun temple, was scattered across the Astral Sea by a Void Serpent, and drifted into Barovia in perma-wanderlust."
 ---
-
-
 
 Campaign: [[Curse of Strahd]] | Player: [[Paul]]
 
-> **Reliability -Name:** Only nickname/handle appears in notes. Full character name is unconfirmed. Confirm with Paul.
+Race: [[Aasimar]] (Scourge) | Class: [[Monk]] 2 / [[Warlock]] 1 / Transcendent 1 | Background: Astral Drifter | Alignment: Neutral Good
 
-> **Reliability -Class:** Primarily a [[Monk]] (confirmed by Jeff). Early play showed Sacred Flame and Augury, which Monk doesn't grant. Their source (multiclass, pact, or homebrew) is unconfirmed. Confirm with Paul.
+Faith: the Sun and Stars
+
+> **Reliability:** Full name, class split, background, and backstory from Paul's Roll20 sheet (2026-10-05), the source of truth. **Lucitania** is her full name; "Luci" is what the table uses. Transcendent is a homebrew psionic class.
+>
+> **Hit dice** are derived, not read: the sheet's field shows "2D3 | 1D8 | 1D10 | 2D8", a likely glitch from the homebrew class (a d3 is not a hit die, and four entries add up to six dice at level 4). Her 32 max HP fits 3d8 + 1d10 exactly: 8 + 5 + 5 + 6 at average rolls, plus CON +2 per level.
+>
+> The sheet settles the old class question. Her **Sacred Flame** came from the Magic Initiate (Cleric) feat; the sheet marks it LOST, matching Session 5. Her **Augury** comes from her warlock pact with **Sabathiel** through the *Written in the Stars* invocation, which grants Guidance and Augury.
 
 ## Appearance
 
+- A woman of 210 years, 5'9", who looks 113 years younger than she is: time dilation from the Astral Sea
+- Skin alabaster and phthalo green; hair like billowing silk
 - Eyes: liquid gold that constantly drips from the eyelids
 - Elaborate headdress built from depictions in scrolls and temple walls
 - Constant restless movement -spins on a stool while listening, always exploring the space
-
-Race: [[Aasimar]] (Scourge) | Class: [[Monk]]
 
 ## Personality
 
 Embodies light. Was the sole entity in her original light-dimension temple. Ripped from infinite temple structure and thrown into the material plane -this is mentally draining. Living in perpetual near-seasonal-disorder, like a moat of light adrift in the dark. Hyperactive, curious, restless.
 
-> **Reliability:** Paul described this backstory in Session 4. Treat as confirmed for flavor; mechanical implications unconfirmed.
+- **Trait:** Will dig down into every finite detail. Shining a light on ignorance.
+- **Ideal:** The heavens sing with one voice. We must join their chorus.
+- **Bond:** Preserve the creatures of the light. Those upon whom the sun smiles have tasted her sweet nectar.
+- **Flaw:** Cannot be still. Needs to flow towards a brighter place.
 
-## Backstory (from Session 4 Disclosure)
+## Backstory
 
-Was shunted from the light dimension to the astral plane, then to the material plane. As a Scourge Aasimar, has made pacts with certain beings. The party does not know the full details.
+**The temple.** She apparated in a temple devoted to the Sun, built on an inconceivably labyrinthine scale. Its worshippers had abandoned it. Alone, she was free to explore, read, and learn their faith. Their language is indecipherable, but her genetic memory let her read it, and she still speaks it, the tongue of the **Dead Sun Worshippers**. The delicate chiming of prayer bells and the spinning of solar-powered machinery inspired her art.
+
+*Was she ever in a temple?* The sheet leaves the question open on purpose.
+
+**The voice.** She hears a guiding voice in her head, speaking a language that compels her. It exudes trust and a warmth she can physically feel on her face.
+
+**The Void Serpent.** An immense, translucent creature crashed into the sprawling temple and scattered her into the Astral Sea. She drifted there for an unknown time and eventually washed up in Barovia.
+
+> **Earlier record (Session 4 disclosure):** Was shunted from the light dimension to the astral plane, then to the material plane. As a Scourge Aasimar, has made pacts with certain beings. The party does not know the full details. Consistent with the sheet; the pact named there is Sabathiel.
+
+## Character Sheet (Roll20)
+
+Monk 2 / Warlock 1 / Transcendent 1 · Scourge Aasimar · Astral Drifter · Neutral Good · Medium, 40 ft.
+
+- **Defenses:** AC 17 (Unarmored Defense), HP 32, Hit Dice 3d8 + 1d10 (Monk 2d8, Warlock 1d8, Transcendent 1d10), initiative +4, passive Perception 13. Resistant to necrotic and radiant damage.
+- **Ability scores:** STR 9, DEX 18 (save +6), CON 15, INT 12, WIS 17, CHA 14.
+- **Skills:** Acrobatics +6, Insight +5, Sleight of Hand +4, Stealth +4, Performance +4, History +3, Investigation +3, Religion +3.
+- **Spellcasting:** Warlock (CHA) save DC 12, attack +4, one 1st-level pact slot; Magic Initiate (WIS) save DC 13, attack +5.
+- **Senses:** Darkvision 60 ft.
+- **Languages:** Celestial, Common, Dead Sun Worshipper.
+- **Proficiencies:** martial weapons.
+
+### Spells
+
+- **Cantrips:** Spare the Dying, Mage Hand, True Strike, Guidance; Sacred Flame (**lost**, Session 5).
+- **1st:** Expeditious Retreat, Sanctuary, Hellish Rebuke, Augury (Written in the Stars).
+
+### Features
+
+- **Monk:** Martial Arts (d6), Unarmored Defense, Unarmored Movement, Monk's Focus (Flurry of Blows, Patient Defense, Step of the Wind), Uncanny Metabolism.
+- **Warlock:** Pact Magic; Eldritch Invocation — *Written in the Stars*: Sabathiel grants a glimpse of the cosmos and its twinkling agents of illumination.
+- **Transcendent (homebrew psionics, WIS):** Power Manifesting; knows **Energy Storm**, a telekinetic vortex of debris or radiant energy (ranged strike 2d4).
+- **Scourge Aasimar:** Radiant Consumption (searing light, radiant damage to all within 10 ft, extra radiant damage on hits), Healing Hands, Divine Grace and Wit, Embrace the Light.
+- **Background — Astral Drifter:** Lost in Prayer; Longevity (113 years older than she looks).
+- **Feat:** Magic Initiate (Cleric).
+
+### Gear
+
+Bullseye lantern, 3 poison darts, a diary, an ink pen, traveler's clothes. No coin.
 
 ## Abilities (Noted in Play)
 
 - **Sacred Flame** -permanently sacrificed at end of Session 5 to revive Miguel and Ben (via Sabathiel). Gone for the rest of the campaign.
 - "Sun spell" -referenced in Session 4 when freeing Jeff from the cursed bed. Exact spell unconfirmed.
-- **Augury** -selected at level 2 (Session 6 level-up)
+- **Augury** -selected at level 2 (Session 6 level-up); granted by Sabathiel through *Written in the Stars*.
 
 ## Session History
 

@@ -29,7 +29,7 @@ Location: [[Aethryn]] | Campaign: [[Homebrew Campaign]]
 
 ## Overview
 
-The small hamlet where [[Dip]] was born and raised — and shunned, for being an orc. His sharpest childhood memory is its end.
+The small hamlet where [[Dip]] was born and raised — and shunned, for being an orc. Their sharpest childhood memory is its end.
 
 ## Destruction
 

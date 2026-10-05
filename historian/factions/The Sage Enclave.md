@@ -23,7 +23,7 @@ motives:
 tensions:
   - "Attunement to the ethereal sharpens during festivals of worship — a power the wider world may fear or covet"
 hierarchy: "Loose community of spiritual folk and sages; specifics unknown"
-description: "A secluded order of spiritual sages that took Dip in after his wandering years and taught him planar communion, meditation, and the ways of the sage."
+description: "A secluded order of spiritual sages that took Dip in after their wandering years and taught them planar communion, meditation, and the ways of the sage."
 ---
 
 Campaign: [[Homebrew Campaign]] | World: [[Aethryn]]
@@ -32,9 +32,9 @@ Campaign: [[Homebrew Campaign]] | World: [[Aethryn]]
 
 ## Overview
 
-The spiritual folk [[Dip]] fell in with after years wandering the woods. They taught him how the many planes converge on this one, the ways of the sage, and the power of meditation for communing across planes. During festivals — when the powers of worship pull people together — the Enclave's attuned can feel the weak points in reality and grow more attuned to the ethereal.
+The spiritual folk [[Dip]] fell in with after years wandering the woods. They taught Dip how the many planes converge on this one, the ways of the sage, and the power of meditation for communing across planes. During festivals — when the powers of worship pull people together — the Enclave's attuned can feel the weak points in reality and grow more attuned to the ethereal.
 
-The Enclave's libraries opened many avenues of study. What drew Dip most were the literatures of gods and goddesses and their interventions in mortal lives, and the holy sites that gather the faithful — the seeds of his later pilgrimages.
+The Enclave's libraries opened many avenues of study. What drew Dip most were the literatures of gods and goddesses and their interventions in mortal lives, and the holy sites that gather the faithful — the seeds of their later pilgrimages.
 
 ## Open Questions (for the DM / Ben)
 

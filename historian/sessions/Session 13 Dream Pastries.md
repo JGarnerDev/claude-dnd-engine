@@ -79,7 +79,7 @@ Donavich revealed during burial proceedings: **Ireena is not a blood relative of
 
 He spoke of "trials that await her" without elaboration.
 
-Each party member took a turn shoveling. **[[Dip]]** used his hands.
+Each party member took a turn shoveling. **[[Dip]]** used their hands.
 
 ### Donavich's Instruction
 

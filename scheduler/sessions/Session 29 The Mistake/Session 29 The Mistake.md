@@ -29,7 +29,6 @@ encounters:
 loose_threads:
   - "Three seeds owed to [[Davian Martikov]] — two from [[Baba Lysaga]], one from the druids of [[Yester Hill]]. Barovia-side; acknowledged in one line, not pursued"
   - "[[The Wanderer's Boon]] is inert in Odibli's hand and must be shown to be inert this session"
-  - "Luci's energy storm feature (Session 28 new_entity) — name and mechanics still unrecorded"
   - "[[Halsby]]'s reason to be in Ashford is settled (Scene 1b, Asher's bargain). Still open: what the order doesn't like at [[Tassad]], and the later job he owes Sable"
 difficulty_attrition: light
 difficulty_lethality: standard
@@ -61,8 +60,10 @@ Five PCs at level 4, two of them dormantly afflicted, one brand new to the group
 not long-rested since Session 24 in fiction — but **the transit is the rest**, so they arrive
 whole. Coming out of Session 28 the mood is curiosity rather than dread: nobody cursed them,
 [[Davian Martikov]] gave them a gift, and the last thing they heard was a promise that this
-place would make them stronger. They own no money, no standing, and one relic that has
-stopped working.
+place would make them stronger. They have no standing, one relic that has stopped working, and
+not much coin: Iggy carries nearly all of it (131 gp, 409 sp, and 130 ep stamped with Strahd's
+face), Halsby has 42 gp and Dip 5 gp, and Luci and Odibli have nothing. That's about 280 gp
+between them, enough to live on for a while but not enough to build one room of the new wing.
 
 - **[[Halsby]] joins here,** through his own short intro (Scene 1b). His race and background
   are on his PC file now (Half-Elf, Haunted One). Halsby's `level_confirmed` stamps at this
@@ -71,10 +72,29 @@ stopped working.
   [[Sister Maerith]] sent him to [[Tassad]], the bay's big harbor city (dot 6)
   to find out what, or who, is behind a rumor the order dislikes. The job is expected to take
   months. **Do not tell him** about the animals, Asher, or the bargain.
-- Session 28 left three unresolved `new_entities`: Baba Lysaga's scarecrow constructs
-  (offscreen), **Luci's energy storm feature** (Paul posted it to Discord; name and mechanics
-  unrecorded), and Davian's marked map. All three are Barovia-side — none need acknowledgment
-  here, but the energy storm should be written down before it matters mechanically.
+- Session 28 left two unresolved `new_entities`: Baba Lysaga's scarecrow constructs
+  (offscreen) and Davian's marked map. Both are Barovia-side and need no acknowledgment here.
+  Luci's energy storm is now recorded: it is **Energy Storm**, her Transcendent psionic power
+  (see her PC file).
+
+### Warmup — sheet check
+
+Before the cold open, run a quick check with the table. These are the items canon says each
+character carries, compared against the Roll20 sheets of 2026-10-05. Ask players to add
+anything marked **missing**.
+
+- **Odibli:** [[The Wanderer's Boon]] (**missing**, and the closing beat needs it) ·
+  [[The Wizard of Wines Shipping Manifests]] (**missing**, Session 27) · a pouch of brown-mold
+  spores (**missing**, Session 27) · the Ghastly Spellbook ✓ · Cloak of Protection ✓ · Wizard
+  Wine Ink ✓
+- **Iggy:** both Wine Wizard keys ✓ · deeds to the Durst House and a windmill, and the Durst
+  will ✓ · the 130 Strahd-stamped ep ✓ · **darkvision 60 ft** (his sheet field reads 0, so fix
+  it)
+- **Luci:** a bottled quarter-cask of the poisoned wine (**missing**, Session 26)
+- **Dip:** the druid's necklace of human teeth ✓
+- **Halsby:** the spear and the black shard (his focus) ✓
+- **Not on anyone's sheet, so ask who has them:** the druid's flask of syrup (Session 26) ·
+  [[Davian Martikov]]'s map marking Baba Lysaga and the druids (Session 28)
 
 ### Rest Clock at session open
 
@@ -529,6 +549,14 @@ setback, rescue hook, higher base-building stakes. **No PC death in the premiere
   fences… anyway. That delivery was worth a thousand gold, and she'd paid me a third of it."*
   Sable owes him about 650 gp, and she's close to ruined (set 2026-10-05). She would never say
   so.
+- **Silas and the Barovian coin (optional, one beat).** Only if the party spends money or shows
+  their purse. Coin here is plain gold, silver and copper, and Iggy's electrum carries
+  [[Strahd von Zarovich]]'s profile. Silas turns one over, bites it, and holds it to the light:
+  *"Who's the fellow on this? Handsome. Looks like he'd foreclose on you."* Then the joke turns.
+  A coin with a face nobody knows looks forged, and whoever passes it gets the blame when the
+  authorities come looking. He hands it back and quietly asks them not to spend any more of it
+  in his town. Seed only, no consequence tonight. If it escalates later, it goes: Velmora's crown
+  sends a coin-warden, then a coin reaches Tassad, then Tassad's small crusade.
 - Mara is honest about the arithmetic: [[Lord Corren Cael]] writes letters, and she has too few
   hands.
 - Silas can be the one who mentions, in passing, what the stolen delivery was worth — and that
@@ -598,7 +626,7 @@ detail is the entire budget for tonight.
     per town-help beat. With the deed come a room each, free meals, and the party naming one
     thing in the new wing. Construction runs **250–500 gp a room.** Put the terms on a card.
   - **Don't push for a yes.** The deed sits on the table. The reasons to take it are already in
-    the fiction: they are broke and have no standing; Halsby owes Sable a favour through Asher;
+    the fiction: they have no standing, and their whole purse wouldn't build one room; Halsby owes Sable a favour through Asher;
     Nella's cart and the raiders' return are work waiting. The closing beat (the Boon is dead)
     is the real answer: they can't go home. Expect the yes early in Session 2.
 
@@ -622,7 +650,7 @@ detail is the entire budget for tonight.
   - **The sequence, about two minutes, then move on to the loot:**
     1. The room joins in. It is Mara's people only (set 2026-10-05): Mara, Silas, the wounded
        deputies, and a few families. Play it as a vigil, not a party. A dozen grieving people
-       singing together is still close enough to a gathering in worship to wake Dip's gift (his
+       singing together is still close enough to a gathering in worship to wake Dip's gift (their
        Sage-enclave sense for weak points in reality).
     2. Mid-song the melody turns somewhere none of them has heard, holds a few bars, and stops.
     3. **The hearth goes still.** No flicker, just steady light, for as long as the phrase lasts.
@@ -638,7 +666,7 @@ detail is the entire budget for tonight.
        > stops, the fire breathes again, and Sable, mid-pour, glances once at the floor."*
 
     5. **Dip's moment: tell Ben privately** (note or whisper). Ben decides what Dip shares. Dip
-       rolls Wisdom (Insight), or Intelligence (Religion) if Ben argues for his Sage training:
+       rolls Wisdom (Insight, +3), or Intelligence (Arcana, +4) if Ben argues for Dip's Sage training:
        - **Under 15:** a lurch of nested wrongness, layers inside layers, then gone.
        - **15–19:** it resolves like a nesting doll: real, then hollow, then *real* again, and
          the innermost layer is inside Iggy.
@@ -802,10 +830,9 @@ really bleeds · whether the Boon ever opens again.
 
 ## Engine notes
 
-- **Halsby's intro came from a spitball:**
-  `spitball/act-1-the-hearth-at-ashford/halsby-intro-green-eyed-animal.md` (`state: used`).
-  Two blanks are parked there for later: what the order dislikes at [[Tassad]], and the
-  later job Halsby owes Sable.
+- **Halsby's intro came from a spitball** (since removed; spitballs are not kept as sources).
+  Two blanks stay open, recorded in this file's `loose_threads`: what the order dislikes at
+  [[Tassad]], and the later job Halsby owes Sable.
 
 - **Deployment tracking:** *in medias res* is used here (`meta/literary-devices.md`). At
   `/recap`, set its `Last used:` to [[Session 29 The Mistake]].

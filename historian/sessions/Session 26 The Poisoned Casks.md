@@ -88,7 +88,7 @@ The fight was long and attritional: **as fast as one blight fell, another crawle
 
 The druid fought with **Shillelagh**, multi-attacking Dip for 10 bludgeoning, and later dropped a **Thunderwave** on Dip and Luci, both of whom saved. Odibli, cornered and down to roughly 10 HP, dropped an **Acid Splash** into the cluster that caught Dip in the blast and killed three blights.
 
-**Dip broke the Entangle with a Strength save, raged, and killed the druid in a single greataxe turn** — 25 damage from Divine Fury and Iggy's inspiration die — hacking her apart "limb by limb, like cutting down a tree," and finishing by cleaving her in half. He yelled as he did it: *"Maybe you should have thought before picking on someone. This isn't fair to us."*
+**Dip broke the Entangle with a Strength save, raged, and killed the druid in a single greataxe turn** — 25 damage from Divine Fury and Iggy's inspiration die — hacking her apart "limb by limb, like cutting down a tree," and finishing by cleaving her in half. They yelled as they did it: *"Maybe you should have thought before picking on someone. This isn't fair to us."*
 
 ### The ravens
 

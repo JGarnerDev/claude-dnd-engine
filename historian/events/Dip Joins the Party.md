@@ -27,4 +27,4 @@ awareness: regional
 description: "Dip joined the party inside Death House, the same session the Shazzam spell was established and the specter struck."
 ---
 
-Dip threw in with the party during the Death House delve — the same fraught session that saw the specter kill him and Odibli before Luci's sacrifice brought them back. From here on, Dip rode with the group.
+Dip threw in with the party during the Death House delve — the same fraught session that saw the specter kill Dip and Odibli before Luci's sacrifice brought them back. From here on, Dip rode with the group.
