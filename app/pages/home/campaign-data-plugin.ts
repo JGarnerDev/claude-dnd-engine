@@ -9,9 +9,9 @@
 // scheduler/); editing any .md re-extracts and full-reloads the page. So the DM
 // runs `npm run home` once and the page tracks the campaign with zero steps.
 
-import { execFileSync } from 'node:child_process';
 import { resolve, sep } from 'node:path';
 import type { Plugin } from 'vite';
+import { runPython } from './run-python.js';
 
 const VIRTUAL_ID = 'virtual:campaign-data';
 const RESOLVED_ID = '\0' + VIRTUAL_ID;
@@ -19,13 +19,6 @@ const RESOLVED_ID = '\0' + VIRTUAL_ID;
 // The graph layers a beat can come from. A change to any .md under these
 // invalidates the cached extraction.
 const GRAPH_DIRS = ['data', 'historian', 'scheduler'];
-
-// Python interpreter candidates, in order. $PYTHON overrides; else try `python3`
-// (the norm on macOS/Linux, which often ship no bare `python`) then `python`
-// (Windows / venvs). The first that runs the script wins.
-const PYTHON_CANDIDATES = [process.env.PYTHON, 'python3', 'python'].filter(
-  (x): x is string => Boolean(x),
-);
 
 // Run the extractor and return its JSON text (or 'null' on failure — the page
 // then renders its empty state rather than crashing the dev server).
@@ -36,27 +29,8 @@ const PYTHON_CANDIDATES = [process.env.PYTHON, 'python3', 'python'].filter(
 // shipped artifact stays player-safe — only this local DM-side page opts into the
 // full set.
 function extract(repoRoot: string): string {
-  const script = resolve(repoRoot, 'scripts', 'timeline-data.py');
-  const args = [script, '--json-only', '--full', '--root', repoRoot];
-  let lastErr = '';
-  for (const exe of PYTHON_CANDIDATES) {
-    try {
-      const out = execFileSync(exe, args, {
-        encoding: 'utf8',
-        maxBuffer: 64 * 1024 * 1024,
-      });
-      return rewriteSources(out.trim() || 'null', repoRoot);
-    } catch (err) {
-      // ENOENT: this interpreter isn't on PATH — try the next candidate. Any
-      // other error is the script itself failing, so stop and surface it.
-      const code = (err as { code?: string }).code;
-      lastErr = err instanceof Error ? err.message : String(err);
-      if (code === 'ENOENT') continue;
-      break;
-    }
-  }
-  console.error(`[campaign-data] timeline-data.py failed:\n${lastErr}`);
-  return 'null';
+  const out = runPython(repoRoot, 'timeline-data.py', ['--json-only', '--full', '--root', repoRoot], 'campaign-data');
+  return out === null ? 'null' : rewriteSources(out, repoRoot);
 }
 
 // The extractor writes `source` as `../../<rel>` — tuned for the shipped

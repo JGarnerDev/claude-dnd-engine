@@ -43,6 +43,19 @@
   flex-direction: column;
 }
 
+/* Link to the session runner (session.html), leftmost in the action cluster. */
+.chart-sessionlink {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--chart-text);
+  background: var(--chart-surface);
+  border-radius: 7px;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.chart-sessionlink:hover { background: var(--chart-axis); }
+
 /* View toggle (World | Campaign) — pill tab group at the header's left edge */
 .chart-viewtabs {
   display: flex;

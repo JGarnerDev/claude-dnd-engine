@@ -86,22 +86,27 @@ false date.
 
 ## Scenes
 
+Each scene's prose is filed under `#### S1_ID` headings, one per flow-chart node, so the
+session runner shows it as one dropdown per card, in flow order. Prose above the first
+node heading is the scene's setup.
+
 ### Scene 1 — The Last Thirty Seconds
 
 - **Trigger:** session open, before any description of Ashford.
 - **Location:** [[Wizard of Wines]] — the winery grounds in Barovia, replayed.
 - **NPCs present:** none. This is the party and the relic.
 
-**Beats:**
+#### S1_REPLAY — Replay the last thirty seconds of Session 28
 
 - Replay the exact beat Kellan cut on: hand-in-hand, Odibli's hand on the stone, light rising
   past blinding.
+
+#### S1_REST — The long rest happens here, inside the transit
+
 - Then **hold them inside the transit**, because that is where the rest happens — and the
   relic is what says so, not the DM. Full HP, all slots, hit dice back.
 - Afflictions go dormant *here*, and the dormancy is felt. That is the beat that sells the new
   world as different from Barovia.
-- **Device — in medias res** (`Scale: session`, `Last used: —`). The light does not fade into
-  a quiet field. It fades into shouting.
 
 > *"The light does not hurt. That is the first wrong thing. It climbs past what your eyes
 > should bear and keeps climbing, and somewhere in it the ache in your shoulder stops being an
@@ -112,6 +117,8 @@ false date.
 
 - **Say it in fiction, never as a rules announcement.** The players should work out that they
   are rested because the fiction told them, not because you said "take a long rest."
+- **Device — in medias res** (`Scale: session`, `Last used: —`). The light does not fade into
+  a quiet field. It fades into shouting.
 - **Transition:** the light drops and there is a man-shaped shadow going past them at a run,
   carrying a cask.
 
@@ -126,37 +133,10 @@ false date.
 
 Halsby's first scene, and the only one that is his alone. Keep it to about ten minutes.
 
-**Beats:**
+#### S1_WOODS — Halsby on the road to Tassad, on the Nightveil's errand
 
 - **The talker.** An animal steps onto the path and stops him. **Kellan picks what kind.** Its
   eyes burn green and leak smoke, and it speaks into his head, mind to mind.
-- **The snake.** A second animal, a snake, waits in cover near him with the same eyes. Asher
-  rides both. It acts only if Halsby refuses.
-  - **Spotting it:** within 10 ft, his blindsight finds it automatically. Farther out, it is
-    hidden at Stealth 14 against his passive Perception 11. Place it at 15 ft unless you want
-    him to have the edge.
-- **The ask.** A woman named Sable is being robbed and beaten at a brewery in Ashford, right
-  now. Go and save her. Later, help her with one more thing, and Asher will say when. *(What
-  that later job is: decided later.)*
-- **The offer.** **Protection from the fade.** He knows exactly what Halsby is losing and how
-  fast. The visible proof: the spear and the shard he carries, made into one weapon that
-  holds the fade off ([[The Shadowless Spear]], see `## Rewards`).
-- **The catch, if Halsby works it out.** Asher can fuse the spear in about two minutes. He
-  holds off because the unfinished spear keeps Halsby around until the second job is done. It
-  is leverage, and Halsby reads leverage for a living. Let him see it.
-- **Halsby keeps the shard and the spear the whole time.** Nothing is taken from him.
-
-**The fork:**
-
-- **He spots the snake → he can bargain.** Calling out the threat gives him leverage.
-  Persuasion or Intimidation (+5 either way), DC 13. Success: the spear comes within **1–2
-  sessions** instead of 3–4.
-- **He accepts.** The deal stands as offered. The spear comes in **3–4 sessions**.
-- **He refuses.** The snake bites. **Poisoned** until he drinks the antidote (disadvantage on
-  attacks, his spell attacks included, and on ability checks; saving throws are unaffected).
-  It does no damage and does not kill. The deal now adds **the antidote**, which is waiting at
-  the Lioness. He can still refuse after the bite. Then he walks into the fight poisoned, and
-  Sable has the antidote anyway.
 
 > *"It is standing in the middle of the path as if it has been waiting there all morning, and
 > it is looking at you the way nothing on four legs should. Its eyes are green, a deep-water
@@ -166,6 +146,48 @@ Halsby's first scene, and the only one that is his alone. Keep it to about ten m
 
 - **Never name the fade for him.** Kellan's file calls it that, but the table never has. Asher
   says *thinning*, which is the word Halsby uses for it.
+
+#### S1_ASK — The ask: save Sable at the brewery in Ashford, now
+
+- **The ask.** A woman named Sable is being robbed and beaten at a brewery in Ashford, right
+  now. Go and save her. Later, help her with one more thing, and Asher will say when. *(What
+  that later job is: decided later.)*
+- **The offer.** **Protection from the fade.** He knows exactly what Halsby is losing and how
+  fast. The visible proof: the spear and the shard he carries, made into one weapon that
+  holds the fade off ([[The Shadowless Spear]], see `## Rewards`).
+- **Halsby keeps the shard and the spear the whole time.** Nothing is taken from him.
+
+#### S1_SNAKE — Does he spot the snake hidden nearby?
+
+- **The snake.** A second animal, a snake, waits in cover near him with the same eyes. Asher
+  rides both. It acts only if Halsby refuses.
+  - **Spotting it:** within 10 ft, his blindsight finds it automatically. Farther out, it is
+    hidden at Stealth 14 against his passive Perception 11. Place it at 15 ft unless you want
+    him to have the edge.
+
+#### S1_HAGGLE — He calls out the threat and bargains
+
+- **He spots the snake → he can bargain.** Calling out the threat gives him leverage.
+  Persuasion or Intimidation (+5 either way), DC 13. Success: the spear comes within **1–2
+  sessions** instead of 3–4.
+
+#### S1_ANSWER — Does he take the deal?
+
+- **He accepts.** The deal stands as offered. The spear comes in **3–4 sessions**.
+
+#### S1_BITE — He refuses, and the snake bites
+
+- **He refuses.** The snake bites. **Poisoned** until he drinks the antidote (disadvantage on
+  attacks, his spell attacks included, and on ability checks; saving throws are unaffected).
+  It does no damage and does not kill. The deal now adds **the antidote**, which is waiting at
+  the Lioness. He can still refuse after the bite. Then he walks into the fight poisoned, and
+  Sable has the antidote anyway.
+
+#### S1_DEAL — The deal stands: save Sable now, help her later
+
+- **The catch, if Halsby works it out.** Asher can fuse the spear in about two minutes. He
+  holds off because the unfinished spear keeps Halsby around until the second job is done. It
+  is leverage, and Halsby reads leverage for a living. Let him see it.
 - **Transition:** Halsby comes out of the trees above the Lioness's yard just as a pillar of
   light comes down in it. He sees five strangers land, then Scene 2.
 
@@ -180,24 +202,35 @@ This replaces the struck Descent. One beat, one roll each, straight into initiat
 the same mechanical job the Descent did in a third of the time. **The Grab lever is gone:**
 nothing and nobody crossed with them, and there is no hag to escape.
 
+#### S1_STANCE — Each player picks how their character lands
+
 **Beats** — each PC picks one stance, one roll, DC 12:
+
+**Halsby does not roll a stance.** He arrived on foot, at the yard's edge, and he already
+knows why he is there: Sable is the target. He starts at the edge nearest the wing's doorway.
+If he is poisoned, he fights poisoned.
+
+#### S1_STEADY — Steady — try to land square on your feet
 
 - **Steady** (CON / Athletics / Acrobatics) — land square. The roll also sets where they land:
   - **17+** — they pick their spot anywhere in the yard.
   - **12–16** — they land about 30 ft from the nearest bandits. Normal start.
   - **11 or less** — they land prone, in the middle of the bandits. No lost turn: standing up
     costs half their movement, as normal.
+
+#### S1_READ — Read — take in the yard while still falling into it
+
 - **Read** (WIS / INT / Perception) — take in the yard mid-arrival. Success: initiative edge,
   or one raider caught flat-footed. Failure: nothing — you were busy not falling over.
 
-**Halsby does not roll a stance.** He arrived on foot, at the yard's edge, and he already
-knows why he is there: Sable is the target. He starts at the edge nearest the wing's doorway.
-If he is poisoned, he fights poisoned.
+#### S1_SCATTER — Nobody lands facing the same way, so the party starts split
 
 Scatter places the **Read** PCs only; Steady's roll already placed the rest. The DM splits the
 Read PCs as the statblock expects: some start in the yard near the cask-runners, some near the
 wing's doorway where Sable is. **That split is a positioning
 puzzle, not a penalty.**
+
+#### S1_ENGAGE — Does the party step in, or stand back and watch?
 
 **The first real choice: step in, or stand back?** Stepping in starts the fight. Hanging back
 lets the worst case happen (Sable dragged off, more stock walking), which is still not a death.
@@ -233,6 +266,8 @@ feel earned.
   - **The big one** — nameless on purpose. Scarred, missing teeth, wearing a townsman's stolen
     coat. Give him a look, never a name.
 
+#### S1_FIGHT — The fight in the half-built brewery wing, 3 to 5 rounds
+
 **Roster — six bodies, mixed (Jeff, 2026-10-05):**
 
 - **2 × cask-hauler** — Bandit (CR 1/8, HP 11, AC 12, scimitar +3 for 4). Melee. Hands full with
@@ -248,54 +283,17 @@ feel earned.
 
 Raw 250 XP, ×2 group multiplier → **~500 adjusted**.
 
-**Beats — the tension is a timer and an objective, not attrition:**
-
-- Two bandits haul the last full cask toward the cart at ~15 ft per turn. It reaches the cart,
-  it is **gone**, and Session 2's chase matters more. Saved, it is a clean win.
-- The big one is dragging Sable, bound and gagged, through the wing toward the back door.
-  Ignored about two rounds, he gets her out as leverage. Scorch marks and a blown-out wall
-  section show where the fire explosive went off.
-- **Freeing her:** cutting her bonds is an action, and pulling the gag is free once she is
-  loose. A freed Sable acts on her own turn from the next round (*eldritch blast*), so freeing
-  her early is a real tactical win, not just a rescue.
-- The screen, the crossbow and the hedge-mage cover the runners.
-- **Each raider wears a small cloudy crystal on a cord. None of them uses it.** Do not draw
-  attention to it in the fight. These are the Earshot Crystals (see `## Rewards`).
-- **Two ends, one party.** Pressure, not a lock: the party *can* split and go for both, and
-  Scatter has probably split them already. Each side is thinner, so both are winnable but
-  neither is safe. Don't block a split; let the timers (cask ~15 ft a turn, Sable ~2 rounds)
-  make each player's turn the choice. Saving the cask costs Session 2 nothing, because Nella
-  already has most of the ale.
-- Break the big one (killed, frightened, or talked down) → surviving bandits make **DC 12 WIS**;
-  failures flee and drop what they carry.
-- **Non-combat outs all live:** parley · trickery (pose as the raiders' own people) ·
-  intimidation. Any of these can trigger the morale check early or grant advantage. Details
-  below.
-- **Parley pays in clues.** The surface reason is goods; the hidden reason is keeping Ashford
-  down (the act's spine). A parley roll that beats DC 12 gets the surface line, *"It's the ale,
-  friend. Nothing personal."* **15+** adds one clue below; **20+** adds two. These are mook-level
-  truths. None names Marlow or Harrow Bane, and none says *why* (that stays unresolved):
-  1. *"Pay's steady, and up front. More than the casks are worth."*
-  2. *"Orders were that the wing doesn't open. Take the stock, wreck the fittings."*
-  3. *"Nobody dies. Boss was clear. Bleed the town, don't bury it."*
-  4. *"We hit Ashford. Not the farms, not the road. Ashford, every time."*
-- **Intimidate is live from the first jeer.** The raiders open with contempt (Scene 2) because
-  they take the party for villagers; only the big one saw the light. A player can answer the
-  jeering by turning it around, at any point, even before initiative. Intimidation DC 13
-  triggers the morale check early. **Advantage** if they back it with proof: a raider already
-  dropped, a spell in someone's face, or pointing at the light the big one saw and the rest
-  missed (*"Ask him where we came from"*).
-- **Bluff as the boss's people.** The party has never heard the name Marlow, so the bluff is
-  generic: *"The boss sent us. Change of plan."* It works because the raiders really do take
-  orders from someone. Deception DC 13 buys a round of hesitation, or advantage on the morale
-  check. **18+:** a raider slips an already-planted name, *"Nella sent you?"* Never Marlow: the
-  boots stay tonight's one feud detail.
-
 > *"Smoke is still rolling out of a blown-open wall of the new wing. Through it, a big man is
 > dragging a tiefling woman across the bare floor by her collar. Her wrists and ankles are roped
 > and there's a gag in her mouth. She isn't struggling. She's watching him, very calmly, the way
 > you'd watch a man you intend to remember. Then he sees you. All five of you, standing in a yard
 > where a second ago there was nothing but light."*
+
+**Beats — the tension is a timer and an objective, not attrition:**
+
+- The screen, the crossbow and the hedge-mage cover the runners.
+- **Each raider wears a small cloudy crystal on a cord. None of them uses it.** Do not draw
+  attention to it in the fight. These are the Earshot Crystals (see `## Rewards`).
 
 **Lethality note — the one number that matters.** All six attackers focused on one PC is ~30
 damage a round against ~30 average HP: **RTD 1, which is Dangerous — a tier above the pick.**
@@ -309,8 +307,73 @@ one's multiattack at 16, which cannot instant-kill anyone,
 Odibli included. So the table can run its Odibli-goes-down gag with no real risk of it going
 wrong — and on current table notes, it will.
 
+#### S1_FORK — Pressure, not a lock: they may split and try both
+
+- **Two ends, one party.** Pressure, not a lock: the party *can* split and go for both, and
+  Scatter has probably split them already. Each side is thinner, so both are winnable but
+  neither is safe. Don't block a split; let the timers (cask ~15 ft a turn, Sable ~2 rounds)
+  make each player's turn the choice. Saving the cask costs Session 2 nothing, because Nella
+  already has most of the ale.
+
+#### S1_CASKS — Go after the last cask
+
+- Two bandits haul the last full cask toward the cart at ~15 ft per turn. It reaches the cart,
+  it is **gone**, and Session 2's chase matters more. Saved, it is a clean win.
+
+#### S1_SABLE — Go after Sable instead
+
+- The big one is dragging Sable, bound and gagged, through the wing toward the back door.
+  Ignored about two rounds, he gets her out as leverage. Scorch marks and a blown-out wall
+  section show where the fire explosive went off.
+- **Freeing her:** cutting her bonds is an action, and pulling the gag is free once she is
+  loose. A freed Sable acts on her own turn from the next round (*eldritch blast*), so freeing
+  her early is a real tactical win, not just a rescue.
+
+#### S1_OUTS — Talking the raid down works too, and is encouraged
+
+- **Non-combat outs all live:** parley · trickery (pose as the raiders' own people) ·
+  intimidation. Any of these can trigger the morale check early or grant advantage. Details
+  below.
+
+#### S1_PARLEY — Parley — point out they came for goods, not for blood
+
+- **Parley pays in clues.** The surface reason is goods; the hidden reason is keeping Ashford
+  down (the act's spine). A parley roll that beats DC 12 gets the surface line, *"It's the ale,
+  friend. Nothing personal."* **15+** adds one clue below; **20+** adds two. These are mook-level
+  truths. None names Marlow or Harrow Bane, and none says *why* (that stays unresolved):
+  1. *"Pay's steady, and up front. More than the casks are worth."*
+  2. *"Orders were that the wing doesn't open. Take the stock, wreck the fittings."*
+  3. *"Nobody dies. Boss was clear. Bleed the town, don't bury it."*
+  4. *"We hit Ashford. Not the farms, not the road. Ashford, every time."*
+
+#### S1_SCARE — Intimidate — live from the first jeer, even before initiative
+
+- **Intimidate is live from the first jeer.** The raiders open with contempt (Scene 2) because
+  they take the party for villagers; only the big one saw the light. A player can answer the
+  jeering by turning it around, at any point, even before initiative. Intimidation DC 13
+  triggers the morale check early. **Advantage** if they back it with proof: a raider already
+  dropped, a spell in someone's face, or pointing at the light the big one saw and the rest
+  missed (*"Ask him where we came from"*).
+
+#### S1_TRICK — Bluff — 'the boss sent us, change of plan'
+
+- **Bluff as the boss's people.** The party has never heard the name Marlow, so the bluff is
+  generic: *"The boss sent us. Change of plan."* It works because the raiders really do take
+  orders from someone. Deception DC 13 buys a round of hesitation, or advantage on the morale
+  check. **18+:** a raider slips an already-planted name, *"Nella sent you?"* Never Marlow: the
+  boots stay tonight's one feud detail.
+
+#### S1_MORALE — Put the big one down and the rest break
+
+- Break the big one (killed, frightened, or talked down) → surviving bandits make **DC 12 WIS**;
+  failures flee and drop what they carry.
+
+#### S1_BOTCH — Worst case, and it is still not a death
+
 **Fail-forward, not death:** botched, the big one hauls Sable off, still bound, and more stock walks. Deeper
 setback, rescue hook, higher base-building stakes. **No PC death in the premiere.**
+
+#### S1_LOOT — Right after the fight, in the yard, before the town arrives
 
 - **Loot, right here:** as soon as the fight resolves, the party searches the yard: the crystals
   and the coin (see `## Rewards`). Then the town arrives.
@@ -331,7 +394,7 @@ setback, rescue hook, higher base-building stakes. **No PC death in the premiere
 
 **This is the elastic scene** — cut it to narration if the raid ran long.
 
-**Beats:**
+#### S1_TOWN — The whole town was hit at once by separate groups
 
 - **The whole town was hit at once, by separate groups.** That's why nobody came for Sable: every
   street was fighting its own raid. The town arrives **late**, smoke-stained and bloodied, from
@@ -340,6 +403,13 @@ setback, rescue hook, higher base-building stakes. **No PC death in the premiere
   cowardly neighbours were wrong, and the town's arrival quietly proves it.)
 - **Their first read on the party:** five strangers held the one place the town couldn't get to.
   Mara is grateful and wary in the same breath.
+- Mara is honest about the arithmetic: [[Lord Corren Cael]] writes letters, and she has too few
+  hands.
+- Silas can be the one who mentions, in passing, what the stolen delivery was worth — and that
+  Sable had not finished paying for it.
+
+#### S1_NAMES — Town talk plants three names and stops there
+
 - [[Wick]]'s crew was one of the groups, on the far side, and is already gone. Seed him as a
   *described* stranger, never seen: guild-marked, and wrong somehow.
 - *If the party notes that bandits don't usually coordinate a town-wide raid,* agree, and stop
@@ -348,10 +418,6 @@ setback, rescue hook, higher base-building stakes. **No PC death in the premiere
   (southeast, laden cart, deep ruts) · **[[Harrow Bane]]** gets a name the town fears and no
   face · the feud gets **exactly one detail** — matched boots on dead "independent" bandits —
   and nothing more.
-- Mara is honest about the arithmetic: [[Lord Corren Cael]] writes letters, and she has too few
-  hands.
-- Silas can be the one who mentions, in passing, what the stolen delivery was worth — and that
-  Sable had not finished paying for it.
 - *If the party pushes hard on the boots →* give the next rung only: someone is paying these
   men. Stop there.
 
@@ -368,11 +434,19 @@ detail is the entire budget for tonight.
   whole pitch.**
 - **NPCs present:** [[Sable Wren]], now on her own ground and not cornered.
 
-**Beats:**
+#### S1_WREN — Sable Wren is running the Golden Lioness entirely alone
 
 - She is running the place **entirely alone.** Her crew ([[Lok Thuliaga]], [[Bree Tealeaf]])
   has not arrived. The new wing was built and was supposed to open; now it is scorched and blown
   open by the raiders' explosive, and still undefended.
+
+> *"She pulls five mugs without asking and sets them down. 'That's The Mistake,' she says. 'It's
+> the one people come back for.' Nobody has ever got her to say why it's called that. Behind her
+> the hearth is doing what it has apparently always done, which is burn without anyone feeding
+> it, and through the wall you can hear the new wing being very, very empty."*
+
+#### S1_OFFER — Thanks first, no strings: a room and a meal tonight
+
 - **Thanks first, with no strings.** A room and a hot meal tonight, because they saved her and
   her stock. Hospitality, not a deal: the party can accept without committing to anything.
 - **Then the offer, and it is a standing one, not a question for tonight.** They are strangers
@@ -387,10 +461,16 @@ detail is the entire budget for tonight.
     the fiction: they are broke and have no standing; Halsby owes Sable a favour through Asher;
     Nella's cart and the raiders' return are work waiting. The closing beat (the Boon is dead)
     is the real answer: they can't go home. Expect the yes early in Session 2.
+
+#### S1_ODIBLI — Odibli is offered a stake in a brewery
+
 - **Odibli's beat, and it is free.** Session 28's table notes record that his plan to conquer
   Vallaki through the power of good wine got real buy-in from the whole table. He has just been
   offered a stake in a brewery. Hand it to Miguel directly — **do not explain the joke**, just
   let Sable ask whether any of them knows anything about drink.
+
+#### S1_IGGY — Iggy plays the room he just saved — his spotlight beat
+
 - **Iggy's beat — spotlight.** He is overdue at 2 rotation turns against everyone else's 4. A
   hearth, a rescued room, a town that needs cheering: he plays. Seeds his open hook *"decode the
   unfinished final song trapped in the viol"* — in a world that is neither Barovia nor Threnai,
@@ -414,18 +494,18 @@ detail is the entire budget for tonight.
          the innermost layer is inside Iggy.
        - **20+:** clarity. That innermost layer is a presence, divine, small and very tired, and
          not hostile.
+
+#### S1_ANTIDOTE — Only if Halsby was bitten: Sable already has the antidote
+
 - **The antidote, if Halsby was bitten.** Sable already has it: a cup from her cellar spring.
   She does not explain how she knew to have it ready. *Do not let her name Asher here.* The
   party should leave knowing she has a patron, not that he went fishing for a fifth.
+
+#### S1_BOON — Close on the relic doing nothing at all
+
 - **The Barovia debt, one line.** Odibli still has [[The Wanderer's Boon]]. It is warm, it is
   inert, it does nothing. Without this line the season reads as a detour instead of the errand
   the relic sent them on.
-
-> *"She pulls five mugs without asking and sets them down. 'That's The Mistake,' she says. 'It's
-> the one people come back for.' Nobody has ever got her to say why it's called that. Behind her
-> the hearth is doing what it has apparently always done, which is burn without anyone feeding
-> it, and through the wall you can hear the new wing being very, very empty."*
-
 - **Transition:** into the closing hook.
 
 ## Rewards

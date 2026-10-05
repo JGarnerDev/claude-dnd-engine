@@ -4,3 +4,10 @@ declare module 'virtual:campaign-data' {
   const data: TimelineData | null;
   export default data;
 }
+
+// Ambient type for the session runner's data, supplied by session-data-plugin.
+declare module 'virtual:session-data' {
+  import type { SessionData } from './session/types.js';
+  const data: SessionData | null;
+  export default data;
+}

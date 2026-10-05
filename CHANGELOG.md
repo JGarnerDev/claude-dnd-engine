@@ -6,6 +6,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.12.0] — 2026-10-05
+
+### Added
+
+- **Session runner page** (`app/pages/home/session.html`; `npm run home`, then the **Run session** button or `/session.html`). It walks the next planned session one card at a time, one card per flow-chart node. Each card shows the node text, any plan notes from `_flow.md` that name it, branch buttons for the real forks, and the scene's written prose underneath. When a scene runs in parallel with no arrow into it (Halsby's intro), the runner offers "Cut to Scene 1b" first. Dashed edges show up as asides. A map rail jumps to any card. The side panel holds entity search, the party strip, entities on the current card and scene, the act roster, and the plan's other sections. An entity opens with its canon/pool/plan layer and the session's NPC quick-ref. Keys: → / Enter go forward, 1–9 pick a branch, ← steps back, `/` searches. The walked path survives reloads and can be copied for `/recap`. Auto-surfacing skips the other season's entities and PCs; search still finds everything. `$SESSION` picks a different session folder.
+- **"Previously on…" card.** Every session the runner loads now opens on a recap of the session before it. The card is built from that historian record's `description`, `recap` and `cliffhanger` fields, in the CLAUDE.md recap format: a narrative lead, then TL;DR bullets (party status, the plan's `loose_threads`, the cliffhanger), then the full recap, collapsed. Nothing needs writing by hand: it appears once `/recap` has canonized the previous session. When the previous session belongs to the other season, a "Last time in this world" block adds the last session played in this one.
+- **Scene notes grouped by card.** A scene's written prose shows as one collapsed dropdown per flow-chart node, in flow order: number, kind, id and title on the closed row, the prose inside, and a jump button. Prose is filed by `#### S1_ID — title` headings in the plan's `### Scene` sections; text above the first one becomes a Setup dropdown, and a node with no prose shows its flow-chart lines. A plan without node headings falls back to one dropdown per bold label (`**Beats:**`, `**The fork:**`). Session 29's plan is re-filed this way, lines moved but not reworded.
+- **`scripts/session-cards.py`**: the extractor behind the page. It reads frontmatter only for entities, and the page fetches bodies on demand.
+
+### Fixed
+
+- The home page's Python runner (`app/pages/home/run-python.ts`, now shared by both data plugins) tries `uv run` first and moves to the next interpreter on any failure. Before, a Windows Store `python3` stub stopped the search, so the timeline page loaded no data.
+- **Timeline axis no longer mixes in real-world dates.** Before, a session with no `in_world_end_date` was plotted at its real-world `played_date`, so the Strahd axis ran from year 734 to 2026 and crushed every beat. `scripts/timeline-data.py` now uses the real-world fallback only for a campaign that has no in-world session dates at all. Otherwise a session missing the field takes the previous session's in-world date, and the script prints a warning to stderr. Sessions 16–28 now carry `in_world_end_date`, worked out from their canon event dates.
+
 ## [0.11.0] — 2026-10-04
 
 ### Changed

@@ -68,6 +68,13 @@ export function renderTimelineView(container: HTMLElement, data: TimelineData | 
   actions.className = 'chart-actions';
   header.append(tabs, actions);
 
+  // Leftmost action: the session runner (session.html), served by the same dev server.
+  const sessionLink = document.createElement('a');
+  sessionLink.href = '/session.html';
+  sessionLink.className = 'chart-sessionlink';
+  sessionLink.textContent = 'Run session';
+  actions.append(sessionLink);
+
   const content = document.createElement('div');
   content.className = 'chart-viewcontent';
 

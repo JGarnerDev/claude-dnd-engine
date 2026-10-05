@@ -116,6 +116,7 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 | `session-brief.py` | Start of every `/session` | `uv run scripts/session-brief.py` |
 | `transcribe.py` | Turn a session recording into a speaker-labeled transcript. Multi-track (one file per speaker) needs no diarization; biases decoding toward canon names | `uv run scripts/transcribe.py [--session <n>] [--list] [--force]` |
 | `diarize-track.py` | Split one track that carries two speakers (two players sharing a mic). Embeds each cached utterance with ECAPA-TDNN, clusters by voice, names clusters from DM turn-anchors + class vocabulary | `uv run scripts/diarize-track.py --session <n> --track <stem> --speakers "A,B" [--dry-run]` |
+| `session-cards.py` | One planned session (flow chart + written plan + entity index) as JSON — feeds the session runner page (`npm run home` → `/session.html`, or the **Run session** button). Not for chat use | `uv run scripts/session-cards.py [--session <folder or number>]` |
 | `session-state.py` | Quick campaign/act/mission check | `uv run scripts/session-state.py` |
 | `todo-brief.py` | Start of every `/todo` — all DM action-item signals in one call | `uv run scripts/todo-brief.py` |
 | `inventory-brief.py` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `uv run scripts/inventory-brief.py [--type <type>]` |
