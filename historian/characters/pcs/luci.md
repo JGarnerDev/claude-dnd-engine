@@ -35,7 +35,7 @@ spotlight_hooks:
   - hook: "learn whether she was ever truly in the sun temple, or only remembers it through genetic memory"
     status: open
   - hook: "put a name to the disembodied radiant voice that guides her: Sabathiel, or something else"
-    status: open
+    status: seeded
   - hook: "trace the vanished sun worshippers who abandoned the temple and wrote its dead language"
     status: open
   - hook: "the Void Serpent that shattered the temple surfaces again"

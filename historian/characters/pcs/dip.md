@@ -39,7 +39,7 @@ spotlight_hooks:
   - hook: "find the twin sister they believe survived the blaze"
     status: open
   - hook: "uncover and confront the raiders who slaughtered and burned their home hamlet"
-    status: open
+    status: seeded
   - hook: "interpret the guiding hands in their visions, and why their sister's are absent"
     status: open
   - hook: "pilgrimage to grasp the divine-mortal bond"

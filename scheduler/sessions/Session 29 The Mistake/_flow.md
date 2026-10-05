@@ -51,12 +51,14 @@ flowchart TD
   end
 
   subgraph SC2["Scene 2 · Somewhere You Can Gather Strength"]
+    S1_DIP_SMOKE["[x] S1_DIP_SMOKE<br/>Dip lands smelling a burning tavern again<br/>One sensory line to Ben before the stance roll<br/>Echo of the hamlet only — no link claimed to its raiders<br/>Nudges Dip toward the doorway and Sable, not a lock"]
     S1_STANCE{"[x] S1_STANCE<br/>Each player picks how their character lands:<br/>steady themselves, or read the yard?<br/>One roll each at DC 12, then initiative"}
     S1_STEADY["[x] S1_STEADY<br/>Steady — try to land square on your feet<br/>CON, Athletics or Acrobatics, and the roll sets where they land<br/>17+: pick your spot · 12–16: about 30 ft from the bandits<br/>11 or less: prone, in the middle of the bandits — no lost turn"]
     S1_READ["[x] S1_READ<br/>Read — take in the yard while still falling into it<br/>WIS, INT or Perception<br/>Succeed for an initiative edge, or one raider caught flat-footed"]
     S1_SCATTER["[x] S1_SCATTER<br/>Nobody lands facing the same way, so the party starts split<br/>Places the Read PCs only — Steady's roll placed the rest<br/>Some PCs out in the yard near the cask-runners,<br/>some by the doorway where Sable is<br/>This is a positioning puzzle, not a punishment"]
     S1_MIDRAID["[x] S1_MIDRAID<br/>The raid is already half finished when they arrive<br/>Nella and half her crew are long gone with most of the ale<br/>Wick's crew has already hit the far side of town and left"]
     S1_ENGAGE{"[x] S1_ENGAGE<br/>Does the party step in, or stand back and watch?<br/>The campaign's first real choice<br/>Raiders jeer at anyone who landed among them:<br/>more pitiful villagers, cowards who should run"}
+    S1_DIP_SMOKE --> S1_STANCE
     S1_STANCE --> S1_STEADY --> S1_SCATTER
     S1_STANCE --> S1_READ --> S1_SCATTER
     S1_SCATTER --> S1_MIDRAID --> S1_ENGAGE
@@ -75,7 +77,11 @@ flowchart TD
     S1_DEED["[x] S1_DEED<br/>Objective met: Sable is safe and some stock is saved<br/>This is the favour Sable pays for in Scene 5<br/>with the 10 percent share"]
     S1_BOTCH["[x] S1_BOTCH<br/>Worst case, and it is still not a death<br/>The big one hauls Sable off, still bound, and more stock walks<br/>Deeper setback plus a rescue hook<br/>No PC dies in the premiere"]
     S1_LOOT["[x] S1_LOOT<br/>Right after the fight, in the yard, before the town arrives<br/>The Earshot Crystals, one per PC, taken off the raiders<br/>Touch to speak, words only, to one holder you can see<br/>or to all holders within 300 ft. Confirmed by Jeff<br/>The raiders wore them and never used them, so they are a mystery<br/>Never say the twist: Nella and a few of her crew kept theirs<br/>Nobody levels tonight. Say levels are coming, one PC at a time"]
+    S1_DIP_DUEL["[x] S1_DIP_DUEL<br/>Dip takes the big one off Sable — the marquee hit<br/>Adrenaline Rush Dash reaches him; dragging halves his speed<br/>Shove (DC 13) or a Frenzy hit below half breaks his grip<br/>Halsby may cut Sable free — Dip takes the man"]
+    S1_LUCI_STORM["[x] S1_LUCI_STORM<br/>Luci's Energy Storm on the cask lane<br/>Haulers must keep moving through it: E12 to the cart at N12<br/>Cart end catches cask, both haulers and the hedge-mage<br/>Paul's sheet sets the numbers; rubble feeds the vortex"]
     S1_FIGHT --> S1_FORK
+    S1_SABLE --> S1_DIP_DUEL --> S1_MORALE
+    S1_CASKS --> S1_LUCI_STORM --> S1_DEED
     S1_FORK -->|"chase the cask"| S1_CASKS
     S1_FORK -->|"save Sable"| S1_SABLE
     S1_FIGHT --> S1_OUTS
@@ -104,10 +110,11 @@ flowchart TD
     S1_IGGY["[x] S1_IGGY<br/>Iggy plays the room he just saved — his spotlight beat<br/>Describe only what the table sees: the room sings along,<br/>an unknown phrase, the hearth goes still then eases (Asher accepts Sah)<br/>Dip rolls Insight privately: a nesting doll of reality, Sah inside Iggy<br/>He is overdue, 2 rotation turns against everyone else's 4<br/>Seeds his open hook, the unfinished song trapped in the viol<br/>About two minutes, no resolution"]
     S1_ANTIDOTE["[x] S1_ANTIDOTE<br/>Only if Halsby was bitten: Sable already has the antidote<br/>A cup from her cellar spring, and no explanation<br/>Do not let her name Asher here"]
     S1_BOON["[x] S1_BOON<br/>Close on the relic doing nothing at all<br/>Odibli takes the stone out and it is warm as a pocketed<br/>pebble and completely dead<br/>Without this beat the season reads as a detour<br/>instead of the errand the relic sent them on"]
-    S1_WREN --> S1_OFFER --> S1_ODIBLI --> S1_IGGY --> S1_BOON
+    S1_LUCI["[x] S1_LUCI<br/>Luci looks up, and the voice names the moon<br/>One huge bitten moon, a glittering debris ring; locals never look up<br/>Louder and clearer than in Barovia: one Dead Sun word for the moon<br/>Paul invents the word. Then, clearer still: closer<br/>Lands the same minute the relic goes dead"]
+    S1_WREN --> S1_OFFER --> S1_ODIBLI --> S1_IGGY --> S1_LUCI --> S1_BOON
   end
 
-  S1_REST --> S1_STANCE
+  S1_REST --> S1_DIP_SMOKE
   S1_DEAL -->|"he reaches the yard as the light comes down"| S1_FIGHT
   S1_BITE -.->|"if bitten"| S1_ANTIDOTE
   S1_ENGAGE -->|"they step in"| S1_FIGHT
@@ -129,11 +136,11 @@ flowchart TD
   classDef open fill:#EDEAE6,stroke:#9A948C,color:#4A453F,stroke-dasharray:4 3
   classDef fail fill:#EFE2E2,stroke:#A3736E,color:#4A2C29,stroke-dasharray:4 3
 
-  class S1_FIGHT,S1_CASKS,S1_SABLE,S1_MORALE combat
+  class S1_FIGHT,S1_CASKS,S1_SABLE,S1_MORALE,S1_DIP_DUEL,S1_LUCI_STORM combat
   class S1_WOODS,S1_ASK,S1_HAGGLE,S1_REPLAY,S1_REST,S1_STEADY,S1_READ,S1_SCATTER,S1_MIDRAID,S1_PARLEY,S1_SCARE,S1_TRICK,S1_TOWN,S1_WREN social
   class S1_SNAKE,S1_ANSWER,S1_STANCE,S1_ENGAGE,S1_FORK,S1_OUTS decision
   class S1_DEAL,S1_ANTIDOTE,S1_DEED,S1_OFFER,S1_LOOT stake
-  class S1_NELLA,S1_NAMES,S1_BOON,S1_ODIBLI,S1_IGGY seed
+  class S1_NELLA,S1_NAMES,S1_BOON,S1_ODIBLI,S1_IGGY,S1_DIP_SMOKE,S1_LUCI seed
   class S1_BITE,S1_BOTCH fail
 ```
 
@@ -167,3 +174,11 @@ while the rest of the session is still draft.
 - `S1_DEAL` — Scene 1b, The catch, and `## Rewards`; approved 2026-10-04
 
 `S1_ANTIDOTE` stays `[-]`, because it sits in Scene 5 behind draft beats.
+
+Spotlight top-up for Dip and Luci, approved by Jeff on 2026-10-05 ("Committed"). Backing notes are
+the matching headings in `Session 29 The Mistake.md`:
+
+- `S1_DIP_SMOKE` — Scene 2, S1_DIP_SMOKE; approved 2026-10-05
+- `S1_DIP_DUEL` — Scene 3, S1_DIP_DUEL; approved 2026-10-05
+- `S1_LUCI_STORM` — Scene 3, S1_LUCI_STORM; approved 2026-10-05
+- `S1_LUCI` — Scene 5, S1_LUCI; approved 2026-10-05

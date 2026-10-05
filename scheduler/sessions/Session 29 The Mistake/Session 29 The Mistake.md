@@ -268,6 +268,23 @@ nothing and nobody crossed with them, and there is no hag to escape.
 knows why he is there: Sable is the target. He starts at the edge nearest the wing's doorway.
 If he is poisoned, he fights poisoned.
 
+#### S1_DIP_SMOKE — Dip lands smelling a burning tavern again
+
+- **Dip's beat, and it is pure echo (set 2026-10-05).** Dip's hamlet ended with a burning
+  tavern, after strangers came in friendly and then struck. They land in a yard where a tavern's
+  wing is smoking and someone inside is shouting. Give Ben one sensory line as Dip comes down,
+  before the stance roll, and let Ben decide what it does to Dip.
+- **Echo only. No link is claimed.** These raiders are not the ones who burned the hamlet, and
+  nothing here may suggest they are. Nothing about the hamlet raiders gets committed tonight.
+- **It points Dip at the doorway.** The pull is toward the shouting and the person trapped
+  inside, not the cask. That sets up `S1_DIP_DUEL`, but it's a nudge, not a lock. If Ben goes
+  for the cask, let him.
+
+> *"Dip — the light is still coming down around you, and the first thing that reaches you isn't
+> a sight. It's the smell. Wet timber, burning. A tavern's worth of it. Somewhere inside that
+> smoke a voice is shouting orders, and you know that sound. Not this yard. Not these people. But
+> you have been here before."*
+
 #### S1_STEADY — Steady — try to land square on your feet
 
 - **Steady** (CON / Athletics / Acrobatics) — land square. The roll also sets where they land:
@@ -400,6 +417,40 @@ the stairs and a shut door to the wing. Those are map-only, not canon, until `/r
   do!"* He bought it cheap and it shows.
 - **The crossbowman, to the runners:** *"Move! Move the bloody barrel!"*
 - **The cask-haulers, blocked:** *"We're not paid for this bit."*
+
+#### S1_DIP_DUEL — Dip takes the big one off Sable
+
+- **Dip's fight cue (set 2026-10-05).** The big one is the fight's marquee hit, and dropping him
+  triggers `S1_MORALE`. Hand that hit to Dip. The smoke beat (`S1_DIP_SMOKE`) already points
+  Dip at the doorway.
+- **Reach.** Dragging Sable halves the big one's speed. Adrenaline Rush (a bonus-action Dash)
+  gets Dip to him in one turn from almost anywhere in the yard.
+- **Breaking his grip.** A Shove (an Unarmed Strike option: he makes a STR or DEX save
+  against DC 13) knocks him off Sable. So does any Frenzy hit (Reckless Attack while raging) that takes him
+  below half HP: he lets go to fight.
+- **Halsby starts nearest the doorway** (B9) and may get there first. That's fine: Halsby cuts
+  Sable free, and Dip takes the man. Don't hold Halsby back to save the moment for Dip.
+- **The big one's line, to Dip only.** He has never seen anyone bigger than him.
+  - *"...Huh."* Then he drops Sable's collar and squares up.
+  - If Dip drops him: no last words. He just stops, and every raider in the yard sees it.
+
+#### S1_LUCI_STORM — Luci's Energy Storm on the cask lane
+
+- **Luci's fight cue (set 2026-10-05).** Give her newly recorded Energy Storm a target worth it:
+  the **cask lane**, from the cask at E12 to the cart at N12:O12, with the hedge-mage standing
+  at N13. At the table in Session 28 the storm *struck anything moving in or out of its radius*.
+  The haulers have to keep moving through it to get the cask out, so it is the perfect zone.
+- **Stage the knot.** By round 2 the haulers are halfway down the lane, and the mage is beside
+  the cart with the crossbowman ~20 ft away. If Luci drops the storm on the cart end of the lane,
+  it holds the cask, both haulers and the mage at once. Use Paul's sheet for the numbers. This
+  plan sets the cue, not the mechanics.
+- **Flavour hook.** The blown-out wall is half rubble, so the vortex has plenty to throw. Let it
+  pick up splinters, scorched slats and staves from a split cask.
+- **Raider reaction:**
+  - Crossbowman: *"Move the bloody barrel!"*
+  - Hauler, staring into the vortex: *"Through **that**?"*
+  - The hedge-mage, who bought one trick cheap and is watching someone with a real one: *"...Oh,
+    no."*
 
 **Lethality note — the one number that matters.** All six attackers focused on one PC is ~30
 damage a round against ~30 average HP: **RTD 1, which is Dangerous — a tier above the pick.**
@@ -684,11 +735,32 @@ detail is the entire budget for tonight.
   - If he pushes: *"I know a great many things about this town. Most of them are about
     plumbing."*
 
+#### S1_LUCI — Luci looks up, and the voice names the moon
+
+- **Luci's beat (set 2026-10-05).** When someone steps outside, Luci is the one who looks up.
+  The sky is one huge moon with a bite out of it and a faint, glittering ring of debris along
+  its path. Nobody in Ashford looks up at it.
+- **The voice is louder and clearer here than it ever was in Barovia.** That's a standing fact
+  of the season, not just tonight. Looking at the moon, it does two things:
+  1. **It names the moon, in the Dead Sun tongue.** One word, warm and certain. **Paul invents
+     the word.** Ask him what Luci hears, and don't supply one. It implies the voice knows this
+     world. Whose voice it is stays open.
+  2. **Then it says "closer."** Clearer than it has ever spoken. Leave it ambiguous: closer to
+     what, or to whom, is not decided.
+- **Placement is the point.** This lands just before `S1_BOON`. The voice gets louder in the
+  same minute the relic goes dead, so let those two sit side by side without comment.
+- **Describe the voice by its effect, the way her sheet does:** warmth she can feel on her face.
+  Paul decides what Luci shares with the others.
+
+> *"Luci, the night air hits you, and so does the sky. One moon, far too big, with a bite taken
+> out of it, and a thin glittering ring trailing along its path like spilled salt. Then the voice,
+> and it isn't distant any more. It's right there, warm on your face like a lamp brought close.
+> It says one word, and you know it means that moon. Paul, what does she hear? And then, softer,
+> clearer than it has ever been: closer."*
+
 #### S1_BOON — Close on the relic doing nothing at all
 
-- **The sky, one line, when someone steps outside.** One huge moon with a bite out of it, and a
-  faint glittering ring of debris along its path. Nobody in Ashford looks up at it (set
-  2026-10-05).
+- **The sky** is now `S1_LUCI`, right before this beat.
 - **The Barovia debt, one line.** Odibli still has [[The Wanderer's Boon]]. It is warm, it is
   inert, it does nothing. Without this line the season reads as a detour instead of the errand
   the relic sent them on.
@@ -839,6 +911,23 @@ really bleeds · whether the Boon ever opens again.
 - **Spotlight commitment:** Iggy's hook *"decode the unfinished final song trapped in the viol"*
   moves `open → seeded` on his PC file when this plan is committed; it becomes `paid` at
   `/recap` if the beat lands.
+- **Spotlight top-up for Dip and Luci (Jeff, 2026-10-05).** The first draft gave Iggy, Odibli
+  and Halsby beats of their own, but Luci none and Dip only a reaction roll inside Iggy's song.
+  Added, all committed:
+  - **Dip:** `S1_DIP_SMOKE` (landing echo) and `S1_DIP_DUEL` (the big one). Seeds Dip's hook
+    *"uncover and confront the raiders who slaughtered and burned their home hamlet"* by echo
+    only, with no link between the two groups. `open → seeded` on Dip's PC file now; it becomes
+    `paid` at `/recap` if the beat lands.
+  - **Luci:** `S1_LUCI_STORM` (Energy Storm on the cask lane) and `S1_LUCI` (the voice names the
+    moon, then says "closer"). Seeds Luci's hook *"put a name to the disembodied radiant voice"*.
+    `open → seeded` on her PC file now; it becomes `paid` at `/recap` if it lands.
+  - **For `/recap`:** canonize Paul's word for the moon, and the standing fact that the voice is
+    louder and clearer in Aethryn.
+  - **Saved for a later session, not this one:** Asher says a phrase that echoes the Dead Sun
+    Worshippers' tongue. That would seed Luci's hook *"trace the vanished sun worshippers"*.
+  - **Sky conflict to settle:** `data/lore/calendar-proposal.md` (not canon) proposes two suns and
+    three moons (Maru, Lethe, Ossin). This plan sets one huge broken moon. The plan wins at the
+    table, so reconcile the proposal before it's canonized.
 - **Mission state:** [[The Stolen Casks]] flips `planned → active` when this session is played.
 - **Wishlist drought:** 15 of 15 items in `meta/campaign-design-preferences.md` are undeployed
   after 28 sessions. Nothing was forced into this plan — they are arc-scale events and a
