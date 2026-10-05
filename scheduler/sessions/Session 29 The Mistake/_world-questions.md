@@ -55,9 +55,8 @@ entity files at `/recap`.
 11. **Locals see the party as strangers, not freaks.** Sable has the town used to unusual
     blood. People stare because the party are outsiders who fell out of the sky, not because
     of race. The aasimar glow gets whispered about together with the pillar of light.
-12. **Common works.** Velmorans speak a tongue the party hears as Common, with unfamiliar
-    idioms. Riolgatha's highlanders have their own language, which is where the Earshot
-    Crystals pay off later.
+12. **Common works.** Humans and most of Aethryn's people speak Common, Velmorans and
+    Riolgathans alike. A people speaks another language only where its file says so.
 13. **The stolen delivery was worth 1,000 gp, and Sable had paid only a third.** She owes Silas
     about 650 gp. Silas's tangent lands on both numbers. She is close to ruined, and that's why
     the stake offer is desperate rather than generous. She'd never say so.

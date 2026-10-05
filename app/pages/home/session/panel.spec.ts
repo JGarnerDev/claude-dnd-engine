@@ -26,6 +26,17 @@ describe('mountPanel', () => {
     expect(aside.querySelector('.sr-section summary')!.textContent).toBe('Orientation');
   });
 
+  it('shows the established town / region / world facts above the plan sections', () => {
+    const d = fixture();
+    d.established = [{ title: 'Town — Ashford', md: '- A ford-town on the [[Ashford]] creek' }];
+    const resolve = makeResolver(d.entities);
+    const aside = document.createElement('aside');
+    mountPanel(aside, d, resolve, (n) => !!resolve(n));
+    const groups = [...aside.querySelectorAll('.sr-group')].map((g) => g.textContent);
+    expect(groups.slice(-2)).toEqual(['Established', 'Session plan']);
+    expect(aside.querySelector('.sr-section summary')!.textContent).toBe('Town — Ashford');
+  });
+
   it('search shows ranked results, and Escape clears it', () => {
     const { aside, panel } = setup();
     const input = aside.querySelector<HTMLInputElement>('.sr-search')!;

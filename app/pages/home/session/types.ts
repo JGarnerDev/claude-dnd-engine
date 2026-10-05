@@ -86,6 +86,8 @@ export interface SessionData {
   edges: FlowEdge[];
   scenes: Scene[];
   sections: Section[];
+  // Town / region / world facts from the folder's optional _established.md.
+  established?: Section[];
   quickRefs: Record<string, string>;
   roster: string[];
   party: PartyMember[];

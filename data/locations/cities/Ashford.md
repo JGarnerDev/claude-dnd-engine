@@ -92,7 +92,7 @@ village knows about and treats as risky to deal with. She has never harmed the v
 *(DM-only: she is a vampire, nobody knows it, and she is the target of [[Wick]]'s hunt. She is
 Skyler's cameo, and her name waits on Skyler.)*
 
-Ashford speaks the common Velmoran tongue, pays in plain gold, silver and copper, and treats
+Ashford speaks Common, pays in plain gold, silver and copper, and treats
 odd blood as unremarkable, because it is used to [[Sable Wren]]. Lord Cael's hall is a modest
 fortified seat 3–4 days' ride north: too far to come in time, near enough for a letter.
 

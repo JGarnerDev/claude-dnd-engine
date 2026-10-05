@@ -16,6 +16,8 @@ and its flow chart (`_flow.md`) -- and emits the JSON the session runner
     edges:   [{from, to, label, dashed}],
     scenes:  [{id, key, title, md}],         # flow subgraph + matching `### Scene <key>` prose
     sections:[{title, md}],                  # the plan's other `##` sections (Orientation, Rewards...)
+    established:[{title, md}],               # `##` sections of the folder's optional _established.md
+                                             # (town / region / world facts, table-safe)
     quickRefs: {entity name: md},            # `## NPC Quick-Reference` subsections
     roster:  [entity name],                  # wikilinks in the session + act frontmatter
     party:   [{name, player, raceClass, level, status, path}],
@@ -240,6 +242,16 @@ def previous_sessions(root: Path, number, campaign: str) -> list:
     } for n, f, raw, fm in picks]
 
 
+def established(folder: Path) -> list:
+    """The `##` sections of the session folder's optional _established.md -- what the
+    table can be told about the town, region and world. Text before the first heading is
+    a note to the DM and is dropped."""
+    f = folder / '_established.md'
+    if not f.exists():
+        return []
+    return [{'title': t, 'md': md} for t, md in split_headings(split_body(read_text_no_bom(f)), 2) if t]
+
+
 def party(root: Path) -> list:
     campaign_dir = root / 'scheduler' / 'campaign'
     files = sorted(campaign_dir.glob('*.md')) if campaign_dir.exists() else []
@@ -345,6 +357,7 @@ def main() -> None:
         'edges': edges,
         'scenes': scenes,
         'sections': sections,
+        'established': established(folder),
         'quickRefs': quick_refs,
         'roster': deduped,
         'party': party(root),

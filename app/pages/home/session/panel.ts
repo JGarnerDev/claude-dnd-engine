@@ -1,13 +1,14 @@
 // The side panel. Search box on top; below it either search results, an open
 // entity (with a back stack), or the default view: party, entities on this card,
-// entities in this scene, the act roster, and the plan's other sections.
+// entities in this scene, the act roster, what's established about the town,
+// region and world, and the plan's other sections.
 
 import { escapeHtml, inline, plainText, renderMarkdown } from './markdown.js';
 import type { Known } from './markdown.js';
 import { searchEntities } from './entities.js';
 import type { Resolver } from './entities.js';
 import { entityBody, entityHeader, fetchEntity, LAYER_LABEL } from './entity-view.js';
-import type { EntityRef, SessionData } from './types.js';
+import type { EntityRef, Section, SessionData } from './types.js';
 
 export interface PanelContext {
   onCard: EntityRef[];
@@ -47,14 +48,16 @@ export function mountPanel(aside: HTMLElement, data: SessionData, resolve: Resol
       </button>`).join('');
     const cardSet = new Set(ctx.onCard);
     const roster = data.roster.map((n) => resolve(n)).filter((e): e is EntityRef => !!e);
-    const sections = data.sections
-      .map((s) => `<details class="sr-section"><summary>${escapeHtml(s.title)}</summary><div class="sr-md">${renderMarkdown(s.md, known)}</div></details>`)
-      .join('');
+    const details = (s: Section) =>
+      `<details class="sr-section"><summary>${escapeHtml(s.title)}</summary><div class="sr-md">${renderMarkdown(s.md, known)}</div></details>`;
+    const sections = data.sections.map(details).join('');
+    const established = (data.established ?? []).map(details).join('');
     body.innerHTML = `
       <h3 class="sr-group">Party</h3><div class="sr-party">${party}</div>
       ${group('On this card', ctx.onCard)}
       ${group('In this scene', ctx.inScene.filter((e) => !cardSet.has(e)))}
       ${group('Act roster', roster)}
+      ${established ? `<h3 class="sr-group">Established</h3>${established}` : ''}
       <h3 class="sr-group">Session plan</h3>${sections}`;
   };
 

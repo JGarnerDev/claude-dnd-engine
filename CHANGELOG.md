@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.15.0] — 2026-10-05
+
+### Added
+
+- **Session runner shows what's established.** A session folder can carry an optional `_established.md`: table-safe facts about the town, region and world, one `##` section per scale. `scripts/session-cards.py` sends it as `established`, and the runner's side panel lists it under **Established**, above the session plan, with wikilinks opening their entities. Session 29 has one, built from its `_world-questions.md` prep (Ashford; Stonemarch and the Moorthistle; Velmora and Aethryn), with DM-only lines marked.
+
 ## [0.14.0] — 2026-10-05
 
 ### Added
