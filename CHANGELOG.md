@@ -6,6 +6,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.14.0] — 2026-10-05
+
+### Added
+
+- **Battlemaps, rendered from text.** A session's maps are now text grids kept beside the plan (`<session folder>/maps/*.txt`, one char per 5-ft square, gitignored as local reference), with tokens, zones and labels by grid ref. `scripts/battlemap.py --session <n>` renders each one twice into `maps/battlemaps/session-<n>/` (gitignored): a clean VTT image, 70 px a square (`--px 100` for Foundry), and a DM key with grid refs, tokens, zones and a legend. Session 29 has three: the New Wing fight, Halsby's woods, and the Lioness's old core. Its plan now names each position by grid ref.
+- **Standing location maps.** `maps/battlemaps/<location>/` holds maps of a place that are kept and grown across sessions, rendered beside their layout (`battlemap.py <folder>`). The Golden Lioness has two: indoors (ground floor, core and wing) and outdoors (the lot, with open ground west, southwest and south for base building, down to a dock on the tributary). Grid refs now run past Z (AA, AB…).
+- **Two map kinds, no hybrids** (`maps/CLAUDE.md`). Battle maps (5-ft squares) are built in Roll20, where walls, doors, fog, lights and GM-layer reveals live. Overview maps (world, region, town; anything coarser) are built in Inkarnate. A map is never both: a place that needs both gets two maps.
+- **Town-scale maps.** A layout can set `scale: <feet per square>` (default 5). Ashford has a first draft at 25 ft a square (`maps/battlemaps/ashford/`): the tributary bending behind the Lioness and south past the ford, the market square, and markers for the named places. Most placements on it are not canon yet, and the map says which.
+
 ## [0.13.1] — 2026-10-05
 
 ### Fixed

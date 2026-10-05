@@ -252,7 +252,8 @@ If he is poisoned, he fights poisoned.
 
 - **Steady** (CON / Athletics / Acrobatics) — land square. The roll also sets where they land:
   - **17+** — they pick their spot anywhere in the yard.
-  - **12–16** — they land about 30 ft from the nearest bandits. Normal start.
+  - **12–16** — they land in the Light zone (M9:O10 on the map), 15–20 ft from the nearest
+    raider. Normal start.
   - **11 or less** — they land prone, in the middle of the bandits. No lost turn: standing up
     costs half their movement, as normal.
 
@@ -341,6 +342,23 @@ Raw 250 XP, ×2 group multiplier → **~500 adjusted**.
   shoot at either side. The mage is at the cart. The big one is inside the wing with Sable.
 - **The blown-out wall is half rubble (difficult terrain).** It is a second way into the wing,
   but a slow one. The doorway stays the fast route, so the screen bandit still matters.
+
+**Grid refs (Jeff, 2026-10-05)** — the drawn map is `maps/new-wing.txt` in this folder. Render
+it with `uv run scripts/battlemap.py --session 29`. That writes a clean VTT image and a DM key
+with these refs to `maps/battlemaps/session-29/`. A1 is the top-left square.
+
+- **The big one** I3 and **Sable** J3. The **back door** is D3, with his horse tied at B3.
+- **The last cask** E12, with haulers at E11 and E13. **The cart** is at N12:O12, beside the
+  open gate at P12:P13.
+- **Screen** F8, in the main doorway (F8:G8). **Crossbow** J13, on the tall stack (J13:K14). He
+  sees Sable straight up column J, through the blown wall (J8:L9). **Mage** N13.
+- **Halsby** B9, at the alley's mouth.
+- **Landing zones:** Light M9:O10 (Steady 12–16). Read split A F14:G15 (runners) and B H9:I10
+  (doorway).
+
+**Scenes 1b and 5 have maps too:** `maps/halsby-woods.txt` (talker G8, snake J11, Halsby G11)
+and `maps/old-core.txt` (Sable behind the bar at D2). The core map places the cellar hatch,
+the stairs and a shut door to the wing. Those are map-only, not canon, until `/recap`.
 
 > *"Smoke is still rolling out of a blown-open wall of the new wing. Through it, a big man is
 > dragging a tiefling woman across the bare floor by her collar. Her wrists and ankles are roped

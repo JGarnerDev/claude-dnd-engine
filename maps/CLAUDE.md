@@ -105,3 +105,27 @@ Unnamed city markers carry stable IDs in `maps/world/city-registry.md` (campaign
 
 - **ID format:** `C{col}-{row}{letter}` — col/row are map grid cells (1-indexed), letter disambiguates within the same cell (e.g. `C05-04a`).
 - IDs persist until a city is named and graduated (see the **City graduation** steps above). On graduation, remove the registry entry and add the ID to the entity's `aliases:` field so cross-references resolve.
+
+### Two kinds of map, two tools, no hybrids
+
+Every map is exactly one of two kinds. The scale decides which, and the kind decides the tool.
+
+- **Battle map**: 5-ft squares, made for tokens moving on a grid (fights, and scenes the party plays out on a grid). **Built in Roll20.** Doors and windows on Dynamic Lighting walls, fog of war, light sources and GM-layer reveals all live there. Background art comes from the `-vtt.png` render, or from Inkarnate if a nicer picture is worth the time. Either way the map is finished in Roll20, because Roll20 holds what players interact with.
+- **Overview map**: anything coarser than 5 ft a square (world, region, town). Made for orientation and travel, with nothing to interact with. **Built in Inkarnate.** The world map already lives there (see above).
+
+**No hybrids.** A map never serves both jobs. If a place needs both, such as a town to find your way around and a street fight inside it, make two maps: an overview of the town and a battle map of the street. Never put a battle map's grid, walls or tokens on an overview, or an overview's sprawl on a battle map.
+
+A layout's `scale:` line says which kind it is. Default 5 means a battle map. Anything larger means an overview, and its `.txt` and renders are a draft blueprint for Inkarnate, not a deliverable.
+
+Current maps:
+
+- **Battle maps:** Session 29's New Wing, Halsby's woods and old core, and the Golden Lioness's indoors and outdoors. The outdoors map stays a 5-ft battle map, so base-building is planned on the same grid a raid would be fought on.
+- **Overview maps:** the world map, and the Ashford town draft (`maps/battlemaps/ashford/`, 25 ft a square).
+
+### Battlemaps
+
+Session battlemaps are **text layouts kept beside the session plan, gitignored** (`scheduler/sessions/<Session folder>/maps/<name>.txt`, one char per 5-ft square, A1 top-left) and rendered by `uv run scripts/battlemap.py --session <n>`. The script's header documents the layout format and terrain chars. Output goes to `maps/battlemaps/session-<n>/` as `<name>-vtt.png` (clean, for Roll20/Foundry/Owlbear; `--px 100` for Foundry) and `<name>-key.png` (DM copy). Both are gitignored like every map image. Layouts are local planning reference, not record: anything the table needs (grid refs, distances) goes into the session plan itself. Edit the `.txt` and re-render; never hand-edit the PNGs.
+
+**Standing location maps** — maps of a place the party keeps coming back to, grown over time (the Golden Lioness's `indoors.txt` and `outdoors.txt`) — live in `maps/battlemaps/<location>/` and render beside their layout: `uv run scripts/battlemap.py maps/battlemaps/golden-lioness`. Each carries a `note: State:` line naming the session it reflects. After a `/recap` that changes the place (a room fitted out, a structure built), edit the grid and restamp that line. They are gitignored like the session layouts.
+
+A layout can set `scale: <feet per square>` (default 5) to draft an overview map, such as `maps/battlemaps/ashford/`, a town drawn at 25 ft a square. Overview drafts are blueprints for Inkarnate (see above). Placements on a draft overview are not canon until confirmed. Each draft says in its notes which placements are canon and which are only drawn.

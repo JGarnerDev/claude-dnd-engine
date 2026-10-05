@@ -27,6 +27,11 @@ maps/**/*.webp
 maps/**/*.jpg
 maps/**/*.jpeg
 maps/**/*.gif
+# Battlemap layouts (scripts/battlemap.py input) are local reference for planning talk,
+# not record -- the session plan carries the grid refs that matter.
+scheduler/**/maps/*.txt
+historian/**/maps/*.txt
+maps/battlemaps/**/*.txt
 app/node_modules
 # Session recordings. Audio is large and binary -- it stays on the DM's machine; the
 # transcript in recaps/transcripts/ is the committed record of what was said.
