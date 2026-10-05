@@ -30,7 +30,7 @@ loose_threads:
   - "Three seeds owed to [[Davian Martikov]] — two from [[Baba Lysaga]], one from the druids of [[Yester Hill]]. Barovia-side; acknowledged in one line, not pursued"
   - "[[The Wanderer's Boon]] is inert in Odibli's hand and must be shown to be inert this session"
   - "Luci's energy storm feature (Session 28 new_entity) — name and mechanics still unrecorded"
-  - "[[Halsby]]'s reason to be in Ashford is settled (Scene 1b, Asher's bargain). Still open: what the order doesn't like at Bay-Head Hub, and the later job he owes Sable"
+  - "[[Halsby]]'s reason to be in Ashford is settled (Scene 1b, Asher's bargain). Still open: what the order doesn't like at [[Tassad]], and the later job he owes Sable"
 difficulty_attrition: light
 difficulty_lethality: standard
 depth: narrated
@@ -68,7 +68,7 @@ stopped working.
   are on his PC file now (Half-Elf, Haunted One). Halsby's `level_confirmed` stamps at this
   session's `/recap`, which clears the LEVEL STALE flag.
 - **Tell Kellan before Tuesday, and only this:** Halsby is on the road for the Nightveil.
-  [[Sister Maerith]] sent him to the bay's big harbor city (Bay-Head Hub, dot 6, not named yet)
+  [[Sister Maerith]] sent him to [[Tassad]], the bay's big harbor city (dot 6)
   to find out what, or who, is behind a rumor the order dislikes. The job is expected to take
   months. **Do not tell him** about the animals, Asher, or the bargain.
 - Session 28 left three unresolved `new_entities`: Baba Lysaga's scarecrow constructs
@@ -119,7 +119,7 @@ false date.
 
 - **Trigger:** right after Scene 1, while the light still holds the other four in the transit.
   Cut away to Halsby. *Meanwhile, a few miles off...*
-- **Location:** the woods off the road to Bay-Head Hub, a few miles from [[Ashford]]. A stream
+- **Location:** the woods off the road to [[Tassad]], a few miles from [[Ashford]]. A stream
   that feeds the aquifer under the town runs nearby, and that is how Asher reaches here.
 - **NPCs present:** **Asher** ([[Aashal-Groon Mellenegon Borak]]), riding two animals at once.
   Halsby has never heard of him, and Asher does not give his name.
@@ -434,7 +434,7 @@ act file).
 - **They go straight at the feud.** Give the next rung — someone is paying these men — and stop.
   Harrow Bane's name comes from the town, not from a corpse. The leash is discoverable across
   the act, never handed over in session one.
-- **Halsby kills the animals, or walks off toward Bay-Head Hub.** He can. The talker drops dead
+- **Halsby kills the animals, or walks off toward [[Tassad]].** He can. The talker drops dead
   the moment it is hit, and its eyes go dark. The snake bites first if he turns his back.
   Asher tries once more, through a bird, a fox, anything nearby. If Halsby still walks, let him
   go: the poison sends him back to Ashford within the hour, because the antidote is only at the
@@ -459,7 +459,7 @@ really bleeds · whether the Boon ever opens again.
 
 - **Halsby's intro came from a spitball:**
   `spitball/act-1-the-hearth-at-ashford/halsby-intro-green-eyed-animal.md` (`state: used`).
-  Two blanks are parked there for later: what the order dislikes at Bay-Head Hub, and the
+  Two blanks are parked there for later: what the order dislikes at [[Tassad]], and the
   later job Halsby owes Sable.
 
 - **Deployment tracking:** *in medias res* is used here (`meta/literary-devices.md`). At

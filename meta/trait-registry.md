@@ -23,6 +23,7 @@ Used during elaboration drafting to prevent slot collisions within each entity t
 
 - [[Solenne]] — growing human settler port, tilts the Concord's balance
 - [[Ashford]] — ford-town bled by raiders its own lord can't stop
+- [[Tassad]] — rich hungry port paying a toll its own guild protects
 
 ## Other
 

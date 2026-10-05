@@ -38,7 +38,7 @@ flowchart TD
   end
 
   subgraph S1_HALSBY["Scene 1b · The Green Eyes — Halsby's intro"]
-    S1_WOODS["[x] S1_WOODS<br/>Halsby on the road to Bay-Head Hub, on the Nightveil's errand<br/>An animal Kellan picks stops him on the path<br/>Green eyes leaking smoke, a voice inside his head<br/>Asher is riding it, and does not give his name"]
+    S1_WOODS["[x] S1_WOODS<br/>Halsby on the road to Tassad, on the Nightveil's errand<br/>An animal Kellan picks stops him on the path<br/>Green eyes leaking smoke, a voice inside his head<br/>Asher is riding it, and does not give his name"]
     S1_ASK["[x] S1_ASK<br/>The ask: save Sable at the brewery in Ashford, now<br/>and later help her with one more thing<br/>The offer: protection from the fade, as the Shadowless Spear<br/>Halsby keeps his spear and shard the whole time"]
     S1_SNAKE{"[x] S1_SNAKE<br/>Does he spot the snake hidden nearby?<br/>Within 10 ft his blindsight finds it<br/>Otherwise Stealth 14 against passive Perception 11"}
     S1_HAGGLE["[x] S1_HAGGLE<br/>He calls out the threat and bargains<br/>Persuasion or Intimidation DC 13<br/>Success: the spear comes in 1 to 2 sessions, not 3 to 4"]

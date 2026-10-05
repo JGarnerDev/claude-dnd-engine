@@ -5,7 +5,6 @@ exists: false
 contributed_by: paul
 state: active
 aliases:
-  - Tassad
   - The Triumvirate
 tags:
   - faction/guild
@@ -16,6 +15,7 @@ importance: major
 rulership: [[Grand Archon]]
 relates_to:
   - [[Magic & the Arcane]] (embodies the extreme end of guild spellcaster policing)
+  - [[Tassad]] (seat; the basin's largest city)
 motives:
   - Maintain a complete registry of every recognised Speaker of the Word in the region
   - Preserve the precedence and portfolio boundaries between the three tower-guilds
@@ -30,6 +30,12 @@ description: "A triumvirate of mage-guilds seated in the three towers of Tassad,
 The Templar Triumvirate is seated at [[Tassad]] — three towers of marble, onyx, and malachite, each roughly half a kilometre across and reaching nearly a full kilometre into the air. The towers converge on a suspended "saucer" structure hanging above them, some two and a half kilometres across, where the Triumvirate's shared business is done.
 
 Each tower houses one of three mage-guilds. Each guild oversees a **limited portfolio of magic schools** — no single tower commands the whole of the arcane. The exact division of schools between marble, onyx, and malachite is not yet fixed.
+
+## In the basin
+
+[[Tassad]] is the biggest city in the [[Calenmere Basin]], on the north shore of the bay. The Triumvirate is one of the basin's three wizard guilds: one of the two ancient schools, and the one that **underwrites the strait toll**. Toll silver buys its standing contract with the strait nation, so every ship [[Tassad]] sends out pays a toll its own resident guild protects.
+
+Its registry is law inside [[Tassad]] and across Blue. The other two guilds refuse it beyond Blue, and that refusal is how the rivals fight.
 
 ## The Archon Council
 
@@ -49,4 +55,4 @@ The Templars are the Triumvirate's enforcement arm. They **police magic use** ac
 ## Notes
 
 - The three tower school-portfolios are deliberately unassigned — a DM/Paul elaboration slot.
-- [[Tassad]] (the tower complex) is not yet its own location entity; spawnable later.
+- [[Tassad]] is now the city the towers stand in (`data/locations/cities/Tassad.md`).
