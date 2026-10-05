@@ -9,7 +9,7 @@ import type { EntityRef } from './types.js';
 
 // What a layer means at the table: historian is canon, data is unplayed pool,
 // scheduler is the plan.
-export const LAYER_LABEL: Record<string, string> = { historian: 'canon', data: 'pool', scheduler: 'plan' };
+export const LAYER_LABEL: Record<string, string> = { historian: 'canon', data: 'pool', scheduler: 'plan', meta: 'loot' };
 
 const cache = new Map<string, Promise<string>>();
 

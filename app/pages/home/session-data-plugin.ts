@@ -16,7 +16,8 @@ import { runPython } from './run-python.js';
 
 const VIRTUAL_ID = 'virtual:session-data';
 const RESOLVED_ID = '\0' + VIRTUAL_ID;
-const ENTITY_DIRS = ['data', 'historian', 'scheduler'];
+// meta/loot-options holds the items a plan hands out (confirmed loot options).
+const ENTITY_DIRS = ['data', 'historian', 'scheduler', 'meta/loot-options'];
 
 function extract(repoRoot: string): string {
   const args = ['--root', repoRoot];

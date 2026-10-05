@@ -26,6 +26,12 @@ describe('inline', () => {
 });
 
 describe('renderMarkdown', () => {
+  it('renders indented blockquotes and headings without hanging', () => {
+    const html = renderMarkdown('- read aloud:\n\n       > *"The room\'s carrying the tune"*\n       > now, badly\n\n   ### Aside');
+    expect(html).toContain('<blockquote><p><em>&quot;The room\'s carrying the tune&quot;</em> now, badly</p></blockquote>');
+    expect(html).toContain('<h5>Aside</h5>');
+  });
+
   it('renders headings, paragraphs and blockquotes', () => {
     const html = renderMarkdown('## Title\n\nline one\nline two\n\n> *quoted*\n> more');
     expect(html).toContain('<h4>Title</h4>');

@@ -41,6 +41,7 @@ from lib.common import (  # noqa: E402
 )
 
 ENTITY_DIRS = ['data', 'historian', 'scheduler']
+LOOT_DIR = 'meta/loot-options'
 
 _FM_RE = re.compile(r'^---\r?\n(.+?)\r?\n---\r?\n?', re.S)
 _WIKI_RE = re.compile(r'\[\[([^\]|]+)(?:\|[^\]]*)?\]\]')
@@ -176,6 +177,22 @@ def entity_index(root: Path) -> list:
                 'aliases': fm.get('_list_aliases', []),
                 'path': f.relative_to(root).as_posix(),
             })
+    # Confirmed loot options are items the plan hands out ([[The Shadowless Spear]]),
+    # but they live in meta/ with `item:` instead of `name:`. Options still under
+    # discussion stay out -- they are not part of any plan yet.
+    for f in entity_md_files(root / LOOT_DIR):
+        fm = get_frontmatter(f)
+        if not fm.get('item') or fm.get('status') != 'confirmed':
+            continue
+        out.append({
+            'name': fm['item'],
+            'type': 'item',
+            'subtype': fm.get('class', ''),
+            'description': ' · '.join(filter(None, [fm.get('rarity', ''), fm.get('character', ''), fm.get('form', '')])),
+            'campaign': '',
+            'aliases': [],
+            'path': f.relative_to(root).as_posix(),
+        })
     return out
 
 

@@ -41,13 +41,14 @@ export function renderMarkdown(md: string, known: Known = () => true): string {
       for (i++; i < lines.length && !lines[i].trimStart().startsWith('```'); i++) body.push(lines[i]);
       i++;
       out.push(`<pre>${escapeHtml(body.join('\n'))}</pre>`);
-    } else if (/^#{1,6}\s/.test(line)) {
-      const level = Math.min(6, line.indexOf(' ') + 2);
-      out.push(`<h${level}>${inline(line.replace(/^#+\s*/, ''), known)}</h${level}>`);
+    } else if (/^#{1,6}\s/.test(line.trimStart())) {
+      const level = Math.min(6, line.trimStart().indexOf(' ') + 2);
+      out.push(`<h${level}>${inline(line.replace(/^\s*#+\s*/, ''), known)}</h${level}>`);
       i++;
-    } else if (line.startsWith('>')) {
+    } else if (line.trimStart().startsWith('>')) {
+      // Indented quotes too: read-aloud text often sits under a list item.
       const body: string[] = [];
-      for (; i < lines.length && lines[i].startsWith('>'); i++) body.push(lines[i].replace(/^>\s?/, ''));
+      for (; i < lines.length && lines[i].trimStart().startsWith('>'); i++) body.push(lines[i].replace(/^\s*>\s?/, ''));
       out.push(`<blockquote>${renderMarkdown(body.join('\n'), known)}</blockquote>`);
     } else if (LIST_RE.test(line)) {
       const items: Array<{ depth: number; text: string }> = [];
@@ -59,8 +60,9 @@ export function renderMarkdown(md: string, known: Known = () => true): string {
       }
       out.push(renderList(items, known));
     } else {
-      const body: string[] = [];
-      for (; i < lines.length && lines[i].trim() && !/^(#{1,6}\s|>|```)/.test(lines[i].trimStart()) && !LIST_RE.test(lines[i]); i++) body.push(lines[i].trim());
+      // Always take the first line, so a line no branch claims can't stall the loop.
+      const body: string[] = [line.trim()];
+      for (i++; i < lines.length && lines[i].trim() && !/^(#{1,6}\s|>|```)/.test(lines[i].trimStart()) && !LIST_RE.test(lines[i]); i++) body.push(lines[i].trim());
       out.push(`<p>${inline(body.join(' '), known)}</p>`);
     }
   }

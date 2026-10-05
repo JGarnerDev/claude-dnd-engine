@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.13.1] — 2026-10-05
+
+### Fixed
+
+- **Session runner froze on cards with indented quotes or headings.** The markdown renderer never moved past an indented `>` or `#` line (Scene 5's read-aloud box in Session 29), which hung the tab. Indented quotes and headings now render, and no line can stall the renderer again.
+- **Session runner search now finds confirmed loot.** Items in `meta/loot-options/` with `status: confirmed` (The Shadowless Spear, Earshot Crystals, The Unfinished Binding) are indexed as items, open in the side panel labeled "loot", and resolve the plan's `[[wikilinks]]` to them. Options still under discussion stay out.
+
 ## [0.13.0] — 2026-10-05
 
 ### Added
