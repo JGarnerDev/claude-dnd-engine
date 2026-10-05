@@ -22,7 +22,7 @@ active: true
 relates_to:
   - "[[Harrow Bane]] (his nominal captain — the band is cover)"
   - "[[Ashford]] (where he stages the flush)"
-description: "Bandit lieutenant in name — in fact an elf swordlock working as a sanctioned mage-guild hunter. His guild detected a vampire somewhere in the region and he is using the band as cover to move through the borderlands looking for it. He hits the far half of the raid, and the town remembers him as the strange marked man."
+description: "Bandit lieutenant in name — in fact an elf swordlock working as a sanctioned mage-guild hunter. His guild detected a vampire somewhere in the region (DM-only: Skyler's witch, Ashford's risky healer) and he is using the band as cover to move through the borderlands looking for it. He hits the far half of the raid, and the town remembers him as the strange marked man."
 
 # --- OPTIONAL (antagonist) ---
 race: "[[Elf]]"
@@ -69,6 +69,18 @@ How the hunt runs, once it is live:
   can be completely right about Wick's methods and still be helping a vampire.
 - **After.** If she runs, the hunt continues, and where it ends depends on what the party
   chose to do about her.
+
+### The target (decided 2026-10-05)
+
+**She is the witch Skyler plays as a cameo.** A friend of the group, Skyler, will appear as a
+vampire witch of sorts living at the edge of [[Ashford]]. The village knows her as a niche
+healer, the one you go to when the herb-wife can't help. Locals treat her as risky to deal
+with. She does not harm the village, and nobody knows she is a vampire.
+
+This is the order the act plays it in. The party meets her first as a useful, risky healer, so
+by the time Wick stages the flush (act Session 3) and names her (act Session 4) they already
+have a relationship with her and a real choice. Her name, where she lives, and what her healing
+costs wait on Skyler. Give her an entity file once those are settled.
 
 ## Session 1
 

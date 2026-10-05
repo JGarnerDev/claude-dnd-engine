@@ -49,10 +49,14 @@ the problem: he is bound to a distant purple crown, under-resourced, nominally r
 for ground he cannot cover, and watching his people get robbed at a pace he can neither
 match nor prove.
 
+He rules from a modest fortified hall 3–4 days' ride north of Ashford. That is too far to
+answer a raid in time, and near enough that a letter, or a visit, is always a real option. The
+crown he is bound to is **Velmora**'s: weak, far off, and busy with its landed families.
+
 ## The grave-debt
 
 Two generations back, **[[House Marlow]]** marched to House Cael's defense, and Corren's
-grandfather died holding the border-river beside Marlow's lord — shielding him, specifically.
+grandfather died holding the Moorthistle beside Marlow's lord — shielding him, specifically.
 A life owed, not merely an alliance honoured. That debt is now pointed the wrong way round:
 the house his grandfather died for is the house bleeding his.
 

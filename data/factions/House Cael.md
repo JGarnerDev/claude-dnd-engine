@@ -22,7 +22,7 @@ relates_to:
   - [[House Marlow]] (former war-ally, now feud rival — "the shield that turned")
   - [[Stonemarch]] (their fief)
   - [[Ashford]] (the town they fail to defend)
-description: "Ashford's loyal-ish purple noble house — proud, honest, under-resourced; the grandfather fell holding the border-river, and that grief is both its weakness and its dignity."
+description: "Ashford's loyal-ish purple noble house — proud, honest, under-resourced; the grandfather fell holding the Moorthistle, and that grief is both its weakness and its dignity."
 
 # --- OPTIONAL (faction) ---
 rulership: [[Lord Corren Cael]]
@@ -42,7 +42,7 @@ Ruled by [[Lord Corren Cael]]; holds the fief of [[Stonemarch]], which contains
 **failing to defend its own town**. Proud, honest, out-matched.
 
 Two generations back, [[House Cael]] and [[House Marlow]] stood allied against a coalition
-of red minor lords pushing to seize the border-river. Marlow was the stronger house — **the
+of red minor lords pushing to seize the Moorthistle. Marlow was the stronger house — **the
 shield** — and marched under its ancestral aegis-banner to Cael's defense. In the last
 decisive battle that broke the coalition and held the river, **Cael's grandfather died
 shielding Marlow's lord** — a life spent so a Marlow could live. The alliance was sealed in

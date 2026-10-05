@@ -513,6 +513,9 @@ setback, rescue hook, higher base-building stakes. **No PC death in the premiere
 
 - **Their first read on the party:** five strangers held the one place the town couldn't get to.
   Mara is grateful and wary in the same breath.
+- **The light.** A few townsfolk saw the pillar mid-fight, and the rumour is already going round:
+  *"they came down out of the sky."* Mara asks once: *"Folk are saying you came down in a light.
+  I'd like to hear it from you."* The party chooses how to explain.
 - **Mara, sample lines** (says each thing once):
   - *"You five. I'm not asking you to put those down. I'm asking you not to make me count
     them."*
@@ -523,9 +526,9 @@ setback, rescue hook, higher base-building stakes. **No PC death in the premiere
 - **Silas, sample tangent.** It wanders, and it always lands on a number:
   *"Funny thing about rope. Everybody needs it, nobody budgets for it. My father used to say a
   town's only as good as its rope, which I always thought was a hanging joke, but no, he meant
-  fences… anyway. That delivery was worth* `<a big number>`*, and she'd paid me* `<about half>`
-  *of it."* Set the figures at the table. Canon doesn't fix them yet, and they get recorded at
-  `/recap`.
+  fences… anyway. That delivery was worth a thousand gold, and she'd paid me a third of it."*
+  Sable owes him about 650 gp, and she's close to ruined (set 2026-10-05). She would never say
+  so.
 - Mara is honest about the arithmetic: [[Lord Corren Cael]] writes letters, and she has too few
   hands.
 - Silas can be the one who mentions, in passing, what the stolen delivery was worth — and that
@@ -617,8 +620,10 @@ detail is the entire budget for tonight.
     as well as the DM, so Iggy's inner experience (and [[Sah]]'s presence) is never narrated.
     What Iggy shares is a player choice.
   - **The sequence, about two minutes, then move on to the loot:**
-    1. The room joins in. A full tavern singing along is close enough to a gathering in worship
-       to wake Dip's gift (his Sage-enclave sense for weak points in reality).
+    1. The room joins in. It is Mara's people only (set 2026-10-05): Mara, Silas, the wounded
+       deputies, and a few families. Play it as a vigil, not a party. A dozen grieving people
+       singing together is still close enough to a gathering in worship to wake Dip's gift (his
+       Sage-enclave sense for weak points in reality).
     2. Mid-song the melody turns somewhere none of them has heard, holds a few bars, and stops.
     3. **The hearth goes still.** No flicker, just steady light, for as long as the phrase lasts.
        *(DM only: Asher senses a divine presence under his town, weighs it, and accepts it,
@@ -653,6 +658,9 @@ detail is the entire budget for tonight.
 
 #### S1_BOON — Close on the relic doing nothing at all
 
+- **The sky, one line, when someone steps outside.** One huge moon with a bite out of it, and a
+  faint glittering ring of debris along its path. Nobody in Ashford looks up at it (set
+  2026-10-05).
 - **The Barovia debt, one line.** Odibli still has [[The Wanderer's Boon]]. It is warm, it is
   inert, it does nothing. Without this line the season reads as a detour instead of the errand
   the relic sent them on.

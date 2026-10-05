@@ -36,10 +36,10 @@ opposition:
   - [[House Cael]] (extortion, deniable raids, betrayal of the old alliance)
 ---
 
-Holds [[Duskwater]], nearer the border-river, ruled by [[Lady Sorcha Marlow]]. Two
+Holds [[Duskwater]], nearer the Moorthistle, ruled by [[Lady Sorcha Marlow]]. Two
 generations back this was the **stronger** house — the shield that marched under its
 ancestral aegis-banner to [[House Cael]]'s defense against a coalition of red minor lords,
-and held the border-river at the cost of Cael's grandfather's life.
+and held the Moorthistle at the cost of Cael's grandfather's life.
 
 The new, callous generation inherited the leverage without the loyalty. It **broke the
 betrothal** that bound the houses — coldly, as insult — and demanded the aegis-banner back.

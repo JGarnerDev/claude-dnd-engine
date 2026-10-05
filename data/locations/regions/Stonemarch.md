@@ -11,7 +11,7 @@ tags:
   - location/region
 
 # --- MANDATORY (region) ---
-geography: "A purple-region frontier fief on the southern edge near the red/purple border-river. Rolling borderland cut by a small tributary that feeds the border-river; the ford the town of Ashford is named for is the fief's soft southern crossing. Western-frontier character — lawless edges, hard travel, homesteads that defend themselves."
+geography: "A purple-region frontier fief on the southern edge near the Moorthistle. Rolling borderland cut by a small tributary that feeds the Moorthistle; the ford the town of Ashford is named for is the fief's soft southern crossing. Western-frontier character — lawless edges, hard travel, homesteads that defend themselves."
 controlling_faction: [[House Cael]]
 
 # --- OPTIONAL (entity base) ---
@@ -35,8 +35,8 @@ climate: "Temperate borderland; the tributary valley greens the ground around As
 
 Lord [[Lord Corren Cael]]'s fief, ruled by [[House Cael]] and containing the town of
 [[Ashford]]. A purple frontier fief on the southern edge of the region, near the
-border-river that divides purple from red — it sits on the **Calenmere political map**,
-in the purple south. A small tributary threads down to the border-river; the ford it
+Moorthistle, the border-river that divides purple (Velmora) from red (Riolgatha) — it sits on the **Calenmere political map**,
+in the purple south. A small tributary threads down to the Moorthistle; the ford it
 makes is the fief's soft southern door, and the town of Ashford takes its name from it.
 
 Stonemarch is stretched thin. Bound to a distant purple crown, under-resourced, its lord

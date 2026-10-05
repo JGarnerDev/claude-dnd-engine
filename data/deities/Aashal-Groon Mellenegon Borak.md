@@ -43,7 +43,7 @@ myths:
 ---
 
 Beneath **[[Ashford]]**, in the flooded caverns and the deep aquifer that feeds the
-border-river, lives **Aashal-Groon Mellenegon Borak**. He is one of a kind — no kin, no
+Moorthistle, lives **Aashal-Groon Mellenegon Borak**. He is one of a kind — no kin, no
 species, nothing else like him anywhere. His true name is a pressure behind the eyes when
 he gives it, which is why **[[Sable Wren]]** clipped it down to **Asher** in the first week
 and never went back.

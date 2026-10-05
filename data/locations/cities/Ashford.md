@@ -31,7 +31,7 @@ relates_to:
   - "[[Duskwater]] (the neighbouring fief the raiders come out of, overland)"
   - "[[The Golden Lioness]] (its brewery and pub)"
   - "[[Calenmere Basin]] (broader region — purple southern edge of the political map)"
-description: "A riverside borderlands town on the small tributary feeding the red/purple border-river, named for the ford that is its southern door. Lord Cael's ground, under-defended and steadily bled by deniable overland raids out of Duskwater — western-frontier country where a homestead learns to defend itself."
+description: "A riverside borderlands town on the small tributary feeding the Moorthistle, named for the ford that is its southern door. Lord Cael's ground, under-defended and steadily bled by deniable overland raids out of Duskwater — western-frontier country where a homestead learns to defend itself."
 
 # --- OPTIONAL (city) ---
 population: "A few hundred — a ford-town and market stop, not a city"
@@ -48,7 +48,7 @@ shops:
 
 Ashford is a riverside borderlands town in **[[Stonemarch]]**, the purple frontier fief of
 **[[House Cael]]**, on the southern edge of the **[[Calenmere Basin]]** near the
-border-river that divides purple from red. It sits on a small tributary threading down to
+Moorthistle, the border-river that divides purple (Velmora) from red (Riolgatha). It sits on a small tributary threading down to
 that river, and it takes its name from the **ford** that tributary makes — the fief's soft
 southern crossing, and the reason there is a town here at all. Goods move through the ford;
 so does everything else.
@@ -63,7 +63,10 @@ whose power has outlasted her mind; and whoever happens to be standing there.
 ## The bleeding
 
 Ashford is preyed on — raids on stock and stores, and the extortion that rides along behind
-them. The raiders present as independent bandits, and the town mostly talks about them that
+them. It has been going on for **two or three years**: a long, slow bleed. The town is worn
+down and cynical, several families have already left, and every season makes Lord Cael's
+letters look worse. The night the party arrives is the first strike to hit the whole town at
+once. The raiders present as independent bandits, and the town mostly talks about them that
 way. They are not. They are **[[Harrow Bane]]**'s band, on a leash held by **[[House Marlow]]** out of
 neighbouring **[[Duskwater]]**, run overland from the southeast and across Ashford's own
 ford, through enough intermediaries that no order exists on paper and the house can disavow
@@ -83,6 +86,16 @@ over the other. **[[Richmond Ellesine]]**, the smith, is of the old war generati
 the forge over the fight; he was there for the thing the two houses are still arguing about,
 and will say so to anyone who respects good work.
 
+For healing there is a roadside shrine to Lathander and a herb-wife who sets bones. No priest
+in town can cast. For worse cases there is **the witch** at the edge of town, a niche healer the
+village knows about and treats as risky to deal with. She has never harmed the village.
+*(DM-only: she is a vampire, nobody knows it, and she is the target of [[Wick]]'s hunt. She is
+Skyler's cameo, and her name waits on Skyler.)*
+
+Ashford speaks the common Velmoran tongue, pays in plain gold, silver and copper, and treats
+odd blood as unremarkable, because it is used to [[Sable Wren]]. Lord Cael's hall is a modest
+fortified seat 3–4 days' ride north: too far to come in time, near enough for a letter.
+
 Composition follows the surrounding region — no notable deviation from the frontier mix.
 
 ## The Golden Lioness
@@ -99,6 +112,6 @@ half, and it is what the raiders come for.
   Ashford sits in the purple region's southern edge, between markers 10 and 9; the
   world-master col/row gets captured at `/region` time. It has no city-registry ID — it was
   newly placed rather than graduated from an existing map dot.
-- **Trade-route coverage** is missing. The border-river is load-bearing lore and the ford is
+- **Trade-route coverage** is missing. The Moorthistle is load-bearing lore and the ford is
   a real crossing, so a route entity naming Ashford is worth making once the regional trade
   picture is drawn.
