@@ -105,7 +105,7 @@ as independent bandits without being wrong about anything that matters to them.
   `workshop/first-homebrew-act/sessions/session-01.md` and `session-02.md`, with mechanics in
   `notes/session-1-raid-statblock.md` and `notes/session-2-pursuit-statblock.md`. Both drafts
   predate the 2026-10-01 rulings and still say *level 5* in places — **the party is five PCs
-  at level 4**, and the Session 1 roster (5 Bandits + the big one) stands unretuned.
+  at level 4**, and the Session 1 roster is six bodies: four bandits (melee and crossbow), one hedge-mage, and the big one. The session plan holds the current statblock.
 - **Session 1's opening is not the drafted one.** `session-01.md` Scene A is a hag cold open
   that contradicts canon; the replacement shape is in `notes/the-seam.md`, and the transit
   carries the long rest in fiction. That rewrite belongs in the `/session` plan, not here.

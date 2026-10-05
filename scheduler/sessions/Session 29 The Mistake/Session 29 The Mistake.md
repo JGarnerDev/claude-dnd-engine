@@ -5,7 +5,7 @@ campaign: homebrew
 type: session
 session_number: 29
 exists: false
-state: draft
+state: planned
 tags:
   - session
 
@@ -25,7 +25,7 @@ key_npcs:
   - "[[Nella]] (offscreen — already gone with the ale; do not let the party catch her)"
   - "[[Aashal-Groon Mellenegon Borak]] (data — Asher, riding two animals in the woods; Halsby's bargain)"
 encounters:
-  - "The New Wing — 5x Bandit (CR 1/8) + 1x the big one (reskinned Thug, CR 1/2). ~450 adjusted XP, 3-5 rounds. Tension is a timer and an objective, not attrition: two bandits haul the last cask toward a cart while the big one shakes Sable down, and the party cannot cover both ends. Tactics: keep the raiders on their jobs — all six converging on the party is RTD 1 and silently becomes Dangerous. Morale DC 12 WIS when the big one drops."
+  - "The New Wing — 4x Bandit (2 melee cask-haulers, 1 melee screen, 1 crossbow) + 1x hedge-mage (reskinned Apprentice Wizard, CR 1/4) + 1x the big one (reskinned Thug, CR 1/2). ~500 adjusted XP, 3-5 rounds. Tension is a timer and an objective, not attrition: two bandits haul the last cask toward a cart while the big one drags a bound and gagged Sable toward the back door. The party can split for both, but neither end is safe. Tactics: keep the raiders on their jobs — all six converging on the party is RTD 1 and silently becomes Dangerous. Morale DC 12 WIS when the big one drops."
 loose_threads:
   - "Three seeds owed to [[Davian Martikov]] — two from [[Baba Lysaga]], one from the druids of [[Yester Hill]]. Barovia-side; acknowledged in one line, not pursued"
   - "[[The Wanderer's Boon]] is inert in Odibli's hand and must be shown to be inert this session"
@@ -36,7 +36,7 @@ difficulty_lethality: standard
 depth: narrated
 scope: inline
 opening_scene: "The last thirty seconds of Session 28, replayed — hand-in-hand at the winery, Odibli's hand on the stone, the light climbing past blinding. Held inside the transit long enough for the relic to give them the long rest in fiction, then dropped into a yard where a man is running past them carrying a cask."
-closing_hook: "The stake is real and the hearth is warm, and then Odibli takes the stone out again and it does nothing at all — warm as a pocketed pebble, dead as if it never worked. Somewhere southeast a cart with the Lioness's ale on it is making poor time on a bad road."
+closing_hook: "The offer is on the table and the hearth is warm, and then Odibli takes the stone out again and it does nothing at all — warm as a pocketed pebble, dead as if it never worked. Somewhere southeast a cart with the Lioness's ale on it is making poor time on a bad road."
 relates_to:
   - "[[The Stolen Casks]] (the mission this opens)"
   - "[[Act 1 - The Hearth at Ashford]] (act)"
@@ -182,8 +182,11 @@ nothing and nobody crossed with them, and there is no hag to escape.
 
 **Beats** — each PC picks one stance, one roll, DC 12:
 
-- **Steady** (CON / Athletics / Acrobatics) — land square. Success: normal start. Failure: one
-  round of arriving badly, clears immediately after.
+- **Steady** (CON / Athletics / Acrobatics) — land square. The roll also sets where they land:
+  - **17+** — they pick their spot anywhere in the yard.
+  - **12–16** — they land about 30 ft from the nearest bandits. Normal start.
+  - **11 or less** — they land prone, in the middle of the bandits. No lost turn: standing up
+    costs half their movement, as normal.
 - **Read** (WIS / INT / Perception) — take in the yard mid-arrival. Success: initiative edge,
   or one raider caught flat-footed. Failure: nothing — you were busy not falling over.
 
@@ -191,9 +194,24 @@ nothing and nobody crossed with them, and there is no hag to escape.
 knows why he is there: Sable is the target. He starts at the edge nearest the wing's doorway.
 If he is poisoned, he fights poisoned.
 
-Scatter on the fail spread, exactly as the statblock expects: some PCs start in the yard near
-the cask-runners, some near the wing's doorway where Sable is. **That split is a positioning
+Scatter places the **Read** PCs only; Steady's roll already placed the rest. The DM splits the
+Read PCs as the statblock expects: some start in the yard near the cask-runners, some near the
+wing's doorway where Sable is. **That split is a positioning
 puzzle, not a penalty.**
+
+**The first real choice: step in, or stand back?** Stepping in starts the fight. Hanging back
+lets the worst case happen (Sable dragged off, more stock walking), which is still not a death.
+
+**If anyone lands among the raiders** (Steady 11 or less), the raiders open with contempt. They
+take the newcomers for more of Ashford's useless villagers, and they expect them to run like the
+rest did:
+
+- *"Another one fell out of the hayloft. Go on, run. Your lot's good at that."*
+- *"Look at this — Ashford's sent its heroes. Back on your feet, sweetheart, and back indoors."*
+- *"Town's full of cowards. Scatter, the way your neighbours did."*
+
+Let the mockery hang for one beat. It hands the players their answer, and it makes stepping in
+feel earned.
 
 - **Transition:** initiative.
 
@@ -207,35 +225,76 @@ puzzle, not a penalty.**
   - **[[Sable Wren]]** — tiefling warlock, patron **Asher** ([[Aashal-Groon Mellenegon Borak]]),
     the deep-water being under the town. *Wants:* the new stock not gone, and not to be dragged
     anywhere. *Voice:* warm and level even cornered; treats everyone like a regular customer;
-    does not explain herself. **She must not read as helpless** — she is outnumbered and holding
-    a doorway.
+    does not explain herself. **Bound and gagged when the party arrives.** The raiders knew she
+    is a competent warlock and came prepared: a fire explosive in the wing to do damage and draw
+    her out, then a *scroll of hold person* (read by the hedge-mage) to take her. Rope at wrists
+    and ankles, a gag so she cannot cast. **She is not helpless in spirit**: they needed a bomb
+    and a scroll for one woman, and her eyes say she is keeping score.
   - **The big one** — nameless on purpose. Scarred, missing teeth, wearing a townsman's stolen
     coat. Give him a look, never a name.
 
-**Roster (unchanged — do not retune):** 5 × Bandit (CR 1/8, HP 11, AC 12, scimitar +3 for 4,
-light crossbow +3 for 5) + the big one (reskinned Thug, CR 1/2, HP 32, AC 11, Pack Tactics,
-multiattack, mace +4 for 5). Raw 225 XP, ×2 group multiplier → **~450 adjusted**.
+**Roster — six bodies, mixed (Jeff, 2026-10-05):**
+
+- **2 × cask-hauler** — Bandit (CR 1/8, HP 11, AC 12, scimitar +3 for 4). Melee. Hands full with
+  the cask; they fight only if someone blocks them.
+- **1 × screen** — Bandit, melee (scimitar +3 for 4). Holds the gap between the yard and the wing.
+- **1 × crossbow** — Bandit, ranged (light crossbow +3 for 5, range 80/320). Up on the crate
+  stacks, covering the runners.
+- **1 × hedge-mage** — reskinned Apprentice Wizard (CR 1/4, HP 9, AC 10). *Fire bolt* (+4, 1d10)
+  and *burning hands* twice (15-ft cone, DC 12 DEX, 3d6 fire, half on a save). A raider with
+  scorched cuffs and a trick bought cheap. Stays back near the cart.
+- **The big one** — reskinned Thug (CR 1/2, HP 32, AC 11, Pack Tactics, multiattack, mace +4 for
+  5). Dragging Sable toward the back door.
+
+Raw 250 XP, ×2 group multiplier → **~500 adjusted**.
 
 **Beats — the tension is a timer and an objective, not attrition:**
 
 - Two bandits haul the last full cask toward the cart at ~15 ft per turn. It reaches the cart,
-  it is **gone** — a clean loss that feeds Session 2.
-- The big one is working Sable over at the bar. Ignored about two rounds, he drags her out as
-  leverage.
-- The remaining three screen the runners.
+  it is **gone**, and Session 2's chase matters more. Saved, it is a clean win.
+- The big one is dragging Sable, bound and gagged, through the wing toward the back door.
+  Ignored about two rounds, he gets her out as leverage. Scorch marks and a blown-out wall
+  section show where the fire explosive went off.
+- **Freeing her:** cutting her bonds is an action, and pulling the gag is free once she is
+  loose. A freed Sable acts on her own turn from the next round (*eldritch blast*), so freeing
+  her early is a real tactical win, not just a rescue.
+- The screen, the crossbow and the hedge-mage cover the runners.
 - **Each raider wears a small cloudy crystal on a cord. None of them uses it.** Do not draw
   attention to it in the fight. These are the Earshot Crystals (see `## Rewards`).
-- **The party cannot cover both ends.** That is the scene — chase the cask or save Sable.
+- **Two ends, one party.** Pressure, not a lock: the party *can* split and go for both, and
+  Scatter has probably split them already. Each side is thinner, so both are winnable but
+  neither is safe. Don't block a split; let the timers (cask ~15 ft a turn, Sable ~2 rounds)
+  make each player's turn the choice. Saving the cask costs Session 2 nothing, because Nella
+  already has most of the ale.
 - Break the big one (killed, frightened, or talked down) → surviving bandits make **DC 12 WIS**;
   failures flee and drop what they carry.
-- **Non-combat outs all live:** parley · trickery (pose as Marlow's people — they will believe
-  it, they *are* paid by Marlow) · or leaning on the fact that five strangers just materialised
-  out of a pillar of light. Any of these can trigger the morale check early or grant advantage.
+- **Non-combat outs all live:** parley · trickery (pose as the raiders' own people) ·
+  intimidation. Any of these can trigger the morale check early or grant advantage. Details
+  below.
+- **Parley pays in clues.** The surface reason is goods; the hidden reason is keeping Ashford
+  down (the act's spine). A parley roll that beats DC 12 gets the surface line, *"It's the ale,
+  friend. Nothing personal."* **15+** adds one clue below; **20+** adds two. These are mook-level
+  truths. None names Marlow or Harrow Bane, and none says *why* (that stays unresolved):
+  1. *"Pay's steady, and up front. More than the casks are worth."*
+  2. *"Orders were that the wing doesn't open. Take the stock, wreck the fittings."*
+  3. *"Nobody dies. Boss was clear. Bleed the town, don't bury it."*
+  4. *"We hit Ashford. Not the farms, not the road. Ashford, every time."*
+- **Intimidate is live from the first jeer.** The raiders open with contempt (Scene 2) because
+  they take the party for villagers; only the big one saw the light. A player can answer the
+  jeering by turning it around, at any point, even before initiative. Intimidation DC 13
+  triggers the morale check early. **Advantage** if they back it with proof: a raider already
+  dropped, a spell in someone's face, or pointing at the light the big one saw and the rest
+  missed (*"Ask him where we came from"*).
+- **Bluff as the boss's people.** The party has never heard the name Marlow, so the bluff is
+  generic: *"The boss sent us. Change of plan."* It works because the raiders really do take
+  orders from someone. Deception DC 13 buys a round of hesitation, or advantage on the morale
+  check. **18+:** a raider slips an already-planted name, *"Nella sent you?"* Never Marlow: the
+  boots stay tonight's one feud detail.
 
-> *"The big one has a fist in the front of her coat and she is still talking to him in the voice
-> you use for a customer who has had too much. 'You'll want to think about who owns the thing
-> you're standing in,' she says. He hits the bar beside her head and the whole bare room rings
-> like it's still empty — because it is. Then he sees you. All five of you, standing in a yard
+> *"Smoke is still rolling out of a blown-open wall of the new wing. Through it, a big man is
+> dragging a tiefling woman across the bare floor by her collar. Her wrists and ankles are roped
+> and there's a gag in her mouth. She isn't struggling. She's watching him, very calmly, the way
+> you'd watch a man you intend to remember. Then he sees you. All five of you, standing in a yard
 > where a second ago there was nothing but light."*
 
 **Lethality note — the one number that matters.** All six attackers focused on one PC is ~30
@@ -244,13 +303,17 @@ The objective split is what holds it at Standard: with two bandits on the cask a
 on Sable, effective pressure is ~12 a round, **RTD ~2.5**. If you let them all converge on the
 party you have silently changed tiers. **Keep them on their jobs.**
 
-Max plausible spike is the big one's multiattack at 16, which cannot instant-kill anyone,
+The hedge-mage's *burning hands* is the new spike: about 10 to each PC in the cone, twice per
+fight. Have it target a group, never one downed PC. Max single-target spike is still the big
+one's multiattack at 16, which cannot instant-kill anyone,
 Odibli included. So the table can run its Odibli-goes-down gag with no real risk of it going
 wrong — and on current table notes, it will.
 
-**Fail-forward, not death:** botched, the big one hauls Sable off and more stock walks. Deeper
+**Fail-forward, not death:** botched, the big one hauls Sable off, still bound, and more stock walks. Deeper
 setback, rescue hook, higher base-building stakes. **No PC death in the premiere.**
 
+- **Loot, right here:** as soon as the fight resolves, the party searches the yard: the crystals
+  and the coin (see `## Rewards`). Then the town arrives.
 - **Transition:** the last raider breaks and runs, or the cart rolls. Either way the yard goes
   quiet and there is a hole in the stock.
 
@@ -270,8 +333,17 @@ setback, rescue hook, higher base-building stakes. **No PC death in the premiere
 
 **Beats:**
 
-- The town was hit in **two** places. [[Wick]]'s crew took the far side and left — seed him as a
-  *described* stranger, never seen. Guild-marked, and wrong somehow.
+- **The whole town was hit at once, by separate groups.** That's why nobody came for Sable: every
+  street was fighting its own raid. The town arrives **late**, smoke-stained and bloodied, from
+  its own fights. Mara comes from the ford with a wounded deputy; Silas from his store, which was
+  also hit. They didn't abandon the Lioness; they couldn't reach it. (The raiders' jeers about
+  cowardly neighbours were wrong, and the town's arrival quietly proves it.)
+- **Their first read on the party:** five strangers held the one place the town couldn't get to.
+  Mara is grateful and wary in the same breath.
+- [[Wick]]'s crew was one of the groups, on the far side, and is already gone. Seed him as a
+  *described* stranger, never seen: guild-marked, and wrong somehow.
+- *If the party notes that bandits don't usually coordinate a town-wide raid,* agree, and stop
+  there. That's the same rung as the boots: someone is organising this.
 - Thread seeds, planted light and never lectured: **[[Nella]]** gets a face and a direction
   (southeast, laden cart, deep ruts) · **[[Harrow Bane]]** gets a name the town fears and no
   face · the feud gets **exactly one detail** — matched boots on dead "independent" bandits —
@@ -299,11 +371,22 @@ detail is the entire budget for tonight.
 **Beats:**
 
 - She is running the place **entirely alone.** Her crew ([[Lok Thuliaga]], [[Bree Tealeaf]])
-  has not arrived. The new wing is built, undefended, and was supposed to open.
-- **The offer, and it is not charity** — a provisional share that grows: **10% now**, on
-  tonight's deed. Earns to 25% and 40% by deeds, not coin. One favor per town-help beat.
-  Construction runs **250–500 gp a room.** Have these numbers on a card so the offer lands
-  concrete instead of vague.
+  has not arrived. The new wing was built and was supposed to open; now it is scorched and blown
+  open by the raiders' explosive, and still undefended.
+- **Thanks first, with no strings.** A room and a hot meal tonight, because they saved her and
+  her stock. Hospitality, not a deal: the party can accept without committing to anything.
+- **Then the offer, and it is a standing one, not a question for tonight.** They are strangers
+  who landed an hour ago, so nobody should expect a yes. Sable: *"I can't pay you. I can give you
+  a piece of this place. It's worth more if you stay and help me hold it."* And her real logic,
+  said plainly: *"A share's a reason to come back. I need people with a reason."* She is buying
+  loyalty she can't afford in coin, which is why it is not charity.
+  - **The terms:** 10% on tonight's deed, growing to 25% and 40% by deeds, never coin. One favour
+    per town-help beat. With the deed come a room each, free meals, and the party naming one
+    thing in the new wing. Construction runs **250–500 gp a room.** Put the terms on a card.
+  - **Don't push for a yes.** The deed sits on the table. The reasons to take it are already in
+    the fiction: they are broke and have no standing; Halsby owes Sable a favour through Asher;
+    Nella's cart and the raiders' return are work waiting. The closing beat (the Boon is dead)
+    is the real answer: they can't go home. Expect the yes early in Session 2.
 - **Odibli's beat, and it is free.** Session 28's table notes record that his plan to conquer
   Vallaki through the power of good wine got real buy-in from the whole table. He has just been
   offered a stake in a brewery. Hand it to Miguel directly — **do not explain the joke**, just
@@ -311,7 +394,26 @@ detail is the entire budget for tonight.
 - **Iggy's beat — spotlight.** He is overdue at 2 rotation turns against everyone else's 4. A
   hearth, a rescued room, a town that needs cheering: he plays. Seeds his open hook *"decode the
   unfinished final song trapped in the viol"* — in a world that is neither Barovia nor Threnai,
-  the unfinished part sits differently. One or two lines, **no resolution.**
+  the unfinished part sits differently. **No resolution.**
+  - **Rule for this beat: describe only what the table can see or hear.** Jeff is Iggy's player
+    as well as the DM, so Iggy's inner experience (and [[Sah]]'s presence) is never narrated.
+    What Iggy shares is a player choice.
+  - **The sequence, about two minutes, then move on to the loot:**
+    1. The room joins in. A full tavern singing along is close enough to a gathering in worship
+       to wake Dip's gift (his Sage-enclave sense for weak points in reality).
+    2. Mid-song the melody turns somewhere none of them has heard, holds a few bars, and stops.
+    3. **The hearth goes still.** No flicker, just steady light, for as long as the phrase lasts.
+       *(DM only: Asher senses a divine presence under his town, weighs it, and accepts it,
+       because Sah is good and diminished.)*
+    4. **The fire eases** back to normal. Sable, mid-pour, glances once at the floor toward her
+       cellar spring, and says nothing.
+    5. **Dip's moment: tell Ben privately** (note or whisper). Ben decides what Dip shares. Dip
+       rolls Wisdom (Insight), or Intelligence (Religion) if Ben argues for his Sage training:
+       - **Under 15:** a lurch of nested wrongness, layers inside layers, then gone.
+       - **15–19:** it resolves like a nesting doll: real, then hollow, then *real* again, and
+         the innermost layer is inside Iggy.
+       - **20+:** clarity. That innermost layer is a presence, divine, small and very tired, and
+         not hostile.
 - **The antidote, if Halsby was bitten.** Sable already has it: a cup from her cellar spring.
   She does not explain how she knew to have it ready. *Do not let her name Asher here.* The
   party should leave knowing she has a patron, not that he went fishing for a fifth.
@@ -338,6 +440,8 @@ Common and spends none of the act's Uncommon budget. No personalised item lands 
 - **What they do, at the table:** touch your crystal to speak telepathically, words only and
   past any language, to one holder you can see or to "all" holders within 300 ft. Listeners
   only need to carry theirs. Unlimited use.
+- **When:** immediately after the fight resolves, in the yard, before the town arrives in
+  Scene 4. The coin comes off the bodies at the same time.
 - **Where they're found:** on the raiders, a crystal on a cord around every neck. They come
   off the fallen and out of what fleeing bandits drop. If fewer than five fall, the big one
   carries a pouch of spares.
@@ -373,15 +477,16 @@ Uncommon.
 
 **Narrative rewards** — all recordable as frontmatter, per the file's own test:
 
-- The **10% Stake** — a deed, written onto [[The Golden Lioness]]
+- The **10% Stake** — offered tonight as a deed on [[The Golden Lioness]]; it becomes theirs
+  when they accept, likely early in Session 2
 - [[Sable Wren]]'s `disposition` and `affinity` toward the party
 - Standing with Ashford — [[Mara Tull]] and [[Silas Crubb]] both shift on how the raid was handled
 
 **Levelling: nobody levels tonight.** For this season, levels come **one PC at a time**, at a
 moment the DM judges climactic, with the whole party at 5 before the December finale fight (act
-`## Loot`). Ben pushed on levelling in Session 28, so say at the table that levels are coming.
-Whether to name each PC's trigger ahead of time is an open question (question 22, and see the
-act file).
+`## Loot`). Ben pushed on levelling in Session 28, so say at the table that **levels are coming**, and say no more.
+No trigger is named. Each level lands as a surprise (act `## Loot`, overriding the announce rule
+in `meta/rewards.md`).
 
 ## NPC Quick-Reference
 
@@ -446,7 +551,7 @@ act file).
 
 Land it on the relic, not the fight.
 
-> *"The stake is real. The hearth is warm. And at some point in the evening Odibli takes the
+> *"The deed is on the table. The hearth is warm. And at some point in the evening Odibli takes the
 > stone out again — because of course he does — and it sits in his palm doing nothing at all.
 > Warm, like it's been in a pocket. Dead, like it never worked. Somewhere southeast of here a
 > cart with your ale on it is making poor time on a bad road. Somebody owes somebody three

@@ -104,8 +104,9 @@ Loot carries a large share of the progression weight this act. The rules for it 
 ## Loot
 
 This section overrides `meta/rewards.md` for Act 1, as that file allows. Decided 2026-10-04 by
-Jeff (questions 1–16 of `questionnaires/redwater/act-1-loot.md`). Questions 17–27, on Session 29
-and later, are still open.
+Jeff (questions 1–16 of `questionnaires/redwater/act-1-loot.md`), with questions 20–22 settled
+2026-10-05. Questions 17–19 were overtaken by the Earshot Crystals. Questions 23–27, on Session
+30 and later, are still open.
 
 ### Levels
 
@@ -113,10 +114,10 @@ and later, are still open.
   session's big fight. They start at 4.
 - **Levels are given one PC at a time**, at a moment the DM judges climactic, rather than as a
   party-wide tick. The DM is trying this out and will adjust it if it plays badly.
-- **Tension with `meta/rewards.md`, still unresolved:** that file requires the next level's
-  trigger to be announced before it lands, because an unannounced level reads as arbitrary.
-  One way to keep both rules: name a PC's coming moment when it is set, and keep only the exact
-  timing a surprise. The DM has not ruled on this.
+- **No trigger is announced this season.** The table is told only that levels are coming before
+  the finale. Each level is a full surprise. This deliberately overrides the announce rule in
+  `meta/rewards.md` (name the trigger before a level lands) for this act. If a level reads as
+  arbitrary at the table, that rule is the fallback.
 
 ### Items
 
@@ -152,11 +153,21 @@ makes room. Check this list whenever `/session` plans an Act 1 session.
   letter for [[Mara Tull]], to deliver "the day I don't come back"; find where the missing
   went; find the rest of her). Then she gives him the Unfinished Binding. The full scene and
   her secret are in her file. It needs a quiet moment between fights, not a combat beat.
+- **The aegis-banner, aimed at act Session 2.** Marlow's ancestral banner flies on the raiders'
+  line and is recoverable, then hangs in the Lioness as the prop that unspools the feud. It was
+  held back from Session 29 (2026-10-05) so the matched boots stay that night's one feud detail.
 
 ### Gold and consumables
 
 - **What gold is for:** the party decides, and building at the Lioness is actively encouraged
   (250–500 gp a room). Coin never buys stake percentage. Stake is earned by deeds only.
+- **Session 29 pays coin:** ~120–180 gp party total, as planned.
+- **What the 10% stake gives at once:** a room each at the Lioness, free meals, and the party
+  names one thing in the new wing. The perks come with the deed. They are not stake growth.
+- **Session 29 offers the stake; it doesn't close it.** Strangers an hour off the road have no
+  reason to buy in yet. Sable gives a room and a meal as thanks with no strings, and leaves the
+  deed on the table as a standing offer. The dead Boon at the session's close is the reason to
+  accept. Expect the yes early in Session 2.
 - **Shops:** Ashford sells healing potions at a raised price until the raids stop. No scrolls.
 - **Ale:** the Lioness's regular brews are not magical. Magical brews are something
   [[Sable Wren]] deliberately makes and sells, once the brewhouse is running on Asher's water.
