@@ -327,6 +327,21 @@ feel earned.
 
 Raw 250 XP, ×2 group multiplier → **~500 adjusted**.
 
+**Battlemap layout (Jeff, 2026-10-05)** — 5-ft grid:
+
+- **Size:** a yard of ~60×40 ft beside a wing of ~40×30 ft. The old pub building sits beside the
+  wing. It is set dressing only; nobody fights in it.
+- **The cask starts ~45 ft from the cart**, so it gets there in about 3 turns at 15 ft a turn.
+- **Sable and the big one start ~30 ft from the back door.** Dragging her halves his speed to
+  15 ft, so she is out in 2 rounds.
+- **The two sides of the fight are 40–60 ft apart**, so a party that splits up really can't
+  help both sides.
+- **Starting positions:** the 2 haulers are on the cask. The screen stands in the main doorway.
+  The crossbowman is on top of the tall cargo stack in the yard, ~20 ft from the cart, so he can
+  shoot at either side. The mage is at the cart. The big one is inside the wing with Sable.
+- **The blown-out wall is half rubble (difficult terrain).** It is a second way into the wing,
+  but a slow one. The doorway stays the fast route, so the screen bandit still matters.
+
 > *"Smoke is still rolling out of a blown-open wall of the new wing. Through it, a big man is
 > dragging a tiefling woman across the bare floor by her collar. Her wrists and ankles are roped
 > and there's a gag in her mouth. She isn't struggling. She's watching him, very calmly, the way
@@ -370,14 +385,16 @@ wrong — and on current table notes, it will.
 
 #### S1_CASKS — Go after the last cask
 
-- Two bandits haul the last full cask toward the cart at ~15 ft per turn. It reaches the cart,
+- Two bandits haul the last full cask toward the cart at ~15 ft per turn, starting ~45 ft out
+  (about 3 turns). It reaches the cart,
   it is **gone**, and Session 2's chase matters more. Saved, it is a clean win.
 
 #### S1_SABLE — Go after Sable instead
 
 - The big one is dragging Sable, bound and gagged, through the wing toward the back door.
-  Ignored about two rounds, he gets her out as leverage. Scorch marks and a blown-out wall
-  section show where the fire explosive went off.
+  He starts ~30 ft from it and drags her at 15 ft a round, so if he is ignored for two rounds
+  he gets her out as leverage. Scorch marks and a blown-out wall section show where the fire
+  explosive went off. The rubble there is difficult terrain, a slow second way into the wing.
 - **Freeing her:** cutting her bonds is an action, and pulling the gag is free once she is
   loose. A freed Sable acts on her own turn from the next round (*eldritch blast*), so freeing
   her early is a real tactical win, not just a rescue.
