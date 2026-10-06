@@ -32,6 +32,8 @@ maps/**/*.gif
 scheduler/**/maps/*.txt
 historian/**/maps/*.txt
 maps/battlemaps/**/*.txt
+# Purchased Roll20 / VTT asset packs (Forgotten Adventures etc.) -- licensed, multi-GB.
+maps/roll20 assets/
 app/node_modules
 # Session recordings. Audio is large and binary -- it stays on the DM's machine; the
 # transcript in recaps/transcripts/ is the committed record of what was said.
