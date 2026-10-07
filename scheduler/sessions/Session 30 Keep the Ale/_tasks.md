@@ -25,7 +25,7 @@ Made 2026-10-07. Planned date: `<not set>`.
       `uv run scripts/battlemap.py --session 30`.
 - [x] **The dusk fork** (done: `maps/dusk-fork.txt`): open ground, one lone tree, the road splitting. Either a plain field map
       or theatre of the mind.
-- [ ] **Tokens:** the drover, 2 cask-hands (Thugs), the Scout, 6 Bandits (4 at the camp and 2 at the fork), Nella, the
+- [ ] **Tokens:** Varrick (drover), Haddo and Brask (Thugs), Sennet (Spy), Hesper (Acolyte), Clatter (Bandit), Brick and Mortar (Mastiffs), Ilsa (Scout), Fennel (Bandit), Cinder (Wolf), Nella, the
       fox, and five horses for the party.
 - [ ] **Sheet check at the top of the session.** Session 29 lost a lot of time to Roll20.
       Make sure Paul can open Luci's sheet, dice are visible, and Dip and Luci show level 5.

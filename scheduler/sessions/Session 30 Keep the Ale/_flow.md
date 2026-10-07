@@ -17,7 +17,7 @@ the cart and horses, the silhouette in the cell, the chase scoring), plus the th
 draft: the engine's proposal, for Jeff to commit.
 
 **Difficulty, as settled:** standard attrition, standard lethality. No long rest before the camp
-(24-hour rule held); one short rest at dawn. Nella spreads her fire to wound and pin. Iggy, Odibli and Halsby all level before the camp, so it gets a third cask-hand to stay Hard against an all-5 party; the fork stays under Easy as an objective fight.
+(24-hour rule held); one short rest at dawn. Nella spreads her fire to wound and pin. Iggy, Odibli and Halsby all level before the camp, so the camp is sized Hard against an all-5 party with a mixed crew (drover, two cask-hands, a sneak, a healer, a roof crossbow, two dogs); the fork stays under Easy as an objective fight.
 
 ```mermaid
 flowchart TD
@@ -61,7 +61,7 @@ flowchart TD
   end
 
   subgraph SC6["Scene 6 · The Dusk Fork — the rear guard"]
-    S2_REARGUARD["[-] S2_REARGUARD<br/>2 Bandits and a Scout, mounted<br/>Won stage 3: the party sees them first<br/>The Bandits shoot the horses"]
+    S2_REARGUARD["[-] S2_REARGUARD<br/>Ilsa, Fennel and the wolf Cinder<br/>Won stage 3: the party sees them first<br/>They go for the horses"]
     S2_RIDER{"[-] S2_RIDER<br/>Does a rider reach the camp?<br/>If so, the camp's alert goes up one step"}
     S2_REARGUARD --> S2_RIDER
   end
@@ -70,7 +70,7 @@ flowchart TD
     S2_APPROACH_CHOICE{"[-] S2_APPROACH_CHOICE<br/>Heist, assault, parley or trick?"}
     S2_HEIST["[-] S2_HEIST<br/>Night heist: the cart out, no fight<br/>The party leaves her the taunt"]
     S2_PARLEY["[-] S2_PARLEY<br/>Parley under a truce-branch<br/>She keeps the casks; her debt shows its edge"]
-    S2_FIGHT["[-] S2_FIGHT<br/>The floor: the drover, 3 cask-hands, 4 Bandits<br/>The ridge: Nella, wound and pin<br/>Hard vs. an all-5 party · 3–4 rounds"]
+    S2_FIGHT["[-] S2_FIGHT<br/>The floor: Varrick, 2 cask-hands, a sneak, a healer, a roof crossbow, 2 dogs<br/>The ridge: Nella, wound and pin<br/>Hard vs. an all-5 party · 3–4 rounds"]
     S2_MORALE["[-] S2_MORALE<br/>Drover down or the crew down to two<br/>DC 12 WIS; the rest break"]
     S2_ESCAPE["[x] S2_ESCAPE<br/>Nella loses, and gets away<br/>Covering fire · 'Keep the ale.' · ropes cut · cached horse"]
     S2_TALLY["[x] S2_TALLY<br/>She drops her debt tally<br/>Notched antler and a counted purse"]

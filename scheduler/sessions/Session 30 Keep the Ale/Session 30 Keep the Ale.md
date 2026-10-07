@@ -29,11 +29,12 @@ key_npcs:
   - "[[Silas Crubb]] (data — mayor; the delivery's number, and the horses)"
   - "[[Aashal-Groon Mellenegon Borak]] (historian — Asher, through the fox again; the Spear)"
   - "[[Nella]] (historian — on the ridge; loses, escapes, drops her tally)"
-  - "the drover (nameless by design — Nella's second, the camp's floor anchor)"
+  - "Varrick Tenn, the drover (human — Nella's second, the camp's floor anchor; not an entity)"
+  - "Sennet Orrin (human — Bane's tally-man, keeps the duty ledger; not an entity)"
   - "the prisoner (a silhouette only — Tyler's cameo, beat 1; no name, no lines)"
 encounters:
-  - "The Dusk Fork — Nella's rear guard: 2x Bandit + 1x Scout, mounted. ~300 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. The Bandits shoot the borrowed horses, not the PCs. A rider who escapes toward the camp raises its alert by one step."
-  - "The Waystation — the drover (reskinned Bandit Captain), 3x Thug (the cask-hands) and 4x Bandit on the floor, Nella (custom, ~CR 3) on the ridge. ~3,875 adjusted XP against an all-level-5 party, Hard, RTC ~3.6 (floor ~2.9), RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
+  - "The Dusk Fork — Nella's rear guard: Ilsa Thorn (human Scout) and Fennel Dray (human Bandit), mounted, with Fennel's Wolf Cinder. ~350 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. Fennel shoots the borrowed horses and Cinder goes for their legs, not the PCs. A rider who escapes toward the camp raises its alert by one step."
+  - "The Waystation — Varrick Tenn the drover (human Bandit Captain), Haddo Keel and Brask (human and half-orc Thugs, the cask-hands), Sennet Orrin (human Spy), Hesper Mudd (halfling Acolyte), Tam 'Clatter' Cobb (human Bandit, on the roof) and Brick and Mortar (Mastiffs) on the floor, Nella (custom, ~CR 3) on the ridge. ~4,188 adjusted XP against an all-level-5 party, Hard, RTC ~3.4 (floor ~2.7), RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
 loose_threads:
   - "Session 29's unplayed Scenes 4-5: the loot, the town, the names, Sable's offer, Odibli's drink, Iggy's song, the dead Boon"
   - "[[The Shadowless Spear]] is owed to [[Halsby]] by Asher's fox: 'after you, not before'"
@@ -70,24 +71,36 @@ name and the aegis-banner · night trimmed to the character beats · Nella sprea
 DCs 12/13/13/14, scored by stages won · waystation Common pinned · camp resized to Hard after the
 v0.18.0 offense check (Option A: Captain drover, two Thug cask-hands, morale at 2 standing) ·
 three level-ups, each on its own beat: Iggy at the song, Odibli after saving the hearth, Halsby
-at the Spear · a third cask-hand added to hold the camp at Hard against an all-5 party.
+at the Spear · a third cask-hand added to hold the camp at Hard against an all-5 party · then
+both fights varied and the crew named (a Spy, an Acolyte, Mastiffs, a Wolf; mostly human, as the region is), still Hard.
 
 ## Combatants
 
-All enemy stat blocks in one place. 2014 Monster Manual Bandit, Thug, Bandit Captain and Scout,
-reskinned, plus Nella's custom block (from
-`workshop/first-homebrew-act/notes/session-2-pursuit-statblock.md`, tuned here).
+All enemy stat blocks in one place. 2014 Monster Manual Bandit, Thug, Bandit Captain, Scout, Spy,
+Acolyte, Mastiff and Wolf, reskinned, plus Nella's custom block (from
+`workshop/first-homebrew-act/notes/session-2-pursuit-statblock.md`, tuned here). Mixed in for
+variety (Jeff, 2026-10-07): a sneak, a healer, dogs and a wolf, so the fights aren't all melee bodies.
 
 ### At a glance
 
-- **The Dusk Fork** (Scene 6): 2 Bandits + 1 Scout, mounted
-- **The Waystation** (Scene 7): the drover, 3 Thug cask-hands and 4 Bandits on the floor, Nella on
-  the ridge
+- **The Dusk Fork** (Scene 6), mounted except the wolf:
+  - **Ilsa Thorn** (human, Scout) — the rider who goes for the camp
+  - **Fennel Dray** (human, Bandit) — crossbow on the horses
+  - **Cinder** (Wolf) — Fennel's, runs with the horses
+- **The Waystation** (Scene 7):
+  - **Varrick Tenn** (human, Bandit Captain) — the drover, between cart and fire
+  - **Haddo Keel** (human, Thug) and **Brask** (half-orc, Thug) — the cask-hands at the cart
+  - **Sennet Orrin** (human, Spy) — Bane's tally-man, the ledger's clerk, in and out of the shed
+  - **Hesper Mudd** (halfling, Acolyte) — hedge-priest at the fire
+  - **Tam "Clatter" Cobb** (human, Bandit) — crossbow on the shed roof
+  - **Brick** and **Mortar** (Mastiffs) — chained at the corral
+  - [[Nella]] on the ridge
 - **Morale:**
-  - **The fork:** when the Scout drops or both Bandits are down, each survivor makes a DC 12 WIS
-    save (+0).
-  - **The camp:** when the drover drops, or the crew (Thugs and Bandits) is down to 2 standing.
-    Not at half: half the crew falls in round 1, and the fight would end before Nella matters.
+  - **The fork:** when Ilsa drops, or Fennel and Cinder are both down, each survivor makes a
+    DC 12 WIS save (+0).
+  - **The camp:** when Varrick drops, or the crew (everyone but Nella and Varrick) is down to 2
+    standing. Not at half: half the crew falls in round 1, and the fight would end before Nella
+    matters. The dogs don't roll; they slink off when Varrick drops.
   - Failures flee and drop what they carry.
 
 ### Difficulty check (v0.18.0)
@@ -101,38 +114,53 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   Halsby ~12 with 3rd-level slots, and Iggy ~9 plus Bless or Faerie Fire (more with Smite if he
   takes Paladin 2). Whatever slots went into the hearth (`S2_HEARTH`) are gone for the camp; the
   short rest doesn't return them, except through Arcane Recovery.
-- **The fork:** 150 XP, ×2 = 300 adjusted, **under Easy**. 38 HP, RTC under 1. Left small on
+- **The fork:** 175 XP, ×2 = 350 adjusted, **under Easy**. 38 HP, RTC under 1. Left small on
   purpose: the stake is the rider and the horses, not HP.
-- **The camp:** 1,550 XP, 9 creatures ×2.5 = **3,875 adjusted, Hard**. The third cask-hand is what
-  keeps it there. Without him it's 3,625, Medium against an all-5 party, and one extra Bandit
-  isn't enough (3,688). 254 HP; RTC ~3.6 overall, ~2.9 on the floor. The drover survives two hits
-  from anyone; the Thugs survive two from anyone but Dip, and one Fireball. The four Bandits are
-  one-hit bodies (two effective).
-- **RTD, crew on its stations:** a front-liner takes ~30 a round (drover ~10, Thugs ~12 between
-  them with Pack Tactics, Nella's share ~8), so RTD ~2 for a raging Dip and ~1.3 for Luci if she
-  dives the cart. The back line takes Nella's
-  spread plus a crossbow, ~RTD 3. Standard lethality holds **only** while the crew stays on its
+- **The camp:** 1,675 XP, 9 creatures ×2.5 = **4,188 adjusted, Hard** (Deadly starts at 5,500).
+  235 HP; RTC ~3.4 overall, ~2.7 on the floor. Varrick survives two hits from anyone; the Thugs
+  survive two from anyone but Dip, and one Fireball. Sennet, Hesper, Clatter and the dogs are
+  one-hit bodies, but each asks the party a different question: find the sneak, drop the healer,
+  get the roof, deal with the dogs.
+- **RTD, crew on its stations:** a front-liner takes ~35 a round (Varrick ~10, the Thugs ~12
+  between them with Pack Tactics, Sennet's Sneak Attack ~5 averaged over misses, Nella's share
+  ~8), so RTD ~2 for a raging Dip and ~1.2 for Luci if she dives the cart. The dogs add prone,
+  not much damage. The back line takes Nella's spread, Clatter's crossbow and Hesper's Sacred
+  Flame, ~RTD 3. Standard lethality holds **only** while the crew stays on its
   stations and Nella keeps to wound and pin.
 - **Why Hard:** the day carries ~11 of standard's 18–24 rounds, so the camp is the day's one real
   fight. The missing long rest is the squeeze; the party is otherwise near full.
 
-### Bandit — the crew
+### Bandit — Fennel Dray (fork) and Clatter (camp)
 
-- AC 12 · HP 11 · Speed 30 ft
+- AC 12 · HP 11 · Speed 30 ft · CR 1/8
 - **Scimitar** +3 to hit, 1d6+1 slashing (avg 4)
 - **Light crossbow** +3 to hit, range 80/320, 1d8+1 piercing (avg 5)
+- **Fennel Dray** (human): wiry farm lad gone wrong, twitchy, talks fast, loves Cinder more than anyone in the band.
+  Shoots the horses. If Cinder goes down, Fennel stops fighting and goes to the wolf.
+- **Tam "Clatter" Cobb** (human): on the shed roof (half cover), crossbow on whoever is in the
+  open. Named for the bolts he never stops fiddling with; you hear him before you see him. Calls
+  out targets to the floor, so whoever he's watching gets no hiding in the open.
 
-### Scout — the rear guard's rider
+### Scout — Ilsa Thorn, the rear guard's rider
 
-- AC 13 · HP 16 · Speed 30 ft · Perception +5, Stealth +6, Survival +5
+- AC 13 · HP 16 · Speed 30 ft · CR 1/2 · Perception +5, Stealth +6, Survival +5
 - **Keen Hearing and Sight:** advantage on Perception checks that use hearing or sight
 - **Multiattack:** two melee or two ranged attacks
 - **Shortsword** +4 to hit, 1d6+2 piercing (avg 5)
 - **Longbow** +4 to hit, range 150/600, 1d8+2 piercing (avg 6)
-- **Job:** watch the back trail. When the fight turns, the Scout rides for the camp, not for the
-  party.
+- **Ilsa Thorn** (human): Nella's best rider and the closest thing she has to a student. Quiet,
+  sun-squinting, already half-turned toward the camp.
+- **Job:** watch the back trail. When the fight turns, Ilsa rides for the camp, not for the party.
 
-### The drover — reskinned Bandit Captain
+### Wolf — Cinder
+
+- AC 13 · HP 11 · Speed 40 ft · CR 1/4
+- **Keen Hearing and Smell** · **Pack Tactics**
+- **Bite** +4 to hit, 2d4+2 piercing (avg 7); target makes DC 11 STR or is knocked prone
+- Grey-black, scarred muzzle, keeps pace with the horses. Goes for a horse's legs first (a prone
+  horse throws its rider).
+
+### The drover — Varrick Tenn, reskinned Bandit Captain
 
 - AC 15 (studded leather) · **HP 65** · Speed 30 ft · CR 2
 - STR 15 · DEX 16 · CON 14 · INT 14 · WIS 11 · CHA 14 · Saves STR +4, DEX +5, WIS +2
@@ -140,20 +168,54 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - **Cart-whip** (scimitar) +5 to hit, 1d6+3 slashing (avg 6)
 - **Dagger** +5 to hit, reach 5 ft or range 20/60, 1d4+3 piercing (avg 5)
 - **Parry (reaction):** +2 AC against one melee attack he can see
-- Leathery, barks orders, named by role and never by name. He anchors the camp floor the way the
-  big one anchored the raid, and **he holds the crew together:** while he stands, morale holds
-  until only 2 are left. He doesn't roll morale himself. **He knows nothing useful** — taken
-  alive, he is a Mara Tull problem.
+- **Varrick Tenn** (human): leathery, barks orders, ex-soldier who treats the cart like a
+  posting. He anchors the camp floor the way the big one anchored the raid, and **he holds the
+  crew together:** while he stands, morale holds until only 2 are left. He doesn't roll morale
+  himself. **He knows nothing useful** — taken alive, he is a Mara Tull problem.
 
-### Thug — the cask-hands (3)
+### Thug — the cask-hands, Haddo Keel and Brask
 
 - AC 11 · HP 32 · Speed 30 ft · CR 1/2
 - **Pack Tactics:** advantage on an attack if an ally is within 5 ft of the target
 - **Multiattack:** two mace attacks (a cask-mallet in the fiction), +4 to hit, 1d6+2 bludgeoning
   each (avg 5)
 - **Heavy crossbow** +2 to hit, range 100/400, 1d10 piercing
-- **Station:** the cart, together, so Pack Tactics is live whenever someone reaches the casks. Big,
-  slow, and paid by the barrel. *"Nobody touches the cart"* is their whole job.
+- **Haddo Keel** (human): huge, patient, hums while he works. Counts the casks out loud.
+- **Brask** (half-orc): long arms and a bad temper, sleeps against the cart wheel when off watch.
+- **Station:** the cart, together, so Pack Tactics is live whenever someone reaches the casks.
+  Paid by the barrel. *"Nobody touches the cart"* is their whole job.
+
+### Spy — Sennet Orrin, Bane's tally-man
+
+- AC 12 · HP 27 · Speed 30 ft · CR 1 · Deception +5, Insight +4, Stealth +4
+- **Cunning Action:** Dash, Disengage or Hide as a bonus action
+- **Sneak Attack (1/turn):** +2d6 (7) when he has advantage or an ally is within 5 ft of the target
+- **Multiattack:** two shortsword attacks, +4 to hit, 1d6+2 piercing (avg 5)
+- **Hand crossbow** +4 to hit, range 30/120, 1d6+2 piercing (avg 5)
+- **Sennet Orrin** (human): ink on his fingers, a ledger under his arm. **He keeps Bane's duty
+  ledger** (`S2_CAMP_INTEL`); the clerk's tidy hand is his. Not one of Nella's crew; Bane's man,
+  checking the haul. Slips between the shed doors and stabs whoever the Thugs are already hitting.
+- **If taken alive and asked about Bane,** he says the name and goes white. He'll trade the ledger
+  for his life before he'll trade anything else.
+
+### Acolyte — Hesper Mudd, hedge-priest
+
+- AC 10 · HP 9 · Speed 25 ft · CR 1/4
+- **Spellcasting** (WIS, save DC 12, +4 to hit): *sacred flame* (1d8 radiant, DEX save), *light*,
+  *thaumaturgy* · 1st (3 slots): *bless*, *cure wounds*, *sanctuary*
+- **Club** +2 to hit, 1d4 bludgeoning
+- **Hesper Mudd** (halfling): the band's patch-up, prays to whatever is listening. *Bless* on
+  Varrick and the Thugs in round 1, then *cure wounds* on whoever is about to drop.
+- **Use *sanctuary* sparingly.** On Varrick it stalls the morale trigger; if the fight is running
+  long, she casts *bless* or heals instead.
+
+### Mastiff — Brick and Mortar
+
+- AC 12 · HP 5 · Speed 40 ft · CR 1/8
+- **Keen Hearing and Smell:** advantage on Perception by hearing or smell
+- **Bite** +3 to hit, 1d6+1 piercing (avg 4); target makes DC 11 STR or is knocked prone
+- Chained at the corral (15-ft chains). They bark at anyone sneaking within 30 ft of the corral
+  unless Stealth beats their passive Perception 18 (13, +5 for advantage). Loosed by any crew member as an action.
 
 ### Nella — veteran sniper (~CR 3, custom)
 
@@ -174,15 +236,19 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 
 ### Running it
 
-- **The crew stays on its stations:** the Thugs at the cart, the drover between cart and fire, two
-  Bandits at the fire and two at the corral. All eight converging on one PC is ~50 a round, RTD
-  under 1, and quietly turns this into a deadly fight. Same rule as the Session 29 raid, and it
-  matters more now the camp is sized Hard.
+- **The crew stays on its stations:** Haddo and Brask at the cart, Varrick between cart and fire,
+  Hesper at the fire, Clatter on the shed roof, Brick and Mortar chained at the corral, and Sennet
+  working between the shed's side door and the cart. All eight converging on one PC is ~50 a
+  round, RTD under 1, and quietly turns this into a deadly fight. Same rule as the Session 29 raid,
+  and it matters more now the camp is sized Hard. Sennet is the one who moves; he goes where the
+  Thugs already are, for Sneak Attack, not after the back line.
 - **Alert states** (set by the chase, `S2_APPROACH`):
-  - **Unaware** (4 stages won): sentries dicing, two crew asleep in the shed. The party picks its
-    position and gets surprise if it wants it. Nella is in the shed, so her first round is the
-    climb to her perch.
-  - **Dusk** (2–3 won): two sentries posted, Nella on her perch at the dusk rotation.
+  - **Unaware** (4 stages won): Clatter and Hesper dicing by the fire, Brask asleep against the
+    cart wheel, Sennet in the shed over the ledger, the dogs dozing (Stealth still has to beat
+    their passive 18 near the corral). The party picks its position and gets surprise if it wants
+    it. Nella is in the shed, so her first round is the climb to her perch.
+  - **Dusk** (2–3 won): Clatter on the roof and Hesper at the fire on watch, Nella on her perch at
+    the dusk rotation.
   - **Night alert** (0–1 won): perimeter staked (difficult ground, or DEX 12 to cross at speed),
     double watch, fires banked. Nella pre-positioned, Prepared Ground live from round 1.
 - **Round budget:** ~3 on the clock from the raid, ~1–2 at the fork, ~3–4 at the camp ≈ 8–9 of
@@ -613,40 +679,42 @@ each block on its card.
 - **Trigger:** during stage 3 of the chase.
 - **Location:** the fork in the drover's road. Long light, scrub, one lone tree, open ground
   either side. Riders show for a long way out here.
-- **NPCs present:** Nella's rear guard: two Bandits and the Scout, mounted, watching the back trail.
+- **NPCs present:** Nella's rear guard, watching the back trail: Ilsa Thorn (the Scout) and
+  Fennel Dray (a Bandit), mounted, and Fennel's wolf Cinder.
 - **Time:** ~15 minutes, 1–2 rounds. Under Easy on purpose; the stake is the rider and the horses.
 
 #### S2_REARGUARD — Nella's rear guard holds the fork
 
 - **If the party won stage 3:** they see the riders first, sitting their horses by the lone tree.
   Surprise is theirs to take.
-- **If they lost it:** the Scout sees them first and puts an arrow into the lead horse's
+- **If they lost it:** Ilsa sees them first and puts an arrow into the lead horse's
   saddlebag as a warning.
 
-> *"Three riders by a lone tree at the fork, black against the low sun. One of them stands in the
-> stirrups to look at you, then sits back down and says something to the others. You can't hear it.
-> You can see them stop laughing."*
+> *"Two riders by a lone tree at the fork, black against the low sun, and something grey and low
+> in the grass between them. One of them stands in the stirrups to look at you, then sits back
+> down and says something to the other. You can't hear it. The grey thing gets up."*
 
-- **Bandit lines:** *"Told you someone'd come."* · *"That's the sky lot. That's them."* · *"Ride
-  for her. Go!"*
-- **Talking it down works:** Intimidation DC 13 sends the two Bandits running (but they run *to the
-  camp*). A good bluff keeps them sitting long enough to close.
-- **The Bandits shoot the horses, not the riders.** Unhorse the pursuit and nobody reaches the
+- **Fennel's lines:** *"Told you someone'd come."* · *"That's the sky lot. That's them."* · *"Ilsa,
+  go! Ride for her!"*
+- **Talking it down works:** Intimidation DC 13 sends Fennel and Cinder running (but they run *to
+  the camp*). A good bluff keeps them sitting long enough to close.
+- **Fennel shoots the horses, and Cinder goes for their legs.** Unhorse the pursuit and nobody
+  reaches the
   camp. Silas's horses: AC 10, HP 13. A downed horse is one Silas wants 11 gp for, and it puts
   the favour debt in doubt. Say it the first time a bolt goes in: *"That's Silas's horse."*
 
 #### S2_RIDER — Does a rider reach the camp?
 
-- **The Scout's job** is to warn the camp, not to win. When the fight turns, it rides.
-- **The head start:** if the party lost stage 3, the Scout is already moving when initiative
+- **Ilsa's job** is to warn the camp, not to win. When the fight turns, she rides.
+- **The head start:** if the party lost stage 3, Ilsa is already moving when initiative
   starts. A Dashing horse covers 120 ft a round, so the casters get one or two rounds of shots
-  (Fire Bolt and Magic Missile reach 120 ft, Chromatic Orb 90 ft) before he is out of range. His
-  horse (AC 10, HP 13) is the easier target than he is (AC 13, HP 16).
+  (Fire Bolt and Magic Missile reach 120 ft, Chromatic Orb 90 ft) before she is out of range. Her
+  horse (AC 10, HP 13) is the easier target than she is (AC 13, HP 16).
 - **If any rider escapes toward the camp**, its alert state goes up one step (unaware → dusk →
-  night alert). Stopping the rider is the real objective. Make that legible: *"The scout isn't
-  fighting you any more. He's riding for the camp."*
-- **Morale:** the Scout down or the two Bandits down → DC 12 WIS. Failures flee, and fleeing
-  Bandits go to the camp.
+  night alert). Stopping the rider is the real objective. Make that legible: *"The woman isn't
+  fighting you any more. She's riding for the camp."*
+- **Morale:** Ilsa down, or Fennel and Cinder both down → DC 12 WIS. Failures flee, and fleeing
+  riders go to the camp.
 - **Transition:** the light goes. The camp approach (stage 4).
 
 ### Scene 7 — The Waystation
@@ -657,8 +725,9 @@ each block on its card.
   **the cart**, parked by the shed with the casks still loaded · **watch-fire** · and set back, the
   **overwatch ridge** with a brush blind, a **gully** behind it, a **rope-crossing** over the gully,
   and a **cached horse** half a mile beyond. Map: `maps/waystation.txt` (render with `uv run scripts/battlemap.py --session 30`). Key refs: cart R10:S12, Nella's blind AB8:AC10 (55 ft from the cart, up a difficult slope at X:Z), rope-crossing AF9:AH9, 15 ft behind the blind.
-- **NPCs present:** [[Nella]] on the ridge · the drover · three cask-hands · four Bandits · the
-  Marlow banner on the shed's pole.
+- **NPCs present:** [[Nella]] on the ridge · Varrick Tenn, the drover · Haddo and Brask, the
+  cask-hands · Sennet Orrin, Bane's tally-man · Hesper Mudd, hedge-priest · Clatter on the roof ·
+  Brick and Mortar at the corral · the Marlow banner on the shed's pole.
 - **Time:** ~45 minutes.
 
 > *"The waystation sits in a fold of the land: a long shed with a sagging roof, a corral full of
@@ -681,21 +750,24 @@ each block on its card.
   - Pushed on why she does this: *"I'm working off a number. When it's done, I'm done."* Then
     nothing more.
 - **Trickery** — posing as the band's relay riders, or Marlow men with new orders. Insight and
-  Deception contested; the drover is easy to fool, Nella isn't (Insight +7 from the ridge). If it
+  Deception contested; Varrick is easy to fool, Sennet less so (Insight +4), Nella isn't (Insight +7 from the ridge). If it
   half-works, it buys positioning, not the cart.
 
 #### S2_FIGHT — Two layers: the floor and the ridge, 3–4 rounds
 
-- **The floor:** the drover, three cask-hands at the cart and four Bandits at the fire and corral.
-  Sized **Hard** (see Difficulty check): the drover and the cask-hands are built to take two hits
-  and keep swinging, so Dip and a Shatter don't end it in round 1. The crew holds stations; they
-  don't converge.
+- **The floor:** Varrick, Haddo and Brask at the cart, Sennet slipping between them, Hesper at the
+  fire, Clatter on the roof, and the dogs at the corral. Sized **Hard** (see Difficulty check):
+  Varrick and the cask-hands are built to take two hits and keep swinging, so Dip and a Shatter
+  don't end it in round 1. The crew holds stations; they don't converge.
 - **The ridge:** Nella's ranged pressure, spread to wound and pin. Closing on her costs the floor
   fight bodies; ignoring her costs HP every round. **That squeeze is the fight.**
 - **Mid-fight lines:**
-  - Drover: *"Hold the cart! Nobody touches the cart!"* · *"She's up there, she's got you, keep
+  - Varrick: *"Hold the cart! Nobody touches the cart!"* · *"She's up there, she's got you, keep
     them in the open!"*
-  - Bandits: *"That's the sky lot."* · *"Bane doesn't pay us for this."* · *"Where's she going?
+  - Haddo, counting: *"Eleven. Twelve. Nobody touches twelve."* · Brask: *"That's the sky lot."*
+  - Sennet: *"Bane doesn't pay us for this."* · Hesper: *"Stand still, Varrick, I can't — stand
+    STILL."*
+  - Clatter, from the roof: *"One by the well! One by the WELL!"* · *"Where's she going?
     Where's she GOING?"*
   - Nella, calm, to whoever is climbing toward her: *"Further than you'd like."*
 - **Halsby's Spear in the dark:** reach 15 ft in dim light or darkness. If the fight is at night,
@@ -705,10 +777,10 @@ each block on its card.
 
 #### S2_MORALE — The drover drops, or the crew is down to two, and the rest break
 
-- DC 12 WIS (+0) for every surviving Bandit and cask-hand. Failures scatter into the dark,
-  dropping what they hold.
+- DC 12 WIS for every surviving crew member (the dogs slink off instead). Failures scatter into
+  the dark, dropping what they hold. Sennet runs with the ledger if nobody is near the shed.
 - **Not at half.** Half the crew falls in round 1 against this party, which would end the fight
-  before Nella's pressure lands. The drover keeps them in it until he drops.
+  before Nella's pressure lands. Varrick keeps them in it until he drops.
 - Morale-break line: *"She's leaving us. She's LEAVING us."* — and they run.
 - **This also triggers `S2_ESCAPE`.**
 
@@ -748,9 +820,10 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
 
 - **Band scale:** the shed is provisioned for far more than one crew. Thirty bedrolls, rations for
   a month, a rack of matched boots. *This was one finger of a hand.*
-- **Bane confirmed:** a duty ledger in a clerk's tidy hand. Rotations, payments, and at the foot of
-  each page the same initials and one name in full: **Harrow Bane**. No face, no description. If a
-  surviving Bandit is asked, he says the name and goes white.
+- **Bane confirmed:** a duty ledger in a clerk's tidy hand (Sennet's). Rotations, payments, and at
+  the foot of each page the same initials and one name in full: **Harrow Bane**. No face, no
+  description. If Sennet is taken alive and asked, he says the name and goes white. If he ran with
+  the ledger, it is found dropped in the scrub on the road east, or he's caught with it.
 - **The Marlow aegis-banner** on the shed's pole: old, fine, heraldic, far too good for a bandit
   relay. The party can take it. **It hangs in the Lioness later** and is the prop that unspools the
   feud. Nobody in the camp can say whose it is. Silas can, back home, and goes quiet when he does.
@@ -758,6 +831,8 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
     grandfather's flag."*
 - **The waystation Common** is hidden here (in the shed, the drover's bedroll, or under the cart
   seat): `<waystation Common — pinned by Jeff 2026-10-07, choose before the table>`.
+  (The camp crew are named in Combatants, but none of them are entities. If one survives and
+  matters, `/recap` creates them.)
 
 ### Scene 8 — The Man in the Cell
 
