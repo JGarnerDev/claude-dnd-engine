@@ -15,6 +15,7 @@ hook: "The party arrives in Ashford mid-raid and saves Sable Wren, but the ale i
 # --- OPTIONAL ---
 sessions:
   - [[Session 29 The Mistake]]
+  - [[Session 30 Keep the Ale]]
 locations:
   - [[Ashford]]
   - [[The Golden Lioness]]
@@ -100,7 +101,7 @@ as independent bandits without being wrong about anything that matters to them.
   something she overheard. See the Session 29 plan's `## Rewards`.
 - **Session 1 is planned as [[Session 29 The Mistake]]**, 2026-10-06. Numbering is continuous
   across both campaigns rather than restarting per season, so the act's "Session 1" is
-  act-relative shorthand. The pursuit session is not written yet.
+  act-relative shorthand. The pursuit is planned as [[Session 30 Keep the Ale]] (draft, 2026-10-07), which also carries Session 29's unplayed Scenes 4-5.
 - **Draft material, not canon.** The beat sheets live at
   `workshop/first-homebrew-act/sessions/session-01.md` and `session-02.md`, with mechanics in
   `notes/session-1-raid-statblock.md` and `notes/session-2-pursuit-statblock.md`. Both drafts
