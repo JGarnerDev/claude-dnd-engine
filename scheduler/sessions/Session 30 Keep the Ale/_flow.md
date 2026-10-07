@@ -12,11 +12,12 @@ grey is undecided. Markers: `[x]` committed, `[-]` draft, `[?]` open. Boxes are 
 
 **Commitment:** `[x]` marks beats carried from Session 29 (committed by Jeff 2026-10-05) and the
 choices Jeff made on 2026-10-07 (Spear at the ford, the tally drop, the camp's three discoverables,
-the cart and horses, the silhouette in the cell, the chase scoring). Everything else is `[-]`
+the cart and horses, the silhouette in the cell, the chase scoring), plus the three level-ups and
+`S2_HEARTH`, Odibli's deed (Jeff, 2026-10-07). Everything else is `[-]`
 draft: the engine's proposal, for Jeff to commit.
 
 **Difficulty, as settled:** standard attrition, standard lethality. No long rest before the camp
-(24-hour rule held); one short rest at dawn. Nella spreads her fire to wound and pin. The camp is sized Hard after the v0.18.0 offense check; the fork stays under Easy as an objective fight.
+(24-hour rule held); one short rest at dawn. Nella spreads her fire to wound and pin. Iggy, Odibli and Halsby all level before the camp, so it gets a third cask-hand to stay Hard against an all-5 party; the fork stays under Easy as an objective fight.
 
 ```mermaid
 flowchart TD
@@ -36,15 +37,16 @@ flowchart TD
     S2_WREN["[x] S2_WREN<br/>Sable, alone, pours The Mistake"]
     S2_OFFER["[x] S2_OFFER<br/>A room and a meal, no strings<br/>Then the 10% deed, left on the table"]
     S2_ODIBLI["[x] S2_ODIBLI<br/>'Any of you know drink?'"]
-    S2_IGGY["[x] S2_IGGY<br/>Iggy plays the room<br/>The hearth holds still; Dip's private roll"]
-    S2_BOON["[x] S2_BOON<br/>Odibli's stone does nothing at all<br/>The reason to take the deed<br/>They sleep. It is not a long rest"]
-    S2_WREN --> S2_OFFER --> S2_ODIBLI --> S2_IGGY --> S2_BOON
+    S2_IGGY["[x] S2_IGGY<br/>Iggy plays the room<br/>The hearth holds still; Dip's private roll<br/>Iggy levels to 5"]
+    S2_BOON["[x] S2_BOON<br/>Odibli's stone does nothing at all<br/>The reason to take the deed"]
+    S2_HEARTH["[x] S2_HEARTH<br/>The hearth is dying: Tallis's smother-charm<br/>The party feeds the flame; Odibli writes over the glyph<br/>Odibli levels to 5 · they sleep, not a long rest"]
+    S2_WREN --> S2_OFFER --> S2_ODIBLI --> S2_IGGY --> S2_BOON --> S2_HEARTH
   end
 
   subgraph SC4["Scene 4 · Dawn at the Ford"]
     S2_SHORT_REST["[x] S2_SHORT_REST<br/>One short rest before they ride"]
     S2_HORSES["[x] S2_HORSES<br/>Silas lends the horses<br/>'Bring them back shod' — a favour debt"]
-    S2_SPEAR["[x] S2_SPEAR<br/>The fox waits on a dry stone mid-ford<br/>Two minutes: spear and shard fused<br/>The Shadowless Spear — Halsby's beat"]
+    S2_SPEAR["[x] S2_SPEAR<br/>The fox waits on a dry stone mid-ford<br/>Two minutes: spear and shard fused<br/>The Shadowless Spear — Halsby's beat<br/>Halsby levels to 5"]
     S2_TRAIL["[-] S2_TRAIL<br/>Deep ruts, a split stave, southeast"]
     S2_SHORT_REST --> S2_HORSES --> S2_SPEAR --> S2_TRAIL
   end
@@ -68,7 +70,7 @@ flowchart TD
     S2_APPROACH_CHOICE{"[-] S2_APPROACH_CHOICE<br/>Heist, assault, parley or trick?"}
     S2_HEIST["[-] S2_HEIST<br/>Night heist: the cart out, no fight<br/>The party leaves her the taunt"]
     S2_PARLEY["[-] S2_PARLEY<br/>Parley under a truce-branch<br/>She keeps the casks; her debt shows its edge"]
-    S2_FIGHT["[-] S2_FIGHT<br/>The floor: the drover, 2 cask-hands, 4 Bandits<br/>The ridge: Nella, wound and pin<br/>Hard · 3–4 rounds"]
+    S2_FIGHT["[-] S2_FIGHT<br/>The floor: the drover, 3 cask-hands, 4 Bandits<br/>The ridge: Nella, wound and pin<br/>Hard vs. an all-5 party · 3–4 rounds"]
     S2_MORALE["[-] S2_MORALE<br/>Drover down or the crew down to two<br/>DC 12 WIS; the rest break"]
     S2_ESCAPE["[x] S2_ESCAPE<br/>Nella loses, and gets away<br/>Covering fire · 'Keep the ale.' · ropes cut · cached horse"]
     S2_TALLY["[x] S2_TALLY<br/>She drops her debt tally<br/>Notched antler and a counted purse"]
@@ -93,7 +95,7 @@ flowchart TD
 
   S2_LOOT --> S2_TOWN
   S2_NAMES --> S2_WREN
-  S2_BOON --> S2_SHORT_REST
+  S2_HEARTH --> S2_SHORT_REST
   S2_TRAIL --> S2_CHASE_RULES
   S2_FORK --> S2_REARGUARD
   S2_RIDER --> S2_APPROACH
@@ -112,7 +114,7 @@ flowchart TD
   class S2_REARGUARD,S2_FIGHT,S2_MORALE,S2_ESCAPE combat
   class S2_SABLE_FREE,S2_TOWN,S2_WREN,S2_ODIBLI,S2_IGGY,S2_HORSES,S2_PARLEY,S2_HEIST,S2_SHORT_REST,S2_CHASE_RULES,S2_FORD_STAGE,S2_ROAD,S2_FORK,S2_TRAIL social
   class S2_APPROACH,S2_RIDER,S2_APPROACH_CHOICE decision
-  class S2_LOOT,S2_OFFER,S2_SPEAR,S2_HAUL_HOME stake
+  class S2_LOOT,S2_OFFER,S2_HEARTH,S2_SPEAR,S2_HAUL_HOME stake
   class S2_NAMES,S2_BOON,S2_TALLY,S2_CAMP_INTEL,S2_CELL seed
   class S2_SKIP fail
 ```

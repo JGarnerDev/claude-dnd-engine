@@ -33,7 +33,7 @@ key_npcs:
   - "the prisoner (a silhouette only — Tyler's cameo, beat 1; no name, no lines)"
 encounters:
   - "The Dusk Fork — Nella's rear guard: 2x Bandit + 1x Scout, mounted. ~300 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. The Bandits shoot the borrowed horses, not the PCs. A rider who escapes toward the camp raises its alert by one step."
-  - "The Waystation — the drover (reskinned Bandit Captain), 2x Thug (the cask-hands) and 4x Bandit on the floor, Nella (custom, ~CR 3) on the ridge. ~3,625 adjusted XP, Hard (just under Deadly), RTC ~3.5 (floor ~2.9), RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
+  - "The Waystation — the drover (reskinned Bandit Captain), 3x Thug (the cask-hands) and 4x Bandit on the floor, Nella (custom, ~CR 3) on the ridge. ~3,875 adjusted XP against an all-level-5 party, Hard, RTC ~3.6 (floor ~2.9), RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
 loose_threads:
   - "Session 29's unplayed Scenes 4-5: the loot, the town, the names, Sable's offer, Odibli's drink, Iggy's song, the dead Boon"
   - "[[The Shadowless Spear]] is owed to [[Halsby]] by Asher's fox: 'after you, not before'"
@@ -68,7 +68,9 @@ dawn only) · Spear at dawn by the ford · Elowen held for a later breather · N
 · close on a silent prisoner · cart kept, horses returned · the camp gives up band scale, Bane's
 name and the aegis-banner · night trimmed to the character beats · Nella spreads her fire · chase
 DCs 12/13/13/14, scored by stages won · waystation Common pinned · camp resized to Hard after the
-v0.18.0 offense check (Option A: Captain drover, two Thug cask-hands, morale at 2 standing).
+v0.18.0 offense check (Option A: Captain drover, two Thug cask-hands, morale at 2 standing) ·
+three level-ups, each on its own beat: Iggy at the song, Odibli after saving the hearth, Halsby
+at the Spear · a third cask-hand added to hold the camp at Hard against an all-5 party.
 
 ## Combatants
 
@@ -79,7 +81,7 @@ reskinned, plus Nella's custom block (from
 ### At a glance
 
 - **The Dusk Fork** (Scene 6): 2 Bandits + 1 Scout, mounted
-- **The Waystation** (Scene 7): the drover, 2 Thug cask-hands and 4 Bandits on the floor, Nella on
+- **The Waystation** (Scene 7): the drover, 3 Thug cask-hands and 4 Bandits on the floor, Nella on
   the ridge
 - **Morale:**
   - **The fork:** when the Scout drops or both Bandits are down, each survivor makes a DC 12 WIS
@@ -92,17 +94,23 @@ reskinned, plus Nella's custom block (from
 
 Session 29's raid ended in two rounds, so both fights were re-run against the party's offense.
 
-- **Party thresholds** (levels 5, 5, 4, 4, 4): Easy 875 · Medium 1,750 · Hard 2,625 · Deadly 3,700.
-- **Party damage, after the dawn short rest:** ~60 a round. Dip ~25–30 (raging, Reckless, Extra
-  Attack, Frenzy, Cleave), Luci ~14, Odibli ~12 plus Shatter on clusters, Halsby ~10 (the most
-  drained), Iggy ~7 plus Bless or Faerie Fire. Nobody levels before either fight.
+- **Party thresholds** (all level 5 once the night's two level-ups and the dawn one land): Easy
+  1,250 · Medium 2,500 · Hard 3,750 · Deadly 5,500.
+- **Party damage, after the dawn short rest:** ~70 a round. Dip ~25–30 (raging, Reckless, Extra
+  Attack, Frenzy, Cleave), Luci ~14, Odibli ~12, with Shatter or now **Fireball** on clusters,
+  Halsby ~12 with 3rd-level slots, and Iggy ~9 plus Bless or Faerie Fire (more with Smite if he
+  takes Paladin 2). Whatever slots went into the hearth (`S2_HEARTH`) are gone for the camp; the
+  short rest doesn't return them, except through Arcane Recovery.
 - **The fork:** 150 XP, ×2 = 300 adjusted, **under Easy**. 38 HP, RTC under 1. Left small on
   purpose: the stake is the rider and the horses, not HP.
-- **The camp:** 1,450 XP, 8 creatures ×2.5 = **3,625 adjusted, Hard** (75 under Deadly). 222 HP;
-  RTC ~3.5 overall, ~2.9 on the floor. The drover survives two hits from anyone; the Thugs survive
-  two from anyone but Dip. The four Bandits are one-hit bodies (two effective).
-- **RTD, crew on its stations:** a front-liner takes ~25 a round (drover ~10, a Thug ~7, Nella's
-  share ~8), so RTD ~2 for Dip and ~1.5 for Luci if she dives the cart. The back line takes Nella's
+- **The camp:** 1,550 XP, 9 creatures ×2.5 = **3,875 adjusted, Hard**. The third cask-hand is what
+  keeps it there. Without him it's 3,625, Medium against an all-5 party, and one extra Bandit
+  isn't enough (3,688). 254 HP; RTC ~3.6 overall, ~2.9 on the floor. The drover survives two hits
+  from anyone; the Thugs survive two from anyone but Dip, and one Fireball. The four Bandits are
+  one-hit bodies (two effective).
+- **RTD, crew on its stations:** a front-liner takes ~30 a round (drover ~10, Thugs ~12 between
+  them with Pack Tactics, Nella's share ~8), so RTD ~2 for a raging Dip and ~1.3 for Luci if she
+  dives the cart. The back line takes Nella's
   spread plus a crossbow, ~RTD 3. Standard lethality holds **only** while the crew stays on its
   stations and Nella keeps to wound and pin.
 - **Why Hard:** the day carries ~11 of standard's 18–24 rounds, so the camp is the day's one real
@@ -137,7 +145,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   until only 2 are left. He doesn't roll morale himself. **He knows nothing useful** — taken
   alive, he is a Mara Tull problem.
 
-### Thug — the cask-hands (2)
+### Thug — the cask-hands (3)
 
 - AC 11 · HP 32 · Speed 30 ft · CR 1/2
 - **Pack Tactics:** advantage on an attack if an ally is within 5 ft of the target
@@ -167,7 +175,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 ### Running it
 
 - **The crew stays on its stations:** the Thugs at the cart, the drover between cart and fire, two
-  Bandits at the fire and two at the corral. All seven converging on one PC is ~45 a round, RTD
+  Bandits at the fire and two at the corral. All eight converging on one PC is ~50 a round, RTD
   under 1, and quietly turns this into a deadly fight. Same rule as the Session 29 raid, and it
   matters more now the camp is sized Hard.
 - **Alert states** (set by the chase, `S2_APPROACH`):
@@ -189,7 +197,11 @@ gone south under the trees with the barrels she had already loaded. [[Halsby]] w
 shadows among four strangers who came down in a light, and Asher's fox still owes him a spear.
 
 - **Levels:** Dip and Luci 5; Halsby, Iggy and Odibli 4. Levels keep coming one PC at a time, as
-  a surprise. Nobody is planned to level tonight.
+  a surprise, and **all three level tonight**, each on a deed of their own (Jeff, 2026-10-07):
+  - **Iggy** when the hearth holds still for his song (`S2_IGGY`)
+  - **Odibli** on the last stroke that saves the hearth (`S2_HEARTH`)
+  - **Halsby** when the Spear is fused at dawn (`S2_SPEAR`)
+  The party walks into the camp all level 5, and the camp is sized for that.
 - **Resources:** the transit's long rest was about an hour before the raid. Halsby spent heavily
   (Invisibility, a twinned Chromatic Orb, Magic Missile upcast to ~3rd); Odibli spent Hold Person;
   Luci spent ki and her emanation; Iggy one Bardic Inspiration; Dip one rage and took 8 fire.
@@ -328,7 +340,7 @@ each block on its card.
   town, a hearth that burns without anyone feeding it. Through the wall, the new wing is very
   empty. **The contrast is the whole pitch.**
 - **NPCs present:** [[Sable Wren]], on her own ground now.
-- **Time:** ~30–35 minutes. **Played in full.** This is the heart of the night.
+- **Time:** ~40–50 minutes with `S2_HEARTH`. **Played in full.** This is the heart of the night.
 
 #### S2_WREN — Sable, alone, pours The Mistake
 
@@ -387,6 +399,8 @@ each block on its card.
      diminished.)*
   4. The fire eases back. Sable, mid-pour, glances once at the floor toward her cellar spring and
      says nothing.
+  5. **Iggy levels to 5** as the phrase ends. Describe only what the table sees. Jeff picks the
+     class (Bard 4 or Paladin 2).
 
 > *"The room's carrying the tune now, badly and loudly, the way rooms do. And then the viol goes
 > somewhere nobody follows. A few bars none of you have heard, not sad exactly, more like the middle
@@ -413,6 +427,71 @@ each block on its card.
   the yes here, or at dawn.
 - If they accept tonight: Sable slides the deed across, says *"Ten,"* and pours another round.
   Record the 10% Stake.
+- **Transition:** the room empties, and the fire starts to go wrong.
+
+#### S2_HEARTH — The hearth is dying. Odibli finds the charm and writes over it
+
+- **Odibli's deed and level-up** (Jeff, 2026-10-07).
+- **Time:** ~10–15 minutes. Late, with the room emptied, so it stays apart from Iggy's song.
+
+**What's going on (DM only):**
+
+- During the raid, **Tallis** (the hedge-mage who sold charms at the fair) dropped a written charm
+  into the old core's hearth. It's a **smother-charm**: it drinks the fire, stores the heat, and
+  lets it all go at once when the flame finally dies. The new wing burned; this was meant to finish
+  the old core while everyone slept in it.
+- The fire is Asher's breath coming up from under the floor. He feels the charm as suffocation,
+  and **he remembers who saved it.**
+
+**The symptom:**
+
+- The fire that never needs feeding gutters. Sable stops mid-pour, and for the first time tonight
+  she looks afraid: *"It doesn't do that. It has never done that."* Wood won't help; this fire has
+  never taken wood.
+
+> *"The hearth dips. Not a flicker, a dip, like something under it took a breath and didn't let it
+> out. Then again. The light in the room goes the colour of old brass, and Sable has stopped
+> pouring."*
+
+**Finding it and reading it:**
+
+- **Finding it:** Odibli checks every fire for mail, so give him advantage, or let him find it
+  automatically. A page is curled in the coals and won't burn, and a glyph on it is slowly
+  brightening.
+- **Reading it** (Arcana DC 13): it's a smother-charm. It can't be pulled out, because it's bound to
+  the fire, and it can't be erased, because it's written. **It can be written over**, but only
+  while the fire stays alight.
+
+**The deed, run in rounds:**
+
+- **The flame track: 3 → 2 → 1 → 0.** At 0, the charm lets go.
+- **Each round, someone feeds the fire magic, or it drops one step.** A fire cantrip (Fire Bolt
+  into the hearth, Produce Flame, Prestidigitation) holds it for one round. A spell slot burned
+  into it holds it for as many rounds as the slot's level. **This is the party's job**, and Halsby
+  and Odibli can both do it.
+- **Each round, Odibli makes one stroke:** INT with calligrapher's supplies, DC 14 (he's at +7). A
+  failed stroke also drops the flame one step.
+- **Three successful strokes** overwrite the glyph.
+- **If the flame hits 0:** the charm bursts. 2d6 fire to everyone at the hearth (DEX 13 for half),
+  and the old core catches. They put it out, but Sable's last safe building is scorched and the
+  hearth is cold until Asher recovers. Odibli still levels: he tried, in the fire, for her.
+
+**The last stroke:**
+
+- **Miguel picks the word he writes over the glyph.** If he wants a suggestion: the charm says
+  *consume*, and he turns it into *kindle*.
+
+> *"The last stroke goes into the coals and the glyph stops being what it was. For a heartbeat the
+> fire is all the way out, and every one of you feels the cold come up through the floor. Then it
+> comes back up the chimney in one long breath, gold to the rafters, and stays."*
+
+- **Odibli levels to 5.**
+- Sable lets go of the bar, looks at Odibli a long moment, and says only: *"…Don't tell anyone it
+  went out."* She explains nothing (she's not saying Asher's name tonight).
+- **The seed:** the charm paper matches the charms Tallis sold at the fair. Mara knows his name.
+  Someone may ask who taught him. Leave it there.
+- **His Aethryn rule:** a sustained cast like this is the kind the original Odibli might feel.
+  Roll for it if the odds are set by then; otherwise note it for `/recap`.
 - **They sleep.** Rooms in the old core. It helps; it is not a long rest. One line: *"You sleep
   like dropped coats. It isn't enough, and you all know it."*
 - **Transition:** grey light, and the trail is getting older.
@@ -465,6 +544,8 @@ each block on its card.
 - **History, three sentences, if asked:** *His own spear and his own shard, fused by something old
   in the water under Ashford. It was promised by a fox and delivered at a ford. What it cost the
   thing that made it, nobody said.*
+- **Halsby levels to 5** as the point stops casting a shadow. The fade halts and the level lands
+  together.
 - The fox walks off the stone and under the water. It doesn't come up.
 
 #### S2_TRAIL — Deep ruts, a dropped stave, southeast
@@ -576,7 +657,7 @@ each block on its card.
   **the cart**, parked by the shed with the casks still loaded · **watch-fire** · and set back, the
   **overwatch ridge** with a brush blind, a **gully** behind it, a **rope-crossing** over the gully,
   and a **cached horse** half a mile beyond. Map: `maps/waystation.txt` (render with `uv run scripts/battlemap.py --session 30`). Key refs: cart R10:S12, Nella's blind AB8:AC10 (55 ft from the cart, up a difficult slope at X:Z), rope-crossing AF9:AH9, 15 ft behind the blind.
-- **NPCs present:** [[Nella]] on the ridge · the drover · two cask-hands · four Bandits · the
+- **NPCs present:** [[Nella]] on the ridge · the drover · three cask-hands · four Bandits · the
   Marlow banner on the shed's pole.
 - **Time:** ~45 minutes.
 
@@ -605,7 +686,7 @@ each block on its card.
 
 #### S2_FIGHT — Two layers: the floor and the ridge, 3–4 rounds
 
-- **The floor:** the drover, two cask-hands at the cart and four Bandits at the fire and corral.
+- **The floor:** the drover, three cask-hands at the cart and four Bandits at the fire and corral.
   Sized **Hard** (see Difficulty check): the drover and the cask-hands are built to take two hits
   and keep swinging, so Dip and a Shatter don't end it in round 1. The crew holds stations; they
   don't converge.
@@ -792,11 +873,15 @@ Land it on the cell door, not on the casks.
 - **Carryover.** Session 29's Scenes 4–5 run here as Scenes 1–3, with `S1_` ids renumbered to `S2_`.
   `S1_LUCI` already played mid-fight in Session 29. `S1_ANTIDOTE` is dead (Halsby was never bitten).
 - **Spotlight.** Halsby's beat is `S2_SPEAR` (a promised delivery, not one of his `spotlight_hooks`
-  — none seeded). Iggy's `S2_IGGY` carries his already-seeded viol hook. Odibli gets `S2_ODIBLI`.
+  — none seeded). Iggy's `S2_IGGY` carries his already-seeded viol hook. Odibli gets `S2_ODIBLI`
+  and his deed, `S2_HEARTH`.
   The trend says lean party-centric; the chase and the camp are.
 - **Deployment tracking:** none planned from `meta/literary-devices.md` or the design
   preferences. The false trail at the fork is a device candidate if `/recap` wants to log it.
 - **For `/recap`:**
+  - Levels: Iggy, Odibli and Halsby to 5 (stamp `level_confirmed: 30` on all five PCs)
+  - The hearth: saved or scorched · Tallis's charm and who taught him · whether the original
+    Odibli felt the cast
   - The 10% Stake, if accepted · the second deed (casks home), banked
   - [[The Shadowless Spear]] delivered — flip its loot file to delivered; Halsby's fade halts
   - The Earshot Crystals handed out
