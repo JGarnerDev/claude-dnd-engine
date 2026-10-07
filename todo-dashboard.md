@@ -32,7 +32,6 @@ Plan drafted 2026-10-07 at `scheduler/sessions/Session 30 Keep the Ale/`. These 
 
 - **70.** 🙋 **Jeff** — **pick the waystation Common** (loot question 23, pinned 2026-10-07). The plan carries a placeholder at `S2_CAMP_INTEL`. Dip is the lean (Halsby already gets the Spear this session); every Common in the menus is still a draft, so confirming one flips its `status`.
 - **71.** 🤝 **Jeff** — **Tyler's backstory, enough to know why he surrendered.** Session 30 closes on him as a silent silhouette in Mara's cell (`S2_CELL`); Session 31 opens on the cell conversation and needs his defection trigger and his price. No entity file exists yet; the concept is in `workshop/first-homebrew-act/drafts/cameos.md`.
-- **72.** 🙋 **Jeff** — **sketch the waystation:** shed, corral, well, cart, watch-fire, overwatch ridge, gully and rope-crossing, cached horse half a mile out. The gully and ridge distances keep Nella's escape honest. A rough layout is enough (`battlemap.py` text grid if you want one rendered).
 - **73.** 🙋 **Jeff** — **set the number in Nella's purse** (`S2_TALLY`) and commit the 13 draft nodes in `_flow.md` (`uv run scripts/flow-status.py --set "scheduler/sessions/Session 30 Keep the Ale"`).
 
 ### Rulings — one pin left open

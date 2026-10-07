@@ -19,13 +19,13 @@ Made 2026-10-07. Planned date: `<not set>`.
 
 ## Maps and Roll20
 
-- [ ] **Sketch the waystation** (todo 72): shed, corral, well, cart, watch-fire, overwatch ridge,
+- [x] **Sketch the waystation** (todo 72, done: `maps/waystation.txt`): shed, corral, well, cart, watch-fire, overwatch ridge,
       gully and rope-crossing, and the cached horse half a mile out. The ridge and gully distances
       keep Nella's escape honest. A rough sketch is fine, or a text grid in `maps/` rendered with
       `uv run scripts/battlemap.py --session 30`.
-- [ ] **The dusk fork**: open ground, one lone tree, the road splitting. Either a plain field map
+- [x] **The dusk fork** (done: `maps/dusk-fork.txt`): open ground, one lone tree, the road splitting. Either a plain field map
       or theatre of the mind.
-- [ ] **Tokens:** the drover, the Scout, 8 Bandits (6 at the camp and 2 at the fork), Nella, the
+- [ ] **Tokens:** the drover, 2 cask-hands (Thugs), the Scout, 6 Bandits (4 at the camp and 2 at the fork), Nella, the
       fox, and five horses for the party.
 - [ ] **Sheet check at the top of the session.** Session 29 lost a lot of time to Roll20.
       Make sure Paul can open Luci's sheet, dice are visible, and Dip and Luci show level 5.

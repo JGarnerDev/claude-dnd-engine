@@ -16,7 +16,7 @@ the cart and horses, the silhouette in the cell, the chase scoring). Everything 
 draft: the engine's proposal, for Jeff to commit.
 
 **Difficulty, as settled:** standard attrition, standard lethality. No long rest before the camp
-(24-hour rule held); one short rest at dawn. Nella spreads her fire to wound and pin.
+(24-hour rule held); one short rest at dawn. Nella spreads her fire to wound and pin. The camp is sized Hard after the v0.18.0 offense check; the fork stays under Easy as an objective fight.
 
 ```mermaid
 flowchart TD
@@ -59,7 +59,7 @@ flowchart TD
   end
 
   subgraph SC6["Scene 6 · The Dusk Fork — the rear guard"]
-    S2_REARGUARD["[-] S2_REARGUARD<br/>2 Bandits and a Scout, mounted<br/>Won stage 3: the party sees them first"]
+    S2_REARGUARD["[-] S2_REARGUARD<br/>2 Bandits and a Scout, mounted<br/>Won stage 3: the party sees them first<br/>The Bandits shoot the horses"]
     S2_RIDER{"[-] S2_RIDER<br/>Does a rider reach the camp?<br/>If so, the camp's alert goes up one step"}
     S2_REARGUARD --> S2_RIDER
   end
@@ -68,8 +68,8 @@ flowchart TD
     S2_APPROACH_CHOICE{"[-] S2_APPROACH_CHOICE<br/>Heist, assault, parley or trick?"}
     S2_HEIST["[-] S2_HEIST<br/>Night heist: the cart out, no fight<br/>The party leaves her the taunt"]
     S2_PARLEY["[-] S2_PARLEY<br/>Parley under a truce-branch<br/>She keeps the casks; her debt shows its edge"]
-    S2_FIGHT["[-] S2_FIGHT<br/>The floor: the drover and six Bandits<br/>The ridge: Nella, wound and pin<br/>4–5 rounds"]
-    S2_MORALE["[-] S2_MORALE<br/>Drover down or half the crew down<br/>DC 12 WIS; the rest break"]
+    S2_FIGHT["[-] S2_FIGHT<br/>The floor: the drover, 2 cask-hands, 4 Bandits<br/>The ridge: Nella, wound and pin<br/>Hard · 3–4 rounds"]
+    S2_MORALE["[-] S2_MORALE<br/>Drover down or the crew down to two<br/>DC 12 WIS; the rest break"]
     S2_ESCAPE["[x] S2_ESCAPE<br/>Nella loses, and gets away<br/>Covering fire · 'Keep the ale.' · ropes cut · cached horse"]
     S2_TALLY["[x] S2_TALLY<br/>She drops her debt tally<br/>Notched antler and a counted purse"]
     S2_CAMP_INTEL["[x] S2_CAMP_INTEL<br/>The band's size · Harrow Bane in the ledger<br/>The Marlow aegis-banner, theirs to take<br/>The waystation Common — pinned"]

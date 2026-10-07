@@ -32,8 +32,8 @@ key_npcs:
   - "the drover (nameless by design — Nella's second, the camp's floor anchor)"
   - "the prisoner (a silhouette only — Tyler's cameo, beat 1; no name, no lines)"
 encounters:
-  - "The Dusk Fork — Nella's rear guard: 2x Bandit + 1x Scout, mounted. ~300 adjusted XP, 2-3 rounds. A rider who escapes toward the camp raises its alert by one step."
-  - "The Waystation — 6x Bandit + the drover (reskinned Thug) on the floor, Nella (custom, ~CR 3) on the ridge. ~2,375 adjusted XP, 4-5 rounds, medium-hard. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or half the crew is down."
+  - "The Dusk Fork — Nella's rear guard: 2x Bandit + 1x Scout, mounted. ~300 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. The Bandits shoot the borrowed horses, not the PCs. A rider who escapes toward the camp raises its alert by one step."
+  - "The Waystation — the drover (reskinned Bandit Captain), 2x Thug (the cask-hands) and 4x Bandit on the floor, Nella (custom, ~CR 3) on the ridge. ~3,625 adjusted XP, Hard (just under Deadly), RTC ~3.5 (floor ~2.9), RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
 loose_threads:
   - "Session 29's unplayed Scenes 4-5: the loot, the town, the names, Sable's offer, Odibli's drink, Iggy's song, the dead Boon"
   - "[[The Shadowless Spear]] is owed to [[Halsby]] by Asher's fox: 'after you, not before'"
@@ -67,21 +67,46 @@ Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The
 dawn only) · Spear at dawn by the ford · Elowen held for a later breather · Nella drops her tally
 · close on a silent prisoner · cart kept, horses returned · the camp gives up band scale, Bane's
 name and the aegis-banner · night trimmed to the character beats · Nella spreads her fire · chase
-DCs 12/13/13/14, scored by stages won · waystation Common pinned.
+DCs 12/13/13/14, scored by stages won · waystation Common pinned · camp resized to Hard after the
+v0.18.0 offense check (Option A: Captain drover, two Thug cask-hands, morale at 2 standing).
 
 ## Combatants
 
-All enemy stat blocks in one place. 2014 Monster Manual Bandit, Thug and Scout, reskinned, plus
-Nella's custom block (from `workshop/first-homebrew-act/notes/session-2-pursuit-statblock.md`,
-tuned here).
+All enemy stat blocks in one place. 2014 Monster Manual Bandit, Thug, Bandit Captain and Scout,
+reskinned, plus Nella's custom block (from
+`workshop/first-homebrew-act/notes/session-2-pursuit-statblock.md`, tuned here).
 
 ### At a glance
 
 - **The Dusk Fork** (Scene 6): 2 Bandits + 1 Scout, mounted
-- **The Waystation** (Scene 7): 6 Bandits + the drover on the floor, Nella on the ridge
-- **Morale (both fights):** when the leader drops (the Scout at the fork, the drover at the camp)
-  or half the group is down, each survivor makes a DC 12 WIS save (+0). Failures flee and drop
-  what they carry.
+- **The Waystation** (Scene 7): the drover, 2 Thug cask-hands and 4 Bandits on the floor, Nella on
+  the ridge
+- **Morale:**
+  - **The fork:** when the Scout drops or both Bandits are down, each survivor makes a DC 12 WIS
+    save (+0).
+  - **The camp:** when the drover drops, or the crew (Thugs and Bandits) is down to 2 standing.
+    Not at half: half the crew falls in round 1, and the fight would end before Nella matters.
+  - Failures flee and drop what they carry.
+
+### Difficulty check (v0.18.0)
+
+Session 29's raid ended in two rounds, so both fights were re-run against the party's offense.
+
+- **Party thresholds** (levels 5, 5, 4, 4, 4): Easy 875 · Medium 1,750 · Hard 2,625 · Deadly 3,700.
+- **Party damage, after the dawn short rest:** ~60 a round. Dip ~25–30 (raging, Reckless, Extra
+  Attack, Frenzy, Cleave), Luci ~14, Odibli ~12 plus Shatter on clusters, Halsby ~10 (the most
+  drained), Iggy ~7 plus Bless or Faerie Fire. Nobody levels before either fight.
+- **The fork:** 150 XP, ×2 = 300 adjusted, **under Easy**. 38 HP, RTC under 1. Left small on
+  purpose: the stake is the rider and the horses, not HP.
+- **The camp:** 1,450 XP, 8 creatures ×2.5 = **3,625 adjusted, Hard** (75 under Deadly). 222 HP;
+  RTC ~3.5 overall, ~2.9 on the floor. The drover survives two hits from anyone; the Thugs survive
+  two from anyone but Dip. The four Bandits are one-hit bodies (two effective).
+- **RTD, crew on its stations:** a front-liner takes ~25 a round (drover ~10, a Thug ~7, Nella's
+  share ~8), so RTD ~2 for Dip and ~1.5 for Luci if she dives the cart. The back line takes Nella's
+  spread plus a crossbow, ~RTD 3. Standard lethality holds **only** while the crew stays on its
+  stations and Nella keeps to wound and pin.
+- **Why Hard:** the day carries ~11 of standard's 18–24 rounds, so the camp is the day's one real
+  fight. The missing long rest is the squeeze; the party is otherwise near full.
 
 ### Bandit — the crew
 
@@ -99,15 +124,28 @@ tuned here).
 - **Job:** watch the back trail. When the fight turns, the Scout rides for the camp, not for the
   party.
 
-### The drover — reskinned Thug
+### The drover — reskinned Bandit Captain
 
-- AC 11 · HP 32 · Speed 30 ft
+- AC 15 (studded leather) · **HP 65** · Speed 30 ft · CR 2
+- STR 15 · DEX 16 · CON 14 · INT 14 · WIS 11 · CHA 14 · Saves STR +4, DEX +5, WIS +2
+- **Multiattack:** two cart-whip attacks and one dagger, or two thrown daggers
+- **Cart-whip** (scimitar) +5 to hit, 1d6+3 slashing (avg 6)
+- **Dagger** +5 to hit, reach 5 ft or range 20/60, 1d4+3 piercing (avg 5)
+- **Parry (reaction):** +2 AC against one melee attack he can see
+- Leathery, barks orders, named by role and never by name. He anchors the camp floor the way the
+  big one anchored the raid, and **he holds the crew together:** while he stands, morale holds
+  until only 2 are left. He doesn't roll morale himself. **He knows nothing useful** — taken
+  alive, he is a Mara Tull problem.
+
+### Thug — the cask-hands (2)
+
+- AC 11 · HP 32 · Speed 30 ft · CR 1/2
 - **Pack Tactics:** advantage on an attack if an ally is within 5 ft of the target
-- **Multiattack:** two mace attacks (a cart-whip in the fiction), +4 to hit, 1d6+2 bludgeoning
+- **Multiattack:** two mace attacks (a cask-mallet in the fiction), +4 to hit, 1d6+2 bludgeoning
   each (avg 5)
 - **Heavy crossbow** +2 to hit, range 100/400, 1d10 piercing
-- Leathery, barks orders, named by role and never by name. He anchors the camp floor the way the
-  big one anchored the raid. **He knows nothing useful** — taken alive, he is a Mara Tull problem.
+- **Station:** the cart, together, so Pack Tactics is live whenever someone reaches the casks. Big,
+  slow, and paid by the barrel. *"Nobody touches the cart"* is their whole job.
 
 ### Nella — veteran sniper (~CR 3, custom)
 
@@ -128,8 +166,10 @@ tuned here).
 
 ### Running it
 
-- **The crew stays on its stations** (the cart, the corral, the fire). All seven converging on one
-  PC is RTD ~1 and quietly turns this into a dangerous fight. Same rule as the Session 29 raid.
+- **The crew stays on its stations:** the Thugs at the cart, the drover between cart and fire, two
+  Bandits at the fire and two at the corral. All seven converging on one PC is ~45 a round, RTD
+  under 1, and quietly turns this into a deadly fight. Same rule as the Session 29 raid, and it
+  matters more now the camp is sized Hard.
 - **Alert states** (set by the chase, `S2_APPROACH`):
   - **Unaware** (4 stages won): sentries dicing, two crew asleep in the shed. The party picks its
     position and gets surprise if it wants it. Nella is in the shed, so her first round is the
@@ -137,7 +177,7 @@ tuned here).
   - **Dusk** (2–3 won): two sentries posted, Nella on her perch at the dusk rotation.
   - **Night alert** (0–1 won): perimeter staked (difficult ground, or DEX 12 to cross at speed),
     double watch, fires banked. Nella pre-positioned, Prepared Ground live from round 1.
-- **Round budget:** ~3 on the clock from the raid, ~2–3 at the fork, ~4–5 at the camp ≈ 11 of
+- **Round budget:** ~3 on the clock from the raid, ~1–2 at the fork, ~3–4 at the camp ≈ 8–9 of
   standard's 18–24. The squeeze is the missing long rest, not the round count.
 
 ## Orientation
@@ -493,7 +533,7 @@ each block on its card.
 - **Location:** the fork in the drover's road. Long light, scrub, one lone tree, open ground
   either side. Riders show for a long way out here.
 - **NPCs present:** Nella's rear guard: two Bandits and the Scout, mounted, watching the back trail.
-- **Time:** ~15 minutes, 2–3 rounds.
+- **Time:** ~15 minutes, 1–2 rounds. Under Easy on purpose; the stake is the rider and the horses.
 
 #### S2_REARGUARD — Nella's rear guard holds the fork
 
@@ -510,10 +550,17 @@ each block on its card.
   for her. Go!"*
 - **Talking it down works:** Intimidation DC 13 sends the two Bandits running (but they run *to the
   camp*). A good bluff keeps them sitting long enough to close.
+- **The Bandits shoot the horses, not the riders.** Unhorse the pursuit and nobody reaches the
+  camp. Silas's horses: AC 10, HP 13. A downed horse is one Silas wants 11 gp for, and it puts
+  the favour debt in doubt. Say it the first time a bolt goes in: *"That's Silas's horse."*
 
 #### S2_RIDER — Does a rider reach the camp?
 
 - **The Scout's job** is to warn the camp, not to win. When the fight turns, it rides.
+- **The head start:** if the party lost stage 3, the Scout is already moving when initiative
+  starts. A Dashing horse covers 120 ft a round, so the casters get one or two rounds of shots
+  (Fire Bolt and Magic Missile reach 120 ft, Chromatic Orb 90 ft) before he is out of range. His
+  horse (AC 10, HP 13) is the easier target than he is (AC 13, HP 16).
 - **If any rider escapes toward the camp**, its alert state goes up one step (unaware → dusk →
   night alert). Stopping the rider is the real objective. Make that legible: *"The scout isn't
   fighting you any more. He's riding for the camp."*
@@ -528,9 +575,9 @@ each block on its card.
   **corral** of nervous horses (noise hazard for sneaks, stampede lever for chaos) · **well** ·
   **the cart**, parked by the shed with the casks still loaded · **watch-fire** · and set back, the
   **overwatch ridge** with a brush blind, a **gully** behind it, a **rope-crossing** over the gully,
-  and a **cached horse** half a mile beyond. No map yet: `<rough sketch before the table>`.
-- **NPCs present:** [[Nella]] on the ridge · the drover · six Bandits · the Marlow banner on the
-  shed's pole.
+  and a **cached horse** half a mile beyond. Map: `maps/waystation.txt` (render with `uv run scripts/battlemap.py --session 30`). Key refs: cart R10:S12, Nella's blind AB8:AC10 (55 ft from the cart, up a difficult slope at X:Z), rope-crossing AF9:AH9, 15 ft behind the blind.
+- **NPCs present:** [[Nella]] on the ridge · the drover · two cask-hands · four Bandits · the
+  Marlow banner on the shed's pole.
 - **Time:** ~45 minutes.
 
 > *"The waystation sits in a fold of the land: a long shed with a sagging roof, a corral full of
@@ -556,10 +603,12 @@ each block on its card.
   Deception contested; the drover is easy to fool, Nella isn't (Insight +7 from the ridge). If it
   half-works, it buys positioning, not the cart.
 
-#### S2_FIGHT — Two layers: the floor and the ridge, 4–5 rounds
+#### S2_FIGHT — Two layers: the floor and the ridge, 3–4 rounds
 
-- **The floor:** the drover and six Bandits around the cart and fire. Session 29's fight, one rung
-  meaner. The crew holds stations; they don't converge.
+- **The floor:** the drover, two cask-hands at the cart and four Bandits at the fire and corral.
+  Sized **Hard** (see Difficulty check): the drover and the cask-hands are built to take two hits
+  and keep swinging, so Dip and a Shatter don't end it in round 1. The crew holds stations; they
+  don't converge.
 - **The ridge:** Nella's ranged pressure, spread to wound and pin. Closing on her costs the floor
   fight bodies; ignoring her costs HP every round. **That squeeze is the fight.**
 - **Mid-fight lines:**
@@ -573,9 +622,12 @@ each block on its card.
 - **The horses:** a stampede through the corral is a lever for chaos (DC 13 Animal Handling to
   start it on purpose, or it starts on its own if fire reaches the corral).
 
-#### S2_MORALE — The drover drops, or half the crew is down, and the rest break
+#### S2_MORALE — The drover drops, or the crew is down to two, and the rest break
 
-- DC 12 WIS for every surviving Bandit. Failures scatter into the dark, dropping what they hold.
+- DC 12 WIS (+0) for every surviving Bandit and cask-hand. Failures scatter into the dark,
+  dropping what they hold.
+- **Not at half.** Half the crew falls in round 1 against this party, which would end the fight
+  before Nella's pressure lands. The drover keeps them in it until he drops.
 - Morale-break line: *"She's leaving us. She's LEAVING us."* — and they run.
 - **This also triggers `S2_ESCAPE`.**
 
