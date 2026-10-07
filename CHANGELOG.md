@@ -6,6 +6,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.18.0] — 2026-10-07
+
+### Added
+
+- **Difficulty checks the party's offense, not just the monsters'.** Session 29's fight was planned at Standard lethality and ended in two rounds with almost no damage taken. Most raiders died before acting. `meta/difficulty.md` gains **rounds-to-clear (RTC)**: total monster HP ÷ party damage per round. Under 2 means the fight ends before rounds-to-down (RTD) matters. It also adds a **one-hit body** rule: a monster with HP at or below one average PC hit counts as half a body. Fights meant to sting need RTC 3+ and at least one creature that survives two hits.
+- **Light attrition sizes the main fight at Hard or Deadly.** A fresh party facing one fight goes all-out, so few fights means each must be harder.
+- **Encounter writeups state their DMG XP band** before the RTD and RTC checks (`/session` updated to match). Session 29's ~500 XP sat under Easy and nothing flagged it.
+- **Budget at the level the party fights at.** Level-ups planned before or during a fight count in its math.
+
 ## [0.17.0] — 2026-10-07
 
 ### Added

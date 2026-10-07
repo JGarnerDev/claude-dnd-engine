@@ -13,7 +13,7 @@ Difficulty is a two-axis spectrum. **Attrition** and **lethality** are independe
 
 ## Party Profile
 
-- **Level & size:** derived live, never hard-coded here. Source of truth is the `level` field in each PC's frontmatter (`historian/characters/pcs/`), surfaced by `party-status.py`. During `/session` orientation, state the derived level and party size and ask the DM to confirm. Each PC also carries `level_confirmed: <session number>` — restamped by every `/recap` — and `party-status.py` prints a LEVEL STALE warning when the stamp lags the latest played session, catching level-ups that missed canonization.
+- **Level & size:** derived live, never hard-coded here. Source of truth is the `level` field in each PC's frontmatter (`historian/characters/pcs/`), surfaced by `party-status.py`. During `/session` orientation, state the derived level and party size and ask the DM to confirm. **Budget each fight at the level the party will be when it fights it.** If the plan levels a PC before or during an encounter, run the numbers at the new level. A mid-fight level-up can bring Extra Attack, a new spell level or more HP into that same fight. Each PC also carries `level_confirmed: <session number>` — restamped by every `/recap` — and `party-status.py` prints a LEVEL STALE warning when the stamp lags the latest played session, catching level-ups that missed canonization.
 - **General power level:** <!-- are they optimized, casual, somewhere in between? -->
 
 ## Axis 1: Attrition
@@ -24,7 +24,7 @@ How much of the party's resource budget the adventuring day spends. 5e baseline 
 
 Tiers (rounds of combat per long rest):
 
-- **Light** — ~6–10 rounds. 1–3 encounters. Party ends the day with most resources intact. Use for roleplay-heavy or travel sessions where combat is punctuation, not pressure.
+- **Light** — ~6–10 rounds. 1–3 encounters. Party ends the day with most resources intact. Use for roleplay-heavy or travel sessions where combat is punctuation, not pressure. **Fewer fights means each fight must be harder.** A party on full resources facing one fight spends its best slots and features in round 1. Size the day's main fight at DMG **Hard or Deadly**, not Easy or Medium, or it will end before the monsters act.
 - **Standard** — ~18–24 rounds. The DMG baseline. Resource management matters; the party should feel the squeeze by the last encounter.
 - **Grinding** — 30+ rounds. Dungeon crawls, sieges, forced marches. Danger comes from depletion, not any single fight. Short rest access becomes a meaningful tactical question.
 
@@ -48,6 +48,8 @@ How capable the monsters are of actually killing a PC. Measured by two numbers a
 - **Rounds-to-down (RTD)** — average PC HP ÷ combined monster damage-per-round when focused on one target. RTD 1 means the encounter can drop a PC every round; RTD 4+ means chip damage only.
 - **Spike** — maximum plausible single-round damage against one PC, compared to PC max HP. The instant-death rule triggers when damage ≥ remaining HP + max HP. Save-or-suck riders (paralysis, banishment, hold person) count as spike even without damage.
 - **Tactics** — the free lever. Focus fire, attacking downed PCs, intelligent target selection (casters first). The same statblock swings an entire tier on tactics alone.
+- **Rounds-to-clear (RTC)** — total monster HP ÷ party damage per round. RTD only counts if the monsters live long enough to act, and RTC says whether they will. Estimate party damage from the sheets: each PC's usual round, with nova options (area spells, Twinned Spell, Extra Attack) counted on a fresh rest. **RTC under 2 means the fight is over before RTD matters**, whatever tier it claims. A fight meant to sting wants RTC 3+.
+- **One-hit bodies** — a monster whose HP is at or below one average PC hit usually dies before its first turn. Count each one as **half a body** in the action economy, and expect area damage to remove several at once. Six of them are not six threats. Every fight meant to sting needs at least one creature that survives two average hits.
 
 Tiers:
 
@@ -61,7 +63,7 @@ Tiers:
 1. Resolve the two tier picks **after the story hook is chosen** (`/session` Phase 4 scoping): DM prompt override > DM's scoping answer > frontmatter defaults. Propose tiers that fit the hook and flag discrepancies both ways — a story whose implied intensity contradicts the picked tiers gets reshaped or the tiers get changed, never silently bent. If the session shape is roleplay-only, skip steps 2–4 — plan against Non-Combat Stakes instead, and the Rest Clock simply carries forward unchanged.
 2. **Attrition tier** sets the round budget for the adventuring day; subtract the Rest Clock's rounds-since-long-rest to get this session's budget. Near-zero remainder means the long rest is the content — plan it as a scene (interrupted rests included), or push past budget as a deliberate lethality bump.
 3. **Lethality tier** sets CR targets and statblock selection (via `monster-lookup.py`), plus a tactics note in each encounter writeup (focus fire? kill-confirm? retreat triggers?).
-4. Sanity-check with RTD math against the Party Profile above — XP-threshold tables (DMG 2014) run inaccurate at high levels and against optimized parties. Use the XP budget as a first pass only; tune by RTD and rounds-per-rest.
+4. **State the XP band first.** Compare adjusted XP to the party's DMG 2014 thresholds and write the band (under Easy / Easy / Medium / Hard / Deadly) in the encounter writeup. Then sanity-check against the Party Profile above with **RTD and RTC**. XP-threshold tables run inaccurate at high levels and against optimized parties. Use the XP budget as a first pass only, and tune by RTD, RTC and rounds-per-rest.
 
 ## Skill Challenge DCs
 
