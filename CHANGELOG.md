@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.17.0] — 2026-10-07
+
+### Added
+
+- **Session runner shows a written recap.** A session plan may carry its own `## Recap` section, a hand-written read-aloud version. The runner's recap card leads with it in place of the previous session's one-line description, and the plan panel leaves it out so it isn't shown twice. Entities it mentions are picked up like the rest of the recap. Plans without the section render as before.
+
 ## [0.16.0] — 2026-10-05
 
 ### Changed

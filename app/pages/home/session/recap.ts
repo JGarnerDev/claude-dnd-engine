@@ -6,8 +6,11 @@
 //
 // When that session belongs to the other season, the extractor also sends the
 // last session played in this season, shown as "Last time in this world".
+//
+// A plan may carry its own `## Recap` section — a hand-written, read-aloud
+// version. It leads the card, and the plan panel leaves it out.
 
-import { escapeHtml, inline } from './markdown.js';
+import { escapeHtml, inline, renderMarkdown } from './markdown.js';
 import type { Known } from './markdown.js';
 import type { PreviousSession, SessionData } from './types.js';
 
@@ -28,9 +31,13 @@ export function withRecap(data: SessionData): SessionData {
   };
 }
 
+export const isRecapSection = (title: string) => /^recap$/i.test(title.trim());
+
+const writtenRecap = (data: SessionData) => data.sections.find((s) => isRecapSection(s.title))?.md ?? '';
+
 // All the recap's prose, for finding the entities it mentions.
 export function recapText(data: SessionData): string {
-  return data.previously.flatMap((p) => [p.description, p.cliffhanger, p.recap]).join('\n');
+  return [writtenRecap(data), ...data.previously.flatMap((p) => [p.description, p.cliffhanger, p.recap])].join('\n');
 }
 
 const meta = (p: PreviousSession) =>
@@ -46,9 +53,11 @@ export function recapHtml(data: SessionData, known: Known): string {
     .map((pc) => `<li><strong>${escapeHtml(pc.name)}</strong>${pc.status ? ` — ${inline(pc.status, known)}` : ''}</li>`)
     .join('');
   const threads = data.session.looseThreads.map((t) => `<li>${inline(t, known)}</li>`).join('');
+  const written = writtenRecap(data);
   return `
     ${meta(prev)}
-    ${prev.description ? `<p class="sr-recap-lead">${inline(prev.description, known)}</p>` : ''}
+    ${written ? `<div class="sr-recap-written sr-md">${renderMarkdown(written, known)}</div>` : ''}
+    ${prev.description && !written ? `<p class="sr-recap-lead">${inline(prev.description, known)}</p>` : ''}
     <h3 class="sr-recap-h">TL;DR</h3>
     <ul class="sr-recap-tldr">
       ${party ? `<li><strong>Party</strong><ul>${party}</ul></li>` : ''}
