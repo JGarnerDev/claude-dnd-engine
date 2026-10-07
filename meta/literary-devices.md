@@ -14,6 +14,7 @@ DM-craft palette for session planning. Not player-sourced desires (that's [[camp
 - `arc` / `campaign` — suggested only at act transitions or campaign planning; needs seeds placed sessions or acts apart, so the decision to commit must come early
 
 **Two lifecycles:**
+
 - **Devices** are reusable. Track *Last used:* with a session wikilink so planning avoids repeating the same trick in back-to-back sessions. `—` means never used.
 - **Twists** burn on use. Track *Deployed:* like [[campaign-design-preferences]] items, and *Seeded:* for breadcrumbs placed before the reveal. A deployed twist is retired — variants need to feel genuinely different, not reskinned.
 
@@ -32,7 +33,7 @@ Reusable narrative techniques. The note on each is the *table-level* application
 - **Dramatic irony** — players (or one player) know something the characters don't, or the DM lets the table see a danger the party hasn't noticed. Cutaway scenes and overheard conversations are the delivery vehicles.
   - *Scale: scene, session* · *Last used: —*
 - **In medias res** — open the session mid-action: combat already joined, the chase already running, the negotiation already going wrong. Backfill how they got there in the first lull.
-  - *Scale: session* · *Last used: —*
+  - *Scale: session* · *Last used: [[Session 29 The Mistake]]* (the party lands mid-raid)
 - **Red herring** — a deliberately plantable false lead. Use sparingly and make the truth discoverable — a red herring with no path back to the real answer is just a wasted session.
   - *Scale: session, mission* · *Last used: —*
 - **Ticking clock** — visible, concrete time pressure: the ritual completes at moonrise, the garrison arrives in three days. The clock must actually advance when players stall.

@@ -4,13 +4,47 @@ name: "Session 29 The Mistake"
 campaign: homebrew
 type: session
 session_number: 29
-exists: false
-state: planned
+exists: true
+state: completed
 tags:
   - session
 
 mission: [[The Stolen Casks]]
 planned_date: "2026-10-06"
+played_date: "2026-10-06"
+# in_world_end_date deliberately unset: Aethryn has no calendar yet (DM, 2026-10-07).
+# Working label: "Day 1, Ashford reckoning, night". Set it once the calendar lands.
+recap: "Davian's relic carried the party through a long transit of pure light that rested them in passing. Meanwhile, on a night road, the Nightveil sorcerer Halsby, sent by Sister Maerith toward Tassad, was stopped by a possessed fox with smoky green eyes. It begged him to save a woman named Sable from bandits at Ashford across the river and promised to fuse his spear and focus into a boon once the job was done. Halsby took the job without haggling. The party fell out of the light over a moonlit, half-burned brewery yard being stripped by raiders. Dip read the scene, relived the burning tavern of their childhood, landed feet-first on a cask-hauler, raged and leveled to 5. Odibli landed hidden outside the wall and watched a cart of barrels escape south with a long-haired archer on it, whom the raiders' leader called Nella. Luci landed hard by the breach, looked up at a vast broken moon shedding shards, named it Fida in the Dead Sun tongue, heard her voice answer 'Closer', and leveled to 5. In two rounds the party and the newly arrived Halsby killed all six raiders: Dip killed Arden, Willem and the mage Tallis; Halsby's twinned chromatic orb killed the crossbowman and Bandit 1; and his upcast magic missile killed the big one as he rode off with a bound Sable, who fell clear of the spooked horse. The party stopped the raiders present from taking anything more."
+cliffhanger: "The yard is quiet and every raider is dead. Sable lies beside a spooked horse, still bound and gagged, and has not yet spoken to her rescuers. Nella's cart, loaded with the barrels already taken, is gone south under the trees. Halsby has walked out of the shadows among four strangers who arrived out of falling light. The fox's promise to Halsby is still owed."
+entities_canonized:
+  - [[Sable Wren]]
+  - [[Ashford]]
+  - [[The Golden Lioness]]
+  - [[Nella]]
+  - [[Aashal-Groon Mellenegon Borak]]
+  - [[The Nightveil]]
+  - [[Tassad]]
+  - [[Sister Maerith]]
+new_entities:
+  - "Fida, Luci's name for Aethryn's broken moon, given in the Dead Sun tongue. Recorded on Luci's file and in the campaign doc, with no standalone entity yet"
+  - "The raiders, all dead and kept as recap narration only: Arden (the hauler Dip landed on), Willem (cleaved), Gib (likely the crossbowman), Tallis (the hedge-mage) and the big one (nameless by design)"
+  - "The fox: a possessed messenger with smoky green eyes, Asher's mouthpiece. Not a standalone entity"
+table_notes: "Roll20 had a terrible night: sheets wouldn't load, Paul was locked out of his character, dice rolls were invisible, and the page froze. It ate a large share of a 2.5-hour session, and Scenes 4-5 (the town, the offer, the inert Boon) were not reached. What landed: Dip's 60-foot drop onto a hauler and the 'don't call me a townie' kill, Halsby's magic-missile kill narration, Luci's moon naming, and 'my leathers' as a running bit. Kellan loved his intro. The table agreed to stop after the fight and open next session on roleplay. Jeff's first session DMing the homebrew."
+beats:
+  - "spotlight(Halsby): arc"
+  - "spotlight(Dip): beat"
+  - "party-centric: beat"
+  - "spotlight(Odibli): touch"
+  - "spotlight(Luci): beat"
+  - "party-centric: beat"
+  - "spotlight(Halsby): touch"
+  - "spotlight(Dip): touch"
+pcs_present:
+  - "Iggy"
+  - "Luci"
+  - "Odibli"
+  - "Dip"
+  - "Halsby"
 
 # --- OPTIONAL ---
 act: [[Act 1 - The Hearth at Ashford]]
@@ -53,6 +87,153 @@ description: "The first homebrew session. The party arrives mid-raid beside the 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
 
 **Shape:** balanced · **Length:** standard (~2 hr, 5 scenes plus Halsby's short intro) · **Attrition:** light · **Lethality:** standard
+
+## As Played
+
+Canonized 2026-10-07 from the Craig recording (`recaps/transcripts/session-29.md`). The
+frontmatter `recap` is the record. What follows is the plan as written. Scenes 1, 1b, 2 and 3
+ran; **Scenes 4 and 5 did not** (`S1_LOOT`, `S1_TOWN`, `S1_NAMES`, `S1_WREN`, `S1_OFFER`,
+`S1_ODIBLI`, `S1_IGGY`, `S1_BOON`). They carry into the next session.
+
+**Deviations from the plan:**
+
+- **Only one animal appeared.** A possessed fox with smoky green eyes delivered Asher's ask
+  alone. The snake (`S1_SNAKE` / `S1_BITE`) never came up. Halsby was not bitten.
+- **Halsby did not bargain.** He took the job outright. The fox promised to fuse his spear and
+  focus into a boon "after you, not before." The DM will deliver [[The Shadowless Spear]]
+  around Session 30 or 31.
+- **Levels:** the DM leveled **Dip** (to 5, at the start of round 1, as the rage took hold) and
+  **Luci** (to 5, on naming the moon). Halsby, Iggy and Odibli stay at 4.
+- **The landing:** Dip and Odibli chose *Read*. Luci tried to hold the light-form (WIS, flat 10)
+  and failed. Iggy failed and landed prone.
+- **The moon beat (`S1_LUCI`) moved into the fight.** On a free perception check Luci saw the
+  broken moon, named it **Fida** in the Dead Sun tongue, and heard **"Closer."**
+- **Both halves of the fork (`S1_FORK`) were won.** The big one was killed on horseback and
+  Sable fell clear, still bound and gagged. The party stopped the raiders present from taking
+  anything more. Only the cart that had already left (Nella's) got away.
+- **The raiders were named at the table:** Arden, Willem, Gib and the mage **Tallis**. The big
+  one stayed nameless.
+
+> **Reliability:** "Arden" and "Gib" were each heard once in the recording. Gib is assumed to
+> be the crossbowman because no other raider was left to be him. Halsby's twinned chromatic orb
+> was logged as a missed attack (7) then a hit (20), and the transcript can't tell a reroll from
+> the twin's second target, so slot and sorcery-point spend is approximate. Confirm with Kellan.
+
+## Recap
+
+### Previously on Curse of Strahd…
+
+- **Winery cleared.** The party confirmed nothing else was inside and stepped out to report to Davian Martikov.
+- **Ambush.** A second wave of blights was waiting in the treeline. They hadn't been alerted because the vampire staff's scream never carried past the cellar walls.
+- **Odibli** opened with Shatter across seven blights and dropped to 0 HP for it.
+- **Iggy** pulled the spine out of Odibli and stabilized him with Lay on Hands. Iggy then spent both remaining 2nd-level slots on Healing Word: one for Odibli, one for Luci.
+- **Luci** critically failed an acrobatic wall-run, landed on a blight's spike, and was crit to the ground. Once back up, Luci cast Sanctuary on Odibli and dashed 80 feet clear to find Davian.
+- **Dip** bellowed across the grounds for help and cleaved blights down two at a time. Dip also felled the last one.
+- **Raven swarms** came off the winery's upper floor in answer and killed as many blights as the party did.
+- Odibli's second Shatter caught Luci's square.
+- **Davian** cast poison and disease off Odibli and Dip, clearing both the tainted wine and the brown mold.
+
+### The Martikov secret
+
+- Davian is not the Wizard of Wines and not a wizard at all.
+- The vineyard was founded by a mage whose name is lost. The mage made three magic gems, called seeds, that let grapes grow healthy through Strahd's curse. Davian's family has run the place ever since.
+- The ravens that saved the party are that family. Every Martikov in the line is a wereraven, infected so long ago that even they don't know how it happened.
+- **Gem 1:** stolen ten years ago on Davian's son Urwin's watch. No Champagne du Stomp has been made since.
+- **Gem 2:** taken three weeks ago by Baba Lysaga, who believes she is Strahd's mother and hunts anyone who opposes him.
+- **Gem 3:** Baba Lysaga set the druids of Yester Hill on the winery to take it. The Martikovs' counter-attack failed, and the druids came back with the blights.
+- Without the gems the winery will never produce again. **The party accepted the quest to recover all three.**
+
+### The portal
+
+- Davian's last secret: the founding mage left one other relic and promised that travelers would one day come to defend the vineyard. It should be given to them.
+- Odibli read it as a portal of lost magic that would carry them somewhere to gather strength and return stronger.
+- He made the whole party hold hands and grasped the stone. Luminous mist rose to the edge of blinding, then faded…
+- **…and they were somewhere none of them had ever been.**
+
+### Where things stand
+
+- The party is unrested since Session 24 and out of spell slots.
+- Barovia is paused mid-quest. The Martikovs are owed a return with three gems.
+
+## Combatants
+
+Every enemy stat block for tonight's one fight, Scene 3 (`S1_FIGHT`), in one place. Six
+raiders. Stats are the 2014 Monster Manual Bandit and Thug and Volo's Apprentice Wizard,
+reskinned. Grid refs are their starting squares on `maps/new-wing.txt`.
+
+### At a glance
+
+- **Hauler 1** (E11) — Bandit · AC 12 · HP 11 · scimitar +3 to hit, 1d6+1 slashing (avg 4)
+- **Hauler 2** (E13) — Bandit · AC 12 · HP 11 · scimitar +3 to hit, 1d6+1 slashing (avg 4)
+- **Screen** (F8, doorway) — Bandit · AC 12 · HP 11 · scimitar +3 to hit, 1d6+1 slashing (avg 4)
+- **Crossbow** (J13, on the tall stack) — Bandit · AC 12 · HP 11 · light crossbow +3 to hit, 1d8+1 piercing (avg 5)
+- **Hedge-mage** (N13, by the cart) — Apprentice Wizard · AC 10 · HP 9 · fire bolt +4 to hit, 1d10 fire (no bonus)
+- **The big one** (I3, holding Sable) — Thug · AC 11 · HP 32 · two mace attacks, +4 to hit, 1d6+2 bludgeoning each (avg 5)
+- **Morale:** when the big one drops, is frightened or is talked down, each survivor makes a
+  DC 12 WIS save (+0). Failures flee and drop what they carry.
+
+### Bandit — Hauler 1, Hauler 2, Screen, Crossbow
+
+- **AC 12** (leather) · **HP 11** (2d8+2) · **Speed 30 ft** · **Init +1** · CR 1/8
+- **STR** 11 (+0) · **DEX** 12 (+1) · **CON** 12 (+1) · **INT** 10 (+0) · **WIS** 10 (+0) ·
+  **CHA** 10 (+0)
+- **Passive Perception** 10
+- **Scimitar.** Melee, +3 to hit, reach 5 ft. **4** (1d6+1) slashing.
+- **Light crossbow.** Ranged, +3 to hit, 80/320 ft. **5** (1d8+1) piercing.
+- **Haulers' job:** carry the cask toward the cart, 15 ft a turn (about 3 turns from E12 to
+  N12). They fight only if someone blocks them. *"We're not paid for this bit."*
+- **Screen's job:** hold the main doorway (F8:G8), the fast route into the wing.
+- **Crossbow's job:** shoot from the stack at whoever threatens the runners. He can see Sable
+  up column J through the blown wall. *"Move! Move the bloody barrel!"*
+
+### Hedge-mage — Apprentice Wizard
+
+- **AC 10** · **HP 9** (2d8) · **Speed 30 ft** · **Init +0** · CR 1/4
+- **STR** 10 (+0) · **DEX** 10 (+0) · **CON** 10 (+0) · **INT** 14 (+2) · **WIS** 10 (+0) ·
+  **CHA** 11 (+0)
+- **Passive Perception** 10 · **Skills** Arcana +4, History +4
+- **Spellcasting.** INT, **save DC 12**, **+4 to hit** with spells.
+  - **Cantrips (at will):** *fire bolt* (120 ft, +4 to hit, **1d10** fire), *mending*,
+    *prestidigitation*
+  - **1st level (2 slots):** *burning hands*, *disguise self*, *shield*
+- ***Burning hands.*** 15-ft cone, DEX save DC 12, **3d6** fire, half on a save. The plan has
+  him cast it twice, which spends both slots, so he has no *shield* left after that.
+- ***Shield*** (reaction, if a slot is left): +5 AC until his next turn, so AC 15.
+- **Dagger.** Melee or thrown (20/60), +2 to hit. **2** (1d4) piercing.
+- **Job:** stay back by the cart. Aim *burning hands* at a group, never at one downed PC. On the
+  second cast: *"That's not what the man said it'd do!"*
+- **Already used:** he read the *scroll of hold person* on Sable before the party arrived. It is
+  gone.
+
+### The big one — Thug
+
+- **AC 11** (leather) · **HP 32** (5d8+10) · **Speed 30 ft**, **15 ft while dragging Sable** ·
+  **Init +0** · CR 1/2
+- **STR** 15 (+2) · **DEX** 11 (+0) · **CON** 14 (+2) · **INT** 10 (+0) · **WIS** 10 (+0) ·
+  **CHA** 11 (+0)
+- **Passive Perception** 10 · **Skills** Intimidation +2
+- **Pack Tactics.** Advantage on an attack roll when an ally that isn't incapacitated is
+  within 5 ft of the target.
+- **Multiattack.** Two melee attacks.
+- **Mace.** Melee, +4 to hit, reach 5 ft. **5** (1d6+2) bludgeoning. Two hits max at **16**,
+  which can't instant-kill anyone.
+- **Heavy crossbow.** Ranged, +2 to hit, 100/400 ft. **5** (1d10) piercing. Not used while he
+  is holding Sable.
+- **Job:** drag Sable from I3 to the back door at D3. That's about 30 ft, so 2 rounds at 15 ft.
+  His horse is tied at B3.
+- **Breaking his grip on Sable:**
+  - a Shove (STR or DEX save, DC 13), or
+  - any hit that takes him below half HP (**16 or less**). Then he lets go to fight.
+- **To Dip only:** *"...Huh."* Then he drops her collar and squares up.
+- **Lines:** *"She comes with me. You don't."* · *"Stay down."* · *"Your turn's next."*
+
+### Running it
+
+- **Keep them on their jobs.** All six on one PC is ~30 damage a round, which is Dangerous.
+  Haulers on the cask and the big one on Sable keep it around 12 a round, which is Standard.
+- **Talk-downs** (see `S1_OUTS`): parley DC 12, Intimidation DC 13, Deception DC 13. Any of them
+  can trigger the morale save early.
+- **Loot on every raider:** one cloudy Earshot Crystal on a cord, never used in the fight.
 
 ## Orientation
 

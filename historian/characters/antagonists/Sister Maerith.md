@@ -2,7 +2,9 @@
 name: "Sister Maerith"
 type: character
 subtype: antagonist
-exists: false
+exists: true
+source_session: [[Session 29 The Mistake]]
+confirmed_date: "2026-10-06"
 campaign: homebrew
 contributed_by: kellan
 state: alive
@@ -50,4 +52,12 @@ She is not a brawler — she is a handler. Her weapon is the one question Halsby
 to answer, and the ledger she lets him run against it.
 
 > **Kellan-editable:** name ("Sister Maerith") and details are a first pass from Halsby's
-> backstory — rename or reshape freely. `exists: false` until she appears in play.
+> backstory — rename or reshape freely. Canonized at Session 29, when the DM named her at the table as the one who sent Halsby on the road.
+
+## Canon — Session 29
+
+Named at the table as Halsby's sender (the DM's words, heard as "Major Stride"; confirmed by Jeff
+on 2026-10-07 as Sister Maerith). For the Nightveil, she sent Halsby to investigate something
+that greatly upsets the order, with minimal detail and an existential worry, in [[Tassad]], the
+great city on the shore. The journey runs several weeks, and it is perilous for him because
+light is hard on him. She did not appear in person.

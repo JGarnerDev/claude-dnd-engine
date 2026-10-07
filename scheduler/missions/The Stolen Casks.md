@@ -4,7 +4,7 @@ name: "The Stolen Casks"
 type: mission
 campaign: homebrew
 exists: false
-state: planned
+state: active
 tags:
   - mission
 

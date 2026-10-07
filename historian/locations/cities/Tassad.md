@@ -2,7 +2,9 @@
 name: "Tassad"
 type: location
 subtype: city
-exists: false
+exists: true
+source_session: [[Session 29 The Mistake]]
+confirmed_date: "2026-10-06"
 state: thriving
 campaign: homebrew
 tags:
@@ -81,3 +83,9 @@ Tassad cannot feed itself. [[Grain]] comes down the Bayward from the plains (Pur
 - Which magic schools each tower holds (Paul's elaboration slot on the Triumvirate)
 - Where the other two basin guilds keep their charterhouses
 - The rumor behind Halsby's errand
+
+## Canon — Session 29
+
+Named at the table as [[Halsby]]'s destination: a great city on the shore, several weeks away,
+where [[The Nightveil]] has sent him to investigate something the order fears. He was on the
+road toward it when Asher's fox turned him aside to [[Ashford]].

@@ -3,7 +3,9 @@
 name: "Ashford"
 type: location
 subtype: city
-exists: false
+exists: true
+source_session: [[Session 29 The Mistake]]
+confirmed_date: "2026-10-06"
 state: troubled
 campaign: homebrew
 tags:
@@ -115,3 +117,10 @@ half, and it is what the raiders come for.
 - **Trade-route coverage** is missing. The Moorthistle is load-bearing lore and the ford is
   a real crossing, so a route entity naming Ashford is worth making once the regional trade
   picture is drawn.
+
+## Canon — Session 29
+
+The party arrived here by night, falling out of the light of [[The Wanderer's Boon]] into the
+raid on [[The Golden Lioness]]. [[Halsby]] came overland, told by Asher's fox that Ashford is a
+town on the river beset by bandits. The rest of the town (the separate raids, [[Mara Tull]],
+[[Silas Crubb]]) has not yet been seen on screen.

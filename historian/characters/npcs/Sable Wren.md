@@ -2,7 +2,9 @@
 name: "Sable Wren"
 type: character
 subtype: npc
-exists: false
+exists: true
+source_session: [[Session 29 The Mistake]]
+confirmed_date: "2026-10-06"
 state: alive
 tags:
   - character
@@ -42,3 +44,21 @@ ability to bless and charge deep-water for brewing. What he gets is a clean well
 life, someone opposing the fouling, and company.
 
 She works alongside [[Lok Thuliaga]] and [[Bree Tealeaf]].
+
+## Canon — Session 29
+
+- **Raided and taken.** Raiders working for [[Nella]] stripped the half-built new wing of the
+  Lioness, blew a hole in its side, and bound and gagged Sable. A hedge-mage's *hold person*
+  scroll was spent on her before the party arrived (per the plan). The raiders' leader, "the
+  big one", was riding off with her on his horse when [[Halsby]]'s magic missiles killed him.
+  The horse spooked and she fell clear.
+- **Where she stands at session end:** on the ground in the yard, **still bound and gagged**.
+  She has not yet spoken to the party, and none of them has spoken to her.
+- **Asher sent help.** [[Aashal-Groon Mellenegon Borak]], through a possessed fox, sent Halsby
+  to save her: "Sable is the woman's name, and she will need your help in the future." The fox
+  described her eyes as light gray. It said she rarely laughs, and that when she does it is
+  "like the really cool kid at school that laughs at you when you drop your food."
+
+> **Reliability:** the eye colour and the laugh come from Asher's fox, describing her secondhand
+> to Halsby. Treat them as Asher's view of her, not an established description. Confirm with
+> DM (Jeff) before using them as her canonical look.

@@ -1,7 +1,9 @@
 ---
 name: The Nightveil
 type: faction
-exists: false
+exists: true
+source_session: [[Session 29 The Mistake]]
+confirmed_date: "2026-10-06"
 campaign: homebrew
 contributed_by: kellan
 state: active
@@ -48,5 +50,11 @@ addressed, and that they alone could tell him what is in his blood — whenever 
 and ask. He keeps a ledger of what he owes them for the answers. He believes he can close it.
 
 > **Kellan-editable:** "The Nightveil" and its shape are a first pass from Halsby's backstory —
-> rename or reshape freely. Left `exists: false` (creative pool) until it appears in play and is
-> canonized to `historian/`.
+> rename or reshape freely. Canonized at Session 29, when it was named at the table as Halsby's order.
+
+## Canon — Session 29
+
+Named at the table as [[Halsby]]'s order (heard as "the Night Vale"). It has sent him, through
+[[Sister Maerith]], to [[Tassad]] to look into something that greatly upsets the order. It gave
+him minimal detail, only an existential worry. What the order dislikes at Tassad is still
+open.

@@ -14,7 +14,7 @@ class: "Bard 3 (College of Valor) / Paladin 1"
 background: "Entertainer"
 homeland: [[Threnai]]
 level: 4
-level_confirmed: 28
+level_confirmed: 29
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Iggadron \"Iggy\" Wallaed (Bard 3 Valor / Paladin 1)"
 aliases:
@@ -195,6 +195,7 @@ Shadow does not match Iggy's form and moves in the wrong direction. Onset: Sessi
 - **Session 9:** Killed by shadows (Strength reduced to 0)
 - **Session 10:** Revived by Odibli's shadow ritual; half max HP for duration in dungeon; affliction onset; leveled to 3
 - **Session 16:** At the [[Blue Water Inn]], turned [[Bosco]]'s dance into a crowd-winning "for Bosco!" moment and spun a gold-dragon-turned-raccoon tale into a viol jig. Earlier at the Vallaki market, traded a platinum necklace for thieves' tools and hide armor. **Reliability:** the trade is recorded from the notes; confirm the item details against Iggy's sheet.
+- **Session 29:** Failed the landing roll and came out of the light prone in the raided yard. Gave Dip Bardic Inspiration, missed a lunging rapier attack on Willem, then threw down the sword for his crossbow and put a bolt in the mage Tallis's stomach for 8. Stays level 4.
 
 ## Affinity notes
 

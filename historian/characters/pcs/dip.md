@@ -14,8 +14,8 @@ player: [[Ben]]
 race: "Orc"
 class: "Barbarian (Path of the Berserker)"
 background: [[Sage]]
-level: 4
-level_confirmed: 28
+level: 5
+level_confirmed: 29
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Dip T (Barbarian 4, Path of the Berserker)"
 pronouns: "they/them"
@@ -39,7 +39,7 @@ spotlight_hooks:
   - hook: "find the twin sister they believe survived the blaze"
     status: open
   - hook: "uncover and confront the raiders who slaughtered and burned their home hamlet"
-    status: seeded
+    status: paid
   - hook: "interpret the guiding hands in their visions, and why their sister's are absent"
     status: open
   - hook: "pilgrimage to grasp the divine-mortal bond"
@@ -136,6 +136,9 @@ Hears whispers when it is quiet. Onset: Session 10, after Odibli absorbed shadow
 - **Session 10:** Revived by Odibli's shadow ritual; half max HP in dungeon; affliction onset; leveled to 3
 - **Session 15:** Lost a small toe to their own axe while trying to clear grass from the stuck cart; Odibli failed to recover it with mage hand. No assumed mechanical effect — confirm with DM.
 - **Session 16:** Made a jovial entrance at the [[Blue Water Inn]] (audibly calling the patrons "less than stellar company"); performed an interpretive dance and rolled a natural 1, crashing into tables to jeers; later followed [[Urwin]] into the kitchen.
+- **Session 29:** Landed in Aethryn reading the raid on [[The Golden Lioness]]. The burning tavern brought back the fire that took their hamlet, and the DM granted a free rage and **level 5** on the spot (Extra Attack and Fast Movement; Ben also noted javelin weapon mastery). Dropped feet-first from the light onto a cask-hauler. Killed Arden ("don't call me a townie, ever"), cleaved Willem in half, and jammed a battleaxe down the throat of the mage Tallis mid-curse. Took 8 fire from Tallis's fire bolt.
+
+> **Reliability:** the level-5 features are as Ben read them aloud at the table while his sheet was down. The Roll20 sheet is authoritative. Confirm with Ben.
 
 ## Affinity notes
 

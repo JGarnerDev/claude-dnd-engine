@@ -2,7 +2,9 @@
 # --- MANDATORY (entity base) ---
 name: "Aashal-Groon Mellenegon Borak"
 type: deity
-exists: false
+exists: true
+source_session: [[Session 29 The Mistake]]
+confirmed_date: "2026-10-06"
 state: active
 campaign: homebrew
 tags:
@@ -128,3 +130,16 @@ His deep memory is a lore faucet with a tap on it. He may well know what the two
 actually arguing about. He does not give it away.
 
 The joke underneath all of it: the safest building in town is sitting on a monster.
+
+## Canon — Session 29
+
+- **He reached out through a fox.** A possessed fox with glowing, smoky green eyes stopped
+  [[Halsby]] on a night road and spoke into his mind. It asked him to save "one quite dear to
+  me", [[Sable Wren]], from bandits at [[Ashford]] across the river. It said it could not
+  intervene itself.
+- **The fox's promise:** it sensed Halsby's spear and his "magical conduit, a stone or gem" and
+  offered to join them into a boon, but **only after** the job: "You help me and I help you."
+  Halsby took the job without haggling. The boon is [[The Shadowless Spear]], owed, and the DM
+  plans to deliver it around Session 30–31.
+- He was **never named** to Halsby, and the party does not know he exists. Only one animal (the
+  fox) was used. No snake appeared.

@@ -3,7 +3,9 @@
 name: "Nella"
 type: character
 subtype: antagonist
-exists: false
+exists: true
+source_session: [[Session 29 The Mistake]]
+confirmed_date: "2026-10-06"
 state: alive
 campaign: homebrew
 tags:
@@ -81,3 +83,16 @@ hears, and she can answer. She sits on that through many fights before it comes 
 - **The third.** The rule of three pays off. The natural slot is as support marksman on the
   convergence night, where the party finally has her — and where the debt is on the table
   instead of her life.
+
+## Canon — Session 29
+
+- **First sighting.** During the raid on [[The Golden Lioness]], [[Odibli]] saw a long-haired
+  woman with a bow sitting on a cart of the Lioness's barrels, 200–300 ft down the road and
+  heading south. Her cape was blowing, and she looked back at him before vanishing under tree
+  cover.
+- **Her name was spoken aloud.** The raiders' leader shouted "we need to get packing up and back
+  to Nella," and the party heard it. They have not tied the name to the woman on the cart on
+  screen.
+- **Her crew left behind at the Lioness died to a man:** Arden, Willem, Gib, the hedge-mage
+  Tallis and the big one. Her cart and the barrels already loaded got away. The party stopped
+  the rest of the yard's stock from leaving.

@@ -12,8 +12,8 @@ player: [[Paul]]
 race: "Aasimar (Scourge)"
 class: "Monk 2 / Warlock 1 / Transcendent 1"
 background: "Astral Drifter"
-level: 4
-level_confirmed: 28
+level: 5
+level_confirmed: 29
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Lucitania (Monk 2 / Warlock 1 / Transcendent 1)"
 aliases:
@@ -35,7 +35,7 @@ spotlight_hooks:
   - hook: "learn whether she was ever truly in the sun temple, or only remembers it through genetic memory"
     status: open
   - hook: "put a name to the disembodied radiant voice that guides her: Sabathiel, or something else"
-    status: seeded
+    status: paid
   - hook: "trace the vanished sun worshippers who abandoned the temple and wrote its dead language"
     status: open
   - hook: "the Void Serpent that shattered the temple surfaces again"
@@ -122,6 +122,11 @@ Bullseye lantern, 3 poison darts, a diary, an ink pen, traveler's clothes. No co
 - "Sun spell" -referenced in Session 4 when freeing Jeff from the cursed bed. Exact spell unconfirmed.
 - **Augury** -selected at level 2 (Session 6 level-up); granted by Sabathiel through *Written in the Stars*.
 
+## The Voice in Aethryn
+
+- **Fida.** Luci's name for Aethryn's broken moon, spoken in the Dead Sun tongue when she first saw it (Session 29). Canon as the moon's name as the voice gave it to her. Whether anyone in Aethryn calls it that is unknown.
+- **The voice is louder and clearer here** than it ever was in Barovia. This is a standing fact of the season. Its first clear word in Aethryn was **"Closer"**. Closer to what, or to whom, is open. The voice itself is still unnamed (Sabathiel, or something else).
+
 ## Session History
 
 - **Session 1:** Introduced at Black Sheep Inn; performed with Iggy; threw knife at tavern customer (hit their neck); party banned
@@ -130,6 +135,9 @@ Bullseye lantern, 3 poison darts, a diary, an ink pen, traveler's clothes. No co
 - **Session 9:** Killed all shadows; MVP of the session
 - **Session 10:** Sacrificed herself on the cult altar to save the party; mists carried party away; Strahd retrieved her from death; leveled to 3
 - **Session 16:** At the [[Blue Water Inn]], told the room of her radiant celestial home — [[Danika]] quipped she might out-tell the resident bard [[Rictavio]]; danced with [[Bosco]] during the crowd-winning set.
+- **Session 29:** Tried to hold the light-form through the landing and failed (a flat 10), skidding in prone beside the smouldering breach. On a free perception check (18) she looked up at Aethryn's vast **broken moon**, shedding shards, and brighter than any light in Barovia. She felt closer to the plane she came from. Without thinking, she named it **Fida** in the Dead Sun tongue. The voice answered one word, **"Closer."** Leveled to **5** on the spot. Lit her radiant emanation (10-ft aura) and hit the big one for 13, 9 and a 5-point crit, all radiant.
+
+> **Reliability:** the class line still reads Monk 2 / Warlock 1 / Transcendent 1. Which class took the fifth level isn't recorded; Paul mentioned d8 attacks and +3 proficiency. Update the class line from the Roll20 sheet. Confirm with Paul.
 
 ## Affinity notes
 

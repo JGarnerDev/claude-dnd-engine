@@ -13,7 +13,7 @@ race: "Gnome (Forest)"
 class: "Wizard (Evoker)"
 background: [[Sage]]
 level: 4
-level_confirmed: 28
+level_confirmed: 29
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Odibli Spannerbranch (Wizard 4, Evoker)"
 aliases:
@@ -201,6 +201,7 @@ Wizard 4 (Evoker) · Forest Gnome · Sage · Lawful Neutral · Small, 30 ft. Pro
 - **Session 9:** Revived Ben with thrown healing potion
 - **Session 10:** Smashed the orb; absorbed shadow essence; veins turned black; healed Dip and Iggy via ritual; party at half max HP; leveled to 3
 - **Session 16:** At the [[Blue Water Inn]], cast speak with animals to let [[Sergei Rubelgerd]] tell the room his story of lost friend Tidak (the bar wept); interrogated the bard [[Rictavio]] on his dragon-slaying boast, caught the evasion, and came away mistrustful
+- **Session 29:** Chose to read the scene as he fell. He spotted the crossbowman circling behind the crates and landed hidden outside the yard wall. He watched a cart of barrels escape south with a long-haired archer aboard (Nella), who looked back at him before vanishing under the trees. Fire bolt at the crossbowman: natural 1. Hold Person on the big one: saved. [[The Wanderer's Boon]] was not checked on screen. Stays level 4.
 
 ## Affinity notes
 

@@ -44,31 +44,54 @@ Five PCs this season. The four who crossed from Barovia persist across both worl
 | Paul | Luci | Aasimar (Scourge) Monk | Alive — sacrificed Sacred Flame permanently |
 | Miguel | Odibli (also "ODB") | Gnome Wizard | Alive — poison cured by Davian Martikov, Session 28 |
 | Ben | Dip | Half-Orc Barbarian/Sage | Alive — whisper affliction, dormant in this world |
-| Kellan | Halsby | TBD, Sorcerer (Shadow Magic) | Joins at Session 1 — race/background TBD; level 4 per the 2026-10-01 ruling, stamps at Session 1's `/recap` |
+| Kellan | Halsby | Half-Elf Sorcerer (Shadow Magic) 4 | Joined in Session 29 — on the Nightveil's errand, owed the fox's boon |
 
 > **Reliability:** carried over from the Strahd roster plus the Session 28 seam pass. Afflictions cross **dormant** (the mists fed them; away, they are muted) — `workshop/first-homebrew-act/notes/the-seam.md`. Odibli's poison and Dip's mold were cured on screen and are gone; do not reuse them. Party level is unset pending the starting-level ruling.
 
-## Current State (after Session 28)
+## Current State (after Session 29)
 
-The party arrived in [[Ashford]] through [[The Wanderer's Boon]] and has not yet played a
-session in this world. [[Act 1 - The Hearth at Ashford]] is the live act;
-[[The Stolen Casks]] is the opening mission, and [[Session 29 The Mistake]] is planned for
-2026-10-06. Nothing in Aethryn is canon yet — every entity the first session touches still
-carries `exists: false` until `/recap` graduates it.
+The party is in Aethryn. At night they stand in the raided yard of [[The Golden Lioness]] in
+[[Ashford]], with all six of [[Nella]]'s raiders dead around them. [[Act 1 - The Hearth at Ashford]]
+is the live act and [[The Stolen Casks]] is **active**.
+[[Session 29 The Mistake]] played Scenes 1–3. Scenes 4–5 carry into the next session.
 
-### Rest Clock (as of: Session 28)
+- **[[Sable Wren]]** is on the ground beside a spooked horse, **still bound and gagged**. She
+  has not spoken to the party.
+- **Nella's cart**, with the barrels already loaded, escaped south under the trees toward
+  Duskwater. The party stopped the raiders present from taking anything more.
+- **Not yet played:** the bodies (coin, plus an Earshot Crystal on every raider, `S1_LOOT`) ·
+  the town's other raids · [[Mara Tull]] and [[Silas Crubb]] · Sable's thanks and the offer of
+  a 10% stake · Iggy's viol-song beat · the beat where [[The Wanderer's Boon]] is shown inert.
+- **[[Halsby]]** has joined. He was on [[The Nightveil]]'s errand to [[Tassad]] for
+  [[Sister Maerith]] until Asher's fox turned him aside. He took the job without bargaining. The
+  fox owes him [[The Shadowless Spear]], which the DM plans to deliver around Session 30–31.
+- **Levels:** Dip and Luci are 5. Halsby, Iggy and Odibli are 4. Levels come one PC at a time,
+  with everyone at 5 before the December finale.
+- **The sky:** a single vast **broken moon**, shedding shards. Luci named it **Fida** in the
+  Dead Sun tongue, and her voice, louder here than in Barovia, answered "Closer." This
+  conflicts with `data/lore/calendar-proposal.md` (two suns, three moons; not canon), which
+  needs reconciling before it is canonized.
+
+### Rest Clock (as of: Session 29)
 
 Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` -> Long Rest Rules).
 
-- In-world time now: **working label "Day 1, Ashford reckoning"** — deliberately not a date. Aethryn has no settled calendar (`questionnaires/world/history/`, `data/lore/calendar-proposal.md` both open), so no in-world date is asserted until those land
-- Last long rest (in-world): **the transit itself.** Per the DM ruling of 2026-10-01, passing through [[The Wanderer's Boon]] counts as a long rest, told to the party in fiction as they teleport rather than announced as a mechanic
-- Hours since last long rest: 0 — the party arrives rested
-- Long rest available: **not for ~24 in-world hours** from arrival. The 24-hour gate restarts at the transit, so Session 29 has no second reset in it
-- Rounds of combat since: **0**
+- In-world time now: **"Day 1, Ashford reckoning", night, just after the raid.** This is a working label, not a date, because Aethryn has no settled calendar (`questionnaires/world/history/`, `data/lore/calendar-proposal.md` both open)
+- Last long rest (in-world): **the transit itself**, given in fiction at Session 29's landing (DM ruling, 2026-10-01)
+- Hours since last long rest: ~1 (~estimate). The transit landed straight into the fight
+- Long rest available: **no, not for ~23 more in-world hours**
+- Rounds of combat since: **~3** (two full rounds plus Dip's finishing turn)
 - Short rests since: **0**
-- Notable burns: **none carried.** The transit cleared the Barovian ledger — all slots, hit dice and HP restored. Afflictions cross **dormant** ([[Iggy]]'s shadow, [[Dip]]'s whispers). [[Odibli]]'s poisonings and Dip's spore infection were cured on screen by [[Davian Martikov]] in Session 28 and are **gone — do not reuse them.** Permanent losses that do persist: Luci's **Sacred Flame**, sacrificed permanently, and Odibli's **familiar**, destroyed in Session 25
+- Notable burns:
+  - [[Halsby]]: Invisibility, a twinned Chromatic Orb (slot + sorcery points), and Magic Missile upcast for 5 darts (~3rd level; ~estimate)
+  - [[Odibli]]: Hold Person (2nd)
+  - [[Luci]]: ki/focus for the flurry, plus her radiant emanation
+  - [[Iggy]]: 1 Bardic Inspiration
+  - [[Dip]]: 1 rage (granted free), and took 8 fire
+  - Permanent losses that still apply: Luci's **Sacred Flame**, and Odibli's **familiar** (Session 25)
+  - Afflictions are still **dormant** (Iggy's shadow, Dip's whispers)
 
-> **Reliability:** this clock was **initialized at the season swap**, not carried across it — exactly the reset the paused [[Curse of Strahd]] clock suggested considering. Barovia's ~35 rounds and ~17-24 hours-since figures are retired with that campaign and are not inherited here; they remain in `scheduler/campaign/Curse of Strahd.md` for when the Strahd season resumes. The header stamp reads Session 28 because that is the last played session of either campaign; Session 29's `/recap` is the first to restamp it from actual homebrew play.
+> **Reliability:** spell levels and the sorcery-point spend come from a machine transcript of a Roll20 night when sheets were failing. Confirm with Kellan and Miguel if a resource question decides anything.
 
 ## Setup TODO
 

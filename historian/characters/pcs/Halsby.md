@@ -17,10 +17,10 @@ source_session: "player backstory (Halsby)"
 confirmed_date: "pre-campaign"
 race: "Half-Elf"
 class: "Sorcerer (Shadow Magic)"
-# level ruled 2026-10-01: party stays at 4 on the homebrew crossing, no level-up on
-# arrival. No level_confirmed stamp until he is actually played -- party-status.py flags
-# him STALE by design; Session 1's /recap stamps it.
+# level ruled 2026-10-01: party stays at 4 on the homebrew crossing. Levels now come one PC
+# at a time at DM-chosen moments; Halsby is still 4 after his first session (Session 29).
 level: 4
+level_confirmed: 29
 background: "Haunted One"
 # Roll20 sheet (2026-10-04) is the mechanical source of truth.
 character_sheet: "Roll20 — Halsby (Sorcerer 4, Shadow Sorcery)"
@@ -207,6 +207,12 @@ Dagger ×2, spear, crowbar ×2, 15 torches, 2 tinderboxes, 4 flasks of oil, holy
 
 ---
 
+## Session History
+
+- **Session 29 (first session):** At the table, Kellan described Halsby as born in **Netheril**, in a floating city that survived the original cataclysm by going into the shadow realm. It came back, he was born there, and then it fell to earth. He was one of its only survivors, and he now wanders, trying to work out his own story and what he is. This matches The Object and Backstory above. On a night road toward [[Tassad]] on [[The Nightveil]]'s errand from [[Sister Maerith]], he was stopped by a possessed fox with smoky green eyes (Asher's mouthpiece). It asked him to save [[Sable Wren]] from bandits at [[Ashford]]. He read it as earnest (perception 14) and **took the job without bargaining**. The fox promised to fuse his spear and shard into a boon *after* the job ([[The Shadowless Spear]], expected around Session 30–31). He went in invisible. A **twinned chromatic orb (fire)** for 21 killed the crossbowman and leapt for 8 to kill Bandit 1. An **upcast magic missile** (5 darts, 15) then killed the big one as he rode off with Sable, and she fell clear.
+
+> **Reliability:** "Netheril" was heard as "Neferil", and Kellan paused mid-sentence to get the names right. The DM ruled the table account canon where it is clearly heard. Confirm the spelling with Kellan.
+
 ## DM-Only
 
 > **Do not surface to the player.** Halsby does not know any of the following.
@@ -257,7 +263,7 @@ pass, Kellan-editable:
 - Selgaunt (home city) → **Corveth**
 - Sembia (nation) → **Sarmene**
 - Old Chauncel (elder merchant-noble caste) → **the Old Charter**
-- Netheril (fallen arcane empire) → **TBD**
+- Netheril (fallen arcane empire) → **kept as Netheril.** Kellan named it at the table in Session 29 (heard as "Neferil"; DM ruled 2026-10-07 that his table account is canon)
 - Thultanthar / Shade (the fallen flying city) → **TBD** (state: destroyed)
 - Ordulin Maelstrom (the shadow-wound) → **TBD**
 - Myth Drannor (the city it fell on) → **TBD / offscreen**

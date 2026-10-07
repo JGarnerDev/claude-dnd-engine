@@ -20,6 +20,8 @@ confirmed_for: "Session 29 The Mistake"
 *His own plain spear, with the black shard set into the head as if it grew there. The haft
 throws a shadow. The point does not.*
 
+> **Delivery (recap, 2026-10-07):** promised by Asher's fox in Session 29. Halsby took the job **without bargaining**, and the DM plans the hand-over for around **Session 30 or 31**.
+
 ## What it does
 
 1. **+1 weapon.** +1 to attack and damage rolls made with it.

@@ -2,7 +2,9 @@
 name: "The Golden Lioness"
 type: location
 subtype: shop
-exists: false
+exists: true
+source_session: [[Session 29 The Mistake]]
+confirmed_date: "2026-10-06"
 state: open
 campaign: homebrew
 tags:
@@ -91,3 +93,14 @@ half genuinely protected. The party may not realize this until something bad can
 through the door. The new wing is not covered by it. Also: the safest building in Ashford is
 sitting directly on top of a monster, and whatever [[Lok Thuliaga]] and [[Bree Tealeaf]] left
 behind will find them eventually.
+
+## Canon — Session 29
+
+- **Raided by night.** Nella's crew blew a hole in the side of the half-built new wing, leaving
+  smouldering embers, and stripped the yard of barrels and crates. A cart of casks escaped
+  south.
+- **The party won the yard back.** All six raiders were killed in the yard and on the road
+  outside, and the remaining stock stayed. [[Sable Wren]] was freed from the big one's horse,
+  still bound and gagged.
+- The building was never named aloud at the table. The party knows it as "the tavern" or "the
+  house".
