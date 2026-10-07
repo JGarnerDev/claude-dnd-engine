@@ -14,7 +14,7 @@ contributed_by: miguel
 source_session: "player backstory (Odibli)"
 confirmed_date: "pre-campaign"
 relates_to:
-  - [[Odibli]] (scribe and transcriber for roughly forty years; DM-only: an escaped copy)
+  - [[Odibli]] (scribe and transcriber for roughly forty years; a runaway copy, and since Session 29 he knows it)
   - [[The Original Odibli]] (scribe; made the copy and hid it)
   - [[The Citadel Assistant]] (junior scribe; knows about the copy)
   - [[The Citadel Colleague]] (scribe; Odibli's friend)
@@ -22,7 +22,7 @@ relates_to:
   - [[Tome of Strahd]] (held a fragment; its transcription woke the copy)
 rulership: [[The Master of the Citadel]]
 known_by:
-  - [[Odibli]] (partial: knows it as a scriptorium, not as what it does to copies)
+  - [[Odibli]] (knows he is its runaway copy, since Session 29; how much else he knows about its copy-making is unstated)
 motives:
   - "Contain cursed and powerful texts by transcribing them"
   - "Keep its copy-making clean: no copy lives long enough to wake"
@@ -35,7 +35,7 @@ livelihood: "Unknown"
 description: "A containment institution for cognitohazard texts that makes full-person copies of its scribes to do the deadly copying, each written with an ending. Odibli's home of forty years."
 ---
 
-> **Reliability:** Sourced from [[Odibli]]'s player backstory (Miguel), pre-campaign. Player-authoritative. Where the Citadel stands, and in which world, is unstated.
+> **Reliability:** Sourced from [[Odibli]]'s player backstory (Miguel), pre-campaign. Player-authoritative. Where the Citadel stands, and in which world, is unstated. Miguel, Session 29: Aethryn is **closer** to it than Barovia was.
 
 ## What It Says It Is
 

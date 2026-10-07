@@ -48,7 +48,7 @@ goals:
   - "Keep this fellowship from ending the way the ones on the page do"
   - "Read the rest of the Tome of Strahd (he cannot leave a text unread)"
 secrets:
-  - "DM-only: he is a copy of the original Odibli, made by the Citadel as a work tool; he does not know"
+  - "Known to him since Session 29 (Miguel): he is a runaway agent, a copy of the original Odibli made by the Citadel as a work tool, and the real Odibli can sense his spellcasting"
   - "DM-only: Strahd unwrote the ending inscribed into him and called him through the mist; the distant voice was Strahd"
   - "DM-only: the original knows the copy exists and hid it; the Citadel Assistant knows and is deciding whether to tell the Master"
   - "DM-only: Strahd taps his outgoing fireplace messages"
@@ -73,8 +73,10 @@ spotlight_hooks:
   - hook: "his leap-before-look costs a companion"
     status: open
   - hook: "he learns he is the copy"
+    status: paid
+  - hook: "the real Odibli detects his magic in Aethryn"
     status: open
-description: "[[Miguel]]'s PC. Odibli Spannerbranch, forest gnome Evoker; forty years a Citadel scribe, called into Barovia by a distant voice. Unknown to him, he is a deathless copy of the original, and the voice was Strahd."
+description: "[[Miguel]]'s PC. Odibli Spannerbranch, forest gnome Evoker; forty years a Citadel scribe, called into Barovia by a distant voice. He knows he is a runaway copy of the original. In Aethryn he is closer to the Citadel, his magic is less reliable, and each cast risks the real Odibli sensing him. Unknown to him, the voice was Strahd."
 ---
 
 Campaign: [[Curse of Strahd]] | Player: [[Miguel]]
@@ -128,6 +130,17 @@ The break was not one event but a slow erosion over years of copying. The trigge
 **What he's afraid of:** he leaps toward adventure and keeps leading himself into danger. He knows this about himself and is working on it, but the hunger to *experience* adventure outweighs his own safety.
 
 **What would send him back to the desk:** only the promise of safety and a long life. Going back is nearly unthinkable, because the desk was slowly killing him; the monotony and absence of wonder would hollow out his soul. That tension is the point: part of him knows the safe path would keep him alive.
+
+## The Runaway Agent (Aethryn)
+
+> **Reliability:** Miguel, at the table, Session 29. Player-authoritative, and it **overrides** earlier writing that had Odibli unaware he is a copy.
+
+> *"After coming back to this world, I am now closer to the Citadel as a runaway agent. My magic isn't as reliable and whenever I cast it, there's a chance that the real odibli can detect it. Runaway agent is fully aware of this sort of stuff."*
+
+- **He knows what he is.** Odibli is a runaway agent of [[The Citadel]], a copy, and he knows the real Odibli ([[The Original Odibli]]) is out there.
+- **Aethryn is closer to the Citadel** than Barovia was. Where exactly the Citadel stands is still unstated.
+- **His magic is less reliable here.** How unreliable is not yet set.
+- **Each cast risks detection.** Whenever he casts, there is a chance the real Odibli senses it. The odds, and what the original does about it, are not yet set.
 
 ## The Fireplace: the hearth-channel
 
@@ -199,11 +212,11 @@ Odibli mistrusted [[Rictavio]] from their first meeting — until Rictavio drove
 
 ## DM-Only
 
-> **Do not surface to the character.** Odibli does not know any of the following. Miguel authored it.
+> **Do not surface to the character.** Miguel authored it. Since Session 29, Odibli knows he is a runaway copy and that the original exists (see **The Runaway Agent**). He still does not know the rest: that Strahd was the voice and unwrote his ending, that Strahd taps the hearth-channel, or what the Assistant and the Colleague know.
 
 ### The pursuer and the truth
 
-The Odibli in Barovia is a **copy**. He believes he is the one and only Odibli and does not know the original exists. Subjectively there is no seam: the copy woke with the original's entire memory, continuous with his whole life.
+The Odibli in Barovia is a **copy**, and as of Session 29 he knows it. Subjectively there is no seam: the copy woke with the original's entire memory, continuous with his whole life.
 
 **How the copy came to exist.** [[The Original Odibli]], the safety-bound desk-self too afraid to answer the mist's call himself, made the copy as a *work tool* to handle the transcription of a dangerous text. Ordinarily a copy carries an inscribed ending and expires once its task is done. This one didn't. As it transcribed a fragment of the [[Tome of Strahd]], **[[Strahd von Zarovich]] reached through the mist, prevented its ending from being written, and called it to Barovia.** The copy woke deathless and fled toward the call. The original did not summon it or engineer the journey; Strahd did. The original's role is passive: he made it and hid the consequences.
 
@@ -211,7 +224,9 @@ His guilt is **instrumentalization, negligence, and cover-up**, not murder. He m
 
 ### The bleed
 
-The two can never occupy the same world at once; the mist enforces it. But the copy's own hand betrays him: letters, journal entries, and confessions appear in Odibli's exact handwriting, pages he has no memory of writing. Because he trusts his own memory absolutely (it has never occurred to him that he is forgeable), he has no defense against his past being edited. His certainty is the wound.
+The two can never occupy the same world at once; the mist enforces it. But the copy's own hand betrays him: letters, journal entries, and confessions appear in Odibli's exact handwriting, pages he has no memory of writing. *(Superseded in part, Session 29: he now knows he is a copy, so he knows he is forgeable. Whether that gives him any defense against the bleed is open.)*
+
+In Aethryn the bleed has a new face: his spellcasting. Each cast risks the original sensing him.
 
 ### The Citadel's crime
 
