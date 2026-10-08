@@ -370,20 +370,25 @@ each block on its card.
 > the yard the way a merchant looks at a spilled order."*
 
 - **Mara's lines** (each said once):
-  - *"You five. I'm not asking you to put those down. I'm asking you not to make me count them."*
-  - *"Folk are saying you came down in a light. I'd like to hear it from you."* — the party chooses
-    how to explain. She listens all the way through and doesn't argue.
-  - *"You held the one door I couldn't reach. I'll thank you for it tonight and find out who you are
-    tomorrow."*
-  - To the wounded deputy, not looking at him: *"Sit. That's not a request."*
-- **Silas's tangent:** *"Funny thing about rope. Everybody needs it, nobody budgets for it. My father
-  used to say a town's only as good as its rope, which I always thought was a hanging joke, but no,
-  he meant fences… anyway. That delivery was worth a thousand gold, and she'd paid me a third of
-  it."* Sable owes him about 650 gp. She would never say so.
+  - *"You five. You can keep your weapons. Just keep them pointed at the ground while we talk."*
+  - *"Half the town says you fell out of the sky in a flash of light. I'd like to hear what happened
+    from you."* — the party chooses how to explain. She listens all the way through and doesn't
+    argue.
+  - *"Every street was fighting. I couldn't get to the Lioness, and you held it for me. Thank you.
+    Tomorrow I'll want to know who you are."*
+  - To the wounded deputy, not looking at him: *"Sit down before you fall down. That's an order."*
+- **Silas's tangent:** he spots the new wing's brewing copper, the big kettle beer is boiled in,
+  half out of its crate with a spear-hole punched through the side. He's genuinely offended.
+  *"Do you know what that is? That's a brewing copper. One sheet, hammered round by hand, and
+  there's maybe three smiths on this side of the river who can do it without splitting the seam.
+  You can't patch it. Patch it and the beer tastes like a penny. And they put a hole in it. Didn't
+  take it, mind. Took the casks, took the cart, and stabbed the one thing worth stealing. Idiots.
+  …That was on the delivery I sold her, too. A thousand gold all told, and she'd paid me a
+  third."* Sable owes him about 650 gp. She would never say so.
 - **The Barovian coin (optional, one beat):** only if someone spends or shows coin. Silas turns
-  Iggy's electrum over: *"Who's the fellow on this? Handsome. Looks like he'd foreclose on you."*
-  Then quietly: a coin with a face nobody knows looks forged, and he'd rather they didn't spend more
-  of it in his town. Seed only.
+  Iggy's electrum over: *"Never seen this face before. Where's this coin from?"* Then quietly: a
+  coin nobody recognizes looks forged, and he'd rather they didn't spend more of it in his town.
+  Seed only.
 
 #### S2_NAMES — Three names and the boots, one line each, then stop
 
