@@ -317,7 +317,7 @@ After presenting the plan, ask:
 
 If yes:
 
-1. Read `meta/schemas/session.md` to confirm the frontmatter template, then run the **Description & Dialogue Pass** below over the plan
+1. Read `meta/schemas/session.md` to confirm the frontmatter template, then read `.claude/commands/review.md` and run its passes over the plan in its `/session` mode (applied directly, no findings list)
 2. Determine path based on scope (filename = exact display name, matching canon precedent — e.g. `Session 14 The Road Remembers.md`):
    - Always create the folder `scheduler/sessions/Session {NN} {Name}/` and write the plan inside it as `Session {NN} {Name}.md`
    - `scope: linked` → also write each encounter into that folder as `Encounter {Name}.md`
@@ -329,28 +329,4 @@ If yes:
 
 If no: leave the plan in chat for the DM to use or adapt manually.
 
-### Description & Dialogue Pass
-
-A plan that has rules but no voice leaves the DM improvising cold. Before the file is written, and again when the DM confirms a draft as ready to run (`state: draft → planned`), walk every scene and every `#### S1_` node and fill what is thin. **Everything added is guidance, not script.** The DM improvises from it. Say so once, at the top of `## Scenes`.
-
-Look for, and fill:
-
-- **Scenes the players must choose from, with no picture.** If a roll, stance or fork depends on what the party can see, give a short `> *"..."*` read-aloud first (3–5 sentences). Read-aloud boxes only when `depth: narrated`
-- **NPCs with a voice note but no lines.** Give 2–4 sample lines per speaking NPC, each in their voice from the NPC Quick-Reference: the first line they say, plus one per likely player push ("who are you", "why me", a refusal)
-- **Branch outcomes with no response.** Every success, failure or refusal node gets the NPC's reaction in a line
-- **Discoveries with no sensory detail:** an item's first touch, what a successful Perception or Read roll notices (offer 3–5 options), a creature hidden for a blindsight or Perception check
-- **Names planted with no delivery.** For each thread seed, say who says it and how (secondhand description, a silence, a gesture) and where to stop
-- **Mid-fight beats:** a few flat lines for the enemies, a morale-break line, and what a bound or sidelined NPC does while the party fights
-- **Contingencies whose tone changes** (a colder NPC, a worse deal). Give one sample line for the changed tone
-
-Rules:
-
-- Ground every voice in the entity's file (`personality`, `description`, the Quick-Reference). Never invent a look or a voice that the file contradicts. Read 1 hop for any NPC whose look is not already in context
-- **Plain over clever.** Each line states its point outright, so the DM gets it on a cold read at the table. No subtext to decode, no wordplay that needs explaining. If a line needs a gloss, rewrite the line rather than adding the gloss. The DM riffs from it anyway
-- **Every line has a cue.** Note what in the scene prompts it: something the NPC sees, a question, an event. A character tangent needs a concrete object or moment to set it off, ideally drawn from the location's file, never a musing out of nowhere
-- **Leave unset canon unset.** Numbers, names and facts that canon has not fixed go in as backticked placeholders (`` `<a big number>` ``) for the DM to set at the table and `/recap` to record
-- Respect the plan's own limits: do not narrate a PC's inner experience, do not name what a scene says stays unnamed, and do not front-load a feud past its stated budget
-- Add under the existing node headings, so the session runner shows each addition on the right card. Never rename or reorder nodes
-- Skip anything already covered. A node with a working read-aloud or lines needs nothing
-
-After writing, lint the file and confirm `uv run scripts/session-cards.py --session {NN}` still parses. Then list in chat what was added, grouped by scene, plus any placeholders the DM must set.
+Before the DM marks a draft ready to run (`state: draft → planned`), suggest `/review {NN} --ready`.

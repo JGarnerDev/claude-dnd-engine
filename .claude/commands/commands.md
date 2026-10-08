@@ -6,6 +6,7 @@ Commands to list:
 
 - `/commands` — show this list
 - `/session [--depth narrated|notes] [--scope inline|linked]` — plan the next session
+- `/review [session] [--ready]` — polish an existing session plan: plain, cued lines; names placed at first appearance; cuts swept from the flow graph; new canon listed for `/recap`
 - `/recap` — canonize a played session; moves it to historian and audits entities
 - `/transcript [session] [--transcribe] [--quotes-only]` — digest a session recording's transcript into `recaps/inbox/` notes ready for `/recap`; `--transcribe` runs the audio through Whisper first
 - `/inventory` — report all free entities in `./data` grouped by type, with gaps

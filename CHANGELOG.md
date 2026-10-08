@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.20.0] — 2026-10-08
+
+### Added
+
+- **`/review` polishes a session plan before it runs.** `/session` builds a plan; `/review [session] [--ready]` reviews one that already exists, in four passes. **Description & Dialogue** fills thin scenes and keeps lines plain and cued. **Names & People** checks new names for collisions and describes each person once, where they first appear. **Cuts & Renames** sweeps a removed or renamed node out of `_flow.md`, the Engine notes and the frontmatter. **New Canon** lists every fact the plan sets under *For `/recap`*. Standalone runs present numbered findings and apply what the DM approves; `--ready` sets `state: planned`.
+
+### Changed
+
+- **The Description & Dialogue Pass moved out of `/session` into `/review`.** `/session` Phase 6 now reads `review.md` and runs its passes when it writes the plan, so `/session` no longer loads the pass on every run. Behavior is unchanged, apart from the three new passes now also running at write time.
+
 ## [0.19.0] — 2026-10-08
 
 ### Added

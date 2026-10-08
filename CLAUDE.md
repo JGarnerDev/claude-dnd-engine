@@ -259,6 +259,7 @@ No DM brief card needed. No other formats unless explicitly requested.
 - `/commands` — `.claude/commands/commands.md` — list all available slash commands with descriptions
 - `/inventory` — `.claude/commands/inventory.md` — scan all entities in `./data` and report what's in the pool
 - `/session` — `.claude/commands/session.md` — plan the next session from campaign state, threads, and scheduler
+- `/review [session] [--ready]` — `.claude/commands/review.md` — polish an existing session plan before it runs: fill thin scenes, make lines plain and cued, keep names and cuts consistent, list the new canon it sets
 - `/recap` — `.claude/commands/recap.md` — canonize a played session and write it to historian
 - `/entity-questionnaire` — `.claude/commands/entity-questionnaire.md` — generate a player-facing questionnaire to design a new world entity
 - `/find <query>` — `.claude/commands/find.md` — semantic entity search; surfaces entities by meaning
