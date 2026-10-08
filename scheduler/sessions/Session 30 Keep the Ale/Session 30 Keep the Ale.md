@@ -246,7 +246,9 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   - **Unaware** (4 stages won): Clatter and Hesper dicing by the fire, Brask asleep against the
     cart wheel, Sennet in the shed over the ledger, the dogs dozing (Stealth still has to beat
     their passive 18 near the corral). The party picks its position and gets surprise if it wants
-    it. Nella is in the shed, so her first round is the climb to her perch.
+    it. Nella is in the shed (O6), so her **first two rounds** are the run to her perch: out the
+    side door and up the slope is ~80 ft of movement, and her best is 70 (Dash via Skirmisher's
+    Step). She shoots from the slope on round 2 if anyone is in the open.
   - **Dusk** (2–3 won): Clatter on the roof and Hesper at the fire on watch, Nella on her perch at
     the dusk rotation.
   - **Night alert** (0–1 won): perimeter staked (difficult ground, or DEX 12 to cross at speed),
@@ -268,7 +270,7 @@ shadows among four strangers who came down in a light, and Asher's fox still owe
   - **Odibli** on the last stroke that saves the hearth (`S2_HEARTH`)
   - **Halsby** when the Spear is fused at dawn (`S2_SPEAR`)
   The party walks into the camp all level 5, and the camp is sized for that.
-- **Resources:** the transit's long rest was about an hour before the raid. Halsby spent heavily
+- **Resources:** the transit's long rest started about an hour before the raid. Halsby spent heavily
   (Invisibility, a twinned Chromatic Orb, Magic Missile upcast to ~3rd); Odibli spent Hold Person;
   Luci spent ki and her emanation; Iggy one Bardic Inspiration; Dip one rage and took 8 fire.
 - **Afflictions:** Iggy's shadow and Dip's whispers are dormant in Aethryn. Luci's Sacred Flame and
@@ -633,13 +635,15 @@ each block on its card.
 - **Each stage:** every PC makes one check from the open menu, describing how they help. **A stage
   is won when at least half the party passes** (3 of 5).
 - **Menu:** Survival (tracking) · Perception (spotting sign) · Animal Handling (pushing the horses)
-  · Nature (reading terrain) · Athletics (crossings) · Investigation (the cart's tells). A player
-  who argues well for something else gets it.
+  · Nature (reading terrain) · Athletics (crossings) · Investigation (the cart's tells) · Stealth
+  (stage 4 only). A player who argues well for something else gets it.
 - **DCs:** stage 1 **12** · stage 2 **13** · stage 3 **13** · stage 4 **14** (Jeff, 2026-10-07).
   Record what actually gets used; it fills the empty Skill Challenge table in `meta/difficulty.md`.
 - **Failures cost lead, never the trail.** A lost stage is a lamed horse, a cold fork, a night
   crossing. They always find the camp.
 - **Result** (stages won): **4** → camp unaware · **2–3** → dusk · **0–1** → night alert.
+  Then apply the fork's rider bump, if Ilsa got away (`S2_RIDER`): one step up, capped at night
+  alert.
 
 #### S2_FORD_STAGE — Stage 1, the far bank (DC 12)
 
@@ -672,7 +676,8 @@ each block on its card.
 - Woodsmoke, and a corral full of horses that can smell theirs.
 - **Animal Handling** keeps the borrowed horses quiet. **Stealth** works here too.
 - **Loss:** a horse whinnies, a corral answers, and somebody at the camp looks up.
-- **Set the alert state** now, then go to Scene 7.
+- **Set the alert state** now from stages won, add the rider bump if Ilsa escaped at the fork,
+  then go to Scene 7.
 
 ### Scene 6 — The Dusk Fork
 
@@ -696,11 +701,12 @@ each block on its card.
 
 - **Fennel's lines:** *"Told you someone'd come."* · *"That's the sky lot. That's them."* · *"Ilsa,
   go! Ride for her!"*
-- **Talking it down works:** Intimidation DC 13 sends Fennel and Cinder running (but they run *to
-  the camp*). A good bluff keeps them sitting long enough to close.
-- **Fennel shoots the horses, and Cinder goes for their legs.** Unhorse the pursuit and nobody
-  reaches the
-  camp. Silas's horses: AC 10, HP 13. A downed horse is one Silas wants 11 gp for, and it puts
+- **Talking it down works:** Intimidation DC 13 sends Fennel and Cinder running, off the road
+  and away from the camp. A scared farm lad doesn't report to Nella. A good bluff keeps them
+  sitting long enough to close.
+- **Fennel shoots the horses, and Cinder goes for their legs.** Unhorse the pursuit and they
+  still find the camp, but late and on foot (a lost horse costs them stage 4's lead, never the
+  trail). Silas's horses: AC 10, HP 13. A downed horse is one Silas wants 11 gp for, and it puts
   the favour debt in doubt. Say it the first time a bolt goes in: *"That's Silas's horse."*
 
 #### S2_RIDER — Does a rider reach the camp?
@@ -710,11 +716,12 @@ each block on its card.
   starts. A Dashing horse covers 120 ft a round, so the casters get one or two rounds of shots
   (Fire Bolt and Magic Missile reach 120 ft, Chromatic Orb 90 ft) before she is out of range. Her
   horse (AC 10, HP 13) is the easier target than she is (AC 13, HP 16).
-- **If any rider escapes toward the camp**, its alert state goes up one step (unaware → dusk →
-  night alert). Stopping the rider is the real objective. Make that legible: *"The woman isn't
-  fighting you any more. She's riding for the camp."*
-- **Morale:** Ilsa down, or Fennel and Cinder both down → DC 12 WIS. Failures flee, and fleeing
-  riders go to the camp.
+- **If Ilsa escapes toward the camp**, its alert state goes up one step (unaware → dusk →
+  night alert), applied **after** stage 4 sets it, and capped at night alert. Only Ilsa carries
+  the warning; Fennel flees home, not to Nella. Stopping her is the real objective. Make that
+  legible: *"The woman isn't fighting you any more. She's riding for the camp."*
+- **Morale:** Ilsa down, or Fennel and Cinder both down → DC 12 WIS. Failures flee. A fleeing
+  Ilsa rides for the camp (the bump above); Fennel and Cinder just run.
 - **Transition:** the light goes. The camp approach (stage 4).
 
 ### Scene 7 — The Waystation
@@ -742,6 +749,12 @@ each block on its card.
 - **Night heist** — get the cart out without a fight. Watch rotations, the corral, and Nella is the
   light sleeper. Pulling it off means **the party leaves *her* the taunt for once.** Encourage it.
   If it goes loud halfway, drop into `S2_FIGHT` with the party already at the cart.
+  - **A clean heist still pays out.** The tally rides with the cart: she whittles it on the seat
+    (the antler shavings at `S2_ROAD`), so it's in the box under the seat, and they drive off
+    with it (`S2_TALLY`, found later, not dropped). The ledger (Sennet's table, I5) and the banner
+    (the pole, L3) are each one more Stealth check to take; failing one goes loud.
+  - **Nella, after a clean heist:** no rout, no ropes cut. Skip the escape ladder. She wakes to
+    an empty cart, and the party never sees her face. If they left a taunt, it reached her.
 - **Assault** — `S2_FIGHT` on their initiative.
 - **Parley** under a truce-branch. Nella talks from the ridge, never comes down. She won't give up
   the casks, but **her debt can show its edge:**
@@ -805,7 +818,7 @@ each block on its card.
 #### S2_TALLY — She drops her debt tally
 
 - At the gully's lip, where she cut the ropes: **a notched antler stick and a purse of counted,
-  sorted coin.**
+  sorted coin.** After a clean heist, both are in the box under the cart seat instead.
 - **First touch:** the antler is worn smooth where a thumb rests. Hundreds of notches, in groups,
   some scored through. The purse is tied in three places, each section a different coin, counted.
 - **Investigation, DC 12:** the notches are payments; the scored-through groups are *years*.
