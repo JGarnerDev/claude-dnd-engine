@@ -346,6 +346,8 @@ Look for, and fill:
 Rules:
 
 - Ground every voice in the entity's file (`personality`, `description`, the Quick-Reference). Never invent a look or a voice that the file contradicts. Read 1 hop for any NPC whose look is not already in context
+- **Plain over clever.** Each line states its point outright, so the DM gets it on a cold read at the table. No subtext to decode, no wordplay that needs explaining. If a line needs a gloss, rewrite the line rather than adding the gloss. The DM riffs from it anyway
+- **Every line has a cue.** Note what in the scene prompts it: something the NPC sees, a question, an event. A character tangent needs a concrete object or moment to set it off, ideally drawn from the location's file, never a musing out of nowhere
 - **Leave unset canon unset.** Numbers, names and facts that canon has not fixed go in as backticked placeholders (`` `<a big number>` ``) for the DM to set at the table and `/recap` to record
 - Respect the plan's own limits: do not narrate a PC's inner experience, do not name what a scene says stays unnamed, and do not front-load a feud past its stated budget
 - Add under the existing node headings, so the session runner shows each addition on the right card. Never rename or reorder nodes

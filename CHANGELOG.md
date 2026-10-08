@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.19.0] — 2026-10-08
+
+### Added
+
+- **NPC lines are plain and cued.** `/session`'s Description & Dialogue Pass gains two rules. **Plain over clever:** each line states its point outright, so the DM gets it on a cold read. If a line needs a gloss, rewrite the line instead. **Every line has a cue:** the plan says what in the scene prompts the line, and a character tangent is set off by a concrete object or moment, ideally from the location's file. Prompted by Session 30's review, where several lines read as vague and one tangent came from nowhere.
+
 ## [0.18.0] — 2026-10-07
 
 ### Added
