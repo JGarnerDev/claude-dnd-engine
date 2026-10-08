@@ -36,7 +36,7 @@ encounters:
   - "The Dusk Fork — Nella's rear guard: Ilsa Thorn (human Scout) and Fennel Dray (human Bandit), mounted, with Fennel's Wolf Cinder. ~350 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. Fennel shoots the borrowed horses and Cinder goes for their legs, not the PCs. A rider who escapes toward the camp raises its alert by one step."
   - "The Waystation — Varrick Tenn the drover (human Bandit Captain), Haddo Keel and Brask (human and half-orc Thugs, the cask-hands), Sennet Orrin (human Spy), Hesper Mudd (halfling Acolyte), Tam 'Clatter' Cobb (human Bandit, on the roof) and Brick and Mortar (Mastiffs) on the floor, Nella (custom, ~CR 3) on the ridge. ~4,188 adjusted XP against an all-level-5 party, Hard, RTC ~3.4 (floor ~2.7), RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
 loose_threads:
-  - "Session 29's unplayed Scenes 4-5: the loot, the town, the names, Sable's offer, Odibli's drink, Iggy's song, the dead Boon"
+  - "Session 29's unplayed Scenes 4-5: the loot, the town, the names, Sable's offer, Iggy's song, the dead Boon"
   - "[[The Shadowless Spear]] is owed to [[Halsby]] by Asher's fox: 'after you, not before'"
   - "Three seeds owed to [[Davian Martikov]] — Barovia-side, acknowledged in one line inside the Boon beat, not pursued"
   - "Still open from Session 29: what the order doesn't like at [[Tassad]], and the later job Halsby owes Sable"
@@ -327,7 +327,7 @@ each block on its card.
   - *"Is the fire out in the wing? Then I'm fine."*
   - Once standing, to all of them, level and unhurried: *"Right. Who are you, and are you staying
     for supper?"*
-- If someone asks if she's hurt: *"Ask me tomorrow. Tonight I'm counting."*
+- If someone asks if she's hurt: *"Ask me tomorrow. Tonight I'm counting what they took."*
 - She does not ask about the light. She will, later, and only once.
 
 #### S2_LOOT — The bodies: coin, and a crystal on a cord around every neck
@@ -369,6 +369,11 @@ each block on its card.
 > down her side. Behind her, a big soft man in a shop apron with a burn on one sleeve, looking at
 > the yard the way a merchant looks at a spilled order."*
 
+- **Also coming up the road:**
+  - **Dunny Marsh:** young deputy, arm in a sling, insists he's fine.
+  - **Wenna Moss:** herb-wife who sets bones. Smells of yarrow and smoke.
+  - **The Hollises:** four kids under one blanket, mother counting heads.
+  - **Agnes Brand:** washerwoman, burned hands wrapped. Hums when nervous.
 - **Mara's lines** (each said once):
   - *"You five. You can keep your weapons. Just keep them pointed at the ground while we talk."*
   - *"Half the town says you fell out of the sky in a flash of light. I'd like to hear what happened
@@ -376,7 +381,7 @@ each block on its card.
     argue.
   - *"Every street was fighting. I couldn't get to the Lioness, and you held it for me. Thank you.
     Tomorrow I'll want to know who you are."*
-  - To the wounded deputy, not looking at him: *"Sit down before you fall down. That's an order."*
+  - To Dunny, not looking at him: *"Sit down before you fall down. That's an order."*
 - **Silas's tangent:** he spots the new wing's brewing copper, the big kettle beer is boiled in,
   half out of its crate with a spear-hole punched through the side. He's genuinely offended.
   *"Do you know what that is? That's a brewing copper. One sheet, hammered round by hand, and
@@ -392,13 +397,15 @@ each block on its card.
 
 #### S2_NAMES — Three names and the boots, one line each, then stop
 
-- **[[Wick]]**, secondhand from a villager: *"Elf. Had a mark on his hand like a brand, but neat,
+- **[[Wick]]**, secondhand from **Old Tobin Reed** (ferryman, lost his boat tonight, sees
+  everyone who crosses): *"Elf. Had a mark on his hand like a brand, but neat,
   like someone did it with paperwork. Looked at the houses like he was counting the shutters."*
-- **[[Harrow Bane]]**, as a silence: someone mutters *"Bane's lot,"* the talk stops, and Mara says
+- **[[Harrow Bane]]**, as a silence: Agnes mutters *"Bane's lot,"* the talk stops, and Mara says
   *"Not in the street."* That's all.
 - **The boots:** Mara turns a dead raider's foot over with her own boot. *"Third crew this season
   that calls itself independent. Same cobbler."* Stop there.
-- **[[Nella]]**, a face and a direction: *"Woman on the cart seat, bow across her knees, cool as you
+- **[[Nella]]**, a face and a direction, from **Jory Pike** (stable boy, fourteen, kept Silas's
+  horses from bolting): *"Woman on the cart seat, bow across her knees, cool as you
   like. Took the southeast track, and the ruts are deep, so she's not hauling air."* Odibli saw her;
   let him connect the name if he wants to.
 - **Budget:** the boots are tonight's one feud detail. If pushed: "someone is paying these men," and
@@ -425,6 +432,15 @@ each block on its card.
 > which is burn without anyone feeding it, and through the wall you can hear the new wing being
 > very, very empty."*
 
+- **What it's like:**
+  - **Look:** deep red and a little cloudy, with a pink head that doesn't last.
+  - **Taste:** sour cherry first, sharp enough to make you wince. Then honey rounds it off, and it
+    finishes sweet and very cold, colder than the mug it came in.
+  - **The catch:** it's stronger than it tastes. One mug is fine. A third mug calls for a DC 12
+    Constitution save, or that drinker is cheerfully drunk until morning (disadvantage on
+    Perception).
+  - **DM only:** the cold sweet finish is the cellar spring, which runs down to Asher's aquifer.
+    Nobody at the table needs to know that tonight.
 - **Why's it called The Mistake?** *"Drink it and tell me it's not."* She never explains.
 - **The light, asked once:** *"You came down out of the sky. I'm not going to ask how. I'm going to
   ask if you're going back up."* Whatever they answer, she nods like it's a delivery date.
@@ -448,15 +464,6 @@ each block on its card.
 - **The casks:** if anyone raises the cart, she doesn't ask them to go. *"That ale was the wing's
   whole reason to open. I'd go myself if I had a horse and a bow."* Silas's horses come up at dawn.
 
-#### S2_ODIBLI — "Any of you know drink?"
-
-- Odibli's beat, free. He wanted to conquer Vallaki through good wine; he's just been offered a
-  stake in a brewery. Don't explain the joke.
-- Sable: *"Any of you know drink? Not drinking it. Knowing it."*
-- If Odibli bites, she tests him: a thimble of something from under the bar. *"What's in it?"*
-  A Nature or Intelligence check, DC 12: success names the honey and the spring water's odd
-  sweetness. She raises an eyebrow, which from her is applause.
-
 #### S2_IGGY — Iggy plays the room — his spotlight beat
 
 - Carried from Session 29 (hook *"decode the unfinished final song trapped in the viol"*, seeded).
@@ -466,6 +473,7 @@ each block on its card.
 - **The sequence, about two minutes:**
   1. The room joins in. Mara's people only: Mara back from the deputy's bedside, Silas, the walking
      wounded, a few families. A vigil, not a party.
+     - Dunny, Wenna, the Hollises, Jory, Agnes humming off-key, and Old Tobin, who sings anyway.
   2. Mid-song the melody turns somewhere none of them has heard, holds a few bars, and stops.
   3. **The hearth goes still.** No flicker, steady light, as long as the phrase lasts. *(DM only:
      Asher senses a divine presence under his town, weighs it, accepts it. Sah is good and
@@ -584,9 +592,9 @@ each block on its card.
 
 #### S2_HORSES — Silas lends the horses: "bring them back shod"
 
-- Silas brings five horses himself, which tells you how much he wants that ale back.
-- *"These are not gifts, they are loans, and I'd like them back with four shoes each, which is
-  three more than you'd think people manage."*
+- Silas brings five horses himself, with Jory Pike leading the last two, which tells you how much he wants that ale back.
+- *"These are loans, not gifts. I want them back with all four shoes. You'd be amazed how many
+  come back with one."*
 - *"Funny thing about horses…"* — and it lands on a number: *"…eleven gold a head if you lame one.
   I'm not saying you will."*
 - **This is a favour debt.** Returning them sound pays it off (Jeff, 2026-10-07). Log it for the
@@ -604,7 +612,7 @@ each block on its card.
 > finally paid."*
 
 - **The fox's lines** (Asher's voice, through it; never gives his name):
-  - *"You did it the way I asked. People rarely do. Spear, please. And the stone."*
+  - *"You did it the way I asked. People rarely do. Your spear, please. And the shard."*
   - *"It'll hurt the shadow, not you."*
   - When it's done: *"It casts no shadow at the point. That's the part that keeps the dark from
     eating you. Don't lose it."*
@@ -765,7 +773,7 @@ each block on its card.
   the casks, but **her debt can show its edge:**
   - *"That ale's worth a number to me. You aren't."*
   - *"Everyone wants something back from me tonight. Get in line."*
-  - Pushed on why she does this: *"I'm working off a number. When it's done, I'm done."* Then
+  - Pushed on why she does this: *"I owe someone. When it's paid, I'm done."* Then
     nothing more.
 - **Trickery** — posing as the band's relay riders, or Marlow men with new orders. Insight and
   Deception contested; Varrick is easy to fool, Sennet less so (Insight +4), Nella isn't (Insight +7 from the ridge). If it
@@ -787,7 +795,7 @@ each block on its card.
     STILL."*
   - Clatter, from the roof: *"One by the well! One by the WELL!"* · *"Where's she going?
     Where's she GOING?"*
-  - Nella, calm, to whoever is climbing toward her: *"Further than you'd like."*
+  - Nella, calm, to whoever is climbing toward her: *"Keep climbing. I'll be gone before you're halfway."*
 - **Halsby's Spear in the dark:** reach 15 ft in dim light or darkness. If the fight is at night,
   describe the shadow carrying the point the last ten feet.
 - **The horses:** a stampede through the corral is a lever for chaos (DC 13 Animal Handling to
@@ -865,7 +873,7 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
 - **The horses go back to Silas** sound and shod, and the favour is paid.
 - **Long rest:** if they rest at the waystation first, the clock resets there. Note it for `/recap`.
 - **Sable, at the door, sees the cart.** She doesn't run out. She puts down what she's holding and
-  stands very still. *"That's the second time."* (the second deed — banked, and the next Stake tick
+  stands very still. *"That's twice now you've saved this place."* (the second deed — banked, and the next Stake tick
   pays when base-building resumes)
 - If they bring the banner: she looks at it a long time. *"Not in my bar."* A beat. *"…Fine. Above
   the hearth. Where I can see it."*
@@ -883,7 +891,7 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
 - **The prisoner is a silhouette only (Jeff, 2026-10-07).** No name, no lines, no face in the light.
   He is Tyler's cameo, beat 1, and his backstory has to exist before Session 31.
 - **Mara, at the door, before anyone asks:** *"He walked in. Put his blade down on my step. Hasn't
-  said a word since. Half the town wants him hanged by Sunday."* A beat. *"I haven't decided
+  said a word since. Half the town wants him hanged by week's end."* A beat. *"I haven't decided
   anything."*
 - **End on the cell door.** Don't let them in tonight.
 
@@ -942,7 +950,7 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
   (the camp is watching the road, not the gully side) or a parley. The casks are always there.
 - **They corner Nella.** Run the escape ladder honestly down to the river plunge. If even that can't
   stick, the table wins — capture her, and re-plan her arc around the tally and the debt. Never
-  cheat visibly. Captured-Nella sample, cold: *"Well. That's a new number."*
+  cheat visibly. Captured-Nella sample, cold: *"Well. That'll cost me."*
 - **They want to chase Nella past the gully.** She's mounted and gone. Let them find the cached
   horse's tracks running toward the river and stop at the bank. *"She knows this water. You don't."*
 - **They go straight at the feud with the ledger or the banner.** Give the next rung only:
@@ -956,7 +964,7 @@ Land it on the cell door, not on the casks.
 > *"The cart's back, the ale's back, and nobody's looking at either. They're looking at a barred
 > window, and a man behind it who walked in on his own and hasn't said a word. Mara's at the door
 > with her arms folded. Somewhere behind you, Sable is rolling casks into a wing that finally has
-> something in it. And someone in the crowd says 'Sunday,' and someone else agrees."*
+> something in it. And someone in the crowd says 'week's end,' and someone else agrees."*
 
 **Leave unresolved:** who the prisoner is and why he surrendered · Bane's face · whose banner it is
 · Nella's tally, which she will want back · whether the Boon ever opens again.
@@ -966,8 +974,8 @@ Land it on the cell door, not on the casks.
 - **Carryover.** Session 29's Scenes 4–5 run here as Scenes 1–3, with `S1_` ids renumbered to `S2_`.
   `S1_LUCI` already played mid-fight in Session 29. `S1_ANTIDOTE` is dead (Halsby was never bitten).
 - **Spotlight.** Halsby's beat is `S2_SPEAR` (a promised delivery, not one of his `spotlight_hooks`
-  — none seeded). Iggy's `S2_IGGY` carries his already-seeded viol hook. Odibli gets `S2_ODIBLI`
-  and his deed, `S2_HEARTH`.
+  — none seeded). Iggy's `S2_IGGY` carries his already-seeded viol hook. Odibli gets his deed,
+  `S2_HEARTH`.
   The trend says lean party-centric; the chase and the camp are.
 - **Deployment tracking:** none planned from `meta/literary-devices.md` or the design
   preferences. The false trail at the fork is a device candidate if `/recap` wants to log it.
@@ -983,6 +991,11 @@ Land it on the cell door, not on the casks.
   - Chase DCs used → `meta/difficulty.md` Skill Challenge table
   - Rest Clock: reset if they rested at the waystation
   - The prisoner: canonize only what was shown
+  - **New canon if played:** The Mistake is a sour-cherry and honey ale, deep red, with a cold
+    finish, and stronger than it tastes · the new wing's brewing copper was on Silas's delivery and
+    was holed by a raider's spear · Ashford townsfolk Dunny Marsh (deputy), Wenna Moss (the
+    herb-wife), Old Tobin Reed (ferryman), the Hollises, Jory Pike (stable boy), Agnes Brand
+    (washerwoman)
 - **Held for later:** Elowen and Odibli (the Unfinished Binding) · Jorn's foreshadow · the Marlow
   coppers · Asher's Dead Sun phrase for Luci · the battlefield-spirit and coin-forgery spitballs.
 - **Before the table:** pick the waystation Common · sketch the waystation · write Tyler's backstory

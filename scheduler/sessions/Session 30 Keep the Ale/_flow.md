@@ -28,7 +28,7 @@ flowchart TD
   end
 
   subgraph SC2["Scene 2 · What the Raid Left"]
-    S2_TOWN["[x] S2_TOWN<br/>The whole town was hit at once<br/>Mara and Silas arrive late from their own fights<br/>'Folk are saying you came down in a light'"]
+    S2_TOWN["[x] S2_TOWN<br/>The whole town was hit at once<br/>Mara and Silas arrive late from their own fights<br/>'Half the town says you fell out of the sky'"]
     S2_NAMES["[x] S2_NAMES<br/>Wick, Bane, the boots, Nella<br/>One line each, then stop"]
     S2_TOWN --> S2_NAMES
   end
@@ -36,11 +36,10 @@ flowchart TD
   subgraph SC3["Scene 3 · The Mistake"]
     S2_WREN["[x] S2_WREN<br/>Sable, alone, pours The Mistake"]
     S2_OFFER["[x] S2_OFFER<br/>A room and a meal, no strings<br/>Then the 10% deed, left on the table"]
-    S2_ODIBLI["[x] S2_ODIBLI<br/>'Any of you know drink?'"]
     S2_IGGY["[x] S2_IGGY<br/>Iggy plays the room<br/>The hearth holds still; Dip's private roll<br/>Iggy levels to 5"]
     S2_BOON["[x] S2_BOON<br/>Odibli's stone does nothing at all<br/>The reason to take the deed"]
     S2_HEARTH["[x] S2_HEARTH<br/>The hearth is dying: Tallis's smother-charm<br/>The party feeds the flame; Odibli writes over the glyph<br/>Odibli levels to 5 · they sleep, not a long rest"]
-    S2_WREN --> S2_OFFER --> S2_ODIBLI --> S2_IGGY --> S2_BOON --> S2_HEARTH
+    S2_WREN --> S2_OFFER --> S2_IGGY --> S2_BOON --> S2_HEARTH
   end
 
   subgraph SC4["Scene 4 · Dawn at the Ford"]
@@ -112,7 +111,7 @@ flowchart TD
   classDef fail fill:#EFE2E2,stroke:#A3736E,color:#4A2C29,stroke-dasharray:4 3
 
   class S2_REARGUARD,S2_FIGHT,S2_MORALE,S2_ESCAPE combat
-  class S2_SABLE_FREE,S2_TOWN,S2_WREN,S2_ODIBLI,S2_IGGY,S2_HORSES,S2_PARLEY,S2_HEIST,S2_SHORT_REST,S2_CHASE_RULES,S2_FORD_STAGE,S2_ROAD,S2_FORK,S2_TRAIL social
+  class S2_SABLE_FREE,S2_TOWN,S2_WREN,S2_IGGY,S2_HORSES,S2_PARLEY,S2_HEIST,S2_SHORT_REST,S2_CHASE_RULES,S2_FORD_STAGE,S2_ROAD,S2_FORK,S2_TRAIL social
   class S2_APPROACH,S2_RIDER,S2_APPROACH_CHOICE decision
   class S2_LOOT,S2_OFFER,S2_HEARTH,S2_SPEAR,S2_HAUL_HOME stake
   class S2_NAMES,S2_BOON,S2_TALLY,S2_CAMP_INTEL,S2_CELL seed
