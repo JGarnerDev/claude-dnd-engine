@@ -24,29 +24,14 @@ CHANGELOG.md
 .markdownlint.json
 .gitignore
 
+# Shared Claude Code settings — the SessionStart orientation hook
+.claude/settings.json
+
 # Git hooks — pre-commit Markdown auto-format (paired with scripts/setup-hooks.py)
 .githooks/pre-commit
 
-# Commands — all slash commands
-.claude/commands/check.md
-.claude/commands/commands.md
-.claude/commands/entity-questionnaire.md
-.claude/commands/event.md
-.claude/commands/find.md
-.claude/commands/idea.md
-.claude/commands/inventory.md
-.claude/commands/pc-backstory.md
-.claude/commands/pitch.md
-.claude/commands/recap.md
-.claude/commands/region.md
-.claude/commands/rumor.md
-.claude/commands/session.md
-.claude/commands/sync.md
-.claude/commands/threads.md
-.claude/commands/timeline.md
-.claude/commands/todo.md
-.claude/commands/transition.md
-.claude/commands/voice.md
+# Commands — all slash commands (glob, so new commands ship without an edit here)
+.claude/commands/*.md
 
 # Meta — engine protocol and structural guidelines
 meta/schemas/*.md
@@ -69,6 +54,11 @@ meta/rewards.md
 meta/settlements.md
 meta/trait-registry.md
 meta/warfare.md
+meta/affinity.md
+meta/events.md
+meta/flow-graphs.md
+meta/player-agency.md
+meta/spitball.md
 
 # Subdirectory CLAUDE.md files
 data/CLAUDE.md
@@ -87,6 +77,7 @@ maps/world/city-registry-template.md
 # Tests — structural audit infrastructure only
 tests/rubrics/principles.md
 tests/commands/session/spec.md
+tests/scripts/*.py
 
 # Data — standard D&D reference catalogs
 # NOTE: spell/monster bodies are copied wholesale. Keep their commentary campaign-neutral
@@ -108,40 +99,13 @@ data/spells/*.md
 # Add a line here whenever a new world-specific resource lands in data/resources/.
 #!data/resources/Example.md        # example: a player-contributed, world-specific resource to exclude
 
-# Scripts — all engine scripts and shared library
-scripts/lib/common.py
-scripts/contribution-balance.ps1
-scripts/count-markers.py
-scripts/entity-graph.ps1
-scripts/fetch-maps.py
-scripts/free-entities.ps1
-scripts/gen-tiles.py
-scripts/index-entities.py
-scripts/inventory-brief.ps1
-scripts/location-entities.ps1
-scripts/lib/map_common.py
-scripts/map-crop.py
-scripts/monster-lookup.ps1
-scripts/naming-status.ps1
-scripts/party-status.ps1
-scripts/pitch-brief.ps1
-scripts/refs.ps1
-scripts/region-brief.py
-scripts/region-scale.py
-scripts/region-world-context.py
-scripts/route-cities.ps1
-scripts/semantic-search.py
-scripts/session-brief.ps1
-scripts/session-state.ps1
-scripts/setup-hooks.py
-scripts/spotlight-balance.ps1
-scripts/threads-brief.ps1
-scripts/timeline-data.py
-scripts/timeline-gantt.py
-scripts/todo-brief.ps1
-scripts/validate-refs.ps1
-scripts/validate.ps1
-scripts/version-check.py
+# Scripts — all engine scripts and shared library (globs, so new scripts ship without an edit here)
+scripts/*.py
+scripts/*.ps1
+scripts/lib/*.py
+# Orphaned: superseded by scripts/fetch-maps.py, referenced by nothing
+!scripts/inkarnate-fetch.py
+!scripts/test_inkarnate_fetch.py
 
 # Charting app — timeline/swimlane chart engine (TS + Vite)
 # Whole tree is shareable engine infrastructure (components, helpers, specs,

@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.25.1] — 2026-10-09
+
+### Fixed
+
+- **`.template-sync` ships a working engine again.** It listed 15 `.ps1` scripts that the Python migration had deleted, and it was missing 26 `.py` scripts (`session-brief`, `todo-brief`, `party-status` and others the commands call), four commands (`/flow`, `/review`, `/spitball`, `/transcript`), and five engine meta files (`affinity`, `events`, `flow-graphs`, `player-agency`, `spitball`). Commands and scripts now sync by wildcard (`.claude/commands/*.md`, `scripts/*.py`, `scripts/*.ps1`, `scripts/lib/*.py`), so new ones ship without an edit. The pytest suite (`tests/scripts/*.py`) and the shared `.claude/settings.json` hook now ship too. The orphaned `scripts/inkarnate-fetch.py` (replaced by `fetch-maps.py`) and its test are excluded.
+
 ## [0.25.0] — 2026-10-09
 
 ### Changed
