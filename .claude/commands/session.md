@@ -32,6 +32,7 @@ It reports: next session number (with a milestone flag every 5th session — wor
 3. Active campaign file body (`state: active` in `scheduler/campaign/`) — tone, central conflict, themes
 4. `data/lore/` — frontmatter scan only; open a lore body only when that domain is directly relevant to this session; treat `state: draft` sections as open questions, not settled canon
 5. Table feedback — one grep, no file reads: `grep -A2 "table_notes:" historian/sessions/*.md | tail -20` (last 2–3 sessions' worth). What landed and what fell flat at recent sessions should bias scene design — more of what the table loved, less of what dragged. This is also the live check on the player-agency principle: if recent notes suggest choices aren't landing as consequential, weight the plan toward visible consequences of past party decisions.
+6. Recent party choices — one grep, no file reads: `grep -rA6 "^choices:" historian/sessions/ | tail -30`. These are the decisions the world should remember. Pick at least one whose consequence this session can show (see `meta/player-agency.md` → Remember what they chose). An empty result is normal for sessions recorded before the field existed.
 
 **Step 4 — Meta reference files.** Each is read **once per run**, never re-read per sub-task. Tiered — do not read a conditional file unless its trigger applies:
 
@@ -40,6 +41,7 @@ Always:
 - `meta/difficulty.md` — two-axis difficulty spectrum (attrition × lethality), Non-Combat Stakes, DC ranges. Note the frontmatter defaults here, but **do not resolve tiers yet** — the picks happen in Phase 4, after the story hook is chosen, so the difficulty answer can push back on the story (and vice versa). Exception: tiers given in the DM's prompt are settled immediately. The combat axes apply only if the session ends up planning combat — for a roleplay-only shape they sit inert and Non-Combat Stakes is the operative difficulty guidance.
 - `meta/worldbuilding.md` — tone, themes, setting pillars, what to avoid
 - `meta/mysteries.md` — load-bearing unknowns; do not accidentally answer these in session content
+- `meta/player-agency.md` — what counts as a real choice, how many a session needs, and how to mark them in the plan
 
 Conditional:
 
@@ -242,9 +244,11 @@ Each scene block contains:
 - **Trigger** — what causes this scene to begin (party action, NPC move, time passing)
 - **Location** — `[[wiki-link]]`; one-line description of what the space looks/feels like
 - **NPCs present** — name, one-line goal for this scene, one-line voice note (how they talk/carry themselves)
-- **Beats** — ordered bullet list of what happens; branch points noted inline (e.g., *"if party refuses → …"*)
+- **Beats** — ordered bullet list of what happens; branch points noted inline (e.g., *"if party refuses → …"*). Real choices start their bullet with `Choice (party):` or `Choice (<PC name>):` and give each option's cost (`meta/player-agency.md` → Mark choices in the plan)
 - **Narration** — if `depth: narrated`, include a `> *"..."*` blockquote for the key moment of the scene; if `depth: notes`, omit
 - **Transition** — one line on what triggers the move to the next scene or a likely detour
+
+**Choice check:** before moving on, count the choices across all scenes against `meta/player-agency.md` → How often (about two or three party choices and one character choice a session, with no run of more than about three reaction-only scenes). Include at least one visible payoff of a past choice from Phase 1 Step 3, item 6. If the plan falls short, add choices around the beats rather than reopening committed ones. List every choice point by node or scene in a **Choices** bullet in the plan's Engine notes.
 
 If `scope: linked`, replace the full encounter detail with a one-line reference: `→ see [[encounter-{slug}]]` and note that the encounter file will be written separately.
 

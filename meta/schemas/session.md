@@ -114,6 +114,9 @@ description: ""
 #   - "world: touch"
 # pcs_present:           # PCs at the table this session — drives present-only rotation
 #   - "PC Name"
+# choices:               # decisions the world should remember (meta/player-agency.md)
+#   - "party: what they chose → what it set in motion"
+#   - "PC Name: what they chose → what it set in motion"
 ---
 ```
 

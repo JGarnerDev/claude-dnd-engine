@@ -69,3 +69,5 @@ Structures the group enjoys. Use as a palette, not a formula.
 ## Player Agency Principle
 
 Party and player choices carry above-average weight in the world. Their actions move things. Don't overdo — they are consequential, not omnipotent. The world reacts; it doesn't always comply.
+
+How this is put into practice (what counts as a real choice, how often, marking choices in a plan, and remembering them at `/recap`) lives in `meta/player-agency.md`.

@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.22.0] — 2026-10-09
+
+### Added
+
+- **Player agency has its own rules: `meta/player-agency.md`.** It sets out what counts as a real choice (the players know they're choosing, more than one option works, the options cost different things, the consequence shows up), and party choices versus character choices. It gives a light cadence: about two or three party choices and one character choice a session, no run of more than about three reaction-only scenes, and at least one choice per act that changes where the story goes. Committed beats stay; choices are added around them. It also lists the railroad warning signs.
+- **`/review` Pass 5 — Choices.** It counts the plan's real choices, flags the railroad warning signs, and proposes a draft fix for each one. It never reopens committed beats.
+- **`choices:` historian session field (optional).** `/recap` asks a new Phase 2 question 8 and records what the party or a player decided and what it set in motion. `/session` greps recent `choices:` and pays at least one off visibly.
+
+### Changed
+
+- **`/session` reads `meta/player-agency.md` every run.** Choice bullets are marked `Choice (party):` / `Choice (<PC>):`, the plan is checked against the cadence before it's written, and a **Choices** bullet in the Engine notes lists every choice point.
+
 ## [0.21.0] — 2026-10-08
 
 ### Added

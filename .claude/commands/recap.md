@@ -18,7 +18,7 @@ Read the session file fully: note `session_number`, `mission`, `locations`, `key
 
 ## Phase 2 — Gather What Happened
 
-**If an inbox notes file was found in Phase 1:** mine it for all six answers below first, then ask the DM only what the notes don't answer — in one batched message. Do not re-ask anything the notes already cover.
+**If an inbox notes file was found in Phase 1:** mine it for all the answers below first, then ask the DM only what the notes don't answer — in one batched message. Do not re-ask anything the notes already cover.
 
 Otherwise, ask the DM the following. Keep it conversational — rough notes are fine.
 
@@ -29,6 +29,7 @@ Otherwise, ask the DM the following. Keep it conversational — rough notes are 
 5. **Rests, rounds & in-world time** — Did the party take a long rest at any point (especially before the cliffhanger)? Any short rests? Roughly how many rounds of combat were fought? Roughly how much in-world time passed this session, and what's the in-world date/time the party ends on? (Rough estimates are fine — this feeds the Rest Clock, which only needs to distinguish fresh from half-spent from running-on-fumes, and to know the in-world time for the long-rest 24-hour gate. Zero rounds is a normal answer for a roleplay-only session; the clock still gets restamped.) Any notable resource burns worth recording (big spells gone, hit dice low)?
 6. **New entities** — Anything invented at the table that doesn't have a file yet? (NPCs named on the fly, locations described, items handed out.)
 7. **Table reaction** — What landed? Anything that fell flat or felt off? (One line is fine — this informs future planning, not canonization.)
+8. **Choices** — What did the party (or one player) decide that should matter later? Propose the list yourself from the recap and the plan's `Choice (...)` bullets, and let the DM confirm, cut or add. One line each: who chose, what, and what it set in motion. (`meta/player-agency.md` → Remember what they chose.)
 
 Wait for the DM's response before continuing.
 
@@ -109,6 +110,9 @@ entities_canonized:
 new_entities:
   - "{description}"     # one per thing invented at the table, not yet filed
 table_notes: "{what landed, what didn't — from Phase 2 question 7. Omit field if no feedback given.}"
+choices:                # from Phase 2 question 8; omit if none mattered
+  - "party: {what they chose} → {what it set in motion}"
+  - "PC Name: {what they chose} → {what it set in motion}"
 beats:                  # from Phase 2.5 tagging pass; omit if cold-start not yet cleared
   - "spotlight(PC Name): beat"
   - "party-centric: touch"

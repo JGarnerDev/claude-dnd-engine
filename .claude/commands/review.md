@@ -1,4 +1,4 @@
-Review a session plan before it runs: fill what is thin, make lines plain and cued, keep names and cuts consistent, and list the new canon the plan sets.
+Review a session plan before it runs: fill what is thin, make lines plain and cued, keep names and cuts consistent, list the new canon the plan sets, and make sure the party has real choices to make.
 
 **Arguments:**
 
@@ -16,7 +16,7 @@ Two modes:
 - **Called by `/session` Phase 6** (plan being written for the first time): run the passes and apply them directly. No findings list.
 - **Run by the DM** (standalone): run the passes, present the findings as a numbered list in plain language, and apply what the DM approves ("all" is a fine answer). Keep the numbers stable across follow-up turns, so the DM can answer by number from a phone.
 
-Read once, at the start: the plan file, its `_flow.md` if present, and the files of every NPC who speaks and every location a scene is set in (1 hop, frontmatter first). Do not re-read the plan between passes.
+Read once, at the start: the plan file, its `_flow.md` if present, `meta/player-agency.md` (for Pass 5), and the files of every NPC who speaks and every location a scene is set in (1 hop, frontmatter first). Do not re-read the plan between passes.
 
 ---
 
@@ -74,9 +74,29 @@ List every fact the plan sets that canon has not: a fruit, a price, a new townsp
 
 ---
 
+## Pass 5 — Choices
+
+The party should feel they steer the story, not ride it. Check the plan against
+`meta/player-agency.md`:
+
+- **Count the real choices.** Party and character choices, each meeting that file's four-part
+  test. Is there about two or three party choices and one character choice, and does at least one
+  scene visibly pay off a choice from an earlier session?
+- **Look for the warning signs** listed under Railroad warning signs: a run of reaction-only
+  scenes, a chain of skill checks with nothing to decide, a guaranteed outcome with no
+  counterplay, failure that costs nothing, a stack of gifts, steering text in the plan
+- **Propose a fix for each sign found:** a small choice with a cost, added around the beat. Never
+  reopen a DM-committed (`[x]`) beat. New choice beats go in as draft: a `[-]` node in
+  `_flow.md` (a diamond if it's a real fork), dated "draft, engine `<date>`" in the plan
+- **Mark what's there.** Start every choice bullet with `Choice (party):` or
+  `Choice (<PC name>):`, and keep the **Choices** bullet in `## Engine notes` up to date
+- A plan that already meets the bar needs nothing. Don't add forks for their own sake
+
+---
+
 ## Close
 
 1. Confirm the plan still parses: `uv run scripts/session-cards.py --session {NN}`
 2. If `_flow.md` exists: `uv run scripts/flow-status.py --set "<session folder>" --quiet`. Report only problems this review caused or touched
 3. With `--ready`: set `state: planned` in the plan's frontmatter
-4. In chat, list what changed, grouped by scene, plus any placeholders the DM must set and the new-canon list. Plain language, numbered. Do not commit
+4. In chat, list what changed, grouped by scene, plus any placeholders the DM must set, the new-canon list, and the choice count. Plain language, numbered. Do not commit
