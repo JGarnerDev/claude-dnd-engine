@@ -13,13 +13,13 @@ tags:
 global_location: "[[Calenmere Basin]]"
 purpose: commerce
 aliases:
-  - C05-04h
-  - Dot 6
+  - C06-05a
+  - Dot 17
   - Bay-Head Hub
 importance: major
 active: true
 contributed_by: jeff
-description: "The biggest city in the basin, ~300,000 strong, on the north shore of [[Calenmere]] where the Bayward meets the bay — dot (6). Rich, cosmopolitan, devout to [[Waukeen]], and unable to feed itself. Over the harbor stand the three towers and suspended saucer of [[The Templar Triumvirate]], the guild that underwrites the strait toll Tassad's own ships pay."
+description: "The biggest city in the basin, ~300,000 strong, on the north shore of [[Calenmere]] where the Bayward meets the bay — dot (17). Rich, cosmopolitan, devout to [[Waukeen]], and unable to feed itself. Over the harbor stand the three towers and suspended saucer of [[The Templar Triumvirate]], the guild that underwrites the strait toll Tassad's own ships pay."
 population: "~300,000 — the region's largest city by far"
 composition: "Cosmopolitan: humans ~60%, halflings ~10% (the river crews), dwarves ~8%, elves and half-elves ~8%, everything else ~14%. Every people in the basin keeps a dockside quarter here."
 tensions:

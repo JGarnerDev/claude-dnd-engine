@@ -20,7 +20,7 @@ Until both run, `map-crop.py` and `count-markers.py` will stop with a guard erro
 
 - `maps/world/masters/world-names.webp` — all surface features: continents, mountains, rivers, plains, seas, cities, etc.
 - `maps/world/masters/world-sky.webp` — all air-situated features: Islifts, Slices, and anything else floating above the surface. These are **not** in `world-names.webp`. Tiled separately as `sky-{nw,n,...}.png`; scripts that pull from `world-names.webp` will not show sky features.
-- `maps/world/masters/city-markers.webp` — a **flattened base+dots export**: the full surface map with red dots burned in over it (not a transparent overlay). Red dots mark cities that exist but are unnamed and undetailed — they mean "work needed here."
+- `maps/world/masters/city-markers.webp` — a **flattened base+dots export**: the full surface map with red dots burned in over it (not a transparent overlay). Red dots mark cities that exist but are unnamed and undetailed — they mean "work needed here." **Every red dot is a big city**, thousands of people or more. A graduated dot is `importance: major` or `critical`. Towns, villages and hamlets sit below map resolution and never get a dot (`meta/settlements.md`).
 
 **Always use pre-cropped tiles.** Nine tiles per master cover the full map with overlap. Read the tile that contains your area of interest. Tile coverage and key content are documented in `maps/world/index.md`.
 

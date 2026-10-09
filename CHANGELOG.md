@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.21.0] — 2026-10-08
+
+### Added
+
+- **Red dots on the world map are big cities.** Every city-registry marker stands for a city of thousands or more. A graduated dot gets `importance: major` or `critical`, a population to match, and a trade route. Towns, villages and hamlets stay below map resolution and never get a dot. Stated in `maps/CLAUDE.md`, `meta/settlements.md` and the registry header.
+
+### Changed
+
+- **Calenmere's river names are settled.** The Moorthistle is the upper border branch (purple/red), a tributary of the **Broadwend**, the big river to the bay (red/navy). River F is now the **Bayward**, which reaches the bay at Tassad. The world master's old "Bayward River" label sat on the Broadwend, and its Inkarnate relabel is pending (`todo-worldmap.md`).
+- **Registry IDs in the Calenmere Basin draft re-matched.** Nine of the twelve anchors pointed at the wrong dot. Each now comes from its political-overlay number. Tassad's alias moved from `C05-04h` to `C06-05a` (overlay dot 17, where its label now sits).
+
 ## [0.20.0] — 2026-10-08
 
 ### Added

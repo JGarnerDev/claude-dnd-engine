@@ -23,7 +23,7 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 
 | Tile | File | Cols | Rows | Key content |
 |---|---|---|---|---|
-| Northwest | `tiles/nw.png` | 1–6 | 1–5 | The Caldera, Sub Continent C, Mountains B/C/D/O/P, Bayward River, Deepwend River, Thelindra River |
+| Northwest | `tiles/nw.png` | 1–6 | 1–5 | The Caldera, Sub Continent C, Mountains B/C/D/O/P, Moorthistle, Broadwend, Bayward River, Deepwend River, Thelindra River |
 | North | `tiles/n.png` | 5–12 | 1–5 | Erevast, Still Cold Sea, Tundra A, Grey Fathers, Mountains M |
 | Northeast | `tiles/ne.png` | 10–16 | 1–5 | Hightalon, Oathmark, Continent G north, Watchwall, Virethorn |
 | West | `tiles/w.png` | 1–6 | 4–9 | Karath Ut'll, Ocean A, Islands A/B, Channel F/I |
@@ -57,7 +57,11 @@ Nine pre-cropped tiles in `maps/world/tiles/` cover the full map with overlap. R
 | The Grey Crossing | ~9–10 | ~10–11 | `data/locations/terrain-features/The Grey Crossing.md` |
 | Veth's Gate | ~3–4 | ~7–8 | `data/locations/terrain-features/Veth's Gate.md` |
 | The Dustbreak Plains | ~6–8 | ~5–6 | — |
-| Bayward River | ~4-5 | ~3-4 | — |
+| Bayward River (was River F; mouth at Tassad) | ~5 | ~4 | — |
+| Moorthistle (border branch, lake to junction) | ~4 | ~4 | — |
+| Broadwend (junction to the bay) | ~4-5 | ~4 | — |
+| Ashford (est., not yet on the master) | ~4 | ~4 | `historian/locations/cities/Ashford.md` |
+| Orrend (registry C05-04d) | ~4-5 | ~4 | `data/locations/cities/Orrend.md` |
 | Deepwend River | ~5 | ~3-4 | — |
 | Thelindra River | ~5 | ~4-5 | — |
 | Kethara | ~11–15 | ~9–13 | `data/locations/regions/Kethara.md` |

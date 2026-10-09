@@ -1,6 +1,6 @@
 # City Registry
 
-Stable references for all unnamed city markers — this world's data. ID format and graduation rules are structural: see `maps/CLAUDE.md` → **City Marker ID Format** and **City graduation**.
+Stable references for all unnamed city markers — this world's data. Every marker is a big city (thousands of people or more); towns and villages are never on the map. ID format and graduation rules are structural: see `maps/CLAUDE.md` → **City Marker ID Format** and **City graduation**.
 
 **Total undetailed cities:** 378
 
@@ -330,7 +330,7 @@ Stable references for all unnamed city markers — this world's data. ID format 
 - **pos:** col 4.9, row 4.2
 - **claimed_by:** —
 - **near:** C04-03b, C05-03a, C05-03b, C05-03c, C05-03d, C06-03a
-- **notes:** —
+- **notes:** named [[Orrend]] (data/locations/cities/Orrend.md). Awaiting map label in Inkarnate, then graduate
 
 ## Erevast
 
@@ -366,7 +366,7 @@ Stable references for all unnamed city markers — this world's data. ID format 
 - **pos:** col 5.2, row 4.2
 - **claimed_by:** —
 - **near:** C04-03b, C05-03a, C05-03b, C05-03c, C05-03d, C06-03a
-- **notes:** named [[Tassad]] (data/locations/cities/Tassad.md) — awaiting map label in Inkarnate, then graduate
+- **notes:** —
 
 ## Erevast
 
@@ -815,7 +815,7 @@ Stable references for all unnamed city markers — this world's data. ID format 
 - **pos:** col 5.6, row 4.6
 - **claimed_by:** —
 - **near:** C05-03a, C05-03c, C05-03d, C06-03a, C06-03b, C06-03e
-- **notes:** —
+- **notes:** named [[Tassad]] (historian/locations/cities/Tassad.md). Label placed in Inkarnate 2026-10-08; remove the dot on the next export, then graduate
 
 ### C06-05b
 
