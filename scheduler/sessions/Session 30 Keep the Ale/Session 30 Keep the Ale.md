@@ -31,6 +31,8 @@ key_npcs:
   - "[[Nella]] (historian — on the ridge; loses, escapes, drops her tally)"
   - "Varrick Tenn, the drover (human — Nella's second, the camp's floor anchor; not an entity)"
   - "Sennet Orrin (human — Bane's tally-man, keeps the duty ledger; not an entity)"
+  - "[[Sergei Rubelgerd]] (historian — Odibli's mastiff; drawn in by Iggy's song, Bosco riding him)"
+  - "[[Bosco]] (historian — Iggy's raccoon; arrives on Sergei's back, the cold war with Odibli still on)"
   - "the prisoner (a silhouette only — Tyler's cameo, beat 1; no name, no lines)"
 encounters:
   - "The Dusk Fork — Nella's rear guard: Ilsa Thorn (human Scout) and Fennel Dray (human Bandit), mounted, with Fennel's Wolf Cinder. ~350 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. Fennel shoots the borrowed horses and Cinder goes for their legs, not the PCs. A rider who escapes toward the camp raises its alert by one step."
@@ -420,7 +422,7 @@ each block on its card.
   town, a hearth that burns without anyone feeding it. Through the wall, the new wing is very
   empty. **The contrast is the whole pitch.**
 - **NPCs present:** [[Sable Wren]], on her own ground now.
-- **Time:** ~40–50 minutes with `S2_HEARTH`. **Played in full.** This is the heart of the night.
+- **Time:** ~45–55 minutes with `S2_HEARTH` and `S2_COMPANIONS`. **Played in full.** This is the heart of the night.
 
 #### S2_WREN — Sable, alone, pours The Mistake
 
@@ -482,6 +484,48 @@ each block on its card.
      says nothing.
   5. **Iggy levels to 5** as the phrase ends. Describe only what the table sees. Jeff picks the
      class (Bard 4 or Paladin 2).
+  6. **The song brings them home.** Iggy strikes up again, something lighter. A few bars in, a
+     dog starts howling along from outside. Then the scrabbling comes through the
+     blown-open new wing, and [[Sergei Rubelgerd]] walks into the room with [[Bosco]] riding on
+     his back. See `S2_COMPANIONS`.
+
+#### S2_COMPANIONS — Sergei walks in, and Bosco is riding him
+
+- **Jeff, 2026-10-08:** Iggy's music draws them in. This settles the open question from the
+  portal: the animals did come through.
+- **DM only:** they weren't part of the hand-hold, so they came through loose and landed in the
+  woods outside Ashford. They've been wandering since then, Sergei following his nose and Bosco
+  following the food. They know Iggy's playing because he sang Bosco an ode at the Tser Pool camp.
+  **Never explain this at the table.** If anyone asks how they got there, nobody knows. The stone
+  in Odibli's pocket stays dead either way.
+
+> *"Somewhere outside, a dog starts howling along with the song. Then there's a clatter in the dark
+> of the new wing, and a huge, shaggy mastiff pushes through the door. His coat is full of burrs and
+> his paws are muddy to the shoulder. A raccoon is riding on his back, gripping his fur with both
+> hands. They've come a long way."*
+
+- **Sergei** goes straight to Odibli and leans his whole weight against him. He's thin, and he
+  won't leave Odibli's side for the rest of the night.
+- **Bosco** climbs down, climbs Iggy's leg, and sits on his shoulder until the song ends. When
+  Odibli reaches out to him, Bosco pulls back. He still hasn't forgiven Odibli.
+- **The room reacts:**
+  - When the dog comes through the door, the room goes quiet and a few people stand up. Mara has
+    her hand on her knife until she sees the party knows them.
+  - Sable, once she sees the animals belong to the party, fills a bowl with water and sets it on
+    the floor: *"They can sleep by the fire."*
+  - Mara, before she leaves: *"Keep the big one off the street after dark. People are on edge
+    tonight."*
+- **If Odibli casts speak with animals:** Sergei says, *"I heard the music. I knew it was you."*
+  Bosco won't talk to Odibli at all.
+- **Dip** knows Bosco already (he threw him into Parriwimple's house in Barovia). Bosco
+  remembers.
+- **Later in the session:**
+  - **Dawn:** Sergei can carry Odibli on the ride instead of one of Silas's horses.
+  - **The camp:** Sergei's nose and Bosco's darkvision help with a heist approach. Sergei will
+    square off with Brick and Mortar.
+  - **Difficulty:** this doesn't change the camp's difficulty. Bosco is CR 0 and Sergei is
+    CR 1/8, so the camp is still Hard.
+- **Transition:** back into the song, then to `S2_BOON`.
 
 > *"The room's carrying the tune now, badly and loudly, the way rooms do. And then the viol goes
 > somewhere nobody follows. A few bars none of you have heard, not sad exactly, more like the middle
