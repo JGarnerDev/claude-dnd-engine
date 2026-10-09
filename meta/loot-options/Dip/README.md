@@ -18,6 +18,7 @@ Half-Orc Barbarian · Sage background (narrative) · level 4 · `level_confirmed
 - **weapons/** — [[Pilgrim's Wrap]] (Uncommon) · [[The Counterweight Toe]] (Common) · [[The Recited Edge]] (Uncommon)
 - **armor/** — [[Second Hands]] (Uncommon, attunement) · [[Walked-Out Boots]] (Common) · [[Shrine Leathers]] (Uncommon)
 - **misc/** — [[The Empty Reliquary]] (Common) · [[Quiet-Hours Bead]] (Common) · [[The Scorched Hearthstone]] (Common)
+- **Outside the menu:** [[Varrick's Parrying Bracer]] (Common, `status: confirmed`, the Session 30 waystation Common). Taken off the drover; +2 AC against one melee hit per short rest.
 
 ## What these are built on
 

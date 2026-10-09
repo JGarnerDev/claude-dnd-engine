@@ -5,12 +5,12 @@ campaign: homebrew
 type: session
 session_number: 30
 exists: false
-state: draft
+state: planned
 tags:
   - session
 
 mission: [[The Stolen Casks]]
-planned_date: ""
+planned_date: "2026-10-13"
 pcs_present:
   - "Iggy"
   - "Luci"
@@ -70,7 +70,7 @@ Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The
 dawn only) · Spear at dawn by the ford · Elowen held for a later breather · Nella drops her tally
 · close on a silent prisoner · cart kept, horses returned · the camp gives up band scale, Bane's
 name and the aegis-banner · night trimmed to the character beats · Nella spreads her fire · chase
-DCs 12/13/13/14, scored by stages won · waystation Common pinned · camp resized to Hard after the
+DCs 12/13/13/14, scored by stages won · waystation Common set (Varrick's Parrying Bracer, Dip) · camp resized to Hard after the
 v0.18.0 offense check (Option A: Captain drover, two Thug cask-hands, morale at 2 standing) ·
 three level-ups, each on its own beat: Iggy at the song, Odibli after saving the hearth, Halsby
 at the Spear · a third cask-hand added to hold the camp at Hard against an all-5 party · then
@@ -484,10 +484,23 @@ each block on its card.
      says nothing.
   5. **Iggy levels to 5** as the phrase ends. Describe only what the table sees. Jeff picks the
      class (Bard 4 or Paladin 2).
-  6. **The song brings them home.** Iggy strikes up again, something lighter. A few bars in, a
-     dog starts howling along from outside. Then the scrabbling comes through the
-     blown-open new wing, and [[Sergei Rubelgerd]] walks into the room with [[Bosco]] riding on
-     his back. See `S2_COMPANIONS`.
+
+> *"The room's carrying the tune now, badly and loudly, the way rooms do. And then the viol goes
+> somewhere nobody follows. A few bars none of you have heard, not sad exactly, more like the middle
+> of a sentence. The hearth stops flickering. It doesn't dim. It just holds, steady as a painted
+> flame, for exactly as long as the phrase does. Then the song stops, the fire breathes again, and
+> Sable, mid-pour, glances once at the floor."*
+
+- **Then Dip's moment — tell Ben privately.** Ben decides what Dip shares. Wisdom (Insight) or
+  Intelligence (Arcana) if Ben argues for the Sage training:
+  - **Under 15:** a lurch of nested wrongness, layers inside layers, then gone.
+  - **15–19:** a nesting doll — real, then hollow, then *real* again, and the innermost layer is
+    inside Iggy.
+  - **20+:** that innermost layer is a presence, divine, small and very tired, and not hostile.
+
+- **The song brings them home.** Iggy strikes up again, something lighter. A few bars in, a dog
+  starts howling along from outside. Then the scrabbling comes through the blown-open new wing, and
+  [[Sergei Rubelgerd]] walks into the room with [[Bosco]] riding on his back. See `S2_COMPANIONS`.
 
 #### S2_COMPANIONS — Sergei walks in, and Bosco is riding him
 
@@ -517,7 +530,7 @@ each block on its card.
     tonight."*
 - **If Odibli casts speak with animals:** Sergei says, *"I heard the music. I knew it was you."*
   Bosco won't talk to Odibli at all.
-- **Dip** knows Bosco already (he threw him into Parriwimple's house in Barovia). Bosco
+- **Dip** knows Bosco already (they threw him into Parriwimple's house in Barovia). Bosco
   remembers.
 - **Later in the session:**
   - **Dawn:** Sergei can carry Odibli on the ride instead of one of Silas's horses.
@@ -525,20 +538,7 @@ each block on its card.
     square off with Brick and Mortar.
   - **Difficulty:** this doesn't change the camp's difficulty. Bosco is CR 0 and Sergei is
     CR 1/8, so the camp is still Hard.
-- **Transition:** back into the song, then to `S2_BOON`.
-
-> *"The room's carrying the tune now, badly and loudly, the way rooms do. And then the viol goes
-> somewhere nobody follows. A few bars none of you have heard, not sad exactly, more like the middle
-> of a sentence. The hearth stops flickering. It doesn't dim. It just holds, steady as a painted
-> flame, for exactly as long as the phrase does. Then the song stops, the fire breathes again, and
-> Sable, mid-pour, glances once at the floor."*
-
-- **Then Dip's moment — tell Ben privately.** Ben decides what Dip shares. Wisdom (Insight) or
-  Intelligence (Arcana) if Ben argues for the Sage training:
-  - **Under 15:** a lurch of nested wrongness, layers inside layers, then gone.
-  - **15–19:** a nesting doll — real, then hollow, then *real* again, and the innermost layer is
-    inside Iggy.
-  - **20+:** that innermost layer is a presence, divine, small and very tired, and not hostile.
+- **Transition:** the evening carries on, then `S2_BOON`.
 
 #### S2_BOON — Odibli's stone does nothing at all
 
@@ -808,8 +808,9 @@ each block on its card.
   If it goes loud halfway, drop into `S2_FIGHT` with the party already at the cart.
   - **A clean heist still pays out.** The tally rides with the cart: she whittles it on the seat
     (the antler shavings at `S2_ROAD`), so it's in the box under the seat, and they drive off
-    with it (`S2_TALLY`, found later, not dropped). The ledger (Sennet's table, I5) and the banner
-    (the pole, L3) are each one more Stealth check to take; failing one goes loud.
+    with it (`S2_TALLY`, found later, not dropped). The ledger (Sennet's table, I5), the banner
+    (the pole, L3) and Varrick's bracer (his bedroll by the watch-fire) are each one more Stealth
+    check to take; failing one goes loud.
   - **Nella, after a clean heist:** no rout, no ropes cut. Skip the escape ladder. She wakes to
     an empty cart, and the party never sees her face. If they left a taunt, it reached her.
 - **Assault** — `S2_FIGHT` on their initiative.
@@ -881,8 +882,13 @@ each block on its card.
 - **Investigation, DC 12:** the notches are payments; the scored-through groups are *years*.
   **DC 16:** the last group isn't finished, and the gap left for it is small. She is close.
 - **Don't name the debt.** The party holds something she needs back. That's the whole beat.
-- **The coin** in the purse: `<a sum Jeff sets — her savings, enough to matter>`. Whether they
-  spend it is a choice with a consequence later.
+- **The coin** in the purse: **250 gp**, in its three tied sections: **150 gp · 500 sp · 5 pp**.
+  It is exactly what she still owes. The unfinished last group of notches leaves room for the same
+  sum, so anyone who counts both (DC 16 on the tally, then a look at the purse) can work it out.
+  Never say it aloud for them. The choice: about one room in the new wing, or her freedom. Whether
+  they spend it has a consequence later (`S4_DEBT`, `PAY_NELLA`).
+- **Varrick:** *"That's not wages. Nobody saves like that for wages."* Cue: the purse is opened in
+  front of him, if he's a prisoner.
 
 #### S2_CAMP_INTEL — What the camp gives up: the band's size, Bane's name, the banner
 
@@ -899,10 +905,14 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
   feud. Nobody in the camp can say whose it is. Silas can, back home, and goes quiet when he does.
   - Sample, on first look: *"That's not a bandit flag. Bandits don't have flags. That's someone's
     grandfather's flag."*
-- **The waystation Common** is hidden here (in the shed, the drover's bedroll, or under the cart
-  seat): `<waystation Common — pinned by Jeff 2026-10-07, choose before the table>`.
-  (The camp crew are named in Combatants, but none of them are entities. If one survives and
-  matters, `/recap` creates them.)
+- **The waystation Common: [[Varrick's Parrying Bracer]], for Dip.** It is on Varrick's left
+  forearm, and it is his Parry in the fight, so the table sees it turn their blows before they own
+  it. Taken off him, dead or captured. After a heist or parley, it hangs unlaced on his bedroll by
+  the watch-fire. Once per short rest, reaction: +2 AC against one melee hit Dip can see.
+  - **First touch:** the lacing has been redone so many times the holes have worn into slots.
+
+The camp crew are named in Combatants, but none of them are entities. If one survives and matters,
+`/recap` creates them.
 
 ### Scene 8 — The Man in the Cell
 
@@ -933,7 +943,12 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
 > 'rope' like it's already been decided."*
 
 - **The prisoner is a silhouette only (Jeff, 2026-10-07).** No name, no lines, no face in the light.
-  He is Tyler's cameo, beat 1, and his backstory has to exist before Session 31.
+  He is Tyler's cameo, beat 1. **Nothing at this table depends on Tyler's backstory.** The scene
+  commits only what the cameo already locks: a raider from Bane's band walked in, surrendered, and
+  went silent. Who he is and why he quit stay open.
+- **If Tyler needs more time:** the silhouette carries over. The hanging waits on Cael's reeve, so
+  Mara can hold a silent man for days, and Session 31 can open somewhere else and come back to the
+  cell later. Don't invent a name, a face, or a reason here to fill the gap.
 - **Mara, at the door, before anyone asks:** *"He walked in. Put his blade down on my step. Hasn't
   said a word since. Half the town wants him hanged by week's end."* A beat. *"I haven't decided
   anything."*
@@ -988,8 +1003,8 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
 
 - **They skip the pursuit and stay to build.** Fine. The cart reaches a fence in Duskwater. The
   casks aren't gone, but recovering them becomes a costlier beat later (buy-back or a riskier lift).
-  Sable eats the loss and the Stake ladder starts one deed behind. The waystation Common is still
-  there if they go later.
+  Sable eats the loss and the Stake ladder starts one deed behind. Varrick and his bracer are still
+  at the waystation if they go later.
 - **The fork rider gets away and the camp is on night alert.** Still winnable. Lean on the heist
   (the camp is watching the road, not the gully side) or a parley. The casks are always there.
 - **They corner Nella.** Run the escape ladder honestly down to the river plunge. If even that can't
@@ -1019,7 +1034,8 @@ Land it on the cell door, not on the casks.
   `S1_LUCI` already played mid-fight in Session 29. `S1_ANTIDOTE` is dead (Halsby was never bitten).
 - **Spotlight.** Halsby's beat is `S2_SPEAR` (a promised delivery, not one of his `spotlight_hooks`
   — none seeded). Iggy's `S2_IGGY` carries his already-seeded viol hook. Odibli gets his deed,
-  `S2_HEARTH`.
+  `S2_HEARTH`. Dip gets [[Varrick's Parrying Bracer]] at the camp (an item beat, not one of their
+  hooks). Sergei and Bosco come home in `S2_COMPANIONS`, for Odibli and Iggy.
   The trend says lean party-centric; the chase and the camp are.
 - **Deployment tracking:** none planned from `meta/literary-devices.md` or the design
   preferences. The false trail at the fork is a device candidate if `/recap` wants to log it.
@@ -1031,7 +1047,9 @@ Land it on the cell door, not on the casks.
   - [[The Shadowless Spear]] delivered — flip its loot file to delivered; Halsby's fade halts
   - The Earshot Crystals handed out
   - Silas's favour debt paid if the horses come back
-  - Nella's tally in party hands; Harrow Bane named by the ledger; the aegis-banner taken
+  - Nella's tally in party hands, and the 250 gp purse: kept, spent, or returned (it equals her
+    remaining debt); Harrow Bane named by the ledger; the aegis-banner taken
+  - [[Varrick's Parrying Bracer]] taken — flip its loot file to delivered, add it to Dip's gear
   - Chase DCs used → `meta/difficulty.md` Skill Challenge table
   - Rest Clock: reset if they rested at the waystation
   - The prisoner: canonize only what was shown
@@ -1039,8 +1057,11 @@ Land it on the cell door, not on the casks.
     finish, and stronger than it tastes · the new wing's brewing copper was on Silas's delivery and
     was holed by a raider's spear · Ashford townsfolk Dunny Marsh (deputy), Wenna Moss (the
     herb-wife), Old Tobin Reed (ferryman), the Hollises, Jory Pike (stable boy), Agnes Brand
-    (washerwoman)
+    (washerwoman) · Sable owes Silas about 650 gp of a 1,000 gp delivery · Nella's remaining debt
+    to Bane is 250 gp, the sum in her purse · Sergei and Bosco came through the transit loose, and
+    how is never explained · [[Varrick's Parrying Bracer]] was Varrick Tenn's, a soldier's guard
+    he wore as the camp's drover
 - **Held for later:** Elowen and Odibli (the Unfinished Binding) · Jorn's foreshadow · the Marlow
   coppers · Asher's Dead Sun phrase for Luci · the battlefield-spirit and coin-forgery spitballs.
-- **Before the table:** pick the waystation Common · sketch the waystation · write Tyler's backstory
-  enough to know why he surrendered (Session 31 needs it) · set Nella's purse total.
+- **Before the table:** nothing outstanding. Tyler's backstory is Session 31 prep, not Session 30
+  prep (see `S2_CELL`).

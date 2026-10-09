@@ -4,18 +4,22 @@ Not an entity. A checklist for getting `Session 30 Keep the Ale.md` (in this fol
 The `_` prefix keeps it out of `validate.ps1` and the semantic index. Delete it after the session is
 played. Items 70–73 mirror `todo-dashboard.md`; tick them in both places, or delete them there.
 
-Made 2026-10-07. Planned date: `<not set>`.
+Made 2026-10-07. Planned date: Tuesday 2026-10-13.
 
 ## Blocking — decide before the table
 
-- [ ] **Pick the waystation Common** (todo 70, loot question 23). It goes in `S2_CAMP_INTEL`'s
-      placeholder. Dip is the lean, since Halsby gets the Spear this session. Whatever you pick,
-      flip its loot file from `status: draft` to `confirmed`, with `confirmed_for: "Session 30 Keep the Ale"`.
-- [ ] **Tyler's backstory**, enough to know why he surrendered (todo 71). He is only a silhouette
-      at the close, but Session 31 opens on him. The concept is in `workshop/first-homebrew-act/drafts/cameos.md`.
-- [ ] **Set the coin in Nella's purse** (todo 73). It's in `S2_TALLY`. Her savings toward the
-      buyout: enough to matter, and enough that spending it feels like a choice.
-- [ ] **Set the planned date** in the session frontmatter (`planned_date`).
+- [x] **Pick the waystation Common** (todo 70, done 2026-10-09): [[Varrick's Parrying Bracer]] for Dip,
+      a new item outside the menu. Its loot file is `confirmed`.
+- [x] **Set the coin in Nella's purse** (todo 73, done 2026-10-09): 250 gp (150 gp · 500 sp · 5 pp),
+      exactly her remaining debt. Written into `S2_TALLY`.
+- [x] **Set the planned date** (done 2026-10-09): Tuesday 2026-10-13.
+
+## Not needed for Session 30
+
+- [ ] **Tyler's backstory** (todo 71) is **Session 31 prep.** Session 30 shows the prisoner as a
+      silhouette and commits nothing about him (`S2_CELL`). If it isn't ready by Session 31, the
+      silhouette carries over and Session 31 opens elsewhere. The concept is in
+      `workshop/first-homebrew-act/drafts/cameos.md`.
 
 ## Maps and Roll20
 
@@ -25,7 +29,7 @@ Made 2026-10-07. Planned date: `<not set>`.
       `uv run scripts/battlemap.py --session 30`.
 - [x] **The dusk fork** (done: `maps/dusk-fork.txt`): open ground, one lone tree, the road splitting. Either a plain field map
       or theatre of the mind.
-- [ ] **Tokens:** Varrick (drover), Haddo and Brask (Thugs), Sennet (Spy), Hesper (Acolyte), Clatter (Bandit), Brick and Mortar (Mastiffs), Ilsa (Scout), Fennel (Bandit), Cinder (Wolf), Nella, the
+- [ ] **Tokens:** Varrick (drover, wearing the bracer), Haddo and Brask (Thugs), Sennet (Spy), Hesper (Acolyte), Clatter (Bandit), Brick and Mortar (Mastiffs), Ilsa (Scout), Fennel (Bandit), Cinder (Wolf), Nella, the
       fox, five horses for the party, and Ilsa's and Fennel's two horses at the fork.
 - [ ] **Sheet check at the top of the session.** Session 29 lost a lot of time to Roll20.
       Make sure Paul can open Luci's sheet, dice are visible, and Dip and Luci show level 5.
@@ -52,12 +56,11 @@ Made 2026-10-07. Planned date: `<not set>`.
 
 ## Engine housekeeping
 
-- [ ] **Commit the 13 draft beats** in `_flow.md` (todo 73). Check with
+- [ ] **Commit the 14 draft beats** in `_flow.md` (todo 73). Check with
       `uv run scripts/flow-status.py --set "scheduler/sessions/Session 30 Keep the Ale"`.
-- [ ] **Flip the plan to `state: planned`** once the blocking items are done. Run the Description
-      & Dialogue Pass again at that point (`/session` Phase 6).
+- [x] **Flip the plan to `state: planned`** (done 2026-10-09, after `/review 30 --ready`).
 - [ ] **Write today's loot answers into `questionnaires/redwater/act-1-loot.md`:** question 23
-      is pinned, and question 24 is answered (the cart is kept, the horses go back to Silas).
+      is answered (done 2026-10-09), and question 24 is answered (the cart is kept, the horses go back to Silas).
 - [ ] **Rebuild the semantic index:** `uv run scripts/index-entities.py`. It's stale since Session 29.
 - [ ] **Commit** the Session 30 folder, the mission update and the todo items.
 
