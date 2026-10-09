@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # version-check.py -- flag engine changes since the last version bump
-# consumers: CLAUDE.md, meta/versioning.md -- update these if usage, flags, or output format change.
+# consumers: CLAUDE.md, meta/versioning.md, scripts/session-start.py -- update these if usage, flags, or output format change.
 # Usage: uv run scripts/version-check.py
 #
 # Reads root VERSION, finds the last commit that touched it (the bump commit),
@@ -37,27 +37,40 @@ def git(*args) -> str:
         return ''
 
 
-def main() -> None:
+def engine_status():
+    """(version, bump_sha, bump_date, changed_lines), or None if VERSION is missing.
+
+    bump_sha is '' when VERSION has never been committed. Shared with session-start.py.
+    """
     version_file = ROOT / 'VERSION'
     if not version_file.exists():
-        cwrite("VERSION file missing -- versioning not initialized. See meta/versioning.md.", 'yellow')
-        return
-
+        return None
     version = version_file.read_text(encoding='utf-8-sig').strip()
-    cwrite(f"\nEngine version: {version}", 'cyan')
 
     # Last commit that touched VERSION = the last bump.
     bump_sha = git('log', '-1', '--format=%H', '--', 'VERSION')
     if not bump_sha:
-        cwrite("  VERSION not yet committed -- commit the bump so staleness can be tracked.", 'yellow')
-        return
-
+        return version, '', '', []
     bump_date = git('log', '-1', '--format=%ci', bump_sha) or 'unknown'
-    cwrite(f"  Last bump: {bump_sha[:7]} ({bump_date})", 'darkgray')
 
     # Engine commits since the bump.
     changes = git('log', '--oneline', f'{bump_sha}..HEAD', '--', *ENGINE_PATHS)
     lines = [ln for ln in changes.split('\n') if ln.strip()] if changes else []
+    return version, bump_sha, bump_date, lines
+
+
+def main() -> None:
+    status = engine_status()
+    if status is None:
+        cwrite("VERSION file missing -- versioning not initialized. See meta/versioning.md.", 'yellow')
+        return
+    version, bump_sha, bump_date, lines = status
+    cwrite(f"\nEngine version: {version}", 'cyan')
+    if not bump_sha:
+        cwrite("  VERSION not yet committed -- commit the bump so staleness can be tracked.", 'yellow')
+        return
+    cwrite(f"  Last bump: {bump_sha[:7]} ({bump_date})", 'darkgray')
+
     if lines:
         cwrite(
             f"\n  Engine changed in {len(lines)} commit(s) since last bump "

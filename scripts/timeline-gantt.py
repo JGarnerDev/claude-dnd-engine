@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """timeline-gantt.py -- generate the world-history and party-history gantt charts.
-consumers: .claude/commands/timeline.md, CLAUDE.md (scripts table)
+consumers: .claude/commands/timeline.md
 
 Reads entity frontmatter (timeline_date / in_world_end_date) and emits ONE mermaid
 gantt per chart file, plus a reference doc. Each chart auto-scales to its OWN span

@@ -40,7 +40,7 @@ The helper scripts in `./scripts/` are being migrated from PowerShell (`.ps1`) t
 - **[uv](https://docs.astral.sh/uv/)** — runs every `.py` script via `uv run`; provisions Python 3.14 automatically, no manual interpreter install needed.
 - **PowerShell** — runs the `.ps1` scripts not yet converted. Once all scripts are Python, this requirement goes away.
 
-The scripts table in `CLAUDE.md` shows each script's current extension and exact invocation.
+The scripts table in `CLAUDE.md` lists the cross-cutting scripts and their exact invocation. Command-specific briefs are named in their command files, and map and transcription scripts in `maps/CLAUDE.md` and `recaps/CLAUDE.md`. Every script's header carries a `# Usage:` line.
 
 #### All platforms
 

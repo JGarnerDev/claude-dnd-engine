@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # map-crop.py
-# consumers: CLAUDE.md, .claude/commands/region.md, maps/CLAUDE.md -- update these if usage, flags, or output format change.
+# consumers: .claude/commands/region.md, maps/CLAUDE.md -- update these if usage, flags, or output format change.
 # Crop a region from world-names.webp by feature name (looked up in the index) or by explicit col/row.
 # Cell pixel size is derived from the master image's actual resolution at crop time.
 # Saves permanent crops to maps/locations/<slug>-map.png.

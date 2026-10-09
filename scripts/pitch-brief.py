@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # pitch-brief.py -- pre-pitch context summary (tone, themes, pitch history)
-# consumers: CLAUDE.md, .claude/commands/event.md, .claude/commands/pitch.md -- update these if usage, flags, or output format change.
+# consumers: .claude/commands/event.md, .claude/commands/pitch.md -- update these if usage, flags, or output format change.
 # Replaces manual reads of meta/worldbuilding.md and pitch-log/pitch-history.md.
 # Usage: uv run scripts/pitch-brief.py [--type <type>]
 

@@ -142,9 +142,10 @@ def get_frontmatter_from_text(raw: str) -> dict:
 
 
 # -- Session recordings -------------------------------------------------------
-# The group records sessions instead of taking notes (see CLAUDE.md -> Session
-# Recordings). A recording in recaps/audio/ with no matching transcript is an
-# untranscribed session; both briefs surface it, so the check lives here once.
+# The group records sessions instead of taking notes (see recaps/CLAUDE.md). A
+# recording in recaps/audio/ with no matching transcript is an
+# untranscribed session; both briefs and session-start.py surface it, so the check
+# lives here once.
 AUDIO_EXTS = {'.aac', '.m4a', '.mp3', '.wav', '.flac', '.ogg', '.opus', '.webm', '.mp4', '.mkv'}
 
 

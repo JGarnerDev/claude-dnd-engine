@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # region-world-context.py -- geographic rules for a world map grid position
-# consumers: CLAUDE.md, .claude/commands/region.md -- update these if usage, flags, or output format change.
+# consumers: maps/CLAUDE.md, .claude/commands/region.md -- update these if usage, flags, or output format change.
 # Usage: uv run scripts/region-world-context.py --col <n> --row <n>
 # Grid assumption: ~16 cols x 13 rows, 1000km per cell, equator at row 7, poles at rows 1 and 13
 

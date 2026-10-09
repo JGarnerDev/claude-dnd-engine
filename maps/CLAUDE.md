@@ -67,6 +67,23 @@ To hand work off, copy `maps/map-request-template.md` to `questionnaires/jeff-ma
 
 ---
 
+## Map Scripts
+
+Run each as `uv run scripts/<name>`.
+
+- `fetch-maps.py [--force] [--list]` — pull the gitignored masters from the Inkarnate CDN (manifest `maps/sources.tsv`) into `maps/world/masters/`. Run after a clone, or with `--force` after updating a manifest url
+- `gen-tiles.py` — regenerate all world map tiles (base, markers, sky) from the masters. Cell size is derived from each master's actual resolution
+- `map-crop.py --feature "<name>"` or `--col-min <n> --col-max <n> --row-min <n> --row-max <n> [--margin <px>] [--temp]` — crop the world map; saves to `maps/locations/`
+- `count-markers.py --feature "<name>"` or the same col/row flags — count undetailed cities (red dots) in a map region
+- `route-cities.py --route "<route name>"` — every city served by a trade route (city `routes` field)
+- `naming-status.py [--section <name>]` — named vs. unnamed entries in the world-naming questionnaire
+- `region-world-context.py --col <n> --row <n>` — `/region` Phase 1: climate, wind rules, water checklist
+- `region-scale.py --span-grids <n> [--water-body <sea|river|both|none>] [--locations <n>]` — `/region` Phase 2: travel times and city spacing from grid span
+- `region-brief.py [--region <slug>]` — resume a `/region` session from a compressed draft summary
+- `battlemap.py --session <n>` or `battlemap.py maps/battlemaps/<location>` `[--px <n>] [--vtt-grid]` — render text layouts (one char per 5-ft square) into a VTT image plus a DM key, in `maps/battlemaps/session-<n>/`
+
+---
+
 ## Grid Scale
 
 **Structural (always true):** places are addressed by a 1-indexed column/row grid laid over `world-names.webp`. A cell's pixel box is `cellW × cellH`; left edge of col N = `(N−1) × cellW`, top edge of row N = `(N−1) × cellH`. Cell distance (km) drives all `/region` travel-time and city-spacing math.

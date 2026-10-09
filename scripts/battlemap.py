@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # battlemap.py
-# consumers: CLAUDE.md, maps/CLAUDE.md -- update these if usage, flags, or output format change.
+# consumers: maps/CLAUDE.md -- update these if usage, flags, or output format change.
 # Render a session's battlemap layouts (text grids, one char per 5-ft square) into PNGs.
 #
 # Layouts live beside the session plan: scheduler/sessions/<Session folder>/maps/<name>.txt

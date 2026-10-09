@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """timeline-data.py -- extract the timeline data blob and inject it into the
 self-contained HTML artifact (M2 of the timeline-view overhaul).
-consumers: .claude/commands/timeline.md, CLAUDE.md (scripts table)
+consumers: .claude/commands/timeline.md
 
 Reads entity frontmatter (events, sessions, acts, chronicle beats) and builds
 the JSON shape app/components/charts/timeline/timeline.js consumes:

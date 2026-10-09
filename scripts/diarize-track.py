@@ -15,7 +15,7 @@
 # is the default PyPI wheel, which on Windows is CPU-only; that is deliberate. ECAPA is a
 # ~20M-parameter model and the work is a few thousand short crops, so CPU finishes in
 # minutes and the CUDA wheel is a ~2.5GB download for no useful gain.
-# consumers: CLAUDE.md, README.md, .claude/commands/transcript.md -- update these if
+# consumers: recaps/CLAUDE.md, README.md, .claude/commands/transcript.md -- update these if
 #   usage, flags, or output format change.
 """
 diarize-track.py -- split ONE audio track that carries two or more speakers.

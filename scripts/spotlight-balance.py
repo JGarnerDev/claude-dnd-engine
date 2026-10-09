@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # spotlight-balance.py -- character-focus ledger: spotlight-vs-agnostic balance + per-PC rotation
-# consumers: CLAUDE.md, .claude/commands/session.md, .claude/commands/todo.md, scripts/session-brief.py,
+# consumers: .claude/commands/session.md, .claude/commands/todo.md, scripts/session-brief.py,
 #   scripts/todo-brief.py, scripts/party-status.py -- update these if usage, flags, or output format change.
 # Reads played-session `beats:` (see meta/schemas/session.md) and reports against meta/character-focus.md.
 # Usage: python scripts/spotlight-balance.py [--section]

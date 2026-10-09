@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # count-markers.py
-# consumers: CLAUDE.md, .claude/commands/region.md -- update these if usage, flags, or output format change.
+# consumers: maps/CLAUDE.md, .claude/commands/region.md -- update these if usage, flags, or output format change.
 # Count undetailed city markers (red dots) in a map region.
 # Uses Pillow to detect and count distinct red blobs in city-markers.webp.
 # Cell pixel size is derived from the master image's actual resolution at count time.

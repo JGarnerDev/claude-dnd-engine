@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # region-brief.py -- compressed summary of an existing region draft
-# consumers: CLAUDE.md, .claude/commands/region.md -- update these if usage, flags, or output format change.
+# consumers: maps/CLAUDE.md, .claude/commands/region.md -- update these if usage, flags, or output format change.
 # Usage: uv run scripts/region-brief.py [--region <slug>]
 # Auto-detects draft if only one exists in data/locations/regions/
 

@@ -111,56 +111,40 @@ When adding a new type, subtype, or entity folder, read `meta/graph-settings.md`
 
 Map rules, tile protocol, and crop scripts documented in `maps/CLAUDE.md` — auto-loaded when working with map files.
 
+## Session Start
+
+A SessionStart hook (`.claude/settings.json`) runs `scripts/session-start.py` and puts its output in context: the engine version with recent changelog highlights, engine commits since the last version bump, search-index staleness, notes waiting in `recaps/inbox/`, and untranscribed recordings. Pass its `!` flags to the user in a line or two, framed as "Engine v`<x.y.z>` — since last worked here: …". Never rebuild the index or start a transcription unprompted; prompt instead. If the orientation block is missing (hook not installed, `uv` absent), run `uv run scripts/session-start.py` by hand.
+
 ## Scripts
 
-Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these via Bash before manual file reads — they collapse 5–10 tool calls into one.** (Scripts are being migrated from PowerShell to Python 3.14, run via `uv run`; both extensions appear in the table during the transition.)
+Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these via Bash before manual file reads — they collapse 5–10 tool calls into one.** Run them with `uv run` (Python 3.14); the three `.ps1` files are the last PowerShell holdouts.
+
+Only cross-cutting scripts are listed here. Scripts that one command or domain uses are named where they are used: each command's `*-brief.py` in its command file, map and region scripts in `maps/CLAUDE.md`, transcription scripts in `recaps/CLAUDE.md`. For anything else, each script's header carries a `# Usage:` line.
 
 | Script | When to use | Usage |
 |---|---|---|
 | `session-brief.py` | Start of every `/session` | `uv run scripts/session-brief.py` |
-| `transcribe.py` | Turn a session recording into a speaker-labeled transcript. Multi-track (one file per speaker) needs no diarization; biases decoding toward canon names | `uv run scripts/transcribe.py [--session <n>] [--list] [--force]` |
-| `diarize-track.py` | Split one track that carries two speakers (two players sharing a mic). Embeds each cached utterance with ECAPA-TDNN, clusters by voice, names clusters from DM turn-anchors + class vocabulary | `uv run scripts/diarize-track.py --session <n> --track <stem> --speakers "A,B" [--dry-run]` |
-| `session-cards.py` | One planned session (flow chart + written plan + entity index) as JSON — feeds the session runner page (`npm run home` → `/session.html`, or the **Run session** button). Not for chat use | `uv run scripts/session-cards.py [--session <folder or number>]` |
 | `session-state.py` | Quick campaign/act/mission check | `uv run scripts/session-state.py` |
-| `todo-brief.py` | Start of every `/todo` — all DM action-item signals in one call | `uv run scripts/todo-brief.py` |
-| `inventory-brief.py` | Start of every `/inventory` — free entity pool grouped by type, with gaps | `uv run scripts/inventory-brief.py [--type <type>]` |
-| `questions-brief.py` | Open world-design questions in `questionnaires/`, counted by topic and priority. The tree is one question per file in topic subfolders, and gitignored — ripgrep tools can't see it | `uv run scripts/questions-brief.py [--topic <prefix>] [--required] [--list]` |
-| `spitball-brief.py` | The spitball pile filtered by frontmatter — target act, kind, campaign, state, heat (see `meta/spitball.md`) | `uv run scripts/spitball-brief.py [--target <slug>] [--subtype <kind>] [--campaign <name>] [--state <state>] [--min-heat <n>] [--all] [--count]` |
-| `threads-brief.py` | Start of every `/threads` Phase 2 — unresolved states, hostiles, pending seeds | `uv run scripts/threads-brief.py` |
 | `party-status.py` | PC stats + afflictions | `uv run scripts/party-status.py` |
-| `spotlight-balance.py` | Character-focus ledger — spotlight/agnostic balance, rotation, overdue PC, missing hooks (see `meta/character-focus.md`) | `uv run scripts/spotlight-balance.py [--section]` |
-| `flow-status.py` | Commitment coverage for flow graph sets — committed/draft/open counts, committed beats sitting downstream of uncommitted work, id/label mismatches (see `meta/flow-graphs.md`) | `uv run scripts/flow-status.py [--set <path>] [--blockers] [--quiet]` |
 | `free-entities.py` | Find available entities by type or player | `uv run scripts/free-entities.py [--type <type>] [--player <name>]` |
 | `contribution-balance.py` | Player contribution counts (pool vs. canonized) | `uv run scripts/contribution-balance.py` |
 | `entity-graph.py` | 1-hop relations for any entity | `uv run scripts/entity-graph.py --name "<name>"` |
 | `location-entities.py` | All historian entities near a location | `uv run scripts/location-entities.py --location "<name>"` |
-| `pitch-brief.py` | Start of every `/pitch` | `uv run scripts/pitch-brief.py [--type <type>]` |
 | `monster-lookup.py` | Find monsters by CR, creature type, or habitat | `uv run scripts/monster-lookup.py [--type <type>] [--cr-min <n>] [--cr-max <n>] [--habitat <name>]` |
-| `route-cities.py` | Find all cities served by a trade route (uses city `routes` field) | `uv run scripts/route-cities.py --route "<route name>"` |
-| `count-markers.py` | Count undetailed cities (red dots) in a map region | `uv run scripts/count-markers.py --feature "<name>"` or `--col-min <n> --col-max <n> --row-min <n> --row-max <n>` |
-| `region-world-context.py` | Start of every `/region` Phase 1 — climate, wind rules, water checklist | `uv run scripts/region-world-context.py --col <n> --row <n>` |
-| `region-scale.py` | Start of every `/region` Phase 2 — travel times and city spacing from grid span | `uv run scripts/region-scale.py --span-grids <n> [--water-body <sea\|river\|both\|none>] [--locations <n>]` |
-| `region-brief.py` | Resume a `/region` session — compressed draft summary | `uv run scripts/region-brief.py [--region <slug>]` |
-| `naming-status.py` | Show named vs. unnamed entries in world-naming questionnaire | `uv run scripts/naming-status.py [--section <name>]` |
-| `map-crop.py` | Crop world map by feature name or col/row; saves to `maps/locations/` | `uv run scripts/map-crop.py --feature "<name>"` or `--col-min <n> --col-max <n> --row-min <n> --row-max <n> [--margin <px>] [--temp]` |
-| `fetch-maps.py` | Pull gitignored master map images from the Inkarnate CDN (manifest `maps/sources.tsv`) into `maps/world/masters/`. Run after a clone, or with `--force` after updating a manifest url | `uv run scripts/fetch-maps.py [--force] [--list]` |
-| `battlemap.py` | Render a session's battlemap layouts (text grids in `<session folder>/maps/*.txt`, one char per 5-ft square) into a clean VTT image + a DM key with grid refs, tokens and zones, in `maps/battlemaps/session-<n>/` | `uv run scripts/battlemap.py --session <n>` or `uv run scripts/battlemap.py maps/battlemaps/<location>` `[--px <n>] [--vtt-grid]` |
-| `gen-tiles.py` | Regenerate all world map tiles (base, markers, sky) from the masters in `maps/world/masters/` after fetching a new export. Cell size is derived from each master's actual resolution | `uv run scripts/gen-tiles.py` |
+| `questions-brief.py` | Open world-design questions in `questionnaires/`, counted by topic and priority. The tree is one question per file in topic subfolders, and gitignored — ripgrep tools can't see it | `uv run scripts/questions-brief.py [--topic <prefix>] [--required] [--list]` |
 | `index-entities.py` | Build/rebuild the semantic vector index (run after adding new entities) | `uv run scripts/index-entities.py [--reset]` |
 | `semantic-search.py` | Semantic similarity search — find entities by meaning, not keywords | `uv run scripts/semantic-search.py "<text>" [--type <type>] [--subtype <sub>] [--exists true\|false] [--source data\|historian\|scheduler] [-k <n>]` |
+| `session-start.py` | Start-of-conversation orientation (run by the SessionStart hook) | `uv run scripts/session-start.py` |
+| `version-check.py` | Before a bump — engine changes since the last version bump (see `meta/versioning.md`) | `uv run scripts/version-check.py` |
 | `validate.ps1` | Graph integrity check — dangling `[[links]]`, missing/invalid `exists`/`name`/`type`, broken canon. Run before canonizing or after bulk edits | `.\scripts\validate.ps1 [-Scope all\|links\|frontmatter] [-Quiet]` |
 | `validate-refs.ps1` | Instruction-file reference lint — finds path refs in CLAUDE.md files, commands, meta, tests, and todo files that point at renamed/deleted files. Run after renaming, moving, or deleting any instruction file or script | `.\scripts\validate-refs.ps1 [-Quiet]` |
-| `commands-list.py` | Feeds `/commands` — every slash command with usage and description, read from command frontmatter | `uv run scripts/commands-list.py` |
-| `version-check.py` | Session start / before a bump — flag engine changes since the last version bump (see `meta/versioning.md`) | `uv run scripts/version-check.py` |
 | `refs.ps1` | Reverse dependency lookup — every file:line that references a target file. Run before renaming a file or changing a script's flags/output format, then update what it lists | `.\scripts\refs.ps1 -Target <path-or-filename>` |
 
 **Script dependents:** each consumed script carries a `# consumers:` header line listing the instruction files that reference it. When changing a script's usage, flags, or output format, update those files in the same change.
 
 Scripts output plain text; parse with your own judgment. They read frontmatter only (except `session-brief.py` which also reads the last session body for cliffhanger).
 
-**Semantic index:** `vector-index/` (gitignored, rebuilt from source). Build once with `uv run scripts/index-entities.py`, re-run after bulk entity additions. Use `semantic-search.py` to surface entities by thematic relevance — betrayal arcs, forgotten NPCs, callback hooks, contradiction checks.
-
-**Index staleness check:** At the start of any session, read `vector-index/.index-built` (line 1: ISO timestamp, line 2: git commit SHA). Then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/ spitball/`. If any commits appear, flag it: "Semantic index stale since `<sha[:7]>` — run `uv run scripts/index-entities.py`." Ignore commits that touch only non-indexed files (`CLAUDE.md`, `README.md`) — the indexer skips them, so they cannot stale the index. Do not rebuild automatically; prompt the user. If `.index-built` is missing, index has never been built — prompt to run it.
+**Semantic index:** `vector-index/` (gitignored, rebuilt from source). Build once with `uv run scripts/index-entities.py`, re-run after bulk entity additions. Use `semantic-search.py` to surface entities by thematic relevance — betrayal arcs, forgotten NPCs, callback hooks, contradiction checks. Staleness is computed in `scripts/lib/common.py` (`INDEXED_DIRS` must match the indexer's dirs) and reported at session start, by `session-brief.py` and by `todo-brief.py`. Commits that touch only non-indexed files (`CLAUDE.md`, `README.md`) do not stale it. Never rebuild automatically; prompt the user.
 
 ## Stamp Pattern
 
@@ -170,44 +154,18 @@ Recurring engine idiom for drift-prone state: stamp the state with the marker it
 
 The project carries a single semver `MAJOR.MINOR.PATCH` in root `VERSION`; notable engine changes are logged in `CHANGELOG.md`. The version tells collaborators and their Claude agents *what important thing changed* — not that there was activity. Routine campaign content (new entities, canonized sessions) stays below the bump bar and is not versioned. When a change clears the bar (engine behavior/interaction/view changes, or structural/retcon content changes), bump `VERSION` and prepend a `CHANGELOG.md` entry. Full tier rules and the bump procedure: `meta/versioning.md` (read once per task when bumping).
 
-**Version orientation:** At the start of any session, read root `VERSION` and the top entry or two of `CHANGELOG.md`, and orient the DM/agent: "Engine v`<x.y.z>` — since last worked here: `<recent changelog highlights>`." Run `uv run scripts/version-check.py` to surface whether engine files changed without a version bump (non-blocking — a flag means "decide whether this cleared the bump bar," not "something broke").
-
 ## Player Entity Submissions
 
 **Auto-ingestion trigger:** If any message, pasted content, or file contains a `<!-- CLAUDE-INGEST type: entity-questionnaire -->` block, treat it as a filled player questionnaire awaiting ingestion. Run the Ingestion Mode section of `.claude/commands/entity-questionnaire.md`. Never create an entity directly from raw player input.
 
-## Session Notes Ingestion (Recap Inbox)
+## Session Notes and Recordings
 
-**Auto-ingestion trigger:** any markdown file in `recaps/inbox/` is raw session notes awaiting canonization — the DM drops rough notes there after play. When one exists at session start (`session-brief.py` flags it, along with any session whose `planned_date` has passed with no historian record), offer to run `/recap` using that file as the what-happened notes. Never canonize without the DM walking the `/recap` flow; after canonization completes, delete the inbox file — its content lives in the historian record.
+Pipeline rules (speaker labels, shared mics, detached runs) live in `recaps/CLAUDE.md`, auto-loaded when working in `recaps/`. Triggers that can fire from anywhere:
 
-## Session Recordings (Audio)
-
-The group records sessions instead of taking notes. Audio lands in `recaps/audio/` — either a folder of per-speaker tracks (`recaps/audio/session-26/`, Craig-style multi-track) or a single mixed file. Audio is gitignored; it stays on the DM's machine.
-
-The pipeline is three steps, each with a human checkpoint:
-
-1. `uv run scripts/transcribe.py --session <n>` → `recaps/transcripts/session-<n>.md` — machine transcript, speaker-labeled, committed as the record of what was said
-2. `/transcript <n>` → `recaps/inbox/session-<n>.md` — digested notes shaped for `/recap`'s Phase 2 questions
-3. `/recap` → historian — canonization, DM-supervised as always
-
-**Auto-detection trigger:** a folder or audio file in `recaps/audio/` with no matching transcript in `recaps/transcripts/` is an untranscribed recording. Offer `/transcript <n> --transcribe`; never start a transcription run unprompted — a four-hour session is 15–25 minutes of GPU time.
-
-**A transcript is a source, not canon.** It mishears proper nouns, drops quiet speakers, and cannot tell a joke from a plan. Everything derived from one carries confidence marks (`(?)`, `(??)`) into the inbox note, and the DM resolves them during `/recap`. Never canonize straight from a transcript.
-
-Optional `recaps/audio/<session>/speakers.tsv` maps a track filename stem to a display name (`eljeffe0024` → `Jeff`), so Discord handles don't end up as speaker labels.
-
-**Resolving unknown handles:** a Craig handle that doesn't obviously map to a player is usually identifiable from the audio itself — a player self-identifying ("my name is Odibli"), or class vocabulary that matches exactly one PC (rage/reckless/greataxe → the barbarian; ki/Step of the Wind → the monk). Confirm the mapping, write it into `speakers.tsv`, then re-run `transcribe.py` — the per-track cache makes a relabel instant, with no re-decoding. Note the evidence in a comment in the file so the next person doesn't re-derive it.
-
-**Shared microphones.** One track normally means one speaker, which is why the pipeline needs no diarization. When two players sit together and share a mic, that assumption breaks and every line on that track is falsely attributed to the track's owner. Handle it in two steps:
-
-1. Set the track's `speakers.tsv` label to **both** names (`Jeff (Iggy) + Paul (Luci)`) so nothing is attributed to one player on no evidence, and record in a comment how you know
-2. Optionally run `uv run scripts/diarize-track.py --session <n> --track <stem> --speakers "A,B"` to split it by voice. It writes `.cache/<slug>/<stem>.speakers.json`, which the next `transcribe.py` run stamps onto each utterance — cache-only, no re-decode
-
-Do not try to split a shared track by reading the text. Measured on session 27, class vocabulary plus DM turn-anchors attribute only ~20% of utterances; the rest is `"yeah"` and `"that misses"`, identical between two players. The voice is the signal, the words are not. Lines the split leaves unresolved keep the joint label, and the DM settles them at `/recap`.
-
-**Long runs must be detached.** A transcription launched with the Bash tool's background mode dies when the Claude Code process restarts, losing the whole run. For a full session, launch it detached so it survives — on Windows, `Start-Process` with `-RedirectStandardOutput`/`-RedirectStandardError` into `recaps/transcripts/.cache/<session>/` — then watch the log. The per-track JSON cache means an interrupted run resumes without redoing finished tracks.
-
-**Google Drive notes:** when the DM asks for "google drive notes" (or notes to share with the table), read `/transcript` Phase 6 first. They are written **for the players to read**: no spoilers, no conclusions drawn for the party, and they are built fresh from the ledger, not copied from the DM-facing inbox note. Published as a Google-Docs-pasteable artifact: light theme only, top heading `H3`, Docs-available typefaces.
+- **Recap inbox:** any markdown file in `recaps/inbox/` is raw session notes awaiting canonization. When the session-start orientation or `session-brief.py` flags one (or a session whose `planned_date` passed with no historian record), offer `/recap` with that file as the what-happened notes. Never canonize without the DM walking the `/recap` flow; `/recap` deletes the inbox file when it finishes
+- **Untranscribed recording:** a folder or audio file in `recaps/audio/` with no matching transcript in `recaps/transcripts/`. Offer `/transcript <n> --transcribe`; never start a transcription unprompted — a four-hour session is 15–25 minutes of GPU time
+- **A transcript is a source, not canon.** Never canonize straight from one; confidence marks (`(?)`, `(??)`) carry into the inbox note and the DM resolves them at `/recap`
+- **Google Drive notes:** when the DM asks for "google drive notes" (or notes to share with the table), read `/transcript` Phase 6 first. They are written **for the players to read**: no spoilers, no conclusions drawn for the party, built fresh from the ledger, not copied from the DM-facing inbox note. Published as a Google-Docs-pasteable artifact: light theme only, top heading `H3`, Docs-available typefaces
 
 ## PC Backstory Ingestion
 

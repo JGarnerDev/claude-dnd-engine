@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # naming-status.py -- named vs. unnamed entries in questionnaires/world/naming/world-naming.md
-# consumers: CLAUDE.md -- update these if usage, flags, or output format change.
+# consumers: maps/CLAUDE.md -- update these if usage, flags, or output format change.
 # Usage: uv run scripts/naming-status.py [--section <name>]
 
 import argparse

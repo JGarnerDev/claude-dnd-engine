@@ -12,7 +12,7 @@
 # rest of the repo stays on 3.14; `uv run` builds an isolated 3.13 env for this script.
 # The two nvidia-* wheels are the CUDA runtime bits ctranslate2 dlopens for GPU decode;
 # they are skipped on macOS, where CUDA does not exist and the script runs on CPU.
-# consumers: CLAUDE.md, README.md, .claude/commands/transcript.md, .claude/commands/recap.md,
+# consumers: recaps/CLAUDE.md, README.md, .claude/commands/transcript.md, .claude/commands/recap.md,
 #   scripts/session-brief.py, scripts/todo-brief.py -- update these if usage, flags, or output format change.
 """
 transcribe.py -- turn a session's recorded audio into a speaker-labeled transcript.

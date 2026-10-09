@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """session-cards.py -- extract one planned session as JSON for the session runner page.
-consumers: CLAUDE.md (scripts table), app/pages/home/session-data-plugin.ts
+consumers: .claude/commands/review.md, app/pages/home/session-data-plugin.ts
 -- update those if usage, flags, or output shape change.
 
 Reads a session folder in scheduler/sessions/ -- the written plan (`Session NN Name.md`)

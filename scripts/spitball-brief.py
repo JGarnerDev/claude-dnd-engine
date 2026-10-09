@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # spitball-brief.py -- the spitball pile, filtered by frontmatter (see meta/spitball.md)
-# consumers: CLAUDE.md, .claude/commands/spitball.md, .claude/commands/session.md,
+# consumers: .claude/commands/spitball.md, .claude/commands/session.md,
 #   .claude/commands/flow.md -- update these if usage, flags, or output format change.
 # Groups loose story ideas by target act, with subtype/campaign/state/heat filters so a planning
 # session can pull the relevant pile in one call instead of walking the tree.

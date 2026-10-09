@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # threads-brief.py -- unresolved-thread signals. Backbone of /threads Phase 2.
-# consumers: CLAUDE.md, .claude/commands/threads.md, .claude/commands/session.md -- update these if usage, flags, or output format change.
+# consumers: .claude/commands/threads.md, .claude/commands/session.md -- update these if usage, flags, or output format change.
 # Collects: historian entities in unresolved states, hostile characters (recency judged
 # by the caller), and pending Seeded: lines from the two meta tracking files.
 # Usage: python scripts/threads-brief.py

@@ -4,7 +4,7 @@ Score each criterion: **pass** / **partial** / **fail**, with one evidence line 
 
 ## 1. Script-first
 
-Every applicable script in the root CLAUDE.md scripts table runs **before** manual file reads. Manual reads that duplicate a script's output are failures, even if the result was correct.
+Every applicable script (in the root CLAUDE.md scripts table, or named by the command or domain CLAUDE.md under audit) runs **before** manual file reads. Manual reads that duplicate a script's output are failures, even if the result was correct.
 
 ## 2. Frontmatter-first
 

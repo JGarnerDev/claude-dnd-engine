@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # inventory-brief.py -- free entity pool inventory. Backbone of the /inventory command.
-# consumers: CLAUDE.md, .claude/commands/inventory.md -- update these if usage, flags, or output format change.
+# consumers: .claude/commands/inventory.md -- update these if usage, flags, or output format change.
 # Replaces a manual frontmatter sweep of every file under data/ (1,200+ files).
 # Reports exists:false entities grouped by type/subtype, plus a gaps section for
 # pool types with zero free entities. Reference catalogs (exists:true) are skipped.

@@ -6,6 +6,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.24.0] — 2026-10-09
+
+### Added
+
+- **SessionStart hook in a shared `.claude/settings.json`.** It runs the new `scripts/session-start.py`, which prints the engine version, recent changelog highlights, unbumped engine commits, search-index staleness, recap-inbox notes and untranscribed recordings. This replaces the hand-run start-of-session ritual of four or five tool calls. Collaborators get it on clone; it needs `uv`.
+- **`recaps/CLAUDE.md`.** The audio pipeline rules (speaker labels, shared microphones, detached runs) moved out of root and load only when working in `recaps/`.
+- **Map Scripts section in `maps/CLAUDE.md`.** Lists the ten map, region and naming scripts that used to sit in the root table.
+
+### Changed
+
+- **Root CLAUDE.md is down from about 31KB to about 22KB** (roughly 2.3k fewer tokens a turn). The scripts table keeps only cross-cutting scripts; command-specific briefs are named in their command files. The index-staleness and version-orientation rituals collapse into a Session Start section. The recap inbox and recording triggers shrink to four bullets.
+- **`version-check.py` exposes `engine_status()`** for reuse. Its output is unchanged.
+- **`# consumers:` headers** now name the file that actually references each script.
+
 ## [0.23.0] — 2026-10-09
 
 ### Added
