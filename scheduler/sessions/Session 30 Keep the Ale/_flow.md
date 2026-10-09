@@ -38,9 +38,12 @@ flowchart TD
     S2_OFFER["[x] S2_OFFER<br/>A room and a meal, no strings<br/>Then the 10% deed, left on the table"]
     S2_IGGY["[x] S2_IGGY<br/>Iggy plays the room<br/>The hearth holds still; Dip's private roll<br/>Iggy levels to 5"]
     S2_COMPANIONS["[-] S2_COMPANIONS<br/>Iggy's song brings them home<br/>Sergei walks in, Bosco riding him"]
+    S2_STATEMENT{"[-] S2_STATEMENT<br/>Mara wants one of them at the jail<br/>Whoever goes misses the stone, learns Tallis's name"}
     S2_BOON["[x] S2_BOON<br/>Odibli's stone does nothing at all<br/>The reason to take the deed"]
     S2_HEARTH["[x] S2_HEARTH<br/>The hearth is dying: Tallis's smother-charm<br/>The party feeds the flame; Odibli writes over the glyph<br/>Odibli levels to 5 · they sleep, not a long rest"]
-    S2_WREN --> S2_OFFER --> S2_IGGY --> S2_COMPANIONS --> S2_BOON --> S2_HEARTH
+    S2_WREN --> S2_OFFER --> S2_IGGY --> S2_COMPANIONS --> S2_STATEMENT
+    S2_STATEMENT -->|"nobody goes"| S2_BOON --> S2_HEARTH
+    S2_STATEMENT -->|"one goes: back a round late"| S2_HEARTH
   end
 
   subgraph SC4["Scene 4 · Dawn at the Ford"]
@@ -54,9 +57,9 @@ flowchart TD
   subgraph SC5["Scene 5 · The Red Trail — the chase"]
     S2_CHASE_RULES["[x] S2_CHASE_RULES<br/>Four stages, one check per PC per stage<br/>A stage is won when half the party passes<br/>Failures cost lead, never the trail"]
     S2_FORD_STAGE["[-] S2_FORD_STAGE<br/>Stage 1 · the far bank · DC 12"]
-    S2_ROAD["[-] S2_ROAD<br/>Stage 2 · the drover's road · DC 13<br/>A cracked shoe, a weeping cask, antler shavings"]
+    S2_ROAD{"[-] S2_ROAD<br/>Stage 2 · the drover's road<br/>Road DC 13, a loss costs time<br/>Shortcut DC 11, a loss lames a horse<br/>A cracked shoe, a weeping cask, antler shavings"}
     S2_FORK["[-] S2_FORK<br/>Stage 3 · the dusk fork · DC 13<br/>A false trail laid with a dragged log"]
-    S2_APPROACH{"[-] S2_APPROACH<br/>Stage 4 · the camp approach · DC 14<br/>Stages won set the camp:<br/>4 unaware · 2–3 dusk · 0–1 night alert"}
+    S2_APPROACH{"[-] S2_APPROACH<br/>Stage 4 · the camp approach<br/>Ride in DC 14 · on foot DC 12, horses left behind<br/>Stages won set the camp:<br/>4 unaware · 2–3 dusk · 0–1 night alert"}
     S2_CHASE_RULES --> S2_FORD_STAGE --> S2_ROAD --> S2_FORK
   end
 
@@ -67,6 +70,7 @@ flowchart TD
   end
 
   subgraph SC7["Scene 7 · The Waystation"]
+    S2_SCOUT["[-] S2_SCOUT<br/>Scout first: the blind, the rope-crossing,<br/>a horse tied half a mile out<br/>'Someone's planned a way out of here'"]
     S2_APPROACH_CHOICE{"[-] S2_APPROACH_CHOICE<br/>Heist, assault, parley or trick?"}
     S2_HEIST["[-] S2_HEIST<br/>Night heist: the cart out, no fight<br/>The party leaves her the taunt<br/>Tally rides away under the seat; no escape ladder"]
     S2_PARLEY["[-] S2_PARLEY<br/>Parley under a truce-branch<br/>She keeps the casks; her debt shows its edge"]
@@ -81,6 +85,7 @@ flowchart TD
     S2_HEIST -->|"it goes loud"| S2_FIGHT
     S2_PARLEY -->|"talk fails"| S2_FIGHT
     S2_FIGHT --> S2_MORALE --> S2_ESCAPE --> S2_TALLY
+    S2_SCOUT -.->|"exit cut: skip those rungs"| S2_ESCAPE
     S2_HEIST -->|"clean: tally under the cart seat"| S2_TALLY
     S2_TALLY --> S2_CAMP_INTEL
   end
@@ -100,6 +105,8 @@ flowchart TD
   S2_FORK --> S2_REARGUARD
   S2_RIDER --> S2_APPROACH
   S2_APPROACH --> S2_APPROACH_CHOICE
+  S2_APPROACH -.->|"they scout"| S2_SCOUT
+  S2_SCOUT --> S2_APPROACH_CHOICE
   S2_CAMP_INTEL --> S2_HAUL_HOME
   S2_BOON -.->|"they stay to build"| S2_SKIP
 
@@ -112,9 +119,9 @@ flowchart TD
   classDef fail fill:#EFE2E2,stroke:#A3736E,color:#4A2C29,stroke-dasharray:4 3
 
   class S2_REARGUARD,S2_FIGHT,S2_MORALE,S2_ESCAPE combat
-  class S2_SABLE_FREE,S2_TOWN,S2_WREN,S2_IGGY,S2_COMPANIONS,S2_HORSES,S2_PARLEY,S2_HEIST,S2_SHORT_REST,S2_CHASE_RULES,S2_FORD_STAGE,S2_ROAD,S2_FORK,S2_TRAIL social
-  class S2_APPROACH,S2_RIDER,S2_APPROACH_CHOICE decision
+  class S2_SABLE_FREE,S2_TOWN,S2_WREN,S2_IGGY,S2_COMPANIONS,S2_HORSES,S2_PARLEY,S2_HEIST,S2_SHORT_REST,S2_CHASE_RULES,S2_FORD_STAGE,S2_FORK,S2_TRAIL social
+  class S2_APPROACH,S2_RIDER,S2_APPROACH_CHOICE,S2_STATEMENT,S2_ROAD decision
   class S2_LOOT,S2_OFFER,S2_HEARTH,S2_SPEAR,S2_HAUL_HOME stake
-  class S2_NAMES,S2_BOON,S2_TALLY,S2_CAMP_INTEL,S2_CELL seed
+  class S2_NAMES,S2_BOON,S2_TALLY,S2_CAMP_INTEL,S2_CELL,S2_SCOUT seed
   class S2_SKIP fail
 ```

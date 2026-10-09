@@ -76,6 +76,12 @@ three level-ups, each on its own beat: Iggy at the song, Odibli after saving the
 at the Spear · a third cask-hand added to hold the camp at Hard against an all-5 party · then
 both fights varied and the crew named (a Spy, an Acolyte, Mastiffs, a Wolf; mostly human, as the region is), still Hard.
 
+**Proposed by the engine, 2026-10-09 (draft, for Jeff to commit):** more choices for the
+players, so the night and the chase aren't only watched · Mara asks for one volunteer to give a
+statement at the jail (`S2_STATEMENT`) · the flame track sits on the table where the party can see
+it (`S2_HEARTH`) · a route choice at chase stages 2 and 4 (`S2_ROAD`, `S2_APPROACH`) · Nella's
+escape route can be scouted, and cut off, before the camp goes loud (`S2_SCOUT`, `S2_ESCAPE`).
+
 ## Combatants
 
 All enemy stat blocks in one place. 2014 Monster Manual Bandit, Thug, Bandit Captain, Scout, Spy,
@@ -538,7 +544,27 @@ each block on its card.
     square off with Brick and Mortar.
   - **Difficulty:** this doesn't change the camp's difficulty. Bosco is CR 0 and Sergei is
     CR 1/8, so the camp is still Hard.
-- **Transition:** the evening carries on, then `S2_BOON`.
+- **Transition:** the evening carries on, then `S2_STATEMENT`.
+
+#### S2_STATEMENT — Mara wants one of them at the jail tonight
+
+- **Draft (engine, 2026-10-09).** A small choice inside the inn night. Nobody has to go.
+- Before she leaves, Mara asks: *"I need one of you to walk back with me and put tonight on paper.
+  Just one. The rest of you, sleep."*
+- **If nobody goes:** *"Then first thing tomorrow."* No penalty. Tallis's name waits for the hearth.
+- **Whoever goes:**
+  - Misses `S2_BOON` and walks back in one round into `S2_HEARTH`, as the fire starts to dip. That
+    leaves one fewer person to feed the fire in round 1.
+  - Gets Mara off duty for one line on the walk: *"Six years I've had this star. Tonight's the
+    first night I couldn't be everywhere at once."*
+  - Sees the jail: two cells, both empty. They'll remember that at `S2_CELL`.
+  - Learns Tallis's name. Mara has the dead hedge-mage's satchel on her desk, full of blank charm
+    paper: *"That one's Tallis. Sold charms at the fair. Wrote them himself, on good paper. I
+    bought one off him for my mother."* When the page turns up in the coals, this PC can name him
+    at once.
+- **If Odibli goes:** the hearth waits for him. It starts to dip as he comes through the door, and
+  the flame track starts at **2**, not 3.
+- **Transition:** `S2_BOON` for whoever stayed.
 
 #### S2_BOON — Odibli's stone does nothing at all
 
@@ -590,6 +616,10 @@ each block on its card.
 **The deed, run in rounds:**
 
 - **The flame track: 3 → 2 → 1 → 0.** At 0, the charm lets go.
+- **Show the track (draft, engine 2026-10-09).** Put three coins on the table and take one away
+  each time the flame drops. A good Arcana read tells them what 0 means: *"When it dies, it all
+  comes out at once."* They should know they can lose this. Don't tell them that Odibli levels
+  either way.
 - **Each round, someone feeds the fire magic, or it drops one step.** A fire cantrip (Fire Bolt
   into the hearth, Produce Flame, Prestidigitation) holds it for one round. A spell slot burned
   into it holds it for as many rounds as the slot's level. **This is the party's job**, and Halsby
@@ -696,6 +726,9 @@ each block on its card.
   (stage 4 only). A player who argues well for something else gets it.
 - **DCs:** stage 1 **12** · stage 2 **13** · stage 3 **13** · stage 4 **14** (Jeff, 2026-10-07).
   Record what actually gets used; it fills the empty Skill Challenge table in `meta/difficulty.md`.
+- **Two route choices (draft, engine 2026-10-09):** at stage 2 and stage 4, the party picks a route
+  before anyone rolls. Say both options out loud, let them choose, then roll. Details are under
+  `S2_ROAD` and `S2_APPROACH`.
 - **Failures cost lead, never the trail.** A lost stage is a lamed horse, a cold fork, a night
   crossing. They always find the camp.
 - **Result** (stages won): **4** → camp unaware · **2–3** → dusk · **0–1** → night alert.
@@ -713,6 +746,11 @@ each block on its card.
 #### S2_ROAD — Stage 2, the drover's road (DC 13)
 
 - A wide, old cattle road through rolling scrub. The ruts mix with other traffic here.
+- **The route choice:** the road winds around the hills, and a drover's shortcut cuts straight over
+  broken scrub.
+  - **Stay on the road:** DC 13, as written. A loss costs time.
+  - **Take the shortcut:** DC 11. A loss costs a horse, not time: one of Silas's horses goes lame
+    (he'll want 11 gp, and the favour debt is in doubt).
 - **Perception or Investigation finds (offer one or two):** a hoofprint with a cracked shoe,
   repeated every stride · a wet patch where a cask has been weeping · a whittled curl of antler,
   fresh — someone sitting on the cart seat cutting notches.
@@ -732,6 +770,11 @@ each block on its card.
 
 - Woodsmoke, and a corral full of horses that can smell theirs.
 - **Animal Handling** keeps the borrowed horses quiet. **Stealth** works here too.
+- **The route choice:** ride in close, or leave the horses and walk.
+  - **Ride in:** DC 14, as written. The horses stay close at hand.
+  - **Tie the horses half a mile out and walk in:** DC 12, with no horses to give them away. But
+    nobody is mounted if someone runs, and a crewman who flees the camp can steal one of Silas's
+    horses on his way out (11 gp, favour debt in doubt).
 - **Loss:** a horse whinnies, a corral answers, and somebody at the camp looks up.
 - **Set the alert state** now from stages won, add the rider bump if Ilsa escaped at the fork,
   then go to Scene 7.
@@ -803,6 +846,13 @@ each block on its card.
 #### S2_APPROACH_CHOICE — Heist, assault, parley or trick?
 
 - **All four are viable.** Let the party pick and don't steer.
+- **`S2_SCOUT` — Nella's exit can be found first (draft, engine 2026-10-09).** Anyone who scouts
+  before choosing finds the back of the ridge. They can circle wide (Perception or Survival
+  DC 14), send Bosco or a familiar around (no roll, just time), or follow Sergei's nose (he smells
+  the cached horse). What they find: the brush blind, the rope-crossing staked over the gully, and
+  fresh dung half a mile out where a horse has been tied for days. Say it plainly: *"Someone's
+  planned a way out of here."* This is what lets them cut off her escape on purpose (see
+  `S2_ESCAPE`).
 - **Night heist** — get the cart out without a fight. Watch rotations, the corral, and Nella is the
   light sleeper. Pulling it off means **the party leaves *her* the taunt for once.** Encourage it.
   If it goes loud halfway, drop into `S2_FIGHT` with the party already at the cart.
@@ -869,6 +919,12 @@ each block on its card.
   4. **The tally falls (Jeff, 2026-10-07):** in the scramble she drops it — see `S2_TALLY`.
   5. **Last valve:** if truly cornered, the river plunge. She knows the water. If even that can't
      honestly stick, **the table wins** and her arc gets re-planned. Never visibly cheat.
+- **If they cut her off first (draft, engine 2026-10-09).** If the party found her exit at
+  `S2_SCOUT` and acted on it, those steps of the ladder are gone. Skip them:
+  - **Ropes cut, or someone holding the crossing:** she has to go down into the gully on foot,
+    and they can catch her there.
+  - **Cached horse taken or chased off:** she runs for the river (step 5).
+  - **Both:** they cornered her fairly. The table wins (see Contingencies).
 - **Make the preparation visible afterwards.** Whoever reaches the gully sees the cut ropes, the
   stakes driven in days ago, the trampled spot where the cached horse waited. *She planned her exit
   before you ever arrived.*
@@ -1032,6 +1088,16 @@ Land it on the cell door, not on the casks.
 
 - **Carryover.** Session 29's Scenes 4–5 run here as Scenes 1–3, with `S1_` ids renumbered to `S2_`.
   `S1_LUCI` already played mid-fight in Session 29. `S1_ANTIDOTE` is dead (Halsby was never bitten).
+- **Choices** (`meta/player-agency.md`):
+  - Party: how to explain themselves to Mara (`S2_TOWN`) · Sable's deed (`S2_OFFER`) · who goes to
+    the jail (`S2_STATEMENT`) · chase or stay (`S2_SKIP`) · the route at stages 2 and 4
+    (`S2_ROAD`, `S2_APPROACH`) · the rear guard: fight, scare off or bluff (`S2_REARGUARD`) ·
+    scout first (`S2_SCOUT`) · heist, assault, parley or trick (`S2_APPROACH_CHOICE`) · Nella's
+    purse (`S2_TALLY`) · the banner in the bar (`S2_HAUL_HOME`)
+  - Character: Dip, what to share from the private roll (`S2_IGGY`) · Odibli, the word he writes
+    (`S2_HEARTH`)
+  - Past choices paid off: Iggy's ode to Bosco at the Tser Pool camp (`S2_COMPANIONS`) · Halsby
+    taking the fox's job without haggling (`S2_SPEAR`)
 - **Spotlight.** Halsby's beat is `S2_SPEAR` (a promised delivery, not one of his `spotlight_hooks`
   — none seeded). Iggy's `S2_IGGY` carries his already-seeded viol hook. Odibli gets his deed,
   `S2_HEARTH`. Dip gets [[Varrick's Parrying Bracer]] at the camp (an item beat, not one of their
@@ -1050,7 +1116,10 @@ Land it on the cell door, not on the casks.
   - Nella's tally in party hands, and the 250 gp purse: kept, spent, or returned (it equals her
     remaining debt); Harrow Bane named by the ledger; the aegis-banner taken
   - [[Varrick's Parrying Bracer]] taken — flip its loot file to delivered, add it to Dip's gear
-  - Chase DCs used → `meta/difficulty.md` Skill Challenge table
+  - Chase DCs used → `meta/difficulty.md` Skill Challenge table, including the route choices
+    taken at stages 2 and 4
+  - Who went to the jail with Mara, if anyone (`S2_STATEMENT`) · whether they found and cut off
+    Nella's exit (`S2_SCOUT`)
   - Rest Clock: reset if they rested at the waystation
   - The prisoner: canonize only what was shown
   - **New canon if played:** The Mistake is a sour-cherry and honey ale, deep red, with a cold
