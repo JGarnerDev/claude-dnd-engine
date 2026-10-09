@@ -42,7 +42,7 @@ The engine runs mapless (theater-of-the-mind, or a module's own map) — but a w
 
 - **Providing a map at all?** If no, skip this step entirely — pool entities don't need coordinates. If yes, continue.
 - **Which layers, and when** — `world-names.webp` (base, required), `world-sky.webp` (optional aerial), `city-markers.webp` (optional flattened base+dots export). Note which exist now vs. coming later; build only from what's present. Masters are fetched from a CDN, not committed (see below).
-- **World & grid scale** — real-world distance per cell, grid dimensions (cols × rows), equator row, pole rows. Record these in `maps/CLAUDE.md` → Grid Scale. Cell *pixel* size is derived per-image at run time, so only the km-per-cell distance (`GRID_KM` in `region-scale.py` / `region-world-context.py`) is hardcoded — update it if it differs from the template default.
+- **World & grid scale** — real-world distance per cell, grid dimensions (cols × rows), equator row, pole rows. Record these in `maps/world/CLAUDE.md` → Grid Scale. Cell *pixel* size is derived per-image at run time, so only the km-per-cell distance (`GRID_KM` in `region-scale.py` / `region-world-context.py`) is hardcoded — update it if it differs from the template default.
 - **Biome census** — what biomes / climate zones the world contains and roughly where. Captured into the **Biome Census** section of `index.md` below; it feeds `/region` and entity generation.
 
 **Fetch the masters (not committed):** map masters are large binaries pulled on demand from the Inkarnate CDN. For each layer, paste its `cdn2.inkarnate.com/...?disposition=attachment` url into `maps/sources.tsv`, then run `uv run scripts/fetch-maps.py` to download them into `maps/world/masters/` (gitignored).
@@ -54,7 +54,7 @@ The engine runs mapless (theater-of-the-mind, or a module's own map) — but a w
 3. Run `uv run scripts/gen-tiles.py` to slice every layer into the nine legible tiles (plus `markers-*` / `sky-*` sets).
 4. Read the tiles to fill Tile Coverage and seed Known Region Positions.
 
-The skeletons, `maps/CLAUDE.md`, and `maps/sources.tsv` are the map files that ship in the template; `index.md`, `city-registry.md`, all fetched `.webp` masters, and every generated tile/crop are this world's data and are never committed or shipped pre-filled (no map images live in git).
+The skeletons, the map CLAUDE.md files (`maps/`, `maps/world/`, `maps/battlemaps/`), and `maps/sources.tsv` are the map files that ship in the template; `index.md`, `city-registry.md`, all fetched `.webp` masters, and every generated tile/crop are this world's data and are never committed or shipped pre-filled (no map images live in git).
 
 ---
 

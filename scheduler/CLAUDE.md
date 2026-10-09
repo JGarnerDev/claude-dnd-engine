@@ -12,3 +12,7 @@ Content is organized from largest to smallest narrative unit:
 | **Session** | `scheduler/sessions/Session {NN} {Name}/Session {NN} {Name}.md` | Session is played |
 
 Each level references the one above it and the ones below it via wiki-links. Sessions advance missions; missions build acts; acts serve the campaign.
+
+## Session Battlemaps
+
+A session folder can hold `maps/*.txt` battle-map layouts. Before editing or rendering one, read `maps/battlemaps/CLAUDE.md`. It does not auto-load from here.

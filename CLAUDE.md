@@ -109,7 +109,7 @@ When adding a new type, subtype, or entity folder, read `meta/graph-settings.md`
 
 ## World Map
 
-Map rules, tile protocol, and crop scripts documented in `maps/CLAUDE.md` — auto-loaded when working with map files.
+Map rules auto-load from `maps/`: shared rules in `maps/CLAUDE.md`, the world map (tiles, grid, climate, crop and region scripts) in `maps/world/CLAUDE.md`, battle maps and Roll20 kits in `maps/battlemaps/CLAUDE.md`.
 
 ## Session Start
 
@@ -119,7 +119,7 @@ A SessionStart hook (`.claude/settings.json`) runs `scripts/session-start.py` an
 
 Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these via Bash before manual file reads — they collapse 5–10 tool calls into one.** Run them with `uv run` (Python 3.14); the three `.ps1` files are the last PowerShell holdouts.
 
-Only cross-cutting scripts are listed here. Scripts that one command or domain uses are named where they are used: each command's `*-brief.py` in its command file, map and region scripts in `maps/CLAUDE.md`, transcription scripts in `recaps/CLAUDE.md`. For anything else, each script's header carries a `# Usage:` line.
+Only cross-cutting scripts are listed here. Scripts that one command or domain uses are named where they are used: each command's `*-brief.py` in its command file, map and region scripts in `maps/world/CLAUDE.md`, the battlemap renderer in `maps/battlemaps/CLAUDE.md`, transcription scripts in `recaps/CLAUDE.md`. For anything else, each script's header carries a `# Usage:` line.
 
 | Script | When to use | Usage |
 |---|---|---|

@@ -15,7 +15,7 @@ Masters live in `maps/world/masters/` (gitignored, fetched from the Inkarnate CD
 
 ## Conventions
 
-Grid scale (cell size, pixel formula), the west-to-east climate model, and the city marker ID format are structural engine rules — they live in `maps/CLAUDE.md` (Grid Scale / Climate Rules / City Marker ID Format). This file holds only this world's data.
+Grid scale (cell size, pixel formula), the west-to-east climate model, and the city marker ID format are structural engine rules — they live in `maps/world/CLAUDE.md` (Grid Scale / Climate Rules / City Marker ID Format). This file holds only this world's data.
 
 ## Tile Coverage
 

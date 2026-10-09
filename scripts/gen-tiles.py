@@ -1,4 +1,4 @@
-# consumers: maps/CLAUDE.md -- update these if usage, flags, or output format change.
+# consumers: maps/world/CLAUDE.md -- update these if usage, flags, or output format change.
 from PIL import Image
 import os
 

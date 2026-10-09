@@ -1,4 +1,4 @@
-<!-- SKELETON — copy to maps/world/index.md and fill once map layers are placed. Delete these HTML comments as you go. Structural rules (Grid Scale, Climate Rules, City Marker ID Format) live in maps/CLAUDE.md, NOT here — this file holds only this world's data. -->
+<!-- SKELETON — copy to maps/world/index.md and fill once map layers are placed. Delete these HTML comments as you go. Structural rules (Grid Scale, Climate Rules, City Marker ID Format) live in maps/world/CLAUDE.md, NOT here — this file holds only this world's data. -->
 
 # World Map
 
@@ -15,11 +15,11 @@ Resolution is derived per-image at run time -- no fixed pixel size to record. --
 - `masters/world-names.webp` — base label layer; all land + water features and every named label. Source of truth. Tiled as `tiles/{nw,n,...}.png`.
 - `masters/world-sky.webp` — optional sky layer (floating/aerial features). Separate export; surface scripts ignore it. Tiled as `tiles/sky-{name}.png`.
 - `masters/city-markers.webp` — flattened base+dots export; red dots = unnamed, undetailed cities. Tiled as `tiles/markers-{name}.png`.
-- `city-registry.md` — stable IDs for every undetailed marker. See `maps/CLAUDE.md` → City Marker ID Format.
+- `city-registry.md` — stable IDs for every undetailed marker. See `maps/world/CLAUDE.md` → City Marker ID Format.
 
 ## Biome Census
 
-<!-- The biomes/climate zones this world contains, captured at setup (Map & Geography step). One line per biome: name — where it sits (rough col/row band or named region) — defining traits. This is the world's ecological palette; /region and entity generation draw on it. Reconcile with the Climate Rules model in maps/CLAUDE.md. -->
+<!-- The biomes/climate zones this world contains, captured at setup (Map & Geography step). One line per biome: name — where it sits (rough col/row band or named region) — defining traits. This is the world's ecological palette; /region and entity generation draw on it. Reconcile with the Climate Rules model in maps/world/CLAUDE.md. -->
 
 ## Tile Coverage
 

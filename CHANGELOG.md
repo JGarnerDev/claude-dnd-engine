@@ -6,6 +6,26 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.25.0] — 2026-10-09
+
+### Changed
+
+- **`maps/CLAUDE.md` split into three files, so map work loads only the rules it needs.**
+  - `maps/CLAUDE.md` (about 3KB) keeps the shared rules: no committed images, the two kinds of map, and handing map work to Jeff.
+  - `maps/world/CLAUDE.md` (about 11KB) holds masters and tiles, the four hard rules, re-export and city graduation, Grid Scale, Climate Rules, City Marker ID Format, and the map/region scripts.
+  - `maps/battlemaps/CLAUDE.md` (about 7KB) holds layouts and renders, standing location maps, and Roll20 asset kits.
+
+  World-map work now loads about 14KB of rules instead of 19KB, and battle-map work about 10KB. **Grid Scale, Climate Rules, City Marker ID Format and the graduation checklist now live in `maps/world/CLAUDE.md`**, and every reference in meta, templates, scripts and README is updated.
+- **`scheduler/CLAUDE.md` points to the battlemap rules.** Session layouts (`<Session folder>/maps/*.txt`) live under `scheduler/`, where `maps/` rules never auto-loaded.
+
+### Removed
+
+- **The "Current maps" list in `maps/CLAUDE.md`.** It was a status list inside an instruction file and would have gone out of date; `ls maps/battlemaps/` gives the same answer. Its one design note, that the Golden Lioness outdoors map stays a 5-ft battle map, moved into the battlemap rules.
+
+### Fixed
+
+- **`.template-sync`** now ships the new `maps/world/`, `maps/battlemaps/` and `recaps/` CLAUDE.md files, and no longer lists the deleted `entity-ingest.md`.
+
 ## [0.24.0] — 2026-10-09
 
 ### Added

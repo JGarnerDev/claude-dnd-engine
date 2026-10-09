@@ -10,7 +10,7 @@
 #   data/factions/*, data/locations/*, data/routes/*, data/lore/*, data/characters/*
 #   data/items/magic/*               — may contain campaign-specific items
 #   data/world-events-pool.md        — campaign event pool
-#   historian/*, scheduler/*, maps/* (except maps/CLAUDE.md and the structural scaffolds below:
+#   historian/*, scheduler/*, maps/* (except the maps CLAUDE.md files and the structural scaffolds below:
 #     maps/map-request-template.md, maps/world/index-template.md, maps/world/city-registry-template.md)
 #   maps/world/index.md, maps/world/city-registry.md — built per campaign from the *-template.md skeletons
 #   tests/commands/*/runs/, tests/commands/*/personas/
@@ -30,7 +30,6 @@ CHANGELOG.md
 # Commands — all slash commands
 .claude/commands/check.md
 .claude/commands/commands.md
-.claude/commands/entity-ingest.md
 .claude/commands/entity-questionnaire.md
 .claude/commands/event.md
 .claude/commands/find.md
@@ -74,6 +73,9 @@ meta/warfare.md
 # Subdirectory CLAUDE.md files
 data/CLAUDE.md
 maps/CLAUDE.md
+maps/world/CLAUDE.md
+maps/battlemaps/CLAUDE.md
+recaps/CLAUDE.md
 scheduler/CLAUDE.md
 tests/CLAUDE.md
 

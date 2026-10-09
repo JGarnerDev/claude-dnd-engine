@@ -40,7 +40,7 @@ The helper scripts in `./scripts/` are being migrated from PowerShell (`.ps1`) t
 - **[uv](https://docs.astral.sh/uv/)** — runs every `.py` script via `uv run`; provisions Python 3.14 automatically, no manual interpreter install needed.
 - **PowerShell** — runs the `.ps1` scripts not yet converted. Once all scripts are Python, this requirement goes away.
 
-The scripts table in `CLAUDE.md` lists the cross-cutting scripts and their exact invocation. Command-specific briefs are named in their command files, and map and transcription scripts in `maps/CLAUDE.md` and `recaps/CLAUDE.md`. Every script's header carries a `# Usage:` line.
+The scripts table in `CLAUDE.md` lists the cross-cutting scripts and their exact invocation. Command-specific briefs are named in their command files, and map and transcription scripts in `maps/world/CLAUDE.md` and `recaps/CLAUDE.md`. Every script's header carries a `# Usage:` line.
 
 #### All platforms
 
@@ -278,7 +278,7 @@ Blank fields are fine — deliberate elaboration space, not gaps. Fill what you 
 
 *Tiles:* the Read tool downsamples a large image until labels are unreadable, so nothing reads the full master directly. `uv run scripts/gen-tiles.py` slices each layer into **nine overlapping, legible tiles** (`tiles/nw.png … se.png`, plus `markers-*.png` and `sky-*.png`). **No map images are committed** — neither masters nor tiles. Cold-start a clone with `fetch-maps.py` then `gen-tiles.py`; re-run `gen-tiles.py` after any re-export. Tiles are regenerated, never hand-edited. (Trade-off: with nothing in git, a revoked CDN url leaves no fallback — re-export and update `maps/sources.tsv` if a fetch fails.)
 
-*Scale (your call):* places are addressed by a column/row grid over the map, but **what a cell represents is yours** — pick a real-world distance per cell and set it in `maps/CLAUDE.md` → Grid Scale (the template uses ~16×13 cells at 1000km each, just one campaign's choice). That scale drives `/region` travel-time and city-spacing math, so set it before detailing regions and keep the base image at full resolution.
+*Scale (your call):* places are addressed by a column/row grid over the map, but **what a cell represents is yours** — pick a real-world distance per cell and set it in `maps/world/CLAUDE.md` → Grid Scale (the template uses ~16×13 cells at 1000km each, just one campaign's choice). That scale drives `/region` travel-time and city-spacing math, so set it before detailing regions and keep the base image at full resolution.
 
 *Blank → populated:*
 

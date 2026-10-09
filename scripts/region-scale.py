@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # region-scale.py -- travel scale context for a region
-# consumers: maps/CLAUDE.md, .claude/commands/region.md -- update these if usage, flags, or output format change.
+# consumers: maps/world/CLAUDE.md, .claude/commands/region.md -- update these if usage, flags, or output format change.
 # Usage: uv run scripts/region-scale.py --span-grids <decimal> [--water-body sea|river|both|none] [--locations <n>]
 
 import argparse

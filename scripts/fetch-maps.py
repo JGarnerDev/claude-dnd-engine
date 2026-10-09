@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # fetch-maps.py
-# consumers: maps/CLAUDE.md -- update these if usage, flags, or output format change.
+# consumers: maps/world/CLAUDE.md -- update these if usage, flags, or output format change.
 #
 # Download map images from the Inkarnate CDN listed in maps/sources.tsv.
 # Map images are gitignored (large binaries); this pulls them on demand after a clone.
