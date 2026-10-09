@@ -104,4 +104,4 @@ each other in the street, and their people drink in different taverns.
 - Where the Cael/Marlow split came from. It belongs to the two-generation grievance, which is
   held, so it is left vague here on purpose.
 - Map: registry dot `C05-04d` (overlay dot 9). Label it in Inkarnate, then graduate it per
-  `maps/CLAUDE.md`.
+  `maps/world/CLAUDE.md`.
