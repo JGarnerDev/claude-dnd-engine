@@ -1,3 +1,7 @@
+---
+description: "Canonize a played session: gather what happened, write the historian session record, canonize entities, update campaign state."
+---
+
 Canonize a played session. Closes the loop on the session lifecycle: gathers what actually happened, updates the session file with historian fields, moves it to `historian/sessions/`, and audits entities for canonization.
 
 ---
@@ -209,6 +213,8 @@ Present the proposed changes and ask for confirmation before writing.
 ---
 
 ## Phase 7 — Summary
+
+**Clear the inbox first.** If Phase 1 found a notes file in `recaps/inbox/`, delete it now — its content lives in the historian record, and a file left behind makes the next `/session` and `/todo` report this session as still uncanonized. Delete only that one file, and only once Phases 4–6 are written; if the DM stopped the recap early, leave it.
 
 Report what was done:
 

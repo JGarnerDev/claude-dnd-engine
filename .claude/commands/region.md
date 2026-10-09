@@ -1,3 +1,8 @@
+---
+description: "Detail a region of the world map: geography analysis, draft document, entity anchoring, city questionnaires."
+argument-hint: "[--region <name>] [--draft <file>] [--city <n>]"
+---
+
 Detail a region of the world map — from geographic markers to draft document to player questionnaires.
 
 ---
@@ -55,7 +60,7 @@ Identify where the region sits. Ask the DM to point it out (grid column/row, or 
 
 **Step 1b — Run world context script.**
 
-```
+```text
 uv run scripts/region-world-context.py --col <n> --row <n>
 ```
 
@@ -211,7 +216,7 @@ Prioritize player-contributed entities. Flag if one player's material dominates 
 
 Attach suggestions inline in the draft as a new section per location:
 
-```
+```markdown
 **Candidate entities:**
 - [[EntityName]] (type, player) — one-line fit rationale. [missing: gaps relevant to this use]
 ```
@@ -244,7 +249,7 @@ Format: plain markdown, no YAML, no schema jargon. Suitable to paste into Discor
 
 **Include the registry ID at the top of each questionnaire** — look it up in `maps/world/city-registry.md` by the city's col/row position. Add it as a one-liner before the first question:
 
-```
+```markdown
 **Registry ID:** C##-##x — this is your city's stable reference until it has a name.
 ```
 

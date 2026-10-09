@@ -6,12 +6,14 @@ consumers: scripts/entity-graph.py, scripts/free-entities.py, scripts/location-e
   scripts/timeline-gantt.py, scripts/timeline-data.py,
   scripts/monster-lookup.py, scripts/naming-status.py, scripts/pitch-brief.py,
   scripts/contribution-balance.py, scripts/region-world-context.py,
-  scripts/region-scale.py, scripts/region-brief.py, scripts/transcribe.py
+  scripts/region-scale.py, scripts/region-brief.py, scripts/transcribe.py,
+  scripts/commands-list.py
 -- update those scripts if a function signature or output shape changes here.
 """
 
 import os
 import re
+import subprocess
 import sys
 from datetime import date, datetime
 from pathlib import Path
@@ -168,6 +170,38 @@ def pending_recordings(root) -> list:
         if not (out_dir / (slug + '.md')).exists():
             pending.append((slug, n))
     return pending
+
+
+# -- Semantic index staleness -------------------------------------------------
+# Must match index-entities.py's default --dirs, or a commit to an indexed dir that
+# isn't listed here leaves the index silently stale. Both briefs report it, so the
+# check lives here once.
+INDEXED_DIRS = ('data/', 'historian/', 'scheduler/', 'spitball/')
+
+
+def index_staleness(root) -> Optional[tuple]:
+    """Semantic index freshness. Returns None if never built, else (built_date, sha, commits).
+
+    `commits` lists `git log --oneline` lines touching INDEXED_DIRS since the stamped
+    build SHA; empty means fresh. Stamp file: vector-index/.index-built (line 1 ISO
+    timestamp, line 2 commit SHA).
+    """
+    stamp = Path(root) / 'vector-index' / '.index-built'
+    if not stamp.exists():
+        return None
+    lines = read_text_no_bom(stamp).splitlines()
+    built = lines[0][:10] if lines else ''
+    sha = lines[1].strip() if len(lines) > 1 else ''
+    commits = []
+    if sha:
+        try:
+            out = subprocess.run(
+                ['git', '-C', str(root), 'log', '--oneline', f'{sha}..HEAD', '--', *INDEXED_DIRS],
+                capture_output=True, text=True, check=False)
+            commits = [ln for ln in out.stdout.splitlines() if ln.strip()]
+        except Exception:
+            pass
+    return built, sha, commits
 
 
 # -- Comparison helpers -------------------------------------------------------

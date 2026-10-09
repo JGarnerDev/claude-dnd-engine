@@ -1,3 +1,7 @@
+---
+description: "Ingest raw PC backstory into a proper historian PC file. Auto-triggered by a PC file missing PC frontmatter, or pasted backstory naming a known PC."
+---
+
 # PC Backstory Ingestion
 
 **Do not write anything until DM confirms.** Never merge backstory content silently.

@@ -1,3 +1,8 @@
+---
+description: "Polish a session plan before it runs: fill thin scenes, make lines plain and cued, keep names and cuts consistent, list new canon, check for real choices."
+argument-hint: "[session] [--ready]"
+---
+
 Review a session plan before it runs: fill what is thin, make lines plain and cued, keep names and cuts consistent, list the new canon the plan sets, and make sure the party has real choices to make.
 
 **Arguments:**

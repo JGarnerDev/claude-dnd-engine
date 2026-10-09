@@ -1,3 +1,8 @@
+---
+description: "Plan the next homebrew session from campaign state, threads, and the scheduler."
+argument-hint: "[--depth narrated|notes] [--scope inline|linked]"
+---
+
 Plan the next session.
 
 **Arguments (optional):**
@@ -21,9 +26,9 @@ Do not generate any content yet.
 uv run scripts/session-brief.py
 ```
 
-It reports: next session number (with a milestone flag every 5th session — worth marking at the table), campaign/act/mission names and states, last session summary + cliffhanger + played date, Rest Clock state, Current State stamp staleness, the party roster with afflictions, and the design-preference drought counter (undeployed/seeded wishlist items), and the spotlight readout (lifetime balance, recent trend, overdue PC, missing-hooks flags — from `spotlight-balance.py`; says "insufficient history" before 3 sessions). Do not manually re-read anything it already covers.
+It reports: next session number (with a milestone flag every 5th session — worth marking at the table), campaign/act/mission names and states, last session summary + cliffhanger + played date, Rest Clock state, Current State stamp staleness, the party roster with afflictions, and the design-preference drought counter (undeployed/seeded wishlist items), and the spotlight readout (lifetime balance, recent trend, overdue PC, missing-hooks flags — from `spotlight-balance.py`; says "insufficient history" before 3 sessions), and search-index staleness. Do not manually re-read anything it already covers.
 
-**Step 2 — Index staleness check.** Read `vector-index/.index-built` (line 1: ISO timestamp, line 2: commit SHA), then run `git log --oneline <sha>..HEAD -- data/ historian/ scheduler/`. If any commits appear, flag: *"Semantic index stale since `<sha[:7]>` — run `uv run scripts/index-entities.py`."* If the file is missing, prompt to build. Never rebuild automatically — the searches in this command degrade silently on a stale index, so the DM should decide.
+**Step 2 — Index staleness.** If the brief printed `SEARCH INDEX STALE` or `NEVER BUILT`, pass that line to the DM. Never rebuild automatically — the searches in this command degrade silently on a stale index, so the DM should decide.
 
 **Step 3 — Targeted manual reads** (only what the script doesn't cover):
 
@@ -113,18 +118,15 @@ Keep the following in scope:
 
 When there is no active mission or the arc has reached a conclusion, surface options from three sources. Do not generate a full session plan yet — only brief hooks.
 
-**Step 1 — Scan historian/ for unresolved threads**
+### Step 1 — Scan historian/ for unresolved threads
 
-Run `/threads` for a full standalone view, or inline the same logic here:
+```text
+uv run scripts/threads-brief.py
+```
 
-Read frontmatter only (state, description) across `historian/characters/`, `historian/locations/`, and `historian/sessions/`. Look for:
+It lists historian entities in unresolved states, forgotten hostiles, and pending `Seeded:` lines, each tagged with its `[campaign: …]`. Drop entries tagged for the other season unless the DM asked for a crossover. Do not sweep historian frontmatter by hand. Add what the script can't see: PC afflictions (already in the Phase 1 brief) and unresolved cliffhangers from recent sessions.
 
-- NPCs with `state: missing`, `state: imprisoned`, or `state: transformed`
-- PC afflictions noted in historian PC files
-- Stranded or abandoned entities called out in session recaps (e.g. Rose and Thorn)
-- Cliffhangers from any recent session that were never resolved
-
-**Step 2 — Find free entities**
+### Step 2 — Find free entities
 
 First identify the active campaign (`state: active` file in `scheduler/campaign/`). When surfacing entities, exclude historian entities tagged `campaign: strahd` unless the active campaign is Strahd or the DM explicitly requests a crossover. Untagged data entities are campaign-agnostic and always eligible.
 
@@ -142,7 +144,7 @@ uv run scripts/free-entities.py
 
 Filter its output to `importance: major` or `critical` with `active: true`. Combine both lists — semantic results for thematic fit, script output for importance-flagged entities. Do not manually sweep `data/` frontmatter; the script replaces that.
 
-**Step 3 — Check meta preferences**
+### Step 3 — Check meta preferences
 
 Use `meta/worldbuilding.md` (already read in Phase 1). Player files in `meta/players/` carry identity and character links only — no preference sections — so group-level desires come from `meta/campaign-design-preferences.md`; fall back to the `themes` and `tone` in the active campaign file (already read in Phase 1) for anything not covered.
 
@@ -159,7 +161,7 @@ Respect the `Scale:` tags when picking:
 - `arc`/`campaign`-scale entries fire only when the session sits at an act boundary or opens a new act; their cost is runway — committing means placing `Seeded:` breadcrumbs over multiple sessions before the payoff
 - **Pending seeds outrank new suggestions:** before proposing anything new, check for `Seeded:` lines (devices and twists both) whose payoff this session could land or advance. Paying off a planted seed is almost always better than planting another.
 
-**Step 4 — Present 3 hooks**
+### Step 4 — Present 3 hooks
 
 Present exactly three options. Label their source so the DM knows where each came from. Keep each hook to 2–4 sentences — enough to understand the direction, not a full plan.
 

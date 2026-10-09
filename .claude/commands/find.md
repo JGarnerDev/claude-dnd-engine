@@ -1,3 +1,8 @@
+---
+description: "Find campaign entities by semantic similarity. Pure search: no generation, no file writes."
+argument-hint: "<query> [--type <type>] [--subtype <sub>] [--source historian|data|scheduler] [--exists true|false] [-k <n>]"
+---
+
 Find campaign entities by semantic similarity. Pure RAG query — no generation, no file writes.
 
 **Arguments:**

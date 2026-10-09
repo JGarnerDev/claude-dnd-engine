@@ -6,6 +6,30 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.23.0] — 2026-10-09
+
+### Added
+
+- **Command frontmatter.** Every file in `.claude/commands/` now opens with a quoted `description:` and, where it takes arguments, an `argument-hint:`. Claude Code's command list and model invocation read these, so `pc-backstory` and `entity-questionnaire` now say what triggers them. New commands need both fields.
+- **`scripts/commands-list.py`.** `/commands` now builds its list from the command files, so it can't drift. Replaces two hand-kept lists that had each lost six or seven commands.
+- **`session-brief.py` reports search-index staleness** (`SEARCH INDEX STALE` / `NEVER BUILT`). `/session` Step 2 relays the line instead of reading the stamp and running `git log` by hand.
+- **`threads-brief.py` prints each entry's `[campaign: …]` tag**, so a homebrew `/session` can drop Strahd threads without opening files. The tag is appended; existing fields are unchanged.
+
+### Changed
+
+- **`/session` Phase 3B Step 1 runs `threads-brief.py`** instead of sweeping historian frontmatter by hand.
+- **The index staleness check lives once in `scripts/lib/common.py`** and covers `spitball/`, matching the indexer. `todo-brief.py` used to miss it.
+- **`/recap` Phase 7 deletes the `recaps/inbox/` notes file** once Phases 4–6 are written. The summary reported this before, but no step actually did it.
+- **The root CLAUDE.md command list is gone.** It now points to command frontmatter and `/commands`, and saves about 2KB a turn.
+
+### Removed
+
+- **`.claude/commands/entity-ingest.md`.** The `CLAUDE-INGEST` auto-trigger now runs the full Ingestion Mode in `entity-questionnaire.md`. The stub skipped the `filled: true` marker, so questionnaires taken in through it never surfaced as `/session` cameo candidates. Nobody typed it, and its only caller is updated, so nothing breaks.
+
+### Fixed
+
+- **Stale `.ps1` references.** The `region-*` rows in the scripts table and `/event`'s semantic-search call now use the `.py` scripts.
+
 ## [0.22.0] — 2026-10-09
 
 ### Added

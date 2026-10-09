@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # threads-brief.py -- unresolved-thread signals. Backbone of /threads Phase 2.
-# consumers: CLAUDE.md, .claude/commands/threads.md -- update these if usage, flags, or output format change.
+# consumers: CLAUDE.md, .claude/commands/threads.md, .claude/commands/session.md -- update these if usage, flags, or output format change.
 # Collects: historian entities in unresolved states, hostile characters (recency judged
 # by the caller), and pending Seeded: lines from the two meta tracking files.
 # Usage: python scripts/threads-brief.py
@@ -17,6 +17,12 @@ HOSTILE_RE = re.compile(r'^disposition:\s*hostile\s*$', re.M | re.I)
 ITEM_RE = re.compile(r'^-\s+\*\*([^*]+)\*\*')
 SEED_RE = re.compile(r'^\s*-\s*\*Seeded:\s*(.+?)\*?\s*$')
 PAID_OFF_RE = re.compile(r'paid off', re.I)
+
+
+def campaign_tag(fm: dict) -> str:
+    # /session must skip other-season threads unless the DM asks for a crossover;
+    # printing the tag saves it opening each file to find out. Untagged = agnostic.
+    return f" [campaign: {fm['campaign']}]" if fm.get('campaign') else ''
 
 
 def main() -> None:
@@ -36,7 +42,7 @@ def main() -> None:
         fm = get_frontmatter(f)
         name = fm.get('name') or f.stem
         type_ = f"{fm['type']}/{fm['subtype']}" if fm.get('subtype') else str(fm.get('type') or '')
-        cwrite(f"  {name} ({type_}) [{m.group(1)}] - {fm.get('description', '')}", 'white')
+        cwrite(f"  {name} ({type_}) [{m.group(1)}]{campaign_tag(fm)} - {fm.get('description', '')}", 'white')
     if not found:
         cwrite("  (none)", 'darkgray')
 
@@ -54,7 +60,7 @@ def main() -> None:
                 continue
             found = True
             name = fm.get('name') or f.stem
-            cwrite(f"  {name} [state: {fm.get('state', '')}] - {fm.get('description', '')}", 'white')
+            cwrite(f"  {name} [state: {fm.get('state', '')}]{campaign_tag(fm)} - {fm.get('description', '')}", 'white')
     if not found:
         cwrite("  (none)", 'darkgray')
 

@@ -1,3 +1,8 @@
+---
+description: "Generate the world-history and party-history mermaid gantt charts."
+argument-hint: "[--full]"
+---
+
 Generate the campaign's history gantt charts — a **world-history** timeline (events across the ages) and a **party-history** timeline (sessions and acts the party lived through). Each renders as a single mermaid gantt, viewable in Obsidian or VSCode (Markdown Preview Enhanced).
 
 **Arguments:**

@@ -1,3 +1,8 @@
+---
+description: "Digest a session recording's transcript into recaps/inbox/ notes ready for /recap."
+argument-hint: "[session] [--transcribe] [--quotes-only]"
+---
+
 Digest a recorded session's transcript into session notes ready for `/recap`. Bridges raw audio and canon: the transcript is what was *said*, the inbox note is what *happened*, and `/recap` turns that into canon.
 
 **Arguments:**

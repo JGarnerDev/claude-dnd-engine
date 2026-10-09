@@ -1,3 +1,8 @@
+---
+description: "Generate a creative text pitch (campaign, region, npc, hook, and more). No files, no schema, no entity creation."
+argument-hint: "[--type <type>] [--count <n>] [--tone <tone>] [--setting <text>] [--hook <text>] [--party] [--scale brief|full] [--no-read]"
+---
+
 Generate a creative text pitch — no files, no schema, no entity creation. Pure flavor and ideas.
 
 **Arguments (all optional):**
@@ -115,7 +120,7 @@ Keep it to 2–3 lines total. Skip if `--no-read` or if no player-contributed en
 
 After Step 3a (briefs), append a 2–3 word archetype summary for each pitch to `pitch-log/pitch-history.md`. Do not wait for expansion. Format:
 
-```
+```markdown
 - {type}: {archetype summary}
 ```
 

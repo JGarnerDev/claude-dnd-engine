@@ -1,3 +1,8 @@
+---
+description: "Capture a loose story idea without committing to it: file it immediately, develop it later. A bare entity name gives a where-it-stands reminder instead."
+argument-hint: "[idea|entity] [--list] [--promote <file>] [--assign <file> <target>] [--state <file> <state>]"
+---
+
 Capture a loose story idea without committing to it — file it immediately, develop it as far as interest carries, and keep it searchable so it can be mined when planning gets serious.
 
 **Arguments (all optional):**

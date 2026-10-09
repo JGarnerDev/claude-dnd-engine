@@ -1,3 +1,8 @@
+---
+description: "Surface forgotten or unresolved campaign threads: state-based scan plus semantic ranking against current story state."
+argument-hint: "[-k <n>]"
+---
+
 Surface forgotten or unresolved campaign threads. Combines state-based scanning with semantic ranking against current story state.
 
 **Arguments:** none required

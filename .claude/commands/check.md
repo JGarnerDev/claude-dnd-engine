@@ -1,3 +1,8 @@
+---
+description: "Check a proposed fact, recap summary, or entity detail against historian canon for contradictions."
+argument-hint: "<claim> [--source historian|data|both] [-k <n>]"
+---
+
 Check a proposed fact, recap summary, or entity detail against historian canon for contradictions.
 
 **Arguments:**
@@ -41,7 +46,7 @@ Ignore results below 0.35.
 
 **If POSSIBLE or CONFLICT results exist:**
 
-```
+```text
 CHECK: "<claim summary>"
 
 [CONFLICT / POSSIBLE]:

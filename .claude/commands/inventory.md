@@ -1,3 +1,7 @@
+---
+description: "Scan the free entity pool in ./data and report what is available, grouped by type, with gaps."
+---
+
 Scan the free entity pool in `./data` and produce an inventory report.
 
 **Step 1 — Run the inventory script (no manual file reads):**

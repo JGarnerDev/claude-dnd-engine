@@ -1,3 +1,8 @@
+---
+description: "Build or refresh an act's flow graph set: mermaid maps of its sessions, beats, branches, and which beats are committed enough to run."
+argument-hint: "[act] [--session <n>] [--status]"
+---
+
 Build or refresh a flow graph set — bird's-eye mermaid maps of an act and its sessions, showing what happens when and where, which branches the party is likely to take, and which beats are committed enough to run.
 
 **Arguments:**

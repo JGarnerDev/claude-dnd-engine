@@ -138,9 +138,9 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 | `monster-lookup.py` | Find monsters by CR, creature type, or habitat | `uv run scripts/monster-lookup.py [--type <type>] [--cr-min <n>] [--cr-max <n>] [--habitat <name>]` |
 | `route-cities.py` | Find all cities served by a trade route (uses city `routes` field) | `uv run scripts/route-cities.py --route "<route name>"` |
 | `count-markers.py` | Count undetailed cities (red dots) in a map region | `uv run scripts/count-markers.py --feature "<name>"` or `--col-min <n> --col-max <n> --row-min <n> --row-max <n>` |
-| `region-world-context.ps1` | Start of every `/region` Phase 1 — climate, wind rules, water checklist | `.\scripts\region-world-context.ps1 -Col <n> -Row <n>` |
-| `region-scale.ps1` | Start of every `/region` Phase 2 — travel times and city spacing from grid span | `.\scripts\region-scale.ps1 -SpanGrids <n> -WaterBody <sea\|river\|both\|none> [-Locations <n>]` |
-| `region-brief.ps1` | Resume a `/region` session — compressed draft summary | `.\scripts\region-brief.ps1 [-Region <slug>]` |
+| `region-world-context.py` | Start of every `/region` Phase 1 — climate, wind rules, water checklist | `uv run scripts/region-world-context.py --col <n> --row <n>` |
+| `region-scale.py` | Start of every `/region` Phase 2 — travel times and city spacing from grid span | `uv run scripts/region-scale.py --span-grids <n> [--water-body <sea\|river\|both\|none>] [--locations <n>]` |
+| `region-brief.py` | Resume a `/region` session — compressed draft summary | `uv run scripts/region-brief.py [--region <slug>]` |
 | `naming-status.py` | Show named vs. unnamed entries in world-naming questionnaire | `uv run scripts/naming-status.py [--section <name>]` |
 | `map-crop.py` | Crop world map by feature name or col/row; saves to `maps/locations/` | `uv run scripts/map-crop.py --feature "<name>"` or `--col-min <n> --col-max <n> --row-min <n> --row-max <n> [--margin <px>] [--temp]` |
 | `fetch-maps.py` | Pull gitignored master map images from the Inkarnate CDN (manifest `maps/sources.tsv`) into `maps/world/masters/`. Run after a clone, or with `--force` after updating a manifest url | `uv run scripts/fetch-maps.py [--force] [--list]` |
@@ -150,6 +150,7 @@ Helper scripts in `./scripts/` replace repetitive multi-file reads. **Run these 
 | `semantic-search.py` | Semantic similarity search — find entities by meaning, not keywords | `uv run scripts/semantic-search.py "<text>" [--type <type>] [--subtype <sub>] [--exists true\|false] [--source data\|historian\|scheduler] [-k <n>]` |
 | `validate.ps1` | Graph integrity check — dangling `[[links]]`, missing/invalid `exists`/`name`/`type`, broken canon. Run before canonizing or after bulk edits | `.\scripts\validate.ps1 [-Scope all\|links\|frontmatter] [-Quiet]` |
 | `validate-refs.ps1` | Instruction-file reference lint — finds path refs in CLAUDE.md files, commands, meta, tests, and todo files that point at renamed/deleted files. Run after renaming, moving, or deleting any instruction file or script | `.\scripts\validate-refs.ps1 [-Quiet]` |
+| `commands-list.py` | Feeds `/commands` — every slash command with usage and description, read from command frontmatter | `uv run scripts/commands-list.py` |
 | `version-check.py` | Session start / before a bump — flag engine changes since the last version bump (see `meta/versioning.md`) | `uv run scripts/version-check.py` |
 | `refs.ps1` | Reverse dependency lookup — every file:line that references a target file. Run before renaming a file or changing a script's flags/output format, then update what it lists | `.\scripts\refs.ps1 -Target <path-or-filename>` |
 
@@ -173,7 +174,7 @@ The project carries a single semver `MAJOR.MINOR.PATCH` in root `VERSION`; notab
 
 ## Player Entity Submissions
 
-**Auto-ingestion trigger:** If any message, pasted content, or file contains a `<!-- CLAUDE-INGEST type: entity-questionnaire -->` block, treat it as a filled player questionnaire awaiting ingestion. Read `.claude/commands/entity-ingest.md` for the full flow. Never create an entity directly from raw player input.
+**Auto-ingestion trigger:** If any message, pasted content, or file contains a `<!-- CLAUDE-INGEST type: entity-questionnaire -->` block, treat it as a filled player questionnaire awaiting ingestion. Run the Ingestion Mode section of `.claude/commands/entity-questionnaire.md`. Never create an entity directly from raw player input.
 
 ## Session Notes Ingestion (Recap Inbox)
 
@@ -260,20 +261,4 @@ No DM brief card needed. No other formats unless explicitly requested.
 
 ## Commands
 
-- `/commands` — `.claude/commands/commands.md` — list all available slash commands with descriptions
-- `/inventory` — `.claude/commands/inventory.md` — scan all entities in `./data` and report what's in the pool
-- `/session` — `.claude/commands/session.md` — plan the next session from campaign state, threads, and scheduler
-- `/review [session] [--ready]` — `.claude/commands/review.md` — polish an existing session plan before it runs: fill thin scenes, make lines plain and cued, keep names and cuts consistent, list the new canon it sets
-- `/recap` — `.claude/commands/recap.md` — canonize a played session and write it to historian
-- `/entity-questionnaire` — `.claude/commands/entity-questionnaire.md` — generate a player-facing questionnaire to design a new world entity
-- `/find <query>` — `.claude/commands/find.md` — semantic entity search; surfaces entities by meaning
-- `/threads` — `.claude/commands/threads.md` — surfaces forgotten/unresolved campaign threads
-- `/voice <npc name>` — `.claude/commands/voice.md` — DM voice brief grounded in established canon
-- `/rumor [count] [theme]` — `.claude/commands/rumor.md` — surface pool rumors as session-opener flavor; read-only
-- `/check <claim>` — `.claude/commands/check.md` — contradiction check against historian before canonizing
-- `/transition` — `.claude/commands/transition.md` — guided campaign season-swap flow (bidirectional Strahd ↔ homebrew); also auto-triggered by language cues
-- `/transcript [session] [--transcribe]` — `.claude/commands/transcript.md` — digest a session recording's transcript into `recaps/inbox/` notes ready for `/recap`
-- `/todo` — `.claude/commands/todo.md` — plain-language DM dashboard of everything needing attention or action
-- `/idea [rough idea] [--build]` — `.claude/commands/idea.md` — develop a rough engine idea into a grounded, executable change via the staged idea-process flow; read-only until `--build`
-- `/spitball [idea|entity] [--list] [--promote <file>] [--assign <file> <target>] [--state <file> <state>]` — `.claude/commands/spitball.md` — capture a loose story idea without committing to it; files immediately, phone-friendly, mined later. A bare entity name instead reminds you where that entity stands, then asks what to explore
-- `/flow [act] [--session <n>] [--status]` — `.claude/commands/flow.md` — build or refresh an act's flow graph set: bird's-eye mermaid maps of what happens when, which branches the party may take, and which beats are committed enough to run
+Slash commands live in `.claude/commands/`. Claude Code lists them every turn from each file's frontmatter, and `/commands` prints full usage via `scripts/commands-list.py`, so no hand-kept list lives here to drift. Every command file opens with YAML frontmatter: a quoted `description:` (what it does, plus any auto-trigger) and, when it takes arguments, a quoted `argument-hint:`. Add both to any new command.

@@ -1,3 +1,8 @@
+---
+description: "Generate world events (political, social, economic, military shifts) from the event pool, AI generation, or both."
+argument-hint: "[count|description] [--scale local|regional|global] [--add] [--from-pool] [--ai]"
+---
+
 Generate world events — political, social, economic, or military shifts that could reshape the campaign world. Draws from the pool in `data/world-events-pool.md`, AI generation, or both.
 
 **Arguments:**
@@ -44,8 +49,8 @@ If AI generation is needed (pool empty or sparse, `--ai` flag, or specific descr
 
 - **Specific description mode** (text description provided): run semantic search on that description to surface the most relevant pool entries before deciding on generation vs. pool use:
 
-  ```powershell
-  .\scripts\semantic-search.ps1 -Query "<event description>" -K 5
+  ```text
+  uv run scripts/semantic-search.py "<event description>" -k 5
   ```
 
   Prefer pool matches with score > 0.40 over AI generation — the pool exists to be used. If no strong matches, proceed to AI generation.
@@ -61,7 +66,7 @@ If AI generation is needed (pool empty or sparse, `--ai` flag, or specific descr
 
 For each event:
 
-```
+```markdown
 ### [N]. [Event Name] — [Scale]
 *[pool | AI-generated | AI-generated, sourced from [player]'s material]*
 

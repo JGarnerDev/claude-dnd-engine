@@ -1,3 +1,7 @@
+---
+description: "Plain-language DM dashboard of everything needing attention: player questionnaires, drafts, sessions awaiting recap, housekeeping."
+---
+
 Give the DM a plain-language summary of everything that needs attention or action — outstanding player questionnaires, unfinished drafts, sessions awaiting canonization, engine housekeeping.
 
 **Audience note: the output is for a DM, not an engine operator.** The DM's name appears in the script header (`DM: <name>` — sourced from the active campaign's `dm:` field — read it, don't assume; the DM rotates per campaign, so it is Kellan during a Strahd season and Jeff during the first homebrew season). Address them by name where it reads naturally, and never list the DM as someone to "chase" — 🙋 chasing is for players; the DM's own creative calls are just stated as theirs. No frontmatter jargon, no file paths unless the DM would open the file, no internal terms (`exists: false`, "canonize" → say "make official", "stale index" → say "search needs a refresh"). Every line says *what* and *why it matters* in one sentence.

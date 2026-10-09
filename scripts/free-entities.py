@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # free-entities.py -- list all free (exists: false) entities in ./data
-# consumers: CLAUDE.md, .claude/commands/entity-ingest.md, .claude/commands/entity-questionnaire.md, .claude/commands/region.md, .claude/commands/session.md, tests/commands/session/spec.md, data/CLAUDE.md -- update these if usage, flags, or output format change.
+# consumers: CLAUDE.md, .claude/commands/entity-questionnaire.md, .claude/commands/region.md, .claude/commands/session.md, tests/commands/session/spec.md, data/CLAUDE.md -- update these if usage, flags, or output format change.
 # Usage: python scripts/free-entities.py [--type npc|location|deity|etc] [--player paul|ben|miguel|jeff]
 
 import argparse

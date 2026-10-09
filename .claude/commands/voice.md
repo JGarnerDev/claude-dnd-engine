@@ -1,3 +1,8 @@
+---
+description: "Build a DM voice brief for an NPC, grounded in established canon."
+argument-hint: "<npc name>"
+---
+
 Build a voice brief for an NPC — grounds new dialogue and characterization in established canon.
 
 **Arguments:**
@@ -61,7 +66,7 @@ Use as texture only. Do not copy voice patterns wholesale.
 
 ## Phase 5 — Synthesize Voice Brief
 
-```
+```markdown
 ## Voice Brief: [Name]
 
 **Speaks like:** [cadence, vocabulary, register — 1–2 sentences]

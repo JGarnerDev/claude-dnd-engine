@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (ROOT, ci_eq, cwrite, digits_int, entity_md_files, fmt_num,
-                        get_frontmatter, parse_party_table, pending_recordings,
+                        get_frontmatter, index_staleness, parse_party_table, pending_recordings,
                         read_text_no_bom, try_parse_date)
 
 spotlight = importlib.import_module('spotlight-balance')
@@ -95,6 +95,16 @@ def main() -> None:
         cwrite("\n--- UNCANONIZED SESSIONS ---", 'red')
         for u in uncanonized:
             cwrite(u, 'red')
+
+    # -- Semantic index -------------------------------------------------------
+    # The callback and free-entity searches in /session degrade silently on a stale
+    # index, so flag it here; never rebuild automatically -- the DM decides.
+    idx = index_staleness(ROOT)
+    if idx is None:
+        cwrite("\n! SEARCH INDEX NEVER BUILT - run: uv run scripts/index-entities.py", 'red')
+    elif idx[2]:
+        cwrite(f"\n! SEARCH INDEX STALE since {idx[1][:7]} ({len(idx[2])} commit(s)) - "
+               "run: uv run scripts/index-entities.py", 'yellow')
 
     # -- Campaign / Act / Mission ---------------------------------------------
     cwrite("\n--- STORY STATE ---", 'darkgray')

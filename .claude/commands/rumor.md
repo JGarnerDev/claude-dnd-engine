@@ -1,3 +1,8 @@
+---
+description: "Surface rumors from the pool as session-opener or tavern-talk flavor. Read-only."
+argument-hint: "[count] [theme]"
+---
+
 Surface a rumor — a quick session-opener or tavern-talk beat pulled from the rumor pool. Read-only flavor tool; no entity creation, no file writes.
 
 **Arguments (all optional):**

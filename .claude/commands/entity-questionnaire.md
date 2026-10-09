@@ -1,3 +1,8 @@
+---
+description: "Generate a player-facing questionnaire for designing a world entity, or ingest a filled one through balance review. Auto-triggered by a CLAUDE-INGEST block."
+argument-hint: "[--type <type>] [--name <text>] [--concept <text>] [--player <name>] [--registry-id <id>] [--output] [--ingest <file|paste>]"
+---
+
 Generate a player-facing questionnaire for designing any world entity. Output is a clean shareable markdown document — no YAML, no schema jargon. Suitable to paste into Discord, email, or a shared doc.
 
 Also handles **ingestion**: when a filled questionnaire is returned (by file, paste, or conversational message), run balance review before creating any entity. If a message or file contains a `<!-- CLAUDE-INGEST -->` block, treat it as a pending ingestion automatically — no explicit flag needed.
@@ -73,7 +78,7 @@ Write labels and explanations in a tone that feels like a collaborative creative
 
 ### Phase 4 — Format & Output
 
-```
+```markdown
 <!-- CLAUDE-INGEST
 type: entity-questionnaire
 entity_type: {type}
@@ -112,7 +117,7 @@ Always write the questionnaire to `questionnaires/`, inside the topic subfolder 
 **Answer areas (all questionnaire types):**
 After every question, add a blank blockquote line for the player to fill in:
 
-```
+```markdown
 **Question text** *(label)*:
 
 > 
@@ -122,7 +127,7 @@ For the archetype list, add a `*My picks:*` label followed by a blank blockquote
 
 If an overlap was found in Phase 2, append after the player-facing content:
 
-```
+```markdown
 ---
 ## ⚠ Note for DM
 
@@ -169,7 +174,7 @@ Silently assess — use findings only to inform DM questions:
 
 ### Ingest Phase 3 — DM Questions
 
-```
+```markdown
 ## Entity Ingestion Review: {Name} ({type})
 
 **What the player gave us:**

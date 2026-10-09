@@ -1,3 +1,8 @@
+---
+description: "Develop a rough engine idea into a grounded, executable change via the staged idea process. Read-only until --build."
+argument-hint: "[rough idea] [--build]"
+---
+
 Develop a rough creative idea for the engine into a precise, grounded, executable change — without reinventing what already exists. This command carries the full staged workflow inline; it is self-contained.
 
 **Arguments:**

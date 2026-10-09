@@ -13,7 +13,6 @@
 
 import importlib
 import re
-import subprocess
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -21,7 +20,8 @@ from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (ROOT, ci_eq, color, cwrite, entity_md_files, get_frontmatter,
-                        pending_recordings, read_text_no_bom, try_int, try_parse_date)
+                        index_staleness, pending_recordings, read_text_no_bom, try_int,
+                        try_parse_date)
 
 spotlight = importlib.import_module('spotlight-balance')
 
@@ -185,18 +185,16 @@ def main() -> None:
 
     # -- 2. Semantic index staleness ------------------------------------------
     cwrite("\n--- INDEX ---", 'darkgray')
-    stamp = ROOT / 'vector-index' / '.index-built'
-    if stamp.exists():
-        lines = read_text_no_bom(stamp).splitlines()
-        sha = lines[1] if len(lines) > 1 else ''
-        commits = _git_log_since(sha)
+    idx = index_staleness(ROOT)
+    if idx is None:
+        cwrite("  Never built - run: uv run scripts/index-entities.py", 'red')
+    else:
+        built, sha, commits = idx
         if commits:
             cwrite(f"  Stale: {len(commits)} entity-dir commit(s) since last build ({sha[:7]})", 'yellow')
             cwrite("  (commits touching only CLAUDE.md/README do not stale the index)", 'darkgray')
         else:
-            cwrite(f"  Fresh (built {lines[0][:10]})", 'darkgray')
-    else:
-        cwrite("  Never built - run: python scripts/index-entities.py", 'red')
+            cwrite(f"  Fresh (built {built})", 'darkgray')
 
     # -- 3. Unchecked todo items ----------------------------------------------
     cwrite("\n--- TODO FILES (unchecked) ---", 'darkgray')
@@ -350,19 +348,6 @@ def _validate_error_count() -> Optional[int]:
         return fn()
     except Exception:
         return None
-
-
-def _git_log_since(sha: str) -> list:
-    if not sha:
-        return []
-    try:
-        out = subprocess.run(
-            ['git', '-C', str(ROOT), 'log', '--oneline', f'{sha}..HEAD',
-             '--', 'data/', 'historian/', 'scheduler/'],
-            capture_output=True, text=True, check=False)
-        return [ln for ln in out.stdout.splitlines() if ln.strip()]
-    except Exception:
-        return []
 
 
 if __name__ == '__main__':

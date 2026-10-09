@@ -9,14 +9,15 @@ Contract for what a correct, efficient `/session` run looks like. The command do
 ## Required scripts (before any manual file reads)
 
 1. `scripts/session-brief.py` — root CLAUDE.md mandates it at start of every `/session`. Covers campaign, active act/mission, last-session cliffhanger. Manual reads duplicating its output are rubric-1 failures.
-2. Index staleness check — read `vector-index/.index-built`, run the `git log` comparison, flag if stale. Prompt only; never rebuild.
+2. Index staleness — reported by `session-brief.py` (`SEARCH INDEX STALE` / `NEVER BUILT`); relay it to the DM. Reading `vector-index/.index-built` or running `git log` by hand is a rubric-1 failure. Prompt only; never rebuild.
 3. `scripts/party-status.py` — Phase 5 pre-step; feeds the Orientation party-state paragraph and encounter balance without opening PC files.
 4. `scripts/semantic-search.py` — Phase 1 callback search (cliffhanger/hook query, `--source historian -k 5`); again in Phase 3B Step 2 if TRANSITION (`--exists false -k 8`).
 5. `scripts/free-entities.py` — TRANSITION Step 2 importance-flagged scan, instead of a manual frontmatter sweep of all of `data/`.
+6. `scripts/threads-brief.py` — TRANSITION Step 1 unresolved-thread scan, instead of a manual frontmatter sweep of `historian/`.
 
 ## Read budget
 
-- **Frontmatter-only allowed:** `data/lore/*` (Phase 1 scan), `data/*` and `historian/*` thread/entity scans in Phase 3B, `questionnaires/*` fill-check in Cameo Candidates.
+- **Frontmatter-only allowed:** `data/lore/*` (Phase 1 scan), `data/*` entity scans in Phase 3B (historian thread scans go through `threads-brief.py`), `questionnaires/*` fill-check in Cameo Candidates.
 - **Full-body allowed:**
   - `meta/` reference files per the Phase 1 tier rules — always-tier (difficulty, worldbuilding, mysteries) every run; conditional-tier only when its stated trigger applies; once each per run, never re-read in later phases
   - Active mission + active act files (small, load-bearing)

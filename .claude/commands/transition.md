@@ -1,3 +1,7 @@
+---
+description: "Guide a campaign season-swap (Strahd and homebrew alternate). Also auto-triggered by swap language."
+---
+
 Guide a campaign season-swap — pausing the current campaign and (re)activating the other. Campaigns alternate like TV seasons (Strahd ↔ homebrew); the party persists across both worlds and shifts between them via a shallow in-narrative device. A swap is never final: the paused campaign resumes in a later season.
 
 Do not begin this flow until the DM explicitly confirms the swap is happening. Ask one clarifying question at a time. Do not write anything without confirmation at each step.
