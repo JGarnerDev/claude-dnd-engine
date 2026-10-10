@@ -6,6 +6,21 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.26.0] — 2026-10-09
+
+### Added
+
+- **`session-brief.py` prints a CAMEO PLAYERS block:** every active `role: cameo` player in `meta/players/` with availability, preferences and description, plus a flag for any filled cameo questionnaire not yet ingested.
+- **`meta/settlements.md` → Travel Legs.** The travel-leg procedure (paces, clock advance, 1–3 geography-derived stops) moved here from `/session`, which now points to it only when a plan includes travel.
+
+### Fixed
+
+- **`/session` Cameo Candidates never found ingested cameo players.** It grepped `questionnaires/` for `filled: true`, but ingestion writes cameo players to `meta/players/`, so MacLeod (`role: cameo`) could never surface. It now reads the brief's CAMEO PLAYERS block, with no greps or file reads.
+
+### Changed
+
+- **`/recap` no longer copies rules from meta files.** The affinity magnitudes and bands now come from `meta/affinity.md`, and the daypart cue rules from `meta/events.md` → Dating events. Each rule lives in one place.
+
 ## [0.25.1] — 2026-10-09
 
 ### Fixed

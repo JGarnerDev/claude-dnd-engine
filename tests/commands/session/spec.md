@@ -17,7 +17,7 @@ Contract for what a correct, efficient `/session` run looks like. The command do
 
 ## Read budget
 
-- **Frontmatter-only allowed:** `data/lore/*` (Phase 1 scan), `data/*` entity scans in Phase 3B (historian thread scans go through `threads-brief.py`), `questionnaires/*` fill-check in Cameo Candidates.
+- **Frontmatter-only allowed:** `data/lore/*` (Phase 1 scan), `data/*` entity scans in Phase 3B (historian thread scans go through `threads-brief.py`). Cameo Candidates reads no files: it uses the brief's CAMEO PLAYERS block.
 - **Full-body allowed:**
   - `meta/` reference files per the Phase 1 tier rules — always-tier (difficulty, worldbuilding, mysteries) every run; conditional-tier only when its stated trigger applies; once each per run, never re-read in later phases
   - Active mission + active act files (small, load-bearing)
@@ -41,7 +41,7 @@ Any question outside these five is a rubric-7 finding.
 
 ## Output contract
 
-- Session plan in chat: frontmatter fields (name, key locations as `[[wiki-links]]`, key NPCs with free/canon tag, encounters, loose threads, opening scene, closing hook) plus body sections in order: Orientation, Scenes (count scaled to length), NPC Quick-Reference (`/voice` capped at 2–3 top speakers), Contingencies, Closing, Approaching Entities (omit if empty), Cameo Candidates (omit if no filled questionnaires; detection via single grep, not per-file reads). Elaboration is resolved at the Phase 4 checkpoint, before scenes are written — it is not an output section.
+- Session plan in chat: frontmatter fields (name, key locations as `[[wiki-links]]`, key NPCs with free/canon tag, encounters, loose threads, opening scene, closing hook) plus body sections in order: Orientation, Scenes (count scaled to length), NPC Quick-Reference (`/voice` capped at 2–3 top speakers), Contingencies, Closing, Approaching Entities (omit if empty), Cameo Candidates (omit if the brief printed no CAMEO PLAYERS block; no questionnaire greps or player-file reads). Elaboration is resolved at the Phase 4 checkpoint, before scenes are written — it is not an output section.
 - If write confirmed: file(s) under `scheduler/sessions/` per scope, `state: draft`, `exists: false`, historian-only fields commented out.
 - If meta files blank: the canned "preferences not yet filled" note, once.
 - If a `campaign-design-preferences.md` item is deployed: noted in the plan.

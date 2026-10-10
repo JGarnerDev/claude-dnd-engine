@@ -26,7 +26,7 @@ Do not generate any content yet.
 uv run scripts/session-brief.py
 ```
 
-It reports: next session number (with a milestone flag every 5th session — worth marking at the table), campaign/act/mission names and states, last session summary + cliffhanger + played date, Rest Clock state, Current State stamp staleness, the party roster with afflictions, and the design-preference drought counter (undeployed/seeded wishlist items), and the spotlight readout (lifetime balance, recent trend, overdue PC, missing-hooks flags — from `spotlight-balance.py`; says "insufficient history" before 3 sessions), and search-index staleness. Do not manually re-read anything it already covers.
+It reports: next session number (with a milestone flag every 5th session — worth marking at the table), campaign/act/mission names and states, last session summary + cliffhanger + played date, Rest Clock state, Current State stamp staleness, the party roster with afflictions, and the design-preference drought counter (undeployed/seeded wishlist items), and the spotlight readout (lifetime balance, recent trend, overdue PC, missing-hooks flags — from `spotlight-balance.py`; says "insufficient history" before 3 sessions), search-index staleness, and active cameo players. Do not manually re-read anything it already covers.
 
 **Step 2 — Index staleness.** If the brief printed `SEARCH INDEX STALE` or `NEVER BUILT`, pass that line to the DM. Never rebuild automatically — the searches in this command degrade silently on a stale index, so the DM should decide.
 
@@ -239,7 +239,7 @@ Using all context gathered, produce a session plan in chat.
 
 One `### Scene N — [Title]` block per beat. Scale count to session length (Short: 3–4, Standard: 4–6, Long: 6–8).
 
-**Travel legs:** if the plan moves the party overland or by water between known points, size the leg first — world map scale is 1 grid cell = 1000km; paces are foot 30km/day, horse 60, river barge 80 down / 30 up, ship 150 (per `scripts/region-scale.py`). A leg's duration advances the in-world clock — track days/hours elapsed across the session so the Rest Clock's `In-world time now` and the long-rest gate stay correct, and note where on the route the 24-hour window reopens (the party can long-rest at the first safe stop past that point — see `meta/difficulty.md` → Long Rest Rules). Then derive 1–3 stops from geography alone (river crossings, passes, day's-walk spacing — same map-first principle as `/region`), using working labels, not proper nouns, unless the DM names them. Only stops that serve the session (a scene, an encounter, a rest) become scene blocks; the rest is narration. **Never enumerate every settlement a realistic road would have** — at this scale that's one per travel day, and almost none deserve files. Stops live in the session plan as scheduler content (`exists: false`); `/recap` canonizes only the ones the party actually visits, per the Settlement & Road Tiers section of `meta/settlements.md`.
+**Travel legs:** if the plan moves the party overland or by water between known points, read `meta/settlements.md` → Travel Legs first. It sizes the leg, advances the in-world clock (which feeds the Rest Clock and the long-rest gate), and keeps stops to 1–3 geography-derived working labels.
 
 Each scene block contains:
 
@@ -282,18 +282,13 @@ These are lead-time flags, never blockers — the DM can defer or delegate at an
 
 ### Cameo Candidates
 
-Detect filled questionnaires with a **single search, not per-file reads**. Two constraints discovered in audit: `questionnaires/` is gitignored, so ripgrep-based search tools silently return nothing — use POSIX grep via Bash; and questionnaire templates contain `>` option lists, so blockquote-text heuristics false-positive on blank templates. Use the explicit marker instead:
+Use the brief's **CAMEO PLAYERS** block from Phase 1. Do not grep `questionnaires/` or open player files: the block lists every active cameo player (`role: cameo` in `meta/players/`) with availability, `preferred_alignment`, `preferred_archetypes` and description. It also flags filled cameo questionnaires that haven't been ingested yet. Those get ingested first (`entity-questionnaire.md` → Ingestion Mode), never matched raw.
 
-```bash
-grep -rl "^filled: true" questionnaires/
-```
-
-(`filled:` lives in each questionnaire's `CLAUDE-INGEST` block — `false` at generation, flipped to `true` at return/ingestion. Files without the marker predate it: treat as unfilled unless the DM says otherwise.) `questionnaires/` is grouped into topic subfolders, so the search must recurse — a flat `questionnaires/*.md` glob now matches nothing. The one-question-per-file world-design tree carries `status:`/`topic:`/`priority:` frontmatter instead of a `CLAUDE-INGEST` block and is not cameo material; `uv run scripts/questions-brief.py` reports on it. Intersect the hits with cameo questionnaires (`entity_type: player` in the `CLAUDE-INGEST` block, or `-cameo` filenames).
-
-For each filled cameo questionnaire, compare:
+For each cameo player, compare:
 
 - `preferred_alignment` against the role and disposition of NPCs in this session
 - `preferred_archetypes` against NPC archetypes and scene types
+- with no stated preferences, the description (a player earmarked for a role is a match whenever that role is in this session)
 
 Surface up to 3 strong matches as a short block:
 
@@ -301,7 +296,7 @@ Surface up to 3 strong matches as a short block:
 >
 > - **{Name}** — fits [{NPC or role}] ({one-line reason based on their stated preferences})
 
-Omit this block entirely if no questionnaires are filled. Do not force matches — only surface genuinely good fits. If nothing fits well, skip silently.
+Omit this block if the brief printed no CAMEO PLAYERS section. Do not force matches — only surface genuinely good fits. If nothing fits well, skip silently.
 
 ---
 

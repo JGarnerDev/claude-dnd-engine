@@ -228,7 +228,51 @@ def main() -> None:
     # -- Spotlight balance ----------------------------------------------------
     spotlight.emit(spotlight.render_lines(section=True))
 
+    # -- Cameo players --------------------------------------------------------
+    # Feeds /session's Cameo Candidates block. Ingested cameo players live in
+    # meta/players/ (role: cameo); a filled questionnaire still in questionnaires/
+    # has not been through ingestion yet, so it is flagged, not matched.
+    cameos = []
+    for f in sorted((ROOT / 'meta' / 'players').glob('*.md')):
+        if f.name == 'player-template.md':
+            continue
+        fm = get_frontmatter(f)
+        if ci_eq(fm.get('role'), 'cameo') and not ci_eq(fm.get('status'), 'retired'):
+            cameos.append(fm)
+    unfilled_q = pending_cameo_questionnaires()
+    if cameos or unfilled_q:
+        cwrite("\n--- CAMEO PLAYERS ---", 'darkgray')
+        for fm in cameos:
+            prefs = ", ".join(x for x in (
+                fm.get('preferred_alignment'),
+                "/".join(fm.get('_list_preferred_archetypes', [])),
+            ) if x) or "no stated preferences"
+            cwrite(f"  {fm.get('name')} [{fm.get('status', '')}, {fm.get('availability') or 'availability unknown'}] "
+                   f"- {prefs} - {fm.get('description', '')}", 'white')
+        for q in unfilled_q:
+            cwrite(f"  ! Filled cameo questionnaire not yet ingested: {q} - run ingestion before matching", 'yellow')
+
     cwrite("\n========================================\n", 'darkgray')
+
+
+def pending_cameo_questionnaires() -> list:
+    """Filled cameo questionnaires (`filled: true`, `entity_type: player`) still in questionnaires/.
+
+    questionnaires/ is gitignored, so ripgrep-based tools can't see it; this walks it directly.
+    """
+    qdir = ROOT / 'questionnaires'
+    if not qdir.exists():
+        return []
+    out = []
+    for f in sorted(qdir.rglob('*.md')):
+        try:
+            raw = read_text_no_bom(f)
+        except (OSError, UnicodeDecodeError):
+            continue
+        if re.search(r'(?m)^filled:\s*true\s*$', raw) and (
+                re.search(r'(?m)^entity_type:\s*player\s*$', raw) or f.stem.endswith('-cameo')):
+            out.append(str(f.relative_to(ROOT)).replace('\\', '/'))
+    return out
 
 
 if __name__ == '__main__':

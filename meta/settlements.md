@@ -23,6 +23,15 @@ The world map's scale governs everything here: **1 grid cell = 1000km × 1000km*
 
 **Provenance:** minor settlements and roads improvised at the table are DM-created canon, not player pool material. At `/recap` they skip `data/` and are written **directly to `historian/`** with `exists: true`, `source_session`, and `confirmed_date`. The free-entity pool rules do not apply to them.
 
+## Travel Legs (Session Planning)
+
+`/session` reads this section when a plan moves the party overland or by water between known points.
+
+1. **Size the leg first.** The world map scale is 1 grid cell = 1000km. Paces: foot 30km/day, horse 60, river barge 80 down / 30 up, ship 150 (per `scripts/region-scale.py`).
+2. **Advance the clock.** A leg's duration advances the in-world clock. Track days and hours elapsed across the session so the Rest Clock's `In-world time now` and the long-rest gate stay correct. Note where on the route the 24-hour window reopens: the party can long-rest at the first safe stop past that point (`meta/difficulty.md` → Long Rest Rules).
+3. **Derive 1–3 stops from geography alone** (river crossings, passes, day's-walk spacing — the same map-first principle as `/region`), using working labels, not proper nouns, unless the DM names them. Only stops that serve the session (a scene, an encounter, a rest) become scene blocks; the rest is narration.
+4. **Never enumerate every settlement a realistic road would have.** At this scale that's one per travel day, and almost none deserve files. Stops live in the session plan as scheduler content (`exists: false`); `/recap` canonizes only the ones the party actually visits, per the tiers above.
+
 ## Trade Routes for Cities
 
 Cities with `importance: critical` or `importance: major` should have at least one route entity that names them in `origin` or `destination`. A city with no route connections is a design gap — flag it and fill it when the city becomes relevant.
