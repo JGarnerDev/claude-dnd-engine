@@ -1,5 +1,5 @@
 # validate.ps1 -- integrity checks for the campaign entity graph.
-# consumers: CLAUDE.md, tests/CLAUDE.md -- update these if usage, flags, or output format change.
+# consumers: CLAUDE.md, tests/CLAUDE.md, .claude/commands/recap.md, tests/commands/recap/spec.md -- update these if usage, flags, or output format change.
 # Catches problems that accumulate silently across 1000+ files:
 #   ERRORS   - dangling [[wiki-links]]; missing mandatory frontmatter (name/type/exists);
 #              exists:false in historian/ (canon must be real).

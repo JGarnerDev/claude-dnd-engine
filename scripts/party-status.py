@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # party-status.py -- show all PCs from historian + afflictions from campaign file
-# consumers: CLAUDE.md, .claude/commands/session.md, meta/difficulty.md, tests/commands/session/spec.md -- update these if usage, flags, or output format change.
+# consumers: CLAUDE.md, .claude/commands/session.md, meta/difficulty.md, tests/commands/session/spec.md, .claude/commands/recap.md, tests/commands/recap/spec.md -- update these if usage, flags, or output format change.
 # Usage: python scripts/party-status.py
 
 import re

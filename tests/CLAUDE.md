@@ -8,7 +8,7 @@ A command audit executes (or dry-runs) a slash command and measures it against i
 
 - **Gaps** — instructions in the command doc that are ambiguous, dead (never trigger), or missing
 - **Token inefficiencies** — full-body reads where frontmatter suffices, manual reads where a script exists, re-reads of meta files, scope creep past 1 hop
-- **Script candidates** — repeated multi-file read patterns that should collapse into one PowerShell script
+- **Script candidates** — repeated multi-file read patterns that should collapse into one script
 - **Interaction friction** — unnecessary questions to the user, missing checkpoints, unclear output
 
 ## Folder Layout

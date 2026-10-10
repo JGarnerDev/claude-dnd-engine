@@ -10,9 +10,9 @@ Canonize a played session. Closes the loop on the session lifecycle: gathers wha
 
 First check `recaps/inbox/` for a notes file — if one exists, it is the DM's raw account of the played session and usually identifies which session it was. Read it now; it feeds Phase 2.
 
-Check `scheduler/sessions/` for any file with `state: draft`.
+Check `scheduler/sessions/` for session plans with `state: draft` or `state: planned` (`/review --ready` sets `planned`, so a plan that was readied before play is `planned`).
 
-- If exactly one draft session exists, use it. State its name and session number.
+- If exactly one exists, use it. State its name and session number.
 - If multiple exist, list them and ask the DM which one was just played.
 - If none exist, ask the DM to specify the session number or file name.
 
@@ -29,7 +29,7 @@ Otherwise, ask the DM the following. Keep it conversational — rough notes are 
 1. **Date played** — What date was the session?
 2. **Recap** — What actually happened? Walk me through it. (Free-form; DM can paste notes or speak informally.)
 3. **Cliffhanger** — Where did things end? What question or situation carries into next session?
-4. **State changes** — Any significant PC or NPC changes? (Deaths, level-ups, new afflictions, relationship shifts, items gained or lost.) Always confirm levels explicitly — state the current party level from PC frontmatter and ask "still correct?" rather than waiting for the DM to volunteer a level-up.
+4. **State changes** — Any significant PC or NPC changes? (Deaths, level-ups, new afflictions, relationship shifts, items gained or lost.) Always confirm levels explicitly — state the current party level from `uv run scripts/party-status.py` (not by opening PC files) and ask "still correct?" rather than waiting for the DM to volunteer a level-up.
 5. **Rests, rounds & in-world time** — Did the party take a long rest at any point (especially before the cliffhanger)? Any short rests? Roughly how many rounds of combat were fought? Roughly how much in-world time passed this session, and what's the in-world date/time the party ends on? (Rough estimates are fine — this feeds the Rest Clock, which only needs to distinguish fresh from half-spent from running-on-fumes, and to know the in-world time for the long-rest 24-hour gate. Zero rounds is a normal answer for a roleplay-only session; the clock still gets restamped.) Any notable resource burns worth recording (big spells gone, hit dice low)?
 6. **New entities** — Anything invented at the table that doesn't have a file yet? (NPCs named on the fly, locations described, items handed out.)
 7. **Table reaction** — What landed? Anything that fell flat or felt off? (One line is fine — this informs future planning, not canonization.)
@@ -215,6 +215,8 @@ Present the proposed changes and ask for confirmation before writing.
 ## Phase 7 — Summary
 
 **Clear the inbox first.** If Phase 1 found a notes file in `recaps/inbox/`, delete it now — its content lives in the historian record, and a file left behind makes the next `/session` and `/todo` report this session as still uncanonized. Delete only that one file, and only once Phases 4–6 are written; if the DM stopped the recap early, leave it.
+
+**Check the links.** Run `.\scripts\validate.ps1 -Scope links -Quiet`. Report only errors in files this recap wrote or moved (a `[[link]]` broken by a rename, a canonized entity pointing at a name that has no file); errors that were already there are not this run's to fix.
 
 Report what was done:
 

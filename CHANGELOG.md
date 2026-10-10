@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.26.1] — 2026-10-10
+
+### Added
+
+- **`tests/commands/recap/spec.md`.** An audit contract for `/recap`, the command that writes canon. It sets the required scripts, read budget, nine interaction checkpoints and output contract, and treats any write made before its confirmation as a fail. It ships in the template.
+
+### Fixed
+
+- **`/recap` couldn't find a plan readied with `/review --ready`.** Phase 1 only looked for `state: draft`, but `--ready` sets `state: planned` (as Session 30 is now), so `/recap` would have reported that no session exists. It now accepts both.
+- **`/recap` reads party levels from `party-status.py`** instead of opening each PC file.
+- **`/recap` now runs `validate.ps1 -Scope links`** after its writes, as root CLAUDE.md requires before canonizing, and reports only errors in files it touched.
+
 ## [0.26.0] — 2026-10-09
 
 ### Added

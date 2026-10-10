@@ -77,6 +77,7 @@ maps/world/city-registry-template.md
 # Tests — structural audit infrastructure only
 tests/rubrics/principles.md
 tests/commands/session/spec.md
+tests/commands/recap/spec.md
 tests/scripts/*.py
 
 # Data — standard D&D reference catalogs
