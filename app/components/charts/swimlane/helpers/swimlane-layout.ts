@@ -15,6 +15,7 @@ import {
   SWIM_TOP_PAD,
   SWIM_BOTTOM_PAD,
   PX_PER_YEAR,
+  EDGE_PAD,
   SWIM_LABEL_GAP,
   SWIM_LABEL_LEFT,
   SWIM_LABEL_PAD,
@@ -95,9 +96,11 @@ export function computeSwimlaneFrom(
   cal: Calendar = DEFAULT_CALENDAR,
   pxPerYear: number = PX_PER_YEAR,
 ): SwimLayout {
-  const axis = computeAxisFrom(idx, cal, pxPerYear);
+  // Lazy ticks: the renderer draws only the visible slice via ticksIn, so skip the
+  // full-span walk (one tick per day across the whole campaign at deep zoom).
+  const axis = computeAxisFrom(idx, cal, pxPerYear, EDGE_PAD, false);
   if (axis.isEmpty) {
-    return { isEmpty: true, contentWidth: 0, totalHeight: SWIM_TOP_PAD + SWIM_BOTTOM_PAD, spanYears: 0, ticks: [], rows: [], items: [], bars: [], sessionBands: [] };
+    return { isEmpty: true, contentWidth: 0, totalHeight: SWIM_TOP_PAD + SWIM_BOTTOM_PAD, spanYears: 0, ticksIn: () => [], rows: [], items: [], bars: [], sessionBands: [] };
   }
 
   const rows = buildRows(tree, collapsed);
@@ -196,5 +199,5 @@ export function computeSwimlaneFrom(
   }
 
   const totalHeight = (rows.length ? rows[rows.length - 1].y + ROW_H : SWIM_TOP_PAD) + SWIM_BOTTOM_PAD;
-  return { isEmpty: false, contentWidth: axis.contentWidth, totalHeight, spanYears: axis.spanYears, ticks: axis.ticks, rows, items, bars, sessionBands };
+  return { isEmpty: false, contentWidth: axis.contentWidth, totalHeight, spanYears: axis.spanYears, ticksIn: axis.ticksIn, rows, items, bars, sessionBands };
 }

@@ -80,4 +80,12 @@ describe('buildTicks', () => {
     const ticks = buildTicks(0, 0, DEFAULT_CALENDAR, 720, identity, 100, 20);
     expect(ticks.map((t) => t.x)).toEqual([30, 60]);
   });
+
+  it('windows the walk to a day-index range', () => {
+    // Day granularity (720px/yr over 360 days = 2px/day is too tight; use 36000).
+    const all = buildTicks(idOfYear(1340), idOfYear(1349), DEFAULT_CALENDAR, 36000, identity);
+    const some = buildTicks(idOfYear(1340), idOfYear(1349), DEFAULT_CALENDAR, 36000, identity, Infinity, 0, idOfYear(1345), idOfYear(1345) + 9);
+    expect(all.length).toBeGreaterThan(3000);
+    expect(some.map((t) => t.label)).toEqual(['1345', '2', '3', '4', '5', '6', '7', '8', '9', '10']);
+  });
 });

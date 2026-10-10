@@ -73,7 +73,7 @@ describe('computeSwimlane', () => {
     const out = computeSwimlane(events);
     expect(out.items.find((i) => i.label === 'b')!.colorVar).toBe('--track-party');
     expect(out.contentWidth).toBeGreaterThan(0);
-    expect(out.ticks.length).toBeGreaterThan(0);
+    expect(out.ticksIn(0, out.contentWidth).length).toBeGreaterThan(0);
   });
 
   it('grows totalHeight as rows are added', () => {

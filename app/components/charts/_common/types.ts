@@ -238,7 +238,7 @@ export interface SwimLayout {
   contentWidth: number;
   totalHeight: number;
   spanYears: number;
-  ticks: Tick[];
+  ticksIn: (x0: number, x1: number) => Tick[]; // ticks within a canvas-x window (drawn per visible slice)
   rows: SwimRow[];
   items: SwimItem[]; // individual dots (sparse buckets); dense ones roll into bars
   bars: SwimBar[]; // per-row density histogram

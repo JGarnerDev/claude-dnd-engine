@@ -248,11 +248,15 @@ def collect_session_beats(root: Path) -> tuple:
     """Party sessions: in_world_end_date, falling back to played/planned_date.
     Returns (beats, fallback_count).
 
-    The real-world fallback is only for a campaign with no in-world session dates
-    at all (a fresh template). Once a campaign has any, mixing real-world dates in
-    would stretch its axis from year ~700 to 2026 and crush every beat, so a session
-    missing in_world_end_date instead inherits the previous session's in-world date
-    (by session_number) and is reported on stderr for backfill."""
+    The real-world fallback is only for a repo with no in-world session dates at
+    all (a fresh template). Once any campaign has one, mixing real-world dates in
+    would stretch the axis from year ~700 to 2026 and crush every beat (the
+    Campaign view spans every campaign at once). So a session missing
+    in_world_end_date inherits the previous session's in-world date from its own
+    campaign (by session_number); in a campaign with no in-world dates yet (a new
+    season whose world has no calendar) it is placed one day after the previous
+    in-world session of any campaign -- the party's last dated moment. Both are
+    reported on stderr for backfill."""
     out = []
     fallback = 0
     dir_path = root / 'historian' / 'sessions'
@@ -266,17 +270,26 @@ def collect_session_beats(root: Path) -> tuple:
     rows.sort(key=lambda r: r[0])
     in_world_campaigns = {_unwrap_wikilink(fm.get('campaign') or '')
                           for _, _, fm in rows if fm.get('in_world_end_date')}
+    cal = get_calendar(root) if in_world_campaigns else None
     last_in_world = {}  # campaign slug -> last seen in_world_end_date
+    last_any = None  # last in-world date of any campaign (placed sessions included)
     carried = []
+    placed = []
     for num, f, fm in rows:
         camp = _unwrap_wikilink(fm.get('campaign') or '')
         date = fm.get('in_world_end_date')
         if date:
             last_in_world[camp] = date
+            last_any = date
         elif camp in in_world_campaigns:
             date = last_in_world.get(camp)
             if date:
                 carried.append(f"S{num}" if num else fm.get('name'))
+        elif in_world_campaigns:
+            if last_any:
+                date = _next_day(last_any, cal)
+                last_any = date
+                placed.append(f"S{num}" if num else fm.get('name'))
         else:
             date = fm.get('played_date') or fm.get('planned_date')
             if date:
@@ -299,7 +312,24 @@ def collect_session_beats(root: Path) -> tuple:
     if carried:
         sys.stderr.write(f"timeline-data: no in_world_end_date on {', '.join(carried)} -- placed at the "
                          f"previous session's in-world date. Backfill the field (written by /recap).\n")
+    if placed:
+        sys.stderr.write(f"timeline-data: no in-world dates in the campaign of {', '.join(placed)} -- "
+                         f"placed one day after the previous dated session (a placeholder, not canon).\n")
     return out, fallback
+
+
+def _next_day(date: str, cal) -> str:
+    """The calendar day after a YYYY-MM-DD date (rolls month/year on the campaign
+    calendar). A year- or month-precision date is returned unchanged."""
+    p = date.split('-')
+    if len(p) < 3 or not cal or not cal.months:
+        return date
+    y, m, d = int(p[0]), int(p[1]), int(p[2]) + 1
+    if d > cal.months[min(m, len(cal.months)) - 1][1]:
+        d, m = 1, m + 1
+        if m > len(cal.months):
+            m, y = 1, y + 1
+    return f"{y:04d}-{m:02d}-{d:02d}"
 
 
 def collect_chronicle_beats(root: Path) -> list:

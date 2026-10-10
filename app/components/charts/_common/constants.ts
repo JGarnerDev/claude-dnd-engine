@@ -7,6 +7,9 @@ export const PX_PER_YEAR = 160; // layout's default density (non-render callers/
 // = stretched. Can't zoom out past 1 (nothing to show beyond full view).
 export const ZOOM_FACTOR = 1.5; // multiply/divide per zoom-in/out step
 export const ZOOM_MAX = 8; // floor for deepest zoom = 8× the fit density (sparse timelines)
+// Hard cap on canvas width at the deepest zoom. Browsers stop laying out past
+// ~33.5M px (Chrome), so beats past that would misplace; stay well under it.
+export const MAX_CONTENT_PX = 16_000_000;
 // For dense/long timelines, 8× of a tiny fit density still can't despace beats.
 // render.ts raises the cap so zoom can reach ~this many px between adjacent beats.
 export const TARGET_PX_PER_BEAT = 96;

@@ -122,6 +122,38 @@ describe('renderSwimlane', () => {
     expect(container.querySelectorAll('.chart-swim-marker')).toHaveLength(4);
   });
 
+  it('draws ticks only for the visible slice, not the whole canvas', async () => {
+    // Two beats eight centuries apart: at deep zoom the full span is ~300k days, so
+    // a full tick walk would build hundreds of thousands of nodes.
+    const wide: TimelineData = {
+      calendar: null,
+      events: [
+        { date: '0735-10-20', label: 'Early', track: 'world' },
+        { date: '1535-10-20', label: 'Late', track: 'world' },
+      ],
+    };
+    const api = renderSwimlane(container, wide);
+    for (let i = 0; i < 60; i++) await wheel(-120);
+    expect(api.contentWidth).toBeGreaterThan(1_000_000);
+    expect(container.querySelectorAll('.chart-swim-grid').length).toBeLessThan(200);
+  });
+
+  it('caps the canvas width at deep zoom and stops redrawing once pinned', async () => {
+    const wide: TimelineData = {
+      calendar: null,
+      events: [
+        { date: '0001-01-01', label: 'Early', track: 'world' },
+        { date: '2000-01-01', label: 'Late', track: 'world' },
+      ],
+    };
+    const api = renderSwimlane(container, wide);
+    for (let i = 0; i < 80; i++) await wheel(-120);
+    expect(api.contentWidth).toBeLessThanOrEqual(16_000_000);
+    const canvas = container.querySelector('.chart-swim-canvas');
+    await wheel(-120);
+    expect(container.querySelector('.chart-swim-canvas')).toBe(canvas); // no rebuild at max zoom
+  });
+
   it('exposes the source path on markers that have one', () => {
     renderSwimlane(container, data);
     const sourced = container.querySelector<HTMLElement>('.chart-swim-marker.has-source')!;

@@ -6,6 +6,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.26.2] — 2026-10-10
+
+### Fixed
+
+- **Campaign view froze when zoomed in.** The swimlane built one tick node for every day across the whole timeline: about 940,000 DOM nodes and 14–23 s per wheel step at deep zoom. It now draws ticks only for the visible slice plus a buffer, and refills them as you pan. `buildTicks` takes an optional day-index window, and `Axis` gains `ticksIn(x0, x1)`. Zoom steps hold at about 70 ms.
+- **Wheel zoom redrew at max/min zoom.** It no longer redraws when the level is pinned.
+- **Campaign view canvas could pass the browser layout limit** (80M px; Chrome breaks past about 33.5M). Max zoom is now capped at a 16M px canvas (`MAX_CONTENT_PX`).
+- **Session 29 stretched the Campaign view to 1,291 years.** A session in a campaign with no in-world dates fell back to its real-world `played_date` (2026) next to Strahd's year 735. `timeline-data.py` now uses the real-world fallback only when no campaign has in-world dates. Otherwise it places the session one day after the previous dated session and warns on stderr that the date is a placeholder, not canon.
+
 ## [0.26.1] — 2026-10-10
 
 ### Added

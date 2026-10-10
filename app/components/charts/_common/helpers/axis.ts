@@ -99,7 +99,10 @@ export interface Axis {
   contentWidth: number;
   spanYears: number;
   xOf: (idx: number) => number;
-  ticks: Tick[];
+  ticks: Tick[]; // every tick across the canvas ([] when computed with eagerTicks=false)
+  // Ticks whose x falls within [x0, x1] only — what a renderer that draws just the
+  // visible slice of a very wide canvas asks for.
+  ticksIn: (x0: number, x1: number) => Tick[];
 }
 
 // pxPerYear is the axis density (driven by zoom); higher = stretched. Width is
@@ -116,16 +119,20 @@ export function computeAxis(
 
 // Zoom step: takes the pre-indexed (sorted, day-indexed) events and recomputes
 // only the density-driven parts — scale, xOf, contentWidth, ticks. No re-sort.
+// eagerTicks=false skips the full tick walk (ticks: []) for a caller that draws
+// only the visible slice via ticksIn — at day granularity over a long span the
+// full walk is hundreds of thousands of ticks.
 export function computeAxisFrom(
   idx: IndexedEvents,
   cal: Calendar = DEFAULT_CALENDAR,
   pxPerYear: number = PX_PER_YEAR,
   rightPad: number = EDGE_PAD,
+  eagerTicks: boolean = true,
 ): Axis {
   const { events, daysPerYear, minIdx, maxIdx } = idx;
 
   if (events.length === 0) {
-    return { isEmpty: true, events: [], daysPerYear, minIdx: 0, maxIdx: 0, contentWidth: 0, spanYears: 0, xOf: () => MARGIN, ticks: [] };
+    return { isEmpty: true, events: [], daysPerYear, minIdx: 0, maxIdx: 0, contentWidth: 0, spanYears: 0, xOf: () => MARGIN, ticks: [], ticksIn: () => [] };
   }
 
   // Pad the date domain so the first and last beats sit inset from the canvas
@@ -140,12 +147,16 @@ export function computeAxisFrom(
   const contentWidth = Math.ceil(spanYears * pxPerYear) + MARGIN * 2;
   const scale = createScale(domMin, domMax, contentWidth - MARGIN * 2);
   const xOf = (i: number) => MARGIN + scale(i);
+  // Inverse of xOf, for windowing ticks by canvas x.
+  const idxOf = (x: number) => domMin + ((x - MARGIN) / (contentWidth - MARGIN * 2)) * (domMax - domMin);
 
   // Tick granularity adapts to the current density (months / years / multi-year).
   // Clip the tick band a label-pad in from both edges so the first/last tick label
   // keeps equal breathing room from each canvas edge and never spills past the bound
   // (which would trip the horizontal scrollbar).
-  const ticks: Tick[] = buildTicks(minIdx, maxIdx, cal, pxPerYear, xOf, contentWidth, TICK_LABEL_PAD);
+  const ticksIn = (x0: number, x1: number): Tick[] =>
+    buildTicks(minIdx, maxIdx, cal, pxPerYear, xOf, contentWidth, TICK_LABEL_PAD, idxOf(x0), idxOf(x1));
+  const ticks: Tick[] = eagerTicks ? buildTicks(minIdx, maxIdx, cal, pxPerYear, xOf, contentWidth, TICK_LABEL_PAD) : [];
 
-  return { isEmpty: false, events, daysPerYear, minIdx, maxIdx, contentWidth, spanYears, xOf, ticks };
+  return { isEmpty: false, events, daysPerYear, minIdx, maxIdx, contentWidth, spanYears, xOf, ticks, ticksIn };
 }

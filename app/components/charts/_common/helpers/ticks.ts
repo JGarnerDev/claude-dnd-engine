@@ -36,6 +36,11 @@ export function yearStepFor(pxPerYear: number): number {
 // the same comfortable distance from each view edge (MARGIN >= half a label, see
 // constants). Defaults: contentWidth Infinity + inset 0 so pure callers/tests stay
 // unclipped.
+//
+// fromIdx/toIdx window the walk to a day-index range (the visible slice of the
+// canvas): years outside it are never visited, ticks outside it never emitted. A
+// deep zoom over a long span would otherwise walk — and the renderer draw — one
+// tick per day across centuries. Defaults: unwindowed.
 export function buildTicks(
   minIdx: number,
   maxIdx: number,
@@ -44,14 +49,17 @@ export function buildTicks(
   xOf: (idx: number) => number,
   contentWidth: number = Infinity,
   inset: number = 0,
+  fromIdx: number = -Infinity,
+  toIdx: number = Infinity,
 ): Tick[] {
   const { daysPerYear } = calendarTables(cal);
   const monthsPerYear = cal.months.length;
-  const firstYear = Math.floor(minIdx / daysPerYear);
-  const lastYear = Math.floor(maxIdx / daysPerYear);
+  const firstYear = Math.max(Math.floor(minIdx / daysPerYear), Math.floor(fromIdx / daysPerYear));
+  const lastYear = Math.min(Math.floor(maxIdx / daysPerYear), Math.floor(toIdx / daysPerYear));
   const yearLabel = (y: number) => (cal.epochLabel ? `${y} ${cal.epochLabel}` : `${y}`);
   const ticks: Tick[] = [];
   const push = (idx: number, label: string) => {
+    if (idx < fromIdx || idx > toIdx) return;
     const x = xOf(idx);
     if (x >= inset && x <= contentWidth - inset) ticks.push({ label, x });
   };

@@ -16,7 +16,7 @@ import { clampZoom, resolveTracks, serializeState, DEFAULT_STATE } from '../_com
 import type { SettingsSection } from '../_common/components/settingspanel.js';
 import { enablePan, enableWheelZoom, enableMarkerInteraction } from '../_common/components/controls.js';
 import { barHeightFor } from '../_common/helpers/cluster.js';
-import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, GUTTER_W, SWIM_TOP_PAD, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT } from '../_common/constants.js';
+import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, GUTTER_W, SWIM_TOP_PAD, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT, MAX_CONTENT_PX } from '../_common/constants.js';
 import type { ChartState, PanViewport, SessionBand, SwimBar, SwimItem, SwimLayout, SwimRow, TimelineEvent, Tick, TimelineData, ZoomKind } from '../_common/types.js';
 
 // Per-row bar height for a member count (swimlane sizing — fits inside a row).
@@ -159,11 +159,14 @@ function styleSwimBar(el: HTMLElement, bar: SwimBar, events: readonly TimelineEv
   return count;
 }
 
-// Builds the full canvas (ticks, bands, per-row density bars, dots) and returns the
-// dot nodes + bar nodes (layout order) and the visible count. The individual/bar
+// Builds the full canvas (tick layer, bands, per-row density bars, dots) and returns
+// the dot nodes + bar nodes (layout order) and the visible count. The individual/bar
 // split changes with zoom (buckets dissolve), so the canvas is rebuilt each draw.
+// The tick layer starts empty: ticks are drawn per visible slice (renderTicks), since
+// a deep zoom over a long span would otherwise mean one tick node per day.
 interface BuiltSwimCanvas {
   canvas: HTMLDivElement;
+  tickLayer: HTMLDivElement;
   markers: HTMLElement[];
   bars: HTMLElement[];
   visibleCount: number;
@@ -174,7 +177,10 @@ function buildCanvas(layout: SwimLayout, events: readonly TimelineEvent[], match
   canvas.style.width = `${layout.contentWidth}px`;
   canvas.style.height = `${layout.totalHeight}px`;
 
-  for (const tick of layout.ticks) canvas.append(...tickNodesFor(tick));
+  // First child, so ticks paint beneath the session columns as before.
+  const tickLayer = document.createElement('div');
+  tickLayer.className = 'chart-swim-ticks';
+  canvas.appendChild(tickLayer);
   // Session columns sit behind the lanes (z 0) — append before the row bands and
   // dots so those paint over them.
   layout.sessionBands.forEach((band, i) => canvas.appendChild(buildSessionBand(band, i)));
@@ -207,7 +213,7 @@ function buildCanvas(layout: SwimLayout, events: readonly TimelineEvent[], match
     positionDot(marker, item, labels, i, vis);
     if (vis) visibleCount++;
   });
-  return { canvas, markers, bars, visibleCount };
+  return { canvas, tickLayer, markers, bars, visibleCount };
 }
 
 function buildGutter(rows: SwimRow[], height: number, onToggle: (category: string) => void): HTMLDivElement {
@@ -335,6 +341,11 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
   // individual/bar split changes as buckets dissolve).
   let markerNodes: HTMLElement[] = [];
   let barNodes: HTMLElement[] = [];
+  let tickLayer: HTMLDivElement | null = null;
+  // Canvas-x window the tick layer currently covers; a scroll that stays inside it
+  // needs no tick work.
+  let tickLo = 0;
+  let tickHi = -1;
 
   // Filtering keeps the layout fixed. Dots toggle .chart-hidden in place; per-row
   // density bars re-count their matching members and rescale (height/badge/hide) so
@@ -369,6 +380,21 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
     : undefined;
   const { bar: filterBar, search, chips, audience, state: filterState } = buildFilterBar(data.events, applyVisibility, seed);
 
+  // Draw the ticks for the visible slice plus a viewport-width buffer either side,
+  // so a pan has room before the next refill. force = the layout changed (new draw).
+  function renderTicks(force = false) {
+    if (!currentLayout || !tickLayer) return;
+    const vw = swim.clientWidth || viewportWidth;
+    const lo = swim.scrollLeft;
+    const hi = lo + vw;
+    if (!force && lo >= tickLo && hi <= tickHi) return;
+    tickLo = lo - vw;
+    tickHi = hi + vw;
+    const nodes: HTMLDivElement[] = [];
+    for (const tick of currentLayout.ticksIn(tickLo, tickHi)) nodes.push(...tickNodesFor(tick));
+    tickLayer.replaceChildren(...nodes);
+  }
+
   // Rebuild the gutter + canvas for the current density/collapse state. Both zoom
   // and collapse change the layout (the individual/bar split shifts with zoom, rows
   // shift with collapse), so the canvas is rebuilt each draw — cheap, since the
@@ -382,6 +408,7 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
     const built = buildCanvas(layout, idx.events, match);
     markerNodes = built.markers;
     barNodes = built.bars;
+    tickLayer = built.tickLayer;
     // Drop any tip hovering a marker we're about to discard (mouseout never
     // fires for a removed node, so the tip would otherwise go stale).
     swim._tlHideTip?.();
@@ -391,6 +418,7 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
     api.rowCount = layout.rows.length;
     api.contentWidth = layout.contentWidth;
     if (anchor) swim.scrollLeft = anchor.frac * layout.contentWidth - anchor.x;
+    renderTicks(true);
   }
 
   function toggle(category: string) {
@@ -413,6 +441,9 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
     const monthDensity = MONTH_VIEW_FRAC * canvasWidth * monthsPerYear;
     const dayDensity = DAY_VIEW_FRAC * canvasWidth * idx.daysPerYear;
     maxZoom = Math.max(ZOOM_MAX, monthDensity / fitDensity, dayDensity / fitDensity);
+    // Never zoom the canvas past what the browser can lay out (a long span at day
+    // resolution would otherwise run to tens of millions of px).
+    maxZoom = Math.max(1, Math.min(maxZoom, (MAX_CONTENT_PX - MARGIN * 2) / (fitDensity * spanYears)));
     zoomLevel = firstBuild && initialState ? clampZoom(initialState.zoomLevel, maxZoom) : Math.min(zoomLevel, maxZoom);
   }
 
@@ -477,16 +508,19 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
     return { frac, x };
   }
 
-  function applyZoom(kind: ZoomKind) {
+  // Returns whether the level moved — false when already pinned at a bound, so the
+  // caller can skip a redraw that would change nothing.
+  function applyZoom(kind: ZoomKind): boolean {
+    const before = zoomLevel;
     if (kind === 'in') zoomLevel = Math.min(maxZoom, zoomLevel * ZOOM_FACTOR);
     else zoomLevel = Math.max(1, zoomLevel / ZOOM_FACTOR);
+    return zoomLevel !== before;
   }
 
   // Density-bar click: discrete zoom-in, draw immediately.
   function zoom(kind: ZoomKind, clientX?: number) {
     const anchor = anchorAt(clientX);
-    applyZoom(kind);
-    draw(anchor);
+    if (applyZoom(kind)) draw(anchor);
   }
 
   // Wheel: coalesce a fling's many events into one draw per frame; anchor is
@@ -494,8 +528,9 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
   let zoomRaf = 0;
   let wheelAnchor: { frac: number; x: number } | undefined;
   function zoomWheel(kind: ZoomKind, clientX?: number) {
-    if (!zoomRaf) wheelAnchor = anchorAt(clientX);
-    applyZoom(kind);
+    const anchor = zoomRaf ? wheelAnchor : anchorAt(clientX);
+    if (!applyZoom(kind)) return; // pinned at min/max zoom: nothing to redraw
+    wheelAnchor = anchor;
     if (!zoomRaf) {
       zoomRaf = requestAnimationFrame(() => {
         zoomRaf = 0;
@@ -535,6 +570,16 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
   if (initialState) swim.scrollLeft = initialState.scrollLeft;
   enablePan(swim);
   enableWheelZoom(swim, zoomWheel);
+  // Pans (drag, wheel-scroll, scrollbar) refill the tick layer when they reach the
+  // edge of its buffered window; coalesced to one check per frame.
+  let scrollRaf = 0;
+  swim.addEventListener('scroll', () => {
+    if (scrollRaf) return;
+    scrollRaf = requestAnimationFrame(() => {
+      scrollRaf = 0;
+      renderTicks();
+    });
+  });
   enableMarkerInteraction(swim, (source) => window.open(source, '_blank'));
 
   // One more refit after the browser settles layout, in case the synchronous read
