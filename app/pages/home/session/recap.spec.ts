@@ -6,7 +6,7 @@ import type { PreviousSession } from './types.js';
 
 const prev = (n: number, campaign: string): PreviousSession => ({
   name: `Session ${n} Before`, number: n, date: '2026-09-29', campaign,
-  description: `What happened in ${n}.`, recap: `Long recap of ${n}.`, cliffhanger: `Left hanging in ${n}.`, path: `historian/sessions/Session ${n}.md`,
+  description: `What happened in ${n}.`, recap: `Long recap of ${n}.`, cliffhanger: `Left hanging in ${n}.`, path: `historian/sessions/Session ${n}.md`, slides: [],
 });
 
 describe('withRecap', () => {
@@ -39,6 +39,17 @@ describe('recapHtml', () => {
     const el = document.createElement('div');
     el.innerHTML = recapHtml({ ...fixture(), previously: [prev(8, 'strahd'), prev(5, 'homebrew')] }, () => true);
     expect(el.querySelector('.sr-recap-season h3')!.textContent).toContain('Session 5 Before');
+  });
+});
+
+describe('recap slides button', () => {
+  it('shows only when the previous session has a deck', () => {
+    const el = document.createElement('div');
+    el.innerHTML = recapHtml({ ...fixture(), previously: [prev(8, 'homebrew')] }, () => true);
+    expect(el.querySelector('[data-act="slides"]')).toBeNull();
+    const withDeck = { ...prev(8, 'homebrew'), slides: [{ title: 'Session 8', md: 'Played.' }] };
+    el.innerHTML = recapHtml({ ...fixture(), previously: [withDeck] }, () => true);
+    expect(el.querySelector('[data-act="slides"]')!.textContent).toBe('Slides');
   });
 });
 

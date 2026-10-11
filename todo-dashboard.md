@@ -88,6 +88,8 @@ These were handed to players; they're Jeff's now. Nothing outside is blocked on 
 
 ## ⚪ Backlog
 
+- **75.** 🤝 **Jeff** — **pixel art for recap slides.** Lofi pixel portraits of characters, items and places beside the slide text. The slides already leave an empty image column for them. Still to settle: what "64bit" means (canvas size or style), how the art gets made, where it lives, and how a slide names its image. Plan and grounding are in `pixel-art-slides.md`; resume with `/idea pixel-art-slides`. Until then, decks are text only.
+
 - **34.** 🤝 **Jeff** — nine map regions still need /region detailing passes (western Struck Side, Caldera's Brace, Kethara, Greywood, The Reach, northern and southwestern waters, the sky layer); Continent C also needs naming before The Ashwall's region link resolves.
 - **35.** 🙋 **Jeff** — the Stonemarch/Duskwater regional map in Inkarnate is a Session 2 need (the pursuit route), not a Session 1 one; build it after the opener. It is a new overview map covering the Cael and Marlow fiefs, the Ashford ford, the Moorthistle stretch and the Duskwater raider routes. Scope: `todo-worldmap.md` → Calenmere.
 - **67.** 🙋 **Jeff** — label the rivers in Inkarnate in one export: Moorthistle (upper branch only), Broadwend (junction to the bay), River F → Bayward River. Add the Orrend label on dot 9. Graduate the Tassad and Orrend dots in the same pass. Then the re-export steps (`sources.tsv` url, `fetch-maps.py --force`, `gen-tiles.py`). `todo-worldmap.md` → Calenmere.

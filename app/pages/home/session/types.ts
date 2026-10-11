@@ -78,6 +78,13 @@ export interface PreviousSession {
   recap: string;
   cliffhanger: string;
   path: string;
+  slides: Slide[]; // party-facing deck from the folder's _slides.md; [] when none
+}
+
+// One slide of a deck (meta/recap-slides.md): a `##` headline and its body.
+export interface Slide {
+  title: string;
+  md: string;
 }
 
 export interface SessionData {

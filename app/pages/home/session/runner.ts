@@ -13,6 +13,7 @@ import { mountPanel } from './panel.js';
 import { loadState, saveState } from './store.js';
 import { escapeHtml } from './markdown.js';
 import { RECAP_ID, recapHtml, recapText, withRecap } from './recap.js';
+import { openSlides } from './slides.js';
 import type { EntityRef, SessionData } from './types.js';
 
 const WIKI_RE = /\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g;
@@ -120,6 +121,11 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
     }
   });
   main.addEventListener('click', (ev) => {
+    const prev = data.previously[0];
+    if ((ev.target as HTMLElement).closest('[data-act="slides"]') && prev) {
+      openSlides(prev.slides, prev.name);
+      return;
+    }
     const link = (ev.target as HTMLElement).closest<HTMLElement>('a.sr-wiki[data-entity]');
     if (link) panel.open(link.dataset.entity!);
   });

@@ -7,6 +7,9 @@
 // When that session belongs to the other season, the extractor also sends the
 // last session played in this season, shown as "Last time in this world".
 //
+// When the previous session has a party-facing deck (_slides.md), the card
+// carries a Slides button that opens it fullscreen (slides.ts).
+//
 // A plan may carry its own `## Recap` section — a hand-written, read-aloud
 // version. It leads the card, and the plan panel leaves it out.
 
@@ -55,6 +58,7 @@ export function recapHtml(data: SessionData, known: Known): string {
   const threads = data.session.looseThreads.map((t) => `<li>${inline(t, known)}</li>`).join('');
   const written = writtenRecap(data);
   return `
+    ${prev.slides.length ? `<button type="button" class="sr-slides-open" data-act="slides" title="Show the party-facing slides">Slides</button>` : ''}
     ${meta(prev)}
     ${written ? `<div class="sr-recap-written sr-md">${renderMarkdown(written, known)}</div>` : ''}
     ${prev.description && !written ? `<p class="sr-recap-lead">${inline(prev.description, known)}</p>` : ''}

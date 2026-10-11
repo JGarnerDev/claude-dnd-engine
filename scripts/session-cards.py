@@ -9,9 +9,11 @@ and its flow chart (`_flow.md`) -- and emits the JSON the session runner
 
   { session: {name, number, date, description, openingScene, closingHook, preamble, folder,
                campaign, root, looseThreads},
-    previously: [{name, number, date, campaign, description, recap, cliffhanger, path}],
+    previously: [{name, number, date, campaign, description, recap, cliffhanger, path, slides}],
                                              # the session before this one, plus the last one
-                                             # in this season when that differs (historian)
+                                             # in this season when that differs (historian);
+                                             # slides: [{title, md}] from the folder's optional
+                                             # _slides.md (party-facing deck, meta/recap-slides.md)
     nodes:   [{id, marker, kind, scene, title, lines, notes}],
     edges:   [{from, to, label, dashed}],
     scenes:  [{id, key, title, md}],         # flow subgraph + matching `### Scene <key>` prose
@@ -239,7 +241,18 @@ def previous_sessions(root: Path, number, campaign: str) -> list:
         'recap': fm_string(raw, 'recap'),
         'cliffhanger': fm_string(raw, 'cliffhanger'),
         'path': f.relative_to(root).as_posix(),
+        'slides': slides(f.parent),
     } for n, f, raw, fm in picks]
+
+
+def slides(folder: Path) -> list:
+    """A played session's party-facing deck: one slide per `##` section of the folder's
+    optional _slides.md (meta/recap-slides.md). Text before the first heading is a DM note,
+    never shown. A flat session file (no folder of its own) has no deck."""
+    f = folder / '_slides.md'
+    if folder.name == 'sessions' or not f.is_file():
+        return []
+    return [{'title': t, 'md': md} for t, md in split_headings(read_text_no_bom(f), 2) if t]
 
 
 def established(folder: Path) -> list:

@@ -40,12 +40,26 @@ describe('renderRunner', () => {
 
   it('opens on the recap card when historian has a previous session', () => {
     const d = fixture();
-    d.previously = [{ name: 'Session 8 Before', number: 8, date: '', campaign: 'strahd', description: 'Before.', recap: '', cliffhanger: 'Hanging.', path: '' }];
+    d.previously = [{ name: 'Session 8 Before', number: 8, date: '', campaign: 'strahd', description: 'Before.', recap: '', cliffhanger: 'Hanging.', path: '', slides: [] }];
     renderRunner(root, d);
     expect(current(root)).toBe('PREVIOUSLY');
     expect(root.querySelector('.sr-recap-lead')!.textContent).toBe('Before.');
     key('ArrowRight');
     expect(current(root)).toBe('S1_OPEN');
+  });
+
+  it('opens the previous session’s slides from the recap card, and Esc returns to it', () => {
+    const d = fixture();
+    d.previously = [{ name: 'Session 8 Before', number: 8, date: '', campaign: 'homebrew', description: 'Before.', recap: '', cliffhanger: '', path: '', slides: [{ title: 'Session 8 Before', md: 'Played.' }, { title: 'Next time…', md: 'Hanging.' }] }];
+    renderRunner(root, d);
+    root.querySelector<HTMLButtonElement>('[data-act="slides"]')!.click();
+    expect(document.querySelector('.sr-slides .sr-slide-title')!.textContent).toBe('Session 8 Before');
+    key('ArrowRight');
+    expect(document.querySelector('.sr-slides .sr-slide-title')!.textContent).toBe('Next time…');
+    expect(current(root)).toBe('PREVIOUSLY');
+    key('Escape');
+    expect(document.querySelector('.sr-slides')).toBeNull();
+    expect(current(root)).toBe('PREVIOUSLY');
   });
 
   it('jumps from the rail, and wikilinks in scene notes open the panel', () => {

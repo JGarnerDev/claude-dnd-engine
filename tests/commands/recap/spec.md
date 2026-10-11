@@ -22,6 +22,7 @@ Contract for what a correct, efficient `/recap` run looks like. The command doc 
   - The played session plan (Phase 1)
   - `meta/player-agency.md` (Phase 2 choices), `meta/character-focus.md` and `meta/schemas/session.md` → Spotlight Beats (Phase 2.5, skipped before cold-start clears), `meta/affinity.md` (Phase 5, only if relationships shifted), `meta/events.md` and `meta/schemas/event.md` (Phase 5.5, only if a beat is promoted)
   - The active campaign file (Phase 6: Current State and Rest Clock)
+  - `meta/recap-slides.md` (Phase 8 slides, homebrew sessions only)
   - Conditional, only when triggered: `meta/types.md` (an entity moves `data/` → `historian/`), `meta/settlements.md` (improvised settlement or road), `meta/entity-creation.md` (DM approves creating a missing entity), `meta/campaign-design-preferences.md` / `meta/literary-devices.md` (the plan notes a deployed or seeded item), `meta/mysteries.md` (a new unknown is flagged)
 - **Frontmatter-only:** entities named in the plan's `locations` / `key_npcs` (Phase 3 state check); PC files for the Phase 5 `level_confirmed` restamp and `spotlight_hooks` advance
 - **Never read:** `spitball/` (never canon), raw transcripts in `recaps/transcripts/` (the inbox note is the digested source)
@@ -38,9 +39,10 @@ Contract for what a correct, efficient `/recap` run looks like. The command doc 
 6. **Phase 5 confirm-lists** — elaboration offers for newly canonized entities with no `personality`/`motivation`, missing-entity creation, affinity nudges, and whether an improvised settlement earned a file.
 7. **Phase 5.5 event candidates** — skipped silently if no beat clears the bar.
 8. **Phase 6 campaign state** — proposed Current State, Rest Clock and preference-line changes.
-9. **Phase 8 player-facing blurb** — offered once.
+9. **Phase 8 recap slides** — homebrew only: the numbered deck draft with its kept-names list (the names check in `meta/recap-slides.md`), repeated until the DM approves or declines. Skipped for Strahd.
+10. **Phase 8 player-facing blurb** — offered once.
 
-Checkpoints 6–8 are adjacent confirm-lists; batching them into one message is allowed and scores better on rubric 7. Any question outside these nine is a rubric-7 finding. Any write made before its checkpoint confirms is a **fail**, regardless of whether the content was right.
+Checkpoints 6–8 are adjacent confirm-lists; batching them into one message is allowed and scores better on rubric 7. Any question outside these ten is a rubric-7 finding. Any write made before its checkpoint confirms is a **fail**, regardless of whether the content was right.
 
 ## Output contract
 
@@ -52,7 +54,8 @@ Checkpoints 6–8 are adjacent confirm-lists; batching them into one message is 
 - Event files in `historian/events/` only for DM-confirmed beats, each with `timeline_date`, `order` and `daypart`
 - Inbox notes file deleted, only after Phases 4–6 are written
 - Phase 7 summary in chat, ending with the one-line index-stale note
-- Player-facing blurb only on a yes: 3–5 sentences, spoiler-safe, no file written
+- Homebrew only, on approval: `_slides.md` in the session's historian folder, with one `##` per slide in `meta/recap-slides.md` order, no frontmatter and no `[[wikilinks]]`. Nothing drawn from `table_notes`, `new_entities`, `Reliability` flags or other DM-only content. No proper noun the party hasn't learned: a name copied from the `recap:` field without DM confirmation is a finding. Never written for a Strahd session or when the DM declines
+- Player-facing blurb only on a yes: 3–5 sentences, spoiler-safe (drawn from the deck when one was just approved), no file written
 
 ## Out of scope
 

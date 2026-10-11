@@ -61,7 +61,7 @@
 /* Scene bar + card */
 .sr-scenebar { display: flex; justify-content: space-between; align-items: baseline; max-width: 860px; margin: 0 auto 10px; color: var(--sr-muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
 .sr-scenebar-title { color: var(--sr-text); font-weight: 600; }
-.sr-card { max-width: 860px; margin: 0 auto; background: var(--sr-surface); border: 1px solid var(--sr-line); border-left: 5px solid var(--k); border-radius: 10px; padding: 20px 26px 22px; font-size: 18px; }
+.sr-card { position: relative; max-width: 860px; margin: 0 auto; background: var(--sr-surface); border: 1px solid var(--sr-line); border-left: 5px solid var(--k); border-radius: 10px; padding: 20px 26px 22px; font-size: 18px; }
 .sr-card-meta { display: flex; gap: 10px; align-items: center; font-size: 13px; }
 .sr-kind { color: var(--k); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
 .sr-id { color: var(--sr-muted); }
@@ -148,6 +148,8 @@
 
 /* "Previously on..." card (recap.ts) */
 .sr-card-body { font-size: 16px; }
+.sr-slides-open { position: absolute; top: 16px; right: 20px; padding: 6px 16px; font-size: 14px; font-weight: 600; background: transparent; color: var(--k); border: 1.5px solid var(--k); border-radius: 8px; cursor: pointer; }
+.sr-slides-open:hover { background: color-mix(in srgb, var(--k) 18%, transparent); }
 .sr-recap-meta { font-size: 13px; color: var(--sr-muted); margin-top: -6px; }
 .sr-recap-lead { font-size: 19px; font-style: italic; color: #f1e9d2; margin: 12px 0; }
 .sr-recap-h { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--k); margin: 18px 0 6px; }

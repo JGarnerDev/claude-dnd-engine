@@ -6,6 +6,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.27.0] — 2026-10-10
+
+### Added
+
+- **Recap slides.** The session runner's "Previously on…" card has a **Slides** button that opens a fullscreen, party-facing carousel of the previous session, built for screen-sharing at the table. Arrow keys, Space or click move; Home and End jump; Esc closes; F toggles browser fullscreen. Each slide leaves an empty column for the per-character pixel art planned for later. New `app/pages/home/session/slides.ts` (+ CSS and spec).
+- **`meta/recap-slides.md`.** The deck rules: homebrew only, DM-approved, written once. Covers the fixed slide order (title, previously-on, scenes as played, choices, the party, next time), about 40 words per slide, and party-safe sources. Every draft gets a names check: seen is not known, so a name the DM's sources mention stays off the slides until the DM confirms the party learned it. Private PC moments stay in. The deck lives in `_slides.md` in the session's historian folder, which the entity scan skips.
+- **Session 29 deck.** A one-time `_slides.md` written by hand, so Session 30 opens with slides.
+
+### Changed
+
+- **`/recap` Phase 8** now drafts a homebrew session's deck as a numbered list. The DM edits it by number and approves it, then `/recap` writes `_slides.md`. The group-chat blurb is still offered afterwards, drawn from the approved deck. Strahd recaps are unchanged. `tests/commands/recap/spec.md` gains the matching checkpoint and output contract.
+- **`session-cards.py`** emits `slides: [{title, md}]` on each `previously` entry, read from the folder's `_slides.md` (empty when there's none). `PreviousSession` in the runner's `types.ts` gains the field.
+
 ## [0.26.2] — 2026-10-10
 
 ### Fixed
