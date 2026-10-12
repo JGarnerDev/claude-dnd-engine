@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.28.0] — 2026-10-12
+
+### Added
+
+- **Recap slides: Voice rules.** `meta/recap-slides.md` gains a `## Voice` section: tell it as a story, not mechanics (no check-, damage- or rules-sounding words); only what an NPC actually said, so a reward the plan names stays off the slides until it was promised out loud; "the party", not "you"; vary verbs; plain words that read well aloud.
+
+### Fixed
+
+- **Session 29 deck** reworded to the new rules. The fox's promise no longer names the spear, which the fox never said.
+
 ## [0.27.1] — 2026-10-12
 
 ### Removed

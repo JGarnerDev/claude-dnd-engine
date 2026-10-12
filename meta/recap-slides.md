@@ -50,6 +50,24 @@ Every deck follows the same order, so players know where to look:
    corrected by `## As Played`.
 6. **Next time…**: the hook from the `cliffhanger:` field, as a teaser.
 
+## Voice
+
+Slides are read aloud to the table, so write them like a story told by someone who was there.
+
+1. **Story, not mechanics.** Say what the characters saw, not what was rolled. No words that sound
+   like checks, damage or rules: "read the yard" (Perception), "landed hidden" (Stealth), "hit
+   hard", "took the job", "the gift", "haggling".
+2. **Only what was said.** When an NPC was vague, the slide stays vague. A reward the plan names is
+   not one an NPC promised out loud: the fox said it would make it worth Halsby's while, so the
+   slide says that, not "fuse his spear". The names check does this for names; do the same for
+   promises, motives and rewards.
+3. **"The party", not "you".** Write in the third person, like the "Previously on…" slide: "What
+   the party chose", "the party went after both".
+4. **Vary the verbs.** When a slide walks the PCs one by one, give each their own verb; don't
+   repeat "landed" four times.
+5. **Plain words, said aloud.** "The gap in the wall", not "the breach"; "agreed", not "accepted
+   terms". If a line sounds stiff spoken, rewrite it.
+
 ## Party-safe
 
 Only what the party saw, heard or was told on screen, written the way they would tell it. The full
