@@ -36,6 +36,7 @@ Look for, and fill:
 - **Branch outcomes with no response.** Every success, failure or refusal node gets the NPC's reaction in a line
 - **Discoveries with no sensory detail:** an item's first touch, what a successful Perception or Read roll notices (offer 3–5 options), a creature hidden for a blindsight or Perception check. Food and drink the party will consume get a look, a taste and any catch
 - **Names planted with no delivery.** For each thread seed, say who says it and how (secondhand description, a silence, a gesture) and where to stop
+- **Combatants with no visible kit.** Every combat-capable enemy and NPC gets a `Kit (player-facing):` line under its entry: one italic sentence of the armour and weapons the party can see, matching the stat block, with no name in it (see `/session` Phase 5, Encounters)
 - **Mid-fight beats:** a few flat lines for the enemies, a morale-break line, and what a bound or sidelined NPC does while the party fights
 - **Contingencies whose tone changes** (a colder NPC, a worse deal). Give one sample line for the changed tone
 

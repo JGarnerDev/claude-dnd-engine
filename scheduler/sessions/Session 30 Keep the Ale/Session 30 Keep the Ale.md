@@ -145,9 +145,13 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - **Light crossbow** +3 to hit, range 80/320, 1d8+1 piercing (avg 5)
 - **Fennel Dray** (human): wiry farm lad gone wrong, twitchy, talks fast, loves Cinder more than anyone in the band.
   Shoots the horses. If Cinder goes down, Fennel stops fighting and goes to the wolf.
+  - **Kit (player-facing):** *a patched farm jerkin, no real armour, a light crossbow across the
+    saddle and a cheap curved blade on his hip.*
 - **Tam "Clatter" Cobb** (human): on the shed roof (half cover), crossbow on whoever is in the
   open. Named for the bolts he never stops fiddling with; you hear him before you see him. Calls
   out targets to the floor, so whoever he's watching gets no hiding in the open.
+  - **Kit (player-facing):** *a light crossbow and a quiver of mismatched bolts, a curved blade
+    stuck through his belt, and a leather jerkin that has seen better owners.*
 
 ### Scout — Ilsa Thorn, the rear guard's rider
 
@@ -158,6 +162,8 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - **Longbow** +4 to hit, range 150/600, 1d8+2 piercing (avg 6)
 - **Ilsa Thorn** (human): Nella's best rider and the closest thing she has to a student. Quiet,
   sun-squinting, already half-turned toward the camp.
+  - **Kit (player-facing):** *sun-faded leather riding armour, a longbow strung and ready, and a
+    short sword at her hip.*
 - **Job:** watch the back trail. When the fight turns, Ilsa rides for the camp, not for the party.
 
 ### Wolf — Cinder
@@ -167,6 +173,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - **Bite** +4 to hit, 2d4+2 piercing (avg 7); target makes DC 11 STR or is knocked prone
 - Grey-black, scarred muzzle, keeps pace with the horses. Goes for a horse's legs first (a prone
   horse throws its rider).
+  - **Kit (player-facing):** *no gear, just a frayed rope collar somebody tied on with care.*
 
 ### The drover — Varrick Tenn, reskinned Bandit Captain
 
@@ -180,6 +187,10 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   posting. He anchors the camp floor the way the big one anchored the raid, and **he holds the
   crew together:** while he stands, morale holds until only 2 are left. He doesn't roll morale
   himself. **He knows nothing useful** — taken alive, he is a Mara Tull problem.
+- **Kit (player-facing):** *studded leather worn like a uniform, a long drover's cart-whip, a
+  row of throwing daggers across his chest, and a scuffed leather bracer on his left forearm, laced
+  and relaced so often the holes have worn into slots.* (The bracer is the loot; let them see it
+  turn a blow first.)
 
 ### Thug — the cask-hands, Haddo Keel and Brask
 
@@ -190,6 +201,8 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - **Heavy crossbow** +2 to hit, range 100/400, 1d10 piercing
 - **Haddo Keel** (human): huge, patient, hums while he works. Counts the casks out loud.
 - **Brask** (half-orc): long arms and a bad temper, sleeps against the cart wheel when off watch.
+- **Kit (player-facing, both):** *stained leather aprons over leather jerkins, iron-banded
+  cask-mallets, and a heavy crossbow each, propped against the cart wheel.*
 - **Station:** the cart, together, so Pack Tactics is live whenever someone reaches the casks.
   Paid by the barrel. *"Nobody touches the cart"* is their whole job.
 
@@ -203,6 +216,8 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - **Sennet Orrin** (human): ink on his fingers, a ledger under his arm. **He keeps Bane's duty
   ledger** (`S2_CAMP_INTEL`); the clerk's tidy hand is his. Not one of Nella's crew; Bane's man,
   checking the haul. Slips between the shed doors and stabs whoever the Thugs are already hitting.
+- **Kit (player-facing):** *a clerk's coat, no armour, ink on the cuffs. A short sword he wears
+  like he knows how to use it, and a little hand crossbow hooked to his belt.*
 - **If taken alive and asked about Bane,** he says the name and goes white. He'll trade the ledger
   for his life before he'll trade anything else.
 
@@ -214,6 +229,8 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - **Club** +2 to hit, 1d4 bludgeoning
 - **Hesper Mudd** (halfling): the band's patch-up, prays to whatever is listening. *Bless* on
   Varrick and the Thugs in round 1, then *cure wounds* on whoever is about to drop.
+- **Kit (player-facing):** *a homespun robe, a knotted wooden club, and a cord of mismatched holy
+  charms she touches one after another, like she isn't sure which one works.*
 - **Use *sanctuary* sparingly.** On Varrick it stalls the morale trigger; if the fight is running
   long, she casts *bless* or heals instead.
 
@@ -224,6 +241,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - **Bite** +3 to hit, 1d6+1 piercing (avg 4); target makes DC 11 STR or is knocked prone
 - Chained at the corral (15-ft chains). They bark at anyone sneaking within 30 ft of the corral
   unless Stealth beats their passive Perception 18 (13, +5 for advantage). Loosed by any crew member as an action.
+- **Kit (player-facing):** *spiked iron collars on heavy chains.*
 
 ### Nella — veteran sniper (~CR 3, custom)
 
@@ -241,6 +259,8 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   targets. Marked Quarry goes on whoever is climbing toward the ridge, **never on a caster**. She
   never shoots a downed PC. This holds her at standard lethality against a party with no long
   rest; on paper her block is RTD ~1 against the back line.
+- **Kit (player-facing):** *dark studded leather under a long weathered cape, a tall longbow,
+  and a short sword at her hip she doesn't touch.*
 
 ### Running it
 
@@ -1030,6 +1050,14 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
   nothing yet about why her prisoner surrendered.
 - **Voice:** quiet, weathered, economical. Gives an order once. Grief steeled into grit, never
   spoken.
+- **Kit (player-facing):** *a sheriff's star on a worn coat, a long knife on her belt, and tonight
+  a deputy's blood down one side. Slung across her back, muzzle down, a short heavy thing of dark
+  brass and iron with a flared mouth like a bell bolted to a walnut stock. It smells of burnt
+  sulfur, the way the air does after lightning.*
+- **The Fourth Letter** (lore in her entity file): a Cael heirloom sent by Lord Cael in place of
+  the soldiers Ashford asked for. If anyone asks, a townsperson answers, not Mara: *"His lordship
+  wrote back three times. Fourth time he sent that."* She fired one charge in her own street fight
+  tonight; the party may have heard the clap from the yard. Six left, and nobody can make more.
 
 ### [[Silas Crubb]]
 

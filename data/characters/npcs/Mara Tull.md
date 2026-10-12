@@ -62,6 +62,30 @@ She has noticed things about the raiders — that they are kitted alike, that th
 cleanly, that this is not what independent bandits look like. She has no one to report it to
 who will act.
 
+## The Fourth Letter
+
+Mara carries a weapon nobody else in Stonemarch has. It is short and heavy, dark brass over
+iron, with a flared mouth like a bell bolted to a walnut stock, and it smells of burnt sulfur.
+Fired, it throws a fist of iron shot across a doorway with a clap people hear at the ford.
+
+It came from **[[Lord Corren Cael]]**. Ashford wrote to him three times the year the raids
+began, asking for men. He answered each letter kindly and sent nothing. The fourth answer was
+a long crate: a Cael heirloom from the house armoury, dug out of a ruin by some ancestor
+generations ago and hung on a wall ever since, with a bandolier of brass charges and a note in
+his own hand. *"I cannot send you soldiers. Send them this instead."* The town calls it the
+Fourth Letter. Mara calls it nothing, and has never said whether she took it as a gift or an
+apology.
+
+Nobody alive can build one, or make the charges. The workmanship is older than the house that
+owned it, the kind of thing a lost people left behind and the living only inherit. Every shot
+she fires is one fewer in the world, so she fires it rarely and the town knows exactly what it
+means when she does.
+
+- **In play:** an action, a 15-ft cone, DEX save DC 13, 3d8 piercing (half on a success).
+  Reloading takes an action. Heard for half a mile.
+- **Charges:** six left after the raid on Ashford (she spent one in her own street fight that
+  night). When they're gone, it's a club. Whether more charges exist anywhere is unanswered.
+
 ## Her children (DM-only)
 
 Her son and daughter did not die in battle. They were in the company

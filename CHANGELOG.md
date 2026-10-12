@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.29.0] — 2026-10-12
+
+### Added
+
+- **Player-facing kit lines.** `/session` (Phase 5, Encounters) now writes a `Kit (player-facing):` line for every combat-capable enemy and NPC: one italic sentence of the armour and weapons the party can see, matching the stat block, with no name in it. `/review` Pass 1 backfills missing ones. Session 30's combatants and Mara Tull carry them.
+
 ## [0.28.0] — 2026-10-12
 
 ### Added
