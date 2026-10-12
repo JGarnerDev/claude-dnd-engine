@@ -15,8 +15,7 @@ import type { Slide } from './types.js';
 // as plain alias text.
 const unlink = (md: string) => md.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, n: string, a?: string) => a ?? n);
 
-// Pure: one slide's markup. The empty art column is reserved for the deferred
-// per-slide pixel art, so text never reflows when images arrive.
+// Pure: one slide's markup.
 export function slideHtml(deck: Slide[], i: number, label: string): string {
   const s = deck[i];
   return `
@@ -25,7 +24,6 @@ export function slideHtml(deck: Slide[], i: number, label: string): string {
         <h1 class="sr-slide-title">${escapeHtml(s.title)}</h1>
         <div class="sr-slide-body">${renderMarkdown(unlink(s.md))}</div>
       </div>
-      <div class="sr-slide-art" aria-hidden="true"></div>
     </div>
     <footer class="sr-slides-foot">
       <span class="sr-slides-label">${escapeHtml(label)}</span>

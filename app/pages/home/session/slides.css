@@ -1,16 +1,15 @@
 /* Recap-slides carousel — built for screen-share: big type, few words, high contrast.
    Uses the runner's --sr-* tokens (session.css). */
 .sr-slides { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; background: var(--sr-bg); color: var(--sr-text); font: 15px/1.5 system-ui, sans-serif; cursor: pointer; user-select: none; }
-.sr-slides-stage { flex: 1; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 4vw; align-items: center; padding: 6vh 7vw; }
-.sr-slide-text { border-left: 6px solid var(--sr-k-recap); padding-left: 3vw; }
+.sr-slides-stage { flex: 1; display: grid; align-items: center; padding: 6vh 7vw; }
+/* Capped so lines stay readable when screen-shared on a wide display. */
+.sr-slide-text { max-width: 1200px; border-left: 6px solid var(--sr-k-recap); padding-left: 3vw; }
 .sr-slide-title { margin: 0 0 3vh; font-size: clamp(32px, 5vw, 72px); line-height: 1.1; }
 .sr-slide-body { font-size: clamp(20px, 2.4vw, 36px); line-height: 1.4; color: #e2e8f0; }
 .sr-slide-body p { margin: 0 0 0.6em; }
 .sr-slide-body ul, .sr-slide-body ol { margin: 0; padding-left: 1.1em; }
 .sr-slide-body li { margin: 0.25em 0; }
 .sr-slide-body strong { color: var(--sr-accent); }
-/* Reserved for per-slide pixel art (deferred); stays empty for now. */
-.sr-slide-art { aspect-ratio: 1; }
 .sr-slides-foot { display: flex; align-items: center; gap: 16px; padding: 12px 24px; color: var(--sr-muted); font-size: 14px; border-top: 1px solid var(--sr-line); cursor: default; }
 .sr-slides-label { flex: 1; }
 .sr-slides-count { font-variant-numeric: tabular-nums; }
@@ -18,6 +17,5 @@
 .sr-slides-foot button:hover { background: var(--sr-raised); }
 
 @media (max-width: 700px) {
-  .sr-slides-stage { grid-template-columns: 1fr; padding: 6vh 16px; }
-  .sr-slide-art { display: none; }
+  .sr-slides-stage { padding: 6vh 16px; }
 }

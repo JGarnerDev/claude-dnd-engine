@@ -33,9 +33,6 @@ frontmatter.
   narrates the rest.
 - Text before the first `##` is a note to the DM and is never shown.
 - No `[[wikilinks]]`: slides are for players, not a way into the entity graph.
-- Reserved: each slide will later carry an image (lofi pixel art of characters and items) in a
-  column beside the text. The carousel already leaves that column empty. No syntax yet, so don't
-  write one.
 
 ## Slide order
 

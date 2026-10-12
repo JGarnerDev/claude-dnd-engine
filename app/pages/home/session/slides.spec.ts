@@ -15,12 +15,11 @@ const key = (k: string) => document.dispatchEvent(new KeyboardEvent('keydown', {
 afterEach(() => { document.body.innerHTML = ''; });
 
 describe('slideHtml', () => {
-  it('renders the headline, markdown body, the empty art column and the counter', () => {
+  it('renders the headline, markdown body and the counter', () => {
     const el = document.createElement('div');
     el.innerHTML = slideHtml(deck, 1, 'Session 8');
     expect(el.querySelector('.sr-slide-title')!.textContent).toBe('Previously on…');
     expect(el.querySelector('.sr-slide-body li strong')!.textContent).toBe('Dip');
-    expect(el.querySelector('.sr-slide-art')!.innerHTML).toBe('');
     expect(el.querySelector('.sr-slides-count')!.textContent).toBe('2 / 3');
   });
 

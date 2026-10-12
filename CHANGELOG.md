@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.27.1] — 2026-10-12
+
+### Removed
+
+- **Recap slides' empty art column.** It was held for pixel art, which is dropped: the group doesn't want AI-generated art. Slide text now spans the stage, capped at 1200px wide so lines stay readable when screen-shared. The reserved-image note is gone from `meta/recap-slides.md`.
+
+### Fixed
+
+- **`.template-sync`** now ships `meta/recap-slides.md`, which `/recap` Phase 8 reads.
+
 ## [0.27.0] — 2026-10-10
 
 ### Added
