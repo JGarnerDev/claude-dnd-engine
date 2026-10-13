@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.36.0] — 2026-10-12
+
+### Added
+
+- **`scripts/label-check.py`.** Checks that a session's combatant labels agree everywhere they are written: the plan's `Label (party-facing):` lines, its Combatants At a glance list, the roles in `tokens.txt`, and the token lines of its battlemap layouts. `--stub` appends a tier-1 `tokens.txt` rule for each label with no role (real name and stat block in the note, regex guessed from the stat block) and prints paste-ready layout token lines; it never edits layouts or picks art. `/review` Pass 2 runs it. Shared parsers live in `scripts/lib/labels.py`. Tests in `tests/scripts/test_labels.py`.
+
+### Fixed
+
+- **`prep-status.py` read labels from the whole plan,** so a known NPC labelled by name (Mara) showed up as a missing token role. It now reads only `## Combatants`, the same scope as the token rules, and points to `label-check.py --stub` when a role is missing.
+
 ## [0.35.0] — 2026-10-12
 
 ### Added

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # prep-status.py -- what is left before a planned session can run.
-# consumers: CLAUDE.md, .claude/commands/review.md, .claude/commands/todo.md -- update these if usage, flags, or output format change.
+# consumers: CLAUDE.md, .claude/commands/review.md, .claude/commands/todo.md, scripts/label-check.py -- update these if usage, flags, or output format change.
 # Builds the session's prep checklist from its files instead of a hand-kept list:
 #   plan state and date, unset `<placeholders>` (with the beat they sit under),
 #   flow beats by marker, linked loot that is not confirmed, battlemap layouts and
@@ -25,6 +25,7 @@ from lib.common import (  # noqa: E402
     ROOT, ci_eq, cwrite, entity_md_files, get_frontmatter, index_staleness,
     read_text_no_bom, try_int, try_parse_date,
 )
+from lib.labels import combatant_labels, manifest_rules, role_of  # noqa: E402
 
 SESSIONS = ROOT / 'scheduler' / 'sessions'
 LOOT = ROOT / 'meta' / 'loot-options'
@@ -37,8 +38,6 @@ HEADING_RE = re.compile(r'^(#{3,4})\s+(.+?)\s*$')
 NODE_ID_RE = re.compile(r'^([A-Z][A-Z0-9]*_[A-Z0-9_]+)\b')
 FLOW_NODE_RE = re.compile(r'\b([A-Z][A-Z0-9]*_[A-Z0-9_]+)\s*[\[{(]+"\[([x?-])\]\s')
 WIKILINK_RE = re.compile(r'\[\[([^\]|#]+)')
-LABEL_RE = re.compile(r'\*\*Label \(party-facing\):\*\*\s*(.+)')
-RULE_RE = re.compile(r'^\s*\d+\s+(\S+)\s+\d+\s+')
 TASK_RE = re.compile(r'^\s*- \[ \]\s+(.+)')
 KIT_COUNT_RE = re.compile(r'^(\d+) tokens, ([\d.]+) MB', re.MULTILINE)
 
@@ -78,25 +77,14 @@ def flow_markers(text: str) -> dict:
 
 
 def label_roles(text: str) -> list:
-    """tokens.txt roles implied by the plan's Label (party-facing) lines, in order.
+    """tokens.txt roles implied by the Label (party-facing) lines under ## Combatants, in order.
 
-    'Mastiff 1 (Brick), Mastiff 2 (Mortar)' -> ['mastiff']; 'Half-orc Cask-hand' ->
-    ['half-orc-cask-hand']."""
-    roles = []
-    for line in LABEL_RE.findall(text):
-        for part in line.split(','):
-            label = re.sub(r'\([^)]*\)', '', part).strip(' .*_')
-            label = re.sub(r'\s+\d+$', '', label).strip()
-            if not label:
-                continue
-            role = re.sub(r'\s+', '-', label.lower())
-            if role not in roles:
-                roles.append(role)
-    return roles
+    Labels elsewhere in the plan (a known NPC's, such as Mara's) are not combatant roles."""
+    return list(dict.fromkeys(role_of(x) for x in combatant_labels(text)))
 
 
 def manifest_roles(text: str) -> set:
-    return {m.group(1).lower() for line in text.splitlines() if (m := RULE_RE.match(line))}
+    return {role for _, role in manifest_rules(text)}
 
 
 def open_tasks(text: str) -> list:
@@ -269,7 +257,8 @@ def main():
         have = manifest_roles(read_text_no_bom(manifest))
         missing = [x for x in roles if x not in have]
         if missing:
-            r.line('TODO', 'labels with no tokens.txt rule: ' + ', '.join(missing))
+            r.line('TODO', 'labels with no tokens.txt rule: ' + ', '.join(missing)
+                   + f'; uv run scripts/label-check.py --session {n} --stub adds them')
         else:
             r.line('ok', f'all {len(roles)} combatant labels have a tokens.txt rule')
     # Kits built before v0.35.0 kept their README inside tokens/.

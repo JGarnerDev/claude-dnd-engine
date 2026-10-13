@@ -24,9 +24,14 @@ The toll is `<a price>`.
 `<inside a fence>`
 ```
 
+## Combatants
+
 - **Label (party-facing):** Drover
 - **Label (party-facing):** Mastiff 1 (Brick), Mastiff 2 (Mortar)
-- **Label (party-facing):** Cask-hand (Haddo), Half-orc Cask-hand (Brask)
+
+## NPC Quick-Reference
+
+- **Label (party-facing):** Mara (the party knows her)
 """
 
 
@@ -37,8 +42,8 @@ def test_placeholders_skip_frontmatter_and_fences_and_name_their_beat():
     ]
 
 
-def test_label_roles_drop_numbers_and_parentheticals():
-    assert ps.label_roles(PLAN) == ["drover", "mastiff", "cask-hand", "half-orc-cask-hand"]
+def test_label_roles_only_read_the_combatants_section():
+    assert ps.label_roles(PLAN) == ["drover", "mastiff"]
 
 
 def test_manifest_roles_read_rule_lines_only():
