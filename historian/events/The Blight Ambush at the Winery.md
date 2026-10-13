@@ -14,6 +14,7 @@ date: "On the grounds outside the Wizard of Wines, on leaving the cleared buildi
 timeline_date: "0735-11-10"
 outcome: "The party left the cleared winery to report to [[Davian Martikov]] and walked into the blights that had been waiting outside — untouched by the vampire staff's death scream, which never carried past the cellar walls. [[Odibli]] opened with Shatter across seven of them and was needled to 0 HP for it. [[Iggy]] pulled the spine out of him, stabilized him with Lay on Hands, and spent both remaining second-level slots on Healing Word — one for Odibli, one for [[Luci]], who had critically failed a wall-run, landed on a blight's spike and then been crit to the ground. [[Dip]] bellowed for help across the grounds and cleaved blights two at a time. Raven swarms came off the winery's upper floor in answer and killed roughly as many as the party did. Dip felled the last one. Nobody died."
 consequences:
+  - "Fame: the Martikov ravens who fought beside the party saw Odibli's Shatter blow six blights apart in one blast."
   - "Settles the question Session 27 left open: [[The Vampire Staff]]'s scream killed every blight inside the winery and nothing outside it. Its reach was the building."
   - "Cleared the winery's exterior, completing the job the party thought they had already finished."
   - "Put the Martikov ravens into open battle alongside the party for the second time, setting up the wereraven disclosure minutes later."
@@ -63,3 +64,5 @@ Odibli's second Shatter was widened to catch Luci's own square with Paul's spoke
 Kellan's verdict: *"you guys didn't even need the staff."*
 
 > **Reliability:** Reconstructed from a machine transcript. The round count (~5–6) and the blight total (~12–14, split roughly evenly between the party and the ravens) are estimates from turn cycles, not table counts — Kellan also ran at least one joint turn, which blurs them. Individual damage figures are as spoken. [[Luci]]'s "energy storm" was posted into Discord rather than read aloud and is described here by effect only; confirm with Paul. No death saves were failed except Luci's one from the friendly Shatter.
+
+> **Reliability:** Fame line added during the stats backfill (2026-10-13, DM-approved). Who heard is a best guess from who witnessed it. Confirm with DM.

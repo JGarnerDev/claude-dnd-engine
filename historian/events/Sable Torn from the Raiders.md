@@ -15,6 +15,7 @@ order: 4
 daypart: night
 outcome: "In two rounds the party killed all six raiders at the Golden Lioness. Dip killed Arden, Willem and the mage Tallis. Halsby's twinned chromatic orb killed the crossbowman and a second bandit. As the big one rode off with a bound and gagged Sable across his horse, Halsby's magic missiles killed him in the saddle. The horse spooked and Sable fell clear. The party stopped the raiders present from taking anything more."
 consequences:
+  - "Fame: word spreads in [[Ashford]] of the stranger whose magic missiles dropped the raider leader from his horse."
   - "Sable Wren was saved but is still bound and gagged, and has not yet spoken to the party."
   - "Nella's crew at the Lioness died to a man. Only her cart escaped."
   - "Earns the party the standing for Sable's coming offer."
@@ -39,3 +40,5 @@ awareness: local
 # Sable Torn from the Raiders
 
 In two rounds the party killed all six raiders at the Golden Lioness. Dip killed Arden, Willem and the mage Tallis. Halsby's twinned chromatic orb killed the crossbowman and a second bandit. As the big one rode off with a bound and gagged Sable across his horse, Halsby's magic missiles killed him in the saddle. The horse spooked and Sable fell clear. The party stopped the raiders present from taking anything more.
+
+> **Reliability:** Fame line added during the stats backfill (2026-10-13, DM-approved). Who heard is a best guess from who witnessed it. Confirm with DM.

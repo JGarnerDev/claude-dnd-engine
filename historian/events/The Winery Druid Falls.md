@@ -14,6 +14,7 @@ date: "Inside the fermentation room of the Wizard of Wines (~Day 14 in Barovia �
 timeline_date: "0735-11-10"
 outcome: "The party barricaded themselves inside the winery's fermentation room and found a druid on the balcony emptying a flask of thick syrup into the casks. She called the blights outside 'security,' refused to say what the flask was beyond that it 'works like a charm every time,' then cast Entangle and called twig blights out of the cask with a word in Druidic. After a long attritional fight, Dip broke free of the vines, raged, and killed her in a single greataxe turn."
 consequences:
+  - "Fame: the Martikov ravens watched Dip fell the druid in one greataxe turn, and word of it reaches [[Davian Martikov]] and the Keepers of the Feather."
   - "Gave the party the first concrete agent behind the siege — and killed her before she named who she served."
   - "Put the flask and a necklace of human teeth in the party's hands."
   - "Confirmed the wine is poisoned rather than merely undelivered, changing the mission from recovery to remedy."
@@ -33,6 +34,7 @@ relates_to:
   - [[Davian Martikov]] (whose winery was being poisoned)
   - [[Curse of Strahd]] (campaign)
 known_by:
+  - [[Davian Martikov]] (fame, through his ravens)
   - [[The Party]] (full)
 description: "The party killed the druid poisoning the Wizard of Wines — and discovered that killing her neither cleaned the wine nor stopped the blights."
 ---
@@ -61,3 +63,5 @@ Recorded in [[Session 26 The Poisoned Casks]].
 Took place at the [[Wizard of Wines]].  
 Known to / linked with [[The Party]], including [[Luci]].  
 Part of the [[Curse of Strahd]] campaign.
+
+> **Reliability:** Fame line added during the stats backfill (2026-10-13, DM-approved). Who heard is a best guess from who witnessed it. Confirm with DM.
