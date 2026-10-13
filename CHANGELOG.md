@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.34.0] — 2026-10-12
+
+### Added
+
+- **`scripts/prep-status.py`.** A session's prep checklist built from its files instead of by hand: plan state and date, unset `<placeholders>` with the beat they sit under, flow beats by marker, linked loot that isn't confirmed, layouts with missing or stale renders, combatant labels with no `tokens.txt` rule, whether the token kit is built and current, stale PC levels, the search index, and unchecked lines in the folder's `_tasks.md`. `_tasks.md` now holds only what no file can show (cards, questions for players). `/review --ready` runs it, and `/todo` folds its lines into Do soon. Tests in `tests/scripts/test_prep_status.py`.
+
 ## [0.33.0] — 2026-10-12
 
 ### Added

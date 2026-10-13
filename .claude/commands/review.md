@@ -105,5 +105,5 @@ The party should feel they steer the story, not ride it. Check the plan against
 
 1. Confirm the plan still parses: `uv run scripts/session-cards.py --session {NN}`
 2. If `_flow.md` exists: `uv run scripts/flow-status.py --set "<session folder>" --quiet`. Report only problems this review caused or touched
-3. With `--ready`: set `state: planned` in the plan's frontmatter
-4. In chat, list what changed, grouped by scene, plus any placeholders the DM must set, the new-canon list, and the choice count. Plain language, numbered. Do not commit
+3. With `--ready`: set `state: planned` in the plan's frontmatter, then run `uv run scripts/prep-status.py --session {NN}` for what is still left before game night (maps, tokens, draft beats, hand-kept tasks)
+4. In chat, list what changed, grouped by scene, plus any placeholders the DM must set, the new-canon list, and the choice count. With `--ready`, add the prep-status TODO lines after them. Plain language, numbered. Do not commit

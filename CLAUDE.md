@@ -125,6 +125,7 @@ Only cross-cutting scripts are listed here. Scripts that one command or domain u
 |---|---|---|
 | `session-brief.py` | Start of every `/session` | `uv run scripts/session-brief.py` |
 | `session-state.py` | Quick campaign/act/mission check | `uv run scripts/session-state.py` |
+| `prep-status.py` | What is left before a planned session can run: placeholders, draft beats, loot, maps, tokens, levels, `_tasks.md` | `uv run scripts/prep-status.py [--session <n>]` |
 | `party-status.py` | PC stats + afflictions | `uv run scripts/party-status.py` |
 | `free-entities.py` | Find available entities by type or player | `uv run scripts/free-entities.py [--type <type>] [--player <name>]` |
 | `contribution-balance.py` | Player contribution counts (pool vs. canonized) | `uv run scripts/contribution-balance.py` |
