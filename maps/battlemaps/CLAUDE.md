@@ -28,6 +28,8 @@ Purchased VTT asset packs (Forgotten Adventures, ~4 GB zips) live in `maps/roll2
 
 Target ~400 files / ~40 MB per session. Enough choice to dress the maps, small enough to upload to Roll20 by hand.
 
+**Roll20 storage quota:** the free tier holds 100 MB of uploads. To clear old kits, paste `maps/battlemaps/roll20-purge.js` into the browser console on the Roll20 editor and run `r20purge()`. It bulk-deletes through Roll20's internal endpoints, and its header says how. Deletion is permanent and pulls the image from every game, so keep a local copy of anything still in use.
+
 **Forgotten Adventures naming (Core Mapmaking Pack Part 1):**
 
 - Tree: `FA_Assets/!Core_Settlements/<Category>/<Subcategory>/...` (Clutter, Decor, Furniture, Lightsources, Workplace_Equipment, Combat, Textures, Vehicles, Burial_and_Graves, Natural_Decor), and `FA_Assets/!Effects/` (Fire, Smoke, Blast_Marks, Lightning, Magic, Webs, and animated `.webm`).

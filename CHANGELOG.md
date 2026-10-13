@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.30.0] — 2026-10-12
+
+### Added
+
+- **Roll20 upload purge.** `maps/battlemaps/roll20-purge.js` is a browser-console script that bulk-deletes uploaded Roll20 assets to get back under the free 100 MB storage quota. It works through Roll20's internal list and delete endpoints. `maps/battlemaps/CLAUDE.md` points to it from the kit workflow.
+
 ## [0.29.0] — 2026-10-12
 
 ### Added
