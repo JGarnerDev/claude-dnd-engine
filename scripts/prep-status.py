@@ -4,7 +4,8 @@
 # Builds the session's prep checklist from its files instead of a hand-kept list:
 #   plan state and date, unset `<placeholders>` (with the beat they sit under),
 #   flow beats by marker, linked loot that is not confirmed, battlemap layouts and
-#   their renders, combatant labels with no token rule, the token kit, stale PC
+#   their renders, combatant labels with no token rule, the token kit and whether it is
+#   recorded as uploaded (maps/battlemaps/tokens-uploaded.txt), stale PC
 #   levels, the search index, and unchecked lines in the folder's _tasks.md.
 # _tasks.md stays for what no file can show (cards to print, players to ask);
 # everything this script derives does not belong in it.
@@ -29,6 +30,7 @@ SESSIONS = ROOT / 'scheduler' / 'sessions'
 LOOT = ROOT / 'meta' / 'loot-options'
 ASSETS = ROOT / 'maps' / 'roll20 assets'
 RENDERS = ROOT / 'maps' / 'battlemaps'
+LEDGER = RENDERS / 'tokens-uploaded.txt'
 
 PLACEHOLDER_RE = re.compile(r'`(<[^>`]+>)`')
 HEADING_RE = re.compile(r'^(#{3,4})\s+(.+?)\s*$')
@@ -270,15 +272,21 @@ def main():
             r.line('TODO', 'labels with no tokens.txt rule: ' + ', '.join(missing))
         else:
             r.line('ok', f'all {len(roles)} combatant labels have a tokens.txt rule')
-    readme = kit_dir / 'tokens' / 'README.md'
+    # Kits built before v0.35.0 kept their README inside tokens/.
+    readme = next((p for p in (kit_dir / 'tokens-README.md', kit_dir / 'tokens' / 'README.md')
+                   if p.exists()), None)
     if manifest.exists():
-        if not readme.exists():
+        if not readme:
             r.line('TODO', f'kit not built; run uv run scripts/token-kit.py --session {n}')
         elif readme.stat().st_mtime < manifest.stat().st_mtime:
             r.line('TODO', f'kit is older than tokens.txt; rebuild with uv run scripts/token-kit.py --session {n}')
         else:
             m = KIT_COUNT_RE.search(read_text_no_bom(readme))
             r.line('ok', f'kit built: {m.group(1)} tokens, {m.group(2)} MB' if m else 'kit built')
+            uploaded = read_text_no_bom(LEDGER) if LEDGER.exists() else ''
+            if not re.search(rf'^{n}\s', uploaded, re.MULTILINE):
+                r.line('TODO', 'kit not recorded as uploaded; after uploading to Roll20, run '
+                       f'uv run scripts/token-kit.py --session {n} --uploaded')
 
     # Party
     r.head('PARTY')

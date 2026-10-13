@@ -1,0 +1,3 @@
+# Tokens already uploaded to the Roll20 art library. Kept by scripts/token-kit.py:
+# --uploaded adds a session, --forget removes one (or all, after a purge).
+# <session> <role> <FA file name>

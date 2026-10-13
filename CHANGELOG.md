@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.35.0] — 2026-10-12
+
+### Added
+
+- **Token upload ledger.** `maps/battlemaps/tokens-uploaded.txt` (tracked) lists every token already in the Roll20 art library and the session it went up in. `token-kit.py` never re-adds one: it counts toward its role's choices and the README lists it under the role as already in Roll20. New flags: `--uploaded` records a session's kit after upload (`--from <dir>` records another folder), and `--forget <n|all>` drops lines after a Roll20 purge. `prep-status.py` flags a built kit that was never recorded. Tests in `tests/scripts/test_token_kit.py`.
+
+### Changed
+
+- **One flat token folder per session (kit layout changes).** `token-kit.py` now writes every image straight into `session-<n>/tokens/` (no per-role subfolders), so the whole kit drags into Roll20 at once, and the README moves beside it as `session-<n>/tokens-README.md`. Kits are never split per map. Kits built before this keep the old layout until rebuilt; `prep-status.py` reads both.
+
 ## [0.34.0] — 2026-10-12
 
 ### Added
