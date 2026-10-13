@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.32.0] — 2026-10-12
+
+### Added
+
+- **Party-facing labels.** `/session` (Phase 5) gives every combatant a `Label (party-facing):` line beside its kit line: the one-to-three-word name the party uses before learning the real one (a job or a look, never a stat block or a bare weapon, unique per encounter, numbered only for lookalikes). The Combatants at-a-glance list leads with it. The label is the Roll20 token label, the `tokens.txt` role (lowercase, hyphenated) and the first word of a map layout's token line. `/review` Pass 2 checks it.
+
+### Changed
+
+- **Everyone gets a real name.** `/session` and `/review` Pass 2 now name every person and animal the plan puts in front of the party, walk-ons included, so anyone can talk. Narration can still leave them unnamed. This replaces the old rule of naming anonymous speakers only on request. Session 30's plan, layouts and token kit use the new labels.
+
 ## [0.31.0] — 2026-10-12
 
 ### Added

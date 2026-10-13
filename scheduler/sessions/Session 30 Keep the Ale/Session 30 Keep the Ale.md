@@ -92,17 +92,18 @@ variety (Jeff, 2026-10-07): a sneak, a healer, dogs and a wolf, so the fights ar
 ### At a glance
 
 - **The Dusk Fork** (Scene 6), mounted except the wolf:
-  - **Ilsa Thorn** (human, Scout) — the rider who goes for the camp
-  - **Fennel Dray** (human, Bandit) — crossbow on the horses
-  - **Cinder** (Wolf) — Fennel's, runs with the horses
+  - **Archer Rider** — Ilsa Thorn (human, Scout), the rider who goes for the camp
+  - **Crossbow Rider** — Fennel Dray (human, Bandit), crossbow on the horses
+  - **Wolf** — Cinder (Wolf), Fennel's, runs with the horses
 - **The Waystation** (Scene 7):
-  - **Varrick Tenn** (human, Bandit Captain) — the drover, between cart and fire
-  - **Haddo Keel** (human, Thug) and **Brask** (half-orc, Thug) — the cask-hands at the cart
-  - **Sennet Orrin** (human, Spy) — Bane's tally-man, the ledger's clerk, in and out of the shed
-  - **Hesper Mudd** (halfling, Acolyte) — hedge-priest at the fire
-  - **Tam "Clatter" Cobb** (human, Bandit) — crossbow on the shed roof
-  - **Brick** and **Mortar** (Mastiffs) — chained at the corral
-  - [[Nella]] on the ridge
+  - **Drover** — Varrick Tenn (human, Bandit Captain), between cart and fire
+  - **Cask-hand** — Haddo Keel (human, Thug), at the cart
+  - **Half-orc Cask-hand** — Brask (half-orc, Thug), at the cart
+  - **Tally-man** — Sennet Orrin (human, Spy), Bane's ledger clerk, in and out of the shed
+  - **Hedge Priest** — Hesper Mudd (halfling, Acolyte), at the fire
+  - **Roof Guard** — Tam "Clatter" Cobb (human, Bandit), crossbow on the shed roof
+  - **Mastiff 1** and **Mastiff 2** — Brick and Mortar (Mastiffs), chained at the corral
+  - **Sniper** — [[Nella]], on the ridge
 - **Morale:**
   - **The fork:** when Ilsa drops, or Fennel and Cinder are both down, each survivor makes a
     DC 12 WIS save (+0).
@@ -147,11 +148,13 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   Shoots the horses. If Cinder goes down, Fennel stops fighting and goes to the wolf.
   - **Kit (player-facing):** *a patched farm jerkin, no real armour, a light crossbow across the
     saddle and a cheap curved blade on his hip.*
+  - **Label (party-facing):** Crossbow Rider
 - **Tam "Clatter" Cobb** (human): on the shed roof (half cover), crossbow on whoever is in the
   open. Named for the bolts he never stops fiddling with; you hear him before you see him. Calls
   out targets to the floor, so whoever he's watching gets no hiding in the open.
   - **Kit (player-facing):** *a light crossbow and a quiver of mismatched bolts, a curved blade
     stuck through his belt, and a leather jerkin that has seen better owners.*
+  - **Label (party-facing):** Roof Guard
 
 ### Scout — Ilsa Thorn, the rear guard's rider
 
@@ -164,6 +167,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   sun-squinting, already half-turned toward the camp.
   - **Kit (player-facing):** *sun-faded leather riding armour, a longbow strung and ready, and a
     short sword at her hip.*
+  - **Label (party-facing):** Archer Rider
 - **Job:** watch the back trail. When the fight turns, Ilsa rides for the camp, not for the party.
 
 ### Wolf — Cinder
@@ -174,6 +178,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - Grey-black, scarred muzzle, keeps pace with the horses. Goes for a horse's legs first (a prone
   horse throws its rider).
   - **Kit (player-facing):** *no gear, just a frayed rope collar somebody tied on with care.*
+  - **Label (party-facing):** Wolf
 
 ### The drover — Varrick Tenn, reskinned Bandit Captain
 
@@ -191,6 +196,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   row of throwing daggers across his chest, and a scuffed leather bracer on his left forearm, laced
   and relaced so often the holes have worn into slots.* (The bracer is the loot; let them see it
   turn a blow first.)
+- **Label (party-facing):** Drover
 
 ### Thug — the cask-hands, Haddo Keel and Brask
 
@@ -203,6 +209,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - **Brask** (half-orc): long arms and a bad temper, sleeps against the cart wheel when off watch.
 - **Kit (player-facing, both):** *stained leather aprons over leather jerkins, iron-banded
   cask-mallets, and a heavy crossbow each, propped against the cart wheel.*
+- **Label (party-facing):** Cask-hand (Haddo), Half-orc Cask-hand (Brask)
 - **Station:** the cart, together, so Pack Tactics is live whenever someone reaches the casks.
   Paid by the barrel. *"Nobody touches the cart"* is their whole job.
 
@@ -218,6 +225,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   checking the haul. Slips between the shed doors and stabs whoever the Thugs are already hitting.
 - **Kit (player-facing):** *a clerk's coat, no armour, ink on the cuffs. A short sword he wears
   like he knows how to use it, and a little hand crossbow hooked to his belt.*
+- **Label (party-facing):** Tally-man
 - **If taken alive and asked about Bane,** he says the name and goes white. He'll trade the ledger
   for his life before he'll trade anything else.
 
@@ -231,6 +239,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   Varrick and the Thugs in round 1, then *cure wounds* on whoever is about to drop.
 - **Kit (player-facing):** *a homespun robe, a knotted wooden club, and a cord of mismatched holy
   charms she touches one after another, like she isn't sure which one works.*
+- **Label (party-facing):** Hedge Priest
 - **Use *sanctuary* sparingly.** On Varrick it stalls the morale trigger; if the fight is running
   long, she casts *bless* or heals instead.
 
@@ -242,6 +251,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - Chained at the corral (15-ft chains). They bark at anyone sneaking within 30 ft of the corral
   unless Stealth beats their passive Perception 18 (13, +5 for advantage). Loosed by any crew member as an action.
 - **Kit (player-facing):** *spiked iron collars on heavy chains.*
+- **Label (party-facing):** Mastiff 1 (Brick), Mastiff 2 (Mortar)
 
 ### Nella — veteran sniper (~CR 3, custom)
 
@@ -261,6 +271,7 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   rest; on paper her block is RTD ~1 against the back line.
 - **Kit (player-facing):** *dark studded leather under a long weathered cape, a tall longbow,
   and a short sword at her hip she doesn't touch.*
+- **Label (party-facing):** Sniper
 
 ### Running it
 
@@ -1070,6 +1081,7 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
   a deputy's blood down one side. Slung across her back, muzzle down, a short heavy thing of dark
   brass and iron with a flared mouth like a bell bolted to a walnut stock. It smells of burnt
   sulfur, the way the air does after lightning.*
+- **Label (party-facing):** Mara (the party knows her)
 - **The Fourth Letter** (lore in her entity file): a Cael heirloom sent by Lord Cael in place of
   the soldiers Ashford asked for. If anyone asks, a townsperson answers, not Mara: *"His lordship
   wrote back three times. Fourth time he sent that."* She fired one charge in her own street fight

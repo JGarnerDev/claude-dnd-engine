@@ -21,7 +21,7 @@
 #   == legend ==
 #   r  Rubble -- difficult terrain                      (overrides a terrain name)
 #   == tokens ==
-#   J3  S  purple  Sable Wren -- bound and gagged        (ref, glyph, colour, name)
+#   P12  Dv  red  Drover -- Varrick Tenn (Bandit Captain)  (ref, glyph, colour, name: label first)
 #   == zones ==
 #   M9:O10  gold  L  Light -- Steady 12-16 lands here    (ref:ref, colour, tag, name)
 #   == labels ==

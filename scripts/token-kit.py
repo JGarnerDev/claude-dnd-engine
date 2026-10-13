@@ -15,7 +15,9 @@
 #
 # Manifest: maps/roll20 assets/session-<n>/tokens.txt, one rule per line, "#" comments:
 #   <tier> <role> <max> <regex>  ; note for the README
-#   1  ilsa-thorn  3  Bandit_Archer|Elf_Scout   ; Ilsa Thorn, human Scout, mounted bow
+#   1  rider-archer  3  Bandit_Archer|Elf_Scout   ; Ilsa Thorn, human Scout, mounted bow
+# The role is the plan's party-facing label, lowercased and hyphenated (it reaches Roll20 as the
+# file name); real names go in the note.
 # The regex is matched case-insensitively against the path inside the zip. Desert_* tokens are
 # skipped unless the regex says "desert". If a rule matches more than <max>, picks are spread
 # evenly over the matches. A file already taken by an earlier rule is not taken twice.
