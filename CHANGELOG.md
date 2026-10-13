@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.31.0] — 2026-10-12
+
+### Added
+
+- **Budgeted token kits.** `scripts/token-kit.py` builds a session's Roll20 token kit from the FA Tokens Library zip inside a storage budget (default 30 MB of the free tier's 100 MB). It reads a tiered per-session manifest (`maps/roll20 assets/session-<n>/tokens.txt`: combatants, then named NPCs, then walk-ons) and tops up from the evergreen `maps/battlemaps/tokens-common.txt`. It downscales to 280 px per square and names files by role so they can be searched in the art library. It also writes a README with Roll20 sizes. Session 30's kit: 269 tokens, 22.8 MB. `maps/battlemaps/CLAUDE.md` documents the workflow.
+
 ## [0.30.0] — 2026-10-12
 
 ### Added

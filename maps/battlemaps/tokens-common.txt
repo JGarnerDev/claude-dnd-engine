@@ -1,0 +1,23 @@
+# Evergreen tokens -- filled after every session manifest, while budget remains (scripts/token-kit.py).
+# <tier> <role> <max> <regex>  ; note
+# Tokens that turn up in almost any session: townsfolk, the watch, road toughs, road animals.
+# Keep it world-agnostic; anything tied to one session goes in that session's tokens.txt.
+
+1  townsfolk-human  30  Commoners/.*Human_Commoner                      ; human commoners, any age
+1  townsfolk-other  24  Commoners/.*(Elf|Dwarf|Smallfolk|HalfOrc|Tiefling)_Commoner ; non-human commoners
+1  watch            10  Guards/Guard_(Fighter|Spearman|Archer|Arbalest)   ; town watch
+1  bandits          21  Adversaries/Bandits/                           ; spare road toughs
+1  dogs-and-horses   4  /Mastiff_A|/Sled_Dog_A|/Riding_Horse_A|/Draft_Horse_A ; the animals of any town
+2  workers         30  NPCs/Workers/(Blacksmith|Farmer|Lumberjack|Priest|Crier|Beggar|Maid|Fisherman|Peddler|Cook|Server|Barkeep|Minstrel|Apprentice_Wizard|Bricklayer) ; trades
+2  nobles           9  Nobles/Human_Noble                             ; gentry, merchants
+2  wild-wolves       3  /Wolf_A|/Dire_Wolf_A|Swarm_of_Ravens          ; woods and road
+2  wild-beasts     10  /(Boar|Black_Bear|Brown_Bear|Deer|Elk|Giant_Spider|Giant_Poisonous_Snake|Constrictor_Snake)_A1 ; forest encounters, CR 0-2
+2  small-critters  10  /(Rat|Cat|Raven|Owl|Hawk|Bat|Chicken|Goat|Sheep|Pig)_A1  ; familiars, livestock, ambience
+3  swarms            4  Swarm_of_(Rats|Bats|Poisonous_Snakes)|Insect_Swarm_(Wasps|Spiders) ; swarms
+3  cultists        12  Adversaries/Cultists/                          ; generic cult hands
+3  undead-basic    12  Adversaries/Undead/(Skeleton|Zombie)           ; skeletons and zombies
+3  adventurers      40  Adventurers/(Humans|!Core_Adventurers|Elves|Dwarves|Smallfolk|HalfOrcs)/ ; rival parties, mercenaries, hired blades
+3  mounts             6  Mount_(Mule|Pony|Warhorse_A|Draft_Horse|Elk)  ; travel and cavalry
+3  goblinoids        8  Adversaries/Goblinoids/                       ; goblins, hobgoblins, bugbears
+3  orcs              6  Adversaries/Orcs/                             ; orc raiders
+3  gnolls            4  Adversaries/Gnolls/                           ; gnoll packs

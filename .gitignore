@@ -32,6 +32,7 @@ maps/**/*.gif
 scheduler/**/maps/*.txt
 historian/**/maps/*.txt
 maps/battlemaps/**/*.txt
+!maps/battlemaps/tokens-common.txt
 # Purchased Roll20 / VTT asset packs (Forgotten Adventures etc.) -- licensed, multi-GB.
 maps/roll20 assets/
 app/node_modules

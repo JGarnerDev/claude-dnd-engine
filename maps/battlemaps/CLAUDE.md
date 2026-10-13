@@ -41,6 +41,13 @@ Target ~400 files / ~40 MB per session. Enough choice to dress the maps, small e
 
 **Forgotten Adventures Tokens Library (v1.14):** 1,446 PNGs, ~750 MB. Pull tokens into the same per-session kit, under `tokens/<role>/`, a few choices per role. Keep every choice in the kit, since Jeff swaps tokens at the table rather than picking ahead.
 
+**Token kits are built by `scripts/token-kit.py`, inside a storage budget (default 30 MB).** Don't hand-extract tokens.
+
+1. Write `maps/roll20 assets/session-<n>/tokens.txt`, one rule per line: `<tier> <role> <max> <regex>  ; note`. Tier 1 is the plan's Combatants, tier 2 named NPCs and companions, tier 3 walk-ons and set pieces. Leave PCs out; their tokens are already in the Roll20 game. Picking rules are in the bullets below.
+2. Dry-run with `uv run scripts/token-kit.py --session <n> --count`: matches, picks and estimated MB per rule. Retune rules that hit 0.
+3. Build with `uv run scripts/token-kit.py --session <n> [--budget <MB>] [--px <n>]`. It fills tier by tier, round-robin across roles. Then it fills from the evergreen manifest `maps/battlemaps/tokens-common.txt` (townsfolk, watch, bandits, road beasts) until the budget is spent. It downscales to 280 px per square, about half the size, and still crisp at Roll20's full zoom. It names files `<role>__<FA name>.png` so the art library can be searched by role. It writes `tokens/README.md` with each token's Roll20 size and anything left over budget.
+4. Library gaps (e.g. there is no raccoon) show as "No token in the library" in the README. Note the stand-in in the rule's note.
+
 - Tree: `FA_Tokens/Adventurers/<Ancestry>/` (PC-style classes, e.g. `Tiefling_Wizard_B1_Wand_Magic`), `FA_Tokens/Adversaries/<Faction>/` (Bandits, Guards, Cultists, Pirates, Undead, Goblinoids…), `FA_Tokens/Creatures/<5e creature type>/` (Beast has subfolders such as `Mammals`, `Birds`, `Aquatic`; also `Mounts`), and `FA_Tokens/NPCs/{Commoners,Nobles,Workers}/`.
 - Name pattern: `<Role>_<Variant>_<Gear>_<Size>_Scale<NNN>_<CreatureType>_01.png`. Gear names what the token holds (`Crossbow`, `Sword_Shield`, `Magic_Fire`), so match it to the stat block's attacks. Commoners and nobles are `<Ancestry>_Commoner_<F|M|A>_<NNN><A|B>`. Workers are trades (`Barkeep`, `Cook`, `Server`, `Apprentice_Wizard`, `Minstrel`, `Stablehand`).
 - **Sizing:** 400 px is one 5-ft square. Tiny, Small and Medium are drawn on a 1x1 canvas, Large on 2x2. `Scale<NNN>` means the canvas is NNN% oversized (`Riding_Horse_A1_Large_Scale200` is 1600 px, i.e. 4x4). Set the Roll20 token to the category size × NNN/100, and the art overhangs its base as intended.
