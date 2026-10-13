@@ -1,5 +1,5 @@
 ---
-description: "Plan the next homebrew session from campaign state, threads, and the scheduler."
+description: "Plan the next homebrew session from campaign state, threads, and the scheduler: a beat spine the DM edits first, then the full plan."
 argument-hint: "[--depth narrated|notes] [--scope inline|linked]"
 ---
 
@@ -208,7 +208,32 @@ Wait for the DM's response before continuing.
 
 ---
 
-## Phase 5 — Generate Session Plan
+## Phase 5 — Spine
+
+Settle the shape before writing any prose. Prose written for a beat the DM later cuts is wasted, so the full plan waits until the DM has seen and edited the skeleton.
+
+**Start from what exists.** If the act's flow graph set or an existing `_flow.md` already draws this session, build the spine from its nodes. Keep their ids and markers, and add only what the session still needs.
+
+Present the spine in chat:
+
+- **Header** — the proposed session name and the node id prefix `S<k>_`, where k is this session's place in the active act (Session 30 is the act's second session, so its ids start `S2_`)
+- **Scenes** — `Scene N — Title`, then the scene's trigger in one line. Scale the scene count to session length (Short: 3–4, Standard: 4–6, Long: 6–8)
+- **Beats** — one numbered line per beat under its scene: `<n>. S<k>_SLUG — what happens, in one line [kind]`. The kind is the beat's flow graph class: combat, social, decision, stake, seed, fail, or open for a beat waiting on a decision
+- **Choices** — real choices start their line with `Choice (party):` or `Choice (<PC name>):` and give each option's cost on the same line
+- **Fights** — one line under each combat beat: who and how many, the tier and XP band against the party, and the rounds expected. Stat blocks, kits and labels come in Phase 6
+- **Choice check** — a closing line counting the choices against `meta/player-agency.md` → How often (about two or three party choices and one character choice, no run of more than about three reaction-only scenes), naming the beat that pays off a past choice from Phase 1 Step 3, item 6, and naming any spotlight beat. If the spine falls short, add choices around its beats before showing it
+
+Number the beats across the whole session, not per scene. **Numbers are stable:** a cut beat retires its number and an added beat takes the next free one, so the DM can answer by number from a phone across turns. The free entity rule applies already: flag any entity a beat needs that is not in `data/` or `historian/`.
+
+End with: *"Edit by number (cut, change, add after), or say **go** to write the folder and flesh it. Say **chat** to flesh it here without writing files."*
+
+Apply each round of edits, re-show only the changed and added lines, and wait again. Approving the spine is not committing it: every beat stays `[-]`, or `[?]` while it waits on a decision, until Phase 7.
+
+---
+
+## Phase 6 — Flesh
+
+On **go** or **chat**, write the full plan for the approved spine.
 
 **Pre-step:** run the party dashboard for the Orientation paragraph and encounter balance:
 
@@ -216,11 +241,11 @@ Wait for the DM's response before continuing.
 uv run scripts/party-status.py
 ```
 
-Using all context gathered, produce a session plan in chat.
+**The spine is fixed.** Each beat becomes a `#### S<k>_SLUG — <one line>` node heading under its `### Scene N — Title`, in spine order, so the session runner shows each beat on its own card. Do not rename, reorder or add beats while fleshing. If fleshing shows a missing beat, or a review pass wants a new choice, list it in the Phase 7 report as a proposed spine change.
 
 **Frontmatter fields to populate:**
 
-- **Session name** — propose a name (the DM can change it)
+- **Session name** — the name from the spine (the DM can change it)
 - **Key locations** — use `[[wiki-link]]` to entities in `historian/locations/` or `data/locations/` only; not factions (e.g., `[[Domain of Barovia]]` is a faction; the region is `[[Barovia]]`)
 - **Key NPCs** — note if free (`data/`) or canon (`historian/`)
 - **Encounters** — for a roleplay-only shape, write `none planned` and stop; never invent encounters to satisfy a budget. Otherwise, list planned encounters sized to the resolved attrition tier (encounter count, round budget) and lethality tier (CR targets, tactics note per encounter); state the DMG XP band, then sanity-check with RTD and RTC math per `meta/difficulty.md`. The attrition budget belongs to the **adventuring day**, not the session: subtract the Rest Clock's rounds-since-long-rest from the tier budget and size to the remainder. If the remainder is near zero, the long rest is the content — plan it as a scene, or flag that pushing past budget bumps effective lethality a tier. Every combat-capable enemy and NPC in the plan gets a **`Kit (player-facing):`** line: one italic sentence of the armour and weapons the party can see, matching the stat block (studded leather for AC 15, no armour for the light ACs) and written without the creature's name, so it is safe to say before an introduction. Monsters with no gear get what they wear instead (a collar, a brand), or nothing. Each also gets a real name (the same rule as NPCs present below) and a **`Label (party-facing):`** line: the one-to-three-word name the party uses for it before they learn the real one. That name is the Roll20 token label and the `tokens.txt` role. A label names a job or what the party can see (*Drover*, *Tally-man*, *Roof Guard*), never a stat block (*Bandit Captain*) or a bare weapon (*Crossbow*). Labels are unique within an encounter. Number them only for true lookalikes (*Mastiff 1*, *Mastiff 2*). The Combatants at-a-glance list leads with the label: **Drover** — Varrick Tenn (human, Bandit Captain). Once the party learns a name, the DM renames the token at the table
@@ -237,7 +262,7 @@ Using all context gathered, produce a session plan in chat.
 
 ### Scenes
 
-One `### Scene N — [Title]` block per beat. Scale count to session length (Short: 3–4, Standard: 4–6, Long: 6–8).
+One `### Scene N — [Title]` block per spine scene, with the spine's beats as its `####` node headings.
 
 **Travel legs:** if the plan moves the party overland or by water between known points, read `meta/settlements.md` → Travel Legs first. It sizes the leg, advances the in-world clock (which feeds the Rest Clock and the long-rest gate), and keeps stops to 1–3 geography-derived working labels.
 
@@ -246,11 +271,11 @@ Each scene block contains:
 - **Trigger** — what causes this scene to begin (party action, NPC move, time passing)
 - **Location** — `[[wiki-link]]`; one-line description of what the space looks/feels like
 - **NPCs present** — name, one-line goal for this scene, one-line voice note (how they talk/carry themselves). Everyone the plan puts in front of the party gets a real name, walk-ons and named animals included, so anyone can be spoken to or talk to each other without the DM inventing a name at the table. The narration can still leave them unnamed until someone says it
-- **Beats** — ordered bullet list of what happens; branch points noted inline (e.g., *"if party refuses → …"*). Real choices start their bullet with `Choice (party):` or `Choice (<PC name>):` and give each option's cost (`meta/player-agency.md` → Mark choices in the plan)
+- **Beats** — under each node heading, what happens; branch points noted inline (e.g., *"if party refuses → …"*). Real choices start their bullet with `Choice (party):` or `Choice (<PC name>):` and give each option's cost (`meta/player-agency.md` → Mark choices in the plan)
 - **Narration** — if `depth: narrated`, include a `> *"..."*` blockquote for the key moment of the scene; if `depth: notes`, omit
 - **Transition** — one line on what triggers the move to the next scene or a likely detour
 
-**Choice check:** before moving on, count the choices across all scenes against `meta/player-agency.md` → How often (about two or three party choices and one character choice a session, with no run of more than about three reaction-only scenes). Include at least one visible payoff of a past choice from Phase 1 Step 3, item 6. If the plan falls short, add choices around the beats rather than reopening committed ones. List every choice point by node or scene in a **Choices** bullet in the plan's Engine notes.
+**Choices bullet:** the count was settled at the spine. List every choice point by node in a **Choices** bullet in the plan's Engine notes.
 
 If `scope: linked`, replace the full encounter detail with a one-line reference: `→ see [[encounter-{slug}]]` and note that the encounter file will be written separately.
 
@@ -310,24 +335,34 @@ If meta preference files are blank, note: *"Group preferences and worldbuilding 
 
 ---
 
-## Phase 6 — Offer to Write
+### Writing
 
-After presenting the plan, ask:
+On **chat**: present the plan in chat, write no files, and stop after it. Phase 7 does not run.
 
-> "Should I save this as a session file with `state: draft`?"
-
-If yes:
+On **go**:
 
 1. Read `meta/schemas/session.md` to confirm the frontmatter template, then read `.claude/commands/review.md` and run its passes over the plan in its `/session` mode (applied directly, no findings list)
 2. Determine path based on scope (filename = exact display name, matching canon precedent — e.g. `Session 14 The Road Remembers.md`):
    - Always create the folder `scheduler/sessions/Session {NN} {Name}/` and write the plan inside it as `Session {NN} {Name}.md`
    - `scope: linked` → also write each encounter into that folder as `Encounter {Name}.md`
-   - Offer to add `_flow.md`, the session's mermaid flow chart, in the same folder — see `meta/flow-graphs.md` and `/flow --session {NN}`
+   - Write `_flow.md`, the session's mermaid flow chart, in the same folder, drawn from the spine. Read `meta/flow-graphs.md` once for its conventions. Every node is `[-]` or `[?]` unless it came from an existing set already marked `[x]`, and the Commitment ledger says "nothing committed yet" when nothing is
 3. Populate all mandatory frontmatter fields from the plan above
 4. Write the full body (Orientation, Scenes, NPC Quick-Reference, Contingencies, Closing) into the main file
 5. Leave historian-only fields commented out (they are filled after play)
 6. **Spotlight commitment:** if the plan builds a scene on a PC's `spotlight_hooks:` entry, advance that entry's `status` from `open → seeded` on the PC file (it becomes `paid` later, at `/recap`, when the beat lands). Only seed hooks the plan actually commits to — surfacing one as an option in Phase 3 is not a commitment.
 
-If no: leave the plan in chat for the DM to use or adapt manually.
+Do not paste the written plan into chat. The report is the `/review` close list (changes by scene, placeholders the DM must set, the new-canon list, the choice count), followed by Phase 7.
+
+---
+
+## Phase 7 — Commit pass
+
+Walk the plan's `[-]` nodes against the commit gate (`meta/flow-graphs.md` → The commit gate, already read in Phase 6). Present, numbered:
+
+- the beats that now meet the gate, each with the plan heading that backs it
+- the beats that do not, each with what is missing
+- any spine changes proposed in Phase 6
+
+The DM approves by number ("all" is a fine answer). Flip only the approved beats to `[x]` in `_flow.md` and add their Commitment ledger lines. **Never flip a beat on your own judgment.** Approved spine changes go in as new `[-]` beats with their prose, and come back to this list.
 
 Before the DM marks a draft ready to run (`state: draft → planned`), suggest `/review {NN} --ready`.

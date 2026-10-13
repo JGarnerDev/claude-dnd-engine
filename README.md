@@ -112,8 +112,9 @@ This command:
 1. Reads your campaign, active act, and active mission
 2. Detects whether you're mid-mission with an open cliffhanger (continue) or at a clean break — mission complete or no active mission (transition)
 3. In transition mode, surfaces 3 narrative hooks and asks which direction
-4. Generates a session plan (opening scene, key NPCs, encounters, closing hook)
-5. Offers to write the plan as a draft in `scheduler/sessions/`
+4. Shows a numbered spine of scenes and one-line beats for you to edit by number
+5. On **go**, writes the full plan for the beats you kept, plus its flow chart, as a draft in `scheduler/sessions/`
+6. Proposes which beats are ready to commit; you approve by number
 
 ### Check Your Free Entity Pool
 

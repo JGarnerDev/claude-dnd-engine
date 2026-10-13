@@ -18,7 +18,7 @@ Review a session plan before it runs: fill what is thin, make lines plain and cu
 
 Two modes:
 
-- **Called by `/session` Phase 6** (plan being written for the first time): run the passes and apply them directly. No findings list.
+- **Called by `/session` Phase 6** (plan being written for the first time): run the passes and apply them directly. No findings list. The DM already approved the spine, so never add a beat in this mode: a new beat a pass wants, such as a Pass 5 choice, goes back to `/session` as a proposed spine change.
 - **Run by the DM** (standalone): run the passes, present the findings as a numbered list in plain language, and apply what the DM approves ("all" is a fine answer). Keep the numbers stable across follow-up turns, so the DM can answer by number from a phone.
 
 Read once, at the start: the plan file, its `_flow.md` if present, `meta/player-agency.md` (for Pass 5), and the files of every NPC who speaks and every location a scene is set in (1 hop, frontmatter first). Do not re-read the plan between passes.
@@ -36,7 +36,7 @@ Look for, and fill:
 - **Branch outcomes with no response.** Every success, failure or refusal node gets the NPC's reaction in a line
 - **Discoveries with no sensory detail:** an item's first touch, what a successful Perception or Read roll notices (offer 3–5 options), a creature hidden for a blindsight or Perception check. Food and drink the party will consume get a look, a taste and any catch
 - **Names planted with no delivery.** For each thread seed, say who says it and how (secondhand description, a silence, a gesture) and where to stop
-- **Combatants with no visible kit.** Every combat-capable enemy and NPC gets a `Kit (player-facing):` line under its entry: one italic sentence of the armour and weapons the party can see, matching the stat block, with no name in it (see `/session` Phase 5, Encounters)
+- **Combatants with no visible kit.** Every combat-capable enemy and NPC gets a `Kit (player-facing):` line under its entry: one italic sentence of the armour and weapons the party can see, matching the stat block, with no name in it (see `/session` Phase 6, Encounters)
 - **Mid-fight beats:** a few flat lines for the enemies, a morale-break line, and what a bound or sidelined NPC does while the party fights
 - **Contingencies whose tone changes** (a colder NPC, a worse deal). Give one sample line for the changed tone
 
@@ -59,8 +59,8 @@ For every named person the plan introduces who has no entity file:
 - **No collisions.** Check the name against `historian/` and `data/` (`uv run scripts/entity-graph.py --name "<name>"` or a grep). Avoid surnames already in use, so the table never hears two Harrows
 - **Free entities are a choice, not a filler.** If a `data/` entity would fit the role, name it to the DM as an option rather than pulling it in silently (`data/CLAUDE.md`)
 - **Describe once, at first appearance.** One light description (10 words or fewer) where the person first shows up in the plan's running order. Later mentions use the name only
-- **Everyone has a real name.** Every person or named animal the plan puts in front of the party has one, walk-ons included (`/session` Phase 5, NPCs present). Backfill missing ones in the cast list or the scene's NPCs-present line, and leave the narration alone: "a villager" and "someone mutters" stay as written, so who carries a line does not change. List the names you added in Pass 4
-- **Every combatant has a party-facing label.** Each one gets a `Label (party-facing):` line next to its `Kit (player-facing):` line (`/session` Phase 5, Encounters). The label names a job or a look, never a stat block, a bare weapon or a name the party has not learned. It is unique within its encounter, and only true lookalikes are numbered. The Combatants at-a-glance list leads with it. If the session has a `tokens.txt`, its roles are the labels in lowercase with hyphens
+- **Everyone has a real name.** Every person or named animal the plan puts in front of the party has one, walk-ons included (`/session` Phase 6, NPCs present). Backfill missing ones in the cast list or the scene's NPCs-present line, and leave the narration alone: "a villager" and "someone mutters" stay as written, so who carries a line does not change. List the names you added in Pass 4
+- **Every combatant has a party-facing label.** Each one gets a `Label (party-facing):` line next to its `Kit (player-facing):` line (`/session` Phase 6, Encounters). The label names a job or a look, never a stat block, a bare weapon or a name the party has not learned. It is unique within its encounter, and only true lookalikes are numbered. The Combatants at-a-glance list leads with it. If the session has a `tokens.txt`, its roles are the labels in lowercase with hyphens
 
 ---
 

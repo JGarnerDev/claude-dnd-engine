@@ -10,7 +10,7 @@ Contract for what a correct, efficient `/session` run looks like. The command do
 
 1. `scripts/session-brief.py` — root CLAUDE.md mandates it at start of every `/session`. Covers campaign, active act/mission, last-session cliffhanger. Manual reads duplicating its output are rubric-1 failures.
 2. Index staleness — reported by `session-brief.py` (`SEARCH INDEX STALE` / `NEVER BUILT`); relay it to the DM. Reading `vector-index/.index-built` or running `git log` by hand is a rubric-1 failure. Prompt only; never rebuild.
-3. `scripts/party-status.py` — Phase 5 pre-step; feeds the Orientation party-state paragraph and encounter balance without opening PC files.
+3. `scripts/party-status.py` — Phase 6 pre-step; feeds the Orientation party-state paragraph and encounter balance without opening PC files.
 4. `scripts/semantic-search.py` — Phase 1 callback search (cliffhanger/hook query, `--source historian -k 5`); again in Phase 3B Step 2 if TRANSITION (`--exists false -k 8`).
 5. `scripts/free-entities.py` — TRANSITION Step 2 importance-flagged scan, instead of a manual frontmatter sweep of all of `data/`.
 6. `scripts/threads-brief.py` — TRANSITION Step 1 unresolved-thread scan, instead of a manual frontmatter sweep of `historian/`.
@@ -22,7 +22,8 @@ Contract for what a correct, efficient `/session` run looks like. The command do
   - `meta/` reference files per the Phase 1 tier rules — always-tier (difficulty, worldbuilding, mysteries) every run; conditional-tier only when its stated trigger applies; once each per run, never re-read in later phases
   - Active mission + active act files (small, load-bearing)
   - Last session file (cliffhanger/recap/new_entities)
-  - `meta/schemas/session.md` — only if Phase 6 write is confirmed
+  - `meta/schemas/session.md` and `meta/flow-graphs.md` — only on **go** at the spine; once each
+  - The act's flow graph set file or an existing `_flow.md` for this session, if one exists — Phase 5 builds the spine from it
   - Specific lore file bodies — only when a lore domain is directly relevant to the chosen hook, stated in the trace
   - Entities that are key NPCs/locations in the final plan (1 hop max from them)
 - **Hard cap:** ~25 file reads for a CONTINUATION run, ~35 for TRANSITION, excluding script calls. Past the cap, declare scope to the DM before continuing.
@@ -35,14 +36,16 @@ Contract for what a correct, efficient `/session` run looks like. The command do
 3. **Phase 4 scoping + elaboration** — one batched message: length, shape, depth/scope if not given as args, elaboration decisions for sparse key entities, at most one hook-specific extra question. Wait once. Splitting into multiple messages is a finding.
    - **3b (conditional):** if the DM delegates drafting, one additional draft-approval message is required by the elaboration protocol — all delegated drafts batched into that single message. More than one draft round trip is a finding.
 4. **Free entity rule stops** — required entity missing from `data/` and `historian/`: stop and flag.
-5. **Phase 6 write offer** — "save as `state: draft`?"
+5. **Phase 5 spine** — numbered one-line beats with node ids, scenes, choices, fight sizes and a choice-count line, ending with the go/chat prompt. Edit rounds may loop; each round re-shows only changed and added lines, and beat numbers never shift. A persona's "save offer: yes" answers **go**; "no" answers **chat**.
+6. **Phase 7 commit pass** — numbered list of beats meeting the commit gate, beats that don't, and proposed spine changes. Flips only what the DM approves. Any `[x]` flipped without approval is a fail. Skipped on **chat**.
 
-Any question outside these five is a rubric-7 finding.
+Any question outside these six is a rubric-7 finding.
 
 ## Output contract
 
-- Session plan in chat: frontmatter fields (name, key locations as `[[wiki-links]]`, key NPCs with free/canon tag, encounters, loose threads, opening scene, closing hook) plus body sections in order: Orientation, Scenes (count scaled to length), NPC Quick-Reference (`/voice` capped at 2–3 top speakers), Contingencies, Closing, Approaching Entities (omit if empty), Cameo Candidates (omit if the brief printed no CAMEO PLAYERS block; no questionnaire greps or player-file reads). Elaboration is resolved at the Phase 4 checkpoint, before scenes are written — it is not an output section.
-- If write confirmed: file(s) under `scheduler/sessions/` per scope, `state: draft`, `exists: false`, historian-only fields commented out.
+- Spine in chat (Phase 5) before any prose. A plan whose scenes or beats differ from the approved spine without a Phase 7 proposal is a finding.
+- Session plan, written to file on **go** (chat gets the `/review` close list, not the plan) or in chat on **chat**: frontmatter fields (name, key locations as `[[wiki-links]]`, key NPCs with free/canon tag, encounters, loose threads, opening scene, closing hook) plus body sections in order: Orientation, Scenes (count scaled to length), NPC Quick-Reference (`/voice` capped at 2–3 top speakers), Contingencies, Closing, Approaching Entities (omit if empty), Cameo Candidates (omit if the brief printed no CAMEO PLAYERS block; no questionnaire greps or player-file reads). Elaboration is resolved at the Phase 4 checkpoint, before scenes are written — it is not an output section.
+- On **go**: file(s) under `scheduler/sessions/` per scope, `state: draft`, `exists: false`, historian-only fields commented out, plus `_flow.md` with every node `[-]` or `[?]` before the commit pass. Each spine beat is a `#### S<k>_SLUG` heading in the plan.
 - If meta files blank: the canned "preferences not yet filled" note, once.
 - If a `campaign-design-preferences.md` item is deployed: noted in the plan.
 

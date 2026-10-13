@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.33.0] — 2026-10-12
+
+### Added
+
+- **Spine first.** `/session` Phase 5 now shows a numbered spine before any prose: scenes, one-line beats with their node ids and flow graph kind, choices with their costs, one line per fight and a choice-count line. The DM edits by number (numbers never shift) and says **go** to write the folder or **chat** to keep the plan in chat. If the act's flow set or an existing `_flow.md` already draws the session, the spine starts from its nodes.
+- **Commit pass.** New `/session` Phase 7 lists which beats now meet the flow graph commit gate, which don't and why, and any spine changes fleshing turned up. The DM approves by number; nothing is flipped to `[x]` without that.
+
+### Changed
+
+- **`/session` Phase 6 fleshes only the approved spine.** Each beat becomes a `####` node heading; no beats are added, renamed or reordered while fleshing. On **go** it always writes `_flow.md` (previously offered) and reports the `/review` close list instead of pasting the plan into chat. The choice check moved to the spine. `/review` in `/session` mode no longer adds beats; it proposes them. `tests/commands/session/spec.md` gains the spine and commit-pass checkpoints.
+
 ## [0.32.0] — 2026-10-12
 
 ### Added
