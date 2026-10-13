@@ -34,6 +34,7 @@ Otherwise, ask the DM the following. Keep it conversational — rough notes are 
 6. **New entities** — Anything invented at the table that doesn't have a file yet? (NPCs named on the fly, locations described, items handed out.)
 7. **Table reaction** — What landed? Anything that fell flat or felt off? (One line is fine — this informs future planning, not canonization.)
 8. **Choices** — What did the party (or one player) decide that should matter later? Propose the list yourself from the recap and the plan's `Choice (...)` bullets, and let the DM confirm, cut or add. One line each: who chose, what, and what it set in motion. (`meta/player-agency.md` → Remember what they chose.)
+9. **Lines** — Any NPC line worth keeping word for word, or an NPC who came across differently from their file? Take the inbox note's `Quotable lines` first and ask only about NPCs it misses. Rough wording is fine; mark it `(?)`. This feeds the voice-shifts step in Phase 5.
 
 Wait for the DM's response before continuing.
 
@@ -159,6 +160,15 @@ For each entity flagged for canonization in Phase 3:
 
 For each confirmed nudge, check whether it **crosses a band** (an unrecorded prior value counts as neutral). A crossing is a relationship turning point. Note every crossing and carry the list to Phase 5.5 — the beat that caused it is an automatic event-promotion candidate there.
 
+**Voice shifts (after the affinity nudges — uses their band crossings):** read `meta/voice.md` once (layers, rules, section shape). Cover every NPC or antagonist who spoke on screen this session, plus every `key_npcs` entry that already has a `## Voice` section. For each, propose only what this session gives evidence for:
+
+- **Lines** — up to 3 verbatim lines for `Said at the table`, from Phase 2 question 9. Never write a line nobody said
+- **Now** — a change only with a cause from this session: a band crossing, a state change, a betrayal, a loss, a rescue, a choice that hit them. Show it as `old → new (S{nn}: cause)`
+- **Core** — only for a **correction** (the table played them against their file) or an **arc shift** the DM calls. A now change that would break their Never line is an arc shift by definition: flag it and ask, do not write it as now
+- **New voice** — an NPC who spoke and has no section: draft the core from their lines and `personality`, marked as a draft for the DM to confirm
+
+Present one numbered item per NPC, stable numbers, so the DM can answer from a phone ("2 ok, cut 4's line"). On approval, write the `## Voice` section at the end of the body in the `meta/voice.md` shape. Set `voice:` when the core is new or changed, and log an arc shift's old core under `### Arc`. Then set `voice_confirmed: {session_number}` on **every NPC in the list, even with no change** — the restamp is what keeps `todo-brief.py` from flagging them stale. A legacy single-line `## Voice` gets an upgrade proposed in the same list. Propose nothing for an NPC with no line and no cause.
+
 **If an entity is missing (no file anywhere):**
 
 - Do not create it silently. Flag it clearly:
@@ -223,6 +233,7 @@ Report what was done:
 - Session file: moved to `historian/sessions/Session {NN} {Name}.md` (filename = exact display name, per `meta/schemas/entity.md`)
 - Entities canonized: [list with paths]
 - Entities with state updates: [list]
+- Voices updated / restamped: [list, marking any arc shift]
 - Missing entities still needing files: [list]
 - Campaign state: updated / no changes needed
 - Preference `Deployed:`/`Seeded:` lines updated: [list, or none]

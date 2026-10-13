@@ -86,6 +86,10 @@ When creating any entity, read `meta/entity-creation.md` before proceeding. It c
 
 PC/NPC files carry an optional `affinity:` field — a per-target liking score (integer −10..+10) toward specific characters, distinct from `relates_to` and `disposition`. When working with character sentiment (proposing nudges, reading relationships, backfilling), read `meta/affinity.md` once per task for scale, bands, scope, and frontmatter shape. `/recap` proposes nudges; `scripts/entity-graph.py` reads them.
 
+## NPC Voice
+
+NPC and antagonist files can carry a `## Voice` section: a **core** (how they speak, which changes only by correction or a DM-called arc shift) and a **now** layer (what sessions have done to them, every line citing its cause), plus lines actually said at the table. Frontmatter `voice:` holds the core in one line; `voice_confirmed:` stamps it. When writing, updating or playing a voice, read `meta/voice.md` once per task. `/recap` proposes voice shifts after the affinity nudges; `/voice` caches new ones; `todo-brief.py` flags stale stamps.
+
 ## Player Agency
 
 The party should steer the story, not ride it. Each session plan carries a few **real choices**, about two or three for the party and one for a single character, marked `Choice (party):` / `Choice (<PC>):`. Each act carries at least one choice that changes where the story goes. Committed beats stay; choices are added around them (how, at what cost, a visible way to beat a set outcome). `/session` plans them, `/review` Pass 5 checks for railroading, and `/recap` records what was chosen in the session's `choices:` field so later sessions can pay it off. Read `meta/player-agency.md` once per task when planning, reviewing or recapping.
@@ -149,7 +153,7 @@ Scripts output plain text; parse with your own judgment. They read frontmatter o
 
 ## Stamp Pattern
 
-Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, the campaign Rest Clock header, the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
+Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, NPC `voice_confirmed`, the campaign Rest Clock header, the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
 
 ## Versioning
 

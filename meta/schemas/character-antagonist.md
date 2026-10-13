@@ -34,9 +34,11 @@ Covers NPCs who are actively hostile to the party. When a neutral or friendly NP
 ## Schema
 
 ### Canonical Path
+
 `data/characters/antagonists/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `alive` | Living and active |
@@ -92,6 +94,8 @@ enemies:
   - [[Character or Faction Name]] (nature of conflict)
 character_sheet: ""    # path to sheet file, or inline summary
 human_detail: ""       # recommended for all antagonists: one comprehensible motive, mundane habit, or thing they protect
+voice: ""              # optional: core cadence and register in one line; see meta/voice.md
+voice_confirmed:       # optional: last played session the voice was checked at (stamp); set by /recap
 ---
 ```
 
@@ -109,7 +113,10 @@ Omit any line for values that are unknown — do not create dead placeholder lin
 
 Fill `human_detail` for all antagonists regardless of importance — even minor ones. One comprehensible reason, mundane habit, or thing they protect separates them from obstacle NPCs and makes encounters land harder.
 
+Once the antagonist has spoken at the table, `/recap` adds a `## Voice` section at the end of the body (core, now, lines said at the table, arc) and sets `voice` and `voice_confirmed`. Shape and rules: `meta/voice.md`.
+
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

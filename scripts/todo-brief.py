@@ -5,7 +5,7 @@
 #       scripts/validate.py (count_errors) for graph health, when present.
 # Collects every mechanical "needs attention" signal in one call:
 #   uncanonized sessions, recap inbox, untranscribed recordings, index staleness,
-#   unchecked topic-todo items,
+#   unchecked topic-todo items, NPC voice stamps (meta/voice.md),
 #   world buildout gaps (empty entity types, scheduler structure),
 #   questionnaire fill states, draft files, undeployed design preferences.
 # Output is raw signals; /todo translates them to plain DM language.
@@ -20,12 +20,15 @@ from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (ROOT, ci_eq, color, cwrite, entity_md_files, get_frontmatter,
-                        index_staleness, pending_recordings, read_text_no_bom, try_int,
-                        try_parse_date)
+                        get_frontmatter_from_text, index_staleness, pending_recordings,
+                        read_text_no_bom, try_int, try_parse_date)
 
 spotlight = importlib.import_module('spotlight-balance')
 
 D20, DRAGON, SCROLL, CROWN, HORNS = '🎲', '🐉', '📜', '👑', '🤘'
+
+_WIKI_NAME_RE = re.compile(r'\[\[([^\]|]+)')
+_VOICE_SECTION_RE = re.compile(r'^## Voice\s*$', re.M)
 
 
 def _glob(rel: str, pattern: str = '*.md') -> list:
@@ -34,6 +37,41 @@ def _glob(rel: str, pattern: str = '*.md') -> list:
         return entity_md_files(ROOT / rel)
     d = ROOT / rel
     return list(d.glob(pattern)) if d.exists() else []
+
+
+def voice_flags(root: Path) -> list:
+    """(text, color) lines for NPC voices that lag the sessions they appeared in.
+
+    Appearance is a played session's `key_npcs`, whose items come either bare
+    ([[Name]]) or quoted with a note ("[[Name]] (why they're here)"). A voice is
+    stale when its `voice_confirmed` stamp is older than its last appearance, and
+    unstamped when it has a `## Voice` section but no stamp (meta/voice.md).
+    """
+    last_seen = {}
+    for s in entity_md_files(root / 'historian' / 'sessions'):
+        fm = get_frontmatter(s)
+        n = try_int(fm.get('session_number'))
+        if n is None:
+            continue
+        for item in fm.get('_list_key_npcs', []):
+            m = _WIKI_NAME_RE.search(item)
+            name = (m.group(1) if m else item.split(' (')[0]).strip().lower()
+            last_seen[name] = max(last_seen.get(name, 0), n)
+
+    lines = []
+    for sub in ('npcs', 'antagonists'):
+        for f in entity_md_files(root / 'historian' / 'characters' / sub):
+            raw = read_text_no_bom(f)
+            fm = get_frontmatter_from_text(raw)
+            name = fm.get('name') or f.stem
+            stamp = try_int(fm.get('voice_confirmed'))
+            seen = last_seen.get(name.lower())
+            if stamp is None:
+                if _VOICE_SECTION_RE.search(raw):
+                    lines.append((f"  VOICE UNSTAMPED: {name} has a voice section but no voice_confirmed - confirm at next /recap or /voice", 'yellow'))
+            elif seen and seen > stamp:
+                lines.append((f"  VOICE STALE: {name} confirmed at session {stamp}, appeared in session {seen} - rebuild their current mood at next /recap", 'yellow'))
+    return lines
 
 
 def main() -> None:
@@ -152,6 +190,14 @@ def main() -> None:
             cwrite("  No Rest Clock section in campaign Current State (see meta/difficulty.md)", 'yellow')
             party_flags += 1
     if not party_flags:
+        cwrite("  (clean)", 'darkgray')
+
+    # -- 1b2b. NPC voice stamps -----------------------------------------------
+    cwrite("\n--- NPC VOICES ---", 'darkgray')
+    v_lines = voice_flags(ROOT)
+    for text, clr in v_lines:
+        cwrite(text, clr)
+    if not v_lines:
         cwrite("  (clean)", 'darkgray')
 
     # -- 1b3. Spotlight -------------------------------------------------------

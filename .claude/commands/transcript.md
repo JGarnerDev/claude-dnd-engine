@@ -138,7 +138,7 @@ digested: "<ISO date>"
 
 Fill every section. Leave `Open questions for the DM` as a short numbered list of only the `(??)` items — that list is what the DM actually has to answer, and keeping it short is what makes the note usable.
 
-`Quotable lines` holds verbatim lines with speaker and timestamp. These feed `/voice` later; they are the one part of the note where exact wording matters more than summary.
+`Quotable lines` holds verbatim lines with speaker and timestamp. `/recap` files the NPC lines into each speaker's `## Voice` section (`meta/voice.md`), so name the character, not the player, and favour lines that show how an NPC talks over lines that only carry plot. They are the one part of the note where exact wording matters more than summary.
 
 Do not delete the transcript. `/recap` deletes the inbox file after canonizing; the transcript stays as the record behind it.
 

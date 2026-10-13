@@ -13,7 +13,7 @@ Build a voice brief for an NPC — grounds new dialogue and characterization in 
 
 ## Behavior
 
-Read-only by default. Output is a compact DM reference card for playing the NPC. The only write this command may perform is the Phase 6 voice cache, and only with DM approval.
+Read-only by default. Output is a compact DM reference card for playing the NPC. The only write this command may perform is the Phase 6 voice cache (the `## Voice` section plus the `voice` and `voice_confirmed` fields), and only with DM approval.
 
 ---
 
@@ -37,6 +37,7 @@ Read the NPC's full file. Extract:
 - Any dialogue or speech examples in the body
 - Relationship notes from `relates_to`
 - Current `state` and `location`
+- `voice`, `voice_confirmed`, and the `## Voice` section if present (`meta/voice.md` — read once). Its core is fixed for this brief; its now lines and `Said at the table` are the strongest evidence you have. If `voice_confirmed` is older than the latest played session the NPC appeared in, the now layer is stale: rebuild it from the sessions after the stamp in Phase 3 and say so in the brief.
 
 ---
 
@@ -48,7 +49,7 @@ Find sessions where this NPC appeared or was referenced:
 uv run scripts/semantic-search.py "<npc name> <personality summary>" --source historian -k 5
 ```
 
-For results with score > 0.40, read the NPC quick-reference section of those session files for established voice notes.
+For results with score > 0.40, read the NPC quick-reference section of those session files for established voice notes. Those notes are what was *planned*; where they disagree with the file's `Said at the table` lines, the played lines win.
 
 ---
 
@@ -83,10 +84,10 @@ Keep each field to one line or a short bullet list. This is a DM reference card,
 
 ## Phase 6 — Offer to Cache the Brief
 
-**Skip silently if the NPC's file already has a `## Voice` section** — in that case Phase 2 read it and this run should have built on it, noting any drift between the cached brief and newer session evidence.
+**If the file already has a layered `## Voice` section,** skip the offer. Phase 2 read it and this brief built on it. List any drift between the section and newer session evidence, and leave it for `/recap` to resolve. A brief never edits an existing voice.
 
-Otherwise, offer once:
+**If it has a legacy `## Voice`** (not in the `meta/voice.md` shape, such as a single line) **or none,** offer once:
 
-> "Save this brief into [Name]'s file as a `## Voice` section? Future /voice calls (and /session NPC quick-reference) become a single file read."
+> "Save this as [Name]'s `## Voice` section? Future /voice calls (and /session NPC quick-reference) become a single file read, and /recap keeps it current."
 
-If yes: append the brief verbatim as a `## Voice` section at the end of the NPC's file (historian or data — wherever it lives), preceded by a one-line stamp: `*Cached by /voice after Session {latest played NN}; regenerate if the character shifts.*` Do not modify frontmatter. If no: leave the brief in chat only.
+If yes: write the section at the end of the file (historian or data, wherever it lives) in the `meta/voice.md` shape. **Speaks like** becomes the `voice:` frontmatter line. **Tell** goes under Core, with a Signature and a Never where the evidence supports them; leave out any it does not. **Callback** goes under `Said at the table` only if it quotes words actually spoken. **Wants right now** becomes a now line only if it cites its session. A legacy section is replaced, and its old wording is kept under `### Arc` as `before S{nn}: <old text>`. Set `voice_confirmed: {latest played session}`. Leave **Knows** and **Won't say** in chat; they go stale too fast to store. If no: leave the brief in chat only.

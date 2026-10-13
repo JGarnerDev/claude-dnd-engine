@@ -281,7 +281,7 @@ If `scope: linked`, replace the full encounter detail with a one-line reference:
 
 ### NPC Quick-Reference
 
-One entry per key NPC appearing this session. For canon NPCs, run `/voice <name>` first — **capped at the 2–3 NPCs carrying the most dialogue this session**. Skip `/voice` entirely for any NPC whose file was already read in full earlier in this run — derive the voice note from the in-context `personality`/`charm_hook` fields and body instead; a sub-command re-reading the same files adds nothing. Remaining canon NPCs get voice notes from their file's frontmatter and description only. Never invent fresh voice from scratch where history exists.
+One entry per key NPC appearing this session. For canon NPCs, run `/voice <name>` first — **capped at the 2–3 NPCs carrying the most dialogue this session**. Skip `/voice` entirely for any NPC whose file was already read in full earlier in this run — derive the voice note from the in-context `personality`/`charm_hook` fields and body instead; a sub-command re-reading the same files adds nothing. Remaining canon NPCs get voice notes from their file's frontmatter and description only. Never invent fresh voice from scratch where history exists. Where a file has a `voice:` field, that line is the NPC's core voice (`meta/voice.md`): carry it into the voice note unchanged, and bend it only by the `## Voice` section's now lines when the file was read in full.
 
 - **Name** — `[[wiki-link]]`
 - **Motivation** — what they want right now

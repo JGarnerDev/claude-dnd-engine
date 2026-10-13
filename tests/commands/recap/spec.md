@@ -20,7 +20,7 @@ Contract for what a correct, efficient `/recap` run looks like. The command doc 
 - **Full-body allowed:**
   - The inbox notes file, when one exists (it replaces most Phase 2 questions)
   - The played session plan (Phase 1)
-  - `meta/player-agency.md` (Phase 2 choices), `meta/character-focus.md` and `meta/schemas/session.md` → Spotlight Beats (Phase 2.5, skipped before cold-start clears), `meta/affinity.md` (Phase 5, only if relationships shifted), `meta/events.md` and `meta/schemas/event.md` (Phase 5.5, only if a beat is promoted)
+  - `meta/player-agency.md` (Phase 2 choices), `meta/character-focus.md` and `meta/schemas/session.md` → Spotlight Beats (Phase 2.5, skipped before cold-start clears), `meta/affinity.md` (Phase 5, only if relationships shifted), `meta/voice.md` and the body of each NPC on the voice-shifts list (Phase 5, only if an NPC spoke or a `key_npcs` entry has a voice), `meta/events.md` and `meta/schemas/event.md` (Phase 5.5, only if a beat is promoted)
   - The active campaign file (Phase 6: Current State and Rest Clock)
   - `meta/recap-slides.md` (Phase 8 slides, homebrew sessions only)
   - Conditional, only when triggered: `meta/types.md` (an entity moves `data/` → `historian/`), `meta/settlements.md` (improvised settlement or road), `meta/entity-creation.md` (DM approves creating a missing entity), `meta/campaign-design-preferences.md` / `meta/literary-devices.md` (the plan notes a deployed or seeded item), `meta/mysteries.md` (a new unknown is flagged)
@@ -36,7 +36,7 @@ Contract for what a correct, efficient `/recap` run looks like. The command doc 
 3. **Phase 2.5 attendance** — any PC absent from the recap: "absent, or just quiet?" Batched into one message, and may ride with checkpoint 2's follow-up.
 4. **Phase 3 entity report** — canonize / state-change / missing lists, plus confirmation of any fuzzy match scoring > 0.45.
 5. **Phase 4 conflicts** — CONFLICT and POSSIBLE results from `/check`. Skipped if `/check` is clean.
-6. **Phase 5 confirm-lists** — elaboration offers for newly canonized entities with no `personality`/`motivation`, missing-entity creation, affinity nudges, and whether an improvised settlement earned a file.
+6. **Phase 5 confirm-lists** — elaboration offers for newly canonized entities with no `personality`/`motivation`, missing-entity creation, affinity nudges, voice shifts (numbered, one item per NPC), and whether an improvised settlement earned a file.
 7. **Phase 5.5 event candidates** — skipped silently if no beat clears the bar.
 8. **Phase 6 campaign state** — proposed Current State, Rest Clock and preference-line changes.
 9. **Phase 8 recap slides** — homebrew only: the numbered deck draft with its kept-names list (the names check in `meta/recap-slides.md`), repeated until the DM approves or declines. Skipped for Strahd.
@@ -51,6 +51,7 @@ Checkpoints 6–8 are adjacent confirm-lists; batching them into one message is 
 - Canonized entities moved `data/` → `historian/` with `exists: true`, `source_session`, `confirmed_date`, and the active campaign tag
 - Every active PC restamped `level_confirmed: {session_number}`, even with no level-up
 - Rest Clock block restamped `(as of: Session {NN})`, even if nothing changed
+- `## Voice` sections written only for DM-approved voice-shift items, in the `meta/voice.md` shape, with no `Said at the table` line that nobody said. Every NPC on the voice-shifts list restamped `voice_confirmed: {session_number}`, even with no change. A core change that is not a correction or a DM-called arc shift is a finding
 - Event files in `historian/events/` only for DM-confirmed beats, each with `timeline_date`, `order` and `daypart`
 - Inbox notes file deleted, only after Phases 4–6 are written
 - Phase 7 summary in chat, ending with the one-line index-stale note

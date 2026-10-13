@@ -6,6 +6,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.37.0] — 2026-10-12
+
+### Added
+
+- **NPC voice records (`meta/voice.md`).** NPCs and antagonists can carry a `## Voice` section with two layers: a **core** (Signature, Never, Tell) that changes only by correction or a DM-called arc shift, logged under `### Arc`, and a **now** layer of at most three lines, each citing the session that caused it. `Said at the table` keeps up to five verbatim lines. New optional frontmatter: `voice` (the core in one line) and `voice_confirmed` (a Stamp Pattern stamp). Both added to the NPC and antagonist schemas.
+- **`/recap` voice shifts.** Phase 2 asks for lines worth keeping (from the inbox note's `Quotable lines` first). After the affinity nudges, Phase 5 proposes lines, now changes, core changes and new voices as a numbered confirm-list, and restamps `voice_confirmed` on every NPC on that list. Quotable lines from `/transcript` no longer vanish when the inbox note is deleted.
+- **`todo-brief.py` `--- NPC VOICES ---` block.** Flags an NPC whose last `key_npcs` appearance is newer than their `voice_confirmed`, and a voice section with no stamp. `/todo` lists them as backlog. Tests in `tests/scripts/test_todo_brief.py`.
+
+### Changed
+
+- **`/voice` caches in the layered shape** and sets `voice` and `voice_confirmed`. It never edits an existing layered section; it reports drift for `/recap` to settle. A legacy `## Voice` (such as Strahd's single line) gets an upgrade offer. Played lines outrank planned Quick-Reference notes.
+- **`/session` and `/review`** treat a file's `voice` line as the fixed core and play the now layer on top.
+
 ## [0.36.0] — 2026-10-12
 
 ### Added

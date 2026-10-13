@@ -98,6 +98,8 @@ sells:
   - [[Resource or Good Name]]  # optional: specific goods/services this NPC trades in; use only when economically relevant
 affinity:
   - [[Player Character Name]] (n)   # optional: per-target liking, integer -10..+10; see meta/affinity.md. Subject->target; absence = neutral (0)
+voice: ""              # optional: core cadence and register in one line; see meta/voice.md
+voice_confirmed:       # optional: last played session the voice was checked at (stamp); set by /recap
 ---
 ```
 
@@ -114,6 +116,8 @@ Race: [[Race Name]] | Class: [[Class Name]] | Background: [[Background Name]]
 Omit any line for values that are unknown — do not create dead placeholder links.
 
 For `disposition: friendly` or `importance: major` NPCs, consider a `charm_hook` — one specific detail (flaw, habit, fear, absurdity) that makes players want to root for them rather than just use them.
+
+Once the NPC has spoken at the table, `/recap` adds a `## Voice` section at the end of the body (core, now, lines said at the table, arc) and sets `voice` and `voice_confirmed`. Shape and rules: `meta/voice.md`.
 
 ### Form → Frontmatter Mapping
 
