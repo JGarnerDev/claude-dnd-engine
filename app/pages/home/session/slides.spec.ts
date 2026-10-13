@@ -23,6 +23,13 @@ describe('slideHtml', () => {
     expect(el.querySelector('.sr-slides-count')!.textContent).toBe('2 / 3');
   });
 
+  it('uses a generated slide’s html in place of its markdown body', () => {
+    const el = document.createElement('div');
+    el.innerHTML = slideHtml([{ title: 'Stats', md: 'ignored', html: '<div class="st-cards"></div>' }], 0, '');
+    expect(el.querySelector('.sr-slide-body .st-cards')).not.toBeNull();
+    expect(el.querySelector('.sr-slide-body')!.textContent).not.toContain('ignored');
+  });
+
   it('shows wikilinks as plain text, never entity links', () => {
     const el = document.createElement('div');
     el.innerHTML = slideHtml([{ title: 'T', md: 'Met [[Sable Wren]] at [[Ashford|the ford]]' }], 0, '');

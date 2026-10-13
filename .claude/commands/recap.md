@@ -35,6 +35,7 @@ Otherwise, ask the DM the following. Keep it conversational — rough notes are 
 7. **Table reaction** — What landed? Anything that fell flat or felt off? (One line is fine — this informs future planning, not canonization.)
 8. **Choices** — What did the party (or one player) decide that should matter later? Propose the list yourself from the recap and the plan's `Choice (...)` bullets, and let the DM confirm, cut or add. One line each: who chose, what, and what it set in motion. (`meta/player-agency.md` → Remember what they chose.)
 9. **Lines** — Any NPC line worth keeping word for word, or an NPC who came across differently from their file? Take the inbox note's `Quotable lines` first and ask only about NPCs it misses. Rough wording is fine; mark it `(?)`. This feeds the voice-shifts step in Phase 5.
+10. **Stats** — Take the inbox note's `Stats` first. Without a note, ask: who landed killing blows, crits, nat 20s or 1s, who healed, performed, punched or cast the most? Rough numbers are fine. This feeds the stats step in Phase 5 (`meta/stats.md`).
 
 Wait for the DM's response before continuing.
 
@@ -169,6 +170,10 @@ For each confirmed nudge, check whether it **crosses a band** (an unrecorded pri
 
 Present one numbered item per NPC, stable numbers, so the DM can answer from a phone ("2 ok, cut 4's line"). On approval, write the `## Voice` section at the end of the body in the `meta/voice.md` shape. Set `voice:` when the core is new or changed, and log an arc shift's old core under `### Arc`. Then set `voice_confirmed: {session_number}` on **every NPC in the list, even with no change** — the restamp is what keeps `todo-brief.py` from flagging them stale. A legacy single-line `## Voice` gets an upgrade proposed in the same list. Propose nothing for an NPC with no line and no cause.
 
+**Stats (after the voice shifts, both campaigns):** read `meta/stats.md` once (catalog, count vs sum, ledger shape). From Phase 2 question 10, present one numbered line per PC, stable numbers, catalog labels, rough sums as `~n`: `3. Iggy — heals cast 4, HP healed ~31, performances 2`. The DM answers from a phone ("3: healed 38", "ok"). A corrected sum drops the `~`; a sum the DM confirms as-is stays `~`. Leave out zeros and ids not in the catalog. On approval, append `## Session {nn}` to `historian/sessions/_stats.md` in the ledger shape. If the DM skips stats, write nothing. Then run `uv run scripts/stats-standings.py --session {nn}` and show the awards, flagging any `!` warnings.
+
+**Fame (after stats):** from the standout moments (a ⭐ personal best, a record-setting award, a killing blow on a named foe), propose up to three in-world fame beats as `F1.`, `F2.`: what happened and who would hear of it (`F1. Dip's killing blow on the drake — word reaches Vallaki?`). Nothing is fame without DM approval. Carry the approved ones to Phase 5.5 as event candidates. When the deed is already an event, add a `Fame:` consequence to it instead. Propose none when nothing stood out.
+
 **If an entity is missing (no file anywhere):**
 
 - Do not create it silently. Flag it clearly:
@@ -190,6 +195,7 @@ The home-page charts (`npm run home`) are a player/DM journal plotted from `type
 Apply the **hybrid promotion rule** (`meta/events.md` — read it once if not already in context): a beat earns its own event if **either** it changed canon (a death, pact, location lost/founded, faction shift a later session will reference) **or** it was simply memorable at the table (a great fight, betrayal, clutch reveal). Favor inclusion; low-stakes-but-fun beats ride as `importance: minor`.
 
 - Draw candidates from the Phase 2.5 tagged beats and the Phase 2 recap. Propose them as a short list — **do not write any event file without DM confirmation.**
+- **Add every approved fame beat from the Fame step** as a candidate. Set `participants` to the PC and the people who heard; `importance: minor` unless the DM says otherwise.
 - **Add every affinity band-crossing beat from the Affinity-nudges step** as a candidate here (a relationship that tipped into a new band is a turning point worth the timeline). Set `participants` to the subject and target so it fans onto their lanes; mark `importance: minor` unless the beat is independently major. The DM may still veto — the crossing only guarantees it surfaces.
 - For each confirmed beat, create a `type: event` entity per `meta/schemas/event.md` in **`historian/events/`** with `exists: true`, `campaign: {active campaign}`, `source_session: [[Session {nn}]]`, and a numeric **`timeline_date`** (from the session's `in_world_end_date`, else flag that the in-world date is unknown). Set `participants`/`relates_to` to the NPCs/factions involved — the extractor auto-fans the beat onto their Party-tab lanes; set an explicit `track:` only to override.
 - Mark a beat `secret: true` (via `state: secret`) only if it's DM-only knowledge the party doesn't have.
@@ -257,6 +263,8 @@ For a `campaign: homebrew` session, draft its party-facing deck. Read `meta/reca
 4. Write `_slides.md` into the session's folder, now in `historian/sessions/`: a one-line DM note, then one `##` heading per slide. No frontmatter, no `[[wikilinks]]`.
 
 If the DM declines, write nothing. The session's card simply shows no **Slides** button.
+
+Stats slides are not drafted here. The runner builds them from the ledger and slots them in before "Next time…" (`meta/stats.md`).
 
 ### Group-chat blurb
 

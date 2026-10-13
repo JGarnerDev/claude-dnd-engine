@@ -79,12 +79,57 @@ export interface PreviousSession {
   cliffhanger: string;
   path: string;
   slides: Slide[]; // party-facing deck from the folder's _slides.md; [] when none
+  stats?: Stats | null; // scripts/lib/stats.py standings (meta/stats.md); null when unledgered
 }
 
 // One slide of a deck (meta/recap-slides.md): a `##` headline and its body.
+// `html` is set only on generated slides (stats) and replaces the markdown body.
 export interface Slide {
   title: string;
   md: string;
+  html?: string;
+}
+
+// A stats category from the meta/stats.md catalog.
+export interface StatCategory {
+  id: string;
+  award: string;
+  label: string;
+  icon: string;
+  family: string;
+  kind: 'count' | 'sum' | string;
+}
+
+// One PC's value; `rough` marks a transcript-mined sum not yet corrected (~).
+export interface StatRow {
+  pc: string;
+  value: number;
+  rough: boolean;
+}
+
+export interface StatLeader extends StatCategory {
+  pcs: string[]; // ties share
+  value: number;
+  rough: boolean;
+}
+
+export interface StatAward extends StatLeader {
+  best: string[]; // PCs for whom this is a new personal best
+}
+
+export interface StatBoard extends StatCategory {
+  rows: StatRow[]; // top three
+}
+
+export interface Stats {
+  session: number;
+  campaign: string;
+  season: { first: number; last: number };
+  awards: StatAward[];
+  leaderboards: StatBoard[];
+  lifetime: StatLeader[];
+  previousSeason: { campaign: string; first: number; last: number; leaderboards: StatBoard[] } | null;
+  warnings: string[];
 }
 
 export interface SessionData {

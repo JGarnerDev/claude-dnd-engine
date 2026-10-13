@@ -22,7 +22,7 @@ export function slideHtml(deck: Slide[], i: number, label: string): string {
     <div class="sr-slides-stage" data-index="${i}">
       <div class="sr-slide-text">
         <h1 class="sr-slide-title">${escapeHtml(s.title)}</h1>
-        <div class="sr-slide-body">${renderMarkdown(unlink(s.md))}</div>
+        <div class="sr-slide-body">${s.html ?? renderMarkdown(unlink(s.md))}</div>
       </div>
     </div>
     <footer class="sr-slides-foot">

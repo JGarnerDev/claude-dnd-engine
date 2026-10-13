@@ -13,14 +13,15 @@ Contract for what a correct, efficient `/recap` run looks like. The command doc 
 1. `scripts/party-status.py` — Phase 2 level confirmation and Phase 2.5 attendance roster. Opening PC files to read `level` before the Phase 5 restamp is a rubric-1 failure.
 2. `scripts/semantic-search.py` — Phase 3 fuzzy fallback (`-k 3`) for any planned entity found in neither `historian/` nor `data/`. Declaring an entity missing without it is a finding.
 3. `/check <recap summary>` — Phase 4, before the session record is written.
-4. `scripts/validate.ps1 -Scope links -Quiet` — Phase 7, after all writes. Report only errors in files this run wrote; pre-existing errors are not this run's to fix.
+4. `scripts/stats-standings.py --session {nn}` — Phase 5, after the stats ledger is written, to show the awards. Skipped when the DM skips stats.
+5. `scripts/validate.ps1 -Scope links -Quiet` — Phase 7, after all writes. Report only errors in files this run wrote; pre-existing errors are not this run's to fix.
 
 ## Read budget
 
 - **Full-body allowed:**
   - The inbox notes file, when one exists (it replaces most Phase 2 questions)
   - The played session plan (Phase 1)
-  - `meta/player-agency.md` (Phase 2 choices), `meta/character-focus.md` and `meta/schemas/session.md` → Spotlight Beats (Phase 2.5, skipped before cold-start clears), `meta/affinity.md` (Phase 5, only if relationships shifted), `meta/voice.md` and the body of each NPC on the voice-shifts list (Phase 5, only if an NPC spoke or a `key_npcs` entry has a voice), `meta/events.md` and `meta/schemas/event.md` (Phase 5.5, only if a beat is promoted)
+  - `meta/player-agency.md` (Phase 2 choices), `meta/character-focus.md` and `meta/schemas/session.md` → Spotlight Beats (Phase 2.5, skipped before cold-start clears), `meta/affinity.md` (Phase 5, only if relationships shifted), `meta/voice.md` and the body of each NPC on the voice-shifts list (Phase 5, only if an NPC spoke or a `key_npcs` entry has a voice), `meta/stats.md` (Phase 5 stats, once), `meta/events.md` and `meta/schemas/event.md` (Phase 5.5, only if a beat is promoted)
   - The active campaign file (Phase 6: Current State and Rest Clock)
   - `meta/recap-slides.md` (Phase 8 slides, homebrew sessions only)
   - Conditional, only when triggered: `meta/types.md` (an entity moves `data/` → `historian/`), `meta/settlements.md` (improvised settlement or road), `meta/entity-creation.md` (DM approves creating a missing entity), `meta/campaign-design-preferences.md` / `meta/literary-devices.md` (the plan notes a deployed or seeded item), `meta/mysteries.md` (a new unknown is flagged)
@@ -36,7 +37,7 @@ Contract for what a correct, efficient `/recap` run looks like. The command doc 
 3. **Phase 2.5 attendance** — any PC absent from the recap: "absent, or just quiet?" Batched into one message, and may ride with checkpoint 2's follow-up.
 4. **Phase 3 entity report** — canonize / state-change / missing lists, plus confirmation of any fuzzy match scoring > 0.45.
 5. **Phase 4 conflicts** — CONFLICT and POSSIBLE results from `/check`. Skipped if `/check` is clean.
-6. **Phase 5 confirm-lists** — elaboration offers for newly canonized entities with no `personality`/`motivation`, missing-entity creation, affinity nudges, voice shifts (numbered, one item per NPC), and whether an improvised settlement earned a file.
+6. **Phase 5 confirm-lists** — elaboration offers for newly canonized entities with no `personality`/`motivation`, missing-entity creation, affinity nudges, voice shifts (numbered, one item per NPC), stats (numbered, one line per PC), fame beats (`F1.`, `F2.`), and whether an improvised settlement earned a file.
 7. **Phase 5.5 event candidates** — skipped silently if no beat clears the bar.
 8. **Phase 6 campaign state** — proposed Current State, Rest Clock and preference-line changes.
 9. **Phase 8 recap slides** — homebrew only: the numbered deck draft with its kept-names list (the names check in `meta/recap-slides.md`), repeated until the DM approves or declines. Skipped for Strahd.
@@ -52,6 +53,7 @@ Checkpoints 6–8 are adjacent confirm-lists; batching them into one message is 
 - Every active PC restamped `level_confirmed: {session_number}`, even with no level-up
 - Rest Clock block restamped `(as of: Session {NN})`, even if nothing changed
 - `## Voice` sections written only for DM-approved voice-shift items, in the `meta/voice.md` shape, with no `Said at the table` line that nobody said. Every NPC on the voice-shifts list restamped `voice_confirmed: {session_number}`, even with no change. A core change that is not a correction or a DM-called arc shift is a finding
+- Both campaigns, unless the DM skips stats: a `## Session {nn}` section appended to `historian/sessions/_stats.md` in the `meta/stats.md` ledger shape, only for DM-confirmed lines. An uncorrected sum without `~`, a zero line, or an id not in the catalog is a finding. Fame reaches canon only as a DM-approved Phase 5.5 event
 - Event files in `historian/events/` only for DM-confirmed beats, each with `timeline_date`, `order` and `daypart`
 - Inbox notes file deleted, only after Phases 4–6 are written
 - Phase 7 summary in chat, ending with the one-line index-stale note

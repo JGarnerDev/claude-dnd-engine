@@ -6,6 +6,22 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.38.0] — 2026-10-13
+
+### Added
+
+- **Character stats (`meta/stats.md`).** Table-side stats celebrate what each PC did (killing blows, crits, nat 1s, HP healed, performances, unarmed hits, spells cast and more), including **lanes** that only certain builds can win. Categories live in one catalog block in `meta/stats.md`. Stats are mechanical, never spotlight, and carry no perks. Counts are plain; sums mined from a transcript are rough (`~n`) until the DM corrects them.
+- **One shared ledger, `historian/sessions/_stats.md`,** for both campaigns, so flat Strahd sessions are covered too. The `_` keeps it out of validate, the index and the inventory.
+- **`scripts/stats-standings.py`** (logic in `scripts/lib/stats.py`): one session's awards (ties share, ⭐ personal bests), season leaderboards (top three, reset at each world swap), lifetime hall of fame, and the previous season's final standings when a session opens a season. `--json` for machines. Tests in `tests/scripts/test_stats_standings.py`.
+- **Stats slides in the recap deck.** The runner builds them from the ledger and slots them in before "Next time…": "While you were in Barovia…" after a Strahd season, "Last session's honors" (award cards), and "The standings" (bars plus a hall-of-fame strip). Generated, never written into `_slides.md`.
+
+### Changed
+
+- **`/transcript`** ledgers stats per PC with catalog ids, and the inbox note gains a `## Stats` section.
+- **`/recap`** asks about stats in Phase 2, confirms them as a numbered per-PC list in Phase 5 and writes the ledger, then proposes in-world **fame** beats (`F1.`) that only become canon as DM-approved Phase 5.5 events.
+- **`meta/recap-slides.md`** places the stats slides and exempts them from the "story, not mechanics" voice rule.
+- **`session-cards.py`** adds `stats` to each `previously[]` entry (additive; null when unledgered). The `Slide` type gains an optional `html`.
+
 ## [0.37.0] — 2026-10-12
 
 ### Added

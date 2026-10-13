@@ -59,6 +59,7 @@ For each chunk record only:
 - **Decisions** — choices the party made, and what they turned down
 - **Named entities** — every person, place, faction, or item named aloud, with the timestamp of first mention
 - **Mechanics** — combats (rough round count), rests (short or long), level-ups, damage taken, resources burned
+- **Stats** — per PC, each moment that fits a category in the `meta/stats.md` catalog (killing blows, crits, nat 1s, heals cast, songs performed, unarmed hits...), using the catalog ids. Add up spoken numbers for sums (damage, HP healed) and write them `~n`: many rolls are never said aloud, so a sum from a transcript is always rough. Read `meta/stats.md` once
 - **In-world time** — any stated time of day, date, or elapsed-travel reference
 - **Quotable lines** — verbatim NPC or PC lines worth keeping, with speaker and timestamp
 - **Table talk** — out-of-character reactions worth noting; keep these separate from in-fiction events
@@ -127,6 +128,8 @@ digested: "<ISO date>"
 
 ## Rests, rounds & in-world time
 
+## Stats
+
 ## New entities
 
 ## Table reaction
@@ -137,6 +140,8 @@ digested: "<ISO date>"
 ```
 
 Fill every section. Leave `Open questions for the DM` as a short numbered list of only the `(??)` items — that list is what the DM actually has to answer, and keeping it short is what makes the note usable.
+
+`Stats` holds one `### <PC>` per PC with `- <id>: <n>` lines in the `meta/stats.md` ledger shape. Sums are `~n`; a count you're unsure of gets `(?)`. `/recap` confirms these with the DM before anything goes in the ledger.
 
 `Quotable lines` holds verbatim lines with speaker and timestamp. `/recap` files the NPC lines into each speaker's `## Voice` section (`meta/voice.md`), so name the character, not the player, and favour lines that show how an NPC talks over lines that only carry plot. They are the one part of the note where exact wording matters more than summary.
 

@@ -50,13 +50,19 @@ Every deck follows the same order, so players know where to look:
    corrected by `## As Played`.
 6. **Next time…**: the hook from the `cliffhanger:` field, as a teaser.
 
+**Stats slides** come between 5 and 6 when the session has a stats ledger: award cards, then the
+season standings, opened by a "While you were in Barovia…" slide after a Strahd season. They are
+**generated, not written**: the runner builds them from `historian/sessions/_stats.md`, which the DM
+confirmed at `/recap`. Never put them in `_slides.md`. Rules and categories: `meta/stats.md`.
+
 ## Voice
 
 Slides are read aloud to the table, so write them like a story told by someone who was there.
 
 1. **Story, not mechanics.** Say what the characters saw, not what was rolled. No words that sound
    like checks, damage or rules: "read the yard" (Perception), "landed hidden" (Stealth), "hit
-   hard", "took the job", "the gift", "haggling".
+   hard", "took the job", "the gift", "haggling". **Exception:** the generated stats slides,
+   whose numbers are the point.
 2. **Only what was said.** When an NPC was vague, the slide stays vague. A reward the plan names is
    not one an NPC promised out loud: the fox said it would make it worth Halsby's while, so the
    slide says that, not "fuse his spear". The names check does this for names; do the same for
