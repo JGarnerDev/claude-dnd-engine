@@ -35,7 +35,7 @@ key_npcs:
   - "[[Bosco]] (historian — Iggy's raccoon; arrives on Sergei's back, the cold war with Odibli still on)"
   - "the prisoner (a silhouette only — Tyler's cameo, beat 1; no name, no lines)"
 encounters:
-  - "The Dusk Fork — Nella's rear guard: Ilsa Thorn (human Scout) and Fennel Dray (human Bandit), mounted, with Fennel's Wolf Cinder. ~350 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. Fennel shoots the borrowed horses and Cinder goes for their legs, not the PCs. A rider who escapes toward the camp raises its alert by one step."
+  - "The Dusk Fork — Nella's rear guard: Ilsa Hask (human Scout) and Fennel Dray (human Bandit), mounted, with Fennel's Wolf Cinder. ~350 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. Fennel shoots the borrowed horses and Cinder goes for their legs, not the PCs. A rider who escapes toward the camp raises its alert by one step."
   - "The Waystation — Varrick Tenn the drover (human Bandit Captain), Haddo Keel and Brask (human and half-orc Thugs, the cask-hands), Sennet Orrin (human Spy), Hesper Mudd (halfling Acolyte), Tam 'Clatter' Cobb (human Bandit, on the roof) and Brick and Mortar (Mastiffs) on the floor, Nella (custom, ~CR 3) on the ridge. ~4,188 adjusted XP against an all-level-5 party, Hard, RTC ~3.4 (floor ~2.7), RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
 loose_threads:
   - "Session 29's unplayed Scenes 4-5: the loot, the town, the names, Sable's offer, Iggy's song, the dead Boon"
@@ -76,7 +76,7 @@ three level-ups, each on its own beat: Iggy at the song, Odibli after saving the
 at the Spear · a third cask-hand added to hold the camp at Hard against an all-5 party · then
 both fights varied and the crew named (a Spy, an Acolyte, Mastiffs, a Wolf; mostly human, as the region is), still Hard.
 
-**Proposed by the engine, 2026-10-09 (draft, for Jeff to commit):** more choices for the
+**Proposed by the engine, 2026-10-09; committed by Jeff, 2026-10-13:** more choices for the
 players, so the night and the chase aren't only watched · Mara asks for one volunteer to give a
 statement at the jail (`S2_STATEMENT`) · the flame track sits on the table where the party can see
 it (`S2_HEARTH`) · a route choice at chase stages 2 and 4 (`S2_ROAD`, `S2_APPROACH`) · Nella's
@@ -92,7 +92,7 @@ variety (Jeff, 2026-10-07): a sneak, a healer, dogs and a wolf, so the fights ar
 ### At a glance
 
 - **The Dusk Fork** (Scene 6), mounted except the wolf:
-  - **Archer Rider** — Ilsa Thorn (human, Scout), the rider who goes for the camp
+  - **Archer Rider** — Ilsa Hask (human, Scout), the rider who goes for the camp
   - **Crossbow Rider** — Fennel Dray (human, Bandit), crossbow on the horses
   - **Wolf** — Cinder (Wolf), Fennel's, runs with the horses
 - **The Waystation** (Scene 7):
@@ -156,14 +156,14 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
     stuck through his belt, and a leather jerkin that has seen better owners.*
   - **Label (party-facing):** Roof Guard
 
-### Scout — Ilsa Thorn, the rear guard's rider
+### Scout — Ilsa Hask, the rear guard's rider
 
 - AC 13 · HP 16 · Speed 30 ft · CR 1/2 · Perception +5, Stealth +6, Survival +5
 - **Keen Hearing and Sight:** advantage on Perception checks that use hearing or sight
 - **Multiattack:** two melee or two ranged attacks
 - **Shortsword** +4 to hit, 1d6+2 piercing (avg 5)
 - **Longbow** +4 to hit, range 150/600, 1d8+2 piercing (avg 6)
-- **Ilsa Thorn** (human): Nella's best rider and the closest thing she has to a student. Quiet,
+- **Ilsa Hask** (human): Nella's best rider and the closest thing she has to a student. Quiet,
   sun-squinting, already half-turned toward the camp.
   - **Kit (player-facing):** *sun-faded leather riding armour, a longbow strung and ready, and a
     short sword at her hip.*
@@ -192,6 +192,9 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
   posting. He anchors the camp floor the way the big one anchored the raid, and **he holds the
   crew together:** while he stands, morale holds until only 2 are left. He doesn't roll morale
   himself. **He knows nothing useful** — taken alive, he is a Mara Tull problem.
+  - Taken alive, first line, with a nod at the ridge: *"I drive the cart. Paid by the mile. Ask
+    her."*
+  - Pushed on who pays: *"The clerk pays. I don't ask whose coin it is."*
 - **Kit (player-facing):** *studded leather worn like a uniform, a long drover's cart-whip, a
   row of throwing daggers across his chest, and a scuffed leather bracer on his left forearm, laced
   and relaced so often the holes have worn into slots.* (The bracer is the loot; let them see it
@@ -228,6 +231,8 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 - **Label (party-facing):** Tally-man
 - **If taken alive and asked about Bane,** he says the name and goes white. He'll trade the ledger
   for his life before he'll trade anything else.
+  - Asked who he works for: *"Harrow Bane. I shouldn't have said that. Take the book. Just the
+    book."*
 
 ### Acolyte — Hesper Mudd, hedge-priest
 
@@ -400,6 +405,7 @@ each block on its card.
 
 #### S2_TOWN — The whole town was hit at once; they couldn't reach the Lioness
 
+- **Choice (party):** how they explain themselves to Mara: the truth (the light, another world), a cover story, or nothing much. Whatever they say is what the town repeats, and what Mara checks tomorrow.
 - Every street fought its own raid. That's why nobody came for Sable. The town arrives late,
   bloodied, from its own fights.
 
@@ -486,6 +492,7 @@ each block on its card.
 
 #### S2_OFFER — A room and a meal, no strings. Then the deed, left on the table
 
+- **Choice (party):** take the deed tonight, take it at dawn, or leave it. Yes is 10% of the Lioness and a reason to come back; no costs nothing tonight, and the deed stays on the table.
 - **Thanks first:** a room and a hot meal tonight, because they saved her and her stock. No deal.
 - **Then the offer, a standing one:**
   - *"I can't pay you. I can give you a piece of this place. It's worth more if you stay and help
@@ -505,6 +512,7 @@ each block on its card.
 
 #### S2_IGGY — Iggy plays the room — his spotlight beat
 
+- **Choice (Dip):** Ben decides what Dip shares from the private roll: all of it, some of it, or nothing.
 - Carried from Session 29 (hook *"decode the unfinished final song trapped in the viol"*, seeded).
   **No resolution.**
 - **Describe only what the table can see or hear.** Jeff is Iggy's player and the DM, so Iggy's
@@ -579,7 +587,8 @@ each block on its card.
 
 #### S2_STATEMENT — Mara wants one of them at the jail tonight
 
-- **Draft (engine, 2026-10-09).** A small choice inside the inn night. Nobody has to go.
+- **Choice (party):** send one of them with Mara, or nobody. Whoever goes misses the stone and comes back a round late to the hearth, but learns Tallis's name and earns Mara's first off-duty line.
+- **Engine, 2026-10-09; committed 2026-10-13.** A small choice inside the inn night. Nobody has to go.
 - Before she leaves, Mara asks: *"I need one of you to walk back with me and put tonight on paper.
   Just one. The rest of you, sleep."*
 - **If nobody goes:** *"Then first thing tomorrow."* No penalty. Tallis's name waits for the hearth.
@@ -605,14 +614,15 @@ each block on its card.
 > worked. Somebody owes somebody three seeds back in Barovia, and the stone has nothing to say about
 > it."*
 
-- One line for the Barovia debt, then let it sit. **This is the reason to take the deed.** Expect
-  the yes here, or at dawn.
+- One line for the Barovia debt, then let it sit. If they take the deed, this is the likely
+  moment. A no is fine: the deed stays on the table (`S2_OFFER`).
 - If they accept tonight: Sable slides the deed across, says *"Ten,"* and pours another round.
   Record the 10% Stake.
 - **Transition:** the room empties, and the fire starts to go wrong.
 
 #### S2_HEARTH — The hearth is dying. Odibli finds the charm and writes over it
 
+- **Choice (Odibli):** Miguel picks the word Odibli writes over the glyph. The word is recorded, and Asher remembers it.
 - **Odibli's deed and level-up** (Jeff, 2026-10-07).
 - **Time:** ~10–15 minutes. Late, with the room emptied, so it stays apart from Iggy's song.
 
@@ -647,7 +657,7 @@ each block on its card.
 **The deed, run in rounds:**
 
 - **The flame track: 3 → 2 → 1 → 0.** At 0, the charm lets go.
-- **Show the track (draft, engine 2026-10-09).** Put three coins on the table and take one away
+- **Show the track (engine 2026-10-09, committed 2026-10-13).** Put three coins on the table and take one away
   each time the flame drops. A good Arcana read tells them what 0 means: *"When it dies, it all
   comes out at once."* They should know they can lose this. Don't tell them that Odibli levels
   either way.
@@ -707,6 +717,7 @@ each block on its card.
 
 #### S2_SPEAR — The fox waits at the water's edge. Halsby's Spear
 
+- **Choice (Halsby):** he gets one question for the fox, and it answers it, in Asher's dry voice and without ever giving his name. What he asks is recorded.
 - **Halsby's spotlight beat.** "After you, not before." The job is done.
 - The fox is sitting on a flat stone mid-ford, dry, as if the water goes around it. Smoky green
   eyes. Nobody else sees it until Halsby does.
@@ -757,7 +768,7 @@ each block on its card.
   (stage 4 only). A player who argues well for something else gets it.
 - **DCs:** stage 1 **12** · stage 2 **13** · stage 3 **13** · stage 4 **14** (Jeff, 2026-10-07).
   Record what actually gets used; it fills the empty Skill Challenge table in `meta/difficulty.md`.
-- **Two route choices (draft, engine 2026-10-09):** at stage 2 and stage 4, the party picks a route
+- **Two route choices (engine 2026-10-09, committed 2026-10-13):** at stage 2 and stage 4, the party picks a route
   before anyone rolls. Say both options out loud, let them choose, then roll. Details are under
   `S2_ROAD` and `S2_APPROACH`.
 - **Failures cost lead, never the trail.** A lost stage is a lamed horse, a cold fork, a night
@@ -776,6 +787,7 @@ each block on its card.
 
 #### S2_ROAD — Stage 2, the drover's road (DC 13)
 
+- **Choice (party):** the road (DC 13, a loss costs time) or the shortcut (DC 11, a loss lames one of Silas's horses: 11 gp, favour debt in doubt).
 - A wide, old cattle road through rolling scrub. The ruts mix with other traffic here.
 - **The route choice:** the road winds around the hills, and a drover's shortcut cuts straight over
   broken scrub.
@@ -799,6 +811,7 @@ each block on its card.
 
 #### S2_APPROACH — Stage 4, the camp approach (DC 14)
 
+- **Choice (party):** ride in (DC 14, horses close) or tie the horses out and walk (DC 12, nobody mounted, and a fleeing crewman can steal a horse).
 - Woodsmoke, and a corral full of horses that can smell theirs.
 - **Animal Handling** keeps the borrowed horses quiet. **Stealth** works here too.
 - **The route choice:** ride in close, or leave the horses and walk.
@@ -815,12 +828,13 @@ each block on its card.
 - **Trigger:** during stage 3 of the chase.
 - **Location:** the fork in the drover's road. Long light, scrub, one lone tree, open ground
   either side. Riders show for a long way out here.
-- **NPCs present:** Nella's rear guard, watching the back trail: Ilsa Thorn (the Scout) and
+- **NPCs present:** Nella's rear guard, watching the back trail: Ilsa Hask (the Scout) and
   Fennel Dray (a Bandit), mounted, and Fennel's wolf Cinder.
 - **Time:** ~15 minutes, 1–2 rounds. Under Easy on purpose; the stake is the rider and the horses.
 
 #### S2_REARGUARD — Nella's rear guard holds the fork
 
+- **Choice (party):** fight, scare them off (Intimidation DC 13: Fennel and Cinder run, and nobody reports), or bluff to close the distance. Ilsa riding for the camp is the cost of getting it wrong.
 - **If the party won stage 3:** they see the riders first, sitting their horses by the lone tree.
   Surprise is theirs to take.
 - **If they lost it:** Ilsa sees them first and puts an arrow into the lead horse's
@@ -857,6 +871,9 @@ each block on its card.
   legible: *"The woman isn't fighting you any more. She's riding for the camp."*
 - **Morale:** Ilsa down, or Fennel and Cinder both down → DC 12 WIS. Failures flee. A fleeing
   Ilsa rides for the camp (the bump above); Fennel and Cinder just run.
+  - Fennel, when Cinder drops: *"No — Cinder, get up, get up—"* He stops fighting and goes to
+    the wolf.
+  - Fennel, when he runs: *"I'm out. Tell her I'm out."*
 - **Transition:** the light goes. The camp approach (stage 4).
 
 ### Scene 7 — The Waystation
@@ -891,8 +908,10 @@ each block on its card.
 
 #### S2_APPROACH_CHOICE — Heist, assault, parley or trick?
 
+- **Choice (party):** heist, assault, parley or trick. Each reaches the casks; each costs and gains something different (see below).
+- **Choice (party):** scout the ridge first (`S2_SCOUT`), or go straight in. Scouting costs time and a check; it buys the chance to cut Nella's exit.
 - **All four are viable.** Let the party pick and don't steer.
-- **`S2_SCOUT` — Nella's exit can be found first (draft, engine 2026-10-09).** Anyone who scouts
+- **`S2_SCOUT` — Nella's exit can be found first (engine 2026-10-09, committed 2026-10-13).** Anyone who scouts
   before choosing finds the back of the ridge. They can circle wide (Perception or Survival
   DC 14), send Bosco or a familiar around (no roll, just time), or follow Sergei's nose (he smells
   the cached horse). What they find: the brush blind, the plank bridge pinned to drop into the river, and
@@ -900,8 +919,13 @@ each block on its card.
   planned a way out of here."* This is what lets them cut off her escape on purpose (see
   `S2_ESCAPE`).
 - **Night heist** — get the cart out without a fight. Watch rotations, the corral, and Nella is the
-  light sleeper. Pulling it off means **the party leaves *her* the taunt for once.** Encourage it.
+  light sleeper. Pulling it off means **the party leaves *her* the taunt for once.** Don't steer. If they
+  choose it, a clean heist pays well.
   If it goes loud halfway, drop into `S2_FIGHT` with the party already at the cart.
+  - **A good Perception check notices (offer one or two):** Haddo humming a count under his
+    breath, even half asleep · Brask snoring against the cart wheel · a chain clinking at the
+    corral whenever a dog shifts · the watch-fire burned down to red coals, with little light past
+    the well · one fresh bootprint on the ridge path, pointing up.
   - **A clean heist still pays out.** The tally rides with the cart: she whittles it on the seat
     (the antler shavings at `S2_ROAD`), so it's in the box under the seat, and they drive off
     with it (`S2_TALLY`, found later, not dropped). The ledger (Sennet's table, I5), the banner
@@ -919,6 +943,9 @@ each block on its card.
 - **Trickery** — posing as the band's relay riders, or Marlow men with new orders. Insight and
   Deception contested; Varrick is easy to fool, Sennet less so (Insight +4), Nella isn't (Insight +7 from the ridge). If it
   half-works, it buys positioning, not the cart.
+  - Varrick, fooled: *"Relay's early. Fine. Horses in the corral, and nobody touches the cart."*
+  - Sennet, suspicious: *"Who signed your orders? Show me the hand."*
+  - Nella from the ridge, not fooled: *"Varrick. Count them."*
 
 #### S2_FIGHT — Two layers: the floor and the ridge, 3–4 rounds
 
@@ -932,10 +959,10 @@ each block on its card.
   - Varrick: *"Hold the cart! Nobody touches the cart!"* · *"She's up there, she's got you, keep
     them in the open!"*
   - Haddo, counting: *"Eleven. Twelve. Nobody touches twelve."* · Brask: *"That's the sky lot."*
-  - Sennet: *"Bane doesn't pay us for this."* · Hesper: *"Stand still, Varrick, I can't — stand
+  - Sennet, the first time he's hit: *"I count this lot. I don't bleed for it."* · Hesper: *"Stand still, Varrick, I can't — stand
     STILL."*
-  - Clatter, from the roof: *"One by the well! One by the WELL!"* · *"Where's she going?
-    Where's she GOING?"*
+  - Clatter, from the roof: *"One by the well! One by the WELL!"* · once Nella leaves her perch
+    (escape ladder, step 1 or 3): *"Where's she going? Where's she GOING?"*
   - Nella, calm, to whoever is climbing toward her: *"Keep climbing. I'll be gone before you're halfway."*
 - **Halsby's Spear in the dark:** reach 15 ft in dim light or darkness. If the fight is at night,
   describe the shadow carrying the point the last ten feet.
@@ -949,6 +976,8 @@ each block on its card.
 - **Not at half.** Half the crew falls in round 1 against this party, which would end the fight
   before Nella's pressure lands. Varrick keeps them in it until he drops.
 - Morale-break line: *"She's leaving us. She's LEAVING us."* — and they run.
+- Hesper, when a PC closes on her after Varrick drops: *"Don't. I'll put the club down. I'll put
+  it down."*
 - **This also triggers `S2_ESCAPE`.**
 
 #### S2_ESCAPE — Nella loses, and gets away on a fallback she rigged
@@ -966,7 +995,7 @@ each block on its card.
   5. **Last valve:** if truly cornered, the river plunge, letting the current take her
      downstream. She knows the water. If even that can't
      honestly stick, **the table wins** and her arc gets re-planned. Never visibly cheat.
-- **If they cut her off first (draft, engine 2026-10-09).** If the party found her exit at
+- **If they cut her off first (engine 2026-10-09, committed 2026-10-13).** If the party found her exit at
   `S2_SCOUT` and acted on it, those steps of the ladder are gone. Skip them:
   - **Bridge dropped early, or someone holding it:** she has to swim the river, and they can
     catch her in the water.
@@ -978,6 +1007,7 @@ each block on its card.
 
 #### S2_TALLY — She drops her debt tally
 
+- **Choice (party):** the 250 gp purse: keep it (about one room in the new wing), spend it, or give it back. It is exactly her remaining debt, and the choice comes due later (`S4_DEBT`, `PAY_NELLA`).
 - At the bridgehead, where she pulled the pins: **a notched antler stick and a purse of counted,
   sorted coin.** After a clean heist, both are in the box under the cart seat instead.
 - **First touch:** the antler is worn smooth where a thumb rests. Hundreds of notches, in groups,
@@ -1026,8 +1056,14 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 
 #### S2_HAUL_HOME — The casks come home on their own cart
 
+- **Choice (party):** bring the banner home or leave it. Hung in the Lioness, it is the prop that unspools the feud, and Silas sees it.
 - **The cart is theirs** (Jeff, 2026-10-07). It becomes the Lioness's delivery cart.
 - **The horses go back to Silas** sound and shod, and the favour is paid.
+  - Silas, checking each hoof: *"All four shoes on every one. You kept your word, so I'll keep
+    mine. We're square, and I'll remember you were good for it."*
+- **Silas sees the banner** (first look, before he goes quiet; he never says whose it is):
+  *"Where did you get that banner?"* A beat. *"If you hang it, hang it high. Some people who
+  drink here would know whose it is, and you don't want them knowing you have it."*
 - **Long rest:** if they rest at the waystation first, the clock resets there. Note it for `/recap`.
 - **Sable, at the door, sees the cart.** She doesn't run out. She puts down what she's holding and
   stands very still. *"That's twice now you've saved this place."* (the second deed — banked, and the next Stake tick
@@ -1113,10 +1149,6 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 
 ## Contingencies
 
-- **They skip the pursuit and stay to build.** Fine. The cart reaches a fence in Duskwater. The
-  casks aren't gone, but recovering them becomes a costlier beat later (buy-back or a riskier lift).
-  Sable eats the loss and the Stake ladder starts one deed behind. Varrick and his bracer are still
-  at the waystation if they go later.
 - **The fork rider gets away and the camp is on night alert.** Still winnable. Lean on the heist
   (the camp is watching the road, not the river side) or a parley. The casks are always there.
 - **They corner Nella.** Run the escape ladder honestly down to the river plunge. If even that can't
@@ -1127,6 +1159,13 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **They go straight at the feud with the ledger or the banner.** Give the next rung only:
   *someone* is paying Harrow Bane. Stop there. Silas recognises the banner back home and won't say
   more in the street.
+
+#### S2_SKIP — They skip the pursuit
+
+- **They skip the pursuit and stay to build.** Fine. The cart reaches a fence in Duskwater. The
+  casks aren't gone, but recovering them becomes a costlier beat later (buy-back or a riskier lift).
+  Sable eats the loss and the Stake ladder starts one deed behind. Varrick and his bracer are still
+  at the waystation if they go later.
 
 ## Closing
 
@@ -1151,7 +1190,7 @@ Land it on the cell door, not on the casks.
     scout first (`S2_SCOUT`) · heist, assault, parley or trick (`S2_APPROACH_CHOICE`) · Nella's
     purse (`S2_TALLY`) · the banner in the bar (`S2_HAUL_HOME`)
   - Character: Dip, what to share from the private roll (`S2_IGGY`) · Odibli, the word he writes
-    (`S2_HEARTH`)
+    (`S2_HEARTH`) · Halsby, his one question for the fox (`S2_SPEAR`)
   - Past choices paid off: Iggy's ode to Bosco at the Tser Pool camp (`S2_COMPANIONS`) · Halsby
     taking the fox's job without haggling (`S2_SPEAR`)
 - **Spotlight.** Halsby's beat is `S2_SPEAR` (a promised delivery, not one of his `spotlight_hooks`
@@ -1185,7 +1224,16 @@ Land it on the cell door, not on the casks.
     (washerwoman) · Sable owes Silas about 650 gp of a 1,000 gp delivery · Nella's remaining debt
     to Bane is 250 gp, the sum in her purse · Sergei and Bosco came through the transit loose, and
     how is never explained · [[Varrick's Parrying Bracer]] was Varrick Tenn's, a soldier's guard
-    he wore as the camp's drover
+    he wore as the camp's drover · Tallis sold written charms at the fair, and Mara bought one for
+    her mother · his smother-charm was dropped in the old core's hearth · Mara has worn the star
+    six years · Ashford's jail has two cells · the raiders' boots: third crew this season, same
+    cobbler · Silas charges 11 gp a lamed horse, and only about three smiths this side of the river
+    can hammer a brewing copper · the waystation is an old drover's relay short of Duskwater,
+    provisioned for about thirty · Sennet Orrin keeps Bane's duty ledger · the cart becomes the
+    Lioness's delivery cart · a hanging in Ashford waits on Cael's reeve · Nella and a few of her
+    crew kept their Earshot Crystals (only if it surfaces) · the camp crew's names (Ilsa Hask,
+    Fennel Dray, Cinder, Varrick Tenn, Haddo Keel, Brask, Sennet Orrin, Hesper Mudd, Tam "Clatter"
+    Cobb, Brick and Mortar), only for whoever comes up
 - **Held for later:** Elowen and Odibli (the Unfinished Binding) · Jorn's foreshadow · the Marlow
   coppers · Asher's Dead Sun phrase for Luci · the battlefield-spirit and coin-forgery spitballs.
 - **Before the table:** nothing outstanding. Tyler's backstory is Session 31 prep, not Session 30
