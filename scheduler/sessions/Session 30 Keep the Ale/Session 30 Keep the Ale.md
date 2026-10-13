@@ -836,6 +836,10 @@ each block on its card.
   starts. A Dashing horse covers 120 ft a round, so the casters get one or two rounds of shots
   (Fire Bolt and Magic Missile reach 120 ft, Chromatic Orb 90 ft) before she is out of range. Her
   horse (AC 10, HP 13) is the easier target than she is (AC 13, HP 16).
+- **The map edge isn't her escape; range is (Jeff, 2026-10-12).** The Roll20 map is about 100 ft
+  across, so she leaves the northwest edge on her first move. Keep her token on the page's grey
+  margin and count feet: ~120 ft out after round 1 (cantrips still reach), ~240 ft after round 2
+  (past cantrips, still inside longbow long range).
 - **If Ilsa escapes toward the camp**, its alert state goes up one step (unaware → dusk →
   night alert), applied **after** stage 4 sets it, and capped at night alert. Only Ilsa carries
   the warning; Fennel flees home, not to Nella. Stopping her is the real objective. Make that
@@ -850,8 +854,19 @@ each block on its card.
 - **Location:** an old drover's relay short of Duskwater. **Long shed** (bunks, ledger, stores) ·
   **corral** of nervous horses (noise hazard for sneaks, stampede lever for chaos) · **well** ·
   **the cart**, parked by the shed with the casks still loaded · **watch-fire** · and set back, the
-  **overwatch ridge** with a brush blind, a **gully** behind it, a **rope-crossing** over the gully,
-  and a **cached horse** half a mile beyond. Map: `maps/waystation.txt` (render with `uv run scripts/battlemap.py --session 30`). Key refs: cart R10:S12, Nella's blind AB8:AC10 (55 ft from the cart, up a difficult slope at X:Z), rope-crossing AF9:AH9, 15 ft behind the blind.
+  **overwatch ridge** with a brush blind, a **fast cold river** behind it, a **rigged plank bridge**
+  over the river, and a **cached horse** half a mile beyond. Map: `maps/waystation.txt` (render with `uv run scripts/battlemap.py --session 30`). Key refs: cart R10:S12, Nella's blind AB8:AC10 (55 ft from the cart, up a difficult slope at X:Z), bridge AF9:AH9, 15 ft behind the blind.
+- **Jeff's Roll20 map (2026-10-12)** differs from the reference render. Rulings:
+  - **The cart** is the covered wagon nearest the slope. Haddo and Brask hold there, between the
+    yard and the ridge.
+  - **The boulder band** is the slope, difficult terrain, **except the rubble gap** where the
+    bridge path cuts through. The gap is normal ground, the fast way up, and Nella's Marked Quarry
+    goes on whoever takes it.
+  - **The river:** swimming it is DC 13 Athletics; a failure costs the round and carries you 10 ft
+    downstream. A crossing still takes ~3 rounds, so the bridge drop holds her lead.
+  - **The bridge** is pinned to drop. One action pulls the pins and the deck goes into the water.
+  - **The quiet approach** is the south tree line, lightly obscured. No scrub patch; sneaking is
+    harder than the reference had it.
 - **NPCs present:** [[Nella]] on the ridge · Varrick Tenn, the drover · Haddo and Brask, the
   cask-hands · Sennet Orrin, Bane's tally-man · Hesper Mudd, hedge-priest · Clatter on the roof ·
   Brick and Mortar at the corral · the Marlow banner on the shed's pole.
@@ -869,7 +884,7 @@ each block on its card.
 - **`S2_SCOUT` — Nella's exit can be found first (draft, engine 2026-10-09).** Anyone who scouts
   before choosing finds the back of the ridge. They can circle wide (Perception or Survival
   DC 14), send Bosco or a familiar around (no roll, just time), or follow Sergei's nose (he smells
-  the cached horse). What they find: the brush blind, the rope-crossing staked over the gully, and
+  the cached horse). What they find: the brush blind, the plank bridge pinned to drop into the river, and
   fresh dung half a mile out where a horse has been tied for days. Say it plainly: *"Someone's
   planned a way out of here."* This is what lets them cut off her escape on purpose (see
   `S2_ESCAPE`).
@@ -881,7 +896,7 @@ each block on its card.
     with it (`S2_TALLY`, found later, not dropped). The ledger (Sennet's table, I5), the banner
     (the pole, L3) and Varrick's bracer (his bedroll by the watch-fire) are each one more Stealth
     check to take; failing one goes loud.
-  - **Nella, after a clean heist:** no rout, no ropes cut. Skip the escape ladder. She wakes to
+  - **Nella, after a clean heist:** no rout, no bridge dropped. Skip the escape ladder. She wakes to
     an empty cart, and the party never sees her face. If they left a taunt, it reached her.
 - **Assault** — `S2_FIGHT` on their initiative.
 - **Parley** under a truce-branch. Nella talks from the ridge, never comes down. She won't give up
@@ -933,25 +948,26 @@ each block on its card.
   1. **Cover the rout:** up to 2 rounds of covering fire for whoever is running.
   2. **The taunt:** one deliberate miss into a post at head height, then a dry voice from the dark:
      ***"Keep the ale."***
-  3. **Withdrawal:** over the gully on the rope-crossing, **cutting the ropes behind her.** The party
-     detours or spends rounds re-rigging. The cached horse is half a mile out. Skirmisher's Step and
+  3. **Withdrawal:** over the river on the plank bridge, **pulling the pins behind her** so the deck
+     drops into the water. The party swims it (DC 13 Athletics, ~3 rounds) or detours. The cached horse is half a mile out. Skirmisher's Step and
      Prepared Ground keep the gap honest.
   4. **The tally falls (Jeff, 2026-10-07):** in the scramble she drops it — see `S2_TALLY`.
-  5. **Last valve:** if truly cornered, the river plunge. She knows the water. If even that can't
+  5. **Last valve:** if truly cornered, the river plunge, letting the current take her
+     downstream. She knows the water. If even that can't
      honestly stick, **the table wins** and her arc gets re-planned. Never visibly cheat.
 - **If they cut her off first (draft, engine 2026-10-09).** If the party found her exit at
   `S2_SCOUT` and acted on it, those steps of the ladder are gone. Skip them:
-  - **Ropes cut, or someone holding the crossing:** she has to go down into the gully on foot,
-    and they can catch her there.
+  - **Bridge dropped early, or someone holding it:** she has to swim the river, and they can
+    catch her in the water.
   - **Cached horse taken or chased off:** she runs for the river (step 5).
   - **Both:** they cornered her fairly. The table wins (see Contingencies).
-- **Make the preparation visible afterwards.** Whoever reaches the gully sees the cut ropes, the
-  stakes driven in days ago, the trampled spot where the cached horse waited. *She planned her exit
+- **Make the preparation visible afterwards.** Whoever reaches the bank sees the pulled pins, the
+  deck pinned in place days ago, the trampled spot where the cached horse waited. *She planned her exit
   before you ever arrived.*
 
 #### S2_TALLY — She drops her debt tally
 
-- At the gully's lip, where she cut the ropes: **a notched antler stick and a purse of counted,
+- At the bridgehead, where she pulled the pins: **a notched antler stick and a purse of counted,
   sorted coin.** After a clean heist, both are in the box under the cart seat instead.
 - **First touch:** the antler is worn smooth where a thumb rests. Hundreds of notches, in groups,
   some scored through. The purse is tied in three places, each section a different coin, counted.
@@ -1090,11 +1106,11 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
   Sable eats the loss and the Stake ladder starts one deed behind. Varrick and his bracer are still
   at the waystation if they go later.
 - **The fork rider gets away and the camp is on night alert.** Still winnable. Lean on the heist
-  (the camp is watching the road, not the gully side) or a parley. The casks are always there.
+  (the camp is watching the road, not the river side) or a parley. The casks are always there.
 - **They corner Nella.** Run the escape ladder honestly down to the river plunge. If even that can't
   stick, the table wins — capture her, and re-plan her arc around the tally and the debt. Never
   cheat visibly. Captured-Nella sample, cold: *"Well. That'll cost me."*
-- **They want to chase Nella past the gully.** She's mounted and gone. Let them find the cached
+- **They want to chase Nella past the river.** She's mounted and gone. Let them find the cached
   horse's tracks running toward the river and stop at the bank. *"She knows this water. You don't."*
 - **They go straight at the feud with the ledger or the banner.** Give the next rung only:
   *someone* is paying Harrow Bane. Stop there. Silas recognises the banner back home and won't say

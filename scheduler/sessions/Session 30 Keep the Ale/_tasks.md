@@ -29,6 +29,9 @@ Made 2026-10-07. Planned date: Tuesday 2026-10-13.
       `uv run scripts/battlemap.py --session 30`.
 - [x] **The dusk fork** (done: `maps/dusk-fork.txt`): open ground, one lone tree, the road splitting. Either a plain field map
       or theatre of the mind.
+- [x] **Roll20 builds** (Jeff, reviewed 2026-10-12): both maps built. Waystation rulings (rigged
+      plank bridge over a fast river, slope fast lane, cask wagon, south tree line) live in Scene 7;
+      the fork's off-map Ilsa ruling in `S2_RIDER`. Keep the dusk fork page's grey margin for her token.
 - [ ] **Tokens:** Varrick (drover, wearing the bracer), Haddo and Brask (Thugs), Sennet (Spy), Hesper (Acolyte), Clatter (Bandit), Brick and Mortar (Mastiffs), Ilsa (Scout), Fennel (Bandit), Cinder (Wolf), Nella, the
       fox, five horses for the party, and Ilsa's and Fennel's two horses at the fork.
 - [ ] **Sheet check at the top of the session.** Session 29 lost a lot of time to Roll20.

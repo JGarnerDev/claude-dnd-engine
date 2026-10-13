@@ -70,13 +70,13 @@ flowchart TD
   end
 
   subgraph SC7["Scene 7 · The Waystation"]
-    S2_SCOUT["[-] S2_SCOUT<br/>Scout first: the blind, the rope-crossing,<br/>a horse tied half a mile out<br/>'Someone's planned a way out of here'"]
+    S2_SCOUT["[-] S2_SCOUT<br/>Scout first: the blind, the rigged bridge,<br/>a horse tied half a mile out<br/>'Someone's planned a way out of here'"]
     S2_APPROACH_CHOICE{"[-] S2_APPROACH_CHOICE<br/>Heist, assault, parley or trick?"}
     S2_HEIST["[-] S2_HEIST<br/>Night heist: the cart out, no fight<br/>The party leaves her the taunt<br/>Tally rides away under the seat; no escape ladder"]
     S2_PARLEY["[-] S2_PARLEY<br/>Parley under a truce-branch<br/>She keeps the casks; her debt shows its edge"]
     S2_FIGHT["[-] S2_FIGHT<br/>The floor: Varrick, 2 cask-hands, a sneak, a healer, a roof crossbow, 2 dogs<br/>The ridge: Nella, wound and pin<br/>Hard vs. an all-5 party · 3–4 rounds"]
     S2_MORALE["[-] S2_MORALE<br/>Drover down or the crew down to two<br/>DC 12 WIS; the rest break"]
-    S2_ESCAPE["[x] S2_ESCAPE<br/>Nella loses, and gets away<br/>Covering fire · 'Keep the ale.' · ropes cut · cached horse"]
+    S2_ESCAPE["[x] S2_ESCAPE<br/>Nella loses, and gets away<br/>Covering fire · 'Keep the ale.' · bridge dropped · cached horse"]
     S2_TALLY["[x] S2_TALLY<br/>She drops her debt tally<br/>Notched antler and a counted purse"]
     S2_CAMP_INTEL["[x] S2_CAMP_INTEL<br/>The band's size · Harrow Bane in the ledger<br/>The Marlow aegis-banner, theirs to take<br/>Varrick's Parrying Bracer, for Dip"]
     S2_APPROACH_CHOICE -->|"sneak"| S2_HEIST
