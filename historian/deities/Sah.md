@@ -50,3 +50,7 @@ Diminished, intermittent, not fully coherent. Communicates with Iggy through par
 - **Critical:** rare fragments of clarity — recovered songs, lessons, and memories of Threnai — that unlock new understanding, reinforce resolve, or seed the emergent **New Sahism**.
 
 Rather than rebuild the old Sahist system, Sah and Iggy develop an adaptive philosophy: meaning as lived and participated in; balance and continuity without rigid preservation; acceptance of change without surrendering coherence. Followers may gather organically around Iggy's actions over time.
+
+**Direction of the reformation (player intent, 2026-10-13):** the old Sah kept meaning in one place, the Library, and treated an ending as a wall around it, which held until the place fell. The new path is **remembrance**: meaning lasts because people carry it in songs, retellings and companions who remember each other. A library can burn, but a song that has been passed on can't be burned. Every story must end, but the telling doesn't. Iggy's vow: *"What is done, I will remember. What must end, I will let end. What I remember, I will carry."*
+
+> **DM-only:** At the collapse, Sah spent part of his remaining power keeping the power invested in Iggy's unfinished final song alive after Threnai was gone. The player's wish is that the reformation completes when Iggy breaks his vow for a dying friend by finishing the song: choosing which story ends, not refusing every ending. Full scenario in [[Iggy]] (Oath & Convictions).

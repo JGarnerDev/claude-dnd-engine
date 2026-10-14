@@ -46,7 +46,19 @@ spotlight_hooks:
     status: open
   - hook: "Rebuild an emergent Sahism as Sah's coherence grows alongside Iggy"
     status: open
-  
+  - hook: "Learn what came up the road at Caelion Marr's bridge, and whether she died, was taken, or Returned"
+    status: open
+  - hook: "Recover what the sealed order said, and whether Iggy carried the Failed Intervention plan to the Library himself"
+    status: open
+  - hook: "Walk into an unfinished stretch of the world, like the blank road from the Library, and recognize it"
+    status: open
+  - hook: "Echo moment: a scene that rhymes with one of the 23 Threnai names, a chance to succeed where they failed"
+    status: open
+  - hook: "Swear the remembrance vow to Sah aloud"
+    status: open
+  - hook: "Meet the grief society: talk first, fight when something comes back wrong"
+    status: open
+
 description: "Jeff's PC. Gruff but light-hearted soldier-bard with copper-red Aasimar features. Refugee of the destroyed library-plane Threnai, guided by the diminished god Sah."
 ---
 
@@ -76,6 +88,7 @@ Player-facing tells (cue others into his past):
 - **Off-beat rhythm in tension** — subtle foot/weapon tapping before combat; stops once chaos starts, resumes after.
 - **Unease around death/return** — a hesitation or stare at kills and revivals: *"Make sure they're… truly back."*
 - **Sees allies as heroes** — assigns brief heroic titles and notes their deeds, delivered naturally, not ceremonially.
+- **Hums in silence** — when a room goes too quiet, he starts humming before he notices he's doing it. A habit from the blank road (see The Sealed Order).
 
 He is disturbed by echoes of his home plane's fall even when he can't name the connection: the deaths of well-intentioned people, the destruction or neglect of books and records, and melancholic songs of war and loss.
 
@@ -108,6 +121,35 @@ The war was ideological: a faction of Library insiders (**[[The Correctors]]**, 
 
 When the ritual completed, Iggy was in an outlying town near a major battle, the central city and Great Library still visible on the horizon. He was composing a final song meant to encode the whole of what was being lost — the battle, his fallen comrades, the plane itself, the origins of the war. The composition was interrupted mid-act as reality disintegrated around him. Sah forcibly displaced him to the Material Plane to save him, with a directive: *"Go now, there are other worlds than these."* The viol survived, carrying the unfinished, unstable song.
 
+### The Final Song
+
+He meant it as a goodbye: ordinary mornings, the names of the people he'd lost, and an honest account of how the war began, written before the winners could rewrite it. As he played, it took in far more than he intended: the people themselves, how they laughed and stood and argued, not only facts about them. That is why it frightens him a little now. It is more archive than song. The opening, as it was:
+
+> *Before the ink, before the end,*
+> *there was a morning, and a friend.*
+> *Bread on the sill at the river gate,*
+> *Caelion laughing, Liora late.*
+>
+> *Let me set down how the quarrel grew,*
+> *before they write it false and new:*
+> *some feared the ending, some the pen,*
+> *and both were only frightened men.*
+>
+> *So here is every name I keep,*
+> *the waking ones, the ones asleep.*
+> *I cannot hold the Library's stone,*
+> *but I can hold you, one by one.*
+
+### The Sealed Order
+
+The courier run he remembers best. He carried a sealed order from Sah's high command, closed with wax pressed in the shape of an open book, for the Library alone and not to be read, even by him. It was the only run where they made him repeat the instructions back. He crossed Caelion's bridge at dawn, and she didn't joke. She looked at the seal and said, "Run fast."
+
+It went to an old archivist deep in the Great Library, a woman whose name he can't recall, with ink-stained sleeves and shelves around her already emptied. She read it twice and copied it into a ledger while he waited: *"If this goes wrong, someone should know we chose it."* He doesn't remember what it said. He remembers her hand shaking.
+
+On the way back, about a hundred paces of road had stopped being finished: grass without blades, trees without bark, footsteps without sound, his own hands like an abandoned sketch. He hummed the whole way across, because it felt like the only thing keeping him drawn in. He never told anyone. It was an early crack from the Correctors' ritual, though he can't name it.
+
+> **DM-only:** Iggy has started to suspect the order was the plan for the Failed Intervention (Tier 3). If so, he carried it there himself.
+
 ### Memory Reveal (3 Tiers)
 
 His memory loss is selective, not impairing — he functions normally but knows his past only in broad strokes. Intended pacing of reveals:
@@ -123,6 +165,16 @@ At the outset Iggy has no formed ideology about the fall — memories too fragme
 - Primary doctrine: *"Meaning is lived, not escaped — and every story must end."*
 - Confrontational form (against the Correctors): *"Nothing that refuses to end remains true."*
 
+The oath is turning into **remembrance**: live so that deeds are remembered, and do deeds worth remembering. Through it, Sah is changing too (see [[Sah]]). Meaning lasts because people carry it, not because one place stores it. Every story still has to end. The telling of it doesn't. The vow he would swear if Sah asked tonight:
+
+> *What is done, I will remember.*
+> *What must end, I will let end.*
+> *What I remember, I will carry.*
+
+> **Reliability:** The oath is story only. Jeff plans to stop at Paladin 2 (2026-10-13), so it may never take a subclass. Going to Paladin 3 would delay Bard 5 (Font of Inspiration).
+
+> **DM-only (player wish):** He would break the second line for a friend. When one of the party is dying, Iggy pours everything the final song still holds into keeping them alive, and to do it he has to finish the song. Threnai's story finally ends so a friend's doesn't. This completes Sah's change: not refusing every ending, as the Correctors did, but choosing which story ends and paying for it with something you love. Afterward the viol is quiet, Threnai is truly gone, and Iggy remembers all of it. It pays off the song, New Sahism and "truly back" hooks at once.
+
 ## Sah — Celestial Guide
 
 **[[Sah]]** is Iggy's Aasimar guide: the diminished god of Threnai, now fragmented and recovering. Communication comes as partial impressions — emotional resonance, tonal fragments, brief clarity — not sustained dialogue. As Iggy grows, Sah's coherence strengthens in parallel (reciprocal). Passive presence: tired, mournful, quietly hopeful. Active: an old martial-master archetype — calm, stern, instructive, sometimes rigid but aware his old certainty was flawed. Rare critical moments recover songs/lessons of Threnai that unlock new understanding or resolve.
@@ -130,6 +182,10 @@ At the outset Iggy has no formed ideology about the fall — memories too fragme
 ## The Viol
 
 Iggy's viol survived the collapse and holds fragments of the unfinished final song — battle, personal loss, cultural memory, unresolved truth, overlapping and unstable. Tones or sequences sometimes surface that Iggy doesn't recall composing. It functions as both instrument and residual archive of the destroyed plane. (Carried item — no separate entity file.)
+
+The phrase it plays on its own is the line he was in the middle of when Threnai broke, and it always stops on the same unresolved note, because the song never got its ending. When it surfaces, Iggy feels the floor drop away, then a strange warmth, as if someone is keeping a door open for him.
+
+> **DM-only:** The song should have ended with Threnai. Sah spent part of his remaining power to keep the power invested in it alive after the plane was gone. Iggy doesn't know this.
 
 ## The Returned
 
@@ -140,6 +196,52 @@ A corruption Iggy witnessed once in the war and now recognizes with dread. The C
 Names Iggy murmurs while tuning — comrades and figures of Threnai, half-remembered. Kept as text only (no NPC files):
 
 Aurelion Thane the Dawnbound · Seraphiel Vorn · Caelion Marr the Bridge-Holder · Luminor Vex · Ithuriel Kane the Unbroken Oath · Valerion Dusk · Elion Var the River's Witness · Thamiel Crest · Aurex Solenne the Gilded Ash · Cadrion Vale · Halcyon Reth the Still Horizon · Orimiel Voss · Caelum Ryn the Skyforged · Azurion Keth · Liora Venn the Gentle Blade · Serion Dhal · Aethros Mire the Knife in Smoke · Velior Ashen · Zophiel Tarn the Broken Halo · Elarion Quill · Caelis Thorn the Grave-Thread · Uriel Nox · Aurel Vire
+
+### Caelion Marr, the Bridge-Holder
+
+His sergeant in the city guard, and the first person to call him "Iggy." She was broad-shouldered and loud, laughed at her own jokes before the punchline, and kept a ledger of every soldier she'd lost in handwriting too neat for her. She made him a courier: *"You run faster than you fight, Wallaed. Make it useful."* That ledger may be where his reverence for records comes from.
+
+She fought with a long spear and a tower shield and never gave ground. In the war she held the stone bridge over the river gate, the only road between the eastern front and the Library, and waved every courier over it with the same bad joke.
+
+Her fall is blurred. On the last day she waved him across without the joke. From the far bank he saw her plant the shield as something came up the road behind him. He doesn't remember what it was, or whether the bridge held. He never crossed back.
+
+His song for her is "The Count at the River Gate," a marching tune counted like soldiers over the bridge, one name added each verse:
+
+> *One for the runner, two for the wall,*
+> *three for the ones who don't come back at all.*
+> *Caelion counts and Caelion stands,*
+> *the whole of the road in her two hands.*
+
+> **Reliability:** Fate left open on purpose: dead, taken by the Correctors, or Returned. Text only, no NPC file, until she becomes plot-relevant.
+
+## Looking Ahead (Player Intent)
+
+What Jeff wants for Iggy this season, from the 2026-10-13 handout. These are wishes for the DM, not canon facts.
+
+- **Wants:** a fight worth having, and answers. The Correctors' idea is loose in this world, and he may be the only one who has seen how it ends. He also wants the rest of himself back: Caelion's bridge, the sealed order, why Sah saved him. He suspects the answers are at the end of the fight.
+- **Stays for:** the party, the closest thing to a home he has now, and echo moments, scenes that rhyme with one of the 23 names, where he can finish a story right that ended wrong.
+- **Never runs:** he ran once, when Sah threw him clear, and he hasn't forgiven himself for surviving. Fear makes him plant his feet. That's brave, and it's also a wound. Someday a friend may have to drag him back.
+- **The hero arc:** the one who stands in front and makes the people beside him into heroes. First he redoes old Threnai stories (the first is a crossing held like Caelion's, except the bridge stands and he walks back). Then he lives his own, then he spends himself on the party's. The names he whispers slowly change until half are from this world. The ballad a bard sings in ten years:
+
+> *He came down burning, face to the yard,*
+> *a stranger with a viol, copper-starred.*
+> *He carried names from a world undone,*
+> *and he mended their endings, one by one.*
+>
+> *He held the river where another fell,*
+> *and he crossed back over to live and tell.*
+> *But ask the old ones what he's known for,*
+> *and they'll sing you the names of the friends he stood before.*
+
+- **The Correctors in Aethryn:** a grief society, written up in [[The Correctors]]. Iggy talks first, gently, because he remembers they were frightened people. If something comes back wrong, the soldier comes out: *"Nothing that refuses to end remains true."*
+- **Tavern song:**
+
+> *I lost my hearth to the end of the world,*
+> *now my roof is the sky and my flag's unfurled.*
+> *But fill up the cups, pull a chair to the fire,*
+> *you're my home, and a better world's my desire.*
+
+> **Reliability:** Handout answers written with Claude and confirmed by Jeff (the player) on 2026-10-13. The party-wish question (Iggy and another PC) was left for later.
 
 ## Character Sheet (Roll20)
 
