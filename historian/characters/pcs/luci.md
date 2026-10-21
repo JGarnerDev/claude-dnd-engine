@@ -13,7 +13,7 @@ race: "Aasimar (Scourge)"
 class: "Monk 2 / Warlock 1 / Transcendent 1"
 background: "Astral Drifter"
 level: 5
-level_confirmed: 29
+level_confirmed: 30
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Lucitania (Monk 2 / Warlock 1 / Transcendent 1)"
 aliases:
@@ -28,6 +28,7 @@ affinity:
   - [[Davian Martikov]] (1)
   - [[Dip]] (2)
   - [[Ireena Kolyana]] (2)
+  - [[Sable Wren]] (2)
 importance: critical
 active: true
 spotlight: normal
@@ -136,6 +137,7 @@ Bullseye lantern, 3 poison darts, a diary, an ink pen, traveler's clothes. No co
 - **Session 10:** Sacrificed herself on the cult altar to save the party; mists carried party away; Strahd retrieved her from death; leveled to 3
 - **Session 16:** At the [[Blue Water Inn]], told the room of her radiant celestial home — [[Danika]] quipped she might out-tell the resident bard [[Rictavio]]; danced with [[Bosco]] during the crowd-winning set.
 - **Session 29:** Tried to hold the light-form through the landing and failed (a flat 10), skidding in prone beside the smouldering breach. On a free perception check (18) she looked up at Aethryn's vast **broken moon**, shedding shards, and brighter than any light in Barovia. She felt closer to the plane she came from. Without thinking, she named it **Fida** in the Dead Sun tongue. The voice answered one word, **"Closer."** Leveled to **5** on the spot. Lit her radiant emanation (10-ft aura) and hit the big one for 13, 9 and a 5-point crit, all radiant.
+- **Session 30:** Vibe-checked Halsby (Insight ~21) and read that he meant no harm. Freed [[Sable Wren]], read her as sincere and long-hurt (Insight 14), and told her to her face that she was untouched by the darkness of Barovia. Her psychokinetic storm fanned the yard fire instead of helping. Gave Halsby guidance on reading the crystals. Asked [[Silas Crubb]] who Strahd von Zarovich is, and celebrated when he'd never heard of him. Healed [[Dunny Marsh]] with her healing hands. Danced to Iggy's viol, juggling glassware before the hearth and pulling old [[Agnes Brand]] into the dance. Proposed ambushing the raiders as they leave camp rather than assaulting it. Holds an [[Earshot Crystals|earshot crystal]].
 
 > **Reliability:** the class line still reads Monk 2 / Warlock 1 / Transcendent 1. Which class took the fifth level isn't recorded; Paul mentioned d8 attacks and +3 proficiency. Update the class line from the Roll20 sheet. Confirm with Paul.
 

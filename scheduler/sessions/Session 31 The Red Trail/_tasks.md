@@ -1,4 +1,8 @@
-# Session 30 — Keep the Ale · prep tasks
+# Session 31 — The Red Trail · prep tasks
+
+> **Carried from Session 30 (2026-10-21)**, which played only Scenes 1–3. The map and token items below
+> are for the pursuit, so they still apply. References to `Session 30 Keep the Ale.md` now mean
+> `Session 31 The Red Trail.md` in this folder.
 
 Not an entity. A checklist for getting `Session 30 Keep the Ale.md` (in this folder) ready to run.
 The `_` prefix keeps it out of `validate.ps1` and the semantic index. Delete it after the session is

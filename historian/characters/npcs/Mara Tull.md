@@ -3,7 +3,9 @@
 name: "Mara Tull"
 type: character
 subtype: npc
-exists: false
+exists: true
+source_session: [[Session 30 Keep the Ale]]
+confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
 tags:
@@ -18,6 +20,7 @@ livelihood: "Sheriff of Ashford."
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
+last_updated: [[Session 30 Keep the Ale]]
 relates_to:
   - "[[Ashford]] (she is its law, and most of its actual defense)"
   - "[[Elowen Rimetusk]] (the town mage who helps her hold it, when she is lucid)"
@@ -35,6 +38,8 @@ motives:
 allies:
   - "[[Elowen Rimetusk]] (the old mage, formidable on her good days)"
 charm_hook: "She lost both her son and her daughter in the war — the wound that made her the wall Ashford leans on, and she has never once mentioned it to ask for anything."
+voice: "Short, plain soldier's report: what happened, how many, what's next. Gives an order once."
+voice_confirmed: 30
 ---
 
 Location: [[Ashford]]
@@ -93,3 +98,30 @@ Her son and daughter did not die in battle. They were in the company
 arrived. Mara believes they died in the war, and does not know Elowen was there. Elowen's
 help is a repayment Mara has never been told about. Whether the children are still somewhere
 in between is deliberately unanswered.
+
+## Session 30
+
+- First met the party in the [[The Golden Lioness]] after the raid, with her deputy
+  [[Dunny Marsh]] and [[Silas Crubb]]. Older and soldierly; the party read her as a veteran.
+- Told them the raid was coordinated: every street hit at once by a larger, more organized force,
+  part of a band camped about a day across the river and now split up. The last raid was about
+  three months ago; "they've got plans for us."
+- Had seen a great ray of light fall from the sky an hour or two before, and asked if it was them.
+- From the dead: the raiders call themselves independent, but every pair of boots came from the
+  same cobbler. This is the third crew this season, and she suspects one force provisions them.
+
+## Voice
+
+### Core
+
+- **Signature:** frames everything as a count ("every street", "three months", "third this season")
+- **Never:** asks for help for herself
+- **Tell:** goes quieter, not louder, when worried
+
+### Now
+
+- **Stance:** thankful, and curious about the light from the sky (S30: they saved Sable)
+
+### Said at the table
+
+- S30: "The last time was about three months ago, but we've gotten word that they're being a little more organized. Seems they've got plans for us." (to the party, over soup)

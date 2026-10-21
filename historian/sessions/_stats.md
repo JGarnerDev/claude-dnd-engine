@@ -117,3 +117,24 @@ Stats ledger (meta/stats.md). One `## Session <n>` per session, both campaigns, 
 ### Iggy
 
 - spells-cast: 1
+
+## Session 30
+
+### Iggy
+
+- heals-cast: 1
+- performances: 1
+
+### Luci
+
+- heals-cast: 1
+- performances: 1
+- spells-cast: 1
+
+### Odibli
+
+- spells-cast: 2
+
+### Halsby
+
+- spells-cast: 1

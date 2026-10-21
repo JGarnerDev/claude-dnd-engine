@@ -10,13 +10,13 @@ tags:
   - player/jeff
 player: [[Jeff]]
 race: "Aasimar (Protector)"
-class: "Bard 3 (College of Valor) / Paladin 1"
+class: "Bard 3 (College of Valor) / Paladin 2"
 background: "Entertainer"
 homeland: [[Threnai]]
-level: 4
-level_confirmed: 29
+level: 5
+level_confirmed: 30
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
-character_sheet: "Roll20 — Iggadron \"Iggy\" Wallaed (Bard 3 Valor / Paladin 1)"
+character_sheet: "Roll20 — Iggadron \"Iggy\" Wallaed (Bard 3 Valor / Paladin 2 from Session 30)"
 aliases:
   - "Iggy"
   - "Iggadron Wallaed"
@@ -29,7 +29,7 @@ enemies:
   - [[The Correctors]] (death-denial cult that destroyed his home plane)
   - [[The First Corrector]] (ideological architect, fate unknown)
 affinity:
-  - [[Bosco]] (3)
+  - [[Bosco]] (4)
   - [[Davian Martikov]] (1)
   - [[Lady Fiona Wachter]] (-4)
 importance: critical
@@ -69,7 +69,7 @@ Campaign: [[Curse of Strahd]] | Player: [[Jeff]]
 
 Copper-red tones throughout -hair, skin. Human-adjacent in looks. Celestial heritage is subtle but present.
 
-Race: [[Aasimar]] | Class: [[Bard]] 3 / [[Paladin]] 1 | Background: [[Entertainer]]
+Race: [[Aasimar]] | Class: [[Bard]] 3 / [[Paladin]] 2 | Background: [[Entertainer]]
 
 > **Reliability:** Confirmed from player notes and session 1 introductions.
 
@@ -245,7 +245,7 @@ What Jeff wants for Iggy this season, from the 2026-10-13 handout. These are wis
 
 ## Character Sheet (Roll20)
 
-Bard 3 (College of Valor) / Paladin 1 · Protector Aasimar · Entertainer · Chaotic Good · Medium.
+Bard 3 (College of Valor) / Paladin 1 · Protector Aasimar *(sheet as ingested; now Paladin 2 from Session 30, re-ingest the Roll20 sheet for the new numbers)* · Entertainer · Chaotic Good · Medium.
 
 - **Defenses:** AC 16 (hide armor + shield), HP 32, Hit Dice 3d8 + 1d10, initiative +2, passive Perception 13. Resistant to radiant and necrotic damage.
 - **Ability scores:** STR 10, DEX 15 (save +4), CON 15, INT 10, WIS 14, CHA 18 (save +6).
@@ -298,6 +298,7 @@ Shadow does not match Iggy's form and moves in the wrong direction. Onset: Sessi
 - **Session 10:** Revived by Odibli's shadow ritual; half max HP for duration in dungeon; affliction onset; leveled to 3
 - **Session 16:** At the [[Blue Water Inn]], turned [[Bosco]]'s dance into a crowd-winning "for Bosco!" moment and spun a gold-dragon-turned-raccoon tale into a viol jig. Earlier at the Vallaki market, traded a platinum necklace for thieves' tools and hide armor. **Reliability:** the trade is recorded from the notes; confirm the item details against Iggy's sheet.
 - **Session 29:** Failed the landing roll and came out of the light prone in the raided yard. Gave Dip Bardic Inspiration, missed a lunging rapier attack on Willem, then threw down the sword for his crossbow and put a bolt in the mage Tallis's stomach for 8. Stays level 4.
+- **Session 30:** Shook Halsby's hand. Offered to heat Sable's ruined brewing copper back into shape; Silas said it needed a specialist. Healed the deputy [[Dunny Marsh]] with Lay on Hands, alongside Luci. After a few drinks he played his viol for the room while Luci danced, slow and bittersweet and then a sing-along. When the tune wandered somewhere foreign, the self-feeding hearth went completely still for about ten seconds, until he came out of it and found the chorus again. Leveled to **5** (**Paladin 2**). Reunited with [[Bosco]], who arrived riding [[Sergei Rubelgerd]]. Holds an [[Earshot Crystals|earshot crystal]].
 
 ## Affinity notes
 

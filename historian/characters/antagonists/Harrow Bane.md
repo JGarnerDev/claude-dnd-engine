@@ -3,7 +3,9 @@
 name: "Harrow Bane"
 type: character
 subtype: antagonist
-exists: false
+exists: true
+source_session: [[Session 30 Keep the Ale]]
+confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
 tags:
@@ -19,6 +21,7 @@ disposition: hostile
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
+last_updated: [[Session 30 Keep the Ale]]
 relates_to:
   - "[[Lady Sorcha Marlow]] (deniable employer — her coin reaches him through an intermediary)"
   - "[[Duskwater]] (where the band is based, and where his family is)"
@@ -87,3 +90,8 @@ He does not appear. He is **the name only** — spoken by townsfolk, attached to
 party has seen, and already more frightening for it. His lieutenants **[[Jorn]]**,
 **[[Wick]]** and **[[Nella]]** carry the early raids; he arrives when the party has earned
 him.
+
+## Session 30 — What the party heard
+
+Not met, not described. Someone in the Golden Lioness said the name, and the room went quiet,
+almost superstitious. Someone gave [[Agnes Brand]] a look to keep her from carrying it further.

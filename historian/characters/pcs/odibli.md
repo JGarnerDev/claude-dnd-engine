@@ -13,7 +13,7 @@ race: "Gnome (Forest)"
 class: "Wizard (Evoker)"
 background: [[Sage]]
 level: 4
-level_confirmed: 29
+level_confirmed: 30
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Odibli Spannerbranch (Wizard 4, Evoker)"
 aliases:
@@ -38,7 +38,7 @@ enemies:
 family:
   - [[The Original Odibli]] (DM-only: the self he was copied from)
 affinity:
-  - [[Sergei Rubelgerd]] (4)
+  - [[Sergei Rubelgerd]] (5)
   - [[Davian Martikov]] (3)
   - [[Luci]] (2)
   - [[Rictavio]] (3)
@@ -202,6 +202,9 @@ Wizard 4 (Evoker) · Forest Gnome · Sage · Lawful Neutral · Small, 30 ft. Pro
 - **Session 10:** Smashed the orb; absorbed shadow essence; veins turned black; healed Dip and Iggy via ritual; party at half max HP; leveled to 3
 - **Session 16:** At the [[Blue Water Inn]], cast speak with animals to let [[Sergei Rubelgerd]] tell the room his story of lost friend Tidak (the bar wept); interrogated the bard [[Rictavio]] on his dragon-slaying boast, caught the evasion, and came away mistrustful
 - **Session 29:** Chose to read the scene as he fell. He spotted the crossbowman circling behind the crates and landed hidden outside the yard wall. He watched a cart of barrels escape south with a long-haired archer aboard (Nella), who looked back at him before vanishing under the trees. Fire bolt at the crossbowman: natural 1. Hold Person on the big one: saved. [[The Wanderer's Boon]] was not checked on screen. Stays level 4.
+- **Session 30:** Told [[Sable Wren]] the party had been ripped from another reality and fell from the stars, and said he feels drawn in one direction. Cast Prestidigitation on the fire alongside Halsby, which smothered most of it. Would not go near the dead raider mage, or the hearth. Read the hearth anyway (Arcana 23): it is linked to another entity not currently present. Told Sable she is a bad business owner and introduced himself as "Warren O'Ghibli Buffett". Pitched [[Silas Crubb]] on rebundling the town's debt (Charisma 19), and hyped Halsby's awning pitch. Reunited with [[Sergei Rubelgerd]] and spoke with him through Speak with Animals. Stays level 4; his level-up waits on the hearth. Holds an [[Earshot Crystals|earshot crystal]].
+
+> **Reliability:** Odibli's pull (toward a citadel, per Miguel) is player-side lore homework, not yet known in fiction. Confirm with Miguel.
 
 ## Affinity notes
 

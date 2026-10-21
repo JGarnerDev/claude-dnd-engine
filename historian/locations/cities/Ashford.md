@@ -102,11 +102,10 @@ Composition follows the surrounding region — no notable deviation from the fro
 
 ## The Golden Lioness
 
-**[[The Golden Lioness]]** is the town's brewery and pub, run by **[[Sable Wren]]**. It is
-half-old and half-new: an established, characterful core with a hearth that never goes out
-and a reputation as the safest building in town, plus a newly built brewery wing that is
-not yet open — bare, unpacked, casks only just delivered. The new wing is the undefended
-half, and it is what the raiders come for.
+**[[The Golden Lioness]]** is meant to be the town's first tavern and brewery. **[[Sable Wren]]**
+came about a week before the Session 29 raid to set it up, in a building still half-built. Its
+hearth never goes out. The raid wrecked most of it and took the stock it was to open on
+(retconned at Session 30; see its file).
 
 ## Open
 
@@ -124,3 +123,21 @@ The party arrived here by night, falling out of the light of [[The Wanderer's Bo
 raid on [[The Golden Lioness]]. [[Halsby]] came overland, told by Asher's fox that Ashford is a
 town on the river beset by bandits. The rest of the town (the separate raids, [[Mara Tull]],
 [[Silas Crubb]]) has not yet been seen on screen.
+
+## Canon — Session 30
+
+- **Every street was hit at once.** [[Mara Tull]]: a coordinated raid by several groups, part of
+  a larger, more organized force camped about a day across the river and now split up. The last
+  raid was about three months ago. This is the third crew this season. The raiders call
+  themselves independent, but every pair of boots came from the same cobbler.
+- **Losses:** [[Old Tobin Reed]]'s only ferry boat was burned early, and with it much of the
+  town's river trade. Only the armed townsfolk were hurt; [[Dunny Marsh]] was healed by the party.
+- **No town hall yet.** [[Silas Crubb]] is acting mayor and market holder, organizing the town's
+  construction. The town has no support from the local king, and the lords have other problems
+  (per Sable).
+- **Magic is rare here.** Townsfolk murmured at the door watching the party heal Dunny.
+- **Named in fear:** [[Wick]] (an elf commander with a neat brand) and [[Harrow Bane]] (a name
+  that hushes a room).
+- **Heading:** [[Jory Pike]] saw the archer's cart take the southeast track, heavily loaded.
+- Mara saw a ray of light fall from the sky about an hour before the party arrived. The party
+  allowed that it could have been them.

@@ -3,7 +3,9 @@
 name: "Silas Crubb"
 type: character
 subtype: npc
-exists: false
+exists: true
+source_session: [[Session 30 Keep the Ale]]
+confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
 tags:
@@ -18,6 +20,7 @@ livelihood: "Mayor of Ashford and its general-goods merchant — one man, both j
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
+last_updated: [[Session 30 Keep the Ale]]
 relates_to:
   - "[[Ashford]] (he is its mayor and its general store)"
   - "[[House Cael]] (trades with them, favours them in public never)"
@@ -33,6 +36,11 @@ motives:
   - "Survival dressed up as affability"
   - "A ledger that balances"
 charm_hook: "Every tangent he goes on ends, eventually and apparently by accident, at a number he wanted you to know."
+affinity:
+  - [[Odibli]] (1)
+  - [[Halsby]] (-1)
+voice: "Affable small-town drawl that always lands on a number. Shrewd, never predatory, slow to commit."
+voice_confirmed: 30
 ---
 
 Location: [[Ashford]]
@@ -61,3 +69,34 @@ kind of thing that makes raiders come back.
 He is the first re-supply contact, a reliable (if purchasable) read on the feud, and the
 practical ground-truth of Ashford: what is in stock, what the raids have actually cost, and
 which households are quietly in debt and to whom.
+
+## Session 30
+
+- Introduced himself as acting mayor and market holder: one general-goods shop, and organizing
+  [[Ashford]]'s construction until it has a town hall.
+- Lent [[Sable Wren]] about 1,000 gp to set up [[The Golden Lioness]]; about 650 gp is still owed.
+  Not predatory, but it is serious money for a town this size.
+- Kicked her ruined brewing copper and named the only two smiths who could remake one,
+  [[George Ringo]] and [[Zach]].
+- Had never heard of Strahd von Zarovich.
+- [[Odibli]] pitched him on rebundling the town's debt, and [[Halsby]] pitched him a 250 gp buy-in
+  on "shade on command". He followed some of it, decided the party was "alien enough not to be
+  applicable to this town's finances", said they could talk later, and left after his second drink.
+
+## Voice
+
+### Core
+
+- **Signature:** names the cost ("not going to affect the money that you owe me")
+- **Never:** commits to anything after his second drink
+- **Tell:** gets riled and swears at waste
+
+### Now
+
+- **Stance:** amused and wary; thinks the party "alien" to the town's finances (S30: the debt and awning pitches)
+
+### Said at the table
+
+- S30: "These bandits didn't steal it, they just broke it. Goddamn waste." (kicking the brewing copper)
+- S30: "Certainly not from that piece of slag." (to Iggy, offering to heat it)
+- S30: "So you're selling me a boat." (to Halsby's shade-on-command pitch)

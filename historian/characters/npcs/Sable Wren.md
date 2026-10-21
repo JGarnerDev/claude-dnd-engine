@@ -15,6 +15,7 @@ livelihood: "Proprietor and brewer at The Golden Lioness."
 race: tiefling
 class: warlock
 importance: major
+last_updated: [[Session 30 Keep the Ale]]
 disposition: friendly
 description: "Tiefling warlock who runs The Golden Lioness in Ashford; her patron is the deep-water being beneath the town, whom she calls Asher. Got the building by making friends with something she was hired to exorcise."
 contributed_by: jeff
@@ -22,8 +23,17 @@ charm_hook: "She named her bestselling ale 'The Mistake' and has never explained
 relates_to:
   - [[The Golden Lioness]] (proprietor and owner)
   - "[[Aashal-Groon Mellenegon Borak]] (her patron — the thing in the water she was sent to exorcise)"
-  - [[Lok Thuliaga]] (colleague)
-  - [[Bree Tealeaf]] (colleague)
+  - "[[Lok Thuliaga]] (planned hire)"
+  - "[[Bree Tealeaf]] (planned hire)"
+  - "[[Silas Crubb]] (her lender; she owes him about 650 gp)"
+affinity:
+  - [[Luci]] (3)
+  - [[Halsby]] (2)
+  - [[Iggy]] (2)
+  - [[Odibli]] (1)
+  - [[Dip]] (1)
+voice: "Practical and dry: acts first, thanks later. Blunt to the point of swearing when pushed, warm under it, never explains herself."
+voice_confirmed: 30
 ---
 
 Location: [[The Golden Lioness]]
@@ -43,7 +53,8 @@ What she gets out of it: the cleanest water in a town whose river is going bad, 
 ability to bless and charge deep-water for brewing. What he gets is a clean well used for
 life, someone opposing the fouling, and company.
 
-She works alongside [[Lok Thuliaga]] and [[Bree Tealeaf]].
+She came to [[Ashford]] about a week before the raid and runs the place alone for now. She means
+to take on [[Lok Thuliaga]] and [[Bree Tealeaf]].
 
 ## Canon — Session 29
 
@@ -62,3 +73,45 @@ She works alongside [[Lok Thuliaga]] and [[Bree Tealeaf]].
 > **Reliability:** the eye colour and the laugh come from Asher's fox, describing her secondhand
 > to Halsby. Treat them as Asher's view of her, not an established description. Confirm with
 > DM (Jeff) before using them as her canonical look.
+
+## Canon — Session 30
+
+- **Freed and practical.** Her first move after [[Luci]] and [[Dip]] cut her loose was to put
+  out the fire, one small pail at a time. Then she invited her rescuers to dinner: soup and
+  hardtack in the one room still standing.
+- **A tiefling, three or four generations removed.** She has seen Aasimar before, just none as
+  "extreme" as Luci, and finds the party exotic rather than hostile. She had never heard of
+  Barovia.
+- **New in town.** She arrived about a week before the raid to open Ashford's first tavern. She
+  borrowed about 1,000 gp from [[Silas Crubb]] and still owes about 650 gp. The stolen first stock
+  was meant to pay it off; without it she likely loses her permit.
+- **The offer.** Rooms, free meals, a stay of a month or two, 10% of earnings rising over time,
+  and the right to name the new sections, if the party brings back her stock from [[Nella]]'s
+  camp. She needs protection, and they need a home: "partial owners, I guess." They agreed to
+  fetch it.
+- **Odibli exasperates her.** When [[Odibli]] called her a bad business owner, she nearly chugged
+  her drink: "I just got my thing stolen from me and you're telling me I have bad financial
+  planning?" She rolled her eyes so hard the party wondered about her anatomy.
+- **Warm toward Luci,** who told her to her face she was untouched by darkness.
+- **The hearth.** When it went still during [[Iggy]]'s song, she glanced at it once and went on
+  pouring. She let [[Sergei Rubelgerd]] and [[Bosco]] sleep beside it; she has a soft spot for
+  pets.
+
+## Voice
+
+### Core
+
+- **Signature:** turns straight to the next job ("now that that fire is out")
+- **Never:** explains The Mistake
+- **Tell:** one glance at the thing she won't talk about, then back to work (the hearth)
+
+### Now
+
+- **Stance:** grateful, and putting her bar in their hands (S30: the rescue and the offer)
+- **Toward Odibli:** exasperated (S30: he called her a bad business owner)
+
+### Said at the table
+
+- S30: "What's Barovia?" (to Odibli, after Luci's speech)
+- S30: "That's the Mistake. It's the one people come back for." (pouring for the party)
+- S30: "I just got my thing stolen from me and you're telling me I have bad financial planning?" (to Odibli)

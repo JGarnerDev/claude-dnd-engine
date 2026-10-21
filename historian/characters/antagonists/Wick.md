@@ -3,7 +3,9 @@
 name: "Wick"
 type: character
 subtype: antagonist
-exists: false
+exists: true
+source_session: [[Session 30 Keep the Ale]]
+confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
 tags:
@@ -19,6 +21,7 @@ disposition: hostile
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
+last_updated: [[Session 30 Keep the Ale]]
 relates_to:
   - "[[Harrow Bane]] (his nominal captain — the band is cover)"
   - "[[Ashford]] (where he stages the flush)"
@@ -87,3 +90,9 @@ costs wait on Skyler. Give her an entity file once those are settled.
 He hits the far half of the raid and is gone before the party can engage him. What survives is
 the townsfolk's account: a strange marked man, moving differently from the rest, who did not
 seem to be there for the ale.
+
+## Session 30 — What the party heard
+
+Not met. Described over soup by [[Old Tobin Reed]]: an elf, one of a couple of raider commanders,
+with a mark on his hand "like a brand, but neater. Like someone did it with paperwork." He took
+careful note of the houses during the raid, as if looking for something.

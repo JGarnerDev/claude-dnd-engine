@@ -11,14 +11,14 @@ creature_type: beast
 challenge_rating: "0"
 size: tiny
 alignment: unaligned
-location: [[Vallaki]] (with the party)
+location: [[The Golden Lioness]] (with the party, in Aethryn)
 stat_block: "inline"
 aliases:
   - "Bosco Trashborn, the Pillager"
 importance: major
 active: true
 owner: [[Iggy]]
-last_updated: [[Session 15 The Gates of Vallaki]]
+last_updated: [[Session 30 Keep the Ale]]
 relates_to:
   - [[Iggy]] (companion; bonded over a ration)
   - [[Odibli]] (cold war — Odibli ate a ration in front of him)
@@ -95,3 +95,10 @@ The grievances are layered: deception first, then provocation. Bosco does not di
 ## Training (Session 14)
 
 At the [[Tser Pool Encampment]], [[Iggy]] began training Bosco over long rests — "Sit, stay, come." So far **only "Sit" learned.** Iggy also fed him and sang an ode to him before the Vistani, charming the camp.
+
+## Canon — Session 30
+
+Came through to Aethryn with the party, by a way never explained. [[Sergei Rubelgerd]] and
+[[Bosco]] turned up muddy at [[The Golden Lioness]] in [[Ashford]] during [[Iggy]]'s song, drawn
+by the music. Bosco arrived riding Sergei, "holding on for dear life". They wolfed down a shared bowl of soup, spun on their hind legs to the
+music, and now sleep by the hearth with [[Sable Wren]]'s blessing.

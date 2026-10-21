@@ -15,38 +15,46 @@ proprietor: [[Sable Wren]]
 purpose: commerce
 aliases: []
 importance: major
-description: "Tiefling-owned microbrewery and pub in Ashford; warm, well-crafted, reputedly the safest building in town. Half-old and half-new — an established characterful core plus a newly built brewery wing not yet open."
+description: "Tiefling-owned brewery and tavern in Ashford, the town's first, which Sable Wren came to set up about a week before the Session 29 raid. Half-built and now half-wrecked: one room survived whole, and its hearth feeds itself. Opening depended on the stock Nella's crew stole."
 contributed_by: jeff
 relates_to:
   - [[Sable Wren]] (proprietor)
   - "[[Ashford]] (the town it stands in)"
   - "[[Aashal-Groon Mellenegon Borak]] (the deep-water being beneath; the cellar spring drops into his aquifer)"
-  - [[Lok Thuliaga]] (staff — security)
-  - [[Bree Tealeaf]] (staff — bartender)
-  - [[Oswin]] (regular performer)
+  - "[[Lok Thuliaga]] (planned hire: security; not yet on staff)"
+  - "[[Bree Tealeaf]] (planned hire: bartender; not yet on staff)"
+  - "[[Oswin]] (hoped-for performer; not yet engaged)"
+  - "[[Silas Crubb]] (lent Sable the setup money)"
 customers: "Working locals, occasional families, small tradespeople; also draws academic and bureaucratic mages with steady salaries."
 specialty: "Stonecap mushroom dishes, pot pies, rotisserie. Signature ales: Lioness's Pride, The Standing, Pale Crossing, Embertide, Ironhold, The Mistake."
 ---
 
 The town's brewery and pub, on a corner in **[[Ashford]]**.
 
-Staff: [[Sable Wren]] (proprietor), [[Lok Thuliaga]] (security), [[Bree Tealeaf]] (bartender)
+Staff: [[Sable Wren]] (proprietor, alone for now). Planned hires: [[Lok Thuliaga]] (security),
+[[Bree Tealeaf]] (bartender). Hoped-for performer: [[Oswin]].
 
-Regular performer: [[Oswin]]
+> **Retconned at Session 30** (DM ruling, 2026-10-21). The table established that Sable came to
+> Ashford about a week before the raid to open its *first* tavern, in a building still under
+> construction. What was said at the table is canon; earlier details stay only where nothing
+> contradicted them. "Years of posted notices" and an established old half are gone; the staff
+> and performer are people she means to take on, not people already there.
 
 ## Description
 
 Two-storey corner building, narrow frontage but wider inside than it looks. Warm sandstone and dark timber, worn but well-kept. Iron sign with a seated lioness. Ivy on the upper floor. Lanterns at the door, always lit. Smell of hops hits before you see it.
 
-Inside: long bar, low ceiling, mismatched chairs — comfortable in an accumulated way, not designed. Central hearth always burning; everything slightly warm. Music stage in one corner, nothing fancy. Walls covered in years of posted notices, sketches, a few mounted antlers. [[Bree Tealeaf]] knows what every one of them means.
+Inside, as of the raid: partly constructed, now partly destroyed. **One room survived whole**, the
+common room with the hearth, full of crates partly unpacked; it had been busy for about a week.
+There is an upstairs with beds, rooms and open, unfurnished space. Central hearth always burning,
+and it **burns without anyone feeding it**: the logs go to ash and the fire stays healthy.
 
-### The new wing
+The brewery side took the raid: a hole blown in the wall, the yard stripped, and Sable's
+**brewing copper** ruined, one sheet hammered round by hand. Only [[George Ringo]] and [[Zach]]
+could remake it.
 
-Everything above is the old half. Built onto it, and freshly finished, is a **brewery wing
-that has not opened yet** — new timber, bare walls, no notices on them, crates still roped
-shut and casks only just delivered to the yard. None of the old building's accumulated
-character has reached it. None of the old building's uncanny safety, either, as far as
-anyone can tell. It is the undefended half, and it is the half worth taking.
+The long bar, the stage, the mismatched chairs are what Sable means it to become, not what it is
+yet.
 
 ## Staff
 
@@ -75,7 +83,8 @@ Specialties: pot pies, rotisserie, stonecap mushrooms (dense, earthy, sourced fr
 
 ## Regulars
 
-Working locals, occasional families, small tradespeople — not wealthy. Also draws academic and bureaucratic mages. Good live music. Staff enforce civility; fights happen anyway.
+None yet; it has not opened. The clientele Sable is aiming for: working locals, occasional
+families, small tradespeople, and academic and bureaucratic mages with steady salaries.
 
 ## Origin
 
@@ -88,9 +97,12 @@ charge deep-water for brewing.
 
 ## Story Hook
 
-The Lioness is the safest place in town — something about Sable's arrangement makes the old
-half genuinely protected. The party may not realize this until something bad can't follow them
-through the door. The new wing is not covered by it. Also: the safest building in Ashford is
+The Lioness may be the safest place in town: something about Sable's arrangement protects part
+of it. The one room that came through the raid whole, around the hearth, is the natural candidate.
+The party may not realize this until something bad can't follow them through the door.
+
+> **Reliability:** linking the protection to the surviving room is a blend made at the Session 30
+> retcon, not something said at the table. Confirm with DM. Also: the safest building in Ashford is
 sitting directly on top of a monster, and whatever [[Lok Thuliaga]] and [[Bree Tealeaf]] left
 behind will find them eventually.
 
@@ -104,3 +116,19 @@ behind will find them eventually.
   still bound and gagged.
 - The building was never named aloud at the table. The party knows it as "the tavern" or "the
   house".
+
+## Canon — Session 30
+
+- **A week-old venture.** [[Sable Wren]] arrived about a week before the raid to open
+  [[Ashford]]'s first tavern, planned to open the following week. She borrowed about 1,000 gp from
+  [[Silas Crubb]] to set it up and still owes about 650 gp. The stolen first stock was meant to
+  pay that off and float the bar for its first month. Without it she likely loses her permit.
+- **The hearth is linked to something.** [[Odibli]] read it (Arcana 23): linked to another
+  entity not currently present, with an aura about 100–200 ft across. It went completely still
+  for about ten seconds during [[Iggy]]'s song, and Sable glanced at it once and kept pouring.
+- **The offer.** Sable offered the party rooms, free meals, a stay of a month or two, and 10% of
+  earnings (rising over time) if they bring the stock back. They may name the new sections. The
+  party agreed to fetch the stock; no deed was formally taken.
+- **The Mistake**, as poured: deep red and a little cloudy, a pink head that foams and fades, sour
+  cherry then a round honeyed middle, finishing sweet and colder than the mug.
+- [[Sergei Rubelgerd]] and [[Bosco]] sleep by the hearth, with Sable's blessing.

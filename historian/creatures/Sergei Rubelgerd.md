@@ -11,7 +11,7 @@ creature_type: beast
 challenge_rating: "1/8"
 size: medium
 alignment: unaligned
-location: [[Vallaki]] (with the party)
+location: [[The Golden Lioness]] (with the party, in Aethryn)
 stat_block: "inline"
 breed: "Tibetan Mastiff"
 aliases:
@@ -21,7 +21,7 @@ active: true
 owner: [[Odibli]]
 source_session: [[Session 15 The Gates of Vallaki]]
 confirmed_date: "2026-06-23"
-last_updated: [[Session 16 The Blue Water Inn]]
+last_updated: [[Session 30 Keep the Ale]]
 relates_to:
   - [[Odibli]] (owner; bought him at the Vallaki market, named him via speak with animals)
   - [[Bosco]] (the party's other animal companion)
@@ -70,3 +70,12 @@ At the [[Blue Water Inn]], [[Odibli]] cast speak with animals and let Sergei tel
 One evening a thick fog came over them and took Tidak away. Sergei waited at the edge of the fog for many days until he found the courage to go after him — but was lost, and captured, in [[Barovia]]. That is how the party came to find him in a shop in [[Vallaki]]. The room wept at the tale.
 
 > **Reliability:** Tidak, the Zeatchean Steppes, and Sergei's capture are from Miguel's Session 16 notes, told in-fiction through Sergei. Tidak has no entity file yet — recorded here as lore. Confirm with DM whether Tidak is a thread to develop.
+
+## Canon — Session 30
+
+Came through to Aethryn with the party, by a way never explained. [[Sergei Rubelgerd]] and
+[[Bosco]] turned up muddy at [[The Golden Lioness]] in [[Ashford]] during [[Iggy]]'s song, drawn
+by the music. Through [[Odibli]]'s Speak with Animals: "So late. I came to the forest. Raccoon. Raccoon Bosco. Nearby. We sniff. We look. We hear a clashing of metal. We come shortly after. Once safe. Now here." They wolfed down a shared bowl of soup, spun on their hind legs to the
+music, and now sleep by the hearth with [[Sable Wren]]'s blessing.
+
+Said at the table (S30, through Speak with Animals): "So late. I came to the forest. Raccoon. Raccoon Bosco. Nearby. We sniff. We look. We hear a clashing of metal. We come shortly after. Once safe. Now here."

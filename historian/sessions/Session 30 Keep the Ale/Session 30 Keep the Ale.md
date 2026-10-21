@@ -4,18 +4,60 @@ name: "Session 30 Keep the Ale"
 campaign: homebrew
 type: session
 session_number: 30
-exists: false
-state: planned
+exists: true
+state: completed
 tags:
   - session
 
 mission: [[The Stolen Casks]]
 planned_date: "2026-10-13"
+played_date: "2026-10-20"
+# in_world_end_date deliberately unset: Aethryn has no calendar yet (DM, 2026-10-07).
+# Working label: "Day 1, Ashford reckoning", late night. Set it once the calendar lands.
+recap: "Minutes after the raid, Halsby stepped out of the shadows and told the party the fox had sent him. Luci tested him and found no lie, and Iggy shook his hand. Odibli said they had been ripped from another reality and fallen from the stars, and that he felt drawn in one direction. Luci freed Sable Wren, a tiefling, who went straight to putting out the fire. Luci's psychokinetic storm fanned the flames, Odibli and Halsby smothered most of it with Prestidigitation, and Dip finished it with the last pail. Luci told Sable she was untouched by the darkness they had known in Barovia, and Sable asked what Barovia was. On the bodies the party found about 150 gp, which Dip kept, and a crude crystal on a cord around every raider's neck. With Luci's guidance, Halsby worked out that they carry silent speech, and he dealt one to each PC: earshot crystals. Odibli would not go near the dead mage. In the one surviving room of the half-built tavern, Sable served soup and hardtack as Ashford arrived: Sheriff Mara Tull, her hurt deputy Dunny Marsh, and the mayor Silas Crubb. Mara said every street had been hit at once by a larger, more organized raider force, camped about a day across the river, and that she had seen a ray of light fall from the sky. Silas had never heard of Strahd, which delighted Luci. Iggy and Luci healed Dunny. Silas kicked Sable's ruined brewing copper; only two smiths, George Ringo and Zach, could remake one. Sable had come to Ashford about a week before to open its first tavern, the Golden Lioness. She had borrowed about 1,000 gp from Silas and still owed about 650, and the stolen stock was meant to pay it off. Over soup, Old Tobin Reed described Wick, a branded elf commander who took notes on houses. The name Harrow Bane hushed the room. Mara said every raider's boots came from the same cobbler, and Jory Pike had seen the archer take the cart southeast on deep ruts. Odibli read the self-feeding hearth as linked to an absent entity. Sable poured The Mistake and offered rooms, meals and 10% of the Lioness if the party brought her stock back from Nella's camp, and they agreed. Odibli told her she was a bad business owner and pitched Silas on rebundling the debt, and Halsby tried to sell Silas shade on command. Silas left uncommitted. Iggy played his viol while Luci danced. When the tune wandered somewhere foreign the hearth went still for ten seconds, Sable glanced at it once, and Iggy reached level 5. Sergei and Bosco found the party and joined the dance."
+cliffhanger: "Late night in the one surviving room of the Golden Lioness. The party has taken Sable's job: bring her stock back from Nella's camp, southeast along a deeply rutted track, for rooms, meals and a share of the bar. Sergei and Bosco sleep by a hearth that feeds itself, which went still for ten seconds while Iggy played, and Sable saw it and said nothing. The townsfolk are leaving, and the dawn pursuit is still ahead."
+entities_canonized:
+  - [[Mara Tull]]
+  - [[Silas Crubb]]
+  - [[Wick]]
+  - [[Harrow Bane]]
+  - [[Earshot Crystals]]
+  - [[George Ringo]]
+  - [[Zach]]
+  - [[Old Tobin Reed]]
+  - [[Jory Pike]]
+  - [[Agnes Brand]]
+  - [[Dunny Marsh]]
+new_entities:
+  - "Sable's broken brewing copper: a state note on the Golden Lioness, not an entity"
+  - "The citadel or wizard's tower Odibli is drawn toward: Miguel's lore homework, player-side only; no character knows it"
+table_notes: "Only Scenes 1-3 of 8 ran in about 2.5 hours, including a long mid-session break. The night ran long on roleplay and the table loved it. The financial-advice bit (Warren O'Ghibli Buffett, debt rebundling, the awning pitch) was the comedy high point. Sable's eye-roll landed hard ('she's my new favorite'). Sergei and Bosco's return got a cheer. Luci's 'Strahd who?' celebration landed. The new stats slides opened the session ('Oh, we got stats now!'). Jeff got 'raised hairs' when players asked about things he hadn't planned, like Sable knowing other Aasimar. Roll20 friction: token labels weren't visible at first and the grid didn't align. Ben was absent. Kellan, Miguel and Paul shared Miguel's mic, so the recording can't separate them by voice."
+choices:
+  - "party: told the town the truth, that they fell from the sky out of Barovia, and allowed that Mara's ray of light could have been them → Ashford will repeat that they came out of the light"
+  - "party: agreed to bring Sable's stock back from Nella's camp for rooms, meals and 10% of the Golden Lioness → the mission continues; terms heard, no deed formally taken"
+  - "Halsby: dealt an earshot crystal to every PC instead of keeping them → the party is linked telepathically within 300 ft"
+  - "Odibli: told Sable she is a bad business owner, then pitched Silas on rebundling the debt → Silas is open to financial advice later; Sable is exasperated with Odibli"
+  - "Halsby: pitched Silas a 250 gp buy-in on 'shade on command' → Silas thinks the party alien to the town's finances; nothing committed"
+  - "Dip (the table, for Ben): keeps the 150 gp and won't donate it → Sable's debt unchanged (confirm with Ben)"
+  - "Odibli: kept away from the dead mage and the fireplace, then read the hearth anyway → the party knows the hearth is linked to something absent"
+beats:
+  - "spotlight(Halsby): beat"
+  - "spotlight(Luci): beat"
+  - "party-centric: touch"
+  - "party-centric: touch"
+  - "world: beat"
+  - "shared(Luci,Iggy): touch"
+  - "world: beat"
+  - "spotlight(Odibli): beat"
+  - "party-centric: beat"
+  - "spotlight(Odibli): beat"
+  - "spotlight(Halsby): touch"
+  - "spotlight(Iggy): beat"
+  - "shared(Odibli,Iggy): touch"
 pcs_present:
   - "Iggy"
   - "Luci"
   - "Odibli"
-  - "Dip"
   - "Halsby"
 
 # --- OPTIONAL ---
@@ -81,6 +123,44 @@ players, so the night and the chase aren't only watched · Mara asks for one vol
 statement at the jail (`S2_STATEMENT`) · the flame track sits on the table where the party can see
 it (`S2_HEARTH`) · a route choice at chase stages 2 and 4 (`S2_ROAD`, `S2_APPROACH`) · Nella's
 escape route can be scouted, and cut off, before the camp goes loud (`S2_SCOUT`, `S2_ESCAPE`).
+
+## As Played
+
+Canonized 2026-10-21 from the Craig recording (`recaps/transcripts/session-30.md`). The
+frontmatter `recap` is the record. What follows is the plan as written. **Only Scenes 1–3 ran**,
+through `S2_COMPANIONS`. `S2_STATEMENT`, `S2_BOON`, `S2_HEARTH` and all of Scenes 4–8 did not; they
+carry into [[Session 31 The Red Trail]] (a draft). [[The Stolen Casks]] does not resolve here.
+
+**Deviations from the plan:**
+
+- **Ben was absent.** Dip appeared only in narration (freeing Sable, the last pail). His private
+  roll at the song (`S2_IGGY`) is owed as a later flashback.
+- **The Golden Lioness was retconned at the table** (DM ruling, 2026-10-21). Sable came to Ashford
+  about a week ago to open the town's *first* tavern in a half-built building, and one room
+  survived the raid. What was said at the table is canon; the old file's details stay only where
+  nothing contradicted them. See [[The Golden Lioness]].
+- **Sable's debt is a loan, not a delivery:** about 1,000 gp borrowed from [[Silas Crubb]], about
+  650 gp still owed. The stolen stock was meant to pay it off.
+- **The smiths were named:** [[George Ringo]] (a half-troll) and [[Zach]] (an Aasimar), the only
+  two who could remake a brewing copper. The plan's "about three" became two at the table.
+- **The deed (`S2_OFFER`)** was offered as rooms, free meals, a stay of a month or two, and 10% of
+  earnings rising over time, and the party may name the new sections. The party agreed to fetch
+  the stock, but no deed was formally taken.
+- **The hearth.** `S2_HEARTH` never ran. Odibli read the hearth early (Arcana 23): it is linked
+  to another entity not currently present, with an aura about 100–200 ft across. It went still
+  for about ten seconds during Iggy's song. The dying-hearth beat waits on Miguel's lore notes.
+- **Levels:** Iggy to 5 (Paladin 2) at the song. Odibli and Halsby stay at 4; their level-ups
+  stay tied to `S2_HEARTH` and `S2_SPEAR`.
+- **Sergei and Bosco** came in muddy after the song. Through Speak with Animals, Sergei said they
+  landed in the forest, sniffed around, heard metal clashing, and came once it was safe.
+- **Not played:** Mara's statement, the dead Boon, the dawn short rest, the horses, the Spear,
+  the chase, the fork, the waystation, the cell.
+
+> **Reliability:** Kellan, Miguel and Paul shared one microphone, and a voice split was tried and
+> rejected, so who said what among Halsby, Odibli and Luci is attributed from content. The
+> Insight result on Halsby (~21) and Luci's Guidance on the crystal check are inferred from
+> context. The table assigned the 150 gp to Dip without Ben present. Confirm with Ben (the gold)
+> and with Kellan, Miguel or Paul for any line attributed to their character.
 
 ## Combatants
 

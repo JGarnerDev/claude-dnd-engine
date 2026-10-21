@@ -96,3 +96,13 @@ hears, and she can answer. She sits on that through many fights before it comes 
 - **Her crew left behind at the Lioness died to a man:** Arden, Willem, Gib, the hedge-mage
   Tallis and the big one. Her cart and the barrels already loaded got away. The party stopped
   the rest of the yard's stock from leaving.
+
+## Canon — Session 30
+
+- **Named and placed.** [[Sable Wren]] told the party that Nella, "one of the raider
+  commanders", took the stock to a nearby camp. The party has now tied the name to the
+  long-haired archer on the cart.
+- [[Jory Pike]] saw her leave: "bow across her knees, cool as you like", southeast, the ruts deep.
+- The party took the job of bringing the stock back. Luci favours ambushing her crew as they
+  leave camp over a head-on assault.
+- The [[Earshot Crystals]] from her dead crew are now with the party, one each.
