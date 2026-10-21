@@ -139,3 +139,39 @@ export function splitNodeSections(md: string): { setup: string; nodes: Map<strin
   }
   return { setup: buckets[0].lines.join('\n').trim(), nodes };
 }
+
+// Table-time callouts filed in a node's prose (`/session` Phase 6), lifted onto the
+// card so the DM never has to open the scene notes for them:
+//   - **Introduce:** Mara Tull        -> one intro per character, at first appearance;
+//     - **Look:** … / **Sound:** … / **Impression:** …   (its nested bullets)
+//   - **Tokens:** who goes on which map, who comes off
+// A callout is the top-level bullet plus every indented line under it.
+const CALLOUT_RE = /^[-*]\s+\*\*(Introduce|Tokens):?\*\*:?\s*(.*)$/;
+
+export interface Callouts {
+  intros: Array<{ name: string; md: string }>;
+  tokens: string[];
+}
+
+export function extractCallouts(md: string): Callouts {
+  const out: Callouts = { intros: [], tokens: [] };
+  const lines = md.replace(/\r/g, '').split('\n');
+  for (let i = 0; i < lines.length; i++) {
+    const m = CALLOUT_RE.exec(lines[i]);
+    if (!m) continue;
+    const head = [m[2].trim()];
+    const body: string[] = [];
+    // Wrapped continuation of the head line, then the nested bullets.
+    while (i + 1 < lines.length && /^\s+\S/.test(lines[i + 1])) {
+      const next = lines[++i];
+      if (body.length || LIST_RE.test(next)) body.push(next);
+      else head.push(next.trim());
+    }
+    if (m[1] === 'Tokens') out.tokens.push([...head, ...body.map((l) => l.trim())].join(' '));
+    else {
+      const indent = Math.min(...body.map((l) => l.match(/^\s*/)![0].length));
+      out.intros.push({ name: head.join(' '), md: body.map((l) => l.slice(indent)).join('\n') });
+    }
+  }
+  return out;
+}

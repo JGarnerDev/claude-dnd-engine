@@ -80,3 +80,17 @@ describe('renderCard scene notes by node', () => {
     expect(v.onGo).toHaveBeenCalledWith('S1_WOODS');
   });
 });
+
+describe('card callouts', () => {
+  it('puts the node\'s token cues and introductions on the card', () => {
+    const main = document.createElement('main');
+    const md = '#### S1_FORK — Pressure\n\n- **Tokens:** Sable by the horse.\n- **Introduce:** Sable\n  - **Look:** horns.\n  - **Sound:** level.\n\n#### S1_CASKS — Casks\n\n- **Introduce:** Nella\n  - **Look:** cape.';
+    renderCard(main, view({ scene: { id: 'SC3', key: '3', title: 'Scene 3', md } }));
+    const card = main.querySelector('.sr-card')!;
+    expect(card.querySelector('.sr-tokens')!.textContent).toContain('Sable by the horse.');
+    const intros = card.querySelectorAll('.sr-intro');
+    expect(intros).toHaveLength(1);
+    expect(intros[0].querySelector('.sr-intro-name')!.textContent).toContain('Sable');
+    expect(intros[0].querySelectorAll('li')).toHaveLength(2);
+  });
+});

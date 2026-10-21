@@ -6,6 +6,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.39.0] — 2026-10-20
+
+### Added
+
+- **Introductions in session plans.** Where a character first appears to the party, the node carries an `- **Introduce:** <Name>, <role>` bullet with **Look**, **Sound** and **Impression** sub-bullets. Combatants lead with their label. Once per character; a deliberate silhouette gets none.
+- **Token cues in session plans.** A `- **Tokens:**` bullet on every node where someone with a token arrives, leaves or changes map: which map, who goes on and roughly where, who comes off.
+- **The session runner shows both on the card**, above the branch buttons, so the DM reads them at the moment they're needed instead of opening the scene notes. Parsed from the node's prose by `extractCallouts` in `app/pages/home/session/markdown.ts`; no change to `session-cards.py` output.
+
+### Changed
+
+- **`/session`** Phase 6 scene blocks gain the Introduce and Tokens fields.
+- **`/review`** Pass 2 checks both. The "describe once in 10 words or fewer" rule is replaced by the Introduce block.
+
 ## [0.38.0] — 2026-10-13
 
 ### Added

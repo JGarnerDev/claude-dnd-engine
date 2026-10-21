@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { escapeHtml, inline, plainText, renderMarkdown, splitNodeSections, splitSections } from './markdown.js';
+import { escapeHtml, extractCallouts, inline, plainText, renderMarkdown, splitNodeSections, splitSections } from './markdown.js';
 
 describe('plainText', () => {
   it('unwraps wikilinks and drops bold/code markup', () => {
@@ -88,5 +88,28 @@ describe('splitNodeSections', () => {
 
   it('finds no nodes in prose without node headings', () => {
     expect(splitNodeSections('**Beats:**\n\n#### Not a node').nodes.size).toBe(0);
+  });
+});
+
+describe('extractCallouts', () => {
+  it('lifts introductions with their nested bullets and wrapped token cues', () => {
+    const md = [
+      '- **Tokens:** outdoors map, Mara at the gate,',
+      '  Silas behind her.',
+      '- **Introduce:** [[Mara Tull]], sheriff',
+      '  - **Look:** a worn coat,',
+      '    a long knife.',
+      '  - **Sound:** quiet.',
+      '- **Mara\'s lines:** not a callout.',
+    ].join('\n');
+    const c = extractCallouts(md);
+    expect(c.tokens).toEqual(['outdoors map, Mara at the gate, Silas behind her.']);
+    expect(c.intros).toHaveLength(1);
+    expect(c.intros[0].name).toBe('[[Mara Tull]], sheriff');
+    expect(c.intros[0].md).toBe('- **Look:** a worn coat,\n  a long knife.\n- **Sound:** quiet.');
+  });
+
+  it('returns nothing for prose without callouts', () => {
+    expect(extractCallouts('- a plain bullet\n\nText.')).toEqual({ intros: [], tokens: [] });
   });
 });

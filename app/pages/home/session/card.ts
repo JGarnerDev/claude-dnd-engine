@@ -1,7 +1,7 @@
 // The main column: scene bar, the current card, its branch buttons, and the
 // scene's full written prose underneath.
 
-import { inline, renderMarkdown, escapeHtml, splitNodeSections, splitSections } from './markdown.js';
+import { extractCallouts, inline, renderMarkdown, escapeHtml, splitNodeSections, splitSections } from './markdown.js';
 import { chipText } from './rail.js';
 import type { Known } from './markdown.js';
 import { mergeLabelLines } from './flow.js';
@@ -58,7 +58,8 @@ export function renderCard(main: HTMLElement, v: CardView): void {
       <h1 class="sr-card-title">${inline(node.title, v.known)}</h1>
       ${v.bodyHtml !== undefined ? `<div class="sr-card-body">${v.bodyHtml}</div>` : `
       <ul class="sr-card-lines">${mergeLabelLines(node.lines).map((l) => `<li>${inline(l, v.known)}</li>`).join('')}</ul>
-      ${node.notes.map((n) => `<p class="sr-note">${inline(n, v.known)}</p>`).join('')}`}
+      ${node.notes.map((n) => `<p class="sr-note">${inline(n, v.known)}</p>`).join('')}
+      ${calloutsHtml(v)}`}
       <div class="sr-options">
         ${branches.length ? branches.map(optBtn).join('') : `<div class="sr-end"><strong>End of the plan.</strong> ${inline(v.closingHook, v.known)}</div>`}
       </div>
@@ -118,5 +119,21 @@ function renderSceneGroups(v: CardView): string {
         + `<code class="sr-gn-id">${escapeHtml(chipText(n.id))}</code> <span class="sr-gn-title">${inline(n.title, v.known)}</span>`;
       return group(n.id, summary, body, current ? ' is-current' : '');
     }),
+  ].join('');
+}
+
+// Token cues and introductions from the current node's prose (`/session` Phase 6),
+// lifted onto the card so the DM reads them at the moment they're needed.
+function calloutsHtml(v: CardView): string {
+  const prose = v.scene?.md ? splitNodeSections(v.scene.md).nodes.get(v.node.id) : undefined;
+  if (!prose) return '';
+  const { intros, tokens } = extractCallouts(prose);
+  return [
+    ...tokens.map((t) => `<p class="sr-tokens"><span class="sr-callout-label">Tokens</span> ${inline(t, v.known)}</p>`),
+    ...intros.map((x) => `
+      <section class="sr-intro">
+        <h2 class="sr-intro-name"><span class="sr-callout-label">Introduce</span> ${inline(x.name, v.known)}</h2>
+        <div class="sr-md">${renderMarkdown(x.md, v.known)}</div>
+      </section>`),
   ].join('');
 }

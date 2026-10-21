@@ -72,6 +72,14 @@
 .sr-note { font-size: 15px; color: #cbd5e1; background: var(--sr-bg); border-radius: 6px; padding: 10px 14px; margin: 10px 0; border-left: 3px solid var(--sr-muted); }
 .sr-note::before { content: "Plan note — "; color: var(--sr-muted); font-weight: 600; }
 
+/* Table-time callouts lifted from the node's prose: token cues and introductions */
+.sr-callout-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--sr-muted); margin-right: 6px; }
+.sr-tokens { font-size: 14px; background: var(--sr-bg); border-radius: 6px; padding: 8px 14px; margin: 10px 0; border-left: 3px solid var(--sr-k-seed); }
+.sr-intro { background: var(--sr-raised); border-radius: 8px; padding: 10px 16px; margin: 12px 0; border-left: 4px solid var(--sr-accent); }
+.sr-intro-name { font-size: 18px; margin: 0 0 4px; }
+.sr-intro .sr-md ul { margin: 0; padding-left: 18px; }
+.sr-intro .sr-md li { margin: 3px 0; }
+
 /* Branch buttons */
 .sr-options, .sr-asides { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
 .sr-asides { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--sr-line); }
