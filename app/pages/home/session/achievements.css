@@ -1,0 +1,19 @@
+/* Achievement slides (achievements.ts, meta/achievements.md) — one popup per achievement,
+   game-notification style. Sized for screen-share like slides.css; uses the runner's
+   --sr-* tokens (session.css). */
+.ac-wrap { display: flex; flex-direction: column; gap: 2.4vh; max-height: 68vh; overflow: auto; max-width: 900px; }
+
+.ac-card { position: relative; padding: 16px 22px 18px; background: linear-gradient(160deg, var(--sr-raised), var(--sr-surface)); border: 2px solid var(--sr-accent); border-radius: 6px; box-shadow: 0 0 0 4px color-mix(in srgb, var(--sr-accent) 14%, transparent), 0 10px 30px rgb(0 0 0 / 35%); animation: ac-pop 0.35s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+.ac-card:nth-child(2) { animation-delay: 0.12s; }
+.ac-card:nth-child(3) { animation-delay: 0.24s; }
+.ac-card:nth-child(n+4) { animation-delay: 0.36s; }
+.ac-card.is-repeat { border-color: var(--sr-k-recap); box-shadow: 0 0 0 4px color-mix(in srgb, var(--sr-k-recap) 16%, transparent), 0 10px 30px rgb(0 0 0 / 35%); }
+
+.ac-eyebrow { font-size: clamp(12px, 1vw, 15px); font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sr-accent); }
+.ac-card.is-repeat .ac-eyebrow { color: var(--sr-k-recap); }
+.ac-eyebrow b { font-variant-numeric: tabular-nums; }
+.ac-title { margin-top: 4px; font-size: clamp(22px, 2.2vw, 34px); font-weight: 800; line-height: 1.15; }
+.ac-text { margin-top: 6px; font-size: clamp(16px, 1.45vw, 22px); line-height: 1.45; color: var(--sr-muted); }
+
+@keyframes ac-pop { from { opacity: 0; transform: translateY(10px) scale(0.96); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .ac-card { animation: none; } }

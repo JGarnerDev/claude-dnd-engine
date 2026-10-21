@@ -6,6 +6,21 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.40.0] — 2026-10-20
+
+### Added
+
+- **Achievements (`meta/achievements.md`).** Homebrew recap decks gain one slide per PC, titled with the PC's name: short, snarky "New achievement!" cards for in-fiction deeds, addressed to the PC as "you". No reward line, no perks, never padded; a PC with nothing good gets no slide. Running jokes come from each PC's history, and a repeated title (`Gravity's Favorite II`) shows as "earned again ×2".
+- **One ledger, `historian/sessions/_achievements.md`**, parsed by `scripts/lib/achievements.py` (tests in `tests/scripts/test_achievements.py`). History starts at Session 30; no backfill.
+- **Achievement slides in the runner** (`app/pages/home/session/achievements.ts`), slotted after "The party" and before the stats slides.
+
+### Changed
+
+- **`/transcript`** ledgers achievement candidates per PC, and the inbox note gains `## Achievement candidates`.
+- **`/recap`** asks about achievements in Phase 2 (question 11), drafts them as `A1.` items after fame in Phase 5, and writes the ledger on approval.
+- **`meta/recap-slides.md`** places the achievement slides and exempts them from the third-person voice rule.
+- **`session-cards.py`** adds `achievements` to each `previously[]` entry (additive; null when unledgered).
+
 ## [0.39.0] — 2026-10-20
 
 ### Added

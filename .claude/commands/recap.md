@@ -36,6 +36,7 @@ Otherwise, ask the DM the following. Keep it conversational — rough notes are 
 8. **Choices** — What did the party (or one player) decide that should matter later? Propose the list yourself from the recap and the plan's `Choice (...)` bullets, and let the DM confirm, cut or add. One line each: who chose, what, and what it set in motion. (`meta/player-agency.md` → Remember what they chose.)
 9. **Lines** — Any NPC line worth keeping word for word, or an NPC who came across differently from their file? Take the inbox note's `Quotable lines` first and ask only about NPCs it misses. Rough wording is fine; mark it `(?)`. This feeds the voice-shifts step in Phase 5.
 10. **Stats** — Take the inbox note's `Stats` first. Without a note, ask: who landed killing blows, crits, nat 20s or 1s, who healed, performed, punched or cast the most? Rough numbers are fine. This feeds the stats step in Phase 5 (`meta/stats.md`).
+11. **Achievements** (homebrew only) — Take the inbox note's `Achievement candidates` first. Without a note, ask: what did each character do that deserves a snarky "New achievement!" card? In-fiction deeds only. This feeds the achievements step in Phase 5 (`meta/achievements.md`).
 
 Wait for the DM's response before continuing.
 
@@ -174,6 +175,8 @@ Present one numbered item per NPC, stable numbers, so the DM can answer from a p
 
 **Fame (after stats):** from the standout moments (a ⭐ personal best, a record-setting award, a killing blow on a named foe), propose up to three in-world fame beats as `F1.`, `F2.`: what happened and who would hear of it (`F1. Dip's killing blow on the drake — word reaches Vallaki?`). Nothing is fame without DM approval. Carry the approved ones to Phase 5.5 as event candidates. When the deed is already an event, add a `Fame:` consequence to it instead. Propose none when nothing stood out.
 
+**Achievements (after fame, homebrew only):** read `meta/achievements.md` once (voice, rules, ledger shape), then each present PC's history in `historian/sessions/_achievements.md` to spot running jokes. From Phase 2 question 11, draft per PC as stable numbered items, `A1.`, `A2.`, grouped under the PC's name: the title in bold, then the description. Only what the session supports; a PC with nothing good gets nothing. Mark a repeat title with its numeral and say what it calls back to. Run the names check in `meta/recap-slides.md` on the draft. The DM answers from a phone ("cut A3", "A5 funnier"). On approval, append `## Session {nn}` to the ledger in its shape. If the DM skips, write nothing.
+
 **If an entity is missing (no file anywhere):**
 
 - Do not create it silently. Flag it clearly:
@@ -264,7 +267,7 @@ For a `campaign: homebrew` session, draft its party-facing deck. Read `meta/reca
 
 If the DM declines, write nothing. The session's card simply shows no **Slides** button.
 
-Stats slides are not drafted here. The runner builds them from the ledger and slots them in before "Next time…" (`meta/stats.md`).
+Stats and achievement slides are not drafted here. The runner builds them from their ledgers and slots them in before "Next time…": achievements first, then stats (`meta/achievements.md`, `meta/stats.md`).
 
 ### Group-chat blurb
 

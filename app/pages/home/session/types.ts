@@ -80,10 +80,11 @@ export interface PreviousSession {
   path: string;
   slides: Slide[]; // party-facing deck from the folder's _slides.md; [] when none
   stats?: Stats | null; // scripts/lib/stats.py standings (meta/stats.md); null when unledgered
+  achievements?: PcAchievements[] | null; // scripts/lib/achievements.py (meta/achievements.md); null when unledgered
 }
 
 // One slide of a deck (meta/recap-slides.md): a `##` headline and its body.
-// `html` is set only on generated slides (stats) and replaces the markdown body.
+// `html` is set only on generated slides (stats, achievements) and replaces the markdown body.
 export interface Slide {
   title: string;
   md: string;
@@ -130,6 +131,19 @@ export interface Stats {
   lifetime: StatLeader[];
   previousSeason: { campaign: string; first: number; last: number; leaderboards: StatBoard[] } | null;
   warnings: string[];
+}
+
+// One achievement (meta/achievements.md). `times` counts how often this PC has now
+// earned the same title, this session included; above 1 it is a repeat.
+export interface Achievement {
+  title: string;
+  text: string;
+  times: number;
+}
+
+export interface PcAchievements {
+  pc: string;
+  items: Achievement[];
 }
 
 export interface SessionData {

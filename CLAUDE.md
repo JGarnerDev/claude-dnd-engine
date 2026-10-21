@@ -90,6 +90,10 @@ PC/NPC files carry an optional `affinity:` field — a per-target liking score (
 
 Table-side **stats** (killing blows, nat 1s, HP healed, songs performed) celebrate what each PC did, as award and standings slides in the recap deck. They're mechanical, never spotlight, and never a perk. `/transcript` mines them (sums are rough, `~n`), `/recap` confirms them into one ledger, `historian/sessions/_stats.md`, for both campaigns, and proposes in-world **fame** that the DM must approve. Read `meta/stats.md` once per task for the catalog, rules and ledger shape.
 
+## Achievements
+
+Homebrew recap decks carry one **achievement** slide per PC: short, snarky "New achievement!" cards for in-fiction deeds, addressed to the PC as "you", with running jokes drawn from each PC's history. No rewards, no perks, never padded. `/transcript` spots candidates, `/recap` drafts them for DM approval into `historian/sessions/_achievements.md`, and the runner builds the slides. Read `meta/achievements.md` once per task.
+
 ## NPC Voice
 
 NPC and antagonist files can carry a `## Voice` section: a **core** (how they speak, which changes only by correction or a DM-called arc shift) and a **now** layer (what sessions have done to them, every line citing its cause), plus lines actually said at the table. Frontmatter `voice:` holds the core in one line; `voice_confirmed:` stamps it. When writing, updating or playing a voice, read `meta/voice.md` once per task. `/recap` proposes voice shifts after the affinity nudges; `/voice` caches new ones; `todo-brief.py` flags stale stamps.

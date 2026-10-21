@@ -14,6 +14,7 @@ import { loadState, saveState } from './store.js';
 import { escapeHtml } from './markdown.js';
 import { RECAP_ID, recapHtml, recapText, withRecap } from './recap.js';
 import { openSlides } from './slides.js';
+import { withAchievements } from './achievements.js';
 import { withStats } from './stats.js';
 import type { EntityRef, SessionData } from './types.js';
 
@@ -124,7 +125,7 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
   main.addEventListener('click', (ev) => {
     const prev = data.previously[0];
     if ((ev.target as HTMLElement).closest('[data-act="slides"]') && prev) {
-      openSlides(withStats(prev.slides, prev.stats), prev.name);
+      openSlides(withStats(withAchievements(prev.slides, prev.achievements), prev.stats), prev.name);
       return;
     }
     const link = (ev.target as HTMLElement).closest<HTMLElement>('a.sr-wiki[data-entity]');

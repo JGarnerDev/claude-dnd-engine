@@ -9,13 +9,15 @@ and its flow chart (`_flow.md`) -- and emits the JSON the session runner
 
   { session: {name, number, date, description, openingScene, closingHook, preamble, folder,
                campaign, root, looseThreads},
-    previously: [{name, number, date, campaign, description, recap, cliffhanger, path, slides, stats}],
+    previously: [{name, number, date, campaign, description, recap, cliffhanger, path, slides, stats, achievements}],
                                              # the session before this one, plus the last one
                                              # in this season when that differs (historian);
                                              # slides: [{title, md}] from the folder's optional
                                              # _slides.md (party-facing deck, meta/recap-slides.md)
                                              # stats: lib/stats.py standings for that session
                                              # (meta/stats.md), or null when unledgered
+                                             # achievements: lib/achievements.py, one entry per
+                                             # PC (meta/achievements.md), or null when unledgered
     nodes:   [{id, marker, kind, scene, title, lines, notes}],
     edges:   [{from, to, label, dashed}],
     scenes:  [{id, key, title, md}],         # flow subgraph + matching `### Scene <key>` prose
@@ -45,6 +47,7 @@ from lib.common import (  # noqa: E402
     ROOT, ci_eq, entity_md_files, get_frontmatter, get_frontmatter_from_text,
     parse_party_table, read_text_no_bom, try_int,
 )
+from lib.achievements import achievements  # noqa: E402
 from lib.stats import standings  # noqa: E402
 
 ENTITY_DIRS = ['data', 'historian', 'scheduler']
@@ -246,6 +249,7 @@ def previous_sessions(root: Path, number, campaign: str) -> list:
         'path': f.relative_to(root).as_posix(),
         'slides': slides(f.parent),
         'stats': standings(root, n),
+        'achievements': achievements(root, n),
     } for n, f, raw, fm in picks]
 
 
