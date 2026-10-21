@@ -60,7 +60,7 @@ For each chunk record only:
 - **Named entities** — every person, place, faction, or item named aloud, with the timestamp of first mention
 - **Mechanics** — combats (rough round count), rests (short or long), level-ups, damage taken, resources burned
 - **Stats** — per PC, each moment that fits a category in the `meta/stats.md` catalog (killing blows, crits, nat 1s, heals cast, songs performed, unarmed hits...), using the catalog ids. Add up spoken numbers for sums (damage, HP healed) and write them `~n`: many rolls are never said aloud, so a sum from a transcript is always rough. Read `meta/stats.md` once
-- **Achievement candidates** (homebrew only) — per PC, in-fiction moments that would make a funny or proud "New achievement!" card: a reckless move that worked, a spectacular failure, an odd choice the table loved. Deeds, not dice. Read `meta/achievements.md` once
+- **Achievement candidates** (homebrew only) — per PC, in-fiction moments where a deliberate action caused a big, visible result (a spectacular success or backfire), plus quirky habits the PC repeated (for tallies). Deeds, not dice; skip routine actions, good rolls that only revealed lore, and things that happened *to* the scene. Read `meta/achievements.md` once
 - **In-world time** — any stated time of day, date, or elapsed-travel reference
 - **Quotable lines** — verbatim NPC or PC lines worth keeping, with speaker and timestamp
 - **Table talk** — out-of-character reactions worth noting; keep these separate from in-fiction events

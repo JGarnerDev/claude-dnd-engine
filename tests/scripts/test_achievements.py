@@ -6,6 +6,13 @@ from lib import achievements  # noqa: E402
 
 LEDGER = """DM note: never shown.
 
+## Tallies
+
+### Iggy
+
+- **Not A Card**: tallies are never slides
+- fireplaces examined: 2 (S30, S31)
+
 ## Session 30
 
 ### Iggy
@@ -48,3 +55,8 @@ def test_repeats_count_across_sessions_ignoring_numerals(tmp_path):
 def test_unledgered_session_is_none(tmp_path):
     assert achievements.achievements(make_repo(tmp_path), 29) is None
     assert achievements.achievements(tmp_path / "nowhere", 30) is None
+
+
+def test_tallies_section_is_skipped(tmp_path):
+    items = achievements.achievements(make_repo(tmp_path), 30)[0]["items"]
+    assert "Not A Card" not in [i["title"] for i in items]

@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.41.0] — 2026-10-21
+
+### Added
+
+- **Achievement tallies.** A `## Tallies` section in `historian/sessions/_achievements.md` counts a PC's quirky repeated habits (fireplaces examined, fires made worse). Tallies stay hidden until one reaches 3, 5, 10 or 20, which unlocks a card; higher tiers repeat the title with a numeral. `/recap` proposes increments as `T1.` items for DM approval. The parser skips the section (test added).
+
+### Changed
+
+- **`meta/achievements.md` has a real bar** (DM feedback on Session 30's first draft, which was cut from fourteen cards to one). There are two ways to earn a card: a big, visible result from a deliberate action, or a tally threshold. Cut if minor, just a good roll, a mystery beat that happened *to* the scene, routine, a fizzle, too contextual, or a reaction. Voice rules add "say it literally first" and "vary the sentence shape". Expect zero or one card per PC.
+- **`/recap`** and **`/transcript`** apply the bar before drafting, and `/transcript` collects habits for tallies.
+
 ## [0.40.0] — 2026-10-20
 
 ### Added

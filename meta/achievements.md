@@ -6,9 +6,9 @@ tags: [guideline]
 # Achievements
 
 **Achievements** are short, snarky "New achievement!" popups, one slide per PC in the recap deck,
-for the things each character did in a played session. Loosely inspired by *Dungeon Crawler
-Carl*: a funny title and a brief jab, nothing more. They sit beside the stats (`meta/stats.md`):
-stats count what was rolled, achievements name what was *done*.
+for the things each character actually *achieved* in a played session. Loosely inspired by
+*Dungeon Crawler Carl*: a funny title and a brief jab, nothing more. They sit beside the stats
+(`meta/stats.md`): stats count what was rolled, achievements name what was *done*.
 
 Read once per task by `/transcript` (spotting candidates), `/recap` (drafting and confirming), and
 anyone editing these rules. `scripts/lib/achievements.py` reads the ledger;
@@ -19,11 +19,8 @@ anyone editing these rules. `scripts/lib/achievements.py` reads the ledger;
 - **Homebrew decks only.** Strahd sessions have no deck, so they get no achievements.
 - **In-fiction deeds only.** What the character did in the story. No dice (nat 1s and crits are
   stats), no table talk, no player jokes, no rules arguments.
-- **Earned, not padded.** As many as the session honestly supports, and no more. A PC with nothing
-  worth a laugh or a nod gets no slide that session. Never invent a deed to fill a slot, and never
-  write one that only restates "you were there".
-- **Not lackluster.** Each one names a specific moment. "Fought bravely" fails; "Made a raider
-  regret the word 'gnome'" passes.
+- **Rare by design.** Most sessions give most PCs nothing. Expect zero or one card per PC, and a
+  deck with one card is a normal deck. Never invent a deed to fill a slot.
 - **No reward line.** No loot boxes, no perks, no mechanical effect. Bragging rights only.
 - **Not spotlight, not fame.** Achievements never feed `meta/character-focus.md` or
   `spotlight-balance.py`, and they are not in-world reputation. Fame stays the DM-approved
@@ -31,6 +28,51 @@ anyone editing these rules. `scripts/lib/achievements.py` reads the ledger;
 - **DM-approved.** Drafted at `/recap`, edited and approved by the DM, then written to the ledger.
   The runner only shows what was approved.
 - **Never "feat".** In this engine that word means a D&D feat.
+
+## The bar
+
+There are exactly two ways to earn a card:
+
+1. **A big result from a deliberate action.** The PC chose to do something, and it caused a
+   clear, visible result in the world: a spectacular success or a spectacular backfire. The
+   bigger the swing from what they meant to happen, the better. Luci fighting a fire with a
+   windstorm and spreading it up the wall is the model.
+2. **A tally reaching a threshold.** A quiet habit, repeated across sessions until it adds up
+   (see Tallies below).
+
+Then cut any candidate that is:
+
+- **Minor.** A small failure with flavor-only fallout (an eye-roll, an awkward moment) is not an
+  achievement. It becomes one only if the failure turns major.
+- **Just a good roll.** A high check that reveals lore or confirms a suspicion is the game working
+  as normal. It earns a card only if what was found is majorly new, not a detail.
+- **Something that happened *to* the scene.** A mystery beat, a DM reveal, or a strange event
+  that nobody can explain yet is not a PC accomplishment, even if it happened around them.
+- **Routine.** Looting, splitting or handing out loot, shopping, resting, healing between fights,
+  a utility cantrip, an ordinary check. These happen every session.
+- **A fizzle.** A failure nothing came of: a pitch nobody bought and nobody will remember.
+- **Too contextual.** A player who has forgotten the scene should get the joke from the card. If
+  it only lands because you remember one line of dialogue, cut it.
+- **A reaction.** Cheering at news, being shocked, feeling something. The card needs a deed.
+
+The lessons came from DM feedback on Session 30 (2026-10-21): fourteen drafts were cut to one.
+Habits that don't clear the bar on their own are what tallies are for.
+
+## Tallies
+
+A **tally** counts a quirky habit a PC keeps repeating, such as examining suspicious fireplaces,
+making fires worse, or pitching get-rich schemes to officials. It is invisible to players until it
+unlocks.
+
+- **What counts:** a distinctive, repeatable behavior of that PC, worth a laugh once it adds up.
+  Not a routine action every PC does (attacking, looting, resting).
+- **Name it plainly** and keep the name stable: `fireplaces examined`, not a joke.
+- **Thresholds: 3, 5, 10, 20.** When a tally reaches one, it unlocks a card in that session's
+  list: "Fireplace Inspector: examined 3 suspicious fireplaces, all of them in the same week." Each
+  higher threshold repeats the title with a numeral (`Fireplace Inspector II` at 5), and the
+  runner shows "Achievement earned again ×2".
+- **`/recap` proposes increments**, citing the moment, and the DM approves them like the cards.
+  Never add one the session doesn't show.
 
 ## Voice
 
@@ -44,23 +86,16 @@ anyone editing these rules. `scripts/lib/achievements.py` reads the ledger;
 - **No host persona.** No unhinged AI announcer, no catchphrases, no fourth-wall commentary about
   the System or its sponsors. Borrow the format, not the character.
 - **Plain spoken words.** These are read off a screen-share, often aloud. If it trips on the
-  tongue, rewrite it.
+  tongue, rewrite it. Say what happened literally before any joke: "the fire spread up the
+  wall", not "the fire said thank you".
+- **Vary the shape.** Don't open every card with "You…". Mix in a terse report ("Fought a fire
+  with a windstorm."), a verdict or score ("Paranoia 1, fireplace 0."), a quoted line, or a
+  plain consequence. Across one deck, no two cards should share a sentence pattern.
 
 ```markdown
-- **Gravity's Favorite**: You fell out of a holy light into a raid and landed flat on your back.
-  Most heroes land on their feet. Most heroes are not you.
+- **Firefighter (Derogatory)**: Fought a fire with a windstorm. The fire spread up the wall.
+  Wind is not water.
 ```
-
-## Running jokes
-
-Before drafting, read each PC's history in the ledger. When a theme recurs (the same PC keeps
-falling, keeps talking to animals, keeps setting things on fire), lean into it:
-
-- **Repeat a title** when the PC does the same kind of thing again: add a roman numeral
-  (`Gravity's Favorite II`). The runner counts repeats by title (numeral ignored) and shows
-  "Achievement earned again ×2" on the card.
-- **Call back** in a new title or description ("Still not on your feet").
-- A running joke needs at least one earlier entry; never claim a pattern the ledger doesn't show.
 
 ## Party-safe
 
@@ -74,19 +109,28 @@ One file, `historian/sessions/_achievements.md`. The leading `_` keeps it out of
 index and the inventory. Not an entity, no frontmatter, no `[[wikilinks]]`.
 
 - Text before the first `##` is a DM note.
-- `## Session <n>` per session, newest at the bottom. `### <PC name>` per PC under it, using the
-  PC's short name as the stats ledger does (`Iggy`, `Odibli`).
-- One bullet per achievement: `- **<Title>**: <description>`. A longer description may wrap onto
-  indented continuation lines.
-- A PC with no achievements that session is simply left out.
+- `## Tallies` comes first: one `### <PC name>` per PC, one line per tally,
+  `- <tally name>: <n> (S30, S32)`, with the sessions that added to it. `/recap` edits these in
+  place.
+- Then `## Session <n>` per session, newest at the bottom. `### <PC name>` per PC under it, using
+  the PC's short name as the stats ledger does (`Iggy`, `Odibli`).
+- One bullet per card: `- **<Title>**: <description>`. A longer description may wrap onto
+  indented continuation lines. A tally card goes here too, in the session it unlocked.
+- A PC with no cards that session is simply left out.
 
 ```markdown
+## Tallies
+
+### Odibli
+
+- fireplaces examined: 1 (S30)
+
 ## Session 30
 
-### Iggy
+### Luci
 
-- **Gravity's Favorite**: You fell out of a holy light into a raid and landed flat on your back.
-- **Room Service**: You played one song and the whole tavern forgot it had just been robbed.
+- **Firefighter (Derogatory)**: Fought a fire with a windstorm. The fire spread up the wall.
+  Wind is not water.
 ```
 
 Written by `/recap` after the DM approves the list. The slides appear on the *next* session's

@@ -6,7 +6,8 @@ Reads the one shared ledger (historian/sessions/_achievements.md): `## Session <
 `### <PC>`, then one bullet per achievement, `- **<Title>**: <description>`. An indented
 line under a bullet continues its description. For one session it returns each PC's
 achievements in ledger order, with how many times that PC has now earned the same title
-(a repeat, so a running joke can escalate: "Gravity's Favorite", then "Gravity's Favorite II").
+(a tally card at a higher threshold: "Fireplace Inspector", then "Fireplace Inspector II").
+Any other `##` section (`## Tallies`) is skipped: tallies are DM-side until they unlock a card.
 """
 
 import re
@@ -17,6 +18,7 @@ from lib.common import read_text_no_bom
 LEDGER_FILE = Path('historian') / 'sessions' / '_achievements.md'
 
 _SESSION_RE = re.compile(r'^##\s+Session\s+(\d+)\s*$')
+_H2_RE = re.compile(r'^##\s')
 _PC_RE = re.compile(r'^###\s+(.+?)\s*$')
 _ITEM_RE = re.compile(r'^-\s+\*\*(.+?)\*\*\s*[:—-]?\s*(.*)$')
 _CONT_RE = re.compile(r'^\s+(\S.*)$')
@@ -39,6 +41,8 @@ def load_ledger(root: Path) -> dict:
         if m := _SESSION_RE.match(line):
             session, pc, item = int(m.group(1)), None, None
             ledger.setdefault(session, {})
+        elif _H2_RE.match(line):
+            session, pc, item = None, None, None
         elif session is not None and (m := _PC_RE.match(line)):
             pc, item = m.group(1), None
             ledger[session].setdefault(pc, [])
