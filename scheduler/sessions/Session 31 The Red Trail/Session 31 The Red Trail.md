@@ -24,9 +24,9 @@ locations:
   - [[Ashford]]
   - [[The Golden Lioness]]
 key_npcs:
-  - "[[Sable Wren]] (historian — thanks, the deed, the hearth)"
-  - "[[Mara Tull]] (data — sheriff; arrives late from her own fight, and holds the prisoner at the close)"
-  - "[[Silas Crubb]] (data — mayor; the delivery's number, and the horses)"
+  - "[[Sable Wren]] (historian — the unsigned deed, the hearth, the send-off)"
+  - "[[Mara Tull]] (historian — sheriff; wants a statement tonight, and holds the prisoner at the close)"
+  - "[[Silas Crubb]] (historian — mayor; the horses, and the party's pitches from last night)"
   - "[[Aashal-Groon Mellenegon Borak]] (historian — Asher, through the fox again; the Spear)"
   - "[[Nella]] (historian — on the ridge; loses, escapes, drops her tally)"
   - "Varrick Tenn, the drover (human — Nella's second, the camp's floor anchor; not an entity)"
@@ -38,7 +38,11 @@ encounters:
   - "The Dusk Fork — Nella's rear guard: Ilsa Hask (human Scout) and Fennel Dray (human Bandit), mounted, with Fennel's Wolf Cinder. ~350 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. Fennel shoots the borrowed horses and Cinder goes for their legs, not the PCs. A rider who escapes toward the camp raises its alert by one step."
   - "The Waystation — Varrick Tenn the drover (human Bandit Captain), Haddo Keel and Brask (human and half-orc Thugs, the cask-hands), Sennet Orrin (human Spy), Hesper Mudd (halfling Acolyte), Tam 'Clatter' Cobb (human Bandit, on the roof) and Brick and Mortar (Mastiffs) on the floor, Nella (custom, ~CR 3) on the ridge. ~4,188 adjusted XP against an all-level-5 party, Hard, RTC ~3.4 (floor ~2.7), RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
 loose_threads:
-  - "[[Session 30 Keep the Ale]]'s unplayed beats: Mara's statement, the dead Boon, the dying hearth (rework after Miguel's lore notes), then all of the dawn pursuit"
+  - "[[Session 30 Keep the Ale]]'s unplayed beats: Mara's statement, the dead Boon, the dying hearth (cause provisional until Miguel's lore notes), then all of the dawn pursuit"
+  - "Dip's private roll from Iggy's song, owed as a flashback (Ben was absent at Session 30), and the 150 gp the table assigned him"
+  - "Sable's deed: terms heard and agreed, never formally taken"
+  - "Odibli's debt-rebundling pitch and Halsby's shade-on-command pitch: Silas left both uncommitted"
+  - "Ashford repeats that the party came out of Mara's light"
   - "[[The Shadowless Spear]] is owed to [[Halsby]] by Asher's fox: 'after you, not before'"
   - "Three seeds owed to [[Davian Martikov]] — Barovia-side, acknowledged in one line inside the Boon beat, not pursued"
   - "Still open from Session 29: what the order doesn't like at [[Tassad]], and the later job Halsby owes Sable"
@@ -58,29 +62,19 @@ relates_to:
   - "[[Harrow Bane]] (named in the camp's ledger; still no face)"
 importance: critical
 active: true
-description: "DRAFT carried from Session 30, which played only its first three scenes. The rest of the night (Mara's statement, the dead Boon, the dying hearth), then the dawn pursuit of Nella's cart to a drover's waystation. Nella loses, escapes on a fallback she rigged, and drops her debt tally. The party comes home with the casks to a silent prisoner in Mara's cell. Needs a /session pass before it runs."
+description: "The back half of Session 30's plan, reworked 2026-10-21. The rest of the night (Mara's statement, Dip's owed moment, the dead Boon, the dying hearth), then the dawn pursuit of Nella's cart to a drover's waystation. Nella loses, escapes on a fallback she rigged, and drops her debt tally. The party comes home with the casks to a silent prisoner in Mara's cell."
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
 
-> **Carried draft (2026-10-21).** Copied from [[Session 30 Keep the Ale]] at its `/recap`, which
-> played only Scenes 1–3 (through `S2_COMPANIONS`). This holds everything that didn't run, with the
-> `S2_` ids kept so they still match `_flow.md`. **Not ready to run:** `/session` reworks it, and
-> `/flow` drops the played nodes. Known changes since the plan was written:
->
-> - **Played already:** the yard, the loot, the town, the names, The Mistake, Sable's offer
->   (accepted, terms heard), Iggy's song (Iggy is now level 5, Paladin 2), Sergei and Bosco's
->   return, and the earshot crystals handed out
-> - **`S2_HEARTH` waits on Miguel's lore notes.** Odibli's Arcana 23 already found the hearth
->   "linked to another entity not currently present", and it went still during Iggy's song.
->   Odibli's level-up stays tied to this beat
-> - **The Golden Lioness was retconned at Session 30.** It's a week-old venture in a half-built
->   building, not an established pub. Check every Lioness line below against its file
-> - **Dip was absent** for Session 30. He holds the 150 gp (to confirm with Ben), and his
->   private-roll moment from the song is owed as a flashback
+> **Carried from [[Session 30 Keep the Ale]], reworked 2026-10-21.** Session 30 played only its
+> first three scenes. This plan is everything that didn't run, with the `S2_` ids kept so they
+> still match `_flow.md`. The rework dropped the played beats, added `S2_DIP` and `S2_CRYSTALS`
+> (both draft), checked every Lioness line against its Session 30 retcon (a week-old venture in a
+> half-built building, one room standing), and folded in what the table chose at Session 30.
 
-**Shape:** balanced · **Length:** long (~3 hr+, 8 scenes) · **Attrition:** standard ·
-**Lethality:** standard · **Milestone:** session #30 — worth marking at the table.
+**Shape:** balanced · **Length:** long (~3 hr+, 6 scenes; overplanned on purpose, Jeff 2026-10-21)
+· **Attrition:** standard · **Lethality:** standard.
 
 **Decided by Jeff, 2026-10-07:** whole pursuit in one session · 24-hour rule held (short rest at
 dawn only) · Spear at dawn by the ford · Elowen held for a later breather · Nella drops her tally
@@ -107,11 +101,11 @@ variety (Jeff, 2026-10-07): a sneak, a healer, dogs and a wolf, so the fights ar
 
 ### At a glance
 
-- **The Dusk Fork** (Scene 6), mounted except the wolf:
+- **The Dusk Fork** (Scene 4), mounted except the wolf:
   - **Archer Rider** — Ilsa Hask (human, Scout), the rider who goes for the camp
   - **Crossbow Rider** — Fennel Dray (human, Bandit), crossbow on the horses
   - **Wolf** — Cinder (Wolf), Fennel's, runs with the horses
-- **The Waystation** (Scene 7):
+- **The Waystation** (Scene 5):
   - **Drover** — Varrick Tenn (human, Bandit Captain), between cart and fire
   - **Cask-hand** — Haddo Keel (human, Thug), at the cart
   - **Half-orc Cask-hand** — Brask (half-orc, Thug), at the cart
@@ -318,35 +312,42 @@ Session 29's raid ended in two rounds, so both fights were re-run against the pa
 
 ## Orientation
 
-Night in the raided yard of [[The Golden Lioness]], minutes after the fight. Six raiders are dead
-(Arden, Willem, Gib, the hedge-mage Tallis, and the big one, nameless). [[Sable Wren]] is on the
-ground beside a spooked horse, still bound and gagged, and has not spoken. [[Nella]]'s cart is
-gone south under the trees with the barrels she had already loaded. [[Halsby]] walked out of the
-shadows among four strangers who came down in a light, and Asher's fox still owes him a spear.
+Late the same night, in the one surviving room of [[The Golden Lioness]]. The party has eaten
+Sable's soup, heard Ashford's names (Wick, Harrow Bane, the boots), told the town the truth about
+falling out of Barovia, and agreed to bring Sable's stock back from [[Nella]]'s camp for rooms,
+meals and 10% of the bar (terms heard; no deed signed). Iggy's song stilled the hearth for ten
+seconds, and Sable saw it and said nothing. [[Sergei Rubelgerd]] and [[Bosco]] are asleep by the
+fire. Every PC wears an [[Earshot Crystals|earshot crystal]]. The townsfolk are filing out, and
+Mara hasn't left yet.
 
-- **Levels:** Dip and Luci 5; Halsby, Iggy and Odibli 4. Levels keep coming one PC at a time, as
-  a surprise, and **all three level tonight**, each on a deed of their own (Jeff, 2026-10-07):
-  - **Iggy** when the hearth holds still for his song (`S2_IGGY`)
+- **Levels:** Dip, Luci and Iggy 5 (Iggy is now Bard 3 / Paladin 2); Halsby and Odibli 4. **Both
+  level this session**, each on a deed of their own (Jeff, 2026-10-07):
   - **Odibli** on the last stroke that saves the hearth (`S2_HEARTH`)
   - **Halsby** when the Spear is fused at dawn (`S2_SPEAR`)
   The party walks into the camp all level 5, and the camp is sized for that.
-- **Resources:** the transit's long rest started about an hour before the raid. Halsby spent heavily
-  (Invisibility, a twinned Chromatic Orb, Magic Missile upcast to ~3rd); Odibli spent Hold Person;
-  Luci spent ki and her emanation; Iggy one Bardic Inspiration; Dip one rage and took 8 fire.
+- **Resources:** nothing has come back since Session 29's fight. Halsby spent heavily
+  (Invisibility, a twinned Chromatic Orb, Magic Missile upcast to ~3rd; Kellan to confirm); Odibli
+  spent Hold Person (Miguel to confirm); Luci spent ki and her emanation; Iggy one Bardic
+  Inspiration; Dip one rage and took 8 fire. Healing Dunny cost Iggy and Luci something too.
 - **Afflictions:** Iggy's shadow and Dip's whispers are dormant in Aethryn. Luci's Sacred Flame and
   Odibli's familiar are still gone.
-- **Mood:** the table loved the fight and agreed to open this session on roleplay. Roll20 ate much
-  of Session 29 — check sheets before starting.
+- **Mood:** the night ran long on roleplay and the table loved it. The financial-advice bit was the
+  comedy high point, and Sable's eye-roll landed ("she's my new favourite"). Keep her dry with
+  Odibli. Players asking about unplanned things worked well; leave room for it. **Ben was absent
+  at Session 30**, so Dip has a moment owed (`S2_DIP`).
+- **Roll20:** Session 30 lost time to token labels not showing and the grid not aligning. Check
+  both, plus sheets, before starting.
 
 ### Rest Clock across the session
 
-- **Night (Scenes 1–3):** the party sleeps at the Lioness. **It is not a long rest.** The 24-hour
-  gate holds (Jeff, 2026-10-07): the transit's rest started about an hour before the raid. Say it in
-  fiction — they sleep, it helps, it isn't enough — never as a rules call.
-- **Dawn (Scene 4):** one short rest at the ford, before they ride. Hit dice, short-rest features,
+- **Night (Scene 1):** the party sleeps at the Lioness. **It is not a long rest.** The 24-hour
+  gate holds (Jeff, 2026-10-07): the transit's rest started about an hour before the raid, and it
+  is ~4 hours on now. Say it in fiction — they sleep, it helps, it isn't enough — never as a rules
+  call.
+- **Dawn (Scene 2):** one short rest at the ford, before they ride. Hit dice, short-rest features,
   Halsby's sorcery points if his build recovers any.
-- **Day (Scenes 5–6):** the ride. Rounds at the fork go on the clock.
-- **Dusk to night (Scene 7):** the camp. Roughly 20–23 hours have passed since the transit rest
+- **Day (Scenes 3–4):** the ride. Rounds at the fork go on the clock.
+- **Dusk to night (Scene 5):** the camp. Roughly 20–23 hours have passed since the transit rest
   started. **The 24-hour window reopens during or just after the camp fight.** Once the camp is
   taken, the waystation is the first place safe enough for a real long rest before the ride home.
   If they ride straight through the night instead, they arrive in Ashford still unrested.
@@ -354,24 +355,46 @@ shadows among four strangers who came down in a light, and Asher's fox still owe
   calendar yet. Exact distances to the waystation are unset: it is **a long day's ride** for a laden
   cart's pursuers. Leave the mileage as `<a day's ride southeast>` until a region pass sets it.
 
-### Unresolved from Session 29
+### Unresolved from Sessions 29–30
 
 - **Fida**, Luci's name for the broken moon, has no entity yet. Nothing tonight needs it.
+- **The citadel or wizard's tower Odibli is drawn toward** is Miguel's lore homework, player-side
+  only. No character knows it, and nothing in this plan touches it.
+- **Sable's brewing copper** is ruined; only [[George Ringo]] and [[Zach]] could remake it. A
+  state note, not a beat tonight.
 - **The raiders' names** stay recap-only. If anyone in town asks, Mara knows Tallis by reputation
   ("hedge-witch, sold charms at the fair, then didn't").
 
 ## Scenes
 
-### Scene 3 (carried) — The Rest of the Night
+### Scene 1 — The Rest of the Night
 
-The tail of Session 30's Scene 3: the beats that never ran.
+- **Summary:** The night winds down. Mara wants one of them at the jail for a statement, Dip gets
+  his owed moment from the song, the Boon stays dead, and then the hearth starts dying. Odibli has
+  to write over a charm in the coals while the party keeps the flame alive. Odibli levels to 5.
+- **Where:** [[The Golden Lioness]], the one room that survived: crates half-unpacked, the hearth,
+  a blown-open wall through to the half-built wing.
+- **Cast:** [[Sable Wren]] · [[Mara Tull]] · [[Dunny Marsh]] · [[Sergei Rubelgerd]] · [[Bosco]]
+- **Enemies:** none
+- **DCs:** Insight or Arcana 15 / 20 — Dip's private roll (bands) · Arcana 13 — read the charm ·
+  INT (calligrapher's supplies) 14 — each of Odibli's three strokes · DEX 13 save — the burst, 2d6
+  fire, half on a success
+- **Time:** ~30 min
+- **Trigger:** the song is over and the room is emptying. The tail of Session 30's Scene 3.
 
 #### S2_STATEMENT — Mara wants one of them at the jail tonight
 
+- **Tokens:** the Lioness `indoors` map. Party, Sable, Sergei and Bosco by the hearth; Mara and
+  Dunny at the door; clear the other townsfolk as they leave.
 - **Choice (party):** send one of them with Mara, or nobody. Whoever goes misses the stone and comes back a round late to the hearth, but learns Tallis's name and earns Mara's first off-duty line.
 - **Engine, 2026-10-09; committed 2026-10-13.** A small choice inside the inn night. Nobody has to go.
-- Before she leaves, Mara asks: *"I need one of you to walk back with me and put tonight on paper.
+- **The party told the town the truth at Session 30**, so the town is already repeating it. Mara
+  wants their version on paper before the story grows.
+- Before she leaves, Mara asks: *"Half the street's already saying you came down in my light. I'd
+  like your version on paper before theirs gets any bigger. I need one of you to walk back with me.
   Just one. The rest of you, sleep."*
+- **If Dip goes,** run `S2_DIP`'s private roll on the walk instead, as he looks back at the
+  lit window.
 - **If nobody goes:** *"Then first thing tomorrow."* No penalty. Tallis's name waits for the hearth.
 - **Whoever goes:**
   - Misses `S2_BOON` and walks back in one round into `S2_HEARTH`, as the fire starts to dip. That
@@ -385,8 +408,32 @@ The tail of Session 30's Scene 3: the beats that never ran.
     at once.
 - **If Odibli goes:** the hearth waits for him. It starts to dip as he comes through the door, and
   the flame track starts at **2**, not 3.
-- **Transition:** `S2_BOON` for whoever stayed.
+- **Transition:** `S2_DIP`, then `S2_BOON` for whoever stayed.
 - **Tokens:** Mara leaves with the volunteer, if there is one. Dunny goes with her.
+
+#### S2_DIP — Dip's owed moment: the private roll, and the 150 gp
+
+- **Draft (engine, 2026-10-21).** Ben missed Session 30, so Dip's private roll at Iggy's song
+  (Session 30's `S2_IGGY`) is owed, and the table gave him the 150 gp without him.
+- **Choice (Dip):** what Dip shares from the private roll: all of it, some of it, or nothing.
+- **Choice (Dip):** keep the 150 gp, or put some or all of it toward Sable's ~650 gp debt to Silas.
+- **Time:** ~5 minutes.
+- **The private roll, as a flashback.** Tell Ben privately, or pass a note. Frame it as Dip, by the
+  dying-down fire, remembering what he felt when the hearth went still mid-song. Wisdom (Insight),
+  or Intelligence (Arcana) if Ben argues for the Sage training:
+  - **Under 15:** a lurch of nested wrongness, layers inside layers, then gone.
+  - **15–19:** a nesting doll — real, then hollow, then *real* again, and the innermost layer is
+    inside Iggy.
+  - **20+:** that innermost layer is a presence, divine, small and very tired, and not hostile.
+  - **Describe only what Dip felt.** Jeff is Iggy's player and the DM, so [[Sah]] is never named
+    or narrated. Ben decides what he says aloud.
+- **The 150 gp.** Confirm with Ben first that Dip took it from the bodies. Sable never asks for it:
+  she isn't that kind of host. If Dip offers, one line, no fuss: *"Put it away. …Fine. Leave it on
+  the bar, and I'll pretend I didn't see you do it."* If he keeps it, nothing changes, and she
+  doesn't look at him differently.
+- **Dip's crystal:** the DM ruled at `/recap` that Dip took one from the pile. Confirm with Ben in
+  the same breath.
+- **Transition:** `S2_BOON`.
 
 #### S2_BOON — Odibli's stone does nothing at all
 
@@ -396,10 +443,15 @@ The tail of Session 30's Scene 3: the beats that never ran.
 > worked. Somebody owes somebody three seeds back in Barovia, and the stone has nothing to say about
 > it."*
 
-- One line for the Barovia debt, then let it sit. If they take the deed, this is the likely
-  moment. A no is fine: the deed stays on the table (`S2_OFFER`).
-- If they accept tonight: Sable slides the deed across, says *"Ten,"* and pours another round.
+- One line for the Barovia debt, then let it sit.
+- **The deed.** At Session 30 the party agreed to fetch the stock and heard the terms (rooms, meals,
+  a month or two's stay, 10% rising, naming the new sections), but nobody signed. If they want it
+  formal, this is the moment. A no is fine: the deed stays on the table.
+- If they sign tonight: Sable slides the deed across, says *"Ten,"* and pours another round.
   Record the 10% Stake.
+- **Sable and Odibli.** He told her she was a bad business owner last night, and she's exasperated
+  with him. If he talks money again, or reaches for the paper: *"Don't. Whatever you're about to
+  rebundle, don't."*
 - **Transition:** the room empties, and the fire starts to go wrong.
 - **Tokens:** clear all the townsfolk and Silas. Only Sable, the party and the companions stay.
 
@@ -409,14 +461,23 @@ The tail of Session 30's Scene 3: the beats that never ran.
 - **Odibli's deed and level-up** (Jeff, 2026-10-07).
 - **Time:** ~10–15 minutes. Late, with the room emptied, so it stays apart from Iggy's song.
 
-**What's going on (DM only):**
+**What's going on (DM only) — provisional until Miguel's lore notes land:**
+
+> The cause below is the stand-in Jeff committed 2026-10-07. Miguel's notes were still outstanding
+> at the 2026-10-21 rework. If they arrive and say something different, they win; swap the cause
+> and keep the mechanics (the flame track, the strokes, the level-up), which don't depend on it.
 
 - During the raid, **Tallis** (the hedge-mage who sold charms at the fair) dropped a written charm
-  into the old core's hearth. It's a **smother-charm**: it drinks the fire, stores the heat, and
-  lets it all go at once when the flame finally dies. The new wing burned; this was meant to finish
-  the old core while everyone slept in it.
+  into the hearth of the one room that would survive. It's a **smother-charm**: it drinks the fire,
+  stores the heat, and lets it all go at once when the flame finally dies. The half-built wing took
+  the blast; this was meant to finish the last standing room while everyone slept in it.
 - The fire is Asher's breath coming up from under the floor. He feels the charm as suffocation,
   and **he remembers who saved it.**
+- **It fits what Odibli already read.** His Arcana 23 at Session 30 found the hearth "linked to
+  another entity not currently present". That read the link, not the coals. The charm works
+  slowly, and it is why the link already felt thin.
+- **Tallis is the dead mage Odibli wouldn't go near** at Session 30. Odibli also kept clear of the
+  fireplace that night. Tonight the fire comes to him.
 
 **The symptom:**
 
@@ -452,7 +513,7 @@ The tail of Session 30's Scene 3: the beats that never ran.
   failed stroke also drops the flame one step.
 - **Three successful strokes** overwrite the glyph.
 - **If the flame hits 0:** the charm bursts. 2d6 fire to everyone at the hearth (DEX 13 for half),
-  and the old core catches. They put it out, but Sable's last safe building is scorched and the
+  and the room catches. They put it out, but the one room that survived the raid is scorched and the
   hearth is cold until Asher recovers. Odibli still levels: he tried, in the fire, for her.
 
 **The last stroke:**
@@ -471,22 +532,31 @@ The tail of Session 30's Scene 3: the beats that never ran.
   Someone may ask who taught him. Leave it there.
 - **His Aethryn rule:** a sustained cast like this is the kind the original Odibli might feel.
   Roll for it if the odds are set by then; otherwise note it for `/recap`.
-- **They sleep.** Rooms in the old core. It helps; it is not a long rest. One line: *"You sleep
+- **They sleep.** Upstairs, in rooms with beds and not much else. It helps; it is not a long rest. One line: *"You sleep
   like dropped coats. It isn't enough, and you all know it."*
 - **Transition:** grey light, and the trail is getting older.
 
-### Scene 4 — Dawn at the Ford
+### Scene 2 — Dawn at the Ford
 
+- **Summary:** Breakfast and a short rest. Sable sees them off, Silas lends five horses as a favour
+  debt, and Asher's fox is waiting mid-ford to fuse Halsby's Shadowless Spear. Halsby levels to 5.
+  Then the ruts, heading southeast.
+- **Where:** [[Ashford]]'s ford. Cold water over flat stones, mist on the tributary, the cart ruts
+  biting into the far bank.
+- **Cast:** [[Sable Wren]] · [[Silas Crubb]] · [[Jory Pike]] · the fox ([[Aashal-Groon Mellenegon Borak]])
+- **Enemies:** none
+- **DCs:** none
+- **Time:** ~15 min
 - **Trigger:** first light.
-- **Location:** [[Ashford]]'s ford. Cold water over flat stones, mist on the tributary, the cart
-  ruts biting into the far bank.
-- **NPCs present:** [[Silas Crubb]] with horses; the fox.
-- **Time:** ~15 minutes.
 
 #### S2_SHORT_REST — The short rest is here, before they ride
 
 - Breakfast at the Lioness and an hour at the ford. One short rest: hit dice and short-rest
   features. Nothing else comes back.
+- **Sable's send-off** (engine, 2026-10-21), at the door with a sack of hardtack and cold pie:
+  *"Bring back what you can carry. Bring back all five of you. If it's one or the other, I know
+  which I'd pick, and so does the bank."* If the hearth was scorched, she says it without looking
+  back at it.
 
 #### S2_HORSES — Silas lends the horses: "bring them back shod"
 
@@ -498,6 +568,14 @@ The tail of Session 30's Scene 3: the beats that never ran.
   I'm not saying you will."*
 - **This is a favour debt.** Returning them sound pays it off (Jeff, 2026-10-07). Log it for the
   favours currency when base-building resumes.
+- **Last night's pitches** (engine, 2026-10-21). Silas left both uncommitted. One line each, only
+  if the PC is in earshot:
+  - To Odibli: *"I've been thinking about your rebundling. Thought about it most of the night,
+    actually. Bring me my ale and we'll talk about who's bundling whom."*
+  - To Halsby: *"And shade on command. Two hundred and fifty gold. I laughed, and then I didn't
+    sleep. Don't tell me how it works. I'm not buying."* A beat. *"Yet."*
+- **"Came out of the light."** Jory Pike, holding the last two horses, can't stop staring at them.
+  He asks one of them, quietly, if it hurt.
 
 #### S2_SPEAR — The fox waits at the water's edge. Halsby's Spear
 
@@ -541,13 +619,22 @@ The tail of Session 30's Scene 3: the beats that never ran.
   southeast toward Duskwater.
 - **Transition:** they ride.
 
-### Scene 5 — The Red Trail
+### Scene 3 — The Red Trail
 
+- **Summary:** The chase, run as a skill challenge in four stages. Each PC makes one check per
+  stage, and a stage is won when 3 of 5 pass. Stages won set how ready the camp is: 4 unaware,
+  2–3 dusk, 0–1 night alert. Failures cost lead, never the trail.
+- **Where:** the southeast road from [[Ashford]] toward Duskwater: the ford, the drover's road, the
+  dusk fork, the camp approach.
+- **Cast:** the party and Silas's horses
+- **Enemies:** none (the rear guard at stage 3 is Scene 4)
+- **DCs:** Stage 1 — 12 · Stage 2 — road 13 or shortcut 11 · Stage 3 — 13 · Stage 4 — ride in 14 or
+  walk in 12 · Checks: Survival, Perception, Animal Handling, Nature, Athletics, Investigation,
+  Stealth (stage 4)
+- **Time:** ~25 min
 - **Trigger:** they ride out.
-- **Location:** the southeast road from [[Ashford]] toward Duskwater. Working labels only: the
-  ford, the drover's road, the dusk fork, the camp approach. Stops are scheduler content; `/recap`
-  canonizes only what they visit.
-- **Time:** ~25 minutes. Skill challenge.
+- **Stops:** working labels only. Stops are scheduler content; `/recap` canonizes only what they
+  visit.
 
 #### S2_CHASE_RULES — Four stages, one check each, scored by stages won
 
@@ -595,7 +682,7 @@ The tail of Session 30's Scene 3: the beats that never ran.
   the real cart went the other way over hard ground.
 - **Survival or Investigation sees through it.** Nature notices the "ruts" don't sink where the
   ground goes soft.
-- **The rear guard is here** — see Scene 6. If the party wins this stage, they spot the riders
+- **The rear guard is here** — see Scene 4. If the party wins this stage, they spot the riders
   first.
 - **Loss:** they ride the false branch until it dead-ends at a stream, and double back in the dark.
 
@@ -611,16 +698,23 @@ The tail of Session 30's Scene 3: the beats that never ran.
     horses on his way out (11 gp, favour debt in doubt).
 - **Loss:** a horse whinnies, a corral answers, and somebody at the camp looks up.
 - **Set the alert state** now from stages won, add the rider bump if Ilsa escaped at the fork,
-  then go to Scene 7.
+  then go to Scene 5.
 
-### Scene 6 — The Dusk Fork
+### Scene 4 — The Dusk Fork
 
+- **Summary:** Nella's rear guard holds the fork. It's a small fight on purpose: what's at stake is
+  the rider and the horses, not HP. If Ilsa gets away, the camp's alert goes up a step. The party
+  can also scare them off or bluff their way close.
+- **Where:** the fork in the drover's road. Long light, scrub, one lone tree, open ground either
+  side. Riders show for a long way out here.
+- **Cast:** Nella's rear guard, mounted
+- **Enemies:** Archer Rider (Ilsa Hask) · Crossbow Rider (Fennel Dray) · Wolf (Cinder)
+- **DCs:** Intimidation 13 — Fennel and Cinder run · WIS 12 save — morale · Silas's horses: AC 10,
+  HP 13
+- **Tactics:** Fennel shoots the horses and Cinder goes for their legs. Ilsa rides for the camp
+  when the fight turns. Morale breaks when Ilsa drops, or Fennel and Cinder are both down.
+- **Time:** ~15 min, 1–2 rounds
 - **Trigger:** during stage 3 of the chase.
-- **Location:** the fork in the drover's road. Long light, scrub, one lone tree, open ground
-  either side. Riders show for a long way out here.
-- **NPCs present:** Nella's rear guard, watching the back trail: Ilsa Hask (the Scout) and
-  Fennel Dray (a Bandit), mounted, and Fennel's wolf Cinder.
-- **Time:** ~15 minutes, 1–2 rounds. Under Easy on purpose; the stake is the rider and the horses.
 
 #### S2_REARGUARD — Nella's rear guard holds the fork
 
@@ -682,10 +776,28 @@ The tail of Session 30's Scene 3: the beats that never ran.
   - Fennel, when he runs: *"I'm out. Tell her I'm out."*
 - **Transition:** the light goes. The camp approach (stage 4).
 
-### Scene 7 — The Waystation
+### Scene 5 — The Waystation
 
+- **Summary:** Nella's camp. The party scouts (or not), picks heist, assault, parley or trick, and
+  takes the casks back. Nella loses, escapes on a fallback she rigged days ago, and drops her debt
+  tally. The camp gives up three things: the band's size, Harrow Bane's name and the banner.
+- **Where:** an old drover's relay short of Duskwater: long shed, corral, well, the cart,
+  watch-fire, and set back, the overwatch ridge, a fast river and a rigged plank bridge.
+- **Cast:** [[Nella]] on the ridge · the camp crew · the Marlow banner on the shed's pole
+- **Enemies:** Drover (Varrick Tenn) · Cask-hand (Haddo Keel) · Half-orc Cask-hand (Brask) ·
+  Tally-man (Sennet Orrin) · Hedge Priest (Hesper Mudd) · Roof Guard (Clatter) · Mastiff 1 (Brick)
+  · Mastiff 2 (Mortar) · Sniper ([[Nella]])
+- **DCs:** Perception or Survival 14 — scout the back of the ridge · Perception 13 — spot the crew's
+  crystal cords · Stealth vs passive 18 — past the dogs · Athletics 13 — swim the river · Animal
+  Handling 13 — start a stampede · Deception vs Insight — Varrick easy, Sennet +4, Nella +7 · WIS 12
+  save — morale · Investigation 12 / 16 — read the tally · DEX 12 — cross the staked perimeter at
+  speed (night alert)
+- **Tactics:** the crew holds its stations around the cart and never converges. Nella spreads her
+  shots to wound and pin, marks whoever climbs toward her (never a caster), and never shoots a
+  downed PC. Morale breaks when Varrick drops or the crew is down to 2.
+- **Time:** ~45 min
 - **Trigger:** the chase ends.
-- **Location:** an old drover's relay short of Duskwater. **Long shed** (bunks, ledger, stores) ·
+- **The ground:** an old drover's relay short of Duskwater. **Long shed** (bunks, ledger, stores) ·
   **corral** of nervous horses (noise hazard for sneaks, stampede lever for chaos) · **well** ·
   **the cart**, parked by the shed with the casks still loaded · **watch-fire** · and set back, the
   **overwatch ridge** with a brush blind, a **fast cold river** behind it, a **rigged plank bridge**
@@ -701,10 +813,6 @@ The tail of Session 30's Scene 3: the beats that never ran.
   - **The bridge** is pinned to drop. One action pulls the pins and the deck goes into the water.
   - **The quiet approach** is the south tree line, lightly obscured. No scrub patch; sneaking is
     harder than the reference had it.
-- **NPCs present:** [[Nella]] on the ridge · Varrick Tenn, the drover · Haddo and Brask, the
-  cask-hands · Sennet Orrin, Bane's tally-man · Hesper Mudd, hedge-priest · Clatter on the roof ·
-  Brick and Mortar at the corral · the Marlow banner on the shed's pole.
-- **Time:** ~45 minutes.
 
 > *"The waystation sits in a fold of the land: a long shed with a sagging roof, a corral full of
 > horses that have already noticed yours, a well with a bucket on a chain, and a fire. Beside the
@@ -786,6 +894,36 @@ The tail of Session 30's Scene 3: the beats that never ran.
   - Varrick, fooled: *"Relay's early. Fine. Horses in the corral, and nobody touches the cart."*
   - Sennet, suspicious: *"Who signed your orders? Show me the hand."*
   - Nella from the ridge, not fooled: *"Varrick. Count them."*
+
+#### S2_CRYSTALS — The crew wear crystals too
+
+- **Draft (engine, 2026-10-21).** It pays off Halsby dealing an earshot crystal to every PC at
+  Session 30, and it runs alongside whichever approach they pick. Nothing in it is new canon
+  unless it fires.
+- **What's true (DM only):** every raider at the Lioness wore a crystal cut from the same stone,
+  and so do Nella and most of this crew (cords at the neck, crudely wrapped in metal). Listening
+  only needs the crystal on your body (`meta/loot-options/Party/misc/Earshot Crystals.md`), so
+  **a PC who speaks to "all holders" within 300 ft is heard by every crew member wearing one.**
+  Speaking to one PC they can see is safe. The camp is well inside 300 ft from the tree line.
+- **Don't warn them.** Let them find out the way they found out how the crystals work: by
+  accident. A careful party can find out first: a Perception check (DC 13) on the camp sees
+  the same cord at Varrick's and Haddo's necks, or someone remembers that the bodies wore them.
+- **If someone broadcasts to "all":**
+  - **During a heist:** the crew hears a stranger's words in their heads. Haddo stops counting.
+    Varrick: *"Who said that? Who's in my head?"* The heist goes loud next round, unless the party
+    turns it (see below).
+  - **Before an assault or parley:** Nella hears it on the ridge and knows how many they are and
+    roughly where. She takes her first shot with advantage, and the parley opens on her terms:
+    *"You talk too much. All five of you."*
+  - **During the fight:** a called target or plan reaches the crew too. Once, the target moves
+    first.
+- **The lever, if they work it out:** a broadcast reaches the crew as well. A PC can use it on
+  purpose: a false order in Nella's voice (Deception against Varrick, DC 12), panic ("she's
+  leaving you") for disadvantage on the morale save at `S2_MORALE`, or a private word to one crew
+  member they can see (Fennel's kind, or Hesper), which Nella can't hear.
+- **Nella's own crystal:** she never broadcasts. If the party listens in, they hear Varrick once:
+  *"Nella? Nella, where do you want us?"* No answer.
+- **Tokens:** none.
 
 #### S2_FIGHT — Two layers: the floor and the ridge, 3–4 rounds
 
@@ -895,12 +1033,19 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
 The camp crew are named in Combatants, but none of them are entities. If one survives and matters,
 `/recap` creates them.
 
-### Scene 8 — The Man in the Cell
+### Scene 6 — The Man in the Cell
 
-- **Trigger:** the party heads home with the cart.
-- **Location:** the road back, then [[Ashford]] at dusk the next day (or by night, if they ride
+- **Summary:** The casks come home on their own cart. The horses go back to Silas, Silas sees the
+  banner, and Sable sees the cart. But the town is looking at Mara's cell: a raider walked in and
+  surrendered while they were gone. End on the cell door.
+- **Where:** the road back, then [[Ashford]] at dusk the next day (or by night, if they ride
   straight through).
-- **Time:** ~10 minutes.
+- **Cast:** [[Silas Crubb]] · [[Sable Wren]] · [[Mara Tull]] · the prisoner (a silhouette: no name,
+  no lines)
+- **Enemies:** none
+- **DCs:** none
+- **Time:** ~10 min
+- **Trigger:** the party heads home with the cart.
 
 #### S2_HAUL_HOME — The casks come home on their own cart
 
@@ -934,7 +1079,7 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
   commits only what the cameo already locks: a raider from Bane's band walked in, surrendered, and
   went silent. Who he is and why he quit stay open.
 - **If Tyler needs more time:** the silhouette carries over. The hanging waits on Cael's reeve, so
-  Mara can hold a silent man for days, and Session 31 can open somewhere else and come back to the
+  Mara can hold a silent man for days, and Session 32 can open somewhere else and come back to the
   cell later. Don't invent a name, a face, or a reason here to fill the gap.
 - **Mara, at the door, before anyone asks:** *"He walked in. Put his blade down on my step. Hasn't
   said a word since. Half the town wants him hanged by week's end."* A beat. *"I haven't decided
@@ -945,13 +1090,16 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 
 ### [[Sable Wren]]
 
-- **Motivation:** open the new wing, which she built, mostly paid for, and can't defend alone.
-- **Knows:** the delivery's worth, and that she hasn't finished paying for it · that the raiders are
+- **Motivation:** open Ashford's first tavern on time, pay Silas the ~650 gp she still owes, and
+  keep her permit. She can't do it without the stolen stock, and can't defend the place alone.
+- **Knows:** what the stolen stock is worth, and that without it she loses her permit · that the raiders are
   not local · that something under the town answers her, and she calls it Asher (she won't say so
   tonight) · nothing about Harrow Bane beyond the name · why the ale is called The Mistake, and she
   isn't telling.
 - **Voice:** warm, competent, unhurried. Treats a lord and a drifter the same. Answers the question
   asked, not the one implied, and never explains herself.
+- **Now:** exasperated with Odibli since his "bad business owner" verdict at Session 30. The
+  eye-roll was the table's favourite thing; keep it dry, never cruel.
 
 ### [[Mara Tull]]
 
@@ -997,8 +1145,9 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 
 ### Walk-ons (Ashford townsfolk)
 
-No entity files; `/recap` decides who becomes canon. Full introductions are on `S2_TOWN` and
-`S2_NAMES`. Token look in brackets.
+Old Tobin Reed, Jory Pike, Agnes Brand and Dunny Marsh became canon at Session 30; the rest have
+no entity files, and `/recap` decides. Full introductions were at Session 30 (`S2_TOWN` and
+`S2_NAMES`, in its file). Token look in brackets.
 
 - **Old Tobin Reed** — ferryman, lost his boat tonight. Gives the Wick description.
 - **Jory Pike** — stable boy, fourteen. Saw Nella take the southeast track. Leads two horses at dawn.
@@ -1036,68 +1185,68 @@ Land it on the cell door, not on the casks.
 
 > *"The cart's back, the ale's back, and nobody's looking at either. They're looking at a barred
 > window, and a man behind it who walked in on his own and hasn't said a word. Mara's at the door
-> with her arms folded. Somewhere behind you, Sable is rolling casks into a wing that finally has
-> something in it. And someone in the crowd says 'week's end,' and someone else agrees."*
+> with her arms folded. Somewhere behind you, Sable is rolling casks into the one room she has
+> left, and it finally has something to pour. And someone in the crowd says 'week's end,' and someone else agrees."*
 
 **Leave unresolved:** who the prisoner is and why he surrendered · Bane's face · whose banner it is
 · Nella's tally, which she will want back · whether the Boon ever opens again.
 
 ## Engine notes
 
-- **Carryover.** Session 29's Scenes 4–5 run here as Scenes 1–3, with `S1_` ids renumbered to `S2_`.
-  `S1_LUCI` already played mid-fight in Session 29. `S1_ANTIDOTE` is dead (Halsby was never bitten).
+- **Carryover.** The back half of [[Session 30 Keep the Ale]]'s plan, reworked 2026-10-21. Ids
+  keep the act-session prefix `S2_` so they match `_flow.md` and Session 30's chart. Played there
+  and dropped here: `S2_SABLE_FREE`, `S2_LOOT`, `S2_TOWN`, `S2_NAMES`, `S2_WREN`, `S2_OFFER`,
+  `S2_IGGY`, `S2_COMPANIONS`.
 - **Choices** (`meta/player-agency.md`):
-  - Party: how to explain themselves to Mara (`S2_TOWN`) · Sable's deed (`S2_OFFER`) · who goes to
-    the jail (`S2_STATEMENT`) · chase or stay (`S2_SKIP`) · the route at stages 2 and 4
-    (`S2_ROAD`, `S2_APPROACH`) · the rear guard: fight, scare off or bluff (`S2_REARGUARD`) ·
-    scout first (`S2_SCOUT`) · heist, assault, parley or trick (`S2_APPROACH_CHOICE`) · Nella's
-    purse (`S2_TALLY`) · the banner in the bar (`S2_HAUL_HOME`)
-  - Character: Dip, what to share from the private roll (`S2_IGGY`) · Odibli, the word he writes
-    (`S2_HEARTH`) · Halsby, his one question for the fox (`S2_SPEAR`)
-  - Past choices paid off: Iggy's ode to Bosco at the Tser Pool camp (`S2_COMPANIONS`) · Halsby
-    taking the fox's job without haggling (`S2_SPEAR`)
-- **Spotlight.** Halsby's beat is `S2_SPEAR` (a promised delivery, not one of his `spotlight_hooks`
-  — none seeded). Iggy's `S2_IGGY` carries his already-seeded viol hook. Odibli gets his deed,
-  `S2_HEARTH`. Dip gets [[Varrick's Parrying Bracer]] at the camp (an item beat, not one of their
-  hooks). Sergei and Bosco come home in `S2_COMPANIONS`, for Odibli and Iggy.
-  The trend says lean party-centric; the chase and the camp are.
+  - Party: who goes to the jail (`S2_STATEMENT`) · sign the deed tonight or not (`S2_BOON`) ·
+    chase or stay (`S2_SKIP`) · the route at stages 2 and 4 (`S2_ROAD`, `S2_APPROACH`) · the rear
+    guard: fight, scare off or bluff (`S2_REARGUARD`) · scout first (`S2_SCOUT`) · heist, assault,
+    parley or trick (`S2_APPROACH_CHOICE`) · Nella's purse (`S2_TALLY`) · the banner in the bar
+    (`S2_HAUL_HOME`)
+  - Character: Dip, what to share from the private roll, and the 150 gp (`S2_DIP`) · Odibli, the
+    word he writes (`S2_HEARTH`) · Halsby, his one question for the fox (`S2_SPEAR`)
+  - Past choices paid off: the truth told to the town, "came out of the light" (`S2_STATEMENT`,
+    `S2_HORSES`) · Odibli's verdict on Sable and his pitch to Silas (`S2_BOON`, `S2_HORSES`) ·
+    Halsby's shade pitch (`S2_HORSES`) · Halsby dealing a crystal to every PC (`S2_CRYSTALS`) ·
+    Halsby taking the fox's job without haggling (`S2_SPEAR`)
+- **Spotlight.** The trend says lean party-centric this week; the chase and the camp are. Halsby,
+  the overdue PC, gets `S2_SPEAR` (a promised delivery, not one of his `spotlight_hooks`, none
+  seeded) and indirectly `S2_CRYSTALS`. Odibli gets his deed, `S2_HEARTH`. Dip gets his owed
+  moment (`S2_DIP`) and [[Varrick's Parrying Bracer]] at the camp. Luci and Iggy carry no beat of
+  their own this session; Iggy had the song at Session 30.
 - **Deployment tracking:** none planned from `meta/literary-devices.md` or the design
   preferences. The false trail at the fork is a device candidate if `/recap` wants to log it.
 - **For `/recap`:**
-  - Levels: Iggy, Odibli and Halsby to 5 (stamp `level_confirmed: 30` on all five PCs)
-  - The hearth: saved or scorched · Tallis's charm and who taught him · whether the original
-    Odibli felt the cast
-  - The 10% Stake, if accepted · the second deed (casks home), banked
+  - Levels: Odibli and Halsby to 5 (stamp `level_confirmed: 31` on all five PCs)
+  - The hearth: saved or scorched · what was in the coals (Tallis's charm, or whatever Miguel's
+    notes made it) · whether the original Odibli felt the cast
+  - Dip's private roll and what he shared · the 150 gp: kept, or put toward Sable's debt · Ben's
+    confirmation of the gold and his crystal
+  - The 10% Stake, if signed · the second deed (casks home), banked
   - [[The Shadowless Spear]] delivered — flip its loot file to delivered; Halsby's fade halts
-  - The Earshot Crystals handed out
-  - Silas's favour debt paid if the horses come back
+  - Silas's favour debt paid if the horses come back · where Silas stands on the two pitches
   - Nella's tally in party hands, and the 250 gp purse: kept, spent, or returned (it equals her
     remaining debt); Harrow Bane named by the ledger; the aegis-banner taken
   - [[Varrick's Parrying Bracer]] taken — flip its loot file to delivered, add it to Dip's gear
   - Chase DCs used → `meta/difficulty.md` Skill Challenge table, including the route choices
     taken at stages 2 and 4
   - Who went to the jail with Mara, if anyone (`S2_STATEMENT`) · whether they found and cut off
-    Nella's exit (`S2_SCOUT`)
+    Nella's exit (`S2_SCOUT`) · whether the crew heard a broadcast (`S2_CRYSTALS`); if so, Nella's
+    crew holding crystals becomes canon on [[Earshot Crystals]]
   - Rest Clock: reset if they rested at the waystation
   - The prisoner: canonize only what was shown
-  - **New canon if played:** The Mistake is a sour-cherry and honey ale, deep red, with a cold
-    finish, and stronger than it tastes · the new wing's brewing copper was on Silas's delivery and
-    was holed by a raider's spear · Ashford townsfolk Dunny Marsh (deputy), Wenna Moss (the
-    herb-wife), Old Tobin Reed (ferryman), the Hollises, Jory Pike (stable boy), Agnes Brand
-    (washerwoman) · Sable owes Silas about 650 gp of a 1,000 gp delivery · Nella's remaining debt
-    to Bane is 250 gp, the sum in her purse · Sergei and Bosco came through the transit loose, and
-    how is never explained · [[Varrick's Parrying Bracer]] was Varrick Tenn's, a soldier's guard
-    he wore as the camp's drover · Tallis sold written charms at the fair, and Mara bought one for
-    her mother · his smother-charm was dropped in the old core's hearth · Mara has worn the star
-    six years · Ashford's jail has two cells · the raiders' boots: third crew this season, same
-    cobbler · Silas charges 11 gp a lamed horse, and only about three smiths this side of the river
-    can hammer a brewing copper · the waystation is an old drover's relay short of Duskwater,
-    provisioned for about thirty · Sennet Orrin keeps Bane's duty ledger · the cart becomes the
-    Lioness's delivery cart · a hanging in Ashford waits on Cael's reeve · Nella and a few of her
-    crew kept their Earshot Crystals (only if it surfaces) · the camp crew's names (Ilsa Hask,
-    Fennel Dray, Cinder, Varrick Tenn, Haddo Keel, Brask, Sennet Orrin, Hesper Mudd, Tam "Clatter"
-    Cobb, Brick and Mortar), only for whoever comes up
+  - **New canon if played:** Nella's remaining debt to Bane is 250 gp, the sum in her purse ·
+    [[Varrick's Parrying Bracer]] was Varrick Tenn's, a soldier's guard he wore as the camp's
+    drover · Tallis sold written charms at the fair, and Mara bought one for her mother · the
+    hearth's cause (provisional, see `S2_HEARTH`) · Mara has worn the star six years · Ashford's
+    jail has two cells · Silas charges 11 gp a lamed horse · the waystation is an old drover's
+    relay short of Duskwater, provisioned for about thirty · Sennet Orrin keeps Bane's duty ledger
+    · the cart becomes the Lioness's delivery cart · a hanging in Ashford waits on Cael's reeve ·
+    the camp crew's names (Ilsa Hask, Fennel Dray, Cinder, Varrick Tenn, Haddo Keel, Brask, Sennet
+    Orrin, Hesper Mudd, Tam "Clatter" Cobb, Brick and Mortar), only for whoever comes up
 - **Held for later:** Elowen and Odibli (the Unfinished Binding) · Jorn's foreshadow · the Marlow
-  coppers · Asher's Dead Sun phrase for Luci · the battlefield-spirit and coin-forgery spitballs.
-- **Before the table:** nothing outstanding. Tyler's backstory is Session 31 prep, not Session 30
-  prep (see `S2_CELL`).
+  coppers · Asher's Dead Sun phrase for Luci · the battlefield-spirit and coin-forgery spitballs ·
+  the citadel Odibli is drawn toward (Miguel's homework).
+- **Before the table:** Miguel's hearth notes (optional; the beat runs on the stand-in) · Tyler's
+  backstory (optional; the cell stays a silhouette without it) · confirm the 150 gp and Dip's
+  crystal with Ben. Maps, tokens and cards are tracked in `_tasks.md`.
