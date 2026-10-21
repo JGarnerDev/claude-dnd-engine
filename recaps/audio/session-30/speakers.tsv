@@ -1,0 +1,13 @@
+# Craig handle -> display name used in the transcript.
+# Format: <audio filename stem><TAB><Display Name>
+# Only two tracks this session. Ben (Dip) absent.
+# SHARED MIC: Kellan (Halsby), Miguel (Odibli) and Paul (Luci) all spoke through
+# Miguel's microphone (confirmed by Jeff, 2026-10-20). Track 1 carries all three;
+# label is deliberately all three names. Jeff DMs and plays Iggy on his own track.
+#
+1-dynamicpenny	Miguel (Odibli) + Kellan (Halsby) + Paul (Luci)
+2-eljeffe0024	Jeff (DM + Iggy)
+# DIARIZE REJECTED (2026-10-21): diarize-track.py 3-way split had only 3 DM anchors, 0 vocab hits;
+# spot-check of 13 content-certain lines found 6 misattributed (e.g. "I'm a Wizard" -> Paul,
+# "Warren O'Ghibli Buffett" -> Kellan). Sidecar kept as .cache/session-30/1-dynamicpenny.speakers.rejected.json.
+# Transcript keeps the joint label; attribute by content at /transcript.
