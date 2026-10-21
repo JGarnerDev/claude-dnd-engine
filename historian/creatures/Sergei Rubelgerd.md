@@ -1,6 +1,6 @@
 ---
 name: "Sergei Rubelgerd"
-campaign: strahd
+campaign: homebrew
 type: creature
 exists: true
 state: alive
@@ -25,7 +25,8 @@ last_updated: [[Session 30 Keep the Ale]]
 relates_to:
   - [[Odibli]] (owner; bought him at the Vallaki market, named him via speak with animals)
   - [[Bosco]] (the party's other animal companion)
-  - [[Curse of Strahd]] (campaign)
+  - [[Curse of Strahd]] (where the party found them)
+  - [[Redwater]] (campaign; crossed over with the party, Session 30)
 known_by:
   - [[The Party]] (full)
 affinity:
@@ -37,7 +38,7 @@ goals:
   - "Being a good boy"
 ---
 
-Owner: [[Odibli]] | Campaign: [[Curse of Strahd]]
+Owner: [[Odibli]] | Campaign: [[Redwater]] (from [[Curse of Strahd]])
 
 ## Stat Block
 

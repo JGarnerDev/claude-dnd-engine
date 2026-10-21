@@ -22,6 +22,9 @@ When generating content that brushes against a mystery, treat it as a shadow —
 - **What is Izek Strazni** *(strahd)* — Vallaki's guard captain has a grotesquely deformed, dark-magic arm (elongated nails, barbs) and carries a hollow, longing air. Diluted holy water spilled on him in Session 18 had **no effect** — so he is not a straightforward undead/fiend the party can read. What he is, where the arm comes from, and what he longs for are DM-controlled. Partial evidence: the arm, the immunity, the hollowness. See [[Izek Strazni]].
   - *Revealed: —*
 
+- **What the Lioness hearth is linked to** *(homebrew)* — the hearth of [[The Golden Lioness]] burns without being fed. Odibli's Arcana 23 found it linked to another entity not currently present, with an aura about 100–200 ft across, and it went completely still for about ten seconds during Iggy's song ([[Session 30 Keep the Ale]]). Sable glanced at it once and said nothing. What it is linked to is open, and waits on Miguel's lore homework (todo 78).
+  - *Revealed: —*
+
 ---
 
 ## How to Add a Mystery

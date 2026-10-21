@@ -1,6 +1,6 @@
 ---
 name: "Bosco"
-campaign: strahd
+campaign: homebrew
 type: creature
 exists: true
 state: alive
@@ -23,7 +23,8 @@ relates_to:
   - [[Iggy]] (companion; bonded over a ration)
   - [[Odibli]] (cold war — Odibli ate a ration in front of him)
   - [[Parriwimple]] (prior history — Bosco was thrown into Parriwimple's domicile during Session 12, left scratch marks)
-  - [[Curse of Strahd]] (campaign)
+  - [[Curse of Strahd]] (where the party found them)
+  - [[Redwater]] (campaign; crossed over with the party, Session 30)
 known_by:
   - [[The Party]] (full)
 affinity:
@@ -40,7 +41,7 @@ goals:
 tactics: "Claw or Bite, +5 to hit, 1 damage. Hearty — advantage on CON saves. Exceptional senses (Perception +5, darkvision 60 ft.). Disproportionate confidence for a CR 0 creature."
 ---
 
-Owner: [[Iggy]] | Campaign: [[Curse of Strahd]]
+Owner: [[Iggy]] | Campaign: [[Redwater]] (from [[Curse of Strahd]])
 
 ## Stat Block
 

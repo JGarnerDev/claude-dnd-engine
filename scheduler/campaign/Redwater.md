@@ -48,45 +48,51 @@ Five PCs this season. The four who crossed from Barovia persist across both worl
 
 > **Reliability:** carried over from the Strahd roster plus the Session 28 seam pass. Afflictions cross **dormant** (the mists fed them; away, they are muted) — `workshop/first-homebrew-act/notes/the-seam.md`. Odibli's poison and Dip's mold were cured on screen and are gone; do not reuse them. Party level is unset pending the starting-level ruling.
 
-## Current State (after Session 29)
+## Current State (after Session 30)
 
-The party is in Aethryn. At night they stand in the raided yard of [[The Golden Lioness]] in
-[[Ashford]], with all six of [[Nella]]'s raiders dead around them. [[Act 1 - The Hearth at Ashford]]
-is the live act and [[The Stolen Casks]] is **active**.
-[[Session 29 The Mistake]] played Scenes 1–3. Scenes 4–5 carry into the next session.
+The party is in Aethryn, in the one surviving room of [[The Golden Lioness]] in [[Ashford]], late
+on the night of their arrival. [[Act 1 - The Hearth at Ashford]] is the live act and
+[[The Stolen Casks]] is **active**. [[Session 30 Keep the Ale]] played only Scenes 1–3; the rest
+of the night and the whole pursuit carry into [[Session 31 The Red Trail]] (a draft).
 
-- **[[Sable Wren]]** is on the ground beside a spooked horse, **still bound and gagged**. She
-  has not spoken to the party.
-- **Nella's cart**, with the barrels already loaded, escaped south under the trees toward
-  Duskwater. The party stopped the raiders present from taking anything more.
-- **Not yet played:** the bodies (coin, plus an Earshot Crystal on every raider, `S1_LOOT`) ·
-  the town's other raids · [[Mara Tull]] and [[Silas Crubb]] · Sable's thanks and the offer of
-  a 10% stake · Iggy's viol-song beat · the beat where [[The Wanderer's Boon]] is shown inert.
-- **[[Halsby]]** has joined. He was on [[The Nightveil]]'s errand to [[Tassad]] for
-  [[Sister Maerith]] until Asher's fox turned him aside. He took the job without bargaining. The
-  fox owes him [[The Shadowless Spear]], which the DM plans to deliver around Session 30–31.
-- **Levels:** Dip and Luci are 5. Halsby, Iggy and Odibli are 4. Levels come one PC at a time,
-  with everyone at 5 before the December finale.
+- **The job is taken.** [[Sable Wren]] offered rooms, meals, a stay of a month or two and 10% of
+  the bar if the party brings back her stock. They agreed; no deed formally taken. She owes
+  [[Silas Crubb]] about 650 gp of a ~1,000 gp loan, and the stock was meant to pay it.
+- **The Golden Lioness was retconned** to a week-old venture, Ashford's first tavern, half-built
+  and now half-wrecked. Sable runs it alone for now.
+- **Nella's cart** went southeast on deep ruts ([[Jory Pike]]). The raiders are one part of a
+  larger, organized force camped about a day across the river, all shod by the same cobbler.
+  [[Wick]] (a branded elf commander) and [[Harrow Bane]] (a name that hushes a room) are known
+  by word only.
+- **The hearth** feeds itself, is linked to something absent, and went still during Iggy's song
+  (`meta/mysteries.md`). Waits on Miguel's lore homework.
+- **The party carries [[Earshot Crystals]]**, one each. **Dip** holds the ~150 gp off the raiders
+  (confirm with Ben). [[Sergei Rubelgerd]] and [[Bosco]] are back with the party.
+- **Not yet played:** Mara's statement · [[The Wanderer's Boon]] shown inert · the dying-hearth
+  beat · dawn, the horses, [[The Shadowless Spear]] for [[Halsby]] · the chase, the fork, the
+  waystation, the man in the cell.
+- **Levels:** Dip, Luci and Iggy are 5 (Iggy took Paladin 2). Halsby and Odibli are 4; their
+  level-ups wait on the Spear and the hearth. Everyone is at 5 before the December finale.
 - **The sky:** a single vast **broken moon**, shedding shards. Luci named it **Fida** in the
-  Dead Sun tongue, and her voice, louder here than in Barovia, answered "Closer." This
-  conflicts with `data/lore/calendar-proposal.md` (two suns, three moons; not canon), which
-  needs reconciling before it is canonized.
+  Dead Sun tongue, and her voice answered "Closer." This conflicts with
+  `data/lore/calendar-proposal.md` (two suns, three moons; not canon), which needs reconciling
+  before it is canonized.
 
-### Rest Clock (as of: Session 29)
+### Rest Clock (as of: Session 30)
 
 Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` -> Long Rest Rules).
 
-- In-world time now: **"Day 1, Ashford reckoning", night, just after the raid.** This is a working label, not a date, because Aethryn has no settled calendar (`questionnaires/world/history/`, `data/lore/calendar-proposal.md` both open)
+- In-world time now: **"Day 1, Ashford reckoning", late night, after dinner and the song.** This is a working label, not a date, because Aethryn has no settled calendar (`questionnaires/world/history/`, `data/lore/calendar-proposal.md` both open)
 - Last long rest (in-world): **the transit itself**, given in fiction at Session 29's landing (DM ruling, 2026-10-01)
-- Hours since last long rest: ~1 (~estimate). The transit landed straight into the fight
-- Long rest available: **no, not for ~23 more in-world hours**
-- Rounds of combat since: **~3** (two full rounds plus Dip's finishing turn)
+- Hours since last long rest: ~4 (~estimate). The transit landed into the fight, then about three hours of dinner, drinks and song
+- Long rest available: **no, not for ~20 more in-world hours**
+- Rounds of combat since: **~3** (all Session 29; Session 30 had no combat)
 - Short rests since: **0**
 - Notable burns:
   - [[Halsby]]: Invisibility, a twinned Chromatic Orb (slot + sorcery points), and Magic Missile upcast for 5 darts (~3rd level; ~estimate)
-  - [[Odibli]]: Hold Person (2nd)
-  - [[Luci]]: ki/focus for the flurry, plus her radiant emanation
-  - [[Iggy]]: 1 Bardic Inspiration
+  - [[Odibli]]: Hold Person (2nd); Speak with Animals (Session 30; ritual or slot, unconfirmed)
+  - [[Luci]]: ki/focus for the flurry, plus her radiant emanation; her healing hands (Session 30, on Dunny)
+  - [[Iggy]]: 1 Bardic Inspiration; some Lay on Hands (Session 30, on Dunny)
   - [[Dip]]: 1 rage (granted free), and took 8 fire
   - Permanent losses that still apply: Luci's **Sacred Flame**, and Odibli's **familiar** (Session 25)
   - Afflictions are still **dormant** (Iggy's shadow, Dip's whispers)
