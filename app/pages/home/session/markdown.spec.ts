@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { escapeHtml, extractCallouts, inline, plainText, renderMarkdown, splitNodeSections, splitSections } from './markdown.js';
+import { escapeHtml, extractCallouts, inline, nodeHeadings, plainText, renderMarkdown, splitNodeSections, splitSections, stripCallouts } from './markdown.js';
 
 describe('plainText', () => {
   it('unwraps wikilinks and drops bold/code markup', () => {
@@ -111,5 +111,15 @@ describe('extractCallouts', () => {
 
   it('returns nothing for prose without callouts', () => {
     expect(extractCallouts('- a plain bullet\n\nText.')).toEqual({ intros: [], tokens: [] });
+  });
+});
+
+describe('nodeHeadings and stripCallouts', () => {
+  it('reads node heading titles by id', () => {
+    expect([...nodeHeadings('#### S1_ASK — Mara asks\n\ntext\n\n#### S1_GO - Go').entries()]).toEqual([['S1_ASK', 'Mara asks'], ['S1_GO', 'Go']]);
+  });
+
+  it('takes callout bullets and their nested lines out of node prose', () => {
+    expect(stripCallouts('- **Tokens:** a\n  more\n- **Introduce:** B\n  - **Look:** x\n- keep')).toBe('- keep');
   });
 });

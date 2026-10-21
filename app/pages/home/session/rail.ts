@@ -1,13 +1,9 @@
-// The map rail under the header: every card as a chip, grouped by scene, colored
-// by kind. Current card ringed, visited cards filled. Click any chip to jump.
+// The map rail under the header: every step as a numbered chip, grouped by scene,
+// colored by kind. Current step ringed, visited steps filled. Click any chip to jump.
+// Chips carry step numbers, not ids: ids are for planning, not for the table.
 
 import { escapeHtml } from './markdown.js';
 import type { FlowNode, Scene } from './types.js';
-
-// Strip the act-relative prefix ("S1_") that every id in a set shares, for chip text.
-export function chipText(id: string): string {
-  return id.replace(/^S\d+_/, '');
-}
 
 export function renderRail(rail: HTMLElement, nodes: FlowNode[], scenes: Scene[], current: string, visited: ReadonlySet<string>, onJump: (id: string) => void): void {
   const groups: Array<{ label: string; title: string; nodes: FlowNode[] }> = scenes.map((s) => ({
@@ -23,7 +19,7 @@ export function renderRail(rail: HTMLElement, nodes: FlowNode[], scenes: Scene[]
     .map((g) => `
       <div class="sr-rail-group${g.nodes.some((n) => n.id === current) ? ' is-current' : ''}" title="${escapeHtml(g.title)}">
         <span class="sr-rail-label">${escapeHtml(g.label)}</span>
-        ${g.nodes.map((n) => `<button type="button" class="sr-chip${n.id === current ? ' is-current' : ''}${visited.has(n.id) ? ' is-visited' : ''}" data-kind="${n.kind}" data-id="${n.id}" title="${escapeHtml(n.id + ' — ' + n.title)}">${escapeHtml(chipText(n.id))}</button>`).join('')}
+        ${g.nodes.map((n, i) => `<button type="button" class="sr-chip${n.id === current ? ' is-current' : ''}${visited.has(n.id) ? ' is-visited' : ''}" data-kind="${n.kind}" data-id="${n.id}" title="${escapeHtml(n.title)}">${i + 1}</button>`).join('')}
       </div>`)
     .join('');
   rail.querySelectorAll<HTMLButtonElement>('.sr-chip').forEach((b) => b.addEventListener('click', () => onJump(b.dataset.id!)));

@@ -58,25 +58,61 @@
 .sr-main { flex: 1; min-width: 0; overflow-y: auto; padding: 18px 28px 48px; }
 .sr-panel { width: 380px; flex-shrink: 0; overflow-y: auto; border-left: 1px solid var(--sr-line); background: #121d31; padding: 12px 14px 40px; }
 
-/* Scene bar + card */
-.sr-scenebar { display: flex; justify-content: space-between; align-items: baseline; max-width: 860px; margin: 0 auto 10px; color: var(--sr-muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
-.sr-scenebar-title { color: var(--sr-text); font-weight: 600; }
-.sr-card { position: relative; max-width: 860px; margin: 0 auto; background: var(--sr-surface); border: 1px solid var(--sr-line); border-left: 5px solid var(--k); border-radius: 10px; padding: 20px 26px 22px; font-size: 18px; }
-.sr-card-meta { display: flex; gap: 10px; align-items: center; font-size: 13px; }
-.sr-kind { color: var(--k); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
-.sr-id { color: var(--sr-muted); }
-.sr-marker { color: var(--sr-accent); border: 1px dashed var(--sr-accent); border-radius: 4px; padding: 0 6px; }
-.sr-card-title { font-size: 26px; line-height: 1.25; margin: 8px 0 12px; }
-.sr-card-lines { margin: 0 0 14px; padding-left: 1.2em; }
-.sr-card-lines li { margin: 4px 0; }
-.sr-note { font-size: 15px; color: #cbd5e1; background: var(--sr-bg); border-radius: 6px; padding: 10px 14px; margin: 10px 0; border-left: 3px solid var(--sr-muted); }
-.sr-note::before { content: "Plan note — "; color: var(--sr-muted); font-weight: 600; }
+/* Scene page (scene.ts): bar, header, enemies, read-aloud, steps, tokens */
+.sr-scene { position: relative; max-width: 880px; margin: 0 auto; }
+.sr-scene-bar { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 2px solid var(--sr-line); padding-bottom: 6px; margin-bottom: 12px; }
+.sr-scene-title { margin: 0; font-size: 22px; }
+.sr-scene-pos { color: var(--sr-muted); font-size: 13px; white-space: nowrap; }
+.sr-scene-time { margin-right: 12px; color: var(--sr-text); }
+.sr-sh-summary { font-size: 18px; line-height: 1.45; margin: 4px 0 12px; color: #f1e9d2; }
+.sr-sh-grid { display: grid; gap: 6px; margin-bottom: 12px; }
+.sr-sh-row { display: grid; grid-template-columns: 96px 1fr; gap: 10px; align-items: baseline; }
+.sr-sh-label { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--sr-muted); }
+.sr-sh-val { font-size: 15px; }
+.sr-sh-val.is-chips { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+.sr-sh-chip { background: var(--sr-surface); border: 1px solid var(--sr-line); border-radius: 999px; padding: 1px 10px; font-size: 14px; }
+.sr-enemies { background: color-mix(in srgb, var(--sr-k-combat) 8%, var(--sr-bg)); border: 1px solid color-mix(in srgb, var(--sr-k-combat) 45%, var(--sr-line)); border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; }
+.sr-enemy > summary { display: grid; grid-template-columns: minmax(180px, 1.1fr) minmax(160px, 1fr) 1.6fr; gap: 10px; align-items: baseline; padding: 5px 0; cursor: pointer; list-style: none; font-size: 14px; border-top: 1px solid var(--sr-line); }
+.sr-enemy:first-of-type > summary { border-top: none; }
+.sr-enemy > summary::-webkit-details-marker { display: none; }
+.sr-enemy-name { font-weight: 600; }
+.sr-enemy-stats { color: var(--sr-text); font-variant-numeric: tabular-nums; }
+.sr-enemy-atk { color: var(--sr-muted); }
+.sr-enemy.is-unmatched { padding: 5px 0; font-size: 14px; }
+.sr-enemy-block { padding: 4px 0 10px 14px; border-left: 3px solid var(--sr-k-combat); margin: 4px 0 8px; }
+.sr-enemy-title { font-weight: 700; margin-bottom: 4px; }
+.sr-tactics { font-size: 14px; color: #cbd5e1; margin: 8px 0 2px; }
+.sr-aloud { margin: 0 0 12px; }
+.sr-setup { background: #131e33; border: 1px solid var(--sr-line); border-radius: 8px; padding: 2px 14px; margin-bottom: 12px; }
+.sr-setup > summary, .sr-tokens-box > summary { cursor: pointer; padding: 7px 0; color: var(--sr-muted); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.05em; }
 
-/* Table-time callouts lifted from the node's prose: token cues and introductions */
+/* Steps */
+.sr-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.sr-step { background: var(--sr-surface); border: 1px solid var(--sr-line); border-radius: 8px; }
+.sr-step-head { display: flex; align-items: baseline; gap: 10px; width: 100%; text-align: left; padding: 8px 14px; background: none; border: none; cursor: pointer; font-size: 16px; }
+.sr-step-num { min-width: 1.4em; text-align: right; color: var(--sr-muted); font-variant-numeric: tabular-nums; font-weight: 700; }
+.sr-step-title { flex: 1; font-weight: 600; }
+.sr-step.is-done { opacity: 0.55; background: transparent; }
+.sr-step.is-done .sr-step-num { color: var(--sr-k-stake); }
+.sr-step.is-current { border-color: var(--sr-accent); border-left: 4px solid var(--sr-accent); background: var(--sr-raised); }
+.sr-step.is-current .sr-step-head { font-size: 19px; }
+.sr-step-body { padding: 0 18px 14px 44px; font-size: 16px; }
+.sr-step-body > .sr-md { font-size: 16px; }
+.sr-mark { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+.sr-mark[data-mark="choice"] { color: var(--sr-k-decision); }
+.sr-mark[data-mark="combat"] { color: var(--sr-k-combat); font-size: 15px; }
+.sr-mark[data-mark="payoff"] { color: var(--sr-k-stake); font-size: 15px; }
+.sr-md li.sr-choice { list-style: none; margin: 8px 0 8px -1.2em; padding: 6px 10px; border-radius: 6px; background: color-mix(in srgb, var(--sr-k-decision) 12%, transparent); border-left: 3px solid var(--sr-k-decision); }
+.sr-tokens-box { margin-top: 14px; background: #131e33; border: 1px solid var(--sr-line); border-radius: 8px; padding: 2px 14px 6px; font-size: 14px; }
+.sr-tokens-box ol { list-style: none; padding: 0; margin: 0; }
+.sr-tokens-box li { margin: 5px 0; }
+.sr-tok-step { display: inline-block; min-width: 1.6em; color: var(--sr-k-seed); font-weight: 700; }
+.sr-card-title { font-size: 26px; line-height: 1.25; margin: 8px 0 12px; }
+
+/* Introductions, inside the open step */
 .sr-callout-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--sr-muted); margin-right: 6px; }
-.sr-tokens { font-size: 14px; background: var(--sr-bg); border-radius: 6px; padding: 8px 14px; margin: 10px 0; border-left: 3px solid var(--sr-k-seed); }
-.sr-intro { background: var(--sr-raised); border-radius: 8px; padding: 10px 16px; margin: 12px 0; border-left: 4px solid var(--sr-accent); }
-.sr-intro-name { font-size: 18px; margin: 0 0 4px; }
+.sr-intro { background: var(--sr-surface); border-radius: 8px; padding: 8px 14px; margin: 4px 0 10px; border-left: 4px solid var(--sr-accent); }
+.sr-intro-name { font-size: 17px; margin: 0 0 4px; }
 .sr-intro .sr-md ul { margin: 0; padding-left: 18px; }
 .sr-intro .sr-md li { margin: 3px 0; }
 
@@ -93,27 +129,8 @@
 .sr-opt-to { font-size: 12.5px; color: var(--sr-muted); }
 .sr-end { font-size: 16px; color: #cbd5e1; padding: 10px 0; }
 
-/* Scene notes */
-.sr-scenenotes { max-width: 860px; margin: 18px auto 0; background: #131e33; border: 1px solid var(--sr-line); border-radius: 10px; padding: 4px 20px; }
-.sr-scenenotes > summary { cursor: pointer; padding: 10px 0; color: var(--sr-muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
+/* Markdown inside the scene */
 .sr-md { font-size: 15px; }
-.sr-group-notes { border-top: 1px solid var(--sr-line); }
-.sr-group-notes:last-child { margin-bottom: 8px; }
-.sr-group-notes > summary { cursor: pointer; padding: 9px 0; font-weight: 600; color: var(--sr-text); }
-.sr-group-notes > summary:hover { color: var(--sr-accent); }
-.sr-group-notes > .sr-md { padding: 0 0 10px 18px; }
-.sr-group-notes > summary { display: flex; align-items: baseline; gap: 8px; list-style: none; }
-.sr-group-notes > summary::before { content: "▸"; color: var(--sr-muted); }
-.sr-group-notes[open] > summary::before { content: "▾"; }
-.sr-group-notes > summary::-webkit-details-marker { display: none; }
-.sr-group-notes.is-current { border-left: 3px solid var(--sr-accent); margin-left: -12px; padding-left: 9px; }
-.sr-gn-num { min-width: 1.4em; text-align: right; color: var(--sr-muted); font-variant-numeric: tabular-nums; }
-.sr-gn-kind { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--k); }
-.sr-gn-id { font-size: 12px; color: var(--sr-muted); }
-.sr-gn-title { font-weight: 600; }
-.sr-gn-go { float: right; margin: 0 0 6px 10px; font-size: 12px; padding: 3px 8px; background: var(--sr-bg); color: var(--sr-muted); border: 1px solid var(--sr-line); border-radius: 5px; cursor: pointer; }
-.sr-gn-go:hover { color: var(--sr-text); border-color: var(--sr-muted); }
-.sr-gn-flow { color: #cbd5e1; }
 .sr-md blockquote { margin: 10px 0; padding: 4px 16px; border-left: 3px solid var(--sr-accent); background: var(--sr-bg); font-style: italic; color: #f1e9d2; }
 .sr-md pre { white-space: pre-wrap; background: var(--sr-bg); padding: 10px; border-radius: 6px; font-size: 13px; }
 .sr-md ul { padding-left: 1.2em; margin: 6px 0; }

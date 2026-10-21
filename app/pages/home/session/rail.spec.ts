@@ -1,14 +1,7 @@
 // @vitest-environment happy-dom
 import { describe, expect, it, vi } from 'vitest';
-import { chipText, renderRail } from './rail.js';
+import { renderRail } from './rail.js';
 import { fixture } from './fixture-data.js';
-
-describe('chipText', () => {
-  it('strips the shared act prefix', () => {
-    expect(chipText('S1_FIGHT')).toBe('FIGHT');
-    expect(chipText('OTHER')).toBe('OTHER');
-  });
-});
 
 describe('renderRail', () => {
   it('groups chips by scene, adds loose nodes last, and marks current and visited', () => {
@@ -20,6 +13,7 @@ describe('renderRail', () => {
     expect(labels).toEqual(['1', '1b', '2', '3', '·']);
     expect(rail.querySelector('.sr-chip.is-current')!.getAttribute('data-id')).toBe('S1_REST');
     expect(rail.querySelectorAll('.sr-chip.is-visited')).toHaveLength(2);
+    expect(rail.querySelector('.sr-chip.is-current')!.textContent).toBe('2'); // step number, not the id
     rail.querySelector<HTMLButtonElement>('[data-id="S1_FIGHT"]')!.click();
     expect(onJump).toHaveBeenCalledWith('S1_FIGHT');
   });

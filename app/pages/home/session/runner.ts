@@ -7,7 +7,8 @@
 import './session.css';
 import { buildGraph, nextOptions } from './flow.js';
 import { findMentions, makeResolver, mentionIndex } from './entities.js';
-import { renderCard } from './card.js';
+import { renderScene } from './scene.js';
+import { parseCombatants } from './combatants.js';
 import { renderRail } from './rail.js';
 import { mountPanel } from './panel.js';
 import { loadState, saveState } from './store.js';
@@ -58,6 +59,7 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
   const recapIdx = mentionIndex(data.entities, (e) => e.subtype === 'pc');
   const panel = mountPanel(root.querySelector<HTMLElement>('.sr-panel')!, data, resolve, known);
   const sceneOf = (id: string | null) => data.scenes.find((x) => x.id === id);
+  const combatants = parseCombatants(data.sections.find((x) => /^combatants$/i.test(x.title.trim()))?.md ?? '');
   const titleOf = (id: string) => g.byId.get(id)?.title ?? id;
 
   const state = loadState(s.folder);
@@ -76,18 +78,20 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
     options = nextOptions(g, current, visited, (id) => sceneOf(id)?.title ?? id);
     const inScene = data.nodes.filter((n) => n.scene === node.scene);
     renderRail(rail, data.nodes, data.scenes, current, visited, go);
-    renderCard(main, {
+    renderScene(main, {
       node,
       scene,
       sceneNodes: inScene,
-      sceneIndex: node.scene && current !== RECAP_ID ? `card ${inScene.indexOf(node) + 1} of ${inScene.length}` : '',
+      visited,
+      position: node.scene && current !== RECAP_ID ? `step ${inScene.indexOf(node) + 1} of ${inScene.length}` : '',
       options,
       titleOf,
       known,
       closingHook: s.closingHook,
-      notesOpen: state.sceneNotesOpen,
+      combatants,
+      tokensOpen: state.tokensOpen,
       onGo: go,
-      onNotesToggle: (open) => { state.sceneNotesOpen = open; saveState(s.folder, state); },
+      onTokensToggle: (open) => { state.tokensOpen = open; saveState(s.folder, state); },
       bodyHtml: current === RECAP_ID ? recapHtml(data, known) : undefined,
     });
     const isRecap = current === RECAP_ID;

@@ -4,20 +4,20 @@
 
 export interface RunnerState {
   history: string[];
-  sceneNotesOpen: boolean;
+  tokensOpen: boolean;
 }
 
 const key = (folder: string) => `session-runner:${folder}:v1`;
 
 export function loadState(folder: string, storage: Storage | undefined = globalThis.localStorage): RunnerState {
-  const empty: RunnerState = { history: [], sceneNotesOpen: true };
+  const empty: RunnerState = { history: [], tokensOpen: false };
   try {
     const raw = storage?.getItem(key(folder));
     if (!raw) return empty;
     const v = JSON.parse(raw) as Partial<RunnerState>;
     return {
       history: Array.isArray(v.history) ? v.history.filter((x): x is string => typeof x === 'string') : [],
-      sceneNotesOpen: v.sceneNotesOpen !== false,
+      tokensOpen: v.tokensOpen === true,
     };
   } catch {
     return empty;

@@ -140,6 +140,16 @@ export function splitNodeSections(md: string): { setup: string; nodes: Map<strin
   return { setup: buckets[0].lines.join('\n').trim(), nodes };
 }
 
+// The one-line titles the plan gives its node headings ("#### S1_ASK — Mara asks"),
+// by id. Flow labels wrap for diagram width, so these read better as step names.
+export function nodeHeadings(md: string): Map<string, string> {
+  const out = new Map<string, string>();
+  for (const m of md.replace(/\r/g, '').matchAll(/^####\s+([A-Z][A-Z0-9]*_[A-Z0-9_]+)\s+[—–-]\s+(.+)$/gm)) {
+    if (!out.has(m[1])) out.set(m[1], m[2].trim());
+  }
+  return out;
+}
+
 // Table-time callouts filed in a node's prose (`/session` Phase 6), lifted onto the
 // card so the DM never has to open the scene notes for them:
 //   - **Introduce:** Mara Tull        -> one intro per character, at first appearance;
@@ -151,6 +161,17 @@ const CALLOUT_RE = /^[-*]\s+\*\*(Introduce|Tokens):?\*\*:?\s*(.*)$/;
 export interface Callouts {
   intros: Array<{ name: string; md: string }>;
   tokens: string[];
+}
+
+// The node's prose with its callouts taken out — the runner shows those on their own.
+export function stripCallouts(md: string): string {
+  const lines = md.replace(/\r/g, '').split('\n');
+  const out: string[] = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (!CALLOUT_RE.test(lines[i])) { out.push(lines[i]); continue; }
+    while (i + 1 < lines.length && /^\s+\S/.test(lines[i + 1])) i++;
+  }
+  return out.join('\n');
 }
 
 export function extractCallouts(md: string): Callouts {

@@ -6,6 +6,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.42.0] — 2026-10-21
+
+### Changed
+
+- **The session runner is scene-first.** One page per scene instead of one card per beat. The top of the page says what the scene is doing (summary), where, who's here, the DCs, and the enemies as compact rows (AC, HP, speed, CR, main attack) that expand to the full stat block from `## Combatants`. Under that, the beats are a step list: done steps greyed with a tick, the current step open, upcoming steps on one line, and fork buttons under the step that branches. Keys are unchanged.
+- **Hidden at the table:** planning history (`(Jeff, <date>)`, `Engine, …; committed …`, `Draft (engine, …)`), node ids and kind tags. The rail shows step numbers, and steps carry only ◆ choice / ⚔ combat / ★ payoff marks. Token cues move behind one **Tokens** toggle per scene. Read-aloud text in a scene's setup stays open; the rest of the setup folds under "Scene notes".
+- **Scene header in plans.** `/session` Phase 6 and `meta/schemas/session.md` open every `### Scene` with `Summary` · `Where` · `Cast` · `Enemies` · `DCs` · `Tactics` (combat) · `Time` · `Trigger` bullets, and planning history goes in the Engine notes, not in scene prose. `/review` Pass 1 checks the header. Plans without one still render: the runner falls back on Trigger, Location and NPCs present, and pulls DCs out of the prose.
+- Session 31's six scenes have headers backfilled.
+
+### Removed
+
+- `app/pages/home/session/card.ts` (replaced by `scene.ts`, `scene-head.ts`, `steps.ts`, with the pure `scene-header.ts`, `combatants.ts`, `provenance.ts`). `session-cards.py`'s output is unchanged.
+
 ## [0.41.0] — 2026-10-21
 
 ### Added

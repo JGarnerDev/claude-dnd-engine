@@ -241,7 +241,7 @@ On **go** or **chat**, write the full plan for the approved spine.
 uv run scripts/party-status.py
 ```
 
-**The spine is fixed.** Each beat becomes a `#### S<k>_SLUG — <one line>` node heading under its `### Scene N — Title`, in spine order, so the session runner shows each beat on its own card. Do not rename, reorder or add beats while fleshing. If fleshing shows a missing beat, or a review pass wants a new choice, list it in the Phase 7 report as a proposed spine change.
+**The spine is fixed.** Each beat becomes a `#### S<k>_SLUG — <one line>` node heading under its `### Scene N — Title`, in spine order, so the session runner shows each beat as its own step on the scene page. Do not rename, reorder or add beats while fleshing. If fleshing shows a missing beat, or a review pass wants a new choice, list it in the Phase 7 report as a proposed spine change.
 
 **Frontmatter fields to populate:**
 
@@ -266,16 +266,26 @@ One `### Scene N — [Title]` block per spine scene, with the spine's beats as i
 
 **Travel legs:** if the plan moves the party overland or by water between known points, read `meta/settlements.md` → Travel Legs first. It sizes the leg, advances the in-world clock (which feeds the Rest Clock and the long-rest gate), and keeps stops to 1–3 geography-derived working labels.
 
-Each scene block contains:
+Each scene block opens with the **scene header**, the bullets the session runner shows at the top of the scene page so the DM can take in the scene at a glance while running it. Write them first, in this order, before the first `####` node:
 
-- **Trigger** — what causes this scene to begin (party action, NPC move, time passing)
-- **Location** — `[[wiki-link]]`; one-line description of what the space looks/feels like
-- **NPCs present** — name, one-line goal for this scene, one-line voice note (how they talk/carry themselves). Everyone the plan puts in front of the party gets a real name, walk-ons and named animals included, so anyone can be spoken to or talk to each other without the DM inventing a name at the table. The narration can still leave them unnamed until someone says it
-- **Introduce** — on the node where a character first appears to the party (NPCs, walk-ons, combatants, named animals, and anyone last seen but never heard), an `- **Introduce:** <Name>, <role>` bullet near the top of the node, with three nested bullets: **Look:** (what the party sees, including the token's look for walk-ons), **Sound:** (how they talk or what you hear), **Impression:** (the gut read in one line, observable, never a secret). Combatants lead with their label: `Introduce: Drover (Varrick Tenn)`. Once per character, at first appearance only. The session runner lifts these onto the card, so the DM reads them at the moment of introduction instead of hunting the scene notes. A deliberate silhouette (a figure the plan keeps faceless) gets none
-- **Tokens** — on any node where someone with a token arrives, leaves or moves to another map, a `- **Tokens:**` bullet at the top of that node: which map (the session layout or a standing location map such as the Lioness `outdoors`/`indoors`), who goes on and roughly where, and who comes off. Cover every token, walk-ons and companions included, and clear the board when a scene empties. The runner shows these on the card too
+- **Summary:** 2–3 plain sentences on what the scene is for and how it usually goes. The DM reads this cold mid-game, so state the point outright
+- **Where:** `[[wiki-link]]` plus one line on what the space looks and feels like. Keep long terrain and Roll20 rulings out of it and put them in their own setup bullet (e.g. `- **The ground:**`), which the runner folds under "Scene notes"
+- **Cast:** everyone present, separated by ` · `, wikilinked when they have a file (`[[Sable Wren]] · [[Mara Tull]] · Dunny Marsh`). Goals and voice notes stay in the NPC Quick-Reference and in the nodes
+- **Enemies:** the combat labels with real names in parentheses, separated by ` · ` (`Archer Rider (Ilsa Hask) · Wolf (Cinder)`), or `none`. Each must match a stat block in `## Combatants`, either by its real name in the block's `###` title or by its `Label (party-facing):` line. The runner turns them into compact rows that expand to the stat block
+- **DCs:** every roll the scene asks for, separated by ` · `, each as `<check> <DC> — <what it's for>` (`Arcana 13 — read the charm · DEX 13 save — half damage`), or `none`. If a DC sits in a node, it goes here too
+- **Tactics:** combat scenes only. One line: how the enemies fight and when they break
+- **Time:** the scene's rough length (`~30 min`)
+- **Trigger:** what causes this scene to begin (party action, NPC move, time passing)
+
+Everyone the plan puts in front of the party gets a real name, walk-ons and named animals included, so anyone can be spoken to or talk to each other without the DM inventing a name at the table. The narration can still leave them unnamed until someone says it. Then, under the header and the node headings:
+
+- **Introduce** — on the node where a character first appears to the party (NPCs, walk-ons, combatants, named animals, and anyone last seen but never heard), an `- **Introduce:** <Name>, <role>` bullet near the top of the node, with three nested bullets: **Look:** (what the party sees, including the token's look for walk-ons), **Sound:** (how they talk or what you hear), **Impression:** (the gut read in one line, observable, never a secret). Combatants lead with their label: `Introduce: Drover (Varrick Tenn)`. Once per character, at first appearance only. The session runner shows these at the top of the open step, so the DM reads them at the moment of introduction instead of hunting the scene notes. A deliberate silhouette (a figure the plan keeps faceless) gets none
+- **Tokens** — on any node where someone with a token arrives, leaves or moves to another map, a `- **Tokens:**` bullet at the top of that node: which map (the session layout or a standing location map such as the Lioness `outdoors`/`indoors`), who goes on and roughly where, and who comes off. Cover every token, walk-ons and companions included, and clear the board when a scene empties. The runner gathers them behind the scene's Tokens toggle, numbered by step
 - **Beats** — under each node heading, what happens; branch points noted inline (e.g., *"if party refuses → …"*). Real choices start their bullet with `Choice (party):` or `Choice (<PC name>):` and give each option's cost (`meta/player-agency.md` → Mark choices in the plan)
 - **Narration** — if `depth: narrated`, include a `> *"..."*` blockquote for the key moment of the scene; if `depth: notes`, omit
 - **Transition** — one line on what triggers the move to the next scene or a likely detour
+
+**No provenance in scenes.** Who decided a beat and when (`(Jeff, 2026-10-07)`, `Engine, …; committed …`) goes in the Engine notes, not in scene prose. The runner strips any it finds, but a beat should read clean in the file too.
 
 **Choices bullet:** the count was settled at the spine. List every choice point by node in a **Choices** bullet in the plan's Engine notes.
 

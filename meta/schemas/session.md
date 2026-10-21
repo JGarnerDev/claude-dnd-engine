@@ -169,11 +169,9 @@ scene blocks nest under `## Scenes` as `###`. Sections in order:
 
 **Orientation** — party state paragraph (location, afflictions, resources, tone coming out of last session); bullet list of unresolved `new_entities` from the last session.
 
-**Scenes** — one `### Scene N — [Title]` block per beat. Count scales to length (Short: 3–4, Standard: 4–6, Long: 6–8). Each block:
+**Scenes** — one `### Scene N — [Title]` block per scene, each beat a `#### S<k>_SLUG — <one line>` node heading under it. Count scales to length (Short: 3–4, Standard: 4–6, Long: 6–8). Each block:
 
-- **Trigger** — what starts the scene
-- **Location** — `[[wiki-link]]`; one-line description
-- **NPCs present** — name, goal for this scene, voice note
+- **Scene header** — first, before any node: `- **Summary:**` · `- **Where:**` · `- **Cast:**` (` · `-separated) · `- **Enemies:**` (combat labels with real names, or `none`) · `- **DCs:**` (`<check> <DC> — <what for>`, ` · `-separated, or `none`) · `- **Tactics:**` (combat only) · `- **Time:**` · `- **Trigger:**`. The session runner reads these for the top of the scene page; full rules in `/session` Phase 6
 - **Beats** — ordered bullets; branch points inline (*"if party refuses → …"*)
 - **Narration** — `> *"..."*` blockquote for key moment (depth: narrated only; omit for depth: notes)
 - **Transition** — what moves to next scene or likely detour

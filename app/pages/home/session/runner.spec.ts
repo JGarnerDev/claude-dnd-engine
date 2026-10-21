@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import { renderRunner } from './runner.js';
 import { fixture } from './fixture-data.js';
 
-const current = (root: HTMLElement) => root.querySelector('.sr-id')!.textContent;
+const current = (root: HTMLElement) => root.querySelector<HTMLElement>('.sr-scene')!.dataset.current;
 const key = (k: string) => document.dispatchEvent(new KeyboardEvent('keydown', { key: k }));
 
 describe('renderRunner', () => {
@@ -62,11 +62,11 @@ describe('renderRunner', () => {
     expect(current(root)).toBe('PREVIOUSLY');
   });
 
-  it('jumps from the rail, and wikilinks in scene notes open the panel', () => {
+  it('jumps from the rail, and wikilinks in the scene open the panel', () => {
     renderRunner(root, fixture());
     root.querySelector<HTMLButtonElement>('.sr-chip[data-id="S1_WOODS"]')!.click();
     expect(current(root)).toBe('S1_WOODS');
-    root.querySelector<HTMLElement>('.sr-scenenotes a.sr-wiki[data-entity="Ashford"]')!.click();
+    root.querySelector<HTMLElement>('.sr-scene a.sr-wiki[data-entity="Ashford"]')!.click();
     expect(root.querySelector('.sr-ent-head h2')!.textContent).toBe('Ashford');
   });
 });

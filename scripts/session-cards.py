@@ -5,7 +5,9 @@ consumers: .claude/commands/review.md, app/pages/home/session-data-plugin.ts
 
 Reads a session folder in scheduler/sessions/ -- the written plan (`Session NN Name.md`)
 and its flow chart (`_flow.md`) -- and emits the JSON the session runner
-(app/pages/home/session.html, `npm run home` -> /session.html) walks card by card:
+(app/pages/home/session.html, `npm run home` -> /session.html) shows scene by scene, step by step.
+The page itself reads each scene's header bullets and the `## Combatants` stat blocks out of
+`scenes[].md` and `sections`, so they need no fields of their own here:
 
   { session: {name, number, date, description, openingScene, closingHook, preamble, folder,
                campaign, root, looseThreads},

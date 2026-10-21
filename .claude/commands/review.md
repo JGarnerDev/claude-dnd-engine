@@ -47,7 +47,8 @@ Rules:
 - **Every line has a cue.** Note what in the scene prompts it: something the NPC sees, a question, an event. A character tangent needs a concrete object or moment to set it off, ideally drawn from the location's file, never a musing out of nowhere
 - **Leave unset canon unset.** Numbers, names and facts that canon has not fixed go in as backticked placeholders (`` `<a big number>` ``) for the DM to set at the table and `/recap` to record. When the DM asks for the detail instead, write it and log it in Pass 4
 - Respect the plan's own limits: do not narrate a PC's inner experience, do not name what a scene says stays unnamed, and do not front-load a feud past its stated budget
-- Add under the existing node headings, so the session runner shows each addition on the right card. Never rename or reorder nodes
+- Add under the existing node headings, so the session runner shows each addition on the right step. Never rename or reorder nodes
+- **Check each scene header** (`/session` Phase 6): Summary, Where, Cast, Enemies, DCs, Time and Trigger are present. Every DC in the scene's nodes is also listed in DCs, and every Enemies entry matches a `## Combatants` stat block. Add or fix what's missing. Move provenance (`(Jeff, <date>)`, `Engine, …; committed …`) out of scene prose and into the Engine notes
 - Skip anything already covered. A node with a working read-aloud or lines needs nothing
 
 ---

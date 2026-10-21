@@ -16,9 +16,9 @@ function memory(): Storage {
 describe('store', () => {
   it('round-trips state per session folder', () => {
     const s = memory();
-    saveState('a', { history: ['X', 'Y'], sceneNotesOpen: false }, s);
-    expect(loadState('a', s)).toEqual({ history: ['X', 'Y'], sceneNotesOpen: false });
-    expect(loadState('b', s)).toEqual({ history: [], sceneNotesOpen: true });
+    saveState('a', { history: ['X', 'Y'], tokensOpen: true }, s);
+    expect(loadState('a', s)).toEqual({ history: ['X', 'Y'], tokensOpen: true });
+    expect(loadState('b', s)).toEqual({ history: [], tokensOpen: false });
   });
 
   it('fails soft on junk or a throwing storage', () => {
@@ -28,6 +28,6 @@ describe('store', () => {
     const thrower = () => { throw new Error('blocked'); };
     const broken = { ...memory(), getItem: thrower, setItem: thrower } as Storage;
     expect(loadState('a', broken).history).toEqual([]);
-    expect(() => saveState('a', { history: [], sceneNotesOpen: true }, broken)).not.toThrow();
+    expect(() => saveState('a', { history: [], tokensOpen: false }, broken)).not.toThrow();
   });
 });
