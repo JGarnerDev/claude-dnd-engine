@@ -365,6 +365,15 @@ each block on its card.
 
 #### S2_SABLE_FREE — Cut Sable loose. Her first words are practical, not grateful
 
+- **Tokens:** Lioness outdoors map. Sable on the ground by the horse in the corner of the yard;
+  the party where Session 29 left them.
+- **Introduce:** [[Sable Wren]] (seen last session, first time she speaks)
+  - **Look:** a tiefling woman with horns, wrists tied behind her, a gag. Dust and straw on a
+    good work shirt. Not a scratch of fear on her face.
+  - **Sound:** warm, level, unhurried. Talks to strangers like regulars. Answers the question
+    asked, never the one implied.
+  - **Impression:** someone already counting losses while still tied up. Competent first,
+    grateful later, maybe.
 - Whoever frees her gets her first words. They are not thanks.
 - **Sample lines** (pick one):
   - *"Horse first. He'll break a leg on that wall."*
@@ -405,6 +414,9 @@ each block on its card.
 
 #### S2_TOWN — The whole town was hit at once; they couldn't reach the Lioness
 
+- **Tokens:** on the Lioness outdoors map, bring them up the road in ones and twos as you read the
+  box text: Mara with Dunny on her arm, Silas, then Wenna, Mother Hollis, Agnes, Hob, Nan, Pell,
+  Old Tobin and Jory. Keep them at the yard's edge, not among the bodies.
 - **Choice (party):** how they explain themselves to Mara: the truth (the light, another world), a cover story, or nothing much. Whatever they say is what the town repeats, and what Mara checks tomorrow.
 - Every street fought its own raid. That's why nobody came for Sable. The town arrives late,
   bloodied, from its own fights.
@@ -414,11 +426,50 @@ each block on its card.
 > down her side. Behind her, a big soft man in a shop apron with a burn on one sleeve, looking at
 > the yard the way a merchant looks at a spilled order."*
 
-- **Also coming up the road:**
-  - **Dunny Marsh:** young deputy, arm in a sling, insists he's fine.
-  - **Wenna Moss:** herb-wife who sets bones. Smells of yarrow and smoke.
-  - **The Hollises:** four kids under one blanket, mother counting heads.
-  - **Agnes Brand:** washerwoman, burned hands wrapped. Hums when nervous.
+- **Introduce:** [[Mara Tull]], sheriff
+  - **Look:** weathered human woman, a sheriff's star on a worn coat, a long knife at her belt, a
+    deputy's blood down one side. Across her back, muzzle down, a short brass-and-iron gun with a
+    bell mouth on a walnut stock. Smells of burnt sulfur.
+  - **Sound:** quiet, economical. Gives an order once and doesn't repeat it.
+  - **Impression:** the wall this town leans on. Tired to the bone, and not about to show it.
+- **Introduce:** [[Silas Crubb]], mayor and general goods
+  - **Look:** big soft man in a shop apron, a burn on one sleeve.
+  - **Sound:** affable drawl, self-deprecating. Wanders off on tangents that always land on a
+    number.
+  - **Impression:** looks at the yard like a spilled order. Friendly, and careful to stay on
+    nobody's side.
+- **Introduce:** Dunny Marsh, young deputy
+  - **Look:** barely grown, arm in a sling, leaning on Mara. *(token: slight, dark clothes, arm
+    held tight)*
+  - **Sound:** too loud, too quick: "I'm fine, I'm fine."
+  - **Impression:** a boy who wants very badly to be useful. He isn't fine.
+- **Introduce:** Wenna Moss, herb-wife
+  - **Look:** older woman, sleeves rolled, a satchel of splints and bundled herbs. *(token: green
+    coat)*
+  - **Sound:** brisk, practical, already telling someone to sit still.
+  - **Impression:** smells of yarrow and smoke. Sets bones first, asks questions never.
+- **Introduce:** Mother Hollis
+  - **Look:** braided hair, bangles, four small kids under one blanket around her legs (no token
+    for the kids). *(token: arm reaching out)*
+  - **Sound:** counting heads under her breath, over and over.
+  - **Impression:** a mother who got all four out, and can't stop checking.
+- **Introduce:** Agnes Brand, washerwoman
+  - **Look:** stout, hands wrapped in burned rags.
+  - **Sound:** hums when nervous, which is now.
+  - **Impression:** says what everyone's thinking, then wishes she hadn't.
+- **Introduce:** Hob Fenner, cooper
+  - **Look:** burly, auburn-haired, split brow crusted over, fists clenched. *(token: burly,
+    auburn)*
+  - **Sound:** gruff, short sentences.
+  - **Impression:** glares at the empty cask racks like it's personal. He made half of them.
+- **Introduce:** Nan Cotter, widow from the ford street
+  - **Look:** red shawl, a feather pinned in it. *(token: red shawl)*
+  - **Sound:** soft and steady.
+  - **Impression:** here because the Lioness is the safest roof in town, and everyone knows it.
+- **Introduce:** Pell Ashby, lamplighter
+  - **Look:** dark blue hooded coat, a lamplighter's hook in hand. *(token: pointed blue hood)*
+  - **Sound:** few words, low voice.
+  - **Impression:** out on the streets when the raid hit. Saw most of it and isn't saying much.
 - **Mara's lines** (each said once):
   - *"You five. You can keep your weapons. Just keep them pointed at the ground while we talk."*
   - *"Half the town says you fell out of the sky in a flash of light. I'd like to hear what happened
@@ -442,6 +493,16 @@ each block on its card.
 
 #### S2_NAMES — Three names and the boots, one line each, then stop
 
+- **Tokens:** nudge each speaker forward as they talk: Old Tobin (Wick), Agnes (Bane), Mara (the
+  boots), Jory (Nella).
+- **Introduce:** Old Tobin Reed, ferryman
+  - **Look:** old, river-brown, wet to the knees. Lost his boat tonight.
+  - **Sound:** slow, gravelly, tells it like a story whether you asked or not.
+  - **Impression:** sees everyone who crosses the ford, and remembers them.
+- **Introduce:** Jory Pike, stable boy
+  - **Look:** fourteen, straw in his hair, rope burns on both palms from holding Silas's horses.
+  - **Sound:** fast and breathless, proud of himself.
+  - **Impression:** the only one who kept his head, and he knows it.
 - **[[Wick]]**, secondhand from **Old Tobin Reed** (ferryman, lost his boat tonight, sees
   everyone who crosses): *"Elf. Had a mark on his hand like a brand, but neat,
   like someone did it with paperwork. Looked at the houses like he was counting the shutters."*
@@ -457,6 +518,7 @@ each block on its card.
   stop.
 - **Transition:** Mara takes her deputy home. Sable, from the doorway of the old core: *"Hearth's
   lit. Come in before you fall down."*
+- **Tokens:** take Mara and Dunny off the map. Everyone else drifts toward the door.
 
 ### Scene 3 — The Mistake
 
@@ -469,6 +531,9 @@ each block on its card.
 
 #### S2_WREN — Sable, alone, pours The Mistake
 
+- **Tokens:** switch to the Lioness indoors map. Sable behind the bar, the party at the hearth.
+  Silas and the walk-ons at tables (Wenna, Mother Hollis, Agnes, Hob, Nan, Pell, Old Tobin, Jory),
+  quiet, nursing drinks. Mara and Dunny stay off the map until `S2_IGGY`.
 - She is running the place entirely alone. Her crew ([[Lok Thuliaga]], [[Bree Tealeaf]]) hasn't
   arrived. The new wing was built and was meant to open.
 
@@ -517,10 +582,12 @@ each block on its card.
   **No resolution.**
 - **Describe only what the table can see or hear.** Jeff is Iggy's player and the DM, so Iggy's
   inner experience (and [[Sah]]'s presence) is never narrated.
+- **Tokens:** Mara and Dunny come back in through the door as the song starts.
 - **The sequence, about two minutes:**
   1. The room joins in. Mara's people only: Mara back from the deputy's bedside, Silas, the walking
      wounded, a few families. A vigil, not a party.
-     - Dunny, Wenna, the Hollises, Jory, Agnes humming off-key, and Old Tobin, who sings anyway.
+     - Dunny (limped back in with Mara, sling and all), Wenna, the Hollises, Hob, Nan, Pell, Jory,
+       Agnes humming off-key, and Old Tobin, who sings anyway.
   2. Mid-song the melody turns somewhere none of them has heard, holds a few bars, and stops.
   3. **The hearth goes still.** No flicker, steady light, as long as the phrase lasts. *(DM only:
      Asher senses a divine presence under his town, weighs it, accepts it. Sah is good and
@@ -549,6 +616,8 @@ each block on its card.
 
 #### S2_COMPANIONS — Sergei walks in, and Bosco is riding him
 
+- **Tokens:** Sergei at the door with Bosco on top. Move Bosco onto Iggy and Sergei against
+  Odibli. Stand a few townsfolk up when the dog comes in.
 - **Jeff, 2026-10-08:** Iggy's music draws them in. This settles the open question from the
   portal: the animals did come through.
 - **DM only:** they weren't part of the hand-hold, so they came through loose and landed in the
@@ -605,6 +674,7 @@ each block on its card.
 - **If Odibli goes:** the hearth waits for him. It starts to dip as he comes through the door, and
   the flame track starts at **2**, not 3.
 - **Transition:** `S2_BOON` for whoever stayed.
+- **Tokens:** Mara leaves with the volunteer, if there is one. Dunny goes with her.
 
 #### S2_BOON — Odibli's stone does nothing at all
 
@@ -619,6 +689,7 @@ each block on its card.
 - If they accept tonight: Sable slides the deed across, says *"Ten,"* and pours another round.
   Record the 10% Stake.
 - **Transition:** the room empties, and the fire starts to go wrong.
+- **Tokens:** clear all the townsfolk and Silas. Only Sable, the party and the companions stay.
 
 #### S2_HEARTH — The hearth is dying. Odibli finds the charm and writes over it
 
@@ -707,6 +778,7 @@ each block on its card.
 
 #### S2_HORSES — Silas lends the horses: "bring them back shod"
 
+- **Tokens:** Silas and Jory with five horses at the ford. No other townsfolk.
 - Silas brings five horses himself, with Jory Pike leading the last two, which tells you how much he wants that ale back.
 - *"These are loans, not gifts. I want them back with all four shoes. You'd be amazed how many
   come back with one."*
@@ -717,6 +789,12 @@ each block on its card.
 
 #### S2_SPEAR — The fox waits at the water's edge. Halsby's Spear
 
+- **Tokens:** the fox on the stone mid-ford, placed only when Halsby spots it.
+- **Introduce:** the fox (Halsby has met it; the rest of the party hasn't)
+  - **Look:** an ordinary red fox, sitting perfectly dry on a stone mid-ford. Green eyes leaking
+    smoke.
+  - **Sound:** precise and dry, a little amused. Talks like someone settling a bill.
+  - **Impression:** far too calm, and it knows far more than it says.
 - **Choice (Halsby):** he gets one question for the fox, and it answers it, in Asher's dry voice and without ever giving his name. What he asks is recorded.
 - **Halsby's spotlight beat.** "After you, not before." The job is done.
 - The fox is sitting on a flat stone mid-ford, dry, as if the water goes around it. Smoky green
@@ -834,6 +912,22 @@ each block on its card.
 
 #### S2_REARGUARD — Nella's rear guard holds the fork
 
+- **Tokens:** dusk fork map. Archer Rider and Crossbow Rider mounted by the lone tree, Wolf low in
+  the grass between them. Ilsa's token goes to the grey margin if she rides off.
+- **Introduce:** Archer Rider (Ilsa Hask, Scout)
+  - **Look:** sun-faded leather riding armour, a longbow strung and ready, a short sword. Squinting
+    into the sun, already half-turned toward the camp.
+  - **Sound:** quiet. Says one thing to Fennel you can't hear.
+  - **Impression:** the one who'll ride for help, and the one you'd want to stop.
+- **Introduce:** Crossbow Rider (Fennel Dray, Bandit)
+  - **Look:** wiry farm lad in a patched jerkin, a light crossbow across the saddle, a cheap curved
+    blade.
+  - **Sound:** twitchy, talks fast, too loud.
+  - **Impression:** a boy in over his head who loves his wolf more than anyone in the band.
+- **Introduce:** Wolf (Cinder)
+  - **Look:** grey-black, scarred muzzle, a frayed rope collar somebody tied on with care.
+  - **Sound:** silent until it moves.
+  - **Impression:** someone's pet, and still a wolf.
 - **Choice (party):** fight, scare them off (Intimidation DC 13: Fennel and Cinder run, and nobody reports), or bluff to close the distance. Ilsa riding for the camp is the cost of getting it wrong.
 - **If the party won stage 3:** they see the riders first, sitting their horses by the lone tree.
   Surprise is theirs to take.
@@ -908,6 +1002,40 @@ each block on its card.
 
 #### S2_APPROACH_CHOICE — Heist, assault, parley or trick?
 
+- **Tokens:** waystation map. Drover by the watch-fire, Cask-hand and Half-orc Cask-hand at the
+  cart, Tally-man at his table by the shed, Hedge Priest at the fire, Roof Guard on the shed roof,
+  Mastiff 1 and 2 chained at the corral, horses in the corral. Sniper in the brush blind on the
+  GM layer until she's seen or speaks. Party tokens on the south tree line, or wherever the chase
+  left them.
+- **Introduce:** Drover (Varrick Tenn)
+  - **Look:** leathery, studded leather worn like a uniform, a long cart-whip, a row of throwing
+    daggers across his chest, a scuffed bracer on his left forearm.
+  - **Sound:** barks orders like he's still in the army.
+  - **Impression:** an old soldier who treats the cart like a posting. The one holding them
+    together.
+- **Introduce:** Cask-hands (Haddo Keel, and Brask the half-orc)
+  - **Look:** stained leather aprons over jerkins, iron-banded cask-mallets, heavy crossbows
+    propped on the cart wheel. Haddo is huge; Brask is long-armed, asleep against the wheel.
+  - **Sound:** Haddo hums and counts the casks out loud. Brask grunts and snores.
+  - **Impression:** paid by the barrel. "Nobody touches the cart" is their whole job.
+- **Introduce:** Tally-man (Sennet Orrin)
+  - **Look:** a clerk's coat, ink on his cuffs and fingers, a ledger under his arm, a short sword
+    and a little hand crossbow.
+  - **Sound:** precise, clipped, suspicious. "Who signed your orders?"
+  - **Impression:** doesn't belong with this crew. Someone else's man, here to check the haul.
+- **Introduce:** Hedge Priest (Hesper Mudd, halfling)
+  - **Look:** homespun robe, a knotted club, a cord of mismatched holy charms she keeps touching.
+  - **Sound:** fretful, bossy with the wounded.
+  - **Impression:** prays to whatever's listening, and isn't sure which one works.
+- **Introduce:** Roof Guard (Tam "Clatter" Cobb)
+  - **Look:** on the shed roof, a light crossbow, a quiver of mismatched bolts, a curved blade in
+    his belt.
+  - **Sound:** you hear him before you see him, fiddling with his bolts. Shouts targets.
+  - **Impression:** nervy lookout who'll give away anyone standing in the open.
+- **Introduce:** Mastiffs 1 and 2 (Brick and Mortar)
+  - **Look:** big dogs in spiked iron collars on heavy chains at the corral.
+  - **Sound:** bark at anything sneaking within 30 ft.
+  - **Impression:** the camp's alarm bell.
 - **Choice (party):** heist, assault, parley or trick. Each reaches the casks; each costs and gains something different (see below).
 - **Choice (party):** scout the ridge first (`S2_SCOUT`), or go straight in. Scouting costs time and a check; it buys the chance to cut Nella's exit.
 - **All four are viable.** Let the party pick and don't steer.
@@ -949,6 +1077,14 @@ each block on its card.
 
 #### S2_FIGHT — Two layers: the floor and the ridge, 3–4 rounds
 
+- **Tokens:** move the Sniper token from the GM layer to the brush blind on her first shot (or
+  earlier, if they parleyed and she spoke).
+- **Introduce:** Sniper ([[Nella]]); first seen here, or at parley
+  - **Look:** long hair, a long weathered cape over dark studded leather, a tall longbow, a short
+    sword she never touches. Odibli has seen her once, on the cart seat.
+  - **Sound:** patient, dry, never raised. Short sentences from a long way away. Counts out loud
+    when she's thinking.
+  - **Impression:** calm in a way that's worse than anger. Watches the fight like she's doing sums.
 - **The floor:** Varrick, Haddo and Brask at the cart, Sennet slipping between them, Hesper at the
   fire, Clatter on the roof, and the dogs at the corral. Sized **Hard** (see Difficulty check):
   Varrick and the cask-hands are built to take two hits and keep swinging, so Dip and a Shatter
@@ -1146,6 +1282,21 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **Voice:** patient, watchful, dry. Short sentences from a long way away. Never raises her voice.
   Counts things out loud when she's thinking.
 - **Look:** long hair, a cape, a bow across her knees on the cart seat. Odibli has seen her once.
+
+### Walk-ons (Ashford townsfolk)
+
+No entity files; `/recap` decides who becomes canon. Full introductions are on `S2_TOWN` and
+`S2_NAMES`. Token look in brackets.
+
+- **Old Tobin Reed** — ferryman, lost his boat tonight. Gives the Wick description.
+- **Jory Pike** — stable boy, fourteen. Saw Nella take the southeast track. Leads two horses at dawn.
+- **Agnes Brand** — washerwoman, burned hands. Hums when nervous. Mutters *"Bane's lot."*
+- **Dunny Marsh** — young deputy, arm in a sling. *[slight, dark clothes]*
+- **Wenna Moss** — herb-wife, sets bones. *[green coat]*
+- **Mother Hollis** — four kids under one blanket, no token for them. *[braided hair, bangles]*
+- **Hob Fenner** — cooper, split brow, angry about the casks. *[burly, auburn]*
+- **Nan Cotter** — widow from the ford street. *[red shawl, feather]*
+- **Pell Ashby** — lamplighter, saw most of the raid. *[dark blue pointed hood]*
 
 ## Contingencies
 
