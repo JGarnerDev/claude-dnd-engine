@@ -22,7 +22,9 @@ aliases:
 source_session: [[Session 01 The Black Sheep Inn]]
 relates_to:
   - [[Curse of Strahd]] (campaign)
-  - "Sabathiel (warlock patron; Written in the Stars)"
+  - [[Sabathiel]] (warlock patron; Written in the Stars)
+  - [[Aedra]] (means to free her from her madness)
+  - [[The Sun Temple]] (remembered home; a pocket dimension)
 affinity:
   - [[Odibli]] (2)
   - [[Davian Martikov]] (1)
@@ -33,6 +35,7 @@ importance: critical
 active: true
 spotlight: normal
 spotlight_hooks:
+  # Paul wants this answered in play, by entering the pocket temple as a playable board.
   - hook: "learn whether she was ever truly in the sun temple, or only remembers it through genetic memory"
     status: open
   - hook: "put a name to the disembodied radiant voice that guides her: Sabathiel, or something else"
@@ -42,6 +45,16 @@ spotlight_hooks:
   - hook: "the Void Serpent that shattered the temple surfaces again"
     status: open
   - hook: "the time she lost drifting in the Astral Sea, 113 years she did not live, catches up with her"
+    status: open
+  - hook: "free Aedra from her descent into madness, hand in hand with Sabathiel"
+    status: open
+  - hook: "enter the pocket temple as a hackable board, where every piece placed shifts it"
+    status: open
+  - hook: "cosmic powers come for Aedra once she stirs"
+    status: open
+  - hook: "the Rider of the Black Sun finds her again"
+    status: open
+  - hook: "the Astral Dragon arrives to weigh her and what she means to do"
     status: open
 description: "Paul's PC. Lucitania, a Scourge Aasimar monk-warlock-psion who woke in an abandoned sun temple, was scattered across the Astral Sea by a Void Serpent, and drifted into Barovia in perma-wanderlust."
 ---
@@ -79,11 +92,43 @@ Embodies light. Was the sole entity in her original light-dimension temple. Ripp
 
 **The temple.** She apparated in a temple devoted to the Sun, built on an inconceivably labyrinthine scale. Its worshippers had abandoned it. Alone, she was free to explore, read, and learn their faith. Their language is indecipherable, but her genetic memory let her read it, and she still speaks it, the tongue of the **Dead Sun Worshippers**. The delicate chiming of prayer bells and the spinning of solar-powered machinery inspired her art.
 
-*Was she ever in a temple?* The sheet leaves the question open on purpose.
+*Was she ever in a temple?* The sheet leaves the question open on purpose. Paul wants it answered **in play**: see **The Pocket Temple** below.
+
+**The walls.** Words cover them, wheeling in script and meaning, each fighting for the reader's
+attention. The light is exalted and revered and feared and condemned, all in one breath. Every
+etched sigil filled Luci with the worship and the horror of the people who carved it, as the light
+envelops them. Within her, the perpetual light illuminated all of those peoples' ideas of their
+place in the universe: motes dancing in an infinite, harsh expanse, drifting and flaring and
+winking out, pulling life in with them. A dance that feeds, that burns, that twirls. Her form there
+was **a mote of divine energy**.
 
 **The voice.** She hears a guiding voice in her head, speaking a language that compels her. It exudes trust and a warmth she can physically feel on her face.
 
 **The Void Serpent.** An immense, translucent creature crashed into the sprawling temple and scattered her into the Astral Sea. She drifted there for an unknown time and eventually washed up in Barovia.
+
+**The drift.** Somewhere between a mote of divine energy and a mortal Aasimar body lies an
+oblivion with no before and no after. Mortals touch it before birth and again as life slips away.
+Drifting the currents was that in-between: the before of anything and the after-echo of what may
+never be. Agency gone, a billowing nothingness that fills no sails, time creeping toward an
+impossibility of the senses. Breaking the emptiness: cosmic powers passing through, mortals on the
+edge of their undoing, titanic cruelties. She kept brief impressions of two:
+
+- **[[Rider of the Black Sun|a Rider of the Black Sun]]** — a gravity-wielding gravekeeper raiding the realms of light to snuff them out.
+- **[[The Astral Dragon|an Astral Dragon]]** — a dragon of the Aether, keeper of balance, rivaled only by its cousins the Time Dragons. Cold, calculating, punishingly wise; its neutrality is a coiled watch on primordial overreach.
+
+## The Pocket Temple
+
+[[The Sun Temple]] is a pocket dimension. Paul wants it playable as a **hackable space**, like
+Shadowrun's cyberdeck security realm: putting a piece on the board shifts the board. At its core
+is **[[Aedra]]**, a powerful dark entity trying to find the light.
+
+## Closer
+
+What Luci hopes is at the end of "closer": the liberation of [[Aedra]] from her descent into
+madness, hand in hand with her eternal guardian [[Sabathiel]], who watches over what is an
+imprisonment of a sort. Aedra is a liability of existential proportions. A being of her temperament
+drifting unsupervised through creation would not go unnoticed. Luci sees herself as a vehicle for
+salvation, and no expense will be spared.
 
 > **Earlier record (Session 4 disclosure):** Was shunted from the light dimension to the astral plane, then to the material plane. As a Scourge Aasimar, has made pacts with certain beings. The party does not know the full details. Consistent with the sheet; the pact named there is Sabathiel.
 
@@ -125,6 +170,7 @@ Bullseye lantern, 3 poison darts, a diary, an ink pen, traveler's clothes. No co
 
 ## The Voice in Aethryn
 
+- **The voice and Sabathiel.** Luci means to free [[Aedra]] together with [[Sabathiel]], so "Closer" may point toward her. Unconfirmed.
 - **Fida.** Luci's name for Aethryn's broken moon, spoken in the Dead Sun tongue when she first saw it (Session 29). Canon as the moon's name as the voice gave it to her. Whether anyone in Aethryn calls it that is unknown.
 - **The voice is louder and clearer here** than it ever was in Barovia. This is a standing fact of the season. Its first clear word in Aethryn was **"Closer"**. Closer to what, or to whom, is open. The voice itself is still unnamed (Sabathiel, or something else).
 

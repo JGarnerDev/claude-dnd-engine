@@ -65,6 +65,14 @@ spotlight_hooks:
     status: open
   - hook: "his living shadow acts on its own will at the worst moment"
     status: open
+  - hook: "a scholar of shadow-folk legend offers him the truth, priced in his freedom or his relics"
+    status: open
+  - hook: "a neutral bystander's death is the fastest, safest route; he proposes it in the flat ferry tone"
+    status: open
+  - hook: "Luci's faith in the light puts her at odds with his shadow ways"
+    status: open
+  - hook: "a secret only he and Odibli share"
+    status: open
 description: "Kellan's PC. Shadow-magic sorcerer raised inside a Sharran mourning-rite he never knew was worship; gives only the single alias 'Halsby' and never a first name."
 ---
 
@@ -82,7 +90,7 @@ Faith: Sharran, unknowingly since childhood — see [[Shar]]
 
 ## Appearance
 
-> **GAP:** No appearance given in the backstory. Awaiting Kellan.
+> **GAP:** Kellan points to his Roll20 token icon ("see my icon in the game"). Needs a written description from that icon.
 
 ## Personality — How He Plays
 
@@ -101,12 +109,18 @@ puzzled by the silence.
 He asks for the numbers: how many guards, how long until the patrol returns, what happens to
 the village if we don't. He notices when someone hands him a feeling instead of a figure.
 
+**The scene Kellan wants.** Sooner or later, killing someone neutral and uninvolved will be the
+route with the least danger and the most haste, while every other option means fights,
+uncertainty, and running out of time. Halsby will kill the person and move on, because it is
+simply the best way forward and the goal is not one they can live without.
+
 **Two tells.** He avoids fire and lies badly about why. And he never gives a first name —
 which people read as evasion, and which is the one place he is being completely honest.
 
 - **Ideal:** *Nothing is unthinkable. Some things just cost more than they're worth, and I can tell the difference.*
 - **Bond:** The shard. He doesn't let anyone else hold it and can't articulate why.
 - **Flaw:** He will trade almost anything for information about what he is. The people who have that information are aware of this.
+- **The two things he will not trade**, even for the answer: his **freedom** and his **relics** (the shard and the spear).
 
 ## The Three Names
 
@@ -159,6 +173,54 @@ everything: *what I need is larger than what this costs; the cost is undefined; 
 not the same as infinite.* He keeps a ledger of what he owes them and believes he can close the
 account. He is wrong about that — but not stupidly wrong, which is worse.
 
+### The Sound
+
+Of the four fragments, the sound is the one he can say most about, and it is not much. It seemed
+to be not only in the shadows but *of* them. He can't make out its details, only its shape: cold,
+deep, a rumble, and at the same time it seemed to beckon. That is all he can really recall.
+
+### The Night He Gave Up "Family"
+
+One dark-moon night in the unlit room, he named what he had always longed for: the family he
+never knew, and the hope that they were still out there somewhere. He felt the longing and the
+loss leave him, replaced by acceptance and finality. The old woman thought for a moment, pain
+visible in her eyes, and then gave up the same word: *family.* The two of them were alone in the
+world, and until that night there had been hope in both of them. That night they gave it up, knew
+the truth in their bones, and accepted it.
+
+### Why He Took the Fox's Job
+
+He calculated that the fox might know something about his past. He doesn't fully understand the
+spear or the shard, and thinks of them as **both relics**. At best the fox gives him a full answer.
+At worst he can back away carefully and handle whatever comes.
+
+### Who Holds the Answer
+
+Legends of the **shadow folk** (Kellan's term) are not widely known, but some people study them
+for their own purposes. When the truth is finally offered at a price, it will come from one of them.
+
+### What Keeps Him Here
+
+He wants **answers**. The promise of them keeps him with the group; if he decides there is no hope
+of them, he runs. He would also slip away if the party does not accept his shadow ways.
+
+### First Read of the Party
+
+The first exchange was already played (Session 30). His private judgements:
+
+- **[[Odibli]]** — he likes him, and sees through the ruse: Odibli is "not really there". He
+  believes Odibli, like himself, does not know his own true nature.
+- **[[Luci]]** — may be blinded by her monk's devotion. He fears she will betray him first: her
+  worship of the light may one day put them at odds.
+- **[[Dip]]** — assumes Dip just hits things hard.
+- **[[Iggy]]** — wonders whether Iggy is any good with "that lute" (Iggy plays a viol; the misread is Halsby's).
+
+> **Reliability:** Kellan's claim that Odibli "does not know his true nature" sits against
+> Odibli's file, where Odibli knows he is a runaway copy (what he doesn't know is that the voice
+> was Strahd). DM ruled 2026-10-25: leave it vague until Miguel's material arrives.
+
+**Kellan's wish for the season:** a shared secret between Halsby and [[Odibli]].
+
 ## The Object (Sorcerous Focus)
 
 A palm-sized shard of black stone, smooth on one face and torn on the other, faintly warm in the
@@ -194,7 +256,7 @@ Sorcerer 4 (Shadow Sorcery) · Half-Elf · Haunted One · Chaotic Evil · Medium
 ### Dark Gifts (feats)
 
 - **Living Shadow.** His shadow is animate, ever-present, and sometimes acts on its own will. Grasping Shadow: component-free Mage Hand. Lengthened Strike: +10 ft reach on a melee attack, as the shadow stretches (2/long rest). **Ominous Will:** on a natural 1 on any d20 Test he makes a WIS save (DC 15) or is Incapacitated, then rolls the Shadow's Will table for what his body does next turn — wander, attack a random creature in reach, or fall prone.
-- **Second Skin.** Another side of him most people never see. Alternate Form: Alter Self once per long rest, no slot, components, or concentration. **Involuntary Change:** after hearing *a particular melody*, he makes a CHA save (DC 15) at the start of his next turn or changes on the spot — stunned instead if the free use is spent. The melody is unnamed.
+- **Second Skin.** Another side of him most people never see. Alternate Form: Alter Self once per long rest, no slot, components, or concentration. **Involuntary Change:** after hearing *a particular melody*, he makes a CHA save (DC 15) at the start of his next turn or changes on the spot — stunned instead if the free use is spent. The melody is unnamed. **Halsby doesn't know he has a second skin; it has never happened.** Its look and name are open.
 
 ### Gear
 
@@ -209,10 +271,8 @@ Dagger ×2, spear, crowbar ×2, 15 torches, 2 tinderboxes, 4 flasks of oil, holy
 
 ## Session History
 
-- **Session 29 (first session):** At the table, Kellan described Halsby as born in **Netheril**, in a floating city that survived the original cataclysm by going into the shadow realm. It came back, he was born there, and then it fell to earth. He was one of its only survivors, and he now wanders, trying to work out his own story and what he is. This matches The Object and Backstory above. On a night road toward [[Tassad]] on [[The Nightveil]]'s errand from [[Sister Maerith]], he was stopped by a possessed fox with smoky green eyes (Asher's mouthpiece). It asked him to save [[Sable Wren]] from bandits at [[Ashford]]. He read it as earnest (perception 14) and **took the job without bargaining**. The fox promised to fuse his spear and shard into a boon *after* the job ([[The Shadowless Spear]], expected around Session 30–31). He went in invisible. A **twinned chromatic orb (fire)** for 21 killed the crossbowman and leapt for 8 to kill Bandit 1. An **upcast magic missile** (5 darts, 15) then killed the big one as he rode off with Sable, and she fell clear.
+- **Session 29 (first session):** At the table, Kellan described Halsby as born in **Neferil**, in a floating city that survived the original cataclysm by going into the shadow realm. It came back, he was born there, and then it fell to earth. He was one of its only survivors, and he now wanders, trying to work out his own story and what he is. This matches The Object and Backstory above. On a night road toward [[Tassad]] on [[The Nightveil]]'s errand from [[Sister Maerith]], he was stopped by a possessed fox with smoky green eyes (Asher's mouthpiece). It asked him to save [[Sable Wren]] from bandits at [[Ashford]]. He read it as earnest (perception 14) and **took the job without bargaining**. The fox promised to fuse his spear and shard into a boon *after* the job ([[The Shadowless Spear]], expected around Session 30–31). He went in invisible. A **twinned chromatic orb (fire)** for 21 killed the crossbowman and leapt for 8 to kill Bandit 1. An **upcast magic missile** (5 darts, 15) then killed the big one as he rode off with Sable, and she fell clear.
 - **Session 30:** Stepped out of hiding and told the party the fox had sent him: "Not everything in the shadows is darkness of the soul. Sometimes it's just the absence of light." Shook Iggy's hand, committing to it harder as he went. Told Odibli, "You've come a long way, young one." Cast Prestidigitation on the fire alongside Odibli. Read the raiders' crystals (Arcana 19, with Luci's guidance), stripped them off the bodies and dealt one to each PC: "Grab one." Searched the dead mage's arcane focus, a twig doll, and found nothing. Pitched [[Silas Crubb]] a 250 gp buy-in on "shade on command"; Silas thought he was selling a boat. Worked out that the long-haired archer is [[Nella]]. Stays level 4; the Spear waits on the dawn. Holds an [[Earshot Crystals|earshot crystal]].
-
-> **Reliability:** "Netheril" was heard as "Neferil", and Kellan paused mid-sentence to get the names right. The DM ruled the table account canon where it is clearly heard. Confirm the spelling with Kellan.
 
 ## DM-Only
 
@@ -228,6 +288,9 @@ Dagger ×2, spear, crowbar ×2, 15 torches, 2 tinderboxes, 4 flasks of oil, holy
 - **The grandmother was never hiding him from the cult.** The veiled woman visited for years;
   from their side he was never lost, only *stored*. Preservation and concealment look identical
   from the inside. Only one has a purpose waiting at the end.
+- **"Family."** The night he gave up family, the grandmother gave up the same word, with pain in
+  her eyes. *Rivalen* means sacrifice-of-family to Shar's clergy. Read from this side, she was
+  giving *him* up. (DM's reading, not Kellan's.)
 - **The four fragments** (cold-with-texture, the sound, the carrying, the grey) may not be the
   night the city fell. They may be a rite performed on a small child.
 - **The shard casts no shadow** because it is already made of one — or because something stands in
@@ -264,11 +327,11 @@ pass, Kellan-editable:
 - Selgaunt (home city) → **Corveth**
 - Sembia (nation) → **Sarmene**
 - Old Chauncel (elder merchant-noble caste) → **the Old Charter**
-- Netheril (fallen arcane empire) → **kept as Netheril.** Kellan named it at the table in Session 29 (heard as "Neferil"; DM ruled 2026-10-07 that his table account is canon)
+- Netheril (fallen arcane empire) → **Neferil.** Kellan named it at the table in Session 29 and confirmed the spelling in his handout answers (2026-10-25)
 - Thultanthar / Shade (the fallen flying city) → **TBD** (state: destroyed)
 - Ordulin Maelstrom (the shadow-wound) → **TBD**
 - Myth Drannor (the city it fell on) → **TBD / offscreen**
 
 ## Gaps — pending Kellan
 
-- **Appearance** — none given (sheet's appearance box carries only faith and size).
+- **Appearance** — Kellan points to his Roll20 token icon; someone needs to write it down.
