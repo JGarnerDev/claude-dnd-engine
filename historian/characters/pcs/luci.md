@@ -56,6 +56,8 @@ spotlight_hooks:
     status: open
   - hook: "the Astral Dragon arrives to weigh her and what she means to do"
     status: open
+  - hook: "a secret she shares with Iggy, and no one else (confirmed by Jeff 2026-10-25; what it is, open)"
+    status: open
 description: "Paul's PC. Lucitania, a Scourge Aasimar monk-warlock-psion who woke in an abandoned sun temple, was scattered across the Astral Sea by a Void Serpent, and drifted into Barovia in perma-wanderlust."
 ---
 
@@ -170,9 +172,9 @@ Bullseye lantern, 3 poison darts, a diary, an ink pen, traveler's clothes. No co
 
 ## The Voice in Aethryn
 
-- **The voice and Sabathiel.** Luci means to free [[Aedra]] together with [[Sabathiel]], so "Closer" may point toward her. Unconfirmed.
+- **The voice is [[Sabathiel]]** (Jeff, 2026-10-25): her warlock patron, the same voice that grants her Guidance and Augury. "Closer" is Sabathiel speaking. What it points at (the Sun Temple, [[Aedra]], or somewhere in Aethryn) is open.
 - **Fida.** Luci's name for Aethryn's broken moon, spoken in the Dead Sun tongue when she first saw it (Session 29). Canon as the moon's name as the voice gave it to her. Whether anyone in Aethryn calls it that is unknown.
-- **The voice is louder and clearer here** than it ever was in Barovia. This is a standing fact of the season. Its first clear word in Aethryn was **"Closer"**. Closer to what, or to whom, is open. The voice itself is still unnamed (Sabathiel, or something else).
+- **The voice is louder and clearer here** than it ever was in Barovia. This is a standing fact of the season. Its first clear word in Aethryn was **"Closer"**. Closer to what, or to whom, is open.
 
 ## Session History
 

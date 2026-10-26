@@ -29,7 +29,7 @@ flowchart TD
     S2_STATEMENT{"[x] S2_STATEMENT<br/>Mara wants one of them at the jail<br/>Whoever goes misses the stone, learns Tallis's name"}
     S2_DIP["[-] S2_DIP<br/>Dip's owed moment<br/>The private roll from the song, as a flashback<br/>The 150 gp: keep it, or toward Sable's debt"]
     S2_BOON["[x] S2_BOON<br/>Odibli's stone does nothing at all<br/>The deed, still unsigned, still on the table"]
-    S2_HEARTH["[x] S2_HEARTH<br/>The hearth is dying (cause provisional)<br/>The party feeds the flame; Odibli writes over the glyph<br/>Odibli levels to 5 · they sleep, not a long rest"]
+    S2_HEARTH["[x] S2_HEARTH<br/>The hearth is dying: Tallis's smother-charm<br/>The party feeds the flame; Odibli writes over the glyph<br/>Odibli levels to 5 · they sleep, not a long rest"]
     S2_STATEMENT -->|"nobody goes"| S2_DIP --> S2_BOON --> S2_HEARTH
     S2_STATEMENT -->|"one goes: back a round late"| S2_HEARTH
   end

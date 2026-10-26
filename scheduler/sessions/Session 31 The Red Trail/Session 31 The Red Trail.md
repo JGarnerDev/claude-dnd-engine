@@ -38,8 +38,8 @@ encounters:
   - "The Dusk Fork — Nella's rear guard: Ilsa Hask (human Scout) and Fennel Dray (human Bandit), mounted, with Fennel's Wolf Cinder. ~350 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. Fennel shoots the borrowed horses and Cinder goes for their legs, not the PCs. A rider who escapes toward the camp raises its alert by one step."
   - "The Waystation — Varrick Tenn the drover (human Bandit Captain), Haddo Keel and Brask (human and half-orc Thugs, the cask-hands), Sennet Orrin (human Spy), Hesper Mudd (halfling Acolyte), Tam 'Clatter' Cobb (human Bandit, on the roof) and Brick and Mortar (Mastiffs) on the floor, Nella (custom, ~CR 3) on the ridge. ~4,188 adjusted XP against an all-level-5 party, Hard, RTC ~3.4 (floor ~2.7), RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
 loose_threads:
-  - "[[Session 30 Keep the Ale]]'s unplayed beats: Mara's statement, the dead Boon, the dying hearth (cause provisional until Miguel's lore notes), then all of the dawn pursuit"
-  - "Dip's private roll from Iggy's song, owed as a flashback (Ben was absent at Session 30), and the 150 gp the table assigned him"
+  - "[[Session 30 Keep the Ale]]'s unplayed beats: Mara's statement, the dead Boon, the dying hearth (Tallis's smother-charm), then all of the dawn pursuit"
+  - "Dip's private roll from Iggy's song, owed as a flashback (Ben was absent at Session 30), and the 150 gp the table assigned them"
   - "Sable's deed: terms heard and agreed, never formally taken"
   - "Odibli's debt-rebundling pitch and Halsby's shade-on-command pitch: Silas left both uncommitted"
   - "Ashford repeats that the party came out of Mara's light"
@@ -371,7 +371,7 @@ Mara hasn't left yet.
 ### Scene 1 — The Rest of the Night
 
 - **Summary:** The night winds down. Mara wants one of them at the jail for a statement, Dip gets
-  his owed moment from the song, the Boon stays dead, and then the hearth starts dying. Odibli has
+  their owed moment from the song, the Boon stays dead, and then the hearth starts dying. Odibli has
   to write over a charm in the coals while the party keeps the flame alive. Odibli levels to 5.
 - **Where:** [[The Golden Lioness]], the one room that survived: crates half-unpacked, the hearth,
   a blown-open wall through to the half-built wing.
@@ -394,7 +394,7 @@ Mara hasn't left yet.
 - Before she leaves, Mara asks: *"Half the street's already saying you came down in my light. I'd
   like your version on paper before theirs gets any bigger. I need one of you to walk back with me.
   Just one. The rest of you, sleep."*
-- **If Dip goes,** run `S2_DIP`'s private roll on the walk instead, as he looks back at the
+- **If Dip goes,** run `S2_DIP`'s private roll on the walk instead, as they look back at the
   lit window.
 - **If nobody goes:** *"Then first thing tomorrow."* No penalty. Tallis's name waits for the hearth.
 - **Whoever goes:**
@@ -415,12 +415,12 @@ Mara hasn't left yet.
 #### S2_DIP — Dip's owed moment: the private roll, and the 150 gp
 
 - **Draft (engine, 2026-10-21).** Ben missed Session 30, so Dip's private roll at Iggy's song
-  (Session 30's `S2_IGGY`) is owed, and the table gave him the 150 gp without him.
+  (Session 30's `S2_IGGY`) is owed, and the table gave Dip the 150 gp while Ben was away.
 - **Choice (Dip):** what Dip shares from the private roll: all of it, some of it, or nothing.
 - **Choice (Dip):** keep the 150 gp, or put some or all of it toward Sable's ~650 gp debt to Silas.
 - **Time:** ~5 minutes.
 - **The private roll, as a flashback.** Tell Ben privately, or pass a note. Frame it as Dip, by the
-  dying-down fire, remembering what he felt when the hearth went still mid-song. Wisdom (Insight),
+  dying-down fire, remembering what they felt when the hearth went still mid-song. Wisdom (Insight),
   or Intelligence (Arcana) if Ben argues for the Sage training:
   - **Under 15:** a lurch of nested wrongness, layers inside layers, then gone.
   - **15–19:** a nesting doll — real, then hollow, then *real* again, and the innermost layer is
@@ -430,8 +430,8 @@ Mara hasn't left yet.
     or narrated. Ben decides what he says aloud.
 - **The 150 gp.** Confirm with Ben first that Dip took it from the bodies. Sable never asks for it:
   she isn't that kind of host. If Dip offers, one line, no fuss: *"Put it away. …Fine. Leave it on
-  the bar, and I'll pretend I didn't see you do it."* If he keeps it, nothing changes, and she
-  doesn't look at him differently.
+  the bar, and I'll pretend I didn't see you do it."* If they keep it, nothing changes, and she
+  doesn't look at them differently.
 - **Dip's crystal:** the DM ruled at `/recap` that Dip took one from the pile. Confirm with Ben in
   the same breath.
 - **Transition:** `S2_BOON`.
@@ -462,11 +462,10 @@ Mara hasn't left yet.
 - **Odibli's deed and level-up** (Jeff, 2026-10-07).
 - **Time:** ~10–15 minutes. Late, with the room emptied, so it stays apart from Iggy's song.
 
-**What's going on (DM only) — provisional until Miguel's lore notes land:**
+**What's going on (DM only):**
 
-> The cause below is the stand-in Jeff committed 2026-10-07. Miguel's notes were still outstanding
-> at the 2026-10-21 rework. If they arrive and say something different, they win; swap the cause
-> and keep the mechanics (the flame track, the strokes, the level-up), which don't depend on it.
+> The cause below is locked (Jeff, 2026-10-25). Miguel's lore notes arrived without covering the
+> hearth. What the hearth is *linked to* is a separate question and stays open (`meta/mysteries.md`).
 
 - During the raid, **Tallis** (the hedge-mage who sold charms at the fair) dropped a written charm
   into the hearth of the one room that would survive. It's a **smother-charm**: it drinks the fire,
@@ -474,6 +473,9 @@ Mara hasn't left yet.
   the blast; this was meant to finish the last standing room while everyone slept in it.
 - The fire is Asher's breath coming up from under the floor. He feels the charm as suffocation,
   and **he remembers who saved it.**
+- **This hearth is Asher's small dominion** (Jeff, 2026-10-25). The gnomish fire channel and
+  [[The Palimpsest]] don't surface in it: nothing ghosts up under the glyph, and Odibli finds no
+  mail here.
 - **It fits what Odibli already read.** His Arcana 23 at Session 30 found the hearth "linked to
   another entity not currently present". That read the link, not the coals. The charm works
   slowly, and it is why the link already felt thin.
@@ -510,6 +512,10 @@ Mara hasn't left yet.
   into the hearth, Produce Flame, Prestidigitation) holds it for one round. A spell slot burned
   into it holds it for as many rounds as the slot's level. **This is the party's job**, and Halsby
   and Odibli can both do it.
+- **Halsby and fire (narration only, no rules cost; Jeff 2026-10-25).** Heat costs him out of
+  all proportion, and he avoids fire and lies badly about why. If he feeds the flame, show it:
+  *"The heat comes to your hands like something dragged up a well. Your fingers go grey to the
+  knuckle, and you're shaking by the time it catches."* If anyone asks, he lies, and badly.
 - **Each round, Odibli makes one stroke:** INT with calligrapher's supplies, DC 14 (he's at +7). A
   failed stroke also drops the flame one step.
 - **Three successful strokes** overwrite the glyph.
@@ -531,9 +537,10 @@ Mara hasn't left yet.
   went out."* She explains nothing (she's not saying Asher's name tonight).
 - **The seed:** the charm paper matches the charms Tallis sold at the fair. Mara knows his name.
   Someone may ask who taught him. Leave it there.
-- **His Aethryn rule (Miguel confirmed 2026-10-25; odds are the DM's):** a sustained cast like
-  this is the kind the Citadel might sense. Roll for it if you've set the odds; otherwise note it
-  for `/recap`.
+- **His Aethryn rule (Jeff, 2026-10-25):** each leveled spell rolls a hidden d6, and a 1 means the
+  Citadel sensed it. Every slot he burns into the hearth is a cast; cantrips are never sensed. Log
+  every cast and any spell 1s in `scheduler/campaign/_citadel-clock.md`, which also holds the
+  ideas to spend on a sensed cast.
 - **They sleep.** Upstairs, in rooms with beds and not much else. It helps; it is not a long rest. One line: *"You sleep
   like dropped coats. It isn't enough, and you all know it."*
 - **Transition:** grey light, and the trail is getting older.
@@ -601,17 +608,31 @@ Mara hasn't left yet.
   - *"You did it the way I asked. People rarely do. Your spear, please. And the shard."*
   - *"It'll hurt the shadow, not you."*
   - When it's done: *"It casts no shadow at the point. That's the part that keeps the dark from
-    eating you. Don't lose it."*
+    eating you quite so fast. Don't lose it."*
   - If Halsby asks what Asher wants next: *"She'll ask. Not me."* (the later job he owes Sable)
+- **His one question (Jeff, 2026-10-25).** The fox answers truthfully, in one or two sentences,
+  and never with a name. Each answer pays a sliver of a hook and spends no big reveal: not
+  *Rivalen*, not the sacrifice, not what the fade really is. Likeliest questions:
+  - "What am I?": *"Borrowed. Most people are. Yours just has a lender who keeps very good
+    books."*
+  - "What is the shard?", asked as it sinks into the spearhead: *"A piece of the underside of
+    something that was never meant to touch the ground. Why it casts no shadow, I'd rather not
+    guess. Out loud."*
+  - "What does the order want with me?": *"What every lender wants. For you to keep coming back.
+    They've been keeping your account since before you could read."*
+  - "Did my grandmother know?": *"She knew everything you ever asked her. That was rather the
+    problem."*
+  - **Anything else:** one true sentence, dry, no names. If the true answer is a big reveal, the
+    fox declines: *"That one costs more than a spear."*
 - **The fusing:** about two minutes. Halsby keeps hold of both the whole time. The shard sinks into
   the spearhead as if it grew there. The haft throws a shadow. The point does not.
 - **[[The Shadowless Spear]]** (confirmed, `meta/loot-options/Halsby/weapons/The Shadowless
-  Spear.md`): +1 · his spellcasting focus · **the fade does not advance while he carries it** ·
+  Spear.md`): +1 · his spellcasting focus · **while he carries it, each mourning rite holds the fade off twice as long (12 days, 16 after a good night)** ·
   reach 15 ft in dim light or darkness. Uncommon — his act Uncommon.
 - **History, three sentences, if asked:** *His own spear and his own shard, fused by something old
   in the water under Ashford. It was promised by a fox and delivered at a ford. What it cost the
   thing that made it, nobody said.*
-- **Halsby levels to 5** as the point stops casting a shadow. The fade halts and the level lands
+- **Halsby levels to 5** as the point stops casting a shadow. The fade slows and the level lands
   together.
 - The fox walks off the stone and under the water. It doesn't come up.
 
@@ -1213,19 +1234,18 @@ Land it on the cell door, not on the casks.
     Halsby taking the fox's job without haggling (`S2_SPEAR`)
 - **Spotlight.** The trend says lean party-centric this week; the chase and the camp are. Halsby,
   the overdue PC, gets `S2_SPEAR` (a promised delivery, not one of his `spotlight_hooks`, none
-  seeded) and indirectly `S2_CRYSTALS`. Odibli gets his deed, `S2_HEARTH`. Dip gets his owed
+  seeded) and indirectly `S2_CRYSTALS`. Odibli gets his deed, `S2_HEARTH`. Dip gets their owed
   moment (`S2_DIP`) and [[Varrick's Parrying Bracer]] at the camp. Luci and Iggy carry no beat of
   their own this session; Iggy had the song at Session 30.
 - **Deployment tracking:** none planned from `meta/literary-devices.md` or the design
   preferences. The false trail at the fork is a device candidate if `/recap` wants to log it.
 - **For `/recap`:**
   - Levels: Odibli and Halsby to 5 (stamp `level_confirmed: 31` on all five PCs)
-  - The hearth: saved or scorched · what was in the coals (Tallis's charm, or whatever Miguel's
-    notes made it) · whether the original Odibli felt the cast
-  - Dip's private roll and what he shared · the 150 gp: kept, or put toward Sable's debt · Ben's
-    confirmation of the gold and his crystal
+  - The hearth: saved or scorched · the coals held Tallis's charm · Odibli's casts, d6 results and spell 1s into `scheduler/campaign/_citadel-clock.md`
+  - Dip's private roll and what they shared · the 150 gp: kept, or put toward Sable's debt · Ben's
+    confirmation of the gold and Dip's crystal
   - The 10% Stake, if signed · the second deed (casks home), banked
-  - [[The Shadowless Spear]] delivered — flip its loot file to delivered; Halsby's fade halts
+  - [[The Shadowless Spear]] delivered — flip its loot file to delivered; Halsby's mourning rite now holds the fade off twice as long
   - Silas's favour debt paid if the horses come back · where Silas stands on the two pitches
   - Nella's tally in party hands, and the 250 gp purse: kept, spent, or returned (it equals her
     remaining debt); Harrow Bane named by the ledger; the aegis-banner taken
@@ -1240,7 +1260,7 @@ Land it on the cell door, not on the casks.
   - **New canon if played:** Nella's remaining debt to Bane is 250 gp, the sum in her purse ·
     [[Varrick's Parrying Bracer]] was Varrick Tenn's, a soldier's guard he wore as the camp's
     drover · Tallis sold written charms at the fair, and Mara bought one for her mother · the
-    hearth's cause (provisional, see `S2_HEARTH`) · Mara has worn the star six years · Ashford's
+    hearth's cause, Tallis's smother-charm (`S2_HEARTH`) · Mara has worn the star six years · Ashford's
     jail has two cells · Silas charges 11 gp a lamed horse · the waystation is an old drover's
     relay short of Duskwater, provisioned for about thirty · Sennet Orrin keeps Bane's duty ledger
     · the cart becomes the Lioness's delivery cart · a hanging in Ashford waits on Cael's reeve ·
@@ -1249,6 +1269,6 @@ Land it on the cell door, not on the casks.
 - **Held for later:** Elowen and Odibli (the Unfinished Binding) · Jorn's foreshadow · the Marlow
   coppers · Asher's Dead Sun phrase for Luci · the battlefield-spirit and coin-forgery spitballs ·
   the pull Odibli feels (Miguel's homework).
-- **Before the table:** Miguel's hearth notes (optional; the beat runs on the stand-in) · Tyler's
+- **Before the table:** Tyler's
   backstory (optional; the cell stays a silhouette without it) · confirm the 150 gp and Dip's
   crystal with Ben. Maps, tokens and cards are tracked in `_tasks.md`.

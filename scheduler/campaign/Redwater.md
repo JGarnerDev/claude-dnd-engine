@@ -40,13 +40,13 @@ Five PCs this season. The four who crossed from Barovia persist across both worl
 
 | Player | Character | Race/Class | Status |
 |---|---|---|---|
-| Jeff | Iggadron "Iggy" Wallaed | Aasimar (Celestial), Bard 3 / Paladin 1 | Alive — shadow affliction, dormant in this world |
-| Paul | Luci | Aasimar (Scourge) Monk | Alive — sacrificed Sacred Flame permanently |
-| Miguel | Odibli (also "ODB") | Gnome Wizard | Alive — poison cured by Davian Martikov, Session 28 |
-| Ben | Dip | Half-Orc Barbarian/Sage | Alive — whisper affliction, dormant in this world |
+| Jeff | Iggadron "Iggy" Wallaed | Aasimar (Protector), Bard 3 (Valor) / Paladin 2 — level 5 | Alive — shadow affliction, dormant in this world |
+| Paul | Luci (Lucitania) | Aasimar (Scourge), Monk 2 / Warlock 1 / Transcendent 1 + one more — level 5 | Alive — sacrificed Sacred Flame permanently |
+| Miguel | Odibli (also "ODB") | Forest Gnome, Wizard 4 (Evoker) | Alive — poison cured by Davian Martikov, Session 28 |
+| Ben | Dip | Orc, Barbarian 5 (Berserker), Sage background | Alive — whisper affliction, dormant in this world |
 | Kellan | Halsby | Half-Elf Sorcerer (Shadow Magic) 4 | Joined in Session 29 — on the Nightveil's errand, owed the fox's boon |
 
-> **Reliability:** carried over from the Strahd roster plus the Session 28 seam pass. Afflictions cross **dormant** (the mists fed them; away, they are muted) — `workshop/first-homebrew-act/notes/the-seam.md`. Odibli's poison and Dip's mold were cured on screen and are gone; do not reuse them. Party level is unset pending the starting-level ruling.
+> **Reliability:** carried over from the Strahd roster plus the Session 28 seam pass. Afflictions cross **dormant** (the mists fed them; away, they are muted) — `workshop/first-homebrew-act/notes/the-seam.md`. Odibli's poison and Dip's mold were cured on screen and are gone; do not reuse them. Builds synced to the PC files 2026-10-25; the PC files and Roll20 sheets win. Which class took Luci's fifth level is unrecorded (confirm with Paul). Odibli and Halsby level to 5 in Session 31.
 
 ## Current State (after Session 30)
 
@@ -65,7 +65,7 @@ of the night and the whole pursuit carry into [[Session 31 The Red Trail]] (a dr
   [[Wick]] (a branded elf commander) and [[Harrow Bane]] (a name that hushes a room) are known
   by word only.
 - **The hearth** feeds itself, is linked to something absent, and went still during Iggy's song
-  (`meta/mysteries.md`). Waits on Miguel's lore homework.
+  (`meta/mysteries.md`). Its link stays open, to be settled in play; the Session 31 threat to it is Tallis's smother-charm.
 - **The party carries [[Earshot Crystals]]**, one each. **Dip** holds the ~150 gp off the raiders
   (confirm with Ben). [[Sergei Rubelgerd]] and [[Bosco]] are back with the party.
 - **Not yet played:** Mara's statement · [[The Wanderer's Boon]] shown inert · the dying-hearth

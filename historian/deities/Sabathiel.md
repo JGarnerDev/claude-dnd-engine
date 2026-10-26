@@ -33,7 +33,7 @@ description: "Luci's warlock patron and the radiant voice in her head; Aedra's e
 
 **Sabathiel** is the patron behind [[Luci]]'s warlock pact. It grants her Guidance and Augury through the *Written in the Stars* invocation: a glimpse of the cosmos and its twinkling agents of illumination. Luci hears it as a voice in her head, speaking a language that compels her, and feels it as warmth on her face.
 
-> **Reliability:** Sourced from Paul's Roll20 sheet (2026-10-05) and his backstory answers (ingested 2026-10-25). Tier and full nature not given. Whether "the voice" Luci hears in Aethryn is Sabathiel, or something else, is still open on her file.
+> **Reliability:** Sourced from Paul's Roll20 sheet (2026-10-05) and his backstory answers (ingested 2026-10-25). Tier and full nature not given. The voice Luci hears in Aethryn, including "Closer", is Sabathiel (Jeff, 2026-10-25). What "Closer" points at is open.
 
 ## The Watch over Aedra
 

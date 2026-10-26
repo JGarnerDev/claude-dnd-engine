@@ -27,8 +27,11 @@ throws a shadow. The point does not.*
 1. **+1 weapon.** +1 to attack and damage rolls made with it.
 2. **Spellcasting focus.** It works as his sorcerer focus. It replaces the bare shard, and
    it still hums when he casts.
-3. **Holds off the fade.** While he holds it or carries it on his body, the fade does not advance. Lose
-   it, or have it taken, and the fade starts again.
+3. **Slows the fade.** While he holds it or carries it on his body, each dark-moon mourning rite
+   holds the fade off twice as long: 12 days instead of 6, or 16 instead of 8 after a good night.
+   He still has to keep doing the rite. Lose the spear, or have it taken, and the rite's old span
+   returns. (Changed 2026-10-25 from "the fade does not advance", which took away the Nightveil's
+   only lever on him.)
 4. **Shadow reach.** In dim light or darkness, its reach is 15 feet. His shadow carries the
    point the rest of the way.
 
@@ -36,15 +39,15 @@ throws a shadow. The point does not.*
 
 It is made from the two things he already carries. The shard is his bond, and the one object he
 lets nobody else hold. The fade is the thing he has spent his whole life failing to stop. A
-weapon that solves the second without taking away the first is the only gift he would accept
+weapon that eases the second without taking away the first is the only gift he would accept
 without first asking what it costs.
 
 ## Why this player
 
 Kellan built a shadow sorcerer whose shadow already stretches his melee reach (Living Shadow).
 Shadow reach rewards him for fighting from the dark, where his darkvision and his own Darkness
-already put him. And holding off the fade only while he keeps the spear gives Kellan a stated
-rule he can test, and a thing he can lose.
+already put him. And stretching the rite only while he keeps the spear gives Kellan a stated
+rule he can test, and a thing he can lose, while the rite stays the order's hook in him.
 
 ## At 6–8
 

@@ -58,6 +58,8 @@ spotlight_hooks:
     status: open
   - hook: "Meet the grief society: talk first, fight when something comes back wrong"
     status: open
+  - hook: "A secret he shares with Luci, and no one else (confirmed by Jeff 2026-10-25; his party wish; what it is, open)"
+    status: open
 
 description: "Jeff's PC. Gruff but light-hearted soldier-bard with copper-red Aasimar features. Refugee of the destroyed library-plane Threnai, guided by the diminished god Sah."
 ---

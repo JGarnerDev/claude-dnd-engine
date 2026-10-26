@@ -71,7 +71,7 @@ spotlight_hooks:
     status: open
   - hook: "Luci's faith in the light puts her at odds with his shadow ways"
     status: open
-  - hook: "a secret only he and Odibli share"
+  - hook: "a secret only he, Odibli and Dip share (confirmed 2026-10-25; what it is, open)"
     status: open
 description: "Kellan's PC. Shadow-magic sorcerer raised inside a Sharran mourning-rite he never knew was worship; gives only the single alias 'Halsby' and never a first name."
 ---
@@ -218,7 +218,7 @@ The first exchange was already played (Session 30). His private judgements:
 > **Reliability:** Kellan's read matches Odibli's file: per Miguel (2026-10-25), Odibli does not
 > know he is a copy. Halsby is right without knowing why.
 
-**Kellan's wish for the season:** a shared secret between Halsby and [[Odibli]].
+**Kellan's wish for the season:** a shared secret between Halsby and [[Odibli]]. **Confirmed (Jeff, 2026-10-25)** as one secret held by three: Halsby, Odibli and [[Dip]], whose player asked for the same. What the secret is stays open (todo dashboard).
 
 ## The Object (Sorcerous Focus)
 
@@ -255,7 +255,7 @@ Sorcerer 4 (Shadow Sorcery) · Half-Elf · Haunted One · Chaotic Evil · Medium
 ### Dark Gifts (feats)
 
 - **Living Shadow.** His shadow is animate, ever-present, and sometimes acts on its own will. Grasping Shadow: component-free Mage Hand. Lengthened Strike: +10 ft reach on a melee attack, as the shadow stretches (2/long rest). **Ominous Will:** on a natural 1 on any d20 Test he makes a WIS save (DC 15) or is Incapacitated, then rolls the Shadow's Will table for what his body does next turn — wander, attack a random creature in reach, or fall prone.
-- **Second Skin.** Another side of him most people never see. Alternate Form: Alter Self once per long rest, no slot, components, or concentration. **Involuntary Change:** after hearing *a particular melody*, he makes a CHA save (DC 15) at the start of his next turn or changes on the spot — stunned instead if the free use is spent. The melody is unnamed. **Halsby doesn't know he has a second skin; it has never happened.** Its look and name are open.
+- **Second Skin.** Another side of him most people never see. Alternate Form: Alter Self once per long rest, no slot, components, or concentration. **Involuntary Change:** after hearing *a particular melody*, he makes a CHA save (DC 15) at the start of his next turn or changes on the spot — stunned instead if the free use is spent. The melody is his grandmother's dark-moon hum (DM-only, below). **Halsby doesn't know he has a second skin; it has never happened.** Its look and name are open.
 
 ### Gear
 
@@ -283,7 +283,9 @@ Dagger ×2, spear, crowbar ×2, 15 torches, 2 tinderboxes, 4 flasks of oil, holy
 - **He was made Sharran at ~six**, not by choice at the funeral. He has been a devotee his whole life.
 - **The fade is a clock.** Time away from shadow-dense places should cost him something small and
   cumulative — it is why he walks into dark places voluntarily, and it is the lever the order
-  eventually pulls. He has already watched what the end of it looks like.
+  eventually pulls. He has already watched what the end of it looks like. The dark-moon rite holds
+  it off 6 days (8 after a good night); [[The Shadowless Spear]], once he has it, doubles that span
+  but never stops the fade, so he still has to keep up the rite (Jeff, 2026-10-25).
 - **The grandmother was never hiding him from the cult.** The veiled woman visited for years;
   from their side he was never lost, only *stored*. Preservation and concealment look identical
   from the inside. Only one has a purpose waiting at the end.
@@ -312,7 +314,7 @@ pass, Kellan-editable:
 - **"Rivalen"** — surfaces only when someone who knows what it means says it to him. Free to leave
   loaded at any level.
 - **The fade clock** — the order's lever; he has already seen where it ends.
-- **The melody** (Second Skin) — whatever tune forces the change is unnamed. A dark-moon hymn, something his grandmother hummed, a Sharran chant: DM's to choose.
+- **The melody** (Second Skin) — **his grandmother's dark-moon hum** (Jeff, 2026-10-25): the tune she hummed in the unlit room on rite nights. It is Sharran, so [[The Nightveil]] knows it. It surfaces when someone of the order hums it, or when he finds it written down. Never Iggy's viol: the trigger stays inside Halsby's own story. The hum has no name or lyric yet.
 - **The living shadow** (Living Shadow) — the shard casts no shadow; *he* casts one that acts on its own will. Two shadows, opposite problems.
 
 ---

@@ -75,6 +75,8 @@ spotlight_hooks:
     status: open
   - hook: "an erased message ghosts up beneath a fresh one in the embers"
     status: open
+  - hook: "a secret he shares with Halsby and Dip, and no one else (confirmed by Jeff 2026-10-25 from Kellan's and Ben's wishes; what it is, open)"
+    status: open
 description: "[[Miguel]]'s PC. Odibli Spannerbranch, forest gnome Evoker with a wide toothy grin and a journal that is also his spellbook. Throws himself at danger every time. Aethryn feels oddly familiar to him and he can't say why. DM-only: he is a copy, an agent made at the Citadel for an experiment, loose by accident, and he doesn't know it."
 ---
 
@@ -153,7 +155,7 @@ In [[Session 10 Escape From Death House]] he smashed the orb and took the shadow
 > **Reliability:** Miguel, at the table, Session 29: *"After coming back to this world, I am now closer to the Citadel as a runaway agent. My magic isn't as reliable and whenever I cast it, there's a chance that the real odibli can detect it. Runaway agent is fully aware of this sort of stuff."* Miguel's 2026-10-25 doc **overrides the awareness**: the copy does not know he is a copy. His follow-up the same day **keeps the casting rule**; he doesn't know the specifics, so they are the DM's call.
 
 - **Aethryn is the Citadel's world.** The copy is now in the same world as the original and the others. Where the Citadel stands is on hold until the world map can be worked with Jeff.
-- **His magic is less reliable here, and each cast risks being sensed** by the Citadel. He feels it go wrong but doesn't know why. How unreliable, the odds, and what a sensed cast sets off (a teardown attempt finding him, perhaps) are the DM's to set.
+- **His magic is less reliable here, and each cast risks being sensed** by the Citadel. He feels it go wrong but doesn't know why. The DM set the specifics 2026-10-25 (DM-only, `scheduler/campaign/_citadel-clock.md`): cantrips are never sensed, each leveled spell has a 1-in-6 chance, and three sensed casts bring a teardown attempt. Spells never fail.
 
 ## The Fireplace: the hearth-channel
 

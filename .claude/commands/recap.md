@@ -37,6 +37,7 @@ Otherwise, ask the DM the following. Keep it conversational — rough notes are 
 9. **Lines** — Any NPC line worth keeping word for word, or an NPC who came across differently from their file? Take the inbox note's `Quotable lines` first and ask only about NPCs it misses. Rough wording is fine; mark it `(?)`. This feeds the voice-shifts step in Phase 5.
 10. **Stats** — Take the inbox note's `Stats` first. Without a note, ask: who landed killing blows, crits, nat 20s or 1s, who healed, performed, punched or cast the most? Rough numbers are fine. This feeds the stats step in Phase 5 (`meta/stats.md`).
 11. **Achievements** (homebrew only) — Take the inbox note's `Achievement candidates` first. Without a note, ask: what did each character do that deserves a snarky "New achievement!" card? In-fiction deeds only. This feeds the achievements step in Phase 5 (`meta/achievements.md`).
+12. **Trackers** (homebrew only) — for each campaign tracker (`scheduler/campaign/_*.md` with an `(as of: Session NN)` header), ask what its `## Engine` section says `/recap` asks. Take the inbox note's `Trackers` first. Hidden DM rolls are never on a recording, so always ask for those. This feeds the tracker step in Phase 6.
 
 Wait for the DM's response before continuing.
 
@@ -222,6 +223,8 @@ Read the active campaign file (`state: active` in `scheduler/campaign/`). Propos
 - Long rest taken → reset: new `Last long rest (in-world)` anchor, `Hours since last long rest` to 0, rounds and short rests to 0, clear notable burns
 - No long rest → add this session's rounds to `Rounds of combat since`, increment `Short rests since`, append notable burns
 - DM unsure → record best estimate marked `(~estimate)`; never leave the old numbers standing unstamped
+
+**Campaign trackers (every homebrew recap, never skipped):** for each `scheduler/campaign/_*.md` tracker, apply Phase 2's tracker answers the way its `## Engine` section says, then restamp its header to `(as of: Session {NN})` even if nothing changed. A tracker whose PC missed the session still gets restamped, with a one-line `absent` entry. Name any ideas the new state makes ready; never mark one used unless it was played.
 
 **Preference tracking:** check the session plan's DM notes for deployed or seeded items from `meta/campaign-design-preferences.md`, and for devices or twists from `meta/literary-devices.md`. Update the item's `Deployed:` line (wikilink to the session), its `Seeded:` line (wikilink + one-phrase breadcrumb note — devices and twists both seed), or a device's `Last used:` line. When a session *pays off* a seeded device, stamp `Last used:` with this session and mark the seed note paid (e.g. `→ paid off [[Session NN]]`) so `/threads` stops surfacing it. Note the scale the item was used at if it differs from the obvious one. This closes the loop `/session` opens — if it isn't done here, it never happens.
 

@@ -161,7 +161,7 @@ Scripts output plain text; parse with your own judgment. They read frontmatter o
 
 ## Stamp Pattern
 
-Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, NPC `voice_confirmed`, the campaign Rest Clock header, the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
+Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, NPC `voice_confirmed`, the campaign Rest Clock header, campaign tracker headers (`scheduler/campaign/_*.md`, e.g. the Citadel Clock), the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
 
 ## Versioning
 

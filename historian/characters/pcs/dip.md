@@ -46,7 +46,7 @@ spotlight_hooks:
     status: open
   - hook: "finish off the raiders who escaped Brannoc's fire, and reunite Emberhollow's scattered survivors"
     status: open
-  - hook: "share a secret with Odibli, the other sage, on the road to a holy site"
+  - hook: "share a secret with Odibli, the other sage, and with Halsby (confirmed 2026-10-25; what it is, open), maybe on the road to a holy site"
     status: open
   - hook: "Vessa's hands appear among the guiding mass"
     status: open
@@ -124,7 +124,7 @@ What Ben wants for Dip this season, from the 2026-10-14 handout. These are wishe
 - **Finding Vessa, three ways:**
   - Hoped for: she has grown into someone worth knowing, found her own path, and is proud of it.
   - Feared: she went beyond the veil and came back as one of the monsters that split them apart.
-- **Party wish:** a shared secret with [[Odibli]], the only other sage in the party, maybe on a journey to a holy site.
+- **Party wish:** a shared secret with [[Odibli]], the only other sage in the party, maybe on a journey to a holy site. **Confirmed (Jeff, 2026-10-25)** as one secret held by three: Dip, Odibli and [[Halsby]], whose player asked for the same. What it is stays open.
 
 > **DM-only:** The version Dip would never say aloud: there was no twin. Vessa is a figment Dip's broken mind built as a pillar to rebuild itself on. Ben calls it a possibility, "hopefully not the real one."
 

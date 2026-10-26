@@ -48,6 +48,8 @@ his grandmother had been one of theirs; that the rite he'd performed since child
 and so did the one it addressed; and that they could tell him what is in his blood whenever he
 cared to come and ask. She did not say what it would cost. She did not have to. He went.
 
+**DM-only (Jeff, 2026-10-25):** she knows the grandmother's dark-moon hum, the Sharran tune that forces Halsby's second skin. He doesn't know it can, and neither does she, unless the DM decides she does. A lever she holds without knowing.
+
 She is not a brawler — she is a handler. Her weapon is the one question Halsby will trade anything
 to answer, and the ledger she lets him run against it.
 

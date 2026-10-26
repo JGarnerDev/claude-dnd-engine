@@ -61,6 +61,7 @@ For each chunk record only:
 - **Mechanics** — combats (rough round count), rests (short or long), level-ups, damage taken, resources burned
 - **Stats** — per PC, each moment that fits a category in the `meta/stats.md` catalog (killing blows, crits, nat 1s, heals cast, songs performed, unarmed hits...), using the catalog ids. Add up spoken numbers for sums (damage, HP healed) and write them `~n`: many rolls are never said aloud, so a sum from a transcript is always rough. Read `meta/stats.md` once
 - **Achievement candidates** (homebrew only) — per PC, in-fiction moments where a deliberate action caused a big, visible result (a spectacular success or backfire), plus quirky habits the PC repeated (for tallies). Deeds, not dice; skip routine actions, good rolls that only revealed lore, and things that happened *to* the scene. Read `meta/achievements.md` once
+- **Trackers** (homebrew only) — for each campaign tracker (`scheduler/campaign/_*.md` with an `(as of: Session NN)` header), whatever its `## Engine` section says `/transcript` mines. Read each tracker's `## Engine` section once
 - **In-world time** — any stated time of day, date, or elapsed-travel reference
 - **Quotable lines** — verbatim NPC or PC lines worth keeping, with speaker and timestamp
 - **Table talk** — out-of-character reactions worth noting; keep these separate from in-fiction events
@@ -133,6 +134,8 @@ digested: "<ISO date>"
 
 ## Achievement candidates
 
+## Trackers
+
 ## New entities
 
 ## Table reaction
@@ -147,6 +150,8 @@ Fill every section. Leave `Open questions for the DM` as a short numbered list o
 `Stats` holds one `### <PC>` per PC with `- <id>: <n>` lines in the `meta/stats.md` ledger shape. Sums are `~n`; a count you're unsure of gets `(?)`. `/recap` confirms these with the DM before anything goes in the ledger.
 
 `Achievement candidates` holds one `### <PC>` per PC with one bullet per moment: what happened, with a timestamp. Just the deed, not a drafted title; `/recap` writes the snark against the PC's achievement history. Leave a PC out when nothing fits. Skip the section for a Strahd session.
+
+`Trackers` holds one `### <tracker name>` per campaign tracker, in the shape its `## Engine` section asks for. Skip the section for a Strahd session, or when no tracker applies.
 
 `Quotable lines` holds verbatim lines with speaker and timestamp. `/recap` files the NPC lines into each speaker's `## Voice` section (`meta/voice.md`), so name the character, not the player, and favour lines that show how an NPC talks over lines that only carry plot. They are the one part of the note where exact wording matters more than summary.
 

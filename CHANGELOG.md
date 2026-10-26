@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.44.0] — 2026-10-25
+
+### Added
+
+- **Campaign trackers.** A `scheduler/campaign/_*.md` file with an `(as of: Session NN)` header and an `## Engine` section is now read by `/transcript` (mines what the section names into a new `## Trackers` inbox section), `/recap` (Phase 2 question 12, then applies and restamps in Phase 6, every homebrew recap) and `/session` (states each tracker in the orientation and surfaces at most one ready idea). The first is `_citadel-clock.md`: Odibli's casts in Aethryn, a hidden d6 per leveled spell, three sensed casts bring a teardown attempt, plus an ideas sheet keyed to the results. Rules: `scheduler/CLAUDE.md` → Campaign Trackers.
+
+### Changed
+
+- **The Shadowless Spear slows the fade instead of stopping it** (not yet delivered): each dark-moon mourning rite now holds the fade off twice as long, so the rite stays the Nightveil's hook in Halsby.
+
 ## [0.43.0] — 2026-10-25
 
 ### Changed
