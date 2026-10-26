@@ -441,8 +441,7 @@ Mara hasn't left yet.
 - Late in the evening Odibli takes [[The Wanderer's Boon]] out again, because of course he does.
 
 > *"It sits in your palm doing nothing at all. Warm, like it's been in a pocket. Dead, like it never
-> worked. Somebody owes somebody three seeds back in Barovia, and the stone has nothing to say about
-> it."*
+> worked. You still owe Davian three seeds, and the stone has nothing to say about it."*
 
 - One line for the Barovia debt, then let it sit.
 - **The deed.** At Session 30 the party agreed to fetch the stock and heard the terms (rooms, meals,
@@ -528,13 +527,15 @@ Mara hasn't left yet.
 - **Miguel picks the word he writes over the glyph.** If he wants a suggestion: the charm says
   *consume*, and he turns it into *kindle*.
 
-> *"The last stroke goes into the coals and the glyph stops being what it was. For a heartbeat the
-> fire is all the way out, and every one of you feels the cold come up through the floor. Then it
-> comes back up the chimney in one long breath, gold to the rafters, and stays."*
+> *"The last stroke goes into the coals and the glyph goes dark. The fire goes all the way out,
+> and cold comes up through the floorboards into your boots. Then it comes back up the chimney in
+> one long breath, gold to the rafters, and stays."*
 
 - **Odibli levels to 5.**
 - Sable lets go of the bar, looks at Odibli a long moment, and says only: *"…Don't tell anyone it
   went out."* She explains nothing (she's not saying Asher's name tonight).
+  - Then one glance at the hearth, and straight to the next job, as the flame steadies: *"Right.
+    Beds. You ride at first light."*
 - **The seed:** the charm paper matches the charms Tallis sold at the fair. Mara knows his name.
   Someone may ask who taught him. Leave it there.
 - **His Aethryn rule (Jeff, 2026-10-25):** each leveled spell rolls a hidden d6, and a 1 means the
@@ -542,7 +543,7 @@ Mara hasn't left yet.
   every cast and any spell 1s in `scheduler/campaign/_citadel-clock.md`, which also holds the
   ideas to spend on a sensed cast.
 - **They sleep.** Upstairs, in rooms with beds and not much else. It helps; it is not a long rest. One line: *"You sleep
-  like dropped coats. It isn't enough, and you all know it."*
+  like dropped coats. In the morning your legs still ache from the raid."*
 - **Transition:** grey light, and the trail is getting older.
 
 ### Scene 2 — Dawn at the Ford
@@ -563,8 +564,7 @@ Mara hasn't left yet.
 - Breakfast at the Lioness and an hour at the ford. One short rest: hit dice and short-rest
   features. Nothing else comes back.
 - **Sable's send-off** (engine, 2026-10-21), at the door with a sack of hardtack and cold pie:
-  *"Bring back what you can carry. Bring back all five of you. If it's one or the other, I know
-  which I'd pick, and so does the bank."* If the hearth was scorched, she says it without looking
+  *"Bring back the casks if you can. Bring all five of you back either way."* If the hearth was scorched, she says it without looking
   back at it.
 
 #### S2_HORSES — Silas lends the horses: "bring them back shod"
@@ -585,6 +585,8 @@ Mara hasn't left yet.
     sleep. Don't tell me how it works. I'm not buying."* A beat. *"Yet."*
 - **"Came out of the light."** Jory Pike, holding the last two horses, can't stop staring at them.
   He asks one of them, quietly, if it hurt.
+  - Jory, handing over the last reins: *"Did it hurt? Coming out of the light? I'd have yelled. I
+    didn't yell at the raid, mind. Not once."*
 
 #### S2_SPEAR — The fox waits at the water's edge. Halsby's Spear
 
@@ -593,7 +595,7 @@ Mara hasn't left yet.
   - **Look:** an ordinary red fox, sitting perfectly dry on a stone mid-ford. Green eyes leaking
     smoke.
   - **Sound:** precise and dry, a little amused. Talks like someone settling a bill.
-  - **Impression:** far too calm, and it knows far more than it says.
+  - **Impression:** far too calm for a fox, and it's looking straight at Halsby.
 - **Choice (Halsby):** he gets one question for the fox, and it answers it, in Asher's dry voice and without ever giving his name. What he asks is recorded.
 - **Halsby's spotlight beat.** "After you, not before." The job is done.
 - The fox is sitting on a flat stone mid-ford, dry, as if the water goes around it. Smoky green
@@ -607,21 +609,20 @@ Mara hasn't left yet.
 - **The fox's lines** (Asher's voice, through it; never gives his name):
   - *"You did it the way I asked. People rarely do. Your spear, please. And the shard."*
   - *"It'll hurt the shadow, not you."*
-  - When it's done: *"It casts no shadow at the point. That's the part that keeps the dark from
-    eating you quite so fast. Don't lose it."*
+  - When it's done: *"The point casts no shadow. While you carry it, the fade comes slower.
+    Slower, mind. Don't lose it."*
   - If Halsby asks what Asher wants next: *"She'll ask. Not me."* (the later job he owes Sable)
 - **His one question (Jeff, 2026-10-25).** The fox answers truthfully, in one or two sentences,
   and never with a name. Each answer pays a sliver of a hook and spends no big reveal: not
   *Rivalen*, not the sacrifice, not what the fade really is. Likeliest questions:
-  - "What am I?": *"Borrowed. Most people are. Yours just has a lender who keeps very good
-    books."*
+  - "What am I?": *"In debt. Your shadow was lent to you, and the lender keeps count."*
   - "What is the shard?", asked as it sinks into the spearhead: *"A piece of the underside of
     something that was never meant to touch the ground. Why it casts no shadow, I'd rather not
     guess. Out loud."*
   - "What does the order want with me?": *"What every lender wants. For you to keep coming back.
     They've been keeping your account since before you could read."*
-  - "Did my grandmother know?": *"She knew everything you ever asked her. That was rather the
-    problem."*
+  - "Did my grandmother know?": *"She knew. She answered what you asked, and you never asked
+    that."*
   - **Anything else:** one true sentence, dry, no names. If the true answer is a big reveal, the
     fox declines: *"That one costs more than a spear."*
 - **The fusing:** about two minutes. Halsby keeps hold of both the whole time. The shard sinks into
@@ -679,9 +680,11 @@ Mara hasn't left yet.
 
 #### S2_FORD_STAGE — Stage 1, the far bank (DC 12)
 
-> *"The ruts come up out of the water deep enough to stand a boot in. Somebody's been dragging a
-> great deal of weight in a hurry, and somebody else has been sweeping the edges with a branch to
-> make it look like less."*
+> *"The ruts come up out of the water deep enough to stand a boot in. Along both edges, the mud
+> has been scraped smooth in long, even strokes."*
+
+- **A pass reads the strokes:** a branch, dragged to make the ruts look shallower. The cart is
+  heavy and in a hurry.
 
 - **Loss:** a horse balks in the ford and somebody takes a cold soaking. Twenty minutes lost.
 
@@ -745,14 +748,15 @@ Mara hasn't left yet.
   the grass between them. Ilsa's token goes to the grey margin if she rides off.
 - **Introduce:** Archer Rider (Ilsa Hask, Scout)
   - **Look:** sun-faded leather riding armour, a longbow strung and ready, a short sword. Squinting
-    into the sun, already half-turned toward the camp.
+    into the sun, already half-turned in the saddle.
   - **Sound:** quiet. Says one thing to Fennel you can't hear.
-  - **Impression:** the one who'll ride for help, and the one you'd want to stop.
+  - **Impression:** keeps glancing back down the road behind her, like she's measuring the
+    distance.
 - **Introduce:** Crossbow Rider (Fennel Dray, Bandit)
   - **Look:** wiry farm lad in a patched jerkin, a light crossbow across the saddle, a cheap curved
     blade.
   - **Sound:** twitchy, talks fast, too loud.
-  - **Impression:** a boy in over his head who loves his wolf more than anyone in the band.
+  - **Impression:** a boy in over his head, who keeps one hand near the wolf.
 - **Introduce:** Wolf (Cinder)
   - **Look:** grey-black, scarred muzzle, a frayed rope collar somebody tied on with care.
   - **Sound:** silent until it moves.
@@ -762,6 +766,13 @@ Mara hasn't left yet.
   Surprise is theirs to take.
 - **If they lost it:** Ilsa sees them first and puts an arrow into the lead horse's
   saddlebag as a warning.
+
+- **Read-aloud, if they won stage 3:**
+
+> *"Two riders by a lone tree at the fork, black against the low sun, and something grey and low
+> in the grass between them. They're watching the road behind them. They haven't seen you."*
+
+- **Read-aloud, if they lost it:**
 
 > *"Two riders by a lone tree at the fork, black against the low sun, and something grey and low
 > in the grass between them. One of them stands in the stirrups to look at you, then sits back
@@ -814,7 +825,7 @@ Mara hasn't left yet.
   crystal cords · Stealth vs passive 18 — past the dogs · Athletics 13 — swim the river · Animal
   Handling 13 — start a stampede · Deception vs Insight — Varrick easy, Sennet +4, Nella +7 · WIS 12
   save — morale · Investigation 12 / 16 — read the tally · DEX 12 — cross the staked perimeter at
-  speed (night alert)
+  speed (night alert) · Deception 12 vs Varrick — a false order in Nella's voice (`S2_CRYSTALS`)
 - **Tactics:** the crew holds its stations around the cart and never converges. Nella spreads her
   shots to wound and pin, marks whoever climbs toward her (never a caster), and never shoots a
   downed PC. Morale breaks when Varrick drops or the crew is down to 2.
@@ -843,6 +854,9 @@ Mara hasn't left yet.
 > above the shed a banner moves in the dusk wind, too fine for this place. And up on the ridge
 > behind it all, where the brush is thickest, nothing moves at all."*
 
+- **On night alert,** swap the fire for: *"…a well, and a fire banked down to a red eye.
+  Sharpened stakes run in a ragged line across the near ground."*
+
 #### S2_APPROACH_CHOICE — Heist, assault, parley or trick?
 
 - **Tokens:** waystation map. Drover by the watch-fire, Cask-hand and Half-orc Cask-hand at the
@@ -865,7 +879,7 @@ Mara hasn't left yet.
   - **Look:** a clerk's coat, ink on his cuffs and fingers, a ledger under his arm, a short sword
     and a little hand crossbow.
   - **Sound:** precise, clipped, suspicious. "Who signed your orders?"
-  - **Impression:** doesn't belong with this crew. Someone else's man, here to check the haul.
+  - **Impression:** doesn't belong with this crew. The others go quiet when he walks past.
 - **Introduce:** Hedge Priest (Hesper Mudd, halfling)
   - **Look:** homespun robe, a knotted club, a cord of mismatched holy charms she keeps touching.
   - **Sound:** fretful, bossy with the wounded.
@@ -957,7 +971,7 @@ Mara hasn't left yet.
     sword she never touches. Odibli has seen her once, on the cart seat.
   - **Sound:** patient, dry, never raised. Short sentences from a long way away. Counts out loud
     when she's thinking.
-  - **Impression:** calm in a way that's worse than anger. Watches the fight like she's doing sums.
+  - **Impression:** calm and unhurried. Watches the fight like she's doing sums.
 - **The floor:** Varrick, Haddo and Brask at the cart, Sennet slipping between them, Hesper at the
   fire, Clatter on the roof, and the dogs at the corral. Sized **Hard** (see Difficulty check):
   Varrick and the cask-hands are built to take two hits and keep swinging, so Dip and a Shatter
@@ -1011,8 +1025,9 @@ Mara hasn't left yet.
   - **Cached horse taken or chased off:** she runs for the river (step 5).
   - **Both:** they cornered her fairly. The table wins (see Contingencies).
 - **Make the preparation visible afterwards.** Whoever reaches the bank sees the pulled pins, the
-  deck pinned in place days ago, the trampled spot where the cached horse waited. *She planned her exit
-  before you ever arrived.*
+  deck pinned in place days ago, the trampled spot where the cached horse waited:
+  *"The pin holes are worn smooth, drilled days ago. On the far bank, the dung where a horse stood
+  tied runs from old to fresh."*
 
 #### S2_TALLY — She drops her debt tally
 
@@ -1037,7 +1052,7 @@ Mara hasn't left yet.
 Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, no Jorn.
 
 - **Band scale:** the shed is provisioned for far more than one crew. Thirty bedrolls, rations for
-  a month, a rack of matched boots. *This was one finger of a hand.*
+  a month, a rack of matched boots.
 - **Bane confirmed:** a duty ledger in a clerk's tidy hand (Sennet's). Rotations, payments, and at
   the foot of each page the same initials and one name in full: **Harrow Bane**. No face, no
   description. If Sennet is taken alive and asked, he says the name and goes white. If he ran with
@@ -1045,7 +1060,7 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
 - **The Marlow aegis-banner** on the shed's pole: old, fine, heraldic, far too good for a bandit
   relay. The party can take it. **It hangs in the Lioness later** and is the prop that unspools the
   feud. Nobody in the camp can say whose it is. Silas can, back home, and goes quiet when he does.
-  - Sample, on first look: *"That's not a bandit flag. Bandits don't have flags. That's someone's
+  - Varrick, if he's a prisoner, as they take it down in front of him: *"That's not a bandit flag. Bandits don't have flags. That's someone's
     grandfather's flag."*
 - **The waystation Common: [[Varrick's Parrying Bracer]], for Dip.** It is on Varrick's left
   forearm, and it is his Parry in the fight, so the table sees it turn their blows before they own
@@ -1075,8 +1090,8 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **Choice (party):** bring the banner home or leave it. Hung in the Lioness, it is the prop that unspools the feud, and Silas sees it.
 - **The cart is theirs** (Jeff, 2026-10-07). It becomes the Lioness's delivery cart.
 - **The horses go back to Silas** sound and shod, and the favour is paid.
-  - Silas, checking each hoof: *"All four shoes on every one. You kept your word, so I'll keep
-    mine. We're square, and I'll remember you were good for it."*
+  - Silas, checking each hoof: *"All four shoes on every one. We're square. Next time you need
+    horses, you come to me first."*
 - **Silas sees the banner** (first look, before he goes quiet; he never says whose it is):
   *"Where did you get that banner?"* A beat. *"If you hang it, hang it high. Some people who
   drink here would know whose it is, and you don't want them knowing you have it."*
@@ -1119,8 +1134,10 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
   not local · that something under the town answers her, and she calls it Asher (she won't say so
   tonight) · nothing about Harrow Bane beyond the name · why the ale is called The Mistake, and she
   isn't telling.
-- **Voice:** warm, competent, unhurried. Treats a lord and a drifter the same. Answers the question
-  asked, not the one implied, and never explains herself.
+- **Voice:** practical and dry; acts first, thanks later. Blunt to the point of swearing when
+  pushed, warm under it. Turns straight to the next job. Treats a lord and a drifter the same, and
+  never explains herself, least of all The Mistake.
+- **Tell:** one glance at the hearth when it comes up, then back to work.
 - **Now:** exasperated with Odibli since his "bad business owner" verdict at Session 30. The
   eye-roll was the table's favourite thing; keep it dry, never cruel.
 
@@ -1135,7 +1152,7 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **Kit (player-facing):** *a sheriff's star on a worn coat, a long knife on her belt, and tonight
   a deputy's blood down one side. Slung across her back, muzzle down, a short heavy thing of dark
   brass and iron with a flared mouth like a bell bolted to a walnut stock. It smells of burnt
-  sulfur, the way the air does after lightning.*
+  sulfur, like a struck match.*
 - **Label (party-facing):** Mara (the party knows her)
 - **The Fourth Letter** (lore in her entity file): a Cael heirloom sent by Lord Cael in place of
   the soldiers Ashford asked for. If anyone asks, a townsperson answers, not Mara: *"His lordship
@@ -1206,10 +1223,9 @@ no entity files, and `/recap` decides. Full introductions were at Session 30 (`S
 
 Land it on the cell door, not on the casks.
 
-> *"The cart's back, the ale's back, and nobody's looking at either. They're looking at a barred
-> window, and a man behind it who walked in on his own and hasn't said a word. Mara's at the door
-> with her arms folded. Somewhere behind you, Sable is rolling casks into the one room she has
-> left, and it finally has something to pour. And someone in the crowd says 'week's end,' and someone else agrees."*
+> *"Mara's at the door with her arms folded, and she doesn't move aside. Behind you, Sable is
+> rolling casks into the one room she has left. It finally has something to pour. Somewhere in the
+> crowd someone says 'week's end,' and someone else agrees."*
 
 **Leave unresolved:** who the prisoner is and why he surrendered · Bane's face · whose banner it is
 · Nella's tally, which she will want back · whether the Boon ever opens again.
