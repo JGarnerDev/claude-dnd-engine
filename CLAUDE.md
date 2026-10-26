@@ -82,6 +82,10 @@ When starting a new campaign, read `meta/new-campaign-setup.md` before generatin
 
 When creating any entity, read `meta/entity-creation.md` before proceeding. It contains the full protocol, known schemas, Obsidian frontmatter rules, and gameplay mechanics guidance.
 
+## Prose Style
+
+Generated prose (read-aloud text, plans, historian records, player-facing notes, lore) follows an anti-slop pass: no stock AI phrasing, no stock fantasy tells, register matched to the audience, and voice kept rather than flattened. Read `meta/prose-style.md` once per task whenever a task writes or edits prose.
+
 ## Affinity
 
 PC/NPC files carry an optional `affinity:` field — a per-target liking score (integer −10..+10) toward specific characters, distinct from `relates_to` and `disposition`. When working with character sentiment (proposing nudges, reading relationships, backfilling), read `meta/affinity.md` once per task for scale, bands, scope, and frontmatter shape. `/recap` proposes nudges; `scripts/entity-graph.py` reads them.

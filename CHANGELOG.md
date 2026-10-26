@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.45.0] — 2026-10-26
+
+### Added
+
+- **Prose style guide.** `meta/prose-style.md` sets an anti-slop pass for all generated prose, adapted from the MIT `anti-slop` skill in elithrar/dotfiles: the AI-tell catalog, fiction and fantasy tells (stock body language, "the weight of", adjective stacks, ominous one-line endings, default fantasy names), what to keep, register by audience (read-aloud, plans, historian, player notes, lore) and five questions to ask before cutting a phrase. Root `CLAUDE.md` says to read it once per task when writing prose. The example-passages section is empty until the group fills it (todo item 83).
+
 ## [0.44.0] — 2026-10-25
 
 ### Added
