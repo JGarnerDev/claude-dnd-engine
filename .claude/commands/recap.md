@@ -93,6 +93,8 @@ Report findings before proceeding:
 
 ## Phase 4 — Write the Historian Session Record
 
+**Prose:** read `meta/prose-style.md` once for this recap, before the first prose is written. The historian register applies to the session record and canonized entities (Phase 5); the player-facing register applies to the slides and the blurb (Phase 8). Run its **While drafting** checklist on each before showing the DM.
+
 Before writing, run `/check <recap summary>` to flag any historian conflicts in the DM's account. Surface CONFLICT and POSSIBLE results to the DM; do not silently canonize content that contradicts existing canon. If the DM confirms the new account supersedes old canon, note the discrepancy in `table_notes`.
 
 **Reliability flags:** in this session record and in any historian content written during this recap (Phase 5 included), add a `> **Reliability:**` blockquote whenever:

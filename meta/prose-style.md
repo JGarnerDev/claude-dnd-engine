@@ -42,6 +42,28 @@ before cutting it. Over-correcting into flat, beige prose is its own failure.
   (figurative), foster, elevate, myriad, pivotal, crucial, intricate, interplay. Swap for the plain word
   or name the actual thing; keep the original only if the plain word is worse.
 
+### Plainer choices
+
+Flagged for scrutiny, not banned. If the plain word is worse, keep the original.
+
+- **delve (into)** → look at, dig into
+- **tapestry / landscape / realm** (filler nouns) → cut, or name the actual thing
+- **underscore / highlight** → show
+- **leverage** (verb) → use
+- **seamless / frictionless** → easy, or say how
+- **robust** → reliable, sturdy
+- **crucial / pivotal / vital** → important, or say why
+- **testament to** → shows
+- **navigate** (figurative) → handle
+- **foster / cultivate** → build, grow
+- **elevate / unlock / empower** → improve, let
+- **myriad / plethora** → many, or a number
+- **when it comes to** → for, about
+- **it's worth noting / it should be noted / at the end of the day** → cut
+- **that being said** → but, still
+- **a double-edged sword** → name the specific tradeoff
+- **game-changer / revolutionary** → say the concrete change
+
 ## Fiction and fantasy tells
 
 The stock moves of model-written fantasy. Same rule: candidates, not bans.
@@ -71,6 +93,40 @@ The stock moves of model-written fantasy. Same rule: candidates, not bans.
 - Bold everywhere, so nothing stands out.
 - Em-dash as the default connector. Vary with commas, colons, periods, parentheses.
 - Symmetrical hedging and tidy "both sides" wrap-ups when the answer is known.
+- The same picture twice: a read-aloud that repeats one a few minutes earlier in the same scene.
+
+## Before and after
+
+### From the source skill
+
+- **Meta throat-clearing.** Before: "There is a failure mode worth naming directly, because
+  well-intentioned teams walk straight into it. It is the belief that safety means a human approving
+  every step." After: "Many teams equate safety with a human approving every step."
+- **Demonstrative kicker.** Before: "…reuse the machinery we already have. That instinct is where
+  most of the risk hides. Four properties break the assumptions." After: "…reuse the machinery we
+  already have. But four properties break the assumptions."
+- **Importance-flagging.** Before: "Speed is not a footnote here. It changes which controls are
+  viable. Anything that depends on a person noticing has already lost." After: "Speed changes which
+  controls are viable: anything that depends on a person noticing has already lost."
+- **Clever flourish.** Before: "an authorization bug wearing the costume of a performance
+  optimization". After: "an authorization bug, not a performance optimization".
+
+### Fantasy
+
+- **Body-language stock.** Before: *"She lets out a breath she didn't know she was holding."* After:
+  *"She sets the cup down too hard and doesn't apologise."*
+- **Abstract weight.** Before: *"The weight of the years hangs heavy in the silent room."* After:
+  *"Dust lies thick on every chair but one."*
+- **Adjective stack.** Before: *"The ancient, crumbling, moss-covered tower looms ominously."*
+  After: *"The tower leans. Moss has the north side up to the second window."*
+- **Ominous button.** Before: *"…and somewhere in the dark, something is watching."* After: cut it,
+  or give the clue: *"There's fresh mud on the sill. It wasn't there an hour ago."*
+- **Telling the party what they feel.** Before: *"A deep sense of dread washes over you as you
+  enter."* After: *"The door swings open before you touch it."*
+- **Vague transformation** (Session 31, `S2_HEARTH`). Before: *"The last stroke goes into the
+  coals and the glyph stops being what it was. For a heartbeat the fire is all the way out…"*
+  After: *"The last stroke goes into the coals and the glyph goes dark. The fire goes all the way
+  out, and cold comes up through the floorboards into your boots…"*
 
 ## What to keep
 
@@ -94,6 +150,26 @@ Match the register; never neutralize tone toward a generic middle.
 - **Player-facing notes and recap slides** — warmer, a little story flavor, still no spoilers and no
   conclusions drawn for the party.
 - **Lore and pitches** — the most room for voice, and the most slop-prone. Heaviest pass here.
+
+## While drafting
+
+Check a draft before it goes to disk, not only at review:
+
+1. Read every read-aloud box and NPC line once more against the tell lists. Rewrite what a list
+   catches, unless the What to keep list or the validation questions save it.
+2. Every sensory detail is specific to this place: a thing the party could point at.
+3. No read-aloud tells the party what they feel, think or decide.
+4. Read-aloud ends on something the party can act on, not on a portent.
+5. No two read-alouds in one scene paint the same picture.
+6. Each NPC line could only come from that NPC (their file's `voice` and `## Voice`), and needs no
+   gloss to land on a cold read.
+
+## Review findings
+
+`/review` Pass 6 checks a plan against this file. Each finding names the node, quotes the
+problem text, names the tell, and gives the rewrite in full, so the DM can approve it by number.
+Things checked and kept on purpose are listed once, briefly, with the reason, so the DM can
+overrule them.
 
 ## Validation questions
 

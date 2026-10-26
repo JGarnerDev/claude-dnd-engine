@@ -59,6 +59,8 @@ Scan results for contributed entities (`contributed_by` field) — prefer these 
 
 ## Phase 3 — Generate Pitch
 
+**Prose:** read `meta/prose-style.md` once. Pitches are lore-register: the most room for voice and the most prone to slop, so run its **While drafting** checklist on every pitch before showing it.
+
 **Anti-archetype step (mandatory, do not skip):** Before writing each pitch, silently identify the most obvious, default version of the requested type — the first thing anyone would reach for. Then explicitly avoid it. If pitch history is loaded, treat every archetype listed there as also forbidden. The goal is for each generation to occupy different narrative space than everything that came before.
 
 **Default flow — brief first, expand on request:**

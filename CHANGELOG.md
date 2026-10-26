@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.46.0] — 2026-10-26
+
+### Added
+
+- **`/review` Pass 6, Prose.** Every read-aloud box, NPC line, `Introduce:` block, Kit line and the Closing is read against `meta/prose-style.md`. Findings give the node, the quoted text, the tell and a full rewrite. Lines quoted from the table are never rewritten. A DM's name and date marks a decision, not wording, so the prose around it can be rewritten; only wording the plan marks as locked is protected.
+- **The prose guide is loaded where prose is written:** `/session` Phase 6, `/recap` (record, entities, slides, blurb), `/transcript` Phase 6 (Drive notes) and `/pitch` Phase 3, each running the guide's new **While drafting** checklist before showing or saving.
+
+### Changed
+
+- **`meta/prose-style.md` is complete:** the source skill's plainer-word swaps and before/after examples are back, with fantasy examples added (one from Session 31), plus the While drafting checklist and the Review findings format.
+
 ## [0.45.0] — 2026-10-26
 
 ### Added

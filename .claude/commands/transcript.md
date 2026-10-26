@@ -175,6 +175,8 @@ Then: "Run `/recap` to canonize this — it will pick the note up from `recaps/i
 
 **Trigger:** the DM asks for "google drive notes", "drive notes", "notes for the party", or otherwise wants the session as a document to share with the table — pasted into **Google Docs**. Do this only on request; the inbox note is the default deliverable.
 
+**Prose:** read `meta/prose-style.md` once and write to its player-facing register.
+
 **The audience is the players.** Write as if every player will read it, because they will. The inbox note is a DM document; this is not a copy of it. Build it fresh from the ledger, keeping only what the characters experienced at the table.
 
 ### No spoilers

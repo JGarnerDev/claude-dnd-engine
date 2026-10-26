@@ -236,6 +236,8 @@ Apply each round of edits, re-show only the changed and added lines, and wait ag
 
 On **go** or **chat**, write the full plan for the approved spine.
 
+**Prose:** read `meta/prose-style.md` once before writing. Draft every read-aloud box, NPC line, `Introduce:` block and Kit line to it, and run its **While drafting** checklist before the plan goes to disk. Phase 7's `/review` run checks it again in Pass 6.
+
 **Pre-step:** run the party dashboard for the Orientation paragraph and encounter balance:
 
 ```text

@@ -1,5 +1,5 @@
 ---
-description: "Polish a session plan before it runs: fill thin scenes, make lines plain and cued, keep names and cuts consistent, list new canon, check for real choices."
+description: "Polish a session plan before it runs: fill thin scenes, make lines plain and cued, keep names and cuts consistent, list new canon, check for real choices, check prose against the anti-slop guide."
 argument-hint: "[session] [--ready]"
 ---
 
@@ -21,7 +21,7 @@ Two modes:
 - **Called by `/session` Phase 6** (plan being written for the first time): run the passes and apply them directly. No findings list. The DM already approved the spine, so never add a beat in this mode: a new beat a pass wants, such as a Pass 5 choice, goes back to `/session` as a proposed spine change.
 - **Run by the DM** (standalone): run the passes, present the findings as a numbered list in plain language, and apply what the DM approves ("all" is a fine answer). Keep the numbers stable across follow-up turns, so the DM can answer by number from a phone.
 
-Read once, at the start: the plan file, its `_flow.md` if present, `meta/player-agency.md` (for Pass 5), and the files of every NPC who speaks and every location a scene is set in (1 hop, frontmatter first). Do not re-read the plan between passes.
+Read once, at the start: the plan file, its `_flow.md` if present, `meta/player-agency.md` (for Pass 5), `meta/prose-style.md` (for Pass 1's additions and Pass 6), and the files of every NPC who speaks and every location a scene is set in (1 hop, frontmatter first). Do not re-read the plan between passes.
 
 ---
 
@@ -103,9 +103,31 @@ The party should feel they steer the story, not ride it. Check the plan against
 
 ---
 
+## Pass 6 — Prose
+
+Check the plan's prose against `meta/prose-style.md`, after Pass 1 so its additions are checked too.
+
+- **What to check:** every read-aloud box, every NPC line, every `Introduce:` block, every
+  `Kit (player-facing):` line, and the Closing. DM-facing notes get the plain-and-scannable
+  register only; don't polish rules text
+- **Read each one, don't grep.** A search for stock phrases is a fine first sweep, but the pass is
+  reading every item against the tell lists, the structural tells (including the same picture
+  twice in one scene) and the audience calibration for read-aloud
+- **Run each candidate through the validation questions.** Keep what survives, and anything the
+  What to keep list protects: an NPC's `## Voice` core, a deliberate clue, a running joke
+- **Never touch** lines quoted from the table (`Said at the table`) or the plan's fixed facts.
+  A DM's name and date (`Jeff, <date>`) marks a **decision**, not wording: rewrite the prose
+  around a decision freely, as long as the decision still stands. Wording is protected only where
+  the plan says it is locked (for example "verbatim" or "word for word")
+- **Findings** follow the format in `meta/prose-style.md` → Review findings: node, quoted text,
+  the tell, the full rewrite. List what you checked and kept on purpose once, briefly, with why
+- Called by `/session`: apply the rewrites directly, except to committed wording
+
+---
+
 ## Close
 
 1. Confirm the plan still parses: `uv run scripts/session-cards.py --session {NN}`
 2. If `_flow.md` exists: `uv run scripts/flow-status.py --set "<session folder>" --quiet`. Report only problems this review caused or touched
 3. With `--ready`: set `state: planned` in the plan's frontmatter, then run `uv run scripts/prep-status.py --session {NN}` for what is still left before game night (maps, tokens, draft beats, hand-kept tasks)
-4. In chat, list what changed, grouped by scene, plus any placeholders the DM must set, the new-canon list, and the choice count. With `--ready`, add the prep-status TODO lines after them. Plain language, numbered. Do not commit
+4. In chat, list what changed, grouped by scene, plus any placeholders the DM must set, the new-canon list, the choice count, and the Pass 6 result (prose findings, and what was kept on purpose). With `--ready`, add the prep-status TODO lines after them. Plain language, numbered. Do not commit
