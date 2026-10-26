@@ -13,7 +13,7 @@ domains:
   - the record that never erases
 moral_character: "Indifferent and cryptic. A benefactor no one should trust."
 worshippers:
-  - "none known; the Citadel's transcribers use its plane without worshipping it"
+  - "none known; gnomes send messages through its plane without worshipping it"
 wants: "Unknown"
 importance: minor
 active: true
@@ -21,7 +21,7 @@ contributed_by: miguel
 source_session: "player backstory (Odibli)"
 confirmed_date: "pre-campaign"
 relates_to:
-  - [[The Citadel]] (its transcribers relay notes through its plane)
+  - [[The Citadel]] (its gnome transcribers relay notes through its plane)
   - [[Odibli]] (uses the hearth-channel; the name is dramatic irony)
 known_by:
   - [[Odibli]] (partial)
@@ -29,6 +29,8 @@ description: "The indifferent authority presiding over the plane of the gnome Na
 ---
 
 > **Reliability:** Sourced from [[Odibli]]'s player backstory (Miguel), pre-campaign. Player-authoritative. Deliberately kept mechanically loose: it presides, it doesn't cause or hunt copies.
+>
+> **Confirmed by Miguel (2026-10-25 follow-up):** the fireplace channel stands, as a way for gnomes to talk to each other. The Citadel's transcribers are one group that uses it.
 
 ## Overview
 

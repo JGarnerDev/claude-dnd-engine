@@ -215,9 +215,8 @@ The first exchange was already played (Session 30). His private judgements:
 - **[[Dip]]** — assumes Dip just hits things hard.
 - **[[Iggy]]** — wonders whether Iggy is any good with "that lute" (Iggy plays a viol; the misread is Halsby's).
 
-> **Reliability:** Kellan's claim that Odibli "does not know his true nature" sits against
-> Odibli's file, where Odibli knows he is a runaway copy (what he doesn't know is that the voice
-> was Strahd). DM ruled 2026-10-25: leave it vague until Miguel's material arrives.
+> **Reliability:** Kellan's read matches Odibli's file: per Miguel (2026-10-25), Odibli does not
+> know he is a copy. Halsby is right without knowing why.
 
 **Kellan's wish for the season:** a shared secret between Halsby and [[Odibli]].
 

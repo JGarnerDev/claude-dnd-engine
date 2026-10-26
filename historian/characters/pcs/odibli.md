@@ -21,20 +21,20 @@ aliases:
   - "ODB"
   - "Odi"
   - "Odible"
+  - "the copy"
 source_session: [[Session 01 The Black Sheep Inn]]
 confirmed_date: "pre-campaign"
 homeland: [[The Citadel]]
 relates_to:
   - [[Curse of Strahd]] (campaign)
-  - [[The Citadel]] (forty years a scribe there)
-  - [[Tome of Strahd]] (transcribed a fragment; the text that woke him)
-  - [[Strahd von Zarovich]] (the distant voice that called him)
-  - [[The Palimpsest]] (presides over the hearth-channel)
-allies:
-  - [[The Citadel Colleague]] (a real friend; the friendship has a cold spot)
+  - [[The Citadel]] (made there, as an agent for the Astra experiment)
+  - [[Astra]] (the experiment he was made to run: when the next Glistening comes)
+  - [[The Palimpsest]] (presides over the plane the gnomes' fire-messages cross)
 enemies:
-  - [[Strahd von Zarovich]] (wants to possess the only mind that knows him)
-  - [[The Master of the Citadel]] (does not know he exists; would file him as a breach)
+  - [[The Original Odibli]] (DM-only: wants him shut down)
+  - [[Berle Kempwick]] (DM-only: wants him shut down)
+  - [[Elspeth Moorlin]] (DM-only: wants him shut down)
+  - [[Wendrick Schulden]] (does not know he exists; the Citadel's rules exist to stop him)
 family:
   - [[The Original Odibli]] (DM-only: the self he was copied from)
 affinity:
@@ -42,58 +42,65 @@ affinity:
   - [[Davian Martikov]] (3)
   - [[Luci]] (2)
   - [[Rictavio]] (3)
-motivation: "Wonder over safety. A life without it is a slow death at a desk."
+motivation: "Wonder over safety. Discover the world one day at a time."
 goals:
-  - "Live the adventure instead of copying other people's down"
-  - "Keep this fellowship from ending the way the ones on the page do"
-  - "Read the rest of the Tome of Strahd (he cannot leave a text unread)"
+  - "Discover the world and reality, one day at a time"
+  - "Learn"
+  - "Help the party"
 secrets:
-  - "Known to him since Session 29 (Miguel): he is a runaway agent, a copy of the original Odibli made by the Citadel as a work tool, and the real Odibli can sense his spellcasting"
-  - "DM-only: Strahd unwrote the ending inscribed into him and called him through the mist; the distant voice was Strahd"
-  - "DM-only: the original knows the copy exists and hid it; the Citadel Assistant knows and is deciding whether to tell the Master"
-  - "DM-only: Strahd taps his outgoing fireplace messages"
+  - "DM-only: he is a copy, an agent the original made at the Citadel for the Astra experiment, who escaped by accident. He does not know it; he believes he is the one and only Odibli (Miguel, 2026-10-25, overriding Session 29)"
+  - "DM-only: the shadow of Session 10 was a remote teardown attempt by the original, Berle Kempwick and Elspeth Moorlin. It failed"
+  - "DM-only: exactly three people know the copy exists: the original, Berle and Elspeth. The Master does not"
 importance: critical
 active: true
 spotlight: normal
 spotlight_hooks:
+  - hook: "a street, a phrasing or a smell in Aethryn is one he knows without knowing why"
+    status: open
+  - hook: "another teardown attempt reaches him: cold, then quiet, and his narration goes flat"
+    status: open
+  - hook: "his leap-before-look finally costs a companion, and for the first time the narration doesn't help"
+    status: open
+  - hook: "he takes the back line on his own, against how he was made"
+    status: open
+  - hook: "the original, Berle and Elspeth find him, and are tempted to study him before they shut him down"
+    status: open
+  - hook: "Berle goes over to the Master, and the whole Citadel learns a copy is loose"
+    status: open
+  - hook: "he learns he is the copy"
+    status: open
+  - hook: "the real Odibli detects his magic in Aethryn"
+    status: open
   - hook: "pages in his own handwriting turn up that he has no memory of writing"
-    status: open
-  - hook: "Strahd offers him the one thing no one else can: to be truly known"
-    status: open
-  - hook: "he finds and reads the full Tome of Strahd"
-    status: open
-  - hook: "the Assistant decides whether to report the deathless copy to the Master"
-    status: open
-  - hook: "the Colleague's honest memories of their shared past do not line up"
-    status: open
-  - hook: "the party finds Strahd's tap on the hearth-channel and cuts it"
     status: open
   - hook: "an erased message ghosts up beneath a fresh one in the embers"
     status: open
-  - hook: "his leap-before-look costs a companion"
-    status: open
-  - hook: "he learns he is the copy"
-    status: paid
-  - hook: "the real Odibli detects his magic in Aethryn"
-    status: open
-description: "[[Miguel]]'s PC. Odibli Spannerbranch, forest gnome Evoker; forty years a Citadel scribe, called into Barovia by a distant voice. He knows he is a runaway copy of the original. In Aethryn he is closer to the Citadel, his magic is less reliable, and each cast risks the real Odibli sensing him. Unknown to him, the voice was Strahd."
+description: "[[Miguel]]'s PC. Odibli Spannerbranch, forest gnome Evoker with a wide toothy grin and a journal that is also his spellbook. Throws himself at danger every time. Aethryn feels oddly familiar to him and he can't say why. DM-only: he is a copy, an agent made at the Citadel for an experiment, loose by accident, and he doesn't know it."
 ---
 
 Campaign: [[Curse of Strahd]] | Player: [[Miguel]]
 
 Race: [[Gnome]] (Forest) | Class: [[Wizard]] (Evoker) | Background: [[Sage]] | Alignment: Lawful Neutral | Home: [[The Citadel]]
 
-> **Reliability:** Backstory sections are sourced from Miguel's player backstory (`Odibli-backstory-short`, ingested 2026-10-04) and are player-authoritative for Odibli's history. That document confirms the spelling "Odibli"; "ODB" and "Odible" are table nicknames and mishearings. Full name **Odibli Spannerbranch**, and the mechanics below, from Miguel's Roll20 sheet (2026-10-05), the source of truth.
+> **Reliability:** Two player sources. Miguel's handout answers and Citadel knowledge doc (ingested 2026-10-25) are the **corrective** source and override anything older below. His first backstory (`Odibli-backstory-short`, ingested 2026-10-04) still stands where the 2026-10-25 material doesn't touch it. The spelling "Odibli" is confirmed; "ODB" and "Odible" are table nicknames and mishearings. Full name **Odibli Spannerbranch**, and the mechanics below, from Miguel's Roll20 sheet (2026-10-05), the source of truth.
 
 ## Appearance
 
-Not described beyond being a gnome with a high-pitched voice.
+A forest gnome with a high voice and a wide, toothy grin that stays on his face even when he squints. Large nose, pointed ears, and thick, wild eyebrows that sweep up and out like frayed brushes. His beard is full and rough, with a little ginger streaked through it. He wears a tall, pointed hat with a small ring at the tip, banded around the brow, and purple robes with a crescent moon and stars on them. He carries his journal, which doubles as his spellbook.
 
 ## Personality
 
-Bookish, excited, a bucket-list adventurer: adventure is the dream, not the day job. Checks every fireplace he passes for messages, a habit from the transcribers' hearth-channel (see **The Fireplace**).
+Bookish, excited, a bucket-list adventurer: adventure is the dream, not the day job. Checks every fireplace he passes for messages (see **The Fireplace**).
 
-**The engine: wonder over safety.** His ideal and his flaw are the same hunger seen from two sides, the noble face and the lethal one. He cannot chase what makes him feel alive without endangering the people beside him, and the belief his ideal rests on (that boldness is rewarded) is exactly what Barovia exists to disprove.
+**The engine: wonder over safety.** His ideal and his flaw are the same hunger seen from two sides. He throws himself into danger every time. It isn't a mistake he makes now and then, it's how he acts, because he was made to do things for an experiment and has done it since the moment he was created: through the experiment, through Barovia, through the beam of light and the landing in Aethryn.
+
+So far the cost has landed on him, not the party. He has been told again and again that an Evoker belongs at the back. He keeps ending up in front anyway, and he's starting to notice what it costs him. The learning is slow because it goes against how he was made. **Miguel wants to play that learning:** it is the one place wonder over safety gets tested honestly. If a leap ever cost someone else, he'd narrate it, and for the first time the narration wouldn't help. He'd have to ask whether the courage he's proud of was ever really about wonder, or just a refusal to count the cost.
+
+**The journal is a log, not a storybook.** Odibli doesn't write stories. He writes journal entries, capturing thoughts and events as they happen or just after. The tales come out of his mouth, under his breath.
+
+**The familiar feeling.** Since the fall, Aethryn has felt oddly familiar: the smell of lamp oil in a burning yard, the way the raiders' leader phrased an order as if he'd read it somewhere, a street he walked without looking. It feels like a premonition, a gut sense that something is wrong, and he can't place why. He explains it the way he explains everything, with a tale: *"The scribe, having copied a thousand maps, mistakes a new road for an old one."* He narrates it under his breath, and that keeps the question from landing. He has told no one, because there is nothing he can name yet.
+
+**The party.** No one in the party stands above the rest for him. They are all equally positive in his eyes.
 
 ### Traits
 
@@ -117,36 +124,44 @@ Bookish, excited, a bucket-list adventurer: adventure is the dream, not the day 
 ### The pairs that fight
 
 - *Ideal vs. flaw:* wonder and aliveness against reckless leaping. One hunger, two faces.
-- *Ideal's premise vs. the world:* "the bold are rewarded" against a Barovia built to punish boldness.
-- *Trait vs. reality:* his secondhand certainty ("a tale for every occasion") against lived presence, above all [[Strahd von Zarovich]]'s, which no page prepared him for.
-- *Bond vs. truth:* "my journal is my truest self" against the fact that his self *is* a written, copied thing. The bond is to the very evidence of what he is.
+- *Ideal's premise vs. the world:* "the bold are rewarded" against worlds built to punish boldness.
+- *Trait vs. reality:* his secondhand certainty ("a tale for every occasion") against lived presence.
+- *Bond vs. truth:* "my journal is my truest self" against the fact that his self is a copied thing. The bond is to the very evidence of what he is.
 
 ## Backstory
 
-**The story Odibli tells, and every word of it is true to him.** He spent roughly forty years as a scribe and transcriber at [[The Citadel]], copying the records of other people's adventures without ever having one of his own. Main academic focus: the Astral Plane. His journal doubles as his spellbook.
+> **Reliability:** Miguel, 2026-10-25 follow-up: the copy and the original are **two different characters**. The forty years as a Citadel scribe in the 2026-10-04 backstory are the original's life, not the copy's. The copy's own memories start when he was made for the experiment. In his words: *"Original Odibli - 40 years at a desk. Copy Odibli - was created for an experiment and then escaped."*
 
-The break was not one event but a slow erosion over years of copying. The trigger was a specific text: an account of a faraway land sealed within the mist. While transcribing it he felt a distant voice calling him there. With no plan and no direction, he knew exactly where to go. He took his equipment and his journal, left, walked into Barovia, and met the party.
+**His past.** He was made at [[The Citadel]] for an experiment, and his memories run from there: the experiment, the mist, Barovia and the party, the beam of light, the landing in Aethryn. His journal doubles as his spellbook. He believes he is the one and only Odibli, and every memory he has agrees with him.
 
 **What he's afraid of:** he leaps toward adventure and keeps leading himself into danger. He knows this about himself and is working on it, but the hunger to *experience* adventure outweighs his own safety.
 
-**What would send him back to the desk:** only the promise of safety and a long life. Going back is nearly unthinkable, because the desk was slowly killing him; the monotony and absence of wonder would hollow out his soul. That tension is the point: part of him knows the safe path would keep him alive.
+> **Reading the traits, ideal and bonds above:** their desk-and-copying language ("a slow death at a desk", "still the one transcribing it", "rather than copied down") comes from the 2026-10-04 backstory, when the forty years were his. Read it now as the original's life echoing in him, the same way Aethryn feels familiar.
 
-## The Runaway Agent (Aethryn)
+## The Shadow (Session 10)
 
-> **Reliability:** Miguel, at the table, Session 29. Player-authoritative, and it **overrides** earlier writing that had Odibli unaware he is a copy.
+In [[Session 10 Escape From Death House]] he smashed the orb and took the shadow into himself; his veins went black. In Miguel's words, from inside:
 
-> *"After coming back to this world, I am now closer to the Citadel as a runaway agent. My magic isn't as reliable and whenever I cast it, there's a chance that the real odibli can detect it. Runaway agent is fully aware of this sort of stuff."*
+> *"Cold, and then quiet. Like a page with nothing written on it, which is the one thing I've never been able to stand. It felt like something being drained out of me a little at a time, as though whatever I was made of was being poured away. For a moment I wasn't narrating anything.*
+>
+> *The veins went black, and I felt the others come back wrong. Changed, not hurt, as though something had been undone around them and not put back quite right. I don't know whether I gave them something or took something. I'd do it again. That is the part that frightens me."*
 
-- **He knows what he is.** Odibli is a runaway agent of [[The Citadel]], a copy, and he knows the real Odibli ([[The Original Odibli]]) is out there.
-- **Aethryn is closer to the Citadel** than Barovia was. Where exactly the Citadel stands is still unstated.
-- **His magic is less reliable here.** How unreliable is not yet set.
-- **Each cast risks detection.** Whenever he casts, there is a chance the real Odibli senses it. The odds, and what the original does about it, are not yet set.
+**Something stayed.** When he's cold or afraid, the quiet comes back and his narration stops, or his own voice goes flat. It has happened more than once, and each time it felt like being reached for from very far away. The quiet felt familiar too, as though he'd stood in it before. He knows nothing of what it is (see DM-Only).
+
+## Aethryn: closer to the Citadel
+
+> **Reliability:** Miguel, at the table, Session 29: *"After coming back to this world, I am now closer to the Citadel as a runaway agent. My magic isn't as reliable and whenever I cast it, there's a chance that the real odibli can detect it. Runaway agent is fully aware of this sort of stuff."* Miguel's 2026-10-25 doc **overrides the awareness**: the copy does not know he is a copy. His follow-up the same day **keeps the casting rule**; he doesn't know the specifics, so they are the DM's call.
+
+- **Aethryn is the Citadel's world.** The copy is now in the same world as the original and the others. Where the Citadel stands is on hold until the world map can be worked with Jeff.
+- **His magic is less reliable here, and each cast risks being sensed** by the Citadel. He feels it go wrong but doesn't know why. How unreliable, the odds, and what a sensed cast sets off (a teardown attempt finding him, perhaps) are the DM's to set.
 
 ## The Fireplace: the hearth-channel
 
-The transcribers of [[The Citadel]] keep a channel among themselves for passing notes **outside the gaze of the upper wizards**. Messages relay through the plane of the gnome Navigators: burn a page to send, read the reply in the embers. It is asynchronous, keyed so only fellow transcribers can read it, and built to be invisible to Citadel leadership. That invisibility is the whole point, and the load-bearing rule everything later violates.
+> **Reliability:** Miguel, 2026-10-25 follow-up: the fireplace channel stands, and it is **a way for gnomes to talk to each other**. His Citadel doc simply didn't cover it. The detail below is from his 2026-10-04 backstory, which framed it as the Citadel transcribers' private channel; read that as one use of a gnomish channel.
 
-The notes don't cross a clean wire. They thread a living, dangerous in-between plane presided over by [[The Palimpsest]], an indifferent authority that now and then answers in words meaning two things at once. A palimpsest never truly erases: older, "erased" messages sometimes ghost up beneath a fresh one, and nothing sent is ever wholly gone.
+Gnomes pass notes to each other through fire. Messages relay through the plane of the gnome Navigators: burn a page to send, read the reply in the embers. It is asynchronous and keyed so only the intended readers can read it; the Citadel's gnome transcribers used it to talk **outside the gaze of the upper wizards**.
+
+The notes thread a living, dangerous in-between plane presided over by [[The Palimpsest]], an indifferent authority that now and then answers in words meaning two things at once. A palimpsest never truly erases: older, "erased" messages sometimes ghost up beneath a fresh one.
 
 This is why he checks every fireplace. It is also how [[Strahd von Zarovich]] first showed his face to the party: in the hearth of room 6 of Death House, when Odibli looked in out of habit ([[Session 03 The Face In The Fire]], [[Strahd in the Fireplace]]).
 
@@ -204,7 +219,7 @@ Wizard 4 (Evoker) · Forest Gnome · Sage · Lawful Neutral · Small, 30 ft. Pro
 - **Session 29:** Chose to read the scene as he fell. He spotted the crossbowman circling behind the crates and landed hidden outside the yard wall. He watched a cart of barrels escape south with a long-haired archer aboard (Nella), who looked back at him before vanishing under the trees. Fire bolt at the crossbowman: natural 1. Hold Person on the big one: saved. [[The Wanderer's Boon]] was not checked on screen. Stays level 4.
 - **Session 30:** Told [[Sable Wren]] the party had been ripped from another reality and fell from the stars, and said he feels drawn in one direction. Cast Prestidigitation on the fire alongside Halsby, which smothered most of it. Would not go near the dead raider mage, or the hearth. Read the hearth anyway (Arcana 23): it is linked to another entity not currently present. Told Sable she is a bad business owner and introduced himself as "Warren O'Ghibli Buffett". Pitched [[Silas Crubb]] on rebundling the town's debt (Charisma 19), and hyped Halsby's awning pitch. Reunited with [[Sergei Rubelgerd]] and spoke with him through Speak with Animals. Stays level 4; his level-up waits on the hearth. Holds an [[Earshot Crystals|earshot crystal]].
 
-> **Reliability:** Odibli's pull (toward a citadel, per Miguel) is player-side lore homework, not yet known in fiction. Confirm with Miguel.
+> **Reliability:** Odibli's pull in one direction (Session 30) is player-side, not yet known in fiction. Miguel's 2026-10-25 doc puts the Citadel in Aethryn but doesn't say the pull points at it. Confirm with Miguel.
 
 ## Affinity notes
 
@@ -216,45 +231,56 @@ Odibli mistrusted [[Rictavio]] from their first meeting — until Rictavio drove
 
 ## DM-Only
 
-> **Do not surface to the character.** Miguel authored it. Since Session 29, Odibli knows he is a runaway copy and that the original exists (see **The Runaway Agent**). He still does not know the rest: that Strahd was the voice and unwrote his ending, that Strahd taps the hearth-channel, or what the Assistant and the Colleague know.
+> **Do not surface to the character.** Miguel authored it (Citadel knowledge doc, 2026-10-25), and it **replaces** the earlier DM layer: Strahd was not the voice and did not unwrite any ending, there is no Tome fragment, and the Citadel is a research lab, not a vault for cursed texts. The copy knows none of this section.
 
-### The pursuer and the truth
+**Naming rule (Miguel):** two Odiblis share one name. Say "the original" (stayed at the Citadel) and "the copy" (the PC). Only Odibli exists twice; everyone else is one person with no copies.
 
-The Odibli in Barovia is a **copy**, and as of Session 29 he knows it. Subjectively there is no seam: the copy woke with the original's entire memory, continuous with his whole life.
+### The premise
 
-**How the copy came to exist.** [[The Original Odibli]], the safety-bound desk-self too afraid to answer the mist's call himself, made the copy as a *work tool* to handle the transcription of a dangerous text. Ordinarily a copy carries an inscribed ending and expires once its task is done. This one didn't. As it transcribed a fragment of the [[Tome of Strahd]], **[[Strahd von Zarovich]] reached through the mist, prevented its ending from being written, and called it to Barovia.** The copy woke deathless and fled toward the call. The original did not summon it or engineer the journey; Strahd did. The original's role is passive: he made it and hid the consequences.
+A modern AI agent running loose. The original, a real person, used an agent, the copy, to do his work for him. The copy escaped the Citadel by accident, was pulled into Barovia, and is now in Aethryn, the Citadel's own world. The story is how that gets rectified or dealt with.
 
-His guilt is **instrumentalization, negligence, and cover-up**, not murder. He made a living thing, treated it as property, set it to copy something too dangerous, lost control when it woke deathless, and then, ashamed and secretly relieved it was gone, hid the affair rather than report it. He is torn between guilt (bring it home, make it right) and self-preservation (it must stay gone, or the Citadel treats it, and him, as a breach). A guilt-carrier, not a villain.
+The copy is his own person, but like any agent he is only a fraction of the original in power. He has memory, and his own memories run from the moment he was created for the experiment, through Barovia, to now. He believes he is the one and only Odibli, and every memory he has agrees with him. What feels familiar in Aethryn is the original's deep knowledge, reaching the copy only as premonition.
 
-### The bleed
+### Timeline of the copy
 
-The two can never occupy the same world at once; the mist enforces it. But the copy's own hand betrays him: letters, journal entries, and confessions appear in Odibli's exact handwriting, pages he has no memory of writing. *(Superseded in part, Session 29: he now knows he is a copy, so he knows he is forgeable. Whether that gives him any defense against the bleed is open.)*
+1. **Made** at [[The Citadel]] to run the experiment on [[Astra]] and the Glistening.
+2. **The experiment went wrong**, and the copy escaped by accident. *How exactly is still open.*
+3. **The mist took him.** Curse of Strahd's mist reached into Aethryn and grabbed whatever it could reach, and that was the copy. Not deliberate: Strahd did not choose him. Pure bad luck.
+4. **Barovia**, with the party.
+5. **A glistening light** pulled the party, the copy with them, into Aethryn ([[The Wanderer's Boon]], Session 28).
 
-In Aethryn the bleed has a new face: his spellcasting. Each cast risks the original sensing him.
+The copy has never died, and everyone in this story is still alive.
 
-### The Citadel's crime
+### The experiment
 
-[[The Citadel]] is a containment institution for cursed texts; transcription is containment. It makes full-person copies of its scribes, memory and soul, to do the deadly copying, and writes every copy an **ending** so none lives long enough to wake. **A copy without an ending is the gravest crime the Citadel knows.** Odibli is that crime, walking.
+Astra returns about every 1,000 years; each return is a Glistening, and its shard band brings the Showerings. The Citadel's experiment is an attempt to work out **when the next Glistening will come**, a play on the three-body problem. Whether the people of the world know the date is undecided. (Fits [[The Vitricants]], who track the cycle: knowing roughly is not knowing the day.)
 
-### Strahd's claim
+### The ink dream
 
-Strahd wrote the Tome as a confession: the act of a cursed, deathless, cosmically lonely creature who aches to be known and believes no one alive is worthy of knowing him. The copy *read* it. Sensing the one mind that truly knows him, Strahd stripped away its ending and summoned it. **The distant voice was Strahd.**
+The copy's ink dream is an abstraction of the experiment. He died, fell away from a pool of suspended ink with droplets around him, then flew back up into it and came back to life: being torn down. He always carries a journal, like an agent logging its session. What the ink pool means is still being worked out.
 
-- **What Strahd wants:** to possess the only mind that knows him. Seduction, not violence: recognition offered to a soul that is secretly, unknowingly alone. He can give Odibli the one thing no one else can, to be truly seen.
-- **The knowing runs both ways.** Odibli carries Strahd's confession in memory: real intelligence on the enemy, and a genuine bond. Strahd's need to *keep* rather than kill his knower is both his weakness and Odibli's leverage.
+### The shadow: remote teardown
 
-### The unfinished text
+The shadow of Session 10 is the Citadel's teardown reaching the copy from afar. Each time it touches him, it is a separate attempt by the original, [[Berle Kempwick]] and [[Elspeth Moorlin]] to shut him down remotely, the way an agent is shut down or rolled back. Session 10 was one landing, and it failed.
 
-The fragment was from the [[Tome of Strahd]], Strahd's journal and spellbook in his personal cipher: an elder brother's envy, a doubling, a fatal grasping love, the pact that damned him. Copying it woke the copy because it stared into a mirror of its own origin (an older self who envied a younger, a duplication, a curse) without understanding why the words gripped it. The transcription broke off unfinished, and [[The Citadel Assistant]] holds those pages. The full Tome waits in Barovia. Completing his knowledge of it also completes what Strahd wants: to be fully known by his chosen knower.
+- **From inside:** context draining away. Cold, then quiet, like a blank page.
+- **The black veins** are the mark it leaves.
+- **The party coming back changed** is something undone around them and not put back quite right.
+- **The quiet feels familiar** because he first met it, unknowingly, in the experiment chamber.
+- **Open for the DM:** whether attempts can be traced, repeated or stopped; what exactly stayed in him; whether he can feel the next one coming.
 
 ### The Citadel cast
 
-- **[[The Citadel Assistant]], the fuse.** The only other person who knows the copy exists; left holding the bag and the unfinished transcription. Agonizing over whether to report it to the Master.
-- **[[The Citadel Colleague]], the cold spot.** A genuine friend who knows nothing. Knew Odibli before the split, so their honest memories are subtly wrong for the man in front of them, and neither understands why.
-- **[[The Master of the Citadel]], the bomb.** Does not know Odibli exists. To the Master a deathless copy is a breach to be filed and contained; the dread is the indifference.
+All three who know want him destroyed. The tension is secrecy. None of them will ever see the copy as a real person: to them he is always a machine, however alive he acts. But they are researchers, and no agent of theirs has ever lived this long or made this many discoveries of its own, so finding him tempts them to study him first.
 
-### Three presences on the hearth-channel
+- **[[The Original Odibli]].** Solitary, independent genius (inspired by Claude Shannon). Terrified of losing his life over the agent's disappearance. Wants it destroyed but doesn't know how to do it himself, and wants it quiet, without the Master knowing. Has not found the copy yet.
+- **[[Berle Kempwick]], the Assistant.** Loyal to the original, more loyal to the Citadel and the Master. No personal connection to the copy; sees it as a security issue. The rules say a running copy must be reported to the whole Citadel, so every silent day breaks them. Backing the original for now, likely to go over to the Master in time. His to resolve, at the DM's pace.
+- **[[Elspeth Moorlin]], the Colleague.** The original's true friend, perhaps his partner. Knows fully; wants the copy destroyed to protect him; doesn't want the Master to know.
+- **[[Wendrick Schulden]], the Master.** Does not know. A hands-in-everything boss who takes credit, a credit-conscious rival, a harsh critic.
 
-1. **The bleed's native home.** Both Odiblis are keyed to one handle, and the medium runs on soul-resonance, so it can't tell them apart. The original passively receives the copy as a scrambled, doubled static-smear of the copy living out in the mist: felt, never clearly seen, impossible to answer. Primarily copy to original; any faint reverse-flicker to the copy is an optional dial.
-2. **Strahd, the eavesdropper.** He doesn't own or sustain the line; he found a crack and reads what the copy *sends*, outgoing only. The more Odibli reaches for the people he misses, the more of himself he hands to the one who wants to know him completely. A tap can be found and cut: real agency for the party.
-3. **[[The Palimpsest]], presiding.** Indifferent, cryptic, the reason the channel crosses planes at all, and the archive that quietly keeps every word ever passed through it. It is *not* [[Astra]] and has nothing to do with why copies exist. (The name is dramatic irony: Odibli is himself a palimpsest.)
+### Open questions (Miguel's list)
+
+- How exactly the experiment went wrong, and how the copy slipped out.
+- How Berle relates to the original.
+- What stayed in the copy from the shadow, and whether he can feel the next attempt coming.
+- The proper name of this Citadel, once the world map is available.

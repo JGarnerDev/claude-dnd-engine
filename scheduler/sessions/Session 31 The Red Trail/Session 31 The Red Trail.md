@@ -358,8 +358,9 @@ Mara hasn't left yet.
 ### Unresolved from Sessions 29–30
 
 - **Fida**, Luci's name for the broken moon, has no entity yet. Nothing tonight needs it.
-- **The citadel or wizard's tower Odibli is drawn toward** is Miguel's lore homework, player-side
-  only. No character knows it, and nothing in this plan touches it.
+- **The pull Odibli feels in one direction** is player-side only. Miguel's lore (2026-10-25)
+  puts [[The Citadel]] in Aethryn but doesn't say the pull points at it. No character knows it,
+  and nothing in this plan touches it.
 - **Sable's brewing copper** is ruined; only [[George Ringo]] and [[Zach]] could remake it. A
   state note, not a beat tonight.
 - **The raiders' names** stay recap-only. If anyone in town asks, Mara knows Tallis by reputation
@@ -530,8 +531,9 @@ Mara hasn't left yet.
   went out."* She explains nothing (she's not saying Asher's name tonight).
 - **The seed:** the charm paper matches the charms Tallis sold at the fair. Mara knows his name.
   Someone may ask who taught him. Leave it there.
-- **His Aethryn rule:** a sustained cast like this is the kind the original Odibli might feel.
-  Roll for it if the odds are set by then; otherwise note it for `/recap`.
+- **His Aethryn rule (Miguel confirmed 2026-10-25; odds are the DM's):** a sustained cast like
+  this is the kind the Citadel might sense. Roll for it if you've set the odds; otherwise note it
+  for `/recap`.
 - **They sleep.** Upstairs, in rooms with beds and not much else. It helps; it is not a long rest. One line: *"You sleep
   like dropped coats. It isn't enough, and you all know it."*
 - **Transition:** grey light, and the trail is getting older.
@@ -1246,7 +1248,7 @@ Land it on the cell door, not on the casks.
     Orrin, Hesper Mudd, Tam "Clatter" Cobb, Brick and Mortar), only for whoever comes up
 - **Held for later:** Elowen and Odibli (the Unfinished Binding) · Jorn's foreshadow · the Marlow
   coppers · Asher's Dead Sun phrase for Luci · the battlefield-spirit and coin-forgery spitballs ·
-  the citadel Odibli is drawn toward (Miguel's homework).
+  the pull Odibli feels (Miguel's homework).
 - **Before the table:** Miguel's hearth notes (optional; the beat runs on the stand-in) · Tyler's
   backstory (optional; the cell stays a silhouette without it) · confirm the 150 gp and Dip's
   crystal with Ben. Maps, tokens and cards are tracked in `_tasks.md`.

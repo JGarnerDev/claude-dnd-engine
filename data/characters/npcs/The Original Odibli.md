@@ -9,42 +9,49 @@ tags:
   - character
   - character/npc
 location: [[The Citadel]]
-personality: "Safety-bound and afraid. Heard the mist's call and was too frightened to answer it himself. Torn between guilt and self-preservation; ashamed, and secretly relieved."
-livelihood: "Scribe and transcriber at [[The Citadel]]"
+personality: "Solitary, independent, brilliant, and terrified: his life may hang on an agent he lost."
+livelihood: "Wizard and researcher at [[The Citadel]]"
 race: "[[Gnome]]"
 class: "[[Wizard]]"
-disposition: unknown
+disposition: hostile
 importance: major
 active: true
+aliases:
+  - "the original"
 relates_to:
-  - [[Odibli]] (made him as a copy, a work tool; the copy does not know)
-  - [[The Citadel]] (scribe)
-  - [[The Citadel Assistant]] (his junior on the transcription; the only other one who knows)
-  - [[The Citadel Colleague]] (old friend)
+  - [[Odibli]] (made him as an agent for the Astra experiment; wants him shut down)
+  - [[The Citadel]] (researcher)
+  - [[Berle Kempwick]] (his Assistant; knows)
+  - [[Elspeth Moorlin]] (his true friend, perhaps his partner; knows)
+  - [[Wendrick Schulden]] (must not find out)
+  - [[Astra]] (the experiment: when the next Glistening comes)
 known_by:
-  - [[The Citadel Assistant]] (full)
+  - [[Berle Kempwick]] (full)
+  - [[Elspeth Moorlin]] (full)
 goals:
-  - "Keep the copy gone, or the Citadel treats it, and him, as a breach"
-  - "Bring it home and make it right (the guilt that keeps pulling the other way)"
-description: "DM-only. The Odibli who never left the Citadel desk. Made the copy that walked into Barovia, then hid the affair. A guilt-carrier, not a villain."
+  - "Get the copy destroyed, quietly, without the Master knowing"
+  - "Stay out of trouble: he fears for his life over the agent's disappearance"
+description: "DM-only. The Odibli who stayed at the Citadel. Made the copy as an agent to run the Astra experiment; it escaped by accident. Wants it shut down quietly and doesn't know how. Has not found it yet."
 ---
 
-> **DM-only.** [[Odibli]] does not know this person exists. Sourced from Miguel's player backstory.
+> **DM-only.** [[Odibli]] does not know this person exists. Sourced from Miguel's Citadel knowledge doc (2026-10-25), which **replaces** the earlier version (the desk-self afraid of the mist's call, the Tome fragment, the inscribed ending). Inspired by Claude Shannon.
 
 Location: [[The Citadel]] | Race: [[Gnome]] | Class: [[Wizard]]
 
 ## Who He Is
 
-The *original* Odibli, the one who never left. The mist's call reached him and he was too afraid to answer it. He made a full-person copy of himself as a **work tool**, to handle the transcription of a dangerous text: a fragment of the [[Tome of Strahd]]. The copy should have carried an ending and expired. [[Strahd von Zarovich]] unwrote that ending; the copy woke deathless and fled into the mist.
+A solitary, independent genius. He used an agent, the copy, to do his work for him: to run the Citadel's experiment on [[Astra]] and the Glistening. The experiment went wrong and the copy escaped by accident; the mist took it into Barovia, and a glistening light later brought it back into Aethryn, his own world.
 
-He did not summon the copy or engineer its journey. His guilt is **instrumentalization, negligence, and cover-up**: he made a living thing, treated it as property, set it to copy something too dangerous, lost control of it, and hid the affair rather than report it.
+He is **terrified of losing his life** over the agent's disappearance. He wants the copy destroyed, but he doesn't know how to tear it down himself, and he wants it done quietly, without [[Wendrick Schulden]] knowing, so he isn't in trouble.
 
-## The Bleed
+## The Forty Years
 
-The two can never occupy the same world at once; the mist enforces it. Both are keyed to one handle on the transcribers' hearth-channel, and the medium can't tell them apart. He passively receives the copy as a scrambled, doubled static-smear of a life being lived out in the mist: felt, never clearly seen, impossible to answer.
+Miguel, 2026-10-25 follow-up: the copy and the original are two different characters. The forty years at a Citadel desk from the 2026-10-04 backstory are **the original's** life, not the copy's: decades copying other people's adventures without ever having one of his own. When the copy talks about "a slow death at a desk", it is this life echoing in him.
 
-## Human Detail
+## What He Has Done
 
-He is the safe life [[Odibli]] fled. The desk kept him alive, and it is hollowing him out.
+With [[Berle Kempwick]] and [[Elspeth Moorlin]], he has tried to shut the copy down remotely, more than once. The shadow Odibli took in at Session 10 was one of those attempts landing. It failed.
 
-Related: [[The Citadel Assistant]], [[The Citadel Colleague]].
+## When He Finds It
+
+He has not found the copy yet. When he does, he still wants it shut down. But no agent of his has ever lived this long or made this many discoveries of its own, so he may be tempted to study it first. He will never see it as a real person or as its own person: to him it is always a machine.

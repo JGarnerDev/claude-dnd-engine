@@ -14,48 +14,68 @@ contributed_by: miguel
 source_session: "player backstory (Odibli)"
 confirmed_date: "pre-campaign"
 relates_to:
-  - [[Odibli]] (scribe and transcriber for roughly forty years; a runaway copy, and since Session 29 he knows it)
-  - [[The Original Odibli]] (scribe; made the copy and hid it)
-  - [[The Citadel Assistant]] (junior scribe; knows about the copy)
-  - [[The Citadel Colleague]] (scribe; Odibli's friend)
-  - [[The Palimpsest]] (presides over the plane the transcribers' hearth-channel runs through)
-  - [[Tome of Strahd]] (held a fragment; its transcription woke the copy)
-rulership: [[The Master of the Citadel]]
+  - [[Odibli]] (an agent made here for the Astra experiment, loose by accident; he doesn't know)
+  - [[The Original Odibli]] (researcher; made the copy)
+  - [[Berle Kempwick]] (the original's Assistant; knows about the copy)
+  - [[Elspeth Moorlin]] (the original's true friend; knows about the copy)
+  - [[Astra]] (its experiment: when the next Glistening comes)
+  - [[The Palimpsest]] (presides over the plane the gnomes' fire-messages cross)
+rulership: [[Wendrick Schulden]]
 known_by:
-  - [[Odibli]] (knows he is its runaway copy, since Session 29; how much else he knows about its copy-making is unstated)
+  - [[Odibli]] (as his home; he does not know he is its runaway copy)
 motives:
-  - "Contain cursed and powerful texts by transcribing them"
-  - "Keep its copy-making clean: no copy lives long enough to wake"
+  - "Work out when the next Glistening will come"
+  - "Do its work fast through agents, and keep every agent under control"
 tensions:
-  - "A deathless copy is loose (Odibli), and the original buried it"
-  - "The junior who knows is deciding whether to tell the Master"
-  - "The transcribers keep a hearth-channel built to be invisible to leadership"
-hierarchy: "Scribes and transcribers at the bottom, upper wizards above them, the Master over all."
+  - "A copy is loose (Odibli), and the three who know are hiding it from the Master"
+  - "The original's Assistant is breaking the rules every day he stays silent"
+hierarchy: "Researchers and their assistants, with Master Wendrick Schulden over all."
 livelihood: "Unknown"
-description: "A containment institution for cognitohazard texts that makes full-person copies of its scribes to do the deadly copying, each written with an ending. Odibli's home of forty years."
+description: "A great research lab in Aethryn, one vast windowless block of dark glassy stone with a crystal roof, whose people reshape its halls at will. It does its work through agents spun up and shut down on demand. One got loose: Odibli."
 ---
 
-> **Reliability:** Sourced from [[Odibli]]'s player backstory (Miguel), pre-campaign. Player-authoritative. Where the Citadel stands, and in which world, is unstated. Miguel, Session 29: Aethryn is **closer** to it than Barovia was.
+> **Reliability:** Sourced from Miguel's Citadel knowledge doc and handout answers (2026-10-25), which **replace** the earlier writing (a scriptorium-vault for cursed texts, copies written with endings, a Tome of Strahd fragment). Player-authoritative. The Citadel is in **Aethryn**; its proper name and where it stands wait on the world map with Jeff. Until then, call it "the Citadel".
 
-## What It Says It Is
+## Citadels in the World
 
-A great scriptorium. [[Odibli]] spent roughly forty years there as a scribe and transcriber, copying the records of other people's adventures.
+"Citadel" is the general in-world term for this kind of research lab, like "university". Each has its own proper name and a specialty that reflects its part of the world. This one takes its largest inspiration from Bell Labs; others are loosely modeled on GE Research Laboratory, DuPont and Skunk Works. How many there are, their names and placement are on hold until the world map.
 
-## What It Is (DM-only)
+## What It Looks Like
 
-A **containment institution**. Its true function is holding cursed and powerful texts: cognitohazards where reading or copying the worst of them can destroy the mind of whoever does it. **Transcription is containment.**
+From outside, one vast rectangle of dark, glassy stone, fused from the shards of the last Glistening and set on a foundation of the same crystal. No windows, no ornament. Great buttresses stand along its sides, and they move: slowly, over hours and days, they slide, lengthen and change shape, the outward sign of the inside being rearranged for the work being done. Whatever shape they take, they stay the same heavy, bare, massive stone; the Citadel has only ever had one manner of building. The whole roof is a single great collection of crystals, catching whatever light the sky gives.
 
-Its method is monstrous and routine. Because the dangerous texts can't safely be read by real people, the Citadel makes **full-person copies of its scribes**, complete people with memory and soul, to absorb the hazard and do the deadly copying. To keep this clean, every copy is **written with an ending**: an inscribed span that runs out once its short task is done. Copies expire before they live long enough to wake to what they are. Nobody has to look a lasting, self-aware copy in the eye.
+Inside, it is larger than it has any right to be. At its heart is a wide open atrium, and the crystal roof pours its light straight down through it and on through every level, until the walls glow faintly. Down each corridor:
 
-**A copy without an ending is the gravest crime the Citadel knows.** It is what the whole system exists to prevent, because such a being is living proof of what the Citadel does to the people it makes, and it cannot simply be waited out. Odibli is that crime, walking. His ending was never written, because [[Strahd von Zarovich]] unwrote it through the mist while he transcribed a fragment of the [[Tome of Strahd]].
+- **Prismaries** (PRIZ-muh-ree) line one side: the labs, where experiments are run.
+- **Latteries** (LAT-er-ee) line the other: where the writing, office work and records are kept.
+
+The people who work there can reshape the walls, rooms and halls to their own will, but never their manner: every hall stays bare, heavy and severe. Each change is answered by a buttress somewhere outside, bending to match.
+
+**What feels off:** the building obeys everyone and no one. It rearranges for whoever is working, and no two people agree on where anything is. It looks like a place that keeps its rules, and the rules are whatever the last person wanted.
+
+> **Style rule (Miguel):** always brutalist, never another style, but the word "brutalist" is never used in-world and there is no poured concrete. Real inspirations: the AT&T Long Lines Building at 33 Thomas Street (which also inspired the Oldest House in *Control*) and Saarinen's Bell Labs Holmdel building, with its atrium and flexible workspaces. Other influences: *Control*, *Alan Wake*, the Backrooms. *Control*'s floating triangle is deliberately left out.
+
+## The Experiment
+
+[[Astra]] returns about every 1,000 years; each return is a Glistening, and its shard band brings the Showerings. The Citadel is trying to work out **when the next Glistening will come**, a play on the three-body problem. Whether the people of the world know the date is undecided.
+
+## How It Works (DM-only)
+
+The Citadel works through **agents**, in the sense of a modern AI agent: spun up for a task, then spun down and removed. They need a lot of context to do a task properly. It works at a very fast pace this way, and always keeps control: an agent can be shut down as quickly as it was made.
+
+The danger is an agent escaping. A powerful wizard's copy loose in the world, not knowing who he really is, is exactly what the rules exist to prevent, and letting an agent loose is one of the gravest offenses a wizard can commit. **By the rules, if a copy runs, the entire Citadel must be told.**
+
+[[Odibli]] is that agent: made by [[The Original Odibli]] to run the Astra experiment, loose by accident when it went wrong. Exactly three people know: the original, [[Berle Kempwick]] and [[Elspeth Moorlin]]. All three want him shut down and have tried to do it remotely; the shadow of Session 10 was one attempt landing. None of them has told the Master.
 
 ## People
 
-- **[[The Master of the Citadel]]:** the bomb. Does not know Odibli exists.
-- **[[The Original Odibli]]:** the desk-self who made the copy and hid it.
-- **[[The Citadel Assistant]]:** the fuse. Knows, and holds the unfinished transcription.
-- **[[The Citadel Colleague]]:** the cold spot. Odibli's friend, who knows nothing.
+- **[[Wendrick Schulden]], the Master.** Does not know.
+- **[[The Original Odibli]].** Made the copy; wants it destroyed quietly.
+- **[[Berle Kempwick]], the Assistant.** Knows; deciding whether to report it.
+- **[[Elspeth Moorlin]], the Colleague.** Knows; protecting the original.
 
 ## The Hearth-Channel
 
-The transcribers pass notes among themselves outside the gaze of the upper wizards: burn a page to send, read the reply in the embers. Messages relay through the plane of the gnome Navigators, presided over by [[The Palimpsest]]. Keyed so only fellow transcribers can read it; invisible to leadership by design.
+> **Reliability:** Miguel, 2026-10-25 follow-up: the fireplace channel is a way for **gnomes** to talk to each other, not a Citadel institution.
+
+The Citadel's gnome transcribers use it to pass notes outside the gaze of the upper wizards: burn a page to send, read the reply in the embers. Messages relay through the plane of the gnome Navigators, presided over by [[The Palimpsest]].

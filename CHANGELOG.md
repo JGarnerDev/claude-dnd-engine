@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.43.0] — 2026-10-25
+
+### Changed
+
+- **Retcon: Odibli's backstory and the Citadel.** Miguel's 2026-10-25 handout answers and Citadel doc replace the 2026-10-04 layer. Odibli is a copy, an agent the original made for the Astra/Glistening experiment, who escaped by accident. The mist took him by bad luck. He does **not** know he is a copy, which overrides his Session 29 table line. The forty years at a desk were the original's. The Session 10 shadow was a failed attempt to shut him down remotely. The Citadel is now a research lab in Aethryn, not a vault for cursed texts. Retired: Strahd as the calling voice, the "endings" written into copies, the Tome of Strahd fragment, and Strahd listening in on the hearth. Kept: the Aethryn casting rule (odds are the DM's) and the fireplace, now a way for gnomes to talk to each other. Don't plan from the old layer.
+- **Citadel cast named, files renamed:** `The Citadel Assistant` → Berle Kempwick, `The Citadel Colleague` → Elspeth Moorlin (she now knows everything), `The Master of the Citadel` → Wendrick Schulden. Old names are kept as aliases, so old links still resolve.
+
 ## [0.42.0] — 2026-10-21
 
 ### Changed
