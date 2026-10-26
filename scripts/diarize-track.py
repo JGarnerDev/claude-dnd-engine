@@ -15,7 +15,8 @@
 # is the default PyPI wheel, which on Windows is CPU-only; that is deliberate. ECAPA is a
 # ~20M-parameter model and the work is a few thousand short crops, so CPU finishes in
 # minutes and the CUDA wheel is a ~2.5GB download for no useful gain.
-# consumers: recaps/CLAUDE.md, README.md, .claude/commands/transcript.md -- update these if
+# consumers: recaps/CLAUDE.md, README.md, .claude/commands/transcript.md, and
+#   scripts/diarize-bench.py (imports its functions) -- update these if
 #   usage, flags, or output format change.
 """
 diarize-track.py -- split ONE audio track that carries two or more speakers.
@@ -50,9 +51,17 @@ carries a confidence, and `--min-confidence` marks the weak ones ambiguous rathe
 than guessing -- an honestly ambiguous label is worth more than a confident wrong
 one, because /recap turns these into canon.
 
+Voice references (--refs) replace steps 3 and 4 when every speaker on the track has
+been recorded alone before: each line is matched to voiceprints from those solo tracks,
+so there are no anonymous clusters to name. On diarize-bench.py's fake shared mics it
+cut confident-wrong labels from 9% to 1% and from 72% to 0.2%. --export-key cuts clips
+for the DM to tag by ear, and every later run scores itself against those tags.
+
 Usage:
     uv run scripts/diarize-track.py --session 27 --track 1-eljeffe0024 \
-        --speakers "Jeff (Iggy),Paul (Luci)"
+        --speakers "Jeff (Iggy),Paul (Luci)" --refs "26,28"
+    uv run scripts/diarize-track.py --session 30 --track 1-dynamicpenny \
+        --speakers "Miguel (Odibli),Kellan (Halsby),Paul (Luci)" --export-key 40
     uv run scripts/diarize-track.py --session 27 --track 1-eljeffe0024 \
         --speakers "Jeff (Iggy),Paul (Luci)" --assign 0=Paul --dry-run
 """
@@ -155,7 +164,8 @@ def decode(path: Path):
 
 # -- Embedding ----------------------------------------------------------------
 
-def embed(get_wav, segments: list, device: str, cache_file=None, force: bool = False):
+def embed(get_wav, segments: list, device: str, cache_file=None, force: bool = False,
+          min_dur: float = MIN_EMBED_DUR):
     """Crop every long-enough utterance and return (index list, L2-normalised matrix).
 
     `get_wav` is a callable, not samples: on a cache hit the audio is never decoded at
@@ -196,7 +206,7 @@ def embed(get_wav, segments: list, device: str, cache_file=None, force: bool = F
     idx, crops = [], []
     for i, s in enumerate(segments):
         dur = float(s['end']) - float(s['start'])
-        if dur < MIN_EMBED_DUR:
+        if dur < min_dur:
             continue
         a = int(float(s['start']) * SAMPLE_RATE)
         b = int(float(s['end']) * SAMPLE_RATE)
@@ -205,13 +215,13 @@ def embed(get_wav, segments: list, device: str, cache_file=None, force: bool = F
             half = int(MAX_EMBED_DUR * SAMPLE_RATE / 2)
             a, b = mid - half, mid + half
         crop = wav[max(a, 0):min(b, len(wav))]
-        if len(crop) < int(MIN_EMBED_DUR * SAMPLE_RATE):
+        if len(crop) < int(min_dur * SAMPLE_RATE):
             continue
         idx.append(i)
         crops.append(crop)
 
     if not crops:
-        sys.exit('no utterance long enough to embed (all under %.1fs)' % MIN_EMBED_DUR)
+        sys.exit('no utterance long enough to embed (all under %.1fs)' % min_dur)
 
     vecs = []
     BATCH = 16
@@ -291,18 +301,352 @@ def cluster(mat, k: int, method: str = 'spectral'):
     return lab, conf
 
 
+# -- Voice references ---------------------------------------------------------
+
+# Only long lines make reference voiceprints: they are the cleanest samples of a voice,
+# and a solo track has plenty of them, so being picky costs nothing.
+REF_MIN_DUR = 2.0
+
+# A speaker's centroid is rebuilt from the shared track itself only when at least this
+# many of its lines were labelled confidently -- fewer, and one odd line could drag it.
+MIN_ADAPT = 10
+
+
+def handle_of(stem: str) -> str:
+    """Craig track stem -> Discord handle: '3-dynamicpenny' -> 'dynamicpenny'."""
+    return re.sub(r'^\d+-', '', stem).lower()
+
+
+def speaker_map(folder: Path) -> dict:
+    """speakers.tsv -> {lowercased stem: display name}. Same rules as transcribe.py."""
+    f = folder / 'speakers.tsv'
+    if not f.exists():
+        return {}
+    out = {}
+    for line in f.read_text(encoding='utf-8').splitlines():
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
+        parts = re.split(r'\t|\s{2,}|=', line, maxsplit=1)
+        if len(parts) == 2:
+            out[parts[0].strip().lower()] = parts[1].strip()
+    return out
+
+
+def ref_embeddings(handles: list, sessions: list, device: str) -> dict:
+    """{handle: L2-normalised voiceprints} from each player's solo tracks in `sessions`.
+
+    Craig gives every player their own track under the same handle every session, so
+    the voices on a shared track have usually been recorded alone before. A track whose
+    speakers.tsv label names two people (a shared mic) is skipped -- it is not solo.
+    Embeddings land in the same per-track cache diarize-track.py uses, so each solo
+    track is embedded once, ever.
+    """
+    import numpy as np
+
+    out = {h: [] for h in handles}
+    for sess in sessions:
+        slug = sess if str(sess).startswith('session-') else 'session-' + str(sess)
+        folder = AUDIO_DIR / slug
+        cache = OUT_DIR / '.cache' / slug
+        if not folder.is_dir():
+            cwrite('  refs    : no audio for ' + slug + ', skipped', 'yellow')
+            continue
+        labels = speaker_map(folder)
+        for p in sorted(folder.iterdir()):
+            if p.suffix.lower() not in AUDIO_EXTS or handle_of(p.stem) not in out:
+                continue
+            if '+' in labels.get(p.stem.lower(), ''):
+                cwrite('  refs    : ' + slug + '/' + p.stem + ' is a shared mic, skipped',
+                       'darkgray')
+                continue
+            jf = cache / (p.stem + '.json')
+            if not jf.exists():
+                cwrite('  refs    : ' + slug + '/' + p.stem + ' has no transcript cache, skipped',
+                       'yellow')
+                continue
+            segs = json.loads(jf.read_text(encoding='utf-8'))['segments']
+            idx, mat = embed(lambda p=p: decode(p), segs, device,
+                             cache_file=cache / (p.stem + '.emb.npz'))
+            keep = [r for r, i in enumerate(idx)
+                    if float(segs[i]['end']) - float(segs[i]['start']) >= REF_MIN_DUR]
+            out[handle_of(p.stem)].append(mat[keep])
+    return {h: np.concatenate(v) for h, v in out.items() if v}
+
+
+def match_refs(mat, refs: list, norm: str = 'none', rounds: int = 2,
+               min_conf: float = DEFAULT_MIN_CONFIDENCE):
+    """Label each voiceprint by its nearest reference speaker -> (labels, confidence).
+
+    `refs` is one matrix per speaker, in --speakers order, so a label is an index into
+    the names and needs no naming step. Unlike cluster(), this cannot put the wrong
+    name on a group, because there are no anonymous groups.
+
+    norm 'none' (the default) compares raw voiceprints; on the bench it beat 'center'
+    (90.2% vs 89.3%, confident-wrong 1.0% vs 2.0-3.4%). 'center' is kept because the
+    bench gives every voice its own mic, which flatters 'none' -- a real shared mic may
+    still prefer it. 'center' removes each side's shared component before comparing: the target
+    track is centred on its own mean (its mic and room), the references on the average
+    of the speakers' means (their mics, and the generic pull every ECAPA vector has).
+    Both then describe how a voice differs from this group of voices. Never centre a
+    solo track on itself -- its mean *is* the speaker, and centring would delete them.
+
+    `rounds` of adaptation then rebuild each centroid from the target's own confident
+    lines, so the comparison moves from "Kellan on his mic" to "Kellan on this mic".
+    Confidence is the same stretched margin cluster() reports, so --min-confidence
+    means the same thing for both.
+    """
+    import numpy as np
+
+    def unit(x):
+        return x / (np.linalg.norm(x, axis=-1, keepdims=True) + 1e-9)
+
+    tgt, R = mat, list(refs)
+    if norm == 'center':
+        tgt = unit(mat - mat.mean(axis=0, keepdims=True))
+        pool = np.stack([r.mean(axis=0) for r in R]).mean(axis=0)   # each speaker weighs once
+        R = [unit(r - pool) for r in R]
+    cents = unit(np.stack([r.mean(axis=0) for r in R]))
+    k = len(R)
+
+    for rnd in range(rounds + 1):
+        sims = tgt @ cents.T
+        order = np.argsort(-sims, axis=1)
+        lab = order[:, 0]
+        best = sims[np.arange(len(sims)), order[:, 0]]
+        second = sims[np.arange(len(sims)), order[:, 1]] if k > 1 else np.zeros(len(sims))
+        conf = np.clip((best - second) * 6.0, 0.0, 1.0)
+        if rnd == rounds:
+            break
+        for c in range(k):
+            sure = (lab == c) & (conf >= min_conf)
+            if sure.sum() >= MIN_ADAPT:
+                cents[c] = unit(tgt[sure].mean(axis=0))
+    shift = mat.mean(axis=0) if norm == 'center' else None
+    return lab, conf, (cents, shift)
+
+
+# How fast a confident neighbour's vote fades with distance in time, for label_weak().
+NEIGHBOUR_TAU = 10.0
+
+# Weak-pass settings, tuned on diarize-bench.py (session 29 mix, held out on session 28):
+# short crops embed down to WEAK_MIN_DUR with WEAK_PAD seconds of context each side,
+# and the neighbours' vote weighs WEAK_PRIOR against the voice match. Weights 0.1-0.2
+# and pads 0.25-0.5 sat on one plateau, so these are not knife-edge values.
+WEAK_MIN_DUR = 0.3
+WEAK_PAD = 0.25
+WEAK_PRIOR = 0.1
+
+
+def label_weak(weak_mat, weak_times, space, strong, prior_weight: float = WEAK_PRIOR,
+               window: float = ANCHOR_WINDOW / 3):
+    """Label low-confidence lines from their own voice plus their neighbours.
+
+    fill() gives a line with no usable voiceprint the label of the nearest confident
+    line, which in three-way banter is often the person being answered, not the one
+    answering -- measured on the bench, that copy is right only ~70% of the time. Here
+    a weak line keeps whatever voice evidence it has (even a 0.4s crop says something)
+    and the confident lines around it add a vote that fades with distance in time.
+
+    `space` is match_refs()'s third return value, so weak crops are compared in the
+    same space as the strong ones. `strong` is [(time, label)] from confident lines.
+    Returns (labels, confidence), confidence on the same stretched-margin scale.
+    """
+    import numpy as np
+
+    cents, shift = space
+    x = weak_mat if shift is None else weak_mat - shift
+    x = x / (np.linalg.norm(x, axis=1, keepdims=True) + 1e-9)
+    k = len(cents)
+    sims = x @ cents.T
+
+    st = np.array([t for t, _ in strong]) if strong else np.zeros(0)
+    sl = np.array([c for _, c in strong]) if strong else np.zeros(0, dtype=int)
+    prior = np.zeros((len(x), k))
+    for r, t in enumerate(weak_times):
+        near = np.abs(st - t) <= window
+        if near.any():
+            w = np.exp(-np.abs(st[near] - t) / NEIGHBOUR_TAU)
+            for c in range(k):
+                prior[r, c] = w[sl[near] == c].sum()
+            prior[r] /= prior[r].sum() + 1e-9
+
+    score = sims + prior_weight * prior
+    order = np.argsort(-score, axis=1)
+    lab = order[:, 0]
+    best = score[np.arange(len(score)), order[:, 0]]
+    second = score[np.arange(len(score)), order[:, 1]] if k > 1 else np.zeros(len(score))
+    return lab, np.clip((best - second) * 6.0, 0.0, 1.0)
+
+
+def refine_weak(segments: list, idx: list, mat, lab, conf, space, names: list, get_wav,
+                device: str, cache_file, min_conf: float, force: bool = False,
+                min_dur: float = WEAK_MIN_DUR, pad: float = WEAK_PAD,
+                prior: float = WEAK_PRIOR) -> tuple:
+    """Every segment -> (name or None, confidence), weak lines scored by label_weak().
+
+    Lines the strong pass measured confidently keep their label and margin. Lines it
+    was unsure of, and lines too short for it, are relabelled from their own voice (a
+    padded short crop) plus their neighbours, and carry -1: estimated, not measured,
+    the same mark fill() gives an inherited label. Anything too short even for a weak
+    crop falls back to fill()'s nearest-neighbour copy. Returns (final, weak count).
+    """
+    import numpy as np
+
+    final = fill(segments, idx, lab, conf, dict(enumerate(names)), min_conf)
+    row_of = {i: r for r, i in enumerate(idx)}
+    strong = [(float(segments[i]['start']), int(lab[r])) for r, i in enumerate(idx)
+              if conf[r] >= min_conf]
+
+    short = [i for i in range(len(segments)) if i not in row_of]
+    vec = {}
+    if short:
+        padded = [{'start': max(0.0, float(segments[i]['start']) - pad),
+                   'end': float(segments[i]['end']) + pad} for i in short]
+        s_idx, s_mat = embed(get_wav, padded, device, cache_file=cache_file,
+                             force=force, min_dur=min_dur)
+        vec = {short[j]: s_mat[r] for r, j in enumerate(s_idx)}
+    for r, i in enumerate(idx):
+        if conf[r] < min_conf:
+            vec[i] = mat[r]
+    if not vec:
+        return final, 0
+
+    weak = sorted(vec)
+    w_lab, _ = label_weak(np.stack([vec[i] for i in weak]),
+                          [float(segments[i]['start']) for i in weak], space, strong,
+                          prior_weight=prior)
+    # A weak label leans on its neighbours, so its margin is not a voice measurement.
+    for i, l in zip(weak, w_lab):
+        final[i] = (names[int(l)], -1.0)
+    return final, len(weak)
+
+
+def resolve_handles(names: list, sessions: list) -> list:
+    """Display names -> Craig handles, from solo speakers.tsv rows in `sessions`.
+
+    'Kellan (Halsby)' matches any solo row whose label starts with 'Kellan', so a
+    player keeps their handle whether they DM'd or played that night.
+    """
+    first = [n.split('(')[0].strip().split()[0].lower() for n in names]
+    found = {f: set() for f in first}
+    for sess in sessions:
+        slug = sess if str(sess).startswith('session-') else 'session-' + str(sess)
+        for stem, label in speaker_map(AUDIO_DIR / slug).items():
+            if '+' in label:
+                continue
+            who = label.split('(')[0].strip().split()[0].lower() if label.strip() else ''
+            if who in found:
+                found[who].add(handle_of(stem))
+    out = []
+    for n, f in zip(names, first):
+        if len(found[f]) != 1:
+            sys.exit("cannot tell %s's Craig handle from speakers.tsv in sessions %s (%s) -- "
+                     'pass --handles' % (n, ','.join(map(str, sessions)),
+                                         ', '.join(sorted(found[f])) or 'no solo track'))
+        out.append(found[f].pop())
+    return out
+
+
+# -- Answer key ---------------------------------------------------------------
+
+# A real shared track has no ground truth, so the DM makes one: listen to a sample of
+# clips and tag who spoke. The key is small and worth keeping (gitignore lets it
+# through); the clips are regenerable and stay ignored.
+KEY_FILE = 'label-key.tsv'
+KEY_DIR = 'label-key'
+KEY_CLIP_PAD = 0.15
+
+
+def export_key(segments: list, wav, folder: Path, n: int, names: list) -> Path:
+    """Write n clips plus a blank label-key.tsv. Never shows the model's guess.
+
+    Half the clips are short (under 1s), where the split is weakest, and half longer;
+    both halves are spread evenly through the session so no single scene dominates.
+    """
+    import random
+    import wave
+
+    import numpy as np
+
+    rng = random.Random(30)
+    usable = [i for i, s in enumerate(segments)
+              if 0.3 <= float(s['end']) - float(s['start']) <= 12.0]
+    short = [i for i in usable if float(segments[i]['end']) - float(segments[i]['start']) < 1.0]
+    longer = [i for i in usable if i not in set(short)]
+
+    def spread(pool, k):
+        if len(pool) <= k:
+            return pool
+        step = len(pool) / k
+        return [pool[min(len(pool) - 1, int(j * step + rng.random() * step))] for j in range(k)]
+
+    pick = sorted(spread(short, n // 2) + spread(longer, n - n // 2))
+    clips = folder / KEY_DIR
+    clips.mkdir(parents=True, exist_ok=True)
+    rows = []
+    for j, i in enumerate(pick, 1):
+        s = segments[i]
+        a = max(0, int((float(s['start']) - KEY_CLIP_PAD) * SAMPLE_RATE))
+        b = min(len(wav), int((float(s['end']) + KEY_CLIP_PAD) * SAMPLE_RATE))
+        pcm = (np.clip(wav[a:b], -1, 1) * 32767).astype('<i2')
+        name = '%02d.wav' % j
+        with wave.open(str(clips / name), 'wb') as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(SAMPLE_RATE)
+            w.writeframes(pcm.tobytes())
+        t = float(s['start'])
+        rows.append('%s\t%d\t%d:%02d:%02d\t\t%s'
+                    % (name, i, t // 3600, t % 3600 // 60, t % 60, s['text'].replace('\t', ' ')))
+
+    initials = ', '.join(n.split('(')[0].strip()[0].upper() + ' = ' + n for n in names)
+    key = folder / KEY_FILE
+    key.write_text('\n'.join([
+        '# Answer key for the shared-mic split. Play each clip in ' + KEY_DIR + '/ and put',
+        '# who spoke in the "who" column: ' + initials + '.',
+        '# ? = cannot tell, x = more than one voice. Leave the other columns alone.',
+        '# clip\tsegment\ttime\twho\ttext',
+    ] + rows) + '\n', encoding='utf-8')
+    return key
+
+
+def read_key(folder: Path, names: list) -> dict:
+    """{segment index: name} for every tagged row of label-key.tsv; ?/x rows skipped."""
+    key = folder / KEY_FILE
+    if not key.exists():
+        return {}
+    by_initial = {n.split('(')[0].strip()[0].lower(): n for n in names}
+    out = {}
+    for line in key.read_text(encoding='utf-8').splitlines():
+        if not line.strip() or line.startswith('#'):
+            continue
+        cols = line.split('\t')
+        if len(cols) < 4 or not cols[3].strip():
+            continue
+        tag = cols[3].strip().lower()
+        hit = by_initial.get(tag[0]) if tag[0] not in '?x' else None
+        if hit is None:
+            hit = next((n for n in names if n.lower().startswith(tag)), None)
+        if hit:
+            out[int(cols[1])] = hit
+    return out
+
+
 # -- Naming the clusters ------------------------------------------------------
 
-def dm_anchors(cache: Path, stem: str, names: list) -> list:
+def dm_anchors(cache: Path, stem: str, names: list, skip=()) -> list:
     """[(time, name)] for every moment the DM (any other track) says a player's name.
 
     The DM naming someone is the strongest text-side evidence available: 'Paul, it is
     your turn' means the next utterance on a shared track is very likely Paul.
+    `skip` lists further stems to ignore -- diarize-bench.py mixes several solo tracks
+    into one, and their own lines must not count as the DM's.
     """
     first = [n.split('(')[0].strip().split()[0].lower() for n in names]
     out = []
     for jf in sorted(cache.glob('*.json')):
-        if jf.stem == stem or jf.name.endswith('.speakers.json'):
+        if jf.stem == stem or jf.stem in skip or jf.name.endswith('.speakers.json'):
             continue
         try:
             segs = json.loads(jf.read_text(encoding='utf-8')).get('segments', [])
@@ -441,63 +785,11 @@ def fill(segments: list, idx: list, lab, conf, naming: dict, min_conf: float) ->
 
 # -- Main ---------------------------------------------------------------------
 
-def main() -> None:
-    ap = argparse.ArgumentParser(
-        description='Split one audio track that carries two or more speakers.')
-    ap.add_argument('--session', required=True, help='session number or slug (e.g. 27)')
-    ap.add_argument('--track', required=True, help='track filename stem (e.g. 1-eljeffe0024)')
-    ap.add_argument('--speakers', required=True,
-                    help='comma-separated display names sharing the track, '
-                         'e.g. "Jeff (Iggy),Paul (Luci)"')
-    ap.add_argument('--num-speakers', type=int, default=0,
-                    help='cluster count (default: however many --speakers were given)')
-    ap.add_argument('--min-confidence', type=float, default=DEFAULT_MIN_CONFIDENCE,
-                    help='below this margin a label is left ambiguous (default %.2f)'
-                         % DEFAULT_MIN_CONFIDENCE)
-    ap.add_argument('--assign', action='append', default=[],
-                    help='force a cluster to a name, e.g. --assign 0="Paul (Luci)". '
-                         'Repeatable; overrides the vote.')
-    ap.add_argument('--device', default='cpu', choices=['cpu', 'cuda'])
-    ap.add_argument('--cluster-method', default='spectral',
-                    choices=['spectral', 'kmeans', 'agglomerative'],
-                    help='spectral (default) is what diarization systems use; kmeans is a '
-                         'robust fallback; agglomerative is here for comparison')
-    ap.add_argument('--force-embed', action='store_true',
-                    help='recompute embeddings instead of reusing the cached ones')
-    ap.add_argument('--dry-run', action='store_true',
-                    help='report the split without writing the sidecar')
-    args = ap.parse_args()
-
-    names = [s.strip() for s in args.speakers.split(',') if s.strip()]
-    if len(names) < 2:
-        sys.exit('--speakers needs at least two comma-separated names')
-    k = args.num_speakers or len(names)
-
-    cwrite('\n========================================', 'darkgray')
-    cwrite('  TRACK DIARIZER', 'cyan')
-    cwrite('========================================', 'darkgray')
-
-    slug, audio, cache = resolve(args.session, args.track)
-    segments = json.loads((cache / (audio.stem + '.json')).read_text(encoding='utf-8'))['segments']
-    cwrite('  session : ' + slug, 'white')
-    cwrite('  track   : ' + audio.name + '  (' + str(len(segments)) + ' cached utterances)', 'white')
-    cwrite('  split   : ' + str(k) + ' ways -> ' + ', '.join(names), 'white')
-
-    # Decoding 3 hours of audio takes a while and is pure waste when the embeddings are
-    # already cached, so it is deferred until embed() actually needs samples.
-    emb_cache = cache / (audio.stem + '.emb.npz')
-
-    def audio_samples():
-        wav = decode(audio)
-        cwrite('  audio   : %.1f min decoded at %d Hz mono'
-               % (len(wav) / SAMPLE_RATE / 60, SAMPLE_RATE), 'darkgray')
-        return wav
-
-    idx, mat = embed(audio_samples, segments, args.device,
-                     cache_file=emb_cache, force=args.force_embed)
+def run_cluster(args, segments, idx, mat, names, k, cache, stem) -> tuple:
+    """The original path: cluster voiceprints, then name clusters from table evidence."""
     lab, conf = cluster(mat, k, args.cluster_method)
 
-    anchors = dm_anchors(cache, audio.stem, names)
+    anchors = dm_anchors(cache, stem, names)
     ev = score_clusters(segments, idx, lab, k, names, anchors)
     naming = assign_names(ev['votes'], names, k)
 
@@ -548,6 +840,192 @@ def main() -> None:
         cwrite('    joint label and let the DM attribute at /recap.', 'yellow')
 
     final = fill(segments, idx, lab, conf, naming, args.min_confidence)
+    return final, {
+        'method': 'cluster',
+        'dm_anchors': len(anchors),
+        'vocab_hits': len(ev['detail']),
+        'cluster_sizes': ev['sizes'],
+        'naming': {str(c): n for c, n in naming.items()},
+    }
+
+
+def run_refs(args, segments, idx, mat, names, cache, stem, get_wav) -> tuple:
+    """Voice references: match each line to the players' solo-track voiceprints.
+
+    No clusters, so nothing to name: DM name-calls and class vocabulary are reported
+    as a cross-check, and a disagreement is a warning, not a vote.
+    """
+    sessions = [x.strip() for x in args.refs.split(',') if x.strip()]
+    if args.handles:
+        handles = [h.strip().lower() for h in args.handles.split(',') if h.strip()]
+        if len(handles) != len(names):
+            sys.exit('--handles needs one handle per --speakers name, in the same order')
+    else:
+        handles = resolve_handles(names, sessions)
+    refs = ref_embeddings(handles, sessions, args.device)
+    missing = [n for n, h in zip(names, handles) if h not in refs]
+    if missing:
+        sys.exit('no solo reference audio for: ' + ', '.join(missing)
+                 + ' -- add sessions to --refs where they had their own track')
+    R = [refs[h] for h in handles]
+    lab, conf, space = match_refs(mat, R, norm=args.norm, rounds=args.rounds,
+                                  min_conf=args.min_confidence)
+    weak_cache = cache / ('%s.weak%.1f-%.2f.emb.npz' % (stem, WEAK_MIN_DUR, WEAK_PAD))
+    final, n_weak = refine_weak(segments, idx, mat, lab, conf, space, names, get_wav,
+                                args.device, weak_cache, args.min_confidence,
+                                force=args.force_embed)
+
+    k = len(names)
+    anchors = dm_anchors(cache, stem, names)
+    ev = score_clusters(segments, idx, lab, k, names, anchors)
+    cwrite('')
+    cwrite('  --- voice references (sessions ' + ', '.join(sessions) + ') ---', 'darkcyan')
+    for n, h, r in zip(names, handles, R):
+        cwrite('  %-22s %-16s %4d reference lines' % (n, h, len(r)), 'white')
+    cwrite('  %d weak lines scored on voice + neighbours' % n_weak, 'darkgray')
+    cwrite('')
+    cwrite('  --- cross-check (' + str(len(anchors)) + ' DM name anchors, '
+           + str(len(ev['detail'])) + ' class-vocabulary hits) ---', 'darkcyan')
+    # A handful of name-calls each cover a 90s window, so three anchors can cast twenty
+    # votes that all say the same name. Below this much evidence, report, never warn.
+    enough = len({a for _, a in anchors}) >= 2 and len(anchors) + len(ev['detail']) >= 10
+    if not enough:
+        cwrite('  too little table evidence to cross-check -- votes shown for reference only',
+               'darkgray')
+    warn = []
+    for c, n in enumerate(names):
+        v = ev['votes'][c]
+        tally = '  '.join('%s=%.0f' % (m.split('(')[0].strip(), x)
+                          for m, x in sorted(v.items(), key=lambda kv: -kv[1]))
+        cwrite('  lines labelled %-20s votes: %s' % (n, tally), 'white')
+        top = max(v.items(), key=lambda kv: kv[1])
+        if enough and top[1] > 0 and top[0] != n and top[1] > 1.5 * v.get(n, 0):
+            warn.append('table evidence for the lines labelled %s points at %s instead'
+                        % (n, top[0]))
+    for w in warn:
+        cwrite('  ! ' + w + ' -- check a few of them before trusting the split', 'yellow')
+    return final, {
+        'method': 'refs',
+        'ref_sessions': sessions,
+        'handles': dict(zip(names, handles)),
+        'weak_lines': n_weak,
+        'dm_anchors': len(anchors),
+        'vocab_hits': len(ev['detail']),
+    }
+
+
+def score_key(final: list, key: dict, segments: list) -> None:
+    """Print how the split did against the DM's answer key."""
+    if not key:
+        return
+    ok = [i for i, n in key.items() if final[i][0] == n]
+    bad = [i for i, n in key.items() if final[i][0] is not None and final[i][0] != n]
+    none = [i for i, n in key.items() if final[i][0] is None]
+    measured = [i for i in key if final[i][0] is not None and final[i][1] >= 0]
+    m_bad = [i for i in measured if final[i][0] != key[i]]
+    cwrite('')
+    cwrite('  --- answer key (' + str(len(key)) + ' tagged clips) ---', 'darkcyan')
+    cwrite('  right %d, wrong %d, unresolved %d  ->  %.0f%% of labelled'
+           % (len(ok), len(bad), len(none), 100.0 * len(ok) / max(1, len(ok) + len(bad))),
+           'green' if len(ok) >= 0.9 * max(1, len(ok) + len(bad)) else 'yellow')
+    cwrite('  confident-wrong %d of %d measured' % (len(m_bad), len(measured)),
+           'red' if m_bad else 'white')
+    for i in sorted(bad)[:12]:
+        cwrite('    wrong: [%d] said %s, labelled %s%s : "%s"'
+               % (i, key[i].split('(')[0].strip(), final[i][0].split('(')[0].strip(),
+                  '' if final[i][1] >= 0 else ' (est.)', segments[i]['text'][:60]),
+               'darkgray')
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(
+        description='Split one audio track that carries two or more speakers.')
+    ap.add_argument('--session', required=True, help='session number or slug (e.g. 27)')
+    ap.add_argument('--track', required=True, help='track filename stem (e.g. 1-eljeffe0024)')
+    ap.add_argument('--speakers', required=True,
+                    help='comma-separated display names sharing the track, '
+                         'e.g. "Jeff (Iggy),Paul (Luci)"')
+    ap.add_argument('--refs', default='',
+                    help='voice-reference mode: sessions whose solo tracks give each '
+                         'speaker a voiceprint, e.g. "26,28,29". Replaces clustering')
+    ap.add_argument('--handles', default='',
+                    help='refs mode: Craig handles in --speakers order, when speakers.tsv '
+                         'cannot tell them')
+    ap.add_argument('--norm', default='none', choices=['none', 'center'],
+                    help='refs mode: voiceprint normalisation (default none)')
+    ap.add_argument('--rounds', type=int, default=2,
+                    help='refs mode: adaptation rounds on this track (default 2)')
+    ap.add_argument('--num-speakers', type=int, default=0,
+                    help='cluster count (default: however many --speakers were given)')
+    ap.add_argument('--min-confidence', type=float, default=DEFAULT_MIN_CONFIDENCE,
+                    help='below this margin a label is left ambiguous (default %.2f)'
+                         % DEFAULT_MIN_CONFIDENCE)
+    ap.add_argument('--assign', action='append', default=[],
+                    help='cluster mode: force a cluster to a name, e.g. '
+                         '--assign 0="Paul (Luci)". Repeatable; overrides the vote.')
+    ap.add_argument('--device', default='cpu', choices=['cpu', 'cuda'])
+    ap.add_argument('--cluster-method', default='spectral',
+                    choices=['spectral', 'kmeans', 'agglomerative'],
+                    help='spectral (default) is what diarization systems use; kmeans is a '
+                         'robust fallback; agglomerative is here for comparison')
+    ap.add_argument('--export-key', type=int, default=0, metavar='N',
+                    help='write N clips and a blank label-key.tsv for the DM to tag, then '
+                         'stop. Refuses to overwrite a key that already has tags')
+    ap.add_argument('--force-embed', action='store_true',
+                    help='recompute embeddings instead of reusing the cached ones')
+    ap.add_argument('--dry-run', action='store_true',
+                    help='report the split without writing the sidecar')
+    args = ap.parse_args()
+
+    names = [s.strip() for s in args.speakers.split(',') if s.strip()]
+    if len(names) < 2:
+        sys.exit('--speakers needs at least two comma-separated names')
+    k = args.num_speakers or len(names)
+
+    cwrite('\n========================================', 'darkgray')
+    cwrite('  TRACK DIARIZER', 'cyan')
+    cwrite('========================================', 'darkgray')
+
+    slug, audio, cache = resolve(args.session, args.track)
+    segments = json.loads((cache / (audio.stem + '.json')).read_text(encoding='utf-8'))['segments']
+    cwrite('  session : ' + slug, 'white')
+    cwrite('  track   : ' + audio.name + '  (' + str(len(segments)) + ' cached utterances)', 'white')
+    cwrite('  split   : ' + str(k) + ' ways -> ' + ', '.join(names)
+           + ('  (voice references)' if args.refs else '  (clustering)'), 'white')
+
+    # Decoding 3 hours of audio takes a while and is pure waste when the embeddings are
+    # already cached, so it is deferred until something actually needs samples -- and
+    # decoded once, however many things do.
+    decoded = []
+
+    def audio_samples():
+        if not decoded:
+            decoded.append(decode(audio))
+            cwrite('  audio   : %.1f min decoded at %d Hz mono'
+                   % (len(decoded[0]) / SAMPLE_RATE / 60, SAMPLE_RATE), 'darkgray')
+        return decoded[0]
+
+    if args.export_key:
+        if read_key(audio.parent, names):
+            sys.exit(KEY_FILE + ' already has tags -- move it aside to cut a new one')
+        key = export_key(segments, audio_samples(), audio.parent, args.export_key, names)
+        cwrite('')
+        cwrite('  -> ' + str(key.relative_to(ROOT)).replace('\\', '/'), 'cyan')
+        cwrite('     clips in ' + str((audio.parent / KEY_DIR).relative_to(ROOT)).replace('\\', '/'),
+               'darkcyan')
+        cwrite('  next: tag the "who" column, then rerun without --export-key to score',
+               'darkcyan')
+        cwrite('')
+        return
+
+    emb_cache = cache / (audio.stem + '.emb.npz')
+    idx, mat = embed(audio_samples, segments, args.device,
+                     cache_file=emb_cache, force=args.force_embed)
+    if args.refs:
+        final, evidence = run_refs(args, segments, idx, mat, names, cache, audio.stem,
+                                   audio_samples)
+    else:
+        final, evidence = run_cluster(args, segments, idx, mat, names, k, cache, audio.stem)
 
     counts, inherited, unknown = {}, 0, 0
     for n, c in final:
@@ -562,10 +1040,12 @@ def main() -> None:
     for n in names:
         got = counts.get(n, 0)
         cwrite('  %-22s %4d utterances  (%.0f%%)' % (n, got, 100 * got / len(segments)), 'green')
-    cwrite('  %-22s %4d  (short/weak, inherited from nearest confident neighbour)'
-           % ('inherited:', inherited), 'darkgray')
+    cwrite('  %-22s %4d  (short/weak: estimated from neighbours, not measured)'
+           % ('estimated:', inherited), 'darkgray')
     cwrite('  %-22s %4d  (left ambiguous -> keeps the joint track label)'
            % ('unresolved:', unknown), 'yellow' if unknown else 'darkgray')
+
+    score_key(final, read_key(audio.parent, names), segments)
 
     if args.dry_run:
         cwrite('')
@@ -579,12 +1059,7 @@ def main() -> None:
         'speakers': names,
         'labels': [n for n, _ in final],
         'confidence': [round(c, 3) for _, c in final],
-        'evidence': {
-            'dm_anchors': len(anchors),
-            'vocab_hits': len(ev['detail']),
-            'cluster_sizes': ev['sizes'],
-            'naming': {str(c): n for c, n in naming.items()},
-        },
+        'evidence': evidence,
     }, indent=2), encoding='utf-8')
 
     cwrite('')

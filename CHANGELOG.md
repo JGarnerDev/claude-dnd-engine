@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.47.0] — 2026-10-26
+
+### Added
+
+- **Voice-reference splits for shared microphones.** `diarize-track.py --refs "<sessions>"` matches each line on a shared track to voiceprints from the players' own solo tracks in earlier sessions, instead of clustering and then guessing names from DM name-calls. Handles come from those sessions' `speakers.tsv`; `--handles` overrides. Short lines are estimated from a padded short crop plus nearby confident lines, and marked as estimates. Clustering stays the default when `--refs` is not given.
+- **`scripts/diarize-bench.py`.** Mixes solo tracks into a fake shared mic with a known answer and scores a split method on it. Against today's clustering: session 29 mix, 84% to 96% right, confident-wrong 9% to 1%; session 28 mix (held out), 28% to 96% right, confident-wrong 72% to 0.2%.
+- **Answer keys.** `diarize-track.py --export-key N` cuts clips for the DM to tag by ear into `label-key.tsv`, which is committed (new `.gitignore` exception); every later run scores itself against the tags. Session 30's key is cut and waiting (todo item 84).
+
+### Changed
+
+- `diarize-track.py` result line `inherited:` is now `estimated:`. The sidecar format is unchanged, so `transcribe.py` needs nothing.
+
 ## [0.46.0] — 2026-10-26
 
 ### Added
