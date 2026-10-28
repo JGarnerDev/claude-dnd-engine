@@ -24,7 +24,8 @@ throws a shadow. The point does not.*
 
 ## What it does
 
-1. **+1 weapon.** +1 to attack and damage rolls made with it.
+1. **+1 weapon.** +1 to attack and damage rolls made with it, and +1 to his spell attack rolls
+   and spell save DC when he casts through it (Jeff, 2026-10-28).
 2. **Spellcasting focus.** It works as his sorcerer focus. It replaces the bare shard, and
    it still hums when he casts.
 3. **Slows the fade.** While he holds it or carries it on his body, each dark-moon mourning rite
