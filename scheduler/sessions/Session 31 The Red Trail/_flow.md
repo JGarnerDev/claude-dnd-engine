@@ -26,12 +26,10 @@ committed by Jeff 2026-10-13 after the `/review` pass. See the ledger below.
 ```mermaid
 flowchart TD
   subgraph SC3["Scene 1 · The Rest of the Night"]
-    S2_STATEMENT{"[x] S2_STATEMENT<br/>Mara wants one of them at the jail<br/>Whoever goes misses the stone, learns Tallis's name"}
     S2_DIP["[-] S2_DIP<br/>Dip's owed moment<br/>The private roll from the song, as a flashback<br/>The 150 gp: keep it, or toward Sable's debt"]
     S2_BOON["[x] S2_BOON<br/>Odibli's stone does nothing at all<br/>The deed, still unsigned, still on the table"]
     S2_HEARTH["[x] S2_HEARTH<br/>The hearth is dying: Tallis's smother-charm<br/>The party feeds the flame; Odibli writes over the glyph<br/>Odibli levels to 5 · they sleep, not a long rest"]
-    S2_STATEMENT -->|"nobody goes"| S2_DIP --> S2_BOON --> S2_HEARTH
-    S2_STATEMENT -->|"one goes: back a round late"| S2_HEARTH
+    S2_DIP --> S2_BOON --> S2_HEARTH
   end
 
   subgraph SC4["Scene 2 · Dawn at the Ford"]
@@ -109,7 +107,7 @@ flowchart TD
 
   class S2_REARGUARD,S2_FIGHT,S2_MORALE,S2_ESCAPE combat
   class S2_DIP,S2_HORSES,S2_PARLEY,S2_HEIST,S2_SHORT_REST,S2_CHASE_RULES,S2_FORD_STAGE,S2_FORK,S2_TRAIL social
-  class S2_APPROACH,S2_RIDER,S2_APPROACH_CHOICE,S2_STATEMENT,S2_ROAD decision
+  class S2_APPROACH,S2_RIDER,S2_APPROACH_CHOICE,S2_ROAD decision
   class S2_CRYSTALS,S2_HEARTH,S2_SPEAR,S2_HAUL_HOME stake
   class S2_BOON,S2_TALLY,S2_CAMP_INTEL,S2_CELL,S2_SCOUT seed
   class S2_SKIP fail
@@ -118,7 +116,8 @@ flowchart TD
 ## Commitment ledger
 
 Played at Session 30 and dropped here: `S2_SABLE_FREE`, `S2_LOOT`, `S2_TOWN`, `S2_NAMES`,
-`S2_WREN`, `S2_OFFER`, `S2_IGGY`, `S2_COMPANIONS`. Not yet committed: `S2_DIP`, `S2_CRYSTALS`.
+`S2_WREN`, `S2_OFFER`, `S2_IGGY`, `S2_COMPANIONS`. Cut by Jeff 2026-10-27 (it didn't do much):
+`S2_STATEMENT`. Not yet committed: `S2_DIP`, `S2_CRYSTALS`.
 
 - `S2_BOON` — backing note at the plan, `S2_BOON`; approved 2026-10-05
 - `S2_HEARTH` — backing note at the plan, `S2_HEARTH`; approved 2026-10-07
@@ -131,7 +130,6 @@ Played at Session 30 and dropped here: `S2_SABLE_FREE`, `S2_LOOT`, `S2_TOWN`, `S
 - `S2_CAMP_INTEL` — backing note at the plan, `S2_CAMP_INTEL`; approved 2026-10-07
 - `S2_HAUL_HOME` — backing note at the plan, `S2_HAUL_HOME`; approved 2026-10-07
 - `S2_CELL` — backing note at the plan, `S2_CELL`; approved 2026-10-07
-- `S2_STATEMENT` — backing note at the plan, `S2_STATEMENT`; approved 2026-10-13
 - `S2_TRAIL` — backing note at the plan, `S2_TRAIL`; approved 2026-10-13
 - `S2_FORD_STAGE` — backing note at the plan, `S2_FORD_STAGE`; approved 2026-10-13
 - `S2_ROAD` — backing note at the plan, `S2_ROAD`; approved 2026-10-13

@@ -25,7 +25,7 @@ locations:
   - [[The Golden Lioness]]
 key_npcs:
   - "[[Sable Wren]] (historian — the unsigned deed, the hearth, the send-off)"
-  - "[[Mara Tull]] (historian — sheriff; wants a statement tonight, and holds the prisoner at the close)"
+  - "[[Mara Tull]] (historian — sheriff; holds the prisoner at the close)"
   - "[[Silas Crubb]] (historian — mayor; the horses, and the party's pitches from last night)"
   - "[[Aashal-Groon Mellenegon Borak]] (historian — Asher, through the fox again; the Spear)"
   - "[[Nella]] (historian — on the ridge; loses, escapes, drops her tally)"
@@ -38,7 +38,7 @@ encounters:
   - "The Dusk Fork — Nella's rear guard: Ilsa Hask (human Scout) and Fennel Dray (human Bandit), mounted, with Fennel's Wolf Cinder. ~350 adjusted XP, under Easy by design (an objective fight, RTC under 1), 1-2 rounds. Fennel shoots the borrowed horses and Cinder goes for their legs, not the PCs. A rider who escapes toward the camp raises its alert by one step."
   - "The Waystation — Varrick Tenn the drover (human Bandit Captain), Haddo Keel and Brask (human and half-orc Thugs, the cask-hands), Sennet Orrin (human Spy), Hesper Mudd (halfling Acolyte), Tam 'Clatter' Cobb (human Bandit, on the roof) and Brick and Mortar (Mastiffs) on the floor, Nella (custom, ~CR 3) on the ridge. ~4,188 adjusted XP against an all-level-5 party, Hard, RTC ~3.4 (floor ~2.7), RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella spreads her shots to wound and pin, marks whoever climbs toward her, never a caster, and never finishes a downed PC. Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
 loose_threads:
-  - "[[Session 30 Keep the Ale]]'s unplayed beats: Mara's statement, the dead Boon, the dying hearth (Tallis's smother-charm), then all of the dawn pursuit"
+  - "[[Session 30 Keep the Ale]]'s unplayed beats: the dead Boon, the dying hearth (Tallis's smother-charm), then all of the dawn pursuit"
   - "Dip's private roll from Iggy's song, owed as a flashback (Ben was absent at Session 30), and the 150 gp the table assigned them"
   - "Sable's deed: terms heard and agreed, never formally taken"
   - "Odibli's debt-rebundling pitch and Halsby's shade-on-command pitch: Silas left both uncommitted"
@@ -62,7 +62,7 @@ relates_to:
   - "[[Harrow Bane]] (named in the camp's ledger; still no face)"
 importance: critical
 active: true
-description: "The back half of Session 30's plan, reworked 2026-10-21. The rest of the night (Mara's statement, Dip's owed moment, the dead Boon, the dying hearth), then the dawn pursuit of Nella's cart to a drover's waystation. Nella loses, escapes on a fallback she rigged, and drops her debt tally. The party comes home with the casks to a silent prisoner in Mara's cell."
+description: "The back half of Session 30's plan, reworked 2026-10-21. The rest of the night (Dip's owed moment, the dead Boon, the dying hearth), then the dawn pursuit of Nella's cart to a drover's waystation. Nella loses, escapes on a fallback she rigged, and drops her debt tally. The party comes home with the casks to a silent prisoner in Mara's cell."
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
@@ -88,7 +88,7 @@ both fights varied and the crew named (a Spy, an Acolyte, Mastiffs, a Wolf; most
 
 **Proposed by the engine, 2026-10-09; committed by Jeff, 2026-10-13:** more choices for the
 players, so the night and the chase aren't only watched · Mara asks for one volunteer to give a
-statement at the jail (`S2_STATEMENT`) · the flame track sits on the table where the party can see
+statement at the jail (`S2_STATEMENT`; cut by Jeff 2026-10-27) · the flame track sits on the table where the party can see
 it (`S2_HEARTH`) · a route choice at chase stages 2 and 4 (`S2_ROAD`, `S2_APPROACH`) · Nella's
 escape route can be scouted, and cut off, before the camp goes loud (`S2_SCOUT`, `S2_ESCAPE`).
 
@@ -370,47 +370,18 @@ Mara hasn't left yet.
 
 ### Scene 1 — The Rest of the Night
 
-- **Summary:** The night winds down. Mara wants one of them at the jail for a statement, Dip gets
+- **Summary:** The night winds down. Mara and the town head home, Dip gets
   their owed moment from the song, the Boon stays dead, and then the hearth starts dying. Odibli has
   to write over a charm in the coals while the party keeps the flame alive. Odibli levels to 5.
 - **Where:** [[The Golden Lioness]], the one room that survived: crates half-unpacked, the hearth,
   a blown-open wall through to the half-built wing.
-- **Cast:** [[Sable Wren]] · [[Mara Tull]] · [[Dunny Marsh]] · [[Sergei Rubelgerd]] · [[Bosco]]
+- **Cast:** [[Sable Wren]] · [[Sergei Rubelgerd]] · [[Bosco]] · [[Mara Tull]] and [[Dunny Marsh]] on their way out
 - **Enemies:** none
 - **DCs:** Insight or Arcana 15 / 20 — Dip's private roll (bands) · Arcana 13 — read the charm ·
   INT (calligrapher's supplies) 14 — each of Odibli's three strokes · DEX 13 save — the burst, 2d6
   fire, half on a success
 - **Time:** ~30 min
 - **Trigger:** the song is over and the room is emptying. The tail of Session 30's Scene 3.
-
-#### S2_STATEMENT — Mara wants one of them at the jail tonight
-
-- **Tokens:** the Lioness `indoors` map. Party, Sable, Sergei and Bosco by the hearth; Mara and
-  Dunny at the door; clear the other townsfolk as they leave.
-- **Choice (party):** send one of them with Mara, or nobody. Whoever goes misses the stone and comes back a round late to the hearth, but learns Tallis's name and earns Mara's first off-duty line.
-- **Engine, 2026-10-09; committed 2026-10-13.** A small choice inside the inn night. Nobody has to go.
-- **The party told the town the truth at Session 30**, so the town is already repeating it. Mara
-  wants their version on paper before the story grows.
-- Before she leaves, Mara asks: *"Half the street's already saying you came down in my light. I'd
-  like your version on paper before theirs gets any bigger. I need one of you to walk back with me.
-  Just one. The rest of you, sleep."*
-- **If Dip goes,** run `S2_DIP`'s private roll on the walk instead, as they look back at the
-  lit window.
-- **If nobody goes:** *"Then first thing tomorrow."* No penalty. Tallis's name waits for the hearth.
-- **Whoever goes:**
-  - Misses `S2_BOON` and walks back in one round into `S2_HEARTH`, as the fire starts to dip. That
-    leaves one fewer person to feed the fire in round 1.
-  - Gets Mara off duty for one line on the walk: *"Six years I've had this star. Tonight's the
-    first night I couldn't be everywhere at once."*
-  - Sees the jail: two cells, both empty. They'll remember that at `S2_CELL`.
-  - Learns Tallis's name. Mara has the dead hedge-mage's satchel on her desk, full of blank charm
-    paper: *"That one's Tallis. Sold charms at the fair. Wrote them himself, on good paper. I
-    bought one off him for my mother."* When the page turns up in the coals, this PC can name him
-    at once.
-- **If Odibli goes:** the hearth waits for him. It starts to dip as he comes through the door, and
-  the flame track starts at **2**, not 3.
-- **Transition:** `S2_DIP`, then `S2_BOON` for whoever stayed.
-- **Tokens:** Mara leaves with the volunteer, if there is one. Dunny goes with her.
 
 #### S2_DIP — Dip's owed moment: the private roll, and the 150 gp
 
@@ -419,15 +390,29 @@ Mara hasn't left yet.
 - **Choice (Dip):** what Dip shares from the private roll: all of it, some of it, or nothing.
 - **Choice (Dip):** keep the 150 gp, or put some or all of it toward Sable's ~650 gp debt to Silas.
 - **Time:** ~5 minutes.
-- **The private roll, as a flashback.** Tell Ben privately, or pass a note. Frame it as Dip, by the
-  dying-down fire, remembering what they felt when the hearth went still mid-song. Wisdom (Insight),
-  or Intelligence (Arcana) if Ben argues for the Sage training:
-  - **Under 15:** a lurch of nested wrongness, layers inside layers, then gone.
-  - **15–19:** a nesting doll — real, then hollow, then *real* again, and the innermost layer is
-    inside Iggy.
-  - **20+:** that innermost layer is a presence, divine, small and very tired, and not hostile.
-  - **Describe only what Dip felt.** Jeff is Iggy's player and the DM, so [[Sah]] is never named
-    or narrated. Ben decides what he says aloud.
+- **Tokens:** the Lioness `indoors` map. Party, Sable, Sergei and Bosco by the hearth. Mara and
+  Dunny leave with the last of the townsfolk; clear them as they go.
+- **The private roll, as a flashback.** Dip, by the dying-down fire, remembering what they felt
+  when the hearth went still mid-song. Ben rolls in secret; send him the one message that matches.
+- **Private (Dip):** Wisdom (Insight), or Intelligence (Arcana) if Ben argues for the Sage
+  training. Rolled in secret, at the start of this beat.
+  - **Ask:** Private roll, for a moment from last night. Roll Wisdom (Insight), or Intelligence
+    (Arcana) if you'd rather lean on your Sage training, and send me the total. Don't say it out
+    loud.
+  - **Under 15:** Last night, when Iggy's tune wandered and the hearth went still, something lurched
+    under you. Layers inside layers, like a stair that keeps going down past the floor. Then the
+    flame moved again and it was gone. Share as much of this as you like, or none of it.
+  - **15–19:** Last night, when Iggy's tune wandered and the hearth went still, it opened up around
+    you like a nesting doll: real, then hollow, then real again, each layer smaller than the last.
+    The innermost layer wasn't in the fire. It was inside Iggy. Then the flame moved again and it
+    was gone. Share as much of this as you like, or none of it.
+  - **20+:** Last night, when Iggy's tune wandered and the hearth went still, it opened up around
+    you like a nesting doll: real, then hollow, then real again. At the very centre, inside Iggy,
+    something was there. Not an echo: a presence. It felt divine, small and very tired, and it
+    wasn't hostile. Then the flame moved again and it was gone. Share as much of this as you like,
+    or none of it.
+- **Describe only what Dip felt.** Jeff is Iggy's player and the DM, so [[Sah]] is never named
+  or narrated. Ben decides what he says aloud.
 - **The 150 gp.** Confirm with Ben first that Dip took it from the bodies. Sable never asks for it:
   she isn't that kind of host. If Dip offers, one line, no fuss: *"Put it away. …Fine. Leave it on
   the bar, and I'll pretend I didn't see you do it."* If they keep it, nothing changes, and she
@@ -1237,15 +1222,15 @@ Land it on the cell door, not on the casks.
   and dropped here: `S2_SABLE_FREE`, `S2_LOOT`, `S2_TOWN`, `S2_NAMES`, `S2_WREN`, `S2_OFFER`,
   `S2_IGGY`, `S2_COMPANIONS`.
 - **Choices** (`meta/player-agency.md`):
-  - Party: who goes to the jail (`S2_STATEMENT`) · sign the deed tonight or not (`S2_BOON`) ·
+  - Party: sign the deed tonight or not (`S2_BOON`) ·
     chase or stay (`S2_SKIP`) · the route at stages 2 and 4 (`S2_ROAD`, `S2_APPROACH`) · the rear
     guard: fight, scare off or bluff (`S2_REARGUARD`) · scout first (`S2_SCOUT`) · heist, assault,
     parley or trick (`S2_APPROACH_CHOICE`) · Nella's purse (`S2_TALLY`) · the banner in the bar
     (`S2_HAUL_HOME`)
   - Character: Dip, what to share from the private roll, and the 150 gp (`S2_DIP`) · Odibli, the
     word he writes (`S2_HEARTH`) · Halsby, his one question for the fox (`S2_SPEAR`)
-  - Past choices paid off: the truth told to the town, "came out of the light" (`S2_STATEMENT`,
-    `S2_HORSES`) · Odibli's verdict on Sable and his pitch to Silas (`S2_BOON`, `S2_HORSES`) ·
+  - Past choices paid off: the truth told to the town, "came out of the light"
+    (`S2_HORSES`) · Odibli's verdict on Sable and his pitch to Silas (`S2_BOON`, `S2_HORSES`) ·
     Halsby's shade pitch (`S2_HORSES`) · Halsby dealing a crystal to every PC (`S2_CRYSTALS`) ·
     Halsby taking the fox's job without haggling (`S2_SPEAR`)
 - **Spotlight.** The trend says lean party-centric this week; the chase and the camp are. Halsby,
@@ -1268,16 +1253,15 @@ Land it on the cell door, not on the casks.
   - [[Varrick's Parrying Bracer]] taken — flip its loot file to delivered, add it to Dip's gear
   - Chase DCs used → `meta/difficulty.md` Skill Challenge table, including the route choices
     taken at stages 2 and 4
-  - Who went to the jail with Mara, if anyone (`S2_STATEMENT`) · whether they found and cut off
+  - Whether they found and cut off
     Nella's exit (`S2_SCOUT`) · whether the crew heard a broadcast (`S2_CRYSTALS`); if so, Nella's
     crew holding crystals becomes canon on [[Earshot Crystals]]
   - Rest Clock: reset if they rested at the waystation
   - The prisoner: canonize only what was shown
   - **New canon if played:** Nella's remaining debt to Bane is 250 gp, the sum in her purse ·
     [[Varrick's Parrying Bracer]] was Varrick Tenn's, a soldier's guard he wore as the camp's
-    drover · Tallis sold written charms at the fair, and Mara bought one for her mother · the
-    hearth's cause, Tallis's smother-charm (`S2_HEARTH`) · Mara has worn the star six years · Ashford's
-    jail has two cells · Silas charges 11 gp a lamed horse · the waystation is an old drover's
+    drover · Tallis sold written charms at the fair · the
+    hearth's cause, Tallis's smother-charm (`S2_HEARTH`) · Silas charges 11 gp a lamed horse · the waystation is an old drover's
     relay short of Duskwater, provisioned for about thirty · Sennet Orrin keeps Bane's duty ledger
     · the cart becomes the Lioness's delivery cart · a hanging in Ashford waits on Cael's reeve ·
     the camp crew's names (Ilsa Hask, Fennel Dray, Cinder, Varrick Tenn, Haddo Keel, Brask, Sennet
