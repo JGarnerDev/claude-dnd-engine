@@ -28,7 +28,7 @@ relates_to:
 
 ## Current Date
 
-*Pending questionnaire answers.*
+Present year: **1487** (DM, 2026-10-27). The Astra Collision falls in year -5256. Month and day names are still pending, so in-world dates are year-only for now.
 
 ## Note on the Vitrian Calendar
 

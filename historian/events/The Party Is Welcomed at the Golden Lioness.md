@@ -11,7 +11,8 @@ tags:
 source_session: [[Session 30 Keep the Ale]]
 confirmed_date: "2026-10-20"
 date: "Ashford, the night of arrival, after the raid (Day 1, Ashford reckoning, a working label)"
-# timeline_date omitted: Aethryn has no calendar yet, so this event won't plot until one lands.
+# Year precision only: Aethryn's present year is 1487 (DM, 2026-10-27). Add month/day once the calendar's months land.
+timeline_date: "1487"
 order: 1
 daypart: late
 outcome: "The night after the raid, Sable Wren fed her rescuers in the one surviving room of the Golden Lioness, Ashford's townsfolk came to thank them, and Sable offered the party rooms, meals and 10% of the bar if they bring her stolen stock back from Nella's camp. They agreed. Iggy's song and Luci's dance turned the night into a celebration, and Sergei and Bosco found their way to the party."

@@ -10,7 +10,8 @@ tags:
 source_session: [[Session 29 The Mistake]]
 confirmed_date: "2026-10-06"
 date: "Ashford, night of arrival (Day 1, Ashford reckoning, a working label)"
-# timeline_date omitted: Aethryn has no calendar yet, so this event won't plot until one lands.
+# Year precision only: Aethryn's present year is 1487 (DM, 2026-10-27). Add month/day once the calendar's months land.
+timeline_date: "1487"
 order: 1
 daypart: night
 outcome: "On a night road toward Tassad, on the Nightveil's errand, Halsby met a possessed fox with glowing, smoky green eyes that spoke into his mind. It said someone dear to it, Sable, was being attacked by bandits at Ashford across the river, and that it could not help her itself. Halsby read it as earnest. He took the job without bargaining. The fox promised to fuse his spear and his focus into a boon, but only after the job: 'You help me and I help you.'"

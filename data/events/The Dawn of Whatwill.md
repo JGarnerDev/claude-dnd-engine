@@ -11,8 +11,8 @@ tags:
 aliases:
   - "the First Showering"
 date: "Shortly after the Astra Collision (~6.7 millennia ago)"
-# timeline_date is ~year 1 of the homebrew reckoning: shortly after the Impact (year 0). Year precision; prose date: stays the human label.
-timeline_date: "1"
+# timeline_date: ~1 year after the Astra Collision (-5256), present year 1487 (DM, 2026-10-27). Year precision; prose date: stays the human label.
+timeline_date: "-5255"
 outcome: "As the planet first passed through Astra's band of orbital shards, the shards were pulled to the surface as luminous Whatwill — the first Showering, heralded by the first Kerning."
 consequences:
   - "Began the Whatwill economy: the extraction, refinement, and trade that the world's powers are now built around."

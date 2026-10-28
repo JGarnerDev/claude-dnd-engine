@@ -11,7 +11,8 @@ tags:
 source_session: [[Session 29 The Mistake]]
 confirmed_date: "2026-10-06"
 date: "Ashford, night of arrival (Day 1, Ashford reckoning, a working label)"
-# timeline_date omitted: Aethryn has no calendar yet, so this event won't plot until one lands.
+# Year precision only: Aethryn's present year is 1487 (DM, 2026-10-27). Add month/day once the calendar's months land.
+timeline_date: "1487"
 order: 2
 daypart: night
 outcome: "The light of the Wanderer's Boon set the party down, rested, over a moonlit brewery yard in Ashford as raiders stripped it of barrels. Dip read the scene, relived the burning tavern of their childhood, raged, leveled to 5, and landed feet-first on a cask-hauler. Odibli landed hidden outside the wall and watched a cart of barrels escape south with a long-haired archer aboard, whom the raiders' leader called Nella. Luci and Iggy landed prone in the yard."

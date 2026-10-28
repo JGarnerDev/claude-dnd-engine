@@ -12,8 +12,9 @@ tags:
 mission: [[The Stolen Casks]]
 planned_date: "2026-10-06"
 played_date: "2026-10-06"
-# in_world_end_date deliberately unset: Aethryn has no calendar yet (DM, 2026-10-07).
-# Working label: "Day 1, Ashford reckoning, night". Set it once the calendar lands.
+# Year precision only: Aethryn's present year is 1487 (DM, 2026-10-27). Add month/day once the calendar's months land.
+# Working label: "Day 1, Ashford reckoning, night".
+in_world_end_date: "1487"
 recap: "Davian's relic carried the party through a long transit of pure light that rested them in passing. Meanwhile, on a night road, the Nightveil sorcerer Halsby, sent by Sister Maerith toward Tassad, was stopped by a possessed fox with smoky green eyes. It begged him to save a woman named Sable from bandits at Ashford across the river and promised to fuse his spear and focus into a boon once the job was done. Halsby took the job without haggling. The party fell out of the light over a moonlit, half-burned brewery yard being stripped by raiders. Dip read the scene, relived the burning tavern of their childhood, landed feet-first on a cask-hauler, raged and leveled to 5. Odibli landed hidden outside the wall and watched a cart of barrels escape south with a long-haired archer on it, whom the raiders' leader called Nella. Luci landed hard by the breach, looked up at a vast broken moon shedding shards, named it Fida in the Dead Sun tongue, heard her voice answer 'Closer', and leveled to 5. In two rounds the party and the newly arrived Halsby killed all six raiders: Dip killed Arden, Willem and the mage Tallis; Halsby's twinned chromatic orb killed the crossbowman and Bandit 1; and his upcast magic missile killed the big one as he rode off with a bound Sable, who fell clear of the spooked horse. The party stopped the raiders present from taking anything more."
 cliffhanger: "The yard is quiet and every raider is dead. Sable lies beside a spooked horse, still bound and gagged, and has not yet spoken to her rescuers. Nella's cart, loaded with the barrels already taken, is gone south under the trees. Halsby has walked out of the shadows among four strangers who arrived out of falling light. The fox's promise to Halsby is still owed."
 entities_canonized:

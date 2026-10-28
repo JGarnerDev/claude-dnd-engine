@@ -10,7 +10,8 @@ tags:
 source_session: [[Session 29 The Mistake]]
 confirmed_date: "2026-10-06"
 date: "Ashford, night of arrival (Day 1, Ashford reckoning, a working label)"
-# timeline_date omitted: Aethryn has no calendar yet, so this event won't plot until one lands.
+# Year precision only: Aethryn's present year is 1487 (DM, 2026-10-27). Add month/day once the calendar's months land.
+timeline_date: "1487"
 order: 4
 daypart: night
 outcome: "In two rounds the party killed all six raiders at the Golden Lioness. Dip killed Arden, Willem and the mage Tallis. Halsby's twinned chromatic orb killed the crossbowman and a second bandit. As the big one rode off with a bound and gagged Sable across his horse, Halsby's magic missiles killed him in the saddle. The horse spooked and Sable fell clear. The party stopped the raiders present from taking anything more."
