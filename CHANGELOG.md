@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.50.0] — 2026-10-27
+
+### Added
+
+- **`/transcript` resolves before it asks.** Before marking an item `(??)`, Phase 3 now checks the session plan (the beat, its `Private (<PC>):` outcome bands, its roster and rules), the previous session's historian record, and the files and trackers of the PCs in the moment, and writes the best reading as `(?)` with its source. What was said at the table outranks the plan: a divergence is recorded, not asked about, unless it has a mechanical knock-on (a long rest the later fights weren't sized for). Prompted by Session 31, where four of nine DM questions were answerable from files the engine already had.
+- **Recap slides: tall slides auto-scroll.** A slide taller than the screen (the standings, a long achievements list) now creeps down, holds at the bottom, glides back to the top and repeats while it is on screen. The mouse wheel scrolls it from anywhere on the slide; the loop picks up again three seconds after a manual scroll, and holds while the pointer is on anything with a tooltip (the hall-of-fame chips). Off under reduced motion. The scrollbar is now a faint hint. `stepScroll` in `app/pages/home/session/slides.ts`.
+
 ## [0.49.0] — 2026-10-27
 
 ### Added

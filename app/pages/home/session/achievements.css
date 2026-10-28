@@ -1,7 +1,7 @@
 /* Achievement slides (achievements.ts, meta/achievements.md) — one popup per achievement,
    game-notification style. Sized for screen-share like slides.css; uses the runner's
    --sr-* tokens (session.css). */
-.ac-wrap { display: flex; flex-direction: column; gap: 2.4vh; max-height: 68vh; overflow: auto; max-width: 900px; }
+.ac-wrap { display: flex; flex-direction: column; gap: 2.4vh; max-height: 68vh; overflow: auto; max-width: 900px; padding-right: 1.5em; scrollbar-gutter: stable; }
 
 .ac-card { position: relative; padding: 16px 22px 18px; background: linear-gradient(160deg, var(--sr-raised), var(--sr-surface)); border: 2px solid var(--sr-accent); border-radius: 6px; box-shadow: 0 0 0 4px color-mix(in srgb, var(--sr-accent) 14%, transparent), 0 10px 30px rgb(0 0 0 / 35%); animation: ac-pop 0.35s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
 .ac-card:nth-child(2) { animation-delay: 0.12s; }

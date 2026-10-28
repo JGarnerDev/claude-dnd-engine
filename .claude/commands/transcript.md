@@ -93,6 +93,14 @@ Add a seventh section, **Table reaction**, from the out-of-character moments —
 
 Under-marking is the failure mode that matters. A machine transcript mishears names, drops quiet speakers, and cannot tell a joke from a plan. Every unmarked line in this note becomes canon in `/recap` without further scrutiny, so mark generously.
 
+**Resolve before you ask.** `(??)` is for what no source settles, not for whatever the transcript left vague. Before marking an item `(??)`, check it against what the engine already holds, and write the best reading with `(?)` and its source (`(?; per plan S2_DIP)`) when one fits. `/recap` still confirms every `(?)`, so a confident inference costs the DM one "yes", while a bare `(??)` costs them a recall. Look in this order, stopping when one answers:
+
+1. **The session plan** (`scheduler/sessions/<n> …/`): the beat being played, its `Private (<PC>):` blocks (a private roll the DM sent maps to one of its outcome bands; give the band for the total, or every band if no total was said), its combatant roster, and its stated rules (rests, levels, loot)
+2. **The previous session's historian record**: its recap, roster and loose threads. "The big one" or "that guy from the raid" usually names someone in it
+3. **The files of the PCs and NPCs in the moment**, and each campaign tracker's rule. A roll the DM asks for without saying why usually belongs to a PC's hook or a tracker (a d6 on Odibli's magic is the Citadel Clock or his gnome hearth-channel)
+
+What was said at the table outranks the plan. When play diverged from the plan (the fox met Halsby at a bridge, not the ford), record what was played and note the plan's version in passing; that is not a question. Raise it as `(??)` only when the divergence has a mechanical knock-on downstream, such as a long rest the plan's later fights were sized without.
+
 Run a contradiction check on the synthesized recap before writing:
 
 ```text

@@ -1,6 +1,6 @@
 // @vitest-environment happy-dom
 import { afterEach, describe, expect, it } from 'vitest';
-import { openSlides, slideHtml } from './slides.js';
+import { openSlides, SCROLL, slideHtml, stepScroll } from './slides.js';
 import type { Slide } from './types.js';
 
 const deck: Slide[] = [
@@ -80,5 +80,28 @@ describe('openSlides', () => {
     openSlides(deck, 'Session 8');
     overlay()!.querySelector<HTMLButtonElement>('[data-act="close"]')!.click();
     expect(overlay()).toBeNull();
+  });
+});
+
+describe('stepScroll', () => {
+  const start = { phase: 'down' as const, wait: 0, pos: 0 };
+
+  it('creeps down, holds at the bottom, then heads back up', () => {
+    let s = stepScroll(start, 1, 100);
+    expect(s.pos).toBe(SCROLL.speed);
+    s = stepScroll(s, 10, 100);
+    expect(s).toEqual({ phase: 'up', wait: SCROLL.hold, pos: 100 });
+    s = stepScroll(s, SCROLL.hold, 100);
+    expect(s.pos).toBe(100);
+    s = stepScroll(s, 1, 100);
+    expect(s).toEqual({ phase: 'down', wait: SCROLL.hold, pos: 0 });
+  });
+
+  it('waits out a hold before moving', () => {
+    expect(stepScroll({ ...start, wait: 2 }, 0.5, 100)).toEqual({ ...start, wait: 1.5 });
+  });
+
+  it('does nothing when the slide fits', () => {
+    expect(stepScroll(start, 1, 0)).toBe(start);
   });
 });

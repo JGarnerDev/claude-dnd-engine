@@ -32,6 +32,51 @@ export function slideHtml(deck: Slide[], i: number, label: string): string {
     </footer>`;
 }
 
+// Auto-scroll for a slide taller than its box (the standings, a long
+// achievements list): creep down, hold at the bottom, glide back up, hold at the
+// top, repeat. Pure, so the loop below is just frames feeding it.
+export type Scroll = { phase: 'down' | 'up'; wait: number; pos: number };
+export const SCROLL = { speed: 40, back: 600, hold: 2.5, manual: 3, hover: 1 }; // px/s, px/s, then holds in s
+
+export function stepScroll(s: Scroll, dt: number, max: number): Scroll {
+  if (max <= 0) return s;
+  if (s.wait > 0) return { ...s, wait: s.wait - dt };
+  if (s.phase === 'down') {
+    const pos = Math.min(max, s.pos + SCROLL.speed * dt);
+    return pos >= max ? { phase: 'up', wait: SCROLL.hold, pos } : { ...s, pos };
+  }
+  const pos = Math.max(0, s.pos - SCROLL.back * dt);
+  return pos <= 0 ? { phase: 'down', wait: SCROLL.hold, pos } : { ...s, pos };
+}
+
+// Runs the loop on every overflowing scroll box in the slide; returns a stop
+// function. A scroll the loop didn't make (wheel, scrollbar drag) takes over:
+// the loop waits SCROLL.manual seconds, then carries on down from there.
+function autoScroll(root: HTMLElement): () => void {
+  const boxes = [...root.querySelectorAll<HTMLElement>('.sr-slide-body *')].filter((b) =>
+    /auto|scroll/.test(getComputedStyle(b).overflowY) && b.scrollHeight > b.clientHeight + 2);
+  if (!boxes.length || matchMedia?.('(prefers-reduced-motion: reduce)').matches) return () => {};
+  const st = boxes.map((): Scroll => ({ phase: 'down', wait: SCROLL.hold, pos: 0 }));
+  // Hovering anything with a tooltip (a hall-of-fame chip) holds the scroll, so
+  // the thing being inspected doesn't slide out from under the pointer.
+  let held = false;
+  const onOver = (ev: PointerEvent) => { held = !!(ev.target as Element).closest?.('.sr-slide-body [title]'); };
+  root.addEventListener('pointerover', onOver);
+  let last = performance.now();
+  let raf = requestAnimationFrame(function frame(now) {
+    const dt = Math.min(0.1, (now - last) / 1000);
+    last = now;
+    boxes.forEach((b, k) => {
+      if (Math.abs(b.scrollTop - st[k].pos) > 2) st[k] = { phase: 'down', wait: SCROLL.manual, pos: b.scrollTop };
+      if (held) st[k] = { ...st[k], wait: Math.max(st[k].wait, SCROLL.hover) };
+      st[k] = stepScroll(st[k], dt, b.scrollHeight - b.clientHeight);
+      b.scrollTop = st[k].pos;
+    });
+    raf = requestAnimationFrame(frame);
+  });
+  return () => { cancelAnimationFrame(raf); root.removeEventListener('pointerover', onOver); };
+}
+
 // Opens the deck over the page; returns a function that closes it.
 export function openSlides(deck: Slide[], label: string): () => void {
   if (!deck.length) return () => {};
@@ -41,12 +86,25 @@ export function openSlides(deck: Slide[], label: string): () => void {
   el.setAttribute('aria-label', label);
   document.body.appendChild(el);
   let i = 0;
+  let stopScroll = () => {};
   const show = (n: number) => {
     i = Math.max(0, Math.min(deck.length - 1, n));
+    stopScroll();
     el.innerHTML = slideHtml(deck, i, label);
+    stopScroll = autoScroll(el);
   };
+  // The wheel scrolls the slide's scroll box from anywhere on the slide, not
+  // only with the pointer over the box itself.
+  el.addEventListener('wheel', (ev) => {
+    const box = [...el.querySelectorAll<HTMLElement>('.sr-slide-body *')].find((b) => b.scrollHeight > b.clientHeight + 2
+      && /auto|scroll/.test(getComputedStyle(b).overflowY));
+    if (!box || box.contains(ev.target as Node)) return;
+    box.scrollTop += ev.deltaY;
+    ev.preventDefault();
+  }, { passive: false });
 
   const close = () => {
+    stopScroll();
     document.removeEventListener('keydown', onKey, true);
     if (document.fullscreenElement) void document.exitFullscreen?.();
     el.remove();

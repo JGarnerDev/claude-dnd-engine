@@ -1,6 +1,6 @@
 /* Stats slides (stats.ts, meta/stats.md) — award cards, standings bars, hall-of-fame strip.
    Sized for screen-share like slides.css; uses the runner's --sr-* tokens (session.css). */
-.st-wrap { display: flex; flex-direction: column; gap: 3vh; max-height: 68vh; overflow: auto; }
+.st-wrap { display: flex; flex-direction: column; gap: 3vh; max-height: 68vh; overflow: auto; padding-right: 1.5em; scrollbar-gutter: stable; }
 
 .st-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 14px; }
 .st-card { display: flex; align-items: flex-start; gap: 14px; padding: 14px 18px; background: linear-gradient(160deg, var(--sr-raised), var(--sr-surface)); border: 1px solid var(--sr-line); border-radius: 14px; }
