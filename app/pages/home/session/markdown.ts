@@ -155,12 +155,44 @@ export function nodeHeadings(md: string): Map<string, string> {
 //   - **Introduce:** Mara Tull        -> one intro per character, at first appearance;
 //     - **Look:** … / **Sound:** … / **Impression:** …   (its nested bullets)
 //   - **Tokens:** who goes on which map, who comes off
+//   - **Private (Dip):** what triggers it  -> a message for one player, sent privately;
+//     - **Under 15:** … / **20+:** …        (one nested bullet per outcome, each a
+//                                            whole message the DM copies and sends)
 // A callout is the top-level bullet plus every indented line under it.
-const CALLOUT_RE = /^[-*]\s+\*\*(Introduce|Tokens):?\*\*:?\s*(.*)$/;
+const CALLOUT_RE = /^[-*]\s+\*\*(Introduce|Tokens|Private)(?:\s*\(([^)]+)\))?:?\*\*:?\s*(.*)$/;
+const OUTCOME_RE = /^[-*]\s+(?:\*\*(.+?):?\*\*:?\s*)?(.*)$/;
+
+export interface PrivateNote {
+  to: string; // "Dip", or "Dip, Luci"
+  when: string; // the trigger, DM-facing
+  outcomes: Array<{ label: string; text: string }>; // text: player-facing, ready to send
+}
 
 export interface Callouts {
   intros: Array<{ name: string; md: string }>;
   tokens: string[];
+  privates: PrivateNote[];
+}
+
+// A private message as the player should get it: links become their names, and
+// emphasis and code marks go, so it pastes clean into a whisper or a DM.
+export function copyText(md: string): string {
+  return plainText(md).replace(/\*/g, '').replace(/(^|\W)_(\S(?:.*?\S)?)_(?=\W|$)/g, '$1$2').replace(/\s+/g, ' ').trim();
+}
+
+// Nested bullets under a Private callout: each top-level one is an outcome, and its
+// wrapped lines join it. A single message is one bullet (`- **Send:** …`).
+function outcomes(body: string[]): PrivateNote['outcomes'] {
+  if (!body.length) return [];
+  const indent = Math.min(...body.map((l) => l.match(/^\s*/)![0].length));
+  const out: PrivateNote['outcomes'] = [];
+  for (const raw of body) {
+    const l = raw.slice(indent);
+    const m = LIST_RE.test(l) && !/^\s/.test(l) ? OUTCOME_RE.exec(l) : null;
+    if (m) out.push({ label: (m[1] ?? '').trim(), text: m[2].trim() });
+    else if (out.length) out[out.length - 1].text += ' ' + l.trim();
+  }
+  return out.map((o) => ({ label: o.label, text: copyText(o.text) }));
 }
 
 // The node's prose with its callouts taken out — the runner shows those on their own.
@@ -175,12 +207,12 @@ export function stripCallouts(md: string): string {
 }
 
 export function extractCallouts(md: string): Callouts {
-  const out: Callouts = { intros: [], tokens: [] };
+  const out: Callouts = { intros: [], tokens: [], privates: [] };
   const lines = md.replace(/\r/g, '').split('\n');
   for (let i = 0; i < lines.length; i++) {
     const m = CALLOUT_RE.exec(lines[i]);
     if (!m) continue;
-    const head = [m[2].trim()];
+    const head = [m[3].trim()];
     const body: string[] = [];
     // Wrapped continuation of the head line, then the nested bullets.
     while (i + 1 < lines.length && /^\s+\S/.test(lines[i + 1])) {
@@ -189,6 +221,7 @@ export function extractCallouts(md: string): Callouts {
       else head.push(next.trim());
     }
     if (m[1] === 'Tokens') out.tokens.push([...head, ...body.map((l) => l.trim())].join(' '));
+    else if (m[1] === 'Private') out.privates.push({ to: (m[2] ?? '').trim(), when: head.join(' '), outcomes: outcomes(body) });
     else {
       const indent = Math.min(...body.map((l) => l.match(/^\s*/)![0].length));
       out.intros.push({ name: head.join(' '), md: body.map((l) => l.slice(indent)).join('\n') });

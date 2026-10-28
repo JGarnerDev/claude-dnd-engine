@@ -95,6 +95,13 @@ export function renderScene(main: HTMLElement, v: SceneView): void {
   main.querySelectorAll<HTMLButtonElement>('.sr-opt, .sr-step-head').forEach((b) => b.addEventListener('click', () => {
     if (b.dataset.to !== v.node.id) v.onGo(b.dataset.to!);
   }));
+  main.querySelectorAll<HTMLButtonElement>('.sr-copy').forEach((b) => b.addEventListener('click', () => {
+    void navigator.clipboard?.writeText(b.dataset.copy ?? '').then(() => {
+      b.textContent = 'Copied';
+      b.classList.add('is-copied');
+      setTimeout(() => { b.textContent = 'Copy'; b.classList.remove('is-copied'); }, 1500);
+    });
+  }));
   const tokens = main.querySelector<HTMLDetailsElement>('.sr-tokens-box');
   tokens?.addEventListener('toggle', () => v.onTokensToggle(tokens.open));
   main.scrollTop = sameScene ? scroll : 0;

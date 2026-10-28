@@ -149,6 +149,9 @@ Match the register; never neutralize tone toward a generic middle.
   work of evidence.
 - **Player-facing notes and recap slides** — warmer, a little story flavor, still no spoilers and no
   conclusions drawn for the party.
+- **Private messages** (`Private (<PC>):` blocks, copied and sent to one player) — second person, short,
+  what the character perceives and nothing else. The player decides what it means and what to share.
+  Each one reads complete on its own.
 - **Lore and pitches** — the most room for voice, and the most slop-prone. Heaviest pass here.
 
 ## While drafting

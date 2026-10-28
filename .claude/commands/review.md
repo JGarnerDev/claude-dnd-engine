@@ -61,6 +61,7 @@ For every named person the plan introduces who has no entity file:
 - **Free entities are a choice, not a filler.** If a `data/` entity would fit the role, name it to the DM as an option rather than pulling it in silently (`data/CLAUDE.md`)
 - **Introduce once, at first appearance.** Every character the party meets has an `Introduce:` block (Look, Sound, Impression) on the node where they first appear in the plan's running order (`/session` Phase 6, Introduce). Write missing ones from the entity file, the cast list and the combatant Kit lines; move any that sit on a later node. Keep Impression to what the party can observe. Later mentions use the name only
 - **Every token has a cue.** Everyone who gets a token (`tokens.txt`, or anyone in NPCs present) is put on a map by a `Tokens:` bullet on the node where they arrive, naming the map and roughly where, and taken off by one where they leave (`/session` Phase 6, Tokens). Add missing cues on the node itself, not in a separate list
+- **Every private moment is ready to send.** Any secret roll, vision, whisper, passive check or note to one player has a `Private (<PC>):` block (`/session` Phase 6, Private) with a complete message for every outcome. Write missing ones from the beat. Split stacked bands into messages that each stand alone, and move DM notes out of the messages into the beat
 - **Everyone has a real name.** Every person or named animal the plan puts in front of the party has one, walk-ons included (`/session` Phase 6, NPCs present). Backfill missing ones in the cast list or the scene's NPCs-present line, and leave the narration alone: "a villager" and "someone mutters" stay as written, so who carries a line does not change. List the names you added in Pass 4
 - **Every combatant has a party-facing label.** Each one gets a `Label (party-facing):` line next to its `Kit (player-facing):` line (`/session` Phase 6, Encounters). The label names a job or a look, never a stat block, a bare weapon or a name the party has not learned. It is unique within its encounter, and only true lookalikes are numbered. The Combatants at-a-glance list leads with it. If the session has a `tokens.txt` or battlemap layouts, run `uv run scripts/label-check.py --session {NN}`: its roles are the labels in lowercase with hyphens, and layout token lines lead with the label. Fix what it lists in the same pass, in the plan or in the file that drifted
 
@@ -108,7 +109,7 @@ The party should feel they steer the story, not ride it. Check the plan against
 Check the plan's prose against `meta/prose-style.md`, after Pass 1 so its additions are checked too.
 
 - **What to check:** every read-aloud box, every NPC line, every `Introduce:` block, every
-  `Kit (player-facing):` line, and the Closing. DM-facing notes get the plain-and-scannable
+  `Private` message, every `Kit (player-facing):` line, and the Closing. DM-facing notes get the plain-and-scannable
   register only; don't polish rules text
 - **Read each one, don't grep.** A search for stock phrases is a fine first sweep, but the pass is
   reading every item against the tell lists, the structural tells (including the same picture

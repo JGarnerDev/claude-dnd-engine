@@ -32,6 +32,23 @@ describe('stepsHtml', () => {
     expect(el.querySelector('.sr-step.is-current .opts')).not.toBeNull();
     expect(el.querySelector('.sr-step.is-todo .sr-step-num')!.textContent).toBe('1');
   });
+
+  it('shows a private message above the prose with a Copy button per outcome', () => {
+    const el = document.createElement('div');
+    el.innerHTML = stepsHtml({
+      nodes: [n('A')],
+      prose: new Map([['A', '- **Private (Dip):** Insight, in secret\n  - **15+:** It is "real" & hollow.\n- The rest of the beat.']]),
+      headings: new Map(),
+      current: 'A',
+      visited: new Set(['A']),
+      known: () => true,
+      optionsHtml: '',
+    });
+    const box = el.querySelector('.sr-private')!;
+    expect(box.querySelector('.sr-private-head')!.textContent).toContain('Dip');
+    expect(box.querySelector<HTMLButtonElement>('.sr-copy')!.dataset.copy).toBe('It is "real" & hollow.');
+    expect(el.querySelector('.sr-step-body > .sr-md')!.textContent).not.toContain('Insight, in secret');
+  });
 });
 
 describe('stepTitle', () => {

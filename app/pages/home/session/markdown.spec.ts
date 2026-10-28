@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { escapeHtml, extractCallouts, inline, nodeHeadings, plainText, renderMarkdown, splitNodeSections, splitSections, stripCallouts } from './markdown.js';
+import { copyText, escapeHtml, extractCallouts, inline, nodeHeadings, plainText, renderMarkdown, splitNodeSections, splitSections, stripCallouts } from './markdown.js';
 
 describe('plainText', () => {
   it('unwraps wikilinks and drops bold/code markup', () => {
@@ -110,7 +110,35 @@ describe('extractCallouts', () => {
   });
 
   it('returns nothing for prose without callouts', () => {
-    expect(extractCallouts('- a plain bullet\n\nText.')).toEqual({ intros: [], tokens: [] });
+    expect(extractCallouts('- a plain bullet\n\nText.')).toEqual({ intros: [], tokens: [], privates: [] });
+  });
+
+  it('lifts a private message with one copyable outcome per nested bullet', () => {
+    const md = [
+      '- **Private (Dip):** Insight or Arcana, rolled in secret,',
+      '  when the hearth went still',
+      '  - **Under 15:** A lurch of *wrongness*,',
+      '    then gone.',
+      '  - **20+:** Something in [[Iggy]] is tired, and not hostile.',
+      '- **Private:** no name given',
+      '  - **Send:** `Roll Insight` and tell me the total.',
+      '- keep',
+    ].join('\n');
+    const c = extractCallouts(md);
+    expect(c.privates).toEqual([
+      { to: 'Dip', when: 'Insight or Arcana, rolled in secret, when the hearth went still', outcomes: [
+        { label: 'Under 15', text: 'A lurch of wrongness, then gone.' },
+        { label: '20+', text: 'Something in Iggy is tired, and not hostile.' },
+      ] },
+      { to: '', when: 'no name given', outcomes: [{ label: 'Send', text: 'Roll Insight and tell me the total.' }] },
+    ]);
+    expect(stripCallouts(md)).toBe('- keep');
+  });
+});
+
+describe('copyText', () => {
+  it('pastes clean: names for links, no emphasis marks, one line', () => {
+    expect(copyText('*"Put it **away**,"* says [[Sable Wren|Sable]] to _you_,\n  quietly.')).toBe('"Put it away," says Sable to you, quietly.');
   });
 });
 

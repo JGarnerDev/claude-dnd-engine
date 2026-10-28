@@ -6,7 +6,8 @@
 // 2. When every solid edge leaves the current scene (or there are none), the next
 //    scene in plan order that the table has not visited is offered FIRST. That is
 //    how a parallel scene with no arrow into it (Halsby's intro) gets played: the
-//    plan says "cut away now", even though the graph joins it up later.
+//    plan says "cut away now", even though the graph joins it up later. Not when
+//    an unvisited solid target sits at or before that scene: the arrow wins.
 // 3. Dashed edges are asides — out of this card, or from any visited card into an
 //    unvisited card of this scene (an "if bitten" payoff waiting downstream).
 
@@ -74,7 +75,12 @@ export function nextOptions(g: Graph, current: string, visited: ReadonlySet<stri
       return ids.length > 0 && !ids.some((id) => visited.has(id));
     });
     const to = next && g.sceneStart.get(next);
-    if (to && !opts.some((o) => o.to === to)) {
+    // Cut only when the arrows would skip that scene. An arrow back into an
+    // earlier scene (the chase's last stage after the fork fight) or into the cut
+    // scene itself is the path the plan means, so the cut would leapfrog it.
+    const at = (id: string) => g.sceneOrder.indexOf(g.byId.get(id)!.scene ?? '');
+    const skipsIt = solid.every((e) => visited.has(e.to) || at(e.to) > g.sceneOrder.indexOf(next!));
+    if (to && skipsIt && !opts.some((o) => o.to === to)) {
       opts.unshift({ to, label: `Cut to ${sceneTitle(next!)}`, kind: 'scene' });
     }
   }

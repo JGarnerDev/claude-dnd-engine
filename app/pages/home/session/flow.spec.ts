@@ -31,6 +31,34 @@ describe('nextOptions', () => {
     expect(o[0].label).toBe('he arrives');
   });
 
+  // Shaped like Session 31: the chase scene's last stage comes after the fork
+  // fight (an arrow back), then leads straight into the camp scene.
+  const chase = buildGraph({
+    nodes: [
+      { id: 'FORK', scene: 'CHASE' }, { id: 'APPROACH', scene: 'CHASE' },
+      { id: 'RIDER', scene: 'FIGHT' },
+      { id: 'SCOUT', scene: 'CAMP' }, { id: 'CHOICE', scene: 'CAMP' },
+    ].map((n) => ({ ...n, marker: 'committed', kind: 'social', title: n.id, lines: [], notes: [] })),
+    edges: [
+      { from: 'FORK', to: 'RIDER', label: '', dashed: false },
+      { from: 'RIDER', to: 'APPROACH', label: '', dashed: false },
+      { from: 'APPROACH', to: 'CHOICE', label: '', dashed: false },
+      { from: 'APPROACH', to: 'SCOUT', label: 'they scout', dashed: true },
+    ],
+    scenes: ['CHASE', 'FIGHT', 'CAMP'].map((id) => ({ id, key: id, title: id, md: '' })),
+  });
+  const chaseOpts = (cur: string, visited: string[]) => nextOptions(chase, cur, new Set([...visited, cur]), title);
+
+  it('follows an arrow back into an earlier scene instead of cutting past it', () => {
+    expect(chaseOpts('RIDER', ['FORK']).map((x) => x.to)).toEqual(['APPROACH']);
+  });
+
+  it('follows an arrow into the next scene instead of cutting to its first card', () => {
+    const o = chaseOpts('APPROACH', ['FORK', 'RIDER']);
+    expect(o[0]).toEqual({ to: 'CHOICE', label: 'CHOICE', kind: 'edge' });
+    expect(o.some((x) => x.kind === 'scene')).toBe(false);
+  });
+
   it('labels fork branches from their edges', () => {
     expect(opts('S1_ANSWER', ['S1_WOODS']).map((x) => x.label)).toEqual(['yes', 'no']);
   });

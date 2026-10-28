@@ -116,6 +116,19 @@
 .sr-intro .sr-md ul { margin: 0; padding-left: 18px; }
 .sr-intro .sr-md li { margin: 3px 0; }
 
+/* Private messages, inside the open step: one Copy button per outcome */
+.sr-private { background: var(--sr-surface); border-radius: 8px; padding: 8px 14px; margin: 4px 0 10px; border-left: 4px solid var(--sr-k-seed); }
+.sr-private-head { font-size: 17px; margin: 0 0 2px; }
+.sr-private-when { font-size: 13.5px; color: var(--sr-muted); margin-bottom: 6px; }
+.sr-private-list { list-style: none; padding: 0; margin: 0; }
+.sr-private-list li { display: grid; grid-template-columns: 1fr auto; column-gap: 10px; align-items: start; padding: 6px 0; border-top: 1px solid var(--sr-line); }
+.sr-private-list li:first-child { border-top: 0; }
+.sr-private-label { grid-column: 1 / -1; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--sr-k-seed); }
+.sr-private-text { font-size: 15px; }
+.sr-copy { font: 600 12.5px system-ui, sans-serif; padding: 4px 10px; border-radius: 5px; border: 1px solid var(--sr-line); background: var(--sr-bg); color: inherit; cursor: pointer; }
+.sr-copy:hover { border-color: var(--sr-muted); }
+.sr-copy.is-copied { border-color: var(--sr-k-stake); color: var(--sr-k-stake); }
+
 /* Branch buttons */
 .sr-options, .sr-asides { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
 .sr-asides { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--sr-line); }

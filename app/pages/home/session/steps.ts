@@ -1,6 +1,6 @@
 // A scene's beats as a step list: done steps greyed with a tick, the current step
-// open with its prose (introductions first, token cues and planning history taken
-// out), upcoming steps collapsed to one line. Any step row jumps to that beat.
+// open with its prose (introductions first, then private messages ready to copy;
+// token cues and planning history taken out), upcoming steps collapsed to one line. Any step row jumps to that beat.
 
 import { escapeHtml, extractCallouts, inline, renderMarkdown, stripCallouts } from './markdown.js';
 import type { Known } from './markdown.js';
@@ -34,12 +34,29 @@ function introsHtml(prose: string, known: Known): string {
     </section>`).join('');
 }
 
+// Private rolls and whispers: one box per message, a Copy button per outcome, so the
+// DM sends the right version to one player without retyping it.
+function privatesHtml(prose: string, known: Known): string {
+  return extractCallouts(prose).privates.map((p) => `
+    <section class="sr-private">
+      <h3 class="sr-private-head"><span class="sr-callout-label">Private</span>${p.to ? ` → ${inline(p.to, known)}` : ''}</h3>
+      ${p.when ? `<div class="sr-private-when">${inline(stripProvenance(p.when), known)}</div>` : ''}
+      <ul class="sr-private-list">${p.outcomes.map((o) => `
+        <li>
+          ${o.label ? `<span class="sr-private-label">${inline(o.label, known)}</span>` : ''}
+          <span class="sr-private-text">${escapeHtml(o.text)}</span>
+          <button type="button" class="sr-copy" data-copy="${escapeHtml(o.text)}" title="Copy this message">Copy</button>
+        </li>`).join('')}
+      </ul>
+    </section>`).join('');
+}
+
 // Choice bullets get their own class, so they stand out in the open step.
 const markChoices = (html: string) => html.replace(/<li><strong>Choice \(/g, '<li class="sr-choice"><strong>Choice (');
 
 function bodyHtml(n: FlowNode, prose: string, known: Known): string {
   if (!prose) return `<ul class="sr-md">${mergeLabelLines(n.lines).map((l) => `<li>${inline(l, known)}</li>`).join('')}</ul>`;
-  return introsHtml(prose, known) + `<div class="sr-md">${markChoices(renderMarkdown(stripProvenance(stripCallouts(prose)), known))}</div>`;
+  return introsHtml(prose, known) + privatesHtml(prose, known) + `<div class="sr-md">${markChoices(renderMarkdown(stripProvenance(stripCallouts(prose)), known))}</div>`;
 }
 
 // The plan's heading for the beat, else the flow label with its wrapped lines rejoined.

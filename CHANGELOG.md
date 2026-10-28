@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.48.0] — 2026-10-27
+
+### Added
+
+- **Private moments, ready to send.** A plan now writes the message for anything one player gets privately (a secret roll, a vision, a whisper, a note) as a `- **Private (<PC>):**` block: the trigger, then one nested bullet per outcome (`**Ask:**`, each roll band, each choice), and each outcome is a complete message that stands on its own. The session runner shows the block at the top of the open step, with a Copy button on each outcome that copies clean text (names for links, no markdown). Rules: `/session` Phase 6 → Private; `/review` Pass 2 fills in missing ones and Pass 6 checks their prose; `meta/prose-style.md` has the register. Session 31's `S2_DIP` is the first one.
+
+### Fixed
+
+- **Session runner: "Cut to" no longer jumps past the beat the arrow points at.** The scene cut was offered first (Enter, →, Space) whenever a card's arrows left its scene, even when the arrow ran back into an earlier scene or straight into the scene being cut to. In Session 31 that skipped chase stage 4 (`S2_APPROACH`) after the fork fight and landed on the optional scouting beat. The cut now appears only when the arrows would really skip that scene; Session 29's parallel-scene cut (Halsby's intro) still works.
+
 ## [0.47.0] — 2026-10-26
 
 ### Added
