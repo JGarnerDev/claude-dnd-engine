@@ -138,3 +138,19 @@ Stats ledger (meta/stats.md). One `## Session <n>` per session, both campaigns, 
 ### Halsby
 
 - spells-cast: 1
+
+## Session 31
+
+### Halsby
+
+- spells-cast: 1
+- deals-struck: 1
+
+### Luci
+
+- spells-cast: 3
+
+### Odibli
+
+- spells-cast: 1
+- npcs-won-over: 1

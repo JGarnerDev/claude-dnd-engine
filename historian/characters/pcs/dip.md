@@ -15,7 +15,7 @@ race: "Orc"
 class: "Barbarian (Path of the Berserker)"
 background: [[Sage]]
 level: 5
-level_confirmed: 30
+level_confirmed: 31
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Dip T (Barbarian 4, Path of the Berserker)"
 pronouns: "they/them"
@@ -189,6 +189,7 @@ Hears whispers when it is quiet. Onset: Session 10, after Odibli absorbed shadow
 - **Session 16:** Made a jovial entrance at the [[Blue Water Inn]] (audibly calling the patrons "less than stellar company"); performed an interpretive dance and rolled a natural 1, crashing into tables to jeers; later followed [[Urwin]] into the kitchen.
 - **Session 29:** Landed in Aethryn reading the raid on [[The Golden Lioness]]. The burning tavern brought back the fire that took their hamlet, and the DM granted a free rage and **level 5** on the spot (Extra Attack and Fast Movement; Ben also noted whip weapon mastery, first misspoken as javelin). Dropped feet-first from the light onto a cask-hauler. Killed Arden ("don't call me a townie, ever"), cleaved Willem in half, and jammed a battleaxe down the throat of the mage Tallis mid-curse. Took 8 fire from Tallis's fire bolt.
 - **Session 30 (Ben absent):** Narrated by the DM. Came down from the rage to help Luci free Sable, shaken by a scene so like the fire of their past, and finished the yard fire with the last pail. The table ruled that Dip pocketed the ~150 gp off the raiders and won't donate it. Holds an [[Earshot Crystals|earshot crystal]] from the pile. A private moment at Iggy's song is owed as a later flashback.
+- **Session 31:** Owed from Session 30: during Iggy's song Dip saw the hearth go still, and the private roll (Arcana 15) opened it like a nesting doll, real, then hollow, then real again, with the innermost layer inside [[Iggy]]. Dip has told no one. Took the 150 gp share off the raiders and an [[Earshot Crystals|earshot crystal]]. Told [[Sable Wren]] that 10% was low for the work and to think on it while they're gone.
 
 > **Reliability:** the gold and the crystal were assigned with Ben absent (DM, 2026-10-21). Confirm with Ben.
 

@@ -4,7 +4,7 @@ Achievements ledger (meta/achievements.md). One `## Session <n>` per homebrew se
 
 ### Odibli
 
-- fireplaces examined: 1 (S30)
+- fireplaces examined: 2 (S30, S31)
 - financial advice nobody asked for: 1 (S30)
 
 ### Luci
@@ -21,3 +21,10 @@ Achievements ledger (meta/achievements.md). One `## Session <n>` per homebrew se
 
 - **Firefighter (Derogatory)**: Fought a fire with a windstorm. The fire spread up the wall.
   Wind is not water.
+
+## Session 31
+
+### Odibli
+
+- **Airmail**: Tried to fix a curse with two pen strokes and armed its bomb instead. Rode the dog
+  out and threw it as a paper airplane. It landed on a corpse.

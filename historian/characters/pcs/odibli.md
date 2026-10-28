@@ -12,10 +12,10 @@ player: [[Miguel]]
 race: "Gnome (Forest)"
 class: "Wizard (Evoker)"
 background: [[Sage]]
-level: 4
-level_confirmed: 30
+level: 5
+level_confirmed: 31
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
-character_sheet: "Roll20 — Odibli Spannerbranch (Wizard 4, Evoker)"
+character_sheet: "Roll20 — Odibli Spannerbranch (Wizard 5, Evoker)"
 aliases:
   - "Odibli Spannerbranch"
   - "ODB"
@@ -169,7 +169,7 @@ This is why he checks every fireplace. It is also how [[Strahd von Zarovich]] fi
 
 ## Character Sheet (Roll20)
 
-Wizard 4 (Evoker) · Forest Gnome · Sage · Lawful Neutral · Small, 30 ft. Pronouns he/him.
+Wizard 5 (Evoker) · Forest Gnome · Sage · Lawful Neutral · Small, 30 ft. Pronouns he/him.
 
 - **Defenses:** AC 14, HP 22, Hit Dice 4d6, initiative +0, passive Perception 12. Gnomish Cunning: advantage on INT, WIS, and CHA saves.
 - **Ability scores:** STR 9, DEX 11, CON 13, INT 20 (save +7), WIS 14 (save +4), CHA 15.
@@ -220,6 +220,7 @@ Wizard 4 (Evoker) · Forest Gnome · Sage · Lawful Neutral · Small, 30 ft. Pro
 - **Session 16:** At the [[Blue Water Inn]], cast speak with animals to let [[Sergei Rubelgerd]] tell the room his story of lost friend Tidak (the bar wept); interrogated the bard [[Rictavio]] on his dragon-slaying boast, caught the evasion, and came away mistrustful
 - **Session 29:** Chose to read the scene as he fell. He spotted the crossbowman circling behind the crates and landed hidden outside the yard wall. He watched a cart of barrels escape south with a long-haired archer aboard (Nella), who looked back at him before vanishing under the trees. Fire bolt at the crossbowman: natural 1. Hold Person on the big one: saved. [[The Wanderer's Boon]] was not checked on screen. Stays level 4.
 - **Session 30:** Told [[Sable Wren]] the party had been ripped from another reality and fell from the stars, and said he feels drawn in one direction. Cast Prestidigitation on the fire alongside Halsby, which smothered most of it. Would not go near the dead raider mage, or the hearth. Read the hearth anyway (Arcana 23): it is linked to another entity not currently present. Told Sable she is a bad business owner and introduced himself as "Warren O'Ghibli Buffett". Pitched [[Silas Crubb]] on rebundling the town's debt (Charisma 19), and hyped Halsby's awning pitch. Reunited with [[Sergei Rubelgerd]] and spoke with him through Speak with Animals. Stays level 4; his level-up waits on the hearth. Holds an [[Earshot Crystals|earshot crystal]].
+- **Session 31:** Turned the [[The Wanderer's Boon]] over with an illusory hand (Prestidigitation) and, taking 20, found it inert; with [[Halsby]] he sensed it will hold magic again. Rolled a 9 on what foxes are: his notes say some speak, bargain, and eat children's hearts. Drawn to the hearth again when it dipped (Investigation 24 with Luci's guidance), he found a smother charm, the raiders' hedge mage's glyph, and read it (Arcana with guidance, very high): it would drown the self-feeding fire over about eight hours, and it carries its maker's name. He sketched it into his journal, then tried to write it inert. The first stroke went wrong and set off its explosive ward; he rode [[Sergei Rubelgerd]] out, threw it as a paper airplane, and it blew up on the big raider's body in the yard. **Level 5.** [[Sable Wren]] thanked him and asked him not to speak of the fire; he swore to it. A d6 for whether the magic reached his gnome people: 5, not sensed. Shook [[Silas Crubb]]'s hand on future business talk. **Fame (DM-approved):** word goes round [[Ashford]] that the gnome ran a burning charm out of the Lioness and it blew up in the yard; the town saw the blast, not the reason, since Sable has asked for silence about the fire.
 
 > **Reliability:** Odibli's pull in one direction (Session 30) is player-side, not yet known in fiction. Miguel's 2026-10-25 doc puts the Citadel in Aethryn but doesn't say the pull points at it. Confirm with Miguel.
 

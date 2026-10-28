@@ -42,6 +42,8 @@ sacred_practices:
   - "Bringing him a true story, told aloud over the water, so the telling is remembered"
 myths:
   - "The river's red was his own deep mineral dye before any blood was spilled in it"
+voice: "Formal and courteous through the fox; talks in debts and their settling; bows before he refuses, and never gives his name."
+voice_confirmed: 31
 ---
 
 Beneath **[[Ashford]]**, in the flooded caverns and the deep aquifer that feeds the
@@ -143,3 +145,34 @@ The joke underneath all of it: the safest building in town is sitting on a monst
   plans to deliver it around Session 30–31.
 - He was **never named** to Halsby, and the party does not know he exists. Only one animal (the
   fox) was used. No snake appeared.
+
+## Canon — Session 31
+
+- **The debt is paid.** The fox waited for [[Halsby]] at a bridge just outside
+  [[The Golden Lioness]], bowed, and said: "You did what I asked. People rarely do." It refused to
+  say who it is "at this moment", said it did not know Halsby, his companions or their motives,
+  but owed him. Halsby read it as earnest and possessed, by what he couldn't tell. It tracked him
+  through his Darkness, and declined his offer of shadow gifts: it had no need of his magic.
+- It fused his spear and shard into [[The Shadowless Spear]], said "The debt is repaid. I thank you
+  once again," wished him luck in helping save Sable, said "perhaps we will talk again", and ran
+  into the woods. Asher is still unnamed to the party. ([[Session 31 The Red Trail]])
+
+## Voice
+
+> **Draft** (S31 recap, 2026-10-27): built from the fox's lines and his file. Confirm with Jeff.
+
+### Core
+
+- **Signature:** speaks of debts and their settling ("The debt is repaid"), with a formal bow
+- **Never:** gives his name
+- **Tell:** a slow bow before he refuses
+
+### Now
+
+- **Toward Halsby:** square with him, and open to more (S31: the Spear delivered, "perhaps we will talk again")
+
+### Said at the table
+
+- S31: "You did what I asked. People rarely do. Please, if you will, hand me your spear and the shard." (the fox, at the bridge)
+- S31: "This is quite kind of you, but I need not your magic." (the fox, refusing Halsby's offer)
+- S31: "The debt is repaid. I thank you once again." (the fox, after the fusing)

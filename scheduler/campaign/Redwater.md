@@ -48,56 +48,58 @@ Five PCs this season. The four who crossed from Barovia persist across both worl
 
 > **Reliability:** carried over from the Strahd roster plus the Session 28 seam pass. Afflictions cross **dormant** (the mists fed them; away, they are muted) — `workshop/first-homebrew-act/notes/the-seam.md`. Odibli's poison and Dip's mold were cured on screen and are gone; do not reuse them. Builds synced to the PC files 2026-10-25; the PC files and Roll20 sheets win. Which class took Luci's fifth level is unrecorded (confirm with Paul). Odibli and Halsby level to 5 in Session 31.
 
-## Current State (after Session 30)
+## Current State (after Session 31)
 
-The party is in Aethryn, in the one surviving room of [[The Golden Lioness]] in [[Ashford]], late
-on the night of their arrival. [[Act 1 - The Hearth at Ashford]] is the live act and
-[[The Stolen Casks]] is **active**. [[Session 30 Keep the Ale]] played only Scenes 1–3; the rest
-of the night and the whole pursuit carry into [[Session 31 The Red Trail]] (a draft).
+The party is in Aethryn, at a bridge just outside [[The Golden Lioness]] in [[Ashford]], on the
+morning of Day 2, ready to ride southeast after Nella's cart. [[Act 1 - The Hearth at Ashford]] is
+the live act and [[The Stolen Casks]] is **active**. [[Session 31 The Red Trail]] played only its
+night and dawn; the whole pursuit carries into [[Session 32 The Red Trail]] (a draft, whose camp
+needs a resize for a long-rested party).
 
 - **The job is taken.** [[Sable Wren]] offered rooms, meals, a stay of a month or two and 10% of
-  the bar if the party brings back her stock. They agreed; no deed formally taken. She owes
+  the bar if the party brings back her stock. [[Dip]] told her 10% was low; she offered a larger
+  share if they stay, to be talked over when they return. Nothing is signed. She owes
   [[Silas Crubb]] about 650 gp of a ~1,000 gp loan, and the stock was meant to pay it.
-- **The Golden Lioness was retconned** to a week-old venture, Ashford's first tavern, half-built
-  and now half-wrecked. Sable runs it alone for now.
+- **The Golden Lioness** is a week-old venture, Ashford's first tavern, half-built and now
+  half-wrecked. Sable runs it alone for now.
 - **Nella's cart** went southeast on deep ruts ([[Jory Pike]]). The raiders are one part of a
   larger, organized force camped about a day across the river, all shod by the same cobbler.
   [[Wick]] (a branded elf commander) and [[Harrow Bane]] (a name that hushes a room) are known
   by word only.
-- **The hearth** feeds itself, is linked to something absent, and went still during Iggy's song
-  (`meta/mysteries.md`). Its link stays open, to be settled in play; the Session 31 threat to it is Tallis's smother-charm.
-- **The party carries [[Earshot Crystals]]**, one each. **Dip** holds the ~150 gp off the raiders
-  (confirm with Ben). [[Sergei Rubelgerd]] and [[Bosco]] are back with the party.
-- **Not yet played:** Mara's statement · [[The Wanderer's Boon]] shown inert · the dying-hearth
-  beat · dawn, the horses, [[The Shadowless Spear]] for [[Halsby]] · the chase, the fork, the
-  waystation, the man in the cell.
-- **Levels:** Dip, Luci and Iggy are 5 (Iggy took Paladin 2). Halsby and Odibli are 4; their
-  level-ups wait on the Spear and the hearth. Everyone is at 5 before the December finale.
+- **The hearth is saved.** [[Odibli]] found the hedge mage's smother charm in it and got it out of
+  the building before its ward exploded in the yard. The fire still feeds itself and is linked to
+  something absent (`meta/mysteries.md`). Sable asked Odibli not to talk about the fire until she
+  does; word of the blast is going round Ashford.
+- **Halsby has [[The Shadowless Spear]].** The fox's debt is paid ("perhaps we will talk again").
+  Whether its +1 reaches his spells is open (todo #88).
+- **Dip holds a private vision** from the night of Iggy's song: the stillness led inward, to
+  something inside [[Iggy]]. Unshared.
+- **[[The Wanderer's Boon]]** is inert, but holds the space where its magic will return.
+- **The party carries [[Earshot Crystals]]**, one each (words only, 300 ft). **Dip** holds the
+  ~150 gp off the raiders. [[Sergei Rubelgerd]] and [[Bosco]] ride with the party.
+- **Borrowed:** five of Silas's horses and a cart, to come back with every shoe on.
+- **Not yet played:** the trail, the chase, the fork, the waystation, Nella's escape and tally,
+  the haul home, the man in the cell.
+- **Levels:** all five PCs are level 5. Everyone is at 5 before the December finale.
 - **The sky:** a single vast **broken moon**, shedding shards. Luci named it **Fida** in the
   Dead Sun tongue, and her voice answered "Closer." This conflicts with
   `data/lore/calendar-proposal.md` (two suns, three moons; not canon), which needs reconciling
   before it is canonized.
 
-### Rest Clock (as of: Session 30)
+### Rest Clock (as of: Session 31)
 
 Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` -> Long Rest Rules).
 
-- In-world time now: **"Day 1, Ashford reckoning", late night, after dinner and the song.** This is a working label, not a date, because Aethryn has no settled calendar (`questionnaires/world/history/`, `data/lore/calendar-proposal.md` both open)
-- Last long rest (in-world): **the transit itself**, given in fiction at Session 29's landing (DM ruling, 2026-10-01)
-- Hours since last long rest: ~4 (~estimate). The transit landed into the fight, then about three hours of dinner, drinks and song
-- Long rest available: **no, not for ~20 more in-world hours**
-- Rounds of combat since: **~3** (all Session 29; Session 30 had no combat)
+- In-world time now: **"Day 2, Ashford reckoning", early morning**, at a bridge just outside the Lioness. A working label, not a date (Aethryn's months are unsettled)
+- Last long rest (in-world): **overnight Day 1 → Day 2 at the Golden Lioness** (DM ruling at the table, Session 31, overriding the plan's 24-hour gate)
+- Hours since last long rest: ~1 (~estimate): breakfast, the horses, the fox
+- Long rest available: **no, not until the night of Day 2 at the earliest** (24-hour gate)
+- Rounds of combat since: **0**
 - Short rests since: **0**
 - Notable burns:
-  - [[Halsby]]: Invisibility, a twinned Chromatic Orb (slot + sorcery points), and Magic Missile upcast for 5 darts (~3rd level; ~estimate)
-  - [[Odibli]]: Hold Person (2nd); Speak with Animals (Session 30; ritual or slot, unconfirmed)
-  - [[Luci]]: ki/focus for the flurry, plus her radiant emanation; her healing hands (Session 30, on Dunny)
-  - [[Iggy]]: 1 Bardic Inspiration; some Lay on Hands (Session 30, on Dunny)
-  - [[Dip]]: 1 rage (granted free), and took 8 fire
+  - [[Halsby]]: Darkness (2nd level), with Subtle Spell (~1 sorcery point; ~estimate)
   - Permanent losses that still apply: Luci's **Sacred Flame**, and Odibli's **familiar** (Session 25)
   - Afflictions are still **dormant** (Iggy's shadow, Dip's whispers)
-
-> **Reliability:** spell levels and the sorcery-point spend come from a machine transcript of a Roll20 night when sheets were failing. Confirm with Kellan and Miguel if a resource question decides anything.
 
 ## Setup TODO
 

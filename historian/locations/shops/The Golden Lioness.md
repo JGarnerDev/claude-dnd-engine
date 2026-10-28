@@ -132,3 +132,14 @@ behind will find them eventually.
 - **The Mistake**, as poured: deep red and a little cloudy, a pink head that foams and fades, sour
   cherry then a round honeyed middle, finishing sweet and colder than the mug.
 - [[Sergei Rubelgerd]] and [[Bosco]] sleep by the hearth, with Sable's blessing.
+
+## Canon — Session 31
+
+- **The smother charm.** [[Odibli]] found a glyph on parchment pressed into the hearth: a smother
+  charm by the raiders' hedge mage, meant to drown the self-feeding fire unnoticed over about eight
+  hours. [[Sable Wren]] thinks it went in while the raiders held her. His rewrite set off its
+  explosive ward; he got it out of the building, and it exploded in the yard on the big raider's
+  body. The yard grass is scorched in a 20-foot circle; dew kept it from spreading.
+- **The hearth is saved** and still feeds itself, needing no wood. When it dipped, the room's light
+  went the colour of old brass. Sable has asked Odibli not to talk about the fire.
+- The party slept here, two-thirds of the building open to the wind, and took a long rest. ([[Session 31 The Red Trail]])

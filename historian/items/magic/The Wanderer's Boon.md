@@ -17,7 +17,7 @@ aliases:
   - "The relic"
 importance: critical
 active: true
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: [[Session 31 The Red Trail]]
 relates_to:
   - [[The Vintner Mage]] (made it)
   - [[Davian Martikov]] (kept it; gave it to the party)
@@ -55,6 +55,13 @@ The family's knowledge of it is thin and entirely secondhand. They do not know w
 ## What It Did
 
 [[Odibli]] had the entire party hold hands before he grasped it — his own improvisation, not an instruction. Light rose around them like luminous mist, climbed to the edge of blinding, and faded, and the party was no longer at the winery, in a place none of them had ever seen. See [[The Party Steps Through the Portal]].
+
+## In Aethryn
+
+- [[Odibli]] took 20 on it in [[The Golden Lioness]]: it is inert, and the magic it had when
+  [[Davian Martikov]] gave it is gone. [[Halsby]] read it too (Arcana 21, with [[Luci]]'s
+  guidance). Between them they sensed the negative space of magic: it will hold magic again, of a
+  nature they can't yet tell. ([[Session 31 The Red Trail]])
 
 ## Open Questions
 

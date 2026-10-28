@@ -15,7 +15,7 @@ livelihood: "Proprietor and brewer at The Golden Lioness."
 race: tiefling
 class: warlock
 importance: major
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: [[Session 31 The Red Trail]]
 disposition: friendly
 description: "Tiefling warlock who runs The Golden Lioness in Ashford; her patron is the deep-water being beneath the town, whom she calls Asher. Got the building by making friends with something she was hired to exorcise."
 contributed_by: jeff
@@ -30,10 +30,10 @@ affinity:
   - [[Luci]] (3)
   - [[Halsby]] (2)
   - [[Iggy]] (2)
-  - [[Odibli]] (1)
+  - [[Odibli]] (3)
   - [[Dip]] (1)
 voice: "Practical and dry: acts first, thanks later. Blunt to the point of swearing when pushed, warm under it, never explains herself."
-voice_confirmed: 30
+voice_confirmed: 31
 ---
 
 Location: [[The Golden Lioness]]
@@ -97,6 +97,21 @@ to take on [[Lok Thuliaga]] and [[Bree Tealeaf]].
   pouring. She let [[Sergei Rubelgerd]] and [[Bosco]] sleep beside it; she has a soft spot for
   pets.
 
+## Canon — Session 31
+
+- **The deal.** When [[Dip]] told her 10% was low for the work, she said she was open-minded and
+  in dire need, and offered to talk about a more substantial share if the party stays. Nothing is
+  signed. She asked whether the group had a name; when [[Luci]] shouted "The Lightbearers!", she
+  said she'd just call them "you guys" for now.
+- **The glyph.** She told [[Odibli]] the raiders hit the front of the tavern with a fireball, then
+  held her with Hold Person when she came to look, and she guesses the smother charm went into the
+  hearth then. She asked him urgently to deal with it.
+- **The fire is hers to explain.** After he saved it she took him by the shoulder, thanked him,
+  said she might talk to him later about the fire because it is "a little bit strange", and asked
+  him not to bring it up for now. He swore to it.
+- **The send-off.** Breakfast was leftover soup and hardtack. "Bring back the casks if you can,
+  but come back anyways if you can't." ([[Session 31 The Red Trail]])
+
 ## Voice
 
 ### Core
@@ -108,10 +123,12 @@ to take on [[Lok Thuliaga]] and [[Bree Tealeaf]].
 ### Now
 
 - **Stance:** grateful, and putting her bar in their hands (S30: the rescue and the offer)
-- **Toward Odibli:** exasperated (S30: he called her a bad business owner)
+- **Toward Odibli:** trusts him with the fire and has asked for his silence; the exasperation is still there underneath (S31: he saved the hearth; S30: he called her a bad business owner)
 
 ### Said at the table
 
 - S30: "What's Barovia?" (to Odibli, after Luci's speech)
 - S30: "That's the Mistake. It's the one people come back for." (pouring for the party)
 - S30: "I just got my thing stolen from me and you're telling me I have bad financial planning?" (to Odibli)
+- S31: "Thank you for doing that. Maybe I'll talk to you later about that fire, it's a little bit strange, but I'd ask you now to not bring it up." (to Odibli, hand on his shoulder)
+- S31: "Bring back the casks if you can, but come back anyways if you can't." (seeing them off at dawn) (?)

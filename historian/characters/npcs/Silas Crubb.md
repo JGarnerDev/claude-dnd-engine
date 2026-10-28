@@ -20,7 +20,7 @@ livelihood: "Mayor of Ashford and its general-goods merchant — one man, both j
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: [[Session 31 The Red Trail]]
 relates_to:
   - "[[Ashford]] (he is its mayor and its general store)"
   - "[[House Cael]] (trades with them, favours them in public never)"
@@ -37,10 +37,11 @@ motives:
   - "A ledger that balances"
 charm_hook: "Every tangent he goes on ends, eventually and apparently by accident, at a number he wanted you to know."
 affinity:
-  - [[Odibli]] (1)
-  - [[Halsby]] (-1)
+  - [[Odibli]] (2)
+  - [[Halsby]] (0)
+  - [[Luci]] (-1)
 voice: "Affable small-town drawl that always lands on a number. Shrewd, never predatory, slow to commit."
-voice_confirmed: 30
+voice_confirmed: 31
 ---
 
 Location: [[Ashford]]
@@ -83,6 +84,17 @@ which households are quietly in debt and to whom.
   on "shade on command". He followed some of it, decided the party was "alien enough not to be
   applicable to this town's finances", said they could talk later, and left after his second drink.
 
+## Session 31
+
+- Came at dawn with [[Jory Pike]] and lent the party **five horses and a cart**: "These are loans,
+  not gifts. I want them back with all four shoes on each horse. I'll count them." He reminded them
+  how much [[Sable Wren]] owes him, but said the Lioness could mean a healthier future for
+  [[Ashford]], which needs the trade after the raids.
+- Slapped [[Luci]] on the back with a joke about charging her for a missing horseshoe, caught her
+  look, and stepped back. Jovial, maybe always slightly drunk; not creepy.
+- Thanked [[Odibli]] and [[Halsby]] for their business advice, said they'd talk more once things
+  settle, and shook each one's hand. ([[Session 31 The Red Trail]])
+
 ## Voice
 
 ### Core
@@ -93,10 +105,13 @@ which households are quietly in debt and to whom.
 
 ### Now
 
-- **Stance:** amused and wary; thinks the party "alien" to the town's finances (S30: the debt and awning pitches)
+- **Stance:** amused and wary; thinks the party "alien" to the town's finances (S30: the debt and awning pitches), and now invested: lent five horses, every shoe counted (S31)
+- **Toward Luci:** wary (S31: her look backed him off)
 
 ### Said at the table
 
 - S30: "These bandits didn't steal it, they just broke it. Goddamn waste." (kicking the brewing copper)
 - S30: "Certainly not from that piece of slag." (to Iggy, offering to heat it)
 - S30: "So you're selling me a boat." (to Halsby's shade-on-command pitch)
+- S31: "These are loans, not gifts. I want them back with all four shoes on each horse. I'll count them." (lending the horses at dawn)
+- S31: "Listen, fellas, I appreciate your advice there in terms of business. Let's talk more about it in the future. We're all a bit on edge." (to Odibli and Halsby, before the handshakes)

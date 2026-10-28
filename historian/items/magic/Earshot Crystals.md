@@ -13,12 +13,12 @@ item_type: wondrous
 rarity: common
 attunement: false
 origin: "Unknown. Every raider in Nella's crew wore one on a leather cord, crudely wrapped in metal, all identical and cut from one stone. None was seen to use one."
-effect: "While touching your crystal, speak telepathically, past any language and carrying intent as well as words, to one holder you can see, or to all holders within 300 feet. Listening needs only the crystal on your body. Sending feelings conveys them but does not make the listener feel them."
+effect: "While touching your crystal, speak telepathically to one holder you can see, or to all holders, within 300 feet. Words only: no images, feelings or senses. The words are understood whatever language either side speaks. Listening needs only the crystal on your body. Unlimited use."
 aliases:
   - "earshot crystal"
 importance: major
 active: true
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: [[Session 31 The Red Trail]]
 relates_to:
   - "[[Nella]] (her crew wore them)"
 current_holder: "the party: one each for [[Iggy]], [[Luci]], [[Odibli]], [[Dip]] and [[Halsby]]"
@@ -37,3 +37,7 @@ Full mechanics: `meta/loot-options/Party/misc/Earshot Crystals.md`.
 
 > **Reliability:** Dip was absent; the DM ruled at `/recap` (2026-10-21) that Dip took one from the
 > pile. Confirm with Ben.
+
+> **Correction ([[Session 31 The Red Trail]]):** the DM restated the crystals for Dip as words
+> only, with no images, feelings or senses, matching the loot file. The earlier effect line here
+> (intent and feelings carry) was wrong and has been fixed (DM, 2026-10-27).

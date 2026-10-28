@@ -19,11 +19,11 @@ race: "Half-Elf"
 class: "Sorcerer (Shadow Magic)"
 # level ruled 2026-10-01: party stays at 4 on the homebrew crossing. Levels now come one PC
 # at a time at DM-chosen moments; Halsby is still 4 after his first session (Session 29).
-level: 4
-level_confirmed: 30
+level: 5
+level_confirmed: 31
 background: "Haunted One"
 # Roll20 sheet (2026-10-04) is the mechanical source of truth.
-character_sheet: "Roll20 — Halsby (Sorcerer 4, Shadow Sorcery)"
+character_sheet: "Roll20 — Halsby (Sorcerer 5, Shadow Sorcery)"
 aliases:
   - "Halsby"
   - "Rivalen Bleth"
@@ -231,7 +231,7 @@ meant to touch. He doesn't know that.)* **Mechanically: his sorcerous focus.**
 
 ## Character Sheet (Roll20)
 
-Sorcerer 4 (Shadow Sorcery) · Half-Elf · Haunted One · Chaotic Evil · Medium, 30 ft.
+Sorcerer 5 (Shadow Sorcery) · Half-Elf · Haunted One · Chaotic Evil · Medium, 30 ft.
 
 - **Defenses:** AC 12, HP 26, Hit Dice 4d6, initiative +2, passive Perception 11. Immune to magical sleep.
 - **Ability scores:** STR 10, DEX 14, CON 14 (save +4), INT 8, WIS 12, CHA 17 (save +5).
@@ -264,7 +264,7 @@ Dagger ×2, spear, crowbar ×2, 15 torches, 2 tinderboxes, 4 flasks of oil, holy
 ## Abilities (Noted in Play)
 
 - Shadow Magic sorcery — the dark answers cheaply; fire and light cost him disproportionately.
-- Casts through the black shard focus (hums on casting; casts no shadow).
+- Casts through the black shard focus (hums on casting; casts no shadow). Since [[Session 31 The Red Trail]] the shard is the point of [[The Shadowless Spear]], which replaces both the plain spear and the bare focus.
 
 ---
 
@@ -272,6 +272,7 @@ Dagger ×2, spear, crowbar ×2, 15 torches, 2 tinderboxes, 4 flasks of oil, holy
 
 - **Session 29 (first session):** At the table, Kellan described Halsby as born in **Neferil**, in a floating city that survived the original cataclysm by going into the shadow realm. It came back, he was born there, and then it fell to earth. He was one of its only survivors, and he now wanders, trying to work out his own story and what he is. This matches The Object and Backstory above. On a night road toward [[Tassad]] on [[The Nightveil]]'s errand from [[Sister Maerith]], he was stopped by a possessed fox with smoky green eyes (Asher's mouthpiece). It asked him to save [[Sable Wren]] from bandits at [[Ashford]]. He read it as earnest (perception 14) and **took the job without bargaining**. The fox promised to fuse his spear and shard into a boon *after* the job ([[The Shadowless Spear]], expected around Session 30–31). He went in invisible. A **twinned chromatic orb (fire)** for 21 killed the crossbowman and leapt for 8 to kill Bandit 1. An **upcast magic missile** (5 darts, 15) then killed the big one as he rode off with Sable, and she fell clear.
 - **Session 30:** Stepped out of hiding and told the party the fox had sent him: "Not everything in the shadows is darkness of the soul. Sometimes it's just the absence of light." Shook Iggy's hand, committing to it harder as he went. Told Odibli, "You've come a long way, young one." Cast Prestidigitation on the fire alongside Odibli. Read the raiders' crystals (Arcana 19, with Luci's guidance), stripped them off the bodies and dealt one to each PC: "Grab one." Searched the dead mage's arcane focus, a twig doll, and found nothing. Pitched [[Silas Crubb]] a 250 gp buy-in on "shade on command"; Silas thought he was selling a boat. Worked out that the long-haired archer is [[Nella]]. Stays level 4; the Spear waits on the dawn. Holds an [[Earshot Crystals|earshot crystal]].
+- **Session 31:** Told the party he didn't fall from the sky: he walked through a door and came out in a forest, after a long journey from "over yonder", and a talking fox sent him to save Sable. Read [[The Wanderer's Boon]] (Arcana 21 with Luci's guidance): no magic now, but the shape of where it will be. Joined the ale run. At a bridge just outside [[The Golden Lioness]] the fox was waiting. He tested it: Perception (earnest, no trickery), Arcana (possessed, by what he couldn't tell), a subtle Darkness to see if it could track him (it could), and a false offer of shadow gifts from "my people" in return for its name, which it bowed and declined. Then he handed over his spear and the shard, and it fused them into [[The Shadowless Spear]]: "The debt is repaid." **Level 5.** "Thank you, Mr. Foxy. I like my new spear."
 
 ## DM-Only
 

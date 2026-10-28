@@ -4,13 +4,46 @@ name: "Session 31 The Red Trail"
 campaign: homebrew
 type: session
 session_number: 31
-exists: false
-state: draft
+exists: true
+state: completed
 tags:
   - session
 
 mission: [[The Stolen Casks]]
 planned_date: "TBD"
+played_date: "2026-10-27"
+# Year precision only: Aethryn's present year is 1487 (DM, 2026-10-27).
+# Working label: "Day 2, Ashford reckoning", early morning.
+in_world_end_date: "1487"
+recap: "Late on the night of the raid, Dip saw the Golden Lioness's hearth go still while Iggy's fiddle wandered, and privately felt the stillness open like a nesting doll whose innermost layer was inside Iggy. Dip took his 150 gp share and an earshot crystal. Odibli found the Wanderer's Boon inert, and Halsby, with Luci's guidance, sensed it holds the space where its magic will return. Dip told Sable that 10% was low for the work, and she offered a larger share if they stay. Luci offered 'The Lightbearers' as a party name, and nobody took it up. Halsby told the party he had stepped through a door into a forest and that a talking fox had sent him to save Sable, and he joined the ale run. Odibli found a smother charm, a glyph by the raiders' hedge mage, pressed inside the hearth to drown its self-feeding fire over about eight hours; Sable thought it was planted while she was held. His calligraphy rewrite went wrong and set off the glyph's explosive ward. He rode Sergei out, threw it as a paper airplane onto the big raider's body in the yard, and it exploded, scorching the wet grass. He reached level 5, and Sable thanked him and asked him not to speak of the fire. The party took a long rest. At dawn Silas Crubb lent five horses and a cart as loans, to come back fully shod, thanked Odibli and Halsby for their advice, and backed off from Luci's stare. Jory Pike asked if they were angels; Iggy said only strange magic. At a bridge just outside the Lioness the fox waited for Halsby. He tested it with Perception, Arcana, a subtle Darkness and a false offer of shadow gifts: it was earnest, possessed by something he could not name, and declined. He gave it his spear and his shard, and it fused them into the Shadowless Spear, said the debt was repaid, and ran into the woods. Halsby reached level 5."
+cliffhanger: "Morning of Day 2, at a bridge just outside the Golden Lioness. All five are level 5 and long-rested, with five borrowed horses, a cart, Sergei and Bosco, and Halsby's new Spear. Nella's ruts run southeast toward the waystation and the casks."
+entities_canonized:
+  - [[The Shadowless Spear]]
+new_entities:
+  - "The smother charm: the hedge mage's glyph in the Lioness hearth, destroyed this session; recap narration, not an entity"
+  - "'The Lightbearers': Luci's pitched party name, not adopted (todo #43)"
+table_notes: "Only Scenes 1-2 of 6 ran in about 75 minutes of play, after a 15-minute recap of Session 30 for Ben and a stats-and-achievements screen-share, which landed (Paul asked to keep 'derogatory' on Luci's card). The glyph scene was the high point: stacked Guidance, the botched stroke, the 10-second fuse, the paper airplane. Jeff's Roll20 token choreography (townsfolk filing out in lockstep) drew big reactions. Odibli's fox notes and the 'long Silas' token were running jokes. The Spear scene ran long on Kellan's choices, and Paul raised whether the +1 reaches spells (todo #88). Ended at 10:46 pm with Ben and Miguel tired; in-character party talk deferred. The DM granted a long rest at the Lioness, overriding the plan's 24-hour rule. Earshot Crystals were restated as words only, which corrects the historian item (it had said intent and feelings carry)."
+choices:
+  - "Dip: told Sable her 10% is low for the work → she is open to a bigger share when they get back"
+  - "Odibli: rewrote the smother charm instead of tearing it out, botched it, and threw it clear → the hearth is saved; Sable owes him a talk about the fire"
+  - "Odibli: swore to keep quiet about the fire → he holds Sable's secret"
+  - "Halsby: joined the ale run, expecting the fox to find him → he rides with the party"
+  - "Halsby: tested the fox, then took its boon without learning who it is → the Shadowless Spear; the debt is repaid, and the fox said 'perhaps we will talk again'"
+  - "Iggy: kept his wings hidden from Jory and said 'strange magic' → Jory takes the party for mages"
+  - "Dip: kept the nesting-doll vision private → Dip decides when, or whether, to tell Iggy what is inside him"
+  - "Luci: pitched 'The Lightbearers' to Sable and to Jory → nobody took it up; the party is still unnamed"
+beats:
+  - "spotlight(Dip): beat"
+  - "shared(Odibli,Halsby): beat"
+  - "spotlight(Dip): touch"
+  - "spotlight(Luci): touch"
+  - "spotlight(Halsby): beat"
+  - "spotlight(Odibli): touch"
+  - "spotlight(Odibli): beat"
+  - "party-centric: touch"
+  - "spotlight(Luci): touch"
+  - "spotlight(Iggy): touch"
+  - "spotlight(Halsby): arc"
 pcs_present:
   - "Iggy"
   - "Luci"
@@ -57,6 +90,7 @@ relates_to:
   - "[[Act 1 - The Hearth at Ashford]] (act)"
   - "[[Redwater]] (campaign)"
   - "[[Session 30 Keep the Ale]] (its unplayed beats carry over to here)"
+  - "[[Session 32 The Red Trail]] (Scenes 3-6 carry over to there)"
   - "[[The Wanderer's Boon]] (shown inert)"
   - "[[The Shadowless Spear]] (delivered at the ford)"
   - "[[Harrow Bane]] (named in the camp's ledger; still no face)"
@@ -91,6 +125,42 @@ players, so the night and the chase aren't only watched · Mara asks for one vol
 statement at the jail (`S2_STATEMENT`; cut by Jeff 2026-10-27) · the flame track sits on the table where the party can see
 it (`S2_HEARTH`) · a route choice at chase stages 2 and 4 (`S2_ROAD`, `S2_APPROACH`) · Nella's
 escape route can be scouted, and cut off, before the camp goes loud (`S2_SCOUT`, `S2_ESCAPE`).
+
+## As Played
+
+Canonized 2026-10-27 from the Craig recording (`recaps/transcripts/session-31.md`). The
+frontmatter `recap` is the record. What follows is the plan as written. **Only Scenes 1–2 ran**,
+through `S2_SPEAR`. `S2_TRAIL` and all of Scenes 3–6 did not; they carry into
+[[Session 32 The Red Trail]] (a draft). [[The Stolen Casks]] does not resolve here.
+
+**Deviations from the plan:**
+
+- **Long rest, not a short one** (DM ruling at the table, confirmed 2026-10-27). The party slept
+  at the Lioness and took a long rest, overriding the plan's 24-hour rule. `S2_SHORT_REST` did not
+  run. The waystation, sized for a party without one, needs a resize in Session 32.
+- **Dip's private roll (`S2_DIP`):** Arcana 15, so the 15–19 message: the stillness opened like a
+  nesting doll, and the innermost layer was inside Iggy. Dip has not shared it.
+- **The hearth (`S2_HEARTH`)** ran as a calligraphy rewrite rather than the flame track. The first
+  stroke went wrong, the second made up for it, and that set off the glyph's explosive ward. Odibli
+  rode Sergei out and threw it as a paper airplane; it exploded on the big raider's body in the
+  yard ([[Session 29 The Mistake]]), and the dew kept the fire from spreading. Sable asked him to
+  keep quiet about the fire. Miguel rolled a d6 for whether the magic alerted his gnome people:
+  5, not sensed (logged on the Citadel Clock).
+- **The fox (`S2_SPEAR`)** met Halsby at **a bridge just outside the Lioness**, not mid-ford. It
+  did not walk under the water; it ran into the woods. Halsby tested it first with a subtle
+  Darkness and a false offer of shadow gifts. The Spear's effects matched its loot file; whether
+  the +1 reaches his spells is open (todo #88).
+- **The horses (`S2_HORSES`):** five horses and a cart. Silas also thanked Odibli and Halsby for
+  their advice. Jory asked if the party were angels.
+- **Earshot Crystals:** the DM restated them as words only, which corrects the historian item.
+- **Levels:** Odibli to 5 at the hearth, Halsby to 5 at the Spear. All five PCs are level 5.
+- **Not played:** the trail, the chase, the fork, the waystation, Nella's escape and tally, the
+  haul home, the cell.
+
+> **Reliability:** from a five-track recording with no shared mic. The calligraphy rolls were too
+> muddled to record, so only the outcome is kept (DM, 2026-10-27). Luci's Guidance count (three,
+> maybe four) and Halsby's sorcery-point spend are inferred. Confirm with Kellan (sorcery points)
+> and Paul (Guidance) if a resource question decides anything.
 
 ## Combatants
 
