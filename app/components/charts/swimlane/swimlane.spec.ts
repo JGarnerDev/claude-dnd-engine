@@ -123,12 +123,16 @@ describe('renderSwimlane', () => {
   });
 
   it('draws ticks only for the visible slice, not the whole canvas', async () => {
-    // Two beats eight centuries apart: at deep zoom the full span is ~300k days, so
-    // a full tick walk would build hundreds of thousands of nodes.
+    // Beats spread over eight centuries: at deep zoom the full span is ~300k days, so
+    // a full tick walk would build hundreds of thousands of nodes. Evenly spaced so
+    // no stretch is dead enough to squeeze into an axis break (segments.ts).
     const wide: TimelineData = {
       calendar: null,
       events: [
         { date: '0735-10-20', label: 'Early', track: 'world' },
+        { date: '0935-10-20', label: 'Mid 1', track: 'world' },
+        { date: '1135-10-20', label: 'Mid 2', track: 'world' },
+        { date: '1335-10-20', label: 'Mid 3', track: 'world' },
         { date: '1535-10-20', label: 'Late', track: 'world' },
       ],
     };
@@ -142,7 +146,11 @@ describe('renderSwimlane', () => {
     const wide: TimelineData = {
       calendar: null,
       events: [
+        // Evenly spaced so the span stays live (no dead stretch to squeeze).
         { date: '0001-01-01', label: 'Early', track: 'world' },
+        { date: '0500-01-01', label: 'Mid 1', track: 'world' },
+        { date: '1000-01-01', label: 'Mid 2', track: 'world' },
+        { date: '1500-01-01', label: 'Mid 3', track: 'world' },
         { date: '2000-01-01', label: 'Late', track: 'world' },
       ],
     };

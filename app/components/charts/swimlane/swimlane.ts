@@ -8,6 +8,7 @@ import './swimlane.css';
 import { DEFAULT_CALENDAR } from '../_common/helpers/calendar.js';
 import { computeSwimlaneFrom } from './helpers/swimlane-layout.js';
 import { indexEvents, spanYearsOf } from '../_common/helpers/axis.js';
+import { axisOptionsFor } from '../_common/helpers/segments.js';
 import { buildTrackTree, parseTrack, DEFAULT_CATEGORIES } from './helpers/tracks.js';
 import { makeMatcher, trackList, audienceList } from '../_common/helpers/filters.js';
 import { buildFilterBar } from '../_common/components/filterbar.js';
@@ -16,8 +17,8 @@ import { clampZoom, resolveTracks, serializeState, DEFAULT_STATE } from '../_com
 import type { SettingsSection } from '../_common/components/settingspanel.js';
 import { enablePan, enableWheelZoom, enableMarkerInteraction } from '../_common/components/controls.js';
 import { barHeightFor } from '../_common/helpers/cluster.js';
-import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, GUTTER_W, SWIM_TOP_PAD, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT, MAX_CONTENT_PX } from '../_common/constants.js';
-import type { ChartState, PanViewport, SessionBand, SwimBar, SwimItem, SwimLayout, SwimRow, TimelineEvent, Tick, TimelineData, ZoomKind } from '../_common/types.js';
+import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, GUTTER_W, SWIM_TOP_PAD, SWIM_RULER_ROW_H, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT, MAX_CONTENT_PX } from '../_common/constants.js';
+import type { BreakMark, ChartState, PanViewport, SessionBand, SwimBar, SwimItem, SwimLayout, TimelineEvent, Tick, TimelineData, ZoomKind } from '../_common/types.js';
 
 // Per-row bar height for a member count (swimlane sizing — fits inside a row).
 const swimBarHeight = (count: number): number => barHeightFor(count, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT);
@@ -111,14 +112,35 @@ function buildSessionBand(band: SessionBand, i: number): HTMLDivElement {
   return el;
 }
 
-function tickNodesFor(tick: Tick): [HTMLDivElement, HTMLDivElement] {
+// An axis break (a squeezed dead stretch) as a full-height dashed column, label
+// pinned in the tick strip. Mirrors the world view's buildBreak under swimlane
+// class names (one CSS bundle).
+function buildBreak(mark: BreakMark): HTMLDivElement {
+  const el = document.createElement('div');
+  el.className = 'chart-swim-break';
+  el.style.left = `${mark.x}px`;
+  el.title = `${mark.label} squeezed out`;
+  const label = document.createElement('div');
+  label.className = 'chart-swim-break-label';
+  label.textContent = mark.label;
+  el.appendChild(label);
+  return el;
+}
+
+// A ruler tick. Row 0 (the active world) draws the full-height grid line; the
+// other worlds' rows sit below it in the tick strip as labels only, each in its row
+// colour, reading the same moment in that world's dates.
+function tickNodesFor(tick: Tick): HTMLDivElement[] {
+  const row = tick.row ?? 0;
+  const label = document.createElement('div');
+  label.className = `chart-swim-ticklabel is-row-${row}`;
+  label.style.left = `${tick.x}px`;
+  if (row) label.style.top = `${6 + row * SWIM_RULER_ROW_H}px`;
+  label.textContent = tick.label;
+  if (row) return [label];
   const line = document.createElement('div');
   line.className = 'chart-swim-grid';
   line.style.left = `${tick.x}px`;
-  const label = document.createElement('div');
-  label.className = 'chart-swim-ticklabel';
-  label.style.left = `${tick.x}px`;
-  label.textContent = tick.label;
   return [line, label];
 }
 
@@ -183,7 +205,13 @@ function buildCanvas(layout: SwimLayout, events: readonly TimelineEvent[], match
   canvas.appendChild(tickLayer);
   // Session columns sit behind the lanes (z 0) — append before the row bands and
   // dots so those paint over them.
-  layout.sessionBands.forEach((band, i) => canvas.appendChild(buildSessionBand(band, i)));
+  layout.sessionBands.forEach((band, i) => {
+    const el = buildSessionBand(band, i);
+    // Keep the session name below the tick strip when extra ruler rows deepen it.
+    if (layout.topPad !== SWIM_TOP_PAD) (el.firstChild as HTMLElement).style.top = `${layout.topPad - 18}px`;
+    canvas.appendChild(el);
+  });
+  for (const mark of layout.breaks) canvas.appendChild(buildBreak(mark));
   // Faint row bands so dots read as sitting on a lane.
   for (const row of layout.rows) {
     const band = document.createElement('div');
@@ -216,15 +244,29 @@ function buildCanvas(layout: SwimLayout, events: readonly TimelineEvent[], match
   return { canvas, tickLayer, markers, bars, visibleCount };
 }
 
-function buildGutter(rows: SwimRow[], height: number, onToggle: (category: string) => void): HTMLDivElement {
+function buildGutter(layout: SwimLayout, onToggle: (category: string) => void): HTMLDivElement {
+  const { rows, totalHeight: height, topPad, rulers } = layout;
   const gutter = document.createElement('div');
   gutter.className = 'chart-swim-gutter';
   gutter.style.height = `${height}px`;
 
+  // The head sits beside the tick strip. With two or more worlds it names each
+  // ruler row level with its labels (row colour), so the strip reads as a key.
   const head = document.createElement('div');
   head.className = 'chart-swim-gutter-head';
-  head.style.height = `${SWIM_TOP_PAD}px`;
-  head.textContent = 'Tracks';
+  head.style.height = `${topPad}px`;
+  if (rulers.length > 1) {
+    head.classList.add('has-rulers');
+    rulers.forEach((name, row) => {
+      const key = document.createElement('div');
+      key.className = `chart-swim-rulerkey is-row-${row}`;
+      key.style.top = `${6 + row * SWIM_RULER_ROW_H}px`;
+      key.textContent = name;
+      head.appendChild(key);
+    });
+  } else {
+    head.textContent = 'Tracks';
+  }
   gutter.appendChild(head);
 
   for (const row of rows) {
@@ -277,7 +319,10 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
   // pre-campaign deep history (world events before session 1) is hidden unless the
   // DM opts in via the History toggle. The lock only bites when a party beat exists
   // AND something precedes it — otherwise the full set is shown unchanged.
-  const fullIdx = indexEvents(data.events, cal);
+  // The Campaign view spans every campaign on the party's lived time: each world's
+  // dates synced at the crossings, one ruler row per world (segments.ts).
+  const axisOpts = axisOptionsFor(data);
+  const fullIdx = indexEvents(data.events, cal, axisOpts);
   if (fullIdx.events.length === 0) {
     const empty = document.createElement('div');
     empty.className = 'chart-empty';
@@ -412,7 +457,7 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
     // Drop any tip hovering a marker we're about to discard (mouseout never
     // fires for a removed node, so the tip would otherwise go stale).
     swim._tlHideTip?.();
-    swim.replaceChildren(buildGutter(layout.rows, layout.totalHeight, toggle), built.canvas);
+    swim.replaceChildren(buildGutter(layout, toggle), built.canvas);
 
     api.eventCount = built.visibleCount;
     api.rowCount = layout.rows.length;
@@ -452,7 +497,7 @@ export function renderSwimlane(container: HTMLElement, data: TimelineData, initi
   // cache (the index/tree changed) and re-clamps zoom to the new span's max.
   function rebuildForEvents() {
     const events = visibleEvents();
-    idx = indexEvents(events, cal);
+    idx = indexEvents(events, cal, axisOpts);
     tree = buildTrackTree(events.filter((e) => !e.session));
     recomputeScale();
     firstBuild = false;

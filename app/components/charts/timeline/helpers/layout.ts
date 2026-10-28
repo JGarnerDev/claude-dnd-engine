@@ -39,7 +39,7 @@ export function computeLayoutFrom(
 ): Layout {
   const axis = computeAxisFrom(idx, cal, pxPerYear, rightPad);
   if (axis.isEmpty) {
-    return { isEmpty: true, contentWidth: 0, canvasHeight: MIN_CANVAS_HEIGHT, items: [], bars: [], sessionBands: [], ticks: [], laneCount: 0, spanYears: 0 };
+    return { isEmpty: true, contentWidth: 0, canvasHeight: MIN_CANVAS_HEIGHT, items: [], bars: [], sessionBands: [], breaks: [], rulers: [], ticks: [], laneCount: 0, spanYears: 0 };
   }
 
   const { events, daysPerYear, xOf } = axis;
@@ -47,7 +47,7 @@ export function computeLayoutFrom(
   // not as on-axis dots — so split them out before the dot/cluster/label pass.
   const sessions = events.filter((e) => e.session);
   const beats = events.filter((e) => !e.session);
-  const sessionBands = deriveSessionBands(sessions, xOf, daysPerYear);
+  const sessionBands = deriveSessionBands(sessions, xOf, daysPerYear, idx.breaks.map((b) => b.idx));
   const xs = beats.map((e) => xOf(e._idx));
 
   // LOD: roll crowded beats into below-axis density bars (height ∝ count). But
@@ -98,5 +98,5 @@ export function computeLayoutFrom(
     };
   });
 
-  return { isEmpty: false, contentWidth: axis.contentWidth, canvasHeight, items, bars, sessionBands, ticks: axis.ticks, laneCount: maxLane + 1, spanYears: axis.spanYears };
+  return { isEmpty: false, contentWidth: axis.contentWidth, canvasHeight, items, bars, sessionBands, breaks: axis.breaks, rulers: axis.rulers, ticks: axis.ticks, laneCount: maxLane + 1, spanYears: axis.spanYears };
 }

@@ -185,3 +185,47 @@
   color: var(--chart-text);
   cursor: pointer;
 }
+
+/* Axis break (segments.ts): a squeezed dead stretch, as a dashed full-height
+   column. The label chip pins to the tick strip (top:6, with the year/month
+   labels) so it reads as part of the ruler. */
+.chart-swim-break {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 1px dashed var(--chart-axis);
+  z-index: 1;
+  pointer-events: none;
+}
+.chart-swim-break-label {
+  position: absolute;
+  top: 4px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 8px;
+  color: var(--chart-muted);
+  background: var(--chart-bg);
+  border: 1px solid var(--chart-axis);
+}
+
+/* Ruler rows: one per world, synced to the party's lived time. Row 0 (the active
+   world) owns the grid lines; rows below it in the tick strip are labels only, in
+   their own colour. The gutter head names each row level with its labels. */
+.chart-swim-ticklabel.is-row-1 { color: var(--chart-ruler-1); }
+.chart-swim-ticklabel.is-row-2 { color: var(--chart-ruler-2); }
+.chart-swim-gutter-head.has-rulers { position: relative; display: block; }
+.chart-swim-rulerkey {
+  position: absolute;
+  left: 10px;
+  right: 8px;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--chart-muted);
+}
+.chart-swim-rulerkey.is-row-1 { color: var(--chart-ruler-1); }
+.chart-swim-rulerkey.is-row-2 { color: var(--chart-ruler-2); }

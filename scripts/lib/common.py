@@ -409,9 +409,19 @@ class Calendar:
 _INT_RE = re.compile(r'^-?\d+$')
 
 
-def get_calendar(root) -> Calendar:
-    """Read the campaign calendar (falls back to the synced template)."""
-    path = Path(root) / 'meta' / 'calendar.md'
+def campaign_calendar_path(root, campaign: str) -> Path:
+    """Where a campaign's own calendar lives: meta/calendar-<slug>.md. Each world
+    (season axis) may keep its own months; one without falls back to get_calendar's
+    shared file."""
+    return Path(root) / 'meta' / f'calendar-{campaign}.md'
+
+
+def get_calendar(root, campaign: Optional[str] = None) -> Calendar:
+    """Read the calendar: the campaign's own (meta/calendar-<slug>.md) when one is
+    named and exists, else the shared meta/calendar.md, else the synced template."""
+    path = campaign_calendar_path(root, campaign) if campaign else None
+    if path is None or not path.exists():
+        path = Path(root) / 'meta' / 'calendar.md'
     if not path.exists():
         path = Path(root) / 'meta' / 'calendar-template.md'
     fm = get_frontmatter(path)
@@ -424,17 +434,27 @@ def get_calendar(root) -> Calendar:
     return Calendar(months, epoch, fm.get('year_suffix'), year_days)
 
 
+def split_date(s: str) -> list:
+    """Split a "YYYY[-MM[-DD]]" timeline_date into its string parts. A leading
+    minus is a pre-epoch year ("-5256-02" -> ["-5256", "02"]), not a separator."""
+    neg = s.startswith('-')
+    p = s[1:].split('-') if neg else s.split('-')
+    if neg:
+        p[0] = '-' + p[0]
+    return p
+
+
 def get_date_precision(s) -> Optional[str]:
     """Precision of a timeline_date string: 'year' | 'month' | 'day' | None."""
     if not s:
         return None
-    return {1: 'year', 2: 'month', 3: 'day'}.get(len(s.split('-')))
+    return {1: 'year', 2: 'month', 3: 'day'}.get(len(split_date(s)))
 
 
 def get_date_parts(s: str) -> tuple:
     """Split a timeline_date into clamped (year, month, day) ints (clamped so
     custom calendars with >12 months / long months still produce a valid date)."""
-    p = s.split('-')
+    p = split_date(s)
     y = int(p[0])
     m = min(12, max(1, int(p[1]))) if len(p) >= 2 else 1
     d = min(28, max(1, int(p[2]))) if len(p) >= 3 else 1

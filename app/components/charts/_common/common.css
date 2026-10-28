@@ -17,6 +17,10 @@
   --track-antagonist: #f87171;
   --track-faction: #fb923c;
   --track-continent: #f472b6;
+  /* Ruler rows past the first (one per world, segments.ts): each world's dates in
+     its own colour. Row 0 keeps --chart-muted. Deliberately not track colours. */
+  --chart-ruler-1: #fcd34d;
+  --chart-ruler-2: #a5b4fc;
 }
 
 .chart-root {

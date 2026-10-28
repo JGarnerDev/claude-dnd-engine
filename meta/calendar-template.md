@@ -92,3 +92,11 @@ In your copied `meta/calendar.md`, edit the frontmatter only:
 - **`weekdays`** — the day cycle, if your world names days. Optional; unused by the gantt, available to future features.
 
 No code changes — the helper and `/timeline` read whatever is in `meta/calendar.md` (falling back to this template's defaults if that file is absent).
+
+## One calendar per world
+
+Campaigns in different worlds keep different calendars. A world's own calendar goes in **`meta/calendar-<slug>.md`**, where `<slug>` is the campaign's `campaign:` tag (e.g. `meta/calendar-homebrew.md` for Aethryn). Same frontmatter shape as this file. A campaign without one uses `meta/calendar.md` (then this template).
+
+The timeline app's time axis is the party's **lived time**, and each world draws its own ruler row in its own calendar across the full width, so any moment reads in either world's dates. The worlds are synced at the crossings: the first campaign played is the reference, and at each swap the new world's first session lands the day after the last session in the world the party left. A day passes at the same rate in every world, so one sync per world holds for every later return. The selected world (World view) or the active one (Campaign view) takes the ruler row nearest the axis.
+
+Long empty stretches (thousands of years between an ancient event and the present) are squeezed into a labelled break, so they don't flatten the rest of the chart.

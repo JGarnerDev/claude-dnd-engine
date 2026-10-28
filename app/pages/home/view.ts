@@ -17,6 +17,8 @@ import { mountSettingsPanel } from '../../components/charts/_common/components/s
 import type { SettingsSection } from '../../components/charts/_common/components/settingspanel.js';
 import { mountSavedViews } from '../../components/charts/_common/components/savedviews.js';
 import { mountCampaignSelect } from './campaign-select.js';
+import { syncOffsets } from '../../components/charts/_common/helpers/segments.js';
+import { DEFAULT_CALENDAR } from '../../components/charts/_common/helpers/calendar.js';
 import type { ChartState, TimelineData } from '../../components/charts/_common/types.js';
 
 export type View = 'world' | 'tracks';
@@ -87,10 +89,19 @@ export function renderTimelineView(container: HTMLElement, data: TimelineData | 
   // all, currentCampaign is null and the full graph is shown unscoped.
   const known = data.campaigns ?? [];
   let currentCampaign: string | null = known.length ? (known.find((c) => c.active) ?? known[0]).slug : null;
+  // The scoped view also takes that campaign's own calendar when it has one, so the
+  // World view's main ruler speaks the selected world's months. It carries the
+  // lived-time sync worked out from the FULL graph (the scoped set holds only one
+  // world's sessions, so it can't find the crossings), so the other worlds' rulers
+  // still line up under it.
+  const calendars: Record<string, NonNullable<TimelineData['calendar']>> = {};
+  for (const c of known) if (c.calendar) calendars[c.slug] = c.calendar;
+  const sync = syncOffsets(data.events, data.calendar || DEFAULT_CALENDAR, calendars);
   const scopeData = (slug: string | null): TimelineData => {
     if (!slug) return data;
     const keep = (b: { campaign?: string }) => !b.campaign || b.campaign === slug;
-    return { ...data, events: data.events.filter(keep), spans: data.spans?.filter(keep) };
+    const calendar = known.find((c) => c.slug === slug)?.calendar ?? data.calendar;
+    return { ...data, calendar, sync, primary: slug, events: data.events.filter(keep), spans: data.spans?.filter(keep) };
   };
   let activeData = scopeData(currentCampaign);
 

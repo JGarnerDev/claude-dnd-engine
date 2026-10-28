@@ -41,6 +41,12 @@ export function yearStepFor(pxPerYear: number): number {
 // canvas): years outside it are never visited, ticks outside it never emitted. A
 // deep zoom over a long span would otherwise walk — and the renderer draw — one
 // tick per day across centuries. Defaults: unwindowed.
+//
+// yearOnFirst: the first tick emitted carries its year even when it is a month or
+// day tick ("March 1487"), so a short stretch that never reaches a new year still
+// says when it is. The lived-time axis (axis.ts) turns it on for every ruler row:
+// with two worlds' rulers stacked, a bare "March" would not say which year in
+// which world. Default off.
 export function buildTicks(
   minIdx: number,
   maxIdx: number,
@@ -51,6 +57,7 @@ export function buildTicks(
   inset: number = 0,
   fromIdx: number = -Infinity,
   toIdx: number = Infinity,
+  yearOnFirst: boolean = false,
 ): Tick[] {
   const { daysPerYear } = calendarTables(cal);
   const monthsPerYear = cal.months.length;
@@ -58,10 +65,13 @@ export function buildTicks(
   const lastYear = Math.min(Math.floor(maxIdx / daysPerYear), Math.floor(toIdx / daysPerYear));
   const yearLabel = (y: number) => (cal.epochLabel ? `${y} ${cal.epochLabel}` : `${y}`);
   const ticks: Tick[] = [];
-  const push = (idx: number, label: string) => {
+  // firstLabel: what the tick says instead when it is the first one emitted and
+  // yearOnFirst is on (the same tick with its year added).
+  const push = (idx: number, label: string, firstLabel: string = label) => {
     if (idx < fromIdx || idx > toIdx) return;
     const x = xOf(idx);
-    if (x >= inset && x <= contentWidth - inset) ticks.push({ label, x });
+    if (x < inset || x > contentWidth - inset) return;
+    ticks.push({ label: yearOnFirst && ticks.length === 0 ? firstLabel : label, x });
   };
 
   // Day granularity — finest tier, only when a single day is wide enough to label.
@@ -72,7 +82,9 @@ export function buildTicks(
       let dayAcc = y * daysPerYear;
       for (let m = 0; m < monthsPerYear; m++) {
         for (let d = 0; d < cal.months[m].days; d++) {
-          push(dayAcc, m === 0 && d === 0 ? yearLabel(y) : d === 0 ? cal.months[m].name : `${d + 1}`);
+          if (m === 0 && d === 0) push(dayAcc, yearLabel(y));
+          else if (d === 0) push(dayAcc, cal.months[m].name, `${cal.months[m].name} ${yearLabel(y)}`);
+          else push(dayAcc, `${d + 1}`, `${cal.months[m].name} ${d + 1}, ${yearLabel(y)}`);
           dayAcc += 1;
         }
       }
@@ -86,7 +98,8 @@ export function buildTicks(
     for (let y = firstYear; y <= lastYear; y++) {
       let dayAcc = y * daysPerYear;
       for (let m = 0; m < monthsPerYear; m++) {
-        push(dayAcc, m === 0 ? yearLabel(y) : cal.months[m].name);
+        if (m === 0) push(dayAcc, yearLabel(y));
+        else push(dayAcc, cal.months[m].name, `${cal.months[m].name} ${yearLabel(y)}`);
         dayAcc += cal.months[m].days;
       }
     }

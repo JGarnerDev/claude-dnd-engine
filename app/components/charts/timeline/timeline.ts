@@ -10,6 +10,8 @@ import { computeLayoutFrom } from './helpers/layout.js';
 import { layoutLabels } from './helpers/labels.js';
 import { barHeightFor } from '../_common/helpers/cluster.js';
 import { indexEvents, spanYearsOf } from '../_common/helpers/axis.js';
+import { axisOptionsFor } from '../_common/helpers/segments.js';
+import { RULER_ROW_H } from '../_common/constants.js';
 import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, TARGET_PX_PER_BEAT, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, ZOOM_UPSCALE_FROM, ITEM_SCALE_MAX, WORLD_RIGHT_PAD } from '../_common/constants.js';
 import { AXIS_GAP, TIER_H, LABEL_BOX_PAD, LABEL_MIN_TIERS, LABEL_TIER_CEIL } from '../_common/constants.js';
 import { LABEL_GAP, LABEL_MAX_SHIFT, LABEL_GAP_SPREAD, LABEL_SHIFT_SPREAD, LABEL_LIFT, BAND_MIN_PX } from '../_common/constants.js';
@@ -19,7 +21,7 @@ import { buildFilterBar } from '../_common/components/filterbar.js';
 import { DM_AUDIENCE } from '../_common/constants.js';
 import { clampZoom, resolveTracks, serializeState, DEFAULT_STATE } from '../_common/helpers/viewstate.js';
 import type { SettingsSection } from '../_common/components/settingspanel.js';
-import type { ChartState, DensityBar, Layout, LayoutItem, PanViewport, SessionBand, Side, Tick, TimelineData, TimelineEvent, ZoomKind } from '../_common/types.js';
+import type { BreakMark, ChartState, DensityBar, Layout, LayoutItem, PanViewport, SessionBand, Side, Tick, TimelineData, TimelineEvent, ZoomKind } from '../_common/types.js';
 
 // Mutable handle returned to the caller; tests read these counts. `controls` are
 // the chrome nodes (zoom toolbar, filter bar) for the host to hoist into its
@@ -139,17 +141,52 @@ function buildBand(band: SessionBand): HTMLDivElement {
   return el;
 }
 
-function buildTick(tick: Tick): [HTMLDivElement, HTMLDivElement] {
+// A ruler tick. Row 0 (the selected world) draws its grid line; the other worlds'
+// rows stack upward above it as labels only, each in its row colour, so the grid
+// stays one world's and the extra rows read as other dates for the same moment.
+function buildTick(tick: Tick): HTMLDivElement[] {
+  const row = tick.row ?? 0;
+  const label = document.createElement('div');
+  label.className = `chart-tick-label is-row-${row}`;
+  label.style.left = `${tick.x}px`;
+  if (row) label.style.bottom = `${4 + row * RULER_ROW_H}px`;
+  label.textContent = tick.label;
+  if (row) return [label];
   const line = document.createElement('div');
   line.className = 'chart-tick';
   line.style.left = `${tick.x}px`;
-  const label = document.createElement('div');
-  label.className = 'chart-tick-label';
-  label.style.left = `${tick.x}px`;
-  label.textContent = tick.label;
   return [line, label];
 }
 
+// Which ruler row is which world: a small key under the chart, one entry per row
+// in its row colour (row 0 is the bottom row). Only drawn with two or more worlds.
+function buildRulerLegend(rulers: string[]): HTMLDivElement {
+  const el = document.createElement('div');
+  el.className = 'chart-ruler-legend';
+  rulers.forEach((name, row) => {
+    const item = document.createElement('span');
+    item.className = `chart-ruler-key is-row-${row}`;
+    item.textContent = row === 0 ? `${name} (bottom row)` : name;
+    el.appendChild(item);
+  });
+  return el;
+}
+
+
+// An axis break: a squeezed dead stretch ("6,742 years"). Drawn as a dashed column
+// across the canvas with its label on the ruler line, so the reader sees the axis
+// is cut there. Mirrors the swimlane's buildBreak (class names differ: one CSS bundle).
+function buildBreak(mark: BreakMark): HTMLDivElement {
+  const el = document.createElement('div');
+  el.className = 'chart-break';
+  el.style.left = `${mark.x}px`;
+  el.title = `${mark.label} squeezed out`;
+  const label = document.createElement('div');
+  label.className = 'chart-break-label';
+  label.textContent = mark.label;
+  el.appendChild(label);
+  return el;
+}
 
 function buildEmpty(text: string): HTMLDivElement {
   const empty = document.createElement('div');
@@ -178,8 +215,10 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
   container.innerHTML = '';
   container.classList.add('chart-root');
 
-  // Sort + day-index every event exactly once; every zoom level reuses this.
-  const idx = indexEvents(data.events, cal);
+  // Sort + day-index every event exactly once; every zoom level reuses this. Dead
+  // stretches (an ancient beat thousands of years before the present) squeeze into
+  // a break, and every synced world gets a ruler row (the selected one nearest).
+  const idx = indexEvents(data.events, cal, axisOptionsFor(data));
   if (idx.events.length === 0) {
     container.appendChild(buildEmpty('No events to show.'));
     return { eventCount: 0, contentWidth: 0, laneCount: 0, controls: [], getState: () => ({ ...DEFAULT_STATE }) };
@@ -246,7 +285,8 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
     // Lock canvas height to the fit-zoom layout. Lanes only ever decrease as we
     // zoom in (events spread, fewer collisions), so fit is the tallest — pinning
     // it keeps the page from reflowing and the scrollbar from jumping on zoom.
-    canvasHeight = layoutAt(fitDensity).canvasHeight;
+    // Extra ruler rows stack above the bottom tick strip, so grow the canvas by them.
+    canvasHeight = layoutAt(fitDensity).canvasHeight + Math.max(0, idx.rulers.length - 1) * RULER_ROW_H;
     // First mount seeds zoom from a loaded view (clamped to this data's range,
     // decision H); a later refit just re-clamps the live zoom to the new cap.
     zoomLevel = firstBuild && initialState ? clampZoom(initialState.zoomLevel, maxZoom) : Math.min(zoomLevel, maxZoom);
@@ -373,6 +413,7 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
     }
 
     for (const tick of layout.ticks) canvas.append(...buildTick(tick));
+    for (const mark of layout.breaks) canvas.appendChild(buildBreak(mark));
 
     barNodes = [];
     let count = 0;
@@ -488,6 +529,7 @@ export function renderTimeline(container: HTMLElement, data: TimelineData, initi
     ...(audience ? [{ label: 'Known by', node: audience }] : []),
   ];
   container.append(filterBar, viewport);
+  if (idx.rulers.length > 1) container.append(buildRulerLegend(idx.rulers.map((r) => r.label)));
   recomputeScale();
   firstBuild = false;
   draw();

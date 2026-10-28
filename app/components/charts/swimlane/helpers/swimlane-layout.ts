@@ -13,6 +13,7 @@ import { buildTrackTree } from './tracks.js';
 import {
   ROW_H,
   SWIM_TOP_PAD,
+  SWIM_RULER_ROW_H,
   SWIM_BOTTOM_PAD,
   PX_PER_YEAR,
   EDGE_PAD,
@@ -33,9 +34,9 @@ import type { Calendar, CategoryConfig, SwimBar, SwimItem, SwimLayout, SwimRow, 
 // rows: build the ordered row list from the (prebuilt) tree + collapse state,
 // stacking each ROW_H tall below the axis band. The tree is zoom- and
 // collapse-invariant, so the renderer builds it once and passes it in.
-function buildRows(tree: TrackCategory[], collapsed: Set<string>): SwimRow[] {
+function buildRows(tree: TrackCategory[], collapsed: Set<string>, topPad: number = SWIM_TOP_PAD): SwimRow[] {
   const rows: SwimRow[] = [];
-  let y = SWIM_TOP_PAD;
+  let y = topPad;
   const push = (r: Omit<SwimRow, 'y' | 'centerY' | 'height'>) => {
     rows.push({ ...r, y, centerY: y + ROW_H / 2, height: ROW_H });
     y += ROW_H;
@@ -100,10 +101,12 @@ export function computeSwimlaneFrom(
   // full-span walk (one tick per day across the whole campaign at deep zoom).
   const axis = computeAxisFrom(idx, cal, pxPerYear, EDGE_PAD, false);
   if (axis.isEmpty) {
-    return { isEmpty: true, contentWidth: 0, totalHeight: SWIM_TOP_PAD + SWIM_BOTTOM_PAD, spanYears: 0, ticksIn: () => [], rows: [], items: [], bars: [], sessionBands: [] };
+    return { isEmpty: true, topPad: SWIM_TOP_PAD, contentWidth: 0, totalHeight: SWIM_TOP_PAD + SWIM_BOTTOM_PAD, spanYears: 0, ticksIn: () => [], rows: [], items: [], bars: [], sessionBands: [], breaks: [], rulers: [] };
   }
 
-  const rows = buildRows(tree, collapsed);
+  // One extra tick-strip row per extra world ruler, so the rows start below them.
+  const topPad = SWIM_TOP_PAD + Math.max(0, axis.rulers.length - 1) * SWIM_RULER_ROW_H;
+  const rows = buildRows(tree, collapsed, topPad);
   const rowKeys = new Set(rows.map((r) => r.key));
   const centerOf = new Map(rows.map((r) => [r.key, r.centerY]));
   const colorOf = new Map(rows.map((r) => [r.key, r.colorVar]));
@@ -114,7 +117,7 @@ export function computeSwimlaneFrom(
   // from the non-session beats only (the tree the renderer passes in already omits
   // the party lane), and the sessions feed the band derivation off the same axis.
   const sessions = axis.events.filter((e) => e.session);
-  const sessionBands = deriveSessionBands(sessions, axis.xOf, axis.daysPerYear);
+  const sessionBands = deriveSessionBands(sessions, axis.xOf, axis.daysPerYear, idx.breaks.map((b) => b.idx));
   const events = axis.events.filter((e) => !e.session); // sorted ascending by time
   const xs = events.map((e) => axis.xOf(e._idx));
   const keyOf = events.map((e) => rowKeyFor(e.track, rowKeys));
@@ -140,7 +143,7 @@ export function computeSwimlaneFrom(
       const input = idxs.map((i) => ({ x: xs[i], major: !!events[i].major }));
       const { individuals, bars: rowBars } = clusterBeats(input, DENSITY_BUCKET_PX, swimBarHeight);
       for (const li of individuals) individualIdx.push(idxs[li]);
-      const cy = centerOf.get(key) ?? SWIM_TOP_PAD;
+      const cy = centerOf.get(key) ?? topPad;
       const color = colorOf.get(key) ?? '--track-world';
       for (const b of rowBars) {
         bars.push({ x: b.centerX, y: cy, height: b.height, count: b.count, hasMajor: b.hasMajor, colorVar: color, rowKey: key, members: b.members.map((li) => idxs[li]) });
@@ -157,7 +160,7 @@ export function computeSwimlaneFrom(
     return {
       ...e,
       x: xs[i],
-      y: centerOf.get(key) ?? SWIM_TOP_PAD,
+      y: centerOf.get(key) ?? topPad,
       rowKey: key,
       colorVar: colorOf.get(key) ?? '--track-world',
       weight: weightOf(e),
@@ -198,6 +201,6 @@ export function computeSwimlaneFrom(
     }
   }
 
-  const totalHeight = (rows.length ? rows[rows.length - 1].y + ROW_H : SWIM_TOP_PAD) + SWIM_BOTTOM_PAD;
-  return { isEmpty: false, contentWidth: axis.contentWidth, totalHeight, spanYears: axis.spanYears, ticksIn: axis.ticksIn, rows, items, bars, sessionBands };
+  const totalHeight = (rows.length ? rows[rows.length - 1].y + ROW_H : topPad) + SWIM_BOTTOM_PAD;
+  return { isEmpty: false, contentWidth: axis.contentWidth, totalHeight, spanYears: axis.spanYears, ticksIn: axis.ticksIn, rows, items, bars, sessionBands, breaks: axis.breaks, rulers: axis.rulers, topPad };
 }

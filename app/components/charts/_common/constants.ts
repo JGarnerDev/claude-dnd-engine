@@ -41,6 +41,32 @@ export const EDGE_PAD = 0.05; // breathing room before first / after last beat, 
 // symmetric EDGE_PAD.
 export const WORLD_RIGHT_PAD = 0.5;
 
+// Segmented axis (helpers/segments.ts). A stretch between two beats is "dead" and
+// gets squeezed into a break when it is at least GAP_MIN_YEARS long AND at least
+// GAP_SPAN_FRAC of what is left of its segment's span (so a 6,700-year hole
+// between an ancient beat and the present goes, a 14-month lull mid-campaign
+// stays). Every break is BREAK_FRAC of the kept (non-break) span wide, floored at
+// BREAK_MIN_YEARS so it stays visible on a short campaign.
+export const GAP_MIN_YEARS = 10;
+export const GAP_SPAN_FRAC = 0.5;
+export const BREAK_FRAC = 0.06;
+export const BREAK_MIN_YEARS = 1 / 12;
+// Vertical step between ruler rows (one per world, segments.ts): the world view
+// stacks extra rows upward from the bottom tick strip, the swimlane downward from
+// its top tick strip (growing SWIM_TOP_PAD by one step per extra row).
+export const RULER_ROW_H = 16;
+export const SWIM_RULER_ROW_H = 14;
+// Ruler decluttering (axis.ts). A row whose first tick in a stretch lands more
+// than ANCHOR_GAP_PX past the stretch's start also gets a "Month Year" anchor at
+// the start. Label widths are estimated at LABEL_CHAR_PX per character (11-12px
+// system font); a label is dropped when it would sit closer than LABEL_GAP_PX to
+// the one before it in its row, or under a break chip (its label plus
+// BREAK_CHIP_PAD each side).
+export const ANCHOR_GAP_PX = 120;
+export const LABEL_CHAR_PX = 6.5;
+export const LABEL_GAP_PX = 10;
+export const BREAK_CHIP_PAD = 10;
+
 // Label box geometry (mirrors .chart-label in timeline/timeline.css). Labels occupy a fixed
 // slot so lane assignment needs no DOM measurement (works under happy-dom too).
 export const LABEL_W = 150;

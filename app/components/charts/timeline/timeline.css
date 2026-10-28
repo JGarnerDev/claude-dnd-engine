@@ -173,3 +173,52 @@
 /* Weight label styling (dot sizing is shared in _common/common.css) */
 .chart-marker.is-major .chart-label { font-weight: 700; }
 .chart-marker.is-minor .chart-label { color: var(--chart-muted); opacity: 0.85; }
+
+/* Axis break (segments.ts): a squeezed dead stretch. A dashed column marks where
+   the axis is cut; the label chip sits on the ruler strip. Under the dots (z 0) so
+   beats keep their hover. */
+.chart-break {
+  position: absolute;
+  top: 0;
+  bottom: 24px;
+  width: 0;
+  border-left: 1px dashed var(--chart-axis);
+  z-index: 0;
+  pointer-events: none;
+}
+.chart-break-label {
+  position: absolute;
+  bottom: -2px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 8px;
+  color: var(--chart-muted);
+  background: var(--chart-bg);
+  border: 1px solid var(--chart-axis);
+}
+
+/* Ruler rows: one per world, synced to the party's lived time. Row 0 is the
+   selected world (grid lines + muted labels); rows above it are labels only, in
+   their own colour. The legend under the chart says which row is which world. */
+.chart-tick-label.is-row-1 { color: var(--chart-ruler-1); }
+.chart-tick-label.is-row-2 { color: var(--chart-ruler-2); }
+.chart-ruler-legend {
+  display: flex;
+  gap: 16px;
+  padding: 4px 16px 0;
+  font-size: 11px;
+  color: var(--chart-muted);
+}
+.chart-ruler-key::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background: currentColor;
+}
+.chart-ruler-key.is-row-1 { color: var(--chart-ruler-1); }
+.chart-ruler-key.is-row-2 { color: var(--chart-ruler-2); }

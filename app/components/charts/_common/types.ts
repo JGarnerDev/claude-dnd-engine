@@ -37,6 +37,7 @@ export interface TimelineEvent {
   knownBy?: string[]; // character names who know this beat (drives the per-character "Known by" viewpoint)
   session?: boolean; // a play session: the world view draws it as a time-range band (date = its end), not an on-axis dot. The swimlane ignores this and treats it as a normal beat.
   campaign?: string; // campaign slug (e.g. 'strahd'); absent = agnostic (shows under every campaign). Drives pages/home's campaign selector.
+  sessionNumber?: number; // play order of a session beat; syncs the worlds' calendars at each campaign swap (segments.ts)
 }
 
 // Act/mission span bar. Extracted by the generator; render consumes it in M4.
@@ -56,13 +57,58 @@ export interface Campaign {
   slug: string;
   label: string;
   active: boolean;
+  calendar?: Calendar | null; // this world's own calendar; absent = the shared TimelineData.calendar
 }
 
 export interface TimelineData {
   calendar?: Calendar | null;
   campaigns?: Campaign[];
+  // Set by pages/home when it scopes the data to one campaign: the lived-time sync
+  // offsets worked out from the FULL graph (a scoped set has only one world's
+  // sessions, so it can't find the swaps itself), and the selected campaign, whose
+  // ruler sits nearest the axis. Absent = derived from these events / the active campaign.
+  sync?: Record<string, number>;
+  primary?: string;
   events: TimelineEvent[];
   spans?: Span[];
+}
+
+// --- Lived-time axis -----------------------------------------------------------
+// See helpers/segments.ts. The axis is the party's lived time: every campaign's
+// dates are shifted by that campaign's sync offset onto one shared day index, and
+// each world draws its own ruler row across the full width. Dead stretches are cut
+// into pieces, shifted end to end, with a labelled break between them.
+export interface AxisRuler {
+  slug: string; // campaign slug ('' = the lone ruler of a campaign-less graph)
+  label: string; // display name, for the row caption
+  cal: Calendar;
+  offset: number; // shared day index = this calendar's day index + offset
+}
+
+export interface AxisOptions {
+  compressGaps?: boolean; // squeeze dead stretches (thousands of empty years) into a break
+  calendars?: Record<string, Calendar>; // campaign slug -> its own calendar
+  offsets?: Record<string, number>; // campaign slug -> lived-time sync offset (days)
+  rulers?: AxisRuler[]; // ruler rows, row 0 nearest the axis; absent = one ruler on the shared calendar
+}
+
+export interface AxisPiece {
+  rawMin: number; // extent on the shared day index, before this piece's shift
+  rawMax: number;
+  offset: number; // virtual index = shared index + offset
+}
+
+// A squeezed dead stretch between two pieces. idx is the virtual day index of its
+// center; label says how much time was cut ("6,742 years").
+export interface AxisBreak {
+  idx: number;
+  label: string;
+}
+
+// A break placed on the canvas.
+export interface BreakMark {
+  x: number;
+  label: string;
 }
 
 export type Side = 'above' | 'below';
@@ -89,6 +135,7 @@ export interface LayoutItem extends TimelineEvent {
 export interface Tick {
   label: string;
   x: number;
+  row?: number; // ruler row (0 = nearest the axis, the selected world); absent = 0
 }
 
 // A below-axis density bar: one fixed-width pixel bucket aggregating the non-major
@@ -121,6 +168,8 @@ export interface Layout {
   items: LayoutItem[]; // individual markers: majors + sparse beats (dense ones roll into bars)
   bars: DensityBar[]; // density histogram for crowded buckets
   sessionBands: SessionBand[]; // play sessions drawn as time-range bands behind the beats
+  breaks: BreakMark[]; // squeezed dead stretches
+  rulers: string[]; // ruler row captions, row 0 first
   ticks: Tick[];
   laneCount: number;
   spanYears: number;
@@ -235,6 +284,7 @@ export interface SwimBar {
 
 export interface SwimLayout {
   isEmpty: boolean;
+  topPad: number; // px above the first row: the tick strip, one ruler row per world
   contentWidth: number;
   totalHeight: number;
   spanYears: number;
@@ -243,6 +293,8 @@ export interface SwimLayout {
   items: SwimItem[]; // individual dots (sparse buckets); dense ones roll into bars
   bars: SwimBar[]; // per-row density histogram
   sessionBands: SessionBand[]; // play sessions as full-height columns behind the lanes
+  breaks: BreakMark[]; // squeezed dead stretches
+  rulers: string[]; // ruler row captions, row 0 first
 }
 
 // The viewport element carries a flag set by enablePan so the click handler can

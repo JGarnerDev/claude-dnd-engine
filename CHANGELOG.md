@@ -6,6 +6,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.49.0] — 2026-10-27
+
+### Added
+
+- **Timeline: the party's lived time, one ruler row per world.** Both views now run on the party's own lived time instead of one shared year axis, which had put Strahd (Barovian 735) and Aethryn (1487) about 750 meaningless years apart. Each world draws its own ruler row in its own calendar across the full width, so any moment reads in either world's dates (Barovia's November 735 sits over Aethryn's December 1486). The worlds are synced at the crossings: the first campaign played is the reference, and at each swap the new world's first session lands the day after the last session in the world just left. One sync per world, since a day passes at the same rate in both. The selected world (World view) or the active one (Campaign view) takes the row nearest the axis. The other rows are labels in their own colour, named by a legend under the World view and in the Campaign view's gutter. Every stretch on a multi-world axis says its year, and labels that would overlap are dropped. New module: `app/components/charts/_common/helpers/segments.ts`.
+- **Timeline: dead stretches are squeezed into a labelled break**, in both views. A stretch counts as dead when it is at least 10 years long and at least half of what is left of the span. Aethryn's 6,742 years between the Dawn of Whatwill and Ashford become one "6,742 years" marker. The 14-month lull in Strahd stays as it is. Session bands stop at a break instead of reaching across it.
+- **Per-world calendars.** `meta/calendar-<slug>.md` overrides the shared calendar for one campaign (`get_calendar(root, campaign)`). `timeline-data.py` sends it as `campaigns[].calendar`. Contract: `meta/calendar-template.md` → One calendar per world.
+- `timeline-data.py` session beats carry `sessionNumber` (play order, which the sync reads).
+
+### Fixed
+
+- **Negative (pre-epoch) years crashed the timeline scripts.** `timeline-data.py` and the date helpers in `scripts/lib/common.py` split dates on `-`, so `-5256` broke apart. A shared `split_date` helper now reads a leading minus as part of the year, as the date contract always allowed.
+
 ## [0.48.0] — 2026-10-27
 
 ### Added

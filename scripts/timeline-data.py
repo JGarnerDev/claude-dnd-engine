@@ -28,7 +28,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (  # noqa: E402
-    ROOT, ci_eq, digits_int, get_calendar, get_frontmatter,
+    ROOT, campaign_calendar_path, ci_eq, digits_int, get_calendar, get_frontmatter, split_date,
 )
 
 
@@ -53,7 +53,7 @@ def get_beat_sort(s: str) -> int:
     """Unclamped chronological sort key for the JSON array. (common.py's
     get_date_sort_key clamps day<=28 for date safety, which ties days 29-31.
     render.js re-sorts by true day index, so this is purely for a tidy JSON order.)"""
-    p = s.split('-')
+    p = split_date(s)
     y = int(p[0])
     m = int(p[1]) if len(p) >= 2 else 0
     d = int(p[2]) if len(p) >= 3 else 0
@@ -117,9 +117,23 @@ def add_sub_day(obj: dict, fm) -> None:
             pass
 
 
+def calendar_json(cal):
+    """A Calendar as the app's JSON shape, or None when it has no months (the app
+    then falls back to its default; an empty months list would divide by zero)."""
+    if not cal.months:
+        return None
+    return {
+        'epochLabel': cal.year_suffix if cal.year_suffix else '',
+        'months': [{'name': n, 'days': d} for n, d in cal.months],
+    }
+
+
 def get_campaigns(root: Path) -> list:
     """Known campaigns (type:campaign under scheduler/ + historian/), for the app's
-    campaign selector. Each carries slug, display label, and whether it's active."""
+    campaign selector. Each carries slug, display label, and whether it's active,
+    plus its own calendar when meta/calendar-<slug>.md exists (else the app uses the
+    shared top-level calendar). The app draws one ruler row per world in its own
+    calendar, synced to the party's lived time."""
     out = []
     for sub in ('scheduler/campaign', 'historian/campaign'):
         dir_path = root / sub
@@ -131,7 +145,10 @@ def get_campaigns(root: Path) -> list:
                 continue
             slug = _unwrap_wikilink(fm['campaign']) if fm.get('campaign') else ''
             active = ci_eq(str(fm.get('active', '')).strip(), 'true') or ci_eq(fm.get('state'), 'active')
-            out.append({'slug': slug, 'label': fm.get('name'), 'active': active})
+            entry = {'slug': slug, 'label': fm.get('name'), 'active': active}
+            if slug and campaign_calendar_path(root, slug).exists():
+                entry['calendar'] = calendar_json(get_calendar(root, slug))
+            out.append(entry)
     return out
 
 
@@ -303,6 +320,8 @@ def collect_session_beats(root: Path) -> tuple:
             'session': True,
             'source': get_rel_source(f, root),
         }
+        if num:
+            beat['sessionNumber'] = num  # play order: the app syncs the worlds' calendars at each swap
         add_weight(beat, fm)
         add_campaign(beat, fm)
         kw = get_keywords(fm)
@@ -321,7 +340,7 @@ def collect_session_beats(root: Path) -> tuple:
 def _next_day(date: str, cal) -> str:
     """The calendar day after a YYYY-MM-DD date (rolls month/year on the campaign
     calendar). A year- or month-precision date is returned unchanged."""
-    p = date.split('-')
+    p = split_date(date)
     if len(p) < 3 or not cal or not cal.months:
         return date
     y, m, d = int(p[0]), int(p[1]), int(p[2]) + 1
@@ -414,12 +433,7 @@ def build_data(root: Path, full: bool) -> tuple:
     # An empty months array would break its day-index math (divide by zero).
     cal_json = None
     if (root / 'meta' / 'calendar.md').exists() or (root / 'meta' / 'calendar-template.md').exists():
-        cal = get_calendar(root)
-        if cal.months:
-            cal_json = {
-                'epochLabel': cal.year_suffix if cal.year_suffix else '',
-                'months': [{'name': n, 'days': d} for n, d in cal.months],
-            }
+        cal_json = calendar_json(get_calendar(root))
 
     data = {
         'calendar': cal_json,
