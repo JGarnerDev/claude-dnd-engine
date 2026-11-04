@@ -20,7 +20,7 @@ Planned date: Tuesday 2026-11-03.
 
 ## Maps and Roll20
 
-- [ ] **Render the reference maps:** `uv run scripts/battlemap.py --session 32` (dusk fork and
+- [x] **Render the reference maps** (done 2026-11-03, after the waystation layout was updated for the griffon): `uv run scripts/battlemap.py --session 32` (dusk fork and
       waystation; the Roll20 builds already exist).
 - [ ] **Tokens** (and `tokens.txt`): Varrick (drover, wearing the bracer), Haddo and Brask
       (Thugs), Sennet (Spy), Hesper (Acolyte), Clatter (Bandit), Ilsa (Scout), Fennel (Bandit),

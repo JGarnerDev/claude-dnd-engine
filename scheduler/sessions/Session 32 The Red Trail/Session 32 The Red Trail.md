@@ -27,11 +27,10 @@ key_npcs:
   - "[[Sable Wren]] (historian — the unsigned deed, the hearth, the send-off)"
   - "[[Mara Tull]] (historian — sheriff; holds the prisoner at the close)"
   - "[[Silas Crubb]] (historian — mayor; the horses, and the party's pitches from last night)"
-  - "[[Aashal-Groon Mellenegon Borak]] (historian — Asher, through the fox again; the Spear)"
   - "[[Nella]] (historian — on the ridge; loses, escapes, drops her tally)"
   - "Varrick Tenn, the drover (human — Nella's second, the camp's floor anchor; not an entity)"
   - "Sennet Orrin (human — Bane's tally-man, keeps the duty ledger; not an entity)"
-  - "[[Sergei Rubelgerd]] (historian — Odibli's mastiff; drawn in by Iggy's song, Bosco riding him)"
+  - "[[Sergei Rubelgerd]] (historian — Odibli's mastiff; rides along, Bosco on his back, nose for the griffon at S2_SCOUT)"
   - "[[Bosco]] (historian — Iggy's raccoon; arrives on Sergei's back, the cold war with Odibli still on)"
   - "the prisoner (a silhouette only — Tyler's cameo, beat 1; no name, no lines)"
 encounters:
@@ -393,9 +392,13 @@ Everything below happened in [[Session 31 The Red Trail]].
   [[Ashford]] toward Duskwater: the ford, the drover's road, the dusk fork, the camp approach.
 - **Cast:** the party, [[Sergei Rubelgerd]] with [[Bosco]] on his back, and Silas's horses
 - **Enemies:** none (the rear guard at stage 3 is Scene 2)
-- **DCs:** Stage 1 — 12 · Stage 2 — road 13 or shortcut 11 · Stage 3 — 13 · Stage 4 — ride in 14 or
-  walk in 12 · Checks: Survival, Perception, Animal Handling, Nature, Athletics, Investigation,
-  Stealth (stage 4)
+- **DCs:** one DC per stage, for every skill used in it:
+  - Stage 1, the ford — 12: Survival, Investigation, Athletics, Animal Handling
+  - Stage 2, the drover's road — road 13 or shortcut 11: Perception, Investigation, Survival,
+    Animal Handling; shortcut also Nature, Athletics
+  - Stage 3, the fork — 13: Survival, Investigation, Nature, Perception
+  - Stage 4, the approach — ride in 14 or walk in 12: Animal Handling, Stealth, Perception,
+    Survival
 - **Time:** ~30 min
 - **Trigger:** the session opens on the bridge; they ride out.
 - **Stops:** working labels only. Stops are scheduler content; `/recap` canonizes only what they
@@ -419,6 +422,9 @@ Everything below happened in [[Session 31 The Red Trail]].
 - **Menu:** Survival (tracking) · Perception (spotting sign) · Animal Handling (pushing the horses)
   · Nature (reading terrain) · Athletics (crossings) · Investigation (the cart's tells) · Stealth
   (stage 4 only). A player who argues well for something else gets it.
+- **The DC belongs to the stage, not the skill.** Every check in a stage rolls against that
+  stage's DC, whatever skill it uses. Each stage below lists the skills that fit it and what each
+  one does there.
 - **DCs:** stage 1 **12** · stage 2 **13** · stage 3 **13** · stage 4 **14** (Jeff, 2026-10-07).
   Record what actually gets used; it fills the empty Skill Challenge table in `meta/difficulty.md`.
 - **Two route choices (engine 2026-10-09, committed 2026-10-13):** at stage 2 and stage 4, the party picks a route
@@ -435,6 +441,11 @@ Everything below happened in [[Session 31 The Red Trail]].
 > *"The ruts come up out of the water deep enough to stand a boot in. Along both edges, the mud
 > has been scraped smooth in long, even strokes."*
 
+- **Skills (all DC 12):**
+  - **Survival:** picks the ruts up again on the far bank.
+  - **Investigation:** reads the scraped mud (the pass below).
+  - **Athletics:** gets the cart and riders across the current without a spill.
+  - **Animal Handling:** keeps Silas's horses moving through cold water.
 - **A pass reads the strokes:** a branch, dragged to make the ruts look shallower. The cart is
   heavy and in a hurry.
 
@@ -442,13 +453,21 @@ Everything below happened in [[Session 31 The Red Trail]].
 
 #### S2_ROAD — Stage 2, the drover's road (DC 13)
 
-- **Choice (party):** the road (DC 13, a loss costs time) or the shortcut (DC 11, a loss lames one of Silas's horses: 11 gp, favour debt in doubt).
 - A wide, old cattle road through rolling scrub. The ruts mix with other traffic here.
-- **The route choice:** the road winds around the hills, and a drover's shortcut cuts straight over
-  broken scrub.
-  - **Stay on the road:** DC 13, as written. A loss costs time.
-  - **Take the shortcut:** DC 11. A loss costs a horse, not time: one of Silas's horses goes lame
-    (he'll want 11 gp, and the favour debt is in doubt).
+
+> *"The cattle road swings wide around the hills, rutted by years of traffic. Off to the left, a
+> narrow track goes straight over the scrub, the kind drovers use when they're late."*
+
+- **Choice (party):** stay on the road (DC 13, a loss costs time) or take the shortcut over the
+  scrub (DC 11, a loss costs a horse, not time: one of Silas's horses goes lame, 11 gp, and the
+  favour debt is in doubt).
+- **Skills (DC 13 on the road, DC 11 on the shortcut):**
+  - **Perception:** spots sign (the finds below).
+  - **Investigation:** reads the cart's tells (the finds below).
+  - **Survival:** keeps the right ruts where they mix with other traffic.
+  - **Animal Handling:** pushes the horses for pace.
+  - **Shortcut only — Nature:** picks a line over broken scrub. **Athletics:** gets the cart over
+    the rough bits.
 - **Perception or Investigation finds (offer one or two):** a hoofprint with a cracked shoe,
   repeated every stride · a wet patch where a cask has been weeping · a whittled curl of antler,
   fresh — someone sitting on the cart seat cutting notches.
@@ -456,24 +475,36 @@ Everything below happened in [[Session 31 The Red Trail]].
 
 #### S2_FORK — Stage 3, the dusk fork, and a false trail (DC 13)
 
+> *"The road splits at a lone tree. On the right branch the ruts are deep and plain. On the left
+> there's hard ground and almost nothing to see."*
+
 - The road splits. One branch shows the ruts plainly — too plainly. A dragged log has laid them;
   the real cart went the other way over hard ground.
-- **Survival or Investigation sees through it.** Nature notices the "ruts" don't sink where the
-  ground goes soft.
+- **Skills (all DC 13):**
+  - **Survival or Investigation:** sees through the false trail.
+  - **Nature:** notices the "ruts" don't sink where the ground goes soft.
+  - **Perception:** spots the riders at the lone tree before they spot you (feeds Scene 2).
 - **The rear guard is here** — see Scene 2. If the party wins this stage, they spot the riders
   first.
 - **Loss:** they ride the false branch until it dead-ends at a stream, and double back in the dark.
 
 #### S2_APPROACH — Stage 4, the camp approach (DC 14)
 
-- **Choice (party):** ride in (DC 14, horses close) or tie the horses out and walk (DC 12, nobody mounted, and a fleeing crewman can steal a horse).
 - Woodsmoke, and a corral full of horses that can smell theirs.
-- **Animal Handling** keeps the borrowed horses quiet. **Stealth** works here too.
-- **The route choice:** ride in close, or leave the horses and walk.
-  - **Ride in:** DC 14, as written. The horses stay close at hand.
-  - **Tie the horses half a mile out and walk in:** DC 12, with no horses to give them away. But
-    nobody is mounted if someone runs, and a crewman who flees the camp can steal one of Silas's
-    horses on his way out (11 gp, favour debt in doubt).
+
+> *"Woodsmoke, close. Over the next rise, horses in a corral have caught your horses' scent, and
+> one of them calls out."*
+
+- **Choice (party):** ride in (DC 14, the horses stay close at hand) or tie the horses half a
+  mile out and walk in (DC 12, no horses to give them away; but nobody is mounted if someone
+  runs, and a crewman who flees the camp can steal one of Silas's horses on his way out: 11 gp,
+  favour debt in doubt).
+- **Skills (DC 14 riding in, DC 12 on foot):**
+  - **Animal Handling:** keeps the borrowed horses quiet (riding in only; on foot, nothing to
+    quiet).
+  - **Stealth:** closes on the camp unheard.
+  - **Perception:** spots the watch on the roof and the fire before they spot you.
+  - **Survival:** keeps the party downwind of the corral.
 - **Loss:** a horse whinnies, a corral answers, and somebody at the camp looks up.
 - **Set the alert state** now from stages won, add the rider bump if Ilsa escaped at the fork,
   then go to Scene 3.
@@ -497,7 +528,8 @@ Everything below happened in [[Session 31 The Red Trail]].
 #### S2_REARGUARD — Nella's rear guard holds the fork
 
 - **Tokens:** dusk fork map. Archer Rider and Crossbow Rider mounted by the lone tree, Wolf low in
-  the grass between them. Ilsa's token goes to the grey margin if she rides off.
+  the grass between them. The party, mounted on Silas's five horses, on the road where they come
+  in (Sergei and Bosco with them). Ilsa's token goes to the grey margin if she rides off.
 - **Introduce:** Archer Rider (Ilsa Hask, Scout)
   - **Look:** sun-faded leather riding armour, a longbow strung and ready, a short sword. Squinting
     into the sun, already half-turned in the saddle.
@@ -561,6 +593,9 @@ Everything below happened in [[Session 31 The Red Trail]].
   - Fennel, when Cinder drops: *"No — Cinder, get up, get up—"* He stops fighting and goes to
     the wolf.
   - Fennel, when he runs: *"I'm out. Tell her I'm out."*
+  - Ilsa, caught or downed: *"Doesn't matter. She'll know I'm late, and that's warning enough."*
+- **Tokens:** Fennel and Cinder off the map edge away from the camp when they run (Fennel carries
+  Cinder if the wolf is down). Ilsa's token off the grey margin once she's past longbow range.
 - **Transition:** the light goes. The camp approach (stage 4).
 
 ### Scene 3 — The Waystation
@@ -619,11 +654,12 @@ Everything below happened in [[Session 31 The Red Trail]].
 
 #### S2_APPROACH_CHOICE — Heist, assault, parley or trick?
 
-- **Tokens:** waystation map. Drover by the watch-fire, the three Cask-hands at the
-  cart, Tally-man at his table by the shed, Hedge Priest at the fire, Roof Guard on the shed roof,
-  horses in the corral. Sniper in the brush blind and Griffon at its tether behind it, both on
-  the GM layer until seen. Party tokens on the south tree line, or wherever the chase
-  left them.
+- **Tokens:** waystation map. Drover by the watch-fire, Big Cask-hand and Half-orc Cask-hand at
+  the cart, Tally-man at his table by the shed, Hedge Priest at the fire, Roof Guard on the shed
+  roof, horses in the corral. Griffon at its tether behind the blind, on the GM layer until seen.
+  The Sniper goes by alert state, on the GM layer until seen: **unaware**, in the shed at O6 ·
+  **dusk**, in the brush blind · **night alert**, on the Griffon's token, already in the saddle.
+  Party tokens on the south tree line, or wherever the chase left them.
 - **Introduce:** Drover (Varrick Tenn)
   - **Look:** leathery, studded leather worn like a uniform, a long cart-whip, a row of throwing
     daggers across his chest, a scuffed bracer on his left forearm.
@@ -632,7 +668,8 @@ Everything below happened in [[Session 31 The Red Trail]].
     together.
 - **Introduce:** Cask-hands (Haddo Keel, and Brask the half-orc)
   - **Look:** stained leather aprons over jerkins, iron-banded cask-mallets, heavy crossbows
-    propped on the cart wheel. Haddo is huge; Brask is long-armed, asleep against the wheel.
+    propped on the cart wheel. Haddo is huge; Brask is long-armed (asleep against the wheel, if
+    the camp is unaware).
   - **Sound:** Haddo hums and counts the casks out loud. Brask grunts and snores.
   - **Impression:** paid by the barrel. "Nobody touches the cart" is their whole job.
 - **Introduce:** Tally-man (Sennet Orrin)
@@ -649,6 +686,13 @@ Everything below happened in [[Session 31 The Red Trail]].
     his belt.
   - **Sound:** you hear him before you see him, fiddling with his bolts. Shouts targets.
   - **Impression:** nervy lookout who'll give away anyone standing in the open.
+- **Introduce:** Sniper ([[Nella]]), when she's first seen or heard: here at a parley or trick, or
+  at her first shot (`S2_FIGHT`)
+  - **Look:** long hair, a long weathered cape over dark studded leather, a tall longbow, a short
+    sword she never touches. Odibli has seen her once, on the cart seat.
+  - **Sound:** patient, dry, never raised. Short sentences from a long way away. Counts out loud
+    when she's thinking.
+  - **Impression:** calm and unhurried. Watches the fight like she's doing sums.
 - **Choice (party):** heist, assault, parley or trick. Each reaches the casks; each costs and gains something different (see below).
 - **Choice (party):** scout the ridge first (`S2_SCOUT`), or go straight in. Scouting costs time and a check; it buys the chance to cut Nella's exit.
 - **All four are viable.** Let the party pick and don't steer.
@@ -659,11 +703,23 @@ Everything below happened in [[Session 31 The Red Trail]].
   pinned to drop into the river, and behind the blind, **a griffon** hooded and staked on a long
   tether, a rider's saddle on its back and sheep bones around the stake. Say it plainly:
   *"Someone's planned a way out of here, and it isn't on foot."*
+  - **Introduce:** Griffon (Tithe), hooded, if the scouts find it
+    - **Look:** a hooded shape bigger than a horse, wings folded, a rider's saddle on its back,
+      sheep bones around the stake.
+    - **Sound:** slow breathing, a click of beak under the hood.
+    - **Impression:** someone's been feeding it here for days.
   - **Dealing with Tithe first** is the party's way to take the sky away before the fight:
     cut the tether quietly (Stealth DC 13) and walk it off (Animal Handling DC 15), or spook it
     off (it climbs east, loud, and the camp wakes), or attack it hooded (AC 12, HP 59; it
     shrieks, and the camp wakes). With Tithe gone, Nella fights from the blind and falls back on
     the bridge (`S2_ESCAPE`). That's an earned win, not a broken plan.
+    - **Walked off:** *"The griffon lowers its hooded head against your hand and follows the
+      tether like a tired horse."*
+    - **Failed Stealth:** Clatter, from the roof: *"Someone's up by the blind! By the BLIND!"*
+      The camp wakes.
+    - **Failed Animal Handling:** it screams under the hood, rips the tether free and climbs
+      east, trailing rope. The camp wakes, and the sky is still theirs.
+  - **Tokens:** if Tithe is walked off or flies, take the Griffon token off the map.
 - **Night heist** — get the cart out without a fight. Watch rotations, the corral, and Nella is the
   light sleeper. Pulling it off means **the party leaves *her* the taunt for once.** Don't steer. If they
   choose it, a clean heist pays well.
@@ -729,12 +785,6 @@ Everything below happened in [[Session 31 The Red Trail]].
   earlier, if they parleyed and she spoke). When she lifts off, put her token on the Griffon's
   and move both off the map edge to the grey margin, at 130–150 ft. After dark, keep them on the
   GM layer: the party can't see her.
-- **Introduce:** Sniper ([[Nella]]); first seen here, or at parley
-  - **Look:** long hair, a long weathered cape over dark studded leather, a tall longbow, a short
-    sword she never touches. Odibli has seen her once, on the cart seat.
-  - **Sound:** patient, dry, never raised. Short sentences from a long way away. Counts out loud
-    when she's thinking.
-  - **Impression:** calm and unhurried. Watches the fight like she's doing sums.
 - **The floor:** Varrick, Haddo and Brask at the cart, Sennet slipping between them, Hesper at
   the fire, Clatter on the roof. Varrick and the cask-hands take two hits and keep swinging. The
   crew holds stations; they don't converge.
@@ -781,7 +831,8 @@ Everything below happened in [[Session 31 The Red Trail]].
   mark on the world). Show; never explain. Nobody says the name Sah but Iggy.
   1. **His first spell of the session** (wherever it falls, the fork included): the words come out
      in two voices, his and an older one half a beat behind, in a language nobody at the table
-     knows. Only whoever stands nearest him hears the second voice. Say it to that player.
+     knows. Only whoever stands nearest him hears the second voice. Send it to that player
+     (`Private (nearest PC)`, below).
   2. **His first Smite:** the words glow as they leave his mouth, and the strike leaves a hard
      white line hanging in the air for a breath, straight as a ruler stroke. If Hesper is
      standing, the charms on her cord rattle together and one cracks.
@@ -789,6 +840,10 @@ Everything below happened in [[Session 31 The Red Trail]].
      **marked**, like ink pressed hard into paper, darker than anything else in the camp. No more
      than that.
   4. **The wings.** Below.
+- **Private (nearest PC):** cue 1, Iggy's first spell of the session, sent to whoever stands
+  nearest him
+  - **The message:** When Iggy speaks the spell, you hear a second voice under his, older, half a
+    beat behind, in a language you don't know. Nobody else seems to hear it.
 - **Private (Dip):** if Dip uses their sage-sense on Iggy, or rolls Arcana on him, at any point
   this session
   - **Ask:** an Arcana check.
@@ -840,6 +895,8 @@ Everything below happened in [[Session 31 The Red Trail]].
 - Morale-break line: *"She's leaving us. She's LEAVING us."* — and they run.
 - Hesper, when a PC closes on her after Varrick drops: *"Don't. I'll put the club down. I'll put
   it down."*
+- **Tokens:** each crew member who fails goes off the nearest map edge into the dark. Anyone
+  who surrenders stays where they stand.
 - **This also triggers `S2_ESCAPE`.**
 
 #### S2_ESCAPE — Nella loses, and gets away on a fallback she rigged
@@ -851,7 +908,7 @@ Everything below happened in [[Session 31 The Red Trail]].
   2. **The taunt:** one deliberate miss into a post at head height, then a dry voice from the dark:
      ***"Keep the ale."***
   3. **Withdrawal:** Tithe climbs east into the dark at 80 ft a round. Nothing the party has
-     catches it, Iggy's wings included.
+     catches it, Iggy's wings included. **Tokens:** Sniper and Griffon off the grey margin, east.
   4. **The tally falls (Jeff, 2026-10-07):** as Tithe banks over the river, the saddlebag flap
      comes loose. See `S2_TALLY`. If Iggy chased her (`S2_IGGY_BEAT`), it may be in his hands
      instead.
@@ -933,6 +990,8 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **The horses go back to Silas** sound and shod, and the favour is paid.
   - Silas, checking each hoof: *"All four shoes on every one. We're square. Next time you need
     horses, you come to me first."*
+  - Silas, if a horse came back lame: *"That one's lame. Eleven gold, and we'll talk about the
+    rest another day."*
 - **Silas sees the banner** (first look, before he goes quiet; he never says whose it is):
   *"Where did you get that banner?"* A beat. *"If you hang it, hang it high. Some people who
   drink here would know whose it is, and you don't want them knowing you have it."*
@@ -966,6 +1025,9 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **Mara, at the door, before anyone asks:** *"He walked in. Put his blade down on my step. Hasn't
   said a word since. Half the town wants him hanged by week's end."* A beat. *"I haven't decided
   anything."*
+- **If they bring prisoners home** (Varrick, Sennet, anyone from the camp), when she sees them
+  roped on the cart: *"Two more? I've one cell and one man in it already. Put them in the stable
+  and get Dunny."*
 - **End on the cell door.** Don't let them in tonight.
 
 ## NPC Quick-Reference
@@ -993,15 +1055,13 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
   nothing yet about why her prisoner surrendered.
 - **Voice:** quiet, weathered, economical. Gives an order once. Grief steeled into grit, never
   spoken.
-- **Kit (player-facing):** *a sheriff's star on a worn coat, a long knife on her belt, and tonight
-  a deputy's blood down one side. Slung across her back, muzzle down, a short heavy thing of dark
-  brass and iron with a flared mouth like a bell bolted to a walnut stock. It smells of burnt
-  sulfur, like a struck match.*
+- **Kit (player-facing):** *a sheriff's star on a worn coat, a long knife on her belt, and slung
+  across her back, muzzle down, a short heavy thing of dark brass and iron with a flared mouth
+  like a bell bolted to a walnut stock.*
 - **Label (party-facing):** Mara (the party knows her)
 - **The Fourth Letter** (lore in her entity file): a Cael heirloom sent by Lord Cael in place of
   the soldiers Ashford asked for. If anyone asks, a townsperson answers, not Mara: *"His lordship
-  wrote back three times. Fourth time he sent that."* She fired one charge in her own street fight
-  tonight; the party may have heard the clap from the yard. Six left, and nobody can make more.
+  wrote back three times. Fourth time he sent that."* Six charges left, and nobody can make more.
 
 ### [[Silas Crubb]]
 
@@ -1010,13 +1070,6 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **Knows:** stock, debts and prices · who owes whom · whose banner that is (and he'd rather not).
 - **Voice:** affable, drawling, self-deprecating. Tangents that always land on a number. Slightly
   slippery.
-
-### The fox ([[Aashal-Groon Mellenegon Borak]])
-
-- **Motivation:** pay what it promised, and keep Sable safe through people with reasons.
-- **Knows:** far more than it says. Says almost none of it.
-- **Voice:** precise and dry, a little amused. Talks like someone settling a bill. Never gives
-  Asher's name.
 
 ### [[Nella]]
 
@@ -1051,8 +1104,8 @@ no entity files, and `/recap` decides. Full introductions were at Session 30 (`S
   stick, the table wins — capture her, and re-plan her arc around the tally and the debt. Never
   cheat visibly. Captured-Nella sample, cold: *"Well. That'll cost me."*
 - **They want to chase Nella into the dark.** She's on a griffon. Nothing they have keeps up.
-  Let the light of Iggy's wings show her for a moment longer, then nothing. *"Eighty feet a
-  wingbeat. You're not catching that."*
+  Let the light of Iggy's wings show her for a moment longer, then nothing. *"She's going east
+  faster than any horse could. You're not catching that."*
 - **Iggy goes down before he flies.** Nella won't shoot him again, and the wings can still open
   when he's back up. If the night runs out before they do, hold the voice for another night.
 - **They go straight at the feud with the ledger or the banner.** Give the next rung only:
@@ -1127,7 +1180,10 @@ Land it on the cell door, not on the casks.
     crew's names (Ilsa Hask, Fennel Dray, Cinder, Varrick Tenn, Haddo Keel, Brask, Sennet Orrin,
     Hesper Mudd, Tam "Clatter" Cobb), only for whoever comes up · Nella rides a borrowed griffon,
     Tithe, whose owner stays open · Sah's voice spoke through the earshot crystals, and the
-    crew heard it (only what was shown; nothing about why)
+    crew heard it (only what was shown; nothing about why) · Tithe's owner is somewhere east ·
+    some of the people who would know the banner drink at the Lioness (Silas) · the banner hangs
+    above the Lioness hearth · twelve casks, if the count isn't already set · Varrick is an
+    ex-soldier
 - **Held for later:** Elowen and Odibli (the Unfinished Binding) · Jorn's foreshadow · the Marlow
   coppers · Asher's Dead Sun phrase for Luci · Sable's talk with Odibli about the fire · Dip's
   vision of Iggy (Dip's to share) · the battlefield-spirit and coin-forgery spitballs · the pull
