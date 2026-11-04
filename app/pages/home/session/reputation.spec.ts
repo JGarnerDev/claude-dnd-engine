@@ -14,6 +14,7 @@ const rep: Reputation = {
   pcs: [
     pc({ pc: 'Dip', fame: { score: 5696, gain: 272, tier: 'Noticed', rank: 2, up: true },
       infamy: { score: 272, gain: 272, tier: 'Unremarked', rank: 1, up: false },
+      known: { fame: 'Cut down [[Harrow Bane|three raiders]] in two breaths.', infamy: '' },
       deeds: [
         { track: 'fame', scope: 'Ashford', points: 5424, text: 'Felled [[Harrow Bane|the captain]] in the *square*.' },
         { track: 'infamy', scope: 'Ashford', points: 272, text: 'Threw him in the well.' },
@@ -53,6 +54,17 @@ describe('reputationSlides', () => {
     expect(deeds[0].querySelector('a')).toBeNull();
     expect(deeds[0].textContent).toContain('the captain');
     expect(deeds[1].classList.contains('is-infamy')).toBe(true);
+  });
+
+  it('shows known-for lines per track, skipping blank ones and zero tracks', () => {
+    const el = dom(reputationSlides(rep)[0].html!);
+    const known = el.querySelectorAll('.rp-known');
+    expect(known).toHaveLength(1);
+    expect(known[0].closest('.rp-track')!.classList.contains('is-fame')).toBe(true);
+    expect(known[0].textContent).toBe('Cut down three raiders in two breaths.');
+    const zeroInfamy = { ...rep, pcs: [pc({ pc: 'Iggy', fame: { score: 544, gain: 0, tier: 'Unknown', rank: 1, up: false },
+      known: { fame: '', infamy: 'Should not show.' } })] };
+    expect(dom(reputationSlides(zeroInfamy)[0].html!).querySelector('.rp-known')).toBeNull();
   });
 
   it('no slide when every PC is at zero', () => {

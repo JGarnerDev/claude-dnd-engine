@@ -1,6 +1,6 @@
 // Reputation slide for the recap deck (meta/reputation.md): party fame up top, then each PC's
-// fame and infamy with tier names, the gain last session, its top deeds, and a banner on a
-// tier-up. Never the rewards. Pure: builds a Slide whose `html` replaces the markdown body;
+// fame and infamy with tier names, the gain last session, what the PC is known for, its top
+// deeds, and a banner on a tier-up. Never the rewards. Pure: builds a Slide whose `html` replaces the markdown body;
 // slides.ts shows it.
 
 import './reputation.css';
@@ -11,14 +11,18 @@ import type { PcReputation, RepTrack, Reputation, Slide } from './types.js';
 const unlink = (s: string) => s.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, n: string, a?: string) => a ?? n);
 const num = (n: number) => n.toLocaleString('en-US');
 
-function trackHtml(kind: 'fame' | 'infamy', t: RepTrack): string {
+// One track: the score row, with the known-for line under it.
+function trackHtml(kind: 'fame' | 'infamy', t: RepTrack, known = ''): string {
   if (!t.score) return '';
   return `
       <div class="rp-track is-${kind}${t.up ? ' is-up' : ''}">
-        <span class="rp-label">${kind === 'fame' ? 'Fame' : 'Infamy'}</span>
-        <span class="rp-score">${num(t.score)}</span>
-        <span class="rp-tier">${escapeHtml(t.tier)}</span>
-        ${t.gain ? `<span class="rp-gain">+${num(t.gain)}</span>` : ''}
+        <div class="rp-line">
+          <span class="rp-label">${kind === 'fame' ? 'Fame' : 'Infamy'}</span>
+          <span class="rp-score">${num(t.score)}</span>
+          <span class="rp-tier">${escapeHtml(t.tier)}</span>
+          ${t.gain ? `<span class="rp-gain">+${num(t.gain)}</span>` : ''}
+        </div>
+        ${known ? `<div class="rp-known">${inline(unlink(known))}</div>` : ''}
       </div>`;
 }
 
@@ -30,11 +34,15 @@ function pcHtml(p: PcReputation): string {
         <span class="rp-pts">+${num(d.points)}</span>
         <span class="rp-text">${inline(unlink(d.text))}</span>
       </li>`);
+  // Name in the left column; tracks, then deeds, stacked on the right.
   return `
     <div class="rp-pc">
-      ${ups.join('')}
-      <div class="rp-head"><span class="rp-name">${escapeHtml(p.pc)}</span>${trackHtml('fame', p.fame)}${trackHtml('infamy', p.infamy)}</div>
-      ${deeds.length ? `<ul class="rp-deeds">${deeds.join('')}</ul>` : ''}
+      ${ups.length ? `<div class="rp-banners">${ups.join('')}</div>` : ''}
+      <span class="rp-name">${escapeHtml(p.pc)}</span>
+      <div class="rp-body">
+        ${trackHtml('fame', p.fame, p.known?.fame)}${trackHtml('infamy', p.infamy, p.known?.infamy)}
+        ${deeds.length ? `<ul class="rp-deeds">${deeds.join('')}</ul>` : ''}
+      </div>
     </div>`;
 }
 
@@ -48,7 +56,7 @@ export function reputationSlides(r: Reputation | null | undefined): Slide[] {
     md: '',
     html: `<div class="rp-wrap">
       <div class="rp-party">Party fame <b>${num(r.partyFame)}</b>${r.partyTier ? ` <span>${escapeHtml(r.partyTier)}</span>` : ''}</div>
-      ${pcs.map(pcHtml).join('')}
+      <div class="rp-grid">${pcs.map(pcHtml).join('')}</div>
     </div>`,
   }];
 }

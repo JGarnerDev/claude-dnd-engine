@@ -31,3 +31,17 @@ Reputation ledger (meta/reputation.md). One `## Session <n>` per homebrew sessio
 ### Luci
 
 - infamy · Ashford · minor · lvl 5 = 425: Stared the mayor down until he backed off.
+- known · fame: The dancer from the night the Lioness was raided.
+- known · infamy: Fanned the brewery fire. Don't touch her shoulder.
+
+### Dip
+
+- known · fame: Cut down three raiders before they could draw breath.
+
+### Halsby
+
+- known · fame: Knocked the raider leader off his horse with magic.
+
+### Iggy
+
+- known · fame: The viol player who got Ashford through a bad night.

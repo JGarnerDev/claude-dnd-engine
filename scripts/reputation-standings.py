@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # reputation-standings.py -- one homebrew session's reputation: each PC's world fame and infamy,
-# that session's gains and top deeds, tier crossings (world and local), local scores and party
+# that session's gains, top deeds and known-for lines, tier crossings (world and local), local scores and party
 # fame, from historian/sessions/_reputation.md (meta/reputation.md)
 # consumers: .claude/commands/recap.md, .claude/commands/session.md, meta/reputation.md,
 #   scheduler/campaign/_reputation.md -- update these if usage, flags, or output format change.
@@ -45,6 +45,9 @@ def main() -> None:
     cwrite('\n--- PCs ---', 'cyan')
     for p in data['pcs']:
         cwrite(f"  {p['pc']}: fame {track(p['fame'])} | infamy {track(p['infamy'])}")
+        for t in ('fame', 'infamy'):
+            if p['known'][t]:
+                cwrite(f"    known for ({t}): {p['known'][t]}")
         for d in p['deeds']:
             cwrite(f"    {d['track']} +{d['points']:,} @ {d['scope']}: {d['text']}")
         for loc in p['local']:

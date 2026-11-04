@@ -14,6 +14,7 @@ LEDGER = """DM note: never shown.
 
 - fame · Ashford · notable × named-foe × witnesses · lvl 4 = 5,424: Felled the raider
   captain in the square.
+- known · fame: Felled the raider captain.
 
 ## Session 30
 
@@ -21,6 +22,9 @@ LEDGER = """DM note: never shown.
 
 - fame · Ashford · minor · lvl 4 = 272: Bought a round.
 - infamy · Nowhere Inn · minor · lvl 4 = 999: Burned the inn. Wrong points on purpose.
+- known · fame: Bought the whole town a round.
+- known · infamy: Burned the inn down, and maybe meant it, and laughed
+  about it after.
 
 ### Iggy
 
@@ -124,6 +128,24 @@ def test_warnings_for_bad_points_unknown_scope_and_strahd(tmp_path):
     assert "stored 999, formula gives 272" in w
     assert 'scope "Nowhere Inn"' in w
     assert "Session 31 is strahd" in w
+
+
+def test_known_for_carries_forward_and_latest_wins(tmp_path):
+    make_repo(tmp_path)
+    s29 = by_pc(reputation.reputation(tmp_path, 29))
+    assert s29["Dip"]["known"] == {"fame": "Felled the raider captain.", "infamy": ""}
+    assert s29["Luci"]["known"] == {"fame": "", "infamy": ""}
+    s30 = by_pc(reputation.reputation(tmp_path, 30))["Dip"]["known"]
+    assert s30["fame"] == "Bought the whole town a round."
+    assert s30["infamy"] == "Burned the inn down, and maybe meant it, and laughed about it after."
+    assert by_pc(reputation.reputation(tmp_path, 30))["Iggy"]["known"]["fame"] == ""
+    assert reputation.load_ledger(tmp_path)[30]["Dip"][-1]["text"].startswith("Burned the inn.")
+
+
+def test_known_for_warns_over_ten_words(tmp_path):
+    w = "\n".join(reputation.reputation(make_repo(tmp_path), 30)["warnings"])
+    assert "Dip's known-for infamy runs over 10 words" in w
+    assert "known-for fame" not in w
 
 
 def test_strahd_and_empty_sessions_are_none(tmp_path):

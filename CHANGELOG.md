@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.52.0] — 2026-11-03
+
+### Added
+
+- **Reputation: known-for lines.** Each PC can carry one line per track, ten words at most, on what they're known for (`- known · fame: …` in `historian/sessions/_reputation.md`). The latest one carries forward. The recap slide shows it under the PC's scores, and `/recap` proposes rewrites (`K1.`) alongside new deeds. `reputation-standings.py` prints it and warns over ten words; `--json` gains `known` per PC. Backfilled for Dip, Halsby, Luci and Iggy.
+
+### Changed
+
+- **Reputation slide layout:** PC cards now sit two to a row, with the name on the left and each track's score stacked over its known-for line, so a full party fits on one screen without scrolling.
+
 ## [0.51.0] — 2026-11-03
 
 ### Added

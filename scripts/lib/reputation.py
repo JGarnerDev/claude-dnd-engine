@@ -6,12 +6,15 @@ standings shape changes.
 Reads the catalog (the fenced block under `## Catalog` in meta/reputation.md: sizes,
 multipliers, tiers) and the one ledger (historian/sessions/_reputation.md): `## Session <n>`,
 then `### <PC>`, then one bullet per deed,
-`- <fame|infamy> · <scope> · <size> [× <mult>...] · lvl <n> = <points>: <text>`.
+`- <fame|infamy> · <scope> · <size> [× <mult>...] · lvl <n> = <points>: <text>`, and at most one
+`- known · <fame|infamy>: <text>` per track: what the PC is known for, carried forward until a
+later session rewrites it.
 Points are stored, never recomputed; a mismatch with the formula is only a warning.
 
 For one homebrew session it computes each PC's world fame and infamy (all deeds up to it),
 the gain that session, tiers and tier-ups, local scores with the diluted rollup through each
-location's `global_location:`, that session's top deeds, and party fame (the roster average).
+location's `global_location:`, that session's top deeds, the latest known-for line per track, and
+party fame (the roster average).
 """
 
 import math
@@ -26,6 +29,7 @@ LEDGER_FILE = Path('historian') / 'sessions' / '_reputation.md'
 CAMPAIGN = 'homebrew'
 TRACKS = ('fame', 'infamy')
 TOP_N = 3
+KNOWN_MAX_WORDS = 10
 
 _CATALOG_RE = re.compile(r'^## Catalog\s*$.*?^```text\r?\n(.*?)^```', re.S | re.M)
 _SESSION_RE = re.compile(r'^##\s+Session\s+(\d+)\s*$')
@@ -34,6 +38,7 @@ _PC_RE = re.compile(r'^###\s+(.+?)\s*$')
 _DEED_RE = re.compile(
     r'^-\s+(fame|infamy)\s*·\s*(.+?)\s*·\s*([a-z-]+)((?:\s*[×x*]\s*[a-z-]+)*)\s*·\s*'
     r'lvl\s*(\d+)\s*=\s*([\d,]+)\s*:\s*(.*)$', re.I)
+_KNOWN_RE = re.compile(r'^-\s+known\s*·\s*(fame|infamy)\s*:\s*(.*)$', re.I)
 _MULT_SPLIT_RE = re.compile(r'\s*[×x*]\s*')
 _CONT_RE = re.compile(r'^\s+(\S.*)$')
 
@@ -71,10 +76,19 @@ def points(cat: dict, size: str, mults: list, level: int):
 
 def load_ledger(root: Path) -> dict:
     """{session: {pc: [deed]}}; deed = {track, scope, size, mults, level, points, text, line}."""
+    return _parse(root)[0]
+
+
+def load_known(root: Path) -> dict:
+    """{session: {pc: {track: {text, line}}}}: the known-for lines, as written in each session."""
+    return _parse(root)[1]
+
+
+def _parse(root: Path) -> tuple:
     f = root / LEDGER_FILE
-    ledger = {}
+    ledger, known = {}, {}
     if not f.is_file():
-        return ledger
+        return ledger, known
     session = pc = deed = None
     for i, line in enumerate(read_text_no_bom(f).splitlines(), 1):
         if m := _SESSION_RE.match(line):
@@ -92,11 +106,14 @@ def load_ledger(root: Path) -> dict:
                     'points': int(m.group(6).replace(',', '')), 'text': m.group(7).strip(),
                     'line': i}
             ledger[session][pc].append(deed)
+        elif pc and (m := _KNOWN_RE.match(line)):
+            deed = {'text': m.group(2).strip(), 'line': i}
+            known.setdefault(session, {}).setdefault(pc, {})[m.group(1).lower()] = deed
         elif deed and (m := _CONT_RE.match(line)):
             deed['text'] = (deed['text'] + ' ' + m.group(1).strip()).strip()
         elif not line.strip():
             deed = None
-    return ledger
+    return ledger, known
 
 
 def location_parents(root: Path) -> dict:
@@ -164,7 +181,7 @@ def reputation(root: Path, number: int) -> dict:
     campaigns = session_campaigns(root)
     if campaigns.get(number, CAMPAIGN) != CAMPAIGN:
         return None
-    ledger = load_ledger(root)
+    ledger, known = _parse(root)
     warnings = []
     for s in sorted(ledger):
         if campaigns.get(s, CAMPAIGN) != CAMPAIGN:
@@ -188,6 +205,17 @@ def reputation(root: Path, number: int) -> dict:
                 warnings.append(f"line {d['line']}: {pc} stored {d['points']:,}, formula gives {want:,}")
             if d['scope'].casefold() not in parents:
                 warnings.append(f"line {d['line']}: scope \"{d['scope']}\" is no historian location; no rollup ({pc})")
+    for pc, lines in known.get(number, {}).items():
+        for t, k in lines.items():
+            if len(k['text'].split()) > KNOWN_MAX_WORDS:
+                warnings.append(f"line {k['line']}: {pc}'s known-for {t} runs over {KNOWN_MAX_WORDS} words")
+
+    # Known-for: the latest line per PC and track up to this session.
+    latest = {}
+    for s in upto:
+        for pc, lines in known.get(s, {}).items():
+            for t, k in lines.items():
+                latest.setdefault(pc.casefold(), {})[t] = k['text']
 
     names = roster(root)
     for s in upto:
@@ -199,7 +227,7 @@ def reputation(root: Path, number: int) -> dict:
     pcs, crossings = [], []
     for pc in names:
         a, b = after.get(pc.casefold(), empty), before.get(pc.casefold(), empty)
-        row = {'pc': pc}
+        row = {'pc': pc, 'known': {t: latest.get(pc.casefold(), {}).get(t, '') for t in TRACKS}}
         for t in TRACKS:
             now, was = tier(cat, t, a['world'][t]), tier(cat, t, b['world'][t])
             row[t] = {'score': a['world'][t], 'gain': a['world'][t] - b['world'][t],

@@ -174,6 +174,7 @@ export interface PcReputation {
   fame: RepTrack;
   infamy: RepTrack;
   local: RepLocal[]; // DM-side; the slide does not show it
+  known?: { fame: string; infamy: string }; // what the PC is known for, ten words at most; '' when unset
   deeds: RepDeed[]; // this session's top three
 }
 

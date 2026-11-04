@@ -46,6 +46,9 @@ prints the standings; `scripts/session-cards.py` hands them to the runner's slid
 - **Tier:** a named band of a score (see Catalog). It's reached when the score meets the threshold.
 - **Crossing:** a session that lifts a world or local score into a higher tier.
 - **Top deeds:** up to 3 of last session's deeds with the most points, per PC.
+- **Known for:** one line per track, ten words at most, on what a PC is known for. It's written
+  the way the people at the scope would say it, and it sums up the track, not one deed. It carries
+  forward until a later session rewrites it.
 
 ## Scoring
 
@@ -119,6 +122,10 @@ plain name.
   `- <fame|infamy> · <scope> · <size> [× <mult>…] · lvl <n> = <points>: <what happened>`.
   A longer description may wrap onto indented continuation lines.
 - A session with no deeds gets no section. Scores still show; the slide just has no deeds.
+- **Known-for lines** go under the PC as `- known · <fame|infamy>: <ten words at most>`, at most
+  one per track per session. The latest one up to a session is what shows; when a PC has no
+  deeds that session, the `### <PC>` block may hold only these lines. Rewrite one when a new
+  deed changes the story, not every session.
 
 ```markdown
 ## Session 40
@@ -128,10 +135,13 @@ plain name.
 - fame · Ashford · notable × named-foe × witnesses · lvl 4 = 5,424: Felled the raider
   captain in the market square while half the town watched.
 - infamy · Ashford · minor · lvl 4 = 272: Threw the captain's body in the town well.
+- known · fame: Dropped the raider captain in front of half the town.
+- known · infamy: The one who put a raider in the well.
 ```
 
 The lib warns when a deed's stored points don't match the formula, when its scope names no
-historian location (that deed still counts, with no rollup), and when the session isn't homebrew.
+historian location (that deed still counts, with no rollup), when the session isn't homebrew, and
+when a known-for line runs over ten words.
 
 ## Rewards
 
@@ -152,6 +162,7 @@ One reputation slide in the recap deck, after the achievement slides and before 
 - **Header:** party fame.
 - **Per PC:** fame and infamy, each with its tier name and the gain since last session (a track
   at zero is left out). A PC with nothing on either track is left out.
-- **Under each PC:** that session's top deeds with their points.
+- **Under each PC:** the known-for line for each track that has a score, then that session's top
+  deeds with their points.
 - **Tier-up:** a banner naming the new world tier. Never the reward.
-- **Party-safe:** deed lines follow the names check in `meta/recap-slides.md`.
+- **Party-safe:** deed and known-for lines follow the names check in `meta/recap-slides.md`.
