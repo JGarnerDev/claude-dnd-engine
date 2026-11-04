@@ -1,0 +1,29 @@
+/* Reputation slide (reputation.ts, meta/reputation.md) — arcade-score rows per PC. Sized for
+   screen-share like slides.css; uses the runner's --sr-* tokens (session.css). */
+.rp-wrap { display: flex; flex-direction: column; gap: 2vh; max-height: 68vh; overflow: auto; max-width: 980px; padding-right: 1.5em; scrollbar-gutter: stable; --rp-fame: var(--sr-accent); --rp-infamy: var(--sr-k-combat); }
+
+.rp-party { font-size: clamp(16px, 1.4vw, 22px); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sr-muted); }
+.rp-party b { margin-left: 0.4em; font-size: 1.5em; letter-spacing: 0.02em; color: var(--rp-fame); font-variant-numeric: tabular-nums; }
+.rp-party span { margin-left: 0.4em; color: var(--sr-text); }
+
+.rp-pc { padding: 12px 18px 14px; background: linear-gradient(160deg, var(--sr-raised), var(--sr-surface)); border: 1px solid var(--sr-line); border-radius: 6px; }
+.rp-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 22px; }
+.rp-name { font-size: clamp(22px, 2.1vw, 32px); font-weight: 800; min-width: 6ch; }
+
+.rp-track { display: inline-flex; align-items: baseline; gap: 8px; --k: var(--rp-fame); }
+.rp-track.is-infamy { --k: var(--rp-infamy); }
+.rp-label { font-size: clamp(11px, 0.9vw, 14px); font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--k); }
+.rp-score { font-size: clamp(22px, 2.1vw, 32px); font-weight: 800; font-variant-numeric: tabular-nums; color: var(--k); }
+.rp-tier { font-size: clamp(15px, 1.3vw, 20px); font-weight: 600; }
+.rp-gain { font-size: clamp(14px, 1.2vw, 18px); font-weight: 700; color: var(--sr-k-stake); font-variant-numeric: tabular-nums; }
+
+.rp-deeds { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.rp-deed { display: flex; gap: 12px; align-items: baseline; font-size: clamp(15px, 1.3vw, 20px); line-height: 1.4; color: var(--sr-muted); }
+.rp-pts { min-width: 7ch; text-align: right; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--rp-fame); }
+.rp-deed.is-infamy .rp-pts { color: var(--rp-infamy); }
+
+.rp-banner { margin-bottom: 8px; padding: 4px 12px; display: inline-block; margin-right: 8px; border: 2px solid var(--rp-fame); border-radius: 4px; font-size: clamp(13px, 1.1vw, 17px); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rp-fame); animation: rp-pop 0.35s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+.rp-banner.is-infamy { border-color: var(--rp-infamy); color: var(--rp-infamy); }
+
+@keyframes rp-pop { from { opacity: 0; transform: translateY(8px) scale(0.96); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .rp-banner { animation: none; } }

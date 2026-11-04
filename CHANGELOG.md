@@ -6,6 +6,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.51.0] — 2026-11-03
+
+### Added
+
+- **Reputation: scored fame and infamy (homebrew).** Each PC has two up-only tracks, fame and infamy, built from DM-approved **deeds**: `size base × level² × multipliers` (named foe, witnesses, style, underdog). The numbers are big and odd on purpose, climbing past a million by level 20. Each PC has a world score plus local scores that roll up through `global_location:` (½ per step). There are 10 named tiers per track (Unknown → Legendary, Unremarked → Infamous), and party fame is the roster average. Rules and catalog: `meta/reputation.md`. Ledger: `historian/sessions/_reputation.md`.
+- **Reputation slide in the recap deck**, between the achievement and stats slides: party fame, each PC's scores, tiers and gains, last session's top three deeds, and a banner on a tier-up. `app/pages/home/session/reputation.ts`.
+- **DM-only tier rewards.** The tracker `scheduler/campaign/_reputation.md` holds a reward kind per tier (world and local, fame and infamy), the rewards given (`unspent`/`spent`) and current tiers. Its `## Engine` section has `/transcript` mine deed candidates and `/session` surface unspent rewards.
+- **`scripts/reputation-standings.py`** (logic in `scripts/lib/reputation.py`): one session's scores, gains, top deeds, world and local tier crossings, and warnings (points that don't match the formula, unknown scope, non-homebrew sessions). `--json`. Tests in `tests/scripts/test_reputation.py`.
+
+### Changed
+
+- **`/recap` Fame step** is now a **Reputation** step in homebrew: up to 3 deeds per PC (`F1.` fame, `I1.` infamy) with the points worked out, written to the ledger on approval, and a reward proposed for each tier crossing. Strahd keeps the prose-only fame beat.
+- Backfilled Sessions 29–31: six deeds. Dip and Halsby reach *Noticed*.
+
 ## [0.50.0] — 2026-10-27
 
 ### Added

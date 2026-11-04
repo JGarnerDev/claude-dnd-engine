@@ -81,10 +81,11 @@ export interface PreviousSession {
   slides: Slide[]; // party-facing deck from the folder's _slides.md; [] when none
   stats?: Stats | null; // scripts/lib/stats.py standings (meta/stats.md); null when unledgered
   achievements?: PcAchievements[] | null; // scripts/lib/achievements.py (meta/achievements.md); null when unledgered
+  reputation?: Reputation | null; // scripts/lib/reputation.py (meta/reputation.md); null when Strahd or no deeds yet
 }
 
 // One slide of a deck (meta/recap-slides.md): a `##` headline and its body.
-// `html` is set only on generated slides (stats, achievements) and replaces the markdown body.
+// `html` is set only on generated slides (stats, achievements, reputation) and replaces the markdown body.
 export interface Slide {
   title: string;
   md: string;
@@ -144,6 +145,46 @@ export interface Achievement {
 export interface PcAchievements {
   pc: string;
   items: Achievement[];
+}
+
+// Reputation (meta/reputation.md): one track's world score for one PC, up to this session.
+export interface RepTrack {
+  score: number;
+  gain: number; // added this session
+  tier: string;
+  rank: number;
+  up: boolean; // crossed into a higher tier this session
+}
+
+export interface RepDeed {
+  track: 'fame' | 'infamy' | string;
+  scope: string;
+  points: number;
+  text: string;
+}
+
+export interface RepLocal {
+  place: string;
+  fame: { score: number; tier: string; rank: number };
+  infamy: { score: number; tier: string; rank: number };
+}
+
+export interface PcReputation {
+  pc: string;
+  fame: RepTrack;
+  infamy: RepTrack;
+  local: RepLocal[]; // DM-side; the slide does not show it
+  deeds: RepDeed[]; // this session's top three
+}
+
+export interface Reputation {
+  session: number;
+  campaign: string;
+  partyFame: number;
+  partyTier: string;
+  pcs: PcReputation[];
+  crossings: { pc: string; track: string; scope: string; tier: string; rank: number }[];
+  warnings: string[];
 }
 
 export interface SessionData {

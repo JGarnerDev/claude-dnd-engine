@@ -20,6 +20,7 @@ prints the standings; `scripts/session-cards.py` hands them to the runner's slid
 - **No mechanical effect.** No perks, inspiration or rerolls. Bragging rights only.
 - **Fame is DM-approved.** A standout moment can become in-world word ("the one who felled the
   drake"), but only as a `/recap` proposal the DM approves. It's then canonized like any event. When the deed already has an event, fame goes in as a `Fame:` consequence on that event (plus `known_by` for who heard), not a duplicate.
+  In homebrew it is also a scored **deed** with fame or infamy points: `meta/reputation.md`.
   Not "renown" (`meta/warfare.md`) or "standing" (`meta/rewards.md`).
 - **Both seasons count.** Strahd sessions get a ledger too, but no deck. A Strahd season's final
   standings show once in the next homebrew deck, as "While you were in Barovia…".

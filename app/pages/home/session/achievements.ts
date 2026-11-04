@@ -29,7 +29,8 @@ export function achievementSlides(a: PcAchievements[] | null | undefined): Slide
 }
 
 // Pure: the deck with achievement slides slotted in before its last slide
-// ("Next time…"). Run before withStats, so stats land after them. No deck, no slides.
+// ("Next time…"). Run before withReputation and withStats, so those land after them.
+// No deck, no slides.
 export function withAchievements(deck: Slide[], a: PcAchievements[] | null | undefined): Slide[] {
   const extra = achievementSlides(a);
   if (!deck.length || !extra.length) return deck;

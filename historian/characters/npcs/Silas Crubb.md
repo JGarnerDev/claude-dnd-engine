@@ -25,6 +25,7 @@ relates_to:
   - "[[Ashford]] (he is its mayor and its general store)"
   - "[[House Cael]] (trades with them, favours them in public never)"
   - "[[House Marlow]] (trades with them too, which is the entire point)"
+  - "[[Halsby]] (will waive the shoeing on Halsby's borrowed horse when it comes back: word of the missile and the horse)"
 description: "Ashford's mayor and general-goods merchant, one human wearing both hats. Carefully neutral in the Cael–Marlow feud as a survival strategy, trades with whoever pays, and is the town's practical ground-truth — stock, debts, and what the raids have actually cost."
 
 # --- OPTIONAL (npc) ---

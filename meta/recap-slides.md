@@ -59,14 +59,19 @@ confirmed at `/recap`. Never put them in `_slides.md`. Rules and categories: `me
 built by the runner from `historian/sessions/_achievements.md`. Also generated, never written into
 `_slides.md`. They are the one deck slide that says "you". Rules and voice: `meta/achievements.md`.
 
+**The reputation slide** comes after the achievement slides and before the stats slides (homebrew
+only): party fame, each PC's fame and infamy with tier names, last session's gains and top deeds,
+and a banner on a tier-up. Built by the runner from `historian/sessions/_reputation.md`, never
+written into `_slides.md`. Rules: `meta/reputation.md`.
+
 ## Voice
 
 Slides are read aloud to the table, so write them like a story told by someone who was there.
 
 1. **Story, not mechanics.** Say what the characters saw, not what was rolled. No words that sound
    like checks, damage or rules: "read the yard" (Perception), "landed hidden" (Stealth), "hit
-   hard", "took the job", "the gift", "haggling". **Exception:** the generated stats slides,
-   whose numbers are the point. Achievement slides follow their own voice (`meta/achievements.md`).
+   hard", "took the job", "the gift", "haggling". **Exception:** the generated stats and reputation
+   slides, whose numbers are the point. Achievement slides follow their own voice (`meta/achievements.md`).
 2. **Only what was said.** When an NPC was vague, the slide stays vague. A reward the plan names is
    not one an NPC promised out loud: the fox said it would make it worth Halsby's while, so the
    slide says that, not "fuse his spear". The names check does this for names; do the same for
