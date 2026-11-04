@@ -272,11 +272,11 @@ the hard part is the sky, not the floor.
 
 ### Nella — veteran sniper (~CR 3, custom)
 
-- AC 15 (studded leather) · **HP 49** · Speed 35 ft
+- AC 15 (studded leather) · **HP 49** · Speed 35 ft · CR 3
 - STR 12 · **DEX 18 (+4)** · CON 12 · INT 12 · **WIS 16 (+3)** · CHA 10
 - Stealth +8, Survival +7, Perception +7, Nature +5
 - **Multiattack:** two longbow attacks
-- **Longbow** +6 to hit, range 150/600, 1d8+4 piercing (avg 8)
+- **Longbow ×2** +6 to hit, range 150/600, 1d8+4 piercing (avg 8)
 - **Shortsword** +6, 1d6+4 piercing — cornered only; she never chooses melee
 - **Marked Quarry (1/turn):** +1d6 against a creature she hit on her previous turn
 - **Skirmisher's Step:** Dash, Disengage or Hide as a bonus action
@@ -791,6 +791,9 @@ Everything below happened in [[Session 31 The Red Trail]].
 - **The sky:** once Nella lifts off, she's out of reach. The party can win the yard and still
   have arrows coming down out of the dark on them. **That's the fight until Iggy flies**
   (`S2_IGGY_BEAT`).
+- **Nella's turn in the air:** two arrows, then Tithe Dodges. After dark she's **unseen**: her
+  shots have advantage, the party's have disadvantage and must guess her square. Only crossbows
+  reach her, at long range. Lift-off: unaware round 3 · dusk round 2 · night alert round 1.
 - **Introduce:** Griffon (Tithe), when it comes up out of the brush
   - **Look:** wings wider than the shed is long, a tawny lion's back, a hooked eagle's head with
     a brass-ringed hood pulled back, a long saddle with Nella flat along it.
@@ -921,6 +924,22 @@ Everything below happened in [[Session 31 The Red Trail]].
   - **Bridge dropped early, or someone holding it, as well:** she runs for the river (step 5).
   - **Griffon gone and bridge held:** they cornered her fairly. The table wins (see
     Contingencies).
+- **If the party hurts her in the air, then** (once she's lit, she's in reach, and this party can
+  put ~85 into one target in a round; run these honestly too):
+  - **If Nella drops to half (24 HP) or Tithe to half (30 HP):** she skips the covering fire and
+    the taunt and goes straight to withdrawal (step 3). She's done the sums.
+  - **If Tithe drops to 0 with her on it:** it falls. Over the river, she lets go and drops into
+    the water, and that's the river plunge (step 5) on the spot. Over land, she takes 1d6 per 10 ft
+    fallen (Tithe circles about 30 ft up), lands prone beside it, and is on foot: she runs for the
+    bridge, then the river. The tally is in the saddlebags on the dead griffon.
+  - **If she's knocked out of the saddle** (forced movement, or knocked prone while mounted,
+    DEX DC 10 to stay on): Tithe climbs east without her, and she's on foot as above. The flap
+    comes loose as it climbs, so the tally still falls over the river (step 4).
+  - **If Nella drops to 0:** the table wins. Knocked out or killed is the party's call, not hers.
+    She comes down with Tithe if it's low, or slides off and falls if it's high; Tithe climbs east
+    riderless, and the tally falls as in step 4. Re-plan her arc around the tally and the debt
+    (see Contingencies). Waking up tied: *"Well. That'll cost me."*
+  - **Never** add HP, a reaction or a rescue she didn't have when the fight started.
 - **Make the preparation visible afterwards.** Whoever reaches the ridge sees the stake and
   tether, the sheep bones, the bridge pins drilled days ago:
   *"The pin holes are worn smooth, drilled days ago. Around the stake the grass is flattened in a
