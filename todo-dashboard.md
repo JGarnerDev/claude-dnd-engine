@@ -33,6 +33,10 @@ Plan drafted 2026-10-07 at `scheduler/sessions/Session 30 Keep the Ale/`. These 
 - **71.** 🤝 **Jeff** — **Tyler's backstory, enough to know why he surrendered.** Not blocking Session 30: the prisoner there is a silhouette and nothing about him is committed (`S2_CELL`). Session 31 opens on the cell conversation and needs his defection trigger and his price. If it isn't ready in time, the silhouette carries over and Session 31 opens elsewhere. No entity file exists yet; the concept is in `workshop/first-homebrew-act/drafts/cameos.md`.
 - **73.** 🙋 **Jeff** — **commit the 13 draft nodes** in `_flow.md` (`uv run scripts/flow-status.py --set "scheduler/sessions/Session 30 Keep the Ale"`). Nella's purse is set (250 gp, her remaining debt).
 
+### Session 33 prep — the camp in daylight
+
+- **91.** 🤝 **Jeff** — **re-check the waystation fight for daylight before Session 33.** The party reached the camp at about 10 a.m. (Session 32), but the plan sized the sky fight for dark: Nella unseen past darkvision, advantage on her shots, and Iggy's wings "lighting the sky" as the turn. In daylight she is seen and in range of crossbows. Nella also starts airborne (Halsby's broadcast warned her), Ilsa and Cinder may have joined the floor, and the heist option is gone. Rework the Difficulty check, `S2_FIGHT` and `S2_IGGY_BEAT` in `scheduler/sessions/Session 33 The Red Trail/`, and run `/flow` to trim its carried `_flow.md`. Until then the fight is likely softer than "desperate".
+
 ### Session 32 prep — the Spear is in play
 
 - **88.** 🤝 **Jeff + Kellan** — **finish The Shadowless Spear before Halsby's next fight.** The fox delivered it at Session 31 (+1, works as his focus, doubles the fade-rite span, 15-ft reach in dim light, shadowless head). **Ruled 2026-10-28:** the +1 covers his spell attack rolls and save DC as well as the weapon; tell Kellan. Still to do: write Kellan the item sheet Jeff promised, and have `/recap` move the item from `meta/loot-options/Halsby/weapons/The Shadowless Spear.md` into a historian item file. Until then Kellan plays it from memory.
@@ -73,6 +77,8 @@ The entity spine and the act document are both in the engine. What remains is th
 - **64.** ⚪ **anyone** (FYI) — soft lore seam: `Sah.md` says Sah displaced Iggy "to the Material Plane," but Iggy's canon debut is in Barovia, a mist-sealed demiplane. Bridgeable (the Mists take travelers) and it is Kellan's side of the map, but the step is unstated.
 
 ## 🟡 Waiting on Jeff's calls
+
+- **90.** 🤝 **Jeff + Miguel** — **ingest Miguel's Aethryn calendar when he sends his chart.** At Session 32 (out of character) he gave the year as "6743", read as tick counts rather than base-10: 6 Glistenings, 7 Crawls, 4 Showerings, 3 days, with a Crawl about 30 days and a Showering about 7.5 days. He posted the conversion in Discord; Jeff asked for the source files. This may conflict with the settled present year **1487** (item 23) and with `data/lore/calendar-proposal.md` (item 25), so reconcile before anything is canonized. Until then in-world dates stay year-only.
 
 These were handed to players; they're Jeff's now. Nothing outside is blocked on anyone else.
 

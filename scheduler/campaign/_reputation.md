@@ -1,4 +1,4 @@
-# Reputation (as of: Session 31)
+# Reputation (as of: Session 32)
 
 DM-only. Not an entity. What each fame and infamy tier unlocks, the rewards already given, and
 where each PC stands. Scores and rules: `meta/reputation.md`. The deed ledger is
@@ -89,7 +89,7 @@ From `reputation-standings.py`. Rewritten at each `/recap`.
 
 Party fame 1,850 (Unknown).
 
-- **Dip:** fame 4,238 Noticed · infamy 0. Ashford: Noticed.
+- **Dip:** fame 4,238 Noticed · infamy 1,105 Unremarked. Ashford: Noticed. The Waystation: infamy 1,105.
 - **Halsby:** fame 3,616 Noticed · infamy 0. Ashford: Noticed.
 - **Luci:** fame 850 Unknown · infamy 978 Unremarked.
 - **Iggy:** fame 544 Unknown · infamy 0.

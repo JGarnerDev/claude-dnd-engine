@@ -14,7 +14,7 @@ class: "Bard 3 (College of Valor) / Paladin 2"
 background: "Entertainer"
 homeland: [[Threnai]]
 level: 5
-level_confirmed: 31
+level_confirmed: 32
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Iggadron \"Iggy\" Wallaed (Bard 3 Valor / Paladin 2 from Session 30)"
 aliases:
@@ -302,6 +302,7 @@ Shadow does not match Iggy's form and moves in the wrong direction. Onset: Sessi
 - **Session 29:** Failed the landing roll and came out of the light prone in the raided yard. Gave Dip Bardic Inspiration, missed a lunging rapier attack on Willem, then threw down the sword for his crossbow and put a bolt in the mage Tallis's stomach for 8. Stays level 4.
 - **Session 30:** Shook Halsby's hand. Offered to heat Sable's ruined brewing copper back into shape; Silas said it needed a specialist. Healed the deputy [[Dunny Marsh]] with Lay on Hands, alongside Luci. After a few drinks he played his viol for the room while Luci danced, slow and bittersweet and then a sing-along. When the tune wandered somewhere foreign, the self-feeding hearth went completely still for about ten seconds, until he came out of it and found the chorus again. Leveled to **5** (**Paladin 2**). Reunited with [[Bosco]], who arrived riding [[Sergei Rubelgerd]]. Holds an [[Earshot Crystals|earshot crystal]].
 - **Session 31:** Played through the night at the Lioness while Luci danced. At dawn, [[Jory Pike]] asked whether the party were angels; Iggy kept his wings hidden and said they came from somewhere strange, by strange magic, so Jory took them for mages. Unknown to him, Dip's private vision placed the innermost layer of the hearth's stillness inside him.
+- **Session 32:** Rode in the back of the cart on the chase southeast. Missed the dragged-log false trail at the fork (Investigation), costing the party time. At the rear guard he walked out of the cart, knelt and hit the crossbowman with his heavy crossbow (~3 damage) before Dip finished him. Cast nothing; the wings stayed hidden.
 
 ## Affinity notes
 

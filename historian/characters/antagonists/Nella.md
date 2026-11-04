@@ -13,10 +13,12 @@ tags:
   - character/antagonist
 
 # --- MANDATORY (antagonist) ---
-location: [[Duskwater]]
+location: [[The Waystation]]
 personality: "Patient and watchful. Tracks, waits, and picks off from range; disengages the moment a position stops being good. Not loyal and not a believer — collared. Keeps meticulous count of everything, especially what she is owed and what she has paid."
 livelihood: "Bandit lieutenant — the band's hunter and marksman, raiding for House Marlow, unofficially."
 disposition: hostile
+voice: "Patient and dry, never raised: short sentences from a long way off, and she counts things aloud."
+voice_confirmed: 32
 
 # --- OPTIONAL (entity base) ---
 importance: minor
@@ -25,6 +27,7 @@ relates_to:
   - "[[Harrow Bane]] (her captain, and the man who holds her debt)"
   - "[[Ashford]] (the town she raids)"
   - "[[The Golden Lioness]] (she takes its stolen casks in the Session-1 raid)"
+  - "[[The Waystation]] (her camp, Session 32)"
 description: "Bandit lieutenant — a human ranger and marksman, the band's woodsman. Debt-collared to Harrow Bane and raiding to buy herself out, with a notched tally to prove it. She runs the Session-1 raid on the Golden Lioness, leaves with the ale, and escapes clean."
 
 # --- OPTIONAL (antagonist) ---
@@ -106,3 +109,33 @@ hears, and she can answer. She sits on that through many fights before it comes 
 - The party took the job of bringing the stock back. Luci favours ambushing her crew as they
   leave camp over a head-on assault.
 - The [[Earshot Crystals]] from her dead crew are now with the party, one each.
+
+## Canon — Session 32
+
+- **Her camp** is [[The Waystation]], an old drover's relay southeast of [[Ashford]], with the
+  stolen cart still loaded in the yard.
+- **Her rear guard** (an archer, a crossbowman and a wolf) held a fork on the road. The crossbowman
+  died to [[Dip]]; the archer and the wolf fled toward the camp.
+- **She keeps a griffon,** hooded and staked behind the ridge past the camp's bridge. [[Halsby]],
+  scouting invisible, found her saddling it.
+- **She wears an [[Earshot Crystals|earshot crystal]].** When Halsby reported to the party by
+  speaking to every holder at once, she heard him, turned toward the party's trail, whistled and
+  called **"Get moving, they're coming,"** and launched the griffon into the air. Halsby saw the
+  crystal at her neck, so the party now knows she can hear an all-holder broadcast.
+- The session ended with her airborne over a mobilising camp, at about 10 a.m. on Day 2.
+
+## Voice
+
+### Core
+
+- **Signature:** counts things aloud
+- **Never:** raises her voice
+- **Tell:** goes quiet and starts counting
+
+### Now
+
+- **Stance:** on alert; she knows the party is coming and roughly from where (S32: heard Halsby's crystal broadcast)
+
+### Said at the table
+
+- S32: "Get moving, they're coming." (to her crew, mounting the griffon)

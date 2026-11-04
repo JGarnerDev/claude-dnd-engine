@@ -48,56 +48,71 @@ Five PCs this season. The four who crossed from Barovia persist across both worl
 
 > **Reliability:** carried over from the Strahd roster plus the Session 28 seam pass. Afflictions cross **dormant** (the mists fed them; away, they are muted) — `workshop/first-homebrew-act/notes/the-seam.md`. Odibli's poison and Dip's mold were cured on screen and are gone; do not reuse them. Builds synced to the PC files 2026-10-25; the PC files and Roll20 sheets win. Which class took Luci's fifth level is unrecorded (confirm with Paul). Odibli and Halsby level to 5 in Session 31.
 
-## Current State (after Session 31)
+## Current State (after Session 32)
 
-The party is in Aethryn, at a bridge just outside [[The Golden Lioness]] in [[Ashford]], on the
-morning of Day 2, ready to ride southeast after Nella's cart. [[Act 1 - The Hearth at Ashford]] is
-the live act and [[The Stolen Casks]] is **active**. [[Session 31 The Red Trail]] played only its
-night and dawn; the whole pursuit carries into [[Session 32 The Red Trail]] (a draft, whose camp
-needs a resize for a long-rested party).
+The party is in Aethryn, about 200 ft south of [[The Waystation]], Nella's camp at an old drover's
+relay southeast of [[Ashford]], at about 10 a.m. on Day 2. [[Act 1 - The Hearth at Ashford]] is the
+live act and [[The Stolen Casks]] is **active**. [[Session 32 The Red Trail]] played the chase, the
+rear guard and the scouting; the camp fight and everything after it carries into
+[[Session 33 The Red Trail]] (a draft, whose camp fight was sized for dark and needs a daylight
+re-check).
 
+- **The cliffhanger.** [[Halsby]] is invisible near the camp's bridge. He reported to the party
+  by speaking to every crystal holder at once, and [[Nella]] wears one too. She heard him and took
+  off on a griffon, and the camp is mobilising. The rest of the party waits out of sight with the
+  cart and the horses, with about ten minutes to plan.
+- **The camp** holds the stolen cart (about 12 casks), a crew of about six (a drover, two
+  cask-hands, a clerk with a ledger, a hedge priest, a crossbowman on the shed roof) and a fine
+  banner on the shed's pole. None of them are named to the party.
+- **The rear guard** at the fork is broken. [[Dip]] killed the crossbowman. The archer and her
+  wolf fled toward the camp and warned it. The party left the dead man's crossbow and scimitar.
+- **The crystals leak.** An all-holder message reaches anyone wearing an [[Earshot Crystals|earshot
+  crystal]] within 300 ft, and the party now knows Nella has one.
+- **Pablo**, the dead crossbowman's horse, follows the party for the oats [[Odibli]] promised him.
+  The cart's oats are gone.
 - **The job is taken.** [[Sable Wren]] offered rooms, meals, a stay of a month or two and 10% of
-  the bar if the party brings back her stock. [[Dip]] told her 10% was low; she offered a larger
-  share if they stay, to be talked over when they return. Nothing is signed. She owes
-  [[Silas Crubb]] about 650 gp of a ~1,000 gp loan, and the stock was meant to pay it.
+  the bar if the party brings back her stock. Dip told her 10% was low; she offered a larger share,
+  to be talked over when they return. Nothing is signed. She owes [[Silas Crubb]] about 650 gp of
+  a ~1,000 gp loan, and the stock was meant to pay it.
 - **The Golden Lioness** is a week-old venture, Ashford's first tavern, half-built and now
   half-wrecked. Sable runs it alone for now.
-- **Nella's cart** went southeast on deep ruts ([[Jory Pike]]). The raiders are one part of a
-  larger, organized force camped about a day across the river, all shod by the same cobbler.
-  [[Wick]] (a branded elf commander) and [[Harrow Bane]] (a name that hushes a room) are known
-  by word only.
-- **The hearth is saved.** [[Odibli]] found the hedge mage's smother charm in it and got it out of
-  the building before its ward exploded in the yard. The fire still feeds itself and is linked to
-  something absent (`meta/mysteries.md`). Sable asked Odibli not to talk about the fire until she
-  does; word of the blast is going round Ashford.
-- **Halsby has [[The Shadowless Spear]].** The fox's debt is paid ("perhaps we will talk again").
-  Whether its +1 reaches his spells is open (todo #88).
+- **The wider band:** the raiders are one part of a larger, organized force camped about a day
+  across the river, all shod by the same cobbler. [[Wick]] (a branded elf commander) and
+  [[Harrow Bane]] (a name that hushes a room) are known by word only.
+- **The hearth is saved.** The fire still feeds itself and is linked to something absent
+  (`meta/mysteries.md`). Sable asked Odibli not to talk about the fire until she does.
+- **Halsby has [[The Shadowless Spear]]:** +1 to attacks, spell attacks and spell save DC while he
+  holds it (settled 2026-10-28). The fox's debt is paid ("perhaps we will talk again").
 - **Dip holds a private vision** from the night of Iggy's song: the stillness led inward, to
   something inside [[Iggy]]. Unshared.
 - **[[The Wanderer's Boon]]** is inert, but holds the space where its magic will return.
-- **The party carries [[Earshot Crystals]]**, one each (words only, 300 ft). **Dip** holds the
-  ~150 gp off the raiders. [[Sergei Rubelgerd]] and [[Bosco]] ride with the party.
-- **Borrowed:** five of Silas's horses and a cart, to come back with every shoe on.
-- **Not yet played:** the trail, the chase, the fork, the waystation, Nella's escape and tally,
-  the haul home, the man in the cell.
-- **Levels:** all five PCs are level 5. Everyone is at 5 before the December finale.
+- **The party carries** the crystals, one each (words only, 300 ft). Dip holds the ~150 gp off the
+  raiders. [[Sergei Rubelgerd]] and [[Bosco]] ride with the party.
+- **Borrowed:** five of Silas's horses and a cart, to come back with every shoe on. All five are
+  sound so far.
+- **Not yet played:** the camp fight, Iggy's wings and Sah's voice, Nella's escape and tally, the
+  camp's intel (band size, Bane's ledger, the banner), the haul home, the man in the cell.
+- **Levels:** all five PCs are level 5 (confirmed Session 32). Everyone is at 5 before the
+  December finale.
 - **The sky:** a single vast **broken moon**, shedding shards. Luci named it **Fida** in the
   Dead Sun tongue, and her voice answered "Closer." This conflicts with
   `data/lore/calendar-proposal.md` (two suns, three moons; not canon), which needs reconciling
   before it is canonized.
 
-### Rest Clock (as of: Session 31)
+### Rest Clock (as of: Session 32)
 
 Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` -> Long Rest Rules).
 
-- In-world time now: **"Day 2, Ashford reckoning", early morning**, at a bridge just outside the Lioness. A working label, not a date (Aethryn's months are unsettled)
+- In-world time now: **"Day 2, Ashford reckoning", about 10 a.m.** (DM at the table), on the hill south of [[The Waystation]]. A working label, not a date (Aethryn's months are unsettled)
 - Last long rest (in-world): **overnight Day 1 → Day 2 at the Golden Lioness** (DM ruling at the table, Session 31, overriding the plan's 24-hour gate)
-- Hours since last long rest: ~1 (~estimate): breakfast, the horses, the fox
+- Hours since last long rest: ~4 (~estimate): the ride southeast, the fork, the hill
 - Long rest available: **no, not until the night of Day 2 at the earliest** (24-hour gate)
-- Rounds of combat since: **0**
+- Rounds of combat since: **1** (the fork)
 - Short rests since: **0**
 - Notable burns:
-  - [[Halsby]]: Darkness (2nd level), with Subtle Spell (~1 sorcery point; ~estimate)
+  - [[Halsby]]: Darkness (2nd level), with Subtle Spell (~1 sorcery point; ~estimate); Invisibility (2nd level), still running
+  - [[Odibli]]: 2 of 3 free racial Speak with Animals casts
+  - [[Luci]]: Guidance cast (cantrip; no cost)
   - Permanent losses that still apply: Luci's **Sacred Flame**, and Odibli's **familiar** (Session 25)
   - Afflictions are still **dormant** (Iggy's shadow, Dip's whispers)
 

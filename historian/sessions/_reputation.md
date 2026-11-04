@@ -45,3 +45,11 @@ Reputation ledger (meta/reputation.md). One `## Session <n>` per homebrew sessio
 ### Iggy
 
 - known · fame: The viol player who got Ashford through a bad night.
+
+## Session 32
+
+### Dip
+
+- infamy · The Waystation · minor × witnesses × style · lvl 5 = 1,105: Charged Nella's rear guard
+  yelling for a daughter, cut the crossbowman down and beat him with his own leg.
+- known · infamy: Screams for a daughter, then beats you with your leg.

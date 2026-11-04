@@ -154,3 +154,27 @@ Stats ledger (meta/stats.md). One `## Session <n>` per session, both campaigns, 
 
 - spells-cast: 1
 - npcs-won-over: 1
+
+## Session 32
+
+### Dip
+
+- killing-blows: 1
+- damage-dealt: ~8
+
+### Iggy
+
+- damage-dealt: ~3
+
+### Odibli
+
+- spells-cast: 3
+- npcs-won-over: 1
+
+### Luci
+
+- spells-cast: 2
+
+### Halsby
+
+- spells-cast: 1

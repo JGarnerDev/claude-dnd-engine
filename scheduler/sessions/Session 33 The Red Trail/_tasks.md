@@ -1,6 +1,6 @@
-# Session 32 — The Red Trail · prep tasks
+# Session 33 — The Red Trail · prep tasks
 
-Not an entity. A checklist for getting `Session 32 The Red Trail.md` (in this folder) ready to run.
+Not an entity. A checklist for getting `Session 33 The Red Trail.md` (in this folder) ready to run.
 The `_` prefix keeps it out of `validate.ps1` and the semantic index. Delete it after the session is
 played.
 
@@ -11,12 +11,16 @@ wings and Sah's voice break her hold on the sky (`S2_IGGY_BEAT`), and the third 
 dogs are cut to pay for it. Already done in earlier rounds: the waystation Common
 (Varrick's Parrying Bracer), Nella's purse (250 gp), both map sketches, both Roll20 builds.
 
-Planned date: Tuesday 2026-11-03.
+Planned date: TBD.
+
+**Carried from Session 32 (recap 2026-11-04).** The chase and the fork are played; only the waystation is
+left. New first task: re-check the camp fight for **daylight** (the party arrived at 10 a.m.), and
+Nella starts airborne.
 
 ## Blocking — decide before the table
 
 - [x] **Commit the five draft beats** (done 2026-10-28; Jeff may review them again).
-- [ ] **Run `/review 32 --ready`**, then flip the plan to `state: planned`.
+- [ ] **Run `/review 33 --ready`**, then flip the plan to `state: planned`.
 
 ## Maps and Roll20
 

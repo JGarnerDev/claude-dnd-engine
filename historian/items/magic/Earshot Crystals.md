@@ -18,12 +18,13 @@ aliases:
   - "earshot crystal"
 importance: major
 active: true
-last_updated: [[Session 31 The Red Trail]]
+last_updated: [[Session 32 The Red Trail]]
 relates_to:
-  - "[[Nella]] (her crew wore them)"
+  - "[[Nella]] (her crew wore them; she wears one herself)"
 current_holder: "the party: one each for [[Iggy]], [[Luci]], [[Odibli]], [[Dip]] and [[Halsby]]"
 history:
   - "Taken off the dead raiders at [[The Golden Lioness]] after the raid ([[Session 30 Keep the Ale]]). [[Halsby]] worked out what they do (Arcana 19, with [[Luci]]'s guidance) and dealt one to each PC."
+  - "[[Nella]] heard [[Halsby]]'s all-holder broadcast at [[The Waystation]] through her own crystal ([[Session 32 The Red Trail]])."
 ---
 
 Taken from the raiders [[Nella]]'s crew left dead at [[The Golden Lioness]]. Each is a rough
@@ -41,3 +42,10 @@ Full mechanics: `meta/loot-options/Party/misc/Earshot Crystals.md`.
 > **Correction ([[Session 31 The Red Trail]]):** the DM restated the crystals for Dip as words
 > only, with no images, feelings or senses, matching the loot file. The earlier effect line here
 > (intent and feelings carry) was wrong and has been fixed (DM, 2026-10-27).
+
+## Session 32
+
+[[Halsby]], scouting [[The Waystation]] invisible, reported to the party by speaking to every holder
+at once. [[Nella]] wears a crystal from the same stone. She heard him, and took off on her griffon.
+An all-holder message reaches anyone wearing one within 300 ft, friend or not; the party learned
+this the hard way. Whether the rest of her camp crew wear crystals was not seen.

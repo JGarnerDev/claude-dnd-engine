@@ -1,4 +1,4 @@
-# The Citadel Clock (as of: Session 31)
+# The Citadel Clock (as of: Session 32)
 
 DM-only. Not an entity. Tracks [[Odibli]]'s casting in Aethryn, whether [[The Citadel]] senses it,
 and what the DM can do with the results. The `_` prefix keeps it out of `validate.ps1` and the
@@ -68,6 +68,15 @@ from the d6 as fuel for the ideas sheet. They don't trigger anything on their ow
 - Other magic: the smother-charm rewrite (calligraphy on a hostile glyph) — d6 **5**, not sensed. Rolled
   by Miguel at the DM's call, not hidden; logged as a Citadel roll (DM, 2026-10-27)
 - Cantrips: Prestidigitation ×1
+- Spell 1s: 0
+- Sensed: 0 · Clock after: 0 / 3
+
+### Session 32
+
+- Leveled: Speak with Animals (forest gnome free cast) ×2. To the dead crossbowman's horse at the
+  fork: d6 **6**. To the same horse, Pablo, on the hill: d6 **3**. Neither sensed. Rolled by the
+  engine (`scripts/roll.py`) at the DM's request during `/recap`, not at the table (DM, 2026-11-04)
+- Cantrips: Mage Hand ×1 (the antler on the shortcut)
 - Spell 1s: 0
 - Sensed: 0 · Clock after: 0 / 3
 

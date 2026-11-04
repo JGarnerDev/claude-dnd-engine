@@ -4,13 +4,39 @@ name: "Session 32 The Red Trail"
 campaign: homebrew
 type: session
 session_number: 32
-exists: false
-state: draft
+exists: true
+state: completed
 tags:
   - session
 
 mission: [[The Stolen Casks]]
 planned_date: "2026-11-03"
+played_date: "2026-11-03"
+# Year precision only: Aethryn's present year is 1487 (DM, 2026-10-27).
+# Working label: "Day 2, Ashford reckoning", about 10 a.m. (DM at the table).
+in_world_end_date: "1487"
+recap: "On the morning of Day 2 the party drove Silas Crubb's five horses and cart southeast after Nella's ruts. Dip and Halsby took the reins, and Iggy and Odibli rode in the back with Sergei and Bosco. Luci roped the rear pair together, Chestnut and George, and rode the chase standing astride them. At a stream crossing the horses ploughed in too deep, one stumbled, and the party lost time. They took the scrub shortcut, where Odibli spotted a deer antler stuck in the lead horse's path, and he and Luci wrenched it clear with two Mage Hands. At a fork, a dragged log had laid false ruts. Iggy missed it and the party lost more time on the wrong branch. At a second fork Nella's rear guard waited in the trees: an archer, a crossbowman and a wolf. The crossbowman told them to turn back. Dip leapt off the cart and charged, yelling 'Give me back my daughter!', and the archer and wolf fled toward the camp. Iggy hit the crossbowman with his heavy crossbow and Dip cut him down in one round. The party left his crossbow and scimitar. Odibli used Speak with Animals on the dead man's horse, which blamed them for killing the man who fed it, and he spent the cart's oats laying a trail to win it over. Around 10 a.m. the party reached a hill above the waystation, an old drover's relay. The horse, Pablo, caught up hungry and angry. Odibli talked him round with promises of more oats, and Pablo smelled a big strange animal near the bridge. Halsby went invisible and scouted the camp: a hedge priest, a soldierly drover, two cask-hands, a clerk with a ledger, a crossbowman on the shed roof, and the stolen cart with about 12 casks. Beyond the bridge, Nella was saddling a hooded griffon. Halsby reported through his earshot crystal to every holder. Nella wore one too, heard him, called 'Get moving, they're coming,' and launched the griffon into the air."
+cliffhanger: "About 10 a.m. on Day 2, at the waystation. Halsby is invisible near the bridge. Nella is airborne on a griffon, warned by his broadcast, and the camp is mobilising. The rest of the party waits about 200 ft south, out of sight but within crystal range, with the cart, six horses, Sergei and Bosco. They have about ten minutes to plan."
+entities_canonized:
+  - [[The Waystation]]
+new_entities:
+  - "Pablo: the dead crossbowman's horse, won over by Odibli with oats; now with the party. A session note, not an entity (DM, 2026-11-04)"
+  - "Chestnut and George: the rear pair of Silas Crubb's five horses, named at the table. Session note only"
+  - "Miguel's Aethryn calendar (Glistenings, Crawls, Showerings; year '6743' as tick counts): out-of-character, waiting on his chart (todo)"
+table_notes: "The recap deck landed. Paul loved the new reputation system; Ben questioned Luci's infamy for staring down Silas, and Airmail went over well. Luci's Van Damme horse-surfing and the two-handed Mage Hand antler pull were the first hour's big bits. Ben's horse-feed maths became a long derail, which the DM settled ('enough for an excursion'), and it fed straight back into the fiction through Pablo's hunger ('What is pound?'). Dead air while the DM looked up loot drifted into US election results for ~10 minutes. Roll20 friction: the map scale is wrong (count squares, not the ruler), and hidden token names were showing. The table chose a daylight arrival (10 a.m.), while the plan sized the camp fight for dark; Session 33's fight needs a re-check. The cliffhanger hit hard ('I am terrified of that griffin')."
+choices:
+  - "party: took the scrub shortcut at stage 2 → won the stage; no horse lamed"
+  - "party: charged the rear guard instead of scaring them off or bluffing → Dip's intimidation sent the archer and wolf running to warn the camp, and the crossbowman died"
+  - "party: scouted the camp first through an invisible Halsby, who broadcast to every crystal → Nella heard him and is airborne on her griffon before the fight starts"
+  - "Odibli: spent the party's oats to win over the dead crossbowman's horse → Pablo follows the party, hungry, and the cart has no oats left"
+beats:
+  - "spotlight(Luci): touch"
+  - "party-centric: touch"
+  - "shared(Odibli,Luci): touch"
+  - "spotlight(Dip): beat"
+  - "spotlight(Odibli): beat"
+  - "spotlight(Halsby): beat"
+  - "spotlight(Iggy): touch"
 pcs_present:
   - "Iggy"
   - "Luci"
@@ -66,6 +92,18 @@ description: "The pursuit half of the Red Trail, carried from Session 31 (which 
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
+
+> **Played 2026-11-03 (recap 2026-11-04).** The table ran Scene 1, Scene 2 and the start of Scene 3
+> (`S2_SCOUT`, with `S2_CRYSTALS` firing), and stopped as Nella took off from [[The Waystation]].
+> Played: `S2_TRAIL`, `S2_CHASE_RULES`, `S2_FORD_STAGE`, `S2_ROAD` (shortcut), `S2_FORK`,
+> `S2_REARGUARD`, `S2_RIDER` (Ilsa escaped), `S2_SCOUT`, `S2_CRYSTALS`. Not played: `S2_APPROACH`
+> (replaced by the hill and Halsby's scout), `S2_APPROACH_CHOICE`, `S2_FIGHT`, `S2_IGGY_BEAT`,
+> `S2_MORALE`, `S2_ESCAPE`, `S2_TALLY`, `S2_CAMP_INTEL`, Scene 4.
+>
+> **Reliability:** the arrival was at about 10 a.m. in daylight (DM at the table), while this plan
+> sizes the camp fight for dusk or dark. Iggy's 3 damage at the fork is read from a garbled
+> transcript line that fits Fennel's 11 HP. Pablo is the name the horse gave itself through Speak
+> with Animals. Confirm with DM.
 
 > **Carried from [[Session 31 The Red Trail]] at its `/recap` (2026-10-27).** Session 31 played
 > only its first two scenes: Dip's owed moment, the dead Boon, the hearth, the horses and the
