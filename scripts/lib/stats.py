@@ -6,7 +6,8 @@ standings shape changes.
 Reads the category catalog (the fenced block under `## Catalog` in meta/stats.md) and the
 one shared ledger (historian/sessions/_stats.md), orders sessions by number, splits them
 into seasons by runs of the `campaign:` tag, and computes for one session: its awards,
-the season leaderboards so far, the lifetime leaders, and -- when the session opens a
+the season leaderboards so far, the lifetime leaders, the notable lines (personal bests,
+new season leaders) that gate the deck's stats slides, and -- when the session opens a
 season -- the previous season's final standings.
 """
 
@@ -143,6 +144,32 @@ def standings(root: Path, number: int) -> dict:
                                          if c['id'] in ledger[s].get(pc, {})), default=0)]
         awards.append({**c, **win, 'best': best})
 
+    # Notable lines gate the compact "Worth noting" slide (meta/recap-slides.md -> Deck weight):
+    # each personal best over a real earlier mark (a first-ever 1 is not notable), and each
+    # category whose season leader changed this session.
+    def num(x):
+        return f"{'~' if x['rough'] else ''}{x['value']}"
+
+    def low(s):  # "Killing blows" -> "killing blows", "HP healed" keeps its acronym
+        return s[0].lower() + s[1:] if re.match(r'[A-Z][a-z]', s) else s
+
+    def prior(pc, cid):
+        return max((ledger[s][pc][cid][0] for s in earlier if cid in ledger[s].get(pc, {})), default=0)
+
+    notable = [{'icon': a['icon'], 'text': f"{pc}: personal best, {num(a)} {low(a['label'])}"}
+               for a in awards for pc in a['best'] if prior(pc, a['id']) > 0]
+    before = [s for s in so_far if s != number]
+    for c in catalog:
+        now = _ranked(_totals(ledger, so_far, c['id']))
+        was = _ranked(_totals(ledger, before, c['id']))
+        if not now or not was:
+            continue
+        lead, old = _leaders(now), _leaders(was)
+        new = [pc for pc in lead['pcs'] if pc not in old['pcs']]
+        if new:
+            notable.append({'icon': c['icon'],
+                            'text': f"{' & '.join(new)} takes the lead in {low(c['label'])} ({num(lead)})"})
+
     lifetime = []
     for c in catalog:
         rows = _ranked(_totals(ledger, [s for s in ledger if s <= number], c['id']))
@@ -165,5 +192,7 @@ def standings(root: Path, number: int) -> dict:
         'leaderboards': _boards(catalog, ledger, so_far),
         'lifetime': lifetime,
         'previousSeason': previous,
+        'notable': notable,
+        'firstOfSeason': so_far == season[:1],
         'warnings': warnings,
     }

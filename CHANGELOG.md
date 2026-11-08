@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.54.0] — 2026-11-08
+
+### Added
+
+- **Deck weight for recap decks** (`meta/recap-slides.md` → Deck weight). Each homebrew deck is `light`, `medium` or `heavy`, sized by how much the session changed the story: heavy for a mission resolved, an act advanced, a death or a critical reveal; medium for a choice with consequences, a level-up, a lasting condition, a canon-changing event or an `arc`-weight beat; light otherwise. `/recap` Phase 8 proposes the weight with its signals; the DM confirms or overrides. Stored as `deck_weight:` on the session record (missing = heavy).
+- **Orientation-first slide order.** Every deck opens Title → Sky → **Last time…** → **Where you stand** (story position + whereabouts) and closes on **Heading** (what the party means to do next), replacing "Previously on…" / "Next time…". Scenes, Choices, The party and a heavy-only **What changed** slide fit a per-weight budget (light 4–5, medium 5–7, heavy 7–10). No fact on two slides. Act and mission names pass the names check.
+- `scripts/lib/stats.py` returns `notable` (personal bests over a real earlier mark, new season leaders) and `firstOfSeason`; `session-cards.py` adds `deckWeight` per previous session.
+
+### Changed
+
+- **Generated slides show only on change.** Reputation shows only PCs who gained or tiered up, and no slide when nobody did. Stats show the full honors + standings only on a heavy deck or a season opener; otherwise one compact **Worth noting** slide, or none. The sky slide always shows. Older decks (no `deck_weight:`) render as before.
+
 ## [0.53.0] — 2026-11-08
 
 ### Added

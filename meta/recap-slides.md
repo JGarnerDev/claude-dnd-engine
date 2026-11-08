@@ -34,35 +34,94 @@ frontmatter.
 - Text before the first `##` is a note to the DM and is never shown.
 - No `[[wikilinks]]`: slides are for players, not a way into the entity graph.
 
+## Deck weight
+
+A deck is as big as the story change behind it. A travel night gets a short deck; a mission
+finished gets the full run. Every deck, at every weight, is about one thing first: **where the
+party stands in the story right now**.
+
+- **Deck weight**: `light`, `medium` or `heavy`, one per deck, written to the session record as
+  `deck_weight:`. Always "deck weight", never bare "weight", which means spotlight beat weight
+  (`meta/character-focus.md`). A session without the field is treated as `heavy`.
+- **Story change**: what the session did to canon beyond itself. Travel and talk that moved no
+  thread are not story change.
+  - **Heavy** if any: a mission resolved (success or failure), an act advanced or completed, a PC
+    death, or a reveal the DM calls critical.
+  - **Medium** if no heavy signal but any: a choice with consequences (`choices:`), a level-up, a
+    lasting condition gained or lost, a Phase 5.5 event that changed canon (not only memorable),
+    or a beat tagged at `arc` weight.
+  - **Light**: none of the above.
+- **Proposed, then confirmed.** `/recap` proposes one weight with the signals that set it ("medium:
+  Eilonwy level 5; took the north road"). The DM confirms or overrides; the override wins.
+  The session's planned `importance:` is a prior, not an outcome: use it only to break a tie.
+- **Story position**: where the party stands in the active act. Structure (the act, the mission,
+  how far through it, e.g. "the cart is caught; the woman leading it got away") plus one so-far
+  line. Act and mission names may show, through the names check like any proper noun.
+- **Orientation**: four points every deck opens with: **last time**, **story position**,
+  **whereabouts** (where the party physically is) and **heading** (what the *party* means to do
+  next, never what the plan has waiting).
+- **No repeats.** Each fact appears on one slide. If orientation said it, no later slide says it
+  again.
+- **Changed slides only.** A slide shows only if its content changed in a relevant way since the
+  last deck. The sky slide is the one **always-on** slide: it situates the players every session.
+
+**Hand-written slide budget** (soft caps, counting the Title):
+
+- **Light**: 4–5. Title, Last time…, Where you stand, Heading. No scene slides. The Party slide
+  only if someone gained something.
+- **Medium**: 5–7. Orientation, then the 1–3 scenes that moved something, Choices only if one
+  mattered.
+- **Heavy**: 7–10. Orientation, the scenes that moved something, Choices, and **What changed**:
+  the mission or act payoff, said the way the party would tell it.
+
+**Generated-slide gates** (the runner decides from the ledgers):
+
+- **Sky**: always.
+- **Achievements**: only the session's own cards, as before.
+- **Reputation**: only PCs who gained fame or infamy or tiered up this session; none, no slide.
+- **Stats**: on a heavy deck or the first session of a season, the full honors and standings. On
+  any other deck, one compact **Worth noting** slide when something notable happened (a personal
+  best, or a new season leader in a category); otherwise no stats slides.
+
 ## Slide order
 
-Every deck follows the same order, so players know where to look:
+Every deck follows the same order, so players know where to look. Orientation always leads:
 
 1. **Title**: the session's name and the date played.
-2. **Previously on…**: 2–4 sentences of narrative from the `recap:` field, rewritten for players.
-3. **Scenes as played**: one slide per scene that ran. Use the plan's `### Scene` sections,
-   corrected by `## As Played`. A skipped scene gets no slide.
-4. **Choices**: what the party chose, from the `choices:` field (see `meta/player-agency.md`).
+2. **Last time…**: 1–4 sentences of narrative from the `recap:` field, rewritten for players.
+   Light decks keep it to one or two.
+3. **Where you stand**: story position and whereabouts on one slide.
+4. **Scenes that moved something** (medium and heavy only): one slide per scene that changed
+   something. Use the plan's `### Scene` sections, corrected by `## As Played`. A skipped scene, or
+   one that only repeats orientation, gets no slide.
+5. **Choices**: what the party chose, from the `choices:` field (see `meta/player-agency.md`).
    When the field is missing, use the forks in `## As Played`. Leave the slide out if none
    mattered.
-5. **The party**: one line per PC, covering a standout moment plus loot, levels or conditions
-   gained. Levels and conditions come from `uv run scripts/party-status.py`; loot from `## Rewards`
-   corrected by `## As Played`.
-6. **Next time…**: the hook from the `cliffhanger:` field, as a teaser.
+6. **What changed** (heavy only): the payoff of a resolved mission or advanced act.
+7. **The party**: one line per PC who gained loot, a level or a condition, and nobody else. Levels
+   and conditions come from `uv run scripts/party-status.py`; loot from `## Rewards` corrected by
+   `## As Played`. Leave the slide out if nobody gained.
+8. **Heading**: where the party means to go and what they mean to do this session, from what they
+   said at the table (`## As Played`, the DM's notes). It may close on the `cliffhanger:` as a
+   teaser, but only what the party saw. Always the last slide.
 
-**Stats slides** come between 5 and 6 when the session has a stats ledger: award cards, then the
-season standings, opened by a "While you were in Barovia…" slide after a Strahd season. They are
-**generated, not written**: the runner builds them from `historian/sessions/_stats.md`, which the DM
-confirmed at `/recap`. Never put them in `_slides.md`. Rules and categories: `meta/stats.md`.
+Decks written before deck weight end on **Next time…** instead of Heading; the runner treats the
+last slide the same either way.
+
+**Stats slides** come right before Heading when the stats gate opens: award cards, then the
+season standings, opened by a "While you were in Barovia…" slide after a Strahd season; or the
+single Worth noting slide. They are **generated, not written**: the runner builds them from
+`historian/sessions/_stats.md`, which the DM confirmed at `/recap`. Never put them in `_slides.md`.
+Rules and categories: `meta/stats.md`.
 
 **Achievement slides** come right before the stats slides: one per PC, titled with the PC's name,
 built by the runner from `historian/sessions/_achievements.md`. Also generated, never written into
 `_slides.md`. They are the one deck slide that says "you". Rules and voice: `meta/achievements.md`.
 
 **The reputation slide** comes after the achievement slides and before the stats slides (homebrew
-only): party fame, each PC's fame and infamy with tier names, last session's gains and top deeds,
-and a banner on a tier-up. Built by the runner from `historian/sessions/_reputation.md`, never
-written into `_slides.md`. Rules: `meta/reputation.md`.
+only), when someone gained: party fame, and for each PC who gained, fame and infamy with tier
+names, last session's gains and top deeds, and a banner on a tier-up. Built by the runner from
+`historian/sessions/_reputation.md`, never written into `_slides.md`. Rules: `meta/reputation.md`.
 
 **The sky slide** comes right after the Title (homebrew only): the in-world date and time the
 session ended, drawn as an old ring plate with Aethryn at the centre and each body where it stood,
@@ -105,7 +164,9 @@ them on trust.
 
 Run this on every draft before showing it:
 
-1. List every proper noun on the slides: people, places, factions, items, ales, gods.
+1. List every proper noun on the slides: people, places, factions, items, ales, gods, and act or
+   mission names. An act or mission name stays unless the name itself spoils something; then use
+   the party's own words for the goal ("chasing the stolen casks").
 2. **Seen is not known.** Watching someone, fighting beside them or rescuing them doesn't teach
    their name. Neither does a name the DM's sources say was spoken in passing. A name stays only
    when it is the party's own (PCs, things a PC named) or the DM confirms the party learned it. A

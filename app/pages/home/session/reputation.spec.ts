@@ -62,13 +62,22 @@ describe('reputationSlides', () => {
     expect(known).toHaveLength(1);
     expect(known[0].closest('.rp-track')!.classList.contains('is-fame')).toBe(true);
     expect(known[0].textContent).toBe('Cut down three raiders in two breaths.');
-    const zeroInfamy = { ...rep, pcs: [pc({ pc: 'Iggy', fame: { score: 544, gain: 0, tier: 'Unknown', rank: 1, up: false },
+    const zeroInfamy = { ...rep, pcs: [pc({ pc: 'Iggy', fame: { score: 544, gain: 544, tier: 'Unknown', rank: 1, up: false },
       known: { fame: '', infamy: 'Should not show.' } })] };
     expect(dom(reputationSlides(zeroInfamy)[0].html!).querySelector('.rp-known')).toBeNull();
   });
 
   it('no slide when every PC is at zero', () => {
     expect(reputationSlides({ ...rep, pcs: [pc({ pc: 'Luci' })] })).toEqual([]);
+  });
+
+  it('changed slides only: no slide when nobody gained, only PCs who gained or tiered up', () => {
+    const still = { score: 900, gain: 0, tier: 'Unknown', rank: 1, up: false };
+    expect(reputationSlides({ ...rep, pcs: [pc({ pc: 'Iggy', fame: still })] })).toEqual([]);
+    const mixed = { ...rep, pcs: [pc({ pc: 'Iggy', fame: still }), pc({ pc: 'Halsby', fame: { ...still, gain: 40 } }),
+      pc({ pc: 'Luci', infamy: { ...still, up: true } })] };
+    const names = [...dom(reputationSlides(mixed)[0].html!).querySelectorAll('.rp-name')].map((n) => n.textContent);
+    expect(names).toEqual(['Halsby', 'Luci']);
   });
 });
 

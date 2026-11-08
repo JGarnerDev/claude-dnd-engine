@@ -40,7 +40,7 @@ Contract for what a correct, efficient `/recap` run looks like. The command doc 
 6. **Phase 5 confirm-lists** — elaboration offers for newly canonized entities with no `personality`/`motivation`, missing-entity creation, affinity nudges, voice shifts (numbered, one item per NPC), stats (numbered, one line per PC), fame beats (`F1.`, `F2.`), and whether an improvised settlement earned a file.
 7. **Phase 5.5 event candidates** — skipped silently if no beat clears the bar.
 8. **Phase 6 campaign state** — proposed Current State, Rest Clock and preference-line changes.
-9. **Phase 8 recap slides** — homebrew only: the numbered deck draft with its kept-names list (the names check in `meta/recap-slides.md`), repeated until the DM approves or declines. Skipped for Strahd.
+9. **Phase 8 recap slides** — homebrew only: first a one-line deck-weight proposal (light, medium or heavy, with the story-change signals that set it) for the DM to confirm or override; then the numbered deck draft with its kept-names list (the names check in `meta/recap-slides.md`), repeated until the DM approves or declines. Skipped for Strahd.
 10. **Phase 8 player-facing blurb** — offered once.
 
 Checkpoints 6–8 are adjacent confirm-lists; batching them into one message is allowed and scores better on rubric 7. Any question outside these ten is a rubric-7 finding. Any write made before its checkpoint confirms is a **fail**, regardless of whether the content was right.
@@ -57,7 +57,7 @@ Checkpoints 6–8 are adjacent confirm-lists; batching them into one message is 
 - Event files in `historian/events/` only for DM-confirmed beats, each with `timeline_date`, `order` and `daypart`
 - Inbox notes file deleted, only after Phases 4–6 are written
 - Phase 7 summary in chat, ending with the one-line index-stale note
-- Homebrew only, on approval: `_slides.md` in the session's historian folder, with one `##` per slide in `meta/recap-slides.md` order, no frontmatter and no `[[wikilinks]]`. Nothing drawn from `table_notes`, `new_entities`, `Reliability` flags or other DM-only content. No proper noun the party hasn't learned: a name copied from the `recap:` field without DM confirmation is a finding. Never written for a Strahd session or when the DM declines
+- Homebrew only, on approval: `deck_weight:` set on the session record to the confirmed weight; `_slides.md` in the session's historian folder, within that weight's slide budget, opening on orientation (Title, Last time…, Where you stand) and closing on Heading, no fact on two slides, act and mission names put through the names check, with one `##` per slide in `meta/recap-slides.md` order, no frontmatter and no `[[wikilinks]]`. Nothing drawn from `table_notes`, `new_entities`, `Reliability` flags or other DM-only content. No proper noun the party hasn't learned: a name copied from the `recap:` field without DM confirmation is a finding. Never written for a Strahd session or when the DM declines
 - Player-facing blurb only on a yes: 3–5 sentences, spoiler-safe (drawn from the deck when one was just approved), no file written
 
 ## Out of scope

@@ -11,10 +11,12 @@ The page itself reads each scene's header bullets and the `## Combatants` stat b
 
   { session: {name, number, date, description, openingScene, closingHook, preamble, folder,
                campaign, root, looseThreads},
-    previously: [{name, number, date, campaign, description, recap, cliffhanger, path, slides, stats, achievements,
-                  reputation, sky}],
+    previously: [{name, number, date, campaign, description, recap, cliffhanger, path, deckWeight, slides,
+                  stats, achievements, reputation, sky}],
                                              # the session before this one, plus the last one
                                              # in this season when that differs (historian);
+                                             # deckWeight: light|medium|heavy from `deck_weight:`
+                                             # (meta/recap-slides.md), heavy when unset
                                              # slides: [{title, md}] from the folder's optional
                                              # _slides.md (party-facing deck, meta/recap-slides.md)
                                              # stats: lib/stats.py standings for that session
@@ -258,6 +260,7 @@ def previous_sessions(root: Path, number, campaign: str) -> list:
         'recap': fm_string(raw, 'recap'),
         'cliffhanger': fm_string(raw, 'cliffhanger'),
         'path': f.relative_to(root).as_posix(),
+        'deckWeight': (fm.get('deck_weight') or 'heavy').strip().lower(),
         'slides': slides(f.parent),
         'stats': standings(root, n),
         'achievements': achievements(root, n),

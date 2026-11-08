@@ -50,6 +50,20 @@ describe('statsSlides', () => {
     expect(el.querySelector('.st-fame .st-chip')!.textContent).toContain('Iggy');
   });
 
+  it('off a heavy deck: one compact Worth noting slide, or none', () => {
+    expect(statsSlides(stats, 'light')).toEqual([]);
+    const notable = { ...stats, notable: [{ icon: '⚔️', text: 'Dip: personal best, 3 killing blows' }] };
+    const slides = statsSlides(notable, 'medium');
+    expect(slides.map((s) => s.title)).toEqual(['Worth noting']);
+    expect(dom(slides[0].html!).querySelectorAll('.st-notable li')).toHaveLength(1);
+    expect(statsSlides(notable, 'heavy').map((s) => s.title)).toEqual(['Last session’s honors', 'The standings']);
+  });
+
+  it('full set on a season opener at any weight; a missing weight is heavy', () => {
+    expect(statsSlides({ ...stats, firstOfSeason: true }, 'light')).toHaveLength(2);
+    expect(statsSlides(stats)).toHaveLength(2);
+  });
+
   it('opens with the Barovia slide after a Strahd season', () => {
     const s = { ...stats, previousSeason: { campaign: 'strahd', first: 1, last: 28, leaderboards: stats.leaderboards } };
     expect(statsSlides(s)[0].title).toBe('While you were in Barovia…');

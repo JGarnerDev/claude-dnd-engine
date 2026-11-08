@@ -117,6 +117,7 @@ description: ""
 # choices:               # decisions the world should remember (meta/player-agency.md)
 #   - "party: what they chose → what it set in motion"
 #   - "PC Name: what they chose → what it set in motion"
+# deck_weight: light     # light | medium | heavy — recap deck size (meta/recap-slides.md → Deck weight); homebrew, written by /recap Phase 8; missing = heavy
 ---
 ```
 

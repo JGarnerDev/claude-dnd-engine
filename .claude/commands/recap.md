@@ -266,16 +266,17 @@ A recap always writes indexed files (the session record, plus any canonized enti
 
 ### Recap slides (homebrew only)
 
-For a `campaign: homebrew` session, draft its party-facing deck. Read `meta/recap-slides.md` once for the slide order, the size limit, what each slide is built from, and what counts as party-safe. Strahd sessions skip this step.
+For a `campaign: homebrew` session, draft its party-facing deck. Read `meta/recap-slides.md` once for deck weight, the slide order, the size limit, what each slide is built from, and what counts as party-safe. Strahd sessions skip this step.
 
-1. Draft the deck as a **numbered list**, one item per slide: the headline in bold, then the body. Keep the numbers stable so the DM can answer "cut 4" or "reword 6" from a phone.
-2. Run the **names check** in `meta/recap-slides.md` before showing the draft. The `recap:` field names people the party has only seen. Under the deck, list every proper noun you kept, for the DM to confirm, and anything you left out because you weren't sure the party knew it.
-3. Apply the DM's edits and show the deck again. Repeat until the DM approves it.
-4. Write `_slides.md` into the session's folder, now in `historian/sessions/`: a one-line DM note, then one `##` heading per slide. No frontmatter, no `[[wikilinks]]`.
+1. **Propose the deck weight.** Gather the story-change signals already in hand: mission resolved or act advanced (Phase 6), a PC death, `choices:` with consequences, level-ups and conditions (`uv run scripts/party-status.py`), Phase 5.5 events that changed canon, `arc`-weight beats (Phase 2.5). Map them to light, medium or heavy per `meta/recap-slides.md` → Deck weight and propose one line: *"Deck weight: medium — Eilonwy level 5; took the north road. OK?"* Ask whether any reveal was critical only when a heavy call hinges on it. The DM confirms or overrides.
+2. Draft the deck to that weight's budget as a **numbered list**, one item per slide: the headline in bold, then the body. Orientation leads (Title, Last time…, Where you stand) and Heading closes. No fact on two slides. Keep the numbers stable so the DM can answer "cut 4" or "reword 6" from a phone.
+3. Run the **names check** in `meta/recap-slides.md` before showing the draft, act and mission names included. The `recap:` field names people the party has only seen. Under the deck, list every proper noun you kept, for the DM to confirm, and anything you left out because you weren't sure the party knew it.
+4. Apply the DM's edits and show the deck again. Repeat until the DM approves it.
+5. Write `_slides.md` into the session's folder, now in `historian/sessions/`: a one-line DM note naming the deck weight, then one `##` heading per slide. No frontmatter, no `[[wikilinks]]`. Set `deck_weight:` on the session record.
 
 If the DM declines, write nothing. The session's card simply shows no **Slides** button.
 
-Stats and achievement slides are not drafted here. The runner builds them from their ledgers and slots them in before "Next time…": achievements first, then stats (`meta/achievements.md`, `meta/stats.md`).
+Sky, achievement, reputation and stats slides are not drafted here. The runner builds them from their ledgers and gates them (`meta/recap-slides.md` → Deck weight): sky after the Title, the rest before Heading, achievements first, then reputation, then stats.
 
 ### Group-chat blurb
 
@@ -283,4 +284,4 @@ Then offer once:
 
 > "Want a player-facing 'previously on…' blurb for the group chat?"
 
-If yes, render a short message: 3–5 sentences of narrative prose in the "previously on" voice (past tense, third person), closing on the cliffhanger as a teaser. If a deck was just approved, draw from the deck only. It is already party-safe. Otherwise draw from the canonized recap. **Spoiler-safe:** include only what the players witnessed at the table — no DM-side information, no `Reliability` flags, no mechanics, no unrevealed entity names. Output as a single copy-paste block in chat; no file is written.
+If yes, render a short message: 3–5 sentences of narrative prose in the "previously on" voice (past tense, third person), closing on the cliffhanger as a teaser. If a deck was just approved, draw from the deck only and close on its Heading. It is already party-safe. Otherwise draw from the canonized recap. **Spoiler-safe:** include only what the players witnessed at the table — no DM-side information, no `Reliability` flags, no mechanics, no unrevealed entity names. Output as a single copy-paste block in chat; no file is written.

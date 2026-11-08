@@ -1,11 +1,12 @@
 // Stats slides for the recap deck (meta/stats.md): award cards for the session,
 // then the season standings with a hall-of-fame strip, plus a one-time
-// previous-season slide when this session opened a new season. Pure: builds
+// previous-season slide when this session opened a new season. Off a heavy deck, one
+// compact "Worth noting" slide instead, or none (meta/recap-slides.md → Deck weight). Pure: builds
 // Slide objects whose `html` replaces the markdown body; slides.ts shows them.
 
 import './stats.css';
 import { escapeHtml } from './markdown.js';
-import type { Slide, StatBoard, StatRow, Stats } from './types.js';
+import type { DeckWeight, Slide, StatBoard, StatRow, Stats } from './types.js';
 
 const num = (x: { value: number; rough: boolean }) => `${x.rough ? '~' : ''}${x.value}`;
 const names = (pcs: string[]) => pcs.map(escapeHtml).join(' &amp; ');
@@ -47,8 +48,16 @@ function fameHtml(s: Stats): string {
   return `<div class="st-fame"><span class="st-fame-h">Hall of fame</span>${chips.join('')}</div>`;
 }
 
-// Pure: the stats slides for one session, in deck order.
-export function statsSlides(s: Stats | null | undefined): Slide[] {
+function notableHtml(s: Stats): string {
+  return `<ul class="st-notable">${(s.notable ?? []).map((n) =>
+    `<li><span class="st-icon">${escapeHtml(n.icon)}</span>${escapeHtml(n.text)}</li>`).join('')}</ul>`;
+}
+
+// Pure: the stats slides for one session, in deck order. Gated by deck weight
+// (meta/recap-slides.md → Deck weight): the full honors + standings on a heavy deck or a
+// season's first session; otherwise one compact "Worth noting" slide when something is
+// notable, else nothing. A missing weight is heavy, so older decks keep the full set.
+export function statsSlides(s: Stats | null | undefined, weight: DeckWeight = 'heavy'): Slide[] {
   if (!s) return [];
   const out: Slide[] = [];
   const prev = s.previousSeason;
@@ -59,6 +68,10 @@ export function statsSlides(s: Stats | null | undefined): Slide[] {
       html: `<div class="st-wrap">${boardsHtml(prev.leaderboards)}</div>`,
     });
   }
+  if (weight !== 'heavy' && !s.firstOfSeason) {
+    if (s.notable?.length) out.push({ title: 'Worth noting', md: '', html: `<div class="st-wrap">${notableHtml(s)}</div>` });
+    return out;
+  }
   if (s.awards.length) {
     out.push({ title: 'Last session’s honors', md: '', html: `<div class="st-wrap">${awardsHtml(s)}</div>` });
   }
@@ -68,10 +81,10 @@ export function statsSlides(s: Stats | null | undefined): Slide[] {
   return out;
 }
 
-// Pure: the deck with stats slotted in before its last slide ("Next time…"),
-// so the deck still ends on the hook. No deck, no stats: the button stays hidden.
-export function withStats(deck: Slide[], s: Stats | null | undefined): Slide[] {
-  const extra = statsSlides(s);
+// Pure: the deck with stats slotted in before its last slide (Heading, or "Next time…" on
+// older decks), so the deck still ends on the hook. No deck, no stats: the button stays hidden.
+export function withStats(deck: Slide[], s: Stats | null | undefined, weight?: DeckWeight): Slide[] {
+  const extra = statsSlides(s, weight);
   if (!deck.length || !extra.length) return deck;
   return [...deck.slice(0, -1), ...extra, deck[deck.length - 1]];
 }

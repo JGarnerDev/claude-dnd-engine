@@ -131,7 +131,7 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
   main.addEventListener('click', (ev) => {
     const prev = data.previously[0];
     if ((ev.target as HTMLElement).closest('[data-act="slides"]') && prev) {
-      openSlides(withSky(withStats(withReputation(withAchievements(prev.slides, prev.achievements), prev.reputation), prev.stats), prev.sky), prev.name);
+      openSlides(withSky(withStats(withReputation(withAchievements(prev.slides, prev.achievements), prev.reputation), prev.stats, prev.deckWeight), prev.sky), prev.name);
       return;
     }
     const link = (ev.target as HTMLElement).closest<HTMLElement>('a.sr-wiki[data-entity]');

@@ -69,6 +69,8 @@ export interface SessionMeta {
 }
 
 // A played session from historian/sessions/, for the "Previously on…" card.
+export type DeckWeight = 'light' | 'medium' | 'heavy';
+
 export interface PreviousSession {
   name: string;
   number: number;
@@ -78,6 +80,7 @@ export interface PreviousSession {
   recap: string;
   cliffhanger: string;
   path: string;
+  deckWeight?: DeckWeight; // `deck_weight:` (meta/recap-slides.md → Deck weight); heavy when unset
   slides: Slide[]; // party-facing deck from the folder's _slides.md; [] when none
   stats?: Stats | null; // scripts/lib/stats.py standings (meta/stats.md); null when unledgered
   achievements?: PcAchievements[] | null; // scripts/lib/achievements.py (meta/achievements.md); null when unledgered
@@ -154,6 +157,8 @@ export interface Stats {
   leaderboards: StatBoard[];
   lifetime: StatLeader[];
   previousSeason: { campaign: string; first: number; last: number; leaderboards: StatBoard[] } | null;
+  notable?: { icon: string; text: string }[]; // personal bests, new season leaders: gate the compact slide
+  firstOfSeason?: boolean;
   warnings: string[];
 }
 

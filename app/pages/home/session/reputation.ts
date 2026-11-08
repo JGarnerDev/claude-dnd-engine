@@ -1,6 +1,6 @@
 // Reputation slide for the recap deck (meta/reputation.md): party fame up top, then each PC's
 // fame and infamy with tier names, the gain last session, what the PC is known for, its top
-// deeds, and a banner on a tier-up. Never the rewards. Pure: builds a Slide whose `html` replaces the markdown body;
+// deeds, and a banner on a tier-up. Only PCs who gained; nobody gained, no slide. Never the rewards. Pure: builds a Slide whose `html` replaces the markdown body;
 // slides.ts shows it.
 
 import './reputation.css';
@@ -46,10 +46,12 @@ function pcHtml(p: PcReputation): string {
     </div>`;
 }
 
-// Pure: the reputation slide, or none when nothing is ledgered. PCs with nothing on either
-// track are left out.
+const moved = (t: RepTrack) => t.gain > 0 || t.up;
+
+// Pure: the reputation slide, or none when nobody gained (meta/recap-slides.md → Deck weight:
+// changed slides only). PCs who gained nothing on either track are left out.
 export function reputationSlides(r: Reputation | null | undefined): Slide[] {
-  const pcs = (r?.pcs ?? []).filter((p) => p.fame.score || p.infamy.score);
+  const pcs = (r?.pcs ?? []).filter((p) => moved(p.fame) || moved(p.infamy));
   if (!r || !pcs.length) return [];
   return [{
     title: 'Reputation',
