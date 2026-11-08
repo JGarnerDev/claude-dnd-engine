@@ -14,18 +14,25 @@ dogs are cut to pay for it. Already done in earlier rounds: the waystation Commo
 Planned date: TBD.
 
 **Carried from Session 32 (recap 2026-11-04).** The chase and the fork are played; only the waystation is
-left. New first task: re-check the camp fight for **daylight** (the party arrived at 10 a.m.), and
-Nella starts airborne.
+left. **Reworked for daylight the same day (`/session`):** low cloud instead of dark, the camp digs
+in and lays a tree-line ambush, Ilsa and Cinder fight, and Halsby spots it go in (new beats
+`S2_TEN_MINUTES`, `S2_SPOTTER`, `S2_AMBUSH`).
 
 ## Blocking — decide before the table
 
-- [x] **Commit the five draft beats** (done 2026-10-28; Jeff may review them again).
+- [x] **Re-commit the beats** after the daylight rework (all 14, 2026-11-04).
 - [ ] **Run `/review 33 --ready`**, then flip the plan to `state: planned`.
 
 ## Maps and Roll20
 
 - [x] **Render the reference maps** (done 2026-11-03, after the waystation layout was updated for the griffon): `uv run scripts/battlemap.py --session 32` (dusk fork and
       waystation; the Roll20 builds already exist).
+- [ ] **Re-render the waystation reference** for the ambush layout (Ilsa and Cinder in the south
+      brush, Sennet at the side door, crew behind the cart, the stake line):
+      `uv run scripts/battlemap.py --session 33`.
+- [ ] **Roll20 waystation:** the cart turned broadside, a stake line across the open ground south of
+      the yard, Ilsa and Cinder hidden in the south tree line, and the empty tether stake behind the
+      blind. Nella and Tithe start on the GM layer over the river, in the cloud.
 - [ ] **Tokens** (and `tokens.txt`): Varrick (drover, wearing the bracer), Haddo and Brask
       (Thugs), Sennet (Spy), Hesper (Acolyte), Clatter (Bandit), Ilsa (Scout), Fennel (Bandit),
       Cinder (Wolf), Nella, **Tithe the griffon** (Large; hooded at its tether, plus a way to show

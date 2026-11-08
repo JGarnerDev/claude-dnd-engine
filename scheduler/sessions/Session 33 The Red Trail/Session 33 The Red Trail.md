@@ -27,14 +27,14 @@ key_npcs:
   - "[[Sable Wren]] (historian — the unsigned deed, the hearth, the send-off)"
   - "[[Mara Tull]] (historian — sheriff; holds the prisoner at the close)"
   - "[[Silas Crubb]] (historian — mayor; the horses, and the party's pitches from last night)"
-  - "[[Nella]] (historian — on the ridge; loses, escapes, drops her tally)"
+  - "[[Nella]] (historian — in the cloud on Tithe; loses, escapes, drops her tally)"
   - "Varrick Tenn, the drover (human — Nella's second, the camp's floor anchor; not an entity)"
   - "Sennet Orrin (human — Bane's tally-man, keeps the duty ledger; not an entity)"
-  - "[[Sergei Rubelgerd]] (historian — Odibli's mastiff; rides along, Bosco on his back, nose for the griffon at S2_SCOUT)"
+  - "[[Sergei Rubelgerd]] (historian — Odibli's mastiff; rides along, Bosco on his back, nose for the griffon and the wolf at S2_AMBUSH)"
   - "[[Bosco]] (historian — Iggy's raccoon; arrives on Sergei's back, the cold war with Odibli still on)"
   - "the prisoner (a silhouette only — Tyler's cameo, beat 1; no name, no lines)"
 encounters:
-  - "The Waystation — Varrick Tenn the drover (human Bandit Captain), Haddo Keel and Brask (human and half-orc Thugs, the cask-hands), Sennet Orrin (human Spy), Hesper Mudd (halfling Acolyte) and Tam 'Clatter' Cobb (human Bandit, on the roof) on the floor; Nella (custom, ~CR 3) on the griffon Tithe (Griffon) in the air. ~5,188 adjusted XP against a long-rested all-level-5 party, Hard, RTC ~3, RTD ~2 front / ~3 back, 3-4 rounds. Tactics: the crew stays on its stations around the cart; Nella flies out of reach and spreads her shots to wound and pin, never a caster, and never finishes a downed PC, until Iggy's wings break her hold on the sky (S2_IGGY_BEAT). Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
+  - "The Waystation, in daylight under low cloud, with ten minutes' warning — Varrick Tenn the drover (human Bandit Captain), Haddo Keel and Brask (human and half-orc Thugs, the cask-hands), Sennet Orrin (human Spy), Hesper Mudd (halfling Acolyte), Tam 'Clatter' Cobb (human Bandit, on the roof), Ilsa Hask (human Scout) and Cinder (Wolf) in a tree-line ambush; Nella (custom, ~CR 3) on the griffon Tithe (Griffon) inside the cloud. 2,225 XP, ~5,563 adjusted against a nearly fresh all-level-5 party: just over Deadly on paper, about Hard if the party knows where the ambush is (Halsby is watching it go in). RTD ~2 front / ~2–3 back, 3–4 rounds. Tactics: the crew holds its stations behind the cart; Nella drops out of the cloud, shoots twice and climbs back, so only readied actions reach her; she wounds and pins, never a caster, never a downed PC, until Iggy's wings light the cloud (S2_IGGY_BEAT). Morale DC 12 WIS when the drover drops or the crew is down to 2 standing."
 loose_threads:
   - "[[Session 32 The Red Trail]] played the chase, the fork and the scout; the camp fight, escape, tally, intel, haul home and cell carry here"
   - "Halsby's all-holder broadcast warned Nella, who is airborne on Tithe before the fight; the camp is mobilising and Halsby is invisible by the bridge"
@@ -64,7 +64,7 @@ relates_to:
   - "[[Harrow Bane]] (named in the camp's ledger; still no face)"
 importance: critical
 active: true
-description: "The camp half of the Red Trail, carried from Session 32 (which played the chase, the fork and the scout). The party has ten minutes to plan against a mobilised waystation, with Nella already in the air on her griffon. Then the escape and the dropped tally, the casks home, and a silent prisoner in Mara's cell. Daylight, not dark: the camp fight needs a re-check."
+description: "The camp half of the Red Trail, carried from Session 32 (which played the chase, the fork and the scout). The party has ten minutes to plan against a mobilised waystation, with Nella already in the air on her griffon. Then the escape and the dropped tally, the casks home, and a silent prisoner in Mara's cell. Daylight under low cloud: the camp dug in and laid an ambush on the warning, and Nella fights out of the cloud."
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
@@ -74,18 +74,19 @@ Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The
 > are dropped from this copy; their record is in the Session 32 historian file. The `S2_` ids are
 > kept so they still match `_flow.md`.
 >
-> **Re-check before the table (daylight).** The party arrived at about **10 a.m.**, not dusk. The
-> sky fight below assumes Nella is unseen past 60-ft darkvision; in daylight she is seen, her shots
-> lose that advantage, and the party's lose the disadvantage. `S2_IGGY_BEAT`'s "the light" payoff
-> also leans on the dark. Run `/review 33` or rework the Difficulty check and `S2_FIGHT` for day.
+> **Reworked for daylight (2026-11-04).** The party arrived at about **10 a.m.**, so the dark is
+> gone. In its place, **low cloud** sits on the river valley, its base about 100 ft up, and Nella
+> fights from inside it. The camp used its warning to **dig in and lay an ambush** on the south tree
+> line, and **Ilsa and Cinder** fight on the floor. Three new beats open the scene
+> (`S2_TEN_MINUTES`, `S2_SPOTTER`, `S2_AMBUSH`). The night heist is cut.
 >
 > **What changed since the plan was written:**
 >
 > - **Alert state: night alert, in daylight.** The party lost stages 1 and 3 and won stage 2;
 >   stage 4 was never run. Ilsa escaped the fork and warned the camp, and then Halsby's broadcast
 >   told Nella the party was coming. She is **already in the saddle and airborne** at the start.
-> - **Ilsa and Cinder** fled toward the camp. Whether they join the floor is the DM's call (their
->   stat blocks are kept below).
+> - **Ilsa and Cinder** reached the camp ahead of the party and fight on the floor, in the
+>   tree-line ambush.
 > - **Halsby** is invisible near the bridge (2nd-level slot spent) and has found the griffon's
 >   stake, the bridge and the river. `S2_SCOUT` is done; cutting Tithe's tether is no longer on
 >   the table while Nella rides it.
@@ -103,57 +104,59 @@ variety (Jeff, 2026-10-07): a sneak, a healer, a wolf, and (2026-10-28) a griffo
 
 ### At a glance
 
-- **Fled the fork toward the camp** (DM's call whether they fight):
-  - **Archer Rider** — Ilsa Hask (human, Scout)
-  - **Wolf** — Cinder (Wolf)
 - **The Waystation** (Scene 3):
-  - **Drover** — Varrick Tenn (human, Bandit Captain), between cart and fire
-  - **Big Cask-hand** — Haddo Keel (human, Thug), at the cart
-  - **Half-orc Cask-hand** — Brask (half-orc, Thug), at the cart
-  - **Tally-man** — Sennet Orrin (human, Spy), Bane's ledger clerk, in and out of the shed
-  - **Hedge Priest** — Hesper Mudd (halfling, Acolyte), at the fire
+  - **Drover** — Varrick Tenn (human, Bandit Captain), behind the cart
+  - **Big Cask-hand** — Haddo Keel (human, Thug), behind the cart
+  - **Half-orc Cask-hand** — Brask (half-orc, Thug), behind the cart
+  - **Tally-man** — Sennet Orrin (human, Spy), Bane's ledger clerk, hidden at the shed's side door
+  - **Hedge Priest** — Hesper Mudd (halfling, Acolyte), at the cart's back wheel
   - **Roof Guard** — Tam "Clatter" Cobb (human, Bandit), crossbow on the shed roof
-  - **Sniper** — [[Nella]], on the ridge, then in the air
-  - **Griffon** — Tithe (Griffon), Nella's mount, hooded behind the blind until she rides
+  - **Archer Rider** — Ilsa Hask (human, Scout), hidden in the south tree line
+  - **Wolf** — Cinder (Wolf), with Ilsa
+  - **Sniper** — [[Nella]], on Tithe, inside the cloud
+  - **Griffon** — Tithe (Griffon), Nella's mount
 - **Morale:**
-  - **The fork:** when Ilsa drops, or Fennel and Cinder are both down, each survivor makes a
-    DC 12 WIS save (+0).
-  - **The camp:** when Varrick drops, or the crew (everyone but Nella and Varrick) is down to 2
+  - **The camp:** when Varrick drops, or the crew (everyone but Nella, Varrick and Tithe) is down to 2
     standing. Not at half: half the crew falls in round 1, and the fight would end before Nella
     matters. Tithe doesn't roll; it goes where Nella takes it.
   - Failures flee and drop what they carry.
 
-### Difficulty check (resized 2026-10-28)
+### Difficulty check (reworked for daylight 2026-11-04)
 
-The party took a long rest at the Lioness (DM ruling, Session 31), so it rides out with every
-slot, rage and sorcery point back. Jeff wants the camp to **feel desperate until Iggy flies**, so
-the hard part is the sky, not the floor.
+The party took a long rest at the Lioness (DM ruling, Session 31) and has spent only Halsby's
+Invisibility and one round at the fork. Jeff wants the camp to **feel desperate until Iggy flies**,
+so the hard part is the sky, not the floor.
 
 - **Party thresholds** (five level 5s): Easy 1,250 · Medium 2,500 · Hard 3,750 · Deadly 5,500.
 - **Party damage, fresh:** ~85 a round, more in a round-1 nova. Dip ~25–30 (raging, Reckless,
   Extra Attack, Frenzy), Luci ~14, Odibli ~12 with **two Fireballs** for clusters, Halsby ~14
   with 3rd-level slots and the Spear's +1 on spell attacks, and Iggy ~9 plus a Smite (2d8) or
-  Bless. **None of it reaches Nella in the air** except crossbows at long range.
-- **The fork:** 175 XP, ×2 = 350 adjusted, **under Easy**. 38 HP, RTC under 1. Small on purpose:
-  the stake is the rider and the horses, not HP. Anything the party spends here is gone for the
-  camp.
-- **The camp:** 2,075 XP, 8 creatures ×2.5 = **~5,188 adjusted, Hard**, just under Deadly
-  (5,500). The floor (Varrick, Haddo, Brask, Sennet, Hesper, Clatter) is 176 HP and folds in
-  ~2 rounds; that's fine, because the floor isn't the problem.
-- **The sky is the problem.** Nella on Tithe circles 130–150 ft out: past Fire Bolt, Magic
-  Missile and Chromatic Orb, and inside her own longbow's normal range. Tithe takes the Dodge
-  action every turn. After dark she is also past everyone's 60-ft darkvision, so she is
-  **unseen**: her shots have advantage, the party's have disadvantage and must guess her square.
-  The floor can be won and the party still can't touch the one who's hurting them. That's the
-  desperate feeling.
-- **Why lethality holds at standard:** Tithe is a **controlled mount**, so it never attacks
-  while she rides it. All the damage from the sky is Nella's own two arrows (~16 a round, more
-  with advantage), spread across targets, never on a downed PC, never Marked Quarry on a caster.
-  RTD from the sky alone is ~3 for anyone; with the floor still up it's ~2 front, ~3 back.
-- **The turn:** Iggy's wings (`S2_IGGY_BEAT`) light the sky, so she can no longer hide in the
-  dark, and Tithe shies from Sah's voice and drops into range. From there she starts her escape.
-- **Round budget:** ~1–2 at the fork and ~3–4 at the camp ≈ 5–6 of standard's 18–24, on a fresh
-  party. One fight, made to count.
+  Bless.
+- **The camp:** 2,225 XP (the old 2,075, plus Ilsa 100 and Cinder 50), 10 creatures ×2.5 =
+  **~5,563 adjusted, just over Deadly** (5,500). The floor is 203 HP and folds in ~2–3 rounds.
+- **What holds it at standard lethality:**
+  - **The ambush can be known.** Halsby watches it go in (`S2_SPOTTER`). If the party knows where
+    Ilsa and Cinder are, they choose where the fight starts, and it plays about Hard. If they walk
+    into the tree line blind, Ilsa and Cinder get a surprise round, and it plays Deadly.
+  - **Stations.** The crew still never converges (Running it).
+  - **Nella wounds and pins.** She never shoots a downed PC, and never puts Marked Quarry on a
+    caster.
+  - **Tithe never attacks** while she rides it.
+- **The sky is the problem.** Inside the cloud Nella is heavily obscured, so she's unseen. On her
+  turn Tithe drops out, she shoots twice, and they climb back in. **On the party's turns she's in
+  the cloud:** an attack has to guess her square and has disadvantage. The real answer is a
+  **readied action** on "she comes out of the cloud": Fire Bolt, Magic Missile and Eldritch Blast
+  (120 ft) and crossbows all reach her then. A readied spell still costs its slot and
+  concentration if she comes out somewhere else. Let the party find this out after round 1; don't
+  hint before.
+  - **Her damage:** the first arrow comes before anyone sees her (advantage), the second doesn't.
+    That's ~12 a round with Marked Quarry, spread across targets. RTD from the sky alone is 3 or
+    more; with the floor up, ~2 front, ~2–3 back.
+- **The turn:** Iggy's wings (`S2_IGGY_BEAT`) light the cloud from below, so she shows as a shadow
+  in it wherever she is, and Tithe shies from Sah's voice and drops into range. From there she
+  starts her escape.
+- **Round budget:** 1 at the fork, plus ~3–4 here, makes 4–5 of standard's 18–24. One fight, made
+  to count.
 
 ### Bandit — Fennel Dray (fork) and Clatter (camp)
 
@@ -184,7 +187,9 @@ the hard part is the sky, not the floor.
   - **Kit (player-facing):** *sun-faded leather riding armour, a longbow strung and ready, and a
     short sword at her hip.*
   - **Label (party-facing):** Archer Rider
-- **Job:** watch the back trail. When the fight turns, Ilsa rides for the camp, not for the party.
+- **At the camp:** she beat the party to the waystation, and now leads the tree-line ambush
+  with Cinder (`S2_AMBUSH`). She saw the party's faces at the fork. Longbow from cover first,
+  shortsword if they reach her. At morale she runs for the east road, and Cinder goes with her.
 
 ### Wolf — Cinder
 
@@ -195,6 +200,8 @@ the hard part is the sky, not the floor.
   horse throws its rider).
   - **Kit (player-facing):** *no gear, just a frayed rope collar somebody tied on with care.*
   - **Label (party-facing):** Wolf
+- **At the camp:** Fennel tied that collar, and Fennel is dead. Cinder sticks to Ilsa now: hidden
+  with her in the tree line, goes for the nearest PC's legs, and runs when she runs.
 
 ### The drover — Varrick Tenn, reskinned Bandit Captain
 
@@ -306,35 +313,25 @@ the hard part is the sky, not the floor.
 
 ### Running it
 
-- **The crew stays on its stations:** Haddo and Brask at the cart, Varrick between cart and
-  fire, Hesper at the fire, Clatter on the shed roof, and Sennet working between the shed's side
-  door and the cart. All six converging on one PC is ~45 a round, RTD about 1, and quietly turns
-  this into a deadly fight. Same rule as the Session 29 raid,
-  and it matters more now the camp is sized Hard. Sennet is the one who moves; he goes where the
-  Thugs already are, for Sneak Attack, not after the back line.
-- **Alert states** (set by the chase, `S2_APPROACH`):
-  - **Unaware** (4 stages won): Clatter and Hesper dicing by the fire, Brask asleep against the
-    cart wheel, Sennet in the shed over the ledger, Tithe hooded and dozing behind the blind. The
-    corral horses can smell the griffon and are jumpy: anyone sneaking within 30 ft of the
-    corral makes Stealth DC 13 or the horses scream. The party picks its position and gets
-    surprise if it wants it. Nella is in the shed (O6), so her **first two rounds** are the run to
-    her perch (~80 ft; her best is 70 with Skirmisher's Step). She **mounts and lifts off on
-    round 3**.
-  - **Dusk** (2–3 won): Clatter on the roof and Hesper at the fire on watch, Nella in the blind
-    with Tithe unhooded beside her. She shoots from the blind on round 1 and **lifts off on
-    round 2**, or sooner if anyone starts up the slope.
-  - **Night alert** (0–1 won): perimeter staked (difficult ground, or DEX 12 to cross at speed),
-    double watch, fires banked. **Nella already in the saddle**, airborne from round 1, Prepared
-    Ground live.
-- **Nella in the air:** she circles **130–150 ft out**, over the river side, so the camp is
-  between her and the party. Each turn: two arrows, then Tithe Dodges. After dark she's past
-  everyone's 60-ft darkvision, so she's **unseen** until something lights her. Describe the
-  arrows coming out of black sky. A PC with a crossbow can shoot back at long range
-  (disadvantage, and a guess at the square). Make it plain that the yard can't reach her.
+- **The crew stays on its stations:** Haddo and Brask behind the cart (turned broadside as a
+  barricade, half cover), Varrick between them, Hesper at the back wheel, Clatter on the shed
+  roof, Sennet at the shed's side door, and Ilsa and Cinder in the south tree line. All of them
+  converging on one PC is ~50 a round, RTD about 1, and quietly turns this into a deadly fight.
+  Same rule as the Session 29 raid. Sennet moves to where the Thugs already are, for Sneak
+  Attack, not after the back line. Ilsa shoots from cover and falls back to the yard once she's
+  found.
+- **The ambush** (`S2_AMBUSH`) replaces the old alert states. The camp had a warning and ten
+  minutes, so it is past night alert.
+- **The stakes:** sharpened stakes across the open ground at the foot of the hill. Difficult
+  terrain, or DEX 12 to cross at speed (fail: 1d4 piercing and stop).
+- **Nella in the cloud:** Tithe circles inside the cloud base, about 100 ft up, over the river
+  side. On her turn Tithe drops out about 40 ft, she shoots twice, and Tithe climbs back in. Her
+  token sits on the GM layer on everyone else's turns and comes up only while she's out. Describe
+  the shape dropping out of the grey, the two arrows, the shape going back. Make it plain that
+  the yard can't reach her on its own turn.
 - **Until Iggy flies:** that's the fight. Don't soften it, and don't hint. The turn belongs to
   Jeff's timing (`S2_IGGY_BEAT`).
-- **Round budget:** ~1–2 at the fork and ~3–4 at the camp ≈ 5–6 of standard's 18–24, on a
-  fresh party. The camp is sized up to make that one fight count.
+- **Round budget:** ~3–4 at the camp.
 
 ## Orientation
 
@@ -356,8 +353,10 @@ happened in [[Session 32 The Red Trail]].
 ### Rest Clock across the session
 
 - **Start:** about 4 hours after the long rest, 10 a.m. Day 2. One round of combat spent.
-- **The camp (Scene 3):** in daylight. A long rest is not available until the night of Day 2 at
-  the earliest; the waystation is the first safe place for one after the fight.
+- **The camp (Scene 3):** in daylight, about 10:30 a.m. A long rest is not available until the
+  night of Day 2 at the earliest.
+- **Home (Scene 4):** a loaded cart makes the ride back slower than the chase out, so they reach
+  Ashford in the evening of Day 2. A long rest at the Lioness that night clears the 24-hour gate.
 
 ### Unresolved from Sessions 29–31
 
@@ -372,72 +371,157 @@ happened in [[Session 32 The Red Trail]].
 
 ## Scenes
 
-> **Pick up here.** Open on the hill: Halsby by the bridge, Nella climbing on the griffon, the
-> camp shouting. Give the party their ten minutes, then `S2_APPROACH_CHOICE` (heist is off; assault,
-> parley or trick are live) and `S2_FIGHT`.
+> **Pick up here.** Open on the hill: Halsby by the bridge, Nella gone up into the cloud on the
+> griffon, the camp shouting. Run the ten minutes (`S2_TEN_MINUTES`, `S2_SPOTTER`, `S2_AMBUSH`), then
+> `S2_APPROACH_CHOICE` and `S2_FIGHT`. Lines and read-alouds below are guidance, not script.
 
 ### Scene 3 — The Waystation
 
-- **Summary:** Nella's camp. The party scouts (or not), picks heist, assault, parley or trick, and
-  takes the casks back. Nella loses, escapes on a fallback she rigged days ago, and drops her debt
-  tally. The camp gives up three things: the band's size, Harrow Bane's name and the banner.
-- **Where:** an old drover's relay short of Duskwater: long shed, corral, well, the cart,
-  watch-fire, and set back, the overwatch ridge, a fast river and a rigged plank bridge.
-- **Cast:** [[Nella]] on the ridge, then the sky · Tithe the griffon · the camp crew · the
-  Marlow banner on the shed's pole
+- **Summary:** Nella's camp, in daylight under low cloud, with ten minutes' warning. The party
+  plans on the hill while Halsby watches the camp dig in and lay an ambush, then picks assault,
+  parley, trick, or springing the ambush on purpose. Nella fights out of the cloud until Iggy's
+  wings light it, loses, escapes on a fallback she rigged days ago, and drops her debt tally. The
+  camp gives up three things: the band's size, Harrow Bane's name and the banner.
+- **Where:** [[The Waystation]], an old drover's relay short of Duskwater: long shed, corral, well,
+  the cart, a fire, and set back, the overwatch ridge, a fast river and a rigged plank bridge.
+  Grey mid-morning under a low cloud.
+- **Cast:** [[Nella]] in the cloud · Tithe the griffon · the camp crew · Pablo, Sergei and Bosco
+  on the hill · the Marlow banner on the shed's pole
 - **Enemies:** Drover (Varrick Tenn) · Big Cask-hand (Haddo Keel) · Half-orc Cask-hand (Brask) ·
-  Tally-man (Sennet Orrin) · Hedge Priest (Hesper Mudd) · Roof Guard (Clatter) · Sniper
-  ([[Nella]]) · Griffon (Tithe)
-- **DCs:** Perception or Survival 14 — scout the back of the ridge · Perception 13 — spot the crew's
-  crystal cords · Stealth 13 — past the jumpy corral · Stealth 13 then Animal Handling 15 —
-  cut Tithe's tether and walk it off · WIS 13 (Nella, +3) — hold Tithe when Sah speaks ·
-  Athletics 13 — swim the river · Animal
-  Handling 13 — start a stampede · Deception vs Insight — Varrick easy, Sennet +4, Nella +7 · WIS 12
-  save — morale · Investigation 12 / 16 — read the tally · DEX 12 — cross the staked perimeter at
-  speed (night alert) · Deception 12 vs Varrick — a false order in Nella's voice (`S2_CRYSTALS`)
-- **Tactics:** the crew holds its stations around the cart and never converges. Nella takes to
-  the air on Tithe, circles out of reach, and spreads her shots to wound and pin (never Marked
-  Quarry on a caster, never a downed PC). Morale breaks when Varrick drops or the crew is down to
-  2. The sky breaks when Iggy flies.
-- **Time:** ~45 min
-- **Trigger:** the chase ends.
+  Tally-man (Sennet Orrin) · Hedge Priest (Hesper Mudd) · Roof Guard (Clatter) · Archer Rider
+  (Ilsa Hask) · Wolf (Cinder) · Sniper ([[Nella]]) · Griffon (Tithe)
+- **DCs:** Animal Handling 12 — hold Pablo on the hill · Perception vs Ilsa's Stealth (+6) — spot
+  the tree-line ambush · Perception 13 — spot the crew's crystal cords · DEX 12 — cross the stakes
+  at speed · Stealth 13 — past the jumpy corral · Deception vs Insight — Varrick easy, Sennet +4,
+  Nella +7 · Deception 12 vs Varrick — a false order over the crystals (`S2_CRYSTALS`) · Animal
+  Handling 13 — start a stampede · WIS 13 (Nella, +3) — hold Tithe when Sah speaks · DEX 10
+  (Nella) — stay in the saddle · Athletics 13 — swim the river · WIS 12 save — morale ·
+  Investigation 12 / 16 — read the tally
+- **Tactics:** the crew holds its stations behind the cart and never converges; Ilsa and Cinder
+  spring the tree line on whoever comes through it. Nella fights from inside the cloud: out, two
+  arrows, back in. She spreads her shots to wound and pin (never Marked Quarry on a caster, never a
+  downed PC). Morale breaks when Varrick drops or the crew is down to 2. The sky breaks when Iggy
+  flies.
+- **Time:** ~60 min (~15 of it on the hill)
+- **Trigger:** the session opens here, on the hill.
+- **The sky:** low cloud over the river valley, its base about 100 ft up, mist lifting off the
+  water. Under it the yard is flat grey daylight, and everyone on the ground can be seen. Inside
+  the cloud is heavily obscured. It counts as bright light, so the Spear's 15-ft reach is off
+  unless Halsby makes his own dark.
 - **The ground:** an old drover's relay short of Duskwater. **Long shed** (bunks, ledger, stores) ·
   **corral** of nervous horses (noise hazard for sneaks, stampede lever for chaos) · **well** ·
-  **the cart**, parked by the shed with the casks still loaded · **watch-fire** · and set back, the
-  **overwatch ridge** with a brush blind, a **fast cold river** behind it, a **rigged plank bridge**
-  over the river, and **Tithe** staked on a long tether between the blind and the river. Map: `maps/waystation.txt` (render with `uv run scripts/battlemap.py --session 32`). Key refs: cart R10:S12, Nella's blind AB8:AC10 (55 ft from the cart, up a difficult slope at X:Z), bridge AF9:AH9, 15 ft behind the blind.
+  **the cart**, turned broadside by the shed with the casks still loaded · **fire** · and set back,
+  the **overwatch ridge** with a brush blind, a **fast cold river** behind it, a **rigged plank
+  bridge** over the river, and the empty stake where Tithe was tethered, between the blind and the
+  river. Map: `maps/waystation.txt` (render with `uv run scripts/battlemap.py --session 32`). Key
+  refs: cart R10:S12, Nella's blind AB8:AC10 (55 ft from the cart, up a difficult slope at X:Z),
+  bridge AF9:AH9, 15 ft behind the blind.
 - **Jeff's Roll20 map (2026-10-12)** differs from the reference render. Rulings:
-  - **The cart** is the covered wagon nearest the slope. Haddo and Brask hold there, between the
-    yard and the ridge.
+  - **The cart** is the covered wagon nearest the slope, turned broadside to the shed as a
+    barricade (`S2_AMBUSH`). Haddo and Brask hold behind it.
   - **The boulder band** is the slope, difficult terrain, **except the rubble gap** where the
     bridge path cuts through. The gap is normal ground, the fast way up, and Nella's Marked Quarry
     goes on whoever takes it.
   - **The river:** swimming it is DC 13 Athletics; a failure costs the round and carries you 10 ft
     downstream. A crossing still takes ~3 rounds, so the bridge drop holds her lead.
   - **The bridge** is pinned to drop. One action pulls the pins and the deck goes into the water.
-    It's her second way out, for if the griffon is gone.
-  - **Tithe's tether** is a stake just behind the blind, toward the river. Put its token there,
-    hooded, on the GM layer until someone sees it.
-  - **The quiet approach** is the south tree line, lightly obscured. No scrub patch; sneaking is
-    harder than the reference had it.
+    It's her way out if she ends up on foot.
+  - **Tithe's stake** is just behind the blind, toward the river: empty now, with sheep bones and
+    flattened grass around it.
+  - **The quiet approach** is the south tree line, lightly obscured. Today it's where Ilsa and
+    Cinder wait (`S2_AMBUSH`).
 
-> *"The waystation sits in a fold of the land: a long shed with a sagging roof, a corral full of
-> horses that have already noticed yours, a well with a bucket on a chain, and a fire. Beside the
-> shed is a cart you'd know anywhere now, still loaded, the casks lashed down under a tarp. On a pole
-> above the shed a banner moves in the dusk wind, too fine for this place. And up on the ridge
-> behind it all, where the brush is thickest, something big shifts once and goes still."*
+#### S2_TEN_MINUTES — The hill: ten minutes, and a hungry horse
 
-- **On night alert,** swap the fire for: *"…a well, and a fire banked down to a red eye.
-  Sharpened stakes run in a ragged line across the near ground."*
+- **Tokens:** waystation map. Party tokens, the cart, Silas's five horses, Pablo, Sergei and Bosco
+  at the south edge on the hill (off the map's edge if it doesn't reach 200 ft south). Halsby on
+  the GM layer by the bridge, invisible.
+- **The clock:** about ten minutes before the camp is set. Count it loosely in minutes, not
+  rounds; each thing the party does on the hill takes a few. Say it plainly: *"Whatever they're
+  doing down there, they'll be done in about ten minutes."*
+- **Choice (party):** go now, or use the time.
+  - **Go now (within ~5 minutes):** the ambush is half built. Ilsa and Cinder are still crossing
+    the open ground toward the tree line, in plain sight. Only the west half of the stakes is in;
+    the east half is open ground. Sennet is still inside the shed with the ledger. The cost: they
+    go in without Halsby's full report, and with no time to set up.
+  - **Use all ten:** the ambush is complete (`S2_AMBUSH`). They get whatever Halsby reports, and
+    time to place themselves, hide the horses, cast what lasts (1-minute spells won't), and agree
+    who readies what.
+- **Pablo** smells the camp's oats in the corral and keeps drifting toward them. Every few minutes
+  on the hill, someone holds him (Animal Handling 12, or a PC who does nothing else with their
+  hands), or he starts down the hill. A loose Pablo walking into the yard tells the camp where the
+  party is waiting. Odibli has one Speak with Animals left.
+  - Pablo, through Speak with Animals, when he's held back: *"Oats are there. I smell oats. You
+    said oats."* · when he gives up on them: *"I go home. Home has oats."*
+- **Sergei** keeps turning his head up at the cloud, hackles up, each time Tithe passes over inside
+  it. **Bosco** climbs up on the cart seat and won't come down.
+- **Transition:** Halsby's report (`S2_SPOTTER`), or the party moves.
 
-#### S2_APPROACH_CHOICE — Heist, assault, parley or trick?
+#### S2_SPOTTER — Halsby watches the ambush go in
 
-- **Tokens:** waystation map. Drover by the watch-fire, Big Cask-hand and Half-orc Cask-hand at
-  the cart, Tally-man at his table by the shed, Hedge Priest at the fire, Roof Guard on the shed
-  roof, horses in the corral. Griffon at its tether behind the blind, on the GM layer until seen.
-  The Sniper goes by alert state, on the GM layer until seen: **unaware**, in the shed at O6 ·
-  **dusk**, in the brush blind · **night alert**, on the Griffon's token, already in the saddle.
-  Party tokens on the south tree line, or wherever the chase left them.
+- **Halsby is alone by the bridge,** invisible, about 200 ft from the rest. What he sees is `S2_AMBUSH`
+  as it goes in. Send it to Kellan as it happens.
+- **Private (Halsby):** while the camp sets up, from the bridge
+  - **What he sees:** From the bridge you watch the camp get ready. The drover shouts the cart
+    round broadside to the shed, and two big men in aprons get behind it with crossbows. Two more
+    hammer sharpened stakes into the open ground to the south. A clerk with a ledger slips in at
+    the shed's side door and doesn't come out. The archer from the fork walks into the south tree
+    line with her grey wolf, and you lose sight of them both. Then the drover shouts, out loud, to
+    all of them: "Nobody talk into the stones. They can hear us. Shout it or don't say it."
+- **Choice (Halsby):** how to get it to the party.
+  - **Broadcast to "all":** instant, and the party gets all of it. But every crew member wearing
+    a crystal hears a stranger describe their own ambush. Varrick swears and moves one piece:
+    Ilsa and Cinder shift from the tree line to the corral side. The party knows the shape, and
+    one position is now wrong.
+  - **Walk back up the hill and tell them:** safe, but it takes ~5 of the ten minutes, so "go
+    now" is gone, and nobody is watching the camp or the bridge while he walks.
+  - **Stay, and say nothing yet:** he keeps watching and can act from the bridge when it starts,
+    behind the crew and on Nella's way out (`S2_ESCAPE`). The party goes in without the report.
+- **Why not a quiet word to one PC:** an earshot crystal reaches one holder only if you can see
+  them, and nobody is in sight from the bridge. Tell Kellan if he asks.
+- **Transition:** `S2_AMBUSH` is what's down there, whatever he chose.
+
+#### S2_AMBUSH — What the camp built with its warning
+
+- **DM only.** What's down there after ten minutes. If the party went early, use the "go now"
+  state in `S2_TEN_MINUTES`. If Halsby broadcast, Ilsa and Cinder are at the corral side instead
+  of the tree line.
+- **The pieces:**
+  - **The cart,** turned broadside by the shed with the casks behind it. Haddo and Brask behind it
+    with heavy crossbows (half cover), Varrick between them, Hesper at the back wheel to heal.
+  - **The stakes,** across the open ground at the foot of the hill: difficult terrain, or DEX 12 at
+    speed (fail: 1d4 piercing, and stop).
+  - **The south tree line:** Ilsa and Cinder, hidden. Anyone who comes down through the trees to
+    avoid the stakes walks into them.
+  - **Sennet,** hidden at the shed's side door, waiting for someone to reach the cart.
+  - **Clatter,** flat on the shed roof (half cover), the corral at his back.
+  - **Nella,** in the cloud on Tithe. She doesn't shoot until the party commits.
+- **How it's meant to work:** the stakes push anyone charging toward the trees, the trees catch
+  anyone sneaking round the stakes, and Nella shoots whoever is caught in between.
+- **Spotting it from the hill:** Perception against Ilsa's Stealth (+6) sees movement in the tree
+  line. Sergei smells the wolf, no roll, if someone is watching him: his hackles turn from the
+  sky to the trees.
+- **Tokens:** Archer Rider and Wolf in the south tree line, Tally-man at the shed's side door, all
+  on the GM layer until spotted or until they act. Drover, Big Cask-hand, Half-orc Cask-hand and
+  Hedge Priest behind the cart.
+
+> *"The waystation sits in a fold of the land below you: a long shed with a sagging roof, a corral
+> of horses all facing the ridge, a well, and a fire nobody is tending. The cart is turned
+> broadside to the shed now, the casks still lashed under their tarp, and there are men crouched
+> behind it. On a pole above the shed a banner hangs limp in the wet air, too fine for this place.
+> Over the river the cloud sits low and grey, and somewhere inside it something big beats its
+> wings."*
+
+- **If they went early,** add: *"Two men are still hammering stakes into the open ground at the
+  bottom of the hill, and a woman with a longbow is walking a grey wolf toward the trees."*
+
+#### S2_APPROACH_CHOICE — Assault, parley, trick, or spring the ambush?
+
+- **Tokens:** waystation map, as `S2_AMBUSH` leaves it (or its "go now" state). Drover, Big
+  Cask-hand, Half-orc Cask-hand and Hedge Priest behind the cart, Roof Guard on the shed roof,
+  Tally-man at the shed's side door (GM layer), Archer Rider and Wolf in the south tree line (GM
+  layer), horses in the corral. Sniper on the Griffon's token, GM layer, on the grey margin over
+  the river. Party tokens at the south edge, or wherever they've placed themselves.
 - **Introduce:** Drover (Varrick Tenn)
   - **Look:** leathery, studded leather worn like a uniform, a long cart-whip, a row of throwing
     daggers across his chest, a scuffed bracer on his left forearm.
@@ -446,11 +530,10 @@ happened in [[Session 32 The Red Trail]].
     together.
 - **Introduce:** Cask-hands (Haddo Keel, and Brask the half-orc)
   - **Look:** stained leather aprons over jerkins, iron-banded cask-mallets, heavy crossbows
-    propped on the cart wheel. Haddo is huge; Brask is long-armed (asleep against the wheel, if
-    the camp is unaware).
-  - **Sound:** Haddo hums and counts the casks out loud. Brask grunts and snores.
+    resting on the cart bed. Haddo is huge; Brask is long-armed.
+  - **Sound:** Haddo hums and counts the casks out loud. Brask grunts.
   - **Impression:** paid by the barrel. "Nobody touches the cart" is their whole job.
-- **Introduce:** Tally-man (Sennet Orrin)
+- **Introduce:** Tally-man (Sennet Orrin), when he steps out of the shed
   - **Look:** a clerk's coat, ink on his cuffs and fingers, a ledger under his arm, a short sword
     and a little hand crossbow.
   - **Sound:** precise, clipped, suspicious. "Who signed your orders?"
@@ -464,142 +547,107 @@ happened in [[Session 32 The Red Trail]].
     his belt.
   - **Sound:** you hear him before you see him, fiddling with his bolts. Shouts targets.
   - **Impression:** nervy lookout who'll give away anyone standing in the open.
-- **Introduce:** Sniper ([[Nella]]), when she's first seen or heard: here at a parley or trick, or
-  at her first shot (`S2_FIGHT`)
+- **Introduce:** Sniper ([[Nella]]), when she's first seen or heard: here at a parley, or at her
+  first shot (`S2_FIGHT`)
   - **Look:** long hair, a long weathered cape over dark studded leather, a tall longbow, a short
     sword she never touches. Odibli has seen her once, on the cart seat.
   - **Sound:** patient, dry, never raised. Short sentences from a long way away. Counts out loud
     when she's thinking.
   - **Impression:** calm and unhurried. Watches the fight like she's doing sums.
-- **Choice (party):** heist, assault, parley or trick. Each reaches the casks; each costs and gains something different (see below).
-- **Choice (party):** scout the ridge first (`S2_SCOUT`), or go straight in. Scouting costs time and a check; it buys the chance to cut Nella's exit.
-- **All four are viable.** Let the party pick and don't steer.
-- **`S2_SCOUT` — Nella's exit can be found first (engine 2026-10-09, committed 2026-10-13).** Anyone who scouts
-  before choosing finds the back of the ridge. They can circle wide (Perception or Survival
-  DC 14), send Bosco around (no roll, just time), or follow Sergei's nose (he smells something
-  big and meat-fed, and his hackles go up). What they find: the brush blind, the plank bridge
-  pinned to drop into the river, and behind the blind, **a griffon** hooded and staked on a long
-  tether, a rider's saddle on its back and sheep bones around the stake. Say it plainly:
-  *"Someone's planned a way out of here, and it isn't on foot."*
-  - **Introduce:** Griffon (Tithe), hooded, if the scouts find it
-    - **Look:** a hooded shape bigger than a horse, wings folded, a rider's saddle on its back,
-      sheep bones around the stake.
-    - **Sound:** slow breathing, a click of beak under the hood.
-    - **Impression:** someone's been feeding it here for days.
-  - **Dealing with Tithe first** is the party's way to take the sky away before the fight:
-    cut the tether quietly (Stealth DC 13) and walk it off (Animal Handling DC 15), or spook it
-    off (it climbs east, loud, and the camp wakes), or attack it hooded (AC 12, HP 59; it
-    shrieks, and the camp wakes). With Tithe gone, Nella fights from the blind and falls back on
-    the bridge (`S2_ESCAPE`). That's an earned win, not a broken plan.
-    - **Walked off:** *"The griffon lowers its hooded head against your hand and follows the
-      tether like a tired horse."*
-    - **Failed Stealth:** Clatter, from the roof: *"Someone's up by the blind! By the BLIND!"*
-      The camp wakes.
-    - **Failed Animal Handling:** it screams under the hood, rips the tether free and climbs
-      east, trailing rope. The camp wakes, and the sky is still theirs.
-  - **Tokens:** if Tithe is walked off or flies, take the Griffon token off the map.
-- **Night heist** — get the cart out without a fight. Watch rotations, the corral, and Nella is the
-  light sleeper. Pulling it off means **the party leaves *her* the taunt for once.** Don't steer. If they
-  choose it, a clean heist pays well.
-  If it goes loud halfway, drop into `S2_FIGHT` with the party already at the cart.
-  - **A good Perception check notices (offer one or two):** Haddo humming a count under his
-    breath, even half asleep · Brask snoring against the cart wheel · the corral horses all
-    facing the ridge, ears back · the watch-fire burned down to red coals, with little light past
-    the well · one fresh bootprint on the ridge path, pointing up.
-  - **A clean heist still pays out.** The tally rides with the cart: she whittles it on the seat
-    (the antler shavings at `S2_ROAD`), so it's in the box under the seat, and they drive off
-    with it (`S2_TALLY`, found later, not dropped). The ledger (Sennet's table, I5), the banner
-    (the pole, L3) and Varrick's bracer (his bedroll by the watch-fire) are each one more Stealth
-    check to take; failing one goes loud.
-  - **Nella, after a clean heist:** no rout, no griffon in the air. Skip the escape ladder. She wakes to
-    an empty cart, and the party never sees her face. If they left a taunt, it reached her.
-- **Assault** — `S2_FIGHT` on their initiative.
-- **Parley** under a truce-branch. Nella talks from the ridge, never comes down. She won't give up
-  the casks, but **her debt can show its edge:**
+- **Choice (party):** assault, parley, trick, or spring the ambush on purpose. Each reaches the
+  casks; each costs and gains something different. All four are viable. Let the party pick and
+  don't steer.
+- **Assault:** `S2_FIGHT` on their initiative. If they come through the tree line without having
+  spotted it, Ilsa and Cinder get a surprise round on whoever is in the trees.
+- **Spring the ambush on purpose** (once they know where it is): one or two PCs, or a loose Pablo,
+  or Bosco, go at the tree line while the rest hit the cart from the other side. The crew holds
+  its stations, so the bait draws Ilsa, Cinder and Nella's first arrows, not the cart crew. It's
+  the best way in, and someone has to stand where the arrows go.
+- **Parley** under a truce-branch. Nella talks from inside the cloud and never comes down. She
+  won't give up the casks, but **her debt can show its edge:**
   - *"That ale's worth a number to me. You aren't."*
-  - *"Everyone wants something back from me tonight. Get in line."*
+  - *"Everyone wants something back from me today. Get in line."*
   - Pushed on why she does this: *"I owe someone. When it's paid, I'm done."* Then
     nothing more.
-- **Trickery** — posing as the band's relay riders, or Marlow men with new orders. Insight and
-  Deception contested; Varrick is easy to fool, Sennet less so (Insight +4), Nella isn't (Insight +7 from the ridge). If it
-  half-works, it buys positioning, not the cart.
-  - Varrick, fooled: *"Relay's early. Fine. Horses in the corral, and nobody touches the cart."*
+- **Trickery:** the camp knows a party of five is coming, so posing as relay riders won't hold.
+  What can work: a false order over the crystals (`S2_CRYSTALS`), a decoy, a stampede through the
+  corral. Insight and Deception contested; Varrick is easy to fool, Sennet less so (Insight +4),
+  Nella isn't (Insight +7). If it half-works, it buys positioning, not the cart.
+  - Varrick, fooled: *"Fine. Everyone back on the cart, and nobody touches it."*
   - Sennet, suspicious: *"Who signed your orders? Show me the hand."*
-  - Nella from the ridge, not fooled: *"Varrick. Count them."*
+  - Nella from the cloud, not fooled: *"Varrick. Count them."*
 
 #### S2_CRYSTALS — The crew wear crystals too
 
-- **Draft (engine, 2026-10-21).** It pays off Halsby dealing an earshot crystal to every PC at
-  Session 30, and it runs alongside whichever approach they pick. Nothing in it is new canon
-  unless it fires.
 - **What's true (DM only):** every raider at the Lioness wore a crystal cut from the same stone,
   and so do Nella and most of this crew (cords at the neck, crudely wrapped in metal). Listening
   only needs the crystal on your body (`meta/loot-options/Party/misc/Earshot Crystals.md`), so
-  **a PC who speaks to "all holders" within 300 ft is heard by every crew member wearing one.**
-  Speaking to one PC they can see is safe. The camp is well inside 300 ft from the tree line.
-- **Don't warn them.** Let them find out the way they found out how the crystals work: by
-  accident. A careful party can find out first: a Perception check (DC 13) on the camp sees
-  the same cord at Varrick's and Haddo's necks, or someone remembers that the bodies wore them.
-- **If someone broadcasts to "all":**
-  - **During a heist:** the crew hears a stranger's words in their heads. Haddo stops counting.
-    Varrick: *"Who said that? Who's in my head?"* The heist goes loud next round, unless the party
-    turns it (see below).
-  - **Before an assault or parley:** Nella hears it on the ridge and knows how many they are and
-    roughly where. She takes her first shot with advantage, and the parley opens on her terms:
-    *"You talk too much. All five of you."*
-  - **During the fight:** a called target or plan reaches the crew too. Once, the target moves
-    first.
-- **The lever, if they work it out:** a broadcast reaches the crew as well. A PC can use it on
-  purpose: a false order in Nella's voice (Deception against Varrick, DC 12), panic ("she's
-  leaving you") for disadvantage on the morale save at `S2_MORALE`, or a private word to one crew
-  member they can see (Fennel's kind, or Hesper), which Nella can't hear.
-- **Nella's own crystal:** she never broadcasts. If the party listens in, they hear Varrick once:
-  *"Nella? Nella, where do you want us?"* No answer.
+  **anything a PC says to "all" holders within 300 ft is heard by every crew member wearing one.**
+  Speaking to one PC they can see is safe.
+- **What changed:** Halsby's broadcast in Session 32 taught the crew it works both ways. Varrick
+  has banned talking into the stones (`S2_SPOTTER`), so the crew shouts its orders out loud. But
+  they still wear them, so they still hear the party's broadcasts.
+- **Finding out:** the party knows the crystals leak, but may not know the crew wears them. A
+  Perception check (DC 13) on the camp sees the same cord at Varrick's and Haddo's necks, or
+  someone remembers that the Lioness bodies wore them.
+- **The lever, once they know:**
+  - A false order over the crystals, in Nella's voice or any voice "from above" (Deception against
+    Varrick, DC 12): one crew member leaves his station.
+  - Panic ("she's leaving you"): disadvantage on the morale save at `S2_MORALE`.
+- **The risk:** a broadcast plan or a called target reaches the crew too. Once, the target moves
+  first.
+- **Varrick's slip:** once, when the fight turns against him, he forgets his own rule, and every
+  PC hears it: *"Nella? Nella, where do you want us?"* No answer.
+- **Nella's own crystal:** she never broadcasts.
 - **Tokens:** none.
 
-#### S2_FIGHT — Two layers: the floor and the ridge, 3–4 rounds
+#### S2_FIGHT — Two layers: the floor and the cloud, 3–4 rounds
 
-- **Tokens:** move the Sniper token from the GM layer to the brush blind on her first shot (or
-  earlier, if they parleyed and she spoke). When she lifts off, put her token on the Griffon's
-  and move both off the map edge to the grey margin, at 130–150 ft. After dark, keep them on the
-  GM layer: the party can't see her.
-- **The floor:** Varrick, Haddo and Brask at the cart, Sennet slipping between them, Hesper at
-  the fire, Clatter on the roof. Varrick and the cask-hands take two hits and keep swinging. The
-  crew holds stations; they don't converge.
-- **The sky:** once Nella lifts off, she's out of reach. The party can win the yard and still
-  have arrows coming down out of the dark on them. **That's the fight until Iggy flies**
+- **Tokens:** the Sniper and Griffon tokens move together. They stay on the GM layer, on the grey
+  margin over the river, while she's in the cloud. On her turn bring them onto the map about 40 ft
+  below the cloud, resolve her shots, then put them back. Ilsa, Cinder and Sennet come up from the
+  GM layer when they act or are spotted.
+- **The floor:** Varrick, Haddo and Brask behind the cart, Hesper at its back wheel, Sennet
+  slipping out to join them, Clatter on the roof, Ilsa and Cinder from the trees. Varrick and the
+  cask-hands take two hits and keep swinging. The crew holds stations; they don't converge.
+- **The sky:** Nella is in the cloud on every turn but her own. The party can win the yard and
+  still have arrows coming down out of the grey on them. **That's the fight until Iggy flies**
   (`S2_IGGY_BEAT`).
-- **Nella's turn in the air:** two arrows, then Tithe Dodges. After dark she's **unseen**: her
-  shots have advantage, the party's have disadvantage and must guess her square. Only crossbows
-  reach her, at long range. Lift-off: unaware round 3 · dusk round 2 · night alert round 1.
-- **Introduce:** Griffon (Tithe), when it comes up out of the brush
-  - **Look:** wings wider than the shed is long, a tawny lion's back, a hooked eagle's head with
-    a brass-ringed hood pulled back, a long saddle with Nella flat along it.
-  - **Sound:** a hawk's scream, big enough to feel in your teeth. The corral horses go wild.
+- **Nella's turn:** Tithe drops out of the cloud, she shoots twice (the first with advantage,
+  before anyone sees her), and Tithe climbs back in. On the party's turns an attack on her has
+  to guess her square and has disadvantage. A **readied action** for "when she comes out of the
+  cloud" hits her normally, with anything that reaches 120 ft. After the first round, show it,
+  don't say it: *"She comes out in the same place twice. Low over the river, right where the
+  mist thins."*
+- **Introduce:** Griffon (Tithe), when it first drops out of the cloud
+  - **Look:** wings wider than the shed is long, a tawny lion's back, a hooked eagle's head with a
+    brass-ringed hood pushed back, a long saddle with the archer flat along it.
+  - **Sound:** a hawk's scream from inside the cloud, loud enough to feel in your teeth. The
+    corral horses go wild.
   - **Impression:** nobody in this camp could afford that animal.
 
-> *"Something big comes up out of the brush behind the ridge all at once: wings wider than the
-> shed is long, a lion's back, a hooked beak. The archer is flat along its neck. Two wingbeats
-> and she's above the firelight. Then you can't see her at all, and an arrow comes down out of
-> the dark."*
+> *"The cloud over the river sags, and something big drops out of it: wings wider than the shed is
+> long, a lion's back, a hooked beak. The archer is flat along its neck with an arrow already
+> drawn. Two arrows come down, two wingbeats take it up, and it's back in the grey before anyone
+> can answer."*
 
 - **Mid-fight lines:**
-  - Clatter, when Tithe lifts off: *"She's up! She's UP! Now you're for it!"*
-  - Varrick: *"Hold the cart! Nobody touches the cart!"* · *"She's up there, she's got you, keep
-    them in the open!"*
+  - Clatter, the first time Tithe comes out: *"There she is! THERE she is! Now you're for it!"*
+  - Varrick: *"Hold the cart! Nobody touches the cart!"* · *"She's up there, she's got you,
+    keep them in the open!"*
   - Haddo, counting: *"Eleven. Twelve. Nobody touches twelve."* · Brask: *"That's the sky lot."*
-  - Sennet, the first time he's hit: *"I count this lot. I don't bleed for it."* · Hesper: *"Stand still, Varrick, I can't — stand
-    STILL."*
-  - Clatter, from the roof: *"One by the well! One by the WELL!"* · once Nella leaves her perch
+  - Sennet, the first time he's hit: *"I count this lot. I don't bleed for it."* · Hesper:
+    *"Stand still, Varrick, I can't — stand STILL."*
+  - Ilsa, when the trees are found: *"Cinder, back. Back to the cart."*
+  - Clatter, from the roof: *"One by the well! One by the WELL!"* · once Nella starts to leave
     (escape ladder, step 1 or 3): *"Where's she going? Where's she GOING?"*
-  - Nella, calm, to whoever is climbing toward her: *"Keep climbing. I'll be gone before you're
-    halfway."* · from the dark, counting her arrows: *"Nine. Eight."*
-- **Halsby's Spear in the dark:** reach 15 ft in dim light or darkness, and the +1 rides on
-  his spell attacks and save DC too. If the fight is at night,
-  describe the shadow carrying the point the last ten feet.
+  - Nella, calm, to whoever is climbing toward the ridge: *"Keep climbing. I'll be gone before
+    you're halfway."* · from inside the cloud, counting her arrows: *"Nine. Eight."*
+- **Halsby's Spear:** under the cloud it's still bright daylight, so the 15-ft reach is off unless
+  he makes his own dark. The +1 rides on his spell attacks and save DC either way.
 - **The horses:** a stampede through the corral is a lever for chaos (DC 13 Animal Handling to
-  start it on purpose; it starts on its own if fire reaches the corral, or when Tithe first
-  screams overhead).
+  start it on purpose; it starts on its own if fire reaches the corral, or the first time Tithe
+  screams overhead). A loose Pablo is already in there.
 
 #### S2_IGGY_BEAT — "Up, Wallaed": Iggy flies, and Sah shows himself
 
@@ -639,23 +687,25 @@ happened in [[Session 32 The Red Trail]].
     a thing the hundredth time: ***"Up, Wallaed."*** The crew hear a stranger in their heads, and
     their **next morale save is at disadvantage**.
   - **The light.** For the rest of the fight Iggy's words come out lit, light spilling from his
-    mouth and eyes when he casts, and the wings light the sky. **Nella can't hide in the dark any
-    more**: she's seen by everyone, wherever she is.
+    mouth and eyes when he casts, and the wings light the cloud from underneath. **Nella can't
+    hide in it any more**: she shows as a dark shape on the lit grey, so she's seen by everyone,
+    wherever she is.
   - **Tithe shies.** The griffon has never heard a god. Nella makes a WIS save (+3) DC 13 to hold
     it. **Fail:** it drops into a screaming dive and ends its turn within 60 ft of Iggy, in range
-    of everyone, and Nella gets no shots that turn. **Pass:** she holds it high, but she's lit,
-    and in range of anyone who can reach 150 ft.
+    of everyone, and Nella gets no shots that turn. **Pass:** she holds it in the cloud, but she's
+    lit from below, so anyone who can reach 120 ft hits her without guessing.
   - Either way, **her next turn starts the escape ladder** (`S2_ESCAPE`). She's done the sums:
     an angel in the air was not in them.
 
 > *"The voice comes out of every crystal at once, old and level, like a drill sergeant who has
-> said it a hundred times: 'Up, Wallaed.' Iggy's wings open and the yard goes white as noon. High
-> over the river, lit up now, a griffon jinks sideways with the archer flat along its neck."*
+> said it a hundred times: 'Up, Wallaed.' Iggy's wings open, and the cloud over the river lights up
+> from underneath, white as a lamp. Inside it, plain as a shadow on a sheet, a griffon jinks
+> sideways with the archer flat along its neck."*
 
-- **Choice (Iggy):** when Nella breaks for the dark, **chase her or turn back**.
+- **Choice (Iggy):** when Nella breaks east through the cloud, **chase her or turn back**.
   - **Chase:** he's too slow to catch Tithe (30 ft against 80), but he gets one pass alongside.
     He can strike once, or snatch at the saddlebags and come away with the tally and the purse
-    (`S2_TALLY` falls to him, in his hands). He's alone in the dark for two rounds, and the yard
+    (`S2_TALLY` falls to him, in his hands). He's alone in the cloud for two rounds, with only his own light, and the yard
     fights without him.
   - **Turn back:** the wings come down over the yard, between the crew and his friends, and the
     +5 radiant goes where it's needed. Nella gets clean away, and the tally falls where it falls.
@@ -664,20 +714,23 @@ happened in [[Session 32 The Red Trail]].
 - **What stays hidden:** what Sah is, why the crystals carried him, and anything about the
   Lioness hearth or the song in the viol. If someone asks Iggy who that was, it's his answer, not
   the DM's.
-- **No fight, no beat:** after a clean heist or a parley that holds, the wings may never come out.
+- **No fight, no beat:** after a parley that holds, the wings may never come out.
   Cues 1–3 can still land; hold the voice for another night.
 
 #### S2_MORALE — The drover drops, or the crew is down to two, and the rest break
 
-- DC 12 WIS for every surviving crew member (at disadvantage if Sah's voice has just spoken). Failures scatter into
-  the dark, dropping what they hold. Sennet runs with the ledger if nobody is near the shed.
+- DC 12 WIS for every surviving crew member, Ilsa and Cinder included (at disadvantage if Sah's
+  voice has just spoken). Failures scatter into the scrub and down the east road, dropping what
+  they hold. Sennet runs with the ledger if nobody is near the shed. Cinder goes wherever Ilsa
+  goes.
 - **Not at half.** Half the crew falls in round 1 against this party, which would end the fight
   before Nella's pressure lands. Varrick keeps them in it until he drops.
 - Morale-break line: *"She's leaving us. She's LEAVING us."* — and they run.
+- Ilsa, when she breaks: *"Cinder. With me."*
 - Hesper, when a PC closes on her after Varrick drops: *"Don't. I'll put the club down. I'll put
   it down."*
-- **Tokens:** each crew member who fails goes off the nearest map edge into the dark. Anyone
-  who surrenders stays where they stand.
+- **Tokens:** each crew member who fails goes off the nearest map edge. Anyone who surrenders
+  stays where they stand.
 - **This also triggers `S2_ESCAPE`.**
 
 #### S2_ESCAPE — Nella loses, and gets away on a fallback she rigged
@@ -685,31 +738,32 @@ happened in [[Session 32 The Red Trail]].
 - **She loses.** The party takes the casks and breaks her crew. Her escape is flight from a
   defeat. She steals nothing this time.
 - **The ladder, in order, run honest:**
-  1. **Cover the rout:** up to 2 rounds of covering fire from the air for whoever is running.
-  2. **The taunt:** one deliberate miss into a post at head height, then a dry voice from the dark:
-     ***"Keep the ale."***
-  3. **Withdrawal:** Tithe climbs east into the dark at 80 ft a round. Nothing the party has
+  1. **Cover the rout:** up to 2 rounds of covering fire out of the cloud for whoever is running.
+  2. **The taunt:** one deliberate miss into a post at head height, then a dry voice from inside
+     the cloud: ***"Keep the ale."***
+  3. **Withdrawal:** Tithe climbs east through the cloud at 80 ft a round. Nothing the party has
      catches it, Iggy's wings included. **Tokens:** Sniper and Griffon off the grey margin, east.
-  4. **The tally falls (Jeff, 2026-10-07):** as Tithe banks over the river, the saddlebag flap
-     comes loose. See `S2_TALLY`. If Iggy chased her (`S2_IGGY_BEAT`), it may be in his hands
-     instead.
+  4. **The tally falls:** as Tithe banks over the river, the saddlebag flap comes loose. See
+     `S2_TALLY`. If Iggy chased her (`S2_IGGY_BEAT`), it may be in his hands instead.
   5. **Last valve:** if truly cornered, the river plunge, letting the current take her
      downstream. She knows the water. If even that can't honestly stick, **the table wins** and
      her arc gets re-planned. Never visibly cheat.
-- **If they took Tithe first** (`S2_SCOUT`): she fights from the blind and falls back on her
-  second way out: over the river on the plank bridge, **pulling the pins behind her** so the
-  deck drops into the water. The party swims it (DC 13 Athletics, ~3 rounds) or detours.
-  - **Bridge dropped early, or someone holding it, as well:** she runs for the river (step 5).
-  - **Griffon gone and bridge held:** they cornered her fairly. The table wins (see
+- **On foot, her second way out is the bridge.** She crosses the plank bridge and pulls the pins
+  behind her, and the deck drops into the water. The party swims it (DC 13 Athletics, ~3 rounds)
+  or detours.
+  - **If Halsby stayed at the bridge** (`S2_SPOTTER`), he's standing on her way out. She goes for
+    the river (step 5) rather than through him.
+  - **Bridge dropped early, or someone holding it:** she runs for the river (step 5).
+  - **Bridge held and the river cut off:** they cornered her fairly. The table wins (see
     Contingencies).
-- **If the party hurts her in the air, then** (once she's lit, she's in reach, and this party can
-  put ~85 into one target in a round; run these honestly too):
+- **If the party hurts her in the air** (once she's seen, she's in reach, and this party can put
+  ~85 into one target in a round; run these honestly too):
   - **If Nella drops to half (24 HP) or Tithe to half (30 HP):** she skips the covering fire and
     the taunt and goes straight to withdrawal (step 3). She's done the sums.
-  - **If Tithe drops to 0 with her on it:** it falls. Over the river, she lets go and drops into
-    the water, and that's the river plunge (step 5) on the spot. Over land, she takes 1d6 per 10 ft
-    fallen (Tithe circles about 30 ft up), lands prone beside it, and is on foot: she runs for the
-    bridge, then the river. The tally is in the saddlebags on the dead griffon.
+  - **If Tithe drops to 0 with her on it:** it falls from wherever it was hit, usually mid-dive,
+    about 60 ft up. Over the river, she lets go and drops into the water, and that's the river
+    plunge (step 5) on the spot. Over land, she takes 1d6 per 10 ft fallen, lands prone beside it,
+    and is on foot: the bridge, then the river. The tally is in the saddlebags on the dead griffon.
   - **If she's knocked out of the saddle** (forced movement, or knocked prone while mounted,
     DEX DC 10 to stay on): Tithe climbs east without her, and she's on foot as above. The flap
     comes loose as it climbs, so the tally still falls over the river (step 4).
@@ -718,7 +772,7 @@ happened in [[Session 32 The Red Trail]].
     riderless, and the tally falls as in step 4. Re-plan her arc around the tally and the debt
     (see Contingencies). Waking up tied: *"Well. That'll cost me."*
   - **Never** add HP, a reaction or a rescue she didn't have when the fight started.
-- **Make the preparation visible afterwards.** Whoever reaches the ridge sees the stake and
+- **Make the preparation visible afterwards.** Whoever reaches the ridge sees the empty stake and
   tether, the sheep bones, the bridge pins drilled days ago:
   *"The pin holes are worn smooth, drilled days ago. Around the stake the grass is flattened in a
   wide ring, and the bones in it run from old to fresh."*
@@ -727,8 +781,7 @@ happened in [[Session 32 The Red Trail]].
 
 - **Choice (party):** the 250 gp purse: keep it (about one room in the new wing), spend it, or give it back. It is exactly her remaining debt, and the choice comes due later (`S4_DEBT`, `PAY_NELLA`).
 - On the near bank of the river, where Tithe banked (or at the bridgehead, if she ran on foot):
-  **a notched antler stick and a purse of counted, sorted coin.** After a clean heist, both are in
-  the box under the cart seat instead. If Iggy snatched the saddlebag, they're in his hands.
+  **a notched antler stick and a purse of counted, sorted coin.** If Iggy snatched the saddlebag, they're in his hands.
 - **First touch:** the antler is worn smooth where a thumb rests. Hundreds of notches, in groups,
   some scored through. The purse is tied in three places, each section a different coin, counted.
 - **Investigation, DC 12:** the notches are payments; the scored-through groups are *years*.
@@ -759,7 +812,7 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
     grandfather's flag."*
 - **The waystation Common: [[Varrick's Parrying Bracer]], for Dip.** It is on Varrick's left
   forearm, and it is his Parry in the fight, so the table sees it turn their blows before they own
-  it. Taken off him, dead or captured. After a heist or parley, it hangs unlaced on his bedroll by
+  it. Taken off him, dead or captured. After a parley, it hangs unlaced on his bedroll by
   the watch-fire. Once per short rest, reaction: +2 AC against one melee hit Dip can see.
   - **First touch:** the lacing has been redone so many times the holes have worn into slots.
 
@@ -771,8 +824,7 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **Summary:** The casks come home on their own cart. The horses go back to Silas, Silas sees the
   banner, and Sable sees the cart. But the town is looking at Mara's cell: a raider walked in and
   surrendered while they were gone. End on the cell door.
-- **Where:** the road back, then [[Ashford]] at dusk the next day (or by night, if they ride
-  straight through).
+- **Where:** the road back, then [[Ashford]] in the evening of Day 2.
 - **Cast:** [[Silas Crubb]] · [[Sable Wren]] · [[Mara Tull]] · the prisoner (a silhouette: no name,
   no lines)
 - **Enemies:** none
@@ -870,9 +922,9 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 
 ### [[Nella]]
 
-- **Motivation:** get to the end of the tally. Tonight that means keeping the casks if it's cheap,
+- **Motivation:** get to the end of the tally. Today that means keeping the casks if it's cheap,
   and keeping herself if it isn't.
-- **Knows:** Bane's operation from the inside, and would trade it for the right number. Not tonight.
+- **Knows:** Bane's operation from the inside, and would trade it for the right number. Not today.
 - **Voice:** patient, watchful, dry. Short sentences from a long way away. Never raises her voice.
   Counts things out loud when she's thinking.
 - **Look:** long hair, a cape, a bow across her knees on the cart seat. Odibli has seen her once.
@@ -895,26 +947,22 @@ no entity files, and `/recap` decides. Full introductions were at Session 30 (`S
 
 ## Contingencies
 
-- **The fork rider gets away and the camp is on night alert.** Still winnable. Lean on the heist
-  (the camp is watching the road, not the river side) or a parley. The casks are always there.
+- **They walk into the ambush blind.** Ilsa and Cinder get a surprise round on whoever is in the
+  trees or on the stakes. This is the Deadly version. Nella still wounds and pins and never shoots
+  a downed PC; keep the crew on its stations so it doesn't pile on.
+- **Pablo gets loose.** He walks down the hill into the corral, to the oats. The camp knows where
+  the party is, and Ilsa's first arrows go up the hill. But now the party knows where Ilsa is too.
 - **They corner Nella.** Run the escape ladder honestly down to the river plunge. If even that can't
   stick, the table wins — capture her, and re-plan her arc around the tally and the debt. Never
   cheat visibly. Captured-Nella sample, cold: *"Well. That'll cost me."*
-- **They want to chase Nella into the dark.** She's on a griffon. Nothing they have keeps up.
-  Let the light of Iggy's wings show her for a moment longer, then nothing. *"She's going east
-  faster than any horse could. You're not catching that."*
+- **They want to chase Nella into the cloud.** She's on a griffon. Nothing they have keeps up.
+  Let the light of Iggy's wings show her shape for a moment longer, then nothing. *"She's going
+  east faster than any horse could. You're not catching that."*
 - **Iggy goes down before he flies.** Nella won't shoot him again, and the wings can still open
-  when he's back up. If the night runs out before they do, hold the voice for another night.
+  when he's back up. If the session runs out before they do, hold the voice for another night.
 - **They go straight at the feud with the ledger or the banner.** Give the next rung only:
   *someone* is paying Harrow Bane. Stop there. Silas recognises the banner back home and won't say
   more in the street.
-
-#### S2_SKIP — They skip the pursuit
-
-- **They skip the pursuit and stay to build.** Fine. The cart reaches a fence in Duskwater. The
-  casks aren't gone, but recovering them becomes a costlier beat later (buy-back or a riskier lift).
-  Sable eats the loss and the Stake ladder starts one deed behind. Varrick and his bracer are still
-  at the waystation if they go later.
 
 ## Closing
 
@@ -936,16 +984,22 @@ Land it on the cell door, not on the casks.
   `S2_SHORT_REST`, `S2_HORSES`, `S2_SPEAR`. Played at Session 32: `S2_TRAIL`, `S2_CHASE_RULES`,
   `S2_FORD_STAGE`, `S2_ROAD`, `S2_FORK`, `S2_REARGUARD`, `S2_RIDER`, `S2_SCOUT`, `S2_CRYSTALS`;
   `S2_APPROACH` was skipped. Cut: `S2_STATEMENT`.
+- **Reworked for daylight (decided by Jeff, 2026-11-04):** low cloud stands in for the dark ·
+  Ilsa and Cinder fight · the camp digs in and lays an ambush on its crystal warning · Halsby
+  spots, and how he reports is his choice. New beats `S2_TEN_MINUTES`, `S2_SPOTTER`, `S2_AMBUSH`;
+  the night heist (`S2_HEIST`) and the pursuit-skip contingency (`S2_SKIP`) are cut; `S2_SCOUT`
+  was played.
 - **Choices** (`meta/player-agency.md`):
-  - Party: the route at stages 2 and 4 (`S2_ROAD`, `S2_APPROACH`) · the rear guard: fight,
-    scare off or bluff (`S2_REARGUARD`) · scout first (`S2_SCOUT`) · heist, assault, parley or
-    trick (`S2_APPROACH_CHOICE`) · Nella's purse (`S2_TALLY`) · the banner in the bar
+  - Party: go now or use the ten minutes (`S2_TEN_MINUTES`) · assault, parley, trick or spring the
+    ambush (`S2_APPROACH_CHOICE`) · Nella's purse (`S2_TALLY`) · the banner in the bar
     (`S2_HAUL_HOME`)
-  - Character: Iggy, chase Nella or turn back (`S2_IGGY_BEAT`)
-  - Past choices paid off: Halsby dealing a crystal to every PC (`S2_CRYSTALS`) · Halsby taking
-    the fox's boon (the Spear in the fight) · Silas's horses, borrowed against the favour debt
-    (`S2_ROAD`, `S2_HAUL_HOME`) · Dip asking Sable for more than 10% (her bigger share is open
-    when they get home, `S2_HAUL_HOME`)
+  - Character: Halsby, how to report the ambush (`S2_SPOTTER`) · Iggy, chase Nella or turn back
+    (`S2_IGGY_BEAT`)
+  - Past choices paid off: Halsby's broadcast in Session 32 is why the camp is ready
+    (`S2_AMBUSH`, `S2_CRYSTALS`) · Halsby dealing a crystal to every PC (`S2_CRYSTALS`) · Odibli
+    spending the oats on Pablo (`S2_TEN_MINUTES`) · Halsby taking the fox's boon (the Spear in the
+    fight) · Silas's horses, borrowed against the favour debt (`S2_HAUL_HOME`) · Dip asking Sable
+    for more than 10% (her bigger share is open when they get home, `S2_HAUL_HOME`)
 - **Spotlight.** The trend says lean party-centric this week, and the chase and the camp are.
   Iggy, the overdue PC, gets `S2_IGGY_BEAT`: Sah's first visible presence, and the wings he hid
   from Jory at Session 31. Dip gets [[Varrick's Parrying Bracer]]; Halsby gets the Spear's first
@@ -953,7 +1007,7 @@ Land it on the cell door, not on the casks.
 - **Deployment tracking:** none planned from `meta/literary-devices.md` or the design
   preferences. The false trail at the fork is a device candidate if `/recap` wants to log it.
 - **For `/recap`:**
-  - Levels: no level-ups planned (stamp `level_confirmed: 32`)
+  - Levels: no level-ups planned (stamp `level_confirmed: 33`)
   - [[The Shadowless Spear]]: the +1 covers spell attacks and save DC (settled 2026-10-28); move
     the loot-option file out per todo #88
   - Silas's favour debt paid if the horses come back sound · any lamed horse (11 gp)
@@ -961,14 +1015,12 @@ Land it on the cell door, not on the casks.
     remaining debt) · Harrow Bane named by the ledger · the aegis-banner taken
   - [[Varrick's Parrying Bracer]] taken: flip its loot file to delivered, add it to Dip's gear
   - The second deed (casks home), banked toward the Stake; Sable's bigger-share talk if it came up
-  - Chase DCs used → `meta/difficulty.md` Skill Challenge table, including the route choices
-    taken at stages 2 and 4
-  - Whether they found and cut off Nella's exit (`S2_SCOUT`) · whether the crew heard a
-    broadcast (`S2_CRYSTALS`); if so, Nella's crew holding crystals becomes canon on
-    [[Earshot Crystals]]
+  - Whether they went early or used the ten minutes (`S2_TEN_MINUTES`) · how Halsby reported
+    (`S2_SPOTTER`) · whether Pablo got loose · whether they found the crew's crystals
+    (`S2_CRYSTALS`); if so, Nella's crew holding crystals becomes canon on [[Earshot Crystals]]
   - Rest Clock: reset if they rested at the waystation
   - The prisoner: canonize only what was shown
-  - Wherever the table stopped: carry the unplayed beats to Session 33
+  - Wherever the table stopped: carry the unplayed beats to Session 34
   - Iggy: whether the wings came out and Sah spoke; chase or turn back; who heard the voice. Add
     it to [[Sah]] and [[Iggy]] as shown, nothing more · Radiant Soul spent (Rest Clock)
   - **New canon if played:** Nella's remaining debt to Bane is 250 gp, the sum in her purse ·
@@ -982,7 +1034,9 @@ Land it on the cell door, not on the casks.
     crew heard it (only what was shown; nothing about why) · Tithe's owner is somewhere east ·
     some of the people who would know the banner drink at the Lioness (Silas) · the banner hangs
     above the Lioness hearth · twelve casks, if the count isn't already set · Varrick is an
-    ex-soldier
+    ex-soldier · low cloud over the waystation's valley on the morning of Day 2 · Varrick banned
+    talking into the crystals once he knew they leaked · Cinder runs with Ilsa since Fennel died ·
+    Pablo's home has oats (whatever he means by home)
 - **Held for later:** Elowen and Odibli (the Unfinished Binding) · Jorn's foreshadow · the Marlow
   coppers · Asher's Dead Sun phrase for Luci · Sable's talk with Odibli about the fire · Dip's
   vision of Iggy (Dip's to share) · the battlefield-spirit and coin-forgery spitballs · the pull
