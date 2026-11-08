@@ -18,6 +18,10 @@
 .sr-slides-foot button { padding: 5px 12px; font-size: 13px; background: var(--sr-surface); border: 1px solid var(--sr-line); border-radius: 6px; cursor: pointer; color: var(--sr-text); }
 .sr-slides-foot button:hover { background: var(--sr-raised); }
 
+/* A bare slide (Slide.bare) has no headline and gives its body the whole stage. */
+.sr-slides-stage.is-bare { padding: 2vh 2vw; place-items: center; }
+.sr-slides-stage.is-bare .sr-slide-text { max-width: none; border-left: 0; padding-left: 0; }
+
 @media (max-width: 700px) {
   .sr-slides-stage { padding: 6vh 16px; }
 }

@@ -82,14 +82,37 @@ export interface PreviousSession {
   stats?: Stats | null; // scripts/lib/stats.py standings (meta/stats.md); null when unledgered
   achievements?: PcAchievements[] | null; // scripts/lib/achievements.py (meta/achievements.md); null when unledgered
   reputation?: Reputation | null; // scripts/lib/reputation.py (meta/reputation.md); null when Strahd or no deeds yet
+  sky?: Sky | null; // scripts/lib/sky.py (data/lore/calendar.md); null when Strahd or undated
+}
+
+// The sky slide (data/lore/calendar.md): Aethryn's sky at one moment, from scripts/lib/sky.py.
+export interface SkyMoment {
+  date: string;
+  time: string;
+  year: number;
+  dayOfYear: number;
+  hour: number;
+  sun: { phase: number; offset: number; trueDark: number };
+  fida: { age: number; lit: number; waxing: boolean };
+  astra: { yearInCycle: number; toGlistening: number; next: number; trueAnomaly: number; radius: number };
+}
+
+// The moment a session ended, its Crawl (null when the Sky Clock has no log line for it), and
+// the previous session's moment so the slide can sweep from it.
+export interface Sky extends SkyMoment {
+  crawl: number | null;
+  crawlYear: number | null;
+  crawlDay: number | null;
+  prev: SkyMoment | null;
 }
 
 // One slide of a deck (meta/recap-slides.md): a `##` headline and its body.
-// `html` is set only on generated slides (stats, achievements, reputation) and replaces the markdown body.
+// `html` is set only on generated slides (sky, stats, achievements, reputation) and replaces the markdown body.
 export interface Slide {
   title: string;
   md: string;
   html?: string;
+  bare?: boolean; // no headline and a full-bleed stage (the sky slide); `title` becomes the stage's aria-label
 }
 
 // A stats category from the meta/stats.md catalog.

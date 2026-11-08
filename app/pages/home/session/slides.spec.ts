@@ -30,6 +30,15 @@ describe('slideHtml', () => {
     expect(el.querySelector('.sr-slide-body')!.textContent).not.toContain('ignored');
   });
 
+  it('drops the headline on a bare slide and labels the stage instead', () => {
+    const el = document.createElement('div');
+    el.innerHTML = slideHtml([{ title: 'As the sky stood', md: '', html: '<svg></svg>', bare: true }], 0, '');
+    expect(el.querySelector('.sr-slide-title')).toBeNull();
+    const stage = el.querySelector('.sr-slides-stage')!;
+    expect(stage.classList.contains('is-bare')).toBe(true);
+    expect(stage.getAttribute('aria-label')).toBe('As the sky stood');
+  });
+
   it('shows wikilinks as plain text, never entity links', () => {
     const el = document.createElement('div');
     el.innerHTML = slideHtml([{ title: 'T', md: 'Met [[Sable Wren]] at [[Ashford|the ford]]' }], 0, '');

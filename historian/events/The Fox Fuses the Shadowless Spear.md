@@ -9,9 +9,8 @@ tags:
   - event/pact
 source_session: [[Session 31 The Red Trail]]
 confirmed_date: "2026-10-27"
-date: "Ashford, morning of Day 2 (Ashford reckoning, a working label)"
-# Year precision only: Aethryn's present year is 1487 (DM, 2026-10-27).
-timeline_date: "1487"
+date: "Ashford, morning of Day 2 (6743-05-21, late in Crawl 5)"
+timeline_date: "6743-05-21"
 order: 2
 daypart: morning
 outcome: "At a bridge just outside the Golden Lioness, Asher's possessed fox met Halsby to pay the boon it owed him for saving Sable. Halsby tested it with a subtle Darkness and a false offer of shadow gifts; it was earnest, would not give its name, and declined. He handed over his spear and his shard, and the fox fused them into the Shadowless Spear, said the debt was repaid, and ran into the woods. Halsby reached level 5."

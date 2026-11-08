@@ -51,4 +51,7 @@ relates_to:
 
 ## Note on the Astra Impact
 
-The Astra collision (~6.7 millennia ago) is cosmologically significant — it created the Whatwill shard field, [[The Slices]], and the ongoing Islift phenomenon. Whether this event is part of *this world's* shared historical consciousness (a named era, a known anchor) or purely background cosmology for the Whatwill factions is pending — the questionnaire asks this directly.
+The Astra collision is **year 0** of Aethryn's shared count (DM ratification, 2026-11-08); the
+present is 6743. It created the Whatwill shard field, [[The Slices]] and the Islifts, and broke the
+moon. Astra returns every thousand years, so the Glistenings fall in 1000, 2000 and onward; the Seventh
+is due in 7000. The full time system is in [[World Calendar]].

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # roll.py -- roll dice for hidden DM rolls the engine makes on the DM's behalf (Citadel d6, etc.)
-# consumers: none yet -- add instruction files here when one starts calling it.
+# consumers: scheduler/campaign/_sky-clock.md (next Kerning), scheduler/campaign/_citadel-clock.md (hidden d6)
 # Usage: uv run scripts/roll.py <expr> [<expr> ...] [--label "<text>" ...]
 #   expr: NdM[+/-K] with optional " adv" / " dis" on a d20, e.g. d6, 2d8+3, "d20 adv"
 #   --label: one per expr, in order, printed beside each result

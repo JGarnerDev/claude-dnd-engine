@@ -6,6 +6,28 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.53.0] — 2026-11-08
+
+### Added
+
+- **Aethryn calendar (canon).** Miguel's timekeeping system, built on Paul's Whatwill/Astra lore and ratified by Jeff: a 24-hour day and 360-day year counted from the Astra impact (year 0, present **6743**); Showerings (about weekly, heralded by a Kerning) and Crawls (months ended by a major landing) that are recorded, never forecast; two suns whose 18-day swing shrinks true night from 12 hours to none; Fida, the moon the impact broke (29.5-day phases, flavour only); Astra on a thousand-year slingshot orbit, the Seventh Glistening due in 7000. Canon in `data/lore/calendar.md`; machine values in `meta/calendar-homebrew.md` (12 positional 30-day blocks, I–XII, no weekdays).
+- **The Sky Clock** (`scheduler/campaign/_sky-clock.md`), a campaign tracker holding the running date, the Crawl tally, the next Kerning (rolled `1d6+4`) and a per-session log. `/transcript`, `/recap` and `/session` follow its `## Engine` section; no command edits.
+- **`scripts/sky.py`** (maths in `scripts/lib/sky.py`): a date's day of year, sun phase, hours of true dark, Fida's phase, Astra's place, and with `--crawl-start` the day of the Crawl; `--days n` lists the coming nights.
+- **Sky slide in the recap deck**, right after the Title (homebrew only): an old ring plate with Aethryn at the centre and each body where it stood when the session ended (the gold sun's angle is the hour, the red sun trails by the phase, Fida opposite at full, Astra on its ellipse, a dial on the day of the year), in a small card with the year, years since the last Glistening, Crawl, hour, tonight's dark, Fida's phase in Earth moon terms, and Astra's return (likened to a comet). The slide has no headline, so the plate takes the whole screen; the new `Slide.bare` flag drops the headline for any generated slide. The rings ink in and the bodies sweep from last session's sky. `app/pages/home/session/sky.ts`, `sky-plate.ts`, `sky-geometry.ts`, `sky-words.ts`; `session-cards.py` adds `sky` per previous session.
+- **Optional `in_world_end_time: "HH:MM"`** on homebrew sessions, set by `/recap`; the sky slide draws that hour.
+- **`historian/resources/`** now holds canon resources (Whatwill first).
+- **`scripts/roll.py`** (shipped in 9470d9b, unbumped until now): hidden DM dice rolls, `NdM±K`, `adv`/`dis`, labels. The Citadel and Sky Clocks use it.
+
+### Changed
+
+- **Retcon: Aethryn's year count.** The present is **6743** counted from the Astra impact, replacing **1487** with the impact at −5256. The Astra Collision is year `0`, the Dawn of Whatwill year `1`, and the Ashford events and Sessions 29–32 now carry real days (`6743-05-20` / `-21`) instead of year-only `1487`. Don't plan from the old count.
+- **Canonized:** `The Astra Collision` (→ `historian/events/`, now also broke the moon), `Astra` (→ `historian/locations/regions/`, slingshot orbit added) and `Whatwill` (→ `historian/resources/`). Whatwill's vocabulary wins: Showering = the weekly strike, Crawl = the month, Opticon = a new Islift.
+- `meta/events.md`: deep-time events date from the impact epoch (`6743 − N` years ago).
+
+### Removed
+
+- `data/lore/calendar-proposal.md` (its Keening/decadal-Showering vocabulary, named weekdays and months, and the suns Aurel/Veska and moons Maru/Lethe/Ossin are overruled). Its fallibility hooks and cultural lenses were kept as a spitball.
+
 ## [0.52.0] — 2026-11-03
 
 ### Added

@@ -1,7 +1,10 @@
 ---
+campaign: homebrew
 name: Whatwill
 type: resource
-exists: false
+exists: true
+source_session: "DM ratification (Jeff, calendar ingest)"
+confirmed_date: "2026-11-08"
 contributed_by: paul
 state: scarce
 tags:
@@ -14,7 +17,7 @@ aliases:
   - "'Twill"
   - "Watl"
 importance: background
-description: "Semi-opaque, pearlescent, phosphorescent glass with tears of a highly reactive-to-nitrogen metallic compound interspersed within. Falls from the Astra moon's orbital debris during unpredictable Showerings, heralded by a haunting whistle called a Kerning. Dangerous when fractured — refining into pearls, discs, and lodes risks shattering and exposing volatile compounds to nitrogen-rich air."
+description: "Semi-opaque, pearlescent, phosphorescent glass with tears of a highly reactive-to-nitrogen metallic compound interspersed within. Falls from Astra's orbital debris during unpredictable Showerings, heralded by a haunting whistle called a Kerning. Dangerous when fractured — refining into pearls, discs, and lodes risks shattering and exposing volatile compounds to nitrogen-rich air."
 trade_value: varies
 accessibility: contested
 controlled_by: Contested (Partenariats, Courts Superior, factions)

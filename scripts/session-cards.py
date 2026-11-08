@@ -12,7 +12,7 @@ The page itself reads each scene's header bullets and the `## Combatants` stat b
   { session: {name, number, date, description, openingScene, closingHook, preamble, folder,
                campaign, root, looseThreads},
     previously: [{name, number, date, campaign, description, recap, cliffhanger, path, slides, stats, achievements,
-                  reputation}],
+                  reputation, sky}],
                                              # the session before this one, plus the last one
                                              # in this season when that differs (historian);
                                              # slides: [{title, md}] from the folder's optional
@@ -24,6 +24,9 @@ The page itself reads each scene's header bullets and the `## Combatants` stat b
                                              # reputation: lib/reputation.py standings for that
                                              # session (meta/reputation.md), or null when Strahd
                                              # or no deed is ledgered yet
+                                             # sky: lib/sky.py, the in-world moment the session
+                                             # ended (data/lore/calendar.md), or null when Strahd
+                                             # or undated
     nodes:   [{id, marker, kind, scene, title, lines, notes}],
     edges:   [{from, to, label, dashed}],
     scenes:  [{id, key, title, md}],         # flow subgraph + matching `### Scene <key>` prose
@@ -55,6 +58,7 @@ from lib.common import (  # noqa: E402
 )
 from lib.achievements import achievements  # noqa: E402
 from lib.reputation import reputation  # noqa: E402
+from lib.sky import sky  # noqa: E402
 from lib.stats import standings  # noqa: E402
 
 ENTITY_DIRS = ['data', 'historian', 'scheduler']
@@ -258,6 +262,7 @@ def previous_sessions(root: Path, number, campaign: str) -> list:
         'stats': standings(root, n),
         'achievements': achievements(root, n),
         'reputation': reputation(root, n),
+        'sky': sky(root, n),
     } for n, f, raw, fm in picks]
 
 

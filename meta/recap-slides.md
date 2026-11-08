@@ -64,6 +64,13 @@ only): party fame, each PC's fame and infamy with tier names, last session's gai
 and a banner on a tier-up. Built by the runner from `historian/sessions/_reputation.md`, never
 written into `_slides.md`. Rules: `meta/reputation.md`.
 
+**The sky slide** comes right after the Title (homebrew only): the in-world date and time the
+session ended, drawn as an old ring plate with Aethryn at the centre and each body where it stood,
+beside a cartouche with the year, the Crawl, the hour, tonight's dark, Fida and the Glistening
+countdown. Built by the runner from the session's `in_world_end_date` / `in_world_end_time` and the
+Sky Clock's log (`scripts/lib/sky.py`), never written into `_slides.md`. It never shows the next
+Kerning. Rules: `data/lore/calendar.md` and `scheduler/campaign/_sky-clock.md`.
+
 ## Voice
 
 Slides are read aloud to the table, so write them like a story told by someone who was there.

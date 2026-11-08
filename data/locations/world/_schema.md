@@ -23,7 +23,7 @@
 #
 # Upgrade path for existing world-scale entities:
 #   data/locations/regions/Caldera.md   — add world_col / world_row once map is finalized
-#   data/locations/regions/Astra.md     — same
+#   historian/locations/regions/Astra.md — same
 #   data/locations/regions/The Slices.md — same
 #
 # Example entry (do not use until map is finalized):

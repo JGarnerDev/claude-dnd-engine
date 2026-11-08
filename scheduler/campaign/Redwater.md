@@ -95,15 +95,16 @@ re-check).
 - **Levels:** all five PCs are level 5 (confirmed Session 32). Everyone is at 5 before the
   December finale.
 - **The sky:** a single vast **broken moon**, shedding shards. Luci named it **Fida** in the
-  Dead Sun tongue, and her voice answered "Closer." This conflicts with
-  `data/lore/calendar-proposal.md` (two suns, three moons; not canon), which needs reconciling
-  before it is canonized.
+  Dead Sun tongue, and her voice answered "Closer." It is a true moon the Astra impact broke
+  (canon since 2026-11-08). Two suns turn the night over 18 days, from 12 hours of real dark to none;
+  the date, the Crawl and the next Kerning live in `scheduler/campaign/_sky-clock.md`, the system in
+  [[World Calendar]].
 
 ### Rest Clock (as of: Session 32)
 
 Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` -> Long Rest Rules).
 
-- In-world time now: **"Day 2, Ashford reckoning", about 10 a.m.** (DM at the table), on the hill south of [[The Waystation]]. A working label, not a date (Aethryn's months are unsettled)
+- In-world time now: **`6743-05-21`, about 10 a.m.** (Ashford Day 2; DM at the table), on the hill south of [[The Waystation]]. The date itself is kept in `scheduler/campaign/_sky-clock.md`
 - Last long rest (in-world): **overnight Day 1 → Day 2 at the Golden Lioness** (DM ruling at the table, Session 31, overriding the plan's 24-hour gate)
 - Hours since last long rest: ~4 (~estimate): the ride southeast, the fork, the hill
 - Long rest available: **no, not until the night of Day 2 at the earliest** (24-hour gate)
@@ -129,7 +130,7 @@ Master checklist is the `/todo` dashboard (`todo-dashboard.md`); this list track
 
 ### Fill the lore drafts (blocked on questionnaires)
 
-- [ ] `data/lore/calendar.md` — awaiting `questionnaires/world/history/calendar/` + `calendar-proposal/`
+- [x] `data/lore/calendar.md` — canon since 2026-11-08 (Miguel's system, ratified by Jeff)
 - [ ] `data/lore/history.md` — awaiting `questionnaires/world/history/`
 - [ ] `data/lore/magic.md` — awaiting `questionnaires/world-magic.md`
 - [ ] `data/lore/religion.md` — awaiting `questionnaires/world/religion/`

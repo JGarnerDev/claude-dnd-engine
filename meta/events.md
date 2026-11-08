@@ -44,7 +44,7 @@ Every event needs a numeric `timeline_date` (`YYYY-MM-DD`) to plot — the chart
   - **`order`** — 1-based intra-day sequence. `/recap` assigns it as it walks the session's beats in narrative order (1, 2, 3…). Free to produce — it's just the order beats are minted.
   - **`daypart`** — coarse time-of-day (`dawn|morning|midday|afternoon|evening|night|late`), *inferred* so the DM never has to note a time. Read the session notes for cues: explicit words ("that night", "at dawn", "dusk"), or activity (burial/funeral → morning; daytime travel → morning/afternoon; a long rest advances to the next dawn; an ambush or sleep scene → night). No cue → inherit the previous beat's daypart; a session with no cue at all opens at `morning`. Time only moves forward within a session — never an earlier daypart than a prior beat unless the notes flag a flashback.
   - Big single-date world/historical events take **neither** field — they don't share a day and shouldn't spread. Full contract: `meta/calendar-template.md` "Sub-day placement".
-- **World-history / deep-time (Whatwill et al.)** — relative "millennia ago" dates need a chosen epoch before they sort. That calendar decision is a separate gated task; until then, deep-time events may omit `timeline_date` (they won't plot) rather than guess.
+- **World-history / deep-time (Whatwill et al.)** — Aethryn's epoch is the Astra impact, year 0; the present is 6743 (`data/lore/calendar.md`). Convert "N years ago" to `6743 − N` and date at the precision the source supports (usually year-only). Months and days use the positional 30-day blocks in `meta/calendar-homebrew.md`.
 
 ## Canon-pending (unratified lore)
 

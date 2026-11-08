@@ -12,9 +12,9 @@ tags:
 mission: [[The Stolen Casks]]
 planned_date: "TBD"
 played_date: "2026-10-27"
-# Year precision only: Aethryn's present year is 1487 (DM, 2026-10-27).
-# Working label: "Day 2, Ashford reckoning", early morning.
-in_world_end_date: "1487"
+# Was the working label "Day 2, Ashford reckoning", early morning.; dated at the calendar ingest (2026-11-08).
+in_world_end_date: "6743-05-21"
+in_world_end_time: "07:00"
 recap: "Late on the night of the raid, Dip saw the Golden Lioness's hearth go still while Iggy's fiddle wandered, and privately felt the stillness open like a nesting doll whose innermost layer was inside Iggy. Dip took his 150 gp share and an earshot crystal. Odibli found the Wanderer's Boon inert, and Halsby, with Luci's guidance, sensed it holds the space where its magic will return. Dip told Sable that 10% was low for the work, and she offered a larger share if they stay. Luci offered 'The Lightbearers' as a party name, and nobody took it up. Halsby told the party he had stepped through a door into a forest and that a talking fox had sent him to save Sable, and he joined the ale run. Odibli found a smother charm, a glyph by the raiders' hedge mage, pressed inside the hearth to drown its self-feeding fire over about eight hours; Sable thought it was planted while she was held. His calligraphy rewrite went wrong and set off the glyph's explosive ward. He rode Sergei out, threw it as a paper airplane onto the big raider's body in the yard, and it exploded, scorching the wet grass. He reached level 5, and Sable thanked him and asked him not to speak of the fire. The party took a long rest. At dawn Silas Crubb lent five horses and a cart as loans, to come back fully shod, thanked Odibli and Halsby for their advice, and backed off from Luci's stare. Jory Pike asked if they were angels; Iggy said only strange magic. At a bridge just outside the Lioness the fox waited for Halsby. He tested it with Perception, Arcana, a subtle Darkness and a false offer of shadow gifts: it was earnest, possessed by something he could not name, and declined. He gave it his spear and his shard, and it fused them into the Shadowless Spear, said the debt was repaid, and ran into the woods. Halsby reached level 5."
 cliffhanger: "Morning of Day 2, at a bridge just outside the Golden Lioness. All five are level 5 and long-rested, with five borrowed horses, a cart, Sergei and Bosco, and Halsby's new Spear. Nella's ruts run southeast toward the waystation and the casks."
 entities_canonized:

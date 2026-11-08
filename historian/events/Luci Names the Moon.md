@@ -9,9 +9,8 @@ tags:
   - event/revelation
 source_session: [[Session 29 The Mistake]]
 confirmed_date: "2026-10-06"
-date: "Ashford, night of arrival (Day 1, Ashford reckoning, a working label)"
-# Year precision only: Aethryn's present year is 1487 (DM, 2026-10-27). Add month/day once the calendar's months land.
-timeline_date: "1487"
+date: "Ashford, night of arrival (Day 1 at Ashford, 6743-05-20, late in Crawl 5)"
+timeline_date: "6743-05-20"
 order: 3
 daypart: night
 outcome: "Rising from the rubble mid-fight, Luci looked up at Aethryn's moon. It is vast and broken, shards drifting away from it, and its light is far stronger than any light in Barovia. She felt closer to the plane she came from. Without thinking, she named it Fida in the Dead Sun tongue, and her guiding voice answered one word, clearer than ever: 'Closer.' She leveled to 5."

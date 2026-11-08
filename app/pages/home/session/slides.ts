@@ -19,9 +19,9 @@ const unlink = (md: string) => md.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (
 export function slideHtml(deck: Slide[], i: number, label: string): string {
   const s = deck[i];
   return `
-    <div class="sr-slides-stage" data-index="${i}">
+    <div class="sr-slides-stage${s.bare ? ' is-bare' : ''}" data-index="${i}"${s.bare ? ` aria-label="${escapeHtml(s.title)}"` : ''}>
       <div class="sr-slide-text">
-        <h1 class="sr-slide-title">${escapeHtml(s.title)}</h1>
+        ${s.bare ? '' : `<h1 class="sr-slide-title">${escapeHtml(s.title)}</h1>`}
         <div class="sr-slide-body">${s.html ?? renderMarkdown(unlink(s.md))}</div>
       </div>
     </div>
