@@ -17,6 +17,7 @@ import { RECAP_ID, recapHtml, recapText, withRecap } from './recap.js';
 import { openSlides } from './slides.js';
 import { withAchievements } from './achievements.js';
 import { withReputation } from './reputation.js';
+import { withMysteries } from './mysteries.js';
 import { withSky } from './sky.js';
 import { withStats } from './stats.js';
 import type { EntityRef, SessionData } from './types.js';
@@ -131,7 +132,7 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
   main.addEventListener('click', (ev) => {
     const prev = data.previously[0];
     if ((ev.target as HTMLElement).closest('[data-act="slides"]') && prev) {
-      openSlides(withSky(withStats(withReputation(withAchievements(prev.slides, prev.achievements), prev.reputation), prev.stats, prev.deckWeight), prev.sky), prev.name);
+      openSlides(withSky(withStats(withReputation(withAchievements(withMysteries(prev.slides), prev.achievements), prev.reputation), prev.stats, prev.deckWeight), prev.sky), prev.name);
       return;
     }
     const link = (ev.target as HTMLElement).closest<HTMLElement>('a.sr-wiki[data-entity]');

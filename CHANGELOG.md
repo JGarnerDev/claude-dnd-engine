@@ -6,6 +6,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.55.0] — 2026-11-08
+
+### Added
+
+- **Mysteries slide on every recap deck** (`meta/recap-slides.md` → Mysteries slide). Eight ranked, party-safe questions about the world, the NPCs and the mission, right after Where you stand. It always shows, like the sky slide. The list carries forward deck to deck: answered questions drop off, new ones join, and questions past eight wait in reserve (the runner shows the top eight). The runner draws them as a numbered two-column grid of cards (`app/pages/home/session/mysteries.ts`).
+- **Mystery answer key** (`scheduler/campaign/_mysteries.md`), a DM-only campaign tracker: one `###` answer per question, tagged Canon, Planned or Open. `session-cards.py` emits it as `mysteries`, and the runner sidebar shows a **Mysteries** group whose answers are searchable ("myst…" lists them all). `/recap` Phase 8 keeps it in step with the slide.
+- **Cute shorthand** tell in `meta/prose-style.md`, and slide Voice rule 5, **Say what happened**: recaps state who did what and what came of it, not a quirky stand-in ("saved the hearth with a paper airplane").
+
+### Changed
+
+- **Deck weight: choices.** Only a choice that changes where the story goes (a new destination or goal, an ally or enemy made or lost) makes a deck medium. Choices about how the party does something stay light.
+- Session 32's deck rebuilt as a light deck (Title, Last time…, Where you stand, Mysteries, Heading); `deck_weight: light` set.
+
 ## [0.54.0] — 2026-11-08
 
 ### Added

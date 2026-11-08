@@ -1,64 +1,36 @@
-Party-facing recap deck, shown from Session 33's "Previously on…" card. Rules: `meta/recap-slides.md`.
+Party-facing recap deck, shown from Session 33's "Previously on…" card. Deck weight: light. Mysteries holds 11 questions ranked; the runner shows the top 8, the rest wait in reserve. Rules: `meta/recap-slides.md`.
 
 ## Session 32 — The Red Trail
 
-Played 2026-11-03. The road southeast.
+Played 2026-11-03.
 
-## Previously on…
+## Last time…
 
-The party saved the Lioness's hearth with a paper airplane and slept through to dawn. Silas lent
-them five horses and a cart, and at the bridge a fox wove Halsby's spear and shard into one. Then
-they rode after Nella's ruts.
+The party drove Silas's cart southeast after Nella. At a fork, three of her people tried to turn
+them back. The crossbowman died, and the archer and the wolf ran. Odibli won over the dead man's
+horse, Pablo, with the cart's oats.
 
-## The chase
+## Where you stand
 
-- Luci rode the whole way standing on two horses, Chestnut and George
-- A crossing ran deeper than anyone guessed, and a horse stumbled
-- On the shortcut, Odibli and Luci pulled an antler from under the lead horse with two hands
-  nobody could see
-- A dragged log laid false ruts, and the party followed them a while
+The Stolen Casks. The cart and about 12 casks are in a camp at the bottom of the hill, guarded by
+a drover, two cask-hands, a clerk and a crossbowman on the roof. Halsby is alone at the bridge.
+Nella heard him over the crystal, and her griffon is in the air.
 
-## The fork
+## Mysteries
 
-- Three waited in the trees: an archer, a crossbow lad and a wolf. "You best turn back now."
-- Dip leapt off the cart yelling "Give me back my daughter!" The archer and the wolf ran
-- Iggy's bolt, then Dip's blade. The lad didn't get up
+- Where are we? No map, and no names past Ashford and the river.
+- How different is this world from Barovia, and has anyone here heard of it?
+- Why does the sky look wrong: two suns, and a broken moon shedding shards?
+- Who pays for raiders this organized: one cobbler's boots, a banner too fine for a camp?
+- Who is Harrow Bane, and why did the room go quiet at the name?
+- Who else is listening on the raiders' crystals?
+- What is the Lioness's hearth tied to, and why did it stop during Iggy's song?
+- Will Davian's stone wake again, and where would it take the party?
+- Who pressed the charm into the hearth during the raid, and why smother the fire instead of
+  burning the place?
+- Why did the green-eyed fox want the bound woman saved?
+- What answered "Closer." when Luci named the moon?
 
-## A horse with opinions
+## Heading
 
-- The dead man's horse told Odibli: "He gave me oats."
-- Odibli spent every oat laying a trail. It followed, ran out, and came back angry
-- It calls itself Pablo. "Find oats for Pablo." It smelled a big strange animal down the hill
-
-## The camp
-
-- A long shed, a corral, the cart they'd know anywhere, and a banner too fine for the place
-- Halsby went invisible and walked the edge: a drover barking orders, two big cask-hands, a clerk
-  with a ledger, a crossbow on the roof
-- About twelve casks, still loaded
-
-## The crystal
-
-- Beyond the bridge, Nella was saddling a hooded griffon
-- Halsby told everyone through his crystal. Nella's head snapped round: she wore one too
-- "Get moving, they're coming." The griffon came up out of the brush
-
-## What the party chose
-
-- The shortcut: all five of Silas's horses are still sound
-- A charge, not a parley: the archer got away, riding for the camp
-- One message to every crystal: now Nella knows they're coming
-- The oats for a horse: Pablo is fed on promises, and nobody else is fed at all
-
-## The party
-
-- **Iggy**: on the hill with the cart, wings still folded away
-- **Luci**: finally off the horses
-- **Odibli**: one horse richer, no oats poorer, because there are none left
-- **Halsby**: alone at the bridge, and nobody knows it
-- **Dip**: still has the dead man's shoe
-
-## Next time…
-
-Ten minutes to plan. Below, a camp shouting itself awake. Halsby is still down there, by the
-bridge.
+Down the hill to take the casks back. Ten minutes to plan.

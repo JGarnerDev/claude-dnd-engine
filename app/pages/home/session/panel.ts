@@ -1,11 +1,13 @@
 // The side panel. Search box on top; below it either search results, an open
 // entity (with a back stack), or the default view: party, entities on this card,
 // entities in this scene, the act roster, what's established about the town,
-// region and world, and the plan's other sections.
+// region and world, the DM's answers to the deck's mysteries, and the plan's other sections.
+// Search matches entities and those mystery answers.
 
 import { escapeHtml, inline, plainText, renderMarkdown } from './markdown.js';
 import type { Known } from './markdown.js';
 import { searchEntities } from './entities.js';
+import { searchMysteries } from './mysteries.js';
 import { isRecapSection } from './recap.js';
 import type { Resolver } from './entities.js';
 import { entityBody, entityHeader, fetchEntity, LAYER_LABEL } from './entity-view.js';
@@ -25,7 +27,7 @@ export interface Panel {
 
 export function mountPanel(aside: HTMLElement, data: SessionData, resolve: Resolver, known: Known): Panel {
   aside.innerHTML = `
-    <input class="sr-search" type="search" placeholder="Search entities  ( / )" aria-label="Search entities" />
+    <input class="sr-search" type="search" placeholder="Search entities, mysteries  ( / )" aria-label="Search entities and mysteries" />
     <div class="sr-panel-body"></div>`;
   const input = aside.querySelector<HTMLInputElement>('.sr-search')!;
   const body = aside.querySelector<HTMLElement>('.sr-panel-body')!;
@@ -38,6 +40,11 @@ export function mountPanel(aside: HTMLElement, data: SessionData, resolve: Resol
       <span class="sr-ent-type">${escapeHtml([e.type, e.subtype].filter(Boolean).join(' · '))} · ${LAYER_LABEL[e.path.split('/')[0]] ?? ''}</span>
       ${e.description ? `<span class="sr-ent-sub">${escapeHtml(plainText(e.description))}</span>` : ''}
     </button>`;
+  const details = (s: Section) =>
+    `<details class="sr-section"><summary>${escapeHtml(s.title)}</summary><div class="sr-md">${renderMarkdown(s.md, known)}</div></details>`;
+  const mysteries = (list: Section[], open = false) => (list.length
+    ? `<h3 class="sr-group">Mysteries</h3>${list.map((s) => (open ? details(s).replace('<details', '<details open') : details(s))).join('')}`
+    : '');
   const group = (title: string, list: EntityRef[]) => (list.length ? `<h3 class="sr-group">${title}</h3>${list.map(row).join('')}` : '');
 
   const renderDefault = () => {
@@ -49,8 +56,6 @@ export function mountPanel(aside: HTMLElement, data: SessionData, resolve: Resol
       </button>`).join('');
     const cardSet = new Set(ctx.onCard);
     const roster = data.roster.map((n) => resolve(n)).filter((e): e is EntityRef => !!e);
-    const details = (s: Section) =>
-      `<details class="sr-section"><summary>${escapeHtml(s.title)}</summary><div class="sr-md">${renderMarkdown(s.md, known)}</div></details>`;
     const sections = data.sections.filter((s) => !isRecapSection(s.title)).map(details).join('');
     const established = (data.established ?? []).map(details).join('');
     body.innerHTML = `
@@ -59,6 +64,7 @@ export function mountPanel(aside: HTMLElement, data: SessionData, resolve: Resol
       ${group('In this scene', ctx.inScene.filter((e) => !cardSet.has(e)))}
       ${group('Act roster', roster)}
       ${established ? `<h3 class="sr-group">Established</h3>${established}` : ''}
+      ${mysteries(data.mysteries ?? [])}
       <h3 class="sr-group">Session plan</h3>${sections}`;
   };
 
@@ -76,7 +82,10 @@ export function mountPanel(aside: HTMLElement, data: SessionData, resolve: Resol
 
   const renderResults = () => {
     const hits = searchEntities(input.value, data.entities);
-    body.innerHTML = hits.length ? hits.map(row).join('') : '<p class="sr-empty">No matches.</p>';
+    const answers = searchMysteries(input.value, data.mysteries ?? []);
+    body.innerHTML = hits.length || answers.length
+      ? `${hits.map(row).join('')}${mysteries(answers, answers.length <= 3)}`
+      : '<p class="sr-empty">No matches.</p>';
   };
 
   const render = () => {

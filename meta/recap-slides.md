@@ -47,12 +47,14 @@ party stands in the story right now**.
   thread are not story change.
   - **Heavy** if any: a mission resolved (success or failure), an act advanced or completed, a PC
     death, or a reveal the DM calls critical.
-  - **Medium** if no heavy signal but any: a choice with consequences (`choices:`), a level-up, a
-    lasting condition gained or lost, a Phase 5.5 event that changed canon (not only memorable),
-    or a beat tagged at `arc` weight.
-  - **Light**: none of the above.
+  - **Medium** if no heavy signal but any: a choice that changed where the story goes (`choices:`:
+    a new destination or goal, an ally or enemy made or lost), a level-up, a lasting condition
+    gained or lost, a Phase 5.5 event that changed canon (not only memorable), or a beat tagged at
+    `arc` weight.
+  - **Light**: none of the above. Choices about *how* the party does something (a shortcut, a
+    charge instead of a parley, who gets the oats) stay light.
 - **Proposed, then confirmed.** `/recap` proposes one weight with the signals that set it ("medium:
-  Eilonwy level 5; took the north road"). The DM confirms or overrides; the override wins.
+  Odibli level 5; turned back for Ashford"). The DM confirms or overrides; the override wins.
   The session's planned `importance:` is a prior, not an outcome: use it only to break a tie.
 - **Story position**: where the party stands in the active act. Structure (the act, the mission,
   how far through it, e.g. "the cart is caught; the woman leading it got away") plus one so-far
@@ -63,15 +65,28 @@ party stands in the story right now**.
 - **No repeats.** Each fact appears on one slide. If orientation said it, no later slide says it
   again.
 - **Changed slides only.** A slide shows only if its content changed in a relevant way since the
-  last deck. The sky slide is the one **always-on** slide: it situates the players every session.
+  last deck. Two **always-on** slides break the rule: the sky slide situates the players, and the
+  Mysteries slide keeps them curious.
+- **Mysteries slide**: eight open questions the party would be asking about the world, the NPCs
+  and the mission, ranked by how much they matter to the party now. Party-voice questions built
+  only from what the party saw, heard or was told: never a question that hints at the answer, names
+  someone they haven't learned, or points at something they haven't noticed. Not the DM's
+  `meta/mysteries.md` (load-bearing unknowns the DM guards); a guarded mystery appears only as the
+  question the party already has. Carry the last deck's list forward: drop only what was answered,
+  add what this session raised, re-rank. The list may run past eight: the runner shows the top
+  eight and the rest wait in reserve, so a question is never lost just because it fell in rank.
+  In a new world, keep questions about the world itself (where are we, how is it different, why
+  does the sky look wrong) until the party has real answers. The DM's answer key is the tracker
+  `scheduler/campaign/_mysteries.md`, which the runner shows in its sidebar; `/recap` keeps it in
+  step with the slide (its `## Engine` section). One short line each; the 40-word body limit doesn't apply.
 
 **Hand-written slide budget** (soft caps, counting the Title):
 
-- **Light**: 4–5. Title, Last time…, Where you stand, Heading. No scene slides. The Party slide
+- **Light**: 5–6. Title, Last time…, Where you stand, Mysteries, Heading. No scene slides. The Party slide
   only if someone gained something.
-- **Medium**: 5–7. Orientation, then the 1–3 scenes that moved something, Choices only if one
+- **Medium**: 6–8. Orientation and Mysteries, then the 1–3 scenes that moved something, Choices only if one
   mattered.
-- **Heavy**: 7–10. Orientation, the scenes that moved something, Choices, and **What changed**:
+- **Heavy**: 8–11. Orientation, Mysteries, the scenes that moved something, Choices, and **What changed**:
   the mission or act payoff, said the way the party would tell it.
 
 **Generated-slide gates** (the runner decides from the ledgers):
@@ -91,17 +106,20 @@ Every deck follows the same order, so players know where to look. Orientation al
 2. **Last time…**: 1–4 sentences of narrative from the `recap:` field, rewritten for players.
    Light decks keep it to one or two.
 3. **Where you stand**: story position and whereabouts on one slide.
-4. **Scenes that moved something** (medium and heavy only): one slide per scene that changed
+4. **Mysteries**: every deck. Eight open questions, as bullets, most important first (see Deck
+   weight → Mysteries slide). Write plain `-` bullets; the runner draws them as a numbered grid
+   of cards (`app/pages/home/session/mysteries.ts`).
+5. **Scenes that moved something** (medium and heavy only): one slide per scene that changed
    something. Use the plan's `### Scene` sections, corrected by `## As Played`. A skipped scene, or
    one that only repeats orientation, gets no slide.
-5. **Choices**: what the party chose, from the `choices:` field (see `meta/player-agency.md`).
+6. **Choices**: what the party chose, from the `choices:` field (see `meta/player-agency.md`).
    When the field is missing, use the forks in `## As Played`. Leave the slide out if none
    mattered.
-6. **What changed** (heavy only): the payoff of a resolved mission or advanced act.
-7. **The party**: one line per PC who gained loot, a level or a condition, and nobody else. Levels
+7. **What changed** (heavy only): the payoff of a resolved mission or advanced act.
+8. **The party**: one line per PC who gained loot, a level or a condition, and nobody else. Levels
    and conditions come from `uv run scripts/party-status.py`; loot from `## Rewards` corrected by
    `## As Played`. Leave the slide out if nobody gained.
-8. **Heading**: where the party means to go and what they mean to do this session, from what they
+9. **Heading**: where the party means to go and what they mean to do this session, from what they
    said at the table (`## As Played`, the DM's notes). It may close on the `cliffhanger:` as a
    teaser, but only what the party saw. Always the last slide.
 
@@ -146,7 +164,10 @@ Slides are read aloud to the table, so write them like a story told by someone w
    the party chose", "the party went after both".
 4. **Vary the verbs.** When a slide walks the PCs one by one, give each their own verb; don't
    repeat "landed" four times.
-5. **Plain words, said aloud.** "The gap in the wall", not "the breach"; "agreed", not "accepted
+5. **Say what happened.** No cute shorthand (`meta/prose-style.md`): "saved the hearth with a
+   paper airplane" means nothing to a player who forgot the scene. Name who did what and what came
+   of it; the funny detail can ride along.
+6. **Plain words, said aloud.** "The gap in the wall", not "the breach"; "agreed", not "accepted
    terms". If a line sounds stiff spoken, rewrite it.
 
 ## Party-safe

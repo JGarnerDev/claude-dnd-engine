@@ -222,6 +222,8 @@ export interface SessionData {
   edges: FlowEdge[];
   scenes: Scene[];
   sections: Section[];
+  // DM answer key to the deck's Mysteries slide (scheduler/campaign/_mysteries.md): question, answer.
+  mysteries?: Section[];
   // Town / region / world facts from the folder's optional _established.md.
   established?: Section[];
   quickRefs: Record<string, string>;

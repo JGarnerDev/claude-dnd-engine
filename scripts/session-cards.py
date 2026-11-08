@@ -33,6 +33,8 @@ The page itself reads each scene's header bullets and the `## Combatants` stat b
     edges:   [{from, to, label, dashed}],
     scenes:  [{id, key, title, md}],         # flow subgraph + matching `### Scene <key>` prose
     sections:[{title, md}],                  # the plan's other `##` sections (Orientation, Rewards...)
+    mysteries:[{title, md}],                 # `###` under `## Answers` in scheduler/campaign/_mysteries.md:
+                                             # DM answer key to the deck's Mysteries slide (homebrew only)
     established:[{title, md}],               # `##` sections of the folder's optional _established.md
                                              # (town / region / world facts, table-safe)
     quickRefs: {entity name: md},            # `## NPC Quick-Reference` subsections
@@ -279,6 +281,20 @@ def slides(folder: Path) -> list:
     return [{'title': t, 'md': md} for t, md in split_headings(read_text_no_bom(f), 2) if t]
 
 
+MYSTERIES_FILE = Path('scheduler') / 'campaign' / '_mysteries.md'
+
+
+def mysteries(root: Path, campaign: str) -> list:
+    """The DM's answer key to the recap deck's Mysteries slide: each `###` under `## Answers`
+    in the mysteries tracker, its heading the question and its body the answer
+    (meta/recap-slides.md -> Mysteries slide). Homebrew only; [] when the file is missing."""
+    f = root / MYSTERIES_FILE
+    if not ci_eq(campaign, 'homebrew') or not f.exists():
+        return []
+    answers = next((md for t, md in split_headings(read_text_no_bom(f), 2) if t.lower() == 'answers'), '')
+    return [{'title': t, 'md': md} for t, md in split_headings(answers, 3) if t]
+
+
 def established(folder: Path) -> list:
     """The `##` sections of the session folder's optional _established.md -- what the
     table can be told about the town, region and world. Text before the first heading is
@@ -394,6 +410,7 @@ def main() -> None:
         'edges': edges,
         'scenes': scenes,
         'sections': sections,
+        'mysteries': mysteries(root, fm.get('campaign', '')),
         'established': established(folder),
         'quickRefs': quick_refs,
         'roster': deduped,

@@ -1,0 +1,11 @@
+/* Mysteries slide (mysteries.ts, meta/recap-slides.md): eight question cards in two columns,
+   numbered, with room between them. Uses the runner's --sr-* tokens (session.css). */
+.my-grid { list-style: none; margin: 0; padding: 0; counter-reset: my; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.2vh 2vw; max-height: 70vh; overflow: auto; }
+.my-card { counter-increment: my; display: flex; align-items: flex-start; gap: 0.7em; margin: 0; padding: 1.6vh 1.2vw; background: var(--sr-surface); border: 1px solid var(--sr-line); border-left: 4px solid var(--sr-k-recap); border-radius: 10px; }
+.my-card::before { content: counter(my); flex: none; min-width: 1.6em; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--sr-k-recap); }
+.my-q { line-height: 1.35; }
+.my-card, .my-card::before { font-size: clamp(16px, 1.55vw, 26px); }
+
+@media (max-width: 700px) {
+  .my-grid { grid-template-columns: 1fr; }
+}

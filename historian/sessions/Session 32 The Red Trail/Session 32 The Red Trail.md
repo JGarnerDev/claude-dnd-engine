@@ -86,6 +86,7 @@ relates_to:
   - "[[The Wanderer's Boon]] (shown inert)"
   - "[[The Shadowless Spear]] (delivered at the ford)"
   - "[[Harrow Bane]] (named in the camp's ledger; still no face)"
+deck_weight: light
 importance: critical
 active: true
 description: "The pursuit half of the Red Trail, carried from Session 31 (which played only the night and the dawn). The chase southeast, Nella's rear guard at the dusk fork, the drover's waystation, Nella's escape and her dropped tally, then the casks home to a silent prisoner in Mara's cell. The party arrives long-rested, and the camp is sized Hard against that."

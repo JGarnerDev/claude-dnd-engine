@@ -85,6 +85,11 @@ The stock moves of model-written fantasy. Same rule: candidates, not bans.
   kin are model reflexes. Build new names from the culture's own sounds (see
   [[worldbuilding-approach]]); never rename an existing entity for this.
 - **Capitalized Significance** — The Ancient Evil, The Forgotten Pact. Capitalize proper names, not mood.
+- **Cute shorthand** — packing an event into one quirky detail that only makes sense to someone who
+  already remembers it: "saved the hearth with a paper airplane", "turned an old debt into a new
+  spear". Worst in recaps, slides and historian records, whose job is to tell what happened. Say it
+  plainly: who did what, to what, and what came of it. A funny detail can come along once the event
+  is clear.
 
 ## Structural tells
 
@@ -123,6 +128,10 @@ The stock moves of model-written fantasy. Same rule: candidates, not bans.
   or give the clue: *"There's fresh mud on the sill. It wasn't there an hour ago."*
 - **Telling the party what they feel.** Before: *"A deep sense of dread washes over you as you
   enter."* After: *"The door swings open before you touch it."*
+- **Cute shorthand** (Session 32 deck, "Previously on…"). Before: *"The party saved the Lioness's
+  hearth with a paper airplane and slept through to dawn."* After: *"Odibli found a charm in the
+  Lioness's hearth set to put the fire out. He folded it into a paper airplane and threw it into the
+  yard, where it went off. The party slept through to dawn."*
 - **Vague transformation** (Session 31, `S2_HEARTH`). Before: *"The last stroke goes into the
   coals and the glyph stops being what it was. For a heartbeat the fire is all the way out…"*
   After: *"The last stroke goes into the coals and the glyph goes dark. The fire goes all the way
