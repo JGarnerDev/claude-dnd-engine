@@ -18,7 +18,7 @@ Half-Orc Barbarian · Sage background (narrative) · level 4 · `level_confirmed
 - **weapons/** — [[Pilgrim's Wrap]] (Uncommon) · [[The Counterweight Toe]] (Common) · [[The Recited Edge]] (Uncommon)
 - **armor/** — [[Second Hands]] (Uncommon, attunement) · [[Walked-Out Boots]] (Common) · [[Shrine Leathers]] (Uncommon)
 - **misc/** — [[The Empty Reliquary]] (Common) · [[Quiet-Hours Bead]] (Common) · [[The Scorched Hearthstone]] (Common)
-- **Outside the menu:** [[Varrick's Parrying Bracer]] (Common, `status: confirmed`, the Session 30 waystation Common). Taken off the drover; +2 AC against one melee hit per short rest.
+- **Outside the menu:** [[Varrick's Cart-Whip]] (Common, `status: confirmed`, the waystation Common, Session 34). The drover's whip Dip took in Session 33: 1d6, a once-per-rest drag, and a hand with draft animals. [[Varrick's Parrying Bracer]] (Common, draft) held the slot until 2026-11-11.
 
 ## What these are built on
 

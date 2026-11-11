@@ -9,8 +9,7 @@ form: "forearm bracer, leather over a steel splint"
 rarity: common
 attunement: false
 bracket: "levels 4-5"
-status: confirmed
-confirmed_for: "Session 30 Keep the Ale"
+status: draft
 ---
 
 # Varrick's Parrying Bracer
@@ -49,4 +48,5 @@ Twice per short rest.
 ## Outside the menu
 
 Built for Session 30 from the waystation's own contents, not drawn from the nine-item menu. Picked
-by Jeff 2026-10-09 over the menu Commons, for what it does on Dip's sheet.
+by Jeff 2026-10-09 over the menu Commons, for what it does on Dip's sheet. Dropped back to draft
+2026-11-11: [[Varrick's Cart-Whip]] took the waystation Common instead.

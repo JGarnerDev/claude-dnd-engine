@@ -40,7 +40,7 @@ loose_threads:
   - "[[Session 33 The Red Trail]] played the hill and the opening of the camp fight; the rest of the fight, Nella's escape and tally, the intel, the haul home and the cell carry here"
   - "Silas's five horses scattered at the charge (recoverable, maybe lame or unshod); his cart is wrecked against the shed"
   - "Dip shouted at Iggy mid-charge that 'a flame went inside' him; whether that shared the nesting-doll vision is unconfirmed"
-  - "Dip took Varrick's cart-whip; Varrick's Parrying Bracer is still on his body"
+  - "Dip took Varrick's cart-whip; it is the waystation Common, Varrick's Cart-Whip, not yet revealed"
   - "The Citadel Clock is at 1/3 (Odibli's Magic Missile, sensed); the brief cold wasn't played at the table"
   - "Sable owes Odibli a talk about the self-feeding fire, and asked him to keep quiet until then"
   - "Sable's deed: 10% offered, Dip asked for more, a larger share open on their return; still unsigned"
@@ -312,7 +312,8 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   sorcery points unspent. Odibli has spent one 1st-level slot and still has **both Fireballs**.
   Luci has spent 1 focus point. Dip is **raging**. Iggy hasn't acted: Radiant Soul unspent.
 - **HP lost:** Iggy 22, Odibli 18, Halsby 9, Dip ~7, Luci 0.
-- **Gear:** Dip carries Varrick's cart-whip. Varrick's Parrying Bracer is still on his body.
+- **Gear:** Dip carries Varrick's cart-whip ([[Varrick's Cart-Whip]], the waystation Common). It
+  hits for 1d6 from now; its other properties are revealed in `S2_CAMP_INTEL`.
 - **The Citadel Clock is at 1 / 3:** Odibli's Magic Missile was sensed (rolled at the recap). The
   brief cold wasn't played at the table. **Give it to Miguel at the top,** before Iggy acts: *"A
   cold goes through you, quick, like stepping into shade. Then it's gone."*
@@ -669,10 +670,15 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
   feud. Nobody in the camp can say whose it is. Silas can, back home, and goes quiet when he does.
   - Vey, if he's a prisoner, as they take it down in front of him: *"That's not a bandit flag.
     Bandits don't have flags. That's someone's grandfather's flag."*
-- **The waystation Common: [[Varrick's Parrying Bracer]], for Dip.** It is on Varrick's left
-  forearm, still laced on his headless body by the cart (Dip killed him in Session 33). Once per
-  short rest, reaction: +2 AC against one melee hit Dip can see.
-  - **First touch:** the lacing has been redone so many times the holes have worn into slots.
+- **The waystation Common: [[Varrick's Cart-Whip]], for Dip** (`confirmed_for` this session).
+  Dip took it off Varrick's body in Session 33. Once the fight is over and they look at it, or the
+  first time they use it, it is more than a cart-whip: 1d6 slashing (whip mastery applies); once
+  per short rest, on a hit, drag a Large or smaller creature up to 10 ft toward Dip; advantage on
+  Animal Handling to drive, steer, or calm draft animals while holding it.
+  - **First touch:** it is heavier than it looks. Lead shot inside the plait, and the brass cap on
+    the handle is worn flat by one man's grip.
+  - **Payoff:** Silas's scattered horses are rounded up with Animal Handling in `S2_HAUL_HOME`. Dip
+    has advantage there with the whip in hand.
 
 The camp crew are named in Combatants, but none of them are entities. If one survives and matters,
 `/recap` creates them.

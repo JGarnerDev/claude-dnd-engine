@@ -38,7 +38,7 @@ flowchart TD
     S2_MORALE["[-] S2_MORALE<br/>Vey down or the crew down to two<br/>DC 12 WIS; the rest break"]
     S2_ESCAPE["[-] S2_ESCAPE<br/>Nella loses, and gets away<br/>Covering fire · 'Keep the ale.'<br/>A whistle: Tithe lands for her, one turn<br/>On foot: the bridge, then the river"]
     S2_TALLY["[x] S2_TALLY<br/>She drops her debt tally<br/>Notched antler and a counted purse"]
-    S2_CAMP_INTEL["[x] S2_CAMP_INTEL<br/>The band's size · Harrow Bane in the ledger<br/>The Marlow aegis-banner, theirs to take<br/>Varrick's Parrying Bracer, for Dip"]
+    S2_CAMP_INTEL["[x] S2_CAMP_INTEL<br/>The band's size · Harrow Bane in the ledger<br/>The Marlow aegis-banner, theirs to take<br/>Varrick's Cart-Whip, for Dip"]
     S2_FIGHT --> S2_TITHE_HUNTS
     S2_FIGHT --> S2_RELIEF
     S2_CRYSTALS -.->|"lies or a slip"| S2_FIGHT
