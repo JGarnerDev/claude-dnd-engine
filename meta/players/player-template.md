@@ -28,3 +28,6 @@ Character: [[{Character Name}]]
 
 ## Notes for the DM
 <!-- Anything else useful — scheduling, engagement style, things you've loved in past campaigns. -->
+
+## Working with
+<!-- How Claude should work with you when you're at the keyboard: how you read (phone or desk), how you like questions asked, what to avoid. Root CLAUDE.md -> Know who you're working with. -->

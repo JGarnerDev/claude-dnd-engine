@@ -6,6 +6,8 @@ Rules for battle-map layouts, their renders, and the Roll20 asset kits that dres
 
 ## Layouts and renders
 
+**Renders are references, not the map.** The DM builds each real map by hand in Roll20 (the Jumpgate editor: Tokens, GM, Map, Foreground and Lighting layers) with art assets and drawing tools, and does not upload the rendered PNG as the map. For Roll20 help, give sizes in cells, say which layer each piece goes on, and point at the key PNG only for positions.
+
 Session battlemaps are **text layouts kept beside the session plan, gitignored** (`scheduler/sessions/<Session folder>/maps/<name>.txt`, one char per 5-ft square, A1 top-left) and rendered by `uv run scripts/battlemap.py --session <n>`. The script's header documents the layout format and terrain chars. Output goes to `maps/battlemaps/session-<n>/` as `<name>-vtt.png` (clean, for Roll20/Foundry/Owlbear; `--px 100` for Foundry) and `<name>-key.png` (DM copy). Both are gitignored like every map image. Layouts are local planning reference, not record: anything the table needs (grid refs, distances) goes into the session plan itself. Edit the `.txt` and re-render; never hand-edit the PNGs. A token line names the combatant label first, then the real name and stat block: `P12  Dv  red  Drover -- Varrick Tenn (Bandit Captain), between cart and fire`. The key then agrees with the labels on the Roll20 tokens.
 
 `uv run scripts/battlemap.py --session <n>` or `uv run scripts/battlemap.py maps/battlemaps/<location>` `[--px <n>] [--vtt-grid]`.

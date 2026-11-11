@@ -34,7 +34,9 @@ prints the standings; `scripts/session-cards.py` hands them to the runner's slid
 - **Count / sum:** a stat is either a **count** of moments (reliable) or a **sum** of numbers
   (damage, HP). A sum mined from a transcript is **rough**: write it `~n`. Many rolls are never
   said aloud, so rough sums undercount. The DM corrects them at `/recap`, and a corrected sum
-  drops the `~`. A total that includes any rough value is rough.
+  drops the `~`. A total that includes any rough value is rough. When a count or sum is unclear
+  from the transcript, fill in a reasoned best guess and note what it rests on, rather than
+  asking the DM about each one; the DM corrects by number at `/recap`.
 - **Lane:** a category that only some builds can realistically win (healing, performing,
   unarmed, spells). It's there so every build has somewhere to shine.
 - **Award:** the top PC in one category for one session. **Winners only**: a category nobody

@@ -120,7 +120,7 @@ Keep it to 2–3 lines total. Skip if `--no-read` or if no player-contributed en
 
 ## Phase 4 — Save Pitch History
 
-After Step 3a (briefs), append a 2–3 word archetype summary for each pitch to `pitch-log/pitch-history.md`. Do not wait for expansion. Format:
+After Step 3a (briefs), append a 2–3 word archetype summary for each pitch to `pitch-log/pitch-history.md`. Do not wait for expansion. That file (gitignored, local to each machine) is the only record of past pitches; it was deliberately cleared in June 2026, so never backfill it from memory or treat older archetypes as off-limits. Format:
 
 ```markdown
 - {type}: {archetype summary}

@@ -21,6 +21,10 @@ description: "Ingest raw PC backstory into a proper historian PC file. Auto-trig
 
 **Format note:** Backstory content from players is flavor-authoritative for their own character. Treat it as confirmed unless it contradicts `historian/` canon, in which case flag and ask.
 
+## Character Sheets
+
+Roll20 character sheets (PDF exports) are the source of truth for a PC's mechanics and the facts on them, so the confirm-before-write rule above does not apply to them (Jeff, 2026-10-05). Write straight into the PC file: a `## Character Sheet (Roll20)` section and a `character_sheet:` field (Halsby's file is the model). A sheet overrides earlier canon on what it covers (Dip's Half-Orc became Orc; Iggy's Shazzam became 1/long rest). Ask only about real ambiguity or a likely typo, such as pronouns reading "The" or hit dice reading "2D3".
+
 ## Gap Analysis
 
 After parsing, check for missing or underdeveloped material across two categories:

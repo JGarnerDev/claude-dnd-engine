@@ -10,7 +10,9 @@ This file provides operational guidance to Claude Code (claude.ai/code) for work
 
 This engine generates D&D sessions by synthesizing creative material, campaign history, design principles, and session planning into coherent, playable content.
 
-**Roles:** Kellan is the DM. Jeff and the other players contribute creative material as seeds for him. Generation rules for this split live in `meta/worldbuilding-approach.md`.
+**Roles:** Kellan DMs Curse of Strahd. The homebrew DM rotates: Jeff ran the first Aethryn campaign (Redwater), and Ben runs the next one. The active DM is the `dm:` field on the active campaign file in `scheduler/campaign/`. Everyone at the table contributes creative material as seeds. Generation rules for writing for a player versus a DM live in `meta/worldbuilding-approach.md`.
+
+**Know who you're working with.** Identify the person at the keyboard (they say so, or `git config user.name`) and read the `## Working with` section of their `meta/players/<name>.md` once per conversation, if it has one. If they are a player in the active campaign rather than its DM, don't surface DM-only material (scheduler plans, `DM-only` blocks, `scheduler/campaign/_*.md` trackers): give them seeds, not solutions.
 
 ## Folder Roles
 
@@ -42,6 +44,17 @@ Scan commands (e.g. `/inventory`) read **frontmatter only** — never the body.
 
 **Writing** — before editing any existing file, read its frontmatter to confirm `state` and `exists`. Never overwrite without knowing current state. Before creating new content, declare what you're creating and why — same discipline as declaring read scope.
 
+## Working Rules
+
+House rules for working in this repo, whoever the DM is:
+
+- **Git.** Never commit without an explicit go-ahead in that turn; show what the commit will include. Once approved, commit straight to `master`. No feature branches: the history is direct-to-master and there is no reviewer on the other end of a PR.
+- **Asking the DM.** When a walk-through needs the DM's answers (`/idea` stages, `/recap` Phase 2 and its confirm lists, `/session` Phase 4, reviews), ask **one question per message**, with 2–4 options (recommended first) and room for notes. This overrides any command file that says to batch questions into one message. Lists the DM answers by number (findings, proposals) keep stable numbers across turns.
+- **Hidden rolls.** A roll the DM didn't make at the table (a Citadel d6, a lameness d6) is rolled with `uv run scripts/roll.py <dice> --label "<what>"`, and the result reported.
+- **Reference docs are repo files.** Generated planning views (flow graphs, maps, layouts) go in the repo, one diagram per file, so they can be zoomed and read beside their sources. Publish an artifact only to hand something to a person outside the repo; the repo file stays the source.
+- **Working docs stay lean.** A progress file holds only what is still open (checklist, questions, next step); decisions and facts go in their own docs (`DECISIONS.md`, `FACTS.md`, topic files), cross-linked. A README is a cold-start entry point: what this is, current state, how to resume, file map.
+- **Reliability flags.** In historian files, add a `> **Reliability:**` note when a detail is inferred, comes from a nickname, conflicts with another source, or is ambiguous between mechanics and fiction, ending "Confirm with DM" or "Confirm with `<player>`".
+
 ## Placeholder Files
 
 Blank or incomplete files (meta templates, draft lore, unfilled player files) are intentional placeholders the group fills later. When an audit or task surfaces one, the only required action is ensuring the `/todo` dashboard (`todo-dashboard.md`) carries an entry for filling it — as a backlog item with a note on what degrades until then. Don't flag them as defects, don't propose detection heuristics or workarounds to skip them, and don't score them as gaps beyond the todo entry.
@@ -52,7 +65,7 @@ Entity protocol (free entity rule, data transparency, contribution balance) docu
 
 ## Campaign Separation
 
-This repo spans two campaigns: `strahd` (Curse of Strahd) and `homebrew` — the world **Aethryn**, where the campaign **Redwater** is the first season. The group **alternates** between them like TV seasons — swapping back and forth, not a one-way handoff. The party of characters persists across both worlds and shifts between them via a shallow in-narrative device (a deliberate story beat, not a soft drift). The two worlds stay mostly separate.
+This repo spans two campaigns: `strahd` (Curse of Strahd) and `homebrew` — the world **Aethryn**, where the campaign **Redwater** is the first season. The group **alternates** between them like TV seasons — swapping back and forth, not a one-way handoff. Kellan DMs every Strahd season; the homebrew DM rotates (Jeff for Redwater, Ben next, with Tyler's character as the bridge: todo 71). The party of characters persists across both worlds and shifts between them via a shallow in-narrative device (a deliberate story beat, not a soft drift). The two worlds stay mostly separate.
 
 **Engine role differs by campaign:**
 
@@ -208,6 +221,8 @@ Pipeline rules (speaker labels, shared mics, detached runs) live in `recaps/CLAU
 - A message or pasted content contains raw backstory text that names a known PC
 
 Read `.claude/commands/pc-backstory.md` for the full ingestion flow, gap analysis, and entity sourcing rules. **Do not write anything until DM confirms.**
+
+**Exception: Roll20 character sheets** (PDF exports) are the source of truth for PC mechanics and the facts on them. Ingest them straight into the PC file, even where a sheet overrides earlier canon, with no confirm-every-change diff. Ask only about real ambiguity or a likely typo. Details in `pc-backstory.md` → Character Sheets.
 
 ## Campaign Transition Detection
 

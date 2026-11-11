@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.62.0] — 2026-11-11
+
+### Added
+
+- **Working Rules** in root `CLAUDE.md`: commit only on go-ahead and straight to `master`; one question per message when the DM must answer (overrides any "batch" wording in command files); hidden rolls through `scripts/roll.py`; reference docs as repo files; lean working docs; reliability flags. Moved from Jeff's local Claude memory so the next DM's Claude has them.
+- **Know who you're working with** (root `CLAUDE.md`): read the person's `meta/players/<name>.md` → `## Working with` section, and keep DM-only material from a player who isn't the active DM. `player-template.md` gains that section; Jeff's is filled, Ben's is todo 98.
+- Roll20 character sheets ingest without a confirm diff (`/pc-backstory` → Character Sheets); renders are layout references only (`maps/battlemaps/CLAUDE.md`); blank questionnaire answers stay deliberately vague (`/entity-questionnaire`); unclear transcript stats get best guesses (`meta/stats.md`); the pitch log is never backfilled (`/pitch`).
+
+### Changed
+
+- Root `CLAUDE.md` Roles: Kellan DMs Strahd; the homebrew DM rotates (Jeff for Redwater, Ben next), read from the active campaign file's `dm:` field.
+
 ## [0.61.0] — 2026-11-11
 
 ### Changed

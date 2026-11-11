@@ -142,7 +142,7 @@ Triggered by `--ingest <file>`, `--ingest paste`, or automatically whenever a me
 
 ### Ingest Phase 1 — Read Answers
 
-Parse the filled questionnaire. Extract what was answered and note blanks. Read `entity_type` from the CLAUDE-INGEST block to know which schema applies.
+Parse the filled questionnaire. Extract what was answered and note blanks. **Blanks are deliberate:** a question left empty is space the DM elaborates in play, not unfinished work. Note it in the entity body as "deliberately vague — DM elaborates in play", and don't generate a follow-up questionnaire or a todo entry for it unless the DM asks. Read `entity_type` from the CLAUDE-INGEST block to know which schema applies.
 
 If the file lives in `questionnaires/` and has real answers, set `filled: true` in its `CLAUDE-INGEST` block now (add the line if the file predates the marker). `/session` cameo detection and other scans rely on this marker — template `>` blockquote heuristics false-positive, and `questionnaires/` is gitignored so ripgrep-based tools can't see it (use POSIX grep via Bash, recursively — the tree has topic subfolders).
 
