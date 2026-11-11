@@ -1,7 +1,9 @@
 // The top of a scene page: what the scene is doing, where, who is in it, the
 // enemies as compact rows that expand to their stat blocks, and the DCs. Each
 // enemy row carries every attack line and an HP box (current / max) the DM types
-// damage into; scene.ts wires the box, the runner stores the numbers.
+// damage into; scene.ts wires the box, the runner stores the numbers. To-hit
+// bonuses, damage dice, checks and saves are dice buttons (dice.ts); scene.ts
+// rolls them into the roll log under the Enemies heading.
 
 import { escapeHtml, inline, renderMarkdown } from './markdown.js';
 import type { Known } from './markdown.js';
@@ -9,6 +11,7 @@ import { matchEnemy } from './combatants.js';
 import type { StatBlock } from './combatants.js';
 import type { SceneHeader } from './scene-header.js';
 import { stripProvenance } from './provenance.js';
+import { rollableHtml } from './dice.js';
 
 const row = (label: string, body: string, isChips = false) =>
   body ? `<div class="sr-sh-row"><span class="sr-sh-label">${label}</span><div class="sr-sh-val${isChips ? ' is-chips' : ''}">${body}</div></div>` : '';
@@ -37,7 +40,7 @@ function enemyHtml(entry: string, blocks: StatBlock[], known: Known, hp: HpMap):
   const b = matchEnemy(entry, blocks);
   if (!b) return `<div class="sr-enemy is-unmatched"><span class="sr-enemy-name">${inline(entry, known)}</span></div>`;
   const down = b.hp !== null && (hp[entry] ?? b.start ?? b.hp) <= 0;
-  const atks = b.attacks.map((a) => `<span class="sr-atk">${inline(stripProvenance(a), known)}</span>`).join('');
+  const atks = b.attacks.map((a) => `<span class="sr-atk">${rollableHtml(inline(stripProvenance(a), known))}</span>`).join('');
   return `
     <details class="sr-enemy${down ? ' is-down' : ''}">
       <summary>
@@ -46,7 +49,7 @@ function enemyHtml(entry: string, blocks: StatBlock[], known: Known, hp: HpMap):
         <span class="sr-enemy-atk">${atks}</span>
         ${b.hp !== null ? hpHtml(entry, b.hp, hp, b.start ?? b.hp) : '<span></span>'}
       </summary>
-      <div class="sr-md sr-enemy-block"><div class="sr-enemy-title">${escapeHtml(b.title)}</div>${renderMarkdown(stripProvenance(b.md), known)}</div>
+      <div class="sr-md sr-enemy-block"><div class="sr-enemy-title">${escapeHtml(b.title)}</div>${rollableHtml(renderMarkdown(stripProvenance(b.md), known))}</div>
     </details>`;
 }
 
@@ -61,7 +64,8 @@ export function sceneHeadHtml(h: SceneHeader, blocks: StatBlock[], known: Known,
     </div>
     ${h.enemies.length ? `
     <div class="sr-enemies">
-      <div class="sr-enemies-head"><span class="sr-sh-label">Enemies</span><button type="button" class="sr-hp-reset" title="Put every enemy back to its known HP at the start of the session">Reset HP</button></div>
+      <div class="sr-enemies-head"><span class="sr-sh-label">Enemies</span><span class="sr-enemies-btns"><button type="button" class="sr-roll-clear" title="Clear the roll log" hidden>Clear rolls</button><button type="button" class="sr-hp-reset" title="Put every enemy back to its known HP at the start of the session">Reset HP</button></span></div>
+      <ol class="sr-roll-log" aria-live="polite"></ol>
       ${h.enemies.map((e) => enemyHtml(e, blocks, known, hp)).join('')}
       ${h.tactics ? `<p class="sr-tactics">${p(h.tactics)}</p>` : ''}
     </div>` : ''}`;

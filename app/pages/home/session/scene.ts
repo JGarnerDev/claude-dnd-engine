@@ -10,6 +10,8 @@ import { sceneHeadHtml } from './scene-head.js';
 import { stepsHtml } from './steps.js';
 import { stripProvenance } from './provenance.js';
 import { applyHp } from './combatants.js';
+import { roll, rollDetailHtml } from './dice.js';
+import type { Roll, RollKind, RollMode } from './dice.js';
 import type { StatBlock } from './combatants.js';
 import type { HpMap } from './scene-head.js';
 import type { FlowNode, Scene } from './types.js';
@@ -107,6 +109,7 @@ export function renderScene(main: HTMLElement, v: SceneView): void {
     });
   }));
   wireHp(main, v);
+  wireRolls(main);
   const tokens = main.querySelector<HTMLDetailsElement>('.sr-tokens-box');
   tokens?.addEventListener('toggle', () => v.onTokensToggle(tokens.open));
   main.scrollTop = sameScene ? scroll : 0;
@@ -145,4 +148,48 @@ function wireHp(main: HTMLElement, v: SceneView): void {
       v.onHp(box.dataset.entry!, null);
     });
   });
+}
+
+// Dice buttons sit in the enemy rows' <summary> too, so a click rolls without toggling
+// the block. The log lives here, not in the runner's store: rolls are for the moment,
+// and it survives re-renders within the page but not a reload.
+interface LoggedRoll { who: string; what: string; r: Roll }
+const rollLog: LoggedRoll[] = [];
+const LOG_SIZE = 6;
+
+function logHtml(): string {
+  return rollLog.map(({ who, what, r }, i) => {
+    const tag = r.nat === 20 ? ' is-nat20' : r.nat === 1 ? ' is-nat1' : '';
+    const mode = r.mode === 'adv' ? ' · adv' : r.mode === 'dis' ? ' · dis' : r.mode === 'crit' ? ' · crit' : '';
+    const kind = r.kind === 'hit' ? 'to hit' : r.kind === 'dmg' ? 'damage' : 'roll';
+    return `<li class="sr-roll-entry${tag}${i === 0 ? ' is-latest' : ''}"><b class="sr-roll-total">${r.total}</b>
+      <span class="sr-roll-what">${escapeHtml(who)} · ${escapeHtml(what)} · ${kind}${mode}</span>
+      <span class="sr-roll-detail">${rollDetailHtml(r)}</span></li>`;
+  }).join('');
+}
+
+function wireRolls(main: HTMLElement): void {
+  const log = main.querySelector<HTMLElement>('.sr-roll-log');
+  const clear = main.querySelector<HTMLButtonElement>('.sr-roll-clear');
+  const show = () => {
+    if (log) log.innerHTML = logHtml();
+    if (clear) clear.hidden = !rollLog.length;
+  };
+  show();
+  clear?.addEventListener('click', () => { rollLog.length = 0; show(); });
+  main.querySelectorAll<HTMLButtonElement>('.sr-roll').forEach((b) => b.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    ev.stopPropagation();
+    const kind = b.dataset.kind as RollKind;
+    const mode: RollMode = kind === 'dmg' ? (ev.shiftKey ? 'crit' : 'normal') : ev.shiftKey ? 'adv' : ev.altKey ? 'dis' : 'normal';
+    const r = roll(b.dataset.roll!, kind, mode);
+    if (!r) return;
+    const enemy = b.closest('.sr-enemy');
+    const who = enemy?.querySelector('.sr-enemy-name')?.textContent?.trim() ?? '';
+    const line = b.closest('.sr-atk, li');
+    const what = b.dataset.label ?? line?.querySelector('strong')?.textContent?.replace(/:$/, '').trim() ?? '';
+    rollLog.unshift({ who, what, r });
+    rollLog.length = Math.min(rollLog.length, LOG_SIZE);
+    show();
+  }));
 }

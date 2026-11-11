@@ -73,8 +73,10 @@
 .sr-sh-chip { background: var(--sr-surface); border: 1px solid var(--sr-line); border-radius: 999px; padding: 1px 10px; font-size: 14px; }
 .sr-enemies { background: color-mix(in srgb, var(--sr-k-combat) 8%, var(--sr-bg)); border: 1px solid color-mix(in srgb, var(--sr-k-combat) 45%, var(--sr-line)); border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; }
 .sr-enemies-head { display: flex; justify-content: space-between; align-items: baseline; }
-.sr-hp-reset { font-size: 11.5px; padding: 1px 8px; background: transparent; color: var(--sr-muted); border: 1px solid var(--sr-line); border-radius: 4px; cursor: pointer; }
-.sr-hp-reset:hover { color: var(--sr-text); background: var(--sr-surface); }
+.sr-enemies-btns { display: flex; gap: 6px; }
+.sr-hp-reset, .sr-roll-clear { font-size: 11.5px; padding: 1px 8px; background: transparent; color: var(--sr-muted); border: 1px solid var(--sr-line); border-radius: 4px; cursor: pointer; }
+.sr-roll-clear[hidden] { display: none; }
+.sr-hp-reset:hover, .sr-roll-clear:hover { color: var(--sr-text); background: var(--sr-surface); }
 .sr-enemy > summary { display: grid; grid-template-columns: minmax(150px, 1fr) minmax(130px, 0.9fr) 2fr auto; gap: 10px; align-items: baseline; padding: 5px 0; cursor: pointer; list-style: none; font-size: 14px; border-top: 1px solid var(--sr-line); }
 .sr-enemy:first-of-type > summary { border-top: none; }
 .sr-enemy > summary::-webkit-details-marker { display: none; }
@@ -90,6 +92,18 @@
 .sr-enemy.is-down > summary { opacity: 0.5; }
 .sr-enemy.is-down .sr-enemy-name { text-decoration: line-through; }
 .sr-enemy.is-down .sr-hp-val b { color: var(--sr-k-combat); }
+.sr-roll { font: inherit; color: inherit; background: color-mix(in srgb, var(--sr-k-combat) 12%, transparent); border: none; border-bottom: 1px dashed color-mix(in srgb, var(--sr-k-combat) 70%, transparent); border-radius: 3px; padding: 0 2px; cursor: pointer; }
+.sr-roll:hover { background: color-mix(in srgb, var(--sr-k-combat) 30%, transparent); color: var(--sr-text); }
+.sr-roll-log { list-style: none; margin: 4px 0 6px; padding: 0; display: flex; flex-direction: column; gap: 2px; font-size: 13px; }
+.sr-roll-log:empty { display: none; }
+.sr-roll-entry { display: flex; align-items: baseline; gap: 8px; color: var(--sr-muted); }
+.sr-roll-entry.is-latest { color: var(--sr-text); }
+.sr-roll-total { min-width: 2.2em; text-align: right; font-size: 15px; font-variant-numeric: tabular-nums; color: var(--sr-text); }
+.sr-roll-entry.is-latest .sr-roll-total { font-size: 18px; color: var(--sr-accent); }
+.sr-roll-entry.is-nat20 .sr-roll-total { color: var(--sr-k-stake); }
+.sr-roll-entry.is-nat1 .sr-roll-total { color: var(--sr-k-combat); }
+.sr-roll-detail { font-variant-numeric: tabular-nums; opacity: 0.8; }
+.sr-roll-detail s { opacity: 0.6; }
 .sr-enemy.is-unmatched { padding: 5px 0; font-size: 14px; }
 .sr-enemy-block { padding: 4px 0 10px 14px; border-left: 3px solid var(--sr-k-combat); margin: 4px 0 8px; }
 .sr-enemy-title { font-weight: 700; margin-bottom: 4px; }

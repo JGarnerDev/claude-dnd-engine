@@ -103,6 +103,27 @@ describe('renderScene', () => {
     expect(onHp).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', null);
   });
 
+  it('rolls an enemy attack into the log without opening its stat block, and keeps the log across renders', () => {
+    const main = document.createElement('main');
+    renderScene(main, view());
+    const hit = main.querySelector<HTMLButtonElement>('.sr-enemy-atk .sr-roll[data-kind="hit"]')!;
+    expect(hit.textContent).toBe('+4 to hit');
+    hit.click();
+    expect(main.querySelector('details.sr-enemy')!.hasAttribute('open')).toBe(false);
+    const entry = main.querySelector('.sr-roll-log .sr-roll-entry')!;
+    expect(entry.querySelector('.sr-roll-what')!.textContent).toBe('Archer Rider (Ilsa Hask) · Longbow · to hit');
+    const total = Number(entry.querySelector('.sr-roll-total')!.textContent);
+    expect(total).toBeGreaterThanOrEqual(5);
+    expect(total).toBeLessThanOrEqual(24);
+    renderScene(main, view());
+    expect(main.querySelectorAll('.sr-roll-log .sr-roll-entry').length).toBeGreaterThanOrEqual(1);
+    const clear = main.querySelector<HTMLButtonElement>('.sr-roll-clear')!;
+    expect(clear.hidden).toBe(false);
+    clear.click();
+    expect(main.querySelectorAll('.sr-roll-log .sr-roll-entry').length).toBe(0);
+    expect(clear.hidden).toBe(true);
+  });
+
   it('opens only the current step, with intro and choice, and hides tokens and provenance', () => {
     const main = document.createElement('main');
     renderScene(main, view());

@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.59.0] — 2026-11-11
+
+### Added
+
+- **Enemy dice rollers.** In the session runner's enemy rows and stat blocks, to-hit bonuses ("+4 to hit", "beak +6, 1d8+4"), damage dice ("1d6+2", Sneak Attack's "+2d6"), skills and abilities ("Perception +5", "WIS +3") and save notes ("(it has +3)") are click-to-roll. Shift rolls with advantage (a crit on damage), Alt with disadvantage. Results land in a roll log under the Enemies heading with the dice shown; natural 20s and 1s are colored; **Clear rolls** empties it. Rolling never opens the stat block (`app/pages/home/session/dice.ts`, `scene.ts`, `scene-head.ts`, `session.css`).
+
 ## [0.58.0] — 2026-11-11
 
 ### Added
