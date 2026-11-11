@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.56.0] — 2026-11-10
+
+### Added
+
+- **Enemy HP tracker in the session runner.** Each enemy row in a scene's Enemies box carries a current/max HP box: type `12` or `-12` for damage, `+5` to heal, `=40` to set, Enter applies. At 0 the row dims and strikes through. HP is kept per enemy entry (two Thugs track separately), survives a page reload, and clears on **Reset HP** or **Restart** (`app/pages/home/session/combatants.ts`, `scene.ts`, `store.ts`).
+- **Difficulty: area damage per body, and round 0** (`meta/difficulty.md` → Axis 2). Party damage now counts each area spell against every enemy it reaches in the plan's own positions, and takes the party's opener (readied actions, surprise, a planned set piece) off monster HP before RTC. A fight meant to sting wants RTC 3+ *after* round 0. Levers for a short RTC are listed. Party Profile's power level is filled: plays above the sheet. `/session`'s encounter step points at both.
+
+### Fixed
+
+- **Runner enemy rows showed only the first attack.** The compact row now lists every attack line in the stat block: each weapon, Multiattack, dice features (Sneak Attack, Marked Quarry), save spells (Sacred Flame) and reactions (Parry). `StatBlock.attack` became `attacks: string[]`, plus `hp`.
+
 ## [0.55.0] — 2026-11-08
 
 ### Added

@@ -14,7 +14,7 @@ class: "Bard 3 (College of Valor) / Paladin 2"
 background: "Entertainer"
 homeland: [[Threnai]]
 level: 5
-level_confirmed: 32
+level_confirmed: 33
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Iggadron \"Iggy\" Wallaed (Bard 3 Valor / Paladin 2 from Session 30)"
 aliases:

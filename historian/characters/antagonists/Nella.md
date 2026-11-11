@@ -18,7 +18,7 @@ personality: "Patient and watchful. Tracks, waits, and picks off from range; dis
 livelihood: "Bandit lieutenant — the band's hunter and marksman, raiding for House Marlow, unofficially."
 disposition: hostile
 voice: "Patient and dry, never raised: short sentences from a long way off, and she counts things aloud."
-voice_confirmed: 32
+voice_confirmed: 33
 
 # --- OPTIONAL (entity base) ---
 importance: minor

@@ -14,7 +14,10 @@ Difficulty is a two-axis spectrum. **Attrition** and **lethality** are independe
 ## Party Profile
 
 - **Level & size:** derived live, never hard-coded here. Source of truth is the `level` field in each PC's frontmatter (`historian/characters/pcs/`), surfaced by `party-status.py`. During `/session` orientation, state the derived level and party size and ask the DM to confirm. **Budget each fight at the level the party will be when it fights it.** If the plan levels a PC before or during an encounter, run the numbers at the new level. A mid-fight level-up can bring Extra Attack, a new spell level or more HP into that same fight. Each PC also carries `level_confirmed: <session number>` — restamped by every `/recap` — and `party-status.py` prints a LEVEL STALE warning when the stamp lags the latest played session, catching level-ups that missed canonization.
-- **General power level:** <!-- are they optimized, casual, somewhere in between? -->
+- **General power level:** plays above the sheet. Two homebrew fights in a row ended faster than
+  planned, the second after the rules below were added to stop it (Session 33: four of ten enemies
+  dead before the end of round 1). Assume the party opens with its best area spell and a set-up
+  it planned, every time, and size against that, not against its average turn.
 
 ## Axis 1: Attrition
 
@@ -50,6 +53,11 @@ How capable the monsters are of actually killing a PC. Measured by two numbers a
 - **Tactics** — the free lever. Focus fire, attacking downed PCs, intelligent target selection (casters first). The same statblock swings an entire tier on tactics alone.
 - **Rounds-to-clear (RTC)** — total monster HP ÷ party damage per round. RTD only counts if the monsters live long enough to act, and RTC says whether they will. Estimate party damage from the sheets: each PC's usual round, with nova options (area spells, Twinned Spell, Extra Attack) counted on a fresh rest. **RTC under 2 means the fight is over before RTD matters**, whatever tier it claims. A fight meant to sting wants RTC 3+.
 - **One-hit bodies** — a monster whose HP is at or below one average PC hit usually dies before its first turn. Count each one as **half a body** in the action economy, and expect area damage to remove several at once. Six of them are not six threats. Every fight meant to sting needs at least one creature that survives two average hits.
+- **Area damage counts per body hit.** For each area spell the party holds, count how many enemies it reaches *in the plan's own positions*, and multiply. Enemies holding a station together (behind a barricade, around a cart, in a doorway) are a line or a sphere waiting to happen: a Lightning Bolt through four of them is ~100 damage, not the ~28 a single-target estimate books. Put the party's best area spell into party damage once, at full value, whenever the enemy layout allows it.
+- **Count round 0.** Readied actions, surprise, free turns before initiative, and set pieces the party plans (a charge, a sprung ambush, a cart driven into the yard) give the party a round before the monsters act. Book it as the party's nova plus its best area spell, take it off monster HP first, and only then compute RTC. **A fight meant to sting wants RTC 3+ after round 0.**
+- **Levers when RTC comes out short** (pick by fit, don't stack them all): spread the stations so no line or 20-ft sphere covers more than two bodies · give the anchor enough HP to survive round 0 and two average hits · stagger arrivals, so reinforcements land in round 2 or 3 where the opener can't reach them · keep one threat out of reach until it matters (in the air, behind a door, across water).
+
+Session 33 is the worked example. The plan booked ~85 party damage a round against a 203-HP floor (RTC ~2.4). At the table, a readied Lightning Bolt through four of the crew posted together behind the cart did ~100. With two free turns before initiative, that made ~125 before any enemy acted, and four of the ten were dead before the end of round 1.
 
 Tiers:
 

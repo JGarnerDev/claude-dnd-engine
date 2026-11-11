@@ -178,3 +178,29 @@ Stats ledger (meta/stats.md). One `## Session <n>` per session, both campaigns, 
 ### Halsby
 
 - spells-cast: 1
+
+## Session 33
+
+### Halsby
+
+- killing-blows: 1
+- damage-dealt: ~106
+- spells-cast: 2
+
+### Dip
+
+- killing-blows: 2
+- damage-dealt: ~50
+
+### Luci
+
+- killing-blows: 1
+- damage-dealt: ~23
+- unarmed-hits: 4
+- unarmed-damage: ~23
+- spells-cast: 2
+
+### Odibli
+
+- damage-dealt: ~11
+- spells-cast: 1

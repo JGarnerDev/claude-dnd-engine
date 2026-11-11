@@ -15,7 +15,7 @@ race: "Orc"
 class: "Barbarian (Path of the Berserker)"
 background: [[Sage]]
 level: 5
-level_confirmed: 32
+level_confirmed: 33
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Dip T (Barbarian 4, Path of the Berserker)"
 pronouns: "they/them"

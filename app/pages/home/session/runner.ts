@@ -92,9 +92,15 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
       known,
       closingHook: s.closingHook,
       combatants,
+      hp: state.hp,
       tokensOpen: state.tokensOpen,
       onGo: go,
       onTokensToggle: (open) => { state.tokensOpen = open; saveState(s.folder, state); },
+      onHp: (entry, value) => {
+        if (value === null) delete state.hp[entry];
+        else state.hp[entry] = value;
+        saveState(s.folder, state);
+      },
       bodyHtml: current === RECAP_ID ? recapHtml(data, known) : undefined,
     });
     const isRecap = current === RECAP_ID;
@@ -120,8 +126,9 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
   root.querySelector('.sr-actions')!.addEventListener('click', (ev) => {
     const act = (ev.target as HTMLElement).closest<HTMLElement>('[data-act]')?.dataset.act;
     if (act === 'back') back();
-    if (act === 'restart' && confirm('Restart the session from the first card? The path walked so far is cleared.')) {
+    if (act === 'restart' && confirm('Restart the session from the first card? The path walked so far and enemy HP are cleared.')) {
       state.history = [g.start!];
+      state.hp = {};
       render();
     }
     if (act === 'copy') {

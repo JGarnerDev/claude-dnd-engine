@@ -4,13 +4,33 @@ name: "Session 33 The Red Trail"
 campaign: homebrew
 type: session
 session_number: 33
-exists: false
-state: planned
+exists: true
+state: completed
 tags:
   - session
 
 mission: [[The Stolen Casks]]
 planned_date: "2026-11-10"
+played_date: "2026-11-10"
+in_world_end_date: "6743-05-21"
+in_world_end_time: "11:00"
+recap: "At about 10 a.m. on Day 2 the party stood on the hill above the waystation while the camp, warned by Halsby's broadcast, armed itself. Halsby, still invisible near the bridge, whispered 'going dark' into his crystal. The rest planned fast. They held Pablo back from the camp's oats and drove Silas Crubb's cart down the hill with all five horses, Dip on the reins and Luci beside him, Iggy and Odibli behind with Sergei and Bosco. About 100 ft out Dip cut the horses loose with his axe and tried to turn the cart by hauling on the shaft. It turned too little, glanced off the long shed, and slammed into the big cask-hand, knocking him flat. Everyone jumped clear; Dip took a knock landing. Halsby, who had seen the cart coming and readied a spell, sent a Lightning Bolt from the tip of the Shadowless Spear through four of the crew. It burned the drover and both cask-hands and killed the hedge priest, whose holy symbol shattered in her hand. The lightning sent Silas's horses running. Luci, on the wrecked cart, hit the tally-man with two bolts of light, and Dip, raging, cut into the drover. The tally-man stabbed Halsby. Nella, on her griffon about 90 ft up under the low cloud, loosed two arrows: one went wild and struck the big cask-hand, and one hit Dip. When Halsby cast through the Spear, Luci felt the warmth on her face go cold for a breath. Luci flipped off the cart and killed the big cask-hand with a beam to the back of the head. Halsby hasted himself and stabbed the tally-man. The archer from the fork came out of the shed and cut Iggy, shouting that they had killed her friend; her wolf went for Odibli and nearly took him off his feet. Dip took the drover's head off, saying 'Who's the bastard now?', took his cart-whip, and split the wolf in half, then swung at the archer, who yelled that she didn't have his daughter. The half-orc cask-hand mallet-struck Halsby, who held his Haste; the roof guard's bolt missed Dip; Odibli hit the archer with Magic Missile. The tally-man missed Halsby twice, and Nella swooped low with a scream from the griffon and shot Iggy and Odibli. The session ended there, mid-fight."
+cliffhanger: "About 11 a.m. on Day 2 (~estimate), mid-fight in the waystation yard. The drover, the hedge priest, the big cask-hand and the wolf are dead. The tally-man and the half-orc cask-hand are on Halsby, the badly hurt archer is near Iggy, and the roof guard is on the corner of the shed roof. Nella circles about 60 ft up on the griffon. Halsby is hasted. Silas's horses are scattered and his cart is wrecked against the shed. Iggy, missed from initiative, acts first."
+entities_canonized: []
+new_entities:
+  - "Varrick Tenn (the drover), Hesper Mudd (the hedge priest), Haddo Keel (the big cask-hand) and Cinder (the wolf): killed at the waystation. Plan names only, not entities; the party never learned them"
+  - "Varrick's cart-whip: taken by Dip off the body. Gear, not an item file"
+table_notes: "The cart charge was the big set piece and a glorious failure ('This has been a tremendous failure'). Halsby's lightning and his ash-outline description, Dip's beheading line, the 'I don't have your daughter' exchange and 'the wolf thinks Sergei is a class traitor' all landed. About 15 minutes went to a horses mix-up: the players heard 'we don't have six horses' (Pablo was the sixth) as 'no horses' and built a horseless plan; the DM let them re-plan. Setting up initiative for ~20 creatures took real time, and Iggy was left out of it. Token names weren't visible to players at first, and the Shadowless Spear isn't on Halsby's Roll20 sheet yet. Rules looked up at the table: readied-action triggers, Lightning Bolt rolls damage once (RAW), no stealth disadvantage on saves, Cleave once per turn, Haste's extra action can't cast spells. DM notes after: the engine still underestimates the party's damage (fixed in v0.56.0: area damage per body, round 0), the runner needed an HP tracker (added), and enemy rows hid all but the first attack (fixed). The DM wants this fight stepped up for Session 34. Jeff had a rough day; the session ran to 11 p.m."
+choices:
+  - "party: a cart charge down the hill instead of using the full ten minutes or a quieter approach → the crew saw them coming but held their stations, and the fight started on the party's terms"
+  - "Halsby: kept what he saw to himself and readied Lightning Bolt for the first move → opened the fight from invisibility and killed the hedge priest"
+  - "Dip: cut Silas's horses loose at speed and steered by hand → the horses scattered (recoverable), Silas's cart is wrecked, and Silas will want an accounting"
+beats:
+  - "party-centric: beat"
+  - "spotlight(Dip): beat"
+  - "spotlight(Halsby): beat"
+  - "spotlight(Luci): touch"
+  - "spotlight(Odibli): touch"
 pcs_present:
   - "Iggy"
   - "Luci"
@@ -62,12 +82,29 @@ relates_to:
   - "[[The Wanderer's Boon]] (shown inert)"
   - "[[The Shadowless Spear]] (its first real fight)"
   - "[[Harrow Bane]] (named in the camp's ledger; still no face)"
+deck_weight: light
 importance: critical
 active: true
 description: "The camp half of the Red Trail, carried from Session 32 (which played the chase, the fork and the scout). The party has ten minutes to plan against a mobilised waystation, with Nella already in the air on her griffon. Then the escape and the dropped tally, the casks home, and a silent prisoner in Mara's cell. Daylight under low cloud: the camp dug in and laid an ambush on the warning, and Nella fights out of the cloud."
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
+
+> **Played 2026-11-10 (recap 2026-11-10).** The table ran the hill and the opening of the fight,
+> and stopped in round 2. Played: `S2_TEN_MINUTES` (a fast plan; Pablo held), `S2_SPOTTER`
+> (Halsby stayed and said nothing), `S2_AMBUSH` (Ilsa and Cinder came from the shed, not the tree
+> line), `S2_APPROACH_CHOICE` (assault, by cart charge), `S2_FIGHT` (rounds 0–1 and the start of 2),
+> and Sabathiel and the Spear (Luci). Not played: the rest of `S2_FIGHT`, `S2_IGGY_BEAT`,
+> `S2_MORALE` (the DM chose not to roll it at the drover's death), `S2_ESCAPE`, `S2_TALLY`,
+> `S2_CAMP_INTEL`, Scene 4. They carry to [[Session 34 The Red Trail]].
+>
+> **Reliability:** digested from a machine transcript. Damage figures and who-hit-whom are read
+> from table talk and are rough; Luci's kill shot damage was not said. The hedge priest was
+> narrated as "him" at the table (the plan has her as a woman). Halsby's "going dark" is taken as
+> sent to every crystal holder, so the crew heard it (no PC was in sight to send to one).
+> Mid-charge, Dip shouted at Iggy that "a flame went inside" him the night of the fire; whether
+> that shared the nesting-doll vision in character is unconfirmed, and the vision is still
+> treated as Dip's own. In-world time (one hour) is the DM's estimate. Confirm with DM.
 
 > **Carried from [[Session 32 The Red Trail]] at its `/recap` (2026-11-04).** Session 32 played
 > Scene 1, Scene 2 and the start of Scene 3 (`S2_SCOUT`, with `S2_CRYSTALS` firing). Scenes 1 and 2

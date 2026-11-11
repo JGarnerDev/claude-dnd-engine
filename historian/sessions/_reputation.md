@@ -53,3 +53,20 @@ Reputation ledger (meta/reputation.md). One `## Session <n>` per homebrew sessio
 - infamy · The Waystation · minor × witnesses × style · lvl 5 = 1,105: Charged Nella's rear guard
   yelling for a daughter, cut the crossbowman down and beat him with his own leg.
 - known · infamy: Screams for a daughter, then beats you with your leg.
+
+## Session 33
+
+### Dip
+
+- infamy · The Waystation · notable × witnesses × style · lvl 5 = 7,345: Beheaded the camp's drover
+  after the drover called him a bastard, and took his whip.
+- fame · The Waystation · minor × style · lvl 5 = 553: Drove a cart into a bandit camp at full
+  speed and cut the horses loose on the way in.
+- known · infamy: Took the drover's head and his whip.
+
+### Halsby
+
+- infamy · The Waystation · notable × witnesses × style · lvl 5 = 7,345: Opened the fight with a
+  bolt of lightning out of nowhere that burned four of the crew and left the hedge priest as a
+  hard outline of ash.
+- known · infamy: Lightning from nowhere. The priest was ash.

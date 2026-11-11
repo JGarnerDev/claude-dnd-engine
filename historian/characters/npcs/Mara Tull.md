@@ -39,7 +39,7 @@ allies:
   - "[[Elowen Rimetusk]] (the old mage, formidable on her good days)"
 charm_hook: "She lost both her son and her daughter in the war — the wound that made her the wall Ashford leans on, and she has never once mentioned it to ask for anything."
 voice: "Short, plain soldier's report: what happened, how many, what's next. Gives an order once."
-voice_confirmed: 32
+voice_confirmed: 33
 ---
 
 Location: [[Ashford]]

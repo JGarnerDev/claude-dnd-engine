@@ -72,12 +72,24 @@
 .sr-sh-val.is-chips { display: flex; flex-wrap: wrap; gap: 4px 6px; }
 .sr-sh-chip { background: var(--sr-surface); border: 1px solid var(--sr-line); border-radius: 999px; padding: 1px 10px; font-size: 14px; }
 .sr-enemies { background: color-mix(in srgb, var(--sr-k-combat) 8%, var(--sr-bg)); border: 1px solid color-mix(in srgb, var(--sr-k-combat) 45%, var(--sr-line)); border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; }
-.sr-enemy > summary { display: grid; grid-template-columns: minmax(180px, 1.1fr) minmax(160px, 1fr) 1.6fr; gap: 10px; align-items: baseline; padding: 5px 0; cursor: pointer; list-style: none; font-size: 14px; border-top: 1px solid var(--sr-line); }
+.sr-enemies-head { display: flex; justify-content: space-between; align-items: baseline; }
+.sr-hp-reset { font-size: 11.5px; padding: 1px 8px; background: transparent; color: var(--sr-muted); border: 1px solid var(--sr-line); border-radius: 4px; cursor: pointer; }
+.sr-hp-reset:hover { color: var(--sr-text); background: var(--sr-surface); }
+.sr-enemy > summary { display: grid; grid-template-columns: minmax(150px, 1fr) minmax(130px, 0.9fr) 2fr auto; gap: 10px; align-items: baseline; padding: 5px 0; cursor: pointer; list-style: none; font-size: 14px; border-top: 1px solid var(--sr-line); }
 .sr-enemy:first-of-type > summary { border-top: none; }
 .sr-enemy > summary::-webkit-details-marker { display: none; }
 .sr-enemy-name { font-weight: 600; }
 .sr-enemy-stats { color: var(--sr-text); font-variant-numeric: tabular-nums; }
-.sr-enemy-atk { color: var(--sr-muted); }
+.sr-enemy-atk { color: var(--sr-muted); display: flex; flex-direction: column; gap: 1px; }
+.sr-atk { line-height: 1.35; }
+.sr-hp { display: inline-flex; align-items: baseline; gap: 6px; white-space: nowrap; cursor: default; }
+.sr-hp-val { font-variant-numeric: tabular-nums; color: var(--sr-muted); }
+.sr-hp-val b { color: var(--sr-text); font-size: 15px; }
+.sr-hp-in { width: 4.2em; padding: 1px 5px; font: inherit; font-size: 13px; background: var(--sr-bg); color: var(--sr-text); border: 1px solid var(--sr-line); border-radius: 4px; }
+.sr-hp-in:focus { outline: none; border-color: var(--sr-k-combat); }
+.sr-enemy.is-down > summary { opacity: 0.5; }
+.sr-enemy.is-down .sr-enemy-name { text-decoration: line-through; }
+.sr-enemy.is-down .sr-hp-val b { color: var(--sr-k-combat); }
 .sr-enemy.is-unmatched { padding: 5px 0; font-size: 14px; }
 .sr-enemy-block { padding: 4px 0 10px 14px; border-left: 3px solid var(--sr-k-combat); margin: 4px 0 8px; }
 .sr-enemy-title { font-weight: 700; margin-bottom: 4px; }

@@ -1,4 +1,4 @@
-# The Citadel Clock (as of: Session 32)
+# The Citadel Clock (as of: Session 33)
 
 DM-only. Not an entity. Tracks [[Odibli]]'s casting in Aethryn, whether [[The Citadel]] senses it,
 and what the DM can do with the results. The `_` prefix keeps it out of `validate.ps1` and the
@@ -41,7 +41,7 @@ it) and left the specifics to the DM. Todo #80, settled:
 
 ## The clock
 
-- **Sensed casts toward the next teardown: 0 / 3**
+- **Sensed casts toward the next teardown: 1 / 3** (Session 33, Magic Missile)
 - Teardowns that have reached him in Aethryn: 0 (the Session 10 one, in Barovia, was the first)
 
 ## Cast log
@@ -79,6 +79,16 @@ from the d6 as fuel for the ideas sheet. They don't trigger anything on their ow
 - Cantrips: Mage Hand ×1 (the antler on the shortcut)
 - Spell 1s: 0
 - Sensed: 0 · Clock after: 0 / 3
+
+### Session 33
+
+- Leveled: Magic Missile (1st) at the Archer Rider — d6 **1**, **sensed**. Rolled by the engine
+  (`scripts/roll.py`) at the DM's request during `/recap`, not at the table (DM, 2026-11-10)
+- Cantrips: none
+- Spell 1s: 0
+- Sensed: 1 · Clock after: 1 / 3
+- Ready now (not used): ideas 1–3, the sensed-cast set. Idea 3 fits Session 34 best: Halsby is
+  in the same fight and already reads Odibli as "not really there".
 
 ## Ideas sheet
 

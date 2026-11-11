@@ -42,7 +42,7 @@ affinity:
   - [[Halsby]] (0)
   - [[Luci]] (-1)
 voice: "Affable small-town drawl that always lands on a number. Shrewd, never predatory, slow to commit."
-voice_confirmed: 32
+voice_confirmed: 33
 ---
 
 Location: [[Ashford]]

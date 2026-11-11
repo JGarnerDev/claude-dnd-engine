@@ -20,7 +20,7 @@ class: "Sorcerer (Shadow Magic)"
 # level ruled 2026-10-01: party stays at 4 on the homebrew crossing. Levels now come one PC
 # at a time at DM-chosen moments; Halsby is still 4 after his first session (Session 29).
 level: 5
-level_confirmed: 32
+level_confirmed: 33
 background: "Haunted One"
 # Roll20 sheet (2026-10-04) is the mechanical source of truth.
 character_sheet: "Roll20 — Halsby (Sorcerer 5, Shadow Sorcery)"

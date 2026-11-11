@@ -1,4 +1,4 @@
-# Mystery Answers (as of: Session 32)
+# Mystery Answers (as of: Session 33)
 
 DM-only. Not an entity. The answer key to the questions on the recap deck's **Mysteries** slide
 (`meta/recap-slides.md` → Mysteries slide). The `_` prefix keeps it out of `validate.ps1` and the
@@ -22,6 +22,30 @@ file with an `(as of: Session NN)` header and follow this section. Homebrew sess
 
 ## Answers
 
+### Who pays for raiders this organized: one cobbler's boots, a banner too fine for a camp?
+
+**Canon.** The band is [[Harrow Bane]]'s: an ex-soldier running banditry as a business, hence the
+matched boots and staged crews.
+
+**Planned.** The money behind him is [[Lady Sorcha Marlow]] of House Marlow, holding [[Duskwater]],
+bleeding [[House Cael]] through a deniable land band. Act 1 does not require the party to learn it
+(`scheduler/acts/Act 1 - The Hearth at Ashford.md`, closing state).
+
+### Whose griffon is that, and how does a bandit camp have one?
+
+**Canon.** Tithe, a big tawny griffon kept hooded and staked behind the camp's blind and fed on
+mutton. [[Nella]] rides it carefully, like a borrowed horse. It isn't hers.
+
+**Open.** Whose it is, and where it came from, is deliberately unset (Session 33 plan): nobody at
+the camp says, and nobody in the ledger names it. If it's set loose without a rider it flies east,
+home to whoever owns it.
+
+### Who is Harrow Bane, and why did the room go quiet at the name?
+
+**Canon.** [[Harrow Bane]] commands the land band raiding [[Ashford]]: an ex-soldier, matched boots,
+no wasted violence. [[Nella]] is debt-collared to him and raids to buy herself out. His name is in
+the camp's ledger (Session 32). The party has not seen his face; Act 1 means for them to meet him.
+
 ### Where are we? No map, and no names past Ashford and the river
 
 **Canon.** The world is [[Aethryn]]. The town is [[Ashford]], on a small tributary that feeds the
@@ -33,41 +57,12 @@ and the stolen casks are heading.
 **Planned.** [[Calenmere Basin]] and [[Duskwater]] are still data drafts. Townsfolk can name the
 river, the fief and the Caels freely; the party has heard none of them yet.
 
-### How different is this world from Barovia, and has anyone here heard of it?
-
-**Canon.** No mists, no Strahd. Aethryn has a broken moon, two suns and Whatwill falling in
-Showerings, and every power is built on getting to the landings first (`scheduler/campaign/Redwater.md`).
-Luci's voice ([[Sabathiel]]) is louder and clearer here than it was in Barovia.
-
-**Open.** Whether anyone in Aethryn has heard of Barovia is not established.
-
 ### Why does the sky look wrong: two suns, and a broken moon shedding shards?
 
 **Canon** (`data/lore/calendar.md`). A gold sun and a dimmer red one orbit each other every 18
 days, so true night swings from 12 hours down to none. The moon, Fida, was broken by [[The Astra Collision]]
 6743 years ago and still sheds shards. They fall as Whatwill in Showerings about
 weekly, each heralded by a Kerning. Astra itself is far out and returns around the year 7000.
-
-### Who pays for raiders this organized: one cobbler's boots, a banner too fine for a camp?
-
-**Canon.** The band is [[Harrow Bane]]'s: an ex-soldier running banditry as a business, hence the
-matched boots and staged crews.
-
-**Planned.** The money behind him is [[Lady Sorcha Marlow]] of House Marlow, holding [[Duskwater]],
-bleeding [[House Cael]] through a deniable land band. Act 1 does not require the party to learn it
-(`scheduler/acts/Act 1 - The Hearth at Ashford.md`, closing state).
-
-### Who is Harrow Bane, and why did the room go quiet at the name?
-
-**Canon.** [[Harrow Bane]] commands the land band raiding [[Ashford]]: an ex-soldier, matched boots,
-no wasted violence. [[Nella]] is debt-collared to him and raids to buy herself out. His name is in
-the camp's ledger (Session 32). The party has not seen his face; Act 1 means for them to meet him.
-
-### Who else is listening on the raiders' crystals?
-
-**Canon.** The [[Earshot Crystals]] were all cut from one stone, one per raider. [[Nella]] kept hers,
-and so did a few of the crew who got away. Any message sent to "all" within 300 ft of her, she hears
-and can answer. In Session 32 she heard Halsby's report and launched the griffon.
 
 ### What is the Lioness's hearth tied to, and why did it stop during Iggy's song?
 
@@ -78,13 +73,6 @@ bit strange" and has asked Odibli to keep quiet until she talks to him. Her patr
 ([[Aashal-Groon Mellenegon Borak]]), lives in the aquifer under the cellar spring: a candidate, not
 an answer. Settle it in play.
 
-### Will Davian's stone wake again, and where would it take the party?
-
-**Canon.** [[The Wanderer's Boon]] is inert. Halsby read it in Session 31: no magic now, but the
-shape of where it will be. It is the route back to Barovia.
-
-**Planned.** It is still inert when Act 1 ends; the road back stays shut for the act.
-
 ### Who pressed the charm into the hearth during the raid, and why smother the fire instead of burning the place?
 
 **Canon.** The raiders' hedge mage, while the crew held [[Sable Wren]] with Hold Person after a
@@ -92,6 +80,38 @@ fireball hit the front of the tavern. It was meant to drown the self-feeding fir
 about eight hours ([[The Golden Lioness]], Session 31).
 
 **Open.** Why the band wanted the hearth dead rather than the building burned is not established.
+
+### Who else is listening on the raiders' crystals?
+
+**Canon.** The [[Earshot Crystals]] were all cut from one stone, one per raider. [[Nella]] kept hers,
+and so did a few of the crew who got away. Any message sent to "all" within 300 ft of her, she hears
+and can answer. In Session 32 she heard Halsby's report and launched the griffon. The waystation crew wear them
+too (Session 33), and heard Halsby's "going dark". The relief riders from the east road don't.
+
+### Why did Luci's warmth go cold when Halsby cast through his spear?
+
+**Canon.** In Session 33, when [[Halsby]] cast Lightning Bolt through [[The Shadowless Spear]],
+the warmth [[Sabathiel]] keeps on [[Luci]]'s face went out for one breath and came back, and the
+voice said nothing about it. Planted on purpose (todo 81) to seed Luci's light against Halsby's
+shadow ways.
+
+**Open.** What Sabathiel makes of the Spear, or of Halsby, is not set. Don't explain it; check
+Paul's and Kellan's appetite for PC friction before building on it.
+
+### How different is this world from Barovia, and has anyone here heard of it?
+
+**Canon.** No mists, no Strahd. Aethryn has a broken moon, two suns and Whatwill falling in
+Showerings, and every power is built on getting to the landings first (`scheduler/campaign/Redwater.md`).
+Luci's voice ([[Sabathiel]]) is louder and clearer here than it was in Barovia.
+
+**Open.** Whether anyone in Aethryn has heard of Barovia is not established.
+
+### Will Davian's stone wake again, and where would it take the party?
+
+**Canon.** [[The Wanderer's Boon]] is inert. Halsby read it in Session 31: no magic now, but the
+shape of where it will be. It is the route back to Barovia.
+
+**Planned.** It is still inert when Act 1 ends; the road back stays shut for the act.
 
 ### Why did the green-eyed fox want the bound woman saved?
 

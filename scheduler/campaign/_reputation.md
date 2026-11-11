@@ -1,4 +1,4 @@
-# Reputation (as of: Session 32)
+# Reputation (as of: Session 33)
 
 DM-only. Not an entity. What each fame and infamy tier unlocks, the rewards already given, and
 where each PC stands. Scores and rules: `meta/reputation.md`. The deed ledger is
@@ -83,14 +83,28 @@ Backfilled at the engine build (2026-11-03), from Session 29's crossings.
 - **S29 · Halsby · Noticed (fame, Ashford)** · `unspent`: Silas Crubb waives the shoeing on
   Halsby's borrowed horse when it comes back. Written to `Silas Crubb` `relates_to`.
 
+Session 33 crossings, toned down by the DM (2026-11-10): it is only the party's second day in
+Aethryn, so word hasn't left the waystation. The world and Duskwater crossings are `held` until
+fleeing crew could plausibly have carried the story; the waystation rewards are in-scene flavour
+only (no free hits, no surrenders).
+
+- **S33 · Dip · Suspect (infamy, The Waystation)** · `unspent`: the crew give Dip room. The first
+  time he steps toward one of them in Session 34, that crewman backs off a step before standing.
+- **S33 · Halsby · Suspect (infamy, The Waystation)** · `unspent`: Clatter keeps one eye on Halsby.
+  When Halsby raises the Spear, Clatter shouts "Lightning man!" and the crew flinch.
+- **S33 · Dip · Suspect (infamy, world)** · `held`: nobody beyond the waystation has heard yet.
+- **S33 · Dip · Suspect (infamy, Duskwater)** · `held`: as above.
+- **S33 · Halsby · Suspect (infamy, world)** · `held`: as above.
+- **S33 · Halsby · Suspect (infamy, Duskwater)** · `held`: as above.
+
 ## Current tiers
 
 From `reputation-standings.py`. Rewritten at each `/recap`.
 
-Party fame 1,850 (Unknown).
+Party fame 1,960 (Unknown).
 
-- **Dip:** fame 4,238 Noticed · infamy 1,105 Unremarked. Ashford: Noticed. The Waystation: infamy 1,105.
-- **Halsby:** fame 3,616 Noticed · infamy 0. Ashford: Noticed.
+- **Dip:** fame 4,791 Noticed · infamy 8,450 Suspect. Ashford: Noticed. The Waystation: infamy Suspect. Duskwater: infamy Suspect (held).
+- **Halsby:** fame 3,616 Noticed · infamy 7,345 Suspect. Ashford: Noticed. The Waystation: infamy Suspect. Duskwater: infamy Suspect (held).
 - **Luci:** fame 850 Unknown · infamy 978 Unremarked.
 - **Iggy:** fame 544 Unknown · infamy 0.
 - **Odibli:** fame 0 · infamy 0.

@@ -1,0 +1,106 @@
+<title>The Shadowless Spear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: one item card, centered, sized to its content. Player handout for Halsby (Kellan). */
+:root {
+  --bg: #e9e7e2;
+  --card: #f7f5f0;
+  --ink: #23221f;
+  --muted: #615d55;
+  --rule: #cfc9bd;
+  --accent: #3d6b4f;      /* the fox's green light */
+  --shadow: rgba(35, 34, 31, .28);
+  --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+  --body: "Spectral", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141513; --card: #1d1f1c; --ink: #e6e2d8; --muted: #a39e92;
+    --rule: #3a3c37; --accent: #7fb08f; --shadow: rgba(0, 0, 0, .55); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141513; --card: #1d1f1c; --ink: #e6e2d8; --muted: #a39e92;
+  --rule: #3a3c37; --accent: #7fb08f; --shadow: rgba(0, 0, 0, .55); color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--body);
+  font-size: 17px; line-height: 1.55; padding: 32px 16px;
+}
+.card {
+  max-width: 34rem; margin: 0 auto; background: var(--card);
+  border: 1px solid var(--rule); border-radius: 4px; padding: 28px 28px 24px;
+  display: grid; gap: 18px;
+}
+header { display: grid; gap: 4px; }
+h1 {
+  font-family: var(--display); font-weight: 400; font-size: 2.1rem; line-height: 1.1;
+  margin: 0; text-wrap: balance;
+}
+.type { margin: 0; color: var(--muted); font-style: italic; }
+.art { display: block; width: 100%; max-width: 100%; height: auto; }
+.flavor { margin: 0; }
+.stats {
+  display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 0; padding: 10px 0;
+  border-block: 1px solid var(--rule); font-size: .95rem; font-variant-numeric: tabular-nums;
+}
+.stats div { display: flex; gap: 6px; }
+.stats dt { color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-size: .78rem; align-self: center; }
+.stats dd { margin: 0; }
+ul.props { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.props h2 {
+  font-family: var(--display); font-weight: 400; font-size: 1.2rem; margin: 0 0 2px;
+  color: var(--accent);
+}
+.props p { margin: 0; }
+footer { color: var(--muted); font-size: .9rem; font-style: italic; border-top: 1px solid var(--rule); padding-top: 12px; }
+@media (max-width: 440px) { .card { padding: 22px 18px 20px; } h1 { font-size: 1.8rem; } }
+</style>
+
+<article class="card">
+  <header>
+    <h1>The Shadowless Spear</h1>
+    <p class="type">Weapon (spear), uncommon · no attunement · Halsby</p>
+  </header>
+
+  <svg class="art" viewBox="0 0 480 70" role="img" aria-label="A spear lying flat. The haft casts a shadow on the ground; the black head casts none.">
+    <!-- shadow of the haft only -->
+    <rect x="34" y="50" width="330" height="5" rx="2.5" fill="var(--shadow)"/>
+    <!-- haft -->
+    <rect x="20" y="31" width="350" height="6" rx="3" fill="var(--muted)"/>
+    <!-- new wood binding the shard -->
+    <path d="M352 29 q8 5 0 10 M360 28 q8 6 0 12" stroke="var(--accent)" stroke-width="2" fill="none"/>
+    <!-- the black shard as the head -->
+    <path d="M368 34 L398 22 L462 34 L398 46 Z" fill="var(--ink)"/>
+  </svg>
+
+  <p class="flavor">Your own plain spear, with your black shard grown onto it as the point. The haft throws a shadow. The head does not. It still hums when you cast through it, the way the bare shard did.</p>
+
+  <dl class="stats">
+    <div><dt>Damage</dt><dd>1d6 + 1 piercing</dd></div>
+    <div><dt>Two-handed</dt><dd>1d8 + 1</dd></div>
+    <div><dt>Thrown</dt><dd>20/60 ft</dd></div>
+  </dl>
+
+  <ul class="props">
+    <li>
+      <h2>+1 weapon</h2>
+      <p>+1 to attack and damage rolls made with it.</p>
+    </li>
+    <li>
+      <h2>Your focus</h2>
+      <p>It replaces the bare shard as your sorcerer focus. When you cast through it, the +1 also applies to your spell attack rolls and your spell save DC.</p>
+    </li>
+    <li>
+      <h2>Slows the fade</h2>
+      <p>While you carry it, each dark-moon mourning rite holds the fade off twice as long: 12 days instead of 6, or 16 instead of 8 after a good night. If you lose the spear, the old span returns.</p>
+    </li>
+    <li>
+      <h2>Shadow reach</h2>
+      <p>In dim light or darkness, its reach is 15 feet.</p>
+    </li>
+  </ul>
+
+  <footer>The fox made it at the bridge outside the Golden Lioness, the morning after you saved Sable Wren. It said the debt was repaid.</footer>
+</article>

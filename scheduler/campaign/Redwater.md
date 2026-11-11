@@ -48,28 +48,30 @@ Five PCs this season. The four who crossed from Barovia persist across both worl
 
 > **Reliability:** carried over from the Strahd roster plus the Session 28 seam pass. Afflictions cross **dormant** (the mists fed them; away, they are muted) — `workshop/first-homebrew-act/notes/the-seam.md`. Odibli's poison and Dip's mold were cured on screen and are gone; do not reuse them. Builds synced to the PC files 2026-10-25; the PC files and Roll20 sheets win. Which class took Luci's fifth level is unrecorded (confirm with Paul). Odibli and Halsby level to 5 in Session 31.
 
-## Current State (after Session 32)
+## Current State (after Session 33)
 
-The party is in Aethryn, about 200 ft south of [[The Waystation]], Nella's camp at an old drover's
-relay southeast of [[Ashford]], at about 10 a.m. on Day 2. [[Act 1 - The Hearth at Ashford]] is the
-live act and [[The Stolen Casks]] is **active**. [[Session 32 The Red Trail]] played the chase, the
-rear guard and the scouting; the camp fight and everything after it carries into
-[[Session 33 The Red Trail]] (a draft, whose camp fight was sized for dark and needs a daylight
-re-check).
+The party is in Aethryn, **mid-fight** in the yard of [[The Waystation]], Nella's camp at an old
+drover's relay southeast of [[Ashford]], at about 11 a.m. on Day 2. [[Act 1 - The Hearth at Ashford]]
+is the live act and [[The Stolen Casks]] is **active**. [[Session 33 The Red Trail]] played the
+hill and the opening of the fight and stopped in round 2; the rest carries into
+[[Session 34 The Red Trail]] (a draft, stepped up by the DM: Nella takes the ridge and sets her
+griffon hunting, and relief riders come up the east road).
 
-- **The cliffhanger.** [[Halsby]] is invisible near the camp's bridge. He reported to the party
-  by speaking to every crystal holder at once, and [[Nella]] wears one too. She heard him and took
-  off on a griffon, and the camp is mobilising. The rest of the party waits out of sight with the
-  cart and the horses, with about ten minutes to plan.
-- **The camp** holds the stolen cart (about 12 casks), a crew of about six (a drover, two
-  cask-hands, a clerk with a ledger, a hedge priest, a crossbowman on the shed roof) and a fine
-  banner on the shed's pole. None of them are named to the party.
-- **The rear guard** at the fork is broken. [[Dip]] killed the crossbowman. The archer and her
-  wolf fled toward the camp and warned it. The party left the dead man's crossbow and scimitar.
+- **The cliffhanger.** The party charged the camp in Silas's cart. [[Halsby]]'s Lightning Bolt and
+  [[Dip]]'s axe took the drover, the hedge priest, the big cask-hand and the wolf. Still fighting:
+  the tally-man and the half-orc cask-hand (both on Halsby), the badly hurt archer from the fork
+  (on Iggy) and the roof guard. [[Nella]] circles about 60 ft up on her griffon. [[Iggy]] was
+  missed from initiative and acts first next session.
+- **Silas's loan:** his five horses scattered at the charge but are nearby and can be rounded up
+  (some may come back lame or unshod). **His cart is wrecked** against the shed. The camp's own
+  wagon can carry the casks home.
+- **The camp** still holds the casks (about 12) and a fine banner on the shed's pole. None of the
+  crew are named to the party.
 - **The crystals leak.** An all-holder message reaches anyone wearing an [[Earshot Crystals|earshot
-  crystal]] within 300 ft, and the party now knows Nella has one.
-- **Pablo**, the dead crossbowman's horse, follows the party for the oats [[Odibli]] promised him.
-  The cart's oats are gone.
+  crystal]] within 300 ft, and Nella and the crew wear them. Halsby's "going dark" went to all of
+  them.
+- **Dip took the drover's cart-whip.** The drover's bracer is still on his body.
+- **Pablo**, the dead crossbowman's horse, is on the hill. The cart's oats are gone.
 - **The job is taken.** [[Sable Wren]] offered rooms, meals, a stay of a month or two and 10% of
   the bar if the party brings back her stock. Dip told her 10% was low; she offered a larger share,
   to be talked over when they return. Nothing is signed. She owes [[Silas Crubb]] about 650 gp of
@@ -84,15 +86,16 @@ re-check).
 - **Halsby has [[The Shadowless Spear]]:** +1 to attacks, spell attacks and spell save DC while he
   holds it (settled 2026-10-28). The fox's debt is paid ("perhaps we will talk again").
 - **Dip holds a private vision** from the night of Iggy's song: the stillness led inward, to
-  something inside [[Iggy]]. Unshared.
+  something inside [[Iggy]]. Mid-charge in Session 33, Dip shouted at Iggy that "a flame went
+  inside" him; whether that shared it in character is unconfirmed, so it's still treated as Dip's.
 - **[[The Wanderer's Boon]]** is inert, but holds the space where its magic will return.
 - **The party carries** the crystals, one each (words only, 300 ft). Dip holds the ~150 gp off the
   raiders. [[Sergei Rubelgerd]] and [[Bosco]] ride with the party.
-- **Borrowed:** five of Silas's horses and a cart, to come back with every shoe on. All five are
-  sound so far.
-- **Not yet played:** the camp fight, Iggy's wings and Sah's voice, Nella's escape and tally, the
-  camp's intel (band size, Bane's ledger, the banner), the haul home, the man in the cell.
-- **Levels:** all five PCs are level 5 (confirmed Session 32). Everyone is at 5 before the
+- **Borrowed:** five of Silas's horses (scattered) and a cart (wrecked). He wanted every shoe on.
+- **Not yet played:** the rest of the camp fight, Iggy's wings and Sah's voice, Nella's escape and
+  tally, the camp's intel (band size, Bane's ledger, the banner), the haul home, the man in the
+  cell.
+- **Levels:** all five PCs are level 5 (confirmed Session 33). Everyone is at 5 before the
   December finale.
 - **The sky:** a single vast **broken moon**, shedding shards. Luci named it **Fida** in the
   Dead Sun tongue, and her voice answered "Closer." It is a true moon the Astra impact broke
@@ -100,20 +103,22 @@ re-check).
   the date, the Crawl and the next Kerning live in `scheduler/campaign/_sky-clock.md`, the system in
   [[World Calendar]].
 
-### Rest Clock (as of: Session 32)
+### Rest Clock (as of: Session 33)
 
 Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` -> Long Rest Rules).
 
-- In-world time now: **`6743-05-21`, about 10 a.m.** (Ashford Day 2; DM at the table), on the hill south of [[The Waystation]]. The date itself is kept in `scheduler/campaign/_sky-clock.md`
+- In-world time now: **`6743-05-21`, about 11 a.m.** (Ashford Day 2; DM's estimate, one hour on), mid-fight at [[The Waystation]]. The date itself is kept in `scheduler/campaign/_sky-clock.md`
 - Last long rest (in-world): **overnight Day 1 → Day 2 at the Golden Lioness** (DM ruling at the table, Session 31, overriding the plan's 24-hour gate)
-- Hours since last long rest: ~4 (~estimate): the ride southeast, the fork, the hill
+- Hours since last long rest: ~5 (~estimate): the ride southeast, the fork, the hill, the charge
 - Long rest available: **no, not until the night of Day 2 at the earliest** (24-hour gate)
-- Rounds of combat since: **1** (the fork)
+- Rounds of combat since: **3** (the fork 1, the waystation ~2 so far, mid-round)
 - Short rests since: **0**
 - Notable burns:
-  - [[Halsby]]: Darkness (2nd level), with Subtle Spell (~1 sorcery point; ~estimate); Invisibility (2nd level), still running
-  - [[Odibli]]: 2 of 3 free racial Speak with Animals casts
-  - [[Luci]]: Guidance cast (cantrip; no cost)
+  - [[Halsby]]: Darkness (2nd level), with Subtle Spell (~1 sorcery point; ~estimate); Invisibility (2nd level), ended at the charge; Lightning Bolt (3rd) and Haste (3rd, still concentrating). Out of 3rd-level slots; sorcery points otherwise unspent
+  - [[Odibli]]: 2 of 3 free racial Speak with Animals casts; Magic Missile (1st). Both Fireballs left
+  - [[Luci]]: 1 focus point
+  - [[Dip]]: Rage, still active
+  - HP lost (rough): Iggy 22, Odibli 18, Halsby 9, Dip ~7
   - Permanent losses that still apply: Luci's **Sacred Flame**, and Odibli's **familiar** (Session 25)
   - Afflictions are still **dormant** (Iggy's shadow, Dip's whispers)
 

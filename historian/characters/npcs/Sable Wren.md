@@ -33,7 +33,7 @@ affinity:
   - [[Odibli]] (3)
   - [[Dip]] (1)
 voice: "Practical and dry: acts first, thanks later. Blunt to the point of swearing when pushed, warm under it, never explains herself."
-voice_confirmed: 32
+voice_confirmed: 33
 ---
 
 Location: [[The Golden Lioness]]

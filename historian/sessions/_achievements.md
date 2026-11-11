@@ -41,3 +41,15 @@ Achievements ledger (meta/achievements.md). One `## Session <n>` per homebrew se
 
 - **Oat-Based Diplomacy**: Spent every oat the party owned to recruit a dead man's horse. It joined.
   It's still hungry.
+
+## Session 33
+
+### Dip
+
+- **Defensive Driving**: Cut the horses loose at full speed, then steered the cart by hand. It hit
+  the shed, then a cask-hand. It was Silas's cart.
+
+### Halsby
+
+- **Opening Statement**: One readied bolt, four of the crew in a line. The hedge priest held up a
+  holy symbol. Lightning 1, holy symbol 0.

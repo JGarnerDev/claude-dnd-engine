@@ -13,7 +13,7 @@ race: "Gnome (Forest)"
 class: "Wizard (Evoker)"
 background: [[Sage]]
 level: 5
-level_confirmed: 32
+level_confirmed: 33
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Odibli Spannerbranch (Wizard 5, Evoker)"
 aliases:

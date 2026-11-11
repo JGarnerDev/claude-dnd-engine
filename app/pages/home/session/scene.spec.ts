@@ -46,9 +46,11 @@ function view(over: Partial<SceneView> = {}): SceneView {
     known: () => true,
     closingHook: 'The end.',
     combatants,
+    hp: {},
     tokensOpen: false,
     onGo: vi.fn(),
     onTokensToggle: vi.fn(),
+    onHp: vi.fn(),
     ...over,
   };
 }
@@ -64,6 +66,25 @@ describe('renderScene', () => {
     expect(main.querySelector('.sr-aloud blockquote')!.textContent).toContain('Read this aloud.');
     expect(main.querySelector('.sr-sh-val')!.textContent).toBe('the inn');
     expect(main.querySelector('.sr-setup')!.textContent).toContain('use the indoors map');
+  });
+
+  it('tracks enemy HP in place: damage, down at 0, saved per entry, and reset', () => {
+    const main = document.createElement('main');
+    const onHp = vi.fn();
+    renderScene(main, view({ onHp, hp: { 'Archer Rider (Ilsa Hask)': 9 } }));
+    const box = main.querySelector<HTMLElement>('.sr-hp')!;
+    expect(box.querySelector('.sr-hp-val')!.textContent).toBe('9/16');
+    expect(main.querySelector('.sr-enemy-atk')!.textContent).toContain('+4 to hit');
+    const input = box.querySelector<HTMLInputElement>('.sr-hp-in')!;
+    input.value = '11';
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+    expect(box.querySelector('.sr-hp-val b')!.textContent).toBe('0');
+    expect(main.querySelector('.sr-enemy')!.classList.contains('is-down')).toBe(true);
+    expect(onHp).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', 0);
+    main.querySelector<HTMLButtonElement>('.sr-hp-reset')!.click();
+    expect(box.querySelector('.sr-hp-val b')!.textContent).toBe('16');
+    expect(main.querySelector('.sr-enemy')!.classList.contains('is-down')).toBe(false);
+    expect(onHp).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', null);
   });
 
   it('opens only the current step, with intro and choice, and hides tokens and provenance', () => {

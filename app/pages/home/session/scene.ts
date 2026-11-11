@@ -9,7 +9,9 @@ import { parseSceneHeader } from './scene-header.js';
 import { sceneHeadHtml } from './scene-head.js';
 import { stepsHtml } from './steps.js';
 import { stripProvenance } from './provenance.js';
+import { applyHp } from './combatants.js';
 import type { StatBlock } from './combatants.js';
+import type { HpMap } from './scene-head.js';
 import type { FlowNode, Scene } from './types.js';
 
 export interface SceneView {
@@ -23,10 +25,12 @@ export interface SceneView {
   known: Known;
   closingHook: string;
   combatants: StatBlock[];
+  hp: HpMap; // current enemy HP by enemy entry; missing = full
   tokensOpen: boolean;
   bodyHtml?: string; // the recap card's body, in place of steps
   onGo: (id: string) => void;
   onTokensToggle: (open: boolean) => void;
+  onHp: (entry: string, value: number | null) => void; // null = back to full
 }
 
 function optionsHtml(v: SceneView): string {
@@ -75,7 +79,7 @@ export function renderScene(main: HTMLElement, v: SceneView): void {
   const time = header.time ? `<span class="sr-scene-time">${escapeHtml(header.time)}</span>` : '';
   const body = v.bodyHtml !== undefined
     ? `<h1 class="sr-card-title">${inline(v.node.title, v.known)}</h1><div class="sr-card-body">${v.bodyHtml}</div>${optionsHtml(v)}`
-    : `${sceneHeadHtml(header, v.combatants, v.known)}
+    : `${sceneHeadHtml(header, v.combatants, v.known, v.hp)}
        ${setupHtml(header.rest, prose.size === 0, v.known)}
        ${stepsHtml({ nodes: v.sceneNodes, prose, headings: nodeHeadings(v.scene?.md ?? ''), current: v.node.id, visited: v.visited, known: v.known, optionsHtml: optionsHtml(v) })}
        ${tokensHtml(v, prose)}`;
@@ -102,8 +106,42 @@ export function renderScene(main: HTMLElement, v: SceneView): void {
       setTimeout(() => { b.textContent = 'Copy'; b.classList.remove('is-copied'); }, 1500);
     });
   }));
+  wireHp(main, v);
   const tokens = main.querySelector<HTMLDetailsElement>('.sr-tokens-box');
   tokens?.addEventListener('toggle', () => v.onTokensToggle(tokens.open));
   main.scrollTop = sameScene ? scroll : 0;
   if (sameScene) main.querySelector('.sr-step.is-current')?.scrollIntoView?.({ block: 'nearest' });
+}
+
+// The HP boxes sit inside each enemy row's <summary>, so clicks and keys in them must
+// not toggle the stat block open. Updates land in place (no re-render), so an open
+// stat block and the scroll position survive a hit.
+function wireHp(main: HTMLElement, v: SceneView): void {
+  const show = (box: HTMLElement, cur: number) => {
+    box.querySelector('.sr-hp-val b')!.textContent = String(cur);
+    box.closest('.sr-enemy')?.classList.toggle('is-down', cur <= 0);
+  };
+  main.querySelectorAll<HTMLElement>('.sr-hp').forEach((box) => {
+    const entry = box.dataset.entry!;
+    const max = Number(box.dataset.max);
+    const input = box.querySelector<HTMLInputElement>('.sr-hp-in')!;
+    box.addEventListener('click', (ev) => ev.preventDefault());
+    input.addEventListener('keyup', (ev) => { if (ev.key === ' ') ev.preventDefault(); });
+    input.addEventListener('keydown', (ev) => {
+      if (ev.key !== 'Enter') return;
+      ev.preventDefault();
+      const cur = Number(box.querySelector('.sr-hp-val b')!.textContent);
+      const next = applyHp(cur, max, input.value);
+      if (next === null) return;
+      input.value = '';
+      show(box, next);
+      v.onHp(entry, next === max ? null : next);
+    });
+  });
+  main.querySelector('.sr-hp-reset')?.addEventListener('click', () => {
+    main.querySelectorAll<HTMLElement>('.sr-hp').forEach((box) => {
+      show(box, Number(box.dataset.max));
+      v.onHp(box.dataset.entry!, null);
+    });
+  });
 }

@@ -13,7 +13,7 @@ race: "Aasimar (Scourge)"
 class: "Monk 2 / Warlock 1 / Transcendent 1"
 background: "Astral Drifter"
 level: 5
-level_confirmed: 32
+level_confirmed: 33
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Lucitania (Monk 2 / Warlock 1 / Transcendent 1)"
 aliases:
