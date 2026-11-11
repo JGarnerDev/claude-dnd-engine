@@ -1,0 +1,138 @@
+<title>Tyler's Way In</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: one parchment column, the same card family as the party's item handouts. A brief for a new player, sent by Jeff. Player-safe only. */
+:root {
+  --bg: #e9e7e2;
+  --card: #f7f5f0;
+  --ink: #23221f;
+  --muted: #615d55;
+  --rule: #cfc9bd;
+  --accent: #7a3b2e;
+  --fixed: #ece6da;
+  --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+  --body: "Spectral", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141513; --card: #1d1f1c; --ink: #e6e2d8; --muted: #a39e92;
+    --rule: #3a3c37; --accent: #d08a72; --fixed: #262823; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141513; --card: #1d1f1c; --ink: #e6e2d8; --muted: #a39e92;
+  --rule: #3a3c37; --accent: #d08a72; --fixed: #262823; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--body);
+  font-size: 17px; line-height: 1.6; padding-block: 32px; padding-inline: 16px;
+}
+.card {
+  max-width: 40rem; margin: 0 auto; background: var(--card);
+  border: 1px solid var(--rule); border-radius: 4px; padding: 32px 32px 28px;
+  display: grid; gap: 26px;
+}
+header { display: grid; gap: 6px; }
+h1 {
+  font-family: var(--display); font-weight: 400; font-size: 2.3rem; line-height: 1.1;
+  margin: 0; text-wrap: balance;
+}
+.lede { margin: 0; color: var(--muted); font-style: italic; }
+section { display: grid; gap: 10px; min-width: 0; }
+h2 {
+  font-family: var(--display); font-weight: 400; font-size: 1.35rem; margin: 0;
+  color: var(--accent); text-wrap: balance;
+}
+p { margin: 0; max-width: 65ch; }
+ul { margin: 0; padding-left: 1.2rem; display: grid; gap: 6px; }
+.party { list-style: none; padding: 0; gap: 10px; }
+.party li { display: grid; grid-template-columns: 6.5rem 1fr; gap: 12px; }
+.party b { font-weight: 600; }
+.party .who { color: var(--muted); font-size: .85rem; display: block; font-style: italic; }
+.entrance {
+  background: var(--fixed); border-left: 3px solid var(--accent);
+  padding: 14px 16px; font-style: italic;
+}
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.split h3 {
+  margin: 0 0 6px; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--muted); font-weight: 600;
+}
+footer { color: var(--muted); font-size: .9rem; font-style: italic; border-top: 1px solid var(--rule); padding-top: 12px; }
+@media (max-width: 520px) {
+  .card { padding: 22px 18px 20px; }
+  h1 { font-size: 1.9rem; }
+  .split { grid-template-columns: 1fr; }
+  .party li { grid-template-columns: 1fr; gap: 2px; }
+}
+</style>
+
+<article class="card">
+  <header>
+    <h1>Tyler's Way In</h1>
+    <p class="lede">What you need to know to build your character. Jeff's sessions end with you in a cell, and Ben's sessions start from there.</p>
+  </header>
+
+  <section>
+    <h2>The game</h2>
+    <p>The group plays two campaigns in turns, like seasons of a show. One is Curse of Strahd, run by Kellan in the land of Barovia. The other is Aethryn, a world the group built together. Jeff is running Aethryn now, and Ben runs it next. The same party travels between both worlds.</p>
+    <p>The party is level 5, so your character starts at level 5 too.</p>
+  </section>
+
+  <section>
+    <h2>The party</h2>
+    <ul class="party">
+      <li><span><b>Dip</b><span class="who">Ben</span></span><span>An orc barbarian with a scholar's training, searching for a twin sister lost in a fire. Dip sits out Ben's sessions on a pilgrimage of their own.</span></li>
+      <li><span><b>Halsby</b><span class="who">Kellan</span></span><span>A sorcerer who works with shadow and never gives anyone a first name.</span></li>
+      <li><span><b>Iggy</b><span class="who">Jeff</span></span><span>A soldier and musician with copper-red, faintly celestial features, the survivor of a world that ended.</span></li>
+      <li><span><b>Luci</b><span class="who">Paul</span></span><span>A monk who woke up alone in an abandoned temple of the sun, and hasn't been able to sit still since.</span></li>
+      <li><span><b>Odibli</b><span class="who">Miguel</span></span><span>A gnome wizard whose journal is also his spellbook. He runs at danger every time.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where you are</h2>
+    <p>Ashford is a small river town on a border, with too few guards and a lord who answers its letters but sends no soldiers. Its new tavern, the Golden Lioness, is run by Sable Wren. Its sheriff, Mara Tull, holds the town together with a handful of deputies.</p>
+    <p>For months the town has been raided by a band that fights like a business: matched boots, planned crews, no wasted violence. When people say the leader's name, Harrow Bane, the room goes quiet.</p>
+    <p>The party arrived in the middle of one of those raids, saved the tavern, and rode out after the ale the raiders stole. Overhead, Aethryn has two suns and a broken moon that still sheds pieces of itself.</p>
+  </section>
+
+  <section>
+    <h2>Your entrance</h2>
+    <p class="entrance">While the party is away, a raider from Bane's band walks into Ashford, lays his weapons on the sheriff's step, and surrenders. He sits in Mara's cell and says nothing. Half the town wants him hanged by the end of the week. When the party gets back, he's the first thing they hear about.</p>
+    <p>That raider is your character.</p>
+  </section>
+
+  <section>
+    <h2>Where it goes</h2>
+    <p>Ben's sessions start with a long boat journey to the far north. Your character is how the party gets there, so talk with Ben about what links you to that trip.</p>
+  </section>
+
+  <section>
+    <h2>Set, and yours to decide</h2>
+    <div class="split">
+      <div>
+        <h3>Already set</h3>
+        <ul>
+          <li>You rode with Bane's band.</li>
+          <li>You walked in and surrendered on your own.</li>
+          <li>You haven't said a word since.</li>
+          <li>You're level 5.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Yours</h3>
+        <ul>
+          <li>Your name, race and class.</li>
+          <li>Why you quit the band.</li>
+          <li>Why you've stayed silent.</li>
+          <li>What you want from the party.</li>
+        </ul>
+      </div>
+    </div>
+    <p>What your character knows about the band from the inside, and how it ties into the trip north, is worth working out with Jeff and Ben together.</p>
+  </section>
+
+  <footer>From Jeff. Anything not on this page is still open, so ask.</footer>
+</article>

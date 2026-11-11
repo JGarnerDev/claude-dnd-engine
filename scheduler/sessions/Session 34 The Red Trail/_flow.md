@@ -3,7 +3,7 @@
 > `S2_APPROACH_CHOICE`, and `S2_FIGHT` through the start of round 2); those nodes are dropped, and
 > the played chart stays in `historian/sessions/Session 33 The Red Trail/_flow.md`. `S2_PARLEY` is
 > gone with the approach. Jeff chose to step the rest of the fight up (option 4): Nella takes the
-> ridge and sets Tithe hunting (`S2_TITHE_HUNTS`), and relief riders come up the east road
+> ridge and sets Tithe hunting (`S2_TITHE_HUNTS`), and relief riders come up the south road
 > (`S2_RELIEF`).
 
 > **Earlier carries:** from Session 32 (2026-11-04), Session 31 (2026-10-27) and Session 30
@@ -19,9 +19,8 @@ Legend: rust is combat · parchment is social · lantern-yellow diamond is a rea
 share tick or payoff · blue is a thread planted · dashed dusty red is a designed setback · dashed
 grey is undecided. Markers: `[x]` committed, `[-]` draft, `[?]` open. Boxes are the scenes.
 
-**Commitment:** the two new beats are drafts, and five carried beats dropped to `[-]` because the
-step-up changed what's in them (2026-11-10, see the ledger). `S2_TALLY`, `S2_CAMP_INTEL` and
-`S2_CELL` keep their approval but sit downstream of drafts until `/review 34 --ready`.
+**Commitment:** every beat is committed. Jeff committed the seven drafts on 2026-11-11, after the
+review pass and the snatch trigger for Iggy's wings (see the ledger).
 
 **Difficulty, as settled:** standard attrition, standard lethality, stepped up by Jeff. ~240 HP
 standing across the floor, the ridge, the cloud and the road; RTC ~3.5 rounds counting Iggy's
@@ -31,12 +30,12 @@ opening turn (v0.56.0 rules).
 flowchart TD
   subgraph SC3["Scene 3 · The Waystation, mid-fight"]
     S2_CRYSTALS["[x] S2_CRYSTALS<br/>The crew wear crystals too<br/>They still hear the party: lies, panic, one slip"]
-    S2_FIGHT["[-] S2_FIGHT<br/>Iggy first · what's left of the floor<br/>Nella on the ridge, Tithe in the cloud<br/>~3–4 rounds"]
-    S2_TITHE_HUNTS["[-] S2_TITHE_HUNTS<br/>Nella takes the ridge blind<br/>'Tithe. Hunt.' The griffon fights riderless"]
-    S2_RELIEF["[-] S2_RELIEF<br/>Riders on the east road<br/>Garran Vey and three, spread out<br/>The round after Iggy's first turn"]
-    S2_IGGY_BEAT{"[-] S2_IGGY_BEAT<br/>'Up, Wallaed': Iggy's wings open<br/>Sah speaks through every crystal; the cloud lights<br/>Tithe shies into range<br/>Iggy: chase Nella or turn back"}
-    S2_MORALE["[-] S2_MORALE<br/>Vey down or the crew down to two<br/>DC 12 WIS; the rest break"]
-    S2_ESCAPE["[-] S2_ESCAPE<br/>Nella loses, and gets away<br/>Covering fire · 'Keep the ale.'<br/>A whistle: Tithe lands for her, one turn<br/>On foot: the bridge, then the river"]
+    S2_FIGHT["[x] S2_FIGHT<br/>Iggy first · what's left of the floor<br/>Nella on the ridge, Tithe in the cloud<br/>~3–4 rounds"]
+    S2_TITHE_HUNTS["[x] S2_TITHE_HUNTS<br/>Nella takes the ridge blind<br/>'Tithe. Hunt.' The griffon fights riderless"]
+    S2_RELIEF["[x] S2_RELIEF<br/>Riders on the south road<br/>Garran Vey and three, spread out<br/>The round after Iggy's first turn"]
+    S2_IGGY_BEAT{"[x] S2_IGGY_BEAT<br/>Tithe snatches someone into the sky<br/>'Up, Wallaed': Iggy's wings open to reach them<br/>Sah speaks through every crystal; the cloud lights<br/>Tithe shies into range<br/>Iggy: chase Nella or turn back"}
+    S2_MORALE["[x] S2_MORALE<br/>Vey down or the crew down to two<br/>DC 12 WIS; the rest break"]
+    S2_ESCAPE["[x] S2_ESCAPE<br/>Nella loses, and gets away<br/>Covering fire · 'Keep the ale.'<br/>A whistle: Tithe lands for her, one turn<br/>On foot: the bridge, then the river"]
     S2_TALLY["[x] S2_TALLY<br/>She drops her debt tally<br/>Notched antler and a counted purse"]
     S2_CAMP_INTEL["[x] S2_CAMP_INTEL<br/>The band's size · Harrow Bane in the ledger<br/>The Marlow aegis-banner, theirs to take<br/>Varrick's Cart-Whip, for Dip"]
     S2_FIGHT --> S2_TITHE_HUNTS
@@ -52,7 +51,7 @@ flowchart TD
   end
 
   subgraph SC4["Scene 4 · The Man in the Cell"]
-    S2_HAUL_HOME["[-] S2_HAUL_HOME<br/>The casks come home in the camp's wagon<br/>Silas's horses rounded up; his cart is a number<br/>The second deed, banked"]
+    S2_HAUL_HOME["[x] S2_HAUL_HOME<br/>The casks come home in the camp's wagon<br/>Silas's horses rounded up; his cart is a number<br/>The second deed, banked"]
     S2_CELL["[x] S2_CELL<br/>A raider walked in and surrendered<br/>A silhouette behind Mara's bars<br/>The town wants a rope"]
     S2_HAUL_HOME --> S2_CELL
   end
@@ -83,6 +82,10 @@ Dropped to `[-]` on 2026-11-10, when the step-up changed their content (Jeff app
 as option 4; the beats as written still need his look): `S2_FIGHT` (new enemies, Iggy first),
 `S2_IGGY_BEAT` (Tithe makes its own save), `S2_MORALE` (trigger moved to Vey), `S2_ESCAPE`
 (Nella on foot, the pickup turn), `S2_HAUL_HOME` (Silas's cart wrecked, the camp's wagon).
+
+Committed 2026-11-11 (Jeff, after `/review 34` and the snatch trigger): `S2_FIGHT`,
+`S2_TITHE_HUNTS`, `S2_RELIEF`, `S2_IGGY_BEAT`, `S2_MORALE`, `S2_ESCAPE`, `S2_HAUL_HOME`. Backing
+notes are the plan's nodes of the same names.
 
 - `S2_CRYSTALS` — backing note at the plan, `S2_CRYSTALS`; approved 2026-11-04
 - `S2_TALLY` — backing note at the plan, `S2_TALLY`; approved 2026-11-04

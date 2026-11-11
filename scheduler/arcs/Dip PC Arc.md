@@ -50,3 +50,4 @@ See [[Dip]] → Looking Ahead (Player Intent): Ben wants a fight, a fortune and 
 ## Shifts
 
 - S33 — created with Jeff (2026-11-11).
+- S34 — Ben DMs next and sits Dip out on a pilgrimage of their own for his run (Ben, 2026-11-11). It answers the "pilgrimage to grasp the divine-mortal bond" hook. Next step pauses while Dip is away. Open idea for Ben: the pilgrimage ends at [[Deorum Ostium]], where his run is headed.

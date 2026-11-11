@@ -5,12 +5,12 @@ campaign: homebrew
 type: session
 session_number: 34
 exists: false
-state: draft
+state: planned
 tags:
   - session
 
 mission: [[The Stolen Casks]]
-planned_date: ""
+planned_date: "2026-11-17"
 pcs_present:
   - "Iggy"
   - "Luci"
@@ -30,12 +30,12 @@ key_npcs:
   - "[[Mara Tull]] (historian — sheriff; holds the prisoner at the close)"
   - "[[Silas Crubb]] (historian — his horses scattered and his cart wrecked)"
   - "Sennet Orrin (human — Bane's tally-man, keeps the duty ledger; not an entity)"
-  - "Garran Vey (human — leads the relief riders up the east road; not an entity)"
+  - "Garran Vey (human — leads the relief riders up the south road; not an entity)"
   - "[[Sergei Rubelgerd]] (historian — Odibli's mastiff)"
   - "[[Bosco]] (historian — Iggy's raccoon)"
   - "the prisoner (a silhouette only — Tyler's cameo, beat 1; no name, no lines)"
 encounters:
-  - "The Waystation, mid-fight and stepped up (Jeff, 2026-11-10, option 4). Left from Session 33: Sennet Orrin (Spy, ~10/27 HP), Brask (Thug, ~15/32), Ilsa Hask (Scout, ~5/16), Clatter (Bandit, 11/11). Nella (custom, ~CR 3, 49 HP) drops to the ridge blind and shoots from half cover, and sends Tithe (Griffon, 59 HP) to hunt riderless. In the round after Iggy's first turn, relief riders come up the east road: Garran Vey (Veteran, 58 HP) and three Bandits (Dace Morrow, Pim Ostler, Callan Shire), spread out. 2,350 XP standing, ~5,875 adjusted (just over Deadly on paper, though four of them are hurt); RTC ~3.5 rounds counting Iggy's opening turn; RTD ~2 spread, ~1 if Tithe and Vey pile on one PC. Tactics: no station clusters; Tithe takes whoever is in the open and moving, never stays on a downed PC; Nella still never shoots a downed PC. Morale DC 12 WIS when Vey drops or the crew is down to two."
+  - "The Waystation, mid-fight and stepped up (Jeff, 2026-11-10, option 4). Left from Session 33: Sennet Orrin (Spy, ~10/27 HP), Brask (Thug, ~15/32), Ilsa Hask (Scout, ~5/16), Clatter (Bandit, 11/11). Nella (custom, ~CR 3, 49 HP) drops to the ridge blind and shoots from half cover, and sends Tithe (Griffon, 59 HP) to hunt riderless. In the round after Iggy's first turn, relief riders come up the south road: Garran Vey (Veteran, 58 HP) and three Bandits (Dace Morrow, Pim Ostler, Callan Shire), spread out. 2,350 XP standing, ~5,875 adjusted (just over Deadly on paper, though four of them are hurt); RTC ~3.5 rounds counting Iggy's opening turn; RTD ~2 spread, ~1 if Tithe and Vey pile on one PC. Tactics: no station clusters; Tithe takes whoever is in the open and moving, never stays on a downed PC; Nella still never shoots a downed PC. Morale DC 12 WIS when Vey drops or the crew is down to two."
 loose_threads:
   - "[[Session 33 The Red Trail]] played the hill and the opening of the camp fight; the rest of the fight, Nella's escape and tally, the intel, the haul home and the cell carry here"
   - "Silas's five horses scattered at the charge (recoverable, maybe lame or unshod); his cart is wrecked against the shed"
@@ -60,7 +60,7 @@ relates_to:
   - "[[Harrow Bane]] (named in the camp's ledger; still no face)"
 importance: critical
 active: true
-description: "The rest of the waystation fight, carried from Session 33 and stepped up: Nella takes the ridge and sets her griffon hunting, and relief riders come up the east road. Iggy acts first, and his wings break the sky. Then Nella's escape and dropped tally, the camp's intel, the casks home on a borrowed-and-wrecked trail, and a silent prisoner in Mara's cell."
+description: "The rest of the waystation fight, carried from Session 33 and stepped up: Nella takes the ridge and sets her griffon hunting, and relief riders come up the south road. Iggy acts first, and his wings break the sky. Then Nella's escape and dropped tally, the camp's intel, the casks home on a borrowed-and-wrecked trail, and a silent prisoner in Mara's cell."
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
@@ -72,9 +72,9 @@ Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The
 >
 > **Stepped up (Jeff, 2026-11-10, option 4).** The floor that's left (~41 HP) would die to Iggy's
 > first turn and the one after it. So Nella drops to the ridge blind and sends Tithe to hunt
-> riderless (`S2_TITHE_HUNTS`), and four relief riders come up the east road the round after
+> riderless (`S2_TITHE_HUNTS`), and four relief riders come up the south road the round after
 > Iggy's first turn (`S2_RELIEF`). Sized by the v0.56.0 rules in `meta/difficulty.md` (area damage
-> per body, round 0). Both new beats are drafts (`[-]`) until Jeff commits them.
+> per body, round 0). Both new beats committed 2026-11-11.
 >
 > **Other changes since the plan was written:**
 >
@@ -101,10 +101,11 @@ Griffon, reskinned, plus Nella's custom block (from
   - **Roof Guard** — Tam "Clatter" Cobb (human, Bandit), on the shed roof's corner · 11 / 11
   - **Sniper** — [[Nella]], on Tithe about 60 ft up; drops to the ridge blind on her turn · 49 / 49
   - **Griffon** — Tithe (Griffon), riderless once she's down, hunting · 59 / 59
-  - **Relief Captain** — Garran Vey (human, Veteran), east road, arrives the round after Iggy's
+  - **Relief Captain** — Garran Vey (human, Veteran), south road, arrives the round after Iggy's
     first turn · 58 / 58
-  - **Relief Rider 1–3** — Dace Morrow, Pim Ostler and Callan Shire (humans, Bandits), with him,
-    spread out · 11 / 11 each
+  - **Relief Rider 1** — Dace Morrow (human, Bandit), with him, spread out · 11 / 11
+  - **Relief Rider 2** — Pim Ostler (human, Bandit), with him, spread out · 11 / 11
+  - **Relief Rider 3** — Callan Shire (human, Bandit), with him, spread out · 11 / 11
 - **Dead (Session 33):** Varrick Tenn (the drover), Hesper Mudd (the hedge priest), Haddo Keel
   (the big cask-hand), Cinder (the wolf).
 - **Morale:** DC 12 WIS when Vey drops, or the crew (everyone but Nella and Tithe) is down to 2
@@ -128,7 +129,7 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
   all; **RTC ~3.5 rounds counting Iggy's opening turn**, inside the 3+ the rules ask for.
 - **Area exposure:** the riders come in spread, about 20 ft apart, so a Fireball takes two at
   most. Don't bunch them on the road.
-- **RTD:** Tithe ~13 a round, Nella ~12, Vey ~13, riders ~3 each. About 2 spread across the party;
+- **RTD:** Tithe ~13 a round (~25 to one target when a Snatch ends in a fall), Nella ~12, Vey ~13, riders ~3 each. About 2 spread across the party;
   about 1 if Tithe and Vey both go for one PC. Keep Tithe on whoever is in the open and moving.
   Tithe leaves a downed PC for the next target; Nella still never shoots a downed PC.
 - **Round budget:** 2 played, ~3–4 more. About 6 of standard's 18–24.
@@ -248,6 +249,18 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
   for her, riderless. It dives on whoever is in the open and moving, beak and claws, then climbs
   back into the grey. It leaves a downed PC for the next target, and goes for the horses only if
   no PC is in the open.
+- **Snatch (its usual attack once hunting, Jeff 2026-11-11):** in place of Multiattack, claws +6,
+  2d6+4 slashing, and a Medium or smaller target is **grappled** (escape DC 14). Tithe then flies up
+  to 40 ft straight up with it (half speed, carrying). On its next turn it **drops** its catch from
+  wherever it is and dives on someone new. A fall is 1d6 per 10 ft (40 ft: 4d6, ~14).
+  - **Who:** improvise from what the players are doing: whoever is in the open, moving, or
+    hurting Nella. Never a downed PC.
+  - **It lets go early** if it takes 15 or more damage from one hit, when it breaks off at half HP,
+    or when Nella whistles. Escaping the grapple mid-air means falling from where it is.
+  - **Only a flier fixes it.** Nobody on the ground can reach a creature 40 ft up or catch one
+    falling. That is Iggy's cue (`S2_IGGY_BEAT`).
+  - Snatch, then a fall: ~25 to one target over two turns. Keep it spread, as with every other
+    threat here.
 - **Sah's voice** (`S2_IGGY_BEAT`) hits it hardest: WIS save DC 13 (it has +3). Fail: it screams,
   drops, and ends its turn on the ground within 60 ft of Iggy, and doesn't attack that turn.
 - **At half HP (30)** it breaks off and flies to Nella for the pickup. **If Nella is down or
@@ -264,7 +277,7 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
 - **Shortsword** +5 to hit, 1d6+3 piercing (avg 6)
 - **Heavy crossbow** +3 to hit, range 100/400, 1d10+1 piercing (avg 6)
 - **Garran Vey** (human): grey at the temples, a broken nose set crooked, splint mail he keeps
-  oiled. Came up the east road to collect the casks for the band and found a fight. Thinks the
+  oiled. Came up the south road to collect the casks for the band and found a fight. Thinks the
   waystation crew are amateurs and says so. Bane's man more than Nella's: he doesn't wait for her
   orders and she doesn't give him any.
   - Riding in, seeing the yard: *"Twelve casks and you couldn't hold a cart. Off the horses.
@@ -286,12 +299,13 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
 - **Nella's next turn:** down to the ridge blind, *"Tithe. Hunt."* (`S2_TITHE_HUNTS`). From then
   on she's a token on the ridge with half cover, and Tithe is the thing in the cloud.
 - **The relief, the round after Iggy's first turn** (`S2_RELIEF`): Vey and three riders up the
-  east road. **Spread, about 20 ft apart.** Never let them bunch: a Fireball takes two at most.
+  south road. **Spread, about 20 ft apart.** Never let them bunch: a Fireball takes two at most.
 - **The cloud:** Tithe circles in it and drops out on its own turn. On the party's turns, attacks
   on it guess its square at disadvantage, and a readied action works as before. Iggy's wings
   light the cloud for good (`S2_IGGY_BEAT`).
 - **Until Iggy flies:** that's the pressure, from the sky and now from the road. Don't soften it.
-  The wings are still Jeff's timing; this fight gives them more to answer.
+  The wings answer Tithe's first snatch (`S2_IGGY_BEAT`); until then, nothing on the ground
+  can touch the sky.
 - **Round budget:** ~3–4 more.
 
 ## Orientation
@@ -343,7 +357,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 ### Scene 3 — The Waystation
 
 - **Summary:** the rest of the fight at Nella's camp, stepped up. Nella takes the ridge and sets
-  her griffon hunting, and four relief riders come up the east road. Iggy's wings light the
+  her griffon hunting, and four relief riders come up the south road. Iggy's wings light the
   cloud and Sah speaks. Nella loses, escapes on a fallback she rigged days ago, and drops her
   debt tally. The camp gives up three things: the band's size, Harrow Bane's name and the banner.
 - **Where:** [[The Waystation]], an old drover's relay short of Duskwater: long shed, corral, well,
@@ -389,16 +403,18 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
     It's her way out if she ends up on foot.
   - **Tithe's stake** is just behind the blind, toward the river: empty now, with sheep bones and
     flattened grass around it.
-  - **The east road** comes in past the corral toward Duskwater. The relief rides in along it
+  - **The south road** comes in at the bottom edge (M28), past the corral's east side, toward
+    Duskwater. It crosses the stakes line by a gap the crew left (M22:N22). The relief rides in along it
     (`S2_RELIEF`).
 
 #### S2_TITHE_HUNTS — Nella takes the ridge and sets the griffon loose
 
-- **[-] Draft (stepped up, Jeff 2026-11-10, option 4).** Nella's next turn.
+- **Committed 2026-11-11 (stepped up, Jeff 2026-11-10, option 4).** Nella's next turn.
 - **What happens:** Tithe drops out of the cloud onto the overwatch ridge. Nella swings off into the
   brush blind and slaps its neck once: *"Tithe. Hunt."* It goes straight back up.
 - **From now on:** Nella shoots from the blind (half cover), two arrows a turn. Tithe is the thing
-  in the cloud: it drops on whoever is in the open and moving, beak and claws, and climbs back.
+  in the cloud: it drops on whoever is in the open and moving, and most turns it **snatches**
+  them and climbs (see Tithe's block). Pick the target from what the players are doing.
 - **What the party can use:** Nella is on foot now. Someone who reaches the ridge can corner her;
   someone who reaches the bridge first can cut her best way out (`S2_ESCAPE`). Tithe at half HP
   breaks off to fetch her.
@@ -409,10 +425,10 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 > the blind, slaps its neck once, and says something short. It goes up again, straight up, and the
 > cloud takes it."*
 
-#### S2_RELIEF — Riders on the east road
+#### S2_RELIEF — Riders on the south road
 
-- **[-] Draft (stepped up, Jeff 2026-11-10, option 4).** The round after Iggy's first turn.
-- **What happens:** hoofbeats on the east road, then four riders at a canter: Garran Vey in grey
+- **Committed 2026-11-11 (stepped up, Jeff 2026-11-10, option 4).** The round after Iggy's first turn.
+- **What happens:** hoofbeats on the south road, then four riders at a canter: Garran Vey in grey
   splint, three behind him. They came to collect the casks and found a fight. Vey takes the yard in
   one look and doesn't like what he sees.
 - **They come in spread,** about 20 ft apart, swing down at the corral, and fight on foot. Vey goes
@@ -433,10 +449,10 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   - **Look:** riding leathers, a curved blade each, a light crossbow slung from every saddle.
   - **Sound:** Dace shouting over the others; Pim's voice cracking when he answers.
   - **Impression:** hired riders, not Nella's crew. They hang back for Vey's word.
-- **Tokens:** Relief Captain and Relief Rider 1–3, mounted, at the east edge on the road; spread
+- **Tokens:** Relief Captain and Relief Rider 1–3, mounted, on the south road at the bottom edge (M27, I28, Q28, U28); spread
   them 20 ft apart. One initiative for the four.
 
-> *"Hoofbeats on the east road. Four riders come round the corral at a canter, and the one in front
+> *"Hoofbeats on the south road. Four riders come round the corral at a canter, and the one in front
 > wears grey splint mail, oiled bright. He reins in, looks at the cart, at the bodies, at you,
 > and swings down without hurrying."*
 
@@ -500,15 +516,18 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
     one breath it's gone completely. Then it comes back, and the voice says nothing about it.
 - **The horses:** a stampede through the corral is a lever for chaos (DC 13 Animal Handling to
   start it on purpose; it starts on its own if fire reaches the corral, or the first time Tithe
-  dives on it). It would run straight at the relief riders coming off the east road.
+  dives on it). It would run straight at the relief riders coming off the south road.
 
 #### S2_IGGY_BEAT — "Up, Wallaed": Iggy flies, and Sah shows himself
 
 - **Jeff's design (2026-10-28):** the camp fight feels desperate while Nella owns the sky. Iggy's
   wings (Radiant Soul, once per long rest: 1 minute, fly 30 ft, +5 radiant once a turn) are what
-  break it, and the moment he opens them, the party sees Sah for the first time. **Jeff picks the
-  moment;** the pressure is on from Nella's first arrow, so whenever it lands, it lands as the
-  turn.
+  break it, and the moment he opens them, the party sees Sah for the first time.
+- **The trigger (Jeff, 2026-11-11):** the wings answer a problem only a flier can solve. When Tithe
+  **snatches** someone and carries them up, nobody on the ground can reach them or catch the fall.
+  Iggy can: he opens the wings to go up after them, pull them free, or catch them as they drop
+  (fly under them before they land, and they take no fall damage). If Tithe snatches Iggy himself,
+  the wings open to break free. It's still Iggy's call; the snatch makes it the obvious one.
 - **The cues build all session** (Prince of Nothing style: doubled voices, light in the words, a
   mark on the world). Show; never explain. Nobody says the name Sah but Iggy.
   1. **His first spell of the session** (wherever it falls, the fork included): the words come out
@@ -580,7 +599,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 - **Not at Varrick's death** (Jeff, 2026-11-10). Vey is the anchor now.
 - DC 12 WIS for every surviving crew member and rider (at disadvantage if Sah's voice has just
-  spoken, for those wearing crystals). Failures scatter into the scrub and down the east road,
+  spoken, for those wearing crystals). Failures scatter into the scrub and down the south road,
   dropping what they hold. Sennet runs with the ledger if nobody is near the shed.
 - Morale-break line, Brask, the first to fail the save, looking up at the ridge: *"She's leaving
   us. She's LEAVING us."* Then they run.
@@ -670,7 +689,7 @@ Three discoverables, from Jeff's pick. **Nothing else** — no Marlow coppers, n
 - **Bane confirmed:** a duty ledger in a clerk's tidy hand (Sennet's). Rotations, payments, and at
   the foot of each page the same initials and one name in full: **Harrow Bane**. No face, no
   description. If Sennet is taken alive and asked, he says the name and goes white. If he ran with
-  the ledger, it is found dropped in the scrub on the road east, or he's caught with it.
+  the ledger, it is found dropped in the scrub on the south road, or he's caught with it.
 - **The Marlow aegis-banner** on the shed's pole: old, fine, heraldic, far too good for a bandit
   relay. The party can take it. **It hangs in the Lioness later** and is the prop that unspools the
   feud. Nobody in the camp can say whose it is. Silas can, back home, and goes quiet when he does.
@@ -839,6 +858,8 @@ no entity files, and `/recap` decides. Full introductions were at Session 30 (`S
   east faster than any horse could. You're not catching that."*
 - **Iggy goes down before he flies.** Nella won't shoot him again, and the wings can still open
   when he's back up. If the session runs out before they do, hold the voice for another night.
+- **Tithe snatches someone and Iggy doesn't go up.** The catch falls at the start of Tithe's next
+  turn, as written. Don't hold the drop for him. The next snatch is the next cue.
 - **They go straight at the feud with the ledger or the banner.** Give the next rung only:
   *someone* is paying Harrow Bane. Stop there. Silas recognises the banner back home and won't say
   more in the street.

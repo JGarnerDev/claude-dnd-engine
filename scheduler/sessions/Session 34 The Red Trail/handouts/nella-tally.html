@@ -1,0 +1,88 @@
+<title>Nella's Tally and Purse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: one item card, centered, sized to its content. Player handout for whoever picks them up (S2_TALLY). Describe only what they hold: the notches and the debt come from the Investigation checks, never the card. */
+:root {
+  --bg: #e9e7e2;
+  --card: #f7f5f0;
+  --ink: #23221f;
+  --muted: #615d55;
+  --rule: #cfc9bd;
+  --accent: #5b6b3a;
+  --shadow: rgba(35, 34, 31, .28);
+  --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+  --body: "Spectral", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141513; --card: #1d1f1c; --ink: #e6e2d8; --muted: #a39e92;
+    --rule: #3a3c37; --accent: #a8b884; --shadow: rgba(0, 0, 0, .55); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141513; --card: #1d1f1c; --ink: #e6e2d8; --muted: #a39e92;
+  --rule: #3a3c37; --accent: #a8b884; --shadow: rgba(0, 0, 0, .55); color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--body);
+  font-size: 17px; line-height: 1.55; padding: 32px 16px;
+}
+.card {
+  max-width: 34rem; margin: 0 auto; background: var(--card);
+  border: 1px solid var(--rule); border-radius: 4px; padding: 28px 28px 24px;
+  display: grid; gap: 18px;
+}
+header { display: grid; gap: 4px; }
+h1 {
+  font-family: var(--display); font-weight: 400; font-size: 2.1rem; line-height: 1.1;
+  margin: 0; text-wrap: balance;
+}
+.type { margin: 0; color: var(--muted); font-style: italic; }
+.art { display: block; width: 100%; max-width: 100%; height: auto; }
+.flavor { margin: 0; }
+.stats {
+  display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 0; padding: 10px 0;
+  border-block: 1px solid var(--rule); font-size: .95rem; font-variant-numeric: tabular-nums;
+}
+.stats div { display: flex; gap: 6px; }
+.stats dt { color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-size: .78rem; align-self: center; }
+.stats dd { margin: 0; }
+ul.props { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.props h2 {
+  font-family: var(--display); font-weight: 400; font-size: 1.2rem; margin: 0 0 2px;
+  color: var(--accent);
+}
+.props p { margin: 0; }
+footer { color: var(--muted); font-size: .9rem; font-style: italic; border-top: 1px solid var(--rule); padding-top: 12px; }
+@media (max-width: 440px) { .card { padding: 22px 18px 20px; } h1 { font-size: 1.8rem; } }
+</style>
+
+<article class="card">
+  <header>
+    <h1>A Notched Antler and a Purse</h1>
+    <p class="type">Found at the river, where the griffon banked</p>
+  </header>
+
+  <svg class="art" viewBox="0 0 480 70" role="img" aria-label="An antler tine covered in rows of small notches, beside a purse tied off in three places.">
+    <!-- the antler tine -->
+    <path d="M20 46 C120 40 220 30 330 16" stroke="var(--muted)" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <!-- notches, in groups -->
+    <g stroke="var(--ink)" stroke-width="2">
+      <path d="M50 38 v10 M58 37 v10 M66 37 v10 M74 36 v10 M90 35 v10 M98 34 v10 M106 34 v10 M114 33 v10 M130 32 v10 M138 31 v10 M146 30 v10 M162 29 v10 M170 28 v10 M186 26 v10 M194 25 v10 M210 24 v10 M218 23 v10 M234 21 v10 M250 19 v10"/>
+    </g>
+    <!-- the purse, tied in three places -->
+    <path d="M380 20 q-18 0 -18 22 q0 22 40 22 q40 0 40 -22 q0 -22 -18 -22 z" fill="var(--accent)"/>
+    <path d="M384 20 v44 M402 18 v46 M420 20 v44" stroke="var(--card)" stroke-width="2"/>
+  </svg>
+
+  <p class="flavor">A stick of antler worn smooth where a thumb rests, covered in hundreds of small notches cut in groups. Some groups are scored through. Beside it, a leather purse tied off in three places, each section holding a different coin.</p>
+
+  <dl class="stats">
+    <div><dt>Gold</dt><dd>150 gp</dd></div>
+    <div><dt>Silver</dt><dd>500 sp</dd></div>
+    <div><dt>Platinum</dt><dd>5 pp</dd></div>
+  </dl>
+
+  <footer>Every section is counted and sorted, one kind of coin to a tie.</footer>
+</article>
