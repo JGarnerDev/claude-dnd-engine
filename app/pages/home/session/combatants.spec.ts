@@ -37,6 +37,13 @@ describe('parseCombatants', () => {
     expect(blocks[1].hp).toBe(16);
     expect(blocks[2].attacks).toEqual([]);
     expect(blocks[2].hp).toBe(49); // bold "**HP 49**"
+    expect(blocks[1].start).toBe(16); // no carried damage: starts full
+  });
+
+  it('reads known HP carried from an earlier session ("HP 10/27")', () => {
+    const [b] = parseCombatants('### Spy — Sennet Orrin\n\n- AC 12 · HP 10/27 · Speed 30 ft');
+    expect(b.hp).toBe(27);
+    expect(b.start).toBe(10);
   });
 });
 

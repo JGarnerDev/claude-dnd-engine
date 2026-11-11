@@ -110,6 +110,10 @@ NPC and antagonist files can carry a `## Voice` section: a **core** (how they sp
 
 The party should steer the story, not ride it. Each session plan carries a few **real choices**, about two or three for the party and one for a single character, marked `Choice (party):` / `Choice (<PC>):`. Each act carries at least one choice that changes where the story goes. Committed beats stay; choices are added around them (how, at what cost, a visible way to beat a set outcome). `/session` plans them, `/review` Pass 5 checks for railroading, and `/recap` records what was chosen in the session's `choices:` field so later sessions can pay it off. Read `meta/player-agency.md` once per task when planning, reviewing or recapping.
 
+## Enemy HP
+
+Enemy HP is always noted the moment it is given, somewhere a misclick can't erase. In the session runner, every HP entry is kept in a change log (enemy, input, before → after) that **Reset HP** does not clear, and Reset itself can be undone. Never hold HP only as the live current value. When a fight carries over between sessions, the next plan's stat line writes the known HP as `HP 10/27` (current/max); the runner starts each enemy there, and **Reset HP** returns to it rather than to full. In chat, when the DM reports enemy damage mid-session, keep a running tally per enemy and show it back, rather than just acknowledging the number.
+
 ## Private Moments
 
 Whenever a plan gives one player something private (a secret roll, a vision, a whisper, a note), the plan carries the player-facing message ready to copy: a `Private (<PC>):` block with one complete message per outcome (each roll band, choice or situation). The session runner shows each outcome with a Copy button so the DM can send it straight to that player. Format: `/session` Phase 6 → Private. `/review` Pass 2 fills in any that are missing.

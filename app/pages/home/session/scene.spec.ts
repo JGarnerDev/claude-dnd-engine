@@ -87,6 +87,22 @@ describe('renderScene', () => {
     expect(onHp).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', null);
   });
 
+  it('starts and resets each enemy at its known HP, not full, when the plan carries damage', () => {
+    const main = document.createElement('main');
+    const onHp = vi.fn();
+    const hurt = parseCombatants('### Scout — Ilsa Hask\n\n- AC 13 · HP 5/16\n- **Longbow** +4 to hit, 1d8+2');
+    renderScene(main, view({ onHp, combatants: hurt }));
+    const box = main.querySelector<HTMLElement>('.sr-hp')!;
+    expect(box.querySelector('.sr-hp-val')!.textContent).toBe('5/16');
+    const input = box.querySelector<HTMLInputElement>('.sr-hp-in')!;
+    input.value = '3';
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+    expect(onHp).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', 2);
+    main.querySelector<HTMLButtonElement>('.sr-hp-reset')!.click();
+    expect(box.querySelector('.sr-hp-val b')!.textContent).toBe('5');
+    expect(onHp).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', null);
+  });
+
   it('opens only the current step, with intro and choice, and hides tokens and provenance', () => {
     const main = document.createElement('main');
     renderScene(main, view());

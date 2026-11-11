@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.58.0] — 2026-11-11
+
+### Added
+
+- **Carried-over enemy HP.** A plan's stat line can write known HP as `HP 10/27` (current/max) when a fight spans sessions. The runner starts that enemy at 10, and **Reset HP** returns it to 10, not full (`app/pages/home/session/combatants.ts`, `scene-head.ts`, `scene.ts`). Session 34's Tally-man, Brask and Ilsa Hask carry their session 33 damage.
+- **Enemy HP rule** (`CLAUDE.md` → Enemy HP): HP is noted the moment it is given, somewhere a misclick can't erase; in chat, mid-session damage gets a running tally per enemy.
+
 ## [0.57.0] — 2026-11-11
 
 ### Added

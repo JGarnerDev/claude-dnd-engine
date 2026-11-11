@@ -157,7 +157,7 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
 
 ### Scout — Ilsa Hask, the rear guard's rider
 
-- AC 13 · HP 16 · Speed 30 ft · CR 1/2 · Perception +5, Stealth +6, Survival +5
+- AC 13 · HP 5/16 · Speed 30 ft · CR 1/2 · Perception +5, Stealth +6, Survival +5
 - **Keen Hearing and Sight:** advantage on Perception checks that use hearing or sight
 - **Multiattack:** two melee or two ranged attacks
 - **Shortsword** +4 to hit, 1d6+2 piercing (avg 5)
@@ -174,7 +174,7 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
 
 ### Thug — Brask, the half-orc cask-hand
 
-- AC 11 · HP 32 · Speed 30 ft · CR 1/2
+- AC 11 · HP 15/32 · Speed 30 ft · CR 1/2
 - **Pack Tactics:** advantage on an attack if an ally is within 5 ft of the target
 - **Multiattack:** two mace attacks (a cask-mallet in the fiction), +4 to hit, 1d6+2 bludgeoning
   each (avg 5)
@@ -189,7 +189,7 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
 
 ### Spy — Sennet Orrin, Bane's tally-man
 
-- AC 12 · HP 27 · Speed 30 ft · CR 1 · Deception +5, Insight +4, Stealth +4
+- AC 12 · HP 10/27 · Speed 30 ft · CR 1 · Deception +5, Insight +4, Stealth +4
 - **Cunning Action:** Dash, Disengage or Hide as a bonus action
 - **Sneak Attack (1/turn):** +2d6 (7) when he has advantage or an ally is within 5 ft of the target
 - **Multiattack:** two shortsword attacks, +4 to hit, 1d6+2 piercing (avg 5)

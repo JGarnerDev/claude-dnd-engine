@@ -21,12 +21,13 @@ const chips = (items: string[], known: Known) =>
   items.map((x) => `<span class="sr-sh-chip">${inline(x, known)}</span>`).join('');
 
 // Current HP per enemy entry ("Drover (Varrick Tenn)"), so two enemies sharing one
-// block (both cask-hands are Thugs) keep their own numbers. Missing = full.
+// block (both cask-hands are Thugs) keep their own numbers. Missing = the block's known
+// starting HP ("HP 10/27" carries damage from an earlier session), else full.
 export type HpMap = Readonly<Record<string, number>>;
 
-export function hpHtml(entry: string, max: number, hp: HpMap): string {
-  const cur = Math.min(hp[entry] ?? max, max);
-  return `<span class="sr-hp" data-entry="${escapeHtml(entry)}" data-max="${max}">
+export function hpHtml(entry: string, max: number, hp: HpMap, start: number = max): string {
+  const cur = Math.min(hp[entry] ?? start, max);
+  return `<span class="sr-hp" data-entry="${escapeHtml(entry)}" data-max="${max}" data-start="${start}">
       <span class="sr-hp-val"><b>${cur}</b>/${max}</span>
       <input class="sr-hp-in" type="text" inputmode="numeric" size="4" placeholder="dmg" title="12 or -12 deals damage · +5 heals · =40 sets · Enter applies" aria-label="Damage or heal">
     </span>`;
@@ -35,7 +36,7 @@ export function hpHtml(entry: string, max: number, hp: HpMap): string {
 function enemyHtml(entry: string, blocks: StatBlock[], known: Known, hp: HpMap): string {
   const b = matchEnemy(entry, blocks);
   if (!b) return `<div class="sr-enemy is-unmatched"><span class="sr-enemy-name">${inline(entry, known)}</span></div>`;
-  const down = b.hp !== null && (hp[entry] ?? b.hp) <= 0;
+  const down = b.hp !== null && (hp[entry] ?? b.start ?? b.hp) <= 0;
   const atks = b.attacks.map((a) => `<span class="sr-atk">${inline(stripProvenance(a), known)}</span>`).join('');
   return `
     <details class="sr-enemy${down ? ' is-down' : ''}">
@@ -43,7 +44,7 @@ function enemyHtml(entry: string, blocks: StatBlock[], known: Known, hp: HpMap):
         <span class="sr-enemy-name">${inline(entry, known)}</span>
         <span class="sr-enemy-stats">${inline(rowStats(b.stats), known)}</span>
         <span class="sr-enemy-atk">${atks}</span>
-        ${b.hp !== null ? hpHtml(entry, b.hp, hp) : '<span></span>'}
+        ${b.hp !== null ? hpHtml(entry, b.hp, hp, b.start ?? b.hp) : '<span></span>'}
       </summary>
       <div class="sr-md sr-enemy-block"><div class="sr-enemy-title">${escapeHtml(b.title)}</div>${renderMarkdown(stripProvenance(b.md), known)}</div>
     </details>`;
@@ -60,7 +61,7 @@ export function sceneHeadHtml(h: SceneHeader, blocks: StatBlock[], known: Known,
     </div>
     ${h.enemies.length ? `
     <div class="sr-enemies">
-      <div class="sr-enemies-head"><span class="sr-sh-label">Enemies</span><button type="button" class="sr-hp-reset" title="Put every enemy back to full HP">Reset HP</button></div>
+      <div class="sr-enemies-head"><span class="sr-sh-label">Enemies</span><button type="button" class="sr-hp-reset" title="Put every enemy back to its known HP at the start of the session">Reset HP</button></div>
       ${h.enemies.map((e) => enemyHtml(e, blocks, known, hp)).join('')}
       ${h.tactics ? `<p class="sr-tactics">${p(h.tactics)}</p>` : ''}
     </div>` : ''}`;

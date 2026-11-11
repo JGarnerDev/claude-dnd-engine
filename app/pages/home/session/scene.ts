@@ -30,7 +30,7 @@ export interface SceneView {
   bodyHtml?: string; // the recap card's body, in place of steps
   onGo: (id: string) => void;
   onTokensToggle: (open: boolean) => void;
-  onHp: (entry: string, value: number | null) => void; // null = back to full
+  onHp: (entry: string, value: number | null) => void; // null = back to its known starting HP
 }
 
 function optionsHtml(v: SceneView): string {
@@ -124,6 +124,7 @@ function wireHp(main: HTMLElement, v: SceneView): void {
   main.querySelectorAll<HTMLElement>('.sr-hp').forEach((box) => {
     const entry = box.dataset.entry!;
     const max = Number(box.dataset.max);
+    const start = Number(box.dataset.start ?? max);
     const input = box.querySelector<HTMLInputElement>('.sr-hp-in')!;
     box.addEventListener('click', (ev) => ev.preventDefault());
     input.addEventListener('keyup', (ev) => { if (ev.key === ' ') ev.preventDefault(); });
@@ -135,12 +136,12 @@ function wireHp(main: HTMLElement, v: SceneView): void {
       if (next === null) return;
       input.value = '';
       show(box, next);
-      v.onHp(entry, next === max ? null : next);
+      v.onHp(entry, next === start ? null : next);
     });
   });
   main.querySelector('.sr-hp-reset')?.addEventListener('click', () => {
     main.querySelectorAll<HTMLElement>('.sr-hp').forEach((box) => {
-      show(box, Number(box.dataset.max));
+      show(box, Number(box.dataset.start ?? box.dataset.max));
       v.onHp(box.dataset.entry!, null);
     });
   });

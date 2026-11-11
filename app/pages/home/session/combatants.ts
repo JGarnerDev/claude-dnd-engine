@@ -9,12 +9,13 @@ export interface StatBlock {
   title: string; // "Bandit — Fennel Dray (fork) and Clatter (camp)"
   stats: string; // "AC 12 · HP 11 · Speed 30 ft · CR 1/8"
   hp: number | null; // max HP from the stats line, for the runner's HP tracker
+  start: number | null; // known HP going in ("HP 10/27" = 10 of 27, carried from earlier damage); else max
   attacks: string[]; // every attack-ish line: "**Scimitar** +3 to hit, 1d6+1 slashing (avg 4)"
   md: string;
 }
 
 const AC_RE = /^[-*]\s+(AC\s+\d+.*)$/m;
-const HP_RE = /\bHP\s+(\d+)/;
+const HP_RE = /\bHP\s+(\d+)(?:\s*\/\s*(\d+))?/;
 
 // A top-level bullet is an attack line when it is a named feature (`**Name**`) that rolls
 // to hit, deals dice, forces a save, or is a reaction. That catches Multiattack, every
@@ -40,7 +41,9 @@ export function parseCombatants(sectionMd: string): StatBlock[] {
     if (!ac) continue;
     const stats = ac[1].trim();
     const hp = HP_RE.exec(stats.replace(/\*/g, ''));
-    out.push({ title, stats, hp: hp ? Number(hp[1]) : null, attacks: attackLines(md), md });
+    const max = hp ? Number(hp[2] ?? hp[1]) : null;
+    const start = hp && max !== null ? Math.min(Number(hp[1]), max) : null;
+    out.push({ title, stats, hp: max, start, attacks: attackLines(md), md });
   }
   return out;
 }
