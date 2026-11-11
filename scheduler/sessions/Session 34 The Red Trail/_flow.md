@@ -33,7 +33,7 @@ flowchart TD
     S2_CRYSTALS["[x] S2_CRYSTALS<br/>The crew wear crystals too<br/>They still hear the party: lies, panic, one slip"]
     S2_FIGHT["[-] S2_FIGHT<br/>Iggy first · what's left of the floor<br/>Nella on the ridge, Tithe in the cloud<br/>~3–4 rounds"]
     S2_TITHE_HUNTS["[-] S2_TITHE_HUNTS<br/>Nella takes the ridge blind<br/>'Tithe. Hunt.' The griffon fights riderless"]
-    S2_RELIEF["[-] S2_RELIEF<br/>Riders on the east road<br/>Brannoch Vey and three, spread out<br/>The round after Iggy's first turn"]
+    S2_RELIEF["[-] S2_RELIEF<br/>Riders on the east road<br/>Garran Vey and three, spread out<br/>The round after Iggy's first turn"]
     S2_IGGY_BEAT{"[-] S2_IGGY_BEAT<br/>'Up, Wallaed': Iggy's wings open<br/>Sah speaks through every crystal; the cloud lights<br/>Tithe shies into range<br/>Iggy: chase Nella or turn back"}
     S2_MORALE["[-] S2_MORALE<br/>Vey down or the crew down to two<br/>DC 12 WIS; the rest break"]
     S2_ESCAPE["[-] S2_ESCAPE<br/>Nella loses, and gets away<br/>Covering fire · 'Keep the ale.'<br/>A whistle: Tithe lands for her, one turn<br/>On foot: the bridge, then the river"]

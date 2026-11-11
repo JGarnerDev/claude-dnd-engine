@@ -12,7 +12,7 @@ Planned date: not set.
 
 ## Blocking — decide before the table
 
-- [ ] **Look over the step-up** in the plan: `S2_TITHE_HUNTS`, `S2_RELIEF`, Brannoch Vey's block,
+- [ ] **Look over the step-up** in the plan: `S2_TITHE_HUNTS`, `S2_RELIEF`, Garran Vey's block,
       and the changed `S2_FIGHT`, `S2_IGGY_BEAT`, `S2_MORALE`, `S2_ESCAPE`, `S2_HAUL_HOME`.
 - [ ] **Run `/review 34 --ready`**, commit the seven `[-]` beats in `_flow.md`, then flip the plan to
       `state: planned`.
@@ -21,7 +21,7 @@ Planned date: not set.
 
 - [ ] **Restore the fight on Roll20** from Session 33's end-of-session screenshot. **Add Iggy to
       initiative first** (he was missed last session).
-- [ ] **Tokens** (and `tokens.txt`): **Relief Captain** (Brannoch Vey, Veteran, splint), **Relief
+- [ ] **Tokens** (and `tokens.txt`): **Relief Captain** (Garran Vey, Veteran, splint), **Relief
       Rider 1–3** (Dace Morrow, Pim Ostler, Callan Shire, Bandits), and four horses for them.
       Labels are in the plan's Combatants. The rest are already on the map.
 - [ ] **The east road** at the map's east edge, past the corral, for the relief to ride in on.

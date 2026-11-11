@@ -30,12 +30,12 @@ key_npcs:
   - "[[Mara Tull]] (historian — sheriff; holds the prisoner at the close)"
   - "[[Silas Crubb]] (historian — his horses scattered and his cart wrecked)"
   - "Sennet Orrin (human — Bane's tally-man, keeps the duty ledger; not an entity)"
-  - "Brannoch Vey (human — leads the relief riders up the east road; not an entity)"
+  - "Garran Vey (human — leads the relief riders up the east road; not an entity)"
   - "[[Sergei Rubelgerd]] (historian — Odibli's mastiff)"
   - "[[Bosco]] (historian — Iggy's raccoon)"
   - "the prisoner (a silhouette only — Tyler's cameo, beat 1; no name, no lines)"
 encounters:
-  - "The Waystation, mid-fight and stepped up (Jeff, 2026-11-10, option 4). Left from Session 33: Sennet Orrin (Spy, ~10/27 HP), Brask (Thug, ~15/32), Ilsa Hask (Scout, ~5/16), Clatter (Bandit, 11/11). Nella (custom, ~CR 3, 49 HP) drops to the ridge blind and shoots from half cover, and sends Tithe (Griffon, 59 HP) to hunt riderless. In the round after Iggy's first turn, relief riders come up the east road: Brannoch Vey (Veteran, 58 HP) and three Bandits (Dace Morrow, Pim Ostler, Callan Shire), spread out. 2,350 XP standing, ~5,875 adjusted (just over Deadly on paper, though four of them are hurt); RTC ~3.5 rounds counting Iggy's opening turn; RTD ~2 spread, ~1 if Tithe and Vey pile on one PC. Tactics: no station clusters; Tithe takes whoever is in the open and moving, never stays on a downed PC; Nella still never shoots a downed PC. Morale DC 12 WIS when Vey drops or the crew is down to two."
+  - "The Waystation, mid-fight and stepped up (Jeff, 2026-11-10, option 4). Left from Session 33: Sennet Orrin (Spy, ~10/27 HP), Brask (Thug, ~15/32), Ilsa Hask (Scout, ~5/16), Clatter (Bandit, 11/11). Nella (custom, ~CR 3, 49 HP) drops to the ridge blind and shoots from half cover, and sends Tithe (Griffon, 59 HP) to hunt riderless. In the round after Iggy's first turn, relief riders come up the east road: Garran Vey (Veteran, 58 HP) and three Bandits (Dace Morrow, Pim Ostler, Callan Shire), spread out. 2,350 XP standing, ~5,875 adjusted (just over Deadly on paper, though four of them are hurt); RTC ~3.5 rounds counting Iggy's opening turn; RTD ~2 spread, ~1 if Tithe and Vey pile on one PC. Tactics: no station clusters; Tithe takes whoever is in the open and moving, never stays on a downed PC; Nella still never shoots a downed PC. Morale DC 12 WIS when Vey drops or the crew is down to two."
 loose_threads:
   - "[[Session 33 The Red Trail]] played the hill and the opening of the camp fight; the rest of the fight, Nella's escape and tally, the intel, the haul home and the cell carry here"
   - "Silas's five horses scattered at the charge (recoverable, maybe lame or unshod); his cart is wrecked against the shed"
@@ -79,7 +79,7 @@ Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The
 > **Other changes since the plan was written:**
 >
 > - **Dead:** Varrick (Dip), Hesper (Halsby's Lightning Bolt), Haddo (Luci), Cinder (Dip). Their
->   blocks are cut. **The morale trigger moves** to Brannoch Vey (Jeff chose not to roll it at
+>   blocks are cut. **The morale trigger moves** to Garran Vey (Jeff chose not to roll it at
 >   Varrick's death).
 > - **Silas's horses** are scattered nearby and his cart is wrecked against the shed, so the casks
 >   need the camp's own wagon home (`S2_HAUL_HOME`).
@@ -101,7 +101,7 @@ Griffon, reskinned, plus Nella's custom block (from
   - **Roof Guard** — Tam "Clatter" Cobb (human, Bandit), on the shed roof's corner · 11 / 11
   - **Sniper** — [[Nella]], on Tithe about 60 ft up; drops to the ridge blind on her turn · 49 / 49
   - **Griffon** — Tithe (Griffon), riderless once she's down, hunting · 59 / 59
-  - **Relief Captain** — Brannoch Vey (human, Veteran), east road, arrives the round after Iggy's
+  - **Relief Captain** — Garran Vey (human, Veteran), east road, arrives the round after Iggy's
     first turn · 58 / 58
   - **Relief Rider 1–3** — Dace Morrow, Pim Ostler and Callan Shire (humans, Bandits), with him,
     spread out · 11 / 11 each
@@ -256,14 +256,14 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
   saddle with deep saddlebags strapped behind its wings.*
 - **Label (party-facing):** Griffon
 
-### Veteran — Brannoch Vey, the relief captain
+### Veteran — Garran Vey, the relief captain
 
 - AC 17 (splint) · HP 58 · Speed 30 ft · CR 3 · Athletics +5, Perception +2
 - **Multiattack:** two longsword attacks, plus a shortsword attack if he has it drawn
 - **Longsword** +5 to hit, 1d8+3 slashing (avg 7), or 1d10+3 two-handed
 - **Shortsword** +5 to hit, 1d6+3 piercing (avg 6)
 - **Heavy crossbow** +3 to hit, range 100/400, 1d10+1 piercing (avg 6)
-- **Brannoch Vey** (human): grey at the temples, a broken nose set crooked, splint mail he keeps
+- **Garran Vey** (human): grey at the temples, a broken nose set crooked, splint mail he keeps
   oiled. Came up the east road to collect the casks for the band and found a fight. Thinks the
   waystation crew are amateurs and says so. Bane's man more than Nella's: he doesn't wait for her
   orders and she doesn't give him any.
@@ -315,8 +315,9 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 - **Gear:** Dip carries Varrick's cart-whip ([[Varrick's Cart-Whip]], the waystation Common). It
   hits for 1d6 from now; its other properties are revealed in `S2_CAMP_INTEL`.
 - **The Citadel Clock is at 1 / 3:** Odibli's Magic Missile was sensed (rolled at the recap). The
-  brief cold wasn't played at the table. **Give it to Miguel at the top,** before Iggy acts: *"A
-  cold goes through you, quick, like stepping into shade. Then it's gone."*
+  brief cold wasn't played at the table. Send it to Miguel at the top, before Iggy acts.
+- **Private (Odibli):** the Citadel's cold, owed from Session 33
+  - **The message:** A cold goes through you, quick, like stepping into shade. Then it's gone.
 - **Open from Session 33:** mid-charge, Dip shouted at Iggy that "a flame went inside" him the
   night of the fire. Whether that told Iggy the nesting-doll vision is unconfirmed, so treat the
   vision as still Dip's own. If Ben or Jeff bring it up, it's theirs to play.
@@ -351,12 +352,12 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 - **Cast:** [[Nella]] on Tithe, then the ridge · Tithe the griffon · what's left of the crew · the
   relief riders · Sergei and Bosco · Pablo on the hill · the Marlow banner on the shed's pole
 - **Enemies:** Tally-man (Sennet Orrin) · Half-orc Cask-hand (Brask) · Archer Rider (Ilsa Hask) ·
-  Roof Guard (Clatter) · Sniper ([[Nella]]) · Griffon (Tithe) · Relief Captain (Brannoch Vey) ·
+  Roof Guard (Clatter) · Sniper ([[Nella]]) · Griffon (Tithe) · Relief Captain (Garran Vey) ·
   Relief Rider 1 (Dace Morrow) · Relief Rider 2 (Pim Ostler) · Relief Rider 3 (Callan Shire)
 - **DCs:** Perception 13 — spot the crew's crystal cords · Animal Handling 13 — start a stampede ·
-  Animal Handling 12 — round up one of Silas's horses · WIS 13 (Tithe, +3) — hold when Sah speaks ·
+  WIS 13 (Tithe, +3) — hold when Sah speaks ·
   Athletics 13 — swim the river · WIS 12 save — morale · Investigation 12 / 16 — read the tally ·
-  Arcana 15 — Dip reads Iggy (`S2_IGGY_BEAT`)
+  Arcana 15 — Dip reads Iggy (`S2_IGGY_BEAT`). Rounding up Silas's horses is in Scene 4.
 - **Tactics:** no station clusters any more. What's left of the floor fights where it stands.
   Nella shoots from the ridge blind with half cover, two arrows a turn, never Marked Quarry on a
   caster, never a downed PC. Tithe hunts whoever is in the open and moving, then climbs back into
@@ -411,7 +412,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 #### S2_RELIEF — Riders on the east road
 
 - **[-] Draft (stepped up, Jeff 2026-11-10, option 4).** The round after Iggy's first turn.
-- **What happens:** hoofbeats on the east road, then four riders at a canter: Brannoch Vey in grey
+- **What happens:** hoofbeats on the east road, then four riders at a canter: Garran Vey in grey
   splint, three behind him. They came to collect the casks and found a fight. Vey takes the yard in
   one look and doesn't like what he sees.
 - **They come in spread,** about 20 ft apart, swing down at the corral, and fight on foot. Vey goes
@@ -423,16 +424,20 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 - **What it tells the party, if they listen:** these four are not Nella's crew. They answer to
   someone else and come from a camp that can spare riders. (It feeds `S2_CAMP_INTEL`'s thirty
   bedrolls.)
-- **Introduce:** Relief Captain (Brannoch Vey)
+- **Introduce:** Relief Captain (Garran Vey)
   - **Look:** grey at the temples, a broken nose set crooked, splint mail kept oiled, a longsword
     and a short one at his belt.
   - **Sound:** flat and tired, like an officer inspecting a bad post.
   - **Impression:** a professional. The waystation crew were amateurs, and he knows it.
+- **Introduce:** Relief Rider 1–3 (Dace Morrow, Pim Ostler, Callan Shire)
+  - **Look:** riding leathers, a curved blade each, a light crossbow slung from every saddle.
+  - **Sound:** Dace shouting over the others; Pim's voice cracking when he answers.
+  - **Impression:** hired riders, not Nella's crew. They hang back for Vey's word.
 - **Tokens:** Relief Captain and Relief Rider 1–3, mounted, at the east edge on the road; spread
   them 20 ft apart. One initiative for the four.
 
 > *"Hoofbeats on the east road. Four riders come round the corral at a canter, and the one in front
-> wears grey plate that has seen a lot of oil. He reins in, looks at the cart, at the bodies, at you,
+> wears grey splint mail, oiled bright. He reins in, looks at the cart, at the bodies, at you,
 > and swings down without hurrying."*
 
 #### S2_CRYSTALS — The crew wear crystals too
@@ -563,8 +568,9 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
     fights without him.
   - **Turn back:** the wings come down over the yard, between the crew and his friends, and the
     +5 radiant goes where it's needed. Nella gets clean away, and the tally falls where it falls.
-  - Don't frame it as right or wrong. His file says he never runs, and he never crossed back over
-    Caelion's bridge. Either answer says something.
+  - Turning back is Iggy standing in front of his friends. Chasing is him planting his feet
+    against the thing alone, the never-run wound ([[Iggy PC Arc]], Growth 2 against Fall 1).
+    Don't frame it as right or wrong; either answer says something.
 - **What stays hidden:** what Sah is, why the crystals carried him, and anything about the
   Lioness hearth or the song in the viol. If someone asks Iggy who that was, it's his answer, not
   the DM's.
@@ -692,7 +698,8 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **Cast:** [[Silas Crubb]] · [[Sable Wren]] · [[Mara Tull]] · the prisoner (a silhouette: no name,
   no lines)
 - **Enemies:** none
-- **DCs:** none
+- **DCs:** Animal Handling 12 — round up one of Silas's horses (advantage with Varrick's
+  Cart-Whip in hand), then a d6 per horse: on a 1 it's lame or has thrown a shoe
 - **Time:** ~10 min
 - **Trigger:** the party heads home with the cart.
 
@@ -741,7 +748,7 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
   commits only what the cameo already locks: a raider from Bane's band walked in, surrendered, and
   went silent. Who he is and why he quit stay open.
 - **If Tyler needs more time:** the silhouette carries over. The hanging waits on Cael's reeve, so
-  Mara can hold a silent man for days, and Session 34 can open somewhere else and come back to the
+  Mara can hold a silent man for days, and Session 35 can open somewhere else and come back to the
   cell later. Don't invent a name, a face, or a reason here to fill the gap.
 - **Mara, at the door, before anyone asks:** *"He walked in. Put his blade down on my step. Hasn't
   said a word since. Half the town wants him hanged by week's end."* A beat. *"I haven't decided
@@ -869,6 +876,18 @@ Land it on the cell door, not on the casks.
 - **Mysteries:** `S2_IGGY_BEAT` touches what Sah is; `S2_CAMP_INTEL` touches Harrow Bane and the
   banner; `S2_TALLY` touches Nella's debt. Check `scheduler/campaign/_mysteries.md` when the
   answers land.
-- **For `/recap`:** log Odibli's casts (Citadel Clock, at 1 / 3), and his two Fireballs if they
+- **PC arcs:** Iggy's is touched hard (Sah speaks; his choice). Dip's lightly (Sable's "twice now"
+  and the stake talk; the Arcana read on Iggy). Odibli's lightly (the Citadel cold). Halsby's and
+  Luci's are untouched on purpose: the spotlight trend says lean agnostic this week. Carry them to
+  Session 35, where the silent raider in the cell also fits Dip's raiders hook.
+- **For `/recap`:**
+  - **New canon if played:** Garran Vey and his riders Dace Morrow, Pim Ostler and Callan Shire,
+    who don't wear crystals · the shed stocked for thirty, with a month's rations · Sennet Orrin
+    keeps Bane's duty ledger · Tithe isn't Nella's and flies east to its owner · the purse, 250 gp
+    (150 gp, 500 sp, 5 pp), exactly her remaining debt · Silas's cart worth ~35 gp, a lame horse
+    11 gp · the camp's wagon becomes the Lioness's delivery cart · the banner above the hearth, if
+    they bring it · Sah's voice through the crystals ("Up, Wallaed") · the prisoner who
+    surrendered and has said nothing
+- **Also for `/recap`:** log Odibli's casts (Citadel Clock, at 1 / 3), and his two Fireballs if they
   come out. Restamp the trackers. The reputation rewards at the waystation (Clatter's "Lightning
   man!", Brask backing off from Dip) are `unspent` until played.
