@@ -55,6 +55,7 @@
     { "query": "path:scheduler/sessions",               "color": { "a": 1, "rgb": 244143177 } },
     { "query": "path:scheduler/missions",               "color": { "a": 1, "rgb": 240098146 } },
     { "query": "path:scheduler/acts",                   "color": { "a": 1, "rgb": 236064122 } },
+    { "query": "path:scheduler/arcs",                   "color": { "a": 1, "rgb": 255202040 } },
     { "query": "path:scheduler/campaign",               "color": { "a": 1, "rgb": 173020087 } },
     { "query": "path:scheduler",                        "color": { "a": 1, "rgb": 173020087 } },
     { "query": "path:meta",                             "color": { "a": 1, "rgb": 224224224 } }

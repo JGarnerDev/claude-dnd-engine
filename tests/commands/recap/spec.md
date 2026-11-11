@@ -53,6 +53,7 @@ Checkpoints 6–8 are adjacent confirm-lists; batching them into one message is 
 - Every active PC restamped `level_confirmed: {session_number}`, even with no level-up
 - Rest Clock block restamped `(as of: Session {NN})`, even if nothing changed
 - `## Voice` sections written only for DM-approved voice-shift items, in the `meta/voice.md` shape, with no `Said at the table` line that nobody said. Every NPC on the voice-shifts list restamped `voice_confirmed: {session_number}`, even with no change. A core change that is not a correction or a DM-called arc shift is a finding
+- PC arc shifts written only for DM-approved `A` items, each with a cause from this session and a `## Shifts` line; `next_step:` strings still match the PC's hooks word for word. Every active PC arc restamped `arc_checked: {session_number}`, even with no change. A logline changed without the DM calling it is a finding
 - Both campaigns, unless the DM skips stats: a `## Session {nn}` section appended to `historian/sessions/_stats.md` in the `meta/stats.md` ledger shape, only for DM-confirmed lines. An uncorrected sum without `~`, a zero line, or an id not in the catalog is a finding. Fame reaches canon only as a DM-approved Phase 5.5 event
 - Event files in `historian/events/` only for DM-confirmed beats, each with `timeline_date`, `order` and `daypart`
 - Inbox notes file deleted, only after Phases 4–6 are written

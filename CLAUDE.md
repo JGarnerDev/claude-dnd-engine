@@ -106,6 +106,10 @@ Homebrew PCs carry two scored tracks, **fame** and **infamy**: big, odd arcade n
 
 NPC and antagonist files can carry a `## Voice` section: a **core** (how they speak, which changes only by correction or a DM-called arc shift) and a **now** layer (what sessions have done to them, every line citing its cause), plus lines actually said at the table. Frontmatter `voice:` holds the core in one line; `voice_confirmed:` stamps it. When writing, updating or playing a voice, read `meta/voice.md` once per task. `/recap` proposes voice shifts after the affinity nudges; `/voice` caches new ones; `todo-brief.py` flags stale stamps.
 
+## PC Arcs
+
+Each PC has a **PC arc** in `scheduler/arcs/`: a provisional direction (logline, growth and fall, the next one or two `spotlight_hooks:` to seed), DM-facing and shared by both seasons. Always "PC arc", never bare "arc", which means four other things here. `/session` reaches for the overdue PC's Next step first, `/review` notes a present PC whose arc nothing touches, `/recap` proposes shifts and restamps `arc_checked`, and `scripts/spotlight-balance.py` prints them in the briefs. Read `meta/pc-arcs.md` once per task when writing, shifting or planning from one.
+
 ## Player Agency
 
 The party should steer the story, not ride it. Each session plan carries a few **real choices**, about two or three for the party and one for a single character, marked `Choice (party):` / `Choice (<PC>):`. Each act carries at least one choice that changes where the story goes. Committed beats stay; choices are added around them (how, at what cost, a visible way to beat a set outcome). `/session` plans them, `/review` Pass 5 checks for railroading, and `/recap` records what was chosen in the session's `choices:` field so later sessions can pay it off. Read `meta/player-agency.md` once per task when planning, reviewing or recapping.

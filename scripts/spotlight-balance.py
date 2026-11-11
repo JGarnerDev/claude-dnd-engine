@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 # spotlight-balance.py -- character-focus ledger: spotlight-vs-agnostic balance + per-PC rotation
 # consumers: .claude/commands/session.md, .claude/commands/todo.md, scripts/session-brief.py,
-#   scripts/todo-brief.py, scripts/party-status.py -- update these if usage, flags, or output format change.
+#   scripts/todo-brief.py, scripts/party-status.py, meta/pc-arcs.md -- update these if usage, flags, or output format change.
 # Reads played-session `beats:` (see meta/schemas/session.md) and reports against meta/character-focus.md.
+# Also prints the PC ARCS block: each active PC's scheduler/arcs/ file (meta/pc-arcs.md), its
+#   next-step hooks with their status on the PC file, and stale / paid / missing flags.
 # Usage: python scripts/spotlight-balance.py [--section]
 #   --section : print as a compact "--- SPOTLIGHT ---" subsection (for embedding in session-brief.py)
 #               instead of the standalone banner report.
@@ -19,10 +21,57 @@ from typing import Optional
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (
     ROOT, ci_eq, color, fmt_num, get_frontmatter, get_played_spotlight_sessions,
-    get_spotlight_rotation, read_text_no_bom,
+    get_spotlight_rotation, read_text_no_bom, try_int,
 )
 
 HOOK_RE = re.compile(r'(?m)^\s*-\s*hook:')
+# A hook entry and its status line, from a PC file's spotlight_hooks: list.
+HOOK_STATUS_RE = re.compile(r'(?m)^\s*-\s*hook:\s*"(.*)"\s*\r?\n\s*status:\s*(\w+)')
+
+
+def _hook_statuses(raw: str) -> dict:
+    """Map hook text -> status for one PC file."""
+    return {m.group(1): m.group(2) for m in HOOK_STATUS_RE.finditer(raw)}
+
+
+def _arc_lines(pcs: list, latest: int) -> list:
+    """The PC ARCS block: one entry per active PC (meta/pc-arcs.md)."""
+    arcs = {}
+    arcs_dir = ROOT / 'scheduler' / 'arcs'
+    if arcs_dir.exists():
+        for f in arcs_dir.glob('*.md'):
+            fm = get_frontmatter(f)
+            if not ci_eq(fm.get('type'), 'pc-arc') or ci_eq(fm.get('state'), 'retired'):
+                continue
+            pc = (fm.get('pc') or '').strip().strip('"')
+            if pc.startswith('[['):
+                pc = pc[2:].split(']]')[0].split('|')[0]
+            arcs[pc.lower()] = fm
+
+    lines = [("\n--- PC ARCS ---", 'darkgray')]
+    for p in sorted(pcs, key=lambda p: str(p['Name'] or '').lower()):
+        fm = arcs.get(str(p['Name'] or '').lower())
+        if fm is None:
+            lines.append((f"  ! {p['Name']} has no PC arc - draft one with the DM.", 'yellow'))
+            continue
+        stamp = try_int(fm.get('arc_checked'))
+        stamp_txt = f"S{stamp}" if stamp else "unstamped"
+        lines.append((f"  {p['Name']:<10} (checked {stamp_txt})", 'white'))
+        if not stamp or (latest and stamp < latest):
+            lines.append((f"    ! stale - checked {stamp_txt}, latest played S{latest}; review with DM before planning on it.", 'yellow'))
+        steps = [s.strip().strip('"') for s in fm.get('_list_next_step', [])]
+        steps = [s for s in steps if s]
+        if not steps:
+            lines.append(("    ! no next step - pick one or two hooks with the DM.", 'yellow'))
+        for step in steps:
+            status = p['HookStatus'].get(step)
+            if status is None:
+                lines.append((f'    ! next-step hook not found on PC file: "{step}"', 'yellow'))
+            elif ci_eq(status, 'paid'):
+                lines.append((f'    ! next-step hook already paid - pick a new next step: "{step}"', 'yellow'))
+            else:
+                lines.append((f'    next: "{step}" [{status}]', 'white'))
+    return lines
 
 
 def _balance(session_set: list) -> Optional[dict]:
@@ -57,6 +106,7 @@ def render_lines(section: bool = False) -> list:
 
     sessions = get_played_spotlight_sessions(ROOT)
     played_count = len(sessions)
+    latest = max((s.num for s in sessions), default=0)
 
     pcs = []
     pcs_dir = ROOT / 'historian' / 'characters' / 'pcs'
@@ -73,6 +123,7 @@ def render_lines(section: bool = False) -> list:
                 'Player': fm.get('player'),
                 'Appetite': appetite,
                 'Hooks': hook_count,
+                'HookStatus': _hook_statuses(raw),
             })
     active_names = [p['Name'] for p in pcs]
 
@@ -91,6 +142,7 @@ def render_lines(section: bool = False) -> list:
         no_hooks = [p for p in pcs if not ci_eq(p['Appetite'], 'low') and p['Hooks'] == 0]
         for p in no_hooks:
             lines.append((f"  ! {p['Name']} has no spotlight hooks - needs a backstory pass.", 'yellow'))
+        lines.extend(_arc_lines(pcs, latest))
         if not section:
             lines.append(("\n========================================\n", 'darkgray'))
         return lines
@@ -184,6 +236,8 @@ def render_lines(section: bool = False) -> list:
         lines.append(("\n--- MISSING HOOKS ---", 'darkgray'))
         for p in no_hooks:
             lines.append((f"  ! {p['Name']} has no spotlight hooks - needs a backstory pass.", 'yellow'))
+
+    lines.extend(_arc_lines(pcs, latest))
 
     if not section:
         lines.append(("\n========================================\n", 'darkgray'))

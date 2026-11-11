@@ -22,6 +22,13 @@ casting in Aethryn). Each carries an `## Engine` section saying what `/transcrip
 `validate.ps1` and the semantic index. A new tracker needs only that header and section; the
 commands find it by the glob.
 
+## PC Arcs
+
+`scheduler/arcs/{PC} PC Arc.md` — one provisional direction per PC (`meta/pc-arcs.md`). The
+exception to "moves to historian": a PC arc is never played, so it stays here as long as the PC
+plays, and a finished or dropped one goes `state: retired` in place. No `campaign` tag; both
+seasons use them.
+
 ## Session Battlemaps
 
 A session folder can hold `maps/*.txt` battle-map layouts. Before editing or rendering one, read `maps/battlemaps/CLAUDE.md`. It does not auto-load from here.

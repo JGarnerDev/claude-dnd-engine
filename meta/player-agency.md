@@ -42,7 +42,8 @@ casks. The choice is still real if each path costs and gains something different
   up. These pair naturally with spotlight beats (`meta/character-focus.md`), so the
   spotlight is something the PC *does* rather than something that happens to them. Ask that
   player directly, in the fiction ("Odibli, she's holding the page out to you. What do you
-  do?").
+  do?"). When the PC has a PC arc (`meta/pc-arcs.md`), aim the choice at its growth or fall,
+  so the decision asks who the character is.
 
 ## How often
 

@@ -6,6 +6,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.60.0] — 2026-11-11
+
+### Added
+
+- **PC arcs.** Each PC can have a provisional direction in `scheduler/arcs/{PC} PC Arc.md`: a plain-language logline, growth and fall, the one or two `spotlight_hooks:` to seed next, a pointer to what the player wants, a someday line, and a log of shifts. DM-facing, no campaign tag, so both seasons share them. New type `pc-arc` (`meta/schemas/pc-arc.md`, `meta/types.md`, `meta/tags.md`, graph colors), rules in `meta/pc-arcs.md`, root `CLAUDE.md` → PC Arcs. Always written "PC arc", since "arc" already means four other things.
+- **PC ARCS block** in `scripts/spotlight-balance.py`, so it shows in `session-brief.py` and `todo-brief.py`: each PC's `arc_checked` stamp and next-step hooks with their status, flagging a stale stamp, a next-step hook already paid or not found, and a PC with no PC arc (`tests/scripts/test_pc_arcs.py`).
+
+### Changed
+
+- `/session` reaches for the overdue PC's next-step hooks first, and aims `Choice (<PC>):` at that PC's growth or fall (`meta/player-agency.md`).
+- `/review` Pass 5 notes a present PC whose PC arc nothing in the plan touches. A note, never a block.
+- `/recap` proposes numbered PC arc shifts after the voice step, and restamps `arc_checked` on every active PC arc each session, both campaigns.
+- `/todo` translates the `PC ARC:` flags; `meta/character-focus.md` and `scheduler/CLAUDE.md` point at the new layer (PC arcs never move to `historian/`).
+
 ## [0.59.0] — 2026-11-11
 
 ### Added

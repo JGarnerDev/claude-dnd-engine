@@ -21,7 +21,7 @@ Two modes:
 - **Called by `/session` Phase 6** (plan being written for the first time): run the passes and apply them directly. No findings list. The DM already approved the spine, so never add a beat in this mode: a new beat a pass wants, such as a Pass 5 choice, goes back to `/session` as a proposed spine change.
 - **Run by the DM** (standalone): run the passes, present the findings as a numbered list in plain language, and apply what the DM approves ("all" is a fine answer). Keep the numbers stable across follow-up turns, so the DM can answer by number from a phone.
 
-Read once, at the start: the plan file, its `_flow.md` if present, `meta/player-agency.md` (for Pass 5), `meta/prose-style.md` (for Pass 1's additions and Pass 6), and the files of every NPC who speaks and every location a scene is set in (1 hop, frontmatter first). Do not re-read the plan between passes.
+Read once, at the start: the plan file, its `_flow.md` if present, `meta/player-agency.md` (for Pass 5), `meta/prose-style.md` (for Pass 1's additions and Pass 6), the files of every NPC who speaks and every location a scene is set in (1 hop, frontmatter first), and the PC arc of every PC present (`scheduler/arcs/`, frontmatter plus Growth / Fall, for Pass 5). Do not re-read the plan between passes.
 
 ---
 
@@ -98,6 +98,11 @@ The party should feel they steer the story, not ride it. Check the plan against
 - **Propose a fix for each sign found:** a small choice with a cost, added around the beat. Never
   reopen a DM-committed (`[x]`) beat. New choice beats go in as draft: a `[-]` node in
   `_flow.md` (a diamond if it's a real fork), dated "draft, engine `<date>`" in the plan
+- **Check each present PC's arc** (`meta/pc-arcs.md` → Touching a PC arc). A present PC whose
+  PC arc nothing in the plan touches gets a note and one fix: a one-line beat on their
+  `next_step:` hook, or a `Choice (<PC>):` aimed at their growth or fall, added as draft like any
+  new choice. A note, never a block; skip it when the spotlight trend says lean agnostic. A
+  `Choice (<PC>):` that ignores an existing PC arc gets the same note
 - **Mark what's there.** Start every choice bullet with `Choice (party):` or
   `Choice (<PC name>):`, and keep the **Choices** bullet in `## Engine notes` up to date
 - A plan that already meets the bar needs nothing. Don't add forks for their own sake

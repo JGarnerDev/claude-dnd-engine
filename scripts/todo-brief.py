@@ -204,9 +204,18 @@ def main() -> None:
     cwrite("\n--- SPOTLIGHT ---", 'darkgray')
     spot_lines = spotlight.render_lines(section=True)
     spot_flags = 0
+    arc_pc = None  # PC whose PC ARCS entry the flag lines below belong to
     for text, _clr in spot_lines:
         t = text.strip()
-        if 'Overdue:' in t:
+        if '(checked ' in t:
+            arc_pc = t.split('(checked ')[0].strip()
+        elif t.startswith('! ') and arc_pc and text.startswith('    '):
+            cwrite(f"  PC ARC: {arc_pc} - {t[2:]}", 'yellow')
+            spot_flags += 1
+        elif 'has no PC arc' in t:
+            cwrite(f"  PC ARC: {t[2:]}", 'yellow')
+            spot_flags += 1
+        elif 'Overdue:' in t:
             cwrite(f"  {t}", 'yellow')
             spot_flags += 1
         elif 'no spotlight hooks' in t:

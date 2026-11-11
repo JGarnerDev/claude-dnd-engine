@@ -111,7 +111,7 @@ Keep the following in scope:
 - Last session cliffhanger
 - Key NPCs and locations already established in the mission or recent sessions
 - Any unresolved `new_entities` from the last session (things invented at the table that should be revisited)
-- **Spotlight opportunities** (once ≥3 sessions): if the brief named an overdue PC and the trend owes spotlight, thread one of that PC's open/seeded `spotlight_hooks:` into the mission — a 1–2 line opportunity, never a forced detour (same shaping as Phase 3B; lean agnostic instead if the trend says so)
+- **Spotlight opportunities** (once ≥3 sessions): if the brief named an overdue PC and the trend owes spotlight, thread one of that PC's open/seeded `spotlight_hooks:` into the mission, preferring the hooks named in their PC arc's `next_step:` (`scheduler/arcs/`, `meta/pc-arcs.md`) — a 1–2 line opportunity, never a forced detour (same shaping as Phase 3B; lean agnostic instead if the trend says so)
 
 ---
 
@@ -153,7 +153,7 @@ Also check `meta/campaign-design-preferences.md` (conditional-tier file — TRAN
 
 Also check `meta/literary-devices.md`: if the story state creates a natural opening for one device or twist, name it as a light suggestion alongside the hooks (e.g. *"this hook would support a cold open"* or *"the patron thread is ripe for The patron's true face"*). At most one suggestion; skip silently when nothing fits. Twist suggestions must pass the file's safety check (no contradiction with historian canon, no accidental answer to a `meta/mysteries.md` unknown). Avoid devices whose `Last used:` points at the immediately previous session.
 
-**Spotlight hooks (once ≥3 sessions):** if the brief flagged an overdue, present, normal-appetite PC and the trend owes spotlight material, read that PC's open/seeded `spotlight_hooks:` and shape **Option C** around one that fits the story state. Surface 1–2 candidates, not a mandate. No hooks → surface *"[Name] has no spotlight hooks — needs a backstory pass"* instead. If the trend says lean agnostic, bias all three hooks toward `party-centric`/`world` and skip the spotlight push this session.
+**Spotlight hooks (once ≥3 sessions):** if the brief flagged an overdue, present, normal-appetite PC and the trend owes spotlight material, read that PC's open/seeded `spotlight_hooks:` and shape **Option C** around one that fits the story state. If the PC has a PC arc (`scheduler/arcs/`, rules in `meta/pc-arcs.md`), offer its `next_step:` hooks first, framed by its logline; when the brief flags the PC arc stale, say so in one line and fall back to choosing by fit. Surface 1–2 candidates, not a mandate. No hooks → surface *"[Name] has no spotlight hooks — needs a backstory pass"* instead. If the trend says lean agnostic, bias all three hooks toward `party-centric`/`world` and skip the spotlight push this session.
 
 Respect the `Scale:` tags when picking:
 
@@ -222,7 +222,7 @@ Present the spine in chat:
 - **Beats** — one numbered line per beat under its scene: `<n>. S<k>_SLUG — what happens, in one line [kind]`. The kind is the beat's flow graph class: combat, social, decision, stake, seed, fail, or open for a beat waiting on a decision
 - **Choices** — real choices start their line with `Choice (party):` or `Choice (<PC name>):` and give each option's cost on the same line
 - **Fights** — one line under each combat beat: who and how many, the tier and XP band against the party, and the rounds expected. Stat blocks, kits and labels come in Phase 6
-- **Choice check** — a closing line counting the choices against `meta/player-agency.md` → How often (about two or three party choices and one character choice, no run of more than about three reaction-only scenes), naming the beat that pays off a past choice from Phase 1 Step 3, item 6, and naming any spotlight beat. If the spine falls short, add choices around its beats before showing it
+- **Choice check** — a closing line counting the choices against `meta/player-agency.md` → How often (about two or three party choices and one character choice, no run of more than about three reaction-only scenes), naming the beat that pays off a past choice from Phase 1 Step 3, item 6, and naming any spotlight beat. A `Choice (<PC name>):` should face that PC's growth or fall when they have a PC arc (read its Growth / Fall sections). If the spine falls short, add choices around its beats before showing it
 
 Number the beats across the whole session, not per scene. **Numbers are stable:** a cut beat retires its number and an added beat takes the next free one, so the DM can answer by number from a phone across turns. The free entity rule applies already: flag any entity a beat needs that is not in `data/` or `historian/`.
 

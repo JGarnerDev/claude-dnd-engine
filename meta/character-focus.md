@@ -134,6 +134,10 @@ normal-appetite PC — biased by balance (lean agnostic when the campaign owes i
 no hooks surfaces as *"needs a backstory pass,"* not a dead nag. Without this field the whole
 feature is inert.
 
+A PC's **PC arc** (`scheduler/arcs/`, rules in `meta/pc-arcs.md`) puts these hooks in order: its
+`next_step:` names the one or two hooks `/session` reaches for first. Hooks and their status stay
+on the PC file.
+
 ## How the Engine Uses This
 
 - **`/session` Phase 1** carries a spotlight readout next to the drought counter — lifetime

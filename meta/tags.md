@@ -151,6 +151,8 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `culture` | culture entity | Entity type: shared customs, values, and practices of a people |
 | **mechanic** | | |
 | `mechanic` | mechanic file | Meta document: gameplay mechanic or structured mini-game |
+| **pc-arc** | | |
+| `pc-arc` | pc-arc entity | Entity type: a PC's provisional direction (`meta/pc-arcs.md`) |
 | **mission** | | |
 | `mission` | mission entity | Entity type: a self-contained objective (quest) |
 | **skill** | | |

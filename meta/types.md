@@ -40,6 +40,7 @@ Authoritative list of all valid `type` / `subtype` combinations. **Before declar
 | `location` | `terrain-feature` | `meta/schemas/location-terrain-feature.md` | `data/locations/terrain-features/` | `historian/locations/terrain-features/` |
 | `mission` | — | `meta/schemas/mission.md` | `scheduler/missions/` | `historian/missions/` |
 | `monster` | — | `meta/schemas/monster.md` | `data/monsters/` | — |
+| `pc-arc` | — | `meta/schemas/pc-arc.md` | `scheduler/arcs/` | — |
 | `party` | — | `meta/schemas/party.md` | — | `historian/characters/parties/` |
 | `race` | — | `meta/schemas/race.md` | `data/races/` | `historian/races/` |
 | `resource` | — | `meta/schemas/resource.md` | `data/resources/` | `historian/resources/` |

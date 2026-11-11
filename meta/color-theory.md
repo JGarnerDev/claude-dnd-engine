@@ -41,11 +41,11 @@
   - mission — `#f06292` — active quest
   - act — `#ec407a` — story arc
   - campaign — `#ad1457` — overarching narrative
+  - pc-arc — `#ffca28` — yellow, a PC's provisional direction
 - **Meta** — `#e0e0e0` — design guidelines, non-story
 
 ## Available (reserved for future types)
 
-- Yellow `#ffca28`
 - Yellow-Green `#8bc34a`
 - Green `#66bb6a`
 - Yellow-Orange `#ffb300`

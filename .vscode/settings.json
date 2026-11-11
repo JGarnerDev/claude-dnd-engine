@@ -80,6 +80,7 @@
         { "id": "sessions-draft",    "label": "Sessions (draft)",       "match": { "property": "path", "value": "scheduler/sessions" },            "color": "#f48fb1", "enabled": true },
         { "id": "missions-active",   "label": "Missions (active)",      "match": { "property": "path", "value": "scheduler/missions" },            "color": "#f06292", "enabled": true },
         { "id": "acts-active",       "label": "Acts (active)",          "match": { "property": "path", "value": "scheduler/acts" },                "color": "#ec407a", "enabled": true },
+        { "id": "pc-arcs",           "label": "PC Arcs",                "match": { "property": "path", "value": "scheduler/arcs" },                "color": "#ffca28", "enabled": true },
         { "id": "campaign",          "label": "Campaign",               "match": { "property": "path", "value": "scheduler/campaign" },            "color": "#ad1457", "enabled": true },
         { "id": "meta",              "label": "Meta",                   "match": { "property": "path", "value": "meta" },                          "color": "#e0e0e0", "enabled": true }
       ]
