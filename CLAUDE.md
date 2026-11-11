@@ -48,7 +48,7 @@ Scan commands (e.g. `/inventory`) read **frontmatter only** — never the body.
 
 House rules for working in this repo, whoever the DM is:
 
-- **Git.** Never commit without an explicit go-ahead in that turn; show what the commit will include. Once approved, commit straight to `master`. No feature branches: the history is direct-to-master and there is no reviewer on the other end of a PR.
+- **Git.** Never commit without an explicit go-ahead in that turn; show what the commit will include. Once approved, where it goes depends on who is at the keyboard. The repo owner (Jeff, `JGarnerDev`) commits straight to `master`, with no feature branches. Anyone else commits to a branch and opens a PR into `master` (`gh pr create`): a ruleset blocks other pushes to `master`, and the owner must approve before a merge.
 - **Asking the DM.** When a walk-through needs the DM's answers (`/idea` stages, `/recap` Phase 2 and its confirm lists, `/session` Phase 4, reviews), ask **one question per message**, with 2–4 options (recommended first) and room for notes. This overrides any command file that says to batch questions into one message. Lists the DM answers by number (findings, proposals) keep stable numbers across turns.
 - **Hidden rolls.** A roll the DM didn't make at the table (a Citadel d6, a lameness d6) is rolled with `uv run scripts/roll.py <dice> --label "<what>"`, and the result reported.
 - **Reference docs are repo files.** Generated planning views (flow graphs, maps, layouts) go in the repo, one diagram per file, so they can be zoomed and read beside their sources. Publish an artifact only to hand something to a person outside the repo; the repo file stays the source.
