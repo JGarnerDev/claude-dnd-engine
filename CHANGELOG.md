@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.61.0] — 2026-11-11
+
+### Changed
+
+- **Mysteries slide renamed Mysteries & Loose Ends.** New decks write `## Mysteries & Loose Ends`; the slide also carries loose ends the party knows are hanging, not only questions. The runner still reads an older deck's `## Mysteries` (`app/pages/home/session/mysteries.ts`, `meta/recap-slides.md`, `/recap`, `scheduler/campaign/_mysteries.md`). Session 33's deck renamed.
+
 ## [0.60.0] — 2026-11-11
 
 ### Added

@@ -66,9 +66,11 @@ party stands in the story right now**.
   again.
 - **Changed slides only.** A slide shows only if its content changed in a relevant way since the
   last deck. Two **always-on** slides break the rule: the sky slide situates the players, and the
-  Mysteries slide keeps them curious.
-- **Mysteries slide**: eight open questions the party would be asking about the world, the NPCs
-  and the mission, ranked by how much they matter to the party now. Party-voice questions built
+  Mysteries & Loose Ends slide keeps them curious.
+- **Mysteries & Loose Ends slide** (heading `## Mysteries & Loose Ends`; the runner still reads an
+  older deck's `## Mysteries`): eight open questions the party would be asking about the world, the
+  NPCs and the mission, plus loose ends they know are hanging (a stone that hasn't woken, something
+  a companion said and never explained), ranked by how much they matter to the party now. Party-voice questions built
   only from what the party saw, heard or was told: never a question that hints at the answer, names
   someone they haven't learned, or points at something they haven't noticed. Not the DM's
   `meta/mysteries.md` (load-bearing unknowns the DM guards); a guarded mystery appears only as the
@@ -82,11 +84,11 @@ party stands in the story right now**.
 
 **Hand-written slide budget** (soft caps, counting the Title):
 
-- **Light**: 5–6. Title, Last time…, Where you stand, Mysteries, Next. No scene slides. The Party slide
+- **Light**: 5–6. Title, Last time…, Where you stand, Mysteries & Loose Ends, Next. No scene slides. The Party slide
   only if someone gained something.
-- **Medium**: 6–8. Orientation and Mysteries, then the 1–3 scenes that moved something, Choices only if one
+- **Medium**: 6–8. Orientation and Mysteries & Loose Ends, then the 1–3 scenes that moved something, Choices only if one
   mattered.
-- **Heavy**: 8–11. Orientation, Mysteries, the scenes that moved something, Choices, and **What changed**:
+- **Heavy**: 8–11. Orientation, Mysteries & Loose Ends, the scenes that moved something, Choices, and **What changed**:
   the mission or act payoff, said the way the party would tell it.
 
 **Generated-slide gates** (the runner decides from the ledgers):
@@ -106,8 +108,8 @@ Every deck follows the same order, so players know where to look. Orientation al
 2. **Last time…**: 1–4 sentences of narrative from the `recap:` field, rewritten for players.
    Light decks keep it to one or two.
 3. **Where you stand**: story position and whereabouts on one slide.
-4. **Mysteries**: every deck. Eight open questions, as bullets, most important first (see Deck
-   weight → Mysteries slide). Write plain `-` bullets; the runner draws them as a numbered grid
+4. **Mysteries & Loose Ends**: every deck. Eight open questions, as bullets, most important first
+   (see Deck weight → Mysteries & Loose Ends slide). Write plain `-` bullets; the runner draws them as a numbered grid
    of cards (`app/pages/home/session/mysteries.ts`).
 5. **Scenes that moved something** (medium and heavy only): one slide per scene that changed
    something. Use the plan's `### Scene` sections, corrected by `## As Played`. A skipped scene, or

@@ -1,5 +1,6 @@
-// Mysteries slide for the recap deck (meta/recap-slides.md → Mysteries slide): the party's eight
-// open questions, written as `- ` bullets in _slides.md under `## Mysteries`, ranked. Only the top
+// Mysteries & Loose Ends slide for the recap deck (meta/recap-slides.md → Mysteries & Loose Ends
+// slide): the party's eight open questions, written as `- ` bullets in _slides.md under
+// `## Mysteries & Loose Ends` (older decks: `## Mysteries`), ranked. Only the top
 // MAX_SHOWN show; any below wait in reserve for a later deck. The runner lays them
 // out as a numbered grid of cards so eight questions read at a glance when screen-shared. Pure:
 // returns the deck with that slide's `html` filled; slides.ts shows it.
@@ -10,7 +11,7 @@ import type { Section, Slide } from './types.js';
 
 export const MAX_SHOWN = 8;
 
-const isMysteries = (s: Slide) => !s.html && /^mysteries$/i.test(s.title.trim());
+const isMysteries = (s: Slide) => !s.html && /^mysteries(\s*(&|and)\s*loose ends)?$/i.test(s.title.trim());
 
 // Pure: the questions in a markdown bullet list; an indented line continues the bullet above it.
 export function questions(md: string): string[] {

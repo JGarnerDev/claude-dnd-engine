@@ -1,7 +1,7 @@
 # Mystery Answers (as of: Session 33)
 
-DM-only. Not an entity. The answer key to the questions on the recap deck's **Mysteries** slide
-(`meta/recap-slides.md` → Mysteries slide). The `_` prefix keeps it out of `validate.ps1` and the
+DM-only. Not an entity. The answer key to the questions on the recap deck's **Mysteries & Loose Ends** slide
+(`meta/recap-slides.md` → Mysteries & Loose Ends slide). The `_` prefix keeps it out of `validate.ps1` and the
 semantic index. The session runner shows each answer in its sidebar under **Mysteries**,
 searchable. Each answer is tagged: **Canon** (historian), **Planned** (data or scheduler, not yet
 played) or **Open** (deliberately unset; see `meta/mysteries.md`).
@@ -12,7 +12,7 @@ A campaign tracker: `/transcript`, `/recap` and `/session` read every `scheduler
 file with an `(as of: Session NN)` header and follow this section. Homebrew sessions only.
 
 - **`/transcript` mines:** nothing.
-- **`/recap` asks:** nothing new. After the deck's Mysteries list is approved (Phase 8), make
+- **`/recap` asks:** nothing new. After the deck's Mysteries & Loose Ends list is approved (Phase 8), make
   `## Answers` match it: one `###` per question, its heading the question word for word, in the
   slide's order, reserve questions included. Write each answer from canon with wikilinks, tagged
   Canon, Planned or Open. Move a question the session answered to `## Answered` with the session
@@ -125,6 +125,18 @@ It gave no name.
 **Canon.** [[Sabathiel]], [[Luci]]'s warlock patron, the voice behind her Guidance and Augury.
 
 **Open.** What "closer" points at (the Sun Temple, [[Aedra]], or somewhere in Aethryn) is not set.
+
+### What did Dip mean, shouting that a flame went inside Iggy the night of the fire?
+
+**Canon.** During [[Iggy]]'s song at [[The Golden Lioness]] (Session 30, played as a flashback at
+Session 31), [[Dip]] saw the hearth go still, and a private Arcana roll (15) opened it like a
+nesting doll: real, then hollow, then real again, with the innermost layer inside Iggy. Dip told no
+one. Mid-charge at Session 33, Dip shouted at Iggy that "a flame went inside" him that night.
+
+**Open.** Whether the shout shared the vision in character is unconfirmed; the vision stays Dip's
+own until Ben or Jeff play it. What the innermost layer is ties to "What is the Lioness's hearth
+tied to" above, and stays unset (`meta/mysteries.md`). Added to the deck's reserve 2026-11-11, ahead
+of Session 34; check with Ben before it ranks into the top eight.
 
 ## Answered
 

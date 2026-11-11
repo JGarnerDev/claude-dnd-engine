@@ -17,7 +17,7 @@ half-orc are on Halsby, the archer from the fork is on Iggy, and a crossbowman i
 Nella is circling overhead on her griffon. Silas's horses are loose, and his cart is wrecked
 against the shed.
 
-## Mysteries
+## Mysteries & Loose Ends
 
 - Who pays for raiders this organized: one cobbler's boots, a banner too fine for a camp?
 - Whose griffon is that, and how does a bandit camp have one?
@@ -33,6 +33,7 @@ against the shed.
 - Will Davian's stone wake again, and where would it take the party?
 - Why did the green-eyed fox want the bound woman saved?
 - What answered "Closer." when Luci named the moon?
+- What did Dip mean, shouting that a flame went inside Iggy the night of the fire?
 
 ## Next
 

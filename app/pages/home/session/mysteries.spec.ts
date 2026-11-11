@@ -26,6 +26,13 @@ describe('withMysteries', () => {
     expect(cards[2].textContent).toContain('the archer');
   });
 
+  it('recognises the new title and the old one', () => {
+    for (const title of ['Mysteries & Loose Ends', 'Mysteries and loose ends', 'Mysteries']) {
+      const out = withMysteries([{ title, md }]);
+      expect(dom(out[0].html!).querySelectorAll('.my-card')).toHaveLength(3);
+    }
+  });
+
   it('shows only the top eight; the rest stay in reserve', () => {
     const many = [{ title: 'Mysteries', md: Array.from({ length: 11 }, (_, i) => `- Q${i + 1}?`).join('\n') }];
     const cards = dom(withMysteries(many)[0].html!).querySelectorAll('.my-card');
