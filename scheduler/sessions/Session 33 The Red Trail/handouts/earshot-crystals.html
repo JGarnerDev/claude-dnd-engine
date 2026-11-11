@@ -1,0 +1,126 @@
+<title>Earshot Crystals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: one item card, centered, sized to its content. Party handout; matches the Shadowless Spear card. */
+:root {
+  --bg: #e7e8e6;
+  --card: #f6f6f2;
+  --ink: #22231f;
+  --muted: #5e605a;
+  --rule: #cbccc4;
+  --accent: #4a6a86;      /* cut-stone blue */
+  --metal: #8a7f6a;
+  --warn-bg: #efe6d8;
+  --warn-ink: #6b4a1f;
+  --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+  --body: "Spectral", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131514; --card: #1c1e1d; --ink: #e4e3dc; --muted: #a09f97; --rule: #383a37;
+    --accent: #8db3d4; --metal: #b2a68c; --warn-bg: #2c251b; --warn-ink: #e0bf8a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131514; --card: #1c1e1d; --ink: #e4e3dc; --muted: #a09f97; --rule: #383a37;
+  --accent: #8db3d4; --metal: #b2a68c; --warn-bg: #2c251b; --warn-ink: #e0bf8a; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--body);
+  font-size: 17px; line-height: 1.55; padding: 32px 16px;
+}
+.card {
+  max-width: 34rem; margin: 0 auto; background: var(--card);
+  border: 1px solid var(--rule); border-radius: 4px; padding: 28px 28px 24px;
+  display: grid; gap: 18px;
+}
+header { display: grid; gap: 4px; }
+h1 {
+  font-family: var(--display); font-weight: 400; font-size: 2.1rem; line-height: 1.1;
+  margin: 0; text-wrap: balance;
+}
+.type { margin: 0; color: var(--muted); font-style: italic; }
+.art { display: block; width: 100%; max-width: 100%; height: auto; }
+.flavor { margin: 0; }
+.stats {
+  display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 0; padding: 10px 0;
+  border-block: 1px solid var(--rule); font-size: .95rem; font-variant-numeric: tabular-nums;
+}
+.stats div { display: flex; gap: 6px; }
+.stats dt { color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-size: .78rem; align-self: center; }
+.stats dd { margin: 0; }
+ul.props { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.props h2 {
+  font-family: var(--display); font-weight: 400; font-size: 1.2rem; margin: 0 0 2px;
+  color: var(--accent);
+}
+.props p { margin: 0; }
+.warn {
+  background: var(--warn-bg); color: var(--warn-ink); border-radius: 3px;
+  padding: 12px 14px; display: grid; gap: 4px;
+}
+.warn h2 { font-family: var(--display); font-weight: 400; font-size: 1.2rem; margin: 0; }
+.warn p { margin: 0; }
+footer { color: var(--muted); font-size: .9rem; font-style: italic; border-top: 1px solid var(--rule); padding-top: 12px; }
+@media (max-width: 440px) { .card { padding: 22px 18px 20px; } h1 { font-size: 1.8rem; } }
+</style>
+
+<article class="card">
+  <header>
+    <h1>Earshot Crystals</h1>
+    <p class="type">Wondrous item, common · no attunement · one each</p>
+  </header>
+
+  <svg class="art" viewBox="0 0 480 90" role="img" aria-label="Five identical rough crystals, each wrapped in a band of metal and hung on a leather cord.">
+    <g fill="none" stroke="var(--metal)" stroke-width="2">
+      <path d="M48 0 V30"/><path d="M144 0 V30"/><path d="M240 0 V30"/><path d="M336 0 V30"/><path d="M432 0 V30"/>
+    </g>
+    <g fill="var(--accent)">
+      <path d="M48 30 l14 14 -6 30 -16 8 -12 -26 z"/>
+      <path d="M144 30 l14 14 -6 30 -16 8 -12 -26 z"/>
+      <path d="M240 30 l14 14 -6 30 -16 8 -12 -26 z"/>
+      <path d="M336 30 l14 14 -6 30 -16 8 -12 -26 z"/>
+      <path d="M432 30 l14 14 -6 30 -16 8 -12 -26 z"/>
+    </g>
+    <g fill="var(--metal)">
+      <rect x="34" y="50" width="28" height="5"/><rect x="130" y="50" width="28" height="5"/>
+      <rect x="226" y="50" width="28" height="5"/><rect x="322" y="50" width="28" height="5"/>
+      <rect x="418" y="50" width="28" height="5"/>
+    </g>
+  </svg>
+
+  <p class="flavor">A rough crystal, crudely wrapped in metal, on a leather cord. Every one is the same, cut from one stone. You took them off the raiders left dead at the Golden Lioness.</p>
+
+  <dl class="stats">
+    <div><dt>Range</dt><dd>300 ft</dd></div>
+    <div><dt>Uses</dt><dd>Unlimited</dd></div>
+    <div><dt>Carries</dt><dd>Words only</dd></div>
+  </dl>
+
+  <ul class="props">
+    <li>
+      <h2>Speaking takes touch</h2>
+      <p>While touching your crystal, you speak telepathically to other holders within 300 feet. Pick one: a single holder you can see, and only they hear it, or <strong>all</strong> holders.</p>
+    </li>
+    <li>
+      <h2>Listening doesn't</h2>
+      <p>You hear messages as long as the crystal is on your body. To answer, touch your own.</p>
+    </li>
+    <li>
+      <h2>Words only</h2>
+      <p>No images, feelings or senses. The listener hears your own voice.</p>
+    </li>
+    <li>
+      <h2>Any language</h2>
+      <p>The words are understood whatever language either of you speaks.</p>
+    </li>
+  </ul>
+
+  <section class="warn">
+    <h2>"All" means all</h2>
+    <p>A message to all reaches every crystal from this stone within 300 feet, including ones you don't know about. You get no sense of who heard it.</p>
+  </section>
+
+  <footer>Halsby worked out what they do and dealt one to each of you: "Grab one."</footer>
+</article>

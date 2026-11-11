@@ -37,6 +37,15 @@ Plan drafted 2026-10-07 at `scheduler/sessions/Session 30 Keep the Ale/`. These 
 
 - **91.** 🤝 **Jeff** — **re-check the waystation fight for daylight before Session 33.** The party reached the camp at about 10 a.m. (Session 32), but the plan sized the sky fight for dark: Nella unseen past darkvision, advantage on her shots, and Iggy's wings "lighting the sky" as the turn. In daylight she is seen and in range of crossbows. Nella also starts airborne (Halsby's broadcast warned her), Ilsa and Cinder may have joined the floor, and the heist option is gone. Rework the Difficulty check, `S2_FIGHT` and `S2_IGGY_BEAT` in `scheduler/sessions/Session 33 The Red Trail/`, and run `/flow` to trim its carried `_flow.md`. Until then the fight is likely softer than "desperate".
 
+### Session 34 prep — cards and the region map
+
+Card style to match: `scheduler/sessions/Session 33 The Red Trail/handouts/` (the Spear and the Earshot Crystals cards). Each one goes out only at its moment, never at the start of the session.
+
+- **92.** 🤝 **Jeff** — **Varrick's Parrying Bracer card, for Dip.** Once per short rest, as a reaction, +2 AC against one melee hit Dip can see. Hand it over when the party takes it off Varrick. Build it once Session 33 shows whether they did.
+- **93.** 🤝 **Jeff** — **Nella's tally and purse card**, for whoever picks it up: a notched antler stick and a purse of 250 gp in three tied sections (150 gp, 500 sp, 5 pp). Describe only what they hold. The notches and the debt come from the Investigation checks (DC 12 and DC 16), never the card. Build it once Session 33 shows who has it.
+- **94.** 🤝 **Jeff** — **Stake terms card, for the party.** Their share in the Lioness grows 10% → 25% → 40%, earned by deeds and never by coin. It comes with a room each, free meals, and the party naming one thing in the new wing. Rooms cost 250–500 gp to build. Hand it out when Sable's bigger-share talk happens.
+- **95.** 🙋 **Jeff** — **a regional map with fog of war.** The party has now ridden from Ashford to the waystation and back. Give them a region map in Roll20 with the unexplored ground hidden, and reveal it as they travel. Silas's road sketch (`maps/handouts/silas-road-sketch.md`) is the base layer they already hold. Until then the party has no shared picture of where the waystation and Duskwater sit.
+
 ### Session 32 prep — the Spear is in play
 
 - **88.** 🤝 **Jeff + Kellan** — **finish The Shadowless Spear before Halsby's next fight.** The fox delivered it at Session 31 (+1, works as his focus, doubles the fade-rite span, 15-ft reach in dim light, shadowless head). **Ruled 2026-10-28:** the +1 covers his spell attack rolls and save DC as well as the weapon; tell Kellan. Still to do: write Kellan the item sheet Jeff promised, and have `/recap` move the item from `meta/loot-options/Halsby/weapons/The Shadowless Spear.md` into a historian item file. Until then Kellan plays it from memory.

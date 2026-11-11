@@ -5,12 +5,12 @@ campaign: homebrew
 type: session
 session_number: 33
 exists: false
-state: draft
+state: planned
 tags:
   - session
 
 mission: [[The Stolen Casks]]
-planned_date: "TBD"
+planned_date: "2026-11-10"
 pcs_present:
   - "Iggy"
   - "Luci"
@@ -60,7 +60,7 @@ relates_to:
   - "[[Redwater]] (campaign)"
   - "[[Session 32 The Red Trail]] (its unplayed Scene 3 and Scene 4 carry over to here)"
   - "[[The Wanderer's Boon]] (shown inert)"
-  - "[[The Shadowless Spear]] (delivered at the ford)"
+  - "[[The Shadowless Spear]] (its first real fight)"
   - "[[Harrow Bane]] (named in the camp's ledger; still no face)"
 importance: critical
 active: true
@@ -158,16 +158,12 @@ so the hard part is the sky, not the floor.
 - **Round budget:** 1 at the fork, plus ~3–4 here, makes 4–5 of standard's 18–24. One fight, made
   to count.
 
-### Bandit — Fennel Dray (fork) and Clatter (camp)
+### Bandit — Clatter
 
 - AC 12 · HP 11 · Speed 30 ft · CR 1/8
 - **Scimitar** +3 to hit, 1d6+1 slashing (avg 4)
 - **Light crossbow** +3 to hit, range 80/320, 1d8+1 piercing (avg 5)
-- **Fennel Dray** (human): wiry farm lad gone wrong, twitchy, talks fast, loves Cinder more than anyone in the band.
-  Shoots the horses. If Cinder goes down, Fennel stops fighting and goes to the wolf.
-  - **Kit (player-facing):** *a patched farm jerkin, no real armour, a light crossbow across the
-    saddle and a cheap curved blade on his hip.*
-  - **Label (party-facing):** Crossbow Rider
+- **Fennel Dray** (human, the fork's crossbow rider): dead at the fork, Session 32. No token.
 - **Tam "Clatter" Cobb** (human): on the shed roof (half cover), crossbow on whoever is in the
   open. Named for the bolts he never stops fiddling with; you hear him before you see him. Calls
   out targets to the floor, so whoever he's watching gets no hiding in the open.
@@ -396,7 +392,7 @@ happened in [[Session 32 The Red Trail]].
   Nella +7 · Deception 12 vs Varrick — a false order over the crystals (`S2_CRYSTALS`) · Animal
   Handling 13 — start a stampede · WIS 13 (Nella, +3) — hold Tithe when Sah speaks · DEX 10
   (Nella) — stay in the saddle · Athletics 13 — swim the river · WIS 12 save — morale ·
-  Investigation 12 / 16 — read the tally
+  Investigation 12 / 16 — read the tally · Arcana 15 — Dip reads Iggy (`S2_IGGY_BEAT`)
 - **Tactics:** the crew holds its stations behind the cart and never converges; Ilsa and Cinder
   spring the tree line on whoever comes through it. Nella fights from inside the cloud: out, two
   arrows, back in. She spreads her shots to wound and pin (never Marked Quarry on a caster, never a
@@ -413,7 +409,7 @@ happened in [[Session 32 The Red Trail]].
   **the cart**, turned broadside by the shed with the casks still loaded · **fire** · and set back,
   the **overwatch ridge** with a brush blind, a **fast cold river** behind it, a **rigged plank
   bridge** over the river, and the empty stake where Tithe was tethered, between the blind and the
-  river. Map: `maps/waystation.txt` (render with `uv run scripts/battlemap.py --session 32`). Key
+  river. Map: `maps/waystation.txt` (render with `uv run scripts/battlemap.py --session 33`). Key
   refs: cart R10:S12, Nella's blind AB8:AC10 (55 ft from the cart, up a difficult slope at X:Z),
   bridge AF9:AH9, 15 ft behind the blind.
 - **Jeff's Roll20 map (2026-10-12)** differs from the reference render. Rulings:
@@ -455,6 +451,26 @@ happened in [[Session 32 The Red Trail]].
     said oats."* · when he gives up on them: *"I go home. Home has oats."*
 - **Sergei** keeps turning his head up at the cloud, hackles up, each time Tithe passes over inside
   it. **Bosco** climbs up on the cart seat and won't come down.
+- **Luci's Augury (optional, ready if she casts it; Jeff, 2026-11-10, todo 81):** Sabathiel's pact
+  spell, cast on the hill about a plan for the next half hour. Cast from a slot it takes 1 minute.
+  As a ritual it takes 11, which is longer than the clock. Answer honestly, by the plan she asks
+  about:
+  - Spring the ambush on purpose, once they know where it is: **weal**
+  - Use all ten minutes before going in: **weal**
+  - Go in now: **weal and woe** (half-built ambush, but no report and no setup)
+  - Assault the cart head-on: **weal and woe**
+  - Parley: **weal and woe** (an edge, and an arrow for the branch-holder)
+  - A trick (false order, decoy, stampede): **weal and woe**
+  - Come down through the south tree line without knowing it's held: **woe**
+  - A question too vague to answer, or about more than the next half hour: **nothing**
+- **Private (Luci):** the Augury's answer, one message per result
+  - **Weal:** The warmth on your face spreads, steady as sun through a window. The voice says one
+    word in the language that pulls at you, and you understand it: *Go.*
+  - **Woe:** The warmth goes out of your face all at once, the way it does when a cloud covers
+    the sun. The voice says one word, and you understand it: *No.*
+  - **Weal and woe:** The warmth comes and goes on your face, warm then cool then warm. The voice
+    says one word, and you understand it: *Both.*
+  - **Nothing:** The warmth stays where it was. The voice says nothing at all.
 - **Transition:** Halsby's report (`S2_SPOTTER`), or the party moves.
 
 #### S2_SPOTTER — Halsby watches the ambush go in
@@ -468,6 +484,11 @@ happened in [[Session 32 The Red Trail]].
     the shed's side door and doesn't come out. The archer from the fork walks into the south tree
     line with her grey wolf, and you lose sight of them both. Then the drover shouts, out loud, to
     all of them: "Nobody talk into the stones. They can hear us. Shout it or don't say it."
+  - **If the party goes early** (`S2_TEN_MINUTES`, go now): From the bridge you watch the camp
+    scramble. The drover shouts the cart round broadside to the shed, and two big men in aprons
+    get behind it with crossbows. Two more are still hammering stakes into the open ground to the
+    south, only the west half done. The archer from the fork is walking her grey wolf across the
+    open ground toward the south tree line. The clerk with the ledger hasn't come out of the shed.
 - **Choice (Halsby):** how to get it to the party.
   - **Broadcast to "all":** instant, and the party gets all of it. But every crew member wearing
     a crystal hears a stranger describe their own ambush. Varrick swears and moves one piece:
@@ -569,6 +590,12 @@ happened in [[Session 32 The Red Trail]].
   - *"Everyone wants something back from me today. Get in line."*
   - Pushed on why she does this: *"I owe someone. When it's paid, I'm done."* Then
     nothing more.
+  - **What talking buys (Jeff, 2026-11-10):** while the crew watches whoever holds the branch, the
+    rest of the party gets one free reposition each, or advantage on Perception to spot the
+    ambush. Sennet steps out of the shed's side door to listen, so his position shows.
+  - **What it costs:** the branch-holder stands in the open when the talk breaks, and Nella's
+    first arrow goes to them.
+  - Nella, ending it: *"That's enough talk. Varrick, count them."*
 - **Trickery:** the camp knows a party of five is coming, so posing as relay riders won't hold.
   What can work: a false order over the crystals (`S2_CRYSTALS`), a decoy, a stampede through the
   corral. Insight and Deception contested; Varrick is easy to fool, Sennet less so (Insight +4),
@@ -606,7 +633,8 @@ happened in [[Session 32 The Red Trail]].
 - **Tokens:** the Sniper and Griffon tokens move together. They stay on the GM layer, on the grey
   margin over the river, while she's in the cloud. On her turn bring them onto the map about 40 ft
   below the cloud, resolve her shots, then put them back. Ilsa, Cinder and Sennet come up from the
-  GM layer when they act or are spotted.
+  GM layer when they act or are spotted. Halsby's token comes up from the GM layer, by the bridge,
+  when he attacks or casts (that ends his Invisibility) or chooses to show himself.
 - **The floor:** Varrick, Haddo and Brask behind the cart, Hesper at its back wheel, Sennet
   slipping out to join them, Clatter on the roof, Ilsa and Cinder from the trees. Varrick and the
   cask-hands take two hits and keep swinging. The crew holds stations; they don't converge.
@@ -635,7 +663,8 @@ happened in [[Session 32 The Red Trail]].
   - Clatter, the first time Tithe comes out: *"There she is! THERE she is! Now you're for it!"*
   - Varrick: *"Hold the cart! Nobody touches the cart!"* · *"She's up there, she's got you,
     keep them in the open!"*
-  - Haddo, counting: *"Eleven. Twelve. Nobody touches twelve."* · Brask: *"That's the sky lot."*
+  - Haddo, counting: *"Eleven. Twelve. Nobody touches twelve."* · Brask, when Nella's first
+    arrows land: *"About time she showed up."*
   - Sennet, the first time he's hit: *"I count this lot. I don't bleed for it."* · Hesper:
     *"Stand still, Varrick, I can't — stand STILL."*
   - Ilsa, when the trees are found: *"Cinder, back. Back to the cart."*
@@ -645,6 +674,13 @@ happened in [[Session 32 The Red Trail]].
     you're halfway."* · from inside the cloud, counting her arrows: *"Nine. Eight."*
 - **Halsby's Spear:** under the cloud it's still bright daylight, so the 15-ft reach is off unless
   he makes his own dark. The +1 rides on his spell attacks and save DC either way.
+- **Sabathiel and the Spear (optional, ready; Jeff, 2026-11-10, todo 81):** the first time Luci
+  stands within 5 ft of Halsby while he casts through the Spear, or touches it. Once only. Don't
+  explain it, and don't let Halsby notice. It seeds Luci's light against Halsby's shadow ways, so
+  check Paul's and Kellan's appetite for PC friction before using it.
+- **Private (Luci):** Sabathiel and the Spear
+  - **The message:** Halsby casts through his spear, and the warmth on your face goes cold. For
+    one breath it's gone completely. Then it comes back, and the voice says nothing about it.
 - **The horses:** a stampede through the corral is a lever for chaos (DC 13 Animal Handling to
   start it on purpose; it starts on its own if fire reaches the corral, or the first time Tithe
   screams overhead). A loose Pablo is already in there.
@@ -681,6 +717,10 @@ happened in [[Session 32 The Red Trail]].
     the page. The pressing is fresh. Whatever is doing it is doing it now.
   - **Under 15:** the air right around Iggy feels heavier than the air anywhere else in the
     camp. You can't tell why.
+- **Private (whoever casts Detect Magic on Iggy):** cue 3, for anyone but Dip
+  - **The message:** Iggy shows no school of magic you know. But he's pressed into the world
+    harder than anything around him, like ink pressed hard into paper. Nothing else in the camp
+    looks like that.
 - **When the wings open:**
   - **The voice.** Every earshot crystal within 300 ft speaks at once: the party's five, and every
     one on the crew and on Nella. An old voice, level and unhurried, the way a drill sergeant says
@@ -699,8 +739,8 @@ happened in [[Session 32 The Red Trail]].
 
 > *"The voice comes out of every crystal at once, old and level, like a drill sergeant who has
 > said it a hundred times: 'Up, Wallaed.' Iggy's wings open, and the cloud over the river lights up
-> from underneath, white as a lamp. Inside it, plain as a shadow on a sheet, a griffon jinks
-> sideways with the archer flat along its neck."*
+> from underneath, white as a lamp. Inside it, plain as a shadow on a sheet, the griffon jinks
+> sideways, its rider bent low."*
 
 - **Choice (Iggy):** when Nella breaks east through the cloud, **chase her or turn back**.
   - **Chase:** he's too slow to catch Tithe (30 ft against 80), but he gets one pass alongside.
@@ -714,8 +754,8 @@ happened in [[Session 32 The Red Trail]].
 - **What stays hidden:** what Sah is, why the crystals carried him, and anything about the
   Lioness hearth or the song in the viol. If someone asks Iggy who that was, it's his answer, not
   the DM's.
-- **No fight, no beat:** after a parley that holds, the wings may never come out.
-  Cues 1–3 can still land; hold the voice for another night.
+- **No fight, no beat:** if the table stops before the fight starts, the wings may never come
+  out. Cues 1–3 can still land; hold the voice for another night.
 
 #### S2_MORALE — The drover drops, or the crew is down to two, and the rest break
 
@@ -725,7 +765,8 @@ happened in [[Session 32 The Red Trail]].
   goes.
 - **Not at half.** Half the crew falls in round 1 against this party, which would end the fight
   before Nella's pressure lands. Varrick keeps them in it until he drops.
-- Morale-break line: *"She's leaving us. She's LEAVING us."* — and they run.
+- Morale-break line, Haddo, the first to fail the save, looking up at the empty cloud: *"She's
+  leaving us. She's LEAVING us."* Then they run.
 - Ilsa, when she breaks: *"Cinder. With me."*
 - Hesper, when a PC closes on her after Varrick drops: *"Don't. I'll put the club down. I'll put
   it down."*
@@ -869,7 +910,7 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
   commits only what the cameo already locks: a raider from Bane's band walked in, surrendered, and
   went silent. Who he is and why he quit stay open.
 - **If Tyler needs more time:** the silhouette carries over. The hanging waits on Cael's reeve, so
-  Mara can hold a silent man for days, and Session 33 can open somewhere else and come back to the
+  Mara can hold a silent man for days, and Session 34 can open somewhere else and come back to the
   cell later. Don't invent a name, a face, or a reason here to fill the gap.
 - **Mara, at the door, before anyone asks:** *"He walked in. Put his blade down on my step. Hasn't
   said a word since. Half the town wants him hanged by week's end."* A beat. *"I haven't decided
@@ -969,8 +1010,7 @@ no entity files, and `/recap` decides. Full introductions were at Session 30 (`S
 Land it on the cell door, not on the casks.
 
 > *"Mara's at the door with her arms folded, and she doesn't move aside. Behind you, Sable is
-> rolling casks into the one room she has left. It finally has something to pour. Somewhere in the
-> crowd someone says 'week's end,' and someone else agrees."*
+> rolling the casks in one at a time. Through the bars, the man on the bench still hasn't moved."*
 
 **Leave unresolved:** who the prisoner is and why he surrendered · Bane's face · whose banner it is
 · Nella's tally, which she will want back · whether the Boon ever opens again.
@@ -1003,13 +1043,14 @@ Land it on the cell door, not on the casks.
 - **Spotlight.** The trend says lean party-centric this week, and the chase and the camp are.
   Iggy, the overdue PC, gets `S2_IGGY_BEAT`: Sah's first visible presence, and the wings he hid
   from Jory at Session 31. Dip gets [[Varrick's Parrying Bracer]]; Halsby gets the Spear's first
-  real fight.
+  real fight. Luci has two optional moments ready (todo 81): her Augury on the hill
+  (`S2_TEN_MINUTES`) and Sabathiel going cold at the Spear (`S2_FIGHT`).
 - **Deployment tracking:** none planned from `meta/literary-devices.md` or the design
   preferences. The false trail at the fork is a device candidate if `/recap` wants to log it.
 - **For `/recap`:**
   - Levels: no level-ups planned (stamp `level_confirmed: 33`)
-  - [[The Shadowless Spear]]: the +1 covers spell attacks and save DC (settled 2026-10-28); move
-    the loot-option file out per todo #88
+  - [[The Shadowless Spear]]: the +1 covers spell attacks and save DC (settled 2026-10-28, already
+    in its historian file); Kellan has the card (`handouts/shadowless-spear.html`)
   - Silas's favour debt paid if the horses come back sound · any lamed horse (11 gp)
   - Nella's tally in party hands, and the 250 gp purse: kept, spent, or returned (it equals her
     remaining debt) · Harrow Bane named by the ledger · the aegis-banner taken
@@ -1026,7 +1067,8 @@ Land it on the cell door, not on the casks.
   - **New canon if played:** Nella's remaining debt to Bane is 250 gp, the sum in her purse ·
     [[Varrick's Parrying Bracer]] was Varrick Tenn's, a soldier's guard he wore as the camp's
     drover · Silas charges 11 gp a lamed horse · the waystation is an old drover's relay short
-    of Duskwater, provisioned for about thirty · Sennet Orrin keeps Bane's duty ledger · the cart
+    of Duskwater, provisioned for about thirty · Sennet Orrin keeps Bane's duty ledger, and is
+    Bane's man checking the haul, not one of Nella's crew · the cart
     becomes the Lioness's delivery cart · a hanging in Ashford waits on Cael's reeve · the camp
     crew's names (Ilsa Hask, Fennel Dray, Cinder, Varrick Tenn, Haddo Keel, Brask, Sennet Orrin,
     Hesper Mudd, Tam "Clatter" Cobb), only for whoever comes up · Nella rides a borrowed griffon,
@@ -1036,10 +1078,12 @@ Land it on the cell door, not on the casks.
     above the Lioness hearth · twelve casks, if the count isn't already set · Varrick is an
     ex-soldier · low cloud over the waystation's valley on the morning of Day 2 · Varrick banned
     talking into the crystals once he knew they leaked · Cinder runs with Ilsa since Fennel died ·
-    Pablo's home has oats (whatever he means by home)
+    Pablo's home has oats (whatever he means by home) · Sabathiel answers Luci's Augury in one
+    word with the warmth on her face · the warmth goes cold for a breath when Halsby casts
+    through the Spear near her (only if shown; nothing about why)
 - **Held for later:** Elowen and Odibli (the Unfinished Binding) · Jorn's foreshadow · the Marlow
   coppers · Asher's Dead Sun phrase for Luci · Sable's talk with Odibli about the fire · Dip's
   vision of Iggy (Dip's to share) · the battlefield-spirit and coin-forgery spitballs · the pull
   Odibli feels (Miguel's homework).
-- **Before the table:** tell Kellan the Spear ruling · Tyler's backstory (optional; the cell
+- **Before the table:** Tyler's backstory (optional; the cell
   stays a silhouette without it). Maps, tokens and cards are tracked in `_tasks.md`.

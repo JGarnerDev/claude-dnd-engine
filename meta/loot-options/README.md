@@ -60,6 +60,19 @@ in conversation. Writing a pick down outside this folder waits until the DM conf
 Once an item is confirmed, plans may name it, and should cite `confirmed_for` so the link
 between item and session can be found in both directions.
 
+## Item cards
+
+Once an item is handed over, its player gets a card: one HTML page in the session's
+`handouts/` folder, published as an artifact so the DM can share the link. The Shadowless Spear
+and Earshot Crystals cards in `scheduler/sessions/Session 33 The Red Trail/handouts/` set the
+style.
+
+**A card carries the item's rules and its origin, and nothing else from play.** Origin means who
+made it, who gave it, and where it came from. Leave out what happened with it since ("Nella
+heard Halsby's"), even as an example of a rule. A card is a reference the player keeps across
+sessions; what happened at the table belongs in the historian. Like any player-facing text, a
+card names only what the party knows ([[prose-style]]).
+
 ## Composition
 
 Each character has **three weapons, three pieces of armor, and three misc**, stated in the character README frontmatter and enforced by the folder layout. The weapon and armor slots exist so every PC has a path to the two things that always matter mechanically, rather than nine pieces of flavor and nothing to hold. Each of those slots runs three deep so the DM has a real choice of *shape* within the slot — typically one Common and one or two Uncommon per slot, hitting different playstyles.
