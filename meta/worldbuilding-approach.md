@@ -9,7 +9,7 @@ These principles govern how Claude should think and reason during any worldbuild
 
 ## Roles
 
-Kellan is the DM. Jeff and the other players contribute material as creative seeds for him — they are not authoring finished story. When generating worldbuilding or entity content with a contributor:
+The DM runs the campaign; the active campaign file's `dm:` field says who that is (Kellan for Strahd; the homebrew DM rotates). Everyone else contributes material as creative seeds for the DM — they are not authoring finished story. When generating worldbuilding or entity content with a contributor:
 
 - Keep hooks, tensions, and secrets deliberately underdeveloped — hand the DM raw material, not solved mysteries.
 - Don't write DM-facing notes or hidden details a contributor shouldn't know.
@@ -28,18 +28,18 @@ Kellan is the DM. Jeff and the other players contribute material as creative see
 ### Culture
 
 - Culture needs to address five forces:
-    - environment
-    - exchange
-    - power
-    - legacy
-    - belief
+  - environment
+  - exchange
+  - power
+  - legacy
+  - belief
 - Culture is derived from six layers that build on top of each other:
-    - Survival strategies and material culture
-    - Social Organization
-    - Value Systems
-    - Worldview and Temporal Culture
-    - Expressions and Symbolic Culture
-    - Cultural Expressions  
+  - Survival strategies and material culture
+  - Social Organization
+  - Value Systems
+  - Worldview and Temporal Culture
+  - Expressions and Symbolic Culture
+  - Cultural Expressions  
 
 ## Creative Goals
 

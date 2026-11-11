@@ -222,6 +222,25 @@ def ci_contains(haystack, needle) -> bool:
     return str(needle).lower() in str(haystack).lower()
 
 
+# -- Active campaign + DM -----------------------------------------------------
+def get_active_campaign(root) -> Optional[dict]:
+    """The campaign file with `state: active` in scheduler/campaign/ (trackers, the
+    `_*.md` files, skipped), as {'name', 'dm', 'path'}; None when no campaign is active.
+    Its `dm:` field is the only record of who the DM is (meta/dm-rotation.md)."""
+    camp_dir = Path(root) / 'scheduler' / 'campaign'
+    if not camp_dir.exists():
+        return None
+    for f in sorted(camp_dir.glob('*.md')):
+        if f.name.startswith('_'):
+            continue
+        fm = get_frontmatter(f)
+        if ci_eq(fm.get('state'), 'active'):
+            return {'name': fm.get('name') or f.stem,
+                    'dm': (fm.get('dm') or '').strip().strip('"') or None,
+                    'path': f}
+    return None
+
+
 # -- Numeric coercion + formatting --------------------------------------------
 _DIGITS_RE = re.compile(r'[^0-9]')
 

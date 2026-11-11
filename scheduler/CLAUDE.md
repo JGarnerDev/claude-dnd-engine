@@ -22,6 +22,12 @@ casting in Aethryn). Each carries an `## Engine` section saying what `/transcrip
 `validate.ps1` and the semantic index. A new tracker needs only that header and section; the
 commands find it by the glob.
 
+## The Handover Page
+
+`scheduler/campaign/_handover.md`, written by `/handover` at a DM rotation (`meta/dm-rotation.md`),
+is **not a tracker**: it has no `(as of: Session NN)` header, so `/recap` and `/session` skip it. The
+`_` keeps it out of `validate.ps1` and the search index.
+
 ## PC Arcs
 
 `scheduler/arcs/{PC} PC Arc.md` — one provisional direction per PC (`meta/pc-arcs.md`). The

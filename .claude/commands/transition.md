@@ -20,6 +20,7 @@ Ask:
 1. "Confirmed — swapping now, or just planning ahead?"
 2. "Which way — pausing Strahd to start/resume homebrew, or pausing homebrew to return to Strahd?"
 3. If entering a homebrew world for the first time: "What's the name of the new world? (Placeholder is fine.)"
+4. If entering a world whose next DM differs from the `dm:` on its campaign file (the homebrew DM rotates): say so, finish this swap, then run `/handover` for the rotation (`meta/dm-rotation.md`).
 
 Wait for answers before continuing.
 

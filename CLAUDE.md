@@ -224,6 +224,10 @@ Read `.claude/commands/pc-backstory.md` for the full ingestion flow, gap analysi
 
 **Exception: Roll20 character sheets** (PDF exports) are the source of truth for PC mechanics and the facts on them. Ingest them straight into the PC file, even where a sheet overrides earlier canon, with no confirm-every-change diff. Ask only about real ambiguity or a likely typo. Details in `pc-backstory.md` → Character Sheets.
 
+## DM Rotation
+
+When a world passes to a new DM (Jeff → Ben in Aethryn), that is a **DM rotation**, not a season swap: `/handover` sets the new `dm:`, steps the incoming DM's PC out as `state: away`, asks what DM-only truths pass on, re-owns the dashboard, and writes the incoming DM a one-page `scheduler/campaign/_handover.md`. The active campaign's `dm:` is the only record of who the DM is; instructions say "the DM", never a name. Read `meta/dm-rotation.md` once per task when rotating, or when wording touches who the DM is.
+
 ## Campaign Transition Detection
 
 **Trigger:** Any message suggesting the party is swapping campaigns — in **either** direction (campaigns alternate like seasons). Watch for:

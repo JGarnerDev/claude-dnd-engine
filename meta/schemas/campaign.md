@@ -28,9 +28,11 @@ The root document of the entire campaign. There is one campaign file per campaig
 ## Schema
 
 ### Canonical Path
+
 `scheduler/campaign/{name}.md` — one file per campaign. Exactly one file carries `state: active` at a time; the rest are `draft`, `on-hiatus`, or awaiting move to historian.
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `draft` | Campaign concept being developed, not yet started |
@@ -50,6 +52,8 @@ exists: false
 state: draft | active | on-hiatus | completed | abandoned
 tags:
   - campaign/
+# the active DM's first name, as in meta/players/; the only record of who the DM is
+dm: ""
 
 premise: ""              # one or two sentences: what situation do the players enter?
 central_conflict: ""     # the driving tension the whole campaign ultimately resolves
@@ -68,6 +72,7 @@ description: ""
 ```
 
 ### Notes
+
 - `exists` flips to `true` and the file moves to `historian/` only when the campaign is fully completed.
 - During play, this file stays in `scheduler/` and is updated as the campaign evolves.
 - Claude reads this file first before any session generation task.

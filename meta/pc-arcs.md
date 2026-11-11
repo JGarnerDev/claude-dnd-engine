@@ -83,4 +83,4 @@ before planning on it. `scripts/spotlight-balance.py` flags it.
 
 PC arcs live in `scheduler/arcs/` as long as the PC plays. They never move to `historian/`. A
 PC arc that finished or was dropped goes `state: retired` and stays put, so its Shifts log
-remains readable. A retired PC's arc retires with them.
+remains readable. A retired PC's arc retires with them. An `away` PC's arc stays `active` but pauses: the briefs list it as paused, and `/recap` restamps it without proposing shifts until the PC returns.

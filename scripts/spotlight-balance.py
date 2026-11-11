@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # spotlight-balance.py -- character-focus ledger: spotlight-vs-agnostic balance + per-PC rotation
-# consumers: .claude/commands/session.md, .claude/commands/todo.md, scripts/session-brief.py,
+# consumers: .claude/commands/session.md, .claude/commands/todo.md, scripts/session-brief.py, scripts/handover-brief.py,
 #   scripts/todo-brief.py, scripts/party-status.py, meta/pc-arcs.md -- update these if usage, flags, or output format change.
 # Reads played-session `beats:` (see meta/schemas/session.md) and reports against meta/character-focus.md.
 # Also prints the PC ARCS block: each active PC's scheduler/arcs/ file (meta/pc-arcs.md), its
@@ -34,7 +34,7 @@ def _hook_statuses(raw: str) -> dict:
     return {m.group(1): m.group(2) for m in HOOK_STATUS_RE.finditer(raw)}
 
 
-def _arc_lines(pcs: list, latest: int) -> list:
+def _arc_lines(pcs: list, latest: int, away: tuple = ()) -> list:
     """The PC ARCS block: one entry per active PC (meta/pc-arcs.md)."""
     arcs = {}
     arcs_dir = ROOT / 'scheduler' / 'arcs'
@@ -71,6 +71,8 @@ def _arc_lines(pcs: list, latest: int) -> list:
                 lines.append((f'    ! next-step hook already paid - pick a new next step: "{step}"', 'yellow'))
             else:
                 lines.append((f'    next: "{step}" [{status}]', 'white'))
+    for name in sorted(away, key=lambda n: str(n or '').lower()):
+        lines.append((f"  {name:<10} (away) - PC arc paused until they return", 'darkgray'))
     return lines
 
 
@@ -109,10 +111,14 @@ def render_lines(section: bool = False) -> list:
     latest = max((s.num for s in sessions), default=0)
 
     pcs = []
+    away = []  # PCs out of the story for a stretch (state: away); their PC arcs pause
     pcs_dir = ROOT / 'historian' / 'characters' / 'pcs'
     if pcs_dir.exists():
         for f in pcs_dir.glob('*.md'):
             fm = get_frontmatter(f)
+            if ci_eq(fm.get('state'), 'away'):
+                away.append(fm.get('name'))
+                continue
             if fm.get('state') and not ci_eq(fm.get('state'), 'active'):
                 continue
             raw = read_text_no_bom(f)
@@ -142,7 +148,7 @@ def render_lines(section: bool = False) -> list:
         no_hooks = [p for p in pcs if not ci_eq(p['Appetite'], 'low') and p['Hooks'] == 0]
         for p in no_hooks:
             lines.append((f"  ! {p['Name']} has no spotlight hooks - needs a backstory pass.", 'yellow'))
-        lines.extend(_arc_lines(pcs, latest))
+        lines.extend(_arc_lines(pcs, latest, away))
         if not section:
             lines.append(("\n========================================\n", 'darkgray'))
         return lines
@@ -237,7 +243,7 @@ def render_lines(section: bool = False) -> list:
         for p in no_hooks:
             lines.append((f"  ! {p['Name']} has no spotlight hooks - needs a backstory pass.", 'yellow'))
 
-    lines.extend(_arc_lines(pcs, latest))
+    lines.extend(_arc_lines(pcs, latest, away))
 
     if not section:
         lines.append(("\n========================================\n", 'darkgray'))

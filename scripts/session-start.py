@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # session-start.py -- start-of-conversation orientation, run by the SessionStart hook
-# consumers: CLAUDE.md, .claude/settings.json -- update these if usage, flags, or output format change.
+# consumers: CLAUDE.md, .claude/settings.json, meta/dm-rotation.md -- update these if usage, flags, or output format change.
 # Usage: uv run scripts/session-start.py
 #
 # Replaces the hand-run start-of-session ritual (read VERSION + CHANGELOG, run
@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, index_staleness, pending_recordings, read_text_no_bom
+from lib.common import ROOT, get_active_campaign, index_staleness, pending_recordings, read_text_no_bom
 
 version_check = importlib.import_module('version-check')
 
@@ -54,6 +54,10 @@ def main() -> None:
         if bump_sha and changed:
             print(f"! {len(changed)} engine commit(s) since the last version bump -- "
                   "decide whether they clear the bump bar (uv run scripts/version-check.py)")
+
+    camp = get_active_campaign(ROOT)
+    if camp:
+        print(f"DM: {camp['dm'] or '(no dm: field)'} ({camp['name']})")
 
     idx = index_staleness(ROOT)
     if idx is None:

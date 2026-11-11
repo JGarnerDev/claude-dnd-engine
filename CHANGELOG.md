@@ -6,6 +6,23 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.63.0] — 2026-11-11
+
+### Added
+
+- **DM rotation and `/handover`.** Handing a world to a new DM is now its own flow, separate from a season swap (`/transition`): set the new `dm:` (or a new campaign file, the old one `on-hiatus`), step the incoming DM's PC out, choose which DM-only truths pass on or are held back, re-own the dashboard, and write the incoming DM a one-page `scheduler/campaign/_handover.md`. Rules in `meta/dm-rotation.md`; root `CLAUDE.md` → DM Rotation. `/transition` hands off to it when a world's next DM differs.
+- **`scripts/handover-brief.py`** gathers the handover's sources: campaign and DM, campaign-file sections, PCs not active, trackers, the mysteries answer key (held-back entries marked), PC arcs, open threads, and dashboard items naming the outgoing DM (`tests/scripts/test_handover_brief.py`).
+- **PC state `away`** (`meta/schemas/character-pc.md`): out of the story for a stretch and returning, usually while their player DMs. Briefs and spotlight skip the PC; the PC ARCS block lists its arc as paused.
+- **The DM in the briefs.** The session-start orientation and `session-brief.py` print `DM: <name> (<campaign>)` from the active campaign's `dm:` (new `get_active_campaign` in `scripts/lib/common.py`), now documented in `meta/schemas/campaign.md` as the only record of who the DM is.
+
+### Changed
+
+- Role wording: `meta/worldbuilding-approach.md` and `maps/battlemaps/CLAUDE.md` say "the DM" instead of naming Kellan or Jeff. `/todo` flags a dashboard whose Scope line still names the previous DM.
+
+### Fixed
+
+- `scripts/gen-tiles.py` finds `maps/world/` from its own location instead of a hardcoded path under `C:\Users\Jeff`, so it runs on any machine.
+
 ## [0.62.0] — 2026-11-11
 
 ### Added

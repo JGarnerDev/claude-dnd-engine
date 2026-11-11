@@ -48,6 +48,7 @@ Covers player characters. Unlike NPCs, PCs are owned by a player and link to tha
 | `retired` | Out of active play by choice |
 | `missing` | Whereabouts unknown in-world |
 | `transformed` | Significantly altered — undead, polymorphed, etc. |
+| `away` | Out of the story for a stretch and coming back, usually while their player DMs (Dip on pilgrimage during Ben's run). The body says where and why in one line. Briefs and spotlight skip them; their PC arc pauses (`meta/dm-rotation.md`) |
 
 ### Frontmatter Template
 
@@ -58,7 +59,7 @@ name: ""
 type: character
 subtype: pc
 exists: false
-state: active | dead | retired | missing | transformed
+state: active | dead | retired | missing | transformed | away
 tags:
   - character
   - character/pc
