@@ -5,7 +5,7 @@ character: Odibli
 player: Miguel
 item: "The Unfinished Binding"
 class: misc
-form: "hand wrap"
+form: "arm brace"
 rarity: uncommon
 attunement: false
 bracket: "levels 4-5"
@@ -15,10 +15,11 @@ confirmed_for: "Act 1 - The Hearth at Ashford (session TBD)"
 
 # The Unfinished Binding
 
-- **Misc (hand wrap)** · Uncommon · no attunement · bracket: levels 4–5
+- **Misc (arm brace)** · Uncommon · no attunement · bracket: levels 4–5
 
-*A long strip of grey linen in faded guild script, sized for a half-orc's hand. On a gnome it
-winds to the elbow.*
+*A battle-caster's brace of grey-dyed leather over a thin steel splint, laced shut with three
+buckles, the guild's script tooled down its length. Sized for a half-orc's forearm, it covers a
+gnome from wrist to past the elbow.*
 
 ## What it does
 
@@ -28,9 +29,11 @@ before the first turn of combat.
 
 ## History
 
-**[[Elowen Rimetusk]]** wrapped her casting hand in it for the translocation that moved her
-surrounded company, and wore it for decades after. The spell's last order — *move them* — is
-woven into the linen and never finished running. She gives it to Odibli herself, with a favor
+The guild issued braces like this to its battle-casters: the working of a spell too big to
+hold in the head was tooled into the leather, and the caster read it off their own arm while
+casting. **[[Elowen Rimetusk]]** buckled this one on for the translocation that moved her
+surrounded company, and has never taken it off since. The script ends on the spell's last order,
+*move them*, and the order never finished running. She gives it to Odibli herself, with a favor
 attached; the scene is in her file.
 
 ## Why this character

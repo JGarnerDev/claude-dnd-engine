@@ -74,9 +74,10 @@ and they never arrived. Mara believes they died in the war. Elowen knows exactly
 last, and has never told her. Standing beside Mara is a repayment Mara does not know she is
 receiving.
 
-She has worn the same grey linen wrap on her casting hand ever since, inscribed in faded guild
-script. The tail end of the spell — the order to *move them* — is woven into it and never
-finished running. Under it, her fingers move half a second behind her.
+She has worn the same guild casting brace on her casting arm ever since: grey leather over a
+steel splint, the translocation's working tooled down its length in faded guild script. The tail
+end of the spell — the order to *move them* — is cut into it and never finished running. Below
+it, her fingers move half a second behind her.
 
 ## Odibli, and the favor
 
@@ -93,7 +94,7 @@ She asks him a favor, in three pieces that come out across her lucid and absent 
   Mara. Not me."*
 - **Find the rest of her.** *"And if you find the rest of me, bring it back."*
 
-Then she unwinds the wrap and gives it to him: the
+Then she unbuckles the brace and gives it to him: the
 [Unfinished Binding](../../../meta/loot-options/Odibli/misc/The%20Unfinished%20Binding.md).
 Giving it away changes nothing about her — she is no sharper and no worse for it.
 

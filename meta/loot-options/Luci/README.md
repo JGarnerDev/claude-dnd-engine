@@ -37,7 +37,9 @@ Rebuilt 2026-11-11 from her PC arc (`scheduler/arcs/Luci PC Arc.md`). The arc gi
 
 ## Pick order
 
-**The budgeted Uncommon:** [[The Self-Built Headdress]]. It rewards the growth her arc points at, and it suits a quiet handover better than a damage item.
+**Confirmed for Act I:** [[The Stillwater Wraps]], landing in Session 35 (DM's pick, 2026-11-11). That spends her Act I Uncommon.
+
+**Next act's candidate:** [[The Self-Built Headdress]]. It rewards the growth her arc points at, and it suits a quiet scene better than a damage item.
 
 **Biggest at the table:** [[The Spending Darts]], which turn "no expense spared" into a choice every fight.
 

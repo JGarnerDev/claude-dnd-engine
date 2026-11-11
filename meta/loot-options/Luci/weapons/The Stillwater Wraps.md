@@ -9,7 +9,8 @@ form: "hand wraps"
 rarity: uncommon
 attunement: false
 bracket: "levels 4-5"
-status: draft
+status: confirmed
+confirmed_for: "Session 35 The Reeve's Ledger"
 ---
 
 # The Stillwater Wraps

@@ -43,6 +43,7 @@ Card style to match: `scheduler/sessions/Session 33 The Red Trail/handouts/` (th
 
 - **94.** 🤝 **Jeff** — **Stake terms card, for the party.** Their share in the Lioness grows 10% → 25% → 40%, earned by deeds and never by coin. It comes with a room each, free meals, and the party naming one thing in the new wing. Rooms cost 250–500 gp to build. Hand it out when Sable's bigger-share talk happens (Session 35: she puts it off to "tomorrow" in Session 34).
 - **95.** 🙋 **Jeff** — **a regional map with fog of war.** The party has now ridden from Ashford to the waystation and back. Give them a region map in Roll20 with the unexplored ground hidden, and reveal it as they travel. Silas's road sketch (`maps/handouts/silas-road-sketch.md`) is the base layer they already hold. Until then the party has no shared picture of where the waystation and Duskwater sit.
+- **100.** 🤝 **Jeff** — **Act I item handouts, decided 2026-11-11.** Session 35 gives out two items, each in its own beat and never in one gift scene. Odibli's Unfinished Binding comes from Elowen in a scene of its own. Luci's Stillwater Wraps (confirmed) come from a separate beat, chosen when the plan is written. Iggy gets nothing in Session 35: the incoming DM picks from `meta/loot-options/Iggy/` and gives it in their first act, so Jeff doesn't choose his own PC's item. Carry this into `_handover.md`. Each item needs a card, in the same style as the Session 34 cards.
 
 ### Session 32 prep — the Spear is in play
 
