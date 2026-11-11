@@ -31,6 +31,6 @@ Nella heard him over the crystal, and her griffon is in the air.
 - Why did the green-eyed fox want the bound woman saved?
 - What answered "Closer." when Luci named the moon?
 
-## Heading
+## Next
 
 Down the hill to take the casks back. Ten minutes to plan.

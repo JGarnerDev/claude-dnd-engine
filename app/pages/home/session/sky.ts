@@ -5,10 +5,21 @@
 import './sky.css';
 import { escapeHtml } from './markdown.js';
 import { plateSvg } from './sky-plate.js';
-import { crawlWords, darkWords, eraWords, fidaWords, glisteningWords, hourWords } from './sky-words.js';
-import type { Sky, Slide } from './types.js';
+import { crawlWords, darkWords, elapsedWords, eraWords, fidaWords, glisteningWords, hourWords } from './sky-words.js';
+import type { Sky, SkyMoment, Slide } from './types.js';
 
 export const SKY_TITLE = 'As the sky stood';
+
+// Hours since the impact on Aethryn's 12 x 30-day calendar (scripts/lib/sky.py absolute_day).
+function absHours(m: SkyMoment): number {
+  const [y, mo, d] = m.date.split('-').map(Number);
+  return (y * 360 + (mo - 1) * 30 + d - 1) * 24 + m.hour;
+}
+
+// In-world hours from the previous session's moment to this one, or null with no earlier session.
+export function elapsedHours(s: Sky): number | null {
+  return s.prev ? absHours(s) - absHours(s.prev) : null;
+}
 
 function cartouche(s: Sky): string {
   const era = Math.floor(s.year / 1000);
@@ -28,7 +39,9 @@ function cartouche(s: Sky): string {
 // Pure: the sky slide, or none for a Strahd session or one with no in-world date.
 export function skySlides(s: Sky | null | undefined): Slide[] {
   if (!s) return [];
-  return [{ title: SKY_TITLE, md: '', bare: true, html: `<div class="sk-wrap">${plateSvg(s)}${cartouche(s)}</div>` }];
+  const since = elapsedWords(elapsedHours(s));
+  const side = `<div class="sk-side-col">${since ? `<div class="sk-since">${escapeHtml(since)}</div>` : ''}${cartouche(s)}</div>`;
+  return [{ title: SKY_TITLE, md: '', bare: true, html: `<div class="sk-wrap">${plateSvg(s)}${side}</div>` }];
 }
 
 // Pure: the deck with the sky slide right after the Title slide.

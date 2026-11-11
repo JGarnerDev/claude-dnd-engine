@@ -82,7 +82,7 @@ party stands in the story right now**.
 
 **Hand-written slide budget** (soft caps, counting the Title):
 
-- **Light**: 5–6. Title, Last time…, Where you stand, Mysteries, Heading. No scene slides. The Party slide
+- **Light**: 5–6. Title, Last time…, Where you stand, Mysteries, Next. No scene slides. The Party slide
   only if someone gained something.
 - **Medium**: 6–8. Orientation and Mysteries, then the 1–3 scenes that moved something, Choices only if one
   mattered.
@@ -119,14 +119,14 @@ Every deck follows the same order, so players know where to look. Orientation al
 8. **The party**: one line per PC who gained loot, a level or a condition, and nobody else. Levels
    and conditions come from `uv run scripts/party-status.py`; loot from `## Rewards` corrected by
    `## As Played`. Leave the slide out if nobody gained.
-9. **Heading**: where the party means to go and what they mean to do this session, from what they
+9. **Next**: where the party means to go and what they mean to do this session, from what they
    said at the table (`## As Played`, the DM's notes). It may close on the `cliffhanger:` as a
    teaser, but only what the party saw. Always the last slide.
 
-Decks written before deck weight end on **Next time…** instead of Heading; the runner treats the
+Decks written before deck weight end on **Next time…** instead of Next; the runner treats the
 last slide the same either way.
 
-**Stats slides** come right before Heading when the stats gate opens: award cards, then the
+**Stats slides** come right before Next when the stats gate opens: award cards, then the
 season standings, opened by a "While you were in Barovia…" slide after a Strahd season; or the
 single Worth noting slide. They are **generated, not written**: the runner builds them from
 `historian/sessions/_stats.md`, which the DM confirmed at `/recap`. Never put them in `_slides.md`.
@@ -144,7 +144,9 @@ names, last session's gains and top deeds, and a banner on a tier-up. Built by t
 **The sky slide** comes right after the Title (homebrew only): the in-world date and time the
 session ended, drawn as an old ring plate with Aethryn at the centre and each body where it stood,
 beside a cartouche with the year, the Crawl, the hour, tonight's dark, Fida and the Glistening
-countdown. Built by the runner from the session's `in_world_end_date` / `in_world_end_time` and the
+countdown. Above the cartouche, a short line says how much in-world time passed since the previous
+dated homebrew session ended ("2 days, 14 hours since last session"); it drops out when there is no
+earlier session. Built by the runner from the session's `in_world_end_date` / `in_world_end_time` and the
 Sky Clock's log (`scripts/lib/sky.py`), never written into `_slides.md`. It never shows the next
 Kerning. Rules: `data/lore/calendar.md` and `scheduler/campaign/_sky-clock.md`.
 

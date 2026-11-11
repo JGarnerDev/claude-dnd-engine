@@ -60,6 +60,15 @@ describe('sky slide', () => {
     expect(el.querySelectorAll('.sk-wanderer')).toHaveLength(9);
   });
 
+  it('says how much in-world time passed since last session, above the card', () => {
+    const el = dom(skySlides(sky)[0].html!);
+    expect(el.querySelector('.sk-since')!.textContent).toBe('3 hours since last session');
+    expect(el.querySelector('.sk-side-col')!.firstElementChild!.className).toBe('sk-since');
+    const later = { ...sky, prev: moment({ date: '6743-05-18', time: '20:00', hour: 20 }) };
+    expect(dom(skySlides(later)[0].html!).querySelector('.sk-since')!.textContent).toBe('2 days, 14 hours since last session');
+    expect(dom(skySlides({ ...sky, prev: null })[0].html!).querySelector('.sk-since')).toBeNull();
+  });
+
   it('never shows the next Kerning', () => {
     expect(skySlides(sky)[0].html).not.toMatch(/Kerning/i);
   });

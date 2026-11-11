@@ -7,7 +7,7 @@ tags: [guideline]
 
 Table-side **stats**: countable things each PC did in a played session (killing blows, nat 1s,
 HP healed), kept as a celebration and a friendly rivalry. They're shown to players in the recap
-deck right before the closing Heading slide, gated by deck weight: the full set only on a heavy deck
+deck right before the closing Next slide, gated by deck weight: the full set only on a heavy deck
 or a season opener, otherwise one "Worth noting" slide for personal bests and new season leaders,
 or nothing (`meta/recap-slides.md` → Deck weight).
 

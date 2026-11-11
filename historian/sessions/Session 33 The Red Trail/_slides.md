@@ -34,6 +34,6 @@ against the shed.
 - Why did the green-eyed fox want the bound woman saved?
 - What answered "Closer." when Luci named the moon?
 
-## Heading
+## Next
 
 Finish the fight and take the casks back.

@@ -4,7 +4,7 @@ import { questions, searchMysteries, withMysteries } from './mysteries.js';
 import type { Slide } from './types.js';
 
 const md = '- Who is *Harrow Bane*?\n- Who pressed the charm into the hearth, and why smother\n  the fire?\n- Who sent [[Nella|the archer]]?';
-const deck: Slide[] = [{ title: 'Title', md: '' }, { title: 'Mysteries', md }, { title: 'Heading', md: 'Down the hill.' }];
+const deck: Slide[] = [{ title: 'Title', md: '' }, { title: 'Mysteries', md }, { title: 'Next', md: 'Down the hill.' }];
 const dom = (html: string) => { const el = document.createElement('div'); el.innerHTML = html; return el; };
 
 describe('questions', () => {

@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.57.0] — 2026-11-11
+
+### Added
+
+- **Sky slide: time since last session.** A short line above the date card says how much in-world time passed since the previous dated homebrew session ended ("2 days, 14 hours since last session"), in hours, days, months or years. Hidden when there is no earlier session (`app/pages/home/session/sky.ts`, `sky-words.ts`, `sky.css`; `meta/recap-slides.md`).
+
+### Changed
+
+- **Closing slide renamed Heading → Next.** The last slide of a recap deck is now `## Next` (`meta/recap-slides.md`, `/recap`, `meta/stats.md`). Sessions 32 and 33 decks updated.
+
 ## [0.56.0] — 2026-11-10
 
 ### Added

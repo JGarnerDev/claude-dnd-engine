@@ -81,7 +81,7 @@ export function statsSlides(s: Stats | null | undefined, weight: DeckWeight = 'h
   return out;
 }
 
-// Pure: the deck with stats slotted in before its last slide (Heading, or "Next time…" on
+// Pure: the deck with stats slotted in before its last slide (Next, or "Next time…" on
 // older decks), so the deck still ends on the hook. No deck, no stats: the button stays hidden.
 export function withStats(deck: Slide[], s: Stats | null | undefined, weight?: DeckWeight): Slide[] {
   const extra = statsSlides(s, weight);

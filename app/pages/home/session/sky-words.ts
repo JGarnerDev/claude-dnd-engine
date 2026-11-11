@@ -56,3 +56,21 @@ export function eraWords(era: number, years: number): string {
 export function glisteningWords(next: number, years: number): string {
   return `Astra swings back like a comet in ${years.toLocaleString('en-US')} years: the ${cap(ordinal(next))} Glistening`;
 }
+
+// In-world time between two moments, for the line above the card ("2 days, 4 hours since last session").
+// Empty when there is no earlier moment or no time passed.
+export function elapsedWords(hours: number | null): string {
+  if (hours == null || hours <= 0) return '';
+  const plural = (n: number, unit: string) => `${n} ${unit}${n === 1 ? '' : 's'}`;
+  let span: string;
+  if (hours < 1) span = 'Under an hour';
+  else if (hours < 23.5) span = plural(Math.round(hours), 'hour');
+  else if (hours < 24 * 7) {
+    const days = Math.floor((hours + 0.5) / 24);
+    const rest = Math.round(hours - days * 24);
+    span = rest > 0 ? `${plural(days, 'day')}, ${plural(rest, 'hour')}` : plural(days, 'day');
+  } else if (hours < 24 * 60) span = plural(Math.round(hours / 24), 'day');
+  else if (hours < 24 * 360) span = `About ${plural(Math.round(hours / 24 / 30), 'month')}`;
+  else span = `About ${plural(Math.round(hours / 24 / 360), 'year')}`;
+  return `${span} since last session`;
+}
