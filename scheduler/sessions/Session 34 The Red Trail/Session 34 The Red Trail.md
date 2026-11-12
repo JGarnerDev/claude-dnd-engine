@@ -446,14 +446,30 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   goes bloodied and won't come to her whistle any more (see its block).
 - **Boss fight starts:** here, on *"Tithe. Hunt."* Tithe is this session's boss. Stats,
   legendary actions and the bloodied phase are in Tithe's block.
-  - **Read aloud, as she says it:** *"Nella pulls the hood off the griffon's head and stuffs it
-    in her belt. It blinks once, gold eyes on the yard, on you. She slaps its neck. 'Tithe.
-    Hunt.' Two wingbeats and it's gone into the grey. The yard goes quiet. Then
-    something big drops through the bottom of the cloud and is gone again, too fast to follow,
-    and a scream comes down out of the grey."*
-  - **Title card:** show `handouts/tithe-title-card.html` (*Tithe, Death from the Grey*) on the
-    scream.
-  - **Music (Roll20 Jukebox):** cue 1, the boss track, starts on the scream. Cue 2: cut it dead
+  - **Read aloud, on Nella's turn** (the ridge, seen from the yard): *"The griffon drops out of
+    the cloud onto the ridge. Nella swings down into the brush blind, pulls the hood off its head
+    and stuffs it in her belt. She slaps its neck. 'Tithe. Hunt.' Two wingbeats and it's gone back
+    into the grey. The yard goes quiet."*
+  - **Read aloud, on Tithe's first turn** (it comes down on its first target; the party's first
+    close look, so it runs longer than a usual box). Say "you" to that PC, then roll the attack:
+    *"Right over your head, the bottom of the cloud tears open and the griffon comes through it
+    wings-first, and the wings keep opening, wider than the cart is long. The downdraft hits you
+    like a door slammed in your face. Grit in your eyes, and the wrecked cart rocks against the
+    shed. It lands in the mud an arm's reach from you, hardly a sound for something that size.*
+
+    *Up close it's as big as a plough horse, and all of it is muscle: an eagle from the shoulders
+    forward, gold-brown feathers ruffed thick around its neck, and behind that a lion's tawny
+    body, the shoulders rolling under the hide. The rider's saddle on its back is empty. Its front
+    talons sink into the mud, each one as long as a dagger, and the hooked beak is dark at the
+    tip.*
+
+    *In the corral the horses scream and throw themselves at the rails. The griffon doesn't look
+    at them. It lifts its head slowly, the way a hawk does on a falconer's glove, and gold eyes the
+    size of your fist settle on you. It's in no hurry. Then it screams, and comes at you talons
+    first."*
+  - **Title card:** show `handouts/tithe-title-card.html` (*Tithe, Death from the Grey*) on its
+    scream, after the first-turn read-aloud and before the attack roll.
+  - **Music (Roll20 Jukebox):** cue 1, the boss track, starts on that scream. Cue 2: cut it dead
     at the kill, so Nella's whistle (`S2_ESCAPE`) lands in silence. Cue 3, something quiet, for the
     ride home (`S2_HAUL_HOME`).
   - **HP bar:** Tithe's token shows its HP bar to players from here on.
