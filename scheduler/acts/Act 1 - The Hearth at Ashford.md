@@ -27,7 +27,7 @@ relates_to:
   - "[[House Cael]] (the feud's losing side, and Ashford's nominal protector)"
   - "[[House Marlow]] (the hand behind the raids)"
   - "[[Harrow Bane]] (the band the party actually fights)"
-  - "[[Elowen Rimetusk]] (Odibli's scene and item; committed, session TBD)"
+  - "[[Elowen Rimetusk]] (Odibli's scene and item; committed, Session 36)"
   - "[[The Wanderer's Boon]] (the relic that put them here and has not reopened)"
 description: "The first homebrew act. Five strangers land in a riverside ford-town mid-raid and are offered a share in the one building worth defending. The Cael–Marlow feud explains why Ashford bleeds, but the act is about the Golden Lioness: defend it, earn into it, and discover somewhere along the way that you live here now."
 ---
@@ -139,7 +139,7 @@ Jeff (questions 1–16 of `questionnaires/redwater/act-1-loot.md`), with questio
   `meta/loot-options/Party/misc/Earshot Crystals.md`). They are a Common, so they spend none of
   the Uncommon budget. No personalised item lands in Session 29; when each PC's item lands is
   paced later.
-- **Odibli's Uncommon: the Unfinished Binding** (confirmed for this act, session TBD,
+- **Odibli's Uncommon: the Unfinished Binding** (confirmed for Session 36,
   `meta/loot-options/Odibli/misc/The Unfinished Binding.md`). It comes from
   [[Elowen Rimetusk]] and only through her scene, below.
 
@@ -148,11 +148,87 @@ Jeff (questions 1–16 of `questionnaires/redwater/act-1-loot.md`), with questio
 These are decided and must land somewhere in this act. Fit them into a session when the story
 makes room. Check this list whenever `/session` plans an Act 1 session.
 
-- **Elowen and Odibli.** [[Elowen Rimetusk]] gets a proper look at Odibli and almost sees that
-  there are two of him. Drifting in and out of lucidity, she asks a three-part favor (a sealed
-  letter for [[Mara Tull]], to deliver "the day I don't come back"; find where the missing
-  went; find the rest of her). Then she gives him the Unfinished Binding. The full scene and
-  her secret are in her file. It needs a quiet moment between fights, not a combat beat.
+- **Elowen and Odibli: Session 36 (Jeff, 2026-11-12).** A quiet moment between fights, not a
+  combat beat. Her secret is in her file. Changed from her file: she doesn't *almost* see the
+  second Odibli. She sees it plainly, but only about three-quarters of the truth, read through
+  her own wound. She takes him for a casting accident like hers: split in a crossing, part of him
+  never arrived. She never says "copy". Everything she says is true except how he was made and
+  who is chasing whom, so Miguel's ruling (the copy doesn't know) holds. Run it in this order:
+  1. **She finds him.** It's a lucid afternoon. She comes to wherever Odibli is (his journal, the
+     Lioness, the street) and looks at him far too long. Her fingers move half a second behind
+     her. *"There you are. No. There you are. There's two of you. One's at a desk a long way
+     from here, and he hasn't looked up in years."*
+  2. **She tells him what she thinks he is.** If he laughs or argues: *"I moved a whole company
+     once, all at the same time. I know what it looks like when something arrives and not all of
+     it does."* Then, gently: *"You're not all here either, love. Something moved you, and not
+     all of you came. It's all right. Same as me."*
+  3. **The rest of him.** *"The rest of you is somewhere. At a desk, I think. It'll want you
+     back. The rest of me does too."* A beat. *"It's slow, the part that stays behind. But it
+     doesn't stop looking."* If the Citadel Clock has a sensed cast, add (clock option 11):
+     *"It's already reached for you. I saw the hand."*
+  4. **The favor.** The three pieces from her file, short: the sealed letter for [[Mara Tull]]
+     (*"The day I don't come back, give her this."*), *"If you ever find where the missing
+     went, tell Mara. Not me."* and *"If you find the rest of me, bring it back."*
+  5. **The flock.** She's lucid and sharp for this part: *"Nobody tells you this at the guild.
+     Every spell you cast, somebody's standing in it. They follow you because you can do what
+     they can't, and that makes them yours. Your flock. You keep them safe. That's the whole
+     job. The rest is showing off."* A beat. *"I took a company somewhere they couldn't walk. Not
+     all of them got there."* Then: *"Count them, Odibli. Before and after. Every time."* That's
+     his back-line PC arc step.
+  6. **The brace.** She unbuckles the Unfinished Binding and buckles it onto his arm herself.
+     *"It did half its job. Maybe you'll finish the rest. And it'll get you out of the way of
+     the first arrow, which is more than it ever did for me."* Then she drifts mid-sentence:
+     *"Is it raining? Mara hates the rain."* The scene is over.
+  - **If she goes absent early:** skip to the brace. She buckles it on without a word, pats
+    his arm and says *"Count them,"* and that's all he gets. The rest can come on a later
+    lucid day.
+  - **Choice (Odibli):** believe her, or write it off as an old woman's muddle. She's senile,
+    so both are reasonable, and Miguel decides how much Odibli takes in. Also his choice:
+    whether he tells the party, and whether he opens Mara's letter.
+  - **DM-only: what she got wrong.** He wasn't split. He's a copy, and the one at the desk is
+    the original, with [[The Citadel]] behind him. The original wants him back or gone. When
+    the truth comes out, her words still hold, only turned around. Don't correct her at the
+    table.
+- **The party meets Asher: opens Session 35 (Jeff, 2026-11-12).** The party kills Tithe at the
+  waystation and brings the body home (Session 34, `S2_ESCAPE`, `S2_HAUL_HOME`). In the morning
+  [[Sable Wren]] takes them and the carcass down to the Lioness cellar spring, and
+  [[Aashal-Groon Mellenegon Borak]] rises to take it: the party's first meeting with him.
+  - **The fox.** It went into the Lioness the evening before (Session 34). In the morning it lies
+    by the spring, and walks off into the dark when Asher rises. Halsby knows it. What he tells
+    the others is Kellan's call.
+  - **He gives his true name.** Not Sable's "Asher": the whole name, felt as pressure behind the
+    eyes. It breaks his voice core ("never gives his name") on purpose, a DM-called shift; `/recap`
+    records it in his `## Voice`.
+  - **Dip first.** He speaks mind to mind, to [[Dip]] first (he feels Dip's Sage-trained sense for
+    thin places), and asks for a true story told over the water before he asks for anything.
+  - **The ask.** Eating Tithe, he tastes its memory: Nella flew it over the old battlefield above
+    the ford, where a druid ([[Jorn]]) is waking something. That something is a predator-spirit
+    born of the old war's last stand, the old blood in his water gone sour. He asks Dip, by name,
+    to lay it to rest.
+  - **Dip's sister: true, but thin.** Something of her did pass through water that reaches his. He
+    does not know where she is now, and says so if pressed.
+  - **Iggy.** A slightly deeper bow, and a line or two of questions for what is inside him. In
+    Session 29 he felt a divine presence arrive under his town and accepted it. Keep it short; the
+    meeting belongs to Dip.
+  - **Luci.** He sympathises with a god so far from its one follower; he fears being forgotten
+    himself. He gives her a potion brewed with, among other things, Tithe's ground bone, so she can
+    reach [[Sabathiel]] better. Under it she wanders outside through Ashford, tripping: Sabathiel
+    appears to her, with [[The Sun Temple]] weaving in and out around her. It says "Closer",
+    then for the first time a full line: *"Stand still, and I can reach you."* It binds her hands
+    in grey cloth, and she wakes somewhere odd in town wearing **the Stillwater Wraps**. Cost: one
+    level of exhaustion until her next long rest.
+  - **Promised now, delivered at the finale.** He takes Tithe's bone and talons and says the work
+    will take days. Before the finale's fight he returns **Oathcaller** for [[Iggy]] (griffon bone
+    and river minerals) and **Varrick's Cart-Whip improved with Tithe's talons** for Dip (now his
+    Uncommon; the upgrade's effect is not designed yet).
+  - Still open: the spirit's species and stat block, and how close Jorn is to waking it.
+- **The finale is the old field (Jeff, 2026-11-12).** The December finale is Dip's ask: the field,
+  Jorn and the spirit. The reward is Asher's blessing on the brewhouse water. This replaces the
+  "convergence night" shape in `## Shape` for the act's last session; reshape that section when
+  Session 35 is planned.
+- **Tithe's skull hangs in the Lioness (Jeff, 2026-11-12).** The party decides what they take off
+  the body. [[Mara Tull]] wants the trophy, likely the skull, hung in the Lioness as a point of pride
+  for the town. Tithe's real owner stays open; nobody comes looking yet.
 - **The aegis-banner, aimed at act Session 2.** Marlow's ancestral banner flies on the raiders'
   line and is recoverable, then hangs in the Lioness as the prop that unspools the feud. It was
   held back from Session 29 (2026-10-05) so the matched boots stay that night's one feud detail.

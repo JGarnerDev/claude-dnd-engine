@@ -41,6 +41,12 @@ Planned date: 2026-11-17.
       them up (`S2_TALLY`). Contents only; the notches' meaning comes from the Investigation checks.
 - [ ] **The Stake terms card** (todo 94): was ticked, but no file exists. Not needed here: Sable
       puts the share talk off to "tomorrow" (`S2_HAUL_HOME`), so it belongs to Session 35.
+- [ ] **Make the battle song for Tithe (Jeff).** Then load the three cues into the Roll20
+      Jukebox (`S2_TITHE_HUNTS`): 1, the boss track, on the scream; 2, cut at the kill; 3, something
+      quiet for the ride home. Test that a player can hear it before the session.
+- [ ] **Tithe's token on Roll20:** HP 95, and its HP bar visible to players.
+- [ ] **Open the title card** (`handouts/tithe-title-card.html`) in a tab, ready to share on the
+      scream.
 
 ## Optional
 

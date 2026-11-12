@@ -10,7 +10,7 @@ rarity: uncommon
 attunement: false
 bracket: "levels 4-5"
 status: confirmed
-confirmed_for: "Session 35 The Reeve's Ledger"
+confirmed_for: "Session 36"
 ---
 
 # The Unfinished Binding

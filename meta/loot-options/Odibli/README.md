@@ -20,7 +20,7 @@ Rebuilt 2026-11-11 from his PC arc (`scheduler/arcs/Odibli PC Arc.md`). The arc 
 - **weapons/** — [[The Tally Wand]] (Uncommon) · [[The Headlong Wand]] (Uncommon) · [[The Naming Rod]] (Common)
 - **armor/** — [[The Back-Rank Mantle]] (Common) · [[The Hearthside Coat]] (Common) · [[The Walked-Before Boots]] (Common)
 - **misc/** — [[The Reckoning Beads]] (Common) · [[The Wonder Jar]] (Common) · [[The Patient Glass]] (Uncommon)
-- **Confirmed:** [[The Unfinished Binding]] (Uncommon, misc), from [[Elowen Rimetusk]] in Session 35. It is the one item here with a giver and a plot.
+- **Confirmed:** [[The Unfinished Binding]] (Uncommon, misc), from [[Elowen Rimetusk]] in Session 36. It is the one item here with a giver and a plot.
 
 ## What these are built on
 
@@ -39,7 +39,7 @@ Rebuilt 2026-11-11 from his PC arc (`scheduler/arcs/Odibli PC Arc.md`). The arc 
 
 ## Pick order
 
-**Confirmed for Act I:** [[The Unfinished Binding]], from Elowen in Session 35. That spends his Act I Uncommon.
+**Confirmed for Act I:** [[The Unfinished Binding]], from Elowen in Session 36. That spends his Act I Uncommon.
 
 **Next act's candidate:** [[The Tally Wand]]. It rewards the growth his arc points at.
 

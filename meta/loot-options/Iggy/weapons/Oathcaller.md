@@ -9,7 +9,8 @@ form: "long single-edged blade, hand-and-a-half grip (rapier statistics)"
 rarity: uncommon
 attunement: false
 bracket: "levels 4-5"
-status: draft
+status: confirmed
+confirmed_for: "Act 1 finale (forged by Asher, promised Session 35)"
 ---
 
 # Oathcaller

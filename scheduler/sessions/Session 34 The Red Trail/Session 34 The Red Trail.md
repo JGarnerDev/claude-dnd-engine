@@ -100,7 +100,7 @@ Griffon, reskinned, plus Nella's custom block (from
   - **Archer Rider** — Ilsa Hask (human, Scout), by Iggy, badly hurt · **~5 / 16**
   - **Roof Guard** — Tam "Clatter" Cobb (human, Bandit), on the shed roof's corner · 11 / 11
   - **Sniper** — [[Nella]], on Tithe about 60 ft up; drops to the ridge blind on her turn · 49 / 49
-  - **Griffon** — Tithe (Griffon), riderless once she's down, hunting · 59 / 59
+  - **Griffon** — Tithe (Griffon), riderless once she's down, hunting, the boss · 95 / 95
   - **Relief Captain** — Garran Vey (human, Veteran), south road, arrives the round after Iggy's
     first turn · 58 / 58
   - **Relief Rider 1** — Dace Morrow (human, Bandit), with him, spread out · 11 / 11
@@ -127,9 +127,13 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
 - **With the step-up:** +91 HP of relief (Vey 58 survives two average hits, the anchor the floor
   lacked) arriving where the opener can't reach, and Tithe as a second sky threat. ~240 HP in
   all; **RTC ~3.5 rounds counting Iggy's opening turn**, inside the 3+ the rules ask for.
+- **With the boss (Jeff, 2026-11-12):** Tithe at 95 HP with 2 legendary actions. ~276 HP in all,
+  **RTC ~4 rounds**. The first half of its HP sits in the cloud at disadvantage until Iggy's
+  wings light it; the reckless second half goes fast. Expect it to die in round 4 or 5.
 - **Area exposure:** the riders come in spread, about 20 ft apart, so a Fireball takes two at
   most. Don't bunch them on the road.
-- **RTD:** Tithe ~13 a round (~25 to one target when a Snatch ends in a fall), Nella ~12, Vey ~13, riders ~3 each. About 2 spread across the party;
+- **RTD:** Tithe ~13 a round, ~18 with legendary actions, ~22 bloodied and reckless (~25 to one
+  target when a Snatch ends in a fall), Nella ~12, Vey ~13, riders ~3 each. About 2 spread across the party;
   about 1 if Tithe and Vey both go for one PC. Keep Tithe on whoever is in the open and moving.
   Tithe leaves a downed PC for the next target; Nella still never shoots a downed PC.
 - **Round budget:** 2 played, ~3–4 more. About 6 of standard's 18–24.
@@ -223,7 +227,7 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
   a caster**. She never shoots a downed PC. This holds her at standard lethality; on paper her
   block is RTD ~1 against the back line.
 - **Mounted (Jeff, 2026-10-28):** once she's on Tithe she fights from the air (see Running it).
-  Mounting costs half her movement. She keeps her own crystal and **never broadcasts**.
+  Mounting costs half her movement. She keeps her own crystal and **never broadcasts**, except once, for Tithe (`S2_ESCAPE`).
 - **Stepped up (Jeff, 2026-11-10):** on her next turn she brings Tithe down on the overwatch
   ridge, steps off into the brush blind (half cover) and sends the griffon back up: *"Tithe.
   Hunt."* From the blind she shoots twice a turn as before. She's on foot now, so her ways out
@@ -255,16 +259,37 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
   wherever it is and dives on someone new. A fall is 1d6 per 10 ft (40 ft: 4d6, ~14).
   - **Who:** improvise from what the players are doing: whoever is in the open, moving, or
     hurting Nella. Never a downed PC.
-  - **It lets go early** if it takes 15 or more damage from one hit, when it breaks off at half HP,
-    or when Nella whistles. Escaping the grapple mid-air means falling from where it is.
+  - **It lets go early** if it takes 15 or more damage from one hit, when it goes bloodied
+    (47 HP), or when Nella whistles. Escaping the grapple mid-air means falling from where it is.
   - **Only a flier fixes it.** Nobody on the ground can reach a creature 40 ft up or catch one
     falling. That is Iggy's cue (`S2_IGGY_BEAT`).
   - Snatch, then a fall: ~25 to one target over two turns. Keep it spread, as with every other
     threat here.
 - **Sah's voice** (`S2_IGGY_BEAT`) hits it hardest: WIS save DC 13 (it has +3). Fail: it screams,
   drops, and ends its turn on the ground within 60 ft of Iggy, and doesn't attack that turn.
-- **At half HP (30)** it breaks off and flies to Nella for the pickup. **If Nella is down or
-  gone,** it climbs and flies east, home to whoever owns it.
+- **Boss (Jeff, 2026-11-12).** From `S2_TITHE_HUNTS` on, Tithe is the session's boss. **HP 95**
+  (up from 59; nobody has hit it yet, and the players haven't seen its HP). Its token's HP bar is
+  visible to players.
+  - **Legendary actions: 2 a round,** one at a time, at the end of another creature's turn. They
+    come back at the start of its turn.
+    - **Climb (1):** it flies up to 40 ft without provoking opportunity attacks, back into the
+      cloud if it can reach it.
+    - **Wing Buffet (1):** one creature within 10 ft makes a DC 14 STR save or is knocked prone.
+    - **Rake (2):** beak +6, 1d8+4 piercing.
+  - **Bloodied, at 47 HP or less: the second phase.** Read aloud:
+    *"The griffon comes down out of the cloud and hits the mud hard. When it gets up one wing is
+    dragging, and there's blood on the gold. It screams once, and this time it doesn't go back up.
+    It lowers its head at you."*
+    - It drops whatever it's holding, from wherever it is.
+    - The torn wing: fly 40 ft, and it won't climb back into the cloud. It fights in the yard,
+      and attacks against it are normal.
+    - It goes reckless: advantage on its attacks, and attacks against it have advantage.
+    - Multiattack every turn, with no more Snatch. Climb is gone; Wing Buffet and Rake stay.
+    - It won't come to Nella's whistle any more. It fights to the death.
+  - **The kill.** Ask whoever lands it: *"How do you want to do this?"* Then read:
+    *"It goes down in front of the waystation door, all of it at once, and you feel it through the
+    ground. One wing stays up a moment longer. Then it folds."* Cut the music on the last word. The
+    next sound is Nella's whistle from the bridge (`S2_ESCAPE`).
 - **Kit (player-facing):** *a leather hood with brass rings over its eyes, and a long rider's
   saddle with deep saddlebags strapped behind its wings.*
 - **Label (party-facing):** Griffon
@@ -416,8 +441,20 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   in the cloud: it drops on whoever is in the open and moving, and most turns it **snatches**
   them and climbs (see Tithe's block). Pick the target from what the players are doing.
 - **What the party can use:** Nella is on foot now. Someone who reaches the ridge can corner her;
-  someone who reaches the bridge first can cut her best way out (`S2_ESCAPE`). Tithe at half HP
-  breaks off to fetch her.
+  someone who reaches the bridge first can cut her best way out (`S2_ESCAPE`). Tithe at 47 HP
+  goes bloodied and won't come to her whistle any more (see its block).
+- **Boss battle (Jeff, 2026-11-12).** Tithe is this session's boss fight, and it starts here, on
+  *"Tithe. Hunt."* Stats, legendary actions and the bloodied phase are in Tithe's block.
+  - **Read aloud, as she says it:** *"Nella pulls the hood off the griffon's head and stuffs it
+    in her belt. It blinks once, gold eyes on the yard, on you. She slaps its neck. 'Tithe.
+    Hunt.' Two wingbeats and it's gone into the grey. The yard goes quiet. Then its shadow slides
+    across the mud, too big and too fast, and a scream comes down out of the cloud."*
+  - **Title card:** show `handouts/tithe-title-card.html` (*Tithe, the Borrowed Wing*) on the
+    scream.
+  - **Music (Roll20 Jukebox):** cue 1, the boss track, starts on the scream. Cue 2: cut it dead
+    at the kill, so Nella's whistle (`S2_ESCAPE`) lands in silence. Cue 3, something quiet, for the
+    ride home (`S2_HAUL_HOME`).
+  - **HP bar:** Tithe's token shows its HP bar to players from here on.
 - **Tokens:** Sniper to the ridge blind (AB8:AC10, or the brush on Jeff's map), token layer.
   Griffon back to the GM layer on the grey margin; up only on its own turn.
 
@@ -641,10 +678,30 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   good. The bridge, then the river.
 - **If the party hurts her or Tithe** (this party can put ~85 into one target in a round; run
   these honestly too):
-  - **If Nella drops to half (24 HP) or Tithe to half (30 HP):** she skips the covering fire and
-    the taunt and goes straight to withdrawal (step 3). She's done the sums.
+  - **If Nella drops to half (24 HP):** she skips the covering fire and the taunt and goes
+    straight to withdrawal (step 3). She's done the sums.
+  - **If Tithe goes bloodied (47 HP):** it won't come to her whistle any more. She skips the
+    covering fire and the taunt and makes for the bridge on foot.
   - **If Tithe drops to 0 while hunting:** it falls where it was hit. The tally is in its
     saddlebags; whoever gets to the body first finds it. Nella is on foot for good.
+- **Committed (Jeff, 2026-11-12): Tithe dies in this fight.** The party is expected to kill it.
+  The body goes home on the wagon (`S2_HAUL_HOME`) and opens Session 35 at the cellar spring.
+  - **Nella's goodbye, from the bridge (Jeff, 2026-11-12).** Tithe dies in front of the waystation
+    while she falls back to the plank bridge. She never goes near the body, because the party
+    would cut her down. She skips the taunt. At the bridgehead, in this order:
+    1. **The whistle.** She blows Tithe's two-note recall whistle once, the same one the party
+       would have heard if it had lived. She waits one breath. Nothing comes.
+    2. **The hood.** She hangs Tithe's empty hood on the bridge post. No line. Whoever reaches the
+       bridge finds it swinging there, the leather worn smooth. They can keep it or give it back
+       to her later.
+    3. **Over the crystals.** For the only time this fight, she broadcasts. Every crystal hears it,
+       the party's included. She doesn't raise her voice: *"Nineteen flights. Never once dropped
+       me."* A beat. *"Fuck you all."*
+    4. Then she pulls the pins and is gone (bridge, then the river, as above).
+  - **If Tithe is still up when she breaks:** it answers her whistle already bleeding and goes down
+    in front of the waystation before it reaches her. Run the goodbye as above.
+  - **If Tithe is bloodied when she breaks:** it doesn't hear her. She runs for the bridge and
+    watches from the bridgehead while it fights on in the yard. Run the goodbye when it falls.
   - **If Tithe drops to 0 with her on it:** it falls from wherever it was hit. Over the river, she
     lets go and drops into the water, and that's the river plunge (step 5) on the spot. Over land,
     she takes 1d6 per 10 ft fallen, lands prone beside it, and is on foot: the bridge, then the
@@ -724,6 +781,8 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 
 #### S2_HAUL_HOME — The casks come home on their own cart
 
+- **Music:** cue 3 on the Roll20 Jukebox, something quiet, once the wagon is moving.
+
 - **Choice (party):** bring the banner home or leave it. Hung in the Lioness, it is the prop that unspools the feud, and Silas sees it.
 - **Silas's cart is wrecked** against the shed (Session 33). The casks go home in the camp's own
   wagon, the covered one by the shed, and that wagon becomes the Lioness's delivery cart (the old
@@ -742,6 +801,23 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **Silas sees the banner** (first look, before he goes quiet; he never says whose it is):
   *"Where did you get that banner?"* A beat. *"If you hang it, hang it high. Some people who
   drink here would know whose it is, and you don't want them knowing you have it."*
+- **Tithe comes home too (committed, Jeff 2026-11-12).** About five hundred pounds of griffon,
+  lifted onto the wagon on top of the casks or behind them. Lifting it is a group Athletics check
+  (DC 12) or ten minutes with the shed's rope and a horse. Silas's horses won't go near it until
+  it's covered (Animal Handling 12, or cover it first).
+  - **Harvest is allowed.** Feathers, talons and the head can come off now or at the Lioness
+    (Survival DC 12 to do it cleanly). Asher works bone and talons into items in Session 35. Name no
+    item tonight.
+  - **Ashford sees it.** When the wagon comes up the ford street, people stop and look. Hob Fenner,
+    the cooper: *"Is that the thing that carried the archer?"* Pell Ashby, the lamplighter:
+    *"Somebody fetch Mara. She'll want to see this."* Record the town's
+    reaction for `/recap` as a possible fame deed.
+  - **Mara wants the trophy (Jeff, 2026-11-12).** She comes out of her office to look, and wants
+    it on show: *"Put that skull up in the Lioness. Let every raider who drinks there see it."*
+    The party decides what they keep.
+  - **The fox.** As the wagon pulls up, a fox with smoky green eyes crosses the street ahead of it
+    and goes in through the Lioness door. Halsby knows it on sight. Nobody else has seen it before.
+    Don't explain it; it's waiting by the cellar spring in the morning (Session 35).
 - **Long rest:** if they rest at the waystation first, the clock resets there. Note it for `/recap`.
 - **Sable, at the door, sees the cart.** She doesn't run out. She puts down what she's holding and
   stands very still. *"That's twice now you've saved this place."* (the second deed — banked, and the next Stake tick
@@ -749,6 +825,10 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **Dip's push for more than 10%** (Session 31) comes back here. Once the casks are inside, she
   raises it before anyone else does: *"You said ten was thin. Bring the deed tomorrow and we'll
   argue it."* Don't set a number tonight.
+- **Sable sees the griffon.** She lifts the cover, looks a long time, and lets it fall. *"Leave it
+  in the wagon. Take what you want off it tonight. The rest goes downstairs in the morning, and
+  I'll go with you."* She won't say why. Pushed: *"Someone down there will want to meet you.
+  Morning."* That sets up Session 35's opening. Don't let her name Asher.
 - If they bring the banner: she looks at it a long time. *"Not in my bar."* A beat. *"…Fine. Above
   the hearth. Where I can see it."*
 
@@ -904,7 +984,7 @@ Land it on the cell door, not on the casks.
 - **For `/recap`:**
   - **New canon if played:** Garran Vey and his riders Dace Morrow, Pim Ostler and Callan Shire,
     who don't wear crystals · the shed stocked for thirty, with a month's rations · Sennet Orrin
-    keeps Bane's duty ledger · Tithe isn't Nella's and flies east to its owner · the purse, 250 gp
+    keeps Bane's duty ledger · Tithe isn't Nella's (its owner stays open), and it dies here · the purse, 250 gp
     (150 gp, 500 sp, 5 pp), exactly her remaining debt · Silas's cart worth ~35 gp, a lame horse
     11 gp · the camp's wagon becomes the Lioness's delivery cart · the banner above the hearth, if
     they bring it · Sah's voice through the crystals ("Up, Wallaed") · the prisoner who
@@ -912,3 +992,13 @@ Land it on the cell door, not on the casks.
 - **Also for `/recap`:** log Odibli's casts (Citadel Clock, at 1 / 3), and his two Fireballs if they
   come out. Restamp the trackers. The reputation rewards at the waystation (Clatter's "Lightning
   man!", Brask backing off from Dip) are `unspent` until played.
+- **Boss recap material (Jeff, 2026-11-12):**
+  - **`/transcript` mines:** who landed the killing blow on Tithe and how they described it,
+    damage each PC dealt to Tithe (rough, `~n`), who it snatched and how far they fell, total fall
+    damage, and whether Sah's voice dropped it.
+  - **`/recap` writes:** the Tithe fight's scene slide as a **"Boss defeated"** slide carrying
+    those numbers. It's a written scene slide, so no engine change is needed. Leave the stats
+    themselves to the ledger.
+  - **Achievement candidates:** snatched by a griffon; fell 40 ft and got up; landed the kill;
+    made the griffon scream with a god's voice (Iggy). Draft them in the usual voice
+    (`meta/achievements.md`).

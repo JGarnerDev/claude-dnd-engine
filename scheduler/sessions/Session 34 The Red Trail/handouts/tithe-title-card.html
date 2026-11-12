@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tithe Title Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;1,400&display=swap">
+<style>
+/* Layout: one full-screen boss title card, shown by screen share on Tithe's scream (S2_TITHE_HUNTS). Name and epithet only: no stats, no HP. */
+:root {
+  --bg: #e9e4d8;
+  --ink: #23221f;
+  --muted: #615d55;
+  --rule: #b49a5e;
+  --accent: #8a6a24;
+  --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+  --body: "Spectral", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12110e; --ink: #ece4d0; --muted: #a39a86; --rule: #6e5a2c; --accent: #d4a94a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12110e; --ink: #ece4d0; --muted: #a39a86; --rule: #6e5a2c; --accent: #d4a94a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--body);
+  display: grid; place-items: center; padding: 16px; overflow: hidden;
+}
+.card { text-align: center; display: grid; gap: 1.2rem; justify-items: center; }
+.kicker {
+  font-family: var(--display); color: var(--accent); letter-spacing: .4em;
+  font-size: clamp(.9rem, 2.2vw, 1.4rem); margin: 0; padding-left: .4em;
+}
+h1 {
+  font-family: var(--display); font-weight: 400; margin: 0; line-height: 1;
+  font-size: clamp(4rem, 18vw, 13rem); letter-spacing: .06em;
+}
+.rule { width: min(60vw, 32rem); height: 1px; background: var(--rule); }
+.epithet {
+  font-style: italic; color: var(--muted); margin: 0;
+  font-size: clamp(1.2rem, 4vw, 2.6rem);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .card > * { animation: rise 1.4s ease-out both; }
+  .card > :nth-child(2) { animation-delay: .25s; }
+  .card > :nth-child(3) { animation-delay: .7s; }
+  .card > :nth-child(4) { animation-delay: 1s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+}
+</style>
+</head>
+<body>
+<main class="card">
+  <p class="kicker">Boss</p>
+  <h1>Tithe</h1>
+  <div class="rule" aria-hidden="true"></div>
+  <p class="epithet">The Borrowed Wing</p>
+</main>
+</body>
+</html>
