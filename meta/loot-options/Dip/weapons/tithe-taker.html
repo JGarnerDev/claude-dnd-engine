@@ -1,0 +1,104 @@
+<title>Tithe-Taker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: one item card, centered, sized to its content. Player handout for Dip (Ben). Hand it over when Asher returns the whip before the act finale. Move it into that session's handouts/ when the finale is planned. */
+:root {
+  --bg: #e9e7e2;
+  --card: #f7f5f0;
+  --ink: #23221f;
+  --muted: #615d55;
+  --rule: #cfc9bd;
+  --accent: #8a5a2b;
+  --shadow: rgba(35, 34, 31, .28);
+  --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+  --body: "Spectral", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141513; --card: #1d1f1c; --ink: #e6e2d8; --muted: #a39e92;
+    --rule: #3a3c37; --accent: #c99a6a; --shadow: rgba(0, 0, 0, .55); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141513; --card: #1d1f1c; --ink: #e6e2d8; --muted: #a39e92;
+  --rule: #3a3c37; --accent: #c99a6a; --shadow: rgba(0, 0, 0, .55); color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--body);
+  font-size: 17px; line-height: 1.55; padding: 32px 16px;
+}
+.card {
+  max-width: 34rem; margin: 0 auto; background: var(--card);
+  border: 1px solid var(--rule); border-radius: 4px; padding: 28px 28px 24px;
+  display: grid; gap: 18px;
+}
+header { display: grid; gap: 4px; }
+h1 {
+  font-family: var(--display); font-weight: 400; font-size: 2.1rem; line-height: 1.1;
+  margin: 0; text-wrap: balance;
+}
+.type { margin: 0; color: var(--muted); font-style: italic; }
+.art { display: block; width: 100%; max-width: 100%; height: auto; }
+.flavor { margin: 0; }
+.stats {
+  display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 0; padding: 10px 0;
+  border-block: 1px solid var(--rule); font-size: .95rem; font-variant-numeric: tabular-nums;
+}
+.stats div { display: flex; gap: 6px; }
+.stats dt { color: var(--muted); text-transform: uppercase; letter-spacing: .06em; font-size: .78rem; align-self: center; }
+.stats dd { margin: 0; }
+ul.props { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.props h2 {
+  font-family: var(--display); font-weight: 400; font-size: 1.2rem; margin: 0 0 2px;
+  color: var(--accent);
+}
+.props p { margin: 0; }
+footer { color: var(--muted); font-size: .9rem; font-style: italic; border-top: 1px solid var(--rule); padding-top: 12px; }
+@media (max-width: 440px) { .card { padding: 22px 18px 20px; } h1 { font-size: 1.8rem; } }
+</style>
+
+<article class="card">
+  <header>
+    <h1>Tithe-Taker</h1>
+    <p class="type">Weapon (whip), uncommon · no attunement · Dip</p>
+  </header>
+
+  <svg class="art" viewBox="0 0 480 70" role="img" aria-label="A coiled whip with hooked talons set along the end of the lash.">
+    <!-- handle with brass cap -->
+    <rect x="24" y="30" width="70" height="10" rx="5" fill="var(--muted)"/>
+    <rect x="16" y="29" width="12" height="12" rx="3" fill="var(--accent)"/>
+    <!-- the plaited lash, looping out -->
+    <path d="M94 35 C150 35 170 12 230 14 C300 16 300 56 360 56 C410 56 430 30 462 32" stroke="var(--ink)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- the black popper knot, kept -->
+    <circle cx="464" cy="32" r="4" fill="var(--ink)"/>
+    <!-- four talons set along the last of the lash, hooked back toward the handle -->
+    <path d="M387 53 q6 6 0 13" stroke="var(--accent)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M408 47 q6 6 0 13" stroke="var(--accent)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M427 40 q6 6 0 13" stroke="var(--accent)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M444 34 q6 6 0 13" stroke="var(--accent)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </svg>
+
+  <p class="flavor">You took it off a dead man at the waystation. Asher gave it back with the griffon worked into it: four of Tithe's talons set along the end of the lash, hooked back toward your hand. What it catches, it keeps.</p>
+
+  <dl class="stats">
+    <div><dt>Bonus</dt><dd>+1 attack and damage</dd></div>
+    <div><dt>Damage</dt><dd>1d6 + 1 slashing</dd></div>
+    <div><dt>Properties</dt><dd>Finesse, reach</dd></div>
+    <div><dt>Reach</dt><dd>10 ft</dd></div>
+    <div><dt>Mastery</dt><dd>Slow</dd></div>
+  </dl>
+
+  <ul class="props">
+    <li>
+      <h2>Bring it down</h2>
+      <p>Twice per short rest, when you hit a Large or smaller creature with it, you can drag that creature up to 15 feet in a straight line toward you. It's grappled until the end of your next turn (escape DC 13). A flying creature grappled this way has a speed of 0, so it falls unless it can hover.</p>
+    </li>
+    <li>
+      <h2>Drover's crack</h2>
+      <p>While you hold it, you have advantage on Animal Handling checks to drive, steer or calm draft animals. Its crack carries about 300 feet.</p>
+    </li>
+  </ul>
+
+  <footer>Won at the waystation. Reforged by Asher, and given back as a gift.</footer>
+</article>

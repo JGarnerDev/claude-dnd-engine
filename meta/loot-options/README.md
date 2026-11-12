@@ -63,7 +63,9 @@ between item and session can be found in both directions.
 ## Item cards
 
 Once an item is handed over, its player gets a card: one HTML page in the session's
-`handouts/` folder, published as an artifact so the DM can share the link. The Shadowless Spear
+`handouts/` folder. **Publish it as an artifact the moment it is written**, so the DM has a link
+to share, and republish to the same URL on every edit; the repo file stays the source. A card
+built before its session is planned sits beside the item file and moves to `handouts/` later. The Shadowless Spear
 and Earshot Crystals cards in `scheduler/sessions/Session 33 The Red Trail/handouts/` set the
 style.
 
