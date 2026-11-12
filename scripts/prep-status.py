@@ -5,7 +5,8 @@
 #   plan state and date, unset `<placeholders>` (with the beat they sit under),
 #   flow beats by marker, linked loot that is not confirmed, battlemap layouts and
 #   their renders, combatant labels with no token rule, the token kit and whether it is
-#   recorded as uploaded (maps/battlemaps/tokens-uploaded.txt), stale PC
+#   recorded as uploaded (maps/battlemaps/tokens-uploaded.txt), handout cards with no
+#   published link (or named in the plan but missing), stale PC
 #   levels, the search index, and unchecked lines in the folder's _tasks.md.
 # _tasks.md stays for what no file can show (cards to print, players to ask);
 # everything this script derives does not belong in it.
@@ -25,6 +26,7 @@ from lib.common import (  # noqa: E402
     ROOT, ci_eq, cwrite, entity_md_files, get_frontmatter, index_staleness,
     read_text_no_bom, try_int, try_parse_date,
 )
+from lib.cards import card_refs, cards  # noqa: E402
 from lib.labels import combatant_labels, manifest_rules, role_of  # noqa: E402
 
 SESSIONS = ROOT / 'scheduler' / 'sessions'
@@ -276,6 +278,27 @@ def main():
             if not re.search(rf'^{n}\s', uploaded, re.MULTILINE):
                 r.line('TODO', 'kit not recorded as uploaded; after uploading to Roll20, run '
                        f'uv run scripts/token-kit.py --session {n} --uploaded')
+
+    # Cards
+    r.head('CARDS (handouts/)')
+    have = cards(folder)
+    paths = {c['path'] for c in have}
+    for ref in card_refs(text):
+        if ref not in paths:
+            r.line('TODO', f'{ref}: named in the plan, but no such file')
+    if not have:
+        r.line('--', 'no handout cards')
+    by_url = {}
+    for c in have:
+        if c['url']:
+            by_url.setdefault(c['url'], []).append(c['path'])
+            r.line('ok', f'{c["path"]}: {c["url"]}')
+        else:
+            r.line('TODO', f'{c["path"]}: no artifact link recorded; publish it and add its '
+                   'artifact-url tag (meta/loot-options/README.md, Item cards)')
+    for url, ps in by_url.items():
+        if len(ps) > 1:
+            r.line('TODO', f'one link on {len(ps)} cards ({", ".join(ps)}): {url}')
 
     # Party
     r.head('PARTY')

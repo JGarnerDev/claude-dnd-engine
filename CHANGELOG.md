@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.69.0] — 2026-11-12
+
+### Added
+
+- **Card links in the runner** (`app/pages/home/session/refs.ts`, `scripts/lib/cards.py`). A handout card records where it is published in its own `<meta name="artifact-url">` tag. Wherever a plan names a card by path (`` `handouts/tithe-title-card.html` ``), the session runner shows the card's title as a link that opens the artifact in a new tab; a card with no link yet, or no such file, stays dotted. `session-cards.py` emits a `cards` list, and the runner reloads when a card file changes.
+- **Cards in `prep-status.py`.** A new CARDS block lists each card in the session's `handouts/` with its link, and flags cards with no link, a card the plan names that doesn't exist, and one link on two cards. The card rule lives in `meta/loot-options/README.md` → Item cards.
+
+### Changed
+
+- **Runner scrollbars.** Thin scrollbars that match the dark theme; the closed side panel no longer lets the page scroll sideways, and on phones enemy rows stack and step rows wrap.
+
 ## [0.68.1] — 2026-11-12
 
 ### Changed

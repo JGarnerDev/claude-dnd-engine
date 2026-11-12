@@ -216,6 +216,14 @@ export interface Reputation {
   warnings: string[];
 }
 
+// A handout card in the session's handouts/ folder; url is '' until the card's
+// <meta name="artifact-url"> records where it is published.
+export interface CardRef {
+  path: string; // handouts/<file>.html
+  title: string;
+  url: string;
+}
+
 export interface SessionData {
   session: SessionMeta;
   nodes: FlowNode[];
@@ -231,4 +239,5 @@ export interface SessionData {
   party: PartyMember[];
   entities: EntityRef[];
   previously: PreviousSession[];
+  cards?: CardRef[];
 }

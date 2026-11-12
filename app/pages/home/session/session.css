@@ -333,6 +333,8 @@
 .sr-bref-n { font: 600 11.5px var(--sr-f-cue); color: var(--sr-bg); background: var(--sr-v-watch); border-radius: 3px; padding: 0 4px; }
 .sr-bref.is-scene { color: var(--sr-accent) !important; background: color-mix(in srgb, var(--sr-accent) 9%, transparent); border-color: color-mix(in srgb, var(--sr-accent) 45%, transparent); }
 .sr-bref.is-scene .sr-bref-n { background: var(--sr-accent); }
+.sr-cardref { font-weight: 600; color: var(--sr-accent) !important; text-decoration: underline; text-underline-offset: 2px; }
+.sr-cardref::after { content: " ↗"; font-size: 0.85em; }
 .sr-bref.is-here { border-style: dashed; }
 .sr-root code.sr-ref-missing { text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; color: var(--sr-muted); }
 

@@ -63,12 +63,14 @@ export function sessionData(repoRoot: string): Plugin {
         );
       });
 
-      // Re-extract on any entity edit, and when the extractor itself changes.
+      // Re-extract on any entity edit, on a handout card edit (its artifact link), and
+      // when the extractor itself changes.
       const script = resolve(repoRoot, 'scripts', 'session-cards.py');
       server.watcher.add([...roots, script]);
       const onChange = (file: string) => {
         const isEntity = file.endsWith('.md') && roots.some((r) => file.startsWith(r));
-        if (!isEntity && resolve(file) !== script) return;
+        const isCard = file.endsWith('.html') && file.includes(`${sep}handouts${sep}`) && roots.some((r) => file.startsWith(r));
+        if (!isEntity && !isCard && resolve(file) !== script) return;
         cached = null;
         const mod = server.moduleGraph.getModuleById(RESOLVED_ID);
         if (mod) server.moduleGraph.invalidateModule(mod);

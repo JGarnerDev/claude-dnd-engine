@@ -3,11 +3,13 @@
 // beat or scene in the side panel without moving the walk. Beat chips are violet,
 // numbered by step ("3", or "4.2" in another scene); scene chips are gold. An id that
 // matches no beat in this session's flow stays plain, underlined dotted, so a typo
-// or a beat from a later session shows as such.
+// or a beat from a later session shows as such. A handout card named by its path
+// (`handouts/tithe-title-card.html`) opens its published artifact in a new tab; a
+// card with no recorded link, or no such file, stays plain and dotted.
 
 import { escapeHtml, nodeHeadings } from './markdown.js';
 import { stepTitle } from './steps.js';
-import type { FlowNode, Scene } from './types.js';
+import type { CardRef, FlowNode, Scene } from './types.js';
 
 export interface BeatRef {
   id: string;
@@ -28,6 +30,7 @@ export interface SceneRef {
 export interface RefIndex {
   beat(id: string): BeatRef | undefined;
   scene(key: string): SceneRef | undefined;
+  card(path: string): CardRef | undefined;
 }
 
 // Chip text: the heading up to its first break, if that leaves enough to read, else
@@ -42,7 +45,10 @@ export function shortTitle(t: string): string {
 
 export const sceneName = (title: string) => title.replace(/^Scene\s+\w+\s*[—–·:-]\s*/, '');
 
-export function buildRefIndex(nodes: readonly FlowNode[], scenes: readonly Scene[], currentId: string): RefIndex {
+// Cards are matched by file name, so `handouts/x.html` and a longer path to it both resolve.
+const fileName = (p: string) => p.slice(p.lastIndexOf('/') + 1).toLowerCase();
+
+export function buildRefIndex(nodes: readonly FlowNode[], scenes: readonly Scene[], currentId: string, cards: readonly CardRef[] = []): RefIndex {
   const headings = new Map<string, string>();
   for (const s of scenes) for (const [id, t] of nodeHeadings(s.md)) if (!headings.has(id)) headings.set(id, t);
   const current = nodes.find((n) => n.id === currentId);
@@ -63,7 +69,8 @@ export function buildRefIndex(nodes: readonly FlowNode[], scenes: readonly Scene
     });
   }
   const byKey = new Map(scenes.map((s) => [s.key.toLowerCase(), { id: s.id, key: s.key, title: sceneName(s.title), here: s.id === current?.scene }]));
-  return { beat: (id) => beats.get(id), scene: (key) => byKey.get(key.toLowerCase()) };
+  const byFile = new Map(cards.map((c) => [fileName(c.path), c]));
+  return { beat: (id) => beats.get(id), scene: (key) => byKey.get(key.toLowerCase()), card: (p) => byFile.get(fileName(p)) };
 }
 
 export function beatChip(b: BeatRef): string {
@@ -75,7 +82,12 @@ export function sceneChip(s: SceneRef): string {
   return `<button type="button" class="sr-bref is-scene${s.here ? ' is-here' : ''}" data-scene="${escapeHtml(s.key)}" title="${escapeHtml(`Scene ${s.key} · ${s.title}`)}${s.here ? ' (you are here)' : ''}"><span class="sr-bref-n">S${escapeHtml(s.key)}</span>${escapeHtml(s.title)}</button>`;
 }
 
+export function cardLink(c: CardRef): string {
+  return `<a class="sr-cardref" href="${escapeHtml(c.url)}" target="_blank" rel="noopener" title="${escapeHtml(`Open the published card · ${c.path}`)}">${escapeHtml(c.title)}</a>`;
+}
+
 const BEAT_CODE_RE = /<code>([A-Z][A-Z0-9]*_[A-Z0-9_]+)<\/code>/g;
+const CARD_CODE_RE = /<code>((?:[^<\s]*\/)?handouts\/[^<\s]+\.html)<\/code>/g;
 const SCENE_RE = /\bScene (\d+[a-z]?)\b/g;
 
 // Rendered HTML in, chips out. "Scene N" is matched in text only, never inside a
@@ -97,7 +109,12 @@ export function linkRefs(html: string, ix: RefIndex): string {
       });
     }
   }
-  return parts.join('').replace(BEAT_CODE_RE, (_, id: string) => {
+  return parts.join('').replace(CARD_CODE_RE, (_, p: string) => {
+    const c = ix.card(p);
+    if (c?.url) return cardLink(c);
+    const why = c ? 'Card not published yet: no artifact link in the file' : "No such card in this session's handouts/";
+    return `<code class="sr-ref-missing" title="${why}">${p}</code>`;
+  }).replace(BEAT_CODE_RE, (_, id: string) => {
     const b = ix.beat(id);
     return b ? beatChip(b) : `<code class="sr-ref-missing" title="No beat with this id in this session's flow">${id}</code>`;
   });

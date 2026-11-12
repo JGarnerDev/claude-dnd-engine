@@ -451,7 +451,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
     Hunt.' Two wingbeats and it's gone into the grey. The yard goes quiet. Then
     something big drops through the bottom of the cloud and is gone again, too fast to follow,
     and a scream comes down out of the grey."*
-  - **Title card:** show `handouts/tithe-title-card.html` (*Tithe, the Borrowed Wing*) on the
+  - **Title card:** show `handouts/tithe-title-card.html` (*Tithe, Death from the Grey*) on the
     scream.
   - **Music (Roll20 Jukebox):** cue 1, the boss track, starts on the scream. Cue 2: cut it dead
     at the kill, so Nella's whistle (`S2_ESCAPE`) lands in silence. Cue 3, something quiet, for the

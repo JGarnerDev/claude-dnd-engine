@@ -78,7 +78,7 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
   const combatants = parseCombatants(data.sections.find((x) => /^combatants$/i.test(x.title.trim()))?.md ?? '');
   const titleOf = (id: string) => g.byId.get(id)?.title ?? id;
   // Beat and scene links are numbered from where the DM stands, so rebuilt per render.
-  let refs = buildRefIndex(data.nodes, data.scenes, '');
+  let refs = buildRefIndex(data.nodes, data.scenes, '', data.cards);
   const panel = mountPanel(root.querySelector<HTMLElement>('.sr-panel')!, data, resolve, known, {
     search: root.querySelector<HTMLInputElement>('.sr-header .sr-search')!,
     shell: root.querySelector<HTMLElement>('.sr-body')!,
@@ -111,7 +111,7 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
     const scene = sceneOf(node.scene);
     options = nextOptions(g, current, visited, (id) => sceneOf(id)?.title ?? id);
     const inScene = data.nodes.filter((n) => n.scene === node.scene);
-    refs = buildRefIndex(data.nodes, data.scenes, current);
+    refs = buildRefIndex(data.nodes, data.scenes, current, data.cards);
     renderRail(rail, data.nodes, data.scenes, current, visited, go);
     renderScene(main, {
       node,

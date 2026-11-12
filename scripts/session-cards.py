@@ -40,6 +40,8 @@ The page itself reads each scene's header bullets and the `## Combatants` stat b
     quickRefs: {entity name: md},            # `## NPC Quick-Reference` subsections
     roster:  [entity name],                  # wikilinks in the session + act frontmatter
     party:   [{name, player, raceClass, level, status, path}],
+    cards:   [{path, title, url}],               # the folder's handouts/*.html (lib/cards.py); url ''
+                                             # until the card records where it is published
     entities:[{name, type, subtype, description, campaign, aliases, path}] }
 
 Frontmatter only for entities and previous sessions; bodies are fetched on demand by the page. Spitballs are
@@ -61,6 +63,7 @@ from lib.common import (  # noqa: E402
     parse_party_table, read_text_no_bom, try_int,
 )
 from lib.achievements import achievements  # noqa: E402
+from lib.cards import cards  # noqa: E402
 from lib.reputation import reputation  # noqa: E402
 from lib.sky import sky  # noqa: E402
 from lib.stats import standings  # noqa: E402
@@ -415,6 +418,7 @@ def main() -> None:
         'quickRefs': quick_refs,
         'roster': deduped,
         'party': party(root),
+        'cards': cards(folder),
         'entities': entity_index(root),
     }
     print(json.dumps(out, ensure_ascii=False))

@@ -37,6 +37,31 @@ describe('linkRefs', () => {
   });
 });
 
+describe('linkRefs, handout cards', () => {
+  const cards = [
+    { path: 'handouts/tithe-title-card.html', title: 'Tithe, the Borrowed Wing', url: 'https://claude.ai/artifact/abc' },
+    { path: 'handouts/nella-tally.html', title: "Nella's Tally", url: '' },
+  ];
+  const cx = buildRefIndex(nodes, scenes, 'S2_RELIEF', cards);
+
+  it('turns a named card into a link to its published artifact, by file name', () => {
+    const el = dom(linkRefs('<p>Show <code>handouts/tithe-title-card.html</code> or <code>scheduler/x/handouts/tithe-title-card.html</code>.</p>', cx));
+    const links = [...el.querySelectorAll<HTMLAnchorElement>('a.sr-cardref')];
+    expect(links).toHaveLength(2);
+    expect(links[0].getAttribute('href')).toBe('https://claude.ai/artifact/abc');
+    expect(links[0].getAttribute('target')).toBe('_blank');
+    expect(links[0].textContent).toBe('Tithe, the Borrowed Wing');
+  });
+
+  it('leaves an unpublished or missing card plain and dotted', () => {
+    const el = dom(linkRefs('<p><code>handouts/nella-tally.html</code> <code>handouts/nope.html</code></p>', cx));
+    const missing = [...el.querySelectorAll<HTMLElement>('code.sr-ref-missing')];
+    expect(missing.map((c) => c.textContent)).toEqual(['handouts/nella-tally.html', 'handouts/nope.html']);
+    expect(missing[0].title).toMatch(/not published/);
+    expect(el.querySelector('a')).toBeNull();
+  });
+});
+
 describe('shortTitle', () => {
   it('cuts at the first break if enough is left, else at a word', () => {
     expect(shortTitle('"Up, Wallaed": Iggy flies, and Sah shows himself')).toBe('"Up, Wallaed"');

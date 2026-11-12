@@ -64,7 +64,12 @@ between item and session can be found in both directions.
 
 Once an item is handed over, its player gets a card: one HTML page in the session's
 `handouts/` folder. **Publish it as an artifact the moment it is written**, so the DM has a link
-to share, and republish to the same URL on every edit; the repo file stays the source. A card
+to share, and republish to the same URL on every edit; the repo file stays the source. After the
+first publish, record the link in the card's `<head>` as
+`<meta name="artifact-url" content="https://claude.ai/artifact/...">` (the tag alone needs no
+republish; it is for the repo, not the page). Plans
+name the card by its path (`handouts/<file>.html`), never by URL; the session runner reads the tag
+and shows the name as a link, and `prep-status.py` lists any card with no link yet. A card
 built before its session is planned sits beside the item file and moves to `handouts/` later. The Shadowless Spear
 and Earshot Crystals cards in `scheduler/sessions/Session 33 The Red Trail/handouts/` set the
 style.
