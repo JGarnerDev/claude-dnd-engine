@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.68.1] — 2026-11-12
+
+### Changed
+
+- **Enemy card in the fight bar** (`app/pages/home/session/scene.ts`). A chip click now opens a card under the damage box as well: the enemy's stats, its attacks as dice that roll, a boss's legendary actions and phases, and the full block folded. A second click on the chip closes it. Rolls from the card show in it and in the Enemies box's log, and its **Clear rolls** clears both.
+
 ## [0.68.0] — 2026-11-12
 
 ### Added

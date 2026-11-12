@@ -220,6 +220,30 @@ describe('renderScene', () => {
     expect([...bar.querySelectorAll('.sr-alert')].map((a) => a.textContent)).toContain('If Ilsa drops to half (8 HP): she runs.');
   });
 
+  it('opens an enemy card under the damage box: stats, dice that roll, and the full block', () => {
+    const main = document.createElement('main');
+    renderScene(main, view({ node: fight }));
+    // The picked chip outlives renders; start from none.
+    main.querySelector<HTMLButtonElement>('.sr-strip .sr-hpchip.is-picked')?.click();
+    expect(main.querySelector('.sr-strip-card')).toBeNull();
+    main.querySelector<HTMLButtonElement>('.sr-strip .sr-hpchip')!.click();
+    const card = main.querySelector<HTMLElement>('.sr-strip-card')!;
+    expect(card.querySelector('.sr-strip-card-stats')!.textContent).toBe('AC 13 · HP 16');
+    expect(card.querySelector('.sr-strip-card-more summary')!.textContent).toBe('Full block');
+    card.querySelector<HTMLButtonElement>('.sr-strip-card-atk .sr-roll')!.click();
+    expect(card.querySelector('.sr-roll-log li')!.textContent).toContain('Ilsa Hask');
+    expect(main.querySelector('.sr-enemies .sr-roll-log li')).not.toBeNull(); // the Enemies box logs it too
+    const clear = card.querySelector<HTMLButtonElement>('.sr-roll-clear')!;
+    expect(clear.hidden).toBe(false);
+    clear.click();
+    expect(card.querySelector('.sr-roll-log li')).toBeNull();
+    expect(main.querySelector('.sr-enemies .sr-roll-log li')).toBeNull();
+    expect(clear.hidden).toBe(true);
+    expect(main.querySelector<HTMLButtonElement>('.sr-enemies .sr-roll-clear')!.hidden).toBe(true);
+    main.querySelector<HTMLButtonElement>('.sr-strip .sr-hpchip')!.click(); // the same chip closes it
+    expect(main.querySelector('.sr-strip-card')).toBeNull();
+  });
+
   it('gives a boss chip its phase ticks and legendary pips, and counts the crew for morale', () => {
     const fmd = [
       '- **Enemies:** Archer Rider (Ilsa Hask) · Griffon (Tithe) · Relief Captain (Garran Vey) arrives round 2',

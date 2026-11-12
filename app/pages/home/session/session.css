@@ -348,6 +348,17 @@
 .sr-strip-quick { display: flex; align-items: center; gap: 8px; font-size: 13px; }
 .sr-strip-in { width: 6em; padding: 2px 6px; font: inherit; background: var(--sr-bg); color: var(--sr-text); border: 1px solid var(--sr-k-combat); border-radius: 4px; }
 .sr-strip-in:focus { outline: none; border-color: var(--sr-accent); }
+.sr-strip-card { display: flex; flex-direction: column; gap: 5px; margin-top: 6px; max-height: 55vh; overflow: auto; padding: 7px 10px; border-radius: 6px; background: var(--sr-bg); border: 1px solid var(--sr-line); font-size: 13px; }
+.sr-strip-card-stats { color: var(--sr-muted); font-variant-numeric: tabular-nums; }
+.sr-strip-card-atk { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.sr-strip-card .sr-roll-log { margin: 0; }
+.sr-strip-card-rolls { display: flex; align-items: flex-start; gap: 10px; }
+.sr-strip-card-rolls .sr-roll-log { flex: 1; }
+.sr-strip-card-rolls .sr-roll-clear { flex: none; }
+.sr-strip-card .sr-roll-log li:nth-child(n+3) { display: none; }
+.sr-strip-card-boss { margin: 0; padding-left: 18px; }
+.sr-strip-card-more > summary { cursor: pointer; color: var(--sr-muted); font-size: 12px; }
+.sr-strip-card-more > div { margin-top: 4px; }
 
 @media (max-width: 720px) {
   .sr-main { padding: 12px 16px 40px; }

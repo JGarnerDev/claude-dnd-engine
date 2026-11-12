@@ -212,8 +212,10 @@ function wireHp(main: HTMLElement, v: SceneView, entries: readonly string[]): vo
 // The fight bar, pinned at the top of the notes while a fight runs (steps.ts →
 // fightSpans): the round counter, what's due now, and one HP chip per enemy, colored
 // by how hurt it is. A chip click opens a damage box right in the bar, so damage goes
-// in wherever the DM has scrolled. An enemy that "arrives round 3" waits greyed out
-// until then.
+// in wherever the DM has scrolled, and under it a card for that enemy: its stats, its
+// attacks as dice, a boss's legendary actions and phases, and the full block folded.
+// The card is copied from the enemy's row in the Enemies box, so it rolls the same way.
+// An enemy that "arrives round 3" waits greyed out until then.
 //
 // After every HP entry and every round, the cues refresh: Watch items and `When:`
 // pills whose condition has come true light up (cues.ts), and the bar lists them.
@@ -284,8 +286,27 @@ function wireFight(main: HTMLElement, v: SceneView, boxes: HTMLElement[], entrie
     const had = quick.querySelector('.sr-strip-in')?.getAttribute('data-entry');
     if (had !== (picked?.entry ?? null)) {
       quick.innerHTML = picked ? `<label class="sr-strip-quick"><span>${escapeHtml(plainText(picked.entry))}</span>
-        <input class="sr-strip-in" data-entry="${escapeHtml(picked.entry)}" type="text" inputmode="numeric" size="5" placeholder="dmg" title="12 or -12 deals damage · +5 heals · =40 sets · Enter applies · Esc closes" aria-label="Damage or heal for ${escapeHtml(plainText(picked.entry))}"></label>` : '';
+        <input class="sr-strip-in" data-entry="${escapeHtml(picked.entry)}" type="text" inputmode="numeric" size="5" placeholder="dmg" title="12 or -12 deals damage · +5 heals · =40 sets · Enter applies · Esc closes" aria-label="Damage or heal for ${escapeHtml(plainText(picked.entry))}"></label>${cardHtml(picked.entry)}` : '';
+      bindRolls(main, [...quick.querySelectorAll<HTMLButtonElement>('.sr-roll')]);
+      quick.querySelector('.sr-roll-clear')?.addEventListener('click', () => clearRolls(main));
+      paintRolls(main);
     }
+  };
+
+  const cardHtml = (entry: string) => {
+    const row = boxes.find((b) => b.dataset.entry === entry)?.closest<HTMLElement>('.sr-enemy');
+    if (!row) return '';
+    const atks = row.querySelector('.sr-enemy-atk')?.innerHTML.trim() ?? '';
+    const block = row.querySelector('.sr-enemy-block');
+    const boss = block ? [...block.querySelectorAll('li')]
+      .filter((li) => /^legendary actions|\b\d+ HP\b/i.test(li.querySelector(':scope > strong')?.textContent ?? '')) : [];
+    return `<div class="sr-strip-card" data-who="${escapeHtml(plainText(entry))}">
+        <div class="sr-strip-card-stats">${row.querySelector('.sr-enemy-stats')?.innerHTML ?? ''}</div>
+        ${atks ? `<div class="sr-strip-card-atk">${atks}</div>` : ''}
+        <div class="sr-strip-card-rolls"><ol class="sr-roll-log" aria-live="polite"></ol><button type="button" class="sr-roll-clear" title="Clear the roll log" hidden>Clear rolls</button></div>
+        ${boss.length ? `<ul class="sr-md sr-strip-card-boss">${boss.map((li) => li.outerHTML).join('')}</ul>` : ''}
+        ${block ? `<details class="sr-strip-card-more"><summary>Full block</summary><div class="sr-md">${block.innerHTML}</div></details>` : ''}
+      </div>`;
   };
 
   // Light what has come true, and list it in the bar.
@@ -388,16 +409,27 @@ function logHtml(): string {
   }).join('');
 }
 
+// Every roll log on the page (the Enemies box's, and the fight bar card's) shows the same rolls.
+function paintRolls(main: HTMLElement): void {
+  main.querySelectorAll<HTMLElement>('.sr-roll-log').forEach((log) => { log.innerHTML = logHtml(); });
+  main.querySelectorAll<HTMLButtonElement>('.sr-roll-clear').forEach((clear) => { clear.hidden = !rollLog.length; });
+}
+
+function clearRolls(main: HTMLElement): void {
+  rollLog.length = 0;
+  paintRolls(main);
+}
+
 function wireRolls(main: HTMLElement): void {
-  const log = main.querySelector<HTMLElement>('.sr-roll-log');
-  const clear = main.querySelector<HTMLButtonElement>('.sr-roll-clear');
-  const show = () => {
-    if (log) log.innerHTML = logHtml();
-    if (clear) clear.hidden = !rollLog.length;
-  };
-  show();
-  clear?.addEventListener('click', () => { rollLog.length = 0; show(); });
-  main.querySelectorAll<HTMLButtonElement>('.sr-roll').forEach((b) => b.addEventListener('click', (ev) => {
+  paintRolls(main);
+  main.querySelector('.sr-enemies .sr-roll-clear')?.addEventListener('click', () => clearRolls(main));
+  // The fight bar card wires its own, each time it opens.
+  bindRolls(main, [...main.querySelectorAll<HTMLButtonElement>('.sr-roll')].filter((b) => !b.closest('.sr-strip-card')));
+}
+
+// Each button gets its own listener, so the click stops before its <summary> toggles.
+function bindRolls(main: HTMLElement, buttons: readonly HTMLButtonElement[]): void {
+  buttons.forEach((b) => b.addEventListener('click', (ev) => {
     ev.preventDefault();
     ev.stopPropagation();
     const kind = b.dataset.kind as RollKind;
@@ -405,11 +437,11 @@ function wireRolls(main: HTMLElement): void {
     const r = roll(b.dataset.roll!, kind, mode);
     if (!r) return;
     const enemy = b.closest('.sr-enemy');
-    const who = enemy?.querySelector('.sr-enemy-name')?.textContent?.trim() ?? '';
+    const who = enemy?.querySelector('.sr-enemy-name')?.textContent?.trim() ?? b.closest<HTMLElement>('[data-who]')?.dataset.who ?? '';
     const line = b.closest('.sr-atk, li');
     const what = b.dataset.label ?? line?.querySelector('strong')?.textContent?.replace(/:$/, '').trim() ?? '';
     rollLog.unshift({ who, what, r });
     rollLog.length = Math.min(rollLog.length, LOG_SIZE);
-    show();
+    paintRolls(main);
   }));
 }
