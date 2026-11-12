@@ -35,16 +35,16 @@ rounds counting Iggy's opening turn (v0.56.0 rules). Tithe likely dies in round 
 flowchart TD
   subgraph SC3["Scene 3 · The Waystation, mid-fight"]
     S2_CRYSTALS["[x] S2_CRYSTALS<br/>The crew wear crystals too<br/>They still hear the party: lies, panic, one slip"]
-    S2_FIGHT["[x] S2_FIGHT<br/>Iggy first · what's left of the floor<br/>Nella on the ridge, Tithe in the cloud<br/>~3–4 rounds"]
+    S2_FIGHT["[x] S2_FIGHT<br/>Iggy first · what's left of the floor<br/>Nella on the ridge, Tithe in the cloud<br/>~4–5 rounds"]
     S2_TITHE_HUNTS["[x] S2_TITHE_HUNTS<br/>Nella takes the ridge blind, pulls the hood<br/>'Tithe. Hunt.' The boss fight starts<br/>Title card · boss track · HP bar shown<br/>95 HP, 2 legendary actions"]
     S2_TITHE_BLOODIED["[x] S2_TITHE_BLOODIED<br/>47 HP: it hits the mud, one wing dragging<br/>Drops its catch · out of the cloud for good<br/>Reckless · deaf to her whistle · to the death"]
     S2_TITHE_DIES["[x] S2_TITHE_DIES<br/>Tithe dies in front of the waystation<br/>'How do you want to do this?'<br/>The music cuts"]
     S2_GOODBYE["[x] S2_GOODBYE<br/>Nella at the bridgehead, never near the body<br/>The whistle, once · the hood on the post<br/>Over every crystal: 'Nineteen flights...'"]
-    S2_RELIEF["[x] S2_RELIEF<br/>Riders on the south road<br/>Garran Vey and three, spread out<br/>The round after Iggy's first turn"]
-    S2_IGGY_BEAT{"[x] S2_IGGY_BEAT<br/>Tithe snatches someone into the sky<br/>'Up, Wallaed': Iggy's wings open to reach them<br/>Sah speaks through every crystal; the cloud lights<br/>Tithe shies into range<br/>Iggy: chase Nella or turn back"}
+    S2_RELIEF["[x] S2_RELIEF<br/>Riders on the south road<br/>Garran Vey and three, spread out<br/>This session's round 3<br/>(the second after Iggy's first turn)"]
+    S2_IGGY_BEAT{"[x] S2_IGGY_BEAT<br/>Tithe snatches someone into the sky<br/>'Up, Wallaed': Iggy's wings open to reach them<br/>Sah speaks through every crystal; the cloud lights<br/>Tithe shies into range<br/>Iggy: cut her off at the bridge or stay"}
     S2_MORALE["[x] S2_MORALE<br/>Vey down or the crew down to two<br/>DC 12 WIS; the rest break"]
     S2_ESCAPE["[x] S2_ESCAPE<br/>Nella loses, and gets away<br/>Tithe never carries her out<br/>On foot: the bridge, then the river"]
-    S2_TALLY["[x] S2_TALLY<br/>She drops her debt tally<br/>Notched antler and a counted purse"]
+    S2_TALLY["[x] S2_TALLY<br/>Her debt tally, left in the saddlebags<br/>Notched antler and a counted purse"]
     S2_CAMP_INTEL["[x] S2_CAMP_INTEL<br/>The band's size · Harrow Bane in the ledger<br/>The Marlow aegis-banner, theirs to take<br/>Varrick's Cart-Whip, for Dip"]
     S2_FIGHT --> S2_TITHE_HUNTS
     S2_FIGHT --> S2_RELIEF
@@ -59,7 +59,7 @@ flowchart TD
     S2_RELIEF --> S2_MORALE
     S2_FIGHT --> S2_IGGY_BEAT
     S2_IGGY_BEAT -->|"she breaks"| S2_ESCAPE
-    S2_IGGY_BEAT -.->|"chase: tally in hand"| S2_TALLY
+    S2_IGGY_BEAT -.->|"cut her off"| S2_ESCAPE
     S2_MORALE --> S2_ESCAPE --> S2_TALLY
     S2_TALLY --> S2_CAMP_INTEL
   end
@@ -113,6 +113,11 @@ Committed 2026-11-12 (Jeff, after the boss refresh): `S2_TITHE_HUNTS`, `S2_TITHE
 `S2_TITHE_DIES`, `S2_GOODBYE`, `S2_ESCAPE`, `S2_HAUL_HOME`, `S2_FOX`, `S2_SABLE_MORNING`. Backing
 notes are the plan's sections: Tithe's block (boss, bloodied, the kill), `S2_TITHE_HUNTS`,
 `S2_ESCAPE` (the goodbye), and `S2_HAUL_HOME` (the fox, Sable sees the griffon).
+
+Edited 2026-11-12 at `/review` (Jeff approved all findings), kept `[x]`: `S2_IGGY_BEAT` (Iggy's
+choice is now cut Nella off at the bridge or stay over the yard), `S2_TALLY` (left in Tithe's
+saddlebags), `S2_FIGHT` (~4–5 rounds), `S2_RELIEF` (moved back to this session's third round,
+Jeff's pick).
 
 - `S2_CRYSTALS` — backing note at the plan, `S2_CRYSTALS`; approved 2026-11-04
 - `S2_TALLY` — backing note at the plan, `S2_TALLY`; approved 2026-11-04

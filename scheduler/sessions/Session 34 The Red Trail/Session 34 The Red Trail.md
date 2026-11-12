@@ -35,7 +35,7 @@ key_npcs:
   - "[[Bosco]] (historian — Iggy's raccoon)"
   - "the prisoner (a silhouette only — Tyler's cameo, beat 1; no name, no lines)"
 encounters:
-  - "The Waystation, mid-fight and stepped up (Jeff, 2026-11-10, option 4). Left from Session 33: Sennet Orrin (Spy, ~10/27 HP), Brask (Thug, ~15/32), Ilsa Hask (Scout, ~5/16), Clatter (Bandit, 11/11). Nella (custom, ~CR 3, 49 HP) drops to the ridge blind and shoots from half cover, and sends Tithe (Griffon, 59 HP) to hunt riderless. In the round after Iggy's first turn, relief riders come up the south road: Garran Vey (Veteran, 58 HP) and three Bandits (Dace Morrow, Pim Ostler, Callan Shire), spread out. 2,350 XP standing, ~5,875 adjusted (just over Deadly on paper, though four of them are hurt); RTC ~3.5 rounds counting Iggy's opening turn; RTD ~2 spread, ~1 if Tithe and Vey pile on one PC. Tactics: no station clusters; Tithe takes whoever is in the open and moving, never stays on a downed PC; Nella still never shoots a downed PC. Morale DC 12 WIS when Vey drops or the crew is down to two."
+  - "The Waystation, mid-fight and stepped up (Jeff, 2026-11-10, option 4). Left from Session 33: Sennet Orrin (Spy, ~10/27 HP), Brask (Thug, ~15/32), Ilsa Hask (Scout, ~5/16), Clatter (Bandit, 11/11). Nella (custom, ~CR 3, 49 HP) drops to the ridge blind and shoots from half cover, and sends Tithe (Griffon, 95 HP as the boss, up from 59, Jeff 2026-11-12) to hunt riderless. In the second round after Iggy's first turn (this session's third round), relief riders come up the south road: Garran Vey (Veteran, 58 HP) and three Bandits (Dace Morrow, Pim Ostler, Callan Shire), spread out. 2,350 XP standing, ~5,875 adjusted (just over Deadly on paper, though four of them are hurt); RTC ~3.5 rounds counting Iggy's opening turn; RTD ~2 spread, ~1 if Tithe and Vey pile on one PC. Tactics: no station clusters; Tithe takes whoever is in the open and moving, never stays on a downed PC; Nella still never shoots a downed PC. Morale DC 12 WIS when Vey drops or the crew is down to two."
 loose_threads:
   - "[[Session 33 The Red Trail]] played the hill and the opening of the camp fight; the rest of the fight, Nella's escape and tally, the intel, the haul home and the cell carry here"
   - "Silas's five horses scattered at the charge (recoverable, maybe lame or unshod); his cart is wrecked against the shed"
@@ -101,8 +101,8 @@ Griffon, reskinned, plus Nella's custom block (from
   - **Roof Guard** — Tam "Clatter" Cobb (human, Bandit), on the shed roof's corner · 11 / 11
   - **Sniper** — [[Nella]], on Tithe about 60 ft up; drops to the ridge blind on her turn · 49 / 49
   - **Griffon** — Tithe (Griffon), riderless once she's down, hunting, the boss · 95 / 95
-  - **Relief Captain** — Garran Vey (human, Veteran), south road, arrives the round after Iggy's
-    first turn · 58 / 58
+  - **Relief Captain** — Garran Vey (human, Veteran), south road, arrives the second round after Iggy's
+    first turn (this session's third round) · 58 / 58
   - **Relief Rider 1** — Dace Morrow (human, Bandit), with him, spread out · 11 / 11
   - **Relief Rider 2** — Pim Ostler (human, Bandit), with him, spread out · 11 / 11
   - **Relief Rider 3** — Callan Shire (human, Bandit), with him, spread out · 11 / 11
@@ -130,13 +130,17 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
 - **With the boss (Jeff, 2026-11-12):** Tithe at 95 HP with 2 legendary actions. ~276 HP in all,
   **RTC ~4 rounds**. The first half of its HP sits in the cloud at disadvantage until Iggy's
   wings light it; the reckless second half goes fast. Expect it to die in round 4 or 5.
+- **Relief moved back a round (Jeff, 2026-11-12):** counting the riders' damage against the
+  party's HP now (Odibli ~9, Iggy ~18), their arrival on top of Tithe's first dives made a
+  ~50-damage round. In this session's third round it lands after the floor is gone and Tithe has
+  been seen, and the peak drops to ~35–45. RTC is unchanged (~4–5; Tithe is the long part).
 - **Area exposure:** the riders come in spread, about 20 ft apart, so a Fireball takes two at
   most. Don't bunch them on the road.
 - **RTD:** Tithe ~13 a round, ~18 with legendary actions, ~22 bloodied and reckless (~25 to one
   target when a Snatch ends in a fall), Nella ~12, Vey ~13, riders ~3 each. About 2 spread across the party;
   about 1 if Tithe and Vey both go for one PC. Keep Tithe on whoever is in the open and moving.
   Tithe leaves a downed PC for the next target; Nella still never shoots a downed PC.
-- **Round budget:** 2 played, ~3–4 more. About 6 of standard's 18–24.
+- **Round budget:** 2 played, ~4–5 more. About 7 of standard's 18–24.
 
 ### Bandit — Clatter and the relief riders
 
@@ -239,7 +243,7 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
 
 ### Griffon — Tithe, Nella's mount
 
-- AC 12 · HP 59 · Speed 30 ft, **fly 80 ft** · CR 2 · Perception +5, darkvision 60 ft
+- AC 12 · **HP 95** (the boss; 59 before, see Boss below) · Speed 30 ft, **fly 80 ft** · CR 2 · Perception +5, darkvision 60 ft
 - **Keen Sight:** advantage on Perception checks that rely on sight
 - **Multiattack:** beak +6, 1d8+4 piercing, and claws +6, 2d6+4 slashing (only when nobody rides
   it)
@@ -323,7 +327,7 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
   Clatter on the roof calling targets. Nobody converges.
 - **Nella's next turn:** down to the ridge blind, *"Tithe. Hunt."* (`S2_TITHE_HUNTS`). From then
   on she's a token on the ridge with half cover, and Tithe is the thing in the cloud.
-- **The relief, the round after Iggy's first turn** (`S2_RELIEF`): Vey and three riders up the
+- **The relief, the second round after Iggy's first turn (this session's third round)** (`S2_RELIEF`): Vey and three riders up the
   south road. **Spread, about 20 ft apart.** Never let them bunch: a Fireball takes two at most.
 - **The cloud:** Tithe circles in it and drops out on its own turn. On the party's turns, attacks
   on it guess its square at disadvantage, and a readied action works as before. Iggy's wings
@@ -331,7 +335,7 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
 - **Until Iggy flies:** that's the pressure, from the sky and now from the road. Don't soften it.
   The wings answer Tithe's first snatch (`S2_IGGY_BEAT`); until then, nothing on the ground
   can touch the sky.
-- **Round budget:** ~3–4 more.
+- **Round budget:** ~4–5 more (Tithe likely dies in round 4 or 5).
 
 ## Orientation
 
@@ -367,7 +371,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 - **Start:** about 7 hours after the long rest (overnight Day 1 → Day 2), 11 a.m. Day 2. Two rounds
   of combat spent this day.
-- **The fight:** ~3–4 more rounds.
+- **The fight:** ~4–5 more rounds.
 - **Home (Scene 4):** a loaded wagon and five horses to round up make the ride back slow, so they
   reach Ashford in the evening of Day 2. A long rest at the Lioness that night clears the 24-hour
   gate.
@@ -376,7 +380,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 > **Pick up here.** Mid-fight. The cold for Odibli, then **Iggy's turn first**, then the order
 > from round 2 after Nella. Nella's next turn takes her to the ridge (`S2_TITHE_HUNTS`); the relief
-> comes the round after Iggy's first turn (`S2_RELIEF`). Lines and read-alouds below are guidance,
+> comes the second round after Iggy's first turn (this session's third round) (`S2_RELIEF`). Lines and read-alouds below are guidance,
 > not script.
 
 ### Scene 3 — The Waystation
@@ -456,15 +460,13 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
     ride home (`S2_HAUL_HOME`).
   - **HP bar:** Tithe's token shows its HP bar to players from here on.
 - **Tokens:** Sniper to the ridge blind (AB8:AC10, or the brush on Jeff's map), token layer.
-  Griffon back to the GM layer on the grey margin; up only on its own turn.
-
-> *"The griffon drops onto the ridge so hard the brush shakes. The archer slides off its back into
-> the blind, slaps its neck once, and says something short. It goes up again, straight up, and the
-> cloud takes it."*
+  Griffon back to the GM layer on the grey margin; up only on its own turn. Once Iggy's wings
+  light the cloud (`S2_IGGY_BEAT`), the Griffon goes to the token layer for good, HP bar showing.
+  At bloodied it's in the yard and stays there; when it dies, leave the token as the body.
 
 #### S2_RELIEF — Riders on the south road
 
-- **Committed 2026-11-11 (stepped up, Jeff 2026-11-10, option 4).** The round after Iggy's first turn.
+- **Committed 2026-11-11 (stepped up, Jeff 2026-11-10, option 4).** The second round after Iggy's first turn (this session's third round; moved back a round, Jeff 2026-11-12, so it doesn't land on Tithe's first dives).
 - **What happens:** hoofbeats on the south road, then four riders at a canter: Garran Vey in grey
   splint, three behind him. They came to collect the casks and found a fight. Vey takes the yard in
   one look and doesn't like what he sees.
@@ -616,15 +618,15 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 > from underneath, white as a lamp. Inside it, plain as a shadow on a sheet, the griffon jinks
 > sideways."*
 
-- **Choice (Iggy):** when Tithe picks Nella up and breaks east through the cloud, **chase her or
-  turn back**.
-  - **Chase:** he's too slow to catch Tithe (30 ft against 80), but he gets one pass alongside.
-    He can strike once, or snatch at the saddlebags and come away with the tally and the purse
-    (`S2_TALLY` falls to him, in his hands). He's alone in the cloud for two rounds, with only his own light, and the yard
-    fights without him.
-  - **Turn back:** the wings come down over the yard, between the crew and his friends, and the
-    +5 radiant goes where it's needed. Nella gets clean away, and the tally falls where it falls.
-  - Turning back is Iggy standing in front of his friends. Chasing is him planting his feet
+- **Choice (Iggy):** when Nella breaks for the bridge (`S2_ESCAPE`), **cut her off or stay over
+  the yard** (draft, engine 2026-11-12; replaces the cloud chase, since Tithe never carries her
+  out).
+  - **Cut her off:** at 30 ft a turn he can reach the bridge before she pulls the pins. He's alone
+    with her there, and she's cornered, so the table may win. The yard fights the griffon without
+    him, bloodied and reckless by then.
+  - **Stay over the yard:** the wings stay between the griffon and his friends, and the +5 radiant
+    goes where it's needed. Nella gets clean away over the bridge.
+  - Staying is Iggy standing in front of his friends. Going after her is him planting his feet
     against the thing alone, the never-run wound ([[Iggy PC Arc]], Growth 2 against Fall 1).
     Don't frame it as right or wrong; either answer says something.
 - **What stays hidden:** what Sah is, why the crystals carried him, and anything about the
@@ -657,14 +659,11 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   1. **Cover the rout:** up to 2 rounds of covering fire from the blind for whoever is running.
   2. **The taunt:** one deliberate miss into a post at head height, then the dry voice from the
      ridge: ***"Keep the ale."***
-  3. **Withdrawal:** a two-note whistle. Tithe drops to the ridge (its whole turn), she mounts
-     (half her movement), and on its next turn it climbs east through the cloud at 80 ft a round.
-     **That one turn on the ridge is the party's window:** anyone on the ridge or in reach can hit
-     a griffon that isn't moving, or stand on the stake ground and make it land elsewhere. Once
-     it climbs, nothing the party has catches it, Iggy's wings included. **Tokens:** Sniper and
-     Griffon off the grey margin, east.
-  4. **The tally falls:** as Tithe banks over the river, the saddlebag flap comes loose. See
-     `S2_TALLY`. If Iggy chased her (`S2_IGGY_BEAT`), it may be in his hands instead.
+  3. **The whistle:** the two-note recall. **Tithe never carries her out** (Jeff, 2026-11-12):
+     it's dead, too bloodied to hear, or dies answering. The whistle starts her goodbye
+     (`S2_GOODBYE`, below), then she runs for the bridge on foot.
+  4. **The tally stays behind:** it's in Tithe's saddlebags, and she never goes near the body.
+     See `S2_TALLY`.
   5. **Last valve:** if truly cornered, the river plunge, letting the current take her
      downstream. She knows the water. If even that can't honestly stick, **the table wins** and
      her arc gets re-planned. Never visibly cheat.
@@ -698,6 +697,10 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
        the party's included. She doesn't raise her voice: *"Nineteen flights. Never once dropped
        me."* A beat. *"Fuck you all."*
     4. Then she pulls the pins and is gone (bridge, then the river, as above).
+    - **Tokens:** Sniper to the bridgehead (AF9) for the goodbye, then off the map east once the
+      pins are pulled.
+    - **Choice (party):** the hood on the bridge post. Keep it, or give it back to her the next
+      time they meet. Either way she'll remember who had it.
   - **If Tithe is still up when she breaks:** it answers her whistle already bleeding and goes down
     in front of the waystation before it reaches her. Run the goodbye as above.
   - **If Tithe is bloodied when she breaks:** it doesn't hear her. She runs for the bridge and
@@ -706,12 +709,12 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
     lets go and drops into the water, and that's the river plunge (step 5) on the spot. Over land,
     she takes 1d6 per 10 ft fallen, lands prone beside it, and is on foot: the bridge, then the
     river. The tally is in the saddlebags on the dead griffon.
-  - **If she's knocked out of the saddle** (forced movement, or knocked prone while mounted,
-    DEX DC 10 to stay on): Tithe climbs east without her, and she's on foot as above. The flap
-    comes loose as it climbs, so the tally still falls over the river (step 4).
+  - **If she's knocked out of the saddle** before she reaches the ridge (forced movement, or
+    knocked prone while mounted, DEX DC 10 to stay on): she falls from where it is, and Tithe
+    hunts riderless from there (`S2_TITHE_HUNTS`). She's on foot as above.
   - **If Nella drops to 0:** the table wins. Knocked out or killed is the party's call, not hers.
-    She comes down with Tithe if it's low, or slides off and falls if it's high; Tithe climbs east
-    riderless, and the tally falls as in step 4. Re-plan her arc around the tally and the debt
+    She comes down with Tithe if it's low, or slides off and falls if it's high. Tithe hunts on
+    riderless until it dies, and the tally is in its saddlebags. Re-plan her arc around the tally and the debt
     (see Contingencies). Waking up tied: *"Well. That'll cost me."*
   - **Never** add HP, a reaction or a rescue she didn't have when the fight started.
 - **Make the preparation visible afterwards.** Whoever reaches the ridge sees the empty stake and
@@ -722,8 +725,9 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 #### S2_TALLY — She drops her debt tally
 
 - **Choice (party):** the 250 gp purse: keep it (about one room in the new wing), spend it, or give it back. It is exactly her remaining debt, and the choice comes due later (`S4_DEBT`, `PAY_NELLA`).
-- On the near bank of the river, where Tithe banked (or at the bridgehead, if she ran on foot):
-  **a notched antler stick and a purse of counted, sorted coin.** If Iggy snatched the saddlebag, they're in his hands.
+- In Tithe's saddlebags, on the body in front of the waystation (Jeff, 2026-11-12: Tithe never
+  carries her out, and she never goes near the body): **a notched antler stick and a purse of
+  counted, sorted coin.** Whoever opens the saddlebags first finds them.
 - **First touch:** the antler is worn smooth where a thumb rests. Hundreds of notches, in groups,
   some scored through. The purse is tied in three places, each section a different coin, counted.
 - **Investigation, DC 12:** the notches are payments; the scored-through groups are *years*.
@@ -933,9 +937,9 @@ no entity files, and `/recap` decides. Full introductions were at Session 30 (`S
   blind, then runs for the bridge. Run the ladder honestly; cornered fairly, the table wins.
 - **The relief is too much.** If two PCs are down at once, Vey pulls his riders back to the corral
   to collect the casks rather than finish anyone. He came for ale, not a war.
-- **They want to chase Nella into the cloud.** She's on a griffon. Nothing they have keeps up.
-  Let the light of Iggy's wings show her shape for a moment longer, then nothing. *"She's going
-  east faster than any horse could. You're not catching that."*
+- **They want to chase Nella to the bridge.** She's on foot with a lead. If she reaches the
+  bridge first she pulls the pins, and the river takes her (`S2_ESCAPE`). Someone who gets there
+  first, Iggy on his wings included, can corner her fairly, and then the table wins.
 - **Iggy goes down before he flies.** Nella won't shoot him again, and the wings can still open
   when he's back up. If the session runs out before they do, hold the voice for another night.
 - **Tithe snatches someone and Iggy doesn't go up.** The catch falls at the start of Tithe's next
@@ -965,15 +969,16 @@ Land it on the cell door, not on the casks.
   33: `S2_TEN_MINUTES`, `S2_SPOTTER`, `S2_AMBUSH`, `S2_APPROACH_CHOICE` (assault, by cart charge),
   and `S2_FIGHT` through the start of round 2. Cut: `S2_STATEMENT`, `S2_HEIST`, `S2_SKIP`,
   `S2_PARLEY`.
-- **Stepped up (Jeff, 2026-11-10, option 4 of four):** reinforcements in the round after Iggy's
-  first turn, and the griffon fights riderless. Not taken: Nella stops holding back (Marked Quarry
+- **Stepped up (Jeff, 2026-11-10, option 4 of four):** reinforcements in the second round after Iggy's
+  first turn (this session's third round), and the griffon fights riderless. Not taken: Nella stops holding back (Marked Quarry
   on casters, shots at downed PCs). Sized with the v0.56.0 difficulty rules after Session 33's
   ~125-damage opening (`meta/difficulty.md`).
 - **Choices** (`meta/player-agency.md`):
-  - Party: corner Nella on the ridge before Tithe comes back for her, or let her go
-    (`S2_TITHE_HUNTS`, `S2_ESCAPE`) · Nella's purse (`S2_TALLY`) · the banner in the bar
-    (`S2_HAUL_HOME`) · what to give Silas for his cart (`S2_HAUL_HOME`)
-  - Iggy: chase Nella into the cloud or turn back (`S2_IGGY_BEAT`)
+  - Party: corner Nella on the ridge or at the bridge, or let her go (`S2_TITHE_HUNTS`,
+    `S2_ESCAPE`) · Nella's purse (`S2_TALLY`) · the banner in the bar (`S2_HAUL_HOME`) · what to
+    give Silas for his cart (`S2_HAUL_HOME`) · keep Nella's hood or give it back (`S2_GOODBYE`,
+    in `S2_ESCAPE`)
+  - Iggy: cut Nella off at the bridge or stay over the yard (`S2_IGGY_BEAT`)
 - **Mysteries:** `S2_IGGY_BEAT` touches what Sah is; `S2_CAMP_INTEL` touches Harrow Bane and the
   banner; `S2_TALLY` touches Nella's debt. Check `scheduler/campaign/_mysteries.md` when the
   answers land.
@@ -988,7 +993,11 @@ Land it on the cell door, not on the casks.
     (150 gp, 500 sp, 5 pp), exactly her remaining debt · Silas's cart worth ~35 gp, a lame horse
     11 gp · the camp's wagon becomes the Lioness's delivery cart · the banner above the hearth, if
     they bring it · Sah's voice through the crystals ("Up, Wallaed") · the prisoner who
-    surrendered and has said nothing
+    surrendered and has said nothing · Tithe weighs about 500 lb · Nella's one broadcast,
+    "Nineteen flights. Never once dropped me." · Tithe's hood left on the bridge post · Mara
+    wants the skull hung in the Lioness · Hob Fenner's and Pell Ashby's lines as the wagon comes
+    in · a fox with smoky green eyes goes into the Lioness · Sable: "Someone down there will want
+    to meet you"
 - **Also for `/recap`:** log Odibli's casts (Citadel Clock, at 1 / 3), and his two Fireballs if they
   come out. Restamp the trackers. The reputation rewards at the waystation (Clatter's "Lightning
   man!", Brask backing off from Dip) are `unspent` until played.
