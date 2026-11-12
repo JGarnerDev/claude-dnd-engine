@@ -280,20 +280,14 @@ and two free turns put ~125 damage down before anyone acted. Jeff wants the rest
       cloud if it can reach it.
     - **Wing Buffet (1):** one creature within 10 ft makes a DC 14 STR save or is knocked prone.
     - **Rake (2):** beak +6, 1d8+4 piercing.
-  - **Bloodied, at 47 HP or less: the second phase.** Read aloud:
-    *"The griffon comes down out of the cloud and hits the mud hard. When it gets up one wing is
-    dragging, and there's blood on the gold. It screams once, and this time it doesn't go back up.
-    It lowers its head at you."*
+  - **Bloodied, at 47 HP or less: the second phase.** The read-aloud is at `S2_TITHE_BLOODIED`.
     - It drops whatever it's holding, from wherever it is.
     - The torn wing: fly 40 ft, and it won't climb back into the cloud. It fights in the yard,
       and attacks against it are normal.
     - It goes reckless: advantage on its attacks, and attacks against it have advantage.
     - Multiattack every turn, with no more Snatch. Climb is gone; Wing Buffet and Rake stay.
     - It won't come to Nella's whistle any more. It fights to the death.
-  - **The kill.** Ask whoever lands it: *"How do you want to do this?"* Then read:
-    *"It goes down in front of the waystation door, all of it at once, and you feel it through the
-    ground. One wing stays up a moment longer. Then it folds."* Cut the music on the last word. The
-    next sound is Nella's whistle from the bridge (`S2_ESCAPE`).
+  - **The kill:** run it at `S2_TITHE_DIES`.
 - **Kit (player-facing):** *a leather hood with brass rings over its eyes, and a long rider's
   saddle with deep saddlebags strapped behind its wings.*
 - **Label (party-facing):** Griffon
@@ -448,8 +442,8 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 - **What the party can use:** Nella is on foot now. Someone who reaches the ridge can corner her;
   someone who reaches the bridge first can cut her best way out (`S2_ESCAPE`). Tithe at 47 HP
   goes bloodied and won't come to her whistle any more (see its block).
-- **Boss battle (Jeff, 2026-11-12).** Tithe is this session's boss fight, and it starts here, on
-  *"Tithe. Hunt."* Stats, legendary actions and the bloodied phase are in Tithe's block.
+- **Boss fight starts:** here, on *"Tithe. Hunt."* Tithe is this session's boss. Stats,
+  legendary actions and the bloodied phase are in Tithe's block.
   - **Read aloud, as she says it:** *"Nella pulls the hood off the griffon's head and stuffs it
     in her belt. It blinks once, gold eyes on the yard, on you. She slaps its neck. 'Tithe.
     Hunt.' Two wingbeats and it's gone into the grey. The yard goes quiet. Then its shadow slides
@@ -636,6 +630,36 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   the DM's.
 - **Iggy hasn't cast this fight yet,** so cue 1 is still live on his first spell (he acts first).
 
+#### S2_TITHE_BLOODIED — It comes down out of the cloud, one wing dragging
+
+- **When:** Tithe at 47 HP or less.
+- **Read aloud:** *"The griffon comes down out of the cloud and hits the mud hard. When it gets
+  up one wing is dragging, and there's blood on the gold. It screams once, and this time it
+  doesn't go back up. It lowers its head at you."*
+- **What changes** (rules in Tithe's block):
+  - It drops whatever it's holding, from wherever it is.
+  - It fights in the yard on the torn wing (fly 40 ft) and never goes back into the cloud.
+    Attacks against it are normal.
+  - Reckless: advantage on its attacks, and attacks against it have advantage.
+  - Multiattack every turn, no more Snatch. Climb is gone; Wing Buffet and Rake stay.
+  - It won't come to Nella's whistle any more, and fights to the death.
+- **Nella, if she hasn't broken yet:** she skips the covering fire and the taunt and makes for
+  the bridge on foot (`S2_ESCAPE`).
+- **Tokens:** Griffon to the token layer in the yard, HP bar showing. It stays there.
+
+#### S2_TITHE_DIES — Tithe dies in front of the waystation
+
+- **When:** Tithe drops to 0.
+- **Boss fight ends:** on the last word of the read-aloud.
+- **Ask whoever lands it:** *"How do you want to do this?"*
+- **Read aloud:** *"It goes down in front of the waystation door, all of it at once, and you feel
+  it through the ground. One wing stays up a moment longer. Then it folds."*
+- **Music:** cut it dead on the last word (Jukebox cue 2).
+- **Next:** the next sound is Nella's whistle from the bridge, in the silence (`S2_GOODBYE`).
+  The tally is in its saddlebags (`S2_TALLY`), and the body goes home on the wagon
+  (`S2_HAUL_HOME`).
+- **Tokens:** leave the Griffon's token where it fell, as the body.
+
 #### S2_MORALE — Vey drops, or the crew is down to two, and the rest break
 
 - **When:** Garran Vey drops, or the crew (everyone but Nella and Tithe) is down to two.
@@ -690,22 +714,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
     saddlebags; whoever gets to the body first finds it. Nella is on foot for good.
 - **Committed (Jeff, 2026-11-12): Tithe dies in this fight.** The party is expected to kill it.
   The body goes home on the wagon (`S2_HAUL_HOME`) and opens Session 35 at the cellar spring.
-  - **Nella's goodbye, from the bridge (Jeff, 2026-11-12).** Tithe dies in front of the waystation
-    while she falls back to the plank bridge. She never goes near the body, because the party
-    would cut her down. She skips the taunt. At the bridgehead, in this order:
-    1. **The whistle.** She blows Tithe's two-note recall whistle once, the same one the party
-       would have heard if it had lived. She waits one breath. Nothing comes.
-    2. **The hood.** She hangs Tithe's empty hood on the bridge post. No line. Whoever reaches the
-       bridge finds it swinging there, the leather worn smooth. They can keep it or give it back
-       to her later.
-    3. **Over the crystals.** For the only time this fight, she broadcasts. Every crystal hears it,
-       the party's included. She doesn't raise her voice: *"Nineteen flights. Never once dropped
-       me."* A beat. *"Fuck you all."*
-    4. Then she pulls the pins and is gone (bridge, then the river, as above).
-    - **Tokens:** Sniper to the bridgehead (AF9) for the goodbye, then off the map east once the
-      pins are pulled.
-    - **Choice (party):** the hood on the bridge post. Keep it, or give it back to her the next
-      time they meet. Either way she'll remember who had it.
+  - **Nella's goodbye, from the bridge:** see `S2_GOODBYE`.
   - **If Tithe is still up when she breaks:** it answers her whistle already bleeding and goes down
     in front of the waystation before it reaches her. Run the goodbye as above.
   - **If Tithe is bloodied when she breaks:** it doesn't hear her. She runs for the bridge and
@@ -726,6 +735,27 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   tether, the sheep bones, the bridge pins drilled days ago:
   *"The pin holes are worn smooth, drilled days ago. Around the stake the grass is flattened in a
   wide ring, and the bones in it run from old to fresh."*
+
+#### S2_GOODBYE — Nella's goodbye, from the bridge
+
+- **When:** Tithe is dead and Nella is at the bridgehead.
+- **Where she is:** Tithe dies in front of the waystation while she falls back to the plank
+  bridge. She never goes near the body, because the party would cut her down. She skips the
+  taunt.
+- **At the bridgehead, in this order:**
+  1. **The whistle.** She blows Tithe's two-note recall whistle once, the same one the party
+     would have heard if it had lived. She waits one breath. Nothing comes.
+  2. **The hood.** She hangs Tithe's empty hood on the bridge post. No line. Whoever reaches the
+     bridge finds it swinging there, the leather worn smooth. They can keep it or give it back to
+     her later.
+  3. **Over the crystals.** For the only time this fight, she broadcasts. Every crystal hears it,
+     the party's included. She doesn't raise her voice: *"Nineteen flights. Never once dropped
+     me."* A beat. *"Fuck you all."*
+  4. Then she pulls the pins and is gone (the bridge, then the river: `S2_ESCAPE`).
+- **Choice (party):** the hood on the bridge post. Keep it, or give it back to her the next time
+  they meet. Either way she'll remember who had it.
+- **Tokens:** Sniper to the bridgehead (AF9) for the goodbye, then off the map east once the pins
+  are pulled.
 
 #### S2_TALLY — She drops her debt tally
 

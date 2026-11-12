@@ -119,6 +119,12 @@ choice is now cut Nella off at the bridge or stay over the yard), `S2_TALLY` (le
 saddlebags), `S2_FIGHT` (~4–5 rounds), `S2_RELIEF` (moved back to this session's third round,
 Jeff's pick).
 
+Moved 2026-11-12, wording unchanged, kept `[x]`: `S2_TITHE_BLOODIED`, `S2_TITHE_DIES` and
+`S2_GOODBYE` now have their own plan sections, so the session runner can show them as steps and
+mark the boss fight. The bloodied and kill read-alouds came out of Tithe's block (its rules
+stay there), and the goodbye came out of `S2_ESCAPE`. Added cues: `When:` lines on all three,
+`Boss fight starts:` on `S2_TITHE_HUNTS` and `Boss fight ends:` on `S2_TITHE_DIES`.
+
 - `S2_CRYSTALS` — backing note at the plan, `S2_CRYSTALS`; approved 2026-11-04
 - `S2_TALLY` — backing note at the plan, `S2_TALLY`; approved 2026-11-04
 - `S2_CAMP_INTEL` — backing note at the plan, `S2_CAMP_INTEL`; approved 2026-11-04
