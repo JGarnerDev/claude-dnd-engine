@@ -25,7 +25,7 @@ locations:
   - [[Ashford]]
   - [[The Golden Lioness]]
 key_npcs:
-  - "[[Nella]] (historian — on the ridge now, Tithe hunting for her; loses, escapes, drops her tally)"
+  - "[[Nella]] (historian — on the ridge now, Tithe hunting for her; loses Tithe, escapes on foot; her tally is in its saddlebags)"
   - "[[Sable Wren]] (historian — the casks home, the deed)"
   - "[[Mara Tull]] (historian — sheriff; holds the prisoner at the close)"
   - "[[Silas Crubb]] (historian — his horses scattered and his cart wrecked)"
@@ -50,7 +50,7 @@ difficulty_lethality: standard
 depth: narrated
 scope: inline
 opening_scene: "About 11 a.m. on Day 2, mid-fight in the waystation yard. Iggy, missed from initiative last session, acts first. Four of the crew are down; Nella is in the air on Tithe."
-closing_hook: "The casks ride home, and Ashford is buzzing about something else. While they were gone, a raider walked into town and surrendered. He sits in Mara Tull's cell, silent, and the town wants a rope."
+closing_hook: "The casks and the griffon ride home, and half of Ashford stares at the wagon. The other half is looking at Mara's office. While they were gone, a raider walked into town and surrendered. He sits in Mara Tull's cell, silent, and the town wants a rope."
 relates_to:
   - "[[The Stolen Casks]] (resolves this session)"
   - "[[Act 1 - The Hearth at Ashford]] (act)"
@@ -60,7 +60,7 @@ relates_to:
   - "[[Harrow Bane]] (named in the camp's ledger; still no face)"
 importance: critical
 active: true
-description: "The rest of the waystation fight, carried from Session 33 and stepped up: Nella takes the ridge and sets her griffon hunting, and relief riders come up the south road. Iggy acts first, and his wings break the sky. Then Nella's escape and dropped tally, the camp's intel, the casks home on a borrowed-and-wrecked trail, and a silent prisoner in Mara's cell."
+description: "The rest of the waystation fight, carried from Session 33 and stepped up: Nella takes the ridge and sets her griffon hunting, and relief riders come up the south road. Iggy acts first, and his wings break the sky. Tithe is the boss and dies in the yard; Nella says goodbye from the bridge and escapes on foot, leaving her tally in its saddlebags. Then the camp's intel, the casks home on a borrowed-and-wrecked trail, and a silent prisoner in Mara's cell."
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
@@ -381,8 +381,8 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 - **Summary:** the rest of the fight at Nella's camp, stepped up. Nella takes the ridge and sets
   her griffon hunting, and four relief riders come up the south road. Iggy's wings light the
-  cloud and Sah speaks. Nella loses, escapes on a fallback she rigged days ago, and drops her
-  debt tally. The camp gives up three things: the band's size, Harrow Bane's name and the banner.
+  cloud and Sah speaks. Tithe, the boss, dies in the yard. Nella says goodbye from the bridge and
+  escapes on a fallback she rigged days ago; her debt tally is in Tithe's saddlebags. The camp gives up three things: the band's size, Harrow Bane's name and the banner.
 - **Where:** [[The Waystation]], an old drover's relay short of Duskwater: long shed, corral, well,
   the cart, a fire, and set back, the overwatch ridge, a fast river and a rigged plank bridge.
   Grey mid-morning under a low cloud.
@@ -395,7 +395,9 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 - **DCs:** Perception 13 — spot the crew's crystal cords · Animal Handling 13 — start a stampede ·
   WIS 13 (Tithe, +3) — hold when Sah speaks ·
   Athletics 13 — swim the river · WIS 12 save — morale · Investigation 12 / 16 — read the tally ·
-  Arcana 15 — Dip reads Iggy (`S2_IGGY_BEAT`). Rounding up Silas's horses is in Scene 4.
+  Arcana 15 — Dip reads Iggy (`S2_IGGY_BEAT`) · escape DC 14 — break Tithe's Snatch grapple ·
+  STR 14 save — Tithe's Wing Buffet · DEX 10 save — Nella stays in the saddle (`S2_ESCAPE`).
+  Rounding up Silas's horses is in Scene 4.
 - **Tactics:** no station clusters any more. What's left of the floor fights where it stands.
   Nella shoots from the ridge blind with half cover, two arrows a turn, never Marked Quarry on a
   caster, never a downed PC. Tithe hunts whoever is in the open and moving, then climbs back into
@@ -446,8 +448,9 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   legendary actions and the bloodied phase are in Tithe's block.
   - **Read aloud, as she says it:** *"Nella pulls the hood off the griffon's head and stuffs it
     in her belt. It blinks once, gold eyes on the yard, on you. She slaps its neck. 'Tithe.
-    Hunt.' Two wingbeats and it's gone into the grey. The yard goes quiet. Then its shadow slides
-    across the mud, too big and too fast, and a scream comes down out of the cloud."*
+    Hunt.' Two wingbeats and it's gone into the grey. The yard goes quiet. Then
+    something big drops through the bottom of the cloud and is gone again, too fast to follow,
+    and a scream comes down out of the grey."*
   - **Title card:** show `handouts/tithe-title-card.html` (*Tithe, the Borrowed Wing*) on the
     scream.
   - **Music (Roll20 Jukebox):** cue 1, the boss track, starts on the scream. Cue 2: cut it dead
@@ -467,6 +470,11 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   one look and doesn't like what he sees.
 - **They come in spread,** about 20 ft apart, swing down at the corral, and fight on foot. Vey goes
   for whoever is hurting the crew most; the riders take crossbows to anyone in the open.
+
+> *"Hoofbeats on the south road. Four riders come round the corral at a canter, and the one in front
+> wears grey splint mail, oiled bright. He reins in, looks at the cart, at the bodies, at you,
+> and swings down without hurrying."*
+
 - **Vey, riding in:** *"Twelve casks and you couldn't hold a cart. Off the horses. Spread out, don't
   bunch."*
 - **Vey, to the ridge, not looking up:** *"You'll want to be gone before I'm done here."* Nella
@@ -485,10 +493,6 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   - **Impression:** hired riders, not Nella's crew. They hang back for Vey's word.
 - **Tokens:** Relief Captain and Relief Rider 1–3, mounted, on the south road at the bottom edge (M27, I28, Q28, U28); spread
   them 20 ft apart. One initiative for the four.
-
-> *"Hoofbeats on the south road. Four riders come round the corral at a canter, and the one in front
-> wears grey splint mail, oiled bright. He reins in, looks at the cart, at the bodies, at you,
-> and swings down without hurrying."*
 
 #### S2_CRYSTALS — The crew wear crystals too
 
@@ -517,6 +521,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 #### S2_FIGHT — The rest of it: the floor, the ridge, the cloud and the road, 3–4 rounds
 
+- **Combat starts:** the session opens mid-fight, round 2, Iggy first.
 - **Tokens:** as Session 33 left them (Orientation). Sniper and Griffon together over the yard's
   west side until Nella's turn (`S2_TITHE_HUNTS`); after that the Sniper sits on the ridge and the
   Griffon on the GM layer except on its own turn. Relief tokens off-map south until `S2_RELIEF`.
@@ -540,7 +545,8 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
     Spear (reputation, S33): *"Lightning man!"*
   - Brask, when the relief rides in: *"About time somebody showed up."*
   - Sennet, the first time he's hit again: *"I count this lot. I don't bleed for it."*
-  - Ilsa, to Iggy, sword up: *"Fennel tied that collar. Fennel."*
+  - Ilsa, to Iggy, pointing her sword at Cinder's body: *"Fennel tied that collar on her. Fennel's
+    dead, and now she is."*
   - Vey, at half HP: *"Hold. Hold, I said."*
   - Nella, calm, to whoever is climbing toward the ridge: *"Keep climbing. I'll be gone before
     you're halfway."* · counting her arrows: *"Nine. Eight."*
@@ -549,10 +555,8 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 - **Sabathiel and the Spear (played Session 33):** don't repeat it. Kept for reference: the first time Luci
   stands within 5 ft of Halsby while he casts through the Spear, or touches it. Once only. Don't
   explain it, and don't let Halsby notice. It seeds Luci's light against Halsby's shadow ways, so
-  check Paul's and Kellan's appetite for PC friction before using it.
-- **Private (Luci):** Sabathiel and the Spear
-  - **The message:** Halsby casts through his spear, and the warmth on your face goes cold. For
-    one breath it's gone completely. Then it comes back, and the voice says nothing about it.
+  check Paul's and Kellan's appetite for PC friction before using it. The message Luci got is in
+  the Session 33 historian file.
 - **The horses:** a stampede through the corral is a lever for chaos (DC 13 Animal Handling to
   start it on purpose; it starts on its own if fire reaches the corral, or the first time Tithe
   dives on it). It would run straight at the relief riders coming off the south road.
@@ -570,7 +574,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   the wings open to break free. It's still Iggy's call; the snatch makes it the obvious one.
 - **The cues build all session** (Prince of Nothing style: doubled voices, light in the words, a
   mark on the world). Show; never explain. Nobody says the name Sah but Iggy.
-  1. **His first spell of the session** (wherever it falls, the fork included): the words come out
+  1. **His first spell of the session:** the words come out
      in two voices, his and an older one half a beat behind, in a language nobody at the table
      knows. Only whoever stands nearest him hears the second voice. Send it to that player
      (`Private (nearest PC)`, below).
@@ -590,7 +594,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
   - **Ask:** an Arcana check.
   - **15 or higher:** Iggy looks the way he always does. But he's pressed into the world harder
     than anyone around him, like a word someone wrote over and over until the pen went through
-    the page. The pressing is fresh. Whatever is doing it is doing it now.
+    the page. The pressing is fresh.
   - **Under 15:** the air right around Iggy feels heavier than the air anywhere else in the
     camp. You can't tell why.
 - **Private (whoever casts Detect Magic on Iggy):** cue 3, for anyone but Dip
@@ -615,9 +619,9 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
     an angel in the air was not in them.
 
 > *"The voice comes out of every crystal at once, old and level, like a drill sergeant who has
-> said it a hundred times: 'Up, Wallaed.' Iggy's wings open, and the cloud over the river lights up
-> from underneath, white as a lamp. Inside it, plain as a shadow on a sheet, the griffon jinks
-> sideways."*
+> said it a hundred times: 'Up, Wallaed.' Iggy's wings open, and the cloud over the yard lights up
+> from underneath, white as a lamp. Under it, dark against the glow, the griffon jinks sideways
+> with `<whoever it's holding>` still in its claws."*
 
 - **Choice (Iggy):** when Nella breaks for the bridge (`S2_ESCAPE`), **cut her off or stay over
   the yard** (draft, engine 2026-11-12; replaces the cloud chase, since Tithe never carries her
@@ -656,6 +660,8 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 - **When:** Tithe drops to 0.
 - **Boss fight ends:** on the last word of the read-aloud.
+- **Combat ends:** once Tithe is dead and the floor has broken or surrendered (`S2_MORALE`). If
+  riders are still standing, it ends when they break.
 - **Ask whoever lands it:** *"How do you want to do this?"*
 - **Read aloud:** *"It goes down in front of the waystation door, all of it at once, and you feel
   it through the ground. One wing stays up a moment longer. Then it folds."*
@@ -685,6 +691,11 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 - **When:** Nella's next turn after Iggy's wings open, after the rout (`S2_MORALE`), or once Nella
   drops to half (24 HP).
+- **Choice (party):** go after Nella (up the ridge, or to the bridge before she pulls the pins)
+  or let her go.
+  - **Go after her:** whoever goes is out of the yard fight while Tithe is still up. Corner her
+    fairly and the table wins: she's theirs to question, with the tally and the debt.
+  - **Let her go:** everyone stays on the griffon, and she escapes, owing them a griffon.
 - **She loses.** The party takes the casks and breaks her crew. Her escape is flight from a
   defeat. She steals nothing this time.
 - **She's on foot on the ridge now** (`S2_TITHE_HUNTS`), so her way out needs Tithe, the bridge
@@ -762,9 +773,8 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 - **Tokens:** Sniper to the bridgehead (AF9) for the goodbye, then off the map east once the pins
   are pulled.
 
-#### S2_TALLY — She drops her debt tally
+#### S2_TALLY — Her debt tally, in Tithe's saddlebags
 
-- **Choice (party):** the 250 gp purse: keep it (about one room in the new wing), spend it, or give it back. It is exactly her remaining debt, and the choice comes due later (`S4_DEBT`, `PAY_NELLA`).
 - In Tithe's saddlebags, on the body in front of the waystation (Jeff, 2026-11-12: Tithe never
   carries her out, and she never goes near the body): **a notched antler stick and a purse of
   counted, sorted coin.** Whoever opens the saddlebags first finds them.
@@ -776,10 +786,12 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 - **The coin** in the purse: **250 gp**, in its three tied sections: **150 gp · 500 sp · 5 pp**.
   It is exactly what she still owes. The unfinished last group of notches leaves room for the same
   sum, so anyone who counts both (DC 16 on the tally, then a look at the purse) can work it out.
-  Never say it aloud for them. The choice: about one room in the new wing, or her freedom. Whether
-  they spend it has a consequence later (`S4_DEBT`, `PAY_NELLA`).
+  Never say it aloud for them.
 - **Sennet or Ilsa, if a prisoner:** *"That's not wages. Nobody saves like that for wages."* Cue:
   the purse is opened in front of them.
+- **Choice (party):** the 250 gp purse: keep it (about one room in the new wing), spend it, or give
+  it back. It is exactly her remaining debt, and the choice comes due later (`S4_DEBT`,
+  `PAY_NELLA`).
 
 #### S2_CAMP_INTEL — What the camp gives up: the band's size, Bane's name, the banner
 
@@ -811,17 +823,20 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 
 ### Scene 4 — The Man in the Cell
 
-- **Summary:** The casks come home on their own cart. The horses go back to Silas, Silas sees the
-  banner, and Sable sees the cart. But the town is looking at Mara's cell: a raider walked in and
-  surrendered while they were gone. End on the cell door.
+- **Summary:** The casks come home in the camp's wagon, with Tithe's body on it. Ashford stares,
+  Mara wants the skull for the Lioness, and a fox goes in at the Lioness door. The horses go back
+  to Silas, Silas sees the banner, and Sable sees the griffon. But half the town is looking at
+  Mara's cell: a raider walked in and surrendered while they were gone. End on the cell door.
 - **Where:** the road back, then [[Ashford]] in the evening of Day 2.
-- **Cast:** [[Silas Crubb]] · [[Sable Wren]] · [[Mara Tull]] · the prisoner (a silhouette: no name,
-  no lines)
+- **Cast:** [[Silas Crubb]] · [[Sable Wren]] · [[Mara Tull]] · Hob Fenner · Pell Ashby · the fox
+  (Halsby's) · the prisoner (a silhouette: no name, no lines)
 - **Enemies:** none
 - **DCs:** Animal Handling 12 — round up one of Silas's horses (advantage with Varrick's
-  Cart-Whip in hand), then a d6 per horse: on a 1 it's lame or has thrown a shoe
-- **Time:** ~10 min
-- **Trigger:** the party heads home with the cart.
+  Cart-Whip in hand), then a d6 per horse: on a 1 it's lame or has thrown a shoe · Athletics 12
+  (group) — lift Tithe onto the wagon · Survival 12 — harvest feathers, talons or the head
+  cleanly · Animal Handling 12 — get the horses near the uncovered body
+- **Time:** ~20 min
+- **Trigger:** the party heads home with the wagon.
 
 #### S2_HAUL_HOME — The casks come home on their own cart
 
@@ -842,6 +857,11 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
   - Silas, about the cart: *"And my cart is where, exactly?"* A beat. *"That's a number too."* It's
     worth about 35 gp; he'll take the camp's wagon in trade if they offer, and think less of them
     if they don't.
+- **Choice (party):** what Silas gets for his cart.
+  - **Pay the ~35 gp:** square with Silas, and the party keeps the wagon as the Lioness's delivery
+    cart.
+  - **Give him the camp's wagon:** no coin, but the Lioness has no cart of its own.
+  - **Neither:** he thinks less of them, and the next favour costs more.
 - **Silas sees the banner** (first look, before he goes quiet; he never says whose it is):
   *"Where did you get that banner?"* A beat. *"If you hang it, hang it high. Some people who
   drink here would know whose it is, and you don't want them knowing you have it."*
@@ -881,10 +901,10 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - The town is buzzing about something else. A raider walked into Ashford this morning, laid his
   weapons on the ground in front of Mara's office, and surrendered. He hasn't said a word since.
 
-> *"The square is fuller than it should be at this hour. Nobody's looking at your cart. They're
-> looking at the sheriff's office, at the one small barred window in its side. Through it you can
-> see a man sitting on a bench with his hands on his knees, not moving. Somebody near you says
-> 'rope' like it's already been decided."*
+> *"The square is fuller than it should be at this hour. The ones near the ford street turn to
+> stare at the griffon on your wagon. The rest don't turn round. They're looking at the sheriff's
+> office, where through one small barred window a man sits on a bench with his hands on his
+> knees, not moving. Somebody near you says 'rope' like it's already been decided."*
 
 - **The prisoner is a silhouette only (Jeff, 2026-10-07).** No name, no lines, no face in the light.
   He is Tyler's cameo, beat 1. **Nothing at this table depends on Tyler's backstory.** The scene
@@ -893,7 +913,7 @@ The camp crew are named in Combatants, but none of them are entities. If one sur
 - **If Tyler needs more time:** the silhouette carries over. The hanging waits on Cael's reeve, so
   Mara can hold a silent man for days, and Session 35 can open somewhere else and come back to the
   cell later. Don't invent a name, a face, or a reason here to fill the gap.
-- **Mara, at the door, before anyone asks:** *"He walked in. Put his blade down on my step. Hasn't
+- **Mara, after the skull, before anyone asks about the crowd:** *"He walked in. Put his blade down on my step. Hasn't
   said a word since. Half the town wants him hanged by week's end."* A beat. *"I haven't decided
   anything."*
 - **If they bring prisoners home** (Sennet, Ilsa, Vey, anyone from the camp), when she sees them
@@ -1016,16 +1036,16 @@ Land it on the cell door, not on the casks.
 - **Choices** (`meta/player-agency.md`):
   - Party: corner Nella on the ridge or at the bridge, or let her go (`S2_TITHE_HUNTS`,
     `S2_ESCAPE`) · Nella's purse (`S2_TALLY`) · the banner in the bar (`S2_HAUL_HOME`) · what to
-    give Silas for his cart (`S2_HAUL_HOME`) · keep Nella's hood or give it back (`S2_GOODBYE`,
-    in `S2_ESCAPE`)
+    give Silas for his cart (`S2_HAUL_HOME`) · keep Nella's hood or give it back (`S2_GOODBYE`)
+  - Payoff: Dip's push for more than 10% (Session 31) comes back at Sable's door (`S2_HAUL_HOME`)
   - Iggy: cut Nella off at the bridge or stay over the yard (`S2_IGGY_BEAT`)
 - **Mysteries:** `S2_IGGY_BEAT` touches what Sah is; `S2_CAMP_INTEL` touches Harrow Bane and the
   banner; `S2_TALLY` touches Nella's debt. Check `scheduler/campaign/_mysteries.md` when the
   answers land.
 - **PC arcs:** Iggy's is touched hard (Sah speaks; his choice). Dip's lightly (Sable's "twice now"
-  and the stake talk; the Arcana read on Iggy). Odibli's lightly (the Citadel cold). Halsby's and
-  Luci's are untouched on purpose: the spotlight trend says lean agnostic this week. Carry them to
-  Session 35, where the silent raider in the cell also fits Dip's raiders hook.
+  and the stake talk; the Arcana read on Iggy). Odibli's lightly (the Citadel cold). Halsby's
+  lightly (the fox at the Lioness door, which only he knows). Luci's is untouched on purpose: the
+  spotlight trend says lean agnostic this week. Carry Halsby and Luci to Session 35, where the silent raider in the cell also fits Dip's raiders hook.
 - **For `/recap`:**
   - **New canon if played:** Garran Vey and his riders Dace Morrow, Pim Ostler and Callan Shire,
     who don't wear crystals · the shed stocked for thirty, with a month's rations · Sennet Orrin
@@ -1037,7 +1057,7 @@ Land it on the cell door, not on the casks.
     "Nineteen flights. Never once dropped me." · Tithe's hood left on the bridge post · Mara
     wants the skull hung in the Lioness · Hob Fenner's and Pell Ashby's lines as the wagon comes
     in · a fox with smoky green eyes goes into the Lioness · Sable: "Someone down there will want
-    to meet you"
+    to meet you" · Silas: some who drink at the Lioness would know whose the banner is
 - **Also for `/recap`:** log Odibli's casts (Citadel Clock, at 1 / 3), and his two Fireballs if they
   come out. Restamp the trackers. The reputation rewards at the waystation (Clatter's "Lightning
   man!", Brask backing off from Dip) are `unspent` until played.
