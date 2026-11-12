@@ -1,0 +1,203 @@
+<title>Barovia to Aethryn</title>
+<!-- Table intro card for guests and cameo players. Facts as of Session 33 (2026-11-11): levels, campaign states, recap examples. Refresh before sharing after a season swap or DM rotation. Published: https://claude.ai/artifact/17UGBqHcn2Zpfos6JDBgWD -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<style>
+/* Layout: one narrow card, read top to bottom; the two worlds sit side by side, then party, then the repo loop */
+:root {
+  --bg: #eef0f4;
+  --card: #fbfbfd;
+  --ink: #1d2230;
+  --muted: #5b6275;
+  --line: #d7dbe5;
+  --strahd: #8a1f2b;
+  --glass: #5b4fb0;
+  --glass-soft: #ebe8f8;
+  --strahd-soft: #f6e7e9;
+  --display: "Alegreya SC", Georgia, serif;
+  --body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141b; --card: #1b1e28; --ink: #e6e8ef; --muted: #a2a8b8; --line: #2e3242;
+    --strahd: #e0707c; --glass: #b2a8ff; --glass-soft: #252239; --strahd-soft: #2c1d22;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141b; --card: #1b1e28; --ink: #e6e8ef; --muted: #a2a8b8; --line: #2e3242;
+  --strahd: #e0707c; --glass: #b2a8ff; --glass-soft: #252239; --strahd-soft: #2c1d22;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 17px; line-height: 1.55;
+  padding-inline: 16px; padding-block: 32px 48px;
+}
+.card {
+  max-width: 760px; margin: 0 auto;
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: clamp(20px, 5vw, 44px);
+  display: grid; gap: 36px;
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 700; text-wrap: balance; margin: 0; letter-spacing: .01em; }
+h1 { font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.05; }
+h2 { font-size: 1.45rem; margin-bottom: 12px; }
+h3 { font-size: 1.15rem; }
+p { margin: 0; max-width: 65ch; }
+.eyebrow { font-size: .78rem; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); font-weight: 700; }
+header { display: grid; gap: 12px; }
+header .lede { color: var(--muted); font-size: 1.08rem; }
+.stack { display: grid; gap: 10px; }
+ul.plain { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+ul.plain li { padding-left: 18px; position: relative; max-width: 65ch; }
+ul.plain li::before { content: ""; position: absolute; left: 2px; top: .7em; width: 6px; height: 6px; border-radius: 50%; background: var(--glass); }
+
+.worlds { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.world { border-radius: 10px; padding: 18px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.world.strahd { background: var(--strahd-soft); }
+.world.aethryn { background: var(--glass-soft); }
+.world .tag { font-size: .75rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; }
+.strahd .tag { color: var(--strahd); }
+.aethryn .tag { color: var(--glass); }
+.world .who { color: var(--muted); font-size: .92rem; }
+
+.party { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.pc { display: grid; grid-template-columns: 9.5rem 1fr; gap: 4px 16px; padding-block: 12px; border-bottom: 1px solid var(--line); }
+.pc .name { font-family: var(--display); font-weight: 700; font-size: 1.1rem; }
+.pc .player { color: var(--muted); font-size: .88rem; display: block; font-family: var(--body); font-weight: 400; }
+.pc .build { font-size: .85rem; color: var(--muted); display: block; }
+.pc p { min-width: 0; }
+@media (max-width: 520px) { .pc { grid-template-columns: 1fr; } }
+
+ol.loop { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; counter-reset: step; }
+ol.loop li { counter-increment: step; border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+ol.loop li::before { content: counter(step); font-family: var(--display); font-weight: 700; color: var(--glass); font-size: 1.3rem; line-height: 1; }
+ol.loop b { font-weight: 700; }
+ol.loop span { font-size: .92rem; color: var(--muted); }
+.folders { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px 20px; }
+.folders div { min-width: 0; }
+.folders code { font-family: ui-monospace, Consolas, monospace; font-size: .88rem; color: var(--glass); font-weight: 600; }
+.folders span { display: block; font-size: .93rem; color: var(--muted); }
+.examples { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.ach { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.ach .kicker { font-size: .72rem; text-transform: uppercase; letter-spacing: .14em; color: var(--glass); font-weight: 700; }
+.ach .title { font-family: var(--display); font-weight: 700; font-size: 1.1rem; }
+.ach p { font-size: .95rem; }
+.ach .num { font-family: var(--display); font-weight: 700; font-size: 1.6rem; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.ach .tier { color: var(--muted); font-size: .9rem; }
+.sub { font-family: var(--display); font-weight: 700; font-size: 1.1rem; margin-top: 8px; }
+footer { color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); padding-top: 16px; }
+</style>
+
+<main class="card">
+  <header>
+    <div class="eyebrow">New to the table? A quick look</div>
+    <h1>One party, two worlds, rotating DMs</h1>
+    <p class="lede">We're five friends playing D&amp;D 5e online over Roll20 and voice chat, 30-odd sessions in. The same characters bounce between two very different campaigns, and we keep the whole thing in a Git repo that an AI assistant helps us run.</p>
+  </header>
+
+  <section class="stack">
+    <h2>How we play</h2>
+    <ul class="plain">
+      <li><b>Seasons, not one long campaign.</b> We alternate between two worlds like TV seasons. The party carries over, crossing between them through a deliberate story beat.</li>
+      <li><b>The DM chair moves.</b> Kellan runs Curse of Strahd. The homebrew chair rotates: Jeff ran the first season, Ben takes the next one. Whoever isn't DMing plays.</li>
+      <li><b>Everyone builds the world.</b> All of us pitch places, people, factions and rumors into a shared pool. The DM pulls from it, so the world has everyone's fingerprints on it.</li>
+      <li><b>Choices matter.</b> Every session plans in a few real decisions for the party, and the world remembers what we picked.</li>
+      <li><b>A bit of a game show on top.</b> After each session there's a recap deck with silly achievements, stat awards (killing blows, nat 1s) and fame/infamy scores for the characters.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The campaigns</h2>
+    <div class="worlds">
+      <article class="world strahd">
+        <div class="tag">Paused · Season 1</div>
+        <h3>Curse of Strahd</h3>
+        <div class="who">DM: Kellan · the published module</div>
+        <p>Gothic horror in Barovia, a mist-locked land ruled by a vampire. Serious, with dark humor. We stepped out mid-quest through a portal relic and will go back.</p>
+      </article>
+      <article class="world aethryn">
+        <div class="tag">Running now · Homebrew</div>
+        <h3>Redwater, in Aethryn</h3>
+        <div class="who">DM: Jeff · our own world</div>
+        <p>A world under a broken moon, where glass shards called Whatwill still rain down. Every faction wants to reach it first. Big-scale politics and intrigue, but warm, with rare magic. Ben runs the next Aethryn story after this one.</p>
+        <p>The Whatwill is pearly, glowing and unstable, and nobody can predict where the next Showering lands. A religious order reveres it, scholars cut it open, thieves' guilds steal it, the courts deadlock over who owns the ground it fell on, and whole towns float on it. Magic is rare and tells you who's on top. The party walked in as strangers with no side, which makes them very useful to everyone and easy to throw away.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>Crossing between worlds</h2>
+    <p>The crossing happens in the story, not offscreen. Near the end of the Strahd season the party got hold of a relic from a wizard at a Barovian winery and used it to step out of the mists into Aethryn. They brought baggage with them: a debt still owed to a family back in Barovia, and curses that went quiet once they left. One character carries a voice that whispers, another a shadow. Neither does anything in Aethryn, and both will wake up when we go back. Coming back to Barovia will be its own story beat too, and whatever happened in Aethryn comes along.</p>
+  </section>
+
+  <section>
+    <h2>The party <span class="eyebrow">· all level 5</span></h2>
+    <div class="party">
+      <div class="pc">
+        <div class="name">Iggy<span class="player">Jeff</span></div>
+        <p>Gruff, good-humored soldier who sings his way into battle. A refugee from a destroyed library-world.<span class="build">Aasimar bard / paladin</span></p>
+      </div>
+      <div class="pc">
+        <div class="name">Luci<span class="player">Paul</span></div>
+        <p>Woke alone in an abandoned sun temple, got scattered across the Astral Sea, and can't stop wandering.<span class="build">Aasimar monk / warlock / psion</span></p>
+      </div>
+      <div class="pc">
+        <div class="name">Odibli<span class="player">Miguel</span></div>
+        <p>Bookish gnome with a big toothy grin on a bucket-list adventure. His journal is his spellbook. Runs at danger every time.<span class="build">Gnome wizard (evoker)</span></p>
+      </div>
+      <div class="pc">
+        <div class="name">Dip<span class="player">Ben</span></div>
+        <p>A berserker with a scholar's training, searching for the twin sister they refuse to believe died in a fire.<span class="build">Orc barbarian</span></p>
+      </div>
+      <div class="pc">
+        <div class="name">Halsby<span class="player">Kellan</span></div>
+        <p>A quiet shadow-caster who goes by one alias and nothing more. Kellan plays Halsby in the seasons they aren't DMing.<span class="build">Half-elf sorcerer (shadow magic)</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>Sharing the DM chair</h2>
+    <p>Rotating means nobody burns out behind the screen, and everyone gets a turn to play. When a world changes hands, the new DM's character steps out of the story for that run, written in as a trip of their own rather than vanishing. The outgoing DM decides which secrets pass on and which stay buried, then writes the incoming DM a one-page brief: where things stand, what's still loose, and what's now theirs to change. The new DM can take the world somewhere the last one never planned.</p>
+  </section>
+
+  <section class="stack">
+    <h2>How the repo works</h2>
+    <p>The campaign lives in a folder of plain text notes, tracked in Git. Claude (an AI assistant) works inside it with us: it reads the notes, keeps them straight, and drafts things for the DM to edit. It never decides the story. The DM does.</p>
+    <ol class="loop">
+      <li><b>Play</b><span>We play on Roll20 and record the session.</span></li>
+      <li><b>Recap</b><span>The recording gets transcribed, and the DM confirms what actually happened.</span></li>
+      <li><b>Remember</b><span>That becomes the official history: who we met, what we broke, who likes us now.</span></li>
+      <li><b>Plan</b><span>The next session is drafted from open threads and the idea pool, then the DM reworks it.</span></li>
+    </ol>
+    <div class="folders">
+      <div><code>data</code><span>The idea pool everyone contributes to.</span></div>
+      <div><code>historian</code><span>What actually happened. This wins any argument.</span></div>
+      <div><code>scheduler</code><span>Upcoming sessions and story arcs (DM eyes only).</span></div>
+      <div><code>meta</code><span>How we like our games: pacing, difficulty, tone, loot.</span></div>
+    </div>
+    <div class="sub">One session, start to finish</div>
+    <p>After a session the recording goes through local speech-to-text, and Claude turns the transcript into rough notes, marking anything it isn't sure of. The DM then walks through a recap with it, one question at a time: did this happen, is this NPC new, how does this character feel about the party now? Only what the DM confirms goes into the history. When it's time to plan, Claude reads that history, finds threads we've dropped, checks whose character hasn't had a moment lately, and drafts a skeleton of the next session. The DM rewrites it, cuts what doesn't fit, and runs it. Players add to the idea pool through short questionnaires about a place or person they want in the world. Nobody needs to know any of this to play.</p>
+    <p>For Strahd it only does the remembering, since Kellan preps that one outside it. For the homebrew it does the whole loop.</p>
+  </section>
+
+  <section class="stack">
+    <h2>The recap deck</h2>
+    <p>Each recap ends with awards. Achievements are snarky cards for things a character actually did, and fame and infamy are deliberately silly arcade numbers that grow with each deed. Real examples:</p>
+    <div class="examples">
+      <div class="ach"><div class="kicker">New achievement · Luci</div><div class="title">Firefighter (Derogatory)</div><p>Fought a fire with a windstorm. The fire spread up the wall. Wind is not water.</p></div>
+      <div class="ach"><div class="kicker">New achievement · Odibli</div><div class="title">Oat-Based Diplomacy</div><p>Spent every oat the party owned to recruit a dead man's horse. It joined. It's still hungry.</p></div>
+      <div class="ach"><div class="kicker">Infamy · Halsby</div><div class="num">7,345</div><div class="tier">Tier: Suspect</div><p>Opened a fight with a bolt of lightning out of nowhere. The hedge priest was left as an outline of ash.</p></div>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>What we want from the game</h2>
+    <p>We keep a wishlist the DMs draw from: an Ocean's 11 heist where the plan falls apart, a Kill Bill revenge list, court cases where evidence is the weapon, a catastrophe that hits on a festival day, a tragic villain with a god complex. And, someday, actual gorillas using guerrilla tactics. Combat, roleplay and mystery all get their turn.</p>
+  </section>
+
+  <footer>Questions? Ask any of us. Happy to show you a recap deck or a session plan.</footer>
+</main>
