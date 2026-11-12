@@ -5,10 +5,10 @@ subtype: thread
 exists: false
 campaign: homebrew
 target: act-1-the-hearth-at-ashford
-state: developed
+state: used
 heat: 4
 created: 2026-10-04
-updated: 2026-10-04
+updated: 2026-11-12
 description: "Asher asks Dip to lay a huge predator-spirit born of the old war's last stand; Jorn is trying to wake and bind it."
 relates_to:
   - "[[Aashal-Groon Mellenegon Borak]]"
@@ -143,3 +143,9 @@ Held for a later session, not planned yet (DM, 2026-10-04). `/session` surfaces 
 33. **Jorn's method.** How is he waking it, and how close is he?
 34. **Near the aquifer?** Same as 19.
 35. **Stat block.** Only the sketch in 17 so far.
+
+## Used
+
+Mined into `scheduler/acts/Act 1 - The Hearth at Ashford.md` (Jeff, 2026-11-12): the Asher
+meeting and the December finale on the old field. The act file carries the substance; the
+spirit's species, stat block and how close Jorn is to waking it are still open there.

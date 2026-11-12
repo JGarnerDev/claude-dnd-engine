@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.64.0] — 2026-11-12
+
+### Added
+
+- **Cards are artifacts too** (root `CLAUDE.md` → Working Rules; `meta/loot-options/README.md` → Item cards). Every handout card (item cards, title cards, any HTML page for the table) is written as a repo file and published as an artifact in the same turn, and edits republish to the same URL. A card built before its session is planned sits beside the item file and moves to that session's `handouts/` later.
+
+### Changed
+
+- **Non-owner commits go through a PR.** The Git working rule now sends anyone but the repo owner to a branch and `gh pr create` into `master`; a repo ruleset blocks their direct pushes, and the owner approves merges. The owner still commits straight to `master`.
+
 ## [0.63.0] — 2026-11-11
 
 ### Added
