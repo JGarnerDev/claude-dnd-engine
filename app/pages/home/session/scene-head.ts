@@ -39,15 +39,17 @@ export function hpHtml(entry: string, max: number, hp: HpMap, start: number = ma
     </span>`;
 }
 
-function enemyHtml(entry: string, blocks: StatBlock[], known: Known, hp: HpMap): string {
+function enemyHtml(entry: string, blocks: StatBlock[], known: Known, hp: HpMap, arrives = 0): string {
+  const tag = arrives ? ` <span class="sr-arrives">arrives round ${arrives}</span>` : '';
+  const at = arrives ? ` data-arrives="${arrives}"` : '';
   const b = matchEnemy(entry, blocks);
-  if (!b) return `<div class="sr-enemy is-unmatched"><span class="sr-enemy-name">${inline(entry, known)}</span></div>`;
+  if (!b) return `<div class="sr-enemy is-unmatched"${at}><span class="sr-enemy-name">${inline(entry, known)}${tag}</span></div>`;
   const down = b.hp !== null && (hp[entry] ?? b.start ?? b.hp) <= 0;
   const atks = b.attacks.map((a) => `<span class="sr-atk">${rollableHtml(inline(stripProvenance(a), known))}</span>`).join('');
   return `
-    <details class="sr-enemy${down ? ' is-down' : ''}">
+    <details class="sr-enemy${down ? ' is-down' : ''}"${at}>
       <summary>
-        <span class="sr-enemy-name">${inline(entry, known)}</span>
+        <span class="sr-enemy-name">${inline(entry, known)}${tag}</span>
         <span class="sr-enemy-stats">${inline(rowStats(b.stats), known)}</span>
         <span class="sr-enemy-atk">${atks}</span>
         ${b.hp !== null ? hpHtml(entry, b.hp, hp, b.start ?? b.hp) : '<span></span>'}
@@ -70,7 +72,8 @@ export function hpLogHtml(log: readonly HpLogEntry[], entries: readonly string[]
     const act = e.undone
       ? '<span class="sr-hplog-tag">undone</span>'
       : `<button type="button" class="sr-hplog-undo" data-undo="${i}"${undoable(log, i) ? '' : ' disabled title="Changed since: undo the newer entry first"'}>Undo</button>`;
-    return `<li class="${e.undone ? 'is-undone' : ''}"><span class="sr-hplog-at">${clock(e.at)}</span><span class="sr-hplog-what">${what}</span>${act}</li>`;
+    const round = e.kind === 'hit' && e.round ? ` <span class="sr-hplog-round">R${e.round}</span>` : '';
+    return `<li class="${e.undone ? 'is-undone' : ''}"><span class="sr-hplog-at">${clock(e.at)}${round}</span><span class="sr-hplog-what">${what}</span>${act}</li>`;
   };
   const live = rows.filter(({ e }) => !e.undone).length;
   return `<details class="sr-hplog"${open ? ' open' : ''}><summary>HP log (${live})</summary>${rows.length
@@ -102,7 +105,7 @@ export function sceneHeadHtml(h: SceneHeader, blocks: StatBlock[], known: Known,
     <div class="sr-enemies">
       <div class="sr-enemies-head"><span class="sr-sh-label">Enemies</span><span class="sr-enemies-btns"><button type="button" class="sr-roll-clear" title="Clear the roll log" hidden>Clear rolls</button><button type="button" class="sr-hp-undo-reset" data-undo="${undoAt}" title="Put back the HP the last reset wiped"${undoAt < 0 ? ' hidden' : ''}>Undo reset</button><button type="button" class="sr-hp-reset" title="Put every enemy back to its known HP at the start of the session. The HP log keeps the old numbers.">Reset HP</button></span></div>
       <ol class="sr-roll-log" aria-live="polite"></ol>
-      ${h.enemies.map((e) => enemyHtml(e, blocks, known, hp)).join('')}
+      ${h.enemies.map((e) => enemyHtml(e, blocks, known, hp, h.arrivals[e])).join('')}
       ${h.tactics ? `<p class="sr-tactics">${p(h.tactics)}</p>` : ''}
       ${hpLogHtml(log, h.enemies, logOpen)}
     </div>` : ''}`;

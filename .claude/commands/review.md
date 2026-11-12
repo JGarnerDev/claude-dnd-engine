@@ -49,6 +49,7 @@ Rules:
 - Respect the plan's own limits: do not narrate a PC's inner experience, do not name what a scene says stays unnamed, and do not front-load a feud past its stated budget
 - Add under the existing node headings, so the session runner shows each addition on the right step. Never rename or reorder nodes
 - **Check each scene header** (`/session` Phase 6): Summary, Where, Cast, Enemies, DCs, Time and Trigger are present. Every DC in the scene's nodes is also listed in DCs, and every Enemies entry matches a `## Combatants` stat block. Add or fix what's missing. Move provenance (`(Jeff, <date>)`, `Engine, …; committed …`) out of scene prose and into the Engine notes
+- **Check the cues** (`/session` Phase 6 → Say when things happen): a beat that fires on a condition opens with a `When:` line, an enemy who joins mid-fight carries `arrives round N` on its Enemies entry, an HP threshold in a Watch item names the enemy and gives the number in HP, and a fight whose combat beats don't bracket it carries `Combat starts:` / `Combat ends:` markers. Add what's missing
 - Skip anything already covered. A node with a working read-aloud or lines needs nothing
 
 ---

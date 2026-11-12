@@ -4,6 +4,7 @@
 //   - **Summary:** The night closes out: …
 //   - **Cast:** [[Sable Wren]] · [[Mara Tull]] · Dunny Marsh
 //   - **Enemies:** Archer Rider (Ilsa Hask) · Wolf (Cinder)      (or "none")
+//     (one who joins mid-fight ends "arrives round 3": Relief Captain (Garran Vey) arrives round 3)
 //   - **DCs:** Arcana 13 — read the charm · DEX 13 save — half damage
 //   - **Tactics:** one line: how they fight and when they break
 //   - **Time:** ~30 min
@@ -16,6 +17,7 @@ export interface SceneHeader {
   where: string;
   cast: string;
   enemies: string[];
+  arrivals: Record<string, number>; // enemy entry -> the round it joins the fight
   dcs: string[];
   tactics: string;
   time: string;
@@ -30,9 +32,10 @@ const FIELDS: Record<string, keyof SceneHeader> = {
 };
 const FIELD_RE = /^[-*]\s+\*\*([^*:]+):\*\*\s*(.*)$/;
 const SPLIT_RE = /\s+·\s+/;
+const ARRIVES_RE = /[\s,—–-]+\(?arrives (?:in |on )?round (\d+)\)?\.?$/i;
 
 export function parseSceneHeader(setup: string, sceneMd: string): SceneHeader {
-  const h: SceneHeader = { summary: '', where: '', cast: '', enemies: [], dcs: [], tactics: '', time: '', rest: '' };
+  const h: SceneHeader = { summary: '', where: '', cast: '', enemies: [], arrivals: {}, dcs: [], tactics: '', time: '', rest: '' };
   const lines = setup.replace(/\r/g, '').split('\n');
   const rest: string[] = [];
   let hadSummary = false;
@@ -47,9 +50,18 @@ export function parseSceneHeader(setup: string, sceneMd: string): SceneHeader {
     // A real Summary beats the Trigger fallback, whichever comes first.
     if (field === 'summary') {
       if (label === 'summary') { h.summary = value; hadSummary = true; } else if (!hadSummary) h.summary = value;
-    } else if (field === 'enemies' || field === 'dcs') {
-      h[field] = /^none\b/i.test(value) ? [] : value.split(SPLIT_RE).filter(Boolean);
-    } else if (!h[field]) {
+    } else if (field === 'dcs') {
+      h.dcs = /^none\b/i.test(value) ? [] : value.split(SPLIT_RE).filter(Boolean);
+    } else if (field === 'enemies') {
+      // "arrives round 3" comes off the entry, which stays the HP key.
+      h.enemies = /^none\b/i.test(value) ? [] : value.split(SPLIT_RE).filter(Boolean).map((e) => {
+        const a = ARRIVES_RE.exec(e);
+        if (!a) return e;
+        const entry = e.slice(0, a.index).trim();
+        h.arrivals[entry] = Number(a[1]);
+        return entry;
+      });
+    } else if (field !== 'arrivals' && !h[field]) {
       h[field] = value;
     }
   }

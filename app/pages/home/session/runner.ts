@@ -131,7 +131,13 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
       onGo: go,
       onTokensToggle: (open) => { state.tokensOpen = open; saveState(s.folder, state); },
       onHpHit: (entry, input, before, after, start) => {
-        recordHit(state, entry, input, before, after, start);
+        recordHit(state, entry, input, before, after, start, Date.now(), node.scene ? state.rounds[node.scene] ?? 1 : undefined);
+        saveState(s.folder, state);
+      },
+      round: (node.scene && state.rounds[node.scene]) || 1,
+      onRound: (r) => {
+        if (!node.scene) return;
+        state.rounds[node.scene] = r;
         saveState(s.folder, state);
       },
       onHpReset: (before) => {
@@ -167,6 +173,7 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
     if (act === 'restart' && confirm('Restart the session from the first card? The path walked so far is cleared and enemy HP goes back to its start. The HP log keeps the old numbers, and Undo there brings them back.')) {
       state.history = [g.start!];
       recordReset(state, 'Restart', { ...state.hp });
+      state.rounds = {};
       render();
     }
     if (act === 'copy') {

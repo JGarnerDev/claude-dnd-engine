@@ -172,7 +172,7 @@ scene blocks nest under `## Scenes` as `###`. Sections in order:
 
 **Scenes** — one `### Scene N — [Title]` block per scene, each beat a `#### S<k>_SLUG — <one line>` node heading under it. Count scales to length (Short: 3–4, Standard: 4–6, Long: 6–8). Each block:
 
-- **Scene header** — first, before any node: `- **Summary:**` · `- **Where:**` · `- **Cast:**` (` · `-separated) · `- **Enemies:**` (combat labels with real names, or `none`) · `- **DCs:**` (`<check> <DC> — <what for>`, ` · `-separated, or `none`) · `- **Tactics:**` (combat only) · `- **Time:**` · `- **Trigger:**`. The session runner reads these for the top of the scene page; full rules in `/session` Phase 6
+- **Scene header** — first, before any node: `- **Summary:**` · `- **Where:**` · `- **Cast:**` (` · `-separated) · `- **Enemies:**` (combat labels with real names, or `none`; `arrives round N` after one who joins mid-fight) · `- **DCs:**` (`<check> <DC> — <what for>`, ` · `-separated, or `none`) · `- **Tactics:**` (combat only) · `- **Time:**` · `- **Trigger:**`. The session runner reads these for the top of the scene page; full rules in `/session` Phase 6
 - **Beats** — ordered bullets; branch points inline (*"if party refuses → …"*)
 - **Narration** — `> *"..."*` blockquote for key moment (depth: narrated only; omit for depth: notes)
 - **Transition** — what moves to next scene or likely detour

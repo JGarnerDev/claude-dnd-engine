@@ -8,6 +8,7 @@
 //   Choice   a real choice (`Choice (party):`, `Choice (Iggy):`)
 //   Private  a message for one player, one Copy button per outcome
 //   Introduce  a character's first appearance: look, sound, impression
+//   Fight    where a fight or a boss fight starts and ends (`Combat starts:`, `Boss fight ends:`)
 //
 // The voice comes from the bullet's bold label (`- **Tokens:** …`) or its shape (a
 // `>` quote, a bullet that opens on a quoted line). Unlabeled DM bullets join the
@@ -17,7 +18,7 @@ import { escapeHtml, extractCallouts, inline, renderMarkdown } from './markdown.
 import type { Known } from './markdown.js';
 import { stripProvenance } from './provenance.js';
 
-export type Voice = 'you' | 'say' | 'do' | 'watch' | 'choice' | 'private' | 'intro';
+export type Voice = 'you' | 'say' | 'do' | 'watch' | 'choice' | 'private' | 'intro' | 'fight';
 
 export interface PbBlock {
   voice: Voice;
@@ -26,7 +27,7 @@ export interface PbBlock {
 }
 
 const VOICE_NAME: Record<Voice, string> = {
-  you: 'You', say: 'Say', do: 'Do', watch: 'Watch', choice: 'Choice', private: 'Private', intro: 'Introduce',
+  you: 'You', say: 'Say', do: 'Do', watch: 'Watch', choice: 'Choice', private: 'Private', intro: 'Introduce', fight: 'Fight',
 };
 
 const ITEM_RE = /^(?:[-*]|\d+\.)\s+(.*)$/;
@@ -34,6 +35,7 @@ const LABEL_RE = /^\*\*([^*]+?):\*\*:?\s*(.*)$|^\*\*([^*]+?)\*\*:\s*(.*)$/;
 const CALLOUT_RE = /^[-*]\s+\*\*(Introduce|Tokens|Private)\b/;
 const DO_RE = /^(tokens?|music|jukebox|title card|handout|hp bars?|set hp|roll20|maps?|lighting|sound cue|show)\b/i;
 const SAY_RE = /\b(read(?:s)? aloud|read-aloud|say|says|aloud|lines?)\b/i;
+export const FIGHT_RE = /^(combat|fight|boss fight|boss) (starts|begins|ends)\b/i;
 const WATCH_RE = /^(when|if|once|after|until|unless|the moment|(?:the )?triggers?|watch)\b/i;
 const QUOTED_RE = /^\*{1,3}["“']/;
 
@@ -101,6 +103,7 @@ function classify(c: Chunk): PbBlock {
     if (/^\*\*[^*]+\*\*\.?$/.test(text) && /\btrigger/i.test(bare)) return { voice: 'watch', label: '', md: body(bare, c.lines.slice(1)) };
     // A bold "If …" / "When …" lead is a condition, even without a colon.
     const lead = /^\*\*([^*]+?)\.?\*\*\.?\s*(.*)$/.exec(text);
+    if (lead && FIGHT_RE.test(lead[1])) return { voice: 'fight', label: cleanLabel(lead[1]), md: body(lead[2], c.lines.slice(1)) };
     if (lead && WATCH_RE.test(lead[1])) return { voice: 'watch', label: cleanLabel(lead[1]), md: body(lead[2], c.lines.slice(1)) };
     if (QUOTED_RE.test(text)) return { voice: 'say', label: '', md: body(text, c.lines.slice(1)) };
     return { voice: 'you', label: '', md: whole };
@@ -108,7 +111,8 @@ function classify(c: Chunk): PbBlock {
   const label = cleanLabel(m[1] ?? m[3]);
   const rest = cap((m[2] ?? m[4]).trim()); // the label moved to the gutter, so the text starts a sentence
   const md = body(rest, c.lines.slice(1));
-  const voice: Voice = /^choice\b/i.test(label) ? 'choice'
+  const voice: Voice = FIGHT_RE.test(label) ? 'fight'
+    : /^choice\b/i.test(label) ? 'choice'
     : DO_RE.test(label) ? 'do'
     : SAY_RE.test(label) || QUOTED_RE.test(rest) ? 'say'
     : WATCH_RE.test(label) ? 'watch'
@@ -122,7 +126,7 @@ export function promptBlocks(prose: string): PbBlock[] {
   // Provenance goes twice: per line first, then per block, once a label's wrapped
   // lines are joined, so a "(draft, engine 2026-…)" split across lines goes too.
   for (const b of chunks(stripProvenance(prose)).map(classify).map((x) => ({ ...x, md: stripProvenance(x.md) }))) {
-    if (!b.md.trim() && b.voice !== 'private' && b.voice !== 'intro') continue;
+    if (!b.md.trim() && b.voice !== 'private' && b.voice !== 'intro' && b.voice !== 'fight') continue;
     const prev = out[out.length - 1];
     // Plain bullets carry on the DM block before them; quotes run together.
     if (prev && !b.label && prev.voice === b.voice && (b.voice === 'you' || (b.voice === 'say' && !prev.label))) {

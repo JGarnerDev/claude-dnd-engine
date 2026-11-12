@@ -6,6 +6,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.67.0] — 2026-11-12
+
+### Added
+
+- **Trackers drive the scene notes** (`app/pages/home/session/cues.ts`, `steps.ts`, `scene.ts`). Third and last stage of the scene-notes overhaul. While a fight runs, a **fight bar** sits pinned at the top of the notes: a round counter (kept per scene), what's due now, and the HP chips. The runner checks the plan's cues after every HP entry and every round: a round (`round 3`), an enemy's HP (`Nella drops to half (24 HP)`), or an enemy going down (`Garran Vey drops`). Watch items that have come true light up with NOW, a beat's `When:` line shows on its step row and turns to **ready**, and the bar lists them, with a jump to any step that's ready.
+- **Arrivals.** An Enemies entry ending `arrives round 3` waits greyed out in the Enemies box and the bar until its round, then the bar says it arrives.
+- **Fight and boss rails.** A red rail runs down the steps a fight covers, tagged where it starts and ends, and a salmon one for a boss fight. Plans mark them with `Combat starts:` / `Combat ends:` and `Boss fight starts:` / `Boss fight ends:`; unmarked, the fight runs from the first combat beat to the last. HP log entries now carry their round.
+- **Plan conventions** in `/session` Phase 6 → Say when things happen, checked by `/review` Pass 1, with `arrives round N` in `meta/schemas/session.md`.
+
 ## [0.66.0] — 2026-11-12
 
 ### Added

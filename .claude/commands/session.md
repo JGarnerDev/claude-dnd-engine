@@ -274,7 +274,7 @@ Each scene block opens with the **scene header**, the bullets the session runner
 - **Summary:** 2–3 plain sentences on what the scene is for and how it usually goes. The DM reads this cold mid-game, so state the point outright
 - **Where:** `[[wiki-link]]` plus one line on what the space looks and feels like. Keep long terrain and Roll20 rulings out of it and put them in their own setup bullet (e.g. `- **The ground:**`), which the runner folds under "Scene notes"
 - **Cast:** everyone present, separated by ` · `, wikilinked when they have a file (`[[Sable Wren]] · [[Mara Tull]] · Dunny Marsh`). Goals and voice notes stay in the NPC Quick-Reference and in the nodes
-- **Enemies:** the combat labels with real names in parentheses, separated by ` · ` (`Archer Rider (Ilsa Hask) · Wolf (Cinder)`), or `none`. Each must match a stat block in `## Combatants`, either by its real name in the block's `###` title or by its `Label (party-facing):` line. The runner turns them into compact rows that expand to the stat block
+- **Enemies:** the combat labels with real names in parentheses, separated by ` · ` (`Archer Rider (Ilsa Hask) · Wolf (Cinder)`), or `none`. Each must match a stat block in `## Combatants`, either by its real name in the block's `###` title or by its `Label (party-facing):` line. The runner turns them into compact rows that expand to the stat block. An enemy who joins mid-fight ends its entry `arrives round N` (`Relief Captain (Garran Vey) arrives round 3`): the runner holds it greyed out until its round counter reaches N
 - **DCs:** every roll the scene asks for, separated by ` · `, each as `<check> <DC> — <what it's for>` (`Arcana 13 — read the charm · DEX 13 save — half damage`), or `none`. If a DC sits in a node, it goes here too
 - **Tactics:** combat scenes only. One line: how the enemies fight and when they break
 - **Time:** the scene's rough length (`~30 min`)
@@ -290,6 +290,13 @@ Everyone the plan puts in front of the party gets a real name, walk-ons and name
 - **Transition** — one line on what triggers the move to the next scene or a likely detour
 
 **Labels set the voice.** The session runner shows each node as a prompt book, one block per bullet, tagged by its bold label: `Tokens:`, `Music:`, `Title card:` or `Set HP…:` is **Do** (the table or Roll20); a label with *read aloud*, *say* or *line(s)*, a bullet that opens on a quoted line, or a `>` quote is **Say**; `When …:`, `If …:`, `Once …:` or `After …:` is **Watch**; `Choice (…):` is **Choice**; anything else is for the DM. So give each bullet a short label ending in a colon, and put spoken lines in `*"…"*`. Backticked beat ids (`` `S2_ESCAPE` ``) and "Scene N" become links that open in the side panel.
+
+**Say when things happen.** These let the runner's trackers light the notes:
+
+- **When** — any beat that fires on a condition, not just the next move, opens with `- **When:** <the cue>`. The runner shows it on the step's row and marks it ready once it comes true
+- **Cues the runner can check:** a round (`round 3`), an enemy's HP (`Nella drops to half (24 HP)`, `Tithe at 47 HP`: the number in HP, near the name), or an enemy going down (`Garran Vey drops`, `Tithe drops to 0`). Name the enemy the way its Enemies entry does: its real name, either half of it, or its label. Anything else (`the crew is down to two`) stays for the DM to judge; join cues with "or"
+- **Watch items** (`- **If Nella drops to half (24 HP):** …`) light up the same way, one nested bullet per condition
+- **Fight markers** — `- **Combat starts:** …` and `- **Combat ends:** …` on the beats where a fight begins and ends, and `- **Boss fight starts:**` / `- **Boss fight ends:**` for a boss inside it. The runner draws a rail down the steps between them and shows its fight bar (round counter, what's due now, HP chips) on those steps. Unmarked, the fight runs from the first combat beat to the last
 
 **No provenance in scenes.** Who decided a beat and when (`(Jeff, 2026-10-07)`, `Engine, …; committed …`) goes in the Engine notes, not in scene prose. The runner strips any it finds, but a beat should read clean in the file too.
 

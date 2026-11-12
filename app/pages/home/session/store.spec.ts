@@ -17,9 +17,9 @@ describe('store', () => {
   it('round-trips state per session folder', () => {
     const s = memory();
     const hpLog = [{ kind: 'hit' as const, at: 1, entry: 'Drover (Varrick Tenn)', input: '8', before: 20, after: 12 }];
-    saveState('a', { history: ['X', 'Y'], tokensOpen: true, hp: { 'Drover (Varrick Tenn)': 12 }, hpLog }, s);
-    expect(loadState('a', s)).toEqual({ history: ['X', 'Y'], tokensOpen: true, hp: { 'Drover (Varrick Tenn)': 12 }, hpLog });
-    expect(loadState('b', s)).toEqual({ history: [], tokensOpen: false, hp: {}, hpLog: [] });
+    saveState('a', { history: ['X', 'Y'], tokensOpen: true, hp: { 'Drover (Varrick Tenn)': 12 }, hpLog, rounds: { SC3: 4 } }, s);
+    expect(loadState('a', s)).toEqual({ history: ['X', 'Y'], tokensOpen: true, hp: { 'Drover (Varrick Tenn)': 12 }, hpLog, rounds: { SC3: 4 } });
+    expect(loadState('b', s)).toEqual({ history: [], tokensOpen: false, hp: {}, hpLog: [], rounds: {} });
   });
 
   it('fails soft on junk or a throwing storage', () => {
@@ -29,7 +29,7 @@ describe('store', () => {
     const thrower = () => { throw new Error('blocked'); };
     const broken = { ...memory(), getItem: thrower, setItem: thrower } as Storage;
     expect(loadState('a', broken).history).toEqual([]);
-    expect(() => saveState('a', { history: [], tokensOpen: false, hp: {}, hpLog: [] }, broken)).not.toThrow();
+    expect(() => saveState('a', { history: [], tokensOpen: false, hp: {}, hpLog: [], rounds: {} }, broken)).not.toThrow();
   });
 
   it('loads state saved before the HP tracker, and drops junk HP', () => {

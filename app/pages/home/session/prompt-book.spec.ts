@@ -46,6 +46,12 @@ describe('promptBlocks', () => {
     expect(blocks[1].md).toBe('Sennet on Halsby.\n- Clatter on the roof.\n- Brask on the cart.');
   });
 
+  it('marks where a fight or a boss fight starts and ends, with or without a note', () => {
+    expect(voices('- **Combat starts:** mid-fight\n- **Boss fight ends.**\n- **Fight ends:** the rout')).toEqual([
+      'fight:Combat starts', 'fight:Boss fight ends', 'fight:Fight ends',
+    ]);
+  });
+
   it('keeps Introduce and Private callouts whole, where the plan put them', () => {
     const md = [
       '- **Introduce:** Mara, sheriff',

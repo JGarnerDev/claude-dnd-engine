@@ -109,7 +109,7 @@
 .sr-hplog { margin-top: 8px; font-size: 13px; }
 .sr-hplog > summary { cursor: pointer; color: var(--sr-muted); padding: 2px 0; }
 .sr-hplog ol { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 2px; max-height: 200px; overflow-y: auto; }
-.sr-hplog li { display: grid; grid-template-columns: 4.6em 1fr auto; gap: 8px; align-items: baseline; font-variant-numeric: tabular-nums; }
+.sr-hplog li { display: grid; grid-template-columns: 6.8em 1fr auto; gap: 8px; align-items: baseline; font-variant-numeric: tabular-nums; }
 .sr-hplog li.is-undone .sr-hplog-what { text-decoration: line-through; opacity: 0.5; }
 .sr-hplog-at { color: var(--sr-muted); }
 .sr-hplog-undo { font-size: 11.5px; padding: 0 8px; background: transparent; color: var(--sr-muted); border: 1px solid var(--sr-line); border-radius: 4px; cursor: pointer; }
@@ -336,10 +336,8 @@
 .sr-bref.is-here { border-style: dashed; }
 .sr-root code.sr-ref-missing { text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; color: var(--sr-muted); }
 
-/* HP strip: floats at the top once the Enemies box scrolls away */
-.sr-strip-dock { position: sticky; top: -18px; z-index: 6; height: 0; }
-.sr-strip-dock:not(.is-shown) { visibility: hidden; }
-.sr-strip { display: flex; flex-direction: column; gap: 6px; padding: 7px 10px; border-radius: 8px; background: color-mix(in srgb, var(--sr-k-combat) 16%, var(--sr-bg)); border: 1px solid var(--sr-k-combat); box-shadow: 0 6px 16px rgb(0 0 0 / 0.35); }
+/* Fight bar: pinned at the top of the notes while a fight runs */
+.sr-strip { position: sticky; top: -18px; z-index: 6; margin: 0 -6px 14px; display: flex; flex-direction: column; gap: 6px; padding: 7px 10px; border-radius: 8px; background: color-mix(in srgb, var(--sr-k-combat) 16%, var(--sr-bg)); border: 1px solid var(--sr-k-combat); box-shadow: 0 6px 16px rgb(0 0 0 / 0.35); }
 .sr-strip-chips { display: flex; flex-wrap: wrap; gap: 5px; }
 .sr-hpchip { --hc: var(--sr-k-stake); display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px 2px 4px; border-radius: 5px; border: 1px solid var(--sr-line); background: var(--sr-bg); cursor: pointer; font-size: 13px; font-variant-numeric: tabular-nums; }
 .sr-hpchip i { width: 6px; height: 18px; border-radius: 2px; background: var(--hc); }
@@ -357,4 +355,63 @@
   .sr-pb-gut { text-align: left; border-right: 0; border-left: 3px solid var(--c); padding: 0 0 0 8px; }
   .sr-pb-gut small { display: inline; margin-left: 6px; }
   .sr-body:not(.is-docked) .sr-panel { width: 100%; }
+}
+
+/* ===== Scene-notes overhaul, stage 3: trackers drive the notes ===== */
+:root { --sr-boss: #f0a08c; }
+.sr-strip.is-boss { border-color: var(--sr-boss); }
+.sr-strip-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+.sr-strip-mode { font: 700 12.5px system-ui, sans-serif; letter-spacing: 0.07em; text-transform: uppercase; color: #ffd2c6; }
+.sr-strip.is-boss .sr-strip-mode { color: var(--sr-bg); background: var(--sr-boss); padding: 1px 7px; border-radius: 3px; }
+.sr-round { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; }
+.sr-round button { width: 26px; height: 26px; border-radius: 6px; border: 1px solid var(--sr-k-combat); background: var(--sr-bg); cursor: pointer; font-weight: 700; }
+.sr-round button:hover { background: var(--sr-raised); }
+.sr-round output { font: 700 18px system-ui, sans-serif; display: inline-block; min-width: 1.4em; text-align: center; font-variant-numeric: tabular-nums; }
+.sr-strip-alerts { flex: 1; min-width: 14em; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; font-size: 13.5px; color: #f3c4b8; }
+.sr-strip-alerts:empty { display: none; }
+.sr-alert.is-now::before { content: "NOW"; font: 700 10.5px system-ui, sans-serif; letter-spacing: 0.06em; color: var(--sr-bg); background: var(--sr-v-watch); border-radius: 3px; padding: 1px 5px; margin-right: 6px; }
+.sr-alert.is-now { color: #fff; }
+button.sr-alert { font-size: 13px; padding: 1px 8px; border-radius: 4px; border: 1px solid var(--sr-v-watch); background: transparent; color: var(--sr-v-watch); cursor: pointer; }
+button.sr-alert:hover { background: color-mix(in srgb, var(--sr-v-watch) 18%, transparent); }
+.sr-hpchip.is-coming { opacity: 0.5; border-style: dashed; }
+.sr-hpchip small { font-size: 11px; color: var(--sr-muted); }
+
+/* Arrivals in the Enemies box */
+.sr-arrives { font-size: 11.5px; font-weight: 600; color: var(--sr-v-watch); white-space: nowrap; }
+.sr-enemy.is-coming > summary, .sr-enemy.is-unmatched.is-coming { opacity: 0.55; }
+.sr-hplog-round { color: var(--sr-k-combat); font-weight: 600; }
+
+/* Watch items light up when they come true */
+.sr-pb-watch.is-now .sr-pb-text { border-style: solid; border-color: var(--sr-v-watch); background: color-mix(in srgb, var(--sr-v-watch) 12%, transparent); }
+.sr-pb-watch.is-now .sr-pb-voice::after { content: " · now"; }
+.sr-pb-watch li.is-now { list-style: none; margin-left: -1.1em; padding: 2px 6px; border-radius: 4px; background: color-mix(in srgb, var(--sr-v-watch) 16%, transparent); }
+.sr-pb-watch li.is-now::before { content: "NOW"; font: 700 10px system-ui, sans-serif; letter-spacing: 0.06em; color: var(--sr-bg); background: var(--sr-v-watch); border-radius: 3px; padding: 1px 4px; margin-right: 6px; }
+
+/* Fight markers in the prompt book */
+.sr-pb-fight { --c: var(--sr-k-combat); }
+.sr-pb-fight .sr-pb-text { background: color-mix(in srgb, var(--sr-k-combat) 14%, transparent); border: 1px solid color-mix(in srgb, var(--sr-k-combat) 60%, transparent); border-radius: 6px; padding: 6px 10px; min-height: 1.5em; }
+
+/* When pills and fight edges on step rows */
+.sr-when { font-size: 12.5px; color: var(--sr-v-watch); white-space: nowrap; font-weight: 400; }
+.sr-when::before { content: "when "; color: var(--sr-faint); }
+.sr-when.is-ready { color: var(--sr-bg); background: var(--sr-v-watch); border-radius: 3px; padding: 0 6px; font-weight: 700; }
+.sr-when.is-ready::before { content: "ready · "; color: var(--sr-bg); }
+.sr-edge { font-size: 12px; color: var(--sr-k-combat); white-space: nowrap; font-weight: 600; }
+.sr-edge-boss { color: var(--sr-boss); }
+
+/* Fight and boss rails down the step list */
+.sr-steps.has-rails > .sr-step { position: relative; margin-left: 26px; }
+.sr-rails { position: absolute; left: -26px; top: -4px; bottom: -4px; width: 22px; }
+.sr-r { position: absolute; top: 0; bottom: 0; width: 3px; }
+.sr-r-fight { left: 3px; background: var(--sr-k-combat); }
+.sr-r-boss { left: 13px; background: var(--sr-boss); }
+.sr-r.is-start { top: 18px; }
+.sr-r.is-start::before { content: ""; position: absolute; top: -4px; left: -3px; width: 9px; height: 9px; border-radius: 50%; background: inherit; }
+.sr-r.is-end { bottom: 24px; }
+.sr-r.is-end::after { content: ""; position: absolute; bottom: -2px; left: -3px; width: 9px; height: 3px; background: inherit; }
+@media (max-width: 720px) {
+  .sr-steps.has-rails > .sr-step { margin-left: 16px; }
+  .sr-rails { left: -16px; width: 14px; }
+  .sr-r-boss { left: 9px; }
+  .sr-r-fight { left: 1px; }
 }

@@ -24,6 +24,12 @@ describe('parseSceneHeader', () => {
     expect(h.rest).toBe('> Read this aloud.');
   });
 
+  it('takes "arrives round N" off an enemy entry, which stays its HP key', () => {
+    const h = parseSceneHeader('- **Enemies:** Archer Rider (Ilsa Hask) · Relief Captain (Garran Vey) arrives round 3 · Wolf (Cinder), arrives in round 2', '');
+    expect(h.enemies).toEqual(['Archer Rider (Ilsa Hask)', 'Relief Captain (Garran Vey)', 'Wolf (Cinder)']);
+    expect(h.arrivals).toEqual({ 'Relief Captain (Garran Vey)': 3, 'Wolf (Cinder)': 2 });
+  });
+
   it('treats "none" as no enemies, and joins wrapped lines', () => {
     const h = parseSceneHeader('- **Enemies:** none\n- **Summary:** one\n  two', '');
     expect(h.enemies).toEqual([]);

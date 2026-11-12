@@ -4,7 +4,7 @@ import { rowStats, sceneHeadHtml } from './scene-head.js';
 import { parseCombatants } from './combatants.js';
 import type { SceneHeader } from './scene-header.js';
 
-const blank: SceneHeader = { summary: '', where: '', cast: '', enemies: [], dcs: [], tactics: '', time: '', rest: '' };
+const blank: SceneHeader = { summary: '', where: '', cast: '', enemies: [], arrivals: {}, dcs: [], tactics: '', time: '', rest: '' };
 const blocks = parseCombatants('### Wolf — Cinder\n\n- AC 13 · HP 11\n- **Bite** +4 to hit, 2d4+2\n- **Tactics (Jeff, 2026-10-07):** legs first');
 
 describe('sceneHeadHtml', () => {

@@ -58,6 +58,8 @@ function view(over: Partial<SceneView> = {}): SceneView {
     onHpHit: vi.fn(),
     onHpReset: vi.fn(),
     onHpUndo: vi.fn(),
+    round: 1,
+    onRound: vi.fn(),
     ...over,
   };
 }
@@ -145,6 +147,8 @@ describe('renderScene', () => {
     const main = document.createElement('main');
     const onHpHit = vi.fn();
     renderScene(main, view({ onHpHit }));
+    expect(main.querySelector('.sr-strip')).toBeNull(); // step 2 is before the fight
+    renderScene(main, view({ onHpHit, node: fight }));
     const chip = () => main.querySelector<HTMLButtonElement>('.sr-strip .sr-hpchip')!;
     expect(chip().textContent!.replace(/\s+/g, ' ').trim()).toBe('Ilsa Hask 16/16');
     chip().click();
@@ -160,6 +164,60 @@ describe('renderScene', () => {
     input.value = '6';
     input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
     expect(chip().classList.contains('is-down')).toBe(true);
+  });
+
+  it('drives the notes from the fight bar: rounds, arrivals, Watch items and When pills', () => {
+    const fmd = [
+      '- **Enemies:** Archer Rider (Ilsa Hask) · Relief Captain (Garran Vey) arrives round 2',
+      '',
+      '#### S1_HOLD — Hold the yard',
+      '',
+      '- **Combat starts:** mid-fight',
+      '- **If they hurt her:**',
+      '  - **If Ilsa drops to half (8 HP):** she runs.',
+      '  - **Garran Vey drops:** the riders break.',
+      '',
+      '#### S1_RIDE — Riders',
+      '',
+      '- **When:** round 2',
+    ].join('\n');
+    const hold = n('S1_HOLD', 'combat', 'Hold the yard');
+    const ride = n('S1_RIDE', 'combat', 'Riders');
+    const blocks = parseCombatants('### Scout — Ilsa Hask\n\n- AC 13 · HP 16\n- **Longbow** +4 to hit, 1d8+2\n\n### Veteran — Garran Vey\n\n- AC 17 · HP 58\n- **Longsword** +5 to hit, 1d8+3');
+    const main = document.createElement('main');
+    const onRound = vi.fn();
+    const onGo = vi.fn();
+    renderScene(main, view({
+      node: hold, sceneNodes: [hold, ride], visited: new Set(['S1_HOLD']), combatants: blocks, onRound, onGo,
+      scene: { id: 'SC1', key: '1', title: 'Scene 1', md: fmd },
+    }));
+    const bar = main.querySelector<HTMLElement>('.sr-strip')!;
+    expect(bar.querySelector('.sr-strip-mode')!.textContent).toBe('Fight');
+    expect(main.querySelector('.sr-step[data-id="S1_HOLD"] .sr-edge')).toBeNull(); // starts at the top: nothing to mark
+    // Vey waits for round 2.
+    const vey = main.querySelector<HTMLElement>('.sr-enemy[data-arrives="2"]')!;
+    expect(vey.querySelector('.sr-arrives')!.textContent).toBe('arrives round 2');
+    expect(vey.classList.contains('is-coming')).toBe(true);
+    expect(bar.querySelectorAll('.sr-hpchip.is-coming')).toHaveLength(1);
+    const pill = main.querySelector('.sr-step[data-id="S1_RIDE"] .sr-when')!;
+    expect(pill.classList.contains('is-ready')).toBe(false);
+    bar.querySelector<HTMLButtonElement>('[data-round="1"]')!.click();
+    expect(onRound).toHaveBeenLastCalledWith(2);
+    expect(bar.querySelector('.sr-round output')!.textContent).toBe('2');
+    expect(vey.classList.contains('is-coming')).toBe(false);
+    expect(pill.classList.contains('is-ready')).toBe(true);
+    const alerts = [...bar.querySelectorAll('.sr-alert')].map((a) => a.textContent);
+    expect(alerts).toEqual(['Garran Vey arrives this round', 'Ready: 2 · Riders']);
+    bar.querySelector<HTMLButtonElement>('.sr-alert[data-to]')!.click();
+    expect(onGo).toHaveBeenCalledWith('S1_RIDE');
+    // Ilsa to 8 lights her Watch item; the block's label carries no cue of its own.
+    const items = () => [...main.querySelectorAll('.sr-pb-watch li')].map((li) => li.classList.contains('is-now'));
+    expect(items()).toEqual([false, false]);
+    const ilsa = main.querySelector<HTMLInputElement>('.sr-hp[data-entry="Archer Rider (Ilsa Hask)"] .sr-hp-in')!;
+    ilsa.value = '8';
+    ilsa.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+    expect(items()).toEqual([true, false]);
+    expect([...bar.querySelectorAll('.sr-alert')].map((a) => a.textContent)).toContain('If Ilsa drops to half (8 HP): she runs.');
   });
 
   it('links beat ids in the notes to their steps', () => {
