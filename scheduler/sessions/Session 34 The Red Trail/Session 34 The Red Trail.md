@@ -395,8 +395,9 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 - **Cast:** [[Nella]] on Tithe, then the ridge · Tithe the griffon · what's left of the crew · the
   relief riders · Sergei and Bosco · Pablo on the hill · the Marlow banner on the shed's pole
 - **Enemies:** Tally-man (Sennet Orrin) · Half-orc Cask-hand (Brask) · Archer Rider (Ilsa Hask) ·
-  Roof Guard (Clatter) · Sniper ([[Nella]]) · Griffon (Tithe) · Relief Captain (Garran Vey) ·
-  Relief Rider 1 (Dace Morrow) · Relief Rider 2 (Pim Ostler) · Relief Rider 3 (Callan Shire)
+  Roof Guard (Clatter) · Sniper ([[Nella]]) · Griffon (Tithe) ·
+  Relief Captain (Garran Vey) arrives round 3 · Relief Rider 1 (Dace Morrow) arrives round 3 ·
+  Relief Rider 2 (Pim Ostler) arrives round 3 · Relief Rider 3 (Callan Shire) arrives round 3
 - **DCs:** Perception 13 — spot the crew's crystal cords · Animal Handling 13 — start a stampede ·
   WIS 13 (Tithe, +3) — hold when Sah speaks ·
   Athletics 13 — swim the river · WIS 12 save — morale · Investigation 12 / 16 — read the tally ·
@@ -438,7 +439,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 #### S2_TITHE_HUNTS — Nella takes the ridge and sets the griffon loose
 
-- **Committed 2026-11-11 (stepped up, Jeff 2026-11-10, option 4).** Nella's next turn.
+- **When:** Nella's next turn. (Committed 2026-11-11; stepped up, Jeff 2026-11-10, option 4.)
 - **What happens:** Tithe drops out of the cloud onto the overwatch ridge. Nella swings off into the
   brush blind and slaps its neck once: *"Tithe. Hunt."* It goes straight back up.
 - **From now on:** Nella shoots from the blind (half cover), two arrows a turn. Tithe is the thing
@@ -466,7 +467,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 #### S2_RELIEF — Riders on the south road
 
-- **Committed 2026-11-11 (stepped up, Jeff 2026-11-10, option 4).** The second round after Iggy's first turn (this session's third round; moved back a round, Jeff 2026-11-12, so it doesn't land on Tithe's first dives).
+- **When:** round 3, the second round after Iggy's first turn. (Committed 2026-11-11; stepped up, Jeff 2026-11-10, option 4; moved back a round, Jeff 2026-11-12, so it doesn't land on Tithe's first dives.)
 - **What happens:** hoofbeats on the south road, then four riders at a canter: Garran Vey in grey
   splint, three behind him. They came to collect the casks and found a fight. Vey takes the yard in
   one look and doesn't like what he sees.
@@ -559,6 +560,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 #### S2_IGGY_BEAT — "Up, Wallaed": Iggy flies, and Sah shows himself
 
+- **When:** Tithe snatches someone and carries them up.
 - **Jeff's design (2026-10-28):** the camp fight feels desperate while Nella owns the sky. Iggy's
   wings (Radiant Soul, once per long rest: 1 minute, fly 30 ft, +5 radiant once a turn) are what
   break it, and the moment he opens them, the party sees Sah for the first time.
@@ -636,6 +638,7 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 #### S2_MORALE — Vey drops, or the crew is down to two, and the rest break
 
+- **When:** Garran Vey drops, or the crew (everyone but Nella and Tithe) is down to two.
 - **Not at Varrick's death** (Jeff, 2026-11-10). Vey is the anchor now.
 - DC 12 WIS for every surviving crew member and rider (at disadvantage if Sah's voice has just
   spoken, for those wearing crystals). Failures scatter into the scrub and down the south road,
@@ -651,6 +654,8 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 #### S2_ESCAPE — Nella loses, and gets away on a fallback she rigged
 
+- **When:** Nella's next turn after Iggy's wings open, after the rout (`S2_MORALE`), or once Nella
+  drops to half (24 HP).
 - **She loses.** The party takes the casks and breaks her crew. Her escape is flight from a
   defeat. She steals nothing this time.
 - **She's on foot on the ridge now** (`S2_TITHE_HUNTS`), so her way out needs Tithe, the bridge
