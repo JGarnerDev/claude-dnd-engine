@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.66.0] — 2026-11-12
+
+### Added
+
+- **Prompt-book scene notes** (`app/pages/home/session/prompt-book.ts`, `steps.ts`). Each beat's prose shows as one block per bullet, in plan order, with its voice in a gutter: **You** (for the DM), **Say** (read-aloud and spoken lines, in a serif italic), **Do** (tokens, music, title cards, in mono), **Watch** (`When …`, `If …`), **Choice**, **Private** (with Copy) and **Introduce**. The voice comes from each bullet's bold label or its shape; `/session` Phase 6 → Labels set the voice says how to write for it. A quoted line inside any note gets the read-aloud face too. Second stage of the scene-notes overhaul.
+- **Links to beats and scenes** (`refs.ts`, `peeks.ts`). A backticked beat id becomes a violet chip numbered by step, and "Scene N" a gold one. A click opens the beat or scene in the side panel without moving the walk, with **Jump here** to move. An id that matches no beat stays plain with a dotted underline, so typos show.
+- **HP strip.** Once the Enemies box scrolls away, a strip of HP chips floats at the top of the notes, colored by how hurt each enemy is. A click on a chip opens a damage box right there, logged like any other entry.
+
+### Changed
+
+- **Search moves to the header, and the side panel adapts** (`panel.ts`, `runner.ts`). Search (`/`) now also finds beats, scenes and plan sections, and Enter opens the top result. People, beats, scenes, mysteries and plan sections share one Back stack. On a wide window the panel docks; on a narrow one it folds to a thin rail and slides over the notes when something opens. The pin button or `\` docks or hides it whatever the width, and the choice is kept. Home is shorter: the roster, established facts, mysteries and plan sections fold under More.
+
 ## [0.65.0] — 2026-11-12
 
 ### Added

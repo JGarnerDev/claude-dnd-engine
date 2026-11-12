@@ -33,7 +33,7 @@ describe('stepsHtml', () => {
     expect(el.querySelector('.sr-step.is-todo .sr-step-num')!.textContent).toBe('1');
   });
 
-  it('shows a private message above the prose with a Copy button per outcome', () => {
+  it('shows a private message in its own block with a Copy button per outcome', () => {
     const el = document.createElement('div');
     el.innerHTML = stepsHtml({
       nodes: [n('A')],
@@ -44,10 +44,11 @@ describe('stepsHtml', () => {
       known: () => true,
       optionsHtml: '',
     });
-    const box = el.querySelector('.sr-private')!;
-    expect(box.querySelector('.sr-private-head')!.textContent).toContain('Dip');
+    const box = el.querySelector('.sr-pb-private')!;
+    expect(box.querySelector('.sr-pb-gut small')!.textContent).toBe('→ Dip');
+    expect(box.querySelector('.sr-private-when')!.textContent).toBe('Insight, in secret');
     expect(box.querySelector<HTMLButtonElement>('.sr-copy')!.dataset.copy).toBe('It is "real" & hollow.');
-    expect(el.querySelector('.sr-step-body > .sr-md')!.textContent).not.toContain('Insight, in secret');
+    expect(el.querySelector('.sr-pb-you')!.textContent).toBe('YouThe rest of the beat.');
   });
 });
 

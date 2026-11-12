@@ -19,11 +19,15 @@ describe('mountPanel', () => {
     const { d, aside, panel } = setup();
     panel.setContext({ onCard: [d.entities[0]], inScene: [d.entities[0], d.entities[1]] });
     const groups = [...aside.querySelectorAll('.sr-group')].map((g) => g.textContent);
-    expect(groups).toEqual(['Party', 'On this card', 'In this scene', 'Act roster', 'Session plan']);
+    expect(groups).toEqual(['Party', 'On this step', 'In this scene', 'More']);
     expect(aside.querySelector('.sr-pc-name')!.textContent).toBe('Iggy');
     // "In this scene" omits what is already on the card; the roster skips unresolved names.
     expect(aside.querySelectorAll('.sr-ent')).toHaveLength(1 + 1 + 2);
-    expect(aside.querySelector('.sr-section summary')!.textContent).toBe('Orientation');
+    // The roster and the plan sections fold away under More.
+    expect([...aside.querySelectorAll('.sr-pn-fold > summary')].map((x) => x.textContent)).toEqual(['Act roster 2', 'Session plan 1']);
+    aside.querySelector<HTMLButtonElement>('[data-pn="section|0"]')!.click();
+    expect(aside.querySelector('.sr-pn-title')!.textContent).toBe('Orientation');
+    expect(aside.querySelector('.sr-md')!.textContent).toBe('Five PCs.');
   });
 
   it('shows the established town / region / world facts above the plan sections', () => {
@@ -32,9 +36,10 @@ describe('mountPanel', () => {
     const resolve = makeResolver(d.entities);
     const aside = document.createElement('aside');
     mountPanel(aside, d, resolve, (n) => !!resolve(n));
-    const groups = [...aside.querySelectorAll('.sr-group')].map((g) => g.textContent);
-    expect(groups.slice(-2)).toEqual(['Established', 'Session plan']);
-    expect(aside.querySelector('.sr-section summary')!.textContent).toBe('Town — Ashford');
+    const folds = [...aside.querySelectorAll('.sr-pn-fold > summary')].map((x) => x.textContent);
+    expect(folds.slice(-2)).toEqual(['Established 1', 'Session plan 1']);
+    aside.querySelector<HTMLButtonElement>('[data-pn="section|0"]')!.click();
+    expect(aside.querySelector('.sr-pn-title')!.textContent).toBe('Town — Ashford');
   });
 
   it('search shows ranked results, and Escape clears it', () => {
@@ -57,6 +62,62 @@ describe('mountPanel', () => {
     await vi.waitFor(() => expect(aside.querySelector('.sr-ent-body')!.textContent).toContain('Body text.'));
     aside.querySelector<HTMLButtonElement>('.sr-back')!.click();
     expect(aside.querySelector('.sr-group')!.textContent).toBe('Party');
+  });
+
+  it('peeks at a beat with one Back stack, and Jump here moves the walk', () => {
+    const d = fixture();
+    const resolve = makeResolver(d.entities);
+    const aside = document.createElement('aside');
+    const onGo = vi.fn();
+    const panel = mountPanel(aside, d, resolve, (n) => !!resolve(n), {}, {
+      link: (h) => h,
+      beat: (id) => ({ id, title: `Beat ${id}`, num: '2', html: '<p class="peek">Body.</p>', here: false }),
+      scene: () => null,
+      where: () => 'step 1, Open',
+      searchFlow: (q) => (q === 'fig' ? [{ kind: 'beat', id: 'S1_FIGHT', title: 'The fight', sub: 'step 3' }] : []),
+      onGo,
+    });
+    panel.open('Sable Wren');
+    panel.openBeat('S1_FIGHT');
+    expect(aside.querySelector('.sr-pn-title')!.textContent).toBe('2 Beat S1_FIGHT');
+    expect(aside.querySelector('.sr-pn-note')!.textContent).toContain('still on step 1, Open');
+    aside.querySelector<HTMLButtonElement>('.sr-back')!.click();
+    expect(aside.querySelector('.sr-ent-head h2')!.textContent).toBe('Sable Wren');
+    panel.openBeat('S1_FIGHT', true); // from the notes: a fresh trail
+    aside.querySelector<HTMLButtonElement>('[data-jump]')!.click();
+    expect(onGo).toHaveBeenCalledWith('S1_FIGHT');
+    expect(aside.querySelector('.sr-group')!.textContent).toBe('Party');
+    // Search finds beats, and Enter opens the top result.
+    const input = aside.querySelector<HTMLInputElement>('.sr-search')!;
+    input.value = 'fig';
+    input.dispatchEvent(new Event('input'));
+    expect(aside.querySelector('[data-beat="S1_FIGHT"]')).not.toBeNull();
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+    expect(aside.querySelector('.sr-pn-crumb')!.textContent).toBe('S1_FIGHT');
+  });
+
+  it('docks on a wide window or slides over on a narrow one, and the pin overrides and is kept', () => {
+    vi.stubGlobal('matchMedia', () => ({ matches: false, addEventListener: () => {} }));
+    localStorage.clear();
+    const d = fixture();
+    const resolve = makeResolver(d.entities);
+    const shell = document.createElement('div');
+    const aside = document.createElement('aside');
+    const pin = document.createElement('button');
+    const panel = mountPanel(aside, d, resolve, (n) => !!resolve(n), { shell, pin });
+    expect(shell.className).toBe('');
+    panel.open('Sable Wren');
+    expect(shell.classList.contains('is-open')).toBe(true);
+    panel.escape();
+    expect(shell.classList.contains('is-open')).toBe(false);
+    expect(aside.querySelector('.sr-ent-head h2')!.textContent).toBe('Sable Wren'); // still there to slide back to
+    pin.click();
+    expect(shell.classList.contains('is-docked')).toBe(true);
+    expect(pin.textContent).toContain('Hide panel');
+    const again = document.createElement('div');
+    mountPanel(document.createElement('aside'), d, resolve, (n) => !!resolve(n), { shell: again });
+    expect(again.classList.contains('is-docked')).toBe(true);
+    localStorage.clear();
   });
 
   it('an unknown name falls through to a search', () => {

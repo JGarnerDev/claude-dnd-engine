@@ -62,6 +62,34 @@ describe('renderRunner', () => {
     expect(current(root)).toBe('PREVIOUSLY');
   });
 
+  it('a beat chip in the notes peeks in the panel without moving, and Jump here moves', () => {
+    const d = fixture();
+    d.scenes[1].md += ' If it turns ugly, `S1_FIGHT`.';
+    renderRunner(root, d);
+    root.querySelector<HTMLButtonElement>('.sr-chip[data-id="S1_WOODS"]')!.click();
+    root.querySelector<HTMLButtonElement>('.sr-main .sr-bref[data-beat="S1_FIGHT"]')!.click();
+    expect(current(root)).toBe('S1_WOODS');
+    expect(root.querySelector('.sr-panel .sr-pn-crumb')!.textContent).toBe('S1_FIGHT');
+    root.querySelector<HTMLButtonElement>('.sr-panel [data-jump="S1_FIGHT"]')!.click();
+    expect(current(root)).toBe('S1_FIGHT');
+  });
+
+  it('searches from the header, and \\ docks or hides the panel', () => {
+    renderRunner(root, fixture());
+    const body = root.querySelector<HTMLElement>('.sr-body')!;
+    const docked = body.classList.contains('is-docked');
+    key('\\');
+    expect(body.classList.contains('is-docked')).toBe(!docked);
+    key('\\');
+    expect(body.classList.contains('is-docked')).toBe(docked);
+    key('/');
+    const input = root.querySelector<HTMLInputElement>('.sr-header .sr-search')!;
+    expect(document.activeElement).toBe(input);
+    input.value = 'ash';
+    input.dispatchEvent(new Event('input'));
+    expect(root.querySelector('.sr-panel .sr-ent-name')!.textContent).toBe('Ashford');
+  });
+
   it('jumps from the rail, and wikilinks in the scene open the panel', () => {
     renderRunner(root, fixture());
     root.querySelector<HTMLButtonElement>('.sr-chip[data-id="S1_WOODS"]')!.click();

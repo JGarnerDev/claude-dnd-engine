@@ -1,8 +1,9 @@
-// Session runner host: header, map rail, the card column and the side panel.
-// Owns the walked path (history) and the keyboard.
+// Session runner host: header (with search), map rail, the card column and the
+// side panel. Owns the walked path (history) and the keyboard.
 //
 // Keys: → / Enter / Space take the first branch · 1–9 pick a branch or aside ·
-// ← / Backspace step back · / focuses search · Esc clears search or closes an entity.
+// ← / Backspace step back · / focuses search · \ docks or hides the panel ·
+// Esc clears search, closes the slide-over, then closes what's open.
 
 import './session.css';
 import { buildGraph, nextOptions } from './flow.js';
@@ -14,6 +15,8 @@ import { mountPanel } from './panel.js';
 import { loadState, saveState } from './store.js';
 import { recordHit, recordReset, undo } from './hp-log.js';
 import { escapeHtml } from './markdown.js';
+import { buildRefIndex, linkRefs } from './refs.js';
+import { peekBeat, peekScene, searchFlow } from './peeks.js';
 import { RECAP_ID, recapHtml, recapText, withRecap } from './recap.js';
 import { openSlides } from './slides.js';
 import { withAchievements } from './achievements.js';
@@ -38,15 +41,25 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
     <div class="sr-root">
       <header class="sr-header">
         <div class="sr-title"><strong>${escapeHtml(s.name)}</strong><span>${escapeHtml(s.date)}</span></div>
+        <div class="sr-searchbox"><input class="sr-search" type="search" autocomplete="off" placeholder="Search people, places, beats, mysteries" aria-label="Search people, places, beats and mysteries" /><kbd>/</kbd></div>
         <div class="sr-actions">
           <button type="button" data-act="back" title="Step back (←)">← Back</button>
           <button type="button" data-act="copy" title="Copy the path walked so far">Copy path</button>
           <button type="button" data-act="restart">Restart</button>
           <a href="/">Timeline</a>
+          <button type="button" class="sr-pin" title="Dock or hide the side panel (\\)"></button>
         </div>
       </header>
       <nav class="sr-rail"></nav>
-      <div class="sr-body"><main class="sr-main"></main><aside class="sr-panel"></aside></div>
+      <div class="sr-body">
+        <main class="sr-main"></main>
+        <nav class="sr-siderail" aria-label="Side panel">
+          <button type="button" data-rail="search" title="Search ( / )" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+          <button type="button" data-rail="home" title="Party and this scene" aria-label="Party and this scene"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.8 3.4-6 6.5-6s5.7 2.2 6.5 6"/><circle cx="17" cy="9" r="2.6"/><path d="M17 14c2.4 0 4 1.6 4.6 4.4"/></svg></button>
+          <button type="button" data-rail="last" title="Last opened" aria-label="Last opened" hidden><svg viewBox="0 0 24 24"><path d="M5 4h10l4 4v12H5z"/><path d="M9 12h7M9 16h5"/></svg><span class="sr-rail-n"></span></button>
+        </nav>
+        <aside class="sr-panel" aria-label="Side panel"></aside>
+      </div>
     </div>`;
   const rail = root.querySelector<HTMLElement>('.sr-rail')!;
   const main = root.querySelector<HTMLElement>('.sr-main')!;
@@ -61,10 +74,27 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
   // The recap card talks about the previous session, which may be the other
   // season's — there, only PCs stay quiet.
   const recapIdx = mentionIndex(data.entities, (e) => e.subtype === 'pc');
-  const panel = mountPanel(root.querySelector<HTMLElement>('.sr-panel')!, data, resolve, known);
   const sceneOf = (id: string | null) => data.scenes.find((x) => x.id === id);
   const combatants = parseCombatants(data.sections.find((x) => /^combatants$/i.test(x.title.trim()))?.md ?? '');
   const titleOf = (id: string) => g.byId.get(id)?.title ?? id;
+  // Beat and scene links are numbered from where the DM stands, so rebuilt per render.
+  let refs = buildRefIndex(data.nodes, data.scenes, '');
+  const panel = mountPanel(root.querySelector<HTMLElement>('.sr-panel')!, data, resolve, known, {
+    search: root.querySelector<HTMLInputElement>('.sr-header .sr-search')!,
+    shell: root.querySelector<HTMLElement>('.sr-body')!,
+    pin: root.querySelector<HTMLButtonElement>('.sr-pin')!,
+    rail: root.querySelector<HTMLElement>('.sr-siderail')!,
+  }, {
+    link: (html) => linkRefs(html, refs),
+    beat: (id) => peekBeat(data, refs, id, known),
+    scene: (key) => peekScene(data, refs, key, known),
+    where: () => {
+      const b = refs.beat(state.history[state.history.length - 1]);
+      return b ? `step ${b.num}, ${b.short}` : 'the current card';
+    },
+    searchFlow: (q) => searchFlow(data, refs, q),
+    onGo: (id) => go(id),
+  });
 
   const state = loadState(s.folder);
   state.history = state.history.filter((id) => g.byId.has(id));
@@ -81,6 +111,7 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
     const scene = sceneOf(node.scene);
     options = nextOptions(g, current, visited, (id) => sceneOf(id)?.title ?? id);
     const inScene = data.nodes.filter((n) => n.scene === node.scene);
+    refs = buildRefIndex(data.nodes, data.scenes, current);
     renderRail(rail, data.nodes, data.scenes, current, visited, go);
     renderScene(main, {
       node,
@@ -91,6 +122,7 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
       options,
       titleOf,
       known,
+      refs,
       closingHook: s.closingHook,
       combatants,
       hp: state.hp,
@@ -148,8 +180,16 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
       openSlides(withSky(withStats(withReputation(withAchievements(withMysteries(prev.slides), prev.achievements), prev.reputation), prev.stats, prev.deckWeight), prev.sky), prev.name);
       return;
     }
-    const link = (ev.target as HTMLElement).closest<HTMLElement>('a.sr-wiki[data-entity]');
-    if (link) panel.open(link.dataset.entity!);
+    const t = ev.target as HTMLElement;
+    const link = t.closest<HTMLElement>('a.sr-wiki[data-entity]');
+    if (link) { panel.open(link.dataset.entity!, true); return; }
+    // A beat or scene chip peeks in the panel; the beat the DM is on just scrolls into view.
+    const beat = t.closest<HTMLElement>('.sr-bref[data-beat]')?.dataset.beat;
+    if (beat && beat === state.history[state.history.length - 1]) {
+      main.querySelector(`.sr-step[data-id="${beat}"]`)?.scrollIntoView?.({ block: 'start', behavior: 'smooth' });
+    } else if (beat) panel.openBeat(beat, true);
+    const scene = t.closest<HTMLElement>('.sr-bref[data-scene]')?.dataset.scene;
+    if (scene) panel.openScene(scene, true);
   });
 
   document.addEventListener('keydown', (ev) => {
@@ -157,6 +197,7 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
     if (ev.key === 'Escape') { panel.escape(); return; }
     if (t.matches('input, textarea') || ev.ctrlKey || ev.metaKey || ev.altKey) return;
     if (ev.key === '/') { ev.preventDefault(); panel.focusSearch(); return; }
+    if (ev.key === '\\') { ev.preventDefault(); panel.toggleDock(); return; }
     if (t.matches('button, summary') && (ev.key === 'Enter' || ev.key === ' ')) return;
     const primary = options.find((o) => o.kind !== 'aside');
     if ((ev.key === 'ArrowRight' || ev.key === 'Enter' || ev.key === ' ') && primary) { ev.preventDefault(); go(primary.to); }

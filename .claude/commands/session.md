@@ -289,6 +289,8 @@ Everyone the plan puts in front of the party gets a real name, walk-ons and name
 - **Narration** — if `depth: narrated`, include a `> *"..."*` blockquote for the key moment of the scene; if `depth: notes`, omit
 - **Transition** — one line on what triggers the move to the next scene or a likely detour
 
+**Labels set the voice.** The session runner shows each node as a prompt book, one block per bullet, tagged by its bold label: `Tokens:`, `Music:`, `Title card:` or `Set HP…:` is **Do** (the table or Roll20); a label with *read aloud*, *say* or *line(s)*, a bullet that opens on a quoted line, or a `>` quote is **Say**; `When …:`, `If …:`, `Once …:` or `After …:` is **Watch**; `Choice (…):` is **Choice**; anything else is for the DM. So give each bullet a short label ending in a colon, and put spoken lines in `*"…"*`. Backticked beat ids (`` `S2_ESCAPE` ``) and "Scene N" become links that open in the side panel.
+
 **No provenance in scenes.** Who decided a beat and when (`(Jeff, 2026-10-07)`, `Engine, …; committed …`) goes in the Engine notes, not in scene prose. The runner strips any it finds, but a beat should read clean in the file too.
 
 **Choices bullet:** the count was settled at the spine. List every choice point by node in a **Choices** bullet in the plan's Engine notes.

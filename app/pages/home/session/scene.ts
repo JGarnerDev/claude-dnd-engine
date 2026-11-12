@@ -1,13 +1,19 @@
 // The main column: one page per scene. The scene header (summary, where, cast,
-// DCs, enemies), any read-aloud text from the setup, the beats as steps, and a
-// Tokens toggle with the scene's Roll20 cues. The recap card keeps its own body.
+// DCs, enemies), any read-aloud text from the setup, the beats as steps (each a
+// prompt book), and a Tokens toggle with the scene's Roll20 cues. Beat ids and
+// "Scene N" become chips that open in the side panel (refs.ts). With enemies on
+// the page, a strip of HP chips floats at the top once the Enemies box scrolls
+// away. The recap card keeps its own body.
 
-import { escapeHtml, extractCallouts, inline, nodeHeadings, renderMarkdown, splitNodeSections } from './markdown.js';
+import { escapeHtml, extractCallouts, inline, nodeHeadings, plainText, renderMarkdown, splitNodeSections } from './markdown.js';
 import type { Known } from './markdown.js';
 import type { NextOption } from './flow.js';
 import { parseSceneHeader } from './scene-header.js';
 import { hpLogHtml, sceneHeadHtml, undoResetIndex } from './scene-head.js';
 import { stepsHtml } from './steps.js';
+import { promptBookHtml } from './prompt-book.js';
+import { linkRefs } from './refs.js';
+import type { RefIndex } from './refs.js';
 import { stripProvenance } from './provenance.js';
 import { applyHp } from './combatants.js';
 import { roll, rollDetailHtml } from './dice.js';
@@ -26,6 +32,7 @@ export interface SceneView {
   options: NextOption[];
   titleOf: (id: string) => string;
   known: Known;
+  refs: RefIndex; // beat and scene links
   closingHook: string;
   combatants: StatBlock[];
   hp: HpMap; // current enemy HP by enemy entry; missing = its known starting HP
@@ -63,9 +70,9 @@ function setupHtml(rest: string, open: boolean, known: Known): string {
   if (!rest) return '';
   const lines = rest.split('\n');
   const aloud = lines.filter((l) => l.trimStart().startsWith('>')).join('\n');
-  const other = stripProvenance(lines.filter((l) => !l.trimStart().startsWith('>')).join('\n')).trim();
+  const other = lines.filter((l) => !l.trimStart().startsWith('>')).join('\n').trim();
   return (aloud ? `<div class="sr-md sr-aloud">${renderMarkdown(aloud, known)}</div>` : '')
-    + (other ? `<details class="sr-setup"${open ? ' open' : ''}><summary>Scene notes</summary><div class="sr-md">${renderMarkdown(other, known)}</div></details>` : '');
+    + (other ? `<details class="sr-setup"${open ? ' open' : ''}><summary>Scene notes</summary>${promptBookHtml(other, known)}</details>` : '');
 }
 
 function tokensHtml(v: SceneView, prose: Map<string, string>): string {
@@ -85,7 +92,8 @@ export function renderScene(main: HTMLElement, v: SceneView): void {
   const time = header.time ? `<span class="sr-scene-time">${escapeHtml(header.time)}</span>` : '';
   const body = v.bodyHtml !== undefined
     ? `<h1 class="sr-card-title">${inline(v.node.title, v.known)}</h1><div class="sr-card-body">${v.bodyHtml}</div>${optionsHtml(v)}`
-    : `${sceneHeadHtml(header, v.combatants, v.known, v.hp, v.hpLog, hpLogOpen)}
+    : `${header.enemies.length ? '<div class="sr-strip-dock"><div class="sr-strip" aria-label="Enemy HP"></div></div>' : ''}
+       ${sceneHeadHtml(header, v.combatants, v.known, v.hp, v.hpLog, hpLogOpen)}
        ${setupHtml(header.rest, prose.size === 0, v.known)}
        ${stepsHtml({ nodes: v.sceneNodes, prose, headings: nodeHeadings(v.scene?.md ?? ''), current: v.node.id, visited: v.visited, known: v.known, optionsHtml: optionsHtml(v) })}
        ${tokensHtml(v, prose)}`;
@@ -99,7 +107,7 @@ export function renderScene(main: HTMLElement, v: SceneView): void {
         <h2 class="sr-scene-title">${escapeHtml(title)}</h2>
         <span class="sr-scene-pos">${time}${escapeHtml(v.position)}</span>
       </header>
-      ${body}
+      ${linkRefs(body, v.refs)}
     </article>`;
 
   main.querySelectorAll<HTMLButtonElement>('.sr-opt, .sr-step-head').forEach((b) => b.addEventListener('click', () => {
@@ -147,33 +155,41 @@ function wireHp(main: HTMLElement, v: SceneView, entries: readonly string[]): vo
     ev.preventDefault();
     v.onHpUndo(Number(b.dataset.undo));
   });
+  const boxes = [...main.querySelectorAll<HTMLElement>('.sr-hp')];
+  const strip = wireStrip(main, boxes, (entry, typed) => {
+    const box = boxes.find((b) => b.dataset.entry === entry);
+    return box ? hit(box, typed) : false;
+  });
   const show = (box: HTMLElement, cur: number) => {
     box.querySelector('.sr-hp-val b')!.textContent = String(cur);
     box.closest('.sr-enemy')?.classList.toggle('is-down', cur <= 0);
   };
-  main.querySelectorAll<HTMLElement>('.sr-hp').forEach((box) => {
-    const entry = box.dataset.entry!;
+  // One hit, typed in the Enemies box or in the strip: the box holds the number.
+  const hit = (box: HTMLElement, typed: string): boolean => {
     const max = Number(box.dataset.max);
     const start = Number(box.dataset.start ?? max);
+    const cur = Number(box.querySelector('.sr-hp-val b')!.textContent);
+    const next = applyHp(cur, max, typed);
+    if (next === null) return false;
+    show(box, next);
+    v.onHpHit(box.dataset.entry!, typed.trim(), cur, next, start);
+    refreshLog();
+    strip.refresh();
+    return true;
+  };
+  boxes.forEach((box) => {
     const input = box.querySelector<HTMLInputElement>('.sr-hp-in')!;
     box.addEventListener('click', (ev) => ev.preventDefault());
     input.addEventListener('keyup', (ev) => { if (ev.key === ' ') ev.preventDefault(); });
     input.addEventListener('keydown', (ev) => {
       if (ev.key !== 'Enter') return;
       ev.preventDefault();
-      const cur = Number(box.querySelector('.sr-hp-val b')!.textContent);
-      const next = applyHp(cur, max, input.value);
-      if (next === null) return;
-      const typed = input.value.trim();
-      input.value = '';
-      show(box, next);
-      v.onHpHit(entry, typed, cur, next, start);
-      refreshLog();
+      if (hit(box, input.value)) input.value = '';
     });
   });
   main.querySelector('.sr-hp-reset')?.addEventListener('click', () => {
     const before: Record<string, number> = {};
-    main.querySelectorAll<HTMLElement>('.sr-hp').forEach((box) => {
+    boxes.forEach((box) => {
       const cur = Number(box.querySelector('.sr-hp-val b')!.textContent);
       const start = Number(box.dataset.start ?? box.dataset.max);
       if (cur !== start) before[box.dataset.entry!] = cur;
@@ -181,7 +197,56 @@ function wireHp(main: HTMLElement, v: SceneView, entries: readonly string[]): vo
     });
     v.onHpReset(before);
     refreshLog();
+    strip.refresh();
   });
+}
+
+// The strip: one chip per enemy with an HP box, colored by how hurt it is. A click
+// opens a damage box for that enemy right in the strip, so damage goes in wherever
+// the DM has scrolled. It shows once the Enemies box is out of view.
+let stripPick = '';
+
+const shortName = (entry: string) => plainText(/\(([^)]+)\)\s*$/.exec(entry)?.[1] ?? entry);
+const band = (cur: number, max: number) => (cur <= 0 ? 'down' : cur <= max / 4 ? 'low' : cur <= max / 2 ? 'hurt' : 'ok');
+
+function wireStrip(main: HTMLElement, boxes: HTMLElement[], hit: (entry: string, typed: string) => boolean): { refresh: () => void } {
+  const strip = main.querySelector<HTMLElement>('.sr-strip');
+  if (!strip || !boxes.length) return { refresh: () => {} };
+  const read = (b: HTMLElement) => ({ entry: b.dataset.entry!, cur: Number(b.querySelector('.sr-hp-val b')!.textContent), max: Number(b.dataset.max) });
+  if (!boxes.some((b) => b.dataset.entry === stripPick)) stripPick = '';
+  const refresh = () => {
+    const picked = boxes.map(read).find((e) => e.entry === stripPick);
+    strip.innerHTML = `
+      <div class="sr-strip-chips">${boxes.map(read).map((e) => `
+        <button type="button" class="sr-hpchip is-${band(e.cur, e.max)}${e.entry === stripPick ? ' is-picked' : ''}" data-entry="${escapeHtml(e.entry)}" title="${escapeHtml(plainText(e.entry))}: type damage">
+          <i></i>${escapeHtml(shortName(e.entry))} <b>${e.cur}</b>/${e.max}</button>`).join('')}
+      </div>
+      ${picked ? `<label class="sr-strip-quick"><span>${escapeHtml(plainText(picked.entry))}</span>
+        <input class="sr-strip-in" type="text" inputmode="numeric" size="5" placeholder="dmg" title="12 or -12 deals damage · +5 heals · =40 sets · Enter applies · Esc closes" aria-label="Damage or heal for ${escapeHtml(plainText(picked.entry))}"></label>` : ''}`;
+  };
+  strip.addEventListener('click', (ev) => {
+    const chip = (ev.target as Element).closest<HTMLElement>('.sr-hpchip');
+    if (!chip) return;
+    stripPick = stripPick === chip.dataset.entry ? '' : chip.dataset.entry!;
+    refresh();
+    strip.querySelector<HTMLInputElement>('.sr-strip-in')?.focus();
+  });
+  strip.addEventListener('keydown', (ev) => {
+    const input = (ev.target as Element).closest<HTMLInputElement>('.sr-strip-in');
+    if (!input) return;
+    if (ev.key === 'Escape') { ev.stopPropagation(); stripPick = ''; refresh(); return; }
+    if (ev.key !== 'Enter') return;
+    ev.preventDefault();
+    if (hit(stripPick, input.value)) strip.querySelector<HTMLInputElement>('.sr-strip-in')?.focus();
+  });
+  refresh();
+  // Hidden while the Enemies box is on screen; always shown where there's no observer.
+  const box = main.querySelector('.sr-enemies');
+  const dock = strip.parentElement!;
+  if (box && typeof IntersectionObserver !== 'undefined') {
+    new IntersectionObserver(([e]) => dock.classList.toggle('is-shown', !e.isIntersecting), { root: main }).observe(box);
+  } else dock.classList.add('is-shown');
+  return { refresh };
 }
 
 // Dice buttons sit in the enemy rows' <summary> too, so a click rolls without toggling

@@ -5,6 +5,7 @@ import type { SceneView } from './scene.js';
 import { parseCombatants } from './combatants.js';
 import { recordHit, recordReset } from './hp-log.js';
 import type { HpState } from './hp-log.js';
+import { buildRefIndex } from './refs.js';
 import type { FlowNode } from './types.js';
 
 const n = (id: string, kind = 'social', title = id): FlowNode => ({ id, marker: 'committed', kind, scene: 'SC1', title, lines: [], notes: [] });
@@ -46,6 +47,7 @@ function view(over: Partial<SceneView> = {}): SceneView {
     options: [{ to: 'S1_FIGHT', label: 'go', kind: 'edge' }, { to: 'S1_OPEN', label: 'stay', kind: 'edge' }],
     titleOf: (id) => `title of ${id}`,
     known: () => true,
+    refs: buildRefIndex([n('S1_OPEN', 'social', 'Open'), ask, fight], [{ id: 'SC1', key: '1', title: 'Scene 1 · The Night', md }], 'S1_ASK'),
     closingHook: 'The end.',
     combatants,
     hp: {},
@@ -70,7 +72,7 @@ describe('renderScene', () => {
     expect(main.querySelector('.sr-enemy-stats')!.textContent).toBe('AC 13 · HP 16');
     expect(main.querySelector('.sr-aloud blockquote')!.textContent).toContain('Read this aloud.');
     expect(main.querySelector('.sr-sh-val')!.textContent).toBe('the inn');
-    expect(main.querySelector('.sr-setup')!.textContent).toContain('use the indoors map');
+    expect(main.querySelector('.sr-setup')!.textContent).toContain('Use the indoors map');
   });
 
   it('tracks enemy HP in place: damage, down at 0, saved per entry, and reset', () => {
@@ -139,6 +141,35 @@ describe('renderScene', () => {
     expect(onHpUndo).toHaveBeenCalledWith(1);
   });
 
+  it('mirrors enemy HP in the strip, where damage goes in without scrolling back to the box', () => {
+    const main = document.createElement('main');
+    const onHpHit = vi.fn();
+    renderScene(main, view({ onHpHit }));
+    const chip = () => main.querySelector<HTMLButtonElement>('.sr-strip .sr-hpchip')!;
+    expect(chip().textContent!.replace(/\s+/g, ' ').trim()).toBe('Ilsa Hask 16/16');
+    chip().click();
+    const quick = main.querySelector<HTMLInputElement>('.sr-strip-in')!;
+    quick.value = '10';
+    quick.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    expect(onHpHit).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', '10', 16, 6, 16);
+    expect(main.querySelector('.sr-enemies .sr-hp-val b')!.textContent).toBe('6');
+    expect(chip().classList.contains('is-hurt')).toBe(true);
+    expect(main.querySelector('.sr-hplog summary')!.textContent).toBe('HP log (0)'); // the view's log is the runner's
+    // Damage typed in the box shows on the chip too.
+    const input = main.querySelector<HTMLInputElement>('.sr-enemies .sr-hp-in')!;
+    input.value = '6';
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+    expect(chip().classList.contains('is-down')).toBe(true);
+  });
+
+  it('links beat ids in the notes to their steps', () => {
+    const main = document.createElement('main');
+    renderScene(main, view({ scene: { id: 'SC1', key: '1', title: 'Scene 1 · The Night', md: md.replace('go or stay.', 'go (`S1_FIGHT`) or stay.') } }));
+    const chip = main.querySelector<HTMLElement>('.sr-pb-choice .sr-bref')!;
+    expect(chip.dataset.beat).toBe('S1_FIGHT');
+    expect(chip.querySelector('.sr-bref-n')!.textContent).toBe('3');
+  });
+
   it('rolls an enemy attack into the log without opening its stat block, and keeps the log across renders', () => {
     const main = document.createElement('main');
     renderScene(main, view());
@@ -160,16 +191,18 @@ describe('renderScene', () => {
     expect(clear.hidden).toBe(true);
   });
 
-  it('opens only the current step, with intro and choice, and hides tokens and provenance', () => {
+  it('opens only the current step as a prompt book, in plan order, without provenance', () => {
     const main = document.createElement('main');
     renderScene(main, view());
     const steps = [...main.querySelectorAll<HTMLElement>('.sr-step')];
     expect(steps.map((s) => s.className)).toEqual(['sr-step is-done', 'sr-step is-current', 'sr-step is-todo']);
     expect(steps[0].querySelector('.sr-step-num')!.textContent).toBe('✓');
     const body = steps[1].querySelector('.sr-step-body')!;
+    expect([...body.querySelectorAll('.sr-pb')].map((b) => b.className)).toEqual(['sr-pb sr-pb-do', 'sr-pb sr-pb-intro', 'sr-pb sr-pb-choice', 'sr-pb sr-pb-you']);
+    expect(body.querySelector('.sr-pb-do')!.textContent).toContain('Mara at the door');
     expect(body.querySelector('.sr-intro-name')!.textContent).toContain('Mara, sheriff');
-    expect(body.querySelector('li.sr-choice')!.textContent).toContain('go or stay');
-    expect(body.textContent).not.toContain('Mara at the door');
+    expect(body.querySelector('.sr-pb-choice .sr-pb-text')!.textContent).toBe('Go or stay.');
+    expect(body.querySelector('.sr-pb-choice small')!.textContent).toBe('party');
     expect(body.textContent).not.toContain('2026');
     expect(body.textContent).toContain('A small choice.');
     expect(steps[2].querySelector('.sr-mark')!.textContent).toBe('⚔');
