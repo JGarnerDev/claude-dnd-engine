@@ -1,0 +1,108 @@
+<title>Tithe Boss Track Brief</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;700&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, cue timeline as a stepped list, spec facts as label/value rows */
+:root {
+  --bg: #eef0f1;
+  --panel: #f8f9f9;
+  --fg: #1f2629;
+  --muted: #5a666b;
+  --rule: #cfd5d8;
+  --accent: #9a6a1e;
+  --display: "Spectral", Georgia, serif;
+  --body: "Public Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161b1d; --panel: #1e2427; --fg: #e3e7e8; --muted: #9aa6ab; --rule: #333c40; --accent: #d9a24a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161b1d; --panel: #1e2427; --fg: #e3e7e8; --muted: #9aa6ab; --rule: #333c40; --accent: #d9a24a;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--body); padding-inline: 16px; padding-block: 40px 64px; }
+main { max-width: 42rem; margin: 0 auto; display: grid; gap: 40px; }
+header { display: grid; gap: 8px; }
+.eyebrow { font: 500 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+h1 { font: 700 2.4rem/1.1 var(--display); margin: 0; text-wrap: balance; }
+h2 { font: 700 1.4rem/1.2 var(--display); margin: 0 0 12px; text-wrap: balance; }
+p { margin: 0; }
+section { display: grid; gap: 12px; }
+.lede { color: var(--muted); font-size: 1.05rem; }
+ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.facts { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.facts div { display: grid; grid-template-columns: 9rem 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.facts dt { font: 500 12px/1.6 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 0; min-width: 0; }
+.cues { list-style: none; padding: 0; display: grid; gap: 0; counter-reset: cue; }
+.cues li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.cues .when { font: 500 13px/1.5 var(--mono); color: var(--accent); }
+.cues strong { display: block; }
+blockquote { margin: 0; padding: 16px 20px; background: var(--panel); border-left: 3px solid var(--accent); font-style: italic; }
+.prompt { background: var(--panel); border: 1px solid var(--rule); padding: 16px; font: 14px/1.6 var(--mono); white-space: pre-wrap; overflow-x: auto; }
+.note { font-size: 14px; color: var(--muted); }
+@media (max-width: 520px) {
+  .facts div, .cues li { grid-template-columns: 1fr; gap: 4px; }
+  h1 { font-size: 2rem; }
+}
+</style>
+
+<main>
+  <header>
+    <span class="eyebrow">Music brief · Redwater, Session 34 · runs 2026-11-17</span>
+    <h1>Tithe, Death from the Grey</h1>
+    <p class="lede">We need one boss track for a D&amp;D fight against a griffon named Tithe. This page is the whole brief: the scene, how the music gets used at the table, and what to send back.</p>
+  </header>
+
+  <section>
+    <h2>The job</h2>
+    <dl class="facts">
+      <div><dt>Use</dt><dd>Boss music for an online D&amp;D session, played through the Roll20 Jukebox while five players and the DM talk over it.</dd></div>
+      <div><dt>Plays for</dt><dd>One fight of about 3 to 5 rounds, which is roughly 30 to 60 minutes of real time. It has to loop without a noticeable seam, or run long.</dd></div>
+      <div><dt>Starts</dt><dd>On the griffon's scream, right after its entrance is read aloud and its title card goes up.</dd></div>
+      <div><dt>Ends</dt><dd>Cut dead the moment Tithe dies. No outro is needed. The next sound at the table is a whistle in silence.</dd></div>
+      <div><dt>Must be</dt><dd>Instrumental. No lyrics, no spoken words, and no long quiet stretches, since the DM is narrating over it.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>The scene</h2>
+    <p>Grey mid-morning at a drovers' waystation on a frontier road: a long shed, a corral of panicking horses, a wrecked cart, mud, and a cold fast river behind a ridge. A low cloud sits about 100 feet over the yard, and mist lifts off the water.</p>
+    <p>The party has already been fighting a crew of cask thieves. Then their sniper, Nella, lands her griffon on the ridge, steps off, pulls its hood and says two words: <em>"Tithe. Hunt."</em> It goes straight back up into the cloud.</p>
+    <p>From then on Tithe is a predator nobody can see. It circles inside the cloud, drops out of it onto whoever is in the open, grabs them in its talons, carries them 40 feet up, and lets go. Nobody on the ground can reach it. Riders are coming up the south road at the same time. The party is hurt and outnumbered, and the danger is overhead.</p>
+    <blockquote>"Right over your head, the bottom of the cloud tears open and the griffon comes through it wings-first, and the wings keep opening, wider than the cart is long. … It lifts its head slowly, the way a hawk does on a falconer's glove, and gold eyes the size of your fist settle on you. It's in no hurry. Then it screams, and comes at you talons first."</blockquote>
+    <p class="note">From the entrance read-aloud. The music starts on that last scream.</p>
+  </section>
+
+  <section>
+    <h2>How the fight changes</h2>
+    <ol class="cues">
+      <li><span class="when">Phase 1</span><div><strong>Hunted from above.</strong> Tithe hides in the cloud and strikes, snatches, and climbs away. Dread from overhead, a sense of something circling. The party can only guess where it is.</div></li>
+      <li><span class="when">Turn</span><div><strong>The sky breaks.</strong> One of the PCs opens radiant wings, flies up after the griffon, and lights the cloud white from below. Tithe can't hide any more. The track doesn't need a separate section for this, but it should be able to carry a moment where the party fights back.</div></li>
+      <li><span class="when">Phase 2</span><div><strong>Wounded and grounded.</strong> At half health one wing tears. Tithe crashes into the yard, won't go back up, and fights to the death on the ground. Reckless and close. It is a great animal dying, not a villain.</div></li>
+      <li><span class="when">Kill</span><div><strong>Silence.</strong> The DM cuts the track the instant it falls. A separate quiet track plays later for the ride home; that isn't part of this request.</div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Mood</h2>
+    <ul>
+      <li><strong>Aim for:</strong> predatory, airborne, relentless. Big wingbeats in the percussion, a sense of altitude and wind. Urgent enough to feel like a boss, grim enough for a grey sky and a muddy yard.</li>
+      <li><strong>Tithe is a beast, not evil.</strong> It's a borrowed mount doing what it was told. Weight and wildness suit it better than menace or horror.</li>
+      <li><strong>Avoid:</strong> gothic organ, horror stingers and vampire-castle textures (the group's other campaign is Curse of Strahd, and this one should sound different). Also avoid triumphant hero fanfare, since the party is losing for most of this fight, and anything with sung lyrics.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What to send back</h2>
+    <ul>
+      <li><strong>Existing tracks:</strong> 3 to 5 candidates (game or film scores, royalty-free libraries), each with a link, its length, whether it loops cleanly, and one line on why it fits this scene.</li>
+      <li><strong>Or a generation prompt</strong> for a music model, if that's the route. A starting point:</li>
+    </ul>
+    <div class="prompt">Instrumental fantasy boss battle, loopable, no vocals. Driving low war drums like heavy wingbeats, gusting wind textures, tense high strings circling overhead, sharp brass stabs like a raptor's cry. Grey, cold, open-sky dread rather than horror. Steady intensity with no quiet breakdowns. Around 130 BPM, 3+ minutes, seamless loop point.</div>
+    <p class="note">The DM is Jeff. He picks the final track and loads it into the Roll20 Jukebox himself.</p>
+  </section>
+</main>

@@ -56,3 +56,7 @@ craig-*.zip
 # Downloaded model weights (ECAPA speaker embeddings for diarize-track.py). Fetched on
 # first run, same as the Whisper model -- rebuilt from upstream, never committed.
 .models/
+
+# Local-only Claude instructions and generated music (not shared)
+CLAUDE.local.md
+music/
