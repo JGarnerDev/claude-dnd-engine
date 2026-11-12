@@ -6,7 +6,7 @@ import { escapeHtml, extractCallouts, inline, nodeHeadings, renderMarkdown, spli
 import type { Known } from './markdown.js';
 import type { NextOption } from './flow.js';
 import { parseSceneHeader } from './scene-header.js';
-import { sceneHeadHtml } from './scene-head.js';
+import { hpLogHtml, sceneHeadHtml, undoResetIndex } from './scene-head.js';
 import { stepsHtml } from './steps.js';
 import { stripProvenance } from './provenance.js';
 import { applyHp } from './combatants.js';
@@ -14,6 +14,7 @@ import { roll, rollDetailHtml } from './dice.js';
 import type { Roll, RollKind, RollMode } from './dice.js';
 import type { StatBlock } from './combatants.js';
 import type { HpMap } from './scene-head.js';
+import type { HpLogEntry } from './hp-log.js';
 import type { FlowNode, Scene } from './types.js';
 
 export interface SceneView {
@@ -27,12 +28,15 @@ export interface SceneView {
   known: Known;
   closingHook: string;
   combatants: StatBlock[];
-  hp: HpMap; // current enemy HP by enemy entry; missing = full
+  hp: HpMap; // current enemy HP by enemy entry; missing = its known starting HP
+  hpLog: readonly HpLogEntry[]; // every HP entry (hp-log.ts); the runner owns it
   tokensOpen: boolean;
   bodyHtml?: string; // the recap card's body, in place of steps
   onGo: (id: string) => void;
   onTokensToggle: (open: boolean) => void;
-  onHp: (entry: string, value: number | null) => void; // null = back to its known starting HP
+  onHpHit: (entry: string, input: string, before: number, after: number, start: number) => void;
+  onHpReset: (before: Record<string, number>) => void; // the values the reset wipes
+  onHpUndo: (index: number) => void; // undo one log entry; the runner re-renders
 }
 
 function optionsHtml(v: SceneView): string {
@@ -81,7 +85,7 @@ export function renderScene(main: HTMLElement, v: SceneView): void {
   const time = header.time ? `<span class="sr-scene-time">${escapeHtml(header.time)}</span>` : '';
   const body = v.bodyHtml !== undefined
     ? `<h1 class="sr-card-title">${inline(v.node.title, v.known)}</h1><div class="sr-card-body">${v.bodyHtml}</div>${optionsHtml(v)}`
-    : `${sceneHeadHtml(header, v.combatants, v.known, v.hp)}
+    : `${sceneHeadHtml(header, v.combatants, v.known, v.hp, v.hpLog, hpLogOpen)}
        ${setupHtml(header.rest, prose.size === 0, v.known)}
        ${stepsHtml({ nodes: v.sceneNodes, prose, headings: nodeHeadings(v.scene?.md ?? ''), current: v.node.id, visited: v.visited, known: v.known, optionsHtml: optionsHtml(v) })}
        ${tokensHtml(v, prose)}`;
@@ -108,7 +112,7 @@ export function renderScene(main: HTMLElement, v: SceneView): void {
       setTimeout(() => { b.textContent = 'Copy'; b.classList.remove('is-copied'); }, 1500);
     });
   }));
-  wireHp(main, v);
+  wireHp(main, v, header.enemies);
   wireRolls(main);
   const tokens = main.querySelector<HTMLDetailsElement>('.sr-tokens-box');
   tokens?.addEventListener('toggle', () => v.onTokensToggle(tokens.open));
@@ -117,9 +121,32 @@ export function renderScene(main: HTMLElement, v: SceneView): void {
 }
 
 // The HP boxes sit inside each enemy row's <summary>, so clicks and keys in them must
-// not toggle the stat block open. Updates land in place (no re-render), so an open
-// stat block and the scroll position survive a hit.
-function wireHp(main: HTMLElement, v: SceneView): void {
+// not toggle the stat block open. Hits and resets land in place (no re-render), so an
+// open stat block and the scroll position survive; the HP log redraws beside them.
+// Undo goes through the runner, which re-renders. The log's open state outlives renders.
+let hpLogOpen = false;
+
+function wireHp(main: HTMLElement, v: SceneView, entries: readonly string[]): void {
+  const enemies = main.querySelector<HTMLElement>('.sr-enemies');
+  const refreshLog = () => {
+    const log = main.querySelector<HTMLDetailsElement>('.sr-hplog');
+    if (log) log.outerHTML = hpLogHtml(v.hpLog, entries, log.open);
+    const undoReset = main.querySelector<HTMLButtonElement>('.sr-hp-undo-reset');
+    if (undoReset) {
+      const at = undoResetIndex(v.hpLog, entries);
+      undoReset.dataset.undo = String(at);
+      undoReset.hidden = at < 0;
+    }
+  };
+  enemies?.addEventListener('toggle', (ev) => {
+    if ((ev.target as Element).matches?.('.sr-hplog')) hpLogOpen = (ev.target as HTMLDetailsElement).open;
+  }, true);
+  enemies?.addEventListener('click', (ev) => {
+    const b = (ev.target as Element).closest<HTMLButtonElement>('button[data-undo]');
+    if (!b || b.disabled || Number(b.dataset.undo) < 0) return;
+    ev.preventDefault();
+    v.onHpUndo(Number(b.dataset.undo));
+  });
   const show = (box: HTMLElement, cur: number) => {
     box.querySelector('.sr-hp-val b')!.textContent = String(cur);
     box.closest('.sr-enemy')?.classList.toggle('is-down', cur <= 0);
@@ -137,16 +164,23 @@ function wireHp(main: HTMLElement, v: SceneView): void {
       const cur = Number(box.querySelector('.sr-hp-val b')!.textContent);
       const next = applyHp(cur, max, input.value);
       if (next === null) return;
+      const typed = input.value.trim();
       input.value = '';
       show(box, next);
-      v.onHp(entry, next === start ? null : next);
+      v.onHpHit(entry, typed, cur, next, start);
+      refreshLog();
     });
   });
   main.querySelector('.sr-hp-reset')?.addEventListener('click', () => {
+    const before: Record<string, number> = {};
     main.querySelectorAll<HTMLElement>('.sr-hp').forEach((box) => {
-      show(box, Number(box.dataset.start ?? box.dataset.max));
-      v.onHp(box.dataset.entry!, null);
+      const cur = Number(box.querySelector('.sr-hp-val b')!.textContent);
+      const start = Number(box.dataset.start ?? box.dataset.max);
+      if (cur !== start) before[box.dataset.entry!] = cur;
+      show(box, start);
     });
+    v.onHpReset(before);
+    refreshLog();
   });
 }
 

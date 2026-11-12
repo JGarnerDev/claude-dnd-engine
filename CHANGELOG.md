@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.65.0] — 2026-11-12
+
+### Added
+
+- **HP log in the session runner** (`app/pages/home/session/hp-log.ts`, `scene-head.ts`, `scene.ts`, `runner.ts`, `store.ts`). Every enemy HP entry is logged with the time, the enemy, what was typed and before → after, in an **HP log** under each scene's Enemies box. Each entry has an Undo, offered while nothing newer has touched that enemy, so undo walks one enemy's history back in order. The log survives a reload and no reset clears it, which brings the runner in line with root `CLAUDE.md` → Enemy HP. First stage of the scene-notes overhaul.
+
+### Changed
+
+- **Reset HP and Restart can be undone.** Both are log entries holding the values they wiped. An **Undo reset** button appears by Reset HP, and Restart's numbers come back from the log of any scene they touched.
+
 ## [0.64.0] — 2026-11-12
 
 ### Added

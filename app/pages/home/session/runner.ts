@@ -12,6 +12,7 @@ import { parseCombatants } from './combatants.js';
 import { renderRail } from './rail.js';
 import { mountPanel } from './panel.js';
 import { loadState, saveState } from './store.js';
+import { recordHit, recordReset, undo } from './hp-log.js';
 import { escapeHtml } from './markdown.js';
 import { RECAP_ID, recapHtml, recapText, withRecap } from './recap.js';
 import { openSlides } from './slides.js';
@@ -93,14 +94,19 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
       closingHook: s.closingHook,
       combatants,
       hp: state.hp,
+      hpLog: state.hpLog,
       tokensOpen: state.tokensOpen,
       onGo: go,
       onTokensToggle: (open) => { state.tokensOpen = open; saveState(s.folder, state); },
-      onHp: (entry, value) => {
-        if (value === null) delete state.hp[entry];
-        else state.hp[entry] = value;
+      onHpHit: (entry, input, before, after, start) => {
+        recordHit(state, entry, input, before, after, start);
         saveState(s.folder, state);
       },
+      onHpReset: (before) => {
+        recordReset(state, 'Reset HP', before);
+        saveState(s.folder, state);
+      },
+      onHpUndo: (i) => { if (undo(state, i)) render(); },
       bodyHtml: current === RECAP_ID ? recapHtml(data, known) : undefined,
     });
     const isRecap = current === RECAP_ID;
@@ -126,9 +132,9 @@ export function renderRunner(root: HTMLElement, raw: SessionData | null): void {
   root.querySelector('.sr-actions')!.addEventListener('click', (ev) => {
     const act = (ev.target as HTMLElement).closest<HTMLElement>('[data-act]')?.dataset.act;
     if (act === 'back') back();
-    if (act === 'restart' && confirm('Restart the session from the first card? The path walked so far and enemy HP are cleared.')) {
+    if (act === 'restart' && confirm('Restart the session from the first card? The path walked so far is cleared and enemy HP goes back to its start. The HP log keeps the old numbers, and Undo there brings them back.')) {
       state.history = [g.start!];
-      state.hp = {};
+      recordReset(state, 'Restart', { ...state.hp });
       render();
     }
     if (act === 'copy') {

@@ -104,6 +104,19 @@
 .sr-roll-entry.is-nat1 .sr-roll-total { color: var(--sr-k-combat); }
 .sr-roll-detail { font-variant-numeric: tabular-nums; opacity: 0.8; }
 .sr-roll-detail s { opacity: 0.6; }
+.sr-hp-undo-reset { font-size: 11.5px; padding: 1px 8px; background: transparent; color: var(--sr-accent); border: 1px solid var(--sr-accent); border-radius: 4px; cursor: pointer; }
+.sr-hp-undo-reset[hidden] { display: none; }
+.sr-hplog { margin-top: 8px; font-size: 13px; }
+.sr-hplog > summary { cursor: pointer; color: var(--sr-muted); padding: 2px 0; }
+.sr-hplog ol { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 2px; max-height: 200px; overflow-y: auto; }
+.sr-hplog li { display: grid; grid-template-columns: 4.6em 1fr auto; gap: 8px; align-items: baseline; font-variant-numeric: tabular-nums; }
+.sr-hplog li.is-undone .sr-hplog-what { text-decoration: line-through; opacity: 0.5; }
+.sr-hplog-at { color: var(--sr-muted); }
+.sr-hplog-undo { font-size: 11.5px; padding: 0 8px; background: transparent; color: var(--sr-muted); border: 1px solid var(--sr-line); border-radius: 4px; cursor: pointer; }
+.sr-hplog-undo:hover:not([disabled]) { color: var(--sr-text); background: var(--sr-surface); }
+.sr-hplog-undo[disabled] { opacity: 0.4; cursor: default; }
+.sr-hplog-tag { font-size: 11.5px; color: var(--sr-muted); }
+.sr-hplog-empty { color: var(--sr-muted); margin: 4px 0 0; }
 .sr-enemy.is-unmatched { padding: 5px 0; font-size: 14px; }
 .sr-enemy-block { padding: 4px 0 10px 14px; border-left: 3px solid var(--sr-k-combat); margin: 4px 0 8px; }
 .sr-enemy-title { font-weight: 700; margin-bottom: 4px; }

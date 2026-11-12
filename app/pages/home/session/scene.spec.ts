@@ -3,6 +3,8 @@ import { describe, expect, it, vi } from 'vitest';
 import { renderScene } from './scene.js';
 import type { SceneView } from './scene.js';
 import { parseCombatants } from './combatants.js';
+import { recordHit, recordReset } from './hp-log.js';
+import type { HpState } from './hp-log.js';
 import type { FlowNode } from './types.js';
 
 const n = (id: string, kind = 'social', title = id): FlowNode => ({ id, marker: 'committed', kind, scene: 'SC1', title, lines: [], notes: [] });
@@ -47,10 +49,13 @@ function view(over: Partial<SceneView> = {}): SceneView {
     closingHook: 'The end.',
     combatants,
     hp: {},
+    hpLog: [],
     tokensOpen: false,
     onGo: vi.fn(),
     onTokensToggle: vi.fn(),
-    onHp: vi.fn(),
+    onHpHit: vi.fn(),
+    onHpReset: vi.fn(),
+    onHpUndo: vi.fn(),
     ...over,
   };
 }
@@ -70,8 +75,9 @@ describe('renderScene', () => {
 
   it('tracks enemy HP in place: damage, down at 0, saved per entry, and reset', () => {
     const main = document.createElement('main');
-    const onHp = vi.fn();
-    renderScene(main, view({ onHp, hp: { 'Archer Rider (Ilsa Hask)': 9 } }));
+    const onHpHit = vi.fn();
+    const onHpReset = vi.fn();
+    renderScene(main, view({ onHpHit, onHpReset, hp: { 'Archer Rider (Ilsa Hask)': 9 } }));
     const box = main.querySelector<HTMLElement>('.sr-hp')!;
     expect(box.querySelector('.sr-hp-val')!.textContent).toBe('9/16');
     expect(main.querySelector('.sr-enemy-atk')!.textContent).toContain('+4 to hit');
@@ -80,27 +86,57 @@ describe('renderScene', () => {
     input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
     expect(box.querySelector('.sr-hp-val b')!.textContent).toBe('0');
     expect(main.querySelector('.sr-enemy')!.classList.contains('is-down')).toBe(true);
-    expect(onHp).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', 0);
+    expect(onHpHit).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', '11', 9, 0, 16);
     main.querySelector<HTMLButtonElement>('.sr-hp-reset')!.click();
     expect(box.querySelector('.sr-hp-val b')!.textContent).toBe('16');
     expect(main.querySelector('.sr-enemy')!.classList.contains('is-down')).toBe(false);
-    expect(onHp).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', null);
+    expect(onHpReset).toHaveBeenLastCalledWith({ 'Archer Rider (Ilsa Hask)': 0 });
   });
 
   it('starts and resets each enemy at its known HP, not full, when the plan carries damage', () => {
     const main = document.createElement('main');
-    const onHp = vi.fn();
+    const onHpHit = vi.fn();
+    const onHpReset = vi.fn();
     const hurt = parseCombatants('### Scout — Ilsa Hask\n\n- AC 13 · HP 5/16\n- **Longbow** +4 to hit, 1d8+2');
-    renderScene(main, view({ onHp, combatants: hurt }));
+    renderScene(main, view({ onHpHit, onHpReset, combatants: hurt }));
     const box = main.querySelector<HTMLElement>('.sr-hp')!;
     expect(box.querySelector('.sr-hp-val')!.textContent).toBe('5/16');
     const input = box.querySelector<HTMLInputElement>('.sr-hp-in')!;
     input.value = '3';
     input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
-    expect(onHp).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', 2);
+    expect(onHpHit).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', '3', 5, 2, 5);
     main.querySelector<HTMLButtonElement>('.sr-hp-reset')!.click();
     expect(box.querySelector('.sr-hp-val b')!.textContent).toBe('5');
-    expect(onHp).toHaveBeenLastCalledWith('Archer Rider (Ilsa Hask)', null);
+    expect(onHpReset).toHaveBeenLastCalledWith({ 'Archer Rider (Ilsa Hask)': 2 });
+  });
+
+  it('logs every HP entry under the enemies, redraws the log in place, and offers undo', () => {
+    const main = document.createElement('main');
+    const st: HpState = { hp: {}, hpLog: [] };
+    const onHpUndo = vi.fn();
+    renderScene(main, view({
+      hp: st.hp,
+      hpLog: st.hpLog,
+      onHpHit: (e, input, before, after, start) => recordHit(st, e, input, before, after, start),
+      onHpReset: (before) => recordReset(st, 'Reset HP', before),
+      onHpUndo,
+    }));
+    expect(main.querySelector('.sr-hplog summary')!.textContent).toBe('HP log (0)');
+    expect(main.querySelector<HTMLButtonElement>('.sr-hp-undo-reset')!.hidden).toBe(true);
+    const input = main.querySelector<HTMLInputElement>('.sr-hp-in')!;
+    input.value = '4';
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+    expect(main.querySelector('.sr-hplog summary')!.textContent).toBe('HP log (1)');
+    expect(main.querySelector('.sr-hplog li')!.textContent).toContain('16 → 12');
+    main.querySelector<HTMLButtonElement>('.sr-hp-reset')!.click();
+    expect(main.querySelector('.sr-hplog summary')!.textContent).toBe('HP log (2)');
+    expect(main.querySelector('.sr-hplog li')!.textContent).toContain('was 12');
+    // The hit sits under the reset, so it waits until the reset is undone.
+    expect(main.querySelector<HTMLButtonElement>('.sr-hplog li:last-child .sr-hplog-undo')!.disabled).toBe(true);
+    const undoReset = main.querySelector<HTMLButtonElement>('.sr-hp-undo-reset')!;
+    expect(undoReset.hidden).toBe(false);
+    undoReset.click();
+    expect(onHpUndo).toHaveBeenCalledWith(1);
   });
 
   it('rolls an enemy attack into the log without opening its stat block, and keeps the log across renders', () => {
