@@ -20,7 +20,7 @@ import { stripProvenance } from './provenance.js';
 import { applyHp } from './combatants.js';
 import { roll, rollDetailHtml } from './dice.js';
 import type { Roll, RollKind, RollMode } from './dice.js';
-import type { StatBlock } from './combatants.js';
+import type { Phase, StatBlock } from './combatants.js';
 import type { HpMap } from './scene-head.js';
 import type { HpLogEntry } from './hp-log.js';
 import type { FlowNode, Scene } from './types.js';
@@ -217,7 +217,13 @@ function wireHp(main: HTMLElement, v: SceneView, entries: readonly string[]): vo
 //
 // After every HP entry and every round, the cues refresh: Watch items and `When:`
 // pills whose condition has come true light up (cues.ts), and the bar lists them.
+//
+// A boss chip carries a thin HP meter with a tick at each phase ("Bloodied, at 47 HP"),
+// and names the phase once it's in it. Its legendary actions sit beside it as pips: a
+// click spends one, a click on a spent one gives it back, and the next round refills
+// them all (they come back on its turn, which the runner doesn't track).
 let stripPick = '';
+const legendSpent = new Map<string, number>();
 
 const shortName = (entry: string) => plainText(/\(([^)]+)\)\s*$/.exec(entry)?.[1] ?? entry);
 const band = (cur: number, max: number) => (cur <= 0 ? 'down' : cur <= max / 4 ? 'low' : cur <= max / 2 ? 'hurt' : 'ok');
@@ -246,7 +252,13 @@ function wireFight(main: HTMLElement, v: SceneView, boxes: HTMLElement[], entrie
     if (!conds.has(el)) conds.set(el, parseConds(text, names));
     return conds.get(el)!;
   };
-  const read = (b: HTMLElement) => ({ entry: b.dataset.entry!, cur: Number(b.querySelector('.sr-hp-val b')!.textContent), max: Number(b.dataset.max) });
+  const read = (b: HTMLElement) => ({
+    entry: b.dataset.entry!,
+    cur: Number(b.querySelector('.sr-hp-val b')!.textContent),
+    max: Number(b.dataset.max),
+    legendary: Number(b.dataset.legendary ?? 0),
+    phases: b.dataset.phases ? JSON.parse(b.dataset.phases) as Phase[] : [],
+  });
   const arrives = (entry: string) => Number(main.querySelector<HTMLElement>(`.sr-enemy[data-arrives] .sr-hp[data-entry="${CSS.escape(entry)}"]`)?.closest<HTMLElement>('.sr-enemy')?.dataset.arrives ?? 0);
   const strip = main.querySelector<HTMLElement>('.sr-strip');
   if (!boxes.some((b) => b.dataset.entry === stripPick)) stripPick = '';
@@ -257,8 +269,15 @@ function wireFight(main: HTMLElement, v: SceneView, boxes: HTMLElement[], entrie
     box.innerHTML = boxes.map(read).map((e) => {
       const due = arrives(e.entry);
       const coming = due > round;
-      return `<button type="button" class="sr-hpchip is-${band(e.cur, e.max)}${coming ? ' is-coming' : ''}${e.entry === stripPick ? ' is-picked' : ''}" data-entry="${escapeHtml(e.entry)}" title="${escapeHtml(plainText(e.entry))}${coming ? `, arrives round ${due}` : ''}: type damage">
-        <i></i>${escapeHtml(shortName(e.entry))} <b>${e.cur}</b>/${e.max}${coming ? ` <small>R${due}</small>` : ''}</button>`;
+      const phase = e.cur > 0 ? e.phases.filter((p) => e.cur <= p.hp).pop() : undefined;
+      const meter = e.phases.length ? `<span class="sr-meter" aria-hidden="true"><span class="sr-meter-fill" style="width:${Math.max(0, Math.min(100, (e.cur / e.max) * 100))}%"></span>${e.phases.map((p) => `<span class="sr-meter-tick" style="left:${(p.hp / e.max) * 100}%"></span>`).join('')}</span>` : '';
+      const phaseTip = e.phases.map((p) => `${p.name} at ${p.hp}`).join(', ');
+      const chip = `<button type="button" class="sr-hpchip is-${band(e.cur, e.max)}${coming ? ' is-coming' : ''}${phase ? ' is-phase' : ''}${e.entry === stripPick ? ' is-picked' : ''}" data-entry="${escapeHtml(e.entry)}" title="${escapeHtml(plainText(e.entry))}${coming ? `, arrives round ${due}` : ''}${phaseTip ? ` (${escapeHtml(phaseTip)})` : ''}: type damage">
+        <i></i>${escapeHtml(shortName(e.entry))} <b>${e.cur}</b>/${e.max}${meter}${phase ? ` <small class="sr-phase">${escapeHtml(phase.name)}</small>` : ''}${coming ? ` <small>R${due}</small>` : ''}</button>`;
+      if (!e.legendary || e.cur <= 0) return chip;
+      const spent = Math.min(legendSpent.get(e.entry) ?? 0, e.legendary);
+      const pips = Array.from({ length: e.legendary }, (_, i) => `<button type="button" class="sr-pip${i < spent ? ' is-spent' : ''}" data-pip="${i}" aria-pressed="${i < spent}" title="Legendary action ${i + 1} of ${e.legendary}: click to spend, click again to give back. A new round refills them."></button>`).join('');
+      return `<span class="sr-hpchip-wrap">${chip}<span class="sr-legend" data-entry="${escapeHtml(e.entry)}" aria-label="Legendary actions, ${e.legendary - spent} left">${pips}</span></span>`;
     }).join('');
     const picked = boxes.map(read).find((e) => e.entry === stripPick);
     const quick = strip!.querySelector<HTMLElement>('.sr-strip-quickbox')!;
@@ -271,7 +290,11 @@ function wireFight(main: HTMLElement, v: SceneView, boxes: HTMLElement[], entrie
 
   // Light what has come true, and list it in the bar.
   const cues = () => {
-    const now: FightNow = { round, hp: Object.fromEntries(boxes.map(read).map((e) => [e.entry, e.cur])) };
+    const now: FightNow = {
+      round,
+      hp: Object.fromEntries(boxes.map(read).map((e) => [e.entry, e.cur])),
+      arrives: Object.fromEntries(boxes.map((b) => [b.dataset.entry!, arrives(b.dataset.entry!)])),
+    };
     const alerts: string[] = [];
     const arriving: string[] = [];
     main.querySelectorAll<HTMLElement>('.sr-enemy[data-arrives]').forEach((row) => {
@@ -311,7 +334,9 @@ function wireFight(main: HTMLElement, v: SceneView, boxes: HTMLElement[], entrie
     const t = ev.target as Element;
     const step = t.closest<HTMLElement>('[data-round]');
     if (step) {
-      round = Math.max(1, round + Number(step.dataset.round));
+      const next = Math.max(1, round + Number(step.dataset.round));
+      if (next > round) legendSpent.clear();
+      round = next;
       strip.querySelector('.sr-round output')!.textContent = String(round);
       v.onRound(round);
       refresh();
@@ -319,6 +344,14 @@ function wireFight(main: HTMLElement, v: SceneView, boxes: HTMLElement[], entrie
     }
     const go = t.closest<HTMLElement>('.sr-alert[data-to]');
     if (go) { v.onGo(go.dataset.to!); return; }
+    const pip = t.closest<HTMLElement>('.sr-pip');
+    if (pip) {
+      const entry = pip.closest<HTMLElement>('.sr-legend')!.dataset.entry!;
+      const i = Number(pip.dataset.pip);
+      legendSpent.set(entry, pip.classList.contains('is-spent') ? i : i + 1);
+      chips();
+      return;
+    }
     const chip = t.closest<HTMLElement>('.sr-hpchip');
     if (!chip) return;
     stripPick = stripPick === chip.dataset.entry ? '' : chip.dataset.entry!;

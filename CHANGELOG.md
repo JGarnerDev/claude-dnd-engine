@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.68.0] — 2026-11-12
+
+### Added
+
+- **Boss chips** (`app/pages/home/session/combatants.ts`, `scene.ts`). A boss's chip in the fight bar carries its **legendary actions** as pips (a click spends one, a click on a spent one gives it back, a new round refills them) and a thin HP meter with a tick at each **phase** ("Bloodied, at 47 HP"), naming the phase once the boss is in it. Both come from the stat block: `**Legendary actions: 2 a round**` and any bold bullet label with an HP number in it.
+- **Head-count cues** (`cues.ts`). `the crew (everyone but Nella and Tithe) is down to two` now lights up like any other cue: the runner counts enemies above 0 HP who have already arrived, leaving out anyone named after "but" or "except". `/session` Phase 6 → Say when things happen and `/review` Pass 1 cover it, and the boss-block conventions.
+
 ## [0.67.0] — 2026-11-12
 
 ### Added

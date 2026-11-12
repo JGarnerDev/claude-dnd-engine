@@ -9,7 +9,7 @@
 import { escapeHtml, inline, plainText, renderMarkdown } from './markdown.js';
 import type { Known } from './markdown.js';
 import { matchEnemy } from './combatants.js';
-import type { StatBlock } from './combatants.js';
+import type { Phase, StatBlock } from './combatants.js';
 import type { SceneHeader } from './scene-header.js';
 import { stripProvenance } from './provenance.js';
 import { rollableHtml } from './dice.js';
@@ -31,9 +31,12 @@ const chips = (items: string[], known: Known) =>
 // starting HP ("HP 10/27" carries damage from an earlier session), else full.
 export type HpMap = Readonly<Record<string, number>>;
 
-export function hpHtml(entry: string, max: number, hp: HpMap, start: number = max): string {
+// A boss carries its legendary actions and phases on the box, for the fight bar's chip.
+export function hpHtml(entry: string, max: number, hp: HpMap, start: number = max, boss: { legendary?: number; phases?: readonly Phase[] } = {}): string {
   const cur = Math.min(hp[entry] ?? start, max);
-  return `<span class="sr-hp" data-entry="${escapeHtml(entry)}" data-max="${max}" data-start="${start}">
+  const extra = (boss.legendary ? ` data-legendary="${boss.legendary}"` : '')
+    + (boss.phases?.length ? ` data-phases="${escapeHtml(JSON.stringify(boss.phases))}"` : '');
+  return `<span class="sr-hp" data-entry="${escapeHtml(entry)}" data-max="${max}" data-start="${start}"${extra}>
       <span class="sr-hp-val"><b>${cur}</b>/${max}</span>
       <input class="sr-hp-in" type="text" inputmode="numeric" size="4" placeholder="dmg" title="12 or -12 deals damage · +5 heals · =40 sets · Enter applies" aria-label="Damage or heal">
     </span>`;
@@ -52,7 +55,7 @@ function enemyHtml(entry: string, blocks: StatBlock[], known: Known, hp: HpMap, 
         <span class="sr-enemy-name">${inline(entry, known)}${tag}</span>
         <span class="sr-enemy-stats">${inline(rowStats(b.stats), known)}</span>
         <span class="sr-enemy-atk">${atks}</span>
-        ${b.hp !== null ? hpHtml(entry, b.hp, hp, b.start ?? b.hp) : '<span></span>'}
+        ${b.hp !== null ? hpHtml(entry, b.hp, hp, b.start ?? b.hp, b) : '<span></span>'}
       </summary>
       <div class="sr-md sr-enemy-block"><div class="sr-enemy-title">${escapeHtml(b.title)}</div>${rollableHtml(renderMarkdown(stripProvenance(b.md), known))}</div>
     </details>`;

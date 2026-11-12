@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { applyHp, attackLines, matchEnemy, parseCombatants } from './combatants.js';
+import { applyHp, attackLines, legendaryOf, matchEnemy, parseCombatants } from './combatants.js';
 
 const md = [
   '### At a glance',
@@ -98,5 +98,25 @@ describe('matchEnemy', () => {
   it('prefers a name in a block title over a mention in another block', () => {
     const mixed = parseCombatants('### Bandit — Fennel\n\n- AC 12 · HP 11\n- loves Cinder.\n\n### Wolf — Cinder\n\n- AC 13 · HP 11');
     expect(matchEnemy('Wolf (Cinder)', mixed)!.title).toBe('Wolf — Cinder');
+  });
+});
+
+describe('boss blocks', () => {
+  it('reads legendary actions and HP phases from the block', () => {
+    const [tithe] = parseCombatants([
+      '### Griffon — Tithe',
+      '',
+      '- AC 12 · **HP 95** · Speed 30 ft',
+      '- **Boss.** From the hunt on.',
+      '  - **Legendary actions: 2 a round,** one at a time.',
+      '  - **Bloodied, at 47 HP or less: the second phase.** Read aloud.',
+      '  - **Last stand (10 HP):** it fights on.',
+    ].join('\n'));
+    expect(tithe.legendary).toBe(2);
+    expect(tithe.phases).toEqual([{ hp: 47, name: 'Bloodied' }, { hp: 10, name: 'Last stand' }]);
+    expect(legendaryOf('- **Lair.** It takes 3 legendary actions.')).toBe(3);
+    const [scout] = parseCombatants('### Scout — Ilsa\n\n- AC 13 · HP 16\n- **Longbow** +4 to hit, 1d8+2');
+    expect(scout.legendary).toBe(0);
+    expect(scout.phases).toEqual([]);
   });
 });

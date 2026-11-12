@@ -220,6 +220,66 @@ describe('renderScene', () => {
     expect([...bar.querySelectorAll('.sr-alert')].map((a) => a.textContent)).toContain('If Ilsa drops to half (8 HP): she runs.');
   });
 
+  it('gives a boss chip its phase ticks and legendary pips, and counts the crew for morale', () => {
+    const fmd = [
+      '- **Enemies:** Archer Rider (Ilsa Hask) · Griffon (Tithe) · Relief Captain (Garran Vey) arrives round 2',
+      '',
+      '#### S1_HUNT — It hunts',
+      '',
+      '- **Boss fight starts:** on the scream.',
+      '',
+      '#### S1_BREAK — They break',
+      '',
+      '- **When:** Vey drops, or the crew (everyone but Tithe) is down to zero.',
+    ].join('\n');
+    const hunt = n('S1_HUNT', 'combat', 'It hunts');
+    const brk = n('S1_BREAK', 'combat', 'They break');
+    const blocks = parseCombatants([
+      '### Scout — Ilsa Hask', '', '- AC 13 · HP 16', '',
+      '### Griffon — Tithe', '', '- AC 12 · **HP 95** · fly 80 ft',
+      '- **Boss.** Legendary actions below.', '  - **Legendary actions: 2 a round,** one at a time.',
+      '  - **Bloodied, at 47 HP or less: the second phase.** It lands.', '',
+      '### Veteran — Garran Vey', '', '- AC 17 · HP 58',
+    ].join('\n'));
+    const main = document.createElement('main');
+    renderScene(main, view({
+      node: hunt, sceneNodes: [hunt, brk], visited: new Set(['S1_HUNT']), combatants: blocks,
+      scene: { id: 'SC1', key: '1', title: 'Scene 1', md: fmd },
+    }));
+    const bar = main.querySelector<HTMLElement>('.sr-strip')!;
+    expect(bar.classList.contains('is-boss')).toBe(true);
+    const tithe = () => bar.querySelector<HTMLElement>('.sr-hpchip[data-entry="Griffon (Tithe)"]')!;
+    expect(tithe().querySelector<HTMLElement>('.sr-meter-tick')!.style.left).toMatch(/^49\.4/);
+    expect(tithe().querySelector('.sr-phase')).toBeNull();
+    const pips = () => [...bar.querySelectorAll<HTMLButtonElement>('.sr-legend .sr-pip')].map((p) => p.classList.contains('is-spent'));
+    expect(pips()).toEqual([false, false]);
+    bar.querySelectorAll<HTMLButtonElement>('.sr-pip')[1].click(); // a 2-cost action spends both
+    expect(pips()).toEqual([true, true]);
+    bar.querySelectorAll<HTMLButtonElement>('.sr-pip')[1].click(); // give one back
+    expect(pips()).toEqual([true, false]);
+    bar.querySelector<HTMLButtonElement>('[data-round="1"]')!.click(); // a new round refills
+    expect(pips()).toEqual([false, false]);
+    const hp = (entry: string, typed: string) => {
+      const input = main.querySelector<HTMLInputElement>(`.sr-hp[data-entry="${entry}"] .sr-hp-in`)!;
+      input.value = typed;
+      input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+    };
+    hp('Griffon (Tithe)', '=40');
+    expect(tithe().classList.contains('is-phase')).toBe(true);
+    expect(tithe().querySelector('.sr-phase')!.textContent).toBe('Bloodied');
+    // Round 2: Vey is on the field, so the crew isn't down to zero until Ilsa and Vey are.
+    const pill = main.querySelector('.sr-step[data-id="S1_BREAK"] .sr-when')!;
+    hp('Archer Rider (Ilsa Hask)', '=0');
+    expect(pill.classList.contains('is-ready')).toBe(false);
+    hp('Relief Captain (Garran Vey)', '=1');
+    expect(pill.classList.contains('is-ready')).toBe(false);
+    hp('Relief Captain (Garran Vey)', '=0');
+    expect(pill.classList.contains('is-ready')).toBe(true);
+    // A dead boss loses its pips.
+    hp('Griffon (Tithe)', '=0');
+    expect(bar.querySelector('.sr-legend')).toBeNull();
+  });
+
   it('links beat ids in the notes to their steps', () => {
     const main = document.createElement('main');
     renderScene(main, view({ scene: { id: 'SC1', key: '1', title: 'Scene 1 · The Night', md: md.replace('go or stay.', 'go (`S1_FIGHT`) or stay.') } }));

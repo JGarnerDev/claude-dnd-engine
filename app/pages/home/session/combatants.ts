@@ -11,8 +11,12 @@ export interface StatBlock {
   hp: number | null; // max HP from the stats line, for the runner's HP tracker
   start: number | null; // known HP going in ("HP 10/27" = 10 of 27, carried from earlier damage); else max
   attacks: string[]; // every attack-ish line: "**Scimitar** +3 to hit, 1d6+1 slashing (avg 4)"
+  legendary: number; // legendary actions a round ("**Legendary actions: 2 a round**"), else 0
+  phases: Phase[]; // HP thresholds where the fight changes ("**Bloodied, at 47 HP or less: …**")
   md: string;
 }
+
+export interface Phase { hp: number; name: string }
 
 const AC_RE = /^[-*]\s+(AC\s+\d+.*)$/m;
 const HP_RE = /\bHP\s+(\d+)(?:\s*\/\s*(\d+))?/;
@@ -30,6 +34,25 @@ export function attackLines(md: string): string[] {
     .filter((l): l is string => !!l && !SKIP_RE.test(l) && ATTACK_RE.test(l));
 }
 
+// A boss block says how many legendary actions it gets ("**Legendary actions: 2 a
+// round,**" or "3 legendary actions"), and where its fight turns: any bold bullet label
+// carrying an HP number ("**Bloodied, at 47 HP or less: the second phase.**") is a phase,
+// named by its first words.
+const LEGENDARY_RE = /\blegendary actions?\b\W{0,4}(\d+)|\b(\d+) legendary actions?\b/i;
+const PHASE_RE = /^\s*[-*]\s+\*\*([^*]*?\b(\d+) HP\b[^*]*)\*\*/gm;
+
+export function legendaryOf(md: string): number {
+  const m = LEGENDARY_RE.exec(md.replace(/\*/g, ''));
+  return m ? Number(m[1] ?? m[2]) : 0;
+}
+
+export function phasesOf(md: string): Phase[] {
+  return [...md.matchAll(PHASE_RE)].map((m) => ({
+    hp: Number(m[2]),
+    name: m[1].split(/,|:|\s+at\s+|\s+\(/)[0].replace(/\b\d+ HP\b.*/, '').trim() || 'Next phase',
+  })).sort((a, b) => b.hp - a.hp);
+}
+
 export function parseCombatants(sectionMd: string): StatBlock[] {
   const out: StatBlock[] = [];
   const parts = ('\n' + sectionMd.replace(/\r/g, '')).split(/\n### /).slice(1);
@@ -43,7 +66,7 @@ export function parseCombatants(sectionMd: string): StatBlock[] {
     const hp = HP_RE.exec(stats.replace(/\*/g, ''));
     const max = hp ? Number(hp[2] ?? hp[1]) : null;
     const start = hp && max !== null ? Math.min(Number(hp[1]), max) : null;
-    out.push({ title, stats, hp: max, start, attacks: attackLines(md), md });
+    out.push({ title, stats, hp: max, start, attacks: attackLines(md), legendary: legendaryOf(md), phases: phasesOf(md), md });
   }
   return out;
 }
