@@ -122,6 +122,9 @@ Check the plan's prose against `meta/prose-style.md`, after Pass 1 so its additi
   twice in one scene) and the audience calibration for read-aloud
 - **Run each candidate through the validation questions.** Keep what survives, and anything the
   What to keep list protects: an NPC's `## Voice` core, a deliberate clue, a running joke
+- **Boss entrances:** every boss has one at its first close appearance, shaped per
+  `meta/prose-style.md` → Boss introductions. If one is missing, or is a plain two-sentence box,
+  write it in full as a finding
 - **Never touch** lines quoted from the table (`Said at the table`) or the plan's fixed facts.
   A DM's name and date (`Jeff, <date>`) marks a **decision**, not wording: rewrite the prose
   around a decision freely, as long as the decision still stands. Wording is protected only where

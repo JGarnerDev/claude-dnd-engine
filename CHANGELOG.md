@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.70.0] — 2026-11-12
+
+### Added
+
+- **Boss introductions** (`meta/prose-style.md`). A boss gets an epic entrance read-aloud at its first close appearance: up to three short paragraphs (arrival shows power, body shows danger, bearing shows nobility or menace), shown through things the party can see rather than adjectives, ending on its first move toward a PC, with the title card and boss music on the last line. Tithe's Session 34 entrance is the first Good table example. `/session` Phase 6 → Boss blocks points to it; `/review` Pass 6 writes one when a boss has none.
+
 ## [0.69.0] — 2026-11-12
 
 ### Added

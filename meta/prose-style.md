@@ -153,6 +153,8 @@ Match the register; never neutralize tone toward a generic middle.
 - **Read-aloud text** (boxed scene text in session plans) — second person, present tense, short. Two to
   four sentences. One or two sharp sensory details, then stop: end on something the party can act on,
   not on a portent. Never tell the party what they feel or decide.
+- **Boss introductions** — the one read-aloud allowed to run long: up to three short paragraphs. See
+  Boss introductions below.
 - **DM-facing plans** — plain and scannable. Lines carry a scene cue (see `/review`). No flourish.
 - **Historian records** — neutral, past tense, facts first. No foreshadowing, no adjectives doing the
   work of evidence.
@@ -162,6 +164,38 @@ Match the register; never neutralize tone toward a generic middle.
   what the character perceives and nothing else. The player decides what it means and what to share.
   Each one reads complete on its own.
 - **Lore and pitches** — the most room for voice, and the most slop-prone. Heaviest pass here.
+
+## Boss introductions
+
+A boss gets an epic entrance: the read-aloud that makes the table sit up. It should leave the party
+sure the thing is powerful, dangerous and, where it fits, proud or noble, without the text ever
+saying so. Every quality is shown through something the party can see, hear or feel.
+
+- **Where it goes:** the boss's first close appearance, the moment it is near enough to see
+  properly, usually its first turn. A distant first sighting (on a ridge, in the clouds, behind
+  its master) gets an ordinary short box; save the full picture for when it is close.
+- **Shape, up to three short paragraphs:**
+  - **Arrival — power.** How it enters and what that does to the scene: its size against
+    something the party knows (the cart, a door, a plough horse), the force it moves (downdraft,
+    a floor that cracks, a wall that shakes), the damage it does just by arriving.
+  - **The body — danger.** One or two weapons named and measured against a familiar thing
+    (talons as long as a dagger, a beak dark at the tip). Muscle, scars, gear only if the party
+    could point at them. Not a full inventory.
+  - **Bearing — nobility or menace.** How it carries itself: calm while everything else panics,
+    a slow head-turn, ignoring what it doesn't care about. Contrast does this best (the horses
+    scream; it doesn't look at them).
+- **End on its first act toward a PC:** it looks at one of them, then moves. The last words lead
+  straight into its first roll. Say who it picks in the DM note above the box.
+- **Adjectives don't carry it.** "Formidable", "majestic", "terrifying", "ancient" tell the party
+  what to feel; cut them and show the thing that earns the word.
+- **Still prose-style rules:** no stock tells, one detail per idea, second person, present tense,
+  nothing the party feels or decides. The length allowance is for the boss only, once per fight.
+  Bloodied and death beats go back to two to four sentences.
+- **Cue the table on its last line:** title card, boss music, HP bar, all on the same moment
+  (usually its first scream, roar or strike). Name them on the beat (`/session` Phase 6 → Boss
+  blocks).
+
+See the Tithe example under Table examples → Good.
 
 ## While drafting
 
@@ -202,7 +236,26 @@ passage here conflicts with a rule above, the passage wins.
 
 ### Good
 
-(none yet)
+- **Boss introduction: Tithe the griffon** (Session 34, `S2_TITHE_HUNTS`, first turn; Jeff,
+  2026-11-12: "Nice! I like it."). Size measured against the cart, force shown by the downdraft,
+  danger in two measured weapons, nobility by contrast with the panicking horses, and the last line
+  going straight to the attack roll. An earlier draft put this on a distant ridge; the full picture
+  belongs where the boss is close.
+
+  > *"Right over your head, the bottom of the cloud tears open and the griffon comes through it
+  > wings-first, and the wings keep opening, wider than the cart is long. The downdraft hits you
+  > like a door slammed in your face. Grit in your eyes, and the wrecked cart rocks against the
+  > shed. It lands in the mud an arm's reach from you, hardly a sound for something that size.*
+  >
+  > *Up close it's as big as a plough horse, and all of it is muscle: an eagle from the shoulders
+  > forward, gold-brown feathers ruffed thick around its neck, and behind that a lion's tawny body,
+  > the shoulders rolling under the hide. The rider's saddle on its back is empty. Its front talons
+  > sink into the mud, each one as long as a dagger, and the hooked beak is dark at the tip.*
+  >
+  > *In the corral the horses scream and throw themselves at the rails. The griffon doesn't look at
+  > them. It lifts its head slowly, the way a hawk does on a falconer's glove, and gold eyes the
+  > size of your fist settle on you. It's in no hurry. Then it screams, and comes at you talons
+  > first."*
 
 ### Bad
 
