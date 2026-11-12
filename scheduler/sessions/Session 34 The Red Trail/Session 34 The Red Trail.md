@@ -519,17 +519,22 @@ About 11 a.m. on Day 2 (`6743-05-21`, the DM's estimate), mid-fight in the yard 
 
 - **Tokens:** as Session 33 left them (Orientation). Sniper and Griffon together over the yard's
   west side until Nella's turn (`S2_TITHE_HUNTS`); after that the Sniper sits on the ridge and the
-  Griffon on the GM layer except on its own turn. Relief tokens off-map east until `S2_RELIEF`.
+  Griffon on the GM layer except on its own turn. Relief tokens off-map south until `S2_RELIEF`.
 - **Set HP in the runner first:** Tally-man `=10`, Half-orc Cask-hand `=15`, Archer Rider `=5`.
 - **The floor:** Sennet and Brask on Halsby, Ilsa on Iggy, Clatter on the roof calling targets.
-  Then Vey and the riders from the east. Nobody converges on one PC.
-- **The sky:** Tithe is in the cloud on every turn but its own; it drops on whoever is in the open
-  and moving, then climbs back. On the party's turns, attacks on it guess its square at
-  disadvantage. A **readied action** for "when it comes out of the cloud" hits it normally. Show
-  the pattern, don't say it: *"It comes out of the same thin patch twice, over the corral."*
-- **The ridge:** Nella in the blind, half cover, two arrows a turn, never at a downed PC. Reaching
-  her means the slope (difficult) or the rubble gap, and her Marked Quarry goes on whoever takes
-  the gap.
+  Then Vey and the riders up the south road. Nobody converges on one PC.
+- **Until Nella's next turn: she's still in the air on Tithe,** over the yard's west side. She
+  has already acted this round, so she doesn't shoot again before her turn. Tithe, ridden, only
+  Dodges (attacks against it have disadvantage). Her turn takes her down to the ridge
+  (`S2_TITHE_HUNTS`).
+- **From her turn on, the sky:** Tithe is in the cloud on every turn but its own; it drops on
+  whoever is in the open and moving, then climbs back. On the party's turns, attacks on it guess
+  its square at disadvantage. A **readied action** for "when it comes out of the cloud" hits it
+  normally. Show the pattern, don't say it: *"It comes out of the same thin patch twice, over the
+  corral."*
+- **From her turn on, the ridge:** Nella in the blind, half cover, two arrows a turn, never at a
+  downed PC. Reaching her means the slope (difficult) or the rubble gap, and her Marked Quarry
+  goes on whoever takes the gap.
 - **Mid-fight lines:**
   - Clatter, whenever Tithe drops out: *"There it is! THERE it is!"* · when Halsby raises the
     Spear (reputation, S33): *"Lightning man!"*
