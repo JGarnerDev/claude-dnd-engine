@@ -47,9 +47,19 @@ holds the drover's own whip.
 Ben named the whip mastery himself at level 5. A weapon he already chose, made better, rather
 than a second item to track. The animal-handling line hands him the running cart joke.
 
-## At 6–8
+## Upgraded: Tithe-Taker (Uncommon)
 
-Haul twice per short rest, and up to 15 ft.
+Asher reworks the whip with Tithe's talons and returns it before the act finale, renamed
+**Tithe-Taker** (Jeff, 2026-11-12). It becomes Dip's Uncommon and replaces the 6–8 step.
+
+- **+1** to attack and damage rolls. Drover's crack stays.
+- **Bring it down** (replaces Haul). Twice per short rest, when Dip hits a Large or smaller
+  creature with the whip, they can drag it up to 15 ft in a straight line toward them, and it is
+  grappled until the end of Dip's next turn (escape DC 13). A flying creature grappled this way
+  has a speed of 0, so it falls unless it can hover.
+
+The griffon snatched people out of the yard; now its talons do the snatching for Dip, and the
+whip that killed a flier pulls the next one out of the air.
 
 ## Outside the menu
 

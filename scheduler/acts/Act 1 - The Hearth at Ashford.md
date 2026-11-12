@@ -220,7 +220,8 @@ makes room. Check this list whenever `/session` plans an Act 1 session.
   - **Promised now, delivered at the finale.** He takes Tithe's bone and talons and says the work
     will take days. Before the finale's fight he returns **Oathcaller** for [[Iggy]] (griffon bone
     and river minerals) and **Varrick's Cart-Whip improved with Tithe's talons** for Dip (now his
-    Uncommon; the upgrade's effect is not designed yet).
+    Uncommon, renamed **Tithe-Taker**: +1, and Haul becomes **Bring it down**, twice per short rest, a 15 ft drag that
+    grapples and drops fliers; see the loot file, Jeff 2026-11-12).
   - Still open: the spirit's species and stat block, and how close Jorn is to waking it.
 - **The finale is the old field (Jeff, 2026-11-12).** The December finale is Dip's ask: the field,
   Jorn and the spirit. The reward is Asher's blessing on the brewhouse water. This replaces the
