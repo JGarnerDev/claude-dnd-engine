@@ -6,6 +6,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.71.0] — 2026-11-14
+
+### Added
+
+- **`/narrate`: scenes as audiobook takes** (`meta/narration.md`). `/narrate <scene | beat id>` rewrites one scene of a planned homebrew session for the ear and renders it as an MP3: a narrator, a cast voice per NPC, the likely path told as story and each other outcome (choices, private messages, roll bands) as a short "If instead…" aside. Mechanics come through as light spoken cues. DM-only, not canon.
+- **`scripts/narrate.py`.** Renders an ear script with Chatterbox on the local GPU (isolated Python 3.12 env, first run downloads the models), caching each line so an edit re-renders only that line. `--seed` makes three candidate NPC clips with Kokoro; `--keep` makes one the NPC's clip.
+- **`scripts/narrate-brief.py`.** One call for `/narrate`: plan lines to read, spine in story order, forks with line numbers, cast with `voice:` cores, take name and length.
+- **`narration/cast.md`.** Committed voice cast (narrator plus NPCs). Clips, ear scripts and takes in `narration/` are gitignored.
+
 ## [0.70.0] — 2026-11-12
 
 ### Added

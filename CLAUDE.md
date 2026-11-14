@@ -149,6 +149,14 @@ beats can be named in conversation and found with a grep. When building or editi
 `meta/flow-graphs.md` once per task. **Never flip a node to `[x]` on your own judgment** — the
 engine proposes, the DM commits. Built by `/flow`; coverage reported by `scripts/flow-status.py`.
 
+## Narration
+
+`/narrate <scene>` turns one scene or beat of a planned homebrew session into an audiobook-style
+MP3 the DM reviews by ear: a narrator plus a cast voice per NPC (Chatterbox, on the local GPU),
+the likely path told as story and each other outcome as a short "If instead…" aside. DM-only,
+never canon; only `narration/cast.md` is committed. Read `meta/narration.md` once per task when
+writing an ear script or casting a voice.
+
 ## Graph Configuration
 
 When adding a new type, subtype, or entity folder, read `meta/graph-settings.md` before touching any config files.

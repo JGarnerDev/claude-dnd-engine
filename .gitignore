@@ -57,6 +57,13 @@ craig-*.zip
 # first run, same as the Whisper model -- rebuilt from upstream, never committed.
 .models/
 
+# Session narration (meta/narration.md). cast.md is committed config; clips, ear scripts,
+# takes and the per-line cache are per-machine and rebuilt by /narrate.
+narration/voices/
+narration/scripts/
+narration/takes/
+narration/.cache/
+
 # Local-only Claude instructions and generated music (not shared)
 CLAUDE.local.md
 music/
