@@ -16,7 +16,6 @@ workshop/
 questionnaires/*
 !questionnaires/.gitkeep
 vector-index/
-tasks/*
 
 # No map images in git. Masters are fetched from the Inkarnate CDN
 # (scripts/fetch-maps.ps1, manifest maps/sources.tsv, committed); tiles and crops are
