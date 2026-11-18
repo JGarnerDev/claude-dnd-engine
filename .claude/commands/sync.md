@@ -11,11 +11,11 @@ Sync shareable engine files to the template repo.
 Read two files from the project root:
 
 - `.template-sync` — include and exclude patterns for shareable files (committed, no path here)
-- `.template-sync.local` — contains `template=<absolute path>` to the template repo (gitignored, machine-specific)
+- `.template-sync.local` — contains `template=<path>` to the template repo, absolute or relative to the project root (gitignored, machine-specific)
 
 If `.template-sync` is missing, stop. If `.template-sync.local` is missing, tell the DM: "Create `.template-sync.local` with `template=<path to your local clone of the template repo>`."
 
-Extract the `template=` value → absolute path to the template repo. Verify that path exists on disk before continuing.
+Extract the `template=` value → path to the template repo (resolve a relative one from the project root). Verify that path exists on disk before continuing.
 
 **Parsing `.template-sync`:** skip blank lines and lines starting with `#`. Lines starting with `!` are exclusions — strip the `!` and treat as a glob pattern for files to remove from the candidate set. All other lines are include patterns. Process the full file top-to-bottom; later rules override earlier ones (same semantics as `.gitignore`). Build the final candidate list as: all files matched by any include pattern, minus all files matched by any exclusion pattern.
 

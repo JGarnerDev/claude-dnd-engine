@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.72.3] — 2026-11-18
+
+### Changed
+
+- **`/sync` accepts a relative template path** (`.claude/commands/sync.md`). `template=` in `.template-sync.local` can now be relative to the project root, as well as absolute. Existing absolute paths keep working.
+
 ## [0.72.2] — 2026-11-18
 
 ### Fixed
