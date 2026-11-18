@@ -4,14 +4,14 @@ campaign: strahd
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 16 The Blue Water Inn]]
+source_session: "[[Session 16 The Blue Water Inn]]"
 confirmed_date: "2026-06-30"
 state: alive
 tags:
   - character
   - character/npc
 
-location: [[Blue Water Inn]]
+location: "[[Blue Water Inn]]"
 personality: "Extravagant, theatrical, quick with a grand story — and slippery on the details when pressed."
 livelihood: "Travelling bard; resident guest and entertainer at the Blue Water Inn."
 disposition: friendly
@@ -20,21 +20,21 @@ aliases:
   - "Doctor Rudolph van Richten"
 importance: major
 active: true
-last_updated: [[Session 24 The Vampire Hunter]]
+last_updated: "[[Session 24 The Vampire Hunter]]"
 relates_to:
-  - [[Blue Water Inn]] (resident guest)
-  - [[Danika]] (friend)
-  - [[Odibli]] (mistrusted him; then owed him his life)
-  - [[Rictavio's Saber-Toothed Tiger]] (keeper)
-  - [[Keepers of the Feather]] (named them to the party as allies)
-  - [[Strahd Von Zarovich]] (came to Barovia to wreck his plans)
-  - [[Izek Strazni]] (hunting him over the loosed tiger)
-  - [[Van Richten's Tower]] (shares his true name)
-  - [[The Party]] (saved and stabilized them)
-  - [[Vallaki]] (currently here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Blue Water Inn]] (resident guest)"
+  - "[[Danika]] (friend)"
+  - "[[Odibli]] (mistrusted him; then owed him his life)"
+  - "[[Rictavio's Saber-Toothed Tiger]] (keeper)"
+  - "[[Keepers of the Feather]] (named them to the party as allies)"
+  - "[[Strahd Von Zarovich]] (came to Barovia to wreck his plans)"
+  - "[[Izek Strazni]] (hunting him over the loosed tiger)"
+  - "[[Van Richten's Tower]] (shares his true name)"
+  - "[[The Party]] (saved and stabilized them)"
+  - "[[Vallaki]] (currently here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Rictavio — in truth Rudolph van Richten, the vampire hunter. An extravagantly dressed bard staying at the Blue Water Inn, keeping a caged saber-toothed tiger and an alias. He saved the party from a vampire ambush in Session 24, named himself, and pointed them at the Keepers of the Feather."
 charm_hook: "Every grand tale he tells has a hole in it exactly where the details should be."
 race: "Half-elf"

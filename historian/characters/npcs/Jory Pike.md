@@ -4,7 +4,7 @@ name: "Jory Pike"
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
@@ -13,14 +13,14 @@ tags:
   - character/npc
 
 # --- MANDATORY (npc) ---
-location: [[Ashford]]
+location: "[[Ashford]]"
 personality: "Fast and breathless, proud of himself; the only one who kept his head, and he knows it."
 livelihood: "Stable boy, about fourteen. Tends the town's horses, especially Silas Crubb's."
 
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
-last_updated: [[Session 31 The Red Trail]]
+last_updated: "[[Session 31 The Red Trail]]"
 relates_to:
   - "[[Ashford]] (stable boy)"
   - "[[Silas Crubb]] (tends his horses)"

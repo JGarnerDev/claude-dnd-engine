@@ -6,33 +6,33 @@ exists: true
 state: active
 tags:
   - faction/guild
-source_session: [[Session 24 The Vampire Hunter]]
+source_session: "[[Session 24 The Vampire Hunter]]"
 confirmed_date: "2026-08-25"
 locations:
-  - [[Vallaki]]
+  - "[[Vallaki]]"
 purpose: other
 aliases: []
 importance: major
 active: true
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Rictavio]] (named them to the party as allies)
-  - [[The Martikovs Are Wereravens]] (the wereraven family the ravens belong to)
-  - [[Davian Martikov]] (head of that family)
-  - [[Urwin]] (runs the inn the ravens are dispatched from)
-  - [[Blue Water Inn]] (the ravens watching the winery came from here)
-  - [[Dustin]] (one of those ravens)
-  - [[Strahd Von Zarovich]] (opposed to him)
-  - [[Vallaki]] (based here, per Van Richten)
-  - [[The Party]] (told to seek them out)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Rictavio]] (named them to the party as allies)"
+  - "[[The Martikovs Are Wereravens]] (the wereraven family the ravens belong to)"
+  - "[[Davian Martikov]] (head of that family)"
+  - "[[Urwin]] (runs the inn the ravens are dispatched from)"
+  - "[[Blue Water Inn]] (the ravens watching the winery came from here)"
+  - "[[Dustin]] (one of those ravens)"
+  - "[[Strahd Von Zarovich]] (opposed to him)"
+  - "[[Vallaki]] (based here, per Van Richten)"
+  - "[[The Party]] (told to seek them out)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "An anti-Strahd group in Vallaki, named to the party by Rudolph van Richten as possible allies. Session 28 makes the connection near-certain without stating it: the Martikovs are a family of wereravens who run both the Wizard of Wines and the Blue Water Inn, they oppose Strahd, and Baba Lysaga attacked them for exactly that."
 motives:
   - "Opposed to Strahd"
 opposition:
-  - [[Strahd Von Zarovich]] (set against him)
+  - "[[Strahd Von Zarovich]] (set against him)"
 ---
 
 Locations: [[Vallaki]] | Campaign: [[Curse of Strahd]]

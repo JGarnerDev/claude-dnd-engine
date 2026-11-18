@@ -3,35 +3,35 @@ name: "Sable Wren"
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 state: alive
 tags:
   - character
   - character/npc
-location: [[The Golden Lioness]]
+location: "[[The Golden Lioness]]"
 personality: "Warm and competent. Treats everyone like regular customers regardless of bloodline or title. Does not explain herself."
 livelihood: "Proprietor and brewer at The Golden Lioness."
 race: tiefling
 class: warlock
 importance: major
-last_updated: [[Session 31 The Red Trail]]
+last_updated: "[[Session 31 The Red Trail]]"
 disposition: friendly
 description: "Tiefling warlock who runs The Golden Lioness in Ashford; her patron is the deep-water being beneath the town, whom she calls Asher. Got the building by making friends with something she was hired to exorcise."
 contributed_by: jeff
 charm_hook: "She named her bestselling ale 'The Mistake' and has never explained why."
 relates_to:
-  - [[The Golden Lioness]] (proprietor and owner)
+  - "[[The Golden Lioness]] (proprietor and owner)"
   - "[[Aashal-Groon Mellenegon Borak]] (her patron — the thing in the water she was sent to exorcise)"
   - "[[Lok Thuliaga]] (planned hire)"
   - "[[Bree Tealeaf]] (planned hire)"
   - "[[Silas Crubb]] (her lender; she owes him about 650 gp)"
 affinity:
-  - [[Luci]] (3)
-  - [[Halsby]] (2)
-  - [[Iggy]] (2)
-  - [[Odibli]] (3)
-  - [[Dip]] (1)
+  - "[[Luci]] (3)"
+  - "[[Halsby]] (2)"
+  - "[[Iggy]] (2)"
+  - "[[Odibli]] (3)"
+  - "[[Dip]] (1)"
 voice: "Practical and dry: acts first, thanks later. Blunt to the point of swearing when pushed, warm under it, never explains herself."
 voice_confirmed: 34
 ---

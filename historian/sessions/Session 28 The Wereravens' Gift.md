@@ -11,24 +11,24 @@ played_date: "2026-09-29"
 in_world_end_date: "0735-11-10"
 mission: "Clear the last of the blights, report the winery's state to Davian Martikov, and learn why the druids came"
 locations:
-  - [[Wizard of Wines]]
+  - "[[Wizard of Wines]]"
 key_npcs:
-  - [[Davian Martikov]]
-  - [[Baba Lysaga]]
+  - "[[Davian Martikov]]"
+  - "[[Baba Lysaga]]"
 recap: "The party confirmed the winery's interior held nothing more and stepped outside to report to Davian Martikov — into a second wave of blights that had been waiting in the treeline, unharmed because the vampire staff's scream never carried past the cellar walls. Odibli opened with Shatter across seven of them and was needled to 0 HP for it; Iggy pulled the spine out of him, stabilized him with Lay on Hands, and spent both remaining second-level slots on Healing Word — once for Odibli and once for Luci, who had critically failed an acrobatic wall-run, landed on a blight's spike, and then been crit to the ground. Dip bellowed across the grounds for help and cleaved blights down two at a time; raven swarms came off the winery's upper floor in answer and killed as many as the party did. Odibli's second Shatter caught Luci's square with Paul's consent, and Luci — back up — cast Sanctuary on him and dashed eighty feet clear to find Davian. Dip felled the last blight. Davian met them and cast poison and disease off Odibli and Dip both, clearing the tainted wine and the brown mold in one gesture, then told the party what the Martikovs had never told an outsider: he is not the Wizard of Wines and not a wizard at all. The vineyard was founded by a mage whose name is lost, who made three magic gems — seeds — that let grapes grow healthy through Strahd's curse, and whose family has run the place ever since. The ravens that saved them are that family: every Martikov in the line is a wereraven, infected so far back that how it happened is lost even to them. Ten years ago one gem was stolen on his son Urwin's watch and the Champagne du Stomp has not been made since. Three weeks ago Baba Lysaga — who believes she is Strahd's mother, and hunts anyone who opposes him — took a second gem herself and set the druids of Yester Hill on the winery for the third; their counter-attack failed and the druids came back with the blights. Without the gems the winery will never produce again. The party accepted the quest to recover all three, and Davian answered with a last secret: the founding mage made one other relic, held on his promise that travelers would one day come to defend the vineyard and should be given it. Odibli read it as a portal of lost magic that would carry them somewhere to gather strength and return stronger. He made the whole party hold hands and grasped the stone. Luminous mist rose to the edge of blinding, faded — and they were somewhere none of them had ever been."
 cliffhanger: "The party stepped through the founding mage's relic hand-in-hand and arrived somewhere unrecognizable — unrested since Session 24, out of spell slots, carrying an open promise to recover three gems from Baba Lysaga and the druids of Yester Hill. The portal is the campaign's season-swap device: Kellan cut the session on the arrival and handed the scene to Jeff, whose homebrew world is where it put them. Barovia is paused mid-quest, not finished — the Martikovs are owed a return."
 entities_canonized:
-  - [[Yester Hill]]
-  - [[The Seeds of the Wizard of Wines]]
-  - [[The Wanderer's Boon]]
-  - [[The Vintner Mage]]
-  - [[Champagne du Stomp]]
-  - [[Adrian Martikov]]
-  - [[Elvir Martikov]]
-  - [[The Martikovs Are Wereravens]]
-  - [[The Theft of the Three Seeds]]
-  - [[The Blight Ambush at the Winery]]
-  - [[The Party Steps Through the Portal]]
+  - "[[Yester Hill]]"
+  - "[[The Seeds of the Wizard of Wines]]"
+  - "[[The Wanderer's Boon]]"
+  - "[[The Vintner Mage]]"
+  - "[[Champagne du Stomp]]"
+  - "[[Adrian Martikov]]"
+  - "[[Elvir Martikov]]"
+  - "[[The Martikovs Are Wereravens]]"
+  - "[[The Theft of the Three Seeds]]"
+  - "[[The Blight Ambush at the Winery]]"
+  - "[[The Party Steps Through the Portal]]"
 new_entities:
   - "Baba Lysaga's scarecrow constructs — named as recent attackers on the winery, never seen on screen; ride on the existing [[Scarecrow]] stat block, no standalone entity"
   - "Luci's 'energy storm' — a feature Paul posted into Discord rather than reading aloud; name and mechanics unrecorded"

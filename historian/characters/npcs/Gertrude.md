@@ -17,14 +17,14 @@ aliases: []
 importance: minor
 active: false
 relates_to:
-  - [[Mad Mary]] (mother)
-  - [[House of Mad Mary]] (last known home)
-  - [[Strahd Von Zarovich]] (her mother was hiding her from him)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Mad Mary]] (mother)"
+  - "[[House of Mad Mary]] (last known home)"
+  - "[[Strahd Von Zarovich]] (her mother was hiding her from him)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial — heard about her from Mad Mary)
+  - "[[The Party]] (partial — heard about her from Mad Mary)"
 description: "Gertrude. Mad Mary's daughter. Went west of Barovia Village against her mother's wishes. Presumed dead. Left behind a Blinsky doll."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
 ---
 

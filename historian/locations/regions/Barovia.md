@@ -9,18 +9,18 @@ tags:
   - location
   - location/region
 geography: "Isolated valley surrounded by the Balinok Mountains. Dense forests, mist-shrouded roads, a central river, and Castle Ravenloft looming over all."
-controlling_faction: [[Domain of Barovia]]
+controlling_faction: "[[Domain of Barovia]]"
 
 aliases:
   - "The Domain of Barovia"
   - "The Mists"
 importance: critical
 active: true
-last_updated: [[Session 10 Escape From Death House]]
+last_updated: "[[Session 10 Escape From Death House]]"
 relates_to:
-  - [[Domain of Barovia]] (political entity governing this region)
-  - [[Strahd Von Zarovich]] (absolute ruler)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Domain of Barovia]] (political entity governing this region)"
+  - "[[Strahd Von Zarovich]] (absolute ruler)"
+  - "[[Curse of Strahd]] (campaign)"
 description: "The mist-sealed valley domain of Strahd Von Zarovich. No one enters or leaves without his knowledge."
 
 climate: "Perpetually overcast and cold. The mists make navigation difficult and seal the valley from the outside world."
@@ -29,14 +29,14 @@ tensions:
   - Strahd's immortality means the domain has no succession, no end
   - Villages live under constant fear of the castle and the creatures of the night
 settlements:
-  - [[Barovia Village]]
-  - [[Vallaki]]
+  - "[[Barovia Village]]"
+  - "[[Vallaki]]"
 notable_features:
   - Castle Ravenloft — seat of Strahd's power
   - The Mists — supernatural barrier preventing escape
-  - [[Death House]] — haunted manor on the village outskirts
+  - "[[Death House]] — haunted manor on the village outskirts"
 
-source_session: [[Session 01 The Black Sheep Inn]]
+source_session: "[[Session 01 The Black Sheep Inn]]"
 confirmed_date: "unknown"
 ---
 

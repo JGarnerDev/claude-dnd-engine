@@ -6,7 +6,7 @@ exists: true
 state: identified
 tags:
   - item/magic
-source_session: [[Session 28 The Wereravens' Gift]]
+source_session: "[[Session 28 The Wereravens' Gift]]"
 confirmed_date: "2026-09-29"
 item_type: wondrous
 rarity: unknown
@@ -17,20 +17,20 @@ aliases:
   - "The relic"
 importance: critical
 active: true
-last_updated: [[Session 31 The Red Trail]]
+last_updated: "[[Session 31 The Red Trail]]"
 relates_to:
-  - [[The Vintner Mage]] (made it)
-  - [[Davian Martikov]] (kept it; gave it to the party)
-  - [[Wizard of Wines]] (held here for generations)
-  - [[The Seeds of the Wizard of Wines]] (the same mage's other surviving work)
-  - [[Odibli]] (identified it, and triggered it)
-  - [[The Party]] (its intended recipients)
-  - [[Curse of Strahd]] (campaign)
+  - "[[The Vintner Mage]] (made it)"
+  - "[[Davian Martikov]] (kept it; gave it to the party)"
+  - "[[Wizard of Wines]] (held here for generations)"
+  - "[[The Seeds of the Wizard of Wines]] (the same mage's other surviving work)"
+  - "[[Odibli]] (identified it, and triggered it)"
+  - "[[The Party]] (its intended recipients)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
-owner: [[Odibli]]
+  - "[[The Party]] (partial)"
+owner: "[[Odibli]]"
 description: "An ancient relic made by the Wizard of Wines' founding mage and kept by the Martikovs for generations on his promise that travelers would one day come to defend the vineyard. Odibli read it as a portal of lost magic. It carried the whole party out of Barovia at a touch — the campaign's season-swap device."
-current_holder: [[Odibli]]
+current_holder: "[[Odibli]]"
 quirks:
   - "Activated by acceptance rather than by any command — Odibli could tell from holding it that accepting the gift was all that was required"
   - "Carried the entire party, not just the bearer, with everyone holding hands; whether contact was actually necessary is unknown"

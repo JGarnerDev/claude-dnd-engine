@@ -8,7 +8,7 @@ tags:
   - faction/religious
 subtype: religious
 locations:
-  - [[Aethryn]]
+  - "[[Aethryn]]"
 purpose: religious
 importance: minor
 active: true
@@ -16,7 +16,7 @@ contributed_by: ben
 source_session: "player backstory (Dip)"
 confirmed_date: "pre-campaign"
 relates_to:
-  - [[Dip]] (trained here after years of wandering)
+  - "[[Dip]] (trained here after years of wandering)"
 motives:
   - "Understand how the many planes converge on the mortal plane"
   - "Teach communion across planes through meditation"

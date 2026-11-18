@@ -11,15 +11,15 @@ played_date: "2026-08-25"
 in_world_end_date: "0735-11-09"
 mission: "Keep the meeting with Rictavio, then ride out after the missing wine"
 locations:
-  - [[Vallaki]]
-  - [[Luna River]]
-  - [[Raven River]]
-  - [[Wizard of Wines]]
+  - "[[Vallaki]]"
+  - "[[Luna River]]"
+  - "[[Raven River]]"
+  - "[[Wizard of Wines]]"
 key_npcs:
-  - [[Rictavio]]
-  - [[Strahd Von Zarovich]]
-  - [[Danika]]
-  - [[The Raven River Wolf]]
+  - "[[Rictavio]]"
+  - "[[Strahd Von Zarovich]]"
+  - "[[Danika]]"
+  - "[[The Raven River Wolf]]"
 recap: "Leaving Vallaki for the meeting with Rictavio, the party was stopped outside the gates by a noble who congratulated them on ending Fiona Wachter's uprising and lamented how poorly the Burgomaster had rewarded them. He gave his name as Vasili van Holtz. At the meeting place vampires ambushed them and dropped the entire party; Rictavio and his saber-toothed tiger drove the attackers off and stabilized everyone. He told them the noble had been Strahd himself, and gave them his own true name: Rudolph van Richten, the vampire hunter, who lost his wife and child to vampires long ago and came to Vallaki to wreck Strahd's plans — specifically those involving the Vistani vampires. He pointed them at the Keepers of the Feather, enemies of Strahd and possible allies. The party took a long rest, then returned to the tavern, where Danika placed the missing wine shipment past Ravenriver, near Van Richten's tower. Crossing the Luna River they were passed by a skeletal horse and rider that ignored Odibli entirely and rode south into the forest. At the Raven River crossing a dire wolf emerged; Odibli spoke with it, and it told them to leave — it served Strahd, and had been posted to stop a group of four adventurers from going further west. The party was headed south to the vineyard, not west, so they went on and found the winery: a house, and a man among the trees beckoning them in."
 cliffhanger: "The party stands at the edge of the vineyard as a lone man beckons them out of the trees — with Strahd's wolf behind them knowing exactly who they are, and Van Richten's warning that Strahd walks Vallaki wearing a nobleman's face."
 entities_canonized: []

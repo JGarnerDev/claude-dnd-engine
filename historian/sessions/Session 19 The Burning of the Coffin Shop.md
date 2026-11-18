@@ -11,23 +11,23 @@ played_date: "2026-07-28"
 in_world_end_date: "0735-11-07"
 mission: "Destroy the vampire spawn nesting in Henrik's shop, recover the church's stolen saint's bones, and survive the fallout"
 locations:
-  - [[Vallaki]]
-  - [[Henrik]]
-  - [[Burgomaster's Mansion]]
-  - [[Church of St. Andril]]
-  - [[Lake Zarovich]]
+  - "[[Vallaki]]"
+  - "[[Henrik]]"
+  - "[[Burgomaster's Mansion]]"
+  - "[[Church of St. Andril]]"
+  - "[[Lake Zarovich]]"
 key_npcs:
-  - [[Szoldar Szoldarovich]]
-  - [[Yevgeni Krushkin]]
-  - [[Izek Strazni]]
-  - [[Lucien Petrovic]]
-  - [[Ireena Kolyana]]
-  - [[Vargas Vallakovich]]
+  - "[[Szoldar Szoldarovich]]"
+  - "[[Yevgeni Krushkin]]"
+  - "[[Izek Strazni]]"
+  - "[[Lucien Petrovic]]"
+  - "[[Ireena Kolyana]]"
+  - "[[Vargas Vallakovich]]"
 recap: "Picking up the blown ambush, the party hired the wolf-hunters Szoldar Szoldarovich and Yevgeni Krushkin for the day (10 gp) and, taking the correct upstairs door this time, sent their three dexterous members to slip in after the bones — Iggy confirming by Arcana that these were the saint's bones they had hunted. When one hunter made too much noise, the party torched the coffin shop and fled, glimpsing yet more bodies in the flames. The enraged villagers were talked down by the hunters, but Izek Strazni bound the party and paraded them through town toward the dungeon and the Burgomaster. The priest Lucien Petrovic intervened, declaring they had saved the town by finding the bones — and took the relics himself, though the party read an ulterior urgency in his haste to get them back to the church. A nurse brought them before Burgomaster Vargas Vallakovich; there they learned Lake Zarovich was where Izek lost his arm, and noticed that Izek and Ireena share a face. Before the priest, the truth came out: Izek and Ireena are siblings — Izek born without a soul, which is why he forgot her — and Izek, untroubled, accepts his dark-magic arm's unknown origin. The party leveled up."
 cliffhanger: "The bones are recovered and in Lucien Petrovic's hands — but his rush to return them hints at a hidden motive. Izek Strazni has just learned Ireena is the sister he was soulless enough to forget, and the party is still on the hook for burning down Henrik's shop, with the Burgomaster's reckoning ahead."
 entities_canonized:
-  - [[Vargas Vallakovich]]
-  - [[Lake Zarovich]]
+  - "[[Vargas Vallakovich]]"
+  - "[[Lake Zarovich]]"
 new_entities:
   - "Lake Zarovich — the lake where Izek Strazni lost his arm; filed as a wilderness location."
   - "A nurse in the Burgomaster's mansion who brought the party to his office. Minor NPC, no file."

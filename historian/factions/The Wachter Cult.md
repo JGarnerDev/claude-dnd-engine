@@ -6,27 +6,27 @@ exists: true
 state: dissolved
 tags:
   - faction/cult
-source_session: [[Session 23 The Cult in the Cellar]]
+source_session: "[[Session 23 The Cult in the Cellar]]"
 confirmed_date: "2026-08-18"
 locations:
-  - [[Wachter House]]
+  - "[[Wachter House]]"
 purpose: religious
 aliases:
   - "The Book Club"
 importance: major
 active: false
-last_updated: [[Session 23 The Cult in the Cellar]]
-rulership: [[Lady Fiona Wachter]]
+last_updated: "[[Session 23 The Cult in the Cellar]]"
+rulership: "[[Lady Fiona Wachter]]"
 relates_to:
-  - [[Lady Fiona Wachter]] (leader; died with them)
-  - [[Wachter House]] (met in the hidden cellar chamber)
-  - [[Majesto]] (the imp kept in their chamber)
-  - [[Vargas Vallakovich]] (the regime they meant to overthrow)
-  - [[Izek Strazni]] (marked for death)
-  - [[Vallaki]] (operated here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Lady Fiona Wachter]] (leader; died with them)"
+  - "[[Wachter House]] (met in the hidden cellar chamber)"
+  - "[[Majesto]] (the imp kept in their chamber)"
+  - "[[Vargas Vallakovich]] (the regime they meant to overthrow)"
+  - "[[Izek Strazni]] (marked for death)"
+  - "[[Vallaki]] (operated here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "A circle of devil-worshipers who met around a black pentagram in a hidden chamber beneath Wachter House, led by Lady Fiona Wachter. Called themselves a book club when caught. Wiped out by the party in Session 23."
 motives:
   - "Devil worship, by their own admission"
@@ -35,8 +35,8 @@ tensions:
   - "Needed outside hands to kill Izek Strazni — they would not do it themselves"
 hierarchy: "Lady Fiona Wachter at the head; four hooded members seated at the points of a five-pointed star, with the fifth chair empty."
 opposition:
-  - [[Vargas Vallakovich]] (the seat they wanted)
-  - [[The Party]] (destroyed them)
+  - "[[Vargas Vallakovich]] (the seat they wanted)"
+  - "[[The Party]] (destroyed them)"
 ---
 
 Locations: [[Wachter House]] | Campaign: [[Curse of Strahd]]

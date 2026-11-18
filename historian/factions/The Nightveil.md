@@ -2,7 +2,7 @@
 name: The Nightveil
 type: faction
 exists: true
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 campaign: homebrew
 contributed_by: kellan
@@ -10,21 +10,21 @@ state: active
 tags:
   - faction/cult
 locations:
-  - [[Aethryn]]
+  - "[[Aethryn]]"
 purpose: religious
 importance: major
 aliases:
   - "the order"
   - "the veiled ones"
 relates_to:
-  - [[Shar]] (the goddess they serve)
-  - [[Halsby]] (raised in their rite; their stored asset)
-  - [[Sister Maerith]] (member; his handler)
+  - "[[Shar]] (the goddess they serve)"
+  - "[[Halsby]] (raised in their rite; their stored asset)"
+  - "[[Sister Maerith]] (member; his handler)"
 known_by:
-  - [[Halsby]] (partial — he has begun attending, not knowing what they are)
+  - "[[Halsby]] (partial — he has begun attending, not knowing what they are)"
 description: "A secretive Sharran order that harvests loss for the Lady of Loss. They dedicated Halsby as a child through his grandmother, kept him near the shadow-wound to keep him alive, and now hold the answers he'll trade anything for — at an undefined price."
 hierarchy: "Cell-based Sharran order; members veiled, unhurried, and long-lived. Cells operate quietly through devotees embedded in ordinary households."
-rulership: [[Sister Maerith]]
+rulership: "[[Sister Maerith]]"
 motives:
   - Reclaim and own Halsby through the debt he is running up for answers about his blood
   - Harvest loss, offered freely, as devotion to Shar

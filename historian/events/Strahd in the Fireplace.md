@@ -17,12 +17,12 @@ consequences:
 importance: minor
 last_updated: "[[Session 03 The Face In The Fire]]"
 participants:
-  - [[Strahd Von Zarovich]] (watcher)
-  - [[The Party]] (witnesses)
-  - [[Odibli]] (downed)
-  - [[Iggy]] (downed)
+  - "[[Strahd Von Zarovich]] (watcher)"
+  - "[[The Party]] (witnesses)"
+  - "[[Odibli]] (downed)"
+  - "[[Iggy]] (downed)"
 relates_to:
-  - [[Death House]] (occurred in)
+  - "[[Death House]] (occurred in)"
 awareness: secret
 description: "Strahd's face appeared in the fireplace of Death House room 6, the first time the party saw him; animated armor downed Odibli and Iggy in the same encounter."
 ---

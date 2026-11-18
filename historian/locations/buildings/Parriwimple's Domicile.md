@@ -8,13 +8,13 @@ state: occupied
 tags:
   - location
   - location/building
-city: [[Barovia Village]]
+city: "[[Barovia Village]]"
 residents:
-  - [[Parriwimple]] (resident)
+  - "[[Parriwimple]] (resident)"
 purpose: residential
 importance: minor
 active: true
-source_session: [[Session 12 The March of the Dead]]
+source_session: "[[Session 12 The March of the Dead]]"
 confirmed_date: "Session 12"
 description: "The home of Parriwimple in Barovia Village, where he lodges apart from his work at Bildrath's Mercantile."
 ---

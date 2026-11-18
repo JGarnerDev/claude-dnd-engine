@@ -8,35 +8,35 @@ state: closed
 tags:
   - location
   - location/shop
-source_session: [[Session 25 The Wizard of Wines]]
+source_session: "[[Session 25 The Wizard of Wines]]"
 confirmed_date: "2026-09-01"
 city: "None — a vineyard estate south of the Raven River"
-proprietor: [[Davian Martikov]]
+proprietor: "[[Davian Martikov]]"
 purpose: commerce
 aliases:
   - "The Winery"
 importance: major
 active: true
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Davian Martikov]] (proprietor)
-  - [[The Winery Druid]] (poisoned its casks from within; killed here)
-  - [[Baba Lysaga]] (her druids besiege it)
-  - [[Danika]] (its overdue shipments sent the party here)
-  - [[Blue Water Inn]] (the customer waiting on the wine)
-  - [[Vallaki]] (the town it supplies)
-  - [[Raven River]] (lies south of it)
-  - [[The Vintner Mage]] (founded it)
-  - [[The Seeds of the Wizard of Wines]] (the three gems that kept its vineyard fertile)
-  - [[The Wanderer's Boon]] (held here for generations)
-  - [[The Martikovs Are Wereravens]] (the family that runs it)
-  - [[Yester Hill]] (where the third seed was taken)
-  - [[Champagne du Stomp]] (its lost best vintage)
-  - [[Urwin]] (Davian's son; on guard the night the first seed was stolen)
-  - [[Van Richten's Tower]] (nearby landmark)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Davian Martikov]] (proprietor)"
+  - "[[The Winery Druid]] (poisoned its casks from within; killed here)"
+  - "[[Baba Lysaga]] (her druids besiege it)"
+  - "[[Danika]] (its overdue shipments sent the party here)"
+  - "[[Blue Water Inn]] (the customer waiting on the wine)"
+  - "[[Vallaki]] (the town it supplies)"
+  - "[[Raven River]] (lies south of it)"
+  - "[[The Vintner Mage]] (founded it)"
+  - "[[The Seeds of the Wizard of Wines]] (the three gems that kept its vineyard fertile)"
+  - "[[The Wanderer's Boon]] (held here for generations)"
+  - "[[The Martikovs Are Wereravens]] (the family that runs it)"
+  - "[[Yester Hill]] (where the third seed was taken)"
+  - "[[Champagne du Stomp]] (its lost best vintage)"
+  - "[[Urwin]] (Davian's son; on guard the night the first seed was stolen)"
+  - "[[Van Richten's Tower]] (nearby landmark)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "The vineyard and winery south of the Raven River, run by the Martikovs — a family of wereravens. Founded by a mage whose name is lost, whose three magic seeds are the only reason grapes grow here through Strahd's curse. All three are stolen, every cask is poisoned, and the winery cannot produce again until they are recovered."
 specialty: "Wine — the source of Vallaki's supply, and of the Blue Water Inn's overdue shipments. Production is currently zero and will stay there until at least one seed is recovered."
 customers: "Vallaki, via the Blue Water Inn"

@@ -6,7 +6,7 @@ exists: true
 state: alive
 tags:
   - creature
-source_session: [[Session 21 The Festival of the Blazing Sun]]
+source_session: "[[Session 21 The Festival of the Blazing Sun]]"
 confirmed_date: "2026-08-04"
 creature_type: beast
 challenge_rating: "2"
@@ -15,25 +15,25 @@ aliases:
   - "The Vallaki Tiger"
 importance: minor
 active: true
-last_updated: [[Session 24 The Vampire Hunter]]
+last_updated: "[[Session 24 The Vampire Hunter]]"
 relates_to:
-  - [[Rictavio]] (keeper; travels in his cage-cart)
-  - [[Odibli]] (spoke with it; lured it back into the cage)
-  - [[Karl]] (suspected of loosing it)
-  - [[Nikolai]] (suspected of loosing it)
-  - [[Vallaki]] (loosed here during the festival)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Rictavio]] (keeper; travels in his cage-cart)"
+  - "[[Odibli]] (spoke with it; lured it back into the cage)"
+  - "[[Karl]] (suspected of loosing it)"
+  - "[[Nikolai]] (suspected of loosing it)"
+  - "[[Vallaki]] (loosed here during the festival)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "The well-fed saber-toothed tiger Rictavio keeps in a cage-cart. Loosed during the Blazing Sun festival and lured back in by Odibli's summoned frog — then, three sessions later, the thing that drove off the vampires and saved the party's lives."
 personality: "Cheerfully enjoying the panic it caused. Told Odibli, under Speak with Animals, that it was happy to be scaring people."
 goals:
   - "Frighten people; eat well"
 lair: "Rictavio's cage-cart"
 allies:
-  - [[Rictavio]] (keeper)
+  - "[[Rictavio]] (keeper)"
 enemies:
-  - [[Izek Strazni]] (hunted it and its owner)
+  - "[[Izek Strazni]] (hunted it and its owner)"
 tactics: "Not fought by the party. Drove off the vampires at the meeting place alongside Rictavio."
 stat_block: "[[Saber-Toothed Tiger]] (data/monsters)"
 ---

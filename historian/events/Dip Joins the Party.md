@@ -19,10 +19,10 @@ consequences:
 importance: minor
 last_updated: "[[Session 05 The Specter]]"
 participants:
-  - [[Dip]] (joined)
-  - [[The Party]] (joined by)
+  - "[[Dip]] (joined)"
+  - "[[The Party]] (joined by)"
 relates_to:
-  - [[Death House]] (occurred in)
+  - "[[Death House]] (occurred in)"
 awareness: regional
 description: "Dip joined the party inside Death House, the same session the Shazzam spell was established and the specter struck."
 ---

@@ -9,19 +9,19 @@ tags:
   - location
   - location/building
 
-global_location: [[Barovia]]
+global_location: "[[Barovia]]"
 purpose: lair
 aliases:
   - "The Windmill"
 importance: major
 active: true
 relates_to:
-  - [[Barovia]] (located within, on the road to Vallaki)
-  - [[The Dream Pastry Woman]] (suspected resident — the night hag)
-  - [[Vallaki]] (down the road)
+  - "[[Barovia]] (located within, on the road to Vallaki)"
+  - "[[The Dream Pastry Woman]] (suspected resident — the night hag)"
+  - "[[Vallaki]] (down the road)"
 known_by:
-  - [[The Party]] (exterior only — warned off, did not enter)
-source_session: [[Session 15 The Gates of Vallaki]]
+  - "[[The Party]] (exterior only — warned off, did not enter)"
+source_session: "[[Session 15 The Gates of Vallaki]]"
 confirmed_date: "2026-06-23"
 description: "A dilapidated windmill on the hilly road to Vallaki. An agitated raven at the door warned the party away — go inside and you die — and Bosco caught the meat-pie scent of the dream-pastry hag. The party marked it the night hag's lair and chose not to enter unprepared."
 ---

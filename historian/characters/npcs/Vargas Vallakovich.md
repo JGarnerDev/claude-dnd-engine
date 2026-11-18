@@ -8,27 +8,27 @@ state: alive
 tags:
   - character
   - character/npc
-location: [[Vallaki]]
+location: "[[Vallaki]]"
 personality: "Unhealthily obsessed with everyone being happy — enforces joy through mandatory, themed festivals, cheer on pain of treason. Pragmatic enough to bargain and to bury a scandal when his own house is at stake."
 livelihood: "Burgomaster (ruler) of Vallaki."
 disposition: neutral
 importance: major
 active: true
-source_session: [[Session 19 The Burning of the Coffin Shop]]
+source_session: "[[Session 19 The Burning of the Coffin Shop]]"
 confirmed_date: "2026-07-28"
 aliases:
   - "The Burgomaster of Vallaki"
   - "The Burgermeister"
 relates_to:
-  - [[Vallaki]] (rules)
-  - [[Burgomaster's Mansion]] (home and seat)
-  - [[Viktor Vallakovich]] (son)
-  - [[Izek Strazni]] (his guard captain)
-  - [[Karl]] (dissenter against him)
-  - [[Nikolai]] (dissenter against him)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vallaki]] (rules)"
+  - "[[Burgomaster's Mansion]] (home and seat)"
+  - "[[Viktor Vallakovich]] (son)"
+  - "[[Izek Strazni]] (his guard captain)"
+  - "[[Karl]] (dissenter against him)"
+  - "[[Nikolai]] (dissenter against him)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (met — Session 19–20)
+  - "[[The Party]] (met — Session 19–20)"
 description: "Vargas Vallakovich, Burgomaster of Vallaki, obsessed with mandatory happiness — themed festivals on pain of treason. The party finally met him after burning down Henrik's coffin shop; he set them two debt-quests, then waived the penalty entirely in exchange for their silence about his son Viktor's experiments."
 goals:
   - "Keep Vallaki happy — by force if necessary"

@@ -9,7 +9,7 @@ tags:
   - character
   - character/antagonist
 
-location: [[Barovia Village]]
+location: "[[Barovia Village]]"
 personality: "Cordial surface, predatory core. Sold dream pastries door to door with the warmth of a traveling merchant — then took a child from desperate parents without ceremony. Cackling as she shifted planes."
 livelihood: "Sells 'dream pastries' — baked goods that induce a dissociative stupor. Collects children as payment from families who cannot afford to refuse."
 disposition: hostile
@@ -18,14 +18,14 @@ aliases:
 importance: major
 active: true
 relates_to:
-  - [[Barovia Village]] (territory she was operating in)
-  - [[The Party]] (attacked and failed to defeat her)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Barovia Village]] (territory she was operating in)"
+  - "[[The Party]] (attacked and failed to defeat her)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
-  - [[Parriwimple]] (now aware and on alert)
+  - "[[The Party]] (partial)"
+  - "[[Parriwimple]] (now aware and on alert)"
 description: "Unnamed night hag operating in Barovia Village. Sold dream pastries to Barovian residents, taking children as payment. Revealed her true form in combat, then shifted to another plane with a stolen child before the party could stop her."
-source_session: [[Session 13 Dream Pastries]]
+source_session: "[[Session 13 Dream Pastries]]"
 confirmed_date: "2026-06-02"
 
 race: "Night Hag"
@@ -35,7 +35,7 @@ goals:
 motives:
   - "Unknown — hag motivations may involve a larger network or trade in souls"
 enemies:
-  - [[The Party]] (attacked her; failed)
+  - "[[The Party]] (attacked her; failed)"
 human_detail: "She took a child from parents who were still begging. She could have just walked away. She paused, held the doorframe, and waited for them to say it again."
 ---
 

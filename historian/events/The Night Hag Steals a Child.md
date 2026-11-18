@@ -19,10 +19,10 @@ consequences:
 importance: major
 last_updated: "[[Session 13 Dream Pastries]]"
 participants:
-  - [[The Dream Pastry Woman]] (the hag)
-  - [[The Party]] (witnesses)
+  - "[[The Dream Pastry Woman]] (the hag)"
+  - "[[The Party]] (witnesses)"
 relates_to:
-  - [[Domain of Barovia]] (occurred in)
+  - "[[Domain of Barovia]] (occurred in)"
 awareness: regional
 description: "A night hag revealed herself at the church and fled with a stolen child — escaping the party and leaving an open hunt behind her."
 ---

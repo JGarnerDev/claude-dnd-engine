@@ -8,38 +8,38 @@ state: alive
 tags:
   - character
   - character/npc
-source_session: [[Session 25 The Wizard of Wines]]
+source_session: "[[Session 25 The Wizard of Wines]]"
 confirmed_date: "2026-09-01"
-location: [[Wizard of Wines]]
+location: "[[Wizard of Wines]]"
 personality: "Careful and courteous under pressure, quick to reassure — and quicker to change the subject when asked what his people did to earn the druids' hatred. Once a debt is large enough he pays it in truth, all at once, without being asked twice."
 livelihood: "Proprietor of the Wizard of Wines; heads a household of at least ten who work the vineyard and the winery."
 disposition: friendly
 aliases: []
 importance: major
 active: true
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 affinity:
-  - [[Odibli]] (4)
-  - [[Dip]] (4)
-  - [[Iggy]] (4)
-  - [[Luci]] (4)
+  - "[[Odibli]] (4)"
+  - "[[Dip]] (4)"
+  - "[[Iggy]] (4)"
+  - "[[Luci]] (4)"
 relates_to:
-  - [[Wizard of Wines]] (proprietor)
-  - [[Baba Lysaga]] (named her as the power behind the siege, and the thief of a seed)
-  - [[The Seeds of the Wizard of Wines]] (needs all three back)
-  - [[The Wanderer's Boon]] (kept it for generations; gave it to the party)
-  - [[The Vintner Mage]] (his family inherited the vineyard from him)
-  - [[The Martikovs Are Wereravens]] (disclosed it)
-  - [[Urwin]] (son; was on guard the night the first seed was stolen)
-  - [[Adrian Martikov]] (household)
-  - [[Elvir Martikov]] (household)
-  - [[Yester Hill]] (marked it on a map for the party)
-  - [[Champagne du Stomp]] (the vintage his family lost)
-  - [[Danika]] (the overdue wine shipments are hers)
-  - [[Vallaki]] (the town his deliveries have stopped reaching)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (proprietor)"
+  - "[[Baba Lysaga]] (named her as the power behind the siege, and the thief of a seed)"
+  - "[[The Seeds of the Wizard of Wines]] (needs all three back)"
+  - "[[The Wanderer's Boon]] (kept it for generations; gave it to the party)"
+  - "[[The Vintner Mage]] (his family inherited the vineyard from him)"
+  - "[[The Martikovs Are Wereravens]] (disclosed it)"
+  - "[[Urwin]] (son; was on guard the night the first seed was stolen)"
+  - "[[Adrian Martikov]] (household)"
+  - "[[Elvir Martikov]] (household)"
+  - "[[Yester Hill]] (marked it on a map for the party)"
+  - "[[Champagne du Stomp]] (the vintage his family lost)"
+  - "[[Danika]] (the overdue wine shipments are hers)"
+  - "[[Vallaki]] (the town his deliveries have stopped reaching)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Davian Martikov. Proprietor of the Wizard of Wines and head of a family of wereravens. Not the Wizard of Wines and not a wizard — the title belongs to the vineyard's long-dead founder. Told the party the whole truth in Session 28: three stolen seeds, Baba Lysaga's war on anyone opposing Strahd, and a relic left for travelers who would come to defend the place."
 race: "Unknown"
 class: "Unknown"

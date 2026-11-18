@@ -11,17 +11,17 @@ played_date: "2026-08-18"
 in_world_end_date: "0735-11-09"
 mission: "Find out what Lady Wachter is hiding beneath her house"
 locations:
-  - [[Wachter House]]
-  - [[Vallaki]]
+  - "[[Wachter House]]"
+  - "[[Vallaki]]"
 key_npcs:
-  - [[Lady Fiona Wachter]]
-  - [[Majesto]]
-  - [[Vargas Vallakovich]]
+  - "[[Lady Fiona Wachter]]"
+  - "[[Majesto]]"
+  - "[[Vargas Vallakovich]]"
 recap: "The skeletons fell. In the cellar the party found footprints leading to a wall and vanishing into it; Dip detected a secret door and Odibli's Detect Magic read only thin arcana in the air — no traps, no light or air passing through. Dip forced it open onto a candlelit chamber with a black pentagram cut into the floor, five chairs at its points, and four hooded figures rising to meet them. Dip claimed Lady Wachter's explicit permission and Iggy sold the lie; the cultists relaxed, called themselves a book club, mentioned the devil worship they practice, and said the lady would be down shortly. Fiona arrived, took their presence as agreement, and announced that Izek must die and 'these heroes' would see to it. Iggy excused himself to relieve himself, refused to do it on the magic circle, and walked out — at which Fiona shouted 'get him!' and the fight began. The party won. Fiona and her imp Majesto both died to Dip. She dropped a set of keys and a gold ring, and the party went to the Burgomaster to report that they had saved the day."
 cliffhanger: "Lady Wachter and her devil-worshiping circle are dead beneath her own house, her keys and gold ring are in the party's hands with no idea what they open — and the Burgomaster has been told a version of events that leaves the party as heroes."
 entities_canonized:
-  - [[Lady Fiona Wachter]]
-  - [[Wachter House]]
+  - "[[Lady Fiona Wachter]]"
+  - "[[Wachter House]]"
 new_entities:
   - "[[Majesto]] — Lady Wachter's imp familiar, slain by Dip"
   - "[[The Wachter Cult]] — the four hooded devil-worshipers in the pentagram chamber"

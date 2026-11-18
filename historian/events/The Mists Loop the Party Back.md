@@ -20,9 +20,9 @@ consequences:
 importance: minor
 last_updated: "[[Session 15 The Gates of Vallaki]]"
 participants:
-  - [[Odibli]] (read the fog)
+  - "[[Odibli]] (read the fog)"
 relates_to:
-  - [[Barovia]] (occurred in)
+  - "[[Barovia]] (occurred in)"
 awareness: party
 description: "The party tried to cut over the burial hills; the mists enveloped them and returned them to the bridge. Odibli judged the fog a law of the plane, not a curse or spell."
 ---

@@ -6,14 +6,14 @@ exists: true
 state: completed
 session_number: 4
 in_world_end_date: "0735-10-23"
-mission: [[Death House]]
+mission: "[[Death House]]"
 planned_date: "2026-03-30"
 locations:
-  - [[Death House]]
+  - "[[Death House]]"
 key_npcs:
-  - [[The Nursemaid]] (vision)
-  - [[Gustav Durst]] (vision)
-party: [[The Party]]
+  - "[[The Nursemaid]] (vision)"
+  - "[[Gustav Durst]] (vision)"
+party: "[[The Party]]"
 importance: major
 active: false
 description: "Floor 3 exploration. Nursery mirror visions reveal the Durst family secret. Iggy ensnared by cursed bed. Luci reveals her backstory."
@@ -23,9 +23,9 @@ played_date: "2026-03-30"
 recap: "Party explored floor 3. Balcony looks east over grass and forest. In the nursery, Iggy looked in the mirror and saw three visions: nursemaid and master (Gustav) kissing; a stillborn child; the nursemaid being killed by a cult in the same room. Iggy relayed the visions to Odibli. Iggy then got ensnared by the bed when he checked it (also kicked it first). Luci freed him using a sun spell. Iggy experienced a brief backstory flashback from the bed. Luci disclosed her character's backstory (scourge aasimar from the light dimension). Specter not yet triggered."
 cliffhanger: "The specter encounter is still ahead. Tension building."
 entities_canonized:
-  - [[The Nursemaid]]
-  - [[Gustav Durst]]
-  - [[Walter Durst]]
+  - "[[The Nursemaid]]"
+  - "[[Gustav Durst]]"
+  - "[[Walter Durst]]"
 ---
 
 ## Session Notes

@@ -9,7 +9,7 @@ state: completed
 tags:
   - session
 
-mission: [[The Stolen Casks]]
+mission: "[[The Stolen Casks]]"
 planned_date: "2026-11-10"
 played_date: "2026-11-10"
 in_world_end_date: "6743-05-21"
@@ -39,10 +39,10 @@ pcs_present:
   - "Halsby"
 
 # --- OPTIONAL ---
-act: [[Act 1 - The Hearth at Ashford]]
+act: "[[Act 1 - The Hearth at Ashford]]"
 locations:
-  - [[Ashford]]
-  - [[The Golden Lioness]]
+  - "[[Ashford]]"
+  - "[[The Golden Lioness]]"
 key_npcs:
   - "[[Sable Wren]] (historian — the unsigned deed, the hearth, the send-off)"
   - "[[Mara Tull]] (historian — sheriff; holds the prisoner at the close)"

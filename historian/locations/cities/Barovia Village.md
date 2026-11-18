@@ -9,20 +9,20 @@ tags:
   - location
   - location/city
 
-global_location: [[Barovia]]
+global_location: "[[Barovia]]"
 purpose: other
 
 aliases:
   - "The Village of Barovia"
 importance: critical
 active: true
-last_updated: [[Session 10 Escape From Death House]]
+last_updated: "[[Session 10 Escape From Death House]]"
 
 relates_to:
-  - [[Barovia]] (parent region)
-  - [[Domain of Barovia]] (controlling faction)
-  - [[Strahd Von Zarovich]] (distant ruler; his shadow defines village life)
-  - [[Death House]] (haunted manor on village outskirts)
+  - "[[Barovia]] (parent region)"
+  - "[[Domain of Barovia]] (controlling faction)"
+  - "[[Strahd Von Zarovich]] (distant ruler; his shadow defines village life)"
+  - "[[Death House]] (haunted manor on village outskirts)"
 
 description: "The largest settlement in the valley — a village of hopeless souls under Strahd's thumb. Party arrived here after clearing Death House."
 
@@ -34,12 +34,12 @@ tensions:
   - Residents live under threat of Strahd's creatures after dark
   - Ireena Kolyana's presence draws Strahd's attention to the village
 factions:
-  - [[Domain of Barovia]]
+  - "[[Domain of Barovia]]"
 rulership: "Unknown — see reliability note"
 shops:
   - "[[Blood of the Vine Tavern]] (unconfirmed at table)"
 
-source_session: [[Session 10 Escape From Death House]]
+source_session: "[[Session 10 Escape From Death House]]"
 confirmed_date: "Session 10"
 ---
 

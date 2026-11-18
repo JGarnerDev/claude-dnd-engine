@@ -4,7 +4,7 @@ name: "Zach"
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
@@ -20,7 +20,7 @@ livelihood: "Smith. One of only two who could remake a hammered brewing copper."
 # --- OPTIONAL (entity base) ---
 importance: background
 active: true
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: "[[Session 30 Keep the Ale]]"
 relates_to:
   - "[[Silas Crubb]] (named him)"
   - "[[George Ringo]] (the other smith)"

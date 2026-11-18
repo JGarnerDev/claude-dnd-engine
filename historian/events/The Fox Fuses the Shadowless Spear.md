@@ -7,7 +7,7 @@ state: recent
 tags:
   - event
   - event/pact
-source_session: [[Session 31 The Red Trail]]
+source_session: "[[Session 31 The Red Trail]]"
 confirmed_date: "2026-10-27"
 date: "Ashford, morning of Day 2 (6743-05-21, late in Crawl 5)"
 timeline_date: "6743-05-21"
@@ -22,15 +22,15 @@ track: "party"
 importance: major
 active: true
 relates_to:
-  - [[The Shadowless Spear]] (made here)
-  - [[Aashal-Groon Mellenegon Borak]] (through the fox)
-  - [[The Golden Lioness]] (the bridge just outside)
+  - "[[The Shadowless Spear]] (made here)"
+  - "[[Aashal-Groon Mellenegon Borak]] (through the fox)"
+  - "[[The Golden Lioness]] (the bridge just outside)"
 known_by:
-  - [[The Party]] (saw it)
+  - "[[The Party]] (saw it)"
 description: "Asher's fox pays its debt to Halsby at a bridge outside the Lioness, fusing his spear and shard into the Shadowless Spear."
 participants:
-  - [[Halsby]] (received the Spear)
-  - [[Aashal-Groon Mellenegon Borak]] (the fox)
+  - "[[Halsby]] (received the Spear)"
+  - "[[Aashal-Groon Mellenegon Borak]] (the fox)"
 awareness: local
 ---
 

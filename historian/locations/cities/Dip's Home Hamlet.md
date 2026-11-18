@@ -10,7 +10,7 @@ state: ruined
 tags:
   - location
   - location/city
-global_location: [[Aethryn]]
+global_location: "[[Aethryn]]"
 purpose: other
 importance: background
 active: false
@@ -18,9 +18,9 @@ contributed_by: ben
 source_session: "player backstory (Dip)"
 confirmed_date: "pre-campaign"
 relates_to:
-  - [[Dip]] (birthplace)
-  - [[Dip's Twin Sister]] (lost here in the blaze)
-  - [[The Hamlet Raiders]] (attackers who caused its destruction)
+  - "[[Dip]] (birthplace)"
+  - "[[Dip's Twin Sister]] (lost here in the blaze)"
+  - "[[The Hamlet Raiders]] (attackers who caused its destruction)"
 population: "Small hamlet; most perished in the fire, a handful escaped and formed a survivors' movement"
 description: "Emberhollow, the small hamlet where Dip was born and shunned; destroyed by fire after raiders infiltrated it, when the tavern keeper Brannoc Hale torched his own roost to trap them and the blaze spread."
 ---

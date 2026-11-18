@@ -17,18 +17,18 @@ aliases: []
 importance: critical
 active: true
 relates_to:
-  - [[Ismark Kolyanovich]] (adoptive brother)
-  - [[Kolyan Indirovich]] (adoptive father, deceased)
-  - [[Izek Strazni]] (blood brother — revealed Session 19)
-  - [[Strahd Von Zarovich]] (fixated on her)
-  - [[Burgomaster's Mansion]] (home)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Ismark Kolyanovich]] (adoptive brother)"
+  - "[[Kolyan Indirovich]] (adoptive father, deceased)"
+  - "[[Izek Strazni]] (blood brother — revealed Session 19)"
+  - "[[Strahd Von Zarovich]] (fixated on her)"
+  - "[[Burgomaster's Mansion]] (home)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 affinity:
-  - [[The Party]] (2)
+  - "[[The Party]] (2)"
 description: "Ireena Kolyana. Daughter of the late Burgomaster. Strahd has fixated on her. Ismark wants the party to escort her to Vallaki."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
 
 race: "Human"
@@ -38,10 +38,10 @@ goals:
 motives:
   - "Grief and survival — her father is dead, Strahd is a threat she cannot fight"
 family:
-  - [[Ismark Kolyanovich]] (brother)
-  - [[Kolyan Indirovich]] (deceased father)
+  - "[[Ismark Kolyanovich]] (brother)"
+  - "[[Kolyan Indirovich]] (deceased father)"
 enemies:
-  - [[Strahd Von Zarovich]] (fixated on her, existential threat)
+  - "[[Strahd Von Zarovich]] (fixated on her, existential threat)"
 charm_hook: "Carrying grief for her father and fear of Strahd with a quiet composure that barely holds — she asked to bury her father before fleeing."
 ---
 

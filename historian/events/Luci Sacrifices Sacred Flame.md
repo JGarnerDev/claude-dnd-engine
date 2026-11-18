@@ -20,11 +20,11 @@ consequences:
 importance: major
 last_updated: "[[Session 05 The Specter]]"
 participants:
-  - [[Luci]] (sacrificed)
-  - [[Odibli]] (revived)
-  - [[Dip]] (revived)
+  - "[[Luci]] (sacrificed)"
+  - "[[Odibli]] (revived)"
+  - "[[Dip]] (revived)"
 relates_to:
-  - [[Death House]] (occurred in)
+  - "[[Death House]] (occurred in)"
 awareness: regional
 description: "When a specter killed Odibli and Dip in Death House, Luci permanently gave up her Sacred Flame to bring them back — a loss that holds for the rest of the campaign."
 ---

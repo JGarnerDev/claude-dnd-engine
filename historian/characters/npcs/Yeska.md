@@ -8,21 +8,21 @@ state: alive
 tags:
   - character
   - character/npc
-location: [[Church of St. Andril]]
+location: "[[Church of St. Andril]]"
 personality: "A frightened young altar boy — visibly scared under the party's questioning."
 livelihood: "Altar boy at the [[Church of St. Andril]] in [[Vallaki]]."
 disposition: neutral
 importance: minor
 active: true
-source_session: [[Session 17 The Stolen Bones]]
+source_session: "[[Session 17 The Stolen Bones]]"
 confirmed_date: "2026-07-07"
 relates_to:
-  - [[Church of St. Andril]] (altar boy)
-  - [[Lucien Petrovic]] (serves under, vouched for by)
-  - [[Vallaki]] (lives here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Church of St. Andril]] (altar boy)"
+  - "[[Lucien Petrovic]] (serves under, vouched for by)"
+  - "[[Vallaki]] (lives here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Yeska, the young altar boy at the Church of St. Andril. Suspected by the party in the theft of the saint's bones and questioned hard, he was scared and defended by the priest Lucien Petrovic. The true culprit turned out to be the gravedigger Milivoj."
 ---
 

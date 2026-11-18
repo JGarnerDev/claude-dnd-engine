@@ -7,7 +7,7 @@ state: secret
 tags:
   - event
   - event/revelation
-source_session: [[Session 31 The Red Trail]]
+source_session: "[[Session 31 The Red Trail]]"
 confirmed_date: "2026-10-27"
 date: "Ashford, late on the night of arrival (Day 1 at Ashford, 6743-05-20, late in Crawl 5); rolled at Session 31 for a moment in Session 30"
 timeline_date: "6743-05-20"
@@ -20,13 +20,13 @@ track: "party"
 importance: minor
 active: true
 relates_to:
-  - [[The Golden Lioness]] (the hearth)
+  - "[[The Golden Lioness]] (the hearth)"
 known_by:
-  - [[Dip]] (partial)
+  - "[[Dip]] (partial)"
 description: "A private roll shows Dip that the hearth's stillness during Iggy's song led inward, to something inside Iggy."
 participants:
-  - [[Dip]] (saw it)
-  - [[Iggy]] (the centre of it, unknowing)
+  - "[[Dip]] (saw it)"
+  - "[[Iggy]] (the centre of it, unknowing)"
 awareness: secret
 ---
 

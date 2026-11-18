@@ -18,9 +18,9 @@ track: "world:strahd"
 importance: major
 last_updated: "[[Session 14 The Tarokka Reading]]"
 participants:
-  - [[Strahd Von Zarovich]] (victor)
+  - "[[Strahd Von Zarovich]] (victor)"
 relates_to:
-  - [[Tser Pool Encampment]] (where the tale was told)
+  - "[[Tser Pool Encampment]] (where the tale was told)"
 awareness: regional
 description: "Over a year ago a charismatic wizard rallied Barovia against Strahd, marched on Ravenloft, and was hurled to his death above the falls — a tale the Tser Pool Vistani told the party. World-history of the Strahd era."
 ---

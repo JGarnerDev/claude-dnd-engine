@@ -4,7 +4,7 @@ name: "Nella"
 type: character
 subtype: antagonist
 exists: true
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 state: alive
 campaign: homebrew
@@ -13,7 +13,7 @@ tags:
   - character/antagonist
 
 # --- MANDATORY (antagonist) ---
-location: [[The Waystation]]
+location: "[[The Waystation]]"
 personality: "Patient and watchful. Tracks, waits, and picks off from range; disengages the moment a position stops being good. Not loyal and not a believer — collared. Keeps meticulous count of everything, especially what she is owed and what she has paid."
 livelihood: "Bandit lieutenant — the band's hunter and marksman, raiding for House Marlow, unofficially."
 disposition: hostile

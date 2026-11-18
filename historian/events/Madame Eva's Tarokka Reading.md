@@ -18,11 +18,11 @@ consequences:
 importance: major
 last_updated: "[[Session 14 The Tarokka Reading]]"
 participants:
-  - [[Madame Eva]] (seer)
-  - [[The Party]] (querents)
+  - "[[Madame Eva]] (seer)"
+  - "[[The Party]] (querents)"
 relates_to:
-  - [[Tser Pool Encampment]] (occurred at)
-  - [[Strahd Von Zarovich]] (the named enemy)
+  - "[[Tser Pool Encampment]] (occurred at)"
+  - "[[Strahd Von Zarovich]] (the named enemy)"
 awareness: regional
 description: "At the Tser Pool Encampment, Madame Eva read five tarokka cards — the Dictator, Mercenary, Paladin, Marionette, and Broken One — mapping the holy symbol, sunsword, ally, and Strahd's resting place."
 ---

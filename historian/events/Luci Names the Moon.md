@@ -7,7 +7,7 @@ state: recent
 tags:
   - event
   - event/revelation
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 date: "Ashford, night of arrival (Day 1 at Ashford, 6743-05-20, late in Crawl 5)"
 timeline_date: "6743-05-20"
@@ -22,13 +22,13 @@ track: "character:Luci"
 importance: major
 active: true
 relates_to:
-  - [[Luci]]
-  - [[Aethryn]] (its moon)
+  - "[[Luci]]"
+  - "[[Aethryn]] (its moon)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Luci sees Aethryn's broken moon, names it Fida in the Dead Sun tongue, and her voice answers 'Closer.'"
 participants:
-  - [[Luci]] (named the moon)
+  - "[[Luci]] (named the moon)"
 awareness: party
 ---
 

@@ -4,7 +4,7 @@ name: "Wick"
 type: character
 subtype: antagonist
 exists: true
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
@@ -13,7 +13,7 @@ tags:
   - character/antagonist
 
 # --- MANDATORY (antagonist) ---
-location: [[Duskwater]]
+location: "[[Duskwater]]"
 personality: "Detached professional. Guild-sworn, and on his own errand far more than the band's — he rides with raiders the way a man rides with a caravan going the right direction. Courteous, incurious about people, and entirely willing to do something ugly if it shortens the hunt."
 livelihood: "Rides as a lieutenant in the bandit band, but is primarily a mage-guild agent — a sanctioned hunter of dangerous entities."
 disposition: hostile
@@ -21,7 +21,7 @@ disposition: hostile
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: "[[Session 30 Keep the Ale]]"
 relates_to:
   - "[[Harrow Bane]] (his nominal captain — the band is cover)"
   - "[[Ashford]] (where he stages the flush)"

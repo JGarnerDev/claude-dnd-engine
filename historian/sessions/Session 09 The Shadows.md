@@ -6,13 +6,13 @@ exists: true
 state: completed
 session_number: 9
 in_world_end_date: "0735-10-28"
-mission: [[Death House]]
+mission: "[[Death House]]"
 planned_date: "2026-05-05"
 locations:
-  - [[Death House]]
+  - "[[Death House]]"
 key_npcs:
-  - [[Strahd von Zarovich]] (intervention)
-party: [[The Party]]
+  - "[[Strahd von Zarovich]] (intervention)"
+party: "[[The Party]]"
 importance: critical
 active: false
 description: "Shadow encounter kills Iggy and Dip twice. Strahd intervenes to warn the party. Luci kills all shadows. MVP: Luci."

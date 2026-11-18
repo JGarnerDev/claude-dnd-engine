@@ -7,7 +7,7 @@ state: recent
 tags:
   - event
   - event/battle
-source_session: [[Session 34 The Red Trail]]
+source_session: "[[Session 34 The Red Trail]]"
 confirmed_date: "2026-11-17"
 date: "Ashford Day 2, late morning (6743-05-21, Crawl 5)"
 timeline_date: "6743-05-21"
@@ -22,20 +22,20 @@ track: "party"
 importance: major
 active: true
 relates_to:
-  - [[The Waystation]] (where it happened)
-  - [[The Stolen Casks]] (the fight for the casks)
-  - [[Tithe]] (killed)
+  - "[[The Waystation]] (where it happened)"
+  - "[[The Stolen Casks]] (the fight for the casks)"
+  - "[[Tithe]] (killed)"
 known_by:
-  - [[The Party]] (full)
-  - [[Nella]] (saw it from the ridge)
+  - "[[The Party]] (full)"
+  - "[[Nella]] (saw it from the ridge)"
 description: "Nella's griffon hunts the party in the waystation yard; Iggy opens his wings, Dip brings it down, and Halsby's Fire Bolt kills it on top of Odibli."
 participants:
-  - [[Tithe]] (killed)
-  - [[Halsby]] (killing blow)
-  - [[Iggy]] (opened his wings and smote it)
-  - [[Dip]] (brought it down out of the air)
-  - [[Odibli]] (snatched, then dropped to 0 HP)
-  - [[Nella]] (set it hunting)
+  - "[[Tithe]] (killed)"
+  - "[[Halsby]] (killing blow)"
+  - "[[Iggy]] (opened his wings and smote it)"
+  - "[[Dip]] (brought it down out of the air)"
+  - "[[Odibli]] (snatched, then dropped to 0 HP)"
+  - "[[Nella]] (set it hunting)"
 awareness: local
 ---
 

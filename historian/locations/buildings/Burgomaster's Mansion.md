@@ -9,25 +9,25 @@ tags:
   - location
   - location/building
 
-city: [[Barovia Village]]
+city: "[[Barovia Village]]"
 residents:
-  - [[Ismark Kolyanovich]] (acting head of household)
-  - [[Ireena Kolyana]] (resident)
-  - [[Kolyan Indirovich]] (deceased — body inside)
+  - "[[Ismark Kolyanovich]] (acting head of household)"
+  - "[[Ireena Kolyana]] (resident)"
+  - "[[Kolyan Indirovich]] (deceased — body inside)"
 purpose: civic
 aliases: []
 importance: major
 active: true
 relates_to:
-  - [[Ismark Kolyanovich]] (current head of household)
-  - [[Ireena Kolyana]] (lives here)
-  - [[Kolyan Indirovich]] (died here; body inside)
-  - [[Barovia Village]] (located here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Ismark Kolyanovich]] (current head of household)"
+  - "[[Ireena Kolyana]] (lives here)"
+  - "[[Kolyan Indirovich]] (died here; body inside)"
+  - "[[Barovia Village]] (located here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial — visited)
+  - "[[The Party]] (partial — visited)"
 description: "Burgomaster's Mansion. Former seat of the Burgomaster of Barovia Village. Exterior damaged by wolf attack. Kolyan Indirovich died inside. Ismark and Ireena reside here."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
 
 condition: "Exterior visibly damaged from wolf and creature attacks. Interior intact, mansion-like. Faint odor of decay from Kolyan Indirovich's body."

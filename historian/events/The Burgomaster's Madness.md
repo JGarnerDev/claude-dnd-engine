@@ -19,12 +19,12 @@ consequences:
 importance: minor
 last_updated: "[[Session 16 The Blue Water Inn]]"
 participants:
-  - [[Karl]] (dissenter, informant)
-  - [[Nikolai]] (dissenter, informant)
-  - [[Vargas Vallakovich|the Burgomaster]] (subject)
+  - "[[Karl]] (dissenter, informant)"
+  - "[[Nikolai]] (dissenter, informant)"
+  - "[[Vargas Vallakovich|the Burgomaster]] (subject)"
 relates_to:
-  - [[Vallaki]] (concerns)
-  - [[Blue Water Inn]] (revealed at)
+  - "[[Vallaki]] (concerns)"
+  - "[[Blue Water Inn]] (revealed at)"
 awareness: regional
 description: "At the Blue Water Inn, drunk dissenters Karl and Nikolai told the party about the Burgomaster's obsession with mandatory happiness — themed festivals on pain of imprisonment — and the town's eerie mantra, 'all will be well in Vallaki.'"
 ---

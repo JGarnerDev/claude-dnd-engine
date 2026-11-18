@@ -6,7 +6,7 @@ exists: true
 state: unknown
 tags:
   - creature
-source_session: [[Session 24 The Vampire Hunter]]
+source_session: "[[Session 24 The Vampire Hunter]]"
 confirmed_date: "2026-08-25"
 creature_type: undead
 challenge_rating: "unknown"
@@ -15,13 +15,13 @@ aliases:
   - "The Skeletal Horse and Rider"
 importance: minor
 active: true
-last_updated: [[Session 24 The Vampire Hunter]]
+last_updated: "[[Session 24 The Vampire Hunter]]"
 relates_to:
-  - [[Luna River]] (crossed the party's path here)
-  - [[Odibli]] (tried and failed to get its attention)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Luna River]] (crossed the party's path here)"
+  - "[[Odibli]] (tried and failed to get its attention)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "A skeletal horse and rider that passed the party benignly at the Luna River crossing, ignored Odibli entirely, and rode south into the forest. Never named, never engaged, never explained."
 personality: "Utterly indifferent. Did not acknowledge the party's existence."
 goals:

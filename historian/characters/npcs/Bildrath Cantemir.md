@@ -9,7 +9,7 @@ tags:
   - character
   - character/npc
 
-location: [[Bildrath's Mercantile]]
+location: "[[Bildrath's Mercantile]]"
 personality: "Greedy, combative, and unpleasant. Charges exorbitant prices and takes it personally when challenged. Called for Parriwimple when the raccoon prank caused a ruckus."
 livelihood: "Merchant. Operates Bildrath's Mercantile in Barovia Village."
 disposition: hostile
@@ -17,18 +17,18 @@ aliases: []
 importance: minor
 active: true
 relates_to:
-  - [[Bildrath's Mercantile]] (owns and operates)
-  - [[Parriwimple]] (assistant/enforcer)
-  - [[Dip]] (cursed him; actively hostile)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Bildrath's Mercantile]] (owns and operates)"
+  - "[[Parriwimple]] (assistant/enforcer)"
+  - "[[Dip]] (cursed him; actively hostile)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Bildrath Cantemir. Merchant in Barovia Village. Charges exorbitant prices. Dip cursed him. Mutually hostile relationship with the party, especially Dip."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
 
 enemies:
-  - [[Dip]] (cursed him; actively hostile)
+  - "[[Dip]] (cursed him; actively hostile)"
 ---
 
 Location: [[Bildrath's Mercantile]] | Campaign: [[Curse of Strahd]]

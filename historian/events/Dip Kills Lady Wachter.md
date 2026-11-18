@@ -8,7 +8,7 @@ tags:
   - event
   - event/battle
   - region/barovia
-source_session: [[Session 23 The Cult in the Cellar]]
+source_session: "[[Session 23 The Cult in the Cellar]]"
 confirmed_date: "2026-08-18"
 date: "That night, in the pentagram chamber beneath Wachter House (~Day 12-13 in Barovia — estimate)"
 timeline_date: "0735-11-09"
@@ -21,23 +21,23 @@ consequences:
   - "Killed the only person who knew why Izek Strazni had been marked for death."
 importance: major
 active: false
-last_updated: [[Session 23 The Cult in the Cellar]]
+last_updated: "[[Session 23 The Cult in the Cellar]]"
 participants:
-  - [[Dip]] (killed Fiona and Majesto — session MVP)
-  - [[Lady Fiona Wachter]] (killed)
-  - [[Majesto]] (killed)
-  - [[Iggy]] (broke the deception and triggered the fight)
-  - [[The Wachter Cult]] (destroyed)
+  - "[[Dip]] (killed Fiona and Majesto — session MVP)"
+  - "[[Lady Fiona Wachter]] (killed)"
+  - "[[Majesto]] (killed)"
+  - "[[Iggy]] (broke the deception and triggered the fight)"
+  - "[[The Wachter Cult]] (destroyed)"
 relates_to:
-  - [[Wachter House]] (occurred beneath it)
-  - [[Vargas Vallakovich]] (told the party had saved the day)
-  - [[Izek Strazni]] (the intended victim, never informed)
-  - [[Lady Fiona Wachter's Daughter]] (orphaned; whereabouts unknown)
-  - [[Vallaki]] (the town at stake)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wachter House]] (occurred beneath it)"
+  - "[[Vargas Vallakovich]] (told the party had saved the day)"
+  - "[[Izek Strazni]] (the intended victim, never informed)"
+  - "[[Lady Fiona Wachter's Daughter]] (orphaned; whereabouts unknown)"
+  - "[[Vallaki]] (the town at stake)"
+  - "[[Curse of Strahd]] (campaign)"
 awareness: secret
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Dip killed Lady Fiona Wachter and her imp Majesto in the pentagram chamber under her own house, ending her coup and her cult in a single fight."
 ---
 

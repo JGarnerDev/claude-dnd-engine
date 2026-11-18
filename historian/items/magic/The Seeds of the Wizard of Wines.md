@@ -7,7 +7,7 @@ exists: true
 state: lost
 tags:
   - item/magic
-source_session: [[Session 28 The Wereravens' Gift]]
+source_session: "[[Session 28 The Wereravens' Gift]]"
 confirmed_date: "2026-09-29"
 item_type: wondrous
 rarity: unknown
@@ -19,20 +19,20 @@ aliases:
   - "The seeds"
 importance: critical
 active: true
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Wizard of Wines]] (kept its vineyard fertile)
-  - [[The Vintner Mage]] (made them)
-  - [[Davian Martikov]] (told the party of them; needs them back)
-  - [[Baba Lysaga]] (holds the second)
-  - [[Baba Lysaga's Druids]] (took the third to [[Yester Hill]])
-  - [[Yester Hill]] (where the third was carried)
-  - [[Urwin]] (was on guard the night the first was stolen)
-  - [[Champagne du Stomp]] (the vintage that stopped when the first was taken)
-  - [[The Wanderer's Boon]] (the same mage's other surviving work)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (kept its vineyard fertile)"
+  - "[[The Vintner Mage]] (made them)"
+  - "[[Davian Martikov]] (told the party of them; needs them back)"
+  - "[[Baba Lysaga]] (holds the second)"
+  - "[[Baba Lysaga's Druids]] (took the third to [[Yester Hill]])"
+  - "[[Yester Hill]] (where the third was carried)"
+  - "[[Urwin]] (was on guard the night the first was stolen)"
+  - "[[Champagne du Stomp]] (the vintage that stopped when the first was taken)"
+  - "[[The Wanderer's Boon]] (the same mage's other surviving work)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Three magic gems, also called seeds, made by the vineyard's founding mage. They let the Wizard of Wines grow healthy grapes through Strahd's curse. All three are now gone — one stolen ten years ago, one taken by Baba Lysaga three weeks before Session 28, and the third carried off by the druids of Yester Hill. Recovering them is the only way the winery produces wine again."
 current_holder: "Split three ways — first: unknown, stolen ten years ago. Second: [[Baba Lysaga]]. Third: [[Baba Lysaga's Druids]] at [[Yester Hill]]."
 history:

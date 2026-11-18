@@ -8,26 +8,26 @@ tags:
   - faction
   - faction/cult
   - region/barovia
-source_session: [[Session 25 The Wizard of Wines]]
+source_session: "[[Session 25 The Wizard of Wines]]"
 confirmed_date: "2026-09-22"
 locations:
-  - [[Wizard of Wines]]
+  - "[[Wizard of Wines]]"
 purpose: religious
-rulership: [[Baba Lysaga]]
+rulership: "[[Baba Lysaga]]"
 aliases:
   - "The winery druids"
 importance: major
 active: true
-last_updated: [[Session 27 The Vampire Staff]]
+last_updated: "[[Session 27 The Vampire Staff]]"
 relates_to:
-  - [[Baba Lysaga]] (their leader; called "our mother")
-  - [[Wizard of Wines]] (the place they besieged and occupied)
-  - [[The Vampire Staff]] (one of their number carried it)
-  - [[Davian Martikov]] (named them and their leader to the party)
-  - [[Keepers of the Feather]] (opposed at the winery)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Baba Lysaga]] (their leader; called \"our mother\")"
+  - "[[Wizard of Wines]] (the place they besieged and occupied)"
+  - "[[The Vampire Staff]] (one of their number carried it)"
+  - "[[Davian Martikov]] (named them and their leader to the party)"
+  - "[[Keepers of the Feather]] (opposed at the winery)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "The druids who besieged the Wizard of Wines under Baba Lysaga, poisoning its wine and infesting it with blights. Four of them died inside the winery across Sessions 26 and 27, and the staff animating their blights was destroyed."
 motives:
   - "Stop the winery's wine reaching [[Vallaki]]"
@@ -35,9 +35,9 @@ motives:
 tensions:
   - "Davian Martikov claims they act out of jealousy; Iggy's Insight said there was more to it, and the real grievance is still unknown"
 opposition:
-  - [[Davian Martikov]] (blockaded his winery and drove out his household)
-  - [[The Party]] (four of their number killed)
-  - [[Keepers of the Feather]] (the ravens fought against them at the winery)
+  - "[[Davian Martikov]] (blockaded his winery and drove out his household)"
+  - "[[The Party]] (four of their number killed)"
+  - "[[Keepers of the Feather]] (the ravens fought against them at the winery)"
 ---
 
 Locations: [[Wizard of Wines]] | Campaign: [[Curse of Strahd]]

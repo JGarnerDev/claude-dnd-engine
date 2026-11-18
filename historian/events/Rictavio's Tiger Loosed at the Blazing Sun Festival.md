@@ -8,7 +8,7 @@ tags:
   - event
   - event/turning-point
   - region/barovia
-source_session: [[Session 21 The Festival of the Blazing Sun]]
+source_session: "[[Session 21 The Festival of the Blazing Sun]]"
 confirmed_date: "2026-08-04"
 date: "The day of the Festival of the Blazing Sun in Vallaki (~Day 12 in Barovia — estimate)"
 timeline_date: "0735-11-08"
@@ -21,24 +21,24 @@ consequences:
   - "Bought the party the Burgomaster's goodwill for saving his festival."
 importance: minor
 active: false
-last_updated: [[Session 21 The Festival of the Blazing Sun]]
+last_updated: "[[Session 21 The Festival of the Blazing Sun]]"
 participants:
-  - [[Rictavio]] (keeper of the tiger)
-  - [[Vargas Vallakovich]] (held the festival)
-  - [[Rictavio's Saber-Toothed Tiger]] (escaped)
-  - [[Iggy]] (freed the arrested citizen with a joke)
-  - [[Odibli]] (spoke with and recaptured the tiger)
-  - [[Luci]] (lit the wicker sun; misdirected Izek)
-  - [[Izek Strazni]] (led the hunt)
+  - "[[Rictavio]] (keeper of the tiger)"
+  - "[[Vargas Vallakovich]] (held the festival)"
+  - "[[Rictavio's Saber-Toothed Tiger]] (escaped)"
+  - "[[Iggy]] (freed the arrested citizen with a joke)"
+  - "[[Odibli]] (spoke with and recaptured the tiger)"
+  - "[[Luci]] (lit the wicker sun; misdirected Izek)"
+  - "[[Izek Strazni]] (led the hunt)"
 relates_to:
-  - [[Vallaki]] (occurred here)
-  - [[Karl]] (suspected of loosing it)
-  - [[Nikolai]] (suspected of loosing it)
-  - [[Wachter House]] (where the chase led)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vallaki]] (occurred here)"
+  - "[[Karl]] (suspected of loosing it)"
+  - "[[Nikolai]] (suspected of loosing it)"
+  - "[[Wachter House]] (where the chase led)"
+  - "[[Curse of Strahd]] (campaign)"
 awareness: widely-known
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "The Burgomaster's Festival of the Blazing Sun turned farce, then panic, when a caged saber-toothed tiger broke loose in Vallaki — and the chase led the party to Rictavio's secret and to Lady Fiona Wachter's door."
 ---
 

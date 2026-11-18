@@ -10,17 +10,17 @@ state: missing
 tags:
   - character
   - character/npc
-location: [[Death House]]
+location: "[[Death House]]"
 personality: "Willing to share information. Revealed Walter's backstory when asked."
 livelihood: "Ghost -trapped in Death House"
 disposition: friendly
 aliases: []
 relates_to:
-  - [[Rose]] (sister)
-  - [[Gustav Durst]] (father)
-  - [[Elisabeth Durst]] (mother)
-  - [[Death House]] (trapped in)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Rose]] (sister)"
+  - "[[Gustav Durst]] (father)"
+  - "[[Elisabeth Durst]] (mother)"
+  - "[[Death House]] (trapped in)"
+  - "[[Curse of Strahd]] (campaign)"
 importance: major
 active: true
   
@@ -44,6 +44,7 @@ Told the party he was not allowed in the dungeon by his parents.
 ## Key Information Revealed
 
 In Session 6, Thorn explained Walter's origins:
+
 - [[Walter Durst]] was the illegitimate child of Gustav Durst and the nursemaid
 - Elisabeth Durst discovered the affair and was consumed by jealousy
 - The Durst-led cult sacrificed baby Walter on the basement altar

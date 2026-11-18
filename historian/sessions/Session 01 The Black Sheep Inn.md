@@ -6,15 +6,15 @@ exists: true
 state: completed
 session_number: 1
 in_world_end_date: "0735-10-20"
-mission: [[Death House]]
+mission: "[[Death House]]"
 planned_date: "2026-03-09"
 locations:
-  - [[Black Sheep Inn]]
-  - [[Death House]]
+  - "[[Black Sheep Inn]]"
+  - "[[Death House]]"
 key_npcs:
-  - [[Rose]] (lure)
-  - [[Thorn]] (lure)
-party: [[The Party]]
+  - "[[Rose]] (lure)"
+  - "[[Thorn]] (lure)"
+party: "[[The Party]]"
 importance: major
 active: false
 description: "Party introductions at the Black Sheep Inn. Performance, supplies, ban. Arrival at Death House."

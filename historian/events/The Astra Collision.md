@@ -27,13 +27,13 @@ track: "world:homebrew"
 importance: critical
 awareness: widely-known
 relates_to:
-  - [[Astra]] (the celestial body)
-  - [[Whatwill]] (shards born of the impact)
-  - [[The Caldera]] (gouged by the impact)
-  - [[The Slices]] (cast into orbit)
-  - [[The Lifted]] (their Islifts originate here)
+  - "[[Astra]] (the celestial body)"
+  - "[[Whatwill]] (shards born of the impact)"
+  - "[[The Caldera]] (gouged by the impact)"
+  - "[[The Slices]] (cast into orbit)"
+  - "[[The Lifted]] (their Islifts originate here)"
 participants:
-  - [[Astra]] (the impactor)
+  - "[[Astra]] (the impactor)"
 description: "The founding cataclysm of the world: 6.7433 millennia ago the astral body Astra collided with the dwarf planetoid, gouging the Caldera, casting the Slices into orbit, and birthing Whatwill. Paul's Whatwill cosmology, ratified 2026-11-08."
 ---
 

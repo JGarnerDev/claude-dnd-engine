@@ -6,14 +6,14 @@ exists: true
 state: completed
 session_number: 8
 in_world_end_date: "0735-10-27"
-mission: [[Death House]]
+mission: "[[Death House]]"
 planned_date: "2026-04-28"
 locations:
-  - [[Death House]]
+  - "[[Death House]]"
 key_npcs:
-  - [[Strahd von Zarovich]] (statue)
-  - [[Rose]] (provides intel)
-party: [[The Party]]
+  - "[[Strahd von Zarovich]] (statue)"
+  - "[[Rose]] (provides intel)"
+party: "[[The Party]]"
 importance: major
 active: false
 description: "Two wounded ghouls dispatched. Cult leader quarters looted. Ghast ambush. Strahd's face identified on the statue."
@@ -22,7 +22,7 @@ description: "Two wounded ghouls dispatched. Cult leader quarters looted. Ghast 
 played_date: "2026-04-28"
 recap: "Party found the two wounded ghouls from Session 7 in the adjacent room. Dip threw fire (missed). Party killed them. In cult leader quarters: found a footlocker with a cloak of protection, 4 healing potions, chain shirt, mess kit, flask of alchemist's fire, bullseye lantern, thieves' tools, and a yellow leather spellbook. Rose told the party that many travelers before them never returned. As party took items from the chest, Ghasts burst through the walls. Odibli was mid-changing (old and new cloak in hand, in his underwear) and fought naked. Party defeated the Ghasts. Odibli then did an Arcana check on the statue and recognized it as the same face from the fireplace in Session 3 — Strahd. Sensed powerful magic connecting it to another."
 entities_canonized:
-  - [[Strahd von Zarovich]]
+  - "[[Strahd von Zarovich]]"
 ---
 
 ## Session Notes

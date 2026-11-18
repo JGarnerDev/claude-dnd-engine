@@ -3,7 +3,7 @@ name: "Sister Maerith"
 type: character
 subtype: antagonist
 exists: true
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 campaign: homebrew
 contributed_by: kellan
@@ -12,7 +12,7 @@ tags:
   - character
   - character/antagonist
 
-location: [[Aethryn]]
+location: "[[Aethryn]]"
 personality: "Unhurried, veiled, and mild. States terrible things without pressure and without any apparent interest in whether you believe her. Patient the way an owner is patient."
 livelihood: "Sharran priestess of [[The Nightveil]]"
 disposition: hostile
@@ -23,11 +23,11 @@ aliases:
 importance: major
 race: "unknown — unaged, shadow-preserved (as Halsby's grandmother was)"
 relates_to:
-  - [[The Nightveil]] (member / senior figure)
-  - [[Halsby]] (recruited him; holds the debt he is running up)
-  - [[Shar]] (serves)
+  - "[[The Nightveil]] (member / senior figure)"
+  - "[[Halsby]] (recruited him; holds the debt he is running up)"
+  - "[[Shar]] (serves)"
 known_by:
-  - [[Halsby]] (partial — he recognizes her, doesn't understand her)
+  - "[[Halsby]] (partial — he recognizes her, doesn't understand her)"
 goals:
   - Bring Halsby fully into the order
   - Collect on the ledger of debts, on terms he cannot pay

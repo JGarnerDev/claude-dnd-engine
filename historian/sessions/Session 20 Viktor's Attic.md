@@ -11,15 +11,15 @@ played_date: "2026-07-29"
 in_world_end_date: "0735-11-07"
 mission: "Answer the Burgomaster's summons and work off the debt for burning down the coffin shop"
 locations:
-  - [[Vallaki]]
-  - [[Burgomaster's Mansion]]
+  - "[[Vallaki]]"
+  - "[[Burgomaster's Mansion]]"
 key_npcs:
-  - [[Vargas Vallakovich]]
-  - [[Viktor Vallakovich]]
+  - "[[Vargas Vallakovich]]"
+  - "[[Viktor Vallakovich]]"
 recap: "Granted an audience, the party returned to Burgomaster Vargas Vallakovich, who set two debt-quests for the burned coffin shop: gather 12 bushels of sticks from the forest and find his missing lady-in-waiting. Exploring the mansion, they found an attic — and in it Viktor, the Burgomaster's son, revealed as the one experimenting on the missing townsfolk. The party talked their way in by offering to repair his broken teleporter, and did so in part, but Viktor insisted they stand on it to prove it worked. Instead they hit him with Hideous Laughter to cut off his spellcasting; while most of the party held Viktor and fought off his skeleton cats, Luci ran for the Burgomaster and Odibli gathered evidence to clear the party. Vargas believed them and waived the 600 gp coffin-shop penalty in exchange for silence about Viktor — and the party walked off with Viktor's spells and books. They took a long rest, though the hag denied Iggy its benefit."
 cliffhanger: "The debt is settled and Viktor's spells and books are in hand — but Viktor stands exposed, the two original quests (12 bushels of sticks, the missing lady-in-waiting) are still nominally owed, and the hag reached into Iggy's sleep, denying him the long rest the rest of the party enjoyed."
 entities_canonized:
-  - [[Viktor Vallakovich]]
+  - "[[Viktor Vallakovich]]"
 new_entities:
   - "Viktor's teleporter — a broken teleportation device in the mansion attic; no standalone file."
   - "Skeleton cats — undead animals Viktor loosed on the party; no standalone file."

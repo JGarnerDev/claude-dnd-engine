@@ -8,10 +8,10 @@ tags:
   - character
   - character/pc
   - player/miguel
-player: [[Miguel]]
+player: "[[Miguel]]"
 race: "Gnome (Forest)"
 class: "Wizard (Evoker)"
-background: [[Sage]]
+background: "[[Sage]]"
 level: 5
 level_confirmed: 34
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
@@ -22,26 +22,26 @@ aliases:
   - "Odi"
   - "Odible"
   - "the copy"
-source_session: [[Session 01 The Black Sheep Inn]]
+source_session: "[[Session 01 The Black Sheep Inn]]"
 confirmed_date: "pre-campaign"
-homeland: [[The Citadel]]
+homeland: "[[The Citadel]]"
 relates_to:
-  - [[Curse of Strahd]] (campaign)
-  - [[The Citadel]] (made there, as an agent for the Astra experiment)
-  - [[Astra]] (the experiment he was made to run: when the next Glistening comes)
-  - [[The Palimpsest]] (presides over the plane the gnomes' fire-messages cross)
+  - "[[Curse of Strahd]] (campaign)"
+  - "[[The Citadel]] (made there, as an agent for the Astra experiment)"
+  - "[[Astra]] (the experiment he was made to run: when the next Glistening comes)"
+  - "[[The Palimpsest]] (presides over the plane the gnomes' fire-messages cross)"
 enemies:
-  - [[The Original Odibli]] (DM-only: wants him shut down)
-  - [[Berle Kempwick]] (DM-only: wants him shut down)
-  - [[Elspeth Moorlin]] (DM-only: wants him shut down)
-  - [[Wendrick Schulden]] (does not know he exists; the Citadel's rules exist to stop him)
+  - "[[The Original Odibli]] (DM-only: wants him shut down)"
+  - "[[Berle Kempwick]] (DM-only: wants him shut down)"
+  - "[[Elspeth Moorlin]] (DM-only: wants him shut down)"
+  - "[[Wendrick Schulden]] (does not know he exists; the Citadel's rules exist to stop him)"
 family:
-  - [[The Original Odibli]] (DM-only: the self he was copied from)
+  - "[[The Original Odibli]] (DM-only: the self he was copied from)"
 affinity:
-  - [[Sergei Rubelgerd]] (5)
-  - [[Davian Martikov]] (3)
-  - [[Luci]] (3)
-  - [[Rictavio]] (3)
+  - "[[Sergei Rubelgerd]] (5)"
+  - "[[Davian Martikov]] (3)"
+  - "[[Luci]] (3)"
+  - "[[Rictavio]] (3)"
 motivation: "Wonder over safety. Discover the world one day at a time."
 goals:
   - "Discover the world and reality, one day at a time"

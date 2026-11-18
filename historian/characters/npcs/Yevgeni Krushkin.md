@@ -9,7 +9,7 @@ tags:
   - character
   - character/npc
 
-location: [[Blue Water Inn]]
+location: "[[Blue Water Inn]]"
 personality: "Grim and taciturn, of a piece with his hunting partner. Trades in pelts and in what he knows of the road."
 livelihood: "Wolf-hunter — kills wolves and sells them for a living. Offers guiding and local information for coin and drinks."
 disposition: neutral
@@ -18,12 +18,12 @@ aliases:
 importance: minor
 active: true
 relates_to:
-  - [[Szoldar Szoldarovich]] (hunting partner)
-  - [[Blue Water Inn]] (met here)
-  - [[Vallaki]] (operates from here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Szoldar Szoldarovich]] (hunting partner)"
+  - "[[Blue Water Inn]] (met here)"
+  - "[[Vallaki]] (operates from here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Yevgeni Krushkin. A grim wolf-hunter operating out of Vallaki with his partner Szoldar Szoldarovich. Offered the party guiding and information — 5 gp a day, tidbits for drinks."
 sells:
   - "Wolf pelts; guiding and local information"

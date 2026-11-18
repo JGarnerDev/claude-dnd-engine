@@ -8,11 +8,11 @@ tags:
   - character
   - character/pc
   - player/jeff
-player: [[Jeff]]
+player: "[[Jeff]]"
 race: "Aasimar (Protector)"
 class: "Bard 3 (College of Valor) / Paladin 2"
 background: "Entertainer"
-homeland: [[Threnai]]
+homeland: "[[Threnai]]"
 level: 5
 level_confirmed: 34
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
@@ -20,18 +20,18 @@ character_sheet: "Roll20 — Iggadron \"Iggy\" Wallaed (Bard 3 Valor / Paladin 2
 aliases:
   - "Iggy"
   - "Iggadron Wallaed"
-source_session: [[Session 01 The Black Sheep Inn]]
+source_session: "[[Session 01 The Black Sheep Inn]]"
 relates_to:
-  - [[Curse of Strahd]] (campaign)
-  - [[Sah]] (celestial guide / patron)
-  - [[Threnai]] (destroyed home plane)
+  - "[[Curse of Strahd]] (campaign)"
+  - "[[Sah]] (celestial guide / patron)"
+  - "[[Threnai]] (destroyed home plane)"
 enemies:
-  - [[The Correctors]] (death-denial cult that destroyed his home plane)
-  - [[The First Corrector]] (ideological architect, fate unknown)
+  - "[[The Correctors]] (death-denial cult that destroyed his home plane)"
+  - "[[The First Corrector]] (ideological architect, fate unknown)"
 affinity:
-  - [[Bosco]] (4)
-  - [[Davian Martikov]] (1)
-  - [[Lady Fiona Wachter]] (-4)
+  - "[[Bosco]] (4)"
+  - "[[Davian Martikov]] (1)"
+  - "[[Lady Fiona Wachter]] (-4)"
 importance: critical
 active: true
 spotlight: normal

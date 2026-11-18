@@ -8,7 +8,7 @@ tags:
   - event
   - event/revelation
   - region/barovia
-source_session: [[Session 25 The Wizard of Wines]]
+source_session: "[[Session 25 The Wizard of Wines]]"
 confirmed_date: "2026-09-01"
 date: "At the Wizard of Wines, south of the Raven River (~Day 14 in Barovia — estimate)"
 timeline_date: "0735-11-10"
@@ -21,23 +21,23 @@ consequences:
   - "Gave the party allies from the winery — and cost Odibli a familiar to something unidentified inside."
 importance: major
 active: true
-last_updated: [[Session 25 The Wizard of Wines]]
+last_updated: "[[Session 25 The Wizard of Wines]]"
 participants:
-  - [[Baba Lysaga]] (commands the besieging druids; not present)
-  - [[Davian Martikov]] (proprietor; named her)
-  - [[Iggy]] (read more to the story)
-  - [[Dip]] (asked what the winery had done)
-  - [[Luci]] (healed the winery folk; cast Augury)
-  - [[Odibli]] (lost a familiar scouting)
+  - "[[Baba Lysaga]] (commands the besieging druids; not present)"
+  - "[[Davian Martikov]] (proprietor; named her)"
+  - "[[Iggy]] (read more to the story)"
+  - "[[Dip]] (asked what the winery had done)"
+  - "[[Luci]] (healed the winery folk; cast Augury)"
+  - "[[Odibli]] (lost a familiar scouting)"
 relates_to:
-  - [[Wizard of Wines]] (occurred here)
-  - [[Strahd Von Zarovich]] (she delivered and directed him)
-  - [[Danika]] (sent the party after the wine)
-  - [[Vallaki]] (the town cut off from its wine)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (occurred here)"
+  - "[[Strahd Von Zarovich]] (she delivered and directed him)"
+  - "[[Danika]] (sent the party after the wine)"
+  - "[[Vallaki]] (the town cut off from its wine)"
+  - "[[Curse of Strahd]] (campaign)"
 awareness: regional
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "At the Wizard of Wines, Davian Martikov named Baba Lysaga — midwife to Strahd's mother — as the power behind the druids blockading his winery and starving Vallaki of wine."
 ---
 

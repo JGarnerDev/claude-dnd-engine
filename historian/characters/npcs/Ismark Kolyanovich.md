@@ -17,17 +17,17 @@ aliases: []
 importance: major
 active: true
 relates_to:
-  - [[Ireena Kolyana]] (sister)
-  - [[Kolyan Indirovich]] (deceased father)
-  - [[Blood of the Vine Tavern]] (frequents)
-  - [[Barovia Village]] (home)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Ireena Kolyana]] (sister)"
+  - "[[Kolyan Indirovich]] (deceased father)"
+  - "[[Blood of the Vine Tavern]] (frequents)"
+  - "[[Barovia Village]] (home)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 affinity:
-  - [[The Party]] (3)
+  - "[[The Party]] (3)"
 description: "Ismark Kolyanovich. Human veteran. Son of the late Burgomaster Kolyan Indirovich. Wants the party to escort his sister Ireena to Vallaki for her safety."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
 
 race: "Human"
@@ -39,8 +39,8 @@ goals:
 motives:
   - "Strahd has fixated on Ireena; she is not safe in Barovia Village"
 family:
-  - [[Ireena Kolyana]] (sister)
-  - [[Kolyan Indirovich]] (deceased father)
+  - "[[Ireena Kolyana]] (sister)"
+  - "[[Kolyan Indirovich]] (deceased father)"
 charm_hook: "Genuinely warm in a land that has forgotten warmth — his ease with the party feels almost aberrant given how guarded everyone else is."
 ---
 

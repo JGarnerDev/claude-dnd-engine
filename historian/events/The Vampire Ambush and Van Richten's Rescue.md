@@ -8,7 +8,7 @@ tags:
   - event
   - event/battle
   - region/barovia
-source_session: [[Session 24 The Vampire Hunter]]
+source_session: "[[Session 24 The Vampire Hunter]]"
 confirmed_date: "2026-08-25"
 date: "At the meeting place northeast of Vallaki (~Day 13 in Barovia — estimate)"
 timeline_date: "0735-11-09"
@@ -22,23 +22,23 @@ consequences:
   - "Reset the party's long rest anchor and sent them south for the missing wine."
 importance: critical
 active: false
-last_updated: [[Session 24 The Vampire Hunter]]
+last_updated: "[[Session 24 The Vampire Hunter]]"
 participants:
-  - [[Rictavio]] (rescuer; revealed as Rudolph van Richten)
-  - [[Rictavio's Saber-Toothed Tiger]] (drove off the vampires)
-  - [[Iggy]] (downed)
-  - [[Luci]] (downed)
-  - [[Odibli]] (downed)
-  - [[Dip]] (downed)
+  - "[[Rictavio]] (rescuer; revealed as Rudolph van Richten)"
+  - "[[Rictavio's Saber-Toothed Tiger]] (drove off the vampires)"
+  - "[[Iggy]] (downed)"
+  - "[[Luci]] (downed)"
+  - "[[Odibli]] (downed)"
+  - "[[Dip]] (downed)"
 relates_to:
-  - [[Vallaki]] (the meeting place lay northeast of it)
-  - [[Strahd Von Zarovich]] (named as the nobleman at the gates)
-  - [[Keepers of the Feather]] (named as allies)
-  - [[Izek Strazni]] (hunting Rictavio on the party's false tip)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vallaki]] (the meeting place lay northeast of it)"
+  - "[[Strahd Von Zarovich]] (named as the nobleman at the gates)"
+  - "[[Keepers of the Feather]] (named as allies)"
+  - "[[Izek Strazni]] (hunting Rictavio on the party's false tip)"
+  - "[[Curse of Strahd]] (campaign)"
 awareness: secret
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Vampires dropped all four PCs at the meeting place northeast of Vallaki. Rictavio and his saber-toothed tiger saved them, and he gave his real name: Rudolph van Richten, the vampire hunter."
 ---
 

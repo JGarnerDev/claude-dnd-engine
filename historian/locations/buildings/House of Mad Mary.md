@@ -9,22 +9,22 @@ tags:
   - location
   - location/building
 
-city: [[Barovia Village]]
+city: "[[Barovia Village]]"
 residents:
-  - [[Mad Mary]] (grief-stricken resident)
+  - "[[Mad Mary]] (grief-stricken resident)"
 purpose: residential
 aliases: []
 importance: minor
 active: true
 relates_to:
-  - [[Mad Mary]] (lives here)
-  - [[Gertrude]] (lived here before going west)
-  - [[Barovia Village]] (located here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Mad Mary]] (lives here)"
+  - "[[Gertrude]] (lived here before going west)"
+  - "[[Barovia Village]] (located here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial — entered briefly)
+  - "[[The Party]] (partial — entered briefly)"
 description: "House of Mad Mary. Private residence in Barovia Village. Mad Mary grieves here for her missing daughter Gertrude. A Blinsky doll was found inside."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
 ---
 

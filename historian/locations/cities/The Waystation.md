@@ -4,7 +4,7 @@ name: "The Waystation"
 type: location
 subtype: city
 exists: true
-source_session: [[Session 32 The Red Trail]]
+source_session: "[[Session 32 The Red Trail]]"
 confirmed_date: "2026-11-03"
 state: troubled
 campaign: homebrew
@@ -14,7 +14,7 @@ tags:
 
 # --- MANDATORY (city) ---
 # Which side of the Stonemarch–Duskwater border it sits on is unconfirmed; see the Reliability note.
-global_location: [[Duskwater]]
+global_location: "[[Duskwater]]"
 purpose: commerce
 
 # --- OPTIONAL (entity base) ---
@@ -23,7 +23,7 @@ aliases:
   - "the drover's relay"
 importance: background
 active: true
-last_updated: [[Session 32 The Red Trail]]
+last_updated: "[[Session 32 The Red Trail]]"
 relates_to:
   - "[[Nella]] (her camp; she keeps a griffon staked behind the ridge)"
   - "[[Ashford]] (the stolen ale was carted here from the Golden Lioness)"

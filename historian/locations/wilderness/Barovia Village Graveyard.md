@@ -9,21 +9,21 @@ tags:
   - location
   - location/wilderness
 
-global_location: [[Barovia Village]]
+global_location: "[[Barovia Village]]"
 purpose: other
 aliases: []
 importance: minor
 active: true
 relates_to:
-  - [[Barovia Village]] (located within)
-  - [[Kolyan Indirovich]] (to be buried here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Barovia Village]] (located within)"
+  - "[[Kolyan Indirovich]] (to be buried here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial — heading here at session end)
+  - "[[The Party]] (partial — heading here at session end)"
 description: "Barovia Village Graveyard. Source of nightly ghost procession — spirits of adventurers who failed to destroy Strahd. Party visited in Session 12; learned procession origin from Parriwimple; fought zombies here."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
-last_updated: [[Session 12 The March of the Dead]]
+last_updated: "[[Session 12 The March of the Dead]]"
 ---
 
 Global Location: [[Barovia Village]] | Campaign: [[Curse of Strahd]]

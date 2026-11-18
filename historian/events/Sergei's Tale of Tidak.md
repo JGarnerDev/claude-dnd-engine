@@ -18,11 +18,11 @@ consequences:
 importance: minor
 last_updated: "[[Session 16 The Blue Water Inn]]"
 participants:
-  - [[Odibli]] (translator, via speak with animals)
-  - [[Sergei Rubelgerd]] (storyteller)
+  - "[[Odibli]] (translator, via speak with animals)"
+  - "[[Sergei Rubelgerd]] (storyteller)"
 relates_to:
-  - [[Blue Water Inn]] (occurred at)
-  - [[Vallaki]] (occurred in)
+  - "[[Blue Water Inn]] (occurred at)"
+  - "[[Vallaki]] (occurred in)"
 awareness: regional
 description: "At the Blue Water Inn, Odibli let his dog Sergei tell the room his own tale — a search across the Zeatchean Steppes for his best friend Tidak, taken by the fog — and the whole bar wept."
 ---

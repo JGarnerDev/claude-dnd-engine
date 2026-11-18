@@ -8,31 +8,31 @@ state: contested
 tags:
   - location
   - location/terrain-feature
-source_session: [[Session 24 The Vampire Hunter]]
+source_session: "[[Session 24 The Vampire Hunter]]"
 confirmed_date: "2026-08-25"
 feature_type: river
 region:
-  - [[Barovia]]
+  - "[[Barovia]]"
 aliases:
   - "Ravenriver"
 importance: major
 active: true
-last_updated: [[Session 24 The Vampire Hunter]]
+last_updated: "[[Session 24 The Vampire Hunter]]"
 relates_to:
-  - [[The Raven River Wolf]] (guards the crossing)
-  - [[Strahd Von Zarovich]] (posted the wolf)
-  - [[Wizard of Wines]] (lies south of the river)
-  - [[Van Richten's Tower]] (lies past the river)
-  - [[Curse of Strahd]] (campaign)
+  - "[[The Raven River Wolf]] (guards the crossing)"
+  - "[[Strahd Von Zarovich]] (posted the wolf)"
+  - "[[Wizard of Wines]] (lies south of the river)"
+  - "[[Van Richten's Tower]] (lies past the river)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "A river with a bridged crossing on the road south of Vallaki. Strahd has posted a talking dire wolf there with orders to keep a party of four adventurers from going further west."
 scale: regional
 navigability: moderate
-controlled_by: [[Strahd Von Zarovich]]
+controlled_by: "[[Strahd Von Zarovich]]"
 connects:
-  - [[Wizard of Wines]]
-  - [[Van Richten's Tower]]
+  - "[[Wizard of Wines]]"
+  - "[[Van Richten's Tower]]"
 hook: "Something west of this river is being kept from this party specifically — Strahd's sentry knew there were four of them."
 ---
 

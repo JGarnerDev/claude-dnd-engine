@@ -17,17 +17,17 @@ aliases: ["the crone"]
 importance: major
 active: true
 relates_to:
-  - [[Alenka]] (knows of her; recommended her to party)
-  - [[Tser Pool Encampment]] (her tent stands here)
-  - [[Barovia Village]] (lives west of here)
-  - [[The Party]] (read their tarokka, Session 14)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Alenka]] (knows of her; recommended her to party)"
+  - "[[Tser Pool Encampment]] (her tent stands here)"
+  - "[[Barovia Village]] (lives west of here)"
+  - "[[The Party]] (read their tarokka, Session 14)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (met; received her tarokka reading, Session 14)
+  - "[[The Party]] (met; received her tarokka reading, Session 14)"
 description: "Seer and fortune teller dwelling at the Tser Pool Encampment west of Barovia Village. Was expecting the party when they arrived in Session 14 and laid a five-card tarokka reading — the Fortunes of Ravenloft — pointing them to a holy symbol, a sword of sunlight, an ally, and where Strahd may be found. Answers only in riddles."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
-last_updated: [[Session 14 The Tarokka Reading]]
+last_updated: "[[Session 14 The Tarokka Reading]]"
 
 race: "unknown"
 ---

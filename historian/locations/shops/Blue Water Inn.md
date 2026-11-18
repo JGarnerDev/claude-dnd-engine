@@ -9,24 +9,24 @@ tags:
   - location
   - location/shop
 
-city: [[Vallaki]]
-proprietor: [[Urwin]]
+city: "[[Vallaki]]"
+proprietor: "[[Urwin]]"
 purpose: commerce
 aliases: []
 importance: major
 active: true
 relates_to:
-  - [[Vallaki]] (located here)
-  - [[Urwin]] (proprietor)
-  - [[Danika]] (proprietor, bartender)
-  - [[Rictavio]] (resident guest / performer)
-  - [[Brom]] (works in the kitchen)
-  - [[Bray]] (works in the kitchen)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vallaki]] (located here)"
+  - "[[Urwin]] (proprietor)"
+  - "[[Danika]] (proprietor, bartender)"
+  - "[[Rictavio]] (resident guest / performer)"
+  - "[[Brom]] (works in the kitchen)"
+  - "[[Bray]] (works in the kitchen)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full — lodged and performed here)
+  - "[[The Party]] (full — lodged and performed here)"
 description: "Blue Water Inn. Lodging house and tavern inside Vallaki, run by Urwin and Danika. A rough crowd; the party performed here, won the room, and were gifted a free night. The bard Rictavio is a resident guest."
-source_session: [[Session 16 The Blue Water Inn]]
+source_session: "[[Session 16 The Blue Water Inn]]"
 confirmed_date: "2026-06-30"
 
 map_location: "Inside the walls of Vallaki"

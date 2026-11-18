@@ -9,22 +9,22 @@ tags:
   - location
   - location/wilderness
 
-global_location: [[Barovia]]
+global_location: "[[Barovia]]"
 purpose: settlement
 aliases: []
 importance: major
 active: true
 relates_to:
-  - [[Madame Eva]] (her tent stands here; gave the tarokka reading)
-  - [[Barovia]] (region)
-  - [[Vallaki]] (on the road toward)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Madame Eva]] (her tent stands here; gave the tarokka reading)"
+  - "[[Barovia]] (region)"
+  - "[[Vallaki]] (on the road toward)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (visited and stayed the night, Session 14)
+  - "[[The Party]] (visited and stayed the night, Session 14)"
 description: "Vistani encampment ringing a lake several hundred feet across, on the road west of Barovia Village toward Vallaki. Tents and improvised camps around campfires. The Vistani here are loyalists to Strahd — traders, farmers, and bards whose ancestors once nursed Strahd back from a grievous wound. Madame Eva keeps her tent here. Near a waterfall, chasm, and the River Ivlis."
-source_session: [[Session 14 The Tarokka Reading]]
+source_session: "[[Session 14 The Tarokka Reading]]"
 confirmed_date: "2026-06-16"
-last_updated: [[Session 14 The Tarokka Reading]]
+last_updated: "[[Session 14 The Tarokka Reading]]"
 ---
 
 Global Location: [[Barovia]] | Campaign: [[Curse of Strahd]]

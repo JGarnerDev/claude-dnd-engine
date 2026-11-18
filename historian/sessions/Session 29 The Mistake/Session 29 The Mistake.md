@@ -9,7 +9,7 @@ state: completed
 tags:
   - session
 
-mission: [[The Stolen Casks]]
+mission: "[[The Stolen Casks]]"
 planned_date: "2026-10-06"
 played_date: "2026-10-06"
 # Was the working label "Day 1, Ashford reckoning, night".; dated at the calendar ingest (2026-11-08).
@@ -18,14 +18,14 @@ in_world_end_time: "22:00"
 recap: "Davian's relic carried the party through a long transit of pure light that rested them in passing. Meanwhile, on a night road, the Nightveil sorcerer Halsby, sent by Sister Maerith toward Tassad, was stopped by a possessed fox with smoky green eyes. It begged him to save a woman named Sable from bandits at Ashford across the river and promised to fuse his spear and focus into a boon once the job was done. Halsby took the job without haggling. The party fell out of the light over a moonlit, half-burned brewery yard being stripped by raiders. Dip read the scene, relived the burning tavern of their childhood, landed feet-first on a cask-hauler, raged and leveled to 5. Odibli landed hidden outside the wall and watched a cart of barrels escape south with a long-haired archer on it, whom the raiders' leader called Nella. Luci landed hard by the breach, looked up at a vast broken moon shedding shards, named it Fida in the Dead Sun tongue, heard her voice answer 'Closer', and leveled to 5. In two rounds the party and the newly arrived Halsby killed all six raiders: Dip killed Arden, Willem and the mage Tallis; Halsby's twinned chromatic orb killed the crossbowman and Bandit 1; and his upcast magic missile killed the big one as he rode off with a bound Sable, who fell clear of the spooked horse. The party stopped the raiders present from taking anything more."
 cliffhanger: "The yard is quiet and every raider is dead. Sable lies beside a spooked horse, still bound and gagged, and has not yet spoken to her rescuers. Nella's cart, loaded with the barrels already taken, is gone south under the trees. Halsby has walked out of the shadows among four strangers who arrived out of falling light. The fox's promise to Halsby is still owed."
 entities_canonized:
-  - [[Sable Wren]]
-  - [[Ashford]]
-  - [[The Golden Lioness]]
-  - [[Nella]]
-  - [[Aashal-Groon Mellenegon Borak]]
-  - [[The Nightveil]]
-  - [[Tassad]]
-  - [[Sister Maerith]]
+  - "[[Sable Wren]]"
+  - "[[Ashford]]"
+  - "[[The Golden Lioness]]"
+  - "[[Nella]]"
+  - "[[Aashal-Groon Mellenegon Borak]]"
+  - "[[The Nightveil]]"
+  - "[[Tassad]]"
+  - "[[Sister Maerith]]"
 new_entities:
   - "Fida, Luci's name for Aethryn's broken moon, given in the Dead Sun tongue. Recorded on Luci's file and in the campaign doc, with no standalone entity yet"
   - "The raiders, all dead and kept as recap narration only: Arden (the hauler Dip landed on), Willem (cleaved), Gib (likely the crossbowman), Tallis (the hedge-mage) and the big one (nameless by design)"
@@ -48,10 +48,10 @@ pcs_present:
   - "Halsby"
 
 # --- OPTIONAL ---
-act: [[Act 1 - The Hearth at Ashford]]
+act: "[[Act 1 - The Hearth at Ashford]]"
 locations:
-  - [[Ashford]]
-  - [[The Golden Lioness]]
+  - "[[Ashford]]"
+  - "[[The Golden Lioness]]"
 key_npcs:
   - "[[Sable Wren]] (data — the offer, and the session's key NPC moment)"
   - "[[Mara Tull]] (data — sheriff; the town's first read on five armed strangers)"

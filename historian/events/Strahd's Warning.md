@@ -18,12 +18,12 @@ consequences:
 importance: major
 last_updated: "[[Session 09 The Shadows]]"
 participants:
-  - [[Strahd Von Zarovich]] (intervened)
-  - [[Luci]] (slew the shadows)
-  - [[Iggy]] (slain twice)
-  - [[Dip]] (slain twice)
+  - "[[Strahd Von Zarovich]] (intervened)"
+  - "[[Luci]] (slew the shadows)"
+  - "[[Iggy]] (slain twice)"
+  - "[[Dip]] (slain twice)"
 relates_to:
-  - [[Death House]] (occurred in)
+  - "[[Death House]] (occurred in)"
 awareness: secret
 description: "During the shadow fight that killed Iggy and Dip twice, Strahd stepped in to warn the party — a sign he wants them alive — before Luci destroyed the remaining shadows."
 ---

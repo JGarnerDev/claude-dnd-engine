@@ -11,27 +11,27 @@ creature_type: beast
 challenge_rating: "0"
 size: tiny
 alignment: unaligned
-location: [[The Golden Lioness]] (with the party, in Aethryn)
+location: "[[The Golden Lioness]] (with the party, in Aethryn)"
 stat_block: "inline"
 aliases:
   - "Bosco Trashborn, the Pillager"
 importance: major
 active: true
-owner: [[Iggy]]
-last_updated: [[Session 30 Keep the Ale]]
+owner: "[[Iggy]]"
+last_updated: "[[Session 30 Keep the Ale]]"
 relates_to:
-  - [[Iggy]] (companion; bonded over a ration)
-  - [[Odibli]] (cold war — Odibli ate a ration in front of him)
-  - [[Parriwimple]] (prior history — Bosco was thrown into Parriwimple's domicile during Session 12, left scratch marks)
-  - [[Curse of Strahd]] (where the party found them)
-  - [[Redwater]] (campaign; crossed over with the party, Session 30)
+  - "[[Iggy]] (companion; bonded over a ration)"
+  - "[[Odibli]] (cold war — Odibli ate a ration in front of him)"
+  - "[[Parriwimple]] (prior history — Bosco was thrown into Parriwimple's domicile during Session 12, left scratch marks)"
+  - "[[Curse of Strahd]] (where the party found them)"
+  - "[[Redwater]] (campaign; crossed over with the party, Session 30)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 affinity:
-  - [[Iggy]] (5)
-  - [[Odibli]] (-3)
+  - "[[Iggy]] (5)"
+  - "[[Odibli]] (-3)"
 description: "Survived Barovia on spite and instinct. Reads people better than most humanoids, fights harder than his size suggests, holds grudges like treasure, and — rarely, genuinely — does something quietly kind. Iggy witnessed the pillaging, wrote the ballad, then went and found him."
-source_session: [[Session 13 Dream Pastries]]
+source_session: "[[Session 13 Dream Pastries]]"
 confirmed_date: "2026-06-02"
 
 personality: "Reads people and situations with unusual clarity — slow to trust, but when trust is earned, quietly devoted. Punishes deception without exception (see: Odibli). Not above a poignant gesture when someone genuinely needs one. Fights with total commitment. Holds grudges like treasure."

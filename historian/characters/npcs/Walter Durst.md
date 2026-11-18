@@ -11,17 +11,17 @@ tags:
   - character
   - character/npc
 
-location: [[Death House]]
+location: "[[Death House]]"
 personality: "N/A -died as an infant"
 livelihood: "N/A -sacrificed as an infant"
 disposition: unknown
 aliases: []
 relates_to:
-  - [[Gustav Durst]] (father)
-  - [[The Nursemaid]] (birth mother)
-  - [[Elisabeth Durst]] (ordered sacrifice)
-  - [[Death House]] (sacrificed in)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Gustav Durst]] (father)"
+  - "[[The Nursemaid]] (birth mother)"
+  - "[[Elisabeth Durst]] (ordered sacrifice)"
+  - "[[Death House]] (sacrificed in)"
+  - "[[Curse of Strahd]] (campaign)"
 importance: minor
 active: false
   

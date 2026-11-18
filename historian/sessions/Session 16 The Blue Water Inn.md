@@ -11,34 +11,34 @@ played_date: "2026-06-30"
 in_world_end_date: "0735-11-03"
 mission: "Settle into Vallaki; win the town's welcome"
 locations:
-  - [[Vallaki]]
-  - [[Blue Water Inn]]
+  - "[[Vallaki]]"
+  - "[[Blue Water Inn]]"
 key_npcs:
-  - [[Danika]]
-  - [[Urwin]]
-  - [[Rictavio]]
-  - [[Szoldar Szoldarovich]]
-  - [[Yevgeni Krushkin]]
-  - [[Karl]]
-  - [[Nikolai]]
-  - [[Brom]]
-  - [[Bray]]
-  - [[Bosco]]
-  - [[Sergei Rubelgerd]]
+  - "[[Danika]]"
+  - "[[Urwin]]"
+  - "[[Rictavio]]"
+  - "[[Szoldar Szoldarovich]]"
+  - "[[Yevgeni Krushkin]]"
+  - "[[Karl]]"
+  - "[[Nikolai]]"
+  - "[[Brom]]"
+  - "[[Bray]]"
+  - "[[Bosco]]"
+  - "[[Sergei Rubelgerd]]"
 recap: "Directed by a gate guard to the Blue Water Inn, the party pushed into a rough crowd and won it over the only way they know how — a performance. Dip's jovial entrance (with an audible jab that the patrons were 'less than stellar company') curdled into a natural-1 interpretive dance that scattered tables and drew jeers, and Rictavio waved them to stop. But Luci's tale of her radiant celestial home charmed the barkeep Danika — who quipped Luci might outshine Rictavio himself — Iggy spun a gold-dragon-turned-raccoon apple-thief into a viol jig, and Bosco stole the night to roaring 'for Bosco!' cheers led by Iggy. The room wept when Odibli, via speak with animals, let his dog Sergei recount his search for his lost friend Tidak. The inn's resident bard Rictavio, an extravagantly dressed half-elf, boasted of slaying a dragon and selling its hoard; Odibli pressed him on the details, caught the evasion, and came away mistrustful. Between sets, drunk dissenters Karl and Nikolai warned of the mad Burgomaster's mandatory festivals — happiness on pain of imprisonment or worse — before lapsing into the town's eerie mantra, 'all will be well in Vallaki'; grim wolf-hunters Szoldar Szoldarovich and Yevgeni Krushkin offered their services as guides (5 gp a day, information for drinks); and Danika, grateful, gifted the party a free night and stew, asking them to find her overdue wine shipment's missing 'wizard of wine.' Her husband Urwin emerged from the kitchen, where their sons Brom and Bray worked, and offered to lead the weary party up to their rooms. The party took the free night as a long rest. Earlier at the market, Iggy had traded a platinum necklace for thieves' tools and hide armor."
 cliffhanger: "Bedded down under Danika's free roof, the party wakes into a Vallaki ruled by a Burgomaster's mandatory joy — a missing wine-wizard to chase, dissenters whispering revolt behind a hollow mantra, a church visit Ismark and Ireena want to make at dawn, and a bard whose dragon-tale doesn't add up."
 entities_canonized:
-  - [[Blue Water Inn]]
-  - [[Danika]]
-  - [[Urwin]]
-  - [[Rictavio]]
-  - [[Szoldar Szoldarovich]]
-  - [[Yevgeni Krushkin]]
-  - [[Karl]]
-  - [[Nikolai]]
-  - [[Brom]]
-  - [[Bray]]
-  - [[Vargas Vallakovich|the Burgomaster]]
+  - "[[Blue Water Inn]]"
+  - "[[Danika]]"
+  - "[[Urwin]]"
+  - "[[Rictavio]]"
+  - "[[Szoldar Szoldarovich]]"
+  - "[[Yevgeni Krushkin]]"
+  - "[[Karl]]"
+  - "[[Nikolai]]"
+  - "[[Brom]]"
+  - "[[Bray]]"
+  - "[[Vargas Vallakovich|the Burgomaster]]"
 new_entities:
   - "Tidak — Sergei's lost best friend, a humanoid taken by the fog in the Zeatchean Steppes. Told in-fiction through Sergei's tale; recorded as lore on Sergei's file, no standalone entity yet."
 table_notes: "The performance montage landed big — Bosco's crowd-win ('for Bosco!') and Sergei's tearjerker tale of Tidak were the highlights. Rictavio's evasiveness successfully planted party suspicion. The 'all will be well in Vallaki' mantra registered as intended-eerie."

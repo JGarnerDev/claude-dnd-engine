@@ -8,25 +8,25 @@ state: alive
 tags:
   - character
   - character/npc
-source_session: [[Session 28 The Wereravens' Gift]]
+source_session: "[[Session 28 The Wereravens' Gift]]"
 confirmed_date: "2026-09-29"
-location: [[Wizard of Wines]]
+location: "[[Wizard of Wines]]"
 personality: "Unknown — never met on screen. Known only by what he did: went out against the blights, got overwhelmed, and got back alive to report he did not know what had happened to the party."
 livelihood: "Works the [[Wizard of Wines]] with the rest of the Martikov household."
 disposition: friendly
 aliases: []
 importance: minor
 active: true
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Wizard of Wines]] (works here)
-  - [[Davian Martikov]] (family; reported to him)
-  - [[Elvir Martikov]] (fled the blights alongside him)
-  - [[The Martikovs Are Wereravens]] (a Martikov, and so a wereraven)
-  - [[The Party]] (fought alongside them at the winery's edge, then withdrew)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (works here)"
+  - "[[Davian Martikov]] (family; reported to him)"
+  - "[[Elvir Martikov]] (fled the blights alongside him)"
+  - "[[The Martikovs Are Wereravens]] (a Martikov, and so a wereraven)"
+  - "[[The Party]] (fought alongside them at the winery's edge, then withdrew)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "One of the Martikov household at the Wizard of Wines. Went out against the blights with Elvir, was overwhelmed, and fell back to Davian without knowing whether the party inside had survived. A wereraven, like every Martikov."
 race: "Unknown — human form; a wereraven by family line"
 class: "Unknown"

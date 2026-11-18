@@ -8,7 +8,7 @@ state: destroyed
 tags:
   - item/magic
   - item/magic/staff
-source_session: [[Session 27 The Vampire Staff]]
+source_session: "[[Session 27 The Vampire Staff]]"
 confirmed_date: "2026-09-22"
 item_type: staff
 rarity: unknown
@@ -19,15 +19,15 @@ aliases:
   - "The staff of the black branch"
 importance: major
 active: false
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Wizard of Wines]] (the blights it animated infested this place)
-  - [[Baba Lysaga's Druids]] (carried by one of their number)
-  - [[Baba Lysaga]] (presumed ultimate source — unconfirmed)
-  - [[Odibli]] (destroyed it)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (the blights it animated infested this place)"
+  - "[[Baba Lysaga's Druids]] (carried by one of their number)"
+  - "[[Baba Lysaga]] (presumed ultimate source — unconfirmed)"
+  - "[[Odibli]] (destroyed it)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "A gnarled staff of black branch carried by a blood-painted druid in the Wizard of Wines. It animated every blight in the winery; Odibli burned it and shattered it with Magic Missile, and every blight died screaming with it."
 material: "Black branch, spongy to the touch"
 appearance: "A gnarled staff cut from a black branch, described as spongy and black."

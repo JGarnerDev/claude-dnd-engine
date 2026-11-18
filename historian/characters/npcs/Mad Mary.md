@@ -9,7 +9,7 @@ tags:
   - character
   - character/npc
 
-location: [[House of Mad Mary]]
+location: "[[House of Mad Mary]]"
 personality: "Consumed by grief. Clutches her daughter's doll and weeps. Inconsolable. Was hiding Gertrude from Strahd — blames herself for the girl going out."
 livelihood: "Unknown. Known in the village for her grief."
 disposition: neutral
@@ -17,18 +17,18 @@ aliases: []
 importance: minor
 active: true
 relates_to:
-  - [[House of Mad Mary]] (lives here)
-  - [[Gertrude]] (missing daughter)
-  - [[Strahd Von Zarovich]] (tried to hide Gertrude from him)
-  - [[Curse of Strahd]] (campaign)
+  - "[[House of Mad Mary]] (lives here)"
+  - "[[Gertrude]] (missing daughter)"
+  - "[[Strahd Von Zarovich]] (tried to hide Gertrude from him)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Mad Mary. Barovian woman grieving her missing daughter Gertrude. Lives in the House of Mad Mary. Was trying to hide Gertrude from Strahd."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
 
 family:
-  - [[Gertrude]] (missing daughter)
+  - "[[Gertrude]] (missing daughter)"
 ---
 
 Location: [[House of Mad Mary]] | Campaign: [[Curse of Strahd]]

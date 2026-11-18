@@ -10,20 +10,20 @@ state: dead
 tags:
   - character
   - character/antagonist
-location: [[Death House]]
+location: "[[Death House]]"
 personality: "Unknown. Abandoned love for madness, according to Strahd's letter."
 livelihood: "Former cult master and lord of Death House"
 disposition: hostile
 aliases:
   - "The Master"
 relates_to:
-  - [[Elisabeth Durst]] (wife)
-  - [[Rose]] (daughter)
-  - [[Thorn]] (son)
-  - [[Walter Durst]] (illegitimate son)
-  - [[The Nursemaid]] (had affair with)
-  - [[Durst Cult]] (cult member)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Elisabeth Durst]] (wife)"
+  - "[[Rose]] (daughter)"
+  - "[[Thorn]] (son)"
+  - "[[Walter Durst]] (illegitimate son)"
+  - "[[The Nursemaid]] (had affair with)"
+  - "[[Durst Cult]] (cult member)"
+  - "[[Curse of Strahd]] (campaign)"
 importance: major
 active: false
   

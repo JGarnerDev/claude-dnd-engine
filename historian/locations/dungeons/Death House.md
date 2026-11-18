@@ -9,21 +9,21 @@ tags:
   - location
   - location/dungeon
 
-location: [[Barovia Village Outskirts]]
+location: "[[Barovia Village Outskirts]]"
 origin: "Built and corrupted by the Durst family and their death cult"
 current_threat: "None -party cleared it in Session 10. Unknown if it repopulates."
 hook: "Rose and Thorn lured travelers inside. Cult altar required a sacrifice to allow escape."
 
 relates_to:
-  - [[Durst Cult]] (operated within)
-  - [[Gustav Durst]] (former master)
-  - [[Elisabeth Durst]] (former cult leader)
-  - [[The Nursemaid]] (haunts as specter)
-  - [[Rose]] (ghost, now stranded)
-  - [[Thorn]] (ghost, now stranded)
-  - [[Walter Durst]] (sacrificed in basement)
-  - [[Strahd Von Zarovich]] (letter found inside)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Durst Cult]] (operated within)"
+  - "[[Gustav Durst]] (former master)"
+  - "[[Elisabeth Durst]] (former cult leader)"
+  - "[[The Nursemaid]] (haunts as specter)"
+  - "[[Rose]] (ghost, now stranded)"
+  - "[[Thorn]] (ghost, now stranded)"
+  - "[[Walter Durst]] (sacrificed in basement)"
+  - "[[Strahd Von Zarovich]] (letter found inside)"
+  - "[[Curse of Strahd]] (campaign)"
 importance: major
 active: false
   

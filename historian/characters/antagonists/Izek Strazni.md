@@ -8,26 +8,26 @@ state: alive
 tags:
   - character
   - character/antagonist
-location: [[Vallaki]]
+location: "[[Vallaki]]"
 personality: "Cold, menacing, and uncaring — dismisses the party's warnings outright and openly threatens them. Beneath the menace, a hollowness and an air of longing, as though he is missing something he cannot name."
 livelihood: "Captain of the town guard in [[Vallaki]]; oversees the town's guardsmen and the endless preparations for the Burgomaster's mandatory festivals."
 disposition: hostile
 importance: major
 active: true
-source_session: [[Session 18 The Holy Water Ambush]]
+source_session: "[[Session 18 The Holy Water Ambush]]"
 confirmed_date: "2026-07-14"
-last_updated: [[Session 23 The Cult in the Cellar]]
+last_updated: "[[Session 23 The Cult in the Cellar]]"
 relates_to:
-  - [[Vallaki]] (guard captain of)
-  - [[Lady Fiona Wachter]] (marked him for death; now dead herself)
-  - [[The Wachter Cult]] (wanted him killed)
-  - [[Rictavio]] (hunting him over the loosed tiger)
-  - [[Vargas Vallakovich|the Burgomaster]] (serves as guard captain)
-  - [[Ireena Kolyana]] (blood sister — revealed Session 19)
-  - [[Lake Zarovich]] (lost his arm here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vallaki]] (guard captain of)"
+  - "[[Lady Fiona Wachter]] (marked him for death; now dead herself)"
+  - "[[The Wachter Cult]] (wanted him killed)"
+  - "[[Rictavio]] (hunting him over the loosed tiger)"
+  - "[[Vargas Vallakovich|the Burgomaster]] (serves as guard captain)"
+  - "[[Ireena Kolyana]] (blood sister — revealed Session 19)"
+  - "[[Lake Zarovich]] (lost his arm here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Izek Strazni, captain of the Vallaki town guard. One of his arms is grotesquely unnatural — elongated nails, barbs, and heavy deformity that reads as dark magic — and he carries a hollow, longing air beneath a menacing, uncaring manner. Unmoved by holy water diluted onto him. He threatened the party and refused to entertain any joint action against the vampire spawn."
 goals:
   - "Keep order in Vallaki and enforce the Burgomaster's law"

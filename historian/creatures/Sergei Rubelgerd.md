@@ -11,26 +11,26 @@ creature_type: beast
 challenge_rating: "1/8"
 size: medium
 alignment: unaligned
-location: [[The Golden Lioness]] (with the party, in Aethryn)
+location: "[[The Golden Lioness]] (with the party, in Aethryn)"
 stat_block: "inline"
 breed: "Tibetan Mastiff"
 aliases:
   - "Sergei"
 importance: minor
 active: true
-owner: [[Odibli]]
-source_session: [[Session 15 The Gates of Vallaki]]
+owner: "[[Odibli]]"
+source_session: "[[Session 15 The Gates of Vallaki]]"
 confirmed_date: "2026-06-23"
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: "[[Session 30 Keep the Ale]]"
 relates_to:
-  - [[Odibli]] (owner; bought him at the Vallaki market, named him via speak with animals)
-  - [[Bosco]] (the party's other animal companion)
-  - [[Curse of Strahd]] (where the party found them)
-  - [[Redwater]] (campaign; crossed over with the party, Session 30)
+  - "[[Odibli]] (owner; bought him at the Vallaki market, named him via speak with animals)"
+  - "[[Bosco]] (the party's other animal companion)"
+  - "[[Curse of Strahd]] (where the party found them)"
+  - "[[Redwater]] (campaign; crossed over with the party, Session 30)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 affinity:
-  - [[Odibli]] (3)
+  - "[[Odibli]] (3)"
 description: "A dog bought at the Vallaki market with the party pitching in. Odibli passed an animal handling check to ride him, then named him Sergei Rubelgerd via speak with animals. Sergei accepted the name, declared he would be a good boy, and asked for snacks."
 personality: "Eager, agreeable, food-motivated. Wants to be a good boy. Will negotiate for snacks."
 goals:

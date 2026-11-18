@@ -9,7 +9,7 @@ tags:
   - character
   - character/npc
 
-location: [[Bildrath's Mercantile]]
+location: "[[Bildrath's Mercantile]]"
 personality: "Protective and community-minded. Genuinely concerned about the villagers' safety at night. Willing to explain local dangers to strangers. Strong combatant despite gentle demeanor."
 livelihood: "Assistant to Bildrath Cantemir at Bildrath's Mercantile."
 disposition: friendly
@@ -17,15 +17,15 @@ aliases: []
 importance: supporting
 active: true
 relates_to:
-  - [[Bildrath Cantemir]] (employer)
-  - [[Bildrath's Mercantile]] (works here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Bildrath Cantemir]] (employer)"
+  - "[[Bildrath's Mercantile]] (works here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial — seen briefly)
+  - "[[The Party]] (partial — seen briefly)"
 description: "Parriwimple. Large, imposing resident of Barovia village — assistant to Bildrath Cantemir. Community protector who patrols at night. Explained the ghost procession to the party and fought alongside them against zombies. Hosted the party for a long rest."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
-last_updated: [[Session 12 The March of the Dead]]
+last_updated: "[[Session 12 The March of the Dead]]"
 ---
 
 Location: [[Bildrath's Mercantile]] (works) / [[Parriwimple's Domicile]] (lives) | Campaign: [[Curse of Strahd]]

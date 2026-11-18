@@ -8,7 +8,7 @@ tags:
   - event
   - event/battle
   - region/barovia
-source_session: [[Session 26 The Poisoned Casks]]
+source_session: "[[Session 26 The Poisoned Casks]]"
 confirmed_date: "2026-09-15"
 date: "Inside the fermentation room of the Wizard of Wines (~Day 14 in Barovia — estimate)"
 timeline_date: "0735-11-10"
@@ -21,21 +21,21 @@ consequences:
   - "Left the blight-animating magic intact, proving a second druid is still in the building."
 importance: major
 active: true
-last_updated: [[Session 26 The Poisoned Casks]]
+last_updated: "[[Session 26 The Poisoned Casks]]"
 participants:
-  - [[The Winery Druid]] (killed)
-  - [[Dip]] (killed her)
-  - [[Odibli]] (entangled; killed blights with Chromatic Orb and Acid Splash)
-  - [[Iggy]] (Faerie Fire; read that the blights were not endless)
-  - [[Luci]] (radiant aura; fought from atop a cask)
+  - "[[The Winery Druid]] (killed)"
+  - "[[Dip]] (killed her)"
+  - "[[Odibli]] (entangled; killed blights with Chromatic Orb and Acid Splash)"
+  - "[[Iggy]] (Faerie Fire; read that the blights were not endless)"
+  - "[[Luci]] (radiant aura; fought from atop a cask)"
 relates_to:
-  - [[Wizard of Wines]] (where it happened)
-  - [[Baba Lysaga]] (presumed to have sent her, unconfirmed)
-  - [[Davian Martikov]] (whose winery was being poisoned)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (where it happened)"
+  - "[[Baba Lysaga]] (presumed to have sent her, unconfirmed)"
+  - "[[Davian Martikov]] (whose winery was being poisoned)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[Davian Martikov]] (fame, through his ravens)
-  - [[The Party]] (full)
+  - "[[Davian Martikov]] (fame, through his ravens)"
+  - "[[The Party]] (full)"
 description: "The party killed the druid poisoning the Wizard of Wines — and discovered that killing her neither cleaned the wine nor stopped the blights."
 ---
 

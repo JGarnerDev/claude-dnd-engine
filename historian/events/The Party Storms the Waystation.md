@@ -7,7 +7,7 @@ state: recent
 tags:
   - event
   - event/battle
-source_session: [[Session 33 The Red Trail]]
+source_session: "[[Session 33 The Red Trail]]"
 confirmed_date: "2026-11-10"
 date: "Ashford Day 2, mid-morning (6743-05-21, Crawl 5)"
 timeline_date: "6743-05-21"
@@ -22,19 +22,19 @@ track: "party"
 importance: minor
 active: true
 relates_to:
-  - [[The Waystation]] (where it happened)
-  - [[The Stolen Casks]] (the fight for the casks)
-  - [[Silas Crubb]] (his horses and cart)
+  - "[[The Waystation]] (where it happened)"
+  - "[[The Stolen Casks]] (the fight for the casks)"
+  - "[[Silas Crubb]] (his horses and cart)"
 known_by:
-  - [[The Party]] (full)
-  - [[Nella]] (saw it from the air)
+  - "[[The Party]] (full)"
+  - "[[Nella]] (saw it from the air)"
 description: "The party charges Nella's camp in Silas's cart; Halsby's lightning and Dip's axe take four of the crew before the end of the first round."
 participants:
-  - [[The Party]] (attackers)
-  - [[Dip]] (drove the cart; killed the drover and the wolf)
-  - [[Halsby]] (the readied Lightning Bolt)
-  - [[Luci]] (killed the big cask-hand)
-  - [[Nella]] (shooting from her griffon)
+  - "[[The Party]] (attackers)"
+  - "[[Dip]] (drove the cart; killed the drover and the wolf)"
+  - "[[Halsby]] (the readied Lightning Bolt)"
+  - "[[Luci]] (killed the big cask-hand)"
+  - "[[Nella]] (shooting from her griffon)"
 awareness: local
 ---
 

@@ -8,26 +8,26 @@ state: alive
 tags:
   - character
   - character/npc
-source_session: [[Session 27 The Vampire Staff]]
+source_session: "[[Session 27 The Vampire Staff]]"
 confirmed_date: "2026-09-22"
-location: [[Wizard of Wines]]
+location: "[[Wizard of Wines]]"
 personality: "Dry and unbothered, with a scout's habit of understating things. Hops from foot to foot when pleased, gives credit where it is due, and declines flatly to carry a message he was not sent to carry — or to explain a family secret that was not his to give away."
 livelihood: "One of a murder of ravens dispatched from the [[Blue Water Inn]] to keep watch over the [[Wizard of Wines]] and report back if matters got out of hand."
 disposition: friendly
 aliases: []
 importance: minor
 active: true
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Wizard of Wines]] (posted there on watch)
-  - [[Blue Water Inn]] (dispatched from)
-  - [[Davian Martikov]] (answered his call)
-  - [[Keepers of the Feather]] (near-certain affiliation — see Reliability)
-  - [[The Martikovs Are Wereravens]] (what he would not explain in Session 27)
-  - [[Odibli]] (spoke with him via Speak with Animals)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (posted there on watch)"
+  - "[[Blue Water Inn]] (dispatched from)"
+  - "[[Davian Martikov]] (answered his call)"
+  - "[[Keepers of the Feather]] (near-certain affiliation — see Reliability)"
+  - "[[The Martikovs Are Wereravens]] (what he would not explain in Session 27)"
+  - "[[Odibli]] (spoke with him via Speak with Animals)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "A raven at the Wizard of Wines who gave his name to Odibli under Speak with Animals. Dispatched from the Blue Water Inn in answer to Davian Martikov's call, he and his murder had been watching the winery for days — and fought on the party's side without being asked."
 race: "Raven"
 class: "Unknown"

@@ -4,7 +4,7 @@ name: "Dunny Marsh"
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
@@ -13,14 +13,14 @@ tags:
   - character/npc
 
 # --- MANDATORY (npc) ---
-location: [[Ashford]]
+location: "[[Ashford]]"
 personality: "Too loud, too quick: “I'm fine, I'm fine.” Laughs easily, even hurt."
 livelihood: "Deputy to Sheriff Mara Tull."
 
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: "[[Session 30 Keep the Ale]]"
 relates_to:
   - "[[Mara Tull]] (his sheriff)"
   - "[[Iggy]] (healed him)"
@@ -31,8 +31,8 @@ description: "Young Ashford deputy, hurt in the raid, whose cracked bones Iggy a
 race: "[[Human]]"
 disposition: friendly
 affinity:
-  - [[Iggy]] (2)
-  - [[Luci]] (2)
+  - "[[Iggy]] (2)"
+  - "[[Luci]] (2)"
 ---
 
 Location: [[Ashford]]

@@ -8,26 +8,26 @@ state: alive
 tags:
   - character
   - character/npc
-location: [[Church of St. Andril]]
+location: "[[Church of St. Andril]]"
 personality: "Weary, devout, and protective of his flock — insists on the innocence of his altar boy and clings to old wives' tales for want of real answers."
 livelihood: "Priest of the [[Church of St. Andril]] in [[Vallaki]], dedicated to [[Lathander]]."
 disposition: friendly
 importance: major
 active: true
-source_session: [[Session 17 The Stolen Bones]]
+source_session: "[[Session 17 The Stolen Bones]]"
 confirmed_date: "2026-07-07"
 aliases:
   - "Father Lucien"
 relates_to:
-  - [[Church of St. Andril]] (priest)
-  - [[Vallaki]] (lives here)
-  - [[Lathander]] (serves)
-  - [[Yeska]] (altar boy, vouches for)
-  - [[Milivoj]] (groundskeeper/gravedigger)
-  - [[Ireena Kolyana]] (offered shelter from Strahd)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Church of St. Andril]] (priest)"
+  - "[[Vallaki]] (lives here)"
+  - "[[Lathander]] (serves)"
+  - "[[Yeska]] (altar boy, vouches for)"
+  - "[[Milivoj]] (groundskeeper/gravedigger)"
+  - "[[Ireena Kolyana]] (offered shelter from Strahd)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Lucien Petrovic, priest of the Church of St. Andril in Vallaki. The party approached him seeking shelter for Ireena from Strahd. He revealed the church's protective saint's bones had been stolen, defended his altar boy Yeska against the party's suspicion, and knows of the hag coven only through old wives' tales."
 goals:
   - "Protect his church and the innocent under his care"

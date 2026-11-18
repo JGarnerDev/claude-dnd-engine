@@ -20,10 +20,10 @@ consequences:
 importance: minor
 last_updated: "[[Session 15 The Gates of Vallaki]]"
 participants:
-  - [[Odibli]] (owner)
-  - [[Sergei Rubelgerd]] (the dog)
+  - "[[Odibli]] (owner)"
+  - "[[Sergei Rubelgerd]] (the dog)"
 relates_to:
-  - [[Vallaki]] (occurred at)
+  - "[[Vallaki]] (occurred at)"
 awareness: local
 description: "Odibli bought a dog at the Vallaki market, rode it on an animal handling check, and named it Sergei Rubelgerd — a good boy who asked for snacks."
 ---

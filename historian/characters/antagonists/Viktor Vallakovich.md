@@ -8,21 +8,21 @@ state: alive
 tags:
   - character
   - character/antagonist
-location: [[Burgomaster's Mansion]]
+location: "[[Burgomaster's Mansion]]"
 personality: "A reckless young spellcaster with a mad experimenter's single-mindedness — willing to sacrifice townsfolk to his work and to press the party onto an untested teleporter to prove a point."
 livelihood: "Son of the Burgomaster of Vallaki; a self-taught wizard experimenting in the mansion attic."
 disposition: hostile
 importance: major
 active: true
-source_session: [[Session 20 Viktor's Attic]]
+source_session: "[[Session 20 Viktor's Attic]]"
 confirmed_date: "2026-07-29"
 relates_to:
-  - [[Vargas Vallakovich]] (father)
-  - [[Burgomaster's Mansion]] (works in the attic)
-  - [[Vallaki]]
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vargas Vallakovich]] (father)"
+  - "[[Burgomaster's Mansion]] (works in the attic)"
+  - "[[Vallaki]]"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (met — Session 20)
+  - "[[The Party]] (met — Session 20)"
 description: "Viktor Vallakovich, the Burgomaster's son, a young wizard experimenting in the mansion attic. He is behind Vallaki's disappearances — experimenting on the missing townsfolk — and is building a broken teleporter. The party locked him down with Hideous Laughter, fought off his skeleton cats, and took his spells and books; his father bought their silence."
 goals:
   - "Perfect his teleporter"

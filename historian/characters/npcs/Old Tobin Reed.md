@@ -4,7 +4,7 @@ name: "Old Tobin Reed"
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
@@ -13,14 +13,14 @@ tags:
   - character/npc
 
 # --- MANDATORY (npc) ---
-location: [[Ashford]]
+location: "[[Ashford]]"
 personality: "Slow and gravelly; tells everything like a story whether you asked or not. Sees everyone who crosses the ford and remembers them."
 livelihood: "Ferryman at the Ashford ford. Lost his only boat in the raid."
 
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: "[[Session 30 Keep the Ale]]"
 relates_to:
   - "[[Ashford]] (works its ford)"
   - "[[Wick]] (saw him during the raid)"

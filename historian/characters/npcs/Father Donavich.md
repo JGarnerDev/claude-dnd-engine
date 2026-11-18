@@ -9,7 +9,7 @@ tags:
   - character
   - character/npc
 
-location: [[Church of the Morning Lord]]
+location: "[[Church of the Morning Lord]]"
 personality: "Unstable under the weight of prolonged grief. Pacing, muttering, hearing things. Lit only by faith and rage — when asked if he wanted his son dead, he answered with fury: he wants Doru back."
 livelihood: "Priest of the Morning Lord. Tends the church in Barovia Village, alone."
 disposition: neutral
@@ -17,16 +17,16 @@ aliases: []
 importance: major
 active: true
 relates_to:
-  - [[Doru]] (son, vampire spawn caged below the church)
-  - [[Church of the Morning Lord]] (residence and post)
-  - [[Ireena Kolyana]] (revealed her non-blood lineage during Kolyan's burial)
-  - [[Kolyan Indirovich]] (conducted his burial)
-  - [[Strahd Von Zarovich]] (whose castle took his son)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Doru]] (son, vampire spawn caged below the church)"
+  - "[[Church of the Morning Lord]] (residence and post)"
+  - "[[Ireena Kolyana]] (revealed her non-blood lineage during Kolyan's burial)"
+  - "[[Kolyan Indirovich]] (conducted his burial)"
+  - "[[Strahd Von Zarovich]] (whose castle took his son)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Father Donavich. Priest of the Morning Lord in Barovia Village. His son Doru is a vampire spawn caged beneath the church floor. Has been praying ceaselessly for over a year. Told the party Ireena is not a blood relative of the Kolyanovich family."
-source_session: [[Session 13 Dream Pastries]]
+source_session: "[[Session 13 Dream Pastries]]"
 confirmed_date: "2026-06-02"
 
 race: "Human"
@@ -36,7 +36,7 @@ goals:
 motives:
   - "Paternal love — refuses to destroy his son even after a year of torment"
 family:
-  - [[Doru]] (son; vampire spawn)
+  - "[[Doru]] (son; vampire spawn)"
 charm_hook: "He wanted to be the one who guided the lost souls of Barovia toward the light. He got a scream from beneath his own floor instead."
 ---
 

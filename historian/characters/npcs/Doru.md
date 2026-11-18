@@ -9,7 +9,7 @@ tags:
   - character
   - character/npc
 
-location: [[Church of the Morning Lord]]
+location: "[[Church of the Morning Lord]]"
 personality: "Reduced to hunger and instinct. Cries out 'Father, I'm starving' from below the floorboards. Whether any of the original Doru remains is unknown."
 livelihood: "Formerly a young Barovian. Now a vampire spawn, caged beneath the church."
 disposition: hostile
@@ -17,14 +17,14 @@ aliases: []
 importance: major
 active: true
 relates_to:
-  - [[Father Donavich]] (father, keeps him caged and prays for him)
-  - [[Strahd Von Zarovich]] (vampire lord; Doru is bound to him)
-  - [[Church of the Morning Lord]] (location of captivity)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Father Donavich]] (father, keeps him caged and prays for him)"
+  - "[[Strahd Von Zarovich]] (vampire lord; Doru is bound to him)"
+  - "[[Church of the Morning Lord]] (location of captivity)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial — heard but not seen)
+  - "[[The Party]] (partial — heard but not seen)"
 description: "Doru. Son of Father Donavich. Was among a group of Barovians who tried to storm Castle Ravenloft and destroy Strahd. Returned as a vampire spawn, caged beneath the church floor for over a year."
-source_session: [[Session 13 Dream Pastries]]
+source_session: "[[Session 13 Dream Pastries]]"
 confirmed_date: "2026-06-02"
 
 race: "Human (transformed)"
@@ -33,9 +33,9 @@ goals:
 motives:
   - "Vampiric compulsion — bound to Strahd; reduced to hunger"
 family:
-  - [[Father Donavich]] (father)
+  - "[[Father Donavich]] (father)"
 enemies:
-  - [[Strahd Von Zarovich]] (in a sense — the one who made him what he is; but also his lord)
+  - "[[Strahd Von Zarovich]] (in a sense — the one who made him what he is; but also his lord)"
 ---
 
 Location: [[Church of the Morning Lord]] | Campaign: [[Curse of Strahd]]

@@ -8,7 +8,7 @@ tags:
   - character
   - character/pc
   - player/paul
-player: [[Paul]]
+player: "[[Paul]]"
 race: "Aasimar (Scourge)"
 class: "Monk 2 / Warlock 1 / Transcendent 1"
 background: "Astral Drifter"
@@ -19,18 +19,18 @@ character_sheet: "Roll20 — Lucitania (Monk 2 / Warlock 1 / Transcendent 1)"
 aliases:
   - "Lucy"
   - "Lucitania"
-source_session: [[Session 01 The Black Sheep Inn]]
+source_session: "[[Session 01 The Black Sheep Inn]]"
 relates_to:
-  - [[Curse of Strahd]] (campaign)
-  - [[Sabathiel]] (warlock patron; Written in the Stars)
-  - [[Aedra]] (means to free her from her madness)
-  - [[The Sun Temple]] (remembered home; a pocket dimension)
+  - "[[Curse of Strahd]] (campaign)"
+  - "[[Sabathiel]] (warlock patron; Written in the Stars)"
+  - "[[Aedra]] (means to free her from her madness)"
+  - "[[The Sun Temple]] (remembered home; a pocket dimension)"
 affinity:
-  - [[Odibli]] (3)
-  - [[Davian Martikov]] (1)
-  - [[Dip]] (2)
-  - [[Ireena Kolyana]] (2)
-  - [[Sable Wren]] (2)
+  - "[[Odibli]] (3)"
+  - "[[Davian Martikov]] (1)"
+  - "[[Dip]] (2)"
+  - "[[Ireena Kolyana]] (2)"
+  - "[[Sable Wren]] (2)"
 importance: critical
 active: true
 spotlight: normal

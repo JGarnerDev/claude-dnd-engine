@@ -6,11 +6,11 @@ exists: true
 state: completed
 session_number: 7
 in_world_end_date: "0735-10-26"
-mission: [[Death House]]
+mission: "[[Death House]]"
 planned_date: "2026-04-14"
 locations:
-  - [[Death House]]
-party: [[The Party]]
+  - "[[Death House]]"
+party: "[[The Party]]"
 importance: major
 active: false
 description: "Death experience recounts from Odibli and Dip. Formation discussion. Ghoul ambush. Mimic encounter."

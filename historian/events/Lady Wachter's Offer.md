@@ -8,7 +8,7 @@ tags:
   - event
   - event/meeting
   - region/barovia
-source_session: [[Session 22 Lady Wachter's Offer]]
+source_session: "[[Session 22 Lady Wachter's Offer]]"
 confirmed_date: "2026-08-11"
 date: "The afternoon after the Festival of the Blazing Sun, in the Wachter parlor (~Day 12 in Barovia — estimate)"
 timeline_date: "0735-11-08"
@@ -21,24 +21,24 @@ consequences:
   - "Prompted Luci to warn Ireena Kolyana, who defended the Burgomaster and urged research before anything rash."
 importance: major
 active: false
-last_updated: [[Session 22 Lady Wachter's Offer]]
+last_updated: "[[Session 22 Lady Wachter's Offer]]"
 participants:
-  - [[Lady Fiona Wachter]] (made the offer)
-  - [[Dip]] (drawn out; her chosen mark)
-  - [[Iggy]] (pressed her for concrete backing)
-  - [[Luci]] (opened the conversation; later warned Ireena)
-  - [[Odibli]] (set a familiar to spy on the house)
+  - "[[Lady Fiona Wachter]] (made the offer)"
+  - "[[Dip]] (drawn out; her chosen mark)"
+  - "[[Iggy]] (pressed her for concrete backing)"
+  - "[[Luci]] (opened the conversation; later warned Ireena)"
+  - "[[Odibli]] (set a familiar to spy on the house)"
 relates_to:
-  - [[Wachter House]] (occurred here)
-  - [[Izek Strazni]] (marked for death)
-  - [[Vargas Vallakovich]] (the seat she wanted)
-  - [[Lady Fiona Wachter's Daughter]] (discussed, then refused)
-  - [[Ireena Kolyana]] (warned afterward)
-  - [[Vallaki]] (the town at stake)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wachter House]] (occurred here)"
+  - "[[Izek Strazni]] (marked for death)"
+  - "[[Vargas Vallakovich]] (the seat she wanted)"
+  - "[[Lady Fiona Wachter's Daughter]] (discussed, then refused)"
+  - "[[Ireena Kolyana]] (warned afterward)"
+  - "[[Vallaki]] (the town at stake)"
+  - "[[Curse of Strahd]] (campaign)"
 awareness: secret
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Lady Fiona Wachter courted the party over tea for a coup against Burgomaster Vargas Vallakovich, asking them to kill Izek Strazni — and they accepted with no intention of following through."
 ---
 

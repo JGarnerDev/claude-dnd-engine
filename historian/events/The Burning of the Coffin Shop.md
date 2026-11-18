@@ -11,7 +11,7 @@ tags:
 date: "Day ~11 in Barovia (Vallaki) — estimate"
 timeline_date: "0735-11-07"
 track: "region:Barovia"
-source_session: [[Session 19 The Burning of the Coffin Shop]]
+source_session: "[[Session 19 The Burning of the Coffin Shop]]"
 outcome: "The party recovered the church's stolen saint's bones and burned Henrik's coffin shop to the ground to escape, presumably destroying the vampire spawn nesting inside."
 consequences:
   - "The saint's bones are recovered from the spawn's nest."
@@ -22,17 +22,17 @@ consequences:
 importance: major
 last_updated: "[[Session 19 The Burning of the Coffin Shop]]"
 participants:
-  - [[Iggy]]
-  - [[Luci]]
-  - [[Odibli]]
-  - [[Dip]]
-  - [[Szoldar Szoldarovich]]
-  - [[Yevgeni Krushkin]]
-  - [[Izek Strazni]]
-  - [[Henrik]]
+  - "[[Iggy]]"
+  - "[[Luci]]"
+  - "[[Odibli]]"
+  - "[[Dip]]"
+  - "[[Szoldar Szoldarovich]]"
+  - "[[Yevgeni Krushkin]]"
+  - "[[Izek Strazni]]"
+  - "[[Henrik]]"
 relates_to:
-  - [[Church of St. Andril]]
-  - [[Lucien Petrovic]]
+  - "[[Church of St. Andril]]"
+  - "[[Lucien Petrovic]]"
 awareness: local
 description: "The party grabbed the church's stolen saint's bones from the upstairs of Henrik's coffin shop and torched the building to escape — a smoking ruin, the vampire spawn presumed dead, and the party captured for the arson."
 ---

@@ -9,7 +9,7 @@ state: completed
 tags:
   - session
 
-mission: [[The Stolen Casks]]
+mission: "[[The Stolen Casks]]"
 planned_date: "2026-11-17"
 played_date: "2026-11-17"
 in_world_end_date: "6743-05-21"
@@ -45,11 +45,11 @@ pcs_present:
   - "Halsby"
 
 # --- OPTIONAL ---
-act: [[Act 1 - The Hearth at Ashford]]
+act: "[[Act 1 - The Hearth at Ashford]]"
 locations:
-  - [[The Waystation]]
-  - [[Ashford]]
-  - [[The Golden Lioness]]
+  - "[[The Waystation]]"
+  - "[[Ashford]]"
+  - "[[The Golden Lioness]]"
 key_npcs:
   - "[[Nella]] (historian — on the ridge now, Tithe hunting for her; loses Tithe, escapes on foot; her tally is in its saddlebags)"
   - "[[Sable Wren]] (historian — the casks home, the deed)"

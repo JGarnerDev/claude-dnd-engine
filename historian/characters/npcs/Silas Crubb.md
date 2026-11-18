@@ -4,7 +4,7 @@ name: "Silas Crubb"
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
@@ -13,14 +13,14 @@ tags:
   - character/npc
 
 # --- MANDATORY (npc) ---
-location: [[Ashford]]
+location: "[[Ashford]]"
 personality: "A prudent, happy-go-lucky logistics man. Keeps Ashford — and himself — carefully neutral in the feud, because neutrality is how a ford-town survives having two lords. A drawling, affable raconteur who wraps shrewd small-town practicality in goofy charm and long tangents that always circle back to the price of rope. Unflappable, self-deprecating, quietly very good at moving goods and smoothing problems. Slightly slippery."
 livelihood: "Mayor of Ashford and its general-goods merchant — one man, both jobs."
 
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
-last_updated: [[Session 31 The Red Trail]]
+last_updated: "[[Session 31 The Red Trail]]"
 relates_to:
   - "[[Ashford]] (he is its mayor and its general store)"
   - "[[House Cael]] (trades with them, favours them in public never)"
@@ -38,9 +38,9 @@ motives:
   - "A ledger that balances"
 charm_hook: "Every tangent he goes on ends, eventually and apparently by accident, at a number he wanted you to know."
 affinity:
-  - [[Odibli]] (2)
-  - [[Halsby]] (0)
-  - [[Luci]] (-1)
+  - "[[Odibli]] (2)"
+  - "[[Halsby]] (0)"
+  - "[[Luci]] (-1)"
 voice: "Affable small-town drawl that always lands on a number. Shrewd, never predatory, slow to commit."
 voice_confirmed: 34
 ---

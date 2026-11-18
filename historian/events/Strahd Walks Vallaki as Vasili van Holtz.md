@@ -19,14 +19,14 @@ consequences:
 importance: major
 last_updated: "[[Session 17 The Stolen Bones]]"
 participants:
-  - [[Strahd]] (in disguise as "Vasili van Holtz")
-  - [[Henrik]] (visited; informant)
+  - "[[Strahd]] (in disguise as \"Vasili van Holtz\")"
+  - "[[Henrik]] (visited; informant)"
 relates_to:
-  - [[Vallaki]] (occurred in)
-  - [[Church of St. Andril]] (connected via the stolen bones)
+  - "[[Vallaki]] (occurred in)"
+  - "[[Church of St. Andril]] (connected via the stolen bones)"
 awareness: secret
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Henrik the coffinmaker told the party that Strahd, under the alias 'Vasili van Holtz,' had visited his shop — revealing the vampire lord walks Vallaki in human disguise, tied to the vampire spawn hidden above the shop."
 ---
 

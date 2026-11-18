@@ -8,7 +8,7 @@ tags:
   - event
   - event/omen
   - region/barovia
-source_session: [[Session 26 The Poisoned Casks]]
+source_session: "[[Session 26 The Poisoned Casks]]"
 confirmed_date: "2026-09-15"
 date: "Inside the fermentation room of the Wizard of Wines (~Day 14 in Barovia — estimate)"
 timeline_date: "0735-11-10"
@@ -18,16 +18,16 @@ consequences:
   - "Gave the party a second sighting after Iggy glimpsed a raven snatching needle blights during the retreat — which he had dismissed as his eyes playing tricks."
 importance: minor
 active: true
-last_updated: [[Session 26 The Poisoned Casks]]
+last_updated: "[[Session 26 The Poisoned Casks]]"
 participants:
-  - [[Swarm of Ravens]] (fought for the party)
-  - [[Iggy]] (first to glimpse one, during the retreat)
+  - "[[Swarm of Ravens]] (fought for the party)"
+  - "[[Iggy]] (first to glimpse one, during the retreat)"
 relates_to:
-  - [[Wizard of Wines]] (where they roost)
-  - [[Davian Martikov]] (proprietor)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (where they roost)"
+  - "[[Davian Martikov]] (proprietor)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "The ravens roosting in the winery's rafters came down and fought the blights alongside the party, without explanation and without being asked."
 ---
 

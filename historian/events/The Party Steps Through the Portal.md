@@ -8,7 +8,7 @@ tags:
   - event
   - event/turning-point
   - region/barovia
-source_session: [[Session 28 The Wereravens' Gift]]
+source_session: "[[Session 28 The Wereravens' Gift]]"
 confirmed_date: "2026-09-29"
 date: "Outside the Wizard of Wines, on accepting Davian's quest (~Day 14 in Barovia — estimate)"
 timeline_date: "0735-11-10"
@@ -23,20 +23,20 @@ track: "party"
 importance: critical
 active: true
 relates_to:
-  - [[The Wanderer's Boon]] (the relic used)
-  - [[The Vintner Mage]] (made it, and predicted them)
-  - [[Davian Martikov]] (gave it)
-  - [[Odibli]] (identified and triggered it)
-  - [[Wizard of Wines]] (departed from here)
-  - [[The Seeds of the Wizard of Wines]] (the debt they carry out with them)
-  - [[Curse of Strahd]] (the campaign this pauses)
+  - "[[The Wanderer's Boon]] (the relic used)"
+  - "[[The Vintner Mage]] (made it, and predicted them)"
+  - "[[Davian Martikov]] (gave it)"
+  - "[[Odibli]] (identified and triggered it)"
+  - "[[Wizard of Wines]] (departed from here)"
+  - "[[The Seeds of the Wizard of Wines]] (the debt they carry out with them)"
+  - "[[Curse of Strahd]] (the campaign this pauses)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Given an ancient relic by Davian Martikov, Odibli gathers the party hand-in-hand and triggers it. Luminous mist takes them out of Barovia to a place none of them has seen — the campaign's season-swap, and the end of Kellan's run as DM for now."
 participants:
-  - [[The Party]] (departed)
-  - [[Odibli]] (triggered it)
-  - [[Davian Martikov]] (gave the relic)
+  - "[[The Party]] (departed)"
+  - "[[Odibli]] (triggered it)"
+  - "[[Davian Martikov]] (gave the relic)"
 awareness: secret
 ---
 

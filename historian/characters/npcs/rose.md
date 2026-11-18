@@ -11,17 +11,17 @@ tags:
   - character
   - character/npc
 
-location: [[Death House]]
+location: "[[Death House]]"
 personality: "Grateful, gentle. Relieved when bound to Ben's scroll. Said thank you and expressed happiness to be taken along."
 livelihood: "Ghost -trapped in Death House"
 disposition: friendly
 aliases: []
 relates_to:
-  - [[Thorn]] (sister)
-  - [[Gustav Durst]] (father)
-  - [[Elisabeth Durst]] (mother)
-  - [[Death House]] (trapped in)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Thorn]] (sister)"
+  - "[[Gustav Durst]] (father)"
+  - "[[Elisabeth Durst]] (mother)"
+  - "[[Death House]] (trapped in)"
+  - "[[Curse of Strahd]] (campaign)"
 importance: major
 active: true
   

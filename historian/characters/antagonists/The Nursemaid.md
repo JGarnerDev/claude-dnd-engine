@@ -11,7 +11,7 @@ tags:
   - character
   - character/antagonist
 
-location: [[Death House]]
+location: "[[Death House]]"
 personality: "Unknown in life. In undeath: malevolent, attacks intruders."
 livelihood: "Specter -haunting Death House area 15"
 disposition: hostile
@@ -19,12 +19,12 @@ disposition: hostile
 aliases:
   - "The Specter"
 relates_to:
-  - [[Durst Cult]] (killed by)
-  - [[Gustav Durst]] (had affair with)
-  - [[Elisabeth Durst]] (ordered execution)
-  - [[Walter Durst]] (birth mother of)
-  - [[Death House]] (haunts as specter)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Durst Cult]] (killed by)"
+  - "[[Gustav Durst]] (had affair with)"
+  - "[[Elisabeth Durst]] (ordered execution)"
+  - "[[Walter Durst]] (birth mother of)"
+  - "[[Death House]] (haunts as specter)"
+  - "[[Curse of Strahd]] (campaign)"
 importance: major
 active: false
   

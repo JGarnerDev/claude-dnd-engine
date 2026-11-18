@@ -12,7 +12,7 @@ tags:
   - character
   - character/pc
   - player/kellan
-player: [[Kellan]]
+player: "[[Kellan]]"
 source_session: "player backstory (Halsby)"
 confirmed_date: "pre-campaign"
 race: "Half-Elf"
@@ -30,12 +30,12 @@ aliases:
 importance: critical
 active: true
 relates_to:
-  - [[Homebrew Campaign]] (campaign)
-  - [[Shar]] (unknowing lifelong faith)
-  - [[House Bleth]] (his true noble house; he does not know the name)
+  - "[[Homebrew Campaign]] (campaign)"
+  - "[[Shar]] (unknowing lifelong faith)"
+  - "[[House Bleth]] (his true noble house; he does not know the name)"
 enemies:
-  - [[The Nightveil]] (the order that stored him; holds his debt)
-  - [[Sister Maerith]] (his handler; means to own him)
+  - "[[The Nightveil]] (the order that stored him; holds his debt)"
+  - "[[Sister Maerith]] (his handler; means to own him)"
 family:
   - "the grandmother (deceased; used an invented alias; a Nightveil devotee)"
 motivation: "Learn what he is — the fading in his blood — whatever it costs."

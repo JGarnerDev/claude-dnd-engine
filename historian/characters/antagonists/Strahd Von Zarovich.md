@@ -6,26 +6,26 @@ campaign: strahd
 type: character
 subtype: antagonist
 exists: true
-source_session: [[Session 03 The Face In The Fire]]
+source_session: "[[Session 03 The Face In The Fire]]"
 confirmed_date: "2026-03-23"
 state: alive
 tags:
   - character
   - character/antagonist
-location: [[Barovia]]
+location: "[[Barovia]]"
 personality: "Composed, calm, ancient. Greets intruders like guests at a dinner party. Interested in the party but does not explain himself."
 livelihood: "Vampire lord and ruler of Barovia"
 disposition: hostile
 aliases:
   - "Strahd"
   - "Vasili van Holtz"
-last_updated: [[Session 24 The Vampire Hunter]]
+last_updated: "[[Session 24 The Vampire Hunter]]"
 relates_to:
-  - [[Domain of Barovia]] (absolute ruler)
-  - [[Baba Lysaga]] (his mother's midwife; raised and directed him)
-  - [[The Raven River Wolf]] (posted it to guard the crossing)
-  - [[Rictavio]] (hunted by him, as Rudolph van Richten)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Domain of Barovia]] (absolute ruler)"
+  - "[[Baba Lysaga]] (his mother's midwife; raised and directed him)"
+  - "[[The Raven River Wolf]] (posted it to guard the crossing)"
+  - "[[Rictavio]] (hunted by him, as Rudolph van Richten)"
+  - "[[Curse of Strahd]] (campaign)"
 importance: critical
 active: true
 description: "The vampire lord of Barovia. Central antagonist of the Curse of Strahd campaign."

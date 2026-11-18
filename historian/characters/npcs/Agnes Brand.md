@@ -4,7 +4,7 @@ name: "Agnes Brand"
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
@@ -13,14 +13,14 @@ tags:
   - character/npc
 
 # --- MANDATORY (npc) ---
-location: [[Ashford]]
+location: "[[Ashford]]"
 personality: "Hums when nervous; says what everyone is thinking, then wishes she hadn't. Drinks more than you would expect, hinting at a rambunctious past."
 livelihood: "Washerwoman."
 
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: "[[Session 30 Keep the Ale]]"
 relates_to:
   - "[[Ashford]] (resident)"
   - "[[Harrow Bane]] (was hushed for bringing him up)"
@@ -31,7 +31,7 @@ description: "Old Ashford washerwoman. Nearly carried the talk of Harrow Bane to
 race: "[[Human]]"
 disposition: friendly
 affinity:
-  - [[Luci]] (1)
+  - "[[Luci]] (1)"
 ---
 
 Location: [[Ashford]]

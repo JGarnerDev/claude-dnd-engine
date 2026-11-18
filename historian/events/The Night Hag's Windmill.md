@@ -20,11 +20,11 @@ consequences:
 importance: minor
 last_updated: "[[Session 15 The Gates of Vallaki]]"
 participants:
-  - [[The Dream Pastry Woman]] (suspected resident)
-  - [[Odibli]] (cast speak with animals)
-  - [[Bosco]] (confirmed the scent)
+  - "[[The Dream Pastry Woman]] (suspected resident)"
+  - "[[Odibli]] (cast speak with animals)"
+  - "[[Bosco]] (confirmed the scent)"
 relates_to:
-  - [[Old Bonegrinder]] (the windmill)
+  - "[[Old Bonegrinder]] (the windmill)"
 awareness: party
 description: "An agitated raven warned the party to flee a windmill; Bosco caught the dream-pastry hag's meat-pie scent. The party named it her lair and chose to prepare in Vallaki first."
 ---

@@ -8,7 +8,7 @@ state: alive
 tags:
   - character
   - character/antagonist
-source_session: [[Session 25 The Wizard of Wines]]
+source_session: "[[Session 25 The Wizard of Wines]]"
 confirmed_date: "2026-09-01"
 location: "Unknown — somewhere in Barovia, not at the Wizard of Wines"
 personality: "Unknown to the party. Known only through the names Davian Martikov used for her — Ravenbane, our mother, servant of the night."
@@ -18,19 +18,19 @@ aliases:
   - "Ravenbane"
 importance: major
 active: true
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Strahd Von Zarovich]] (midwife to his mother by one account; believes she IS his mother by another)
-  - [[Wizard of Wines]] (her druids besieged it; she attacked it herself and took a seed)
-  - [[The Seeds of the Wizard of Wines]] (holds the second)
-  - [[The Theft of the Three Seeds]] (orchestrated it)
-  - [[Yester Hill]] (set its druids on the winery)
-  - [[Scarecrow]] (her constructs harried the winery)
-  - [[Davian Martikov]] (named her; his winery is under siege)
-  - [[Barovia]] (operates in the region)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Strahd Von Zarovich]] (midwife to his mother by one account; believes she IS his mother by another)"
+  - "[[Wizard of Wines]] (her druids besieged it; she attacked it herself and took a seed)"
+  - "[[The Seeds of the Wizard of Wines]] (holds the second)"
+  - "[[The Theft of the Three Seeds]] (orchestrated it)"
+  - "[[Yester Hill]] (set its druids on the winery)"
+  - "[[Scarecrow]] (her constructs harried the winery)"
+  - "[[Davian Martikov]] (named her; his winery is under siege)"
+  - "[[Barovia]] (operates in the region)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Baba Lysaga. A dark sorceress called Ravenbane and servant of the night. By one of Davian Martikov's accounts she was midwife to Strahd's mother; by another she believes she IS his mother — the gap may be her madness. She hunts anyone who opposes Strahd, which is why she came for the Martikovs. She holds the second of the winery's three seeds."
 race: "Unknown"
 class: "Sorcerer (reported)"
@@ -41,10 +41,10 @@ motives:
   - "She holds herself to be Strahd's mother, and defends him as one"
   - "Learned the Martikovs work against Strahd and came for them on that basis"
 enemies:
-  - [[Davian Martikov]] (his winery is under siege)
-  - [[The Party]] (sent to break the siege)
+  - "[[Davian Martikov]] (his winery is under siege)"
+  - "[[The Party]] (sent to break the siege)"
 allies:
-  - [[Strahd Von Zarovich]] (raised and directed him)
+  - "[[Strahd Von Zarovich]] (raised and directed him)"
 human_detail: "She was there at the beginning of Strahd — the midwife who caught him, then spent a life steering what she had delivered. Somewhere in the centuries since, the distinction between catching a child and bearing one stopped mattering to her."
 ---
 

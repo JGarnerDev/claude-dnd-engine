@@ -8,24 +8,24 @@ state: dead
 tags:
   - character
   - character/npc
-source_session: [[Session 26 The Poisoned Casks]]
+source_session: "[[Session 26 The Poisoned Casks]]"
 confirmed_date: "2026-09-15"
-location: [[Wizard of Wines]]
+location: "[[Wizard of Wines]]"
 personality: "Entirely unbothered by four armed strangers below her. Chatty in a way that gave nothing away — happy to explain that the blights were 'security,' happy to refuse to say what was in the flask, and amused that they had come all this way."
 livelihood: "One of [[Baba Lysaga's Druids]], tasked with poisoning the wine stock of the [[Wizard of Wines]]."
 disposition: hostile
 aliases: []
 importance: minor
 active: false
-last_updated: [[Session 27 The Vampire Staff]]
+last_updated: "[[Session 27 The Vampire Staff]]"
 relates_to:
-  - [[Wizard of Wines]] (poisoned its vats)
-  - [[Baba Lysaga's Druids]] (member)
-  - [[Baba Lysaga]] (served)
-  - [[Dip]] (killed her)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (poisoned its vats)"
+  - "[[Baba Lysaga's Druids]] (member)"
+  - "[[Baba Lysaga]] (served)"
+  - "[[Dip]] (killed her)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "The druid the party found on the fermentation-room balcony of the Wizard of Wines, emptying a flask of thick syrup into the wine. Killed by Dip in a single greataxe turn; she carried a necklace of human teeth and the flask itself."
 race: "Unknown"
 class: "Druid"

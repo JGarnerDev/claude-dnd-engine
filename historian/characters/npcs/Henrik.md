@@ -8,24 +8,24 @@ state: alive
 tags:
   - character
   - character/npc
-location: [[Vallaki]]
+location: "[[Vallaki]]"
 personality: "Cornered and cagey, but spills everything once the party deceives their way inside — a frightened man harboring a nest of monsters."
 livelihood: "Coffinmaker in [[Vallaki]], with a shop near the town square."
 disposition: neutral
 importance: major
 active: true
-source_session: [[Session 17 The Stolen Bones]]
+source_session: "[[Session 17 The Stolen Bones]]"
 confirmed_date: "2026-07-07"
 aliases:
   - "Henric"
 relates_to:
-  - [[Vallaki]] (lives and works here)
-  - [[Milivoj]] (bought the stolen bones from)
-  - [[Church of St. Andril]] (holds its stolen saint's bones)
-  - [[Strahd]] (visited by, under the alias "Vasili van Holtz")
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vallaki]] (lives and works here)"
+  - "[[Milivoj]] (bought the stolen bones from)"
+  - "[[Church of St. Andril]] (holds its stolen saint's bones)"
+  - "[[Strahd]] (visited by, under the alias \"Vasili van Holtz\")"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Henrik the coffinmaker of Vallaki, whose shop sits near the town square. He bought the church's stolen saint's bones from the gravedigger Milivoj. Deceived into letting the party in, he revealed that Strahd — as 'Vasili van Holtz' — had visited, and that six vampire spawn are hiding upstairs in his shop."
 goals:
   - "Survive the monsters lodged in his own home"

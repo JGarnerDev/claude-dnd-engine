@@ -10,14 +10,14 @@ mission: "[[Act 1 - Placeholder]]"
 planned_date: null
 played_date: "2026-06-16"
 locations:
-  - [[Tser Pool Encampment]]
-  - [[Barovia]]
+  - "[[Tser Pool Encampment]]"
+  - "[[Barovia]]"
 key_npcs:
-  - [[Madame Eva]] (gave the tarokka reading)
-  - [[Ireena Kolyana]] (companion; warned against Strahd's carriage)
-  - [[Ismark Kolyanovich]] (companion)
-  - [[Bosco]] (Iggy's companion; began training)
-party: [[The Party]]
+  - "[[Madame Eva]] (gave the tarokka reading)"
+  - "[[Ireena Kolyana]] (companion; warned against Strahd's carriage)"
+  - "[[Ismark Kolyanovich]] (companion)"
+  - "[[Bosco]] (Iggy's companion; began training)"
+party: "[[The Party]]"
 importance: high
 active: false
 description: "On the road to Vallaki the party reached a Vistani encampment by a lake, where they traded performances with the loyalist Vistani and heard the tale of a wizard who once raised Barovia in revolt and was hurled to his death by Strahd. Madame Eva read the tarokka cards — five fortunes pointing to a holy symbol, a sword of sunlight, an ally, and where Strahd may be found. After an uneasy overnight, the party set out again and spotted Strahd's carriage waiting on the bridge ahead."

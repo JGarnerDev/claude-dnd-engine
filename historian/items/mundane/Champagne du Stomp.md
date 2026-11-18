@@ -7,7 +7,7 @@ exists: true
 state: lost
 tags:
   - item/mundane
-source_session: [[Session 28 The Wereravens' Gift]]
+source_session: "[[Session 28 The Wereravens' Gift]]"
 confirmed_date: "2026-09-29"
 item_type: other
 origin: "The finest vintage produced by the [[Wizard of Wines]], made possible by [[The Seeds of the Wizard of Wines]]. Discontinued ten years before Session 28 when the first seed was stolen."
@@ -16,15 +16,15 @@ aliases:
   - "Champagne de l'Estamp"
 importance: minor
 active: false
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Wizard of Wines]] (produced it)
-  - [[The Seeds of the Wizard of Wines]] (production depended on them)
-  - [[Davian Martikov]] (his family's best work)
-  - [[Urwin]] (was on guard the night the seed that ended it was stolen)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (produced it)"
+  - "[[The Seeds of the Wizard of Wines]] (production depended on them)"
+  - "[[Davian Martikov]] (his family's best work)"
+  - "[[Urwin]] (was on guard the night the seed that ended it was stolen)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "The Wizard of Wines' best vintage, unproduced for ten years. It stopped the night the first of the three seeds was stolen and has not been made since — the concrete loss behind the winery's decline."
 material: "Wine"
 appearance: "Never described."

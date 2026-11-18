@@ -7,7 +7,7 @@ exists: true
 state: identified
 tags:
   - item/magic
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 item_type: wondrous
 rarity: common
@@ -18,7 +18,7 @@ aliases:
   - "earshot crystal"
 importance: major
 active: true
-last_updated: [[Session 32 The Red Trail]]
+last_updated: "[[Session 32 The Red Trail]]"
 relates_to:
   - "[[Nella]] (her crew wore them; she wears one herself)"
 current_holder: "the party: one each for [[Iggy]], [[Luci]], [[Odibli]], [[Dip]] and [[Halsby]]"

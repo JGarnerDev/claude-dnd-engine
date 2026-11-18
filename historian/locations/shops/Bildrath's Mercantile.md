@@ -9,21 +9,21 @@ tags:
   - location
   - location/shop
 
-city: [[Barovia Village]]
-proprietor: [[Bildrath Cantemir]]
+city: "[[Barovia Village]]"
+proprietor: "[[Bildrath Cantemir]]"
 purpose: commerce
 aliases: []
 importance: minor
 active: true
 relates_to:
-  - [[Bildrath Cantemir]] (owner)
-  - [[Parriwimple]] (assistant/enforcer on premises)
-  - [[Barovia Village]] (located here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Bildrath Cantemir]] (owner)"
+  - "[[Parriwimple]] (assistant/enforcer on premises)"
+  - "[[Barovia Village]] (located here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial — visited)
+  - "[[The Party]] (partial — visited)"
 description: "Bildrath's Mercantile. General store in Barovia Village. Owner Bildrath Cantemir charges exorbitant prices. Dip cursed him. Party is on hostile terms here."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
 
 customers: "Barovian villagers — captive market with no other options."

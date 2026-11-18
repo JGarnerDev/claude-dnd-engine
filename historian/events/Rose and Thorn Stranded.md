@@ -19,11 +19,11 @@ consequences:
 importance: minor
 last_updated: "[[Session 10 Escape From Death House]]"
 participants:
-  - [[Rose]] (stranded)
-  - [[Thorn]] (stranded)
-  - [[The Party]] (left them)
+  - "[[Rose]] (stranded)"
+  - "[[Thorn]] (stranded)"
+  - "[[The Party]] (left them)"
 relates_to:
-  - [[Death House]] (occurred in)
+  - "[[Death House]] (occurred in)"
 awareness: regional
 description: "The spirits Rose and Thorn, bound to party scrolls, were left behind when the mists swept the party out of Death House — an unresolved loss."
 ---

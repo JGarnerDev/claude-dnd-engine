@@ -3,7 +3,7 @@ name: "Tassad"
 type: location
 subtype: city
 exists: true
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 state: thriving
 campaign: homebrew

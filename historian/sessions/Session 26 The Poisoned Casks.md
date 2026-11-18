@@ -11,14 +11,14 @@ played_date: "2026-09-15"
 in_world_end_date: "0735-11-10"
 mission: "Find the missing wine shipment and break the siege on the winery"
 locations:
-  - [[Wizard of Wines]]
+  - "[[Wizard of Wines]]"
 key_npcs:
-  - [[The Winery Druid]]
+  - "[[The Winery Druid]]"
 recap: "The party fought clear of the needle blights and barricaded themselves inside the winery's fermentation room, where scores of ravens watched from the rafters. On the balcony above the westernmost cask stood a hunched druid in animal skins and a goat-horned headdress, emptying a flask of thick syrup into the wine. She was unbothered by them — the blights outside were 'security,' only there to keep the ground safe — and would say of the flask only that they would find out what it did, that it worked like a charm every time. Then she cast Entangle, spoke a word in Druidic, and twig blights began pouring out of the cask. The fight was long and attritional, the blights replacing themselves as fast as they fell, until Iggy read the room and understood they were not endless. Throughout it the ravens dropped from the rafters again and again to tear the blights apart, fighting on the party's side without explanation. Dip broke free of the vines, raged, and killed the druid in a single greataxe turn. Searching her body they took a necklace of human teeth and the flask itself; Odibli read druidic magic still hanging in the air, animating the blights from a source he could not locate, and then drank from a cask to confirm what they already suspected. The wine is poisoned, and so is he."
 cliffhanger: "The fermentation room is cleared and its druid is dead, but every cask in the winery is poisoned, Odibli is poisoned with it, and the magic animating the blights belongs to a second druid still somewhere in the building — unlocated. The party holds the flask, a bottled sample of the tainted wine, and a necklace of human teeth, and is talking about finding a priest to undo it."
 entities_canonized: []
 new_entities:
-  - [[The Winery Druid]]
+  - "[[The Winery Druid]]"
   - "Necklace of human teeth — taken from the druid's body by Dip; no standalone file"
   - "The druid's flask of thick syrup — the wine poison, now carried by the party; no standalone file"
   - "A bottled quarter-cask of poisoned wine, kept by Luci for inspection; no standalone file"

@@ -12,7 +12,7 @@ tags:
 resource_type: arcane
 rarity: uncommon
 location:
-  - [[The World]]
+  - "[[The World]]"
 aliases:
   - "'Twill"
   - "Watl"
@@ -22,10 +22,10 @@ trade_value: varies
 accessibility: contested
 controlled_by: Contested (Partenariats, Courts Superior, factions)
 consumers:
-  - [[The Vitricants]] (display for public reverie; prize LeyLodes above all)
-  - [[The Mintners]] (dust inhalation; dissect lodes into anaesthetic tatters)
-  - [[The Lifted]] (geo-stabilisation of géode Islifts)
-  - [[The Partenariats]] (clandestine extraction and trade)
+  - "[[The Vitricants]] (display for public reverie; prize LeyLodes above all)"
+  - "[[The Mintners]] (dust inhalation; dissect lodes into anaesthetic tatters)"
+  - "[[The Lifted]] (geo-stabilisation of géode Islifts)"
+  - "[[The Partenariats]] (clandestine extraction and trade)"
   - Watlers and Dust Scrapers (desperate pauper scavengers)
 ---
 

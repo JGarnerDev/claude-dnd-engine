@@ -8,9 +8,9 @@ state: dead
 tags:
   - character
   - character/antagonist
-source_session: [[Session 23 The Cult in the Cellar]]
+source_session: "[[Session 23 The Cult in the Cellar]]"
 confirmed_date: "2026-08-18"
-location: [[Wachter House]]
+location: "[[Wachter House]]"
 personality: "Gracious, patient, and warm in the parlor — she listens well, agrees readily, and lets other people talk themselves into her position. Turns to knives the instant the flattery stops working."
 livelihood: "Vallakian noblewoman; head of the Wachter household and secret leader of a devil-worshiping circle beneath her own house."
 disposition: hostile
@@ -19,21 +19,21 @@ aliases:
   - "Lady Wachter"
 importance: major
 active: false
-last_updated: [[Session 23 The Cult in the Cellar]]
+last_updated: "[[Session 23 The Cult in the Cellar]]"
 relates_to:
-  - [[Wachter House]] (household head, lived and died here)
-  - [[The Wachter Cult]] (leader)
-  - [[Majesto]] (imp familiar)
-  - [[Karl]] (son)
-  - [[Nikolai]] (son)
-  - [[Lady Fiona Wachter's Daughter]] (daughter)
-  - [[Vargas Vallakovich]] (wanted his seat)
-  - [[Izek Strazni]] (wanted him killed)
-  - [[Viktor Vallakovich]] (her daughter's former betrothed)
-  - [[Vallaki]] (lived here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wachter House]] (household head, lived and died here)"
+  - "[[The Wachter Cult]] (leader)"
+  - "[[Majesto]] (imp familiar)"
+  - "[[Karl]] (son)"
+  - "[[Nikolai]] (son)"
+  - "[[Lady Fiona Wachter's Daughter]] (daughter)"
+  - "[[Vargas Vallakovich]] (wanted his seat)"
+  - "[[Izek Strazni]] (wanted him killed)"
+  - "[[Viktor Vallakovich]] (her daughter's former betrothed)"
+  - "[[Vallaki]] (lived here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Lady Fiona Wachter. Vallakian noblewoman who courted the party for a coup against Burgomaster Vargas Vallakovich, asking them to kill Izek Strazni — and who led a devil-worshiping circle in a hidden chamber under her house. Killed by Dip in Session 23."
 race: "Human"
 class: "Unknown"
@@ -44,13 +44,13 @@ motives:
   - "The Burgomaster's mandatory-happiness regime, which she openly despises"
   - "Whatever the pentagram chamber and her devil worship were meant to buy her"
 enemies:
-  - [[Vargas Vallakovich]] (the seat she wanted)
-  - [[Izek Strazni]] (marked for death)
-  - [[The Party]] (killed her)
+  - "[[Vargas Vallakovich]] (the seat she wanted)"
+  - "[[Izek Strazni]] (marked for death)"
+  - "[[The Party]] (killed her)"
 family:
-  - [[Karl]] (son)
-  - [[Nikolai]] (son)
-  - [[Lady Fiona Wachter's Daughter]] (daughter)
+  - "[[Karl]] (son)"
+  - "[[Nikolai]] (son)"
+  - "[[Lady Fiona Wachter's Daughter]] (daughter)"
 human_detail: "She shrugged off her sons' misbehavior by noting they had lost their father — and would not say a word about what Viktor Vallakovich did to her daughter."
 ---
 

@@ -11,15 +11,15 @@ played_date: "2026-08-11"
 in_world_end_date: "0735-11-08"
 mission: "Hear out the noblewoman, and decide who in Vallaki is worth trusting"
 locations:
-  - [[Wachter House]]
-  - [[Vallaki]]
-  - [[Church of St. Andril]]
+  - "[[Wachter House]]"
+  - "[[Vallaki]]"
+  - "[[Church of St. Andril]]"
 key_npcs:
-  - [[Lady Fiona Wachter]]
-  - [[Ireena Kolyana]]
-  - [[Izek Strazni]]
-  - [[Karl]]
-  - [[Nikolai]]
+  - "[[Lady Fiona Wachter]]"
+  - "[[Ireena Kolyana]]"
+  - "[[Izek Strazni]]"
+  - "[[Karl]]"
+  - "[[Nikolai]]"
 recap: "In her tarnished parlor, the noblewoman named herself Lady Fiona Wachter and apologized for her sons. She drew Dip out about the Burgomaster, agreed with every complaint, shrugged off her boys, and refused to discuss the daughter whom Viktor Vallakovich had once been betrothed to and left psychologically wrecked. Then she steered to the point: she wanted a coup, and wanted the party to kill Izek Strazni for her. Iggy pressed for anything concrete backing the offer and got nothing; the party stepped outside, agreed to accept the job with no intention of doing it, and took her money, her protection from the coffin-shop arson charge, and access to her library. Odibli left a familiar watching the house. They found Izek hunting the tiger's liberator, fed him Rictavio's name with a false direction, and said nothing of Fiona's sons. At the church, Luci told Ireena everything — Fiona's plot, the party's refusal, her own history with light-worship curdling into mass ritual suicide — but Ireena defended Vargas as a good man badly executing good motives, warned that many actors in Vallaki have bad intentions, and urged research before anything rash. Odibli's bird found nothing at the house, so he and Dip slipped into the Wachter cellar while Iggy and Luci watched the street — and found eight animated skeletons waiting."
 cliffhanger: "Dip and Odibli are alone in the Wachter cellar against eight hostile animated skeletons, with Iggy and Luci still outside on watch and no one in Vallaki yet aware the party broke in."
 entities_canonized: []

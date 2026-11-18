@@ -4,7 +4,7 @@ name: "Harrow Bane"
 type: character
 subtype: antagonist
 exists: true
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
@@ -13,7 +13,7 @@ tags:
   - character/antagonist
 
 # --- MANDATORY (antagonist) ---
-location: [[Duskwater]]
+location: "[[Duskwater]]"
 personality: "An ex-military professional who runs a bandit band like a company — disciplined, organised, no cruelty for its own sake. Feared for cold competence rather than sadism, though a few brutal public examples earned him the name people go quiet at. Calculating: he will not take a fight that is bad for business."
 livelihood: "Leader of the land-bandit band House Marlow uses, unofficially, to raid Ashford."
 disposition: hostile
@@ -21,7 +21,7 @@ disposition: hostile
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: "[[Session 30 Keep the Ale]]"
 relates_to:
   - "[[Lady Sorcha Marlow]] (deniable employer — her coin reaches him through an intermediary)"
   - "[[Duskwater]] (where the band is based, and where his family is)"

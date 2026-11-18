@@ -9,25 +9,25 @@ tags:
   - location
   - location/building
 
-city: [[Barovia Village]]
+city: "[[Barovia Village]]"
 residents:
-  - [[Father Donavich]] (priest)
-  - [[Doru]] (vampire spawn, caged below)
+  - "[[Father Donavich]] (priest)"
+  - "[[Doru]] (vampire spawn, caged below)"
 purpose: religious
 aliases: []
 importance: major
 active: true
 relates_to:
-  - [[Father Donavich]] (keeper)
-  - [[Doru]] (captive below)
-  - [[Barovia Village]] (located here)
-  - [[Kolyan Indirovich]] (buried in the churchyard)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Father Donavich]] (keeper)"
+  - "[[Doru]] (captive below)"
+  - "[[Barovia Village]] (located here)"
+  - "[[Kolyan Indirovich]] (buried in the churchyard)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (visited)
-  - [[Ireena Kolyana]] (knew Donavich was here)
+  - "[[The Party]] (visited)"
+  - "[[Ireena Kolyana]] (knew Donavich was here)"
 description: "War-worn church in Barovia Village dedicated to the Morning Lord. Battle-scarred exterior, claw marks, fire damage. Mildew smell. Father Donavich keeps his vampire spawn son Doru caged below the floor."
-source_session: [[Session 13 Dream Pastries]]
+source_session: "[[Session 13 Dream Pastries]]"
 confirmed_date: "2026-06-02"
 
 condition: "Claw-marked exterior, fire damage, unlit interior. Rubble in main hall. Four interior doors. Reeks of mildew."

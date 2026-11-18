@@ -21,10 +21,10 @@ contributed_by: miguel
 source_session: "player backstory (Odibli)"
 confirmed_date: "pre-campaign"
 relates_to:
-  - [[The Citadel]] (its gnome transcribers relay notes through its plane)
-  - [[Odibli]] (uses the hearth-channel; the name is dramatic irony)
+  - "[[The Citadel]] (its gnome transcribers relay notes through its plane)"
+  - "[[Odibli]] (uses the hearth-channel; the name is dramatic irony)"
 known_by:
-  - [[Odibli]] (partial)
+  - "[[Odibli]] (partial)"
 description: "The indifferent authority presiding over the plane of the gnome Navigators, through which the Citadel's hearth-channel runs. A switchboard-god that answers in words meaning two things at once and keeps every message ever sent."
 ---
 

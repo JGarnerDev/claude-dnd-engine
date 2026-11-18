@@ -19,14 +19,14 @@ consequences:
 importance: major
 last_updated: "[[Session 17 The Stolen Bones]]"
 participants:
-  - [[Henrik]] (harboring them; informant)
-  - [[Strahd]] (connected via his visit)
+  - "[[Henrik]] (harboring them; informant)"
+  - "[[Strahd]] (connected via his visit)"
 relates_to:
-  - [[Vallaki]] (occurred in)
-  - [[Church of St. Andril]] (connected via the stolen bones)
+  - "[[Vallaki]] (occurred in)"
+  - "[[Church of St. Andril]] (connected via the stolen bones)"
 awareness: secret
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "The party deceived their way into Henrik the coffinmaker's shop and learned six vampire spawn are hiding upstairs — an active threat in Vallaki, tied to Strahd's disguised visit and the stolen saint's bones."
 ---
 

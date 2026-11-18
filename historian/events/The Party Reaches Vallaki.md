@@ -21,10 +21,10 @@ consequences:
 importance: major
 last_updated: "[[Session 15 The Gates of Vallaki]]"
 participants:
-  - [[Ireena Kolyana]] (escorted here)
-  - [[Ismark Kolyanovich]] (recognized at the gate)
+  - "[[Ireena Kolyana]] (escorted here)"
+  - "[[Ismark Kolyanovich]] (recognized at the gate)"
 relates_to:
-  - [[Vallaki]] (occurred at)
+  - "[[Vallaki]] (occurred at)"
 awareness: regional
 description: "The party reached Vallaki, escorting Ireena past the grim gates. The guards admitted them warily and warned of a mandatory-fun festival days away."
 ---

@@ -10,11 +10,11 @@ mission: "[[Act 1 - Placeholder]]"
 planned_date: null
 played_date: "2026-05-26"
 locations:
-  - [[Barovia Village Graveyard]]
-  - [[Parriwimple's Domicile]]
+  - "[[Barovia Village Graveyard]]"
+  - "[[Parriwimple's Domicile]]"
 key_npcs:
-  - [[Parriwimple]] (protector, host)
-party: [[The Party]]
+  - "[[Parriwimple]] (protector, host)"
+party: "[[The Party]]"
 importance: high
 active: false
 description: "Party investigates ghost procession at graveyard. Parriwimple explains the spirits. Zombie attack kills villager. Party defeats zombies with Parriwimple and takes long rest at his home."

@@ -19,11 +19,11 @@ consequences:
 importance: minor
 last_updated: "[[Session 13 Dream Pastries]]"
 participants:
-  - [[Doru]] (the spawn)
-  - [[Father Donavich]] (his father)
-  - [[The Party]] (learned of him)
+  - "[[Doru]] (the spawn)"
+  - "[[Father Donavich]] (his father)"
+  - "[[The Party]] (learned of him)"
 relates_to:
-  - [[Domain of Barovia]] (occurred in)
+  - "[[Domain of Barovia]] (occurred in)"
 awareness: regional
 description: "At the Church of the Morning Lord, the party learned Father Donavich's son Doru had become a vampire spawn, locked in the cellar below."
 ---

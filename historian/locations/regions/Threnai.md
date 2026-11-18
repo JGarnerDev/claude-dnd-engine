@@ -11,15 +11,15 @@ tags:
 geography: "A destroyed plane once organized around a central city and its Great Library, with smaller towns and villages in a fractal distribution across the landscape. Aesthetics blended feudal Japan and medieval Europe."
 controlling_faction: "TBD"
 biome: planar
-source_session: [[Session 01 The Black Sheep Inn]]
+source_session: "[[Session 01 The Black Sheep Inn]]"
 confirmed_date: 2026-08-05
 importance: major
 aliases:
   - "The Library-plane"
 relates_to:
-  - [[Iggy]] (home plane; sole known survivor in play)
-  - [[Sah]] (its anchoring god)
-  - [[The Correctors]] (destroyed it via the spine-breaking ritual)
+  - "[[Iggy]] (home plane; sole known survivor in play)"
+  - "[[Sah]] (its anchoring god)"
+  - "[[The Correctors]] (destroyed it via the spine-breaking ritual)"
 tensions:
   - "Its function as a semantic anchor for adjacent realities has ceased; knowledge survives across planes but its connective meaning is eroding."
 notable_features:

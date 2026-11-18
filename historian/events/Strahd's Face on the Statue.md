@@ -17,10 +17,10 @@ consequences:
 importance: minor
 last_updated: "[[Session 08 The Cult Quarters]]"
 participants:
-  - [[Strahd Von Zarovich]] (depicted)
-  - [[The Party]] (discoverers)
+  - "[[Strahd Von Zarovich]] (depicted)"
+  - "[[The Party]] (discoverers)"
 relates_to:
-  - [[Death House]] (occurred in)
+  - "[[Death House]] (occurred in)"
 awareness: secret
 description: "In the cult quarters beneath Death House, the party recognized Strahd's face carved on the statue the cult venerated."
 ---

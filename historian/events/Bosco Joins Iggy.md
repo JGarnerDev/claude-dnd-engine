@@ -19,10 +19,10 @@ consequences:
 importance: minor
 last_updated: "[[Session 13 Dream Pastries]]"
 participants:
-  - [[Iggy]] (companion)
-  - [[Bosco]] (the raccoon)
+  - "[[Iggy]] (companion)"
+  - "[[Bosco]] (the raccoon)"
 relates_to:
-  - [[Domain of Barovia]] (occurred in)
+  - "[[Domain of Barovia]] (occurred in)"
 awareness: regional
 description: "Iggy picked up a raccoon companion, Bosco, who joined the party for the road to Vallaki and began (slowly) learning tricks."
 ---

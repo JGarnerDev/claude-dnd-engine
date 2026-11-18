@@ -8,28 +8,28 @@ state: occupied
 tags:
   - location
   - location/building
-source_session: [[Session 21 The Festival of the Blazing Sun]]
+source_session: "[[Session 21 The Festival of the Blazing Sun]]"
 confirmed_date: "2026-08-04"
-city: [[Vallaki]]
+city: "[[Vallaki]]"
 residents:
-  - [[Lady Fiona Wachter]] (household head, killed in the cellar)
-  - [[Karl]] (son)
-  - [[Nikolai]] (son)
-  - [[Lady Fiona Wachter's Daughter]] (daughter, whereabouts unknown)
+  - "[[Lady Fiona Wachter]] (household head, killed in the cellar)"
+  - "[[Karl]] (son)"
+  - "[[Nikolai]] (son)"
+  - "[[Lady Fiona Wachter's Daughter]] (daughter, whereabouts unknown)"
 purpose: residential
 aliases:
   - "The Wachter Manor"
 importance: major
 active: true
-last_updated: [[Session 23 The Cult in the Cellar]]
+last_updated: "[[Session 23 The Cult in the Cellar]]"
 relates_to:
-  - [[Lady Fiona Wachter]] (household head)
-  - [[The Wachter Cult]] (met in the hidden cellar chamber)
-  - [[Majesto]] (kept below)
-  - [[Vallaki]] (stands here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Lady Fiona Wachter]] (household head)"
+  - "[[The Wachter Cult]] (met in the hidden cellar chamber)"
+  - "[[Majesto]] (kept below)"
+  - "[[Vallaki]] (stands here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "The Wachter family's fine house in Vallaki — elegant, faintly tarnished, hung with portraits — with a skeleton-guarded cellar and, behind a secret door, a pentagram chamber where Lady Fiona Wachter's devil-worshiping circle met."
 condition: "Well kept above ground; the finery is slightly tarnished. The cellar and the hidden chamber below were fought through and left with the dead in them."
 ---

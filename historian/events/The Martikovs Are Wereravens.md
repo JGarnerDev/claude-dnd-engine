@@ -8,7 +8,7 @@ tags:
   - event
   - event/revelation
   - region/barovia
-source_session: [[Session 28 The Wereravens' Gift]]
+source_session: "[[Session 28 The Wereravens' Gift]]"
 confirmed_date: "2026-09-29"
 date: "Outside the Wizard of Wines, immediately after the blight ambush (~Day 14 in Barovia — estimate)"
 timeline_date: "0735-11-10"
@@ -23,21 +23,21 @@ track: "npc:Davian Martikov"
 importance: major
 active: true
 relates_to:
-  - [[Davian Martikov]] (disclosed it)
-  - [[Wizard of Wines]] (the family seat)
-  - [[Urwin]] (a Martikov)
-  - [[Danika]] (married into the family)
-  - [[Dustin]] (one of the ravens)
-  - [[Keepers of the Feather]] (the connection this explains)
-  - [[Baba Lysaga]] (targeted them for opposing Strahd)
-  - [[The Ravens Take the Winery's Side]] (the beat this explains)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Davian Martikov]] (disclosed it)"
+  - "[[Wizard of Wines]] (the family seat)"
+  - "[[Urwin]] (a Martikov)"
+  - "[[Danika]] (married into the family)"
+  - "[[Dustin]] (one of the ravens)"
+  - "[[Keepers of the Feather]] (the connection this explains)"
+  - "[[Baba Lysaga]] (targeted them for opposing Strahd)"
+  - "[[The Ravens Take the Winery's Side]] (the beat this explains)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Davian Martikov tells the party that his entire family line are wereravens — the ravens that had just fought beside them against the blights were Martikovs. The disclosure answers why he can call ravens and ties the family to the Keepers of the Feather."
 participants:
-  - [[Davian Martikov]] (told it)
-  - [[The Party]] (told)
+  - "[[Davian Martikov]] (told it)"
+  - "[[The Party]] (told)"
 awareness: secret
 ---
 

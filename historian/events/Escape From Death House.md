@@ -20,11 +20,11 @@ consequences:
 importance: major
 last_updated: "[[Session 10 Escape From Death House]]"
 participants:
-  - [[The Party]] (escaped)
-  - [[Strahd Von Zarovich]] (greeted them)
+  - "[[The Party]] (escaped)"
+  - "[[Strahd Von Zarovich]] (greeted them)"
 relates_to:
-  - [[Death House]] (escaped from)
-  - [[Domain of Barovia]] (entered)
+  - "[[Death House]] (escaped from)"
+  - "[[Domain of Barovia]] (entered)"
 awareness: regional
 description: "The mists swept the party out of Death House and into Barovia proper, where Strahd greeted them — the turn from prologue to the open campaign. The party hit level 3."
 ---

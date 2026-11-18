@@ -11,7 +11,7 @@ tags:
 date: "Day ~11 in Barovia (Vallaki) — estimate"
 timeline_date: "0735-11-07"
 track: "faction:The Strazni Siblings"
-source_session: [[Session 19 The Burning of the Coffin Shop]]
+source_session: "[[Session 19 The Burning of the Coffin Shop]]"
 outcome: "Before the priest Lucien Petrovic, it was revealed that Izek Strazni and Ireena Kolyana are blood siblings — Izek born without a soul, which is why he had forgotten her."
 consequences:
   - "Answers the Session 13 revelation that Ireena is not a blood Kolyanovich — she was born a Strazni and adopted."
@@ -20,12 +20,12 @@ consequences:
 importance: major
 last_updated: "[[Session 19 The Burning of the Coffin Shop]]"
 participants:
-  - [[Izek Strazni]]
-  - [[Ireena Kolyana]]
-  - [[Lucien Petrovic]]
+  - "[[Izek Strazni]]"
+  - "[[Ireena Kolyana]]"
+  - "[[Lucien Petrovic]]"
 relates_to:
-  - [[Ireena Is Not a Blood Relative]]
-  - [[Lake Zarovich]]
+  - "[[Ireena Is Not a Blood Relative]]"
+  - "[[Lake Zarovich]]"
 awareness: local
 description: "The reveal that Izek Strazni and Ireena Kolyana are blood siblings — Izek born soulless and having forgotten her — resolving the open question of Ireena's true origin."
 ---

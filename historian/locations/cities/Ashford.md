@@ -4,7 +4,7 @@ name: "Ashford"
 type: location
 subtype: city
 exists: true
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 state: troubled
 campaign: homebrew
@@ -13,13 +13,13 @@ tags:
   - location/city
 
 # --- MANDATORY (city) ---
-global_location: [[Stonemarch]]
+global_location: "[[Stonemarch]]"
 purpose: commerce
 
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
-rulership: [[Silas Crubb]]
+rulership: "[[Silas Crubb]]"
 relates_to:
   - "[[Stonemarch]] (the fief it sits in)"
   - "[[Lord Corren Cael]] (its lord, who cannot cover his own ground)"
@@ -43,9 +43,9 @@ tensions:
   - "The ford that makes the town is also the soft door raiders cross to reach it"
   - "Townsfolk survive by trading with whoever pays and favouring neither house out loud"
 factions:
-  - [[House Cael]]
+  - "[[House Cael]]"
 shops:
-  - [[The Golden Lioness]]
+  - "[[The Golden Lioness]]"
 ---
 
 Ashford is a riverside borderlands town in **[[Stonemarch]]**, the purple frontier fief of

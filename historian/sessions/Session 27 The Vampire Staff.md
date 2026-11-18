@@ -11,18 +11,18 @@ played_date: "2026-09-22"
 in_world_end_date: "0735-11-10"
 mission: "Clear the Wizard of Wines of the druids poisoning it and find the source animating the blights"
 locations:
-  - [[Wizard of Wines]]
+  - "[[Wizard of Wines]]"
 key_npcs:
-  - [[Dustin]]
-  - [[Baba Lysaga's Druids]]
+  - "[[Dustin]]"
+  - "[[Baba Lysaga's Druids]]"
 recap: "The party swept the Wizard of Wines from the fermentation room to the cellar and cleared it. Odibli cast Speak with Animals and got the winery's layout from a raven named Dustin — dispatched from the Blue Water Inn in answer to Davian Martikov's call — who told them the one they wanted was the druid in the cellar, carrying a staff that controlled the blights. After a short rest and Luci's corvid dance for the ravens, they found a second druid upstairs looting Davian's label press and Dip killed her on a cleave. In the master bedroom they found a century of the winery's shipping manifests, naming the Blood of the Vine, the Blue Water Inn, Krezk and the Vistani as standing customers — and Strahd himself in the oldest records, discontinued generations ago. A locked chest gave up coin stamped with Strahd's profile. Beyond it a third druid, skin painted red with blood, bolted with the staff in hand; run down on the barrel ramp, he shouted in Druidic that nature bowed to his whim because he held the vampire staff, and Dip killed him for it. Odibli read the staff: destroying it would kill every blight in the winery. In the cellar a fourth druid opened with Thunder Wave and smashed Odibli into the wall, and while Iggy poured a potion down his throat Odibli oiled the staff, threw it clear, burned it, and broke it with Magic Missile. It screamed, and every blight in the place withered and died. Luci punched a wine bottle through the rack into the last druid's face. Behind a hidden door they found a cave furred with brown mold, whose spores dropped Odibli a third time and poisoned him again."
 cliffhanger: "The winery's interior is cleared, all four druids are dead, and the staff animating the blights is destroyed — but the party is spent, Odibli has been poisoned a second time by the brown mold and spent the session's last quarter cycling in and out of consciousness, and Kellan refused a long rest outright: 'no long rest, you're still not safe. You must be safe.' The mold cave beyond the hidden door is barely explored, the winery's exterior is untouched, and Davian Martikov still has to be found and told in person — the ravens will not carry the message."
 entities_canonized:
-  - [[Dustin]]
-  - [[The Vampire Staff]]
-  - [[Baba Lysaga's Druids]]
-  - [[The Winery Druid]]
-  - [[The Wizard of Wines Shipping Manifests]]
+  - "[[Dustin]]"
+  - "[[The Vampire Staff]]"
+  - "[[Baba Lysaga's Druids]]"
+  - "[[The Winery Druid]]"
+  - "[[The Wizard of Wines Shipping Manifests]]"
 new_entities:
   - "The antlered figure among the cellar blight group — described once, never fought or identified; no standalone file"
   - "Purple Grape Mash No. 3 — a winery label found on three barrels and on bottles; no standalone file"

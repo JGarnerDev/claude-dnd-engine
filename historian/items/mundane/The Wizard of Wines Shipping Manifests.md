@@ -7,7 +7,7 @@ exists: true
 state: intact
 tags:
   - item/mundane
-source_session: [[Session 27 The Vampire Staff]]
+source_session: "[[Session 27 The Vampire Staff]]"
 confirmed_date: "2026-09-22"
 item_type: document
 origin: "Kept by the Martikov household at the [[Wizard of Wines]], recording the winery's wine shipments across roughly the past century. Found on the desk in the master bedroom on the winery's upper floor."
@@ -16,20 +16,20 @@ aliases:
   - "The wine manifests"
 importance: major
 active: true
-last_updated: [[Session 27 The Vampire Staff]]
+last_updated: "[[Session 27 The Vampire Staff]]"
 relates_to:
-  - [[Wizard of Wines]] (the winery whose shipments these record)
-  - [[Davian Martikov]] (his household's records)
-  - [[Blood of the Vine Tavern]] (a standing customer)
-  - [[Blue Water Inn]] (a standing customer)
-  - [[Strahd von Zarovich]] (named in the oldest records)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (the winery whose shipments these record)"
+  - "[[Davian Martikov]] (his household's records)"
+  - "[[Blood of the Vine Tavern]] (a standing customer)"
+  - "[[Blue Water Inn]] (a standing customer)"
+  - "[[Strahd von Zarovich]] (named in the oldest records)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "A century of the Wizard of Wines' shipping records. Almost every delivery goes to the Blood of the Vine Tavern, the Blue Water Inn, Krezk, or the Vistani — but the oldest entries are shipments to Strahd, and they stop decades or centuries back."
 material: "Parchment, bound"
 appearance: "Pages and pages of shipment records, the oldest at the back."
-current_holder: [[Odibli]]
+current_holder: "[[Odibli]]"
 history:
   - "Found on the desk in the winery's master bedroom in [[Session 27 The Vampire Staff]]"
   - "Odibli stated he was taking them"

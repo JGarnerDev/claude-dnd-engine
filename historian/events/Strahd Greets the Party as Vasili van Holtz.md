@@ -8,7 +8,7 @@ tags:
   - event
   - event/revelation
   - region/barovia
-source_session: [[Session 24 The Vampire Hunter]]
+source_session: "[[Session 24 The Vampire Hunter]]"
 confirmed_date: "2026-08-25"
 date: "Outside the gates of Vallaki, on the way to meet Rictavio (~Day 13 in Barovia — estimate)"
 timeline_date: "0735-11-09"
@@ -20,23 +20,23 @@ consequences:
   - "Made every unfamiliar noble in Vallaki suspect."
 importance: critical
 active: false
-last_updated: [[Session 24 The Vampire Hunter]]
+last_updated: "[[Session 24 The Vampire Hunter]]"
 participants:
-  - [[Strahd Von Zarovich]] (in disguise as Vasili van Holtz)
-  - [[Rictavio]] (identified him after the fact)
-  - [[Iggy]] (present)
-  - [[Luci]] (present)
-  - [[Odibli]] (present)
-  - [[Dip]] (present)
+  - "[[Strahd Von Zarovich]] (in disguise as Vasili van Holtz)"
+  - "[[Rictavio]] (identified him after the fact)"
+  - "[[Iggy]] (present)"
+  - "[[Luci]] (present)"
+  - "[[Odibli]] (present)"
+  - "[[Dip]] (present)"
 relates_to:
-  - [[Vallaki]] (occurred at the gates)
-  - [[Strahd Walks Vallaki as Vasili van Holtz]] (the Session 17 thread this confirms)
-  - [[Lady Fiona Wachter]] (the defeat he congratulated them on)
-  - [[Vargas Vallakovich]] (the poor reward he needled them about)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vallaki]] (occurred at the gates)"
+  - "[[Strahd Walks Vallaki as Vasili van Holtz]] (the Session 17 thread this confirms)"
+  - "[[Lady Fiona Wachter]] (the defeat he congratulated them on)"
+  - "[[Vargas Vallakovich]] (the poor reward he needled them about)"
+  - "[[Curse of Strahd]] (campaign)"
 awareness: secret
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Strahd walked up to the party outside Vallaki's gates wearing a nobleman's face, congratulated them on killing Lady Wachter, and gave his name as Vasili van Holtz — confirmed after the fact by Rictavio."
 ---
 

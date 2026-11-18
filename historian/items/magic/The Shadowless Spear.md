@@ -7,7 +7,7 @@ exists: true
 state: identified
 tags:
   - item/magic
-source_session: [[Session 31 The Red Trail]]
+source_session: "[[Session 31 The Red Trail]]"
 confirmed_date: "2026-10-27"
 item_type: weapon
 rarity: uncommon
@@ -18,15 +18,15 @@ aliases:
   - "Halsby's spear"
 importance: major
 active: true
-last_updated: [[Session 31 The Red Trail]]
+last_updated: "[[Session 31 The Red Trail]]"
 relates_to:
   - "[[Halsby]] (his spear and his shard, remade)"
   - "[[Aashal-Groon Mellenegon Borak]] (fused it, through the fox)"
 known_by:
   - "[[Halsby]] (full)"
   - "the party (saw the fusing; heard the reach and the +1)"
-owner: [[Halsby]]
-current_holder: [[Halsby]]
+owner: "[[Halsby]]"
+current_holder: "[[Halsby]]"
 description: "Halsby's plain spear with his black shard grown onto it as the point. The haft throws a shadow; the head does not."
 quirks:
   - "The head casts no shadow. The haft does"

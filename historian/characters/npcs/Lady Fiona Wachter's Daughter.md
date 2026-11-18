@@ -8,7 +8,7 @@ state: missing
 tags:
   - character
   - character/npc
-source_session: [[Session 22 Lady Wachter's Offer]]
+source_session: "[[Session 22 Lady Wachter's Offer]]"
 confirmed_date: "2026-08-11"
 location: "Unknown — presumed Wachter House or elsewhere in Vallaki"
 personality: "Unknown. Described only as psychologically damaged by her time betrothed to Viktor Vallakovich."
@@ -17,24 +17,24 @@ disposition: unknown
 aliases: []
 importance: minor
 active: true
-last_updated: [[Session 23 The Cult in the Cellar]]
+last_updated: "[[Session 23 The Cult in the Cellar]]"
 relates_to:
-  - [[Lady Fiona Wachter]] (mother, now dead)
-  - [[Viktor Vallakovich]] (former betrothed; harmed her)
-  - [[Karl]] (brother)
-  - [[Nikolai]] (brother)
-  - [[Wachter House]] (family home)
-  - [[Vallaki]] (from here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Lady Fiona Wachter]] (mother, now dead)"
+  - "[[Viktor Vallakovich]] (former betrothed; harmed her)"
+  - "[[Karl]] (brother)"
+  - "[[Nikolai]] (brother)"
+  - "[[Wachter House]] (family home)"
+  - "[[Vallaki]] (from here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "The unnamed daughter of Lady Fiona Wachter, once betrothed to Viktor Vallakovich until his madness left her psychologically wrecked. Her mother refused to discuss her current state; the party searched the house and did not find her."
 race: "Unknown"
 class: "Unknown"
 family:
-  - [[Lady Fiona Wachter]] (mother)
-  - [[Karl]] (brother)
-  - [[Nikolai]] (brother)
+  - "[[Lady Fiona Wachter]] (mother)"
+  - "[[Karl]] (brother)"
+  - "[[Nikolai]] (brother)"
 ---
 
 Location: unknown, presumed [[Wachter House]] or elsewhere in [[Vallaki]] | Campaign: [[Curse of Strahd]]

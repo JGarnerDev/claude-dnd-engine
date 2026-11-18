@@ -8,7 +8,7 @@ state: dead
 tags:
   - character
   - character/npc
-source_session: [[Session 28 The Wereravens' Gift]]
+source_session: "[[Session 28 The Wereravens' Gift]]"
 confirmed_date: "2026-09-29"
 location: "None — long dead; his work remains at the [[Wizard of Wines]]"
 personality: "Unknown. The one trait the record preserves is foresight with a condition attached: he left a relic for people who did not exist yet, on the assumption they would earn it."
@@ -19,16 +19,16 @@ aliases:
   - "The founding mage"
 importance: major
 active: false
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Wizard of Wines]] (founded it)
-  - [[The Seeds of the Wizard of Wines]] (made them)
-  - [[The Wanderer's Boon]] (made it; left instructions for its use)
-  - [[Davian Martikov]] (his family inherited the winery and the relic)
-  - [[Strahd Von Zarovich]] (built the vineyard to defeat his curse on the soil)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (founded it)"
+  - "[[The Seeds of the Wizard of Wines]] (made them)"
+  - "[[The Wanderer's Boon]] (made it; left instructions for its use)"
+  - "[[Davian Martikov]] (his family inherited the winery and the relic)"
+  - "[[Strahd Von Zarovich]] (built the vineyard to defeat his curse on the soil)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "The mage who founded the Wizard of Wines, whose name is lost to history. Extremely powerful — he made three magic gems that let the vineyard grow through Strahd's curse, and one further relic he left for travelers he predicted would come one day to protect the place. His magic is described as lost, beyond anything reproducible now."
 race: "Unknown"
 class: "Wizard (reported)"

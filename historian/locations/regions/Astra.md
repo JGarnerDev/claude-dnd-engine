@@ -18,9 +18,9 @@ aliases:
 importance: major
 description: "The astral body that collided with the dwarf planetoid 6.7433 millennia ago, fusing briefly then separating. Spun off trillions of glass shards — Whatwill — into its orbital path. Returns on a thousand-year slingshot orbit; each pass between the two suns is a Glistening. The Seventh is due in year 7000. Regarded by many factions as a near-divine presence."
 relates_to:
-  - [[Whatwill]] (origin source)
-  - [[The Lifted]] (veneration)
-  - [[The Vitricants]] (calendar and reverence)
+  - "[[Whatwill]] (origin source)"
+  - "[[The Lifted]] (veneration)"
+  - "[[The Vitricants]] (calendar and reverence)"
 ---
 
 The celestial body responsible for the creation of [[Whatwill]]. 6.7433 millennia ago, the Astra collided with the dwarf planetoid — gouging the massive Caldera into the Struck Side, dislodging the Arc Side's islands, and casting [[The Slices]] into orbit. Smaller Islifts continue to orbit at varying altitudes.

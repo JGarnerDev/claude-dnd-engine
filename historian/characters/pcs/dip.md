@@ -10,10 +10,10 @@ tags:
   - character
   - character/pc
   - player/ben
-player: [[Ben]]
+player: "[[Ben]]"
 race: "Orc"
 class: "Barbarian (Path of the Berserker)"
-background: [[Sage]]
+background: "[[Sage]]"
 level: 5
 level_confirmed: 34
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
@@ -21,18 +21,18 @@ character_sheet: "Roll20 — Dip T (Barbarian 4, Path of the Berserker)"
 pronouns: "they/them"
 aliases:
   - "Dip T"
-source_session: [[Session 05 The Specter]]
+source_session: "[[Session 05 The Specter]]"
 relates_to:
-  - [[Curse of Strahd]] (campaign)
-  - [[Dip's Twin Sister]] (lost twin, believed alive)
-  - [[The Sage Enclave]] (trained here after wandering)
-  - [[Dip's Home Hamlet]] (birthplace, burned)
-  - [[The Hamlet Raiders]] (destroyed their home)
+  - "[[Curse of Strahd]] (campaign)"
+  - "[[Dip's Twin Sister]] (lost twin, believed alive)"
+  - "[[The Sage Enclave]] (trained here after wandering)"
+  - "[[Dip's Home Hamlet]] (birthplace, burned)"
+  - "[[The Hamlet Raiders]] (destroyed their home)"
 affinity:
-  - [[Luci]] (2)
-  - [[Odibli]] (1)
-  - [[Davian Martikov]] (3)
-  - [[Lady Fiona Wachter]] (-5)
+  - "[[Luci]] (2)"
+  - "[[Odibli]] (1)"
+  - "[[Davian Martikov]] (3)"
+  - "[[Lady Fiona Wachter]] (-5)"
 importance: critical
 active: true
 spotlight: normal

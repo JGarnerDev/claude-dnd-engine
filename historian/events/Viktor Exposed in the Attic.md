@@ -11,7 +11,7 @@ tags:
 date: "Day ~11 in Barovia (Vallaki) — estimate"
 timeline_date: "0735-11-07"
 track: "faction:The Vallakovich Family"
-source_session: [[Session 20 Viktor's Attic]]
+source_session: "[[Session 20 Viktor's Attic]]"
 outcome: "The party found Viktor Vallakovich experimenting on Vallaki's missing townsfolk in the mansion attic, subdued him, and traded silence for a waived penalty and his spellbooks."
 consequences:
   - "Vallaki's disappearances are explained — Viktor was experimenting on the missing people."
@@ -21,14 +21,14 @@ consequences:
 importance: major
 last_updated: "[[Session 20 Viktor's Attic]]"
 participants:
-  - [[Viktor Vallakovich]]
-  - [[Vargas Vallakovich]]
-  - [[Odibli]]
-  - [[Luci]]
-  - [[Iggy]]
-  - [[Dip]]
+  - "[[Viktor Vallakovich]]"
+  - "[[Vargas Vallakovich]]"
+  - "[[Odibli]]"
+  - "[[Luci]]"
+  - "[[Iggy]]"
+  - "[[Dip]]"
 relates_to:
-  - [[Burgomaster's Mansion]]
+  - "[[Burgomaster's Mansion]]"
 awareness: local
 description: "The party uncovered Viktor Vallakovich experimenting on Vallaki's missing townsfolk in the mansion attic, subdued him with Hideous Laughter, fought off his skeleton cats, and traded silence for a waived penalty and his spellbooks."
 ---

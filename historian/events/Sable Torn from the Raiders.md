@@ -7,7 +7,7 @@ state: recent
 tags:
   - event
   - event/combat
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 date: "Ashford, night of arrival (Day 1 at Ashford, 6743-05-20, late in Crawl 5)"
 timeline_date: "6743-05-20"
@@ -23,17 +23,17 @@ track: "party"
 importance: major
 active: true
 relates_to:
-  - [[Sable Wren]] (rescued)
-  - [[Nella]] (her crew)
-  - [[The Golden Lioness]]
+  - "[[Sable Wren]] (rescued)"
+  - "[[Nella]] (her crew)"
+  - "[[The Golden Lioness]]"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "The party kills all six raiders; Halsby's magic missiles drop the big one from his horse and Sable falls free, still bound."
 participants:
-  - [[The Party]]
-  - [[Halsby]] (killed the big one)
-  - [[Dip]] (three kills)
-  - [[Sable Wren]] (rescued)
+  - "[[The Party]]"
+  - "[[Halsby]] (killed the big one)"
+  - "[[Dip]] (three kills)"
+  - "[[Sable Wren]] (rescued)"
 awareness: local
 ---
 

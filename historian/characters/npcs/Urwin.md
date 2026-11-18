@@ -8,10 +8,10 @@ state: alive
 tags:
   - character
   - character/npc
-source_session: [[Session 16 The Blue Water Inn]]
+source_session: "[[Session 16 The Blue Water Inn]]"
 confirmed_date: "2026-06-30"
-last_updated: [[Session 28 The Wereravens' Gift]]
-location: [[Blue Water Inn]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
+location: "[[Blue Water Inn]]"
 personality: "Gracious and unassuming; a working host who steps out of the kitchen to thank his guests personally."
 livelihood: "Runs the Blue Water Inn in Vallaki with his wife Danika; works the kitchen."
 disposition: friendly
@@ -21,25 +21,25 @@ aliases:
 importance: major
 active: true
 relates_to:
-  - [[Blue Water Inn]] (proprietor)
-  - [[Davian Martikov]] (father)
-  - [[Wizard of Wines]] (his family's vineyard)
-  - [[The Seeds of the Wizard of Wines]] (was on guard the night the first was stolen)
-  - [[The Martikovs Are Wereravens]] (a Martikov, and so a wereraven)
-  - [[Champagne du Stomp]] (the vintage lost on his watch)
-  - [[Keepers of the Feather]] (the ravens watching the winery were dispatched from his inn)
-  - [[Danika]] (wife)
-  - [[Brom]] (son)
-  - [[Bray]] (son)
-  - [[Vallaki]] (lives here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Blue Water Inn]] (proprietor)"
+  - "[[Davian Martikov]] (father)"
+  - "[[Wizard of Wines]] (his family's vineyard)"
+  - "[[The Seeds of the Wizard of Wines]] (was on guard the night the first was stolen)"
+  - "[[The Martikovs Are Wereravens]] (a Martikov, and so a wereraven)"
+  - "[[Champagne du Stomp]] (the vintage lost on his watch)"
+  - "[[Keepers of the Feather]] (the ravens watching the winery were dispatched from his inn)"
+  - "[[Danika]] (wife)"
+  - "[[Brom]] (son)"
+  - "[[Bray]] (son)"
+  - "[[Vallaki]] (lives here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Urwin Martikov. Co-owner of the Blue Water Inn in Vallaki, husband of Danika — and Davian Martikov's son, a wereraven like every Martikov. He was supposed to be on guard the night the first of the winery's three seeds was stolen ten years ago, and his father still does not know what happened."
 family:
-  - [[Danika]] (wife)
-  - [[Brom]] (son)
-  - [[Bray]] (son)
+  - "[[Danika]] (wife)"
+  - "[[Brom]] (son)"
+  - "[[Bray]] (son)"
 ---
 
 Location: [[Blue Water Inn]] | Campaign: [[Curse of Strahd]]

@@ -4,39 +4,39 @@ campaign: strahd
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 16 The Blue Water Inn]]
+source_session: "[[Session 16 The Blue Water Inn]]"
 confirmed_date: "2026-06-30"
 state: alive
 tags:
   - character
   - character/npc
 
-location: [[Blue Water Inn]]
+location: "[[Blue Water Inn]]"
 personality: "Drunk but good-natured; loose-tongued about politics he shouldn't be. Chafes against the town's mandatory cheer."
 livelihood: "Vallakian townsman; a quiet dissenter against the Burgomaster."
 disposition: friendly
 aliases: []
 importance: minor
 active: true
-last_updated: [[Session 23 The Cult in the Cellar]]
+last_updated: "[[Session 23 The Cult in the Cellar]]"
 relates_to:
-  - [[Nikolai]] (brother, drinking companion, fellow dissenter)
-  - [[Lady Fiona Wachter]] (mother)
-  - [[Wachter House]] (family home)
-  - [[Lady Fiona Wachter's Daughter]] (sister)
-  - [[Rictavio's Saber-Toothed Tiger]] (suspected of loosing it)
+  - "[[Nikolai]] (brother, drinking companion, fellow dissenter)"
+  - "[[Lady Fiona Wachter]] (mother)"
+  - "[[Wachter House]] (family home)"
+  - "[[Lady Fiona Wachter's Daughter]] (sister)"
+  - "[[Rictavio's Saber-Toothed Tiger]] (suspected of loosing it)"
 
-  - [[Vargas Vallakovich|the Burgomaster]] (opposes)
-  - [[Blue Water Inn]] (met here)
-  - [[Vallaki]] (lives here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vargas Vallakovich|the Burgomaster]] (opposes)"
+  - "[[Blue Water Inn]] (met here)"
+  - "[[Vallaki]] (lives here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Karl. A drunk Vallakian dissenter — and, as of Session 21, a son of Lady Fiona Wachter. He and Nikolai vanished from the Blazing Sun festival and are the party's suspects for loosing Rictavio's tiger."
 family:
-  - [[Lady Fiona Wachter]] (mother, now dead)
-  - [[Nikolai]] (brother)
-  - [[Lady Fiona Wachter's Daughter]] (sister)
+  - "[[Lady Fiona Wachter]] (mother, now dead)"
+  - "[[Nikolai]] (brother)"
+  - "[[Lady Fiona Wachter's Daughter]] (sister)"
 goals:
   - "Relieve the town of the Burgomaster's madness"
 motives:

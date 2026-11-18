@@ -11,10 +11,10 @@ played_date: "2026-09-01"
 in_world_end_date: "0735-11-10"
 mission: "Find the missing wine shipment and break the siege on the winery"
 locations:
-  - [[Wizard of Wines]]
+  - "[[Wizard of Wines]]"
 key_npcs:
-  - [[Davian Martikov]]
-  - [[Baba Lysaga]]
+  - "[[Davian Martikov]]"
+  - "[[Baba Lysaga]]"
 recap: "Nine more people emerged from the vineyard trees behind the man who had beckoned: Davian Martikov, the winery's proprietor. The party announced they came at the behest of Vallaki, and Davian explained that druids had been stopping the deliveries. Asked what the winery had done to them, he claimed jealousy and pleaded ignorance; Iggy's insight said there was more to it. Davian named the druids' leader as Baba Lysaga — a dark sorceress called Ravenbane, 'our mother,' servant of the night — closely tied to Strahd as his mother's midwife, the one who brought him into the world and steered his life. When Iggy called that dangerous, Davian reassured them that Baba Lysaga herself was not present, only her druids. Luci healed the winery folk, and several agreed to fight alongside the party. Scouting the assault, they counted three main doors and a loading area; Odibli's familiar bird sensed animals ahead and was then destroyed by something strange, and Luci's Augury on the loading-dock approach returned 'wheel.' As the party closed on the winery, five needle blights attacked."
 cliffhanger: "Five needle blights are on the party at the edge of the winery, the loading-dock approach has come back as an unreadable 'wheel' omen, and whatever killed Odibli's familiar in a single stroke is still inside."
 entities_canonized: []

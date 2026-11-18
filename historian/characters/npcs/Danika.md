@@ -4,41 +4,41 @@ campaign: strahd
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 16 The Blue Water Inn]]
+source_session: "[[Session 16 The Blue Water Inn]]"
 confirmed_date: "2026-06-30"
 state: alive
 tags:
   - character
   - character/npc
 
-location: [[Blue Water Inn]]
+location: "[[Blue Water Inn]]"
 personality: "Brusque and busy, quick to a dry quip, warm underneath. Sizes people up fast — and rewards those who earn it."
 livelihood: "Runs the Blue Water Inn in Vallaki with her husband Urwin; tends the bar."
 disposition: friendly
 aliases: []
 importance: major
 active: true
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Blue Water Inn]] (proprietor, bartender)
-  - [[The Martikovs Are Wereravens]] (married into the family)
-  - [[Wizard of Wines]] (source of her overdue shipments)
-  - [[Davian Martikov]] (the winery's proprietor)
-  - [[Van Richten's Tower]] (landmark she gave for the missing wine)
-  - [[Urwin]] (husband)
-  - [[Brom]] (son)
-  - [[Bray]] (son)
-  - [[Rictavio]] (friend, resident guest)
-  - [[Vallaki]] (lives here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Blue Water Inn]] (proprietor, bartender)"
+  - "[[The Martikovs Are Wereravens]] (married into the family)"
+  - "[[Wizard of Wines]] (source of her overdue shipments)"
+  - "[[Davian Martikov]] (the winery's proprietor)"
+  - "[[Van Richten's Tower]] (landmark she gave for the missing wine)"
+  - "[[Urwin]] (husband)"
+  - "[[Brom]] (son)"
+  - "[[Bray]] (son)"
+  - "[[Rictavio]] (friend, resident guest)"
+  - "[[Vallaki]] (lives here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Danika. Bartender and co-owner of the Blue Water Inn in Vallaki. Irritable at first, she warmed to the party after their performance, gave them a free night and stew, and asked them to find the overdue 'wizard of wine.'"
 charm_hook: "Delivers her highest praise as a backhanded jab — told Luci she might be a better storyteller than the inn's own resident bard."
 family:
-  - [[Urwin]] (husband)
-  - [[Brom]] (son)
-  - [[Bray]] (son)
+  - "[[Urwin]] (husband)"
+  - "[[Brom]] (son)"
+  - "[[Bray]] (son)"
 goals:
   - "Keep the inn running and the wine flowing"
 motives:

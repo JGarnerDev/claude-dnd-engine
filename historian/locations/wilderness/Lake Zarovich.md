@@ -12,14 +12,14 @@ tags:
 location: near [[Vallaki]]
 importance: minor
 active: true
-source_session: [[Session 19 The Burning of the Coffin Shop]]
+source_session: "[[Session 19 The Burning of the Coffin Shop]]"
 confirmed_date: "2026-07-28"
 relates_to:
-  - [[Vallaki]] (near)
-  - [[Izek Strazni]] (lost his arm here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vallaki]] (near)"
+  - "[[Izek Strazni]] (lost his arm here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (referenced)
+  - "[[The Party]] (referenced)"
 description: "A lake in the region of Vallaki. Named in Session 19 as the place where Izek Strazni lost his arm — the origin of the dark-magic limb that replaced it."
 ---
 

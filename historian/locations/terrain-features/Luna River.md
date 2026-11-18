@@ -8,28 +8,28 @@ state: passable
 tags:
   - location
   - location/terrain-feature
-source_session: [[Session 24 The Vampire Hunter]]
+source_session: "[[Session 24 The Vampire Hunter]]"
 confirmed_date: "2026-08-25"
 feature_type: river
 region:
-  - [[Barovia]]
+  - "[[Barovia]]"
 aliases: []
 importance: minor
 active: true
-last_updated: [[Session 24 The Vampire Hunter]]
+last_updated: "[[Session 24 The Vampire Hunter]]"
 relates_to:
-  - [[The Skeleton Rider]] (crossed the party's path here)
-  - [[Raven River]] (further along the same road south)
-  - [[Vallaki]] (the road runs from here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[The Skeleton Rider]] (crossed the party's path here)"
+  - "[[Raven River]] (further along the same road south)"
+  - "[[Vallaki]] (the road runs from here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "A river crossed on the road south out of Vallaki. The party met nothing here but a skeletal horse and rider that passed them without a word and rode south into the forest."
 scale: regional
 navigability: easy
 connects:
-  - [[Vallaki]]
-  - [[Raven River]]
+  - "[[Vallaki]]"
+  - "[[Raven River]]"
 hook: "Whatever the skeleton rider was going south to do, it did not consider the party worth stopping for."
 ---
 

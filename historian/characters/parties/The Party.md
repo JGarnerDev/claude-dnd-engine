@@ -8,13 +8,13 @@ tags:
 description: "The adventuring party drawn into Barovia; level 3 after clearing Death House."
 aliases: []
 members:
-  - [[Iggy]]
-  - [[Luci]]
-  - [[Odibli]]
-  - [[Dip]]
+  - "[[Iggy]]"
+  - "[[Luci]]"
+  - "[[Odibli]]"
+  - "[[Dip]]"
 base_of_operations: "unknown"
-campaign: [[Curse of Strahd]]
-source_session: [[Session 01 The Black Sheep Inn]]
+campaign: "[[Curse of Strahd]]"
+source_session: "[[Session 01 The Black Sheep Inn]]"
 confirmed_date: "unknown"
 ---
 

@@ -8,24 +8,24 @@ state: dead
 tags:
   - character
   - character/antagonist
-source_session: [[Session 26 The Poisoned Casks]]
+source_session: "[[Session 26 The Poisoned Casks]]"
 confirmed_date: "2026-09-15"
-location: [[Wizard of Wines]]
+location: "[[Wizard of Wines]]"
 personality: "Unhurried and entirely unthreatened. Treated four armed strangers who had just fought through her blights as a mild curiosity, answered their questions about the siege without evasion, and turned aside only the one that mattered — what she was pouring into the wine — with the satisfaction of someone who had done it many times before."
 livelihood: "Poisoning the Wizard of Wines from inside it, while the blights outside kept anyone from interrupting."
 disposition: hostile
 aliases: []
 importance: major
 active: false
-last_updated: [[Session 26 The Poisoned Casks]]
+last_updated: "[[Session 26 The Poisoned Casks]]"
 relates_to:
-  - [[Wizard of Wines]] (poisoned its casks from within)
-  - [[Baba Lysaga]] (presumed to serve her, unconfirmed)
-  - [[Dip]] (killed by them)
-  - [[Twig Blight]] (commanded them)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (poisoned its casks from within)"
+  - "[[Baba Lysaga]] (presumed to serve her, unconfirmed)"
+  - "[[Dip]] (killed by them)"
+  - "[[Twig Blight]] (commanded them)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 race: "unknown"
 class: "Druid"
 goals:
@@ -33,8 +33,8 @@ goals:
 motives:
   - "Unstated — she died without giving a reason"
 enemies:
-  - [[The Party]] (killed her)
-  - [[Davian Martikov]] (whose winery she was poisoning)
+  - "[[The Party]] (killed her)"
+  - "[[Davian Martikov]] (whose winery she was poisoning)"
 description: "The druid who poisoned the Wizard of Wines — a hunched woman in animal skins and a goat-horned headdress, emptying a flask of thick syrup into the casks while her blights held the grounds. Killed by Dip in the fermentation room. She is the first concrete agent behind the siege the party has met, and she was not the last one in the building."
 ---
 

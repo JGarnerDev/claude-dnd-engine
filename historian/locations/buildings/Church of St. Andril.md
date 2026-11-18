@@ -8,27 +8,27 @@ state: occupied
 tags:
   - location
   - location/building
-city: [[Vallaki]]
+city: "[[Vallaki]]"
 residents:
-  - [[Lucien Petrovic]] (priest)
-  - [[Yeska]] (altar boy)
-  - [[Milivoj]] (groundskeeper, gravedigger)
+  - "[[Lucien Petrovic]] (priest)"
+  - "[[Yeska]] (altar boy)"
+  - "[[Milivoj]] (groundskeeper, gravedigger)"
 purpose: religious
 importance: major
 active: true
-source_session: [[Session 17 The Stolen Bones]]
+source_session: "[[Session 17 The Stolen Bones]]"
 confirmed_date: "2026-07-07"
 aliases:
   - "St. Andril's Church"
   - "St. Andral's Church"
 relates_to:
-  - [[Vallaki]] (located in)
-  - [[Lathander]] (dedicated to)
-  - [[Lucien Petrovic]] (priest)
-  - [[Ireena Kolyana]] (sought shelter here)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Vallaki]] (located in)"
+  - "[[Lathander]] (dedicated to)"
+  - "[[Lucien Petrovic]] (priest)"
+  - "[[Ireena Kolyana]] (sought shelter here)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "The Church of St. Andril in Vallaki — dedicated to Lathander and named for the saint St. Andril, whose bones granted the building a boon of protection. Those bones were stolen by the gravedigger Milivoj and sold off, leaving the church unprotected. Stained-glass saints line its windows. The party came seeking shelter here for Ireena from Strahd."
 condition: "Intact but spiritually vulnerable — its protective saint's bones have been stolen."
 ---

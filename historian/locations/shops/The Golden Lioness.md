@@ -3,22 +3,22 @@ name: "The Golden Lioness"
 type: location
 subtype: shop
 exists: true
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 state: open
 campaign: homebrew
 tags:
   - location
   - location/shop
-city: [[Ashford]]
-proprietor: [[Sable Wren]]
+city: "[[Ashford]]"
+proprietor: "[[Sable Wren]]"
 purpose: commerce
 aliases: []
 importance: major
 description: "Tiefling-owned brewery and tavern in Ashford, the town's first, which Sable Wren came to set up about a week before the Session 29 raid. Half-built and now half-wrecked: one room survived whole, and its hearth feeds itself. Opening depended on the stock Nella's crew stole."
 contributed_by: jeff
 relates_to:
-  - [[Sable Wren]] (proprietor)
+  - "[[Sable Wren]] (proprietor)"
   - "[[Ashford]] (the town it stands in)"
   - "[[Aashal-Groon Mellenegon Borak]] (the deep-water being beneath; the cellar spring drops into his aquifer)"
   - "[[Lok Thuliaga]] (planned hire: security; not yet on staff)"

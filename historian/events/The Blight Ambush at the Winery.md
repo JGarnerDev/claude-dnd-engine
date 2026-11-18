@@ -8,7 +8,7 @@ tags:
   - event
   - event/battle
   - region/barovia
-source_session: [[Session 28 The Wereravens' Gift]]
+source_session: "[[Session 28 The Wereravens' Gift]]"
 confirmed_date: "2026-09-29"
 date: "On the grounds outside the Wizard of Wines, on leaving the cleared building (~Day 14 in Barovia — estimate)"
 timeline_date: "0735-11-10"
@@ -23,21 +23,21 @@ track: "party"
 importance: minor
 active: true
 relates_to:
-  - [[Wizard of Wines]] (fought on its grounds)
-  - [[The Vampire Staff]] (whose scream did not reach here)
-  - [[Odibli]] (dropped to 0 HP; two Shatters)
-  - [[Iggy]] (stabilized both downed PCs)
-  - [[Luci]] (dropped to 0 HP; the failed wall-run)
-  - [[Dip]] (called for help; killed the last blight)
-  - [[Davian Martikov]] (whose ravens answered)
-  - [[The Ravens Take the Winery's Side]] (the earlier instance of the same alliance)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Wizard of Wines]] (fought on its grounds)"
+  - "[[The Vampire Staff]] (whose scream did not reach here)"
+  - "[[Odibli]] (dropped to 0 HP; two Shatters)"
+  - "[[Iggy]] (stabilized both downed PCs)"
+  - "[[Luci]] (dropped to 0 HP; the failed wall-run)"
+  - "[[Dip]] (called for help; killed the last blight)"
+  - "[[Davian Martikov]] (whose ravens answered)"
+  - "[[The Ravens Take the Winery's Side]] (the earlier instance of the same alliance)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "The party walks out of the cleared winery into the blights that survived the vampire staff's scream. Odibli and Luci both go down, Iggy hauls both back up, and Martikov ravens kill as many blights as the party does."
 participants:
-  - [[The Party]] (fought)
-  - [[Baba Lysaga's Druids]] (their blights)
+  - "[[The Party]] (fought)"
+  - "[[Baba Lysaga's Druids]] (their blights)"
 awareness: widely-known
 ---
 

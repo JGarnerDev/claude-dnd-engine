@@ -14,15 +14,15 @@ contributed_by: miguel
 source_session: "player backstory (Odibli)"
 confirmed_date: "pre-campaign"
 relates_to:
-  - [[Odibli]] (an agent made here for the Astra experiment, loose by accident; he doesn't know)
-  - [[The Original Odibli]] (researcher; made the copy)
-  - [[Berle Kempwick]] (the original's Assistant; knows about the copy)
-  - [[Elspeth Moorlin]] (the original's true friend; knows about the copy)
-  - [[Astra]] (its experiment: when the next Glistening comes)
-  - [[The Palimpsest]] (presides over the plane the gnomes' fire-messages cross)
-rulership: [[Wendrick Schulden]]
+  - "[[Odibli]] (an agent made here for the Astra experiment, loose by accident; he doesn't know)"
+  - "[[The Original Odibli]] (researcher; made the copy)"
+  - "[[Berle Kempwick]] (the original's Assistant; knows about the copy)"
+  - "[[Elspeth Moorlin]] (the original's true friend; knows about the copy)"
+  - "[[Astra]] (its experiment: when the next Glistening comes)"
+  - "[[The Palimpsest]] (presides over the plane the gnomes' fire-messages cross)"
+rulership: "[[Wendrick Schulden]]"
 known_by:
-  - [[Odibli]] (as his home; he does not know he is its runaway copy)
+  - "[[Odibli]] (as his home; he does not know he is its runaway copy)"
 motives:
   - "Work out when the next Glistening will come"
   - "Do its work fast through agents, and keep every agent under control"

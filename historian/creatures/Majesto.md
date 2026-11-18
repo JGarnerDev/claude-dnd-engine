@@ -6,30 +6,30 @@ exists: true
 state: dead
 tags:
   - creature
-source_session: [[Session 23 The Cult in the Cellar]]
+source_session: "[[Session 23 The Cult in the Cellar]]"
 confirmed_date: "2026-08-18"
 creature_type: fiend
 challenge_rating: "1"
-location: [[Wachter House]]
+location: "[[Wachter House]]"
 aliases: []
 importance: minor
 active: false
-last_updated: [[Session 23 The Cult in the Cellar]]
+last_updated: "[[Session 23 The Cult in the Cellar]]"
 relates_to:
-  - [[Lady Fiona Wachter]] (master; served her)
-  - [[The Wachter Cult]] (served the circle's devil worship)
-  - [[Wachter House]] (kept in the hidden cellar chamber)
-  - [[Dip]] (killed by)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Lady Fiona Wachter]] (master; served her)"
+  - "[[The Wachter Cult]] (served the circle's devil worship)"
+  - "[[Wachter House]] (kept in the hidden cellar chamber)"
+  - "[[Dip]] (killed by)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Majesto. Lady Fiona Wachter's imp, kept beneath Wachter House with her devil-worshiping circle. Killed by Dip in the same fight that killed his mistress."
 personality: "Unrecorded — he was fought, not spoken to."
-lair: [[Wachter House]]
+lair: "[[Wachter House]]"
 allies:
-  - [[Lady Fiona Wachter]] (mistress)
+  - "[[Lady Fiona Wachter]] (mistress)"
 enemies:
-  - [[The Party]] (killed him)
+  - "[[The Party]] (killed him)"
 stat_block: "[[Imp]] (data/monsters) — assumed template"
 ---
 

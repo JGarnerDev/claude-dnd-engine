@@ -8,25 +8,25 @@ state: dangerous
 tags:
   - location
   - location/wilderness
-source_session: [[Session 28 The Wereravens' Gift]]
+source_session: "[[Session 28 The Wereravens' Gift]]"
 confirmed_date: "2026-09-29"
-region: [[Barovia]]
+region: "[[Barovia]]"
 terrain: other
 aliases:
   - "Yesterhill"
 importance: major
 active: true
-last_updated: [[Session 28 The Wereravens' Gift]]
+last_updated: "[[Session 28 The Wereravens' Gift]]"
 relates_to:
-  - [[Baba Lysaga's Druids]] (their hideout)
-  - [[The Seeds of the Wizard of Wines]] (the third seed was carried here)
-  - [[Wizard of Wines]] (the vineyard they attacked from here)
-  - [[Baba Lysaga]] (set the druids here against the winery)
-  - [[Davian Martikov]] (marked it on a map for the party)
-  - [[Barovia]] (region)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Baba Lysaga's Druids]] (their hideout)"
+  - "[[The Seeds of the Wizard of Wines]] (the third seed was carried here)"
+  - "[[Wizard of Wines]] (the vineyard they attacked from here)"
+  - "[[Baba Lysaga]] (set the druids here against the winery)"
+  - "[[Davian Martikov]] (marked it on a map for the party)"
+  - "[[Barovia]] (region)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "A hill somewhere in Barovia that the druids serving Baba Lysaga hold as their hideout. The third of the Wizard of Wines' three seeds was carried here after the druids stole it. The party has its location on a map from Davian Martikov and nothing else."
 travel_difficulty: unknown
 hazards:
@@ -35,7 +35,7 @@ hazards:
 notable_features:
   - "Holds the third [[The Seeds of the Wizard of Wines|seed]]"
 connects:
-  - [[Wizard of Wines]]
+  - "[[Wizard of Wines]]"
 hook: "The only place the party knows of that holds one of the three seeds outright — and the last place the blight horde that nearly killed them came from."
 ---
 

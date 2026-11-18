@@ -10,23 +10,23 @@ mission: "[[Act 1 - Placeholder]]"
 planned_date: null
 played_date: "2026-05-19"
 locations:
-  - [[Barovia Village]]
-  - [[Blood of the Vine Tavern]]
-  - [[House of Mad Mary]]
-  - [[Burgomaster's Mansion]]
-  - [[Bildrath's Mercantile]]
-  - [[Barovia Village Graveyard]]
+  - "[[Barovia Village]]"
+  - "[[Blood of the Vine Tavern]]"
+  - "[[House of Mad Mary]]"
+  - "[[Burgomaster's Mansion]]"
+  - "[[Bildrath's Mercantile]]"
+  - "[[Barovia Village Graveyard]]"
 key_npcs:
-  - [[Ismark Kolyanovich]] (quest giver)
-  - [[Ireena Kolyana]] (escort target)
-  - [[Arik]] (bartender, Blood of the Vine)
-  - [[Mad Mary]] (grieving mother)
-  - [[Bildrath Cantemir]] (merchant)
-  - [[Parriwimple]] (Bildrath's assistant)
-  - [[Alenka]] (Blood of the Vine owner)
-  - [[Mirabel]] (Blood of the Vine owner)
-  - [[Sorvia]] (Blood of the Vine owner)
-party: [[The Party]]
+  - "[[Ismark Kolyanovich]] (quest giver)"
+  - "[[Ireena Kolyana]] (escort target)"
+  - "[[Arik]] (bartender, Blood of the Vine)"
+  - "[[Mad Mary]] (grieving mother)"
+  - "[[Bildrath Cantemir]] (merchant)"
+  - "[[Parriwimple]] (Bildrath's assistant)"
+  - "[[Alenka]] (Blood of the Vine owner)"
+  - "[[Mirabel]] (Blood of the Vine owner)"
+  - "[[Sorvia]] (Blood of the Vine owner)"
+party: "[[The Party]]"
 importance: high
 active: false
 description: "Party exits Death House into Barovia village. Meets Ismark at the Blood of the Vine — he asks them to escort his sister Ireena to Vallaki. Father Kolyan Indirovich is dead. Mad Mary grieves lost daughter Gertrude. Ghost procession passes through. Party heads to graveyard drunk."

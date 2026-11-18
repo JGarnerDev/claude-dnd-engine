@@ -6,16 +6,16 @@ exists: true
 state: completed
 session_number: 10
 in_world_end_date: "0735-10-29"
-mission: [[Death House]]
+mission: "[[Death House]]"
 planned_date: "2026-05-12"
 locations:
-  - [[Death House]]
-  - [[Barovia Village Outskirts]]
+  - "[[Death House]]"
+  - "[[Barovia Village Outskirts]]"
 key_npcs:
-  - [[Strahd von Zarovich]] (greets party)
-  - [[Rose]] (stranded)
-  - [[Thorn]] (stranded)
-party: [[The Party]]
+  - "[[Strahd von Zarovich]] (greets party)"
+  - "[[Rose]] (stranded)"
+  - "[[Thorn]] (stranded)"
+party: "[[The Party]]"
 importance: critical
 active: false
 description: "Odibli smashes the orb and revives the party at personal cost. Cult relics catalogued. Luci sacrifices herself. Mists carry party to Barovia. Strahd greets them. Rose and Thorn stranded. Level up to 3."
@@ -25,7 +25,7 @@ played_date: "2026-05-12"
 recap: "Dip and Iggy were dead from Session 9. Odibli felt the stolen orb was familiar, recognized something in it, and smashed it against the wall. During his long rest, he performed a ritual — absorbed shadow essence from the room, reviving the dead party members. But the cost was: Odibli's veins turned black beneath his skin. Dip now hears whispers when it is quiet. Iggy's shadow no longer matches his form and moves in the wrong direction. Party is at half max HP for the duration of their time in the dungeon. Party found 13 cult relics and catalogued the southern tunnel. In the cult ritual room, Luci sacrificed herself on the altar to save the rest of the party. The mists carried everyone away. Rose and Thorn tried to fight the departure — Dip and Odibli left the scroll pages behind, stranding both children. Strahd greeted the party outside Death House. Thanked and congratulated them. Retrieved Luci from death. Party leveled to 3."
 cliffhanger: "The party is outside Death House in Barovia proper. Strahd has greeted them. Rose and Thorn are stranded somewhere inside. The mists surround everything."
 entities_canonized:
-  - [[Strahd von Zarovich]]
+  - "[[Strahd von Zarovich]]"
 new_entities:
   - "Shadow affliction — Iggy"
   - "Whisper affliction — Dip"

@@ -8,7 +8,7 @@ tags:
   - event
   - event/meeting
   - event/turning-point
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 date: "Ashford, the night of arrival, after the raid (Day 1 at Ashford, 6743-05-20, late in Crawl 5)"
 timeline_date: "6743-05-20"
@@ -23,22 +23,22 @@ track: "party"
 importance: major
 active: true
 relates_to:
-  - [[The Golden Lioness]] (where it happened)
-  - [[Ashford]]
-  - [[The Stolen Casks]] (job taken)
-  - [[Nella]] (holds the stock)
+  - "[[The Golden Lioness]] (where it happened)"
+  - "[[Ashford]]"
+  - "[[The Stolen Casks]] (job taken)"
+  - "[[Nella]] (holds the stock)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "Sable feeds her rescuers, Ashford comes to thank them, and the party takes the job of bringing her stolen stock home for a stake in the Golden Lioness."
 participants:
-  - [[The Party]] (welcomed)
-  - [[Sable Wren]] (host; made the offer)
-  - [[Mara Tull]] (brought the town)
-  - [[Silas Crubb]] (her lender)
-  - [[Dunny Marsh]] (healed by Iggy and Luci)
-  - [[Agnes Brand]] (danced with Luci)
-  - [[Sergei Rubelgerd]] (rejoined)
-  - [[Bosco]] (rejoined)
+  - "[[The Party]] (welcomed)"
+  - "[[Sable Wren]] (host; made the offer)"
+  - "[[Mara Tull]] (brought the town)"
+  - "[[Silas Crubb]] (her lender)"
+  - "[[Dunny Marsh]] (healed by Iggy and Luci)"
+  - "[[Agnes Brand]] (danced with Luci)"
+  - "[[Sergei Rubelgerd]] (rejoined)"
+  - "[[Bosco]] (rejoined)"
 awareness: local
 ---
 

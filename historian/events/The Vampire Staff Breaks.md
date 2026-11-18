@@ -8,7 +8,7 @@ tags:
   - event
   - event/battle
   - region/barovia
-source_session: [[Session 27 The Vampire Staff]]
+source_session: "[[Session 27 The Vampire Staff]]"
 confirmed_date: "2026-09-22"
 date: "In the cellar of the Wizard of Wines (~Day 14 in Barovia — estimate)"
 timeline_date: "0735-11-10"
@@ -22,21 +22,21 @@ consequences:
   - "Killed three of Baba Lysaga's four winery druids in a single day, without any of them naming who they served or why."
 importance: major
 active: true
-last_updated: [[Session 27 The Vampire Staff]]
+last_updated: "[[Session 27 The Vampire Staff]]"
 relates_to:
-  - [[The Vampire Staff]] (the object destroyed)
-  - [[Wizard of Wines]] (location)
-  - [[Baba Lysaga's Druids]] (their instrument, and three of their number)
-  - [[Baba Lysaga]] (presumed ultimate source)
-  - [[Dustin]] (pointed the party at it)
+  - "[[The Vampire Staff]] (the object destroyed)"
+  - "[[Wizard of Wines]] (location)"
+  - "[[Baba Lysaga's Druids]] (their instrument, and three of their number)"
+  - "[[Baba Lysaga]] (presumed ultimate source)"
+  - "[[Dustin]] (pointed the party at it)"
 participants:
-  - [[Odibli]] (destroyed the staff; dropped to 0 HP three times that day)
-  - [[Dip]] (killed the staff's bearer and the druid before him)
-  - [[Luci]] (killed the cellar druid)
-  - [[Iggy]] (kept Odibli alive through it)
+  - "[[Odibli]] (destroyed the staff; dropped to 0 HP three times that day)"
+  - "[[Dip]] (killed the staff's bearer and the druid before him)"
+  - "[[Luci]] (killed the cellar druid)"
+  - "[[Iggy]] (kept Odibli alive through it)"
 known_by:
-  - [[Davian Martikov]] (fame, through his ravens)
-  - [[The Party]] (full)
+  - "[[Davian Martikov]] (fame, through his ravens)"
+  - "[[The Party]] (full)"
 awareness: regional
 description: "Odibli burns and shatters the staff animating every blight in the Wizard of Wines. It screams, and all of them die at once."
 ---

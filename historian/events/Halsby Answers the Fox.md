@@ -7,7 +7,7 @@ state: recent
 tags:
   - event
   - event/encounter
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 date: "Ashford, night of arrival (Day 1 at Ashford, 6743-05-20, late in Crawl 5)"
 timeline_date: "6743-05-20"
@@ -22,17 +22,17 @@ track: "character:Halsby"
 importance: minor
 active: true
 relates_to:
-  - [[Aashal-Groon Mellenegon Borak]] (spoke through the fox)
-  - [[Sable Wren]] (the one to be saved)
-  - [[The Nightveil]] (whose errand he left)
-  - [[Tassad]] (where he was headed)
-  - [[The Shadowless Spear]] (the promised boon)
+  - "[[Aashal-Groon Mellenegon Borak]] (spoke through the fox)"
+  - "[[Sable Wren]] (the one to be saved)"
+  - "[[The Nightveil]] (whose errand he left)"
+  - "[[Tassad]] (where he was headed)"
+  - "[[The Shadowless Spear]] (the promised boon)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "A possessed fox stops Halsby on the road and sends him to save Sable at Ashford, promising a boon once it's done."
 participants:
-  - [[Halsby]] (took the job)
-  - [[Aashal-Groon Mellenegon Borak]] (through the fox)
+  - "[[Halsby]] (took the job)"
+  - "[[Aashal-Groon Mellenegon Borak]] (through the fox)"
 awareness: secret
 ---
 

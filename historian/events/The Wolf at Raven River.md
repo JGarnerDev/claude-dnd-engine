@@ -8,7 +8,7 @@ tags:
   - event
   - event/omen
   - region/barovia
-source_session: [[Session 24 The Vampire Hunter]]
+source_session: "[[Session 24 The Vampire Hunter]]"
 confirmed_date: "2026-08-25"
 date: "At the Raven River crossing, on the road south (~Day 13-14 in Barovia — estimate)"
 timeline_date: "0735-11-09"
@@ -20,19 +20,19 @@ consequences:
   - "Established that Strahd posts sentries to turn the party back rather than to kill them."
 importance: minor
 active: false
-last_updated: [[Session 24 The Vampire Hunter]]
+last_updated: "[[Session 24 The Vampire Hunter]]"
 participants:
-  - [[The Raven River Wolf]] (the sentry)
-  - [[Odibli]] (spoke with it)
-  - [[Strahd Von Zarovich]] (gave the order)
+  - "[[The Raven River Wolf]] (the sentry)"
+  - "[[Odibli]] (spoke with it)"
+  - "[[Strahd Von Zarovich]] (gave the order)"
 relates_to:
-  - [[Raven River]] (occurred at the crossing)
-  - [[Wizard of Wines]] (the party's actual destination, to the south)
-  - [[Luna River]] (crossed earlier the same day)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Raven River]] (occurred at the crossing)"
+  - "[[Wizard of Wines]] (the party's actual destination, to the south)"
+  - "[[Luna River]] (crossed earlier the same day)"
+  - "[[Curse of Strahd]] (campaign)"
 awareness: secret
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "A talking dire wolf at the Raven River crossing told the party to turn back — it serves Strahd, and was posted to stop four adventurers from going west."
 ---
 

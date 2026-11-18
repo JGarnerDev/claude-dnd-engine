@@ -11,15 +11,15 @@ played_date: "2026-08-04"
 in_world_end_date: "0735-11-08"
 mission: "Survive the Burgomaster's mandatory festival, and find out who loosed the tiger"
 locations:
-  - [[Vallaki]]
-  - [[Wachter House]]
+  - "[[Vallaki]]"
+  - "[[Wachter House]]"
 key_npcs:
-  - [[Vargas Vallakovich]]
-  - [[Izek Strazni]]
-  - [[Rictavio]]
-  - [[Lady Fiona Wachter]]
-  - [[Karl]]
-  - [[Nikolai]]
+  - "[[Vargas Vallakovich]]"
+  - "[[Izek Strazni]]"
+  - "[[Rictavio]]"
+  - "[[Lady Fiona Wachter]]"
+  - "[[Karl]]"
+  - "[[Nikolai]]"
 recap: "Back at the inn after the Viktor affair, the party found Vallaki full of eye-rolling townsfolk on the day of the Burgomaster's mandatory Festival of the Blazing Sun. Vargas Vallakovich failed repeatedly to light the wicker sun, had a laughing citizen arrested, and released him only after Iggy claimed the laugh for one of his own jokes and told it to the whole crowd. Luci and Odibli quietly saved the festival with oil and a cantrip, and Vargas declared it a triumph. Then the cry of 'Tiger!' went up: the party tracked a wrecked cage-cart and a well-fed escaped tiger to Rictavio, who was feeding it meat to calm it. Odibli spoke with the beast, which was enjoying the terror, and lured it back into its cage with a summoned frog. Rictavio thanked them and asked to meet outside the village to the northeast that evening; Luci then misdirected Izek Strazni and split his search party. Following where Karl and Nikolai had fled, the party reached a fine house, was turned away by a servant, and was spotted by the elegant lady inside — who, on hearing her sons may have loosed the tiger, invited them in."
 cliffhanger: "The party stands invited into the parlor of an elegant, unnamed noblewoman whose sons may have freed the tiger — with a secret evening meeting with Rictavio still waiting northeast of the village, and Izek's guards sent the wrong way."
 entities_canonized: []

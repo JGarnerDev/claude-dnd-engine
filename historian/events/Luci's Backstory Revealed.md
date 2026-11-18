@@ -17,10 +17,10 @@ consequences:
 importance: minor
 last_updated: "[[Session 04 The Nursery Mirror]]"
 participants:
-  - [[Luci]] (subject)
-  - [[The Party]] (audience)
+  - "[[Luci]] (subject)"
+  - "[[The Party]] (audience)"
 relates_to:
-  - [[Death House]] (occurred in)
+  - "[[Death House]] (occurred in)"
 awareness: regional
 description: "On Death House's third floor, amid the nursery mirror visions, Luci revealed her backstory to the party."
 ---

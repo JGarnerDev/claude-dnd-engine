@@ -11,21 +11,21 @@ played_date: "2026-07-07"
 in_world_end_date: "0735-11-05"
 mission: "Seek shelter for Ireena at the church; recover the stolen saint's bones"
 locations:
-  - [[Vallaki]]
-  - [[Church of St. Andril]]
+  - "[[Vallaki]]"
+  - "[[Church of St. Andril]]"
 key_npcs:
-  - [[Lucien Petrovic]]
-  - [[Yeska]]
-  - [[Milivoj]]
-  - [[Henrik]]
+  - "[[Lucien Petrovic]]"
+  - "[[Yeska]]"
+  - "[[Milivoj]]"
+  - "[[Henrik]]"
 recap: "Come to the Church of St. Andril in Vallaki to beg shelter from Strahd for Ireena, the party found the priest Lucien Petrovic shaken: the church's sacred saint's bones — which grant the building a boon of protection — had been stolen. Suspicion fell first on the scared altar boy Yeska, whom Lucien fiercely defended, but the party's speech-driven investigation (led by Iggy and Luci) traced the theft to the gravedigger Milivoj, who nervously confessed he'd sold the bones to Henrik the coffinmaker near the town square for a few gold, ignorant of their worth. Odibli tried to work out whether the saint's bones could be jury-rigged into a weapon against the hag coven, but both the priest and his own efforts came up empty — the bones protect the church and nothing more. The party deceived their way into Henrik's shop, where the coffinmaker spilled everything: Strahd, under the alias 'Vasili van Holtz,' had visited, and six vampire spawn were hiding upstairs. The priest could offer only old wives' tales about the windmill hag on the hill and the Wizard of Wines winery to the west. The party finished a long rest across the day and turned back toward Lucien Petrovic to plan their approach to the spawn."
 cliffhanger: "Bones traced, spawn revealed: the party heads back to the priest Lucien Petrovic to work out how to deal with the six vampire spawn nested above Henrik the coffinmaker's shop — and Strahd himself walks Vallaki wearing the face of 'Vasili van Holtz.'"
 entities_canonized:
-  - [[Lucien Petrovic]]
-  - [[Yeska]]
-  - [[Milivoj]]
-  - [[Henrik]]
-  - [[Church of St. Andril]]
+  - "[[Lucien Petrovic]]"
+  - "[[Yeska]]"
+  - "[[Milivoj]]"
+  - "[[Henrik]]"
+  - "[[Church of St. Andril]]"
 new_entities:
   - "Kranken Hammershaft — a heavy-metal dwarven barbarian/bard born from a table bit (Metallica / 'Nothing Else Matters' as in-universe). Filed as a `homebrew`-campaign design seed at [[Kranken Hammershaft]] (data pool, exists: false); canonizes when the party meets him in the new world."
   - "The bones of St. Andril — the church's stolen protective relic, currently in Henrik's possession. Recorded on the Church of St. Andril and Henrik files; no standalone item entity yet."

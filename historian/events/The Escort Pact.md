@@ -18,12 +18,12 @@ consequences:
 importance: major
 last_updated: "[[Session 11 Blood of the Vine]]"
 participants:
-  - [[Ismark Kolyanovich]] (petitioner)
-  - [[Ireena Kolyana]] (the charge)
-  - [[The Party]] (escorts)
+  - "[[Ismark Kolyanovich]] (petitioner)"
+  - "[[Ireena Kolyana]] (the charge)"
+  - "[[The Party]] (escorts)"
 relates_to:
-  - [[Vallaki]] (destination)
-  - [[Kolyan Indirovich]] (Ireena's late father)
+  - "[[Vallaki]] (destination)"
+  - "[[Kolyan Indirovich]] (Ireena's late father)"
 awareness: regional
 description: "Ismark asked the party at the Blood of the Vine to escort his sister Ireena to Vallaki, away from Strahd's reach — the quest that now drives the party's road."
 ---

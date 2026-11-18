@@ -4,7 +4,7 @@ name: "Mara Tull"
 type: character
 subtype: npc
 exists: true
-source_session: [[Session 30 Keep the Ale]]
+source_session: "[[Session 30 Keep the Ale]]"
 confirmed_date: "2026-10-20"
 state: alive
 campaign: homebrew
@@ -13,14 +13,14 @@ tags:
   - character/npc
 
 # --- MANDATORY (npc) ---
-location: [[Ashford]]
+location: "[[Ashford]]"
 personality: "A hardened, weathered commander — the seasoned survivor who has buried too much and keeps standing anyway. Grief steeled into grit. Quiet authority, never bluster; she gives an order once and expects it to be enough."
 livelihood: "Sheriff of Ashford."
 
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
-last_updated: [[Session 30 Keep the Ale]]
+last_updated: "[[Session 30 Keep the Ale]]"
 relates_to:
   - "[[Ashford]] (she is its law, and most of its actual defense)"
   - "[[Elowen Rimetusk]] (the town mage who helps her hold it, when she is lucid)"

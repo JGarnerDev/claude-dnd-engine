@@ -16,20 +16,20 @@ domains:
   - memory
 moral_character: "Guardian, mournful, quietly hopeful — believes preservation is a responsibility and finality a protective boundary, not a cage."
 worshippers:
-  - [[Iggy]] (sole present-day conduit)
+  - "[[Iggy]] (sole present-day conduit)"
 wants: "That meaning be lived and preserved through participation — not engineered, forcibly rewritten, or escaped through the denial of death."
-source_session: [[Session 01 The Black Sheep Inn]]
+source_session: "[[Session 01 The Black Sheep Inn]]"
 confirmed_date: 2026-08-05
 importance: major
 active: true
 aliases:
   - "The Keeper of Meaning"
 relates_to:
-  - [[Iggy]] (celestial guide / patron; reciprocal growth)
-  - [[Threnai]] (the plane he anchored)
-  - [[The Correctors]] (the faction whose ritual shattered his plane)
+  - "[[Iggy]] (celestial guide / patron; reciprocal growth)"
+  - "[[Threnai]] (the plane he anchored)"
+  - "[[The Correctors]] (the faction whose ritual shattered his plane)"
 known_by:
-  - [[Iggy]] (partial)
+  - "[[Iggy]] (partial)"
 description: "Diminished god of meaning and continuity from the destroyed plane Threnai; Iggy's Aasimar celestial guide, recovering in fragments as Iggy grows."
 ---
 

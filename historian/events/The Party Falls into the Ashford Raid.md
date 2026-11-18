@@ -8,7 +8,7 @@ tags:
   - event
   - event/turning-point
   - event/combat
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 date: "Ashford, night of arrival (Day 1 at Ashford, 6743-05-20, late in Crawl 5)"
 timeline_date: "6743-05-20"
@@ -23,18 +23,18 @@ track: "party"
 importance: major
 active: true
 relates_to:
-  - [[The Golden Lioness]] (the yard)
-  - [[Ashford]]
-  - [[Nella]] (escaped on the cart)
-  - [[The Wanderer's Boon]] (brought them)
-  - [[The Stolen Casks]] (mission opened)
+  - "[[The Golden Lioness]] (the yard)"
+  - "[[Ashford]]"
+  - "[[Nella]] (escaped on the cart)"
+  - "[[The Wanderer's Boon]] (brought them)"
+  - "[[The Stolen Casks]] (mission opened)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 description: "The party falls out of the light into a night raid on the Golden Lioness; Dip lands on a hauler while Nella's cart escapes south."
 participants:
-  - [[The Party]] (arrived)
-  - [[Dip]] (landed on a hauler)
-  - [[Odibli]] (saw Nella)
+  - "[[The Party]] (arrived)"
+  - "[[Dip]] (landed on a hauler)"
+  - "[[Odibli]] (saw Nella)"
 awareness: local
 ---
 

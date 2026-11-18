@@ -3,7 +3,7 @@
 name: "Aashal-Groon Mellenegon Borak"
 type: deity
 exists: true
-source_session: [[Session 29 The Mistake]]
+source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 state: active
 campaign: homebrew

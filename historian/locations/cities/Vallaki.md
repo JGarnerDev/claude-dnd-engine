@@ -9,22 +9,22 @@ tags:
   - location
   - location/city
 
-global_location: [[Barovia]]
+global_location: "[[Barovia]]"
 purpose: political
 aliases: []
 importance: major
 active: true
 relates_to:
-  - [[Barovia]] (located within)
-  - [[Ismark Kolyanovich]] (seeking to send Ireena here)
-  - [[Ireena Kolyana]] (party escort destination)
-  - [[Gertrude]] (went west — possibly passed through or bound here)
-  - [[Madame Eva]] (lives between Barovia Village and here, or nearby)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Barovia]] (located within)"
+  - "[[Ismark Kolyanovich]] (seeking to send Ireena here)"
+  - "[[Ireena Kolyana]] (party escort destination)"
+  - "[[Gertrude]] (went west — possibly passed through or bound here)"
+  - "[[Madame Eva]] (lives between Barovia Village and here, or nearby)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial — heard of it from Ismark)
+  - "[[The Party]] (partial — heard of it from Ismark)"
 description: "Vallaki. Walled town west of Barovia Village, roughly 2–3 days journey. Ismark believes it is safer for Ireena than Barovia Village."
-source_session: [[Session 11 Blood of the Vine]]
+source_session: "[[Session 11 Blood of the Vine]]"
 confirmed_date: "2026-05-19"
 
 population: "Unknown — larger than Barovia Village"

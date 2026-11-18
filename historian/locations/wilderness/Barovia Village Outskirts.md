@@ -9,21 +9,21 @@ tags:
   - location
   - location/wilderness
 
-region: [[Barovia]]
+region: "[[Barovia]]"
 terrain: other
 
 importance: major
 active: true
-last_updated: [[Session 10 Escape From Death House]]
+last_updated: "[[Session 10 Escape From Death House]]"
 
 relates_to:
-  - [[Barovia Village]] (adjacent settlement)
-  - [[Death House]] (manor situated on these outskirts)
-  - [[Strahd Von Zarovich]] (greeted the party here)
+  - "[[Barovia Village]] (adjacent settlement)"
+  - "[[Death House]] (manor situated on these outskirts)"
+  - "[[Strahd Von Zarovich]] (greeted the party here)"
 
 description: "Open ground surrounding Barovia Village where the party emerged from Death House. Strahd greeted them here as they exited."
 
-source_session: [[Session 10 Escape From Death House]]
+source_session: "[[Session 10 Escape From Death House]]"
 confirmed_date: "Session 10"
 ---
 

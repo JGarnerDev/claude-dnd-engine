@@ -20,12 +20,12 @@ consequences:
 importance: major
 last_updated: "[[Session 10 Escape From Death House]]"
 participants:
-  - [[Odibli]] (bargained)
-  - [[Iggy]] (afflicted — shadow)
-  - [[Dip]] (afflicted — whisper)
-  - [[The Party]] (revived)
+  - "[[Odibli]] (bargained)"
+  - "[[Iggy]] (afflicted — shadow)"
+  - "[[Dip]] (afflicted — whisper)"
+  - "[[The Party]] (revived)"
 relates_to:
-  - [[Death House]] (occurred in)
+  - "[[Death House]] (occurred in)"
 awareness: regional
 description: "To revive the dead party members, Odibli smashed the orb and took on shadow essence — the source of Iggy's shadow affliction and Dip's whisper affliction that persist to this day."
 ---

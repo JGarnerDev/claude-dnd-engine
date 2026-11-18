@@ -10,19 +10,19 @@ mission: "[[Act 1 - Placeholder]]"
 planned_date: null
 played_date: "2026-06-02"
 locations:
-  - [[Burgomaster's Mansion]]
-  - [[Church of the Morning Lord]]
-  - [[Barovia Village]]
+  - "[[Burgomaster's Mansion]]"
+  - "[[Church of the Morning Lord]]"
+  - "[[Barovia Village]]"
 key_npcs:
-  - [[Parriwimple]] (host)
-  - [[Bildrath Cantemir]] (guest at song performance)
-  - [[Ireena Kolyana]] (burial quest resolved; joined party)
-  - [[Ismark Kolyanovich]] (joined party as companion)
-  - [[Father Donavich]] (encountered at church)
-  - [[Doru]] (heard below the church floor)
-  - [[Kolyan Indirovich]] (buried this session)
-  - [[The Dream Pastry Woman]] (night hag, fought and escaped)
-party: [[The Party]]
+  - "[[Parriwimple]] (host)"
+  - "[[Bildrath Cantemir]] (guest at song performance)"
+  - "[[Ireena Kolyana]] (burial quest resolved; joined party)"
+  - "[[Ismark Kolyanovich]] (joined party as companion)"
+  - "[[Father Donavich]] (encountered at church)"
+  - "[[Doru]] (heard below the church floor)"
+  - "[[Kolyan Indirovich]] (buried this session)"
+  - "[[The Dream Pastry Woman]] (night hag, fought and escaped)"
+party: "[[The Party]]"
 importance: high
 active: false
 description: "Burial of Kolyan at the Church of the Morning Lord. Party meets Father Donavich and learns his son Doru is a vampire spawn below the church. Ireena learns she is not a blood relative. Night hag reveals herself and escapes with a stolen child. Iggy gains a raccoon companion. Ismark and Ireena join the party for the road to Vallaki."

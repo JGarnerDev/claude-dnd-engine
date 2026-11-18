@@ -8,7 +8,7 @@ tags:
   - event
   - event/discovery
   - region/barovia
-source_session: [[Session 27 The Vampire Staff]]
+source_session: "[[Session 27 The Vampire Staff]]"
 confirmed_date: "2026-09-22"
 date: "In the master bedroom of the Wizard of Wines (~Day 14 in Barovia — estimate)"
 timeline_date: "0735-11-10"
@@ -20,21 +20,21 @@ consequences:
   - "Left the party divided on whether the Martikovs are Strahd's former suppliers or his current allies."
 importance: major
 active: true
-last_updated: [[Session 27 The Vampire Staff]]
+last_updated: "[[Session 27 The Vampire Staff]]"
 relates_to:
-  - [[The Wizard of Wines Shipping Manifests]] (the document)
-  - [[Wizard of Wines]] (location)
-  - [[Davian Martikov]] (his household's records)
-  - [[Strahd von Zarovich]] (the discontinued customer)
-  - [[Blood of the Vine Tavern]] (standing customer)
-  - [[Blue Water Inn]] (standing customer)
-  - [[Baba Lysaga's Druids]] (their unexplained grievance)
+  - "[[The Wizard of Wines Shipping Manifests]] (the document)"
+  - "[[Wizard of Wines]] (location)"
+  - "[[Davian Martikov]] (his household's records)"
+  - "[[Strahd von Zarovich]] (the discontinued customer)"
+  - "[[Blood of the Vine Tavern]] (standing customer)"
+  - "[[Blue Water Inn]] (standing customer)"
+  - "[[Baba Lysaga's Druids]] (their unexplained grievance)"
 participants:
-  - [[Luci]] (drew the in-league-with-Strahd reading)
-  - [[Odibli]] (took the manifests)
-  - [[Iggy]] (asked when the shipments stopped)
+  - "[[Luci]] (drew the in-league-with-Strahd reading)"
+  - "[[Odibli]] (took the manifests)"
+  - "[[Iggy]] (asked when the shipments stopped)"
 known_by:
-  - [[The Party]] (full)
+  - "[[The Party]] (full)"
 awareness: secret
 description: "A century of the winery's shipping records names Strahd himself as its oldest customer — and the party cannot agree whether that makes the Martikovs his former suppliers or his current allies."
 ---

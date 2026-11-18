@@ -8,7 +8,7 @@ tags:
   - event
   - event/crime
   - region/barovia
-source_session: [[Session 28 The Wereravens' Gift]]
+source_session: "[[Session 28 The Wereravens' Gift]]"
 confirmed_date: "2026-09-29"
 date: "Recounted outside the Wizard of Wines; the thefts themselves span ten years to three weeks before (~Day 14 in Barovia — estimate)"
 timeline_date: "0735-11-10"
@@ -24,25 +24,25 @@ track: "antagonist:Baba Lysaga"
 importance: critical
 active: true
 relates_to:
-  - [[The Seeds of the Wizard of Wines]] (what was stolen)
-  - [[Davian Martikov]] (recounted it)
-  - [[Baba Lysaga]] (took the second seed; set the druids on the third)
-  - [[Baba Lysaga's Druids]] (took the third to [[Yester Hill]])
-  - [[Yester Hill]] (where the third seed went)
-  - [[Urwin]] (was on guard when the first was taken)
-  - [[Wizard of Wines]] (the victim)
-  - [[The Vintner Mage]] (made the seeds)
-  - [[Champagne du Stomp]] (the vintage lost with the first seed)
-  - [[Baba Lysaga's Druids Besiege the Wizard of Wines]] (the siege this explains)
-  - [[Curse of Strahd]] (campaign)
+  - "[[The Seeds of the Wizard of Wines]] (what was stolen)"
+  - "[[Davian Martikov]] (recounted it)"
+  - "[[Baba Lysaga]] (took the second seed; set the druids on the third)"
+  - "[[Baba Lysaga's Druids]] (took the third to [[Yester Hill]])"
+  - "[[Yester Hill]] (where the third seed went)"
+  - "[[Urwin]] (was on guard when the first was taken)"
+  - "[[Wizard of Wines]] (the victim)"
+  - "[[The Vintner Mage]] (made the seeds)"
+  - "[[Champagne du Stomp]] (the vintage lost with the first seed)"
+  - "[[Baba Lysaga's Druids Besiege the Wizard of Wines]] (the siege this explains)"
+  - "[[Curse of Strahd]] (campaign)"
 known_by:
-  - [[The Party]] (partial)
+  - "[[The Party]] (partial)"
 description: "Davian Martikov reveals that three magic seeds made by the vineyard's founder are the only reason the Wizard of Wines could grow through Strahd's curse — and that all three have been stolen, the last two by Baba Lysaga and the druids of Yester Hill three weeks ago. The party accepts the quest to recover them."
 participants:
-  - [[Baba Lysaga]] (took the second seed, orchestrated the third theft)
-  - [[Baba Lysaga's Druids]] (took the third seed)
-  - [[Davian Martikov]] (victim; recounted it)
-  - [[The Party]] (accepted the recovery quest)
+  - "[[Baba Lysaga]] (took the second seed, orchestrated the third theft)"
+  - "[[Baba Lysaga's Druids]] (took the third seed)"
+  - "[[Davian Martikov]] (victim; recounted it)"
+  - "[[The Party]] (accepted the recovery quest)"
 awareness: regional
 ---
 

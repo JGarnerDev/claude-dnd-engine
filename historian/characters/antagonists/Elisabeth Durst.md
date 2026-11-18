@@ -10,19 +10,19 @@ state: dead
 tags:
   - character
   - character/antagonist
-location: [[Death House]]
+location: "[[Death House]]"
 personality: "Consumed by jealousy. Ruthless — ordered the nursemaid killed and sacrificed her own infant."
 livelihood: "Former cult leader and wife of Gustav Durst"
 disposition: hostile
 aliases: []
 relates_to:
-  - [[Gustav Durst]] (husband)
-  - [[Rose]] (daughter)
-  - [[Thorn]] (son)
-  - [[Walter Durst]] (sacrificed)
-  - [[The Nursemaid]] (had killed)
-  - [[Durst Cult]] (cult leader)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Gustav Durst]] (husband)"
+  - "[[Rose]] (daughter)"
+  - "[[Thorn]] (son)"
+  - "[[Walter Durst]] (sacrificed)"
+  - "[[The Nursemaid]] (had killed)"
+  - "[[Durst Cult]] (cult leader)"
+  - "[[Curse of Strahd]] (campaign)"
 importance: major
 active: false
   

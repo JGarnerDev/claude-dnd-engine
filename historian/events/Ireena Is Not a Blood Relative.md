@@ -19,10 +19,10 @@ consequences:
 importance: major
 last_updated: "[[Session 13 Dream Pastries]]"
 participants:
-  - [[Ireena Kolyana]] (subject)
-  - [[Ismark Kolyanovich]] (her adoptive brother)
+  - "[[Ireena Kolyana]] (subject)"
+  - "[[Ismark Kolyanovich]] (her adoptive brother)"
 relates_to:
-  - [[Kolyan Indirovich]] (her adoptive father)
+  - "[[Kolyan Indirovich]] (her adoptive father)"
 awareness: regional
 description: "During Kolyan's burial, Ireena learned she is not a blood relative of the Kolyanovich family — opening the question of her true origin."
 ---

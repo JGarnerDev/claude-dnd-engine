@@ -11,19 +11,19 @@ played_date: "2026-06-23"
 in_world_end_date: "0735-11-03"
 mission: "Escort Ireena to Vallaki"
 locations:
-  - [[Barovia]]
-  - [[Old Bonegrinder]]
-  - [[Vallaki]]
+  - "[[Barovia]]"
+  - "[[Old Bonegrinder]]"
+  - "[[Vallaki]]"
 key_npcs:
-  - [[Ireena Kolyana]]
-  - [[Ismark Kolyanovich]]
-  - [[Bosco]]
-  - [[The Dream Pastry Woman]]
+  - "[[Ireena Kolyana]]"
+  - "[[Ismark Kolyanovich]]"
+  - "[[Bosco]]"
+  - "[[The Dream Pastry Woman]]"
 recap: "Trying to shortcut the winding road, the party hauled their cart up the burial hills — an old battlefield, Ireena warned, its dead still beneath the turf — only to mire it in foliage; Dip lost a small toe to their own axe clearing grass. Iggy played a mournful tune to the mist for the buried dead, earning Ireena and Ismark's quiet thanks, while Odibli probed the fog and judged it no curse and no spell but a law of the plane, and let it wash over him. The mists carried the party back to the bridge they had already crossed. Taking the road this time, they crested a hill to a dilapidated windmill where an agitated raven — via Odibli's speak with animals — begged them to flee or die; Bosco confirmed the danger by scent: meat pies, the smell of the dream-pastry hag. Marking it the night hag's lair, they chose not to fight her unprepared and pressed on. At Vallaki's grim, wolf-head-spiked gates the guards recognized Ireena and Ismark and admitted the wary party, warning of a coming festival where fun is mandatory. In the market Odibli bought a dog, rode it on an animal-handling check, and named it Sergei Rubelgerd — who accepted the name, pronounced himself a good boy, and asked for snacks."
 cliffhanger: "The party is inside the grim walls of Vallaki, a mandatory-fun festival days away, the night hag's windmill left unfought behind them."
 entities_canonized:
-  - [[Sergei Rubelgerd]]
-  - [[Old Bonegrinder]]
+  - "[[Sergei Rubelgerd]]"
+  - "[[Old Bonegrinder]]"
 new_entities:
   - "An agitated raven at the windmill door that warned the party away (speak-with-animals) — recap narration only, no file."
 beats:

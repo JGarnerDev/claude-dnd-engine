@@ -11,19 +11,19 @@ creature_type: monstrosity
 challenge_rating: "2"
 size: large
 alignment: unaligned
-location: [[The Waystation]] (its body lies in the yard)
+location: "[[The Waystation]] (its body lies in the yard)"
 stat_block: "inline"
 importance: minor
 active: false
-last_updated: [[Session 34 The Red Trail]]
+last_updated: "[[Session 34 The Red Trail]]"
 relates_to:
-  - [[Nella]] (rode it, and sent it hunting riderless in its last fight)
-  - [[Halsby]] (burned its wing, then killed it with a second Fire Bolt)
-  - [[The Waystation]] (staked behind the ridge blind; died in the yard)
+  - "[[Nella]] (rode it, and sent it hunting riderless in its last fight)"
+  - "[[Halsby]] (burned its wing, then killed it with a second Fire Bolt)"
+  - "[[The Waystation]] (staked behind the ridge blind; died in the yard)"
 known_by:
-  - [[The Party]] (name only: Nella called it Tithe over the crystals)
+  - "[[The Party]] (name only: Nella called it Tithe over the crystals)"
 description: "A big tawny griffon, eagle in front and lion behind, kept hooded and staked behind the waystation's ridge blind and fed on mutton. Nella flew it in the Ashford raid and in the waystation fight, then set it loose to hunt the party. Halsby killed it in the yard in Session 34."
-source_session: [[Session 33 The Red Trail]]
+source_session: "[[Session 33 The Red Trail]]"
 confirmed_date: "2026-11-17"
 ---
 
