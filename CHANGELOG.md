@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.72.2] — 2026-11-18
+
+### Fixed
+
+- **Frontmatter is read as YAML** (`scripts/lib/common.py`). Every entity file's frontmatter is now valid YAML (links in frontmatter are quoted), so `get_frontmatter` reads it with PyYAML. Values stay strings and the return shape is unchanged. Fixed along the way: values containing `#` or inner quotes, values with a trailing comment, multi-line values and inline lists (`aliases: ["the crone"]`) were cut short or dropped. Frontmatter that isn't valid YAML still goes through the old line reader. Adds `pyyaml` as a direct dependency.
+
 ## [0.72.1] — 2026-11-18
 
 ### Fixed

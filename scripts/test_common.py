@@ -69,6 +69,51 @@ class TestLists(unittest.TestCase):
         self.assertEqual(out['_list_worshippers'], ['The Pale Order'])
 
 
+class TestYamlValues(unittest.TestCase):
+    """Strict-YAML frontmatter is read with a real parser; values stay strings."""
+
+    def test_values_stay_text(self):
+        out = fm('exists: false', 'session_number: 07', 'start: 12:30', 'answer: yes', 'played_date: 2026-03-09')
+        self.assertEqual(out['exists'], 'false')
+        self.assertEqual(out['session_number'], '07')
+        self.assertEqual(out['start'], '12:30')
+        self.assertEqual(out['answer'], 'yes')
+        self.assertEqual(out['played_date'], '2026-03-09')
+
+    def test_quoted_value_with_inner_quotes_and_hash(self):
+        out = fm(r'personality: "Says \"fine\" a lot"', 'motto: "Rank #1 or nothing"')
+        self.assertEqual(out['personality'], 'Says "fine" a lot')
+        self.assertEqual(out['motto'], 'Rank #1 or nothing')
+
+    def test_multiline_value(self):
+        out = fm('description: >', '  First line', '  second line.', 'name: Jorn')
+        self.assertEqual(out['description'], 'First line second line.')
+        self.assertEqual(out['name'], 'Jorn')
+
+    def test_trailing_comment_is_dropped(self):
+        self.assertEqual(fm('state: alive   # or dead')['state'], 'alive')
+
+    def test_list_key_keeps_its_old_scalar(self):
+        out = fm('aliases: []', 'tags:', '  - deity')
+        self.assertEqual(out['aliases'], '[]')
+        self.assertEqual(out['_list_aliases'], [])
+        self.assertEqual(out['tags'], '')
+        self.assertEqual(out['_list_tags'], ['deity'])
+
+    def test_flow_list_items(self):
+        self.assertEqual(fm('domains: [war, "[[Death]]"]')['_list_domains'], ['war', 'Death'])
+
+    def test_mapping_list_items_read_as_first_pair(self):
+        out = fm('spotlight_hooks:', '  - hook: the debt', '    status: open')
+        self.assertEqual(out['_list_spotlight_hooks'], ['hook: the debt'])
+
+    def test_invalid_yaml_falls_back_to_line_parser(self):
+        out = fm('name: Jorn', 'location: [[Duskwater]]', 'tags:', '  - character')
+        self.assertEqual(out['name'], 'Jorn')
+        self.assertEqual(out['location'], 'Duskwater')
+        self.assertEqual(out['_list_tags'], ['character'])
+
+
 class TestBlock(unittest.TestCase):
     def test_no_frontmatter(self):
         self.assertEqual(get_frontmatter_from_text('# Just a heading\n'), {})

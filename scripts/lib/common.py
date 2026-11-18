@@ -19,6 +19,11 @@ from datetime import date, datetime
 from pathlib import Path
 from typing import Optional
 
+try:
+    import yaml
+except ImportError:  # run outside `uv run`: frontmatter falls back to the line parser
+    yaml = None
+
 
 # -- Output encoding ----------------------------------------------------------
 # On Windows, non-tty stdout (every captured/piped run -- the agent's path) is
@@ -104,6 +109,10 @@ _WIKI_SCALAR_RE = re.compile(r'^(\w[\w_]*):\s*' + _QUOTED_LINK + r'\[\[([^\]]+)\
 _SCALAR_RE = re.compile(r'^(\w[\w_]*):\s*"?([^"#\r\n]*)"?\s*$')
 _LIST_WIKI_RE = re.compile(r'^\s+-\s+' + _QUOTED_LINK + r'\[\[([^\]]+)\]\]')
 _LIST_PLAIN_RE = re.compile(r'^\s+-\s+"?([^"#\r\n]+)"?\s*$')
+# A parsed value that is one link plus an optional "(note)" or dash note.
+_LINK_VALUE_RE = re.compile(r'^\[\[([^\]]+)\]\](?:\s+[(\-—–].*)?$', re.DOTALL)
+# BaseLoader keeps every value a string (no false -> bool, 12:30 -> 750), as scripts expect.
+_YAML_LOADER = getattr(yaml, 'CBaseLoader', None) or getattr(yaml, 'BaseLoader', None)
 
 
 def get_frontmatter(path) -> dict:
@@ -112,16 +121,58 @@ def get_frontmatter(path) -> dict:
 
 
 def get_frontmatter_from_text(raw: str) -> dict:
-    """Parse YAML-ish frontmatter from already-read text (no second disk read).
+    """Parse frontmatter from already-read text (no second disk read).
 
-    Scalars: fm['key']. Wikilink scalars are unwrapped and alias-stripped
-    ([[Name|alias]] -> Name), quoted or not, and any note after the link is
-    dropped. List items (plain or wikilink) accumulate under fm['_list_<key>'].
+    Scalars: fm['key'], always a string. Wikilink scalars are unwrapped and
+    alias-stripped ([[Name|alias]] -> Name), quoted or not, and any note after
+    the link is dropped. List items (plain or wikilink) accumulate under
+    fm['_list_<key>'].
+
+    Entity frontmatter is strict YAML (schema migration step 3), so it is read
+    with a real parser: multi-line values, inner quotes, `#` and trailing
+    comments come out right. Frontmatter that isn't valid YAML (some command
+    and meta files) falls back to the line parser alone.
     """
     m = _FM_BLOCK_RE.search(raw)
     if not m:
         return {}
     block = m.group(1)
+    fm = _frontmatter_from_lines(block)
+    if yaml is None:
+        return fm
+    try:
+        data = yaml.load(block, Loader=_YAML_LOADER)
+    except yaml.YAMLError:
+        return fm
+    if not isinstance(data, dict):
+        return fm
+    # The line parser's fm[key] for a list or mapping ('' or '[]') is kept as it was.
+    for key, value in data.items():
+        if isinstance(value, str):
+            fm[key] = _unwrap_link(value.strip())
+        elif isinstance(value, list):
+            fm[f'_list_{key}'] = [_list_item(v) for v in value]
+    return fm
+
+
+def _unwrap_link(value: str) -> str:
+    """'[[Name|alias]] (note)' -> 'Name'. Prose that merely starts with a link is kept whole."""
+    m = _LINK_VALUE_RE.match(value)
+    return m.group(1).split('|')[0].strip() if m else value
+
+
+def _list_item(value) -> str:
+    if isinstance(value, str):
+        return _unwrap_link(value.strip())
+    if isinstance(value, dict) and value:
+        # `- hook: x` / `  status: y` -> 'hook: x', as the line parser read it.
+        k, v = next(iter(value.items()))
+        return f'{k}: {v}' if isinstance(v, str) else f'{k}:'
+    return str(value)
+
+
+def _frontmatter_from_lines(block: str) -> dict:
+    """Line-by-line reader for frontmatter that isn't valid YAML."""
     fm = {}
     current_key = None
     for line in block.split('\n'):
