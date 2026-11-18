@@ -3,7 +3,7 @@
 > `S2_APPROACH_CHOICE`, and `S2_FIGHT` through the start of round 2); those nodes are dropped, and
 > the played chart stays in `historian/sessions/Session 33 The Red Trail/_flow.md`. `S2_PARLEY` is
 > gone with the approach. Jeff chose to step the rest of the fight up (option 4): Nella takes the
-> ridge and sets Tithe hunting (`S2_TITHE_HUNTS`), and relief riders come up the south road
+> ridge and sets Tithe hunting (`S2_TITHE_HUNTS`), and relief riders ride in from the north-east
 > (`S2_RELIEF`).
 >
 > **Refreshed 2026-11-12.** Jeff committed Tithe's death and made it the session's boss fight:
@@ -40,7 +40,7 @@ flowchart TD
     S2_TITHE_BLOODIED["[x] S2_TITHE_BLOODIED<br/>47 HP: it hits the mud, one wing dragging<br/>Drops its catch · out of the cloud for good<br/>Reckless · deaf to her whistle · to the death"]
     S2_TITHE_DIES["[x] S2_TITHE_DIES<br/>Tithe dies in front of the waystation<br/>'How do you want to do this?'<br/>The music cuts"]
     S2_GOODBYE["[x] S2_GOODBYE<br/>Nella at the bridgehead, never near the body<br/>The whistle, once · the hood on the post<br/>Over every crystal: 'Nineteen flights...'"]
-    S2_RELIEF["[x] S2_RELIEF<br/>Riders on the south road<br/>Garran Vey and three, spread out<br/>This session's round 3<br/>(the second after Iggy's first turn)"]
+    S2_RELIEF["[x] S2_RELIEF<br/>Riders from the north-east<br/>Garran Vey and three, spread out<br/>First thing, before Iggy<br/>Initiative 8 (Tithe 6, from round 3)"]
     S2_IGGY_BEAT{"[x] S2_IGGY_BEAT<br/>Tithe snatches someone into the sky<br/>'Up, Wallaed': Iggy's wings open to reach them<br/>Sah speaks through every crystal; the cloud lights<br/>Tithe shies into range<br/>Iggy: cut her off at the bridge or stay"}
     S2_MORALE["[x] S2_MORALE<br/>Vey down or the crew down to two<br/>DC 12 WIS; the rest break"]
     S2_ESCAPE["[x] S2_ESCAPE<br/>Nella loses, and gets away<br/>Tithe never carries her out<br/>On foot: the bridge, then the river"]
@@ -64,7 +64,11 @@ flowchart TD
     S2_TALLY --> S2_CAMP_INTEL
   end
 
-  subgraph SC4["Scene 4 · The Man in the Cell"]
+  subgraph SC4B["Scene 4 · Searching the Yard"]
+    S2_BODIES["[-] S2_BODIES<br/>What's on the bodies, ~20 gp in all<br/>Vey's order: '—H.B.' · splint mail to sell<br/>Take the crew's crystals or leave them"]
+  end
+
+  subgraph SC4["Scene 5 · The Man in the Cell"]
     S2_HAUL_HOME["[x] S2_HAUL_HOME<br/>The casks and the griffon come home in the camp's wagon<br/>Harvest: feathers, talons, head · Ashford stares<br/>Mara: the skull for the Lioness<br/>Silas's cart is a number · the second deed, banked"]
     S2_FOX["[x] S2_FOX<br/>A smoky-eyed fox crosses ahead of the wagon<br/>and goes in at the Lioness door<br/>Halsby knows it"]
     S2_SABLE_MORNING["[x] S2_SABLE_MORNING<br/>Sable lifts the cover<br/>'The rest goes downstairs in the morning'<br/>To Asher, Session 35"]
@@ -74,7 +78,8 @@ flowchart TD
     S2_HAUL_HOME --> S2_CELL
   end
 
-  S2_CAMP_INTEL --> S2_HAUL_HOME
+  S2_CAMP_INTEL --> S2_BODIES
+  S2_BODIES --> S2_HAUL_HOME
   S2_TITHE_DIES -->|"the body on the wagon"| S2_HAUL_HOME
 
   classDef combat fill:#F6DCD3,stroke:#B4452A,color:#5A1E10
@@ -85,12 +90,15 @@ flowchart TD
 
   class S2_FIGHT,S2_TITHE_HUNTS,S2_TITHE_BLOODIED,S2_TITHE_DIES,S2_RELIEF,S2_MORALE,S2_ESCAPE combat
   class S2_IGGY_BEAT decision
-  class S2_HAUL_HOME stake
+  class S2_HAUL_HOME,S2_BODIES stake
   class S2_GOODBYE social
   class S2_CRYSTALS,S2_TALLY,S2_CAMP_INTEL,S2_CELL,S2_FOX,S2_SABLE_MORNING seed
 ```
 
 ## Commitment ledger
+
+Added 2026-11-17 as draft `[-]` (Jeff asked for a loot scene after the battle; the list is the
+engine's): `S2_BODIES`.
 
 Played at Sessions 30–33 and dropped here (see each session's historian `_flow.md`). Cut:
 `S2_STATEMENT` (2026-10-27), `S2_HEIST` and `S2_SKIP` (2026-11-04), `S2_PARLEY` (the approach was
@@ -117,7 +125,7 @@ notes are the plan's sections: Tithe's block (boss, bloodied, the kill), `S2_TIT
 Edited 2026-11-12 at `/review` (Jeff approved all findings), kept `[x]`: `S2_IGGY_BEAT` (Iggy's
 choice is now cut Nella off at the bridge or stay over the yard), `S2_TALLY` (left in Tithe's
 saddlebags), `S2_FIGHT` (~4–5 rounds), `S2_RELIEF` (moved back to this session's third round,
-Jeff's pick).
+Jeff's pick; moved again to the top of the session, Jeff 2026-11-17).
 
 Moved 2026-11-12, wording unchanged, kept `[x]`: `S2_TITHE_BLOODIED`, `S2_TITHE_DIES` and
 `S2_GOODBYE` now have their own plan sections, so the session runner can show them as steps and

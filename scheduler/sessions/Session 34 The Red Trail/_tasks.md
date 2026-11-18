@@ -6,7 +6,7 @@ played.
 
 Carried from Session 33 (recap 2026-11-10), which played the hill and the opening of the camp
 fight and stopped mid-round. The rest of the fight is stepped up (Jeff, option 4): Nella takes
-the ridge and sets Tithe hunting, and four relief riders come up the south road.
+the ridge and sets Tithe hunting, and four relief riders ride in from the north-east.
 
 Planned date: 2026-11-17.
 
@@ -24,7 +24,7 @@ Planned date: 2026-11-17.
 - [x] **Tokens** (and `tokens.txt`; no new art, every pick is already in Roll20 from Session 32, see `maps/roll20 assets/session-34/tokens-README.md`): **Relief Captain** (Garran Vey, Veteran, splint), **Relief
       Rider 1–3** (Dace Morrow, Pim Ostler, Callan Shire, Bandits), and four horses for them.
       Labels are in the plan's Combatants. The rest are already on the map.
-- [ ] **The south road** on the Roll20 map: in at the bottom edge east of the corral, through a gap in the stakes (layout M22:M28, Jeff 2026-11-11). The relief rides in on it.
+- [ ] **The south road** on the Roll20 map: in at the bottom edge east of the corral, through a gap in the stakes (layout M22:M28, Jeff 2026-11-11). The relief no longer uses it (north-east entry, Jeff 2026-11-17); only fleeing crew do, so it can stay unmarked.
 - [ ] **Runner HP boxes** (new in v0.56.0): at the top, set Tally-man `=10`, Half-orc Cask-hand
       `=15`, Archer Rider `=5`.
 - [ ] **Sheet check:** the Shadowless Spear isn't on Halsby's Roll20 sheet yet (attack math was
