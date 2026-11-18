@@ -2,10 +2,10 @@
 
 Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
-**Next:** step 2, tests for `get_frontmatter`, then make it accept quoted links.
+**Next:** step 3, write `quote-links.py` (reuse `quote_links` from `audit.py`), then apply it one folder per commit. Before each apply, rerun `snapshot.py` to an "after" folder and diff against the step-2 output: quoting must change no script output.
 
 - [x] 1. Audit script (`tasks/schema-migration/scripts/audit.py`) and first report (2026-11-18): 1,586 entity files; 1,303 are strict YAML today, 259 more parse once links are quoted, 24 need fixing by hand (below); 2,161 unquoted links in 349 files; every entity file has frontmatter (the plan's "20 without" counted non-entity files)
-- [ ] 2. Tests for `get_frontmatter`, then make it accept quoted links; compare the 29 scripts before and after
+- [x] 2. Tests for `get_frontmatter` (`scripts/test_common.py`), then make it accept quoted links (2026-11-18). `snapshot.py` runs the 24 scripts that use the parser with fixed arguments (28 runs) for before/after diffs. Only fixes changed: `location-entities` finds the neighbours linked through quoted links, and timeline keywords lose their `[[ ]]` and notes. Quoted prose that starts with a link (`"[[Miguel]]'s PC. …"`) is kept whole. `session-cards.py` read the act's `relates_to` through the brackets the parser used to leave in place; it now reads the names directly
 - [ ] 3. `quote-links.py`, applied one folder per commit until the audit shows 0 unquoted links
 - [ ] 4. Fix the 24 files that strict YAML rejects, then switch the parser to `yaml.safe_load`:
   - [ ] 11 region files in `data/locations/regions/`: a stray line holding only a `\x01` control character (line 13), left by commit `4ee9834`. Delete the line

@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.72.1] — 2026-11-18
+
+### Fixed
+
+- **Quoted links in frontmatter** (`scripts/lib/common.py`). `get_frontmatter` now reads `"[[Name]] (note)"` the same as `[[Name]] (note)`: both give `Name`. Before, quoted links came back with their brackets and note, so scripts missed them: `location-entities.py` now finds the neighbours linked that way, and timeline keywords from recent sessions are plain names. Quoted prose that starts with a link (`"[[Miguel]]'s PC. …"`) is kept whole. `session-cards.py` reads the act's `relates_to` names directly. Tests in `scripts/test_common.py`. Part of the schema migration (`tasks/schema-migration/PLAN.md`), which will quote every frontmatter link.
+
 ## [0.72.0] — 2026-11-18
 
 ### Changed

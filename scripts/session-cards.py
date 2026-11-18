@@ -387,7 +387,9 @@ def main() -> None:
         act_file = next((f for f in entity_md_files(root / 'scheduler' / 'acts')
                          if ci_eq(get_frontmatter(f).get('name'), act_name)), None)
         if act_file:
-            roster += [w for w in _WIKI_RE.findall(str(get_frontmatter(act_file).get('_list_relates_to', [])))]
+            # get_frontmatter unwraps links, so items are names, possibly with a "(note)" tail.
+            roster += [item.split(' (')[0].strip()
+                       for item in get_frontmatter(act_file).get('_list_relates_to', [])]
     seen, deduped = set(), []
     for r in roster:
         if r.lower() not in seen:

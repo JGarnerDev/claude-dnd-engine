@@ -95,9 +95,14 @@ def read_text_no_bom(path) -> str:
 
 # -- Frontmatter --------------------------------------------------------------
 _FM_BLOCK_RE = re.compile(r'^---\r?\n(.+?)\r?\n---', re.DOTALL)
-_WIKI_SCALAR_RE = re.compile(r'^(\w[\w_]*):\s*\[\[([^\]]+)\]\]')
+# A link value may be bare ([[X]] (note)) or quoted ("[[X]] (note)"); both give X. A quoted value
+# counts as a link only when the link stands alone or is followed by a "(note)" or a dash note;
+# quoted prose that merely starts with a link ("[[Miguel]]'s PC. ...") is kept whole.
+_QUOTED_LINK = (r'(?:"(?=\[\[[^\]]+\]\](?:"|\s+[(\-—–]))'
+                r"|'(?=\[\[[^\]]+\]\](?:'|\s+[(\-—–])))?")
+_WIKI_SCALAR_RE = re.compile(r'^(\w[\w_]*):\s*' + _QUOTED_LINK + r'\[\[([^\]]+)\]\]')
 _SCALAR_RE = re.compile(r'^(\w[\w_]*):\s*"?([^"#\r\n]*)"?\s*$')
-_LIST_WIKI_RE = re.compile(r'^\s+-\s+\[\[([^\]]+)\]\]')
+_LIST_WIKI_RE = re.compile(r'^\s+-\s+' + _QUOTED_LINK + r'\[\[([^\]]+)\]\]')
 _LIST_PLAIN_RE = re.compile(r'^\s+-\s+"?([^"#\r\n]+)"?\s*$')
 
 
@@ -110,8 +115,8 @@ def get_frontmatter_from_text(raw: str) -> dict:
     """Parse YAML-ish frontmatter from already-read text (no second disk read).
 
     Scalars: fm['key']. Wikilink scalars are unwrapped and alias-stripped
-    ([[Name|alias]] -> Name). List items (plain or wikilink) accumulate under
-    fm['_list_<key>'].
+    ([[Name|alias]] -> Name), quoted or not, and any note after the link is
+    dropped. List items (plain or wikilink) accumulate under fm['_list_<key>'].
     """
     m = _FM_BLOCK_RE.search(raw)
     if not m:
