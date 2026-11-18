@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.72.0] — 2026-11-18
+
+### Changed
+
+- **Serial beat ids** (`meta/flow-graphs.md` → Node ids). A planned session's beats are `S<n>_NN_SLUG`: the real session number and a two-digit position in play order across the whole session (`S35_03_TITHE_HUNTS`). Forks share a position with a capital letter (`S35_07A_ESCAPE`, `S35_07B_CHASE`); the rejoin takes the next number. Plan headings, `_flow.md` node order and positions run in one order. Renumber freely before play, never after; carried-over beats renumber into the next session. Starts with Session 35; played sessions keep their ids.
+- **Act sets name sessions by slot.** Act-level session nodes are `A<slot>_SLUG` (`A2_PURSUIT`), since a slot isn't a session number once sessions split. `/session` mints the session's beats from them; `/flow` carries markers by slug through a renumber or a mint.
+- **Runner step numbers come from the id** (`app/pages/home/session/steps.ts`, `refs.ts`). Steps and beat chips show the position (`7A`); older ids still number by their place in the scene.
+
+### Added
+
+- **Beat order check** (`scripts/lib/beat_order.py`). `flow-status.py` checks every session flow under `scheduler/sessions/`, and `prep-status.py`'s FLOW block lists TODOs, for positions out of order, duplicates, a one-option fork, a wrong session number, and plan headings that disagree with `_flow.md`. Flows with no positions are skipped.
+
 ## [0.71.0] — 2026-11-14
 
 ### Added

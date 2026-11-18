@@ -11,7 +11,7 @@ Read once per task when writing an ear script or casting a voice.
 
 ## What a take is
 
-- **Take**: one MP3 of one scene (`### Scene N`) or one beat (`#### S2_CELL`) of a planned
+- **Take**: one MP3 of one scene (`### Scene N`) or one beat (`#### S35_09_CELL`) of a planned
   session, made on demand with `/narrate`. Never a whole session. Named
   `session-<n>.scene-<key>.mp3` or `session-<n>.<beat id>.mp3`, in `narration/takes/`.
 - **For the DM only.** Takes are made from DM-facing plans and carry spoilers. Never give one to

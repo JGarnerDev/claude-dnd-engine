@@ -213,13 +213,13 @@ Wait for the DM's response before continuing.
 
 Settle the shape before writing any prose. Prose written for a beat the DM later cuts is wasted, so the full plan waits until the DM has seen and edited the skeleton.
 
-**Start from what exists.** If the act's flow graph set or an existing `_flow.md` already draws this session, build the spine from its nodes. Keep their ids and markers, and add only what the session still needs.
+**Start from what exists.** If the act's flow graph set or an existing `_flow.md` already draws this session, build the spine from its nodes, keeping their markers, and add only what the session still needs. The set's slot nodes (`A2_SLUG`) become this session's beats (`meta/flow-graphs.md` → Act nodes and session beats). **Carry-over:** when the last session stopped early, its unplayed beats lead this spine, renumbered under this session.
 
 Present the spine in chat:
 
-- **Header** — the proposed session name and the node id prefix `S<k>_`, where k is this session's place in the active act (Session 30 is the act's second session, so its ids start `S2_`)
+- **Header** — the proposed session name and the node id prefix `S<n>_`, where n is this session's real number (`S35_`)
 - **Scenes** — `Scene N — Title`, then the scene's trigger in one line. Scale the scene count to session length (Short: 3–4, Standard: 4–6, Long: 6–8)
-- **Beats** — one numbered line per beat under its scene: `<n>. S<k>_SLUG — what happens, in one line [kind]`. The kind is the beat's flow graph class: combat, social, decision, stake, seed, fail, or open for a beat waiting on a decision
+- **Beats** — one numbered line per beat under its scene, in play order: `<n>. SLUG — what happens, in one line [kind]`. A fork's options sit on adjacent lines. The kind is the beat's flow graph class: combat, social, decision, stake, seed, fail, or open for a beat waiting on a decision
 - **Choices** — real choices start their line with `Choice (party):` or `Choice (<PC name>):` and give each option's cost on the same line
 - **Fights** — one line under each combat beat: who and how many, the tier and XP band against the party, and the rounds expected. Stat blocks, kits and labels come in Phase 6
 - **Choice check** — a closing line counting the choices against `meta/player-agency.md` → How often (about two or three party choices and one character choice, no run of more than about three reaction-only scenes), naming the beat that pays off a past choice from Phase 1 Step 3, item 6, and naming any spotlight beat. A `Choice (<PC name>):` should face that PC's growth or fall when they have a PC arc (read its Growth / Fall sections). If the spine falls short, add choices around its beats before showing it
@@ -244,7 +244,7 @@ On **go** or **chat**, write the full plan for the approved spine.
 uv run scripts/party-status.py
 ```
 
-**The spine is fixed.** Each beat becomes a `#### S<k>_SLUG — <one line>` node heading under its `### Scene N — Title`, in spine order, so the session runner shows each beat as its own step on the scene page. Do not rename, reorder or add beats while fleshing. If fleshing shows a missing beat, or a review pass wants a new choice, list it in the Phase 7 report as a proposed spine change.
+**The spine is fixed.** On **go**, mint each beat's id from its place in the approved spine, `S<n>_NN_SLUG` with forks as `NNA`/`NNB` (`meta/flow-graphs.md` → Positions); the spine's list numbers were only edit handles. Each beat becomes a `#### S<n>_NN_SLUG — <one line>` node heading under its `### Scene N — Title`, in position order, so the session runner shows each beat as its own step on the scene page. Do not rename, reorder or add beats while fleshing. If fleshing shows a missing beat, or a review pass wants a new choice, list it in the Phase 7 report as a proposed spine change.
 
 **Frontmatter fields to populate:**
 
@@ -289,7 +289,7 @@ Everyone the plan puts in front of the party gets a real name, walk-ons and name
 - **Narration** — if `depth: narrated`, include a `> *"..."*` blockquote for the key moment of the scene; if `depth: notes`, omit
 - **Transition** — one line on what triggers the move to the next scene or a likely detour
 
-**Labels set the voice.** The session runner shows each node as a prompt book, one block per bullet, tagged by its bold label: `Tokens:`, `Music:`, `Title card:` or `Set HP…:` is **Do** (the table or Roll20); a label with *read aloud*, *say* or *line(s)*, a bullet that opens on a quoted line, or a `>` quote is **Say**; `When …:`, `If …:`, `Once …:` or `After …:` is **Watch**; `Choice (…):` is **Choice**; anything else is for the DM. So give each bullet a short label ending in a colon, and put spoken lines in `*"…"*`. Backticked beat ids (`` `S2_ESCAPE` ``) and "Scene N" become links that open in the side panel.
+**Labels set the voice.** The session runner shows each node as a prompt book, one block per bullet, tagged by its bold label: `Tokens:`, `Music:`, `Title card:` or `Set HP…:` is **Do** (the table or Roll20); a label with *read aloud*, *say* or *line(s)*, a bullet that opens on a quoted line, or a `>` quote is **Say**; `When …:`, `If …:`, `Once …:` or `After …:` is **Watch**; `Choice (…):` is **Choice**; anything else is for the DM. So give each bullet a short label ending in a colon, and put spoken lines in `*"…"*`. Backticked beat ids (`` `S35_07A_ESCAPE` ``) and "Scene N" become links that open in the side panel.
 
 **Say when things happen.** These let the runner's trackers light the notes:
 
@@ -371,7 +371,7 @@ On **go**:
 2. Determine path based on scope (filename = exact display name, matching canon precedent — e.g. `Session 14 The Road Remembers.md`):
    - Always create the folder `scheduler/sessions/Session {NN} {Name}/` and write the plan inside it as `Session {NN} {Name}.md`
    - `scope: linked` → also write each encounter into that folder as `Encounter {Name}.md`
-   - Write `_flow.md`, the session's mermaid flow chart, in the same folder, drawn from the spine. Read `meta/flow-graphs.md` once for its conventions. Every node is `[-]` or `[?]` unless it came from an existing set already marked `[x]`, and the Commitment ledger says "nothing committed yet" when nothing is
+   - Write `_flow.md`, the session's mermaid flow chart, in the same folder, drawn from the spine. Read `meta/flow-graphs.md` once for its conventions. Every node is `[-]` or `[?]` unless it came from an existing set already marked `[x]`, and the Commitment ledger says "nothing committed yet" when nothing is Define the nodes in position order, the same order as the plan's headings; `uv run scripts/prep-status.py` flags any drift.
 3. Populate all mandatory frontmatter fields from the plan above
 4. Write the full body (Orientation, Scenes, NPC Quick-Reference, Contingencies, Closing) into the main file
 5. Leave historian-only fields commented out (they are filled after play)

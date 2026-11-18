@@ -79,10 +79,12 @@ Run `/check <claim>` on anything load-bearing you are unsure of.
 
 ## Phase 3 — Preserve existing markers
 
-If the set already exists, read every current file and build a map of `node id → marker` plus the
+If the set already exists, read every current file and build a map of `slug → marker` plus the
 existing commitment ledger entries.
 
-Regeneration **preserves markers by node id**. A node that was `[x]` stays `[x]` and keeps its
+Regeneration **preserves markers by slug** (the id after its prefix and position), so a renumbered
+beat, or a slot node `A2_PURSUIT` minted into a session as `S35_03_PURSUIT`, keeps its marker
+(`meta/flow-graphs.md` → Node ids). A node that was `[x]` stays `[x]` and keeps its
 ledger line. A node that no longer exists drops out; report it. A node whose upstream changed such
 that a `[?]` now sits above it gets flagged, not silently demoted — tell the DM and let them call
 it.
@@ -132,8 +134,10 @@ Every file ends with its **Commitment ledger** section.
 
 Three checks, all cheap:
 
-1. **Marker and id match the label.** Every node's label must begin with `[marker] NODE_ID` where
-   `NODE_ID` is the literal mermaid node id. Verify mechanically, not by eye.
+1. **Marker and id match the label, in order.** Every node's label must begin with `[marker] NODE_ID`
+   where `NODE_ID` is the literal mermaid node id. Verify mechanically, not by eye. A session's
+   `_flow.md` defines its nodes in position order, matching the plan's headings; the coverage
+   report below checks it.
 2. **Lint.** This is bulk generation, so run it:
 
    ```text

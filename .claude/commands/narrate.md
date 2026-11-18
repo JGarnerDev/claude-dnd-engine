@@ -8,7 +8,7 @@ voices, branches told as asides. Rules: `meta/narration.md` (read once).
 
 **Arguments:**
 
-- `<scene number | beat id>`: `4` for `### Scene 4`, or `S2_CELL` for one beat (required)
+- `<scene number | beat id>`: `4` for `### Scene 4`, or `S35_09_CELL` for one beat (required)
 - `--session <n>`: which planned session; defaults to the next unplayed one
 - `--force`: re-render every line, ignoring the per-line cache
 

@@ -3,7 +3,7 @@
 consumers: .claude/commands/narrate.md -- update it if usage, flags, or output format change.
 
 Reads the session plan through session-cards.py (scenes, flow nodes, edges) and narration/cast.md,
-and prints for one target (a scene key like `4`, or a beat id like `S2_CELL`):
+and prints for one target (a scene key like `4`, or a beat id like `S35_09_CELL`):
   - the plan path and the line where the scene (or beat) starts, so the prose can be Read directly
   - the spine: the target's beats in story order (solid flow edges, then plan order), with markers
   - the forks: dashed or labelled flow edges, and every Choice / Private / Contingency line,
@@ -84,7 +84,7 @@ def story_order(ids: list, edges: list) -> list:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('target', help='scene key (e.g. 4) or beat id (e.g. S2_CELL)')
+    ap.add_argument('target', help='scene key (e.g. 4) or beat id (e.g. S35_09_CELL)')
     ap.add_argument('--session')
     a = ap.parse_args()
 

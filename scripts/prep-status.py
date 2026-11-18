@@ -3,7 +3,7 @@
 # consumers: CLAUDE.md, .claude/commands/review.md, .claude/commands/todo.md, scripts/label-check.py -- update these if usage, flags, or output format change.
 # Builds the session's prep checklist from its files instead of a hand-kept list:
 #   plan state and date, unset `<placeholders>` (with the beat they sit under),
-#   flow beats by marker, linked loot that is not confirmed, battlemap layouts and
+#   flow beats by marker and in order (scripts/lib/beat_order.py), linked loot that is not confirmed, battlemap layouts and
 #   their renders, combatant labels with no token rule, the token kit and whether it is
 #   recorded as uploaded (maps/battlemaps/tokens-uploaded.txt), handout cards with no
 #   published link (or named in the plan but missing), stale PC
@@ -26,6 +26,7 @@ from lib.common import (  # noqa: E402
     ROOT, ci_eq, cwrite, entity_md_files, get_frontmatter, index_staleness,
     read_text_no_bom, try_int, try_parse_date,
 )
+from lib.beat_order import flow_node_ids, order_problems, parse_id, plan_beat_ids  # noqa: E402
 from lib.cards import card_refs, cards  # noqa: E402
 from lib.labels import combatant_labels, manifest_rules, role_of  # noqa: E402
 
@@ -213,6 +214,15 @@ def main():
             r.line('TODO', f'draft, not yet committed ({len(by["-"])}): ' + ', '.join(by['-']))
         if not by['?'] and not by['-']:
             r.line('ok', 'every beat committed')
+        ids = flow_node_ids(read_text_no_bom(flow))
+        if any(parse_id(i) for i in ids):
+            problems = order_problems(ids, plan_beat_ids(text), n)
+            for p in problems:
+                r.line('TODO', f'beat order: {p}')
+            if not problems:
+                r.line('ok', 'beats in order (headings, flow and positions agree)')
+        else:
+            r.line('--', 'beat ids carry no positions (planned before the S<n>_NN_ scheme)')
     else:
         r.line('--', 'no _flow.md')
 

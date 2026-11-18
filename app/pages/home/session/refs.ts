@@ -1,20 +1,21 @@
 // Links to beats and scenes (pure). Plans name beats by id in backticks (`S2_ESCAPE`)
 // and scenes by number ("Scene 4"); in the runner each becomes a chip that opens the
 // beat or scene in the side panel without moving the walk. Beat chips are violet,
-// numbered by step ("3", or "4.2" in another scene); scene chips are gold. An id that
+// numbered by the id's position ("7A"), or for older ids by step ("3", or "4.2" in
+// another scene); scene chips are gold. An id that
 // matches no beat in this session's flow stays plain, underlined dotted, so a typo
 // or a beat from a later session shows as such. A handout card named by its path
 // (`handouts/tithe-title-card.html`) opens its published artifact in a new tab; a
 // card with no recorded link, or no such file, stays plain and dotted.
 
 import { escapeHtml, nodeHeadings } from './markdown.js';
-import { stepTitle } from './steps.js';
+import { beatPosition, stepTitle } from './steps.js';
 import type { CardRef, FlowNode, Scene } from './types.js';
 
 export interface BeatRef {
   id: string;
   scene: string | null; // scene id
-  num: string; // "3", or "4.2" outside the current scene
+  num: string; // the id's position ("7A"); older ids: "3", or "4.2" outside the current scene
   title: string; // the plan's heading
   short: string; // chip text
   here: boolean; // the beat the DM is on
@@ -62,7 +63,7 @@ export function buildRefIndex(nodes: readonly FlowNode[], scenes: readonly Scene
     beats.set(n.id, {
       id: n.id,
       scene: n.scene,
-      num: same || !n.scene ? String(step) : `${keyOf.get(n.scene) ?? '?'}.${step}`,
+      num: beatPosition(n.id) || (same || !n.scene ? String(step) : `${keyOf.get(n.scene) ?? '?'}.${step}`),
       title,
       short: shortTitle(title),
       here: n.id === currentId,

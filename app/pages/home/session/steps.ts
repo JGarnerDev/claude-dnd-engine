@@ -83,6 +83,14 @@ export function stepTitle(n: FlowNode, headings: Map<string, string>): string {
   return headings.get(n.id) ?? mergeLabelLines([n.title, ...n.lines])[0];
 }
 
+// A beat's position from its id (meta/flow-graphs.md -> Positions): `S35_07A_ESCAPE` -> `7A`.
+// Empty for ids planned before the scheme (`S2_ESCAPE`), which number by their place instead.
+const POS_ID_RE = /^S\d+_(\d{2})([A-Z]?)_[A-Z0-9_]+$/;
+export function beatPosition(id: string): string {
+  const m = POS_ID_RE.exec(id);
+  return m ? `${Number(m[1])}${m[2]}` : '';
+}
+
 function railsHtml(s: Spans, i: number, last: number): string {
   const rail = (kind: 'fight' | 'boss', span: Span | null) => (inSpan(span, i)
     ? `<i class="sr-r sr-r-${kind}${i === span![0] ? ' is-start' : ''}${i === span![1] && span![1] < last ? ' is-end' : ''}" title="${kind === 'boss' ? 'Boss fight' : 'Fight'}"></i>`
@@ -110,7 +118,7 @@ export function stepsHtml(v: StepsView): string {
     const when = whenOf(prose);
     const head = `
       <button type="button" class="sr-step-head" data-to="${n.id}" title="${escapeHtml(n.id)}">
-        <span class="sr-step-num">${state === 'done' ? '✓' : i + 1}</span>
+        <span class="sr-step-num">${state === 'done' ? '✓' : beatPosition(n.id) || i + 1}</span>
         <span class="sr-step-title">${inline(stepTitle(n, v.headings), v.known)}</span>
         ${rails ? edgeTag(spans, i, last) : ''}
         ${when ? `<span class="sr-when" data-when="${escapeHtml(when)}" title="When: ${escapeHtml(when)}">${escapeHtml(when.length > 42 ? `${when.slice(0, 40)}…` : when)}</span>` : ''}

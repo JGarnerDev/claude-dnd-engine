@@ -21,6 +21,12 @@ describe('linkRefs', () => {
     expect(chips[2].classList.contains('is-here')).toBe(true);
   });
 
+  it('numbers a positioned beat by its id, wherever it sits', () => {
+    const pn = [n('S35_01_RELIEF', 'SC3'), n('S35_02A_ESCAPE', 'SC3'), n('S35_02B_CHASE', 'SC3'), n('S35_03_HOME', 'SC4')];
+    const px = buildRefIndex(pn, scenes, 'S35_01_RELIEF');
+    expect(['S35_01_RELIEF', 'S35_02B_CHASE', 'S35_03_HOME'].map((id) => px.beat(id)!.num)).toEqual(['1', '2B', '3']);
+  });
+
   it('turns "Scene N" into a scene chip, but never inside code or a link', () => {
     const el = dom(linkRefs('<p>In Scene 4, not Scene 9. <code>Scene 4</code> <a class="sr-wiki">Scene 4</a></p>', ix));
     const chips = el.querySelectorAll<HTMLElement>('.sr-bref.is-scene');

@@ -3,7 +3,9 @@
 # consumers: CLAUDE.md, .claude/commands/flow.md -- update these if usage, flags, or output format change.
 # Scans flow graph folders for mermaid nodes carrying a [x]/[-]/[?] marker, reports coverage per
 # file, and flags integrity problems: a printed id that does not match its mermaid node id, and a
-# committed node sitting downstream of one that is not committed.
+# committed node sitting downstream of one that is not committed. Then checks beat order in every
+# session flow under scheduler/sessions/ (positions vs. node order vs. the plan's #### headings,
+# scripts/lib/beat_order.py); flows whose ids carry no positions are listed as skipped.
 # Usage: python scripts/flow-status.py [--set <path>] [--blockers] [--quiet]
 #   --set <path> : scan one flow graph folder instead of discovering every set in the repo
 #   --blockers   : list every committed-after-open edge, not just the count
@@ -16,6 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import ROOT, cwrite, color, read_text_no_bom
+from lib.beat_order import flow_node_ids, order_problems, plan_beat_ids, parse_id
 
 # A flow graph set is a folder whose README names the conventions doc.
 SET_MARKER = 'meta/flow-graphs.md'
@@ -98,6 +101,32 @@ def find_sets(root, explicit):
     return sorted(found)
 
 
+def session_order():
+    """Check beat order in every planned session's _flow.md against its plan."""
+    sessions = ROOT / 'scheduler' / 'sessions'
+    flows = sorted(sessions.glob('*/_flow.md')) if sessions.is_dir() else []
+    if not flows:
+        return
+    cwrite('\n=== session flows (beat order) ===', 'cyan')
+    for flow in flows:
+        folder = flow.parent
+        m = re.match(r'Session\s+(\d+)', folder.name)
+        n = int(m.group(1)) if m else None
+        ids = flow_node_ids(read_text_no_bom(flow))
+        if not any(parse_id(i) for i in ids):
+            cwrite(f'  {folder.name}: no positions in its ids, skipped', 'gray')
+            continue
+        plan = folder / f'{folder.name}.md'
+        plan_ids = plan_beat_ids(read_text_no_bom(plan)) if plan.exists() else None
+        problems = order_problems(ids, plan_ids, n)
+        if problems:
+            cwrite(f'  {folder.name}: {len(problems)} order problem(s)', 'red')
+            for p in problems:
+                cwrite(f'    {p}', 'red')
+        else:
+            cwrite(f'  {folder.name}: in order', 'green')
+
+
 def main():
     ap = argparse.ArgumentParser(description='Commitment coverage for flow graph sets.')
     ap.add_argument('--set', dest='set_path', help='scan one flow graph folder')
@@ -110,7 +139,6 @@ def main():
         cwrite('No flow graph sets found.', 'yellow')
         cwrite('A set is a folder whose README.md references meta/flow-graphs.md.', 'gray')
         cwrite('Run /flow to build one.', 'gray')
-        return 0
 
     for set_dir in sets:
         rel = set_dir.relative_to(ROOT).as_posix()
@@ -182,6 +210,8 @@ def main():
         if not blockers and not all_problems:
             cwrite('\n  integrity OK', 'green')
 
+    if not args.set_path:
+        session_order()
     return 0
 
 

@@ -46,13 +46,14 @@ scheduler/sessions/Session {NN} {Name}/_flow.md
 ```
 
 That file is the session's graph only — not the act spine, not the other sessions — and it travels
-with the plan when `/recap` moves the folder to `historian/`. It is a **graduated snapshot** of the
-matching file in the act's set, so the set stays the live source and the one `flow-status.py`
-reads. The `_` prefix keeps it out of `validate.ps1`'s entity checks and the semantic index; it
-carries no frontmatter and is never an entity.
+with the plan when `/recap` moves the folder to `historian/`. It starts as a **graduated snapshot**
+of the matching slot file in the act's set. Once the session is planned, the snapshot carries the
+session's real ids (`S<n>_NN_`, see Node ids) and is the live source for its beats; the set's slot
+file keeps the act-level design. The `_` prefix keeps it out of `validate.ps1`'s entity checks and
+the semantic index; it carries no frontmatter and is never an entity.
 
-Because there are two copies, they drift. Regenerate the snapshot with `/flow --session {NN}`
-rather than hand-editing both, and never let the snapshot be the only place a marker moved.
+Because there are two copies, markers can drift. Regenerate with `/flow --session {NN}` rather than
+hand-editing both; markers carry between them by slug.
 
 ## Node ids
 
@@ -60,23 +61,50 @@ rather than hand-editing both, and never let the snapshot be the only place a ma
 That is what makes a beat nameable out loud, in a message, and in a grep:
 
 ```powershell
-rg "S1_EXAMPLE" <act-dir>/notes/<act-slug>-flow/
+rg "S35_03_EXAMPLE" scheduler/sessions/
 ```
 
 Prefixes:
 
 - `ACT_` — act-wide: the act's opening state, an overlay that spans every session, the payoff region
-- `S1_` … `SN_` — beats inside session N
+- `A1_` … `AN_` — beats in the act's Nth session slot, in the act's set (spine and per-session
+  files). A slot isn't a session number: sessions split when one runs long
+- `S<n>_<NN>_` — beats in a planned session's `_flow.md` and plan, where `n` is the real session
+  number (`S35_`) and `NN` the beat's position (below)
 - a topical prefix for a discoverable chain that crosses sessions, named for the chain itself
 - `PAY_` — the undesigned payoff slots
 
 Slugs are short, uppercase, speakable, and name the beat rather than describing it. Two words when
 one will not do.
 
-**A beat that appears at two zoom levels keeps one id.** The act spine and the session file draw the
-same beat coarse and fine; they share the id. Where a session file needs finer grain than the act
-spine, it **splits into new ids rather than renaming** — one act-level node opens up into several
-session-level ones, and the act-level id stays on the summary node.
+### Positions
+
+A planned session's beats are numbered in play order, so the next beat is the next number down the
+page: `S35_01_ARRIVAL`, `S35_02_RELIEF`, `S35_03_TITHE_HUNTS`.
+
+- **Two digits, across the whole session.** Scenes group beats but don't reset the count, so a
+  bigger number is always later.
+- **Forks share a position** and take a capital letter each: `S35_07A_ESCAPE`, `S35_07B_CHASE`.
+  The **rejoin** (the first beat every option reaches) takes the next plain number, `S35_08_TALLY`.
+- **An aside** (a dashed-edge payoff) takes the next free position after the beat it hangs off.
+- **One order everywhere.** The plan's `####` headings, the `_flow.md` node definitions and the
+  positions run in the same order. The runner numbers its steps by position. `flow-status.py` and
+  `prep-status.py` warn when they drift.
+- **Renumber freely before play, never after.** Inserting a beat renumbers the ones after it; the
+  grep above finds every mention. Once `/recap` moves a session to `historian/`, its ids are frozen.
+  Played sessions from before this scheme keep their act-slot ids (`S2_ESCAPE`) and get no order
+  check.
+- **Carry-over.** When a session stops early, its unplayed beats move into the next plan,
+  renumbered from `01` under the new session number.
+
+### Act nodes and session beats
+
+The set draws a session before its number is known, so the two levels don't share ids. When
+`/session` plans a slot, it mints `S<n>_NN_` beats, and each beat's paragraph in `_flow.md` names
+the act node it opens up (`` `S35_03_TITHE_HUNTS` opens `A2_PURSUIT` ``). From then on the
+`_flow.md` snapshot is the live source for that session's beats. **Markers carry by slug**: a
+renumber, or the move from `A2_PURSUIT` to `S35_03_PURSUIT`, keeps the node's marker and ledger
+entry.
 
 When a beat is cut or renamed, change the id everywhere it appears. The grep above finds all of
 them.
@@ -95,7 +123,7 @@ Every node carries a marker **before** its id, so the chart doubles as the readi
 A node definition therefore reads:
 
 ```text
-S1_EXAMPLE["[-] S1_EXAMPLE<br/>what the beat is<br/>the detail that makes it runnable"]
+S35_01_EXAMPLE["[-] S35_01_EXAMPLE<br/>what the beat is<br/>the detail that makes it runnable"]
 ```
 
 ### The commit gate
@@ -124,7 +152,7 @@ and the backing source that satisfied gate item 2. Bullets, not a table.
 ```markdown
 ## Commitment ledger
 
-- `S1_EXAMPLE` — backing note at `<path>`; approved `<date>`
+- `S35_01_EXAMPLE` — backing note at `<path>`; approved `<date>`
 ```
 
 Nodes at `[-]` or `[?]` do not appear in the ledger. An empty ledger is honest and normal for a

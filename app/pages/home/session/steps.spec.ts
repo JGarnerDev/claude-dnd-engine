@@ -1,6 +1,6 @@
 // @vitest-environment happy-dom
 import { describe, expect, it } from 'vitest';
-import { fightSpans, stepMark, stepsHtml, stepTitle, whenOf } from './steps.js';
+import { beatPosition, fightSpans, stepMark, stepsHtml, stepTitle, whenOf } from './steps.js';
 import type { FlowNode } from './types.js';
 
 const n = (id: string, kind = 'social', lines: string[] = []): FlowNode => ({ id, marker: 'committed', kind, scene: 'SC1', title: id, lines, notes: [] });
@@ -101,5 +101,14 @@ describe('stepTitle', () => {
     const node = { ...n('A', 'social', ['a horse tied out', 'Next line']), title: 'Scout first: the blind,' };
     expect(stepTitle(node, new Map([['A', 'Scout the ridge']]))).toBe('Scout the ridge');
     expect(stepTitle(node, new Map())).toBe('Scout first: the blind, a horse tied out');
+  });
+});
+
+describe('beatPosition', () => {
+  it("reads the position out of a positioned id, and nothing out of an older one", () => {
+    expect(beatPosition('S35_07A_ESCAPE')).toBe('7A');
+    expect(beatPosition('S35_10_TALLY')).toBe('10');
+    expect(beatPosition('S2_ESCAPE')).toBe('');
+    expect(beatPosition('A2_PURSUIT')).toBe('');
   });
 });

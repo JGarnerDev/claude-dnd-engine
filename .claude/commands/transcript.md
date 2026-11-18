@@ -93,7 +93,7 @@ Add a seventh section, **Table reaction**, from the out-of-character moments —
 
 Under-marking is the failure mode that matters. A machine transcript mishears names, drops quiet speakers, and cannot tell a joke from a plan. Every unmarked line in this note becomes canon in `/recap` without further scrutiny, so mark generously.
 
-**Resolve before you ask.** `(??)` is for what no source settles, not for whatever the transcript left vague. Before marking an item `(??)`, check it against what the engine already holds, and write the best reading with `(?)` and its source (`(?; per plan S2_DIP)`) when one fits. `/recap` still confirms every `(?)`, so a confident inference costs the DM one "yes", while a bare `(??)` costs them a recall. Look in this order, stopping when one answers:
+**Resolve before you ask.** `(??)` is for what no source settles, not for whatever the transcript left vague. Before marking an item `(??)`, check it against what the engine already holds, and write the best reading with `(?)` and its source (`(?; per plan S35_04_DIP)`) when one fits. `/recap` still confirms every `(?)`, so a confident inference costs the DM one "yes", while a bare `(??)` costs them a recall. Look in this order, stopping when one answers:
 
 1. **The session plan** (`scheduler/sessions/<n> …/`): the beat being played, its `Private (<PC>):` blocks (a private roll the DM sent maps to one of its outcome bands; give the band for the total, or every band if no total was said), its combatant roster, and its stated rules (rests, levels, loot)
 2. **The previous session's historian record**: its recap, roster and loose threads. "The big one" or "that guy from the raid" usually names someone in it
