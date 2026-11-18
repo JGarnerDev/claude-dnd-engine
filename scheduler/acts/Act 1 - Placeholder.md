@@ -3,7 +3,7 @@ name: "Act 1 - Placeholder"
 type: act
 exists: false
 state: draft
-campaign: [[Curse of Strahd]]
+campaign: "[[Curse of Strahd]]"
 central_conflict: "TBD — Kellan plans Strahd outside this repo; this file exists so the Strahd records that reference it resolve."
 goal: "TBD"
 opening_state: "TBD"

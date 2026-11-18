@@ -7,22 +7,22 @@ state: paused
 tags:
   - mission
 
-act: [[Act 1 - Placeholder]]
+act: "[[Act 1 - Placeholder]]"
 objective: "Find the missing 'wizard of wine' who supplies the Blue Water Inn, and get the overdue wine shipments moving again."
 hook: "Danika, grateful for the party's performance, gave them a free night and stew — and asked them to look into her overdue wine. The 'wizard of wine' who ships it is late."
 sessions:
-  - [[Session 16 The Blue Water Inn]]
+  - "[[Session 16 The Blue Water Inn]]"
 locations:
-  - [[Vallaki]]
-  - [[Blue Water Inn]]
+  - "[[Vallaki]]"
+  - "[[Blue Water Inn]]"
 key_npcs:
-  - [[Danika]] (quest-giver — needs her wine shipment)
+  - "[[Danika]] (quest-giver — needs her wine shipment)"
 relates_to:
-  - [[Blue Water Inn]] (the wine's destination)
-  - [[Curse of Strahd]] (campaign)
+  - "[[Blue Water Inn]] (the wine's destination)"
+  - "[[Curse of Strahd]] (campaign)"
 importance: major
 active: false
-last_updated: [[Session 16 The Blue Water Inn]]
+last_updated: "[[Session 16 The Blue Water Inn]]"
 description: "Danika's overdue wine shipment — the 'wizard of wine' who supplies the Blue Water Inn is late. The party has been asked to find him."
 ---
 

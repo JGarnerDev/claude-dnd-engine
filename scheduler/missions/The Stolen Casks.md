@@ -8,17 +8,17 @@ state: active
 tags:
   - mission
 
-act: [[Act 1 - The Hearth at Ashford]]
+act: "[[Act 1 - The Hearth at Ashford]]"
 objective: "Get the Golden Lioness's stolen casks back. Nella's crew takes the new brewery wing's delivery during the raid the party lands in; the mission ends when the casks are recovered, bought back, or written off for good."
 hook: "The party arrives in Ashford mid-raid and saves Sable Wren, but the ale is already gone southeast on a laden cart. Sable's unopened brewery wing is the only thing she owns outright, the delivery was not paid for yet, and the party has just been offered a provisional share in the building. The casks are the first thing that share is worth defending."
 
 # --- OPTIONAL ---
 sessions:
-  - [[Session 29 The Mistake]]
-  - [[Session 30 Keep the Ale]]
+  - "[[Session 29 The Mistake]]"
+  - "[[Session 30 Keep the Ale]]"
 locations:
-  - [[Ashford]]
-  - [[The Golden Lioness]]
+  - "[[Ashford]]"
+  - "[[The Golden Lioness]]"
 key_npcs:
   - "[[Sable Wren]] (whose casks they are; makes the Stake offer that gives the party a reason to care)"
   - "[[Nella]] (took them; escapes clean in the raid and again at the camp, both by design)"
