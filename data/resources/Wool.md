@@ -16,9 +16,9 @@ description: "Shorn from sheep and goats raised on open grassland. Woven into cl
 trade_value: low
 accessibility: open
 consumers:
-  - [[Common Clothing]] (primary textile)
-  - [[Rope and Cord]] (secondary cord types)
-  - [[Traveling Gear]] (cloaks)
+  - "[[Common Clothing]] (primary textile)"
+  - "[[Rope and Cord]] (secondary cord types)"
+  - "[[Traveling Gear]] (cloaks)"
 ---
 
 Wool is found in plains, hills. Shorn from sheep and goats raised on open grassland. Woven into clothing, rope, and trade cloth.
@@ -26,4 +26,3 @@ Wool is found in plains, hills. Shorn from sheep and goats raised on open grassl
 Wool guilds can be surprisingly powerful political actors in pastoral regions.
 
 Consumed downstream by [[Common Clothing]], [[Rope and Cord]], and [[Traveling Gear]].
-

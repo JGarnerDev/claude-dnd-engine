@@ -7,12 +7,12 @@ state: active
 tags:
   - faction/noble
 locations:
-  - [[The World]]
+  - "[[The World]]"
 purpose: political
 importance: background
 description: "Aerial faction living on floating géode Islifts on the Arc Side of the dwarf planetoid, which they believe are stabilised and propelled by Whatwill. Call an Opticon when a new Islift forms; regard Stapling — an Islift crashing back to earth — as catastrophic disgrace."
 resources:
-  - [[Whatwill]]
+  - "[[Whatwill]]"
 ---
 
 The Lifted live on floating géode islands called **Islifts** — smaller landmasses that orbit at varying altitudes, some a fathom above ground, others hundreds of fathoms up where air is thin. These originated from the Arc Side of the dwarf planetoid, dislodged when [[Astra]] collided with the Struck Side millennia ago.

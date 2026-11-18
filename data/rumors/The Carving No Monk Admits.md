@@ -8,15 +8,15 @@ tags:
 content: "A pilgrim added her required carving in a chamber the monks say is not there. She came out speaking, and what she was speaking was older than the door she had just walked through."
 truth: unknown
 circulating_in:
-  - [[Deorum Ostium]]
+  - "[[Deorum Ostium]]"
 truth_detail: "Leave this one open — Deorum Ostium is a site where incantations are rumoured in deep unvisited chambers, and that rumour is load-bearing world texture that should not be cashed in cheaply. If a table needs an answer, the cheapest honest one is that the chamber exists and the monks genuinely do not know it does, because the carving is continuous and nobody surveys what they have already cut."
 importance: major
 active: true
 description: "A pilgrim at the Gods' Door who carved in a chamber the monks deny exists and came out speaking something older than the site."
 relates_to:
-  - [[Deorum Ostium]] (the site)
+  - "[[Deorum Ostium]] (the site)"
 known_by:
-  - [[The Vitricants]] (partial)
+  - "[[The Vitricants]] (partial)"
 ---
 
 ## The Rumour

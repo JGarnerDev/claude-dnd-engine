@@ -8,13 +8,13 @@ tags:
   - route/trade
 aliases: []
 importance: critical
-origin: [[Erevast]]
-destination: [[Continent G]]
+origin: "[[Erevast]]"
+destination: "[[Continent G]]"
 medium: land
 controlling_faction: unknown
 description: "The sole overland corridor between eastern Erevast and Continent G, passing through The Irongate — a fortified chokepoint that controls all continental east-west land trade."
 toll_points:
-  - [[The Irongate]]
+  - "[[The Irongate]]"
 hazards:
   - The Irongate garrison and toll
   - Watchwall Mountain passes

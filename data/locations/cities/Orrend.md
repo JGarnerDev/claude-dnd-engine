@@ -11,7 +11,7 @@ tags:
   - location/city
 
 # --- MANDATORY (city) ---
-global_location: [[Stonemarch]]
+global_location: "[[Stonemarch]]"
 purpose: commerce
 
 # --- OPTIONAL (entity base) ---
@@ -40,12 +40,12 @@ tensions:
   - "A border port facing Riolgatha across the Moorthistle"
   - "The city is Cael's richest holding on paper, and most of its wealth leaves through Marlow's gate"
 factions:
-  - [[House Cael]]
-  - [[House Marlow]]
+  - "[[House Cael]]"
+  - "[[House Marlow]]"
 rulership: "Split. Cael's reeve runs the upper town, the market and the walls; Marlow's wharfmaster runs the wharf district and the river. Both unnamed."
 trade_specialty: "the river trade of the upper Moorthistle: grain, ale, hides and timber out by barge; salt, tools, cloth and coin back up"
 routes:
-  - [[The Broadwend Run]]
+  - "[[The Broadwend Run]]"
 ---
 
 # Orrend

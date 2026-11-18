@@ -22,13 +22,13 @@ track: "world:homebrew"
 importance: major
 awareness: widely-known
 relates_to:
-  - [[Whatwill]] (the substance that began falling)
-  - [[Astra]] (source of the shards)
-  - [[The Vitricants]] (reverence and calendar)
-  - [[The Partenariats]] (extraction economy)
-  - [[Courts Superior]] (jurisdiction fights)
+  - "[[Whatwill]] (the substance that began falling)"
+  - "[[Astra]] (source of the shards)"
+  - "[[The Vitricants]] (reverence and calendar)"
+  - "[[The Partenariats]] (extraction economy)"
+  - "[[Courts Superior]] (jurisdiction fights)"
 participants:
-  - [[Whatwill]] (the first fall)
+  - "[[Whatwill]] (the first fall)"
 description: "The first Showering — when Astra's shards first fell to the surface as luminous Whatwill, beginning the era and economy that defines the present world. Paul's Whatwill cosmology — canon-pending."
 ---
 

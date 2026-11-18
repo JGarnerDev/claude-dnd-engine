@@ -14,8 +14,8 @@ description: "Fermented grain beverage; staple of most settlements. Quality vari
 trade_value: low
 accessibility: open
 depends_on:
-  - [[Grain]] (primary production input)
-  - [[Fresh Water]] (brewing medium)
+  - "[[Grain]] (primary production input)"
+  - "[[Fresh Water]] (brewing medium)"
 ---
 
 Ale is everywhere. Any settlement large enough to have a granary has someone brewing it. Most of it is unremarkable — serviceable, cheap, consistent. The gap between ordinary ale and something worth remembering is noticeable to anyone who has had both.

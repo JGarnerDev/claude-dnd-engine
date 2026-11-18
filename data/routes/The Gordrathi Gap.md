@@ -8,12 +8,12 @@ tags:
   - route/trade
 aliases: []
 importance: critical
-origin: [[Erevast]]
-destination: [[Continent B]]
+origin: "[[Erevast]]"
+destination: "[[Continent B]]"
 medium: land
 description: "The only land passage through the Gordrathi Mountains connecting Erevast's southern cities to Continent B — controls the flow of goods between the world's two largest population clusters."
 waypoints:
-  - [[Gordrathi Mountains]]
+  - "[[Gordrathi Mountains]]"
 hazards:
   - Mountain passes subject to seasonal closure
   - Narrow terrain prone to ambush

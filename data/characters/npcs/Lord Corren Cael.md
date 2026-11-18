@@ -11,7 +11,7 @@ tags:
   - character/npc
 
 # --- MANDATORY (npc) ---
-location: [[Stonemarch]]
+location: "[[Stonemarch]]"
 personality: "Proud, honest, out-matched and grief-bound. A nominal protector who is plainly failing to defend his own town, and who cannot bring himself to cleanly hate the house that once died for his."
 livelihood: "Lord of Stonemarch, the purple fief containing Ashford; head of House Cael."
 
@@ -19,7 +19,7 @@ livelihood: "Lord of Stonemarch, the purple fief containing Ashford; head of Hou
 importance: major
 active: true
 relates_to:
-  - [[House Cael]] (head of house)
+  - "[[House Cael]] (head of house)"
   - "[[Stonemarch]] (his fief)"
   - "[[Ashford]] (the town he is failing to protect)"
   - "[[House Marlow]] (feud rival — once the house that bled for his)"

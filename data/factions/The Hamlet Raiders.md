@@ -8,14 +8,14 @@ tags:
   - faction/mercenary
 subtype: mercenary
 locations:
-  - [[Aethryn]]
+  - "[[Aethryn]]"
 purpose: military
 importance: major
 active: false
 contributed_by: ben
 relates_to:
-  - [[Dip's Home Hamlet]] (destroyed by their infiltration)
-  - [[Dip]] (survivor with a grievance against them)
+  - "[[Dip's Home Hamlet]] (destroyed by their infiltration)"
+  - "[[Dip]] (survivor with a grievance against them)"
 motives:
   - "Carried out a contract to slaughter Dip's home hamlet — employer and reason unknown"
   - "Driven by bloodlust and an ideology hidden behind friendly faces"
@@ -24,7 +24,7 @@ tensions:
   - "Most of the band burned in Emberhollow; the few who fled carry the ideology on"
 hierarchy: "A warband capable of infiltration and deception; specifics unknown"
 opposition:
-  - [[Dip]] (survivor seeking to uncover and confront them)
+  - "[[Dip]] (survivor seeking to uncover and confront them)"
 description: "The warband that infiltrated Dip's home hamlet under a mask of friendship, then attempted to slaughter it — triggering the fire that destroyed the town and, Dip believes, took their twin sister."
 ---
 

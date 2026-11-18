@@ -8,14 +8,14 @@ tags:
   - route/trade
 aliases: []
 importance: major
-origin: [[Karath Ut'll]]
-destination: [[Continent C]]
+origin: "[[Karath Ut'll]]"
+destination: "[[Continent C]]"
 medium: land
 description: "The sole named overland passage from Karath Ut'll and Sub Continent C into Continent C, threading through the controlled threshold of Veth's Gate."
 waypoints:
-  - [[Veth's Gate]]
+  - "[[Veth's Gate]]"
 toll_points:
-  - [[Veth's Gate]]
+  - "[[Veth's Gate]]"
 hazards:
   - Veth's Gate — nature and control of the gate unclear
   - Remote terrain with minimal settlements beyond the gate

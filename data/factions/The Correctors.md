@@ -14,9 +14,9 @@ active: false
 aliases:
   - "The Corrector's movement"
 relates_to:
-  - [[Threnai]] (the plane their ritual destroyed)
-  - [[Sah]] (the god whose intervention they defied)
-rulership: [[The First Corrector]]
+  - "[[Threnai]] (the plane their ritual destroyed)"
+  - "[[Sah]] (the god whose intervention they defied)"
+rulership: "[[The First Corrector]]"
 motives:
   - "Abolish death, which they hold to be an imposed falsehood created by systems of meaning that finalize the living into fixed narrative"
   - "Retrieve and return the dead; eliminate permanent loss and separation"
@@ -25,8 +25,8 @@ tensions:
   - "Leadership is ambiguous and partially hidden; the movement is decentralized and may drift from any center"
 hierarchy: "Decentralized and cell-based — covert cells, academic/arcane fronts, and pure memetic spread of the ideology independent of any center"
 opposition:
-  - [[Iggy]] (survivor and Sahist conduit; sworn against them)
-  - [[Sah]] (the diminished god they defied)
+  - "[[Iggy]] (survivor and Sahist conduit; sworn against them)"
+  - "[[Sah]] (the diminished god they defied)"
 description: "The death-denial cult descended from the Library insiders whose spine-breaking ritual destroyed Threnai; now a hidden, distributed movement persisting on the Material Plane."
 ---
 

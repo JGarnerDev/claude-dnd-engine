@@ -8,18 +8,18 @@ tags:
   - route/trade
 aliases: []
 importance: major
-origin: [[Oathmark]]
-destination: [[Continent G]]
+origin: "[[Oathmark]]"
+destination: "[[Continent G]]"
 medium: sea
 description: "Northern sea route across the Skoud Sea from Oathmark and Hightalon to Continent G's northern coast — a faster alternative to The Irongate Road for northern goods, and Oathmark's primary economic lifeline."
 waypoints:
-  - [[Skoud Sea]]
-  - [[Hightalon]]
+  - "[[Skoud Sea]]"
+  - "[[Hightalon]]"
 hazards:
   - Cold northern sea conditions
   - Skoud Sea weather unpredictability
 relates_to:
-  - [[The Irongate Road]] (parallel route, competing corridor)
+  - "[[The Irongate Road]] (parallel route, competing corridor)"
 ---
 
 The **Skoud Sea Crossing** runs across the [[Skoud Sea]] from [[Oathmark]] and [[Hightalon]] to the northern coast of [[Continent G]]. It gives Continent G a second access point beyond [[The Irongate Road]], and gives [[Oathmark]] its primary economic function — without this crossing, Oathmark has little reason to exist as a trading power.

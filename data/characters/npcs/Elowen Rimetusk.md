@@ -11,7 +11,7 @@ tags:
   - character/npc
 
 # --- MANDATORY (npc) ---
-location: [[Ashford]]
+location: "[[Ashford]]"
 personality: "Not fully present. Drifts in and out of lucidity — courteous and sharp one hour, somewhere else entirely the next. Power outlasting the mind that held it. Gentle in both states, which is the mercy of it."
 livelihood: "The old mage of Ashford; helps the sheriff defend the town when she is lucid."
 
@@ -19,7 +19,7 @@ livelihood: "The old mage of Ashford; helps the sheriff defend the town when she
 importance: major
 active: true
 relates_to:
-  - [[Mara Tull]] (aids her defense of Ashford; secretly, it is a debt)
+  - "[[Mara Tull]] (aids her defense of Ashford; secretly, it is a debt)"
   - "[[Ashford]] (the town she has ended up defending)"
 description: "Ashford's old, senile mage — a half-orc wizard whose power has outlasted her fading mind. In the war she moved a whole surrounded company in one translocation; part of her mind never arrived, and neither did Mara Tull's two children. She stands beside Mara as a repayment Mara knows nothing about."
 
@@ -33,7 +33,7 @@ goals:
 motives:
   - "Guilt she has never spoken aloud, and whatever she still remembers about why she settled here"
 allies:
-  - [[Mara Tull]] (the sheriff she stands beside)
+  - "[[Mara Tull]] (the sheriff she stands beside)"
 charm_hook: "A soft elven given name carried over an orcish battle-name — and half the time she cannot recall which war the second one is from."
 ---
 

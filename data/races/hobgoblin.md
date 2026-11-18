@@ -16,7 +16,7 @@ languages:
   - Goblin
 homeland: "Militaristic warbands and fortified encampments"
 patron_deity:
-  - [[Maglubiyet]]
+  - "[[Maglubiyet]]"
 source: VGtM
 key_traits:
   - Darkvision

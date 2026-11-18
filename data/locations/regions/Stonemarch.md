@@ -12,18 +12,18 @@ tags:
 
 # --- MANDATORY (region) ---
 geography: "A purple-region frontier fief on the southern edge near the Moorthistle. Rolling borderland cut by a small tributary that feeds the Moorthistle; the ford the town of Ashford is named for is the fief's soft southern crossing. Western-frontier character — lawless edges, hard travel, homesteads that defend themselves."
-controlling_faction: [[House Cael]]
+controlling_faction: "[[House Cael]]"
 
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
 biome: grassland
 relates_to:
-  - [[House Cael]] (ruling house)
-  - [[Duskwater]] (neighboring purple fief — feud rival, raids come from here)
-  - [[Calenmere Basin]] (broader region; sits on the Calenmere political map, purple southern edge)
+  - "[[House Cael]] (ruling house)"
+  - "[[Duskwater]] (neighboring purple fief — feud rival, raids come from here)"
+  - "[[Calenmere Basin]] (broader region; sits on the Calenmere political map, purple southern edge)"
 settlements:
-  - [[Ashford]]
+  - "[[Ashford]]"
 description: "Lord Corren Cael's fief — the purple frontier fief containing Ashford; House Cael's land, stretched thin and bled by the deniable land raids run out of neighboring Duskwater."
 
 # --- OPTIONAL (region) ---

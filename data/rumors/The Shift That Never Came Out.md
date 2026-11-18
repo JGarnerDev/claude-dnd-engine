@@ -8,18 +8,18 @@ tags:
 content: "A whole refining shift walked into a Mint manufactory on the Fade and not one of them walked back out. No bodies, no blast, no scorch on the walls. The Mintners posted no loss — they say the shift arrived."
 truth: partial
 circulating_in:
-  - [[Opticon's Fade]]
-  - [[The Mintners]]
+  - "[[Opticon's Fade]]"
+  - "[[The Mintners]]"
 truth_detail: "Something did happen and the Mintners are not lying about the absence of bodies. Whether the shift crossed into the other realm the Mintners believe in, or whether a contained Shard event vapourised them and the order is using doctrine to bury an industrial accident, is deliberately unresolved — pick whichever serves the table."
 importance: major
 active: true
 description: "A missing Mint manufactory shift the Mintners claim did not die but 'arrived' — either doctrine vindicated or an industrial accident laundered through it."
 relates_to:
-  - [[The Mintners]] (the order the rumor concerns)
-  - [[Whatwill]] (the substance being refined)
-  - [[Opticon's Fade]] (where it circulates)
+  - "[[The Mintners]] (the order the rumor concerns)"
+  - "[[Whatwill]] (the substance being refined)"
+  - "[[Opticon's Fade]] (where it circulates)"
 known_by:
-  - [[The Vitricants]] (partial)
+  - "[[The Vitricants]] (partial)"
 ---
 
 ## The Rumour

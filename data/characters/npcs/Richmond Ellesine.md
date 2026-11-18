@@ -11,7 +11,7 @@ tags:
   - character/npc
 
 # --- MANDATORY (npc) ---
-location: [[Ashford]]
+location: "[[Ashford]]"
 personality: "Warm but weathered — an old-war-generation veteran who lived the feud and chose the forge over the fight. Friendly and exacting, proud of good work, warms fast to anyone who values it, and goes quiet when the war comes up. Generous with people who earn his respect, and unmoved by people who try to buy it."
 livelihood: "Blacksmith of Ashford."
 

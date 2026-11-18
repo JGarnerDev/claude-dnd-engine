@@ -8,7 +8,7 @@ state: alive
 tags:
   - character
   - character/npc
-location: [[The Citadel]]
+location: "[[The Citadel]]"
 personality: "Warm to the original and protective of him; cold to the copy, which she sees only as a machine."
 livelihood: "Researcher at [[The Citadel]]"
 disposition: hostile
@@ -18,10 +18,10 @@ aliases:
   - "the Colleague"
   - "The Citadel Colleague"
 relates_to:
-  - [[The Original Odibli]] (his true friend inside the Citadel; perhaps his partner)
-  - [[Odibli]] (wants the copy destroyed, to protect the original)
-  - [[Berle Kempwick]] (the only other one who knows)
-  - [[Wendrick Schulden]] (must not find out)
+  - "[[The Original Odibli]] (his true friend inside the Citadel; perhaps his partner)"
+  - "[[Odibli]] (wants the copy destroyed, to protect the original)"
+  - "[[Berle Kempwick]] (the only other one who knows)"
+  - "[[Wendrick Schulden]] (must not find out)"
 goals:
   - "Protect the original: get the copy destroyed, quietly"
   - "Keep the Master from finding out"

@@ -12,16 +12,16 @@ tags:
 
 # --- MANDATORY (region) ---
 geography: "A purple-region fief sitting nearer the Moorthistle than neighboring Stonemarch, to its southeast. Better-watered river country — its stretch of the Moorthistle gives House Marlow both leverage and the overland routes its raiders take up to the Ashford ford. Western-frontier character like the fiefs around it."
-controlling_faction: [[House Marlow]]
+controlling_faction: "[[House Marlow]]"
 
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
 biome: grassland
 relates_to:
-  - [[House Marlow]] (ruling house)
-  - [[Stonemarch]] (neighboring purple fief — feud rival, target of its raids)
-  - [[Calenmere Basin]] (broader region; sits on the Calenmere political map, purple southern edge)
+  - "[[House Marlow]] (ruling house)"
+  - "[[Stonemarch]] (neighboring purple fief — feud rival, target of its raids)"
+  - "[[Calenmere Basin]] (broader region; sits on the Calenmere political map, purple southern edge)"
 description: "Lady Sorcha Marlow's fief — purple, nearer the Moorthistle; its lord courts red and gives deniable backing to the land bandits raiding Ashford."
 
 # --- OPTIONAL (region) ---

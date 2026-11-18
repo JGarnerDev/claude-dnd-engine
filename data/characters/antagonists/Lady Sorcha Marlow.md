@@ -11,7 +11,7 @@ tags:
   - character/antagonist
 
 # --- MANDATORY (antagonist) ---
-location: [[Duskwater]]
+location: "[[Duskwater]]"
 personality: "Cold, cunning, diplomatic right up to the moment she is not. Charm used as a blade. Patient and elaborate about vengeance — she would rather bleed a rival for a decade than beat him in a season."
 livelihood: "Ruling lord of House Marlow; extortionist of the border trade, and the hidden backer of the raids on Ashford."
 disposition: hostile
@@ -20,7 +20,7 @@ disposition: hostile
 importance: major
 active: true
 relates_to:
-  - [[House Marlow]] (head of house)
+  - "[[House Marlow]] (head of house)"
   - "[[Duskwater]] (her fief)"
   - "[[House Cael]] (feud rival — the house Marlow once shielded)"
   - "[[Harrow Bane]] (her deniable instrument, held at arm's length through an intermediary)"

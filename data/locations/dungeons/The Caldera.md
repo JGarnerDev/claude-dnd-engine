@@ -15,8 +15,8 @@ hook: "Venture into the Caldera of the Struck Side. No expedition has plumbed it
 importance: major
 description: "The massive crater gouged into the Struck Side of the dwarf planetoid by the Astra's impact 6.7433 millennia ago. A fiery hellscape. No expedition has returned from its interior with a full account."
 relates_to:
-  - [[Astra]] (cause of formation)
-  - [[Whatwill]] (impact that created both)
+  - "[[Astra]] (cause of formation)"
+  - "[[Whatwill]] (impact that created both)"
 ---
 
 The wound left by [[Astra]]. When the celestial body struck the Struck Side of the dwarf planetoid 6.7433 millennia ago, the impact gouged this massive Caldera into the surface. The same event dislodged the Arc Side's islands, cast [[The Slices]] into orbit, and spun off the trillions of shards that became [[Whatwill]].

@@ -14,8 +14,8 @@ importance: major
 biome: alpine
 description: "The lowest and most accessible of the eastern islifts — close enough that the trees below are visible on clear days. The primary interface between sky-dwellers and the surface world."
 relates_to:
-  - [[The Hearth]] (political hub of the sky community)
-  - [[Astra]] (propulsive force for all islifts)
+  - "[[The Hearth]] (political hub of the sky community)"
+  - "[[Astra]] (propulsive force for all islifts)"
 ---
 
 The lowest of the right-side islifts, close enough to the continental edge that the trees below are visible on clear days. [[The Landing]] is the bridge — the place where the sky world and the surface world exchange goods, people, and information.

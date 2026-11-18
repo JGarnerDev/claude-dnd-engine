@@ -17,10 +17,10 @@ description: "Cattle, pigs, chickens, and goats raised for food, dairy, and draf
 trade_value: low
 accessibility: open
 consumers:
-  - [[Preserved Food]] (salted and smoked meats)
-  - [[Hides]] (source animals for tanning)
-  - [[Candles and Torches]] (tallow)
-  - [[Books and Scrolls]] (vellum)
+  - "[[Preserved Food]] (salted and smoked meats)"
+  - "[[Hides]] (source animals for tanning)"
+  - "[[Candles and Torches]] (tallow)"
+  - "[[Books and Scrolls]] (vellum)"
 ---
 
 Livestock is found in plains, farmland, hills. Cattle, pigs, chickens, and goats raised for food, dairy, and draft labor. The caloric foundation beneath the grain economy.

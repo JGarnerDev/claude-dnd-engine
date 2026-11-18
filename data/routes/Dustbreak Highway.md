@@ -8,8 +8,8 @@ tags:
   - route/highway
 aliases: []
 importance: critical
-origin: [[The Dustbreak Plains]]
-destination: [[The Irongate]]
+origin: "[[The Dustbreak Plains]]"
+destination: "[[The Irongate]]"
 medium: land
 description: "The east-west spine of Erevast, running the length of The Dustbreak Plains from the Bay B river delta to the eastern passes at The Irongate."
 hazards:

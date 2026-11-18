@@ -8,12 +8,12 @@ tags:
   - route/trade
 aliases: []
 importance: major
-origin: [[Sub Continent A]]
-destination: [[Continent G]]
+origin: "[[Sub Continent A]]"
+destination: "[[Continent G]]"
 medium: sea
 description: "Open-water crossing of the Fairway Sea from Sub Continent A's eastern coast to Continent G — reliable winds and predictable sailing make this a well-mapped, heavily trafficked route despite open-ocean exposure."
 waypoints:
-  - [[Fairway Sea]]
+  - "[[Fairway Sea]]"
 ---
 
 The **Fairway Sea Route** crosses the [[Fairway Sea]] from [[Sub Continent A]]'s eastern ports to the shores of [[Continent G]]. The name suggests this body of water offers reliable sailing conditions — predictable winds, manageable currents — making it one of the safer open-ocean crossings available.

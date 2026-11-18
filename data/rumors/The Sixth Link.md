@@ -8,17 +8,17 @@ tags:
 content: "Five houses each hold one link in the ashwake chain, and each of them will tell you the chain has five links. It has six. The sixth belongs to nobody, and whoever finds it stops asking the other five for permission."
 truth: false
 circulating_in:
-  - [[The Ashreaches]]
-  - [[House Apostol]]
+  - "[[The Ashreaches]]"
+  - "[[House Apostol]]"
 truth_detail: "False. There is no sixth link — the chain has five because five houses built it that way, and the belief in a sixth is a structural consequence of five rivals each insisting their own link is the indispensable one. It is nonetheless the single most profitable lie in the region: it funds expeditions, sells maps, and keeps ambitious outsiders arriving. Several people who know it is false sell it anyway."
 importance: major
 active: true
 description: "A false but heavily funded belief in an unclaimed sixth link in the ashwake production chain — the region's most profitable lie."
 relates_to:
-  - [[The Ashreaches]] (where the chain runs)
-  - [[House Apostol]] (newest house, most invested in the story)
+  - "[[The Ashreaches]] (where the chain runs)"
+  - "[[House Apostol]] (newest house, most invested in the story)"
 known_by:
-  - [[House Apostol]] (partial)
+  - "[[House Apostol]] (partial)"
 ---
 
 ## The Rumour

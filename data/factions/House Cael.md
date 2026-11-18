@@ -11,21 +11,21 @@ tags:
 
 # --- MANDATORY (faction) ---
 locations:
-  - [[Stonemarch]]
-  - [[Ashford]]
+  - "[[Stonemarch]]"
+  - "[[Ashford]]"
 purpose: political
 
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
 relates_to:
-  - [[House Marlow]] (former war-ally, now feud rival — "the shield that turned")
-  - [[Stonemarch]] (their fief)
-  - [[Ashford]] (the town they fail to defend)
+  - "[[House Marlow]] (former war-ally, now feud rival — \"the shield that turned\")"
+  - "[[Stonemarch]] (their fief)"
+  - "[[Ashford]] (the town they fail to defend)"
 description: "Ashford's loyal-ish purple noble house — proud, honest, under-resourced; the grandfather fell holding the Moorthistle, and that grief is both its weakness and its dignity."
 
 # --- OPTIONAL (faction) ---
-rulership: [[Lord Corren Cael]]
+rulership: "[[Lord Corren Cael]]"
 motives:
   - "Hold Stonemarch and protect Ashford against raids it cannot afford to stop"
   - "Honor the old alliance and the debt owed by the house that once died for it"
@@ -34,7 +34,7 @@ tensions:
   - "Cannot cleanly hate House Marlow — grief for the shared blood is its wound"
 hierarchy: "A minor purple noble house bound to the distant purple crown; small, proud, under-resourced."
 opposition:
-  - [[House Marlow]] (extortion, deniable raids, collusion with red)
+  - "[[House Marlow]] (extortion, deniable raids, collusion with red)"
 ---
 
 Ruled by [[Lord Corren Cael]]; holds the fief of [[Stonemarch]], which contains

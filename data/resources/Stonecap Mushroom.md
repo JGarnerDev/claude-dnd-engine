@@ -15,7 +15,7 @@ contributed_by: jeff
 trade_value: low
 accessibility: open
 consumers:
-  - [[The Golden Lioness]] (kitchen specialty)
+  - "[[The Golden Lioness]] (kitchen specialty)"
 ---
 
 Stonecap mushrooms grow low to the ground in cool, damp conditions — forest floors, cave mouths, rocky hillsides with good shade. They're not impressive to look at: squat, grey-brown cap, thick stem, about the size of a fist. They turn up in forest, mountain foothills, and the shadowed edges of swamp terrain without much fuss.

@@ -8,7 +8,7 @@ state: alive
 tags:
   - character
   - character/npc
-location: [[The Citadel]]
+location: "[[The Citadel]]"
 personality: "Loyal, rule-bound, cornered. Sees the copy as a security problem, not a person."
 livelihood: "Assistant to [[The Original Odibli]] at [[The Citadel]]"
 disposition: hostile
@@ -18,10 +18,10 @@ aliases:
   - "the Assistant"
   - "The Citadel Assistant"
 relates_to:
-  - [[The Original Odibli]] (his Assistant; loyal, but less loyal than to the Citadel)
-  - [[Odibli]] (wants the copy destroyed as soon as possible; no personal connection)
-  - [[Elspeth Moorlin]] (the only other one who knows)
-  - [[Wendrick Schulden]] (more loyal to him than to the original; deciding whether to tell him)
+  - "[[The Original Odibli]] (his Assistant; loyal, but less loyal than to the Citadel)"
+  - "[[Odibli]] (wants the copy destroyed as soon as possible; no personal connection)"
+  - "[[Elspeth Moorlin]] (the only other one who knows)"
+  - "[[Wendrick Schulden]] (more loyal to him than to the original; deciding whether to tell him)"
 goals:
   - "Get the loose copy destroyed as soon as possible"
   - "Decide whether to tell the Master and the Citadel"

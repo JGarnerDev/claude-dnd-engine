@@ -8,18 +8,18 @@ tags:
 content: "There is a LeyLode in a Vitrian reliquary that has outlived every date the calendar gave for its shattering. The keepers have stopped displaying it. Those who have sat with it say it does not just hold the reverie — it takes a question and gives back a different one."
 truth: partial
 circulating_in:
-  - [[The Vitricants]]
-  - [[The Mintners]]
+  - "[[The Vitricants]]"
+  - "[[The Mintners]]"
 truth_detail: "The overdue part is true and checkable: this lode has outlasted its predicted shattering by a wide margin and the order has quietly withdrawn it from public display, which is a doctrinal problem for a faction whose authority rests on the calendar. The answering is not established. Treat it as either a genuine property of an unusually intact lode or as what happens to people who sit too long in reverie — and do not resolve it before the table has used it."
 importance: major
 active: true
 description: "An overdue LeyLode withdrawn from Vitrian display, rumoured to return questions instead of reverie — and coveted by the Mintners who would dissect it."
 relates_to:
-  - [[The Vitricants]] (hold and hide it)
-  - [[The Mintners]] (want it dissected)
-  - [[Whatwill]] (what a LeyLode is made of)
+  - "[[The Vitricants]] (hold and hide it)"
+  - "[[The Mintners]] (want it dissected)"
+  - "[[Whatwill]] (what a LeyLode is made of)"
 known_by:
-  - [[The Mintners]] (partial)
+  - "[[The Mintners]] (partial)"
 ---
 
 ## The Rumour

@@ -8,12 +8,12 @@ tags:
   - route/pilgrimage
 aliases: []
 importance: critical
-origin: [[Erevast]]
-destination: [[Deorum Ostium]]
+origin: "[[Erevast]]"
+destination: "[[Deorum Ostium]]"
 medium: land
 description: "The great pilgrimage route from Erevast through Oathmark to the Gateway of the Gods — the most spiritually significant journey in the known world, drawing faithful from every continent."
 waypoints:
-  - [[Oathmark]]
+  - "[[Oathmark]]"
 travelers:
   - Religious pilgrims
   - Clergy and holy orders

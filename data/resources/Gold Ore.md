@@ -16,7 +16,7 @@ description: "The universal currency material. River panning and mountain veins 
 trade_value: high
 accessibility: restricted
 consumers:
-  - [[Jewelry and Adornments]] (gold settings and pieces)
+  - "[[Jewelry and Adornments]] (gold settings and pieces)"
 ---
 
 Gold Ore is found in mountains, rivers. The universal currency material. River panning and mountain veins are both viable sources.
@@ -24,4 +24,3 @@ Gold Ore is found in mountains, rivers. The universal currency material. River p
 A new gold strike reshapes regional power within a season.
 
 Consumed downstream by [[Jewelry and Adornments]].
-

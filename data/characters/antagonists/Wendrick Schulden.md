@@ -8,7 +8,7 @@ state: alive
 tags:
   - character
   - character/antagonist
-location: [[The Citadel]]
+location: "[[The Citadel]]"
 personality: "Hands in everything. Takes credit for others' work, guards his own, and criticizes harshly."
 livelihood: "Master of [[The Citadel]]"
 disposition: hostile
@@ -20,11 +20,11 @@ aliases:
   - "Master Wendrick Schulden"
   - "The Master of the Citadel"
 relates_to:
-  - [[The Citadel]] (head)
-  - [[Odibli]] (does not know the copy exists; a loose agent is what his rules exist to stop)
-  - [[The Original Odibli]] (does not know what he did)
-  - [[Berle Kempwick]] (may yet be told)
-  - [[Elspeth Moorlin]] (kept in the dark by her)
+  - "[[The Citadel]] (head)"
+  - "[[Odibli]] (does not know the copy exists; a loose agent is what his rules exist to stop)"
+  - "[[The Original Odibli]] (does not know what he did)"
+  - "[[Berle Kempwick]] (may yet be told)"
+  - "[[Elspeth Moorlin]] (kept in the dark by her)"
 goals:
   - "Keep the Citadel's agents under control"
   - "Keep the credit"

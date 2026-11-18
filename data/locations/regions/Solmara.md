@@ -15,8 +15,8 @@ biome: mediterranean
 description: "Warm, forested sub-continent on the world's western edge. Dense oak and pine cover the hills rolling to a busy trading coast. River valleys feed the interior; the bay mouth is the main hub for fishing, timber, and coastal trade. About 8 settlements, moderate density."
 climate: "Warm and temperate. Wet winters, dry summers. Forest canopy keeps the interior cool; the coast takes full sun."
 relates_to:
-  - [[Ardenwall]] (northern mountain range)
-  - [[Calenmere]] (bay approach and main trading port)
+  - "[[Ardenwall]] (northern mountain range)"
+  - "[[Calenmere]] (bay approach and main trading port)"
 ---
 
 Warm, forested sub-continent on the world's left edge, below the main continent's western arm. Dense oak and pine cover the hills, breaking where river valleys cut down to the sea. Warm stone, good farmland in the inland plains, productive coast.

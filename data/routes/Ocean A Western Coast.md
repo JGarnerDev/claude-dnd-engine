@@ -8,8 +8,8 @@ tags:
   - route/trade
 aliases: []
 importance: major
-origin: [[Sub Continent C]]
-destination: [[Karath Ut'll]]
+origin: "[[Sub Continent C]]"
+destination: "[[Karath Ut'll]]"
 medium: sea
 description: "Coastal trade lane running the western seaboard along Ocean A from Sub Continent C south to Karath Ut'll — the lifeline for cities cut off from Erevast's land trade networks."
 hazards:
@@ -17,7 +17,7 @@ hazards:
   - Ocean A open-water exposure on outer legs
   - Frequent storms on west-facing coast
 waypoints:
-  - [[Ocean A]]
+  - "[[Ocean A]]"
 ---
 
 The **Ocean A Western Coast** route runs south along the western seaboard from [[Sub Continent C]] to [[Karath Ut'll]], hugging the coast of [[Ocean A]]. The cities along this stretch have limited overland connection to Erevast and depend almost entirely on this coastal lane for trade, resupply, and communication.

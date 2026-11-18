@@ -10,7 +10,7 @@ state: missing
 tags:
   - character
   - character/npc
-location: [[Aethryn]]
+location: "[[Aethryn]]"
 personality: "Unknown — never described. To be developed with Ben."
 livelihood: "Unknown"
 race: "[[Orc]]"
@@ -19,10 +19,10 @@ importance: major
 active: false
 contributed_by: ben
 relates_to:
-  - [[Dip]] (twin)
-  - [[Dip's Home Hamlet]] (lost here in the blaze)
+  - "[[Dip]] (twin)"
+  - "[[Dip's Home Hamlet]] (lost here in the blaze)"
 family:
-  - [[Dip]] (twin)
+  - "[[Dip]] (twin)"
 description: "Vessa, Dip's twin sister, presumed dead in the hamlet fire. Dip refuses to believe she died and takes her absence from their guiding visions as proof she still exists on this realm."
 ---
 

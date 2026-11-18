@@ -11,20 +11,20 @@ tags:
 
 # --- MANDATORY (faction) ---
 locations:
-  - [[Duskwater]]
+  - "[[Duskwater]]"
 purpose: political
 
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
 relates_to:
-  - [[House Cael]] (former war-ally, now feud rival — "the shield that turned")
-  - [[Duskwater]] (their fief)
-  - [[Harrow Bane]] (deniable bandit proxy, through a cutout)
+  - "[[House Cael]] (former war-ally, now feud rival — \"the shield that turned\")"
+  - "[[Duskwater]] (their fief)"
+  - "[[Harrow Bane]] (deniable bandit proxy, through a cutout)"
 description: "Lady Sorcha Marlow's purple house — once Cael's heroic shield, now extortionist; broke the betrothal and quietly colludes with red."
 
 # --- OPTIONAL (faction) ---
-rulership: [[Lady Sorcha Marlow]]
+rulership: "[[Lady Sorcha Marlow]]"
 motives:
   - "Supplant Cael, break for independence, or simply profit from Ashford's bleeding"
   - "Court red for coin and leverage while keeping the treason deniable"
@@ -33,7 +33,7 @@ tensions:
   - "An old-guard faction within the house may still honor the broken oath"
 hierarchy: "A purple noble house, once the stronger of the two; the new generation inherited the leverage without the loyalty."
 opposition:
-  - [[House Cael]] (extortion, deniable raids, betrayal of the old alliance)
+  - "[[House Cael]] (extortion, deniable raids, betrayal of the old alliance)"
 ---
 
 Holds [[Duskwater]], nearer the Moorthistle, ruled by [[Lady Sorcha Marlow]]. Two

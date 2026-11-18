@@ -8,7 +8,7 @@ state: alive
 tags:
   - character
   - character/npc
-location: [[The Citadel]]
+location: "[[The Citadel]]"
 personality: "Solitary, independent, brilliant, and terrified: his life may hang on an agent he lost."
 livelihood: "Wizard and researcher at [[The Citadel]]"
 race: "[[Gnome]]"
@@ -19,15 +19,15 @@ active: true
 aliases:
   - "the original"
 relates_to:
-  - [[Odibli]] (made him as an agent for the Astra experiment; wants him shut down)
-  - [[The Citadel]] (researcher)
-  - [[Berle Kempwick]] (his Assistant; knows)
-  - [[Elspeth Moorlin]] (his true friend, perhaps his partner; knows)
-  - [[Wendrick Schulden]] (must not find out)
-  - [[Astra]] (the experiment: when the next Glistening comes)
+  - "[[Odibli]] (made him as an agent for the Astra experiment; wants him shut down)"
+  - "[[The Citadel]] (researcher)"
+  - "[[Berle Kempwick]] (his Assistant; knows)"
+  - "[[Elspeth Moorlin]] (his true friend, perhaps his partner; knows)"
+  - "[[Wendrick Schulden]] (must not find out)"
+  - "[[Astra]] (the experiment: when the next Glistening comes)"
 known_by:
-  - [[Berle Kempwick]] (full)
-  - [[Elspeth Moorlin]] (full)
+  - "[[Berle Kempwick]] (full)"
+  - "[[Elspeth Moorlin]] (full)"
 goals:
   - "Get the copy destroyed, quietly, without the Master knowing"
   - "Stay out of trouble: he fears for his life over the agent's disappearance"

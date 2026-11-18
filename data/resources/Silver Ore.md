@@ -15,7 +15,7 @@ description: "Refined into coinage, jewelry, and anti-undead weapons. Rarer than
 trade_value: moderate
 accessibility: restricted
 consumers:
-  - [[Jewelry and Adornments]] (silver settings and pieces)
+  - "[[Jewelry and Adornments]] (silver settings and pieces)"
 ---
 
 Silver Ore is found in mountains. Refined into coinage, jewelry, and anti-undead weapons. Rarer than iron, far more valuable.
@@ -23,4 +23,3 @@ Silver Ore is found in mountains. Refined into coinage, jewelry, and anti-undead
 Silver mines attract undead, thieves, and rival factions in equal measure.
 
 Consumed downstream by [[Jewelry and Adornments]].
-

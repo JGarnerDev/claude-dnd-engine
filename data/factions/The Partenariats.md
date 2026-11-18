@@ -7,7 +7,7 @@ state: active
 tags:
   - faction/guild
 locations:
-  - [[The World]]
+  - "[[The World]]"
 purpose: commerce
 importance: background
 description: "Glass-obsessed merchant consortia that sponsor clandestine Whatwill extraction expeditions. Fly no true banner, operate under no declared allegiance, and are prone to turning coat for a higher bidder. The most effective actors in the Whatwill economy precisely because they are unencumbered by legal deliberation."
@@ -20,7 +20,7 @@ tensions:
   - Prone to turning coat mid-operation
   - Competition amongst themselves for the same sites
 opposition:
-  - [[Courts Superior]] (their slowness creates the vacuum the Partenariats exploit)
+  - "[[Courts Superior]] (their slowness creates the vacuum the Partenariats exploit)"
 allies: []
 hierarchy: "Loose — individual Partenariats are distinct consortia, not a unified body. Some may compete with each other."
 ---

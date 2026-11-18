@@ -8,21 +8,21 @@ tags:
 content: "Everyone says the way to Opticon's Rest runs through a portal inside Az. Nobody asks the obvious question — Az is the last Climber outpost in Diver territory, and it is still standing. Work out what rent it pays."
 truth: false
 circulating_in:
-  - [[Darkling's Perch]]
-  - [[Arclight's Seat]]
+  - "[[Darkling's Perch]]"
+  - "[[Arclight's Seat]]"
 truth_detail: "False as stated, and usefully so. Az stands for ordinary reasons of altitude politics, not because the Divers are being bought off with access. The rumour's real function is that it is repeated by Climbers who want Az reinforced and by Divers who want it condemned, so both sides argue from a premise neither invented. Nothing is established about what Opticon's Rest actually is — keep it that way."
 importance: minor
 active: true
 description: "A false but politically convenient claim that the Divers already have access to Opticon's Rest, and that this is why Az still stands."
 relates_to:
-  - [[Opticon's Rest]] (the rumoured destination)
-  - [[Darkling's Perch]] (where Az sits)
-  - [[The Divers]] (accused of holding access)
-  - [[The Climbers]] (hold Az, and repeat the rumour)
-  - [[Arclight's Seat]] (where the Climber version circulates)
+  - "[[Opticon's Rest]] (the rumoured destination)"
+  - "[[Darkling's Perch]] (where Az sits)"
+  - "[[The Divers]] (accused of holding access)"
+  - "[[The Climbers]] (hold Az, and repeat the rumour)"
+  - "[[Arclight's Seat]] (where the Climber version circulates)"
 known_by:
-  - [[The Climbers]] (partial)
-  - [[The Divers]] (partial)
+  - "[[The Climbers]] (partial)"
+  - "[[The Divers]] (partial)"
 ---
 
 ## The Rumour

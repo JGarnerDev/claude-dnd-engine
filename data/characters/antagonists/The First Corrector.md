@@ -18,11 +18,11 @@ aliases:
   - "The Corrector"
   - "Ritual Theorist of Transition"
 relates_to:
-  - [[The Correctors]] (founder and ideological architect)
-  - [[Threnai]] (the plane their ritual destroyed)
+  - "[[The Correctors]] (founder and ideological architect)"
+  - "[[Threnai]] (the plane their ritual destroyed)"
 enemies:
-  - [[Iggy]] (survivor sworn against the movement)
-  - [[Sah]] (the god they defied)
+  - "[[Iggy]] (survivor sworn against the movement)"
+  - "[[Sah]] (the god they defied)"
 human_detail: "Never raises their voice or claims malice — they genuinely grieve death and believe they are the only one merciful enough to end it. Every atrocity is framed as compassion."
 description: "The serene ideological architect of the Correctors, whose spine-breaking ritual destroyed Threnai. Never confirmed dead; current state unknown."
 ---

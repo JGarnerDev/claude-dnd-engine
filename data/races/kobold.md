@@ -16,8 +16,8 @@ languages:
   - Draconic
 homeland: "Underground warrens and dragon lairs"
 patron_deity:
-  - [[Kurtulmak]]
-  - [[Tiamat]]
+  - "[[Kurtulmak]]"
+  - "[[Tiamat]]"
 source: VGtM
 key_traits:
   - Darkvision

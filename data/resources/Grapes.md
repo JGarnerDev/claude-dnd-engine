@@ -14,7 +14,7 @@ description: "Cultivated fruit grown in warm climates with good drainage. Primar
 trade_value: low
 accessibility: open
 consumers:
-  - [[Wine]] (primary fermentation input)
+  - "[[Wine]] (primary fermentation input)"
 ---
 
 Grapes are cultivated in warm, well-drained terrain — terraced hillsides, sun-facing valleys, coastal plains in temperate climates. Eaten fresh in season; pressed and fermented into [[Wine]] year-round. A region's grape variety shapes its wine character as much as the vintner does.

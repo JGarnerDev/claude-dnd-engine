@@ -8,18 +8,18 @@ tags:
 content: "There is a jurisdiction case in the Courts Superior that has outlived both men who filed it. Their heirs inherited the standing. The site they were arguing over was stripped to bedrock years ago, and the hearings are still scheduled."
 truth: true
 circulating_in:
-  - [[Courts Superior]]
-  - [[The Partenariats]]
+  - "[[Courts Superior]]"
+  - "[[The Partenariats]]"
 truth_detail: "True, and not even rare — this is how the Whatwill economy actually works. The specific case can be named to taste. The stripping was Partenariat work carried out under no banner, and the court record contains no mechanism for noticing that the disputed property no longer exists, because acknowledging it would require ruling on who owned it."
 importance: major
 active: true
 description: "A Whatwill jurisdiction case still in deliberation years after the site was quietly stripped bare — the deadlock that makes the Partenariats effective."
 relates_to:
-  - [[Courts Superior]] (where the case sits)
-  - [[The Partenariats]] (stripped the site during deliberation)
-  - [[Whatwill]] (what the case is nominally about)
+  - "[[Courts Superior]] (where the case sits)"
+  - "[[The Partenariats]] (stripped the site during deliberation)"
+  - "[[Whatwill]] (what the case is nominally about)"
 known_by:
-  - [[The Partenariats]] (full)
+  - "[[The Partenariats]] (full)"
 ---
 
 ## The Rumour

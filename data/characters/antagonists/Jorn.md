@@ -11,7 +11,7 @@ tags:
   - character/antagonist
 
 # --- MANDATORY (antagonist) ---
-location: [[Duskwater]]
+location: "[[Duskwater]]"
 personality: "Disciplined, deliberate, and short on words. Exiled from his druid circle for a transgression, so the band is the only kin he has left — and his loyalty runs to the crew, not to Marlow's cause. Fights to cover a retreat rather than to slaughter. Hates the fouling of the river more than he hates anyone in Ashford."
 livelihood: "Bandit lieutenant — works the land raids for House Marlow, unofficially."
 disposition: hostile

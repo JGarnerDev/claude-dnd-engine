@@ -16,8 +16,8 @@ languages:
   - Orc
 homeland: "Wastelands, mountains, and conquered territories"
 patron_deity:
-  - [[Gruumsh]]
-  - [[Luthic]]
+  - "[[Gruumsh]]"
+  - "[[Luthic]]"
 source: VGtM
 key_traits:
   - Darkvision

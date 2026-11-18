@@ -11,8 +11,8 @@ tags:
   - region/calenmere
 
 # --- MANDATORY (route) ---
-origin: [[Orrend]]
-destination: [[Tassad]]
+origin: "[[Orrend]]"
+destination: "[[Tassad]]"
 medium: river
 
 # --- OPTIONAL (entity base) ---
@@ -28,7 +28,7 @@ relates_to:
 description: "The barge trade down the Moorthistle and the Broadwend: loaded at Orrend's wharves, floated down to the bay, and carried by ship to Tassad. The upper Moorthistle's whole export economy, and House Marlow's toll on it."
 
 # --- OPTIONAL (route) ---
-controlling_faction: [[House Marlow]]
+controlling_faction: "[[House Marlow]]"
 primary_goods:
   - Grain
   - Ale

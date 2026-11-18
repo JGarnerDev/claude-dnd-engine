@@ -7,7 +7,7 @@ state: alive
 tags:
   - character
   - character/npc
-location: [[The Golden Lioness]]
+location: "[[The Golden Lioness]]"
 personality: "Quiet. Watches rooms the way people with certain histories do."
 livelihood: "Security and heavy work at The Golden Lioness."
 race: goliath
@@ -16,8 +16,8 @@ disposition: neutral
 description: "Goliath working security at The Golden Lioness; left something behind before settling here and doesn't discuss it."
 contributed_by: jeff
 relates_to:
-  - [[The Golden Lioness]] (staff)
-  - [[Bree Tealeaf]] (colleague — arrived within a season of each other)
+  - "[[The Golden Lioness]] (staff)"
+  - "[[Bree Tealeaf]] (colleague — arrived within a season of each other)"
 ---
 
 Location: [[The Golden Lioness]]

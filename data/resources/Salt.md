@@ -16,7 +16,7 @@ description: "Essential preservative and seasoning. Coastal evaporation pans and
 trade_value: low
 accessibility: open
 consumers:
-  - [[Preserved Food]] (preservation agent)
+  - "[[Preserved Food]] (preservation agent)"
 ---
 
 Salt is found in coastal, desert. Essential preservative and seasoning. Coastal evaporation pans and desert flats are primary sources.
@@ -24,4 +24,3 @@ Salt is found in coastal, desert. Essential preservative and seasoning. Coastal 
 Salt taxes have toppled governments. Control of a salt route is control of food security.
 
 Consumed downstream by [[Preserved Food]].
-

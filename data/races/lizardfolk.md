@@ -16,8 +16,8 @@ languages:
   - Draconic
 homeland: "Swamps, jungles, and coastal marshes"
 patron_deity:
-  - [[Semuanya]]
-  - [[Ubtao]]
+  - "[[Semuanya]]"
+  - "[[Ubtao]]"
 source: VGtM
 key_traits:
   - Bite

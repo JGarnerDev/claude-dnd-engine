@@ -18,7 +18,7 @@ languages:
   - Dwarvish
 homeland: "Underground halls and mountain strongholds"
 patron_deity:
-  - [[Moradin]]
+  - "[[Moradin]]"
 source: PHB
 key_traits:
   - Darkvision

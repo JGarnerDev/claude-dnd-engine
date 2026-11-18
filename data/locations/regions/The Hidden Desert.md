@@ -15,7 +15,7 @@ biome: desert
 description: "A desert sunken into a sub-continent's interior and enclosed by mountains on three sides. You don't know it's there until you're already in it."
 climate: "Extreme dry heat. Enclosed by mountains — no coastal moisture reaches. Temperatures extreme."
 relates_to:
-  - [[The Broken Back]] (mountain range that encloses it)
+  - "[[The Broken Back]] (mountain range that encloses it)"
 ---
 
 A desert hidden inside a sub-continent — [[The Broken Back]] and surrounding ranges enclose it on three sides, blocking moisture and trapping heat. Travelers rarely find it intentionally. If you're in it, you were either looking very hard or very lost.

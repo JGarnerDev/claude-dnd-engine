@@ -7,12 +7,12 @@ state: active
 tags:
   - faction/religious
 locations:
-  - [[The World]]
+  - "[[The World]]"
 purpose: religious
 importance: background
 description: "Religious faction that displays Whatwill publicly so onlookers can enter reverie states. Maintain the Vitrian calendar, which tracks Opticons and foretells Glistenings. Go to enormous lengths to secure and preserve LeyLodes before the structures shatter themselves or are dissected by the Mintners."
 resources:
-  - [[Whatwill]]
+  - "[[Whatwill]]"
 ---
 
 The Vitricants display [[Whatwill]] publicly — polished and precisely lit — so onlookers can become lost in reverie. It is entrancing to gaze upon, and the addiction sets in. At the highest end, Aureum-quality Lodes are exhibited in perfectly controlled environments, with lens arrays focusing light to bestow the full luminous splendor of the piece. LeyLodes, if preserved intact, can induce full reality fracturings in unprepared onlookers.

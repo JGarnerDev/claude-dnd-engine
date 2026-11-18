@@ -8,13 +8,13 @@ state: active
 tags:
   - faction/noble
 locations:
-  - [[Aethryn]]
+  - "[[Aethryn]]"
 purpose: political
 importance: major
 aliases:
   - "the Bleths"
 relates_to:
-  - [[Halsby]] (true house of; last direct heir, presumed missing)
+  - "[[Halsby]] (true house of; last direct heir, presumed missing)"
 description: "An old merchant-noble house of Corveth, of the Old Charter caste. Climbed toward the shadow power during the occupation rather than hiding from it — and now wants that history, and its last heir, to stay buried."
 hierarchy: "Old Charter merchant-nobility of Corveth. Elder mercantile line; house standing tied to trade-writs and marriage contracts made during the occupation."
 motives:

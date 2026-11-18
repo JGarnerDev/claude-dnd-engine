@@ -8,21 +8,21 @@ tags:
 content: "The last Islift to Staple did not fail. Someone went down under it and cut the Whatwill out. Ask why no Lifted house has named a cause, and then ask who gained the airspace."
 truth: partial
 circulating_in:
-  - [[The Grey Reaches]]
-  - [[The Lifted]]
+  - "[[The Grey Reaches]]"
+  - "[[The Lifted]]"
 truth_detail: "A Stapling did occur and no house has published a cause — that much is fact, and the silence is disgrace-management, not conspiracy. Whether the Whatwill was cut out is open. The rumour is most useful left half-true: something was taken from beneath the mass, but by whom, and whether removal caused the fall or merely preceded it, stays unsettled. Neither the Climbers nor the Divers will deny it, because the accusation flatters both."
 importance: major
 active: true
 description: "A claim that the last Islift crash was sabotage — Whatwill cut out from underneath — rather than the disgrace the Lifted treat it as."
 relates_to:
-  - [[The Lifted]] (whose disgrace it is)
-  - [[The Climbers]] (accused, and benefiting)
-  - [[The Divers]] (accused, and benefiting)
-  - [[Whatwill]] (what was allegedly removed)
-  - [[The Grey Reaches]] (where it circulates freely)
+  - "[[The Lifted]] (whose disgrace it is)"
+  - "[[The Climbers]] (accused, and benefiting)"
+  - "[[The Divers]] (accused, and benefiting)"
+  - "[[Whatwill]] (what was allegedly removed)"
+  - "[[The Grey Reaches]] (where it circulates freely)"
 known_by:
-  - [[The Climbers]] (partial)
-  - [[The Divers]] (partial)
+  - "[[The Climbers]] (partial)"
+  - "[[The Divers]] (partial)"
 ---
 
 ## The Rumour

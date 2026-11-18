@@ -7,7 +7,7 @@ state: alive
 tags:
   - character
   - character/npc
-location: [[The Golden Lioness]]
+location: "[[The Golden Lioness]]"
 personality: "Looks like nothing special. Genuine folksy charm."
 livelihood: "Regular performer at The Golden Lioness."
 importance: minor
@@ -16,7 +16,7 @@ description: "Old man who plays regularly at The Golden Lioness; unremarkable in
 contributed_by: jeff
 charm_hook: "Has never once asked to be paid, and no one has ever thought to offer."
 relates_to:
-  - [[The Golden Lioness]] (regular performer)
+  - "[[The Golden Lioness]] (regular performer)"
 ---
 
 Location: [[The Golden Lioness]]

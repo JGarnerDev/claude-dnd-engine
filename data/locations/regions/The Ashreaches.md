@@ -19,10 +19,10 @@ importance: major
 biome: volcanic
 description: "The only place in the world where ashwake (coffee) grows. Volcanic ash terraces worked by bonded labor and controlled by five rival houses, each holding one irreplaceable link in the production chain."
 relates_to:
-  - [[Coffee]] (sole growing region)
-  - [[Watler's Way]] (island the Ashreaches sits on)
-  - [[Cindermouth Bay]] (sea export point below the terraces)
-  - [[Tempered Parting]] (separates Watler's Way from the Struck Side)
+  - "[[Coffee]] (sole growing region)"
+  - "[[Watler's Way]] (island the Ashreaches sits on)"
+  - "[[Cindermouth Bay]] (sea export point below the terraces)"
+  - "[[Tempered Parting]] (separates Watler's Way from the Struck Side)"
 ---
 
 The only terrain in the world where [[Coffee]] (ashwake) grows. The volcanic ash soil of the Ashreaches is the missing ingredient — no other terrain takes. [[House Gilgane]] owns and builds the terraces and parcels out the grower-settlements to bonded labor.

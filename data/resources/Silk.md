@@ -16,7 +16,7 @@ description: "Produced by silk moths or giant spiders in warm forested regions. 
 trade_value: high
 accessibility: restricted
 consumers:
-  - [[Fine Clothing]] (premium fabric)
+  - "[[Fine Clothing]] (premium fabric)"
 ---
 
 Silk is found in forests, jungle. Produced by silk moths or giant spiders in warm forested regions. Coveted by nobility worldwide.
@@ -24,4 +24,3 @@ Silk is found in forests, jungle. Produced by silk moths or giant spiders in war
 Silk trade routes are spy corridors. Information travels with the cloth.
 
 Consumed downstream by [[Fine Clothing]].
-

@@ -16,7 +16,7 @@ description: "Nightshade, mandrake, and kin - plants with potent alchemical or m
 trade_value: moderate
 accessibility: open
 consumers:
-  - [[Perfume and Incense]] (resins and aromatic extracts)
+  - "[[Perfume and Incense]] (resins and aromatic extracts)"
 relates_to:
   - "[[Fargrsh]] (most notorious member of this family; detailed as its own resource)"
 ---
@@ -26,4 +26,3 @@ Alchemical Herbs is found in forests, wilderness. Nightshade, mandrake, and kin 
 Overharvesting collapses a local supply; knowing where untouched stands grow is leverage.
 
 Consumed downstream by [[Perfume and Incense]].
-

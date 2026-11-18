@@ -10,13 +10,13 @@ aliases:
 tags:
   - character
   - character/npc
-location: [[Tassad]]
+location: "[[Tassad]]"
 personality: "Imperious, in the manner of high guild mages — TBD beyond the office."
 livelihood: "Heads the Archon Council; governs the Templar Triumvirate and its three tower-guilds."
 importance: major
 disposition: unknown
 relates_to:
-  - [[The Templar Triumvirate]] (leads, as head of the Archon Council)
+  - "[[The Templar Triumvirate]] (leads, as head of the Archon Council)"
 motives:
   - Hold the three towers in balance and the Council's authority intact
 description: "The seated head of the Archon Council, ruling the Templar Triumvirate from Tassad. A title as much as a person — the individual behind it is not yet named."

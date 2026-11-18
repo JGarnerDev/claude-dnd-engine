@@ -7,12 +7,12 @@ state: active
 tags:
   - faction/cult
 locations:
-  - [[The World]]
+  - "[[The World]]"
 purpose: religious
 importance: background
 description: "Dust-inhaling mystics who believe Whatwill transports them to another realm. Operate Mint manufactories for processing and distributing Whatwill in refined form. Known to dissect LeyLodes into anaesthetic tatters for distribution to bankers."
 resources:
-  - [[Whatwill]]
+  - "[[Whatwill]]"
 ---
 
 The Mintners inhale [[Whatwill]] dust, dosed via the eyes — trickling a slurry into the tear ducts. They believe the experience transports them to another realm entirely.

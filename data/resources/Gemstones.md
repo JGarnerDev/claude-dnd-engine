@@ -16,7 +16,7 @@ description: "Rubies, sapphires, emeralds - raw gems cut for jewelry, ritual foc
 trade_value: high
 accessibility: open
 consumers:
-  - [[Jewelry and Adornments]] (cut stones)
+  - "[[Jewelry and Adornments]] (cut stones)"
 ---
 
 Gemstones is found in mountains, underground. Rubies, sapphires, emeralds - raw gems cut for jewelry, ritual foci, and arcane components.
@@ -24,4 +24,3 @@ Gemstones is found in mountains, underground. Rubies, sapphires, emeralds - raw 
 Uncut gems sometimes carry dormant enchantment from the vein they formed in.
 
 Consumed downstream by [[Jewelry and Adornments]].
-

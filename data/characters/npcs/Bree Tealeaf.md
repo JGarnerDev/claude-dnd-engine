@@ -7,7 +7,7 @@ state: alive
 tags:
   - character
   - character/npc
-location: [[The Golden Lioness]]
+location: "[[The Golden Lioness]]"
 personality: "Chatty, remembers everyone and everything. The chatty act is real, and also useful."
 livelihood: "Bartender at The Golden Lioness."
 race: halfling
@@ -17,8 +17,8 @@ description: "Halfling bartender at The Golden Lioness; knows people she shouldn
 contributed_by: jeff
 charm_hook: "Knows the meaning of every notice pinned to the wall but insists she doesn't remember how they got there."
 relates_to:
-  - [[The Golden Lioness]] (staff)
-  - [[Lok Thuliaga]] (colleague — arrived within a season of each other)
+  - "[[The Golden Lioness]] (staff)"
+  - "[[Lok Thuliaga]] (colleague — arrived within a season of each other)"
 ---
 
 Location: [[The Golden Lioness]]

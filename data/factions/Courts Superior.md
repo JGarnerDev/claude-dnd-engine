@@ -7,7 +7,7 @@ state: active
 tags:
   - faction/administrative
 locations:
-  - [[The World]]
+  - "[[The World]]"
 purpose: political
 importance: background
 description: "Urban legal bodies that adjudicate jurisdiction over Whatwill landing sites. Urbanites fight each other in Courts Superior proceedings, largely coming to fruitless impasses as deliberation slows activity to a crawl — creating the vacuum that the Partenariats exploit."
@@ -20,7 +20,7 @@ tensions:
   - Competing jurisdictions between Courts
   - Urbanites fight each other, not the Partenariats extracting under their noses
 opposition:
-  - [[The Partenariats]] (exploit the Courts' slowness entirely)
+  - "[[The Partenariats]] (exploit the Courts' slowness entirely)"
 ---
 
 Urban legal bodies that adjudicate jurisdiction over [[Whatwill]] landing sites. When a Kerning sounds, urbanites race to the Courts Superior to file competing claims — nobles, merchant houses, civic authorities all asserting primacy.

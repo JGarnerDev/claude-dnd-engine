@@ -9,13 +9,13 @@ aliases:
 tags:
   - faction/guild
 locations:
-  - [[Tassad]]
+  - "[[Tassad]]"
 purpose: arcane
 importance: major
-rulership: [[Grand Archon]]
+rulership: "[[Grand Archon]]"
 relates_to:
-  - [[Magic & the Arcane]] (embodies the extreme end of guild spellcaster policing)
-  - [[Tassad]] (seat; the basin's largest city)
+  - "[[Magic & the Arcane]] (embodies the extreme end of guild spellcaster policing)"
+  - "[[Tassad]] (seat; the basin's largest city)"
 motives:
   - Maintain a complete registry of every recognised Speaker of the Word in the region
   - Preserve the precedence and portfolio boundaries between the three tower-guilds

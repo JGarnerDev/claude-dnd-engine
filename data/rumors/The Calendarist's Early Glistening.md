@@ -8,18 +8,18 @@ tags:
 content: "A Vitrian calendarist ran the Glistening forward and got a date inside his own lifetime. He showed his working to the order. He has not been seen since, and the calendar he kept has been recopied in a different hand."
 truth: unknown
 circulating_in:
-  - [[The Vitricants]]
-  - [[The Grey Reaches]]
+  - "[[The Vitricants]]"
+  - "[[The Grey Reaches]]"
 truth_detail: "Whether the arithmetic was right, wrong, or never existed is open. Three usable shapes: the calendarist was correct and the order is managing a panic it cannot survive admitting; he was wrong in a way that would have discredited the whole calendar if published; or there was no calendarist and the story is a Partenariat invention to make landing-site futures look scarce. Do not settle it in worldbuilding — settle it in play."
 importance: major
 active: true
 description: "A suppressed Vitrian calculation putting the next Glistening within a human lifetime instead of a thousand years out."
 relates_to:
-  - [[The Vitricants]] (keepers of the calendar)
-  - [[Astra]] (the body whose return is being predicted)
-  - [[The Partenariats]] (would profit either way)
+  - "[[The Vitricants]] (keepers of the calendar)"
+  - "[[Astra]] (the body whose return is being predicted)"
+  - "[[The Partenariats]] (would profit either way)"
 known_by:
-  - [[The Partenariats]] (partial)
+  - "[[The Partenariats]] (partial)"
 ---
 
 ## The Rumour

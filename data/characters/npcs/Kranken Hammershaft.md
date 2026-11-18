@@ -18,7 +18,7 @@ aliases:
   - "Kraken Hammershaft"
 awareness: regional
 relates_to:
-  - [[Homebrew Campaign]] (belongs to this campaign)
+  - "[[Homebrew Campaign]] (belongs to this campaign)"
 goals:
   - "Compose the one saga that outlives him"
 motives:

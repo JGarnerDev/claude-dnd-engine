@@ -13,9 +13,9 @@ controlling_faction: unknown
 importance: background
 description: "Large orbital island masses cast into orbit by the Astra impact 6.7433 millennia ago. Higher and larger than the Islifts of the Lifted. Frontier — no known permanent inhabitants. Reaching them requires extraordinary means."
 relates_to:
-  - [[Astra]] (cause of formation)
-  - [[The Lifted]] (smaller Islifts contrast; the Lifted do not occupy the Slices)
-  - [[Whatwill]] (Showerings from the shard band may strike the Slices)
+  - "[[Astra]] (cause of formation)"
+  - "[[The Lifted]] (smaller Islifts contrast; the Lifted do not occupy the Slices)"
+  - "[[Whatwill]] (Showerings from the shard band may strike the Slices)"
 ---
 
 The large orbital island masses flung into orbit when [[Astra]] struck the dwarf planetoid 6.7433 millennia ago. The impact dislodged many islands from the Arc Side — the larger ones became the Slices, casting themselves into distant orbits; the smaller Islifts wander at lower altitudes and are inhabited by [[The Lifted]].

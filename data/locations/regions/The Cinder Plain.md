@@ -15,9 +15,9 @@ biome: volcanic
 description: "Volcanic desert on a southern continent. Ash and cinder from persistent volcanic activity mix into the sand, giving it a gritty, dark texture distinct from ordinary desert."
 climate: "Extreme heat. Volcanic ash falls intermittently. Cinder content in soil discourages most agriculture."
 relates_to:
-  - [[The Ashreaches]] (volcanic geography continues here)
-  - [[Cindermouth Bay]] (volcanic island chain nearby)
-  - [[Caldrath]] (broader cinder/amber geographic cluster)
+  - "[[The Ashreaches]] (volcanic geography continues here)"
+  - "[[Cindermouth Bay]] (volcanic island chain nearby)"
+  - "[[Caldrath]] (broader cinder/amber geographic cluster)"
 ---
 
 A volcanic desert on a southern continent. [[The Cinder Plain]] sits in the lower-right of the known world — its sand mixed with cinder and ash from persistent volcanic activity, giving it a dark, gritty quality unlike ordinary desert.
