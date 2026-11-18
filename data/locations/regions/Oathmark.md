@@ -10,7 +10,6 @@ tags:
   - location/region
 geography: "Northern island group near [[Hightalon]]; upper position"
 controlling_faction: unknown
-
 biome: coastal
 description: "Hard seafaring noble raiders; oath-bound warrior culture; named for the code that defines them, not the land itself"
 ---

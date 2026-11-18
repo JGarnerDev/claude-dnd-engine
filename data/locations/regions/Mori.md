@@ -10,7 +10,6 @@ tags:
   - location/region
 geography: "Heavily forested; southern tip of eastern continent; right side lower"
 controlling_faction: unknown
-
 biome: tropical-forest
 description: "Dense ancient forest sub-continent; beauty hidden in depths; remote southern extension of the eastern continent"
 ---

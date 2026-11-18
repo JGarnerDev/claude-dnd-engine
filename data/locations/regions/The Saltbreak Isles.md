@@ -10,7 +10,6 @@ tags:
   - location/region
 geography: "Island chain between the main continent and the eastern continent; center-right position"
 controlling_faction: unknown
-
 biome: coastal
 description: "Pirate-dominated crossroads; no formal law; merchant kings and navigation wizard guild present but pirates set the cultural tone"
 ---

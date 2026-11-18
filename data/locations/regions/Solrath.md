@@ -10,7 +10,6 @@ tags:
   - location/region
 geography: "Lower-center desert sub-continent; enclosed, hot, hard to approach"
 controlling_faction: unknown
-
 biome: desert
 description: "Desert trade chokepoint guarding central ocean routes; proximity to [[Karath Ut'll]]; mercantile and strategically vital; name predates current factions"
 ---

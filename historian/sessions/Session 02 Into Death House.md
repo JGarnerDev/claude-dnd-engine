@@ -15,8 +15,7 @@ importance: major
 active: false
 description: "Party explores floors 1-2 of Death House. Strahd's letter discovered in hidden library room."
 
-# 
---- HISTORIAN ---
+# --- HISTORIAN ---
 played_date: "2026-03-16"
 recap: "Party explored Death House floors 1 and 2. Found hand crossbow and 60 bolts (Iggy), 4 spears (Luci). Threw items out the window — turned to dust, silver tarnished, crystal cracked. Iggy grabbed a first edition book and an iron key to area 20. In the library, found a hidden room containing fake rituals and a letter from Strahd to Gustav Durst, dismissing the cult entirely. Odibli became very interested in fireplaces."
 cliffhanger: "Odibli wants to find out more about the fireplaces next session."

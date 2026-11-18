@@ -17,8 +17,7 @@ importance: major
 active: false
 description: "Strahd appears in the fireplace of room 6. Animated armor downs Odibli and Iggy (temporarily). Jewelry found in master bedroom."
 
-# 
---- HISTORIAN ---
+# --- HISTORIAN ---
 played_date: "2026-03-23"
 recap: "Odibli checked the fireplace in room 6 (his habit). Strahd appeared as a face in the flames — calm, composed, interested. Addressed the party without threat. Odibli sensed ancient, powerful magic. Strahd disappeared when the fire went out. Animated armor in the room attacked when Luci inspected it — downed Odibli and Iggy. Party ultimately defeated the armor. Jewelry found in master bedroom."
 cliffhanger: "Party continues deeper into Death House."

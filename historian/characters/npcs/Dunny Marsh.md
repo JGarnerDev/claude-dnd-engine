@@ -14,7 +14,7 @@ tags:
 
 # --- MANDATORY (npc) ---
 location: [[Ashford]]
-personality: "Too loud, too quick: "I'm fine, I'm fine." Laughs easily, even hurt."
+personality: "Too loud, too quick: “I'm fine, I'm fine.” Laughs easily, even hurt."
 livelihood: "Deputy to Sheriff Mara Tull."
 
 # --- OPTIONAL (entity base) ---

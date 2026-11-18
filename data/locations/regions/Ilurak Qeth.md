@@ -10,7 +10,6 @@ tags:
   - location/region
 geography: "Southern glaciated continent; deep permanent ice, total frost coverage"
 controlling_faction: unknown
-
 biome: arctic
 description: "Ancient arctic peoples; something buried under the ice; draws exploratory science expeditions and magic guilds"
 ---

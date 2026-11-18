@@ -15,8 +15,7 @@ importance: major
 active: false
 description: "Death experience recounts from Odibli and Dip. Formation discussion. Ghoul ambush. Mimic encounter."
 
-# 
---- HISTORIAN ---
+# --- HISTORIAN ---
 played_date: "2026-04-14"
 recap: "Session opened with Odibli and Dip's death experience recounts (from Session 5 specter fight). Formation discussed and set. Party turned a corner and was ambushed by 4 ghouls emerging from the floor — Iggy thrown to the floor, Luci threw Odibli away (2 damage), ghouls took out Odibli/Luci/Iggy but Dip killed the last ghoul. 2 ghouls escaped into darkness. Long rest. Party encountered a Mimic pretending to be a door — adhered to all but Luci. Odibli downed. Short rest."
 cliffhanger: "Two ghouls still in the darkness. Mimic defeated but party depleted."

@@ -17,8 +17,7 @@ importance: critical
 active: false
 description: "Dip joins the party. Shazzam spell established. Specter attacks; Odibli and Dip killed; Luci sacrifices Sacred Flame permanently to revive them."
 
-# 
---- HISTORIAN ---
+# --- HISTORIAN ---
 played_date: "2026-03-31"
 recap: "Dip joined the session injured (3 HP). Iggy and Luci healed them for 2 HP. Shazzam spell officially established as a rule. Specter made its appearance. Sabathiel (Luci's divine connection) went silent; Iggy felt cold; Odibli saw everything blurry; Dip's wounds reopened (1 HP). Iggy detected undead energy. Luci tried to contact Sabathiel via Religion check — failed. Odibli used Minor Illusion to distract the specter for 20 seconds; Luci tried to send Sabathiel a message. Specter entered: initiative order Dip, Odibli, Specter, Luci, Iggy. Odibli immediately downed (0 HP, full dead). Luci cast Sanctuary on Odibli. Specter killed Dip outright. Luci dropped into sleep; Sabathiel revived Odibli and Dip — but Luci sacrificed Sacred Flame FOREVER as the price."
 cliffhanger: "Sacred Flame is gone. Party is depleted. The house remains."

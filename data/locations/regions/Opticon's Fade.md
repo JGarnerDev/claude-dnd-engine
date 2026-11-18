@@ -10,7 +10,6 @@ tags:
   - location/region
 geography: "Large orbital island mass (Slice); high altitude above the main world"
 controlling_faction: "[[The Mintners]]"
-
 biome: aerial
 description: "Less prosperous orbital colony; Mintner dust-economy; dense Lensing Zones from frequent Showerings; inhabitants adapted to live among phantasmic entities"
 relates_to:

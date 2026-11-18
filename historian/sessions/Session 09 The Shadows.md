@@ -17,8 +17,7 @@ importance: critical
 active: false
 description: "Shadow encounter kills Iggy and Dip twice. Strahd intervenes to warn the party. Luci kills all shadows. MVP: Luci."
 
-# 
---- HISTORIAN ---
+# --- HISTORIAN ---
 played_date: "2026-05-05"
 recap: "Iggy tried to move through the room and was immediately killed by two shadows (opportunity attacks reduced Strength to 0). Strahd froze time just before the shadows would have reached Dip, and warned: 'The shadows cannot exist in the light. Be wary of that which you cannot see — it is deadly.' Then left. Dip ran from the shadows and was killed by necrotic damage. Odibli threw a healing potion to revive Dip. Dip tried to hit a shadow and missed; shadow counterattacked and reduced their Strength to 0, killing them again. Luci killed off all remaining shadows. MVP: Luci."
 ---
