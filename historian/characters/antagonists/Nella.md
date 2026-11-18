@@ -18,7 +18,7 @@ personality: "Patient and watchful. Tracks, waits, and picks off from range; dis
 livelihood: "Bandit lieutenant — the band's hunter and marksman, raiding for House Marlow, unofficially."
 disposition: hostile
 voice: "Patient and dry, never raised: short sentences from a long way off, and she counts things aloud."
-voice_confirmed: 33
+voice_confirmed: 34
 
 # --- OPTIONAL (entity base) ---
 importance: minor
@@ -134,8 +134,9 @@ hears, and she can answer. She sits on that through many fights before it comes 
 
 ### Now
 
-- **Stance:** on alert; she knows the party is coming and roughly from where (S32: heard Halsby's crystal broadcast)
+- **Stance:** on the run, on foot; her griffon died in the yard and her crew with it (S34: the waystation fight)
 
 ### Said at the table
 
 - S32: "Get moving, they're coming." (to her crew, mounting the griffon)
+- S34: "Alright, Tithe. Go hunt." (over the crystals, setting the griffon loose)

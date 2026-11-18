@@ -70,3 +70,38 @@ Reputation ledger (meta/reputation.md). One `## Session <n>` per homebrew sessio
   bolt of lightning out of nowhere that burned four of the crew and left the hedge priest as a
   hard outline of ash.
 - known · infamy: Lightning from nowhere. The priest was ash.
+
+## Session 34
+
+### Halsby
+
+- fame · The Waystation · notable × named-foe × witnesses · lvl 5 = 8,475: Killed Nella's griffon
+  Tithe with a Fire Bolt that caught under the wing he had already burned.
+- infamy · The Waystation · notable × witnesses × style · lvl 5 = 7,345: One fire orb burned the
+  tally-man to ash, leapt and burned the half-orc cask-hand to ash too, then set a cart alight.
+- known · fame: Burned Nella's griffon out of the sky.
+- known · infamy: Turns men to ash, two with one spell.
+
+### Dip
+
+- infamy · The Waystation · notable × witnesses × style · lvl 5 = 7,345: Told the crew through
+  their own crystals that their corpses were his, narrated his kills to them, then torched their
+  shed.
+- known · infamy: Narrates your death through your own crystal.
+
+### Odibli
+
+- infamy · The Waystation · notable × witnesses × style · lvl 5 = 7,345: Fireballed the relief
+  riders from flat under a cart and killed all three.
+- known · infamy: Fireballs you from under a cart.
+
+### Luci
+
+- fame · The Waystation · notable × witnesses × style · lvl 5 = 7,345: Danced through her own
+  firestorm untouched, then kicked the relief captain into a burning cart.
+- known · fame: Danced through fire, then kicked their captain in.
+
+### Iggy
+
+- fame · The Waystation · notable × witnesses × style · lvl 5 = 7,345: Opened wings of light in
+  the waystation yard, smote the griffon with a glowing blade, and flew at it.

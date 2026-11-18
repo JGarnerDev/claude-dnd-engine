@@ -5,12 +5,12 @@ Achievements ledger (meta/achievements.md). One `## Session <n>` per homebrew se
 ### Odibli
 
 - fireplaces examined: 2 (S30, S31)
-- financial advice nobody asked for: 1 (S30)
+- financial advice nobody asked for: 2 (S30, S34)
 - animals interviewed: 2 (S30, S32)
 
 ### Luci
 
-- fires made worse: 1 (S30)
+- fires made worse: 2 (S30, S34)
 
 ### Halsby
 
@@ -53,3 +53,25 @@ Achievements ledger (meta/achievements.md). One `## Session <n>` per homebrew se
 
 - **Opening Statement**: One readied bolt, four of the crew in a line. The hedge priest held up a
   holy symbol. Lightning 1, holy symbol 0.
+
+## Session 34
+
+### Halsby
+
+- **Chain Reaction**: One fire orb turned the tally-man to ash, then the half-orc. It still had a
+  bounce left, so it set the reinforcements' cart on fire.
+
+### Dip
+
+- **Live Commentary**: Put the crystal in your mouth and narrated the archer's death to her
+  friends, sound effects included. The reinforcements rode in shaken and couldn't hit a thing.
+
+### Odibli
+
+- **Gnomaha**: Dove flat under a cart and Fireballed the reinforcements, Luci included. She said
+  yes. Three riders down, and one more cart on fire.
+
+### Luci
+
+- **Controlled Burn**: Whipped a burning cart's embers into a whirlwind and stood in the middle of
+  it. Four men swung at you through the fire, and none of them got anything for it.

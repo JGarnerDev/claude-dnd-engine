@@ -15,7 +15,7 @@ race: "Orc"
 class: "Barbarian (Path of the Berserker)"
 background: [[Sage]]
 level: 5
-level_confirmed: 33
+level_confirmed: 34
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Dip T (Barbarian 4, Path of the Berserker)"
 pronouns: "they/them"
@@ -30,6 +30,7 @@ relates_to:
   - [[The Hamlet Raiders]] (destroyed their home)
 affinity:
   - [[Luci]] (2)
+  - [[Odibli]] (1)
   - [[Davian Martikov]] (3)
   - [[Lady Fiona Wachter]] (-5)
 importance: critical

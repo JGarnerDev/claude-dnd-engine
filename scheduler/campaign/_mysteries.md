@@ -1,4 +1,4 @@
-# Mystery Answers (as of: Session 33)
+# Mystery Answers (as of: Session 34)
 
 DM-only. Not an entity. The answer key to the questions on the recap deck's **Mysteries & Loose Ends** slide
 (`meta/recap-slides.md` → Mysteries & Loose Ends slide). The `_` prefix keeps it out of `validate.ps1` and the
@@ -22,6 +22,22 @@ file with an `(as of: Session NN)` header and follow this section. Homebrew sess
 
 ## Answers
 
+### Who sent riders to the camp, and how many more are out there?
+
+**Canon (Session 34).** Four riders came in from the north under a captain in grey splint, to
+collect the casks, and found a fight. All four died in the yard. The party never heard their
+names (Garran Vey and three riders, plan names only).
+
+**Planned.** They answer to someone other than Nella and come from a camp that can spare riders:
+[[Harrow Bane]]'s main band, about a day across the river. The camp's ledger and bedrolls give the
+band's size (`S2_CAMP_INTEL`, carried to Session 35).
+
+### Who is Harrow Bane, and why did the room go quiet at the name?
+
+**Canon.** [[Harrow Bane]] commands the land band raiding [[Ashford]]: an ex-soldier, matched boots,
+no wasted violence. [[Nella]] is debt-collared to him and raids to buy herself out. His name is in
+the camp's ledger (Session 32). The party has not seen his face; Act 1 means for them to meet him.
+
 ### Who pays for raiders this organized: one cobbler's boots, a banner too fine for a camp?
 
 **Canon.** The band is [[Harrow Bane]]'s: an ex-soldier running banditry as a business, hence the
@@ -31,7 +47,7 @@ matched boots and staged crews.
 bleeding [[House Cael]] through a deniable land band. Act 1 does not require the party to learn it
 (`scheduler/acts/Act 1 - The Hearth at Ashford.md`, closing state).
 
-### Whose griffon is that, and how does a bandit camp have one?
+### How did a bandit camp come by a griffon trained for war?
 
 **Canon.** Tithe, a big tawny griffon kept hooded and staked behind the camp's blind and fed on
 mutton. [[Nella]] rides it carefully, like a borrowed horse. It isn't hers.
@@ -40,11 +56,68 @@ mutton. [[Nella]] rides it carefully, like a borrowed horse. It isn't hers.
 the camp says, and nobody in the ledger names it. If it's set loose without a rider it flies east,
 home to whoever owns it.
 
-### Who is Harrow Bane, and why did the room go quiet at the name?
+**Canon (Session 34).** Nella set Tithe loose to hunt the party riderless, and Halsby killed it in
+the waystation yard. The DM called it an animal "trained for war, amongst other things". Its body
+is in the yard ([[Tithe]]), and per the plan Nella's tally is in its saddlebags. Whose it was is
+still open.
 
-**Canon.** [[Harrow Bane]] commands the land band raiding [[Ashford]]: an ex-soldier, matched boots,
-no wasted violence. [[Nella]] is debt-collared to him and raids to buy herself out. His name is in
-the camp's ledger (Session 32). The party has not seen his face; Act 1 means for them to meet him.
+### What language was Iggy speaking when he healed Halsby?
+
+**Canon (Session 34).** When Iggy healed Halsby, his words came out in "a strange language that
+you cannot interpret".
+
+**Planned.** It is [[Sah]], speaking half a beat behind him: the first of the cues that build to Sah
+showing himself when Iggy's wings open (`S2_IGGY_BEAT`). The rest of that beat, "Up, Wallaed",
+wasn't played; it goes into Session 35's combat flashback.
+
+### Who else is listening on the raiders' crystals?
+
+**Canon.** The [[Earshot Crystals]] were all cut from one stone, one per raider. [[Nella]] kept hers,
+and so did a few of the crew who got away. Any message sent to "all" within 300 ft of her, she hears
+and can answer. In Session 32 she heard Halsby's report and launched the griffon. The waystation crew wear them
+too (Session 33), and heard Halsby's "going dark". The plan had the relief riders without crystals, but at the table their captain spoke to Nella over them ("Nella, where do you want us? We just arrived."), so at least he wore one. Dip used his to narrate kills to every crew member wearing one (Session 34).
+
+> **Reliability:** the plan said the relief didn't wear crystals; the table had the captain speak
+> on them. Treated as the table's version. Confirm with DM.
+
+### What is the Lioness's hearth tied to, and why did it stop during Iggy's song?
+
+**Open** (`meta/mysteries.md`, "What the Lioness hearth is linked to"; todo 78). Known: it feeds
+itself, Odibli found it linked to something not present with an aura about 100–200 ft across, and
+it stilled for ten seconds during Iggy's song (Session 30). [[Sable Wren]] calls the fire "a little
+bit strange" and has asked Odibli to keep quiet until she talks to him. Her patron, Asher
+([[Aashal-Groon Mellenegon Borak]]), lives in the aquifer under the cellar spring: a candidate, not
+an answer. Settle it in play.
+
+### What did Dip mean, shouting that a flame went inside Iggy the night of the fire?
+
+**Canon.** During [[Iggy]]'s song at [[The Golden Lioness]] (Session 30, played as a flashback at
+Session 31), [[Dip]] saw the hearth go still, and a private Arcana roll (15) opened it like a
+nesting doll: real, then hollow, then real again, with the innermost layer inside Iggy. Dip told no
+one. Mid-charge at Session 33, Dip shouted at Iggy that "a flame went inside" him that night.
+
+**Open.** Whether the shout shared the vision in character is unconfirmed; the vision stays Dip's
+own until Ben or Jeff play it. What the innermost layer is ties to "What is the Lioness's hearth
+tied to" above, and stays unset (`meta/mysteries.md`). Added to the deck's reserve 2026-11-11, ahead
+of Session 34; check with Ben before it ranks into the top eight.
+
+### Who pressed the charm into the hearth during the raid, and why smother the fire instead of burning the place?
+
+**Canon.** The raiders' hedge mage, while the crew held [[Sable Wren]] with Hold Person after a
+fireball hit the front of the tavern. It was meant to drown the self-feeding fire unnoticed over
+about eight hours ([[The Golden Lioness]], Session 31).
+
+**Open.** Why the band wanted the hearth dead rather than the building burned is not established.
+
+### Why did Luci's warmth go cold when Halsby cast through his spear?
+
+**Canon.** In Session 33, when [[Halsby]] cast Lightning Bolt through [[The Shadowless Spear]],
+the warmth [[Sabathiel]] keeps on [[Luci]]'s face went out for one breath and came back, and the
+voice said nothing about it. Planted on purpose (todo 81) to seed Luci's light against Halsby's
+shadow ways.
+
+**Open.** What Sabathiel makes of the Spear, or of Halsby, is not set. Don't explain it; check
+Paul's and Kellan's appetite for PC friction before building on it.
 
 ### Where are we? No map, and no names past Ashford and the river
 
@@ -63,40 +136,6 @@ river, the fief and the Caels freely; the party has heard none of them yet.
 days, so true night swings from 12 hours down to none. The moon, Fida, was broken by [[The Astra Collision]]
 6743 years ago and still sheds shards. They fall as Whatwill in Showerings about
 weekly, each heralded by a Kerning. Astra itself is far out and returns around the year 7000.
-
-### What is the Lioness's hearth tied to, and why did it stop during Iggy's song?
-
-**Open** (`meta/mysteries.md`, "What the Lioness hearth is linked to"; todo 78). Known: it feeds
-itself, Odibli found it linked to something not present with an aura about 100–200 ft across, and
-it stilled for ten seconds during Iggy's song (Session 30). [[Sable Wren]] calls the fire "a little
-bit strange" and has asked Odibli to keep quiet until she talks to him. Her patron, Asher
-([[Aashal-Groon Mellenegon Borak]]), lives in the aquifer under the cellar spring: a candidate, not
-an answer. Settle it in play.
-
-### Who pressed the charm into the hearth during the raid, and why smother the fire instead of burning the place?
-
-**Canon.** The raiders' hedge mage, while the crew held [[Sable Wren]] with Hold Person after a
-fireball hit the front of the tavern. It was meant to drown the self-feeding fire unnoticed over
-about eight hours ([[The Golden Lioness]], Session 31).
-
-**Open.** Why the band wanted the hearth dead rather than the building burned is not established.
-
-### Who else is listening on the raiders' crystals?
-
-**Canon.** The [[Earshot Crystals]] were all cut from one stone, one per raider. [[Nella]] kept hers,
-and so did a few of the crew who got away. Any message sent to "all" within 300 ft of her, she hears
-and can answer. In Session 32 she heard Halsby's report and launched the griffon. The waystation crew wear them
-too (Session 33), and heard Halsby's "going dark". The relief riders from the east road don't.
-
-### Why did Luci's warmth go cold when Halsby cast through his spear?
-
-**Canon.** In Session 33, when [[Halsby]] cast Lightning Bolt through [[The Shadowless Spear]],
-the warmth [[Sabathiel]] keeps on [[Luci]]'s face went out for one breath and came back, and the
-voice said nothing about it. Planted on purpose (todo 81) to seed Luci's light against Halsby's
-shadow ways.
-
-**Open.** What Sabathiel makes of the Spear, or of Halsby, is not set. Don't explain it; check
-Paul's and Kellan's appetite for PC friction before building on it.
 
 ### How different is this world from Barovia, and has anyone here heard of it?
 
@@ -125,18 +164,6 @@ It gave no name.
 **Canon.** [[Sabathiel]], [[Luci]]'s warlock patron, the voice behind her Guidance and Augury.
 
 **Open.** What "closer" points at (the Sun Temple, [[Aedra]], or somewhere in Aethryn) is not set.
-
-### What did Dip mean, shouting that a flame went inside Iggy the night of the fire?
-
-**Canon.** During [[Iggy]]'s song at [[The Golden Lioness]] (Session 30, played as a flashback at
-Session 31), [[Dip]] saw the hearth go still, and a private Arcana roll (15) opened it like a
-nesting doll: real, then hollow, then real again, with the innermost layer inside Iggy. Dip told no
-one. Mid-charge at Session 33, Dip shouted at Iggy that "a flame went inside" him that night.
-
-**Open.** Whether the shout shared the vision in character is unconfirmed; the vision stays Dip's
-own until Ben or Jeff play it. What the innermost layer is ties to "What is the Lioness's hearth
-tied to" above, and stays unset (`meta/mysteries.md`). Added to the deck's reserve 2026-11-11, ahead
-of Session 34; check with Ben before it ranks into the top eight.
 
 ## Answered
 

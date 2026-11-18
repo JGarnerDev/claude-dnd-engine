@@ -13,7 +13,7 @@ race: "Aasimar (Scourge)"
 class: "Monk 2 / Warlock 1 / Transcendent 1"
 background: "Astral Drifter"
 level: 5
-level_confirmed: 33
+level_confirmed: 34
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Lucitania (Monk 2 / Warlock 1 / Transcendent 1)"
 aliases:
@@ -26,7 +26,7 @@ relates_to:
   - [[Aedra]] (means to free her from her madness)
   - [[The Sun Temple]] (remembered home; a pocket dimension)
 affinity:
-  - [[Odibli]] (2)
+  - [[Odibli]] (3)
   - [[Davian Martikov]] (1)
   - [[Dip]] (2)
   - [[Ireena Kolyana]] (2)

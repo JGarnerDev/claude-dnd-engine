@@ -1,4 +1,4 @@
-# The Sky Clock (as of: Session 33)
+# The Sky Clock (as of: Session 34)
 
 DM-only. Not an entity. Holds Aethryn's running date, the Crawl tally, the next Kerning and a
 per-session log. The `_` prefix keeps it out of `validate.ps1` and the semantic index. **Update it at
@@ -30,7 +30,7 @@ file with an `(as of: Session NN)` header and follow this section. Homebrew sess
 
 ## Now
 
-- **Date:** `6743-05-21`, about 11 a.m. (Ashford Day 2), mid-fight at [[The Waystation]]
+- **Date:** `6743-05-21`, about 11 a.m. (Ashford Day 2), the fight over at [[The Waystation]], the chase still on
 - **Crawl:** 5 of 6743, began `6743-04-25` (day 27 today). No major landing since.
 - **Sun phase:** 5 of 18: about 5.3 hours of true dark tonight, shrinking to none by `6743-05-25`
 - **Fida:** full on the night of Ashford Day 1, waning now
@@ -53,6 +53,8 @@ One line per recapped homebrew session, in this exact shape:
   the scout. Dated at the calendar ingest.
 - **Session 33** · 6743-05-21 11:00 · Crawl 5 of 6743 (began 6743-04-25) · the charge on the
   waystation, mid-fight under low cloud. One hour on, the DM's estimate.
+- **Session 34** · 6743-05-21 11:00 · Crawl 5 of 6743 (began 6743-04-25) · the rest of the
+  waystation fight; Tithe dies. Under a minute passed. No Showering.
 
 ## Ideas sheet
 

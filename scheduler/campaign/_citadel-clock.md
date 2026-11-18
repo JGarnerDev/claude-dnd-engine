@@ -1,4 +1,4 @@
-# The Citadel Clock (as of: Session 33)
+# The Citadel Clock (as of: Session 34)
 
 DM-only. Not an entity. Tracks [[Odibli]]'s casting in Aethryn, whether [[The Citadel]] senses it,
 and what the DM can do with the results. The `_` prefix keeps it out of `validate.ps1` and the
@@ -89,6 +89,17 @@ from the d6 as fuel for the ideas sheet. They don't trigger anything on their ow
 - Sensed: 1 · Clock after: 1 / 3
 - Ready now (not used): ideas 1–3, the sensed-cast set. Idea 3 fits Session 34 best: Halsby is
   in the same fight and already reads Odibli as "not really there".
+
+### Session 34
+
+- Leveled: Magic Missile (1st (?), slot level not said) at the relief captain — d6 **5**, not
+  sensed; Fireball (3rd) on the relief — d6 **6**, not sensed. Both rolled by the engine
+  (`scripts/roll.py`) at the DM's request during `/recap`, not at the table (DM, 2026-11-18)
+- Cantrips: none
+- Spell 1s: 0
+- Sensed: 0 · Clock after: 1 / 3
+- **Owed:** the brief cold from Session 33's sensed cast was never sent. It goes into Session 35's
+  combat flashback (DM, 2026-11-18). Ideas 1–3 are still ready, not used.
 
 ## Ideas sheet
 

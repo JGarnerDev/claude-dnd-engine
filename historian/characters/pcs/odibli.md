@@ -13,7 +13,7 @@ race: "Gnome (Forest)"
 class: "Wizard (Evoker)"
 background: [[Sage]]
 level: 5
-level_confirmed: 33
+level_confirmed: 34
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Odibli Spannerbranch (Wizard 5, Evoker)"
 aliases:
@@ -40,7 +40,7 @@ family:
 affinity:
   - [[Sergei Rubelgerd]] (5)
   - [[Davian Martikov]] (3)
-  - [[Luci]] (2)
+  - [[Luci]] (3)
   - [[Rictavio]] (3)
 motivation: "Wonder over safety. Discover the world one day at a time."
 goals:

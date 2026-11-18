@@ -204,3 +204,42 @@ Stats ledger (meta/stats.md). One `## Session <n>` per session, both campaigns, 
 
 - damage-dealt: ~11
 - spells-cast: 1
+
+## Session 34
+
+### Halsby
+
+- killing-blows: 3
+- damage-dealt: ~55
+- nat-1s: 1
+- spells-cast: 5
+
+### Dip
+
+- killing-blows: 2
+- crits: 1
+- nat-20s: 1
+- damage-dealt: ~86
+
+### Odibli
+
+- killing-blows: 3
+- damage-dealt: ~78
+- knocked-down: 1
+- spells-cast: 2
+
+### Luci
+
+- killing-blows: 1
+- damage-dealt: ~31
+- unarmed-hits: 4
+- unarmed-damage: ~31
+- nat-1s: 1
+
+### Iggy
+
+- damage-dealt: ~40
+- heals-cast: 3
+- hp-healed: ~16
+- performances: 1
+- spells-cast: 4

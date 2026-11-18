@@ -1,4 +1,4 @@
-# Reputation (as of: Session 33)
+# Reputation (as of: Session 34)
 
 DM-only. Not an entity. What each fame and infamy tier unlocks, the rewards already given, and
 where each PC stands. Scores and rules: `meta/reputation.md`. The deed ledger is
@@ -88,23 +88,39 @@ Aethryn, so word hasn't left the waystation. The world and Duskwater crossings a
 fleeing crew could plausibly have carried the story; the waystation rewards are in-scene flavour
 only (no free hits, no surrenders).
 
-- **S33 · Dip · Suspect (infamy, The Waystation)** · `unspent`: the crew give Dip room. The first
+- **S33 · Dip · Suspect (infamy, The Waystation)** · `lapsed` (never played; the crew died in S34): the crew give Dip room. The first
   time he steps toward one of them in Session 34, that crewman backs off a step before standing.
-- **S33 · Halsby · Suspect (infamy, The Waystation)** · `unspent`: Clatter keeps one eye on Halsby.
+- **S33 · Halsby · Suspect (infamy, The Waystation)** · `lapsed` (never played; Clatter died in S34): Clatter keeps one eye on Halsby.
   When Halsby raises the Spear, Clatter shouts "Lightning man!" and the crew flinch.
 - **S33 · Dip · Suspect (infamy, world)** · `held`: nobody beyond the waystation has heard yet.
 - **S33 · Dip · Suspect (infamy, Duskwater)** · `held`: as above.
 - **S33 · Halsby · Suspect (infamy, world)** · `held`: as above.
 - **S33 · Halsby · Suspect (infamy, Duskwater)** · `held`: as above.
 
+Session 34 crossings, all held by the DM (2026-11-18). Everyone who saw the fight is dead except
+Nella. If she escapes in Session 35 she carries the story out, and these unlock at the next
+`/recap`. Nobody is left at the waystation to give a local reward.
+
+- **S34 · Iggy · Noticed (fame, world)** · `held`
+- **S34 · Luci · Noticed (fame, world)** · `held`
+- **S34 · Odibli · Suspect (infamy, world)** · `held`
+- **S34 · Halsby · Noticed (fame, Duskwater)** · `held`
+- **S34 · Iggy · Noticed (fame, Duskwater)** · `held`
+- **S34 · Luci · Noticed (fame, Duskwater)** · `held`
+- **S34 · Odibli · Suspect (infamy, Duskwater)** · `held`
+- **S34 · Halsby · Noticed (fame, The Waystation)** · `held`
+- **S34 · Iggy · Noticed (fame, The Waystation)** · `held`
+- **S34 · Luci · Noticed (fame, The Waystation)** · `held`
+- **S34 · Odibli · Suspect (infamy, The Waystation)** · `held`
+
 ## Current tiers
 
 From `reputation-standings.py`. Rewritten at each `/recap`.
 
-Party fame 1,960 (Unknown).
+Party fame 6,593 (Noticed).
 
-- **Dip:** fame 4,791 Noticed · infamy 8,450 Suspect. Ashford: Noticed. The Waystation: infamy Suspect. Duskwater: infamy Suspect (held).
-- **Halsby:** fame 3,616 Noticed · infamy 7,345 Suspect. Ashford: Noticed. The Waystation: infamy Suspect. Duskwater: infamy Suspect (held).
-- **Luci:** fame 850 Unknown · infamy 978 Unremarked.
-- **Iggy:** fame 544 Unknown · infamy 0.
-- **Odibli:** fame 0 · infamy 0.
+- **Dip:** fame 4,791 Noticed · infamy 15,795 Suspect. Ashford: Noticed. The Waystation: infamy Suspect. Duskwater: infamy Suspect (held).
+- **Halsby:** fame 12,091 Noticed · infamy 14,690 Suspect. Ashford: Noticed. The Waystation: fame Noticed (held), infamy Suspect. Duskwater: fame Noticed (held), infamy Suspect (held).
+- **Luci:** fame 8,195 Noticed (held) · infamy 978 Unremarked. The Waystation and Duskwater: fame Noticed (held).
+- **Iggy:** fame 7,889 Noticed (held) · infamy 0. The Waystation and Duskwater: fame Noticed (held).
+- **Odibli:** fame 0 · infamy 7,345 Suspect (held). The Waystation and Duskwater: infamy Suspect (held).

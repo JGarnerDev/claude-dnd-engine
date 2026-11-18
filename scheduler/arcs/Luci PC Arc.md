@@ -6,7 +6,7 @@ state: active
 tags:
   - pc-arc
 pc: "[[Luci]]"
-arc_checked: 33
+arc_checked: 34
 next_step:
   - "learn whether she was ever truly in the sun temple, or only remembers it through genetic memory"
   - "the time she lost drifting in the Astral Sea, 113 years she did not live, catches up with her"

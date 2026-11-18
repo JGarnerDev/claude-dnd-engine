@@ -6,7 +6,7 @@ state: active
 tags:
   - pc-arc
 pc: "[[Odibli]]"
-arc_checked: 33
+arc_checked: 34
 next_step:
   - "a street, a phrasing or a smell in Aethryn is one he knows without knowing why"
   - "he takes the back line on his own, against how he was made"
@@ -50,3 +50,4 @@ Miguel has no Looking Ahead section yet. What he wants is in [[Odibli]] → Pers
 ## Shifts
 
 - S33 — created with Jeff (2026-11-11).
+- S34 — fought flat under a cart and asked Luci before Fireballing her — a first, mixed lean toward Growth 1: he still dove in and was pecked to 0 HP. Next step unchanged.

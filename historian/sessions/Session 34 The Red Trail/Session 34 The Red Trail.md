@@ -4,13 +4,39 @@ name: "Session 34 The Red Trail"
 campaign: homebrew
 type: session
 session_number: 34
-exists: false
-state: planned
+exists: true
+state: completed
 tags:
   - session
 
 mission: [[The Stolen Casks]]
 planned_date: "2026-11-17"
+played_date: "2026-11-17"
+in_world_end_date: "6743-05-21"
+in_world_end_time: "11:00"
+recap: "The waystation fight carried on from Session 33, still about 11 a.m. on Day 2. The tally-man stabbed Halsby, who held his Haste. Nella landed her griffon on the ridge, dismounted, and over the crystals told it, 'Alright, Tithe. Go hunt'; it climbed back into the cloud. Then a gruff voice on the crystals asked Nella where she wanted them: relief riders, a captain and three men, came in from the north. Luci tripped the tally-man prone. Halsby's fire Chromatic Orb burned him to ash, leapt and burned the half-orc cask-hand to ash too, then, with no one left in reach, set the relief captain's cart alight. Dip put his crystal in his mouth and promised the crew, telepathically, that all their corpses would be his; he crit the archer dead, narrating it with sound effects, leapt onto the shed roof and cut the roof guard's leg off. The relief rode in shaken, shot at Luci and missed. Odibli dove flat under a cart ('This is Omaha') and hit the captain with Magic Missile. Iggy healed Halsby from 6 to 22, his words in a language no one knew. Luci whipped the burning cart's embers into a storm around herself and tumbled through it, and the relief's blows came to nothing. Dip ran into the long shed, poured his oil and lit it. Tithe dropped into the yard and clawed Halsby through his Shield. Odibli asked Luci whether he could Fireball her; she said it sounded like fun, and from under the cart he caught the captain and his three riders in one blast. The riders died, the captain lived, Luci came through with little hurt, and a second cart caught fire. Iggy smote the griffon. Nella shot Iggy down to 7. Halsby lost Haste and his turn with it. Dip threw his last oil and hauled Odibli up ('On your feet, soldier!'). Tithe snatched Odibli into the air; he broke free and landed on his feet. Iggy opened his wings, healed himself and flew at the griffon. Luci kicked the captain into the burning cart and killed him, then went up the ridge path after Nella. Halsby's Fire Bolt burned the griffon's left wing ash-grey. Dip leapt and brought it down out of the air. On the ground it pecked Odibli to 0 HP and clawed Iggy to 5. Halsby's second Fire Bolt caught under the burnt wing; Tithe screamed at him and collapsed on top of Odibli. The session ended there, with Nella running and Luci behind her."
+cliffhanger: "About 11 a.m. on Day 2, in the waystation yard. The crew, the relief captain and his three riders are dead, and so is Tithe, which lies on top of Odibli (0 HP, one death save success). The long shed is burning with the stores and the duty ledger inside, and two carts are burning, one of them beside the stolen cask cart. Iggy is at 5 HP with his wings open. Nella, on foot and apparently unhurt, is running up the ridge or river path toward the bridge, with Luci some way behind. Session 35 gives Luci one more chance to catch her."
+entities_canonized:
+  - "[[Tithe]]"
+new_entities:
+  - "Garran Vey (the relief captain) and his riders Dace Morrow, Pim Ostler and Callan Shire: killed at the waystation. Plan names only, not entities; the party never heard them"
+  - "Sennet Orrin (the tally-man), Brask (the half-orc cask-hand), Ilsa Hask (the archer) and Tam 'Clatter' Cobb (the roof guard): killed. Plan names only, not entities"
+table_notes: "A wicked combat, per Paul: 'so many layers.' The table played on past 11 p.m. to finish the griffon. 'Gnomaha' was the hit of the night (Odibli's belly-dive Fireball, the camera shot through the cart wheel, 'Gnomaha Beach, so hot right now'); expect it back. Dip's crystal narration and Halsby's two-kill orb got big reactions. Friction: a long Shield-timing debate, Haste's extra action (can't cast), Roll20 drawing trouble, Dip dropping off the initiative tracker, Odibli's dagger and Nick confusion, and Luci's Energy Storm text too long for Roll20 chat. Paul's dice were cold all night. Jeff had a cold and ran combat only, so the planned narrative moments (Sah's 'Up, Wallaed', the Citadel's cold for Odibli) did not land; Session 35 opens with a combat flashback to deliver them. Kellan was also sick. Rulings kept: the DM gives the attack roll and the player chooses Shield; Haste's extra action can't cast a spell; a missed attack keeps rage going; oil is tracked as one-pound flasks; cover plus obscurement on Nella's shots counted as +2 AC, not double disadvantage."
+choices:
+  - "Dip: talked to the crew over their own crystals and narrated his kills → the relief rode in rattled and shot with disadvantage"
+  - "Dip: set the long shed alight himself → the stores burn; the duty ledger survives charred but readable"
+  - "Odibli: Fireballed the relief with Luci inside the blast, after asking her ('Sounds like fun, dude') → three riders dead, and a second cart burning beside the stolen one"
+  - "Halsby: sent the orb's third leap into the relief captain's cart → the first fire in the yard"
+  - "Luci: went after Nella alone up the ridge while the griffon still fought → the chase is live at Session 35"
+beats:
+  - "party-centric: beat"
+  - "spotlight(Dip): beat"
+  - "spotlight(Halsby): beat"
+  - "spotlight(Odibli): beat"
+  - "spotlight(Luci): beat"
+  - "spotlight(Iggy): touch"
+  - "world: touch"
+deck_weight: medium
 pcs_present:
   - "Iggy"
   - "Luci"
@@ -64,6 +90,26 @@ description: "The rest of the waystation fight, carried from Session 33 and step
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
+
+> **Played 2026-11-17 (recap 2026-11-18).** The table ran the rest of the fight, rounds 2–5, and
+> stopped with Tithe dead and Nella running. Played: `S2_TITHE_HUNTS`, `S2_RELIEF` (the riders came
+> after Nella's turn, not first), `S2_CRYSTALS` (Dip used it), `S2_FIGHT`, `S2_TITHE_BLOODIED`,
+> `S2_TITHE_DIES` (Halsby's Fire Bolt; the plan's read-aloud and whistle were not used), and the start
+> of `S2_ESCAPE` (Luci gave chase). Not played: `S2_IGGY_BEAT` (Iggy opened his wings, but Sah's
+> voice and "Up, Wallaed" were never given, and Tithe made no shy save), `S2_MORALE` (everyone died
+> first), the rest of `S2_ESCAPE`, `S2_GOODBYE`, `S2_TALLY`, `S2_CAMP_INTEL`, Scene 4 and Scene 5.
+> They carry to Session 35, which opens with a **combat flashback** to deliver the moments the DM
+> couldn't run while sick: Sah and "Up, Wallaed" (`S2_IGGY_BEAT`), and the Citadel's cold for Odibli
+> owed since Session 33. Then Luci gets one more chance to catch Nella, with both outcomes planned:
+> caught, or away, where her stumble on the wall and Nella's rigged fallback make the escape read
+> fair.
+>
+> **Reliability:** digested from a machine transcript. Clatter's death is inferred: Dip's 20 took
+> his leg off against 11 HP, and he fell "concussed and legless". Iggy's self-heal was never rolled
+> aloud, Luci's Fireball damage was "so little", and Dip's HP wasn't said; all three are to be
+> checked against the Roll20 sheets at the start of Session 35. The second burning cart is taken to
+> be the relief's or Silas's, not the stolen cask cart (DM, 2026-11-18). The duty ledger survives
+> charred but readable (DM, 2026-11-18). Confirm with DM.
 
 > **Carried from [[Session 33 The Red Trail]] at its `/recap` (2026-11-10).** Session 33 played the
 > hill and the opening of the fight (rounds 0–1 and the start of round 2) and stopped mid-round.
