@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.75.2] — 2026-11-19
+
+### Removed
+
+- **The legacy session runner** (React migration Task 5, decision D3, `tasks/react-migration/PLAN.md`). Jeff ran a session on the React runner, so its fallback goes: `session-legacy.html`, `session/legacy-main.ts`, the old string-building runner in `session/legacy/` with its specs, and the old-versus-new checks in `session/parity/`. The React specs from 0.75.1 cover the same scenarios.
+
 ## [0.75.1] — 2026-11-18
 
 ### Changed
