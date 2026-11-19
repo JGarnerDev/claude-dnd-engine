@@ -6,6 +6,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.75.1] — 2026-11-18
+
+### Changed
+
+- **The session runner runs on React** (React migration group C, Task 5, `tasks/react-migration/PLAN.md`). `session.html` now loads `session/main.tsx`, which mounts `Runner.tsx`. Every string builder in `session/` is a `.tsx` component of the same name (`Scene`, `SceneHead`, `Steps`, `PromptBook`, `Rail`, `Panel`, `EntityView`, `Recap`, `Slides`, `Sky`/`SkyPlate`, `Stats`, `Reputation`, `Achievements`, `Mysteries`, `Dice`, `Peeks`), and their pure logic moved into sibling `.ts` files (`step-info`, `ref-index`, `recap-data`, `dice-roll`, `mystery-list`, `entity-fetch`, `deck`, `prompt-blocks`, `sky-time`, `fight-cues`, `flow-search`). Markdown renders through `<Markdown>` from parsed tokens, so the runner no longer sets HTML strings; wiki links are `<WikiLink>` and beat and scene refs are chips read from `RefContext`. Runner state is a reducer in `useRunner.ts` saved with the unchanged `store.ts`, and keys live in `useKeys.ts` in the same priority order. The slides overlay renders into `document.body` through a portal. Classes and localStorage keys are unchanged, so saved paths, HP logs and styles carry over. Nothing the DM sees should change. Run `npm install` again in `app/` after pulling; it still needs read access to `JGarnerDev/jeff-ui-project`.
+- **The old runner stays reachable at `session-legacy.html`** until Jeff runs a real session on the React one (decision D3). Its code moved to `session/legacy/` and `session/legacy-main.ts`, and `session/parity/` checks the old and new renders match. All three go after that session.
+- **The runner specs are rewritten as `.spec.tsx`** with Testing Library and user-event, one scenario for one: `runner`, `scene`, `panel`, `rail`, `slides`, and the leaf specs `achievements`, `dice`, `entity-view`, `mysteries`, `prompt-book`, `recap`, `refs` (now `RefChips`), `reputation`, `scene-head`, `sky`, `sky-plate`, `stats` and `steps`.
+
 ## [0.75.0] — 2026-11-18
 
 ### Changed

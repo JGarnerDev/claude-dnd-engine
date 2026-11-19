@@ -2,7 +2,7 @@
 
 > **For agentic workers:** Steps use checkbox (`- [ ]`) syntax for tracking. Tick boxes as you go and keep the **Status** line current, so a fresh session can pick up where the last one stopped. Run `npm` from `app/`.
 
-**Status:** Tasks 0 and 1 done (2026-11-18, engine `0.74.0`), except Jeff's collaborator-access step in Task 0. Group B (Tasks 2–4) done (2026-11-18, engine `0.75.0`, jeff-ui `v0.2.0`). Next: Task 5.
+**Status:** Tasks 0 and 1 done (2026-11-18, engine `0.74.0`), except Jeff's collaborator-access step in Task 0. Group B (Tasks 2–4) done (2026-11-18, engine `0.75.0`, jeff-ui `v0.2.0`). Task 5 built (2026-11-18, engine `0.75.1`); waiting on Jeff’s real session before the legacy runner is deleted.
 
 **Goal:** Rewrite the two pages in `app/pages/home/`, the timeline home page (`index.html`) and the session runner (`session.html`), plus the chart components in `app/components/charts/`, in React 19. Nothing the DM sees should change. The pure logic modules and their tests stay as they are.
 
@@ -117,15 +117,15 @@ Do this page first. It isn't used live at the table, so it's the safer place to 
 
 Work from the leaf components up. The old runner keeps working until the last step.
 
-- [ ] Leaf components, one at a time, each replacing its string builder with a `.tsx` of the same name: `Dice`, `Stats`, `Reputation`, `Achievements`, `Mysteries`, `Combatants`, `Recap`, `PromptBook`, `SkyPlate`/`Sky` (SVG), `SceneHead`/`SceneHeader`, `Steps`, `Refs`, `Peeks`, `EntityView`.
-- [ ] `markdown.ts`: move the parsing into a pure `parseMarkdown()` that returns tokens, and add a `<Markdown>` component that renders them. Wiki links become `<WikiLink entity=…>`, which calls `onOpenEntity`, replacing the runner's event delegation. Keep `escapeHtml` for anything that still builds strings during the transition. No `dangerouslySetInnerHTML` once this task is done.
-- [ ] `useRunner.ts`: a reducer over `RunnerState` (history, tokensOpen, hp, hpLog, rounds), saved through `loadState`/`saveState` from the unchanged `store.ts`. Undo for the HP log stays as it is.
-- [ ] `useKeys.ts`: keyboard shortcuts for the whole page (arrows, digit keys for options, Esc) with the same priority order as `runner.ts`, including the slides overlay taking over keys while it's open.
-- [ ] `Scene.tsx`, `Rail.tsx`, `Panel.tsx` (entity, beat and scene views, plus the history the panel steps back through), `Slides.tsx` (rendered into `document.body` with `createPortal`), `Runner.tsx`, `main.tsx`.
-- [ ] D3: copy the old entry to `session-legacy.html` plus `session/legacy-main.ts` before deleting any old files the legacy runner still needs. Simplest approach: keep the old `.ts` files under `session/legacy/` until the cutover, then delete them.
-- [ ] Rewrite the runner specs (`runner`, `scene`, `panel`, `rail`, `slides` and the leaf specs) as `.spec.tsx` with Testing Library and user-event, covering the same scenarios (walking branches by click and key, stepping back, saving the path, opening slides and returning with Esc, wiki links opening the panel).
+- [x] Leaf components, one at a time, each replacing its string builder with a `.tsx` of the same name: `Dice`, `Stats`, `Reputation`, `Achievements`, `Mysteries`, `Combatants`, `Recap`, `PromptBook`, `SkyPlate`/`Sky` (SVG), `SceneHead`/`SceneHeader`, `Steps`, `Refs`, `Peeks`, `EntityView`. (`combatants.ts` and `scene-header.ts` were already pure and stay as they are, drawn by `SceneHead`; `Refs` became `RefChips`.)
+- [x] `markdown.ts`: move the parsing into a pure `parseMarkdown()` that returns tokens, and add a `<Markdown>` component that renders them. Wiki links become `<WikiLink entity=…>`, which calls `onOpenEntity`, replacing the runner's event delegation. Keep `escapeHtml` for anything that still builds strings during the transition. No `dangerouslySetInnerHTML` once this task is done.
+- [x] `useRunner.ts`: a reducer over `RunnerState` (history, tokensOpen, hp, hpLog, rounds), saved through `loadState`/`saveState` from the unchanged `store.ts`. Undo for the HP log stays as it is.
+- [x] `useKeys.ts`: keyboard shortcuts for the whole page (arrows, digit keys for options, Esc) with the same priority order as `runner.ts`, including the slides overlay taking over keys while it's open.
+- [x] `Scene.tsx`, `Rail.tsx`, `Panel.tsx` (entity, beat and scene views, plus the history the panel steps back through), `Slides.tsx` (rendered into `document.body` with `createPortal`), `Runner.tsx`, `main.tsx`.
+- [x] D3: copy the old entry to `session-legacy.html` plus `session/legacy-main.ts` before deleting any old files the legacy runner still needs. Simplest approach: keep the old `.ts` files under `session/legacy/` until the cutover, then delete them.
+- [x] Rewrite the runner specs (`runner`, `scene`, `panel`, `rail`, `slides` and the leaf specs) as `.spec.tsx` with Testing Library and user-event, covering the same scenarios (walking branches by click and key, stepping back, saving the path, opening slides and returning with Esc, wiki links opening the panel).
 - [ ] Jeff runs one real session on the React runner. Then delete `session-legacy.html` and `session/legacy/`.
-- [ ] Bump the version and add a changelog entry. Commit.
+- [x] Bump the version and add a changelog entry. Commit. (`0.75.1`, before the real session; the deletion gets its own commit.)
 
 ## Group D: Cleanup (commit group 4)
 
