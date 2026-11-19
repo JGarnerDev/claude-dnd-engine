@@ -1,7 +1,7 @@
 # The Sky Clock (as of: Session 34)
 
 DM-only. Not an entity. Holds Aethryn's running date, the Crawl tally, the next Kerning and a
-per-session log. The `_` prefix keeps it out of `validate.ps1` and the semantic index. **Update it at
+per-session log. The `_` prefix keeps it out of `validate.py` and the semantic index. **Update it at
 every homebrew `/recap` and restamp the header even when no time passed** (the engine's stamp
 pattern). The time system is canon in `data/lore/calendar.md`; the maths is `scripts/sky.py`.
 

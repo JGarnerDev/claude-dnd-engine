@@ -71,6 +71,6 @@ this order:
 
 ## Phase 7 — Close
 
-Run `uv run scripts/session-start.py` and show its `DM:` line, then `.\scripts\validate.ps1 -Quiet`
+Run `uv run scripts/session-start.py` and show its `DM:` line, then `uv run scripts/validate.py --quiet`
 (report only errors in files this flow wrote). List what changed, and offer the commit. Suggest the
 incoming DM read `_handover.md`, then fill their `## Working with` section in `meta/players/`.

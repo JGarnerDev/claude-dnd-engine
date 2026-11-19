@@ -14,7 +14,7 @@ Contract for what a correct, efficient `/recap` run looks like. The command doc 
 2. `scripts/semantic-search.py` — Phase 3 fuzzy fallback (`-k 3`) for any planned entity found in neither `historian/` nor `data/`. Declaring an entity missing without it is a finding.
 3. `/check <recap summary>` — Phase 4, before the session record is written.
 4. `scripts/stats-standings.py --session {nn}` — Phase 5, after the stats ledger is written, to show the awards. Skipped when the DM skips stats.
-5. `scripts/validate.ps1 -Scope links -Quiet` — Phase 7, after all writes. Report only errors in files this run wrote; pre-existing errors are not this run's to fix.
+5. `uv run scripts/validate.py --scope links --quiet` — Phase 7, after all writes. Report only errors in files this run wrote; pre-existing errors are not this run's to fix.
 
 ## Read budget
 

@@ -1,6 +1,6 @@
 # Schema migration: prose schemas to JSON Schema
 
-**Status:** steps 1–4 done (2026-11-18, engine v0.72.2); step 5 next. Progress and how to resume: [TODO.md](TODO.md).
+**Status:** steps 1–5 done (2026-11-18, engine v0.73.0); step 6 next. Progress and how to resume: [TODO.md](TODO.md).
 
 ## Goal
 

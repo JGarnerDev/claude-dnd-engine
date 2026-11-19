@@ -36,7 +36,7 @@ uv run scripts/semantic-search.py "betrayal in a small town" --source spitball
 
 - **Never consulted as fact.** Not a source for `/recap`, `/check`, `/voice`, or anything that
   speaks about what is true.
-- **Broken links are fine.** `spitball/` is excluded from `validate.ps1`'s link check so an idea
+- **Broken links are fine.** `spitball/` is excluded from `validate.py`'s link check so an idea
   can name something that does not exist yet.
 - **Promotion lands at `[?]`.** `/spitball --promote` adds an idea to an act's flow graph as an
   open node, never a committed one. Becoming a node is not approval.

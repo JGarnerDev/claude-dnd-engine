@@ -19,7 +19,7 @@ This engine generates D&D sessions by synthesizing creative material, campaign h
 - `./data` — Creative source material (lore, worldbuilding, inspiration). Informational "food" that shapes story flavor and content, but is not authoritative.
 - `./historian` — The authoritative record of the campaign. Past and current in-world facts (events, NPCs, locations, outcomes) live here. When `data` and `historian` conflict, `historian` wins.
 - `./meta` — Principles, guidelines, and rules governing the campaign design (e.g. challenge/reward balance, pacing, tone). These govern *how* sessions are constructed, not *what* happened.
-- `./spitball` — Loose story ideas, captured without commitment and kept searchable so they can be mined later. **Never canon**, never a source of fact; excluded from `validate.ps1`'s link check so an idea may name things that do not exist. See `meta/spitball.md`.
+- `./spitball` — Loose story ideas, captured without commitment and kept searchable so they can be mined later. **Never canon**, never a source of fact; excluded from `validate.py`'s link check so an idea may name things that do not exist. See `meta/spitball.md`.
 - `./scheduler` — The active story layer. Contains the campaign document, acts, missions, and session plans. Files here have `exists: false` and move to `historian/` when completed or played.
 
 ## Story Hierarchy
@@ -86,7 +86,7 @@ This repo spans two campaigns: `strahd` (Curse of Strahd) and `homebrew` — the
 
 ## Command Audits
 
-`tests/` holds command audit specs, rubrics, and run logs — engine QA, not campaign content. Read `tests/CLAUDE.md` before running or writing a command audit. Files in `tests/` are never entities; they are excluded from `validate.ps1` and the semantic index.
+`tests/` holds command audit specs, rubrics, and run logs — engine QA, not campaign content. Read `tests/CLAUDE.md` before running or writing a command audit. Files in `tests/` are never entities; they are excluded from `validate.py` and the semantic index.
 
 ## New Campaign Setup
 
@@ -191,7 +191,7 @@ Only cross-cutting scripts are listed here. Scripts that one command or domain u
 | `semantic-search.py` | Semantic similarity search — find entities by meaning, not keywords | `uv run scripts/semantic-search.py "<text>" [--type <type>] [--subtype <sub>] [--exists true\|false] [--source data\|historian\|scheduler] [-k <n>]` |
 | `session-start.py` | Start-of-conversation orientation (run by the SessionStart hook) | `uv run scripts/session-start.py` |
 | `version-check.py` | Before a bump — engine changes since the last version bump (see `meta/versioning.md`) | `uv run scripts/version-check.py` |
-| `validate.ps1` | Graph integrity check — dangling `[[links]]`, missing/invalid `exists`/`name`/`type`, broken canon. Run before canonizing or after bulk edits | `.\scripts\validate.ps1 [-Scope all\|links\|frontmatter] [-Quiet]` |
+| `validate.py` | Graph integrity check — dangling `[[links]]`, missing/invalid `exists`/`name`/`type`, duplicate filenames, broken canon. Run before canonizing or after bulk edits | `uv run scripts/validate.py [--scope all\|links\|frontmatter] [--quiet]` |
 | `validate-refs.ps1` | Instruction-file reference lint — finds path refs in CLAUDE.md files, commands, meta, tests, and todo files that point at renamed/deleted files. Run after renaming, moving, or deleting any instruction file or script | `.\scripts\validate-refs.ps1 [-Quiet]` |
 | `refs.ps1` | Reverse dependency lookup — every file:line that references a target file. Run before renaming a file or changing a script's flags/output format, then update what it lists | `.\scripts\refs.ps1 -Target <path-or-filename>` |
 

@@ -49,7 +49,7 @@ That file is the session's graph only — not the act spine, not the other sessi
 with the plan when `/recap` moves the folder to `historian/`. It starts as a **graduated snapshot**
 of the matching slot file in the act's set. Once the session is planned, the snapshot carries the
 session's real ids (`S<n>_NN_`, see Node ids) and is the live source for its beats; the set's slot
-file keeps the act-level design. The `_` prefix keeps it out of `validate.ps1`'s entity checks and
+file keeps the act-level design. The `_` prefix keeps it out of `validate.py`'s entity checks and
 the semantic index; it carries no frontmatter and is never an entity.
 
 Because there are two copies, markers can drift. Regenerate with `/flow --session {NN}` rather than

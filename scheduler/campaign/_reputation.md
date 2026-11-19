@@ -2,7 +2,7 @@
 
 DM-only. Not an entity. What each fame and infamy tier unlocks, the rewards already given, and
 where each PC stands. Scores and rules: `meta/reputation.md`. The deed ledger is
-`historian/sessions/_reputation.md`. The `_` prefix keeps this out of `validate.ps1` and the
+`historian/sessions/_reputation.md`. The `_` prefix keeps this out of `validate.py` and the
 semantic index. **Restamp the header at every homebrew `/recap`, even when no deed landed** (the
 engine's stamp pattern).
 

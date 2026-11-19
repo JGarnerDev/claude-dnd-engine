@@ -49,7 +49,7 @@ always uses the same `Session {NN} {Name}` naming convention, matching its folde
 
 **`_flow.md` is not an entity.** It is a derived view of the plan — the session's beats, forks and
 fail paths as a mermaid graph, written in plain sentences for reading at the table. The `_` prefix
-is what keeps it out of `validate.ps1`'s entity checks and the semantic index; it carries no
+is what keeps it out of `validate.py`'s entity checks and the semantic index; it carries no
 frontmatter. Conventions for the graph itself live in `meta/flow-graphs.md`, and it is a graduated
 snapshot of the act's flow graph set — regenerate with `/flow --session {NN}` rather than
 hand-editing both copies.

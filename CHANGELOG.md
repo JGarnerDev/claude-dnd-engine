@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.73.0] — 2026-11-18
+
+### Changed
+
+- **`scripts/validate.py` replaces `validate.ps1`.** The entity-graph check now runs in Python (`uv run scripts/validate.py [--scope all|links|frontmatter] [--quiet]`) and is built on the shared validator [notes-kit](https://github.com/JGarnerDev/notes-kit) (pinned `v0.3.0`, configured under `[tool.notes-kit]` in `pyproject.toml`). Same checks, flags, exit codes and layout; finding lines read `<path>: <text>`, and a broken link reads `broken link [[X]]`. New: two entities sharing a filename is an error, and `Tser Pool Encampment.md` is checked (the old script skipped any filename containing "pool"). Inline `aliases: [..]` lists now count as link targets. `todo-brief.py`'s graph-health line now reports a count (`count_errors()`). Docs that named `validate.ps1` point at the new script. Step 5 of the schema migration (`tasks/schema-migration/PLAN.md`).
+- **Duplicate filenames resolved.** The backgrounds `Acolyte` and `Noble` are now `Acolyte (Background)` and `Noble (Background)`, so `[[Acolyte]]` and `[[Noble]]` name the monsters. `The Winery Druid` was filed twice; the npc copy is merged into `historian/characters/antagonists/The Winery Druid.md` (membership in Baba Lysaga's Druids and the Session 27 facts added; her own loyalty to Baba Lysaga stays flagged as unconfirmed).
+
 ## [0.72.3] — 2026-11-18
 
 ### Changed

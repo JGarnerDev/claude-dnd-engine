@@ -17,9 +17,10 @@ disposition: hostile
 aliases: []
 importance: major
 active: false
-last_updated: "[[Session 26 The Poisoned Casks]]"
+last_updated: "[[Session 27 The Vampire Staff]]"
 relates_to:
   - "[[Wizard of Wines]] (poisoned its casks from within)"
+  - "[[Baba Lysaga's Druids]] (member; one of four killed at the winery)"
   - "[[Baba Lysaga]] (presumed to serve her, unconfirmed)"
   - "[[Dip]] (killed by them)"
   - "[[Twig Blight]] (commanded them)"
@@ -64,12 +65,12 @@ She was killed by [[Dip]] in a single greataxe turn — raging, 25 damage, hacke
 
 - The **flask** and the **necklace of human teeth** are in the party's hands.
 - **Every cask in the winery is poisoned.** [[Odibli]] drank from one and is poisoned himself.
-- The **druidic magic animating the blights outlived her.** Odibli read it still hanging in the air afterward: the blights are not natural and do not exist of their own accord, meaning **at least one more druid** is still unaccounted for in the building.
+- The **druidic magic animating the blights outlived her.** Odibli read it still hanging in the air afterward: the blights are not natural and do not exist of their own accord, meaning **at least one more druid** is still unaccounted for in the building. In [[Session 27 The Vampire Staff]] that source turned out to be [[The Vampire Staff]], carried by one of three more druids deeper in the building; she was one of four [[Baba Lysaga's Druids]] killed at the winery.
 
 > **Reliability:** Her connection to [[Baba Lysaga]] is inferred from [[Davian Martikov]]'s account in [[Session 25 The Wizard of Wines]] that Baba Lysaga leads the druids besieging the winery. The druid herself never named an allegiance. Confirm with DM.
 
 ## Sources
 
-Recorded in [[Session 26 The Poisoned Casks]].  
+Recorded in [[Session 26 The Poisoned Casks]]; placed among the winery druids in [[Session 27 The Vampire Staff]].  
 Known to / linked with [[The Party]].  
 Part of the [[Curse of Strahd]] campaign.

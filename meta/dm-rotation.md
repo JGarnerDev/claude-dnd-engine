@@ -52,7 +52,7 @@ memory. It holds:
 6. **Held back.** How many truths the outgoing DM kept, and "ask `<outgoing DM>`". Never their content.
 
 It is not a tracker: no `(as of: Session NN)` header, so `/recap` and `/session` skip it. The `_`
-keeps it out of `validate.ps1` and the search index, so a player at the keyboard can't surface it by
+keeps it out of `validate.py` and the search index, so a player at the keyboard can't surface it by
 searching. A later rotation replaces it.
 
 ## Held back

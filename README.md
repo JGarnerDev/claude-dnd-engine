@@ -54,13 +54,13 @@ The scripts table in `CLAUDE.md` lists the cross-cutting scripts and their exact
 3. **Run a `.ps1` script** (the not-yet-migrated ones) — Windows:
 
    ```powershell
-   .\scripts\validate.ps1
+   .\scripts\validate-refs.ps1
    ```
 
    macOS/Linux, via [PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell):
 
    ```bash
-   pwsh ./scripts/validate.ps1
+   pwsh ./scripts/validate-refs.ps1
    ```
 
 #### What changed from the `.ps1` versions

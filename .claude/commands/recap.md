@@ -245,7 +245,7 @@ Present the proposed changes and ask for confirmation before writing.
 
 **Clear the inbox first.** If Phase 1 found a notes file in `recaps/inbox/`, delete it now — its content lives in the historian record, and a file left behind makes the next `/session` and `/todo` report this session as still uncanonized. Delete only that one file, and only once Phases 4–6 are written; if the DM stopped the recap early, leave it.
 
-**Check the links.** Run `.\scripts\validate.ps1 -Scope links -Quiet`. Report only errors in files this recap wrote or moved (a `[[link]]` broken by a rename, a canonized entity pointing at a name that has no file); errors that were already there are not this run's to fix.
+**Check the links.** Run `uv run scripts/validate.py --scope links --quiet`. Report only errors in files this recap wrote or moved (a `[[link]]` broken by a rename, a canonized entity pointing at a name that has no file); errors that were already there are not this run's to fix.
 
 Report what was done:
 

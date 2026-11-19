@@ -2,9 +2,9 @@
 
 Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
-**Status (2026-11-18):** steps 1–4 done and pushed (engine v0.72.2). Every entity file's frontmatter is strict YAML with quoted links, and `get_frontmatter` reads it with a YAML parser.
+**Status (2026-11-18):** steps 1–5 done (engine v0.73.0). Every entity file's frontmatter is strict YAML with quoted links, and `get_frontmatter` reads it with a YAML parser.
 
-**Next:** step 5, write `scripts/validate.py`, a Python port of `scripts/validate.ps1`. Details under step 5 below.
+**Next:** step 6, schemas one type at a time, starting with `entity`.
 
 ## Resuming in a new session
 
@@ -35,19 +35,8 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 - [x] 4. Strict YAML everywhere, and the parser switched to YAML:
   - [x] The 24 files strict YAML rejected (`ffeec9a`): 11 region files with a stray `\x01` line; `Dunny Marsh.md` with unescaped inner quotes; Sessions 01–12, where a split comment (`# \n--- HISTORIAN ---`) cut the frontmatter short, so scripts had never seen `played_date`, `recap` and the fields below it
   - [x] `get_frontmatter` reads with PyYAML's `BaseLoader` (`8be63ed`, v0.72.2): values stay strings and the return shape is unchanged. Frontmatter that isn't valid YAML (command and meta files) falls back to the line parser. Snapshot diffs showed only fixes: values containing `#` and inline lists (`aliases: ["the crone"]`) are now read
-- [ ] 5. `scripts/validate.py` matches `validate.ps1`'s results, then `validate.ps1` is retired:
-  - [ ] Baseline: `powershell -NoProfile -File scripts/validate.ps1 > <scratch>/val-ps1.txt` gives 1,585 files checked, 15 errors, 667 warnings (2026-11-18). Exit code 1 when there are errors
-  - [ ] Port every check. **Errors:** dangling `[[links]]` (no matching file or alias); missing `name`, `type` or `exists`; `exists: false` in `historian/`. **Warnings:** a reference-catalog type (monster, spell, deity, feat, race, class, background, skill) with `exists: false`; a historian file missing `source_session` or `confirmed_date`; `name` different from the filename; a frontmatter link not repeated in the body (Foam graph gap). Same scope (`data/`, `historian/`, `scheduler/`; skip `CLAUDE.md`, templates, pool docs, `_` files; `tests/` and `spitball/` excluded from the link check), same flags (`--scope all|links|frontmatter`, `--quiet`) and the same output format
-  - [ ] Reuse `get_frontmatter` and `entity_md_files` from `scripts/lib/common.py`. Add a `# consumers:` header and a `# Usage:` line like the other scripts
-  - [ ] Compare its output with the baseline line by line until they match, or every difference is explained as a fix
-  - [ ] Point everything that names `validate.ps1` at the new script. The script's own `# consumers:` header lists only four files; a search on 2026-11-18 found more:
-    - Instructions: `CLAUDE.md`, `README.md`, `scheduler/CLAUDE.md`, `tests/CLAUDE.md`, `.claude/commands/recap.md`, `.claude/commands/handover.md`, `tests/commands/recap/spec.md`, `meta/flow-graphs.md`, `meta/dm-rotation.md`, `meta/spitball.md`, `meta/schemas/session.md`, `spitball/README.md`
-    - Code: `scripts/lib/common.py` (comment), `scripts/validate-refs.ps1`
-    - Campaign trackers `scheduler/campaign/_mysteries.md`, `_sky-clock.md`, `_citadel-clock.md`, `_reputation.md`: update them too
-    - Played session files (`historian/sessions/Session 29–34 …/_flow.md`, `_tasks.md`, `_world-questions.md`): these are records, so leave them alone
-    - Recheck with `.\scripts\refs.ps1 -Target validate.ps1`, and run `.\scripts\validate-refs.ps1` after deleting the old script
-  - [ ] Delete `validate.ps1`. MINOR version bump (a script replaced), with a changelog entry
-  - [ ] Only after the port matches: add schema checks (D5). A type with a `meta/schemas/<type>.schema.yaml` is validated with `jsonschema` (typed values, so load with `yaml.safe_load`, not `BaseLoader`); its violations are errors once the type is marked enforced, warnings before that
+- [x] 5. `scripts/validate.py` replaces `validate.ps1` (v0.73.0). Built on notes-kit (pinned `v0.3.0`, `[tool.notes-kit]` in `pyproject.toml`) plus the engine's own checks. Compared line by line with `validate.ps1`: the only differences were fixes (3 duplicate filenames, now resolved by renaming the `Acolyte`/`Noble` backgrounds and merging `The Winery Druid`; `Tser Pool Encampment.md` now checked). Docs point at the new script; played session files still name `validate.ps1` and stay as records
+  - [ ] Schema checks (D5), now part of step 6: notes-kit validates a type that has `meta/schemas/<type>.schema.yaml` (it loads frontmatter with typed YAML). Add each finished type to enforcement; until then list unfinished types under `warn-types` in `[tool.notes-kit]`
 - [ ] 6. Schemas per type (enforced when done). Start each one from `audit.py --type <type>` plus the prose schema in `meta/schemas/<type>.md`:
   - [ ] entity (base)
   - [ ] character (pc, npc, antagonist)

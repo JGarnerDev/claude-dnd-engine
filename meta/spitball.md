@@ -73,7 +73,7 @@ relates_to:
   — never interrogate for it.
 - **`relates_to`** — wikilinks to existing entities, where the idea obviously touches one. Links to
   things that do not exist yet are **allowed and expected** — `spitball/` is excluded from
-  `validate.ps1`'s link check precisely so an idea can name something imaginary.
+  `validate.py`'s link check precisely so an idea can name something imaginary.
 
 ## Lifecycle
 

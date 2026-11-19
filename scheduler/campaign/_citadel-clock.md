@@ -1,7 +1,7 @@
 # The Citadel Clock (as of: Session 34)
 
 DM-only. Not an entity. Tracks [[Odibli]]'s casting in Aethryn, whether [[The Citadel]] senses it,
-and what the DM can do with the results. The `_` prefix keeps it out of `validate.ps1` and the
+and what the DM can do with the results. The `_` prefix keeps it out of `validate.py` and the
 semantic index. **Update it at every homebrew `/recap` Odibli plays in, and restamp the header even
 when nothing was sensed** (the engine's stamp pattern).
 

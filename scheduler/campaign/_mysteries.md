@@ -1,7 +1,7 @@
 # Mystery Answers (as of: Session 34)
 
 DM-only. Not an entity. The answer key to the questions on the recap deck's **Mysteries & Loose Ends** slide
-(`meta/recap-slides.md` → Mysteries & Loose Ends slide). The `_` prefix keeps it out of `validate.ps1` and the
+(`meta/recap-slides.md` → Mysteries & Loose Ends slide). The `_` prefix keeps it out of `validate.py` and the
 semantic index. The session runner shows each answer in its sidebar under **Mysteries**,
 searchable. Each answer is tagged: **Canon** (historian), **Planned** (data or scheduler, not yet
 played) or **Open** (deliberately unset; see `meta/mysteries.md`).

@@ -43,7 +43,7 @@ Persona roster — each targets a distinct bug class:
 If an audit needs frozen sample entities, put them in `commands/<command>/fixtures/`. Constraints:
 
 - Fixture filenames must not collide with any real entity name in `data/`, `historian/`, or `scheduler/` — prefix with `fixture-`.
-- Fixtures are excluded from `validate.ps1` and the semantic index. Never link to a fixture from real campaign files.
+- Fixtures are excluded from `validate.py` and the semantic index. Never link to a fixture from real campaign files.
 
 ## Spec Template
 

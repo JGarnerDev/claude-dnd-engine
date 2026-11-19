@@ -1,6 +1,6 @@
 # validate-refs.ps1 -- instruction-file reference lint.
 # consumers: CLAUDE.md -- update these if usage, flags, or output format change.
-# validate.ps1 covers the entity graph ([[wiki-links]], frontmatter). This covers the
+# validate.py covers the entity graph ([[wiki-links]], frontmatter). This covers the
 # OTHER dependency surface: plain path references between instruction files --
 # CLAUDE.md files, command specs, meta docs, tests -- pointing at files that were
 # renamed or deleted. Catches drift like `scheduler/campaign.md` going stale after

@@ -75,7 +75,7 @@ def entity_md_files(base) -> list:
     Sessions get a folder each (`scheduler/sessions/Session 29 The Mistake/...`), so every
     consumer has to recurse rather than glob one level. Names starting with `_` are derived
     views -- flow charts, scratch -- and are never entities; this is the same exclusion
-    `validate.ps1` applies.
+    `validate.py` applies.
     """
     base = Path(base)
     if not base.exists():

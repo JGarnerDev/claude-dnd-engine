@@ -4,12 +4,29 @@ version = "0.1.0"
 requires-python = "==3.14.*"
 dependencies = [
     "chromadb",
+    "notes-kit",
     "pillow",
     "pyyaml>=6.0.3",
 ]
 
 [tool.uv]
 package = false
+
+[tool.uv.sources]
+notes-kit = { git = "https://github.com/JGarnerDev/notes-kit", tag = "v0.3.0" }
+
+# Used by scripts/validate.py, which adds the engine's own checks on top.
+[tool.notes-kit]
+dirs = ["data", "historian", "scheduler"]
+schemas = "meta/schemas"
+id-field = ""                   # validate.py checks name = filename, ignoring case
+require-schema = false         # D5: types without a .schema.yaml pass
+skip = ["CLAUDE.md", "*template*", "*pool*", "_*"]
+exclude = [".git", ".obsidian", ".venv", "node_modules", "tests", "spitball"]
+link-targets = ["."]           # any .md in the repo is a valid link target
+aliases = "aliases"
+links-ignore-case = true
+frontmatter-links = true
 
 [dependency-groups]
 dev = ["pytest"]

@@ -1,5 +1,5 @@
 ---
-name: "Noble"
+name: "Noble (Background)"
 type: background
 exists: true
 state: available

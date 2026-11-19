@@ -1,5 +1,5 @@
 ---
-name: "Acolyte"
+name: "Acolyte (Background)"
 type: background
 exists: true
 state: available
