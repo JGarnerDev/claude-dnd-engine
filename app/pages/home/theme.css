@@ -1,0 +1,23 @@
+/* The engine's dark slate palette mapped onto jeff-ui's --ui-* tokens, so jeff-ui
+   components match the charts and the session runner. Imported right after
+   jeff-ui/tokens.css in both page entries (main.ts, session/main.ts).
+
+   Sources: --chart-* in components/charts/_common/common.css, --sr-* in the
+   session runner's CSS. Keep the two in step when either palette changes. */
+
+:root {
+  /* jeff-ui's tokens turn on color-scheme: dark. The engine never set it, and
+     switching it restyles native controls and scrollbars; keep today's look. */
+  color-scheme: normal;
+
+  --ui-bg: #0f172a;         /* --chart-bg, --sr-bg */
+  --ui-surface: #1f2937;    /* --chart-surface */
+  --ui-surface-hi: #273449; /* --sr-raised */
+  --ui-border: #334155;     /* --sr-line */
+  --ui-text: #e5e7eb;       /* --chart-text, --sr-text */
+  --ui-muted: #94a3b8;      /* --chart-muted, --sr-muted */
+  --ui-accent: #e3b341;     /* --sr-accent */
+  --ui-ok: #4ade80;
+  --ui-warn: #fbbf24;
+  --ui-err: #f87171;
+}

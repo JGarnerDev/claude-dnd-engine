@@ -2,7 +2,7 @@
 
 > **For agentic workers:** Steps use checkbox (`- [ ]`) syntax for tracking. Tick boxes as you go and keep the **Status** line current, so a fresh session can pick up where the last one stopped. Run `npm` from `app/`.
 
-**Status:** not started. Decisions D1–D3 settled 2026-11-18 (below). Start at Task 0.
+**Status:** Task 0 done (2026-11-18), except Jeff's collaborator-access step; jeff-ui `v0.1.0` (Tabs) released. Next: Task 1.
 
 **Goal:** Rewrite the two pages in `app/pages/home/`, the timeline home page (`index.html`) and the session runner (`session.html`), plus the chart components in `app/components/charts/`, in React 19. Nothing the DM sees should change. The pure logic modules and their tests stay as they are.
 
@@ -35,6 +35,7 @@
 - **jeff-ui rules apply to anything built there** (`jeff-ui-project/CLAUDE.md`): only `--ui-*` tokens, one component per folder, no imports from the engine, nothing engine-specific (no campaign types, no `chart-` classes). Code there must also pass the engine's stricter tsconfig (`noUnusedLocals`, `noUnusedParameters`), because the engine typechecks jeff-ui's source.
 - **jeff-ui release loop.** Build and check a widget in jeff-ui first (its demo page, `npm run typecheck`, `npm test`). To try it inside the engine before releasing, run `npm install ../../jeff-ui-project --no-save` from `app/`. That links the local folder without editing `package.json`. To release: commit and push jeff-ui, tag it (`git tag vX.Y.Z && git push --tags`), then point the engine's dependency at the new tag and run `npm install`. The engine never commits a `file:` link.
 - **Template:** don't touch `claude-dnd-engine-template` here. It follows through the usual sync process (`.claude/commands/sync.md`) once the engine work has merged.
+- **State:** keep to React's own state (`useState`, `useReducer`, props). If state gets more advanced (shared across distant components, derived, persisted), use Jotai atoms, per `PREFERENCES.md` → React state. Adding `jotai` to `app/` is fine then; jeff-ui stays free of it.
 - **Test noise:** opening an entity calls `fetch('/__entity?…')`, a dev-server-only endpoint. Stub `fetch` in tests (`vi.stubGlobal`) so `ECONNREFUSED :3000` stops showing up in test output.
 
 ## Inventory (as of 2026-11-18)
@@ -65,16 +66,16 @@ About 15k lines across 54 spec files, 27 of which need a DOM (happy-dom).
 
 ### Task 0: React tooling
 
-- [ ] `npm i react react-dom` and `npm i -D @vitejs/plugin-react @types/react @types/react-dom @testing-library/react @testing-library/dom @testing-library/user-event`.
-- [ ] `tsconfig.json`: add `"jsx": "react-jsx"`. `include` already covers `pages` and `components`.
-- [ ] Add `react()` to `pages/home/vite.config.ts`. (`vite.config.js` is deleted in Task 1.)
-- [ ] Vitest setup file: run `cleanup()` after each test and stub `fetch`. Add a `**/*.spec.tsx` include. Keep `pool: 'forks'` and `fileParallelism: false`.
+- [x] `npm i react react-dom` and `npm i -D @vitejs/plugin-react @types/react @types/react-dom @testing-library/react @testing-library/dom @testing-library/user-event`.
+- [x] `tsconfig.json`: add `"jsx": "react-jsx"`. `include` already covers `pages` and `components`.
+- [x] Add `react()` to `pages/home/vite.config.ts`. (`vite.config.js` is deleted in Task 1.)
+- [x] Vitest setup file: run `cleanup()` after each test and stub `fetch`. Add a `**/*.spec.tsx` include. Keep `pool: 'forks'` and `fileParallelism: false`.
 - [ ] **Jeff:** give every collaborator who runs the app read access to `JGarnerDev/jeff-ui-project`.
-- [ ] **jeff-ui smoke release:** add a trivial exported component to jeff-ui (it can be the first real one, Tabs), commit, push, and tag `v0.1.0`.
-- [ ] `npm i github:JGarnerDev/jeff-ui-project#v0.1.0`. Vitest config: add `server.deps.inline: ['jeff-ui']` under `test`.
-- [ ] Add `pages/home/theme.css` with the engine palette mapped onto `--ui-*`.
-- [ ] Smoke check: render the jeff-ui component in a throwaway `.spec.tsx` and in the dev server, and confirm typecheck, `npm test` and `npm run home` all accept jeff-ui's TypeScript source. Delete the throwaway spec.
-- [ ] Check: typecheck clean, all 54 spec files still pass, and `npm run home` serves both pages unchanged.
+- [x] **jeff-ui smoke release:** add a trivial exported component to jeff-ui (it can be the first real one, Tabs), commit, push, and tag `v0.1.0`.
+- [x] `npm i github:JGarnerDev/jeff-ui-project#v0.1.0`. Vitest config: add `server.deps.inline: ['jeff-ui']` under `test`. npm 12 refuses git dependencies by default, so `app/.npmrc` sets `allow-git=root` (only git deps named in `app/package.json`).
+- [x] Add `pages/home/theme.css` with the engine palette mapped onto `--ui-*`. It also sets `color-scheme: normal`, undoing jeff-ui's `dark`, which the engine never had.
+- [x] Smoke check: render the jeff-ui component in a throwaway `.spec.tsx` and in the dev server, and confirm typecheck, `npm test` and `npm run home` all accept jeff-ui's TypeScript source. Delete the throwaway spec.
+- [x] Check: typecheck clean, all 54 spec files still pass, and `npm run home` serves both pages unchanged.
 
 ### Task 1: Remove the shell route (D1)
 

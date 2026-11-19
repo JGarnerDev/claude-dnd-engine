@@ -10,6 +10,7 @@
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import { campaignData } from './campaign-data-plugin';
 import { sessionData } from './session-data-plugin';
 
@@ -18,7 +19,7 @@ const repoRoot = resolve(here, '..', '..', '..'); // up out of app/pages/home to
 
 export default defineConfig({
   root: here,
-  plugins: [campaignData(repoRoot), sessionData(repoRoot)],
+  plugins: [react(), campaignData(repoRoot), sessionData(repoRoot)],
   server: {
     open: true,
     // home imports charts from components/ and opens source .md via /@fs/ —

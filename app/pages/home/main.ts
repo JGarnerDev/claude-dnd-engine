@@ -4,6 +4,8 @@
 // empty state when the graph carries no dated beats yet — a fresh template, not
 // an error.
 
+import 'jeff-ui/tokens.css';
+import './theme.css';
 import { renderTimelineView } from './view.js';
 import data from 'virtual:campaign-data';
 
