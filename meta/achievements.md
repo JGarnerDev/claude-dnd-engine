@@ -12,7 +12,7 @@ for the things each character actually *achieved* in a played session. Loosely i
 
 Read once per task by `/transcript` (spotting candidates), `/recap` (drafting and confirming), and
 anyone editing these rules. `scripts/lib/achievements.py` reads the ledger;
-`scripts/session-cards.py` hands it to the runner's slides (`app/pages/home/session/achievements.ts`).
+`scripts/session-cards.py` hands it to the runner's slides (`app/pages/home/session/Achievements.tsx`).
 
 ## Rules
 

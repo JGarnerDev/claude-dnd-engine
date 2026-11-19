@@ -14,7 +14,7 @@ Read once per task by `/transcript` (spotting deed candidates), `/recap` (scorin
 deeds, tier rewards), `/session` (unspent rewards), and anyone editing these rules.
 `scripts/lib/reputation.py` reads the catalog and the ledger; `scripts/reputation-standings.py`
 prints the standings; `scripts/session-cards.py` hands them to the runner's slide
-(`app/pages/home/session/reputation.ts`). The DM-only tier rewards live in the campaign tracker
+(`app/pages/home/session/Reputation.tsx`). The DM-only tier rewards live in the campaign tracker
 `scheduler/campaign/_reputation.md`.
 
 ## Rules

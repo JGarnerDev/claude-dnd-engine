@@ -33,6 +33,18 @@ uv run scripts/setup-hooks.py
 
 The index is stored locally in `vector-index/` (gitignored) and must be built on each new clone. Re-run `index-entities.py` after bulk entity additions. Individual entity changes don't require a full rebuild — run with `--reset` only if the index feels stale.
 
+### DM pages (timeline and session runner)
+
+The timeline and the session runner are a React app in `app/`, served by the Vite dev server. It needs Node and npm.
+
+```bash
+cd app
+npm install   # needs read access to the private repo JGarnerDev/jeff-ui-project
+npm run home  # opens the timeline; the runner is at /session.html
+```
+
+`npm install` pulls the shared UI library `jeff-ui` from GitHub (`JGarnerDev/jeff-ui-project`, pinned to a tag in `app/package.json`). That repo is private: ask Jeff for read access first, or the install fails on that package.
+
 ### Running the scripts
 
 The helper scripts in `./scripts/` are being migrated from PowerShell (`.ps1`) to Python (`.py`) so the engine runs on macOS and Linux without installing PowerShell. The migration is in progress — **during the transition the engine needs both runtimes installed:**

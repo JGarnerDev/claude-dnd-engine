@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.75.3] — 2026-11-19
+
+### Changed
+
+- **Docs follow the React app** (React migration Task 6, `tasks/react-migration/PLAN.md`). `app/components/CLAUDE.md` is rewritten for React: `.tsx` components and their specs, the `_common/hooks/` folder for the imperative pan, zoom and tooltip code, when a widget belongs in `jeff-ui` and how to release one (tag, then bump the pin), Testing Library, and the saved-views contract as `ChartProps` and a `ref`. The README gets a "DM pages" setup note: `npm install` in `app/` needs read access to `JGarnerDev/jeff-ui-project`. `meta/achievements.md`, `meta/recap-slides.md` and `meta/reputation.md` now point at `Achievements.tsx`, `Mysteries.tsx` and `Reputation.tsx`. No code changes.
+
 ## [0.75.2] — 2026-11-19
 
 ### Removed

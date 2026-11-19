@@ -110,7 +110,7 @@ Every deck follows the same order, so players know where to look. Orientation al
 3. **Where you stand**: story position and whereabouts on one slide.
 4. **Mysteries & Loose Ends**: every deck. Eight open questions, as bullets, most important first
    (see Deck weight → Mysteries & Loose Ends slide). Write plain `-` bullets; the runner draws them as a numbered grid
-   of cards (`app/pages/home/session/mysteries.ts`).
+   of cards (`app/pages/home/session/Mysteries.tsx`).
 5. **Scenes that moved something** (medium and heavy only): one slide per scene that changed
    something. Use the plan's `### Scene` sections, corrected by `## As Played`. A skipped scene, or
    one that only repeats orientation, gets no slide.

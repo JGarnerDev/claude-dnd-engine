@@ -2,7 +2,7 @@
 
 > **For agentic workers:** Steps use checkbox (`- [ ]`) syntax for tracking. Tick boxes as you go and keep the **Status** line current, so a fresh session can pick up where the last one stopped. Run `npm` from `app/`.
 
-**Status:** Tasks 0 and 1 done (2026-11-18, engine `0.74.0`), except Jeff's collaborator-access step in Task 0. Group B (Tasks 2–4) done (2026-11-18, engine `0.75.0`, jeff-ui `v0.2.0`). Task 5 done (2026-11-18, engine `0.75.1`; legacy runner deleted 2026-11-19, `0.75.2`). Next: Task 6.
+**Status:** Tasks 0 and 1 done (2026-11-18, engine `0.74.0`), except Jeff's collaborator-access step in Task 0. Group B (Tasks 2–4) done (2026-11-18, engine `0.75.0`, jeff-ui `v0.2.0`). Task 5 done (2026-11-18, engine `0.75.1`; legacy runner deleted 2026-11-19, `0.75.2`). Task 6 done (2026-11-19, engine `0.75.3`). The migration is done; Group E is separate work.
 
 **Goal:** Rewrite the two pages in `app/pages/home/`, the timeline home page (`index.html`) and the session runner (`session.html`), plus the chart components in `app/components/charts/`, in React 19. Nothing the DM sees should change. The pure logic modules and their tests stay as they are.
 
@@ -131,11 +131,11 @@ Work from the leaf components up. The old runner keeps working until the last st
 
 ### Task 6: Docs and leftovers
 
-- [ ] Search for leftover old-style DOM code: `grep -rE "innerHTML|createElement|addEventListener" app/components app/pages` should only find the imperative hooks.
-- [ ] Rewrite `app/components/CLAUDE.md` for React: `.tsx` components, a `hooks/` folder, when a widget belongs in jeff-ui and the release loop, Testing Library, and the "Output stays self-contained" section replaced per D1.
-- [ ] Root `README.md`: note that `npm install` in `app/` needs read access to `JGarnerDev/jeff-ui-project`.
-- [ ] Check whether `.claude/commands/*.md` mention any file that changed (`view.ts`, `runner.ts`, `steps.ts`, `refs.ts`, …). The v0.72.0 changelog cites `steps.ts` and `refs.ts`, for example.
-- [ ] Bump the version and add a changelog entry. Commit.
+- [x] Search for leftover old-style DOM code: `grep -rE "innerHTML|createElement|addEventListener" app/components app/pages` should only find the imperative hooks. (Only the hooks and effects that need it: pan, wheel zoom, marker tips, the slides' keys, wheel and auto-scroll, `useKeys`, `usePanel`'s `matchMedia`; plus spec stubs.)
+- [x] Rewrite `app/components/CLAUDE.md` for React: `.tsx` components, a `hooks/` folder, when a widget belongs in jeff-ui and the release loop, Testing Library, and the "Output stays self-contained" section replaced per D1.
+- [x] Root `README.md`: note that `npm install` in `app/` needs read access to `JGarnerDev/jeff-ui-project`.
+- [x] Check whether `.claude/commands/*.md` mention any file that changed (`view.ts`, `runner.ts`, `steps.ts`, `refs.ts`, …). The v0.72.0 changelog cites `steps.ts` and `refs.ts`, for example. (Commands were clean. Three `meta/` docs pointed at the old `achievements.ts`, `mysteries.ts` and `reputation.ts`; fixed. Past changelog entries stay as written.)
+- [x] Bump the version and add a changelog entry. Commit. (`0.75.3`)
 
 ## Group E: After the migration (separate work)
 
