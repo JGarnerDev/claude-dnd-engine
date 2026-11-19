@@ -1,4 +1,4 @@
-/* View switcher (view.ts): a header bar on top (tabs left, actions right), the
+/* View switcher (TimelineView.tsx): a header bar on top (tabs left, actions right), the
    active chart fills the rest. Relies on the theme tokens defined in
    components/charts/_common/common.css, which the charts mounted below import. */
 
@@ -29,6 +29,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
+}
+/* The active chart portals its settings gear here. No box of its own, so the gear
+   lays out as a direct flex item and its panel anchors to .chart-actions. */
+.chart-settings-slot {
+  display: contents;
 }
 /* The active view renders INTO this node — it also carries .chart-root (same
    element), so style it directly. flex:1 fills the host below the tabs; the
@@ -77,12 +82,12 @@
   transition: color 120ms ease, background 120ms ease;
 }
 .chart-viewtab:hover { color: var(--chart-text); }
-.chart-viewtab.is-active {
+.chart-viewtab[aria-selected="true"] {
   color: var(--chart-text);
   background: var(--chart-axis);
 }
 
-/* Empty state (renderEmpty in view.ts): instructive copy when the data carries
+/* Empty state (TimelineEmpty.tsx): instructive copy when the data carries
    no dated beats yet. Hard-coded colors — this branch renders before any chart
    mounts, so the common.css theme tokens aren't guaranteed in scope. */
 .chart-empty {

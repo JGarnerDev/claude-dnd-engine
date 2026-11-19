@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.75.0] — 2026-11-18
+
+### Changed
+
+- **The timeline page runs on React** (React migration group B, Tasks 2–4, `tasks/react-migration/PLAN.md`). The World timeline and the Campaign swimlane are now React components (`charts/timeline/Timeline.tsx`, `charts/swimlane/Swimlane.tsx`) that render from the same layout helpers, so the charts look and behave as before. `TimelineView.tsx` and `main.tsx` replace `view.ts` and `main.ts`. The filter bar, saved views and campaign picker are rebuilt on [jeff-ui](https://github.com/JGarnerDev/jeff-ui-project) widgets (`SettingsPanel`, `Popover`, `Tabs`, `Chip`), and jeff-ui is bumped to `v0.2.0`. Each chart takes the same props (`ChartProps`), puts its own sections into the settings panel, and exposes `getState()` through a ref for saving views. Pan, wheel zoom, marker tips and resizing are hooks in `charts/_common/hooks/`. Saved views keep the same format.
+
+### Removed
+
+- **The imperative chart code**: `timeline.ts`, `swimlane.ts`, `view.ts`, `main.ts`, and the old `filterbar`, `controls`, `settingspanel`, `popovers`, `savedviews` and `campaign-select` widgets, with their specs. Their CSS stays and still styles the React versions. The specs are rewritten as `.spec.tsx` covering the same behaviors.
+
 ## [0.74.0] — 2026-11-18
 
 ### Added

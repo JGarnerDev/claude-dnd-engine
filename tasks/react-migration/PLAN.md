@@ -2,7 +2,7 @@
 
 > **For agentic workers:** Steps use checkbox (`- [ ]`) syntax for tracking. Tick boxes as you go and keep the **Status** line current, so a fresh session can pick up where the last one stopped. Run `npm` from `app/`.
 
-**Status:** Tasks 0 and 1 done (2026-11-18, engine `0.74.0`), except Jeff's collaborator-access step in Task 0. Next: Task 2.
+**Status:** Tasks 0 and 1 done (2026-11-18, engine `0.74.0`), except Jeff's collaborator-access step in Task 0. Group B (Tasks 2–4) done (2026-11-18, engine `0.75.0`, jeff-ui `v0.2.0`). Next: Task 5.
 
 **Goal:** Rewrite the two pages in `app/pages/home/`, the timeline home page (`index.html`) and the session runner (`session.html`), plus the chart components in `app/components/charts/`, in React 19. Nothing the DM sees should change. The pure logic modules and their tests stay as they are.
 
@@ -91,24 +91,25 @@ Do this page first. It isn't used live at the table, so it's the safer place to 
 
 ### Task 2: Shared widgets to React
 
-- [ ] **In jeff-ui:** `Popover`, `SettingsPanel` (gear button plus overlay with sections), `Tabs` (the World and Campaign tabs; use music-generator's `Tabs.tsx` API as the model: `label`, `items`, `selected`, `onPick`), and `Chip` if the filter bar needs it. Build each through the jeff-ui release loop, release a new tag, and bump the engine's dependency.
-- [ ] **In the engine**, built from those widgets: `charts/_common/FilterBar.tsx`, `SavedViews.tsx` (still using `viewstore.ts` and `viewstate.ts`), `pages/home/CampaignSelect.tsx`.
-- [ ] Hooks `usePan`, `useWheelZoom`, `useMarkerInteraction`, ported from `controls.ts` with the same behavior. Attach native listeners in `useEffect`, using `{ passive: false }` for wheel events.
-- [ ] Rewrite the specs for each widget and hook once Jeff accepts it.
+- [x] **In jeff-ui:** `Popover`, `SettingsPanel` (gear button plus overlay with sections), `Tabs` (the World and Campaign tabs; use music-generator's `Tabs.tsx` API as the model: `label`, `items`, `selected`, `onPick`), and `Chip` if the filter bar needs it. Each takes `unstyled` plus `classNames`, so the engine keeps its `chart-*` CSS. Open state is `data-open` and `aria-expanded`, not `.is-open`/`.is-active`: Task 3 updates those three engine selectors.
+- [x] Release jeff-ui `v0.2.0` (Jeff confirms the push and tag) and bump the engine to `github:JGarnerDev/jeff-ui-project#v0.2.0`. Released as jeff-ui `47c6754`. The first `npm install` failed with EALLOWGIT against the stale 0.1.0 lockfile entry; dropping that entry and reinstalling fixed it.
+- [x] **In the engine**, built from those widgets: `charts/_common/FilterBar.tsx`, `SavedViews.tsx` (still using `viewstore.ts` and `viewstate.ts`), `pages/home/CampaignSelect.tsx`. They sit in `_common/`, not `_common/components/`: Windows resolves `SavedViews.js` to the old `savedviews.ts` there. FilterBar is controlled (`useFilterSections` returns the panel sections; `seedFilter` builds the start value from a loaded view).
+- [x] Hooks `usePan`, `useWheelZoom`, `useMarkerInteraction` (in `_common/hooks/`), ported from `controls.ts` with the same behavior. Attach native listeners in `useEffect`, using `{ passive: false }` for wheel events. `usePan` returns a `dragged` ref and `useMarkerInteraction` returns `hideTip`, replacing the viewport expandos.
+- [x] Rewrite the specs for each widget and hook once Jeff accepts it. The old `.ts` widgets and their specs stay until Task 3 deletes them.
 
 ### Task 3: TimelineView shell
 
-- [ ] `TimelineView.tsx` replaces `view.ts`. It holds the active tab, campaign scope and saved views in React state, plus the empty state. Wrap the not-yet-ported `renderTimeline` and `renderSwimlane` in `LegacyMount`. Charts still rebuild when the tab changes, and a loaded view still applies as `initialState`, as the saved-views rules require.
-- [ ] Settings sections: the legacy charts return `controls` as DOM nodes. Until Task 4, `SettingsPanel` accepts a `ReactNode | HTMLElement` section; that branch gets removed when the port is done.
-- [ ] `main.tsx` replaces `main.ts`. Update the script tag in `index.html`.
+- [x] `TimelineView.tsx` replaces `view.ts`. It holds the active tab, campaign scope and saved views in React state, plus the empty state. Wrap the not-yet-ported `renderTimeline` and `renderSwimlane` in `LegacyMount`. Charts still rebuild when the tab changes, and a loaded view still applies as `initialState`, as the saved-views rules require. The campaign scoping moved unchanged into `pages/home/scope.ts`, the empty state into `TimelineEmpty.tsx`. The old `settingspanel`, `popovers`, `savedviews` and `campaign-select` widgets and their specs are deleted (their CSS stays); `filterbar.ts` and `controls.ts` stay until Task 4. Specs: `TimelineView.spec.tsx` (ported from `view.spec.ts`) and `scope.spec.ts`.
+- [x] Settings sections: the legacy charts return `controls` as DOM nodes. Until Task 4, an engine-side adapter wraps each node in a React element that mounts it, so jeff-ui's `SettingsPanel` stays `ReactNode`-only; the adapter goes when the port is done. The adapter is `_common/DomSections.tsx` (`toSections`).
+- [x] `main.tsx` replaces `main.ts`. Update the script tag in `index.html`. Known dev-only quirk: StrictMode mounts each legacy chart twice, and window listeners the old charts add aren't removed; gone once Task 4 ports them.
 
 ### Task 4: Port the charts
 
-- [ ] `Swimlane.tsx` (start with the smaller layout). Render from `swimlane-layout.ts` and `tracks.ts` output. Expanding and collapsing the track tree becomes state. The synced scroll (`swim.addEventListener('scroll')`) moves into a hook.
-- [ ] `Timeline.tsx`: render from `computeLayoutFrom` and `layoutLabels`. Zoom becomes state. Pan writes `scrollLeft` straight to the ref, not through state. `getState()` becomes an `onStateChange` callback or a `useImperativeHandle` ref, and `TimelineView` uses it for saving views.
-- [ ] Remove `LegacyMount` from the timeline page, and the `HTMLElement` branch from `SettingsPanel`.
-- [ ] Rewrite `timeline.spec.ts` and `swimlane.spec.ts` as `.spec.tsx` covering the same behaviors (marker count, track tree toggle, zoom clamp, restoring saved state).
-- [ ] Bump the version and add a changelog entry. Commit.
+- [x] `Swimlane.tsx` (start with the smaller layout). Render from `swimlane-layout.ts` and `tracks.ts` output. Expanding and collapsing the track tree becomes state. The synced scroll (`swim.addEventListener('scroll')`) moves into a hook. Done as React `onScroll`, which refills the visible tick window; the gutter sits inside the scroller, so nothing else needs syncing.
+- [x] `Timeline.tsx`: render from `computeLayoutFrom` and `layoutLabels`. Zoom becomes state. Pan writes `scrollLeft` straight to the ref, not through state. `getState()` becomes an `onStateChange` callback or a `useImperativeHandle` ref, and `TimelineView` uses it for saving views. Went with `useImperativeHandle` (`ChartHandle`). Both charts share `ChartProps` and portal their own settings sections into a slot `TimelineView` provides (`_common/ChartSettings.tsx`). New hooks: `useViewportSize`, `useZoom`.
+- [x] Remove `LegacyMount` and the settings-section adapter from the timeline page. Also deleted: `timeline.ts`, `swimlane.ts`, `filterbar.ts`, `controls.ts` and their specs (their CSS stays).
+- [x] Rewrite `timeline.spec.ts` and `swimlane.spec.ts` as `.spec.tsx` covering the same behaviors (marker count, track tree toggle, zoom clamp, restoring saved state). Shared harness: `_common/chart.test-helper.tsx`.
+- [x] Bump the version and add a changelog entry. Commit.
 
 ## Group C: Session runner (commit group 3)
 
