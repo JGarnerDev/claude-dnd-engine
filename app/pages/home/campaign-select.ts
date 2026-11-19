@@ -3,7 +3,7 @@
 // this widget only renders the choices and reports the selection back.
 //
 // A native <select> keeps it accessible and zero-dependency (no popover/focus
-// trapping to manage), matching the self-contained-output rule. The World view is
+// trapping to manage). The World view is
 // always scoped to exactly one campaign (no "all" option); agnostic beats (no
 // campaign tag) always show, so the page filters with "no tag OR this slug".
 

@@ -1,6 +1,6 @@
 # Frontend components — working rules
 
-Auto-loaded when working under `app/components/`. These are UI components (charts, views) for the engine — dev-only source that a generator inlines into self-contained HTML. All JS/TS tooling (`components/`, `pages/`, `package.json`, the configs) lives under `app/`; run `npm` from there. The campaign content (`data/`, `historian/`, `scheduler/`, `meta/`, `maps/`) and the PowerShell engine scripts (`scripts/`) stay at the repo root, one level up. The runtime artifact ships with no build step and no dependencies; the tooling here (Vite, Vitest, TypeScript) is dev-only.
+Auto-loaded when working under `app/components/`. These are UI components (charts, views) for the engine's local DM pages (`app/pages/home/`), served by the Vite dev server (`npm run home`). All JS/TS tooling (`components/`, `pages/`, `package.json`, the configs) lives under `app/`; run `npm` from there. The campaign content (`data/`, `historian/`, `scheduler/`, `meta/`, `maps/`) and the PowerShell engine scripts (`scripts/`) stay at the repo root, one level up. There is no build step: the pages run only under the dev server.
 
 ## TypeScript
 
@@ -23,18 +23,18 @@ Each chart is its own folder under `components/charts/`, named after the chart; 
 - `_common/helpers/` — pure logic shared by more than one chart (+ specs).
 - `_common/components/` — DOM widgets/behavior shared by more than one chart (+ specs).
 - `_common/constants.ts` (static data) and `_common/types.ts` (shared types).
-- `app/pages/demo/` (sibling of `app/components/` — not under `components/`) — the cross-chart switcher (`view.ts`), build entry (`build-entry.ts`), fixtures (`*-data.ts`), `*.html`, `dist/`. This is the Vite root (see `app/vite.config.js`) and what `npm run dev` opens; its `.ts` import the charts via `../../components/charts/…`.
+- `app/pages/home/` (sibling of `app/components/` — not under `components/`) — the timeline home page and the session runner (`session/`), fed by the live campaign graph through the data plugins. This is the Vite root (see `app/pages/home/vite.config.ts`) and what `npm run home` opens; its `.ts` import the charts via `../../components/charts/…`.
 
 ### Styling (CSS)
 
-CSS lives next to the code that produces the DOM and is pulled in by a side-effect `import './x.css'` in that module — Vite bundles and inlines it into the self-contained artifact (no `<link>` needed). Mirror the same file layout as the source:
+CSS lives next to the code that produces the DOM and is pulled in by a side-effect `import './x.css'` in that module — Vite serves it with the module (no `<link>` needed). Mirror the same file layout as the source:
 
 - `<chart>/<chart>.css` — styles for that chart only (e.g. `timeline/timeline.css`, `swimlane/swimlane.css`), imported by `<chart>/<chart>.ts`.
 - `_common/common.css` — theme tokens (`:root --chart-*` / `--track-*`), shared base classes (`.chart-root`, `.chart-dot`, `.chart-marker` + weight/state), and the shared scrollbar styling. Each chart imports it (Vite dedupes).
 - `_common/components/<widget>.css` — styles for a shared widget (e.g. `filterbar.css`, `controls.css`), imported by its `.ts`.
 - `pages/home/view.css` — styles for the page-level view switcher, imported by `view.ts`.
 
-Classes are prefixed `chart-` (page-agnostic). Keep a rule with the element that owns it; lift a rule to `_common/` only when more than one chart needs it (the "shared when applicable" rule). The dev HTML harnesses carry only page chrome (`.demo-header`, `body`) inline — chart CSS reaches them through the JS import chain. When CSS geometry and layout math must agree, the constant lives in `_common/constants.ts` and the CSS comments point back to it.
+Classes are prefixed `chart-` (page-agnostic). Keep a rule with the element that owns it; lift a rule to `_common/` only when more than one chart needs it (the "shared when applicable" rule). The page HTML carries only page chrome inline — chart CSS reaches them through the JS import chain. When CSS geometry and layout math must agree, the constant lives in `_common/constants.ts` and the CSS comments point back to it.
 
 Pure helpers are unit-testable without a DOM (node env); DOM files use `// @vitest-environment happy-dom`. Don't let a chart's private helper be imported by another chart — if both need it, it belongs in `_common` (this is why `weightOf` lives in `_common/helpers/weight.ts`).
 
@@ -55,6 +55,6 @@ Both charts save/load named UI snapshots through one shared contract — don't r
 - Build first, test after we agree the piece is right (no TDD).
 - DOM env is **happy-dom** (jsdom pulls a broken transitive dep on the dev node version).
 
-## Output stays self-contained
+## No build step
 
-Nothing here may add a runtime dependency or a build step to the shipped HTML. Dev tooling (`package.json`, `node_modules`, Vite, Vitest) never ships — the generator inlines CSS/JS/data into one offline-openable file.
+The pages run only under the dev server (`npm run home`); nothing is built or shipped. The charts read the campaign data through the Vite data plugins (`campaign-data-plugin.ts`, `session-data-plugin.ts`), which run the Python extractors and cache the result until a watched campaign file changes. The old self-contained HTML build was removed in 0.74.0.

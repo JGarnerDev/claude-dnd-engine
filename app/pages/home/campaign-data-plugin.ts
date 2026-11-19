@@ -1,9 +1,8 @@
 // Vite plugin: feed pages/home the LIVE campaign graph instead of fixtures.
 //
-// It runs scripts/timeline-data.py --json-only (the same extractor the shipped
-// artifact uses) and exposes the result as the virtual module
-// `virtual:campaign-data`. --json-only returns before the HTML-injection step, so
-// no `npm run build:timeline` shell is needed — pure read of entity frontmatter.
+// It runs scripts/timeline-data.py (a pure read of entity frontmatter that
+// prints the chart JSON) and exposes the result as the virtual module
+// `virtual:campaign-data`.
 //
 // In `vite dev` it also watches the three graph layers (data/ historian/
 // scheduler/); editing any .md re-extracts and full-reloads the page. So the DM
@@ -25,11 +24,11 @@ const GRAPH_DIRS = ['data', 'historian', 'scheduler'];
 // --full so secret beats reach the DM's own home page (tagged `secret: true`, plus
 // each beat's `knownBy`). The chart's "Known by" filter defaults to no viewpoint
 // (everything shows, secrets included — this is the DM's tool); the DM picks a
-// character to scope it to what that character knows for a player-safe glance. The
-// shipped artifact stays player-safe — only this local DM-side page opts into the
-// full set.
+// character to scope it to what that character knows for a player-safe glance.
+// Without --full the extractor stays player-safe; only this local DM-side page
+// opts into the full set.
 function extract(repoRoot: string): string {
-  const out = runPython(repoRoot, 'timeline-data.py', ['--json-only', '--full', '--root', repoRoot], 'campaign-data');
+  const out = runPython(repoRoot, 'timeline-data.py', ['--full', '--root', repoRoot], 'campaign-data');
   return out === null ? 'null' : rewriteSources(out, repoRoot);
 }
 

@@ -41,8 +41,8 @@ RUNS = [
     ('spotlight-balance', []),
     ('threads-brief', []),
     ('todo-brief', []),
-    ('timeline-data', ['timeline-data.py', '--json-only']),
-    ('timeline-data-full', ['timeline-data.py', '--full', '--json-only']),
+    ('timeline-data', ['timeline-data.py']),
+    ('timeline-data-full', ['timeline-data.py', '--full']),
     ('timeline-gantt', []),
 ]
 GANTT_FILES = ['world-history.md', 'party-history.md']  # timeline.md only carries today's date

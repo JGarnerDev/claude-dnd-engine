@@ -1,23 +1,17 @@
 #!/usr/bin/env python3
-"""timeline-data.py -- extract the timeline data blob and inject it into the
-self-contained HTML artifact (M2 of the timeline-view overhaul).
-consumers: .claude/commands/timeline.md
+"""timeline-data.py -- extract the timeline data blob the home-page charts draw.
+consumers: app/pages/home/campaign-data-plugin.ts (`npm run home`)
 
-Reads entity frontmatter (events, sessions, acts, chronicle beats) and builds
-the JSON shape app/components/charts/timeline/timeline.js consumes:
+Reads entity frontmatter (events, sessions, acts, chronicle beats) and prints,
+on one line, the JSON shape app/components/charts/ consumes:
   { calendar:{epochLabel,months:[{name,days}]}, events:[...], spans:[...] }
-Then rewrites the data sentinel inside the prebuilt shell
-(app/pages/demo/dist/timeline.html, produced by `npm run build:timeline`) and
-writes the result to historian/timeline/timeline.html.
 
-No node needed here -- the JS/CSS are already bundled into the shell; this only
-swaps the data line. Secret events are dropped entirely in the default
-(player-safe) export so they can't leak from the artifact; with --full they are
-emitted carrying `secret: true` (only the DM viewpoint shows them). Every beat
-with a known_by also carries `knownBy`, which drives the chart's "Known by"
+Secret events are dropped entirely by default (player-safe); with --full they
+are emitted carrying `secret: true` (only the DM viewpoint shows them). Every
+beat with a known_by also carries `knownBy`, which drives the chart's "Known by"
 viewpoint filter -- pick a character to scope the chart to what they know.
 
-Usage: python scripts/timeline-data.py [--full] [--json-only] [--root <repo root>] [--shell <path>]
+Usage: python scripts/timeline-data.py [--full] [--root <repo root>]
 """
 
 import argparse
@@ -445,50 +439,14 @@ def build_data(root: Path, full: bool) -> tuple:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description='Extract timeline data + inject into HTML shell.')
+    parser = argparse.ArgumentParser(description='Print the timeline data blob as JSON.')
     parser.add_argument('--full', action='store_true',
                         help='include secret + canon-pending beats (DM viewpoint)')
-    parser.add_argument('--json-only', action='store_true',
-                        help='print the JSON blob and exit (no HTML injection)')
     parser.add_argument('--root', default=str(ROOT), help='repo root')
-    parser.add_argument('--shell', default='',
-                        help='prebuilt single-file shell to inject into')
     args = parser.parse_args()
 
-    root = Path(args.root).resolve()
-    data, event_count, span_count, fallback = build_data(root, args.full)
-
-    # Compact single line so the sentinel swap is a clean one-liner.
-    blob = json.dumps(data, separators=(',', ':'), ensure_ascii=False)
-
-    if args.json_only:
-        print(blob)
-        return
-
-    shell = Path(args.shell) if args.shell else root / 'app' / 'pages' / 'demo' / 'dist' / 'timeline.html'
-    if not shell.exists():
-        sys.stderr.write(f"Shell not built: {shell}\nRun `npm run build:timeline` first.\n")
-        sys.exit(1)
-    html = shell.read_text(encoding='utf-8')
-    pattern = re.compile(r'/\*TL_DATA_START\*/.*?/\*TL_DATA_END\*/', re.DOTALL)
-    if not pattern.search(html):
-        sys.stderr.write(f"Data sentinel not found in {shell} -- was the shell rebuilt from timeline.html?\n")
-        sys.exit(1)
-    replacement = f"/*TL_DATA_START*/{blob}/*TL_DATA_END*/"
-    # Use a function replacement so backslashes/\g in the blob aren't treated as group refs.
-    html = pattern.sub(lambda m: replacement, html)
-
-    out_dir = root / 'historian' / 'timeline'
-    out_dir.mkdir(parents=True, exist_ok=True)
-    out_file = out_dir / 'timeline.html'
-    out_file.write_text(html, encoding='utf-8')
-
-    print(f"Wrote interactive timeline to {out_file}")
-    mode = 'FULL (incl. secret beats, DM-viewpoint only)' if args.full else 'player-safe'
-    print(f"  events: {event_count}   spans: {span_count}   mode: {mode}")
-    if fallback > 0:
-        print(f"  note: {fallback} session(s) have no in_world_end_date -- plotted by real-world "
-              f"played/planned_date. Backfill in_world_end_date for a true in-world axis.")
+    data, _, _, _ = build_data(Path(args.root).resolve(), args.full)
+    print(json.dumps(data, separators=(',', ':'), ensure_ascii=False))
 
 
 if __name__ == '__main__':

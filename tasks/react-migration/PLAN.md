@@ -2,7 +2,7 @@
 
 > **For agentic workers:** Steps use checkbox (`- [ ]`) syntax for tracking. Tick boxes as you go and keep the **Status** line current, so a fresh session can pick up where the last one stopped. Run `npm` from `app/`.
 
-**Status:** Task 0 done (2026-11-18), except Jeff's collaborator-access step; jeff-ui `v0.1.0` (Tabs) released. Next: Task 1.
+**Status:** Tasks 0 and 1 done (2026-11-18, engine `0.74.0`), except Jeff's collaborator-access step in Task 0. Next: Task 2.
 
 **Goal:** Rewrite the two pages in `app/pages/home/`, the timeline home page (`index.html`) and the session runner (`session.html`), plus the chart components in `app/components/charts/`, in React 19. Nothing the DM sees should change. The pure logic modules and their tests stay as they are.
 
@@ -79,11 +79,11 @@ About 15k lines across 54 spec files, 27 of which need a DOM (happy-dom).
 
 ### Task 1: Remove the shell route (D1)
 
-- [ ] Delete `app/vite.config.js`, the `build:timeline` script, `vite-plugin-singlefile`, and the sentinel declarations in `app/globals.d.ts`.
-- [ ] `scripts/timeline-data.py`: remove the shell and HTML output (`--shell`, the `TL_DATA` swap, writing `historian/timeline/timeline.html`) and keep only the JSON path used by `campaign-data-plugin.ts`. Update its pytest tests if there are any.
-- [ ] Update the docs that mention it: `app/components/CLAUDE.md` (the "Output stays self-contained" section and the `pages/demo` lines), `.claude/commands/timeline.md`, and the root `CLAUDE.md` if it refers to it.
-- [ ] Update `todo-dashboard.md`: close item 55, and unblock deleting `timeline-subday-binding` in item 54.
-- [ ] Bump the version and add a changelog entry. Commit.
+- [x] Delete `app/vite.config.js`, the `build:timeline` script, `vite-plugin-singlefile`, and the sentinel declarations in `app/globals.d.ts`.
+- [x] `scripts/timeline-data.py`: remove the shell and HTML output (`--shell`, the `TL_DATA` swap, writing `historian/timeline/timeline.html`) and keep only the JSON path used by `campaign-data-plugin.ts`. Update its pytest tests if there are any.
+- [x] Update the docs that mention it: `app/components/CLAUDE.md` (the "Output stays self-contained" section and the `pages/demo` lines), `.claude/commands/timeline.md`, and the root `CLAUDE.md` if it refers to it.
+- [x] Update `todo-dashboard.md`: close item 55, and unblock deleting `timeline-subday-binding` in item 54.
+- [x] Bump the version and add a changelog entry. Commit.
 
 ## Group B: Timeline page (commit group 2)
 

@@ -15,5 +15,5 @@
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["components/charts", "pages", "globals.d.ts", "vitest.setup.ts"]
+  "include": ["components/charts", "pages", "vitest.setup.ts"]
 }

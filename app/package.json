@@ -3,11 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Dev-only tooling for engine UI components (timeline chart). Output is self-contained HTML; these deps never ship.",
+  "description": "The engine's local DM pages: the timeline home page and the session runner, served by `npm run home`.",
   "scripts": {
-    "dev": "vite pages/demo --open",
     "home": "vite --config pages/home/vite.config.ts",
-    "build:timeline": "vite build",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
@@ -22,7 +20,6 @@
     "happy-dom": "^20.10.5",
     "typescript": "^7.0.2",
     "vite": "^8.2.1",
-    "vite-plugin-singlefile": "^2.3.4",
     "vitest": "^4.1.10"
   },
   "dependencies": {

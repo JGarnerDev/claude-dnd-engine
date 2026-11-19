@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.74.0] — 2026-11-18
+
+### Added
+
+- **React tooling in `app/`** (React migration Task 0, `tasks/react-migration/PLAN.md`). React 19, `@vitejs/plugin-react` and Testing Library are installed; `tsconfig.json` compiles JSX, and Vitest picks up `*.spec.tsx` with a shared `vitest.setup.ts`. The shared component library [jeff-ui](https://github.com/JGarnerDev/jeff-ui-project) is installed from GitHub pinned to `v0.1.0` (`app/.npmrc` sets `allow-git=root`, which npm 12 needs for git dependencies). Both pages load its tokens, with `pages/home/theme.css` mapping the engine palette onto them. Nothing visible changes yet. **Collaborators need read access to `JGarnerDev/jeff-ui-project` to run `npm install`.**
+
+### Removed
+
+- **The self-contained HTML timeline build** (React migration Task 1, decision D1). It was already dead: `app/pages/demo/` no longer exists, so `npm run build:timeline` failed. Removed: `app/vite.config.js`, `app/globals.d.ts`, the `build:timeline` and `dev` scripts, `vite-plugin-singlefile`, and the shell output of `scripts/timeline-data.py` (`--json-only`, `--shell`, the `TL_DATA` sentinel swap and the write to `historian/timeline/timeline.html`). The charts are served only by the dev server (`npm run home`). **Breaking for anything that called `timeline-data.py --json-only`:** the script now always prints the JSON (flags `--full` and `--root`). The data plugin and the schema-migration snapshot script are updated. Closes todo-dashboard item 55; branch `timeline-subday-binding` can now be deleted (item 54).
+
 ## [0.73.0] — 2026-11-18
 
 ### Changed
