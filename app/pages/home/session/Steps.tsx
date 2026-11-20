@@ -7,7 +7,7 @@
 // `When:` line rides on its row as a pill the fight bar lights once it comes true.
 
 import type { ReactNode } from 'react';
-import { Badge } from 'jeff-ui';
+import { Badge, Button } from 'jeff-ui';
 import { mergeLabelLines } from './flow.js';
 import { InlineMd } from './MarkdownView.js';
 import { PromptBook } from './PromptBook.js';
@@ -76,13 +76,13 @@ export function Steps({ nodes, prose: proseOf, headings, current, visited, optio
         return (
           <li key={n.id} className={`sr-step is-${state}`} data-id={n.id} id={`step-${n.id}`}>
             {rails && <Rails s={spans} i={i} last={last} />}
-            <button type="button" className="sr-step-head" data-to={n.id} title={n.id} onClick={() => { if (n.id !== current) onGo(n.id); }}>
+            <Button className="sr-step-head" data-to={n.id} title={n.id} onClick={() => { if (n.id !== current) onGo(n.id); }}>
               <span className="sr-step-num">{state === 'done' ? '✓' : beatPosition(n.id) || i + 1}</span>
               <span className="sr-step-title"><NoSceneLinks><InlineMd md={stepTitle(n, headings)} /></NoSceneLinks></span>
               {rails && <EdgeTags s={spans} i={i} last={last} />}
               {when && <span className={`sr-when${lit?.(when) ? ' is-ready' : ''}`} data-when={when} title={`When: ${when}`}>{when.length > 42 ? `${when.slice(0, 40)}…` : when}</span>}
               <StepMark n={n} prose={prose} />
-            </button>
+            </Button>
             {state === 'current' && <div className="sr-step-body"><BeatBody n={n} prose={prose} />{options}</div>}
           </li>
         );

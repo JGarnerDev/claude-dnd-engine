@@ -11,7 +11,7 @@
 // are the page's own: they survive moving between steps, not a reload.
 
 import { useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import { Disclosure } from 'jeff-ui';
+import { Disclosure, Kbd } from 'jeff-ui';
 import { applyHp, matchEnemy, type StatBlock } from './combatants.js';
 import { RollContext, type LoggedRoll } from './Dice.js';
 import { FightBar, type FightChip } from './FightBar.js';
@@ -64,7 +64,7 @@ function Options({ options, current, titleOf, closingHook, onGo }: Pick<ScenePro
     return (
       <button key={i} type="button" className={`sr-opt${i === 0 && o.kind !== 'aside' ? ' is-primary' : ''}`} data-kind={o.kind} data-to={o.to}
         onClick={() => { if (o.to !== current) onGo(o.to); }}>
-        <kbd>{i + 1}</kbd><span className="sr-opt-label"><InlineMd md={label} /></span>
+        <Kbd>{i + 1}</Kbd><span className="sr-opt-label"><InlineMd md={label} /></span>
         {fork && o.label !== titleOf(o.to) && <span className="sr-opt-to">→ <InlineMd md={titleOf(o.to)} /></span>}
       </button>
     );

@@ -5,6 +5,7 @@
 // rolls are for the moment, and survive re-renders but not a reload.
 
 import { createContext, Fragment, useContext, type MouseEvent } from 'react';
+import { Button } from 'jeff-ui';
 import { parseExpr, roll, rollTokens, type Roll, type RollMode, type RollToken } from './dice-roll.js';
 
 export interface LoggedRoll { who: string; what: string; r: Roll }
@@ -33,9 +34,9 @@ function RollButton({ tok }: { tok: RollToken }) {
     if (r) log(logEntry(ev.currentTarget, r, tok.label));
   };
   return (
-    <button type="button" className="sr-roll" data-roll={tok.expr} data-kind={tok.kind} data-label={tok.label || undefined} title={tip} onClick={onClick}>
+    <Button unstyled className="sr-roll" data-roll={tok.expr} data-kind={tok.kind} data-label={tok.label || undefined} title={tip} onClick={onClick}>
       {tok.match}
-    </button>
+    </Button>
   );
 }
 

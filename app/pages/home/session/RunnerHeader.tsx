@@ -2,7 +2,7 @@
 // feeds the side panel, and the actions: step back, copy the walked path, restart,
 // the timeline, and the pin that docks or hides the panel (`\`).
 
-import { Button } from 'jeff-ui';
+import { Button, Kbd } from 'jeff-ui';
 import type { PanelApi } from './usePanel.js';
 
 export interface RunnerHeaderProps {
@@ -21,7 +21,7 @@ export function RunnerHeader({ name, date, p, onBack, onCopy, onRestart }: Runne
       <div className="sr-searchbox">
         <input ref={p.search} className="sr-search" type="search" autoComplete="off" placeholder="Search people, places, beats, mysteries"
           aria-label="Search people, places, beats and mysteries" value={p.query} onChange={p.onSearchInput} onKeyDown={p.onSearchKey} />
-        <kbd>/</kbd>
+        <Kbd>/</Kbd>
       </div>
       <div className="sr-actions">
         <Button data-act="back" title="Step back (←)" onClick={onBack}>← Back</Button>
@@ -29,7 +29,7 @@ export function RunnerHeader({ name, date, p, onBack, onCopy, onRestart }: Runne
         <Button data-act="restart" onClick={onRestart}>Restart</Button>
         <a href="/">Timeline</a>
         <Button className="sr-pin" title="Dock or hide the side panel (\)" onClick={p.toggleDock}>
-          {p.docked ? 'Hide panel' : 'Pin panel'}<kbd>\</kbd>
+          {p.docked ? 'Hide panel' : 'Pin panel'}<Kbd>\</Kbd>
         </Button>
       </div>
     </header>

@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.75.5] — 2026-11-19
+
+### Changed
+
+- **More jeff-ui widgets on the DM pages** (jeff-ui `tasks/component-census/PLAN.md`, step 30). The pin moves to `jeff-ui` v0.4.0. The campaign picker is its `Select`, the prompt book's Copy buttons are its `CopyButton` (the copied state is now `[data-copied]` instead of `.is-copied`), the runner's key hints are `Kbd`, the timeline search is `SearchInput` and the Swimlane history toggle is `Checkbox`. The stats slides use `Card` for award cards and boards, `ProgressBar` for the standings bars and `Badge` for the hall-of-fame chips. Roll tokens, legendary pips, HP chips, beat and scene chips and step heads are jeff-ui `Button`s (the inline ones `unstyled`). The engine's own classes stay on as `className`. No behavior changes.
+
 ## [0.75.4] — 2026-11-19
 
 ### Changed

@@ -5,7 +5,7 @@
 // hoisted before. Pure matching stays in filters.ts.
 
 import { useMemo } from 'react';
-import { Chip, type SettingsSection } from 'jeff-ui';
+import { Chip, SearchInput, type SettingsSection } from 'jeff-ui';
 import './components/filterbar.css';
 import { trackList, audienceList } from './helpers/filters.js';
 import { DM_AUDIENCE, DM_LABEL } from './constants.js';
@@ -72,12 +72,11 @@ export function useFilterSections(
     {
       label: 'Search',
       content: (
-        <input
-          type="search"
+        <SearchInput
           className="chart-search"
-          placeholder="Search beats…"
+          label="Search beats…"
           value={value.query}
-          onChange={(e) => onChange({ ...value, query: e.target.value })}
+          onChange={(query) => onChange({ ...value, query })}
         />
       ),
     },

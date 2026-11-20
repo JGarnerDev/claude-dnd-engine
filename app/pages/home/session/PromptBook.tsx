@@ -11,33 +11,14 @@
 //   Introduce  a character's first appearance: look, sound, impression
 //   Fight    where a fight or a boss fight starts and ends (`Combat starts:`, `Boss fight ends:`)
 
-import { Fragment, useEffect, useRef, useState, type ReactNode } from 'react';
-import { Button } from 'jeff-ui';
+import { Fragment, type ReactNode } from 'react';
+import { CopyButton } from 'jeff-ui';
 import { itemLit, watchCue, type Lit } from './fight-cues.js';
 import { useFightLit } from './FightContext.js';
 import { extractCallouts } from './markdown.js';
 import { InlineMd, ItemClassContext, Markdown } from './MarkdownView.js';
 import { promptBlocks, VOICE_NAME, type PbBlock } from './prompt-blocks.js';
 import { stripProvenance } from './provenance.js';
-
-// Copies one message; says so for a moment.
-export function CopyButton({ text }: { text: string }) {
-  const [copied, setCopied] = useState(false);
-  const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
-  useEffect(() => () => clearTimeout(timer.current), []);
-  const onClick = () => {
-    void navigator.clipboard?.writeText(text).then(() => {
-      setCopied(true);
-      clearTimeout(timer.current);
-      timer.current = setTimeout(() => setCopied(false), 1500);
-    });
-  };
-  return (
-    <Button className={`sr-copy${copied ? ' is-copied' : ''}`} data-copy={text} title="Copy this message" onClick={onClick}>
-      {copied ? 'Copied' : 'Copy'}
-    </Button>
-  );
-}
 
 function Intros({ md }: { md: string }) {
   return extractCallouts(md).intros.map((x, i) => (
@@ -61,7 +42,7 @@ function Private({ md }: { md: string }) {
           <li key={i}>
             {o.label && <span className="sr-private-label"><InlineMd md={o.label} /></span>}
             <span className="sr-private-text">{o.text}</span>
-            <CopyButton text={o.text} />
+            <CopyButton className="sr-copy" data-copy={o.text} title="Copy this message" text={o.text} />
           </li>
         ))}
       </ul>

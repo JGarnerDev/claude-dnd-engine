@@ -41,7 +41,7 @@ function Chip({ c, round, picked, onPick }: { c: FightChip; round: number; picke
   const phase = c.cur > 0 ? phases.filter((p) => c.cur <= p.hp).pop() : undefined;
   const tip = phases.map((p) => `${p.name} at ${p.hp}`).join(', ');
   return (
-    <button type="button" className={`sr-hpchip is-${band(c.cur, c.max)}${coming ? ' is-coming' : ''}${phase ? ' is-phase' : ''}${picked ? ' is-picked' : ''}`}
+    <Button className={`sr-hpchip is-${band(c.cur, c.max)}${coming ? ' is-coming' : ''}${phase ? ' is-phase' : ''}${picked ? ' is-picked' : ''}`}
       data-entry={c.entry} title={`${plainText(c.entry)}${coming ? `, arrives round ${c.due}` : ''}${tip ? ` (${tip})` : ''}: type damage`} onClick={onPick}>
       <i></i>{shortName(c.entry)} <b>{c.cur}</b>/{c.max}
       {phases.length > 0 && (
@@ -52,7 +52,7 @@ function Chip({ c, round, picked, onPick }: { c: FightChip; round: number; picke
       )}
       {phase && <> <small className="sr-phase">{phase.name}</small></>}
       {coming && <> <small>R{c.due}</small></>}
-    </button>
+    </Button>
   );
 }
 
@@ -60,9 +60,9 @@ function Legend({ entry, n, spent, onSpend }: { entry: string; n: number; spent:
   return (
     <span className="sr-legend" data-entry={entry} aria-label={`Legendary actions, ${n - spent} left`}>
       {Array.from({ length: n }, (_, i) => (
-        <button key={i} type="button" className={`sr-pip${i < spent ? ' is-spent' : ''}`} data-pip={i} aria-pressed={i < spent}
+        <Button key={i} unstyled className={`sr-pip${i < spent ? ' is-spent' : ''}`} data-pip={i} aria-pressed={i < spent}
           title={`Legendary action ${i + 1} of ${n}: click to spend, click again to give back. A new round refills them.`}
-          onClick={() => onSpend(i < spent ? i : i + 1)}></button>
+          onClick={() => onSpend(i < spent ? i : i + 1)}></Button>
       ))}
     </span>
   );

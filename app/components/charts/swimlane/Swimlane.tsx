@@ -8,7 +8,7 @@
 // the density bars. Zoom and collapse change the layout, so they re-render it.
 
 import { useImperativeHandle, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent } from 'react';
-import type { SettingsSection } from 'jeff-ui';
+import { Checkbox, type SettingsSection } from 'jeff-ui';
 import '../_common/common.css';
 import './swimlane.css';
 import { EmptyState } from 'jeff-ui';
@@ -195,10 +195,12 @@ function SwimlaneChart({ data, initialState, settingsSlot, className, ref, full 
     sections.push({
       label: 'History',
       content: (
-        <label className="chart-swim-deephistory">
-          <input type="checkbox" checked={showDeepHistory} onChange={(e) => setShowDeepHistory(e.target.checked)} />
-          <span>Show pre-campaign history</span>
-        </label>
+        <Checkbox
+          className="chart-swim-deephistory"
+          label="Show pre-campaign history"
+          checked={showDeepHistory}
+          onChange={setShowDeepHistory}
+        />
       ),
     });
   }

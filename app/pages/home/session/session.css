@@ -39,7 +39,7 @@
 .sr-rail-group { display: flex; flex-wrap: wrap; align-items: center; gap: 3px; padding: 2px 6px; border-radius: 6px; }
 .sr-rail-group.is-current { background: var(--sr-surface); }
 .sr-rail-label { font-size: 12px; font-weight: 600; color: var(--sr-muted); margin-right: 4px; text-transform: uppercase; }
-.sr-chip { --k: var(--sr-k-social); font-size: 10.5px !important; line-height: 1; padding: 4px 6px; border-radius: 4px; border: 1px solid var(--k); background: transparent; color: var(--sr-muted) !important; cursor: pointer; }
+.sr-chip { --k: var(--sr-k-social); min-height: 0; font-size: 10.5px !important; line-height: 1; padding: 4px 6px; border-radius: 4px; border: 1px solid var(--k); background: transparent; color: var(--sr-muted) !important; cursor: pointer; }
 .sr-chip.is-visited { background: color-mix(in srgb, var(--k) 28%, transparent); color: var(--sr-text) !important; }
 .sr-chip.is-current { background: var(--k); color: #0f172a !important; font-weight: 700; box-shadow: 0 0 0 2px var(--sr-bg), 0 0 0 3px var(--k); }
 
@@ -128,7 +128,7 @@
 /* Steps */
 .sr-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
 .sr-step { background: var(--sr-surface); border: 1px solid var(--sr-line); border-radius: 8px; }
-.sr-step-head { display: flex; align-items: baseline; gap: 10px; width: 100%; text-align: left; padding: 8px 14px; background: none; border: none; cursor: pointer; font-size: 16px; }
+.sr-step-head { min-height: 0; display: flex; align-items: baseline; gap: 10px; width: 100%; text-align: left; padding: 8px 14px; background: none; border: none; cursor: pointer; font-size: 16px; }
 .sr-step-num { min-width: 1.4em; text-align: right; color: var(--sr-muted); font-variant-numeric: tabular-nums; font-weight: 700; }
 .sr-step-title { flex: 1; font-weight: 600; }
 .sr-step.is-done { opacity: 0.55; background: transparent; }
@@ -165,7 +165,7 @@
 .sr-private-text { font-size: 15px; }
 .sr-copy { font: 600 12.5px system-ui, sans-serif; padding: 4px 10px; border-radius: 5px; border: 1px solid var(--sr-line); background: var(--sr-bg); color: inherit; cursor: pointer; }
 .sr-copy:hover { border-color: var(--sr-muted); }
-.sr-copy.is-copied { border-color: var(--sr-k-stake); color: var(--sr-k-stake); }
+.sr-copy[data-copied] { border-color: var(--sr-k-stake); color: var(--sr-k-stake); }
 
 /* Branch buttons */
 .sr-options, .sr-asides { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
@@ -327,7 +327,7 @@
 .sr-setup .sr-pbook { padding-bottom: 8px; }
 
 /* Beat and scene chips (refs.ts) */
-.sr-bref { display: inline-flex; align-items: baseline; gap: 5px; max-width: 100%; font: 600 13px system-ui, sans-serif; color: var(--sr-v-watch) !important; background: color-mix(in srgb, var(--sr-v-watch) 10%, transparent); border: 1px solid color-mix(in srgb, var(--sr-v-watch) 45%, transparent); border-radius: 4px; padding: 0 7px; cursor: pointer; white-space: nowrap; vertical-align: baseline; }
+.sr-bref { min-height: 0; display: inline-flex; align-items: baseline; gap: 5px; max-width: 100%; font: 600 13px system-ui, sans-serif; color: var(--sr-v-watch) !important; background: color-mix(in srgb, var(--sr-v-watch) 10%, transparent); border: 1px solid color-mix(in srgb, var(--sr-v-watch) 45%, transparent); border-radius: 4px; padding: 0 7px; cursor: pointer; white-space: nowrap; vertical-align: baseline; }
 .sr-bref:hover { background: color-mix(in srgb, var(--sr-v-watch) 22%, transparent); }
 .sr-bref-n { font: 600 11.5px var(--sr-f-cue); color: var(--sr-bg); background: var(--sr-v-watch); border-radius: 3px; padding: 0 4px; }
 .sr-bref.is-scene { color: var(--sr-accent) !important; background: color-mix(in srgb, var(--sr-accent) 9%, transparent); border-color: color-mix(in srgb, var(--sr-accent) 45%, transparent); }
@@ -340,7 +340,7 @@
 /* Fight bar: pinned at the top of the notes while a fight runs */
 .sr-strip { position: sticky; top: -18px; z-index: 6; margin: 0 -6px 14px; display: flex; flex-direction: column; gap: 6px; padding: 7px 10px; border-radius: 8px; background: color-mix(in srgb, var(--sr-k-combat) 16%, var(--sr-bg)); border: 1px solid var(--sr-k-combat); box-shadow: 0 6px 16px rgb(0 0 0 / 0.35); }
 .sr-strip-chips { display: flex; flex-wrap: wrap; gap: 5px; }
-.sr-hpchip { --hc: var(--sr-k-stake); display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px 2px 4px; border-radius: 5px; border: 1px solid var(--sr-line); background: var(--sr-bg); cursor: pointer; font-size: 13px; font-variant-numeric: tabular-nums; }
+.sr-hpchip { --hc: var(--sr-k-stake); min-height: 0; display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px 2px 4px; border-radius: 5px; border: 1px solid var(--sr-line); background: var(--sr-bg); cursor: pointer; font-size: 13px; font-variant-numeric: tabular-nums; }
 .sr-hpchip i { width: 6px; height: 18px; border-radius: 2px; background: var(--hc); }
 .sr-hpchip.is-hurt { --hc: var(--sr-accent); }
 .sr-hpchip.is-low { --hc: var(--sr-k-combat); }

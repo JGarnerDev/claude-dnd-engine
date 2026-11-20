@@ -11,6 +11,7 @@
 // card path only as a whole `code` span.
 
 import { createContext, Fragment, useContext, type ReactNode } from 'react';
+import { Button } from 'jeff-ui';
 import type { BeatRef, RefIndex, SceneRef } from './ref-index.js';
 import type { CardRef } from './types.js';
 
@@ -33,20 +34,20 @@ export function BeatChip({ b }: { b: BeatRef }) {
   const links = useContext(RefContext);
   const where = /\./.test(b.num) ? `Scene ${b.num.split('.')[0]}, step ${b.num.split('.')[1]}` : `step ${b.num}`;
   return (
-    <button type="button" className={`sr-bref${b.here ? ' is-here' : ''}`} data-beat={b.id}
+    <Button className={`sr-bref${b.here ? ' is-here' : ''}`} data-beat={b.id}
       title={`${b.id} · ${where} · ${b.title}${b.here ? ' (you are here)' : ''}`} onClick={() => links?.onBeat(b)}>
       <span className="sr-bref-n">{b.num}</span>{b.short}
-    </button>
+    </Button>
   );
 }
 
 export function SceneChip({ s }: { s: SceneRef }) {
   const links = useContext(RefContext);
   return (
-    <button type="button" className={`sr-bref is-scene${s.here ? ' is-here' : ''}`} data-scene={s.key}
+    <Button className={`sr-bref is-scene${s.here ? ' is-here' : ''}`} data-scene={s.key}
       title={`Scene ${s.key} · ${s.title}${s.here ? ' (you are here)' : ''}`} onClick={() => links?.onScene(s)}>
       <span className="sr-bref-n">S{s.key}</span>{s.title}
-    </button>
+    </Button>
   );
 }
 

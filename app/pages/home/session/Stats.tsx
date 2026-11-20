@@ -4,6 +4,7 @@
 // compact "Worth noting" slide instead, or none (meta/recap-slides.md → Deck weight).
 
 import type { ReactNode } from 'react';
+import { Badge, Card, ProgressBar } from 'jeff-ui';
 import './stats.css';
 import { beforeLast, type DeckSlide } from './deck.js';
 import type { DeckWeight, StatBoard, StatRow, Stats } from './types.js';
@@ -17,7 +18,7 @@ function Awards({ s }: { s: Stats }) {
   return (
     <div className="st-cards">
       {s.awards.map((a, i) => (
-        <div key={i} className={`st-card${a.best.length ? ' is-best' : ''}`}>
+        <Card key={i} className={`st-card${a.best.length ? ' is-best' : ''}`}>
           <div className="st-icon">{a.icon}</div>
           <div className="st-card-text">
             <div className="st-award">{a.award}</div>
@@ -25,18 +26,18 @@ function Awards({ s }: { s: Stats }) {
             <div className="st-value">{num(a)} <span>{lower(a.label)}</span></div>
             {a.best.length > 0 && <div className="st-best">⭐ Personal best{a.pcs.length > 1 ? `: ${names(a.best)}` : ''}</div>}
           </div>
-        </div>
+        </Card>
       ))}
     </div>
   );
 }
 
 function Row({ r, top }: { r: StatRow; top: number }) {
-  const w = top ? Math.max(4, Math.round((r.value / top) * 100)) : 0;
+  const w = top ? Math.max(0.04, r.value / top) : 0;
   return (
     <div className={`st-row${r.value === top ? ' is-top' : ''}`}>
       <span className="st-row-pc">{r.pc}</span>
-      <span className="st-bar"><i style={{ width: `${w}%` }} /></span>
+      <ProgressBar className="st-bar" value={w} />
       <span className="st-row-v">{num(r)}</span>
     </div>
   );
@@ -46,10 +47,9 @@ function Boards({ boards }: { boards: StatBoard[] }) {
   return (
     <div className="st-boards">
       {boards.map((b, i) => (
-        <div key={i} className="st-board">
-          <div className="st-board-h">{b.icon} {b.label}</div>
+        <Card key={i} className="st-board" title={`${b.icon} ${b.label}`}>
           {b.rows.map((r, j) => <Row key={j} r={r} top={b.rows[0].value} />)}
-        </div>
+        </Card>
       ))}
     </div>
   );
@@ -60,7 +60,7 @@ function Fame({ s }: { s: Stats }) {
   return (
     <div className="st-fame">
       <span className="st-fame-h">Hall of fame</span>
-      {s.lifetime.map((h, i) => <span key={i} className="st-chip" title={h.label}>{h.icon} {names(h.pcs)} <b>{num(h)}</b></span>)}
+      {s.lifetime.map((h, i) => <Badge key={i} className="st-chip" title={h.label}>{h.icon} {names(h.pcs)} <b>{num(h)}</b></Badge>)}
     </div>
   );
 }

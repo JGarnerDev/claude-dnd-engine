@@ -48,7 +48,7 @@ describe('statsSlides', () => {
 
   it('scales standings bars to the leader and shows the hall of fame', () => {
     const el = dom(statsSlides(stats)[1]);
-    const bars = [...el.querySelectorAll<HTMLElement>('.st-bar i')].map((b) => b.style.width);
+    const bars = [...el.querySelectorAll<HTMLElement>('.st-bar .ui-progress-fill')].map((b) => b.style.width);
     expect(bars).toEqual(['100%', '60%']);
     expect(el.querySelector('.st-row.is-top .st-row-pc')!.textContent).toBe('Dip');
     expect(el.querySelector('.st-fame .st-chip')!.textContent).toContain('Iggy');
