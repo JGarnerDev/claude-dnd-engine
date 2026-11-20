@@ -6,10 +6,6 @@
    session runner's CSS. Keep the two in step when either palette changes. */
 
 :root {
-  /* jeff-ui's tokens turn on color-scheme: dark. The engine never set it, and
-     switching it restyles native controls and scrollbars; keep today's look. */
-  color-scheme: normal;
-
   --ui-bg: #0f172a; /* --chart-bg, --sr-bg */
   --ui-surface: #1f2937; /* --chart-surface */
   --ui-surface-hi: #273449; /* --sr-raised */

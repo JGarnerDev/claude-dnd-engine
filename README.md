@@ -39,11 +39,21 @@ The timeline and the session runner are a React app in `app/`, served by the Vit
 
 ```bash
 cd app
-npm install   # needs read access to the private repo JGarnerDev/jeff-ui-project
+npm install   # needs a GitHub token for jeff-ui; see below
 npm run home  # opens the timeline; the runner is at /session.html
 ```
 
-`npm install` pulls the shared UI library `jeff-ui` from GitHub (`JGarnerDev/jeff-ui-project`, pinned to a tag in `app/package.json`). That repo is private: ask Jeff for read access first, or the install fails on that package.
+`npm install` pulls the shared UI library `jeff-ui`, the private package `@jgarnerdev/jeff-ui` on GitHub Packages (pinned in `app/package.json`; `app/.npmrc` points npm at the registry). Before the first install:
+
+1. Ask Jeff for read access to the repo `JGarnerDev/jeff-ui-project`; the package shares its access.
+2. Give npm a GitHub token that can read packages. With the GitHub CLI:
+
+   ```bash
+   gh auth refresh -s read:packages
+   npm config set //npm.pkg.github.com/:_authToken "$(gh auth token)"
+   ```
+
+   This stores the token in your user `~/.npmrc`, never in the repo. Without it, the install fails on `@jgarnerdev/jeff-ui` with a 401 or 403.
 
 ### Running the scripts
 

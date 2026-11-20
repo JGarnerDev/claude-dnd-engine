@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.78.0] — 2026-11-20
+
+### Changed
+
+- **Setup step for collaborators:** `jeff-ui` now installs from the private package `@jgarnerdev/jeff-ui` on GitHub Packages (v0.8.0, aliased as `jeff-ui`, so imports are unchanged) instead of a git dependency. `app/.npmrc` points the scope at the registry, replacing `allow-git=root`. `npm install` needs a GitHub token with `read:packages` in your own npm config; see the README's DM pages section.
+- The app is dark only: the theme file no longer resets jeff-ui's `color-scheme: dark`, so native controls and scrollbars render dark.
+
 ## [0.77.0] — 2026-11-20
 
 ### Changed
