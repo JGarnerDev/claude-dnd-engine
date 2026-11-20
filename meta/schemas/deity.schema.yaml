@@ -1,0 +1,34 @@
+# deity.schema.yaml -- type: deity (prose: deity.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: deity
+type: object
+required: [state, tier, domains, moral_character, worshippers, wants]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: deity}
+  state: {enum: [active, dormant, diminished, dead, imprisoned, ascended]}
+  tier:
+    description: Divine rank; "unknown" while the table has not fixed it.
+    enum: [greater, intermediate, lesser, demigod, unknown]
+  domains: {$ref: entity.schema.yaml#/$defs/text-list}
+  moral_character:
+    description: Alignment or disposition in plain language.
+    $ref: entity.schema.yaml#/$defs/text
+  worshippers:
+    description: Faction or culture links; may be empty.
+    $ref: entity.schema.yaml#/$defs/text-list
+  wants: {$ref: entity.schema.yaml#/$defs/text}
+  symbol: {$ref: entity.schema.yaml#/$defs/text}
+  holy_day: {$ref: entity.schema.yaml#/$defs/text}
+  sacred_practices: {$ref: entity.schema.yaml#/$defs/text-list}
+  myths: {$ref: entity.schema.yaml#/$defs/text-list}
+  divine_conflicts: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  voice:
+    description: Core cadence and register in one line, for deities that speak at the table; see meta/voice.md.
+    $ref: entity.schema.yaml#/$defs/text
+  voice_confirmed:
+    description: Number of the last played session at which the voice was checked.
+    type: integer
+    minimum: 1
+unevaluatedProperties: false

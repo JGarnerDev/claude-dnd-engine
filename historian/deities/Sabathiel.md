@@ -8,7 +8,7 @@ tags:
   - deity/light
 source_session: "player backstory (Luci)"
 confirmed_date: "pre-campaign"
-tier: "TBD"
+tier: unknown
 domains:
   - light
   - stars

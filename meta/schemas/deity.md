@@ -35,10 +35,14 @@ Covers gods, demigods, dead gods, primordials, and other divine or cosmic entiti
 
 ## Schema
 
+The machine-readable version is [`deity.schema.yaml`](deity.schema.yaml).
+
 ### Canonical Path
+
 `data/deities/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `active` | Present and responsive to worship |
@@ -62,7 +66,7 @@ tags:
   - deity/war         # add one per domain — e.g. deity/war, deity/death, deity/trickery
 
 # --- MANDATORY (deity) ---
-tier: greater | intermediate | lesser | demigod
+tier: greater | intermediate | lesser | demigod | unknown
 domains: []
 moral_character: ""     # alignment or disposition in plain language
 worshippers:
@@ -88,10 +92,13 @@ sacred_practices: []
 myths: []
 divine_conflicts:
   - [[Deity Name]] (nature of conflict)
+voice: ""              # only for deities that speak at the table (meta/voice.md)
+voice_confirmed:        # last played session the voice was checked at; set by /recap
 ---
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

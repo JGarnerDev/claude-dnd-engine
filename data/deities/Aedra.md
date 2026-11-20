@@ -6,7 +6,7 @@ state: imprisoned
 tags:
   - deity
   - deity/twilight
-tier: "TBD"
+tier: unknown
 domains:
   - darkness
   - longing for light

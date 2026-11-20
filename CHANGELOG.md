@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.84.0] — 2026-11-20
+
+- `meta/schemas/deity.schema.yaml`: the deity schema. Mandatory: `state`, `tier`, `domains`, `moral_character`, `worshippers` (may be empty), `wants`.
+- `tier` gains `unknown` for deities the table has not ranked; `voice` and `voice_confirmed` are allowed for deities that speak at the table (Aashal-Groon speaks through the fox). `deity.md` updated to match and links the YAML schema.
+- Content: `tier: TBD` set to `unknown` on Aedra and Sabathiel.
+
 ## [0.83.0] — 2026-11-20
 
 - `meta/schemas/event.schema.yaml`: the event schema. Mandatory: `state`, `date`, `outcome`, `consequences`. `timeline_date` must match `YYYY[-MM[-DD]]` (optional leading minus, year-only and month-level allowed); `track` must name a known track kind.
