@@ -29,6 +29,8 @@ importance: major
 active: false
   
 description: "The nursemaid of Death House. Had an affair with [[Gustav Durst]] and bore Walter. Killed by Elisabeth Durst's cult. Now haunts the house as a specter."
+source_session: "[[Session 04 The Nursery Mirror]]"
+confirmed_date: "2026-03-30"
 ---
 
 > **Reliability -Name:** No personal name appears in the notes. Referred to only as "the nursemaid" or "the specter." Confirm name with DM.
@@ -51,3 +53,7 @@ Tallish, medium build. Slim. Fast moving but also mysteriously slow. Hair all ov
 
 - **Session 4:** Her history was glimpsed through the nursery mirror: nursemaid and master of the house kissing; stillborn child; nursemaid killed horrifically by a cult in the same room.
 - **Session 5:** Specter entered the room and attacked the party. Initiative order: Ben, Miguel, Specter, Paul, Jeff. Downed Miguel and Ben; killed Ben outright. Paul sacrificed Sacred Flame to revive both.
+
+## Sources
+
+Recorded in [[Session 04 The Nursery Mirror]].

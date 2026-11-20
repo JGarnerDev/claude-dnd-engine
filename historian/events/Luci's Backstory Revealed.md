@@ -23,6 +23,12 @@ relates_to:
   - "[[Death House]] (occurred in)"
 awareness: regional
 description: "On Death House's third floor, amid the nursery mirror visions, Luci revealed her backstory to the party."
+source_session: "[[Session 04 The Nursery Mirror]]"
+confirmed_date: "2026-03-30"
 ---
 
 While exploring the third floor of Death House — where the nursery mirror showed the Durst family's secret — Luci opened up about her own past to the party, a quiet character beat amid the horror.
+
+## Sources
+
+Recorded in [[Session 04 The Nursery Mirror]].

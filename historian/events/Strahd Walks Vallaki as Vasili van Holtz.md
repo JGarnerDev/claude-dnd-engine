@@ -28,8 +28,13 @@ awareness: secret
 known_by:
   - "[[The Party]] (partial)"
 description: "Henrik the coffinmaker told the party that Strahd, under the alias 'Vasili van Holtz,' had visited his shop — revealing the vampire lord walks Vallaki in human disguise, tied to the vampire spawn hidden above the shop."
+confirmed_date: "2026-07-07"
 ---
 
 While deceiving their way into [[Henrik]]'s coffin shop near the Vallaki town square, the party learned that [[Strahd]] had visited the shop in person, going by the alias **"Vasili van Holtz."** The vampire lord is moving through [[Vallaki]] in a human disguise — connected to the six vampire spawn hidden upstairs (see [[The Vampire Spawn in the Coffin Shop]]) and, through the stolen relics, to the [[Church of St. Andril]].
 
 > **Reliability:** "Vasili van Holtz" is Henrik's report of the alias (spelling per the session notes; module-adjacent). The in-world date is estimated from the Session 16 anchor. Confirm with DM.
+
+## Sources
+
+Recorded in [[Session 17 The Stolen Bones]].

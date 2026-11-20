@@ -26,6 +26,11 @@ relates_to:
   - "[[Vallaki]] (occurred at)"
 awareness: local
 description: "Odibli bought a dog at the Vallaki market, rode it on an animal handling check, and named it Sergei Rubelgerd — a good boy who asked for snacks."
+confirmed_date: "2026-06-23"
 ---
 
 At the Vallaki market, with the party pitching in, Odibli bought a dog. He passed an animal handling check to ride it, then used speak with animals to offer a name: Sergei Rubelgerd. Sergei accepted, declared he would be a good boy, and asked for snacks.
+
+## Sources
+
+Recorded in [[Session 15 The Gates of Vallaki]].

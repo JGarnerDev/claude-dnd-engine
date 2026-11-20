@@ -23,6 +23,12 @@ relates_to:
   - "[[Death House]] (occurred in)"
 awareness: secret
 description: "In the cult quarters beneath Death House, the party recognized Strahd's face carved on the statue the cult venerated."
+source_session: "[[Session 08 The Cult Quarters]]"
+confirmed_date: "2026-04-28"
 ---
 
 Looting the cult leader's quarters in the depths of Death House, the party found a statue the cultists had revered — and recognized the face on it as Strahd's. The horror in the house and the master of Barovia were one thread.
+
+## Sources
+
+Recorded in [[Session 08 The Cult Quarters]].

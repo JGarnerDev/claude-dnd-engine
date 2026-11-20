@@ -35,8 +35,13 @@ relates_to:
   - "[[Lucien Petrovic]]"
 awareness: local
 description: "The party grabbed the church's stolen saint's bones from the upstairs of Henrik's coffin shop and torched the building to escape — a smoking ruin, the vampire spawn presumed dead, and the party captured for the arson."
+confirmed_date: "2026-07-28"
 ---
 
 > **Reliability:** In-world date is an estimate (no numeric date in the notes). Whether the six vampire spawn and Henrik himself died in the fire is unconfirmed, and the extra bodies inside are unexplained. Confirm with DM.
 
 The long hunt for the [[Church of St. Andril]]'s stolen saint's bones ended in fire. Taking the correct upstairs door this time, the party's dexterous members slipped in and recovered the relics — [[Iggy]] confirming them by Arcana — then **torched the coffin shop** and fled when a hired wolf-hunter made too much noise. The building was left a smoking ruin, the vampire spawn presumed consumed, and the party was seized by [[Izek Strazni]] and paraded off to answer for the arson.
+
+## Sources
+
+Recorded in [[Session 19 The Burning of the Coffin Shop]].

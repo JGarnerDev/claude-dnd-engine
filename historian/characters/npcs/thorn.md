@@ -25,6 +25,8 @@ importance: major
 active: true
   
 description: "Thorn Durst. 8-year-old ghost. Son of the Durst family. Bound to Miguel's scroll in Session 6; stranded in Session 10."
+source_session: "[[Session 01 The Black Sheep Inn]]"
+confirmed_date: "2026-03-09"
 ---
 
 
@@ -55,3 +57,7 @@ In Session 6, Thorn explained Walter's origins:
 - **Session 1:** Spotted outside Death House with Rose. Drew the party inside.
 - **Session 6:** Found in the attic with Rose. His ghost was grabbed by Miguel on a sheet. Revealed Walter Durst's backstory.
 - **Session 10:** Tried to fight against being left behind. Miguel left the scroll page. Thorn is stranded.
+
+## Sources
+
+Recorded in [[Session 01 The Black Sheep Inn]].

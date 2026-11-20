@@ -59,6 +59,7 @@ spotlight_hooks:
   - hook: "a secret she shares with Iggy, and no one else (confirmed by Jeff 2026-10-25; what it is, open)"
     status: open
 description: "Paul's PC. Lucitania, a Scourge Aasimar monk-warlock-psion who woke in an abandoned sun temple, was scattered across the Astral Sea by a Void Serpent, and drifted into Barovia in perma-wanderlust."
+confirmed_date: "2026-03-09"
 ---
 
 Campaign: [[Curse of Strahd]] | Player: [[Paul]]
@@ -196,3 +197,7 @@ Bullseye lantern, 3 poison darts, a diary, an ink pen, traveler's clothes. No co
 Luci brought [[Ireena Kolyana]] the whole of Lady Wachter's plot and was met with a warning to research before acting rashly. She travels with [[Odibli]] and [[Dip]].
 
 [[Davian Martikov]] (1) — Luci ran eighty feet out of a live fight to reach him for help in Session 28, and he turned out to have been sending the ravens all along.
+
+## Sources
+
+Recorded in [[Session 01 The Black Sheep Inn]].

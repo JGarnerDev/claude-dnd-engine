@@ -59,6 +59,7 @@ spotlight_hooks:
     status: open
 
 description: "Ben's PC. Orc Berserker barbarian with a sage's training; joined in Session 5. Hunts for the twin sister they refuse to believe died in the fire that took their hamlet."
+confirmed_date: "2026-03-31"
 ---
 
 
@@ -202,3 +203,7 @@ Hears whispers when it is quiet. Onset: Session 10, after Odibli absorbed shadow
 Dip was the one [[Lady Fiona Wachter]] chose to draw out, and the one who killed her and her imp in her own cellar. They fight alongside [[Luci]].
 
 [[Davian Martikov]] (3) — Dip asked him outright to cure the mushroom-spore infection from the mold cave in Session 28 and he did it without hesitating, having just done the same for [[Odibli]].
+
+## Sources
+
+Recorded in [[Session 05 The Specter]].

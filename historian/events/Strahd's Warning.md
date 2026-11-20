@@ -26,6 +26,12 @@ relates_to:
   - "[[Death House]] (occurred in)"
 awareness: secret
 description: "During the shadow fight that killed Iggy and Dip twice, Strahd stepped in to warn the party — a sign he wants them alive — before Luci destroyed the remaining shadows."
+source_session: "[[Session 09 The Shadows]]"
+confirmed_date: "2026-05-05"
 ---
 
 The shadows in Death House were merciless, dropping Iggy and Dip twice each. Then Strahd intervened — not to kill, but to warn. The master of Barovia wanted these intruders alive, at least for now. Luci finished the shadows herself, the night's clear MVP.
+
+## Sources
+
+Recorded in [[Session 09 The Shadows]].

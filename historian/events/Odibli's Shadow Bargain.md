@@ -28,6 +28,12 @@ relates_to:
   - "[[Death House]] (occurred in)"
 awareness: regional
 description: "To revive the dead party members, Odibli smashed the orb and took on shadow essence — the source of Iggy's shadow affliction and Dip's whisper affliction that persist to this day."
+source_session: "[[Session 10 Escape From Death House]]"
+confirmed_date: "2026-05-12"
 ---
 
 With the party dead or dying at the climax of Death House, Odibli smashed the cult's orb and drew the shadow essence into himself to bring them back. It worked — but the shadow did not leave cleanly. Iggy's shadow no longer matches his form and moves the wrong way; Dip hears whispers in the silence. Both afflictions trace to this moment.
+
+## Sources
+
+Recorded in [[Session 10 Escape From Death House]].

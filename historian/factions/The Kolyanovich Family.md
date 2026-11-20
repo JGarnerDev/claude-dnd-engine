@@ -10,7 +10,7 @@ tags:
 locations:
   - "[[Barovia]]"
 purpose: family
-importance: high
+importance: major
 active: true
 description: "The burgomaster's family of Barovia village — the late Kolyan Indirovich, his son Ismark, and his adopted daughter Ireena. Long the village's stewards against Strahd's encroachment; now leaderless after Kolyan's death."
 rulership: "[[Ismark Kolyanovich]]"
@@ -28,8 +28,13 @@ relates_to:
   - "[[Domain of Barovia]] (subjects of)"
   - "[[Strahd Von Zarovich]] (Ireena hunted by)"
 source_session: "[[Session 11 Blood of the Vine]]"
+confirmed_date: "2026-05-19"
 ---
 
 The Kolyanovich family stewarded Barovia village under the burgomaster [[Kolyan Indirovich]], who stood against Strahd's pull on his daughter [[Ireena Kolyana]] until his death. His son [[Ismark Kolyanovich]] now carries the family, and begged the party to take Ireena to the safety of [[Vallaki]].
 
 At [[Kolyan Indirovich|Kolyan]]'s burial the family's deepest secret surfaced: Ireena is not a blood relative at all, but was raised as one. Who she truly is — and why Strahd wants her so badly — remains an open question.
+
+## Sources
+
+Recorded in [[Session 11 Blood of the Vine]].

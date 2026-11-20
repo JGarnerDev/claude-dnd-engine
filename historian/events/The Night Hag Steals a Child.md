@@ -25,6 +25,12 @@ relates_to:
   - "[[Domain of Barovia]] (occurred in)"
 awareness: regional
 description: "A night hag revealed herself at the church and fled with a stolen child — escaping the party and leaving an open hunt behind her."
+source_session: "[[Session 13 Dream Pastries]]"
+confirmed_date: "2026-06-02"
 ---
 
 The grief at the church curdled into horror: a night hag — the Dream Pastry Woman — revealed herself and escaped with a stolen child before the party could stop her. She is still out there, and the children of Barovia are still her prey. An open hunt the party left unfinished.
+
+## Sources
+
+Recorded in [[Session 13 Dream Pastries]].

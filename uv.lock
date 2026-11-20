@@ -296,7 +296,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "chromadb" },
-    { name = "notes-kit", git = "https://github.com/JGarnerDev/notes-kit?tag=v0.3.0" },
+    { name = "notes-kit", git = "https://github.com/JGarnerDev/notes-kit?tag=v0.5.0" },
     { name = "pillow" },
     { name = "pyyaml", specifier = ">=6.0.3" },
 ]
@@ -726,11 +726,12 @@ wheels = [
 
 [[package]]
 name = "notes-kit"
-version = "0.3.0"
-source = { git = "https://github.com/JGarnerDev/notes-kit?tag=v0.3.0#919824ff4c52bc320f9df79648834fb9898f6ce3" }
+version = "0.5.0"
+source = { git = "https://github.com/JGarnerDev/notes-kit?tag=v0.5.0#262ec7d85335fc45eba119cd2e59792a5e8b645a" }
 dependencies = [
     { name = "jsonschema" },
     { name = "pyyaml" },
+    { name = "referencing" },
 ]
 
 [[package]]

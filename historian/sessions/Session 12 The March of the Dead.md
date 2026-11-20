@@ -15,7 +15,7 @@ locations:
 key_npcs:
   - "[[Parriwimple]] (protector, host)"
 party: "[[The Party]]"
-importance: high
+importance: major
 active: false
 description: "Party investigates ghost procession at graveyard. Parriwimple explains the spirits. Zombie attack kills villager. Party defeats zombies with Parriwimple and takes long rest at his home."
 

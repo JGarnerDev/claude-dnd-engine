@@ -25,6 +25,12 @@ relates_to:
   - "[[Domain of Barovia]] (occurred in)"
 awareness: regional
 description: "Iggy picked up a raccoon companion, Bosco, who joined the party for the road to Vallaki and began (slowly) learning tricks."
+source_session: "[[Session 13 Dream Pastries]]"
+confirmed_date: "2026-06-02"
 ---
 
 Amid the gloom of Barovia, a bright note: Iggy gained a raccoon companion, Bosco. The little beast rode with the party onto the Vallaki road and, over long rests, has so far mastered exactly one command — "Sit."
+
+## Sources
+
+Recorded in [[Session 13 Dream Pastries]].

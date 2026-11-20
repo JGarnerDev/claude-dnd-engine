@@ -23,7 +23,7 @@ key_npcs:
   - "[[Kolyan Indirovich]] (buried this session)"
   - "[[The Dream Pastry Woman]] (night hag, fought and escaped)"
 party: "[[The Party]]"
-importance: high
+importance: major
 active: false
 description: "Burial of Kolyan at the Church of the Morning Lord. Party meets Father Donavich and learns his son Doru is a vampire spawn below the church. Ireena learns she is not a blood relative. Night hag reveals herself and escapes with a stolen child. Iggy gains a raccoon companion. Ismark and Ireena join the party for the road to Vallaki."
 

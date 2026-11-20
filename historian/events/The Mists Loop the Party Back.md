@@ -25,6 +25,11 @@ relates_to:
   - "[[Barovia]] (occurred in)"
 awareness: party
 description: "The party tried to cut over the burial hills; the mists enveloped them and returned them to the bridge. Odibli judged the fog a law of the plane, not a curse or spell."
+confirmed_date: "2026-06-23"
 ---
 
 Trying to save time by hauling the cart over the burial hills, the party was halted by foliage and then swallowed by fog. When it lifted, they stood at the bridge they had already crossed. Odibli's arcane read: not a curse, not quite a spell — a law of this plane. The mist keeps travelers to the road.
+
+## Sources
+
+Recorded in [[Session 15 The Gates of Vallaki]].

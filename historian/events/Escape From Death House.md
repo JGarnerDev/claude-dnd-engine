@@ -27,6 +27,12 @@ relates_to:
   - "[[Domain of Barovia]] (entered)"
 awareness: regional
 description: "The mists swept the party out of Death House and into Barovia proper, where Strahd greeted them — the turn from prologue to the open campaign. The party hit level 3."
+source_session: "[[Session 10 Escape From Death House]]"
+confirmed_date: "2026-05-12"
 ---
 
 Death House did not let the party walk out; the mists took them. They emerged into Barovia proper, leveled to 3 by all they had survived — and were met by Strahd von Zarovich himself, welcoming them to his domain. The prologue was over; the long fight for and against Barovia had begun.
+
+## Sources
+
+Recorded in [[Session 10 Escape From Death House]].

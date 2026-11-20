@@ -26,6 +26,12 @@ relates_to:
   - "[[Death House]] (occurred in)"
 awareness: regional
 description: "The spirits Rose and Thorn, bound to party scrolls, were left behind when the mists swept the party out of Death House — an unresolved loss."
+source_session: "[[Session 10 Escape From Death House]]"
+confirmed_date: "2026-05-12"
 ---
 
 Rose and Thorn, the Durst children's spirits bound to the party's scrolls, did not make it out. When the mists carried the party from Death House into Barovia, Ben and Miguel left the pages behind. The children remain stranded — a thread the party may yet feel the pull to resolve.
+
+## Sources
+
+Recorded in [[Session 10 Escape From Death House]].

@@ -28,6 +28,8 @@ importance: major
 active: false
   
 description: "Gustav Durst. Former master of Death House and cult leader. Deceased."
+source_session: "[[Session 02 Into Death House]]"
+confirmed_date: "2026-03-16"
 ---
 
 
@@ -44,3 +46,7 @@ Strahd's letter to the Dursts (found in Session 2) was addressed to Gustav direc
 - **Session 2:** Letter from Strahd found in hidden room of the library, addressed to Gustav. Established his relationship with Strahd.
 - **Session 4:** Glimpsed in the nursery mirror kissing the nursemaid.
 - **Session 6:** Thorn confirmed he was the father of Walter (the illegitimate child).
+
+## Sources
+
+Recorded in [[Session 02 Into Death House]].

@@ -27,7 +27,7 @@ key_npcs:
   - "[[Mirabel]] (Blood of the Vine owner)"
   - "[[Sorvia]] (Blood of the Vine owner)"
 party: "[[The Party]]"
-importance: high
+importance: major
 active: false
 description: "Party exits Death House into Barovia village. Meets Ismark at the Blood of the Vine — he asks them to escort his sister Ireena to Vallaki. Father Kolyan Indirovich is dead. Mad Mary grieves lost daughter Gertrude. Ghost procession passes through. Party heads to graveyard drunk."
 

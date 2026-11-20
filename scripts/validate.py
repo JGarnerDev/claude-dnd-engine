@@ -3,10 +3,10 @@
 # consumers: CLAUDE.md, tests/CLAUDE.md, scripts/todo-brief.py (count_errors), .claude/commands/handover.md, .claude/commands/recap.md, tests/commands/recap/spec.md -- update these if usage, flags, or output format change.
 # Catches problems that accumulate silently across 1000+ files:
 #   ERRORS   - dangling [[wiki-links]]; missing mandatory frontmatter (name/type/exists);
-#              exists:false in historian/ (canon must be real); two entities sharing a filename;
-#              frontmatter that isn't valid YAML.
+#              exists:false in historian/ (canon must be real); historian files (except
+#              sessions) missing provenance (source_session/confirmed_date); two entities
+#              sharing a filename; frontmatter that isn't valid YAML.
 #   WARNINGS - core reference-catalog type marked exists:false (should be true);
-#              historian files missing provenance (source_session/confirmed_date);
 #              name != filename; frontmatter [[links]] not echoed in body (Foam graph gap).
 # Scope, skips and link targets are configured under [tool.notes-kit] in pyproject.toml.
 #
@@ -74,7 +74,7 @@ def engine_checks(notes: dict) -> list:
         if top == "historian" and "/sessions/" not in rel:
             for req in ("source_session", "confirmed_date"):
                 if blank(fm.get(req)):
-                    add(f"historian file missing '{req}'", "provenance", "warning")
+                    add(f"historian file missing '{req}'", "provenance")
         name = fm.get("name")
         if not blank(name) and str(name).strip().lower() != note.stem.lower():
             add(f"name '{name}' != filename '{note.stem}'", "name", "warning")

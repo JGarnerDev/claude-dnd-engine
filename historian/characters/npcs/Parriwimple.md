@@ -14,7 +14,7 @@ personality: "Protective and community-minded. Genuinely concerned about the vil
 livelihood: "Assistant to Bildrath Cantemir at Bildrath's Mercantile."
 disposition: friendly
 aliases: []
-importance: supporting
+importance: minor
 active: true
 relates_to:
   - "[[Bildrath Cantemir]] (employer)"

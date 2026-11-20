@@ -21,6 +21,8 @@ importance: minor
 active: false
   
 description: "Black Sheep Inn. Located just outside Barovia. Party performed here, earned supplies, then was immediately banned after Paul threw a knife into a customer."
+source_session: "[[Session 01 The Black Sheep Inn]]"
+confirmed_date: "2026-03-09"
 ---
 
 
@@ -40,3 +42,7 @@ Paul then threw knives at the door to outline a customer -and hit them in the ne
 ## Notes
 
 The party has not returned as of Session 10. Given they are now inside Barovia proper and cannot leave, the inn's relevance is low unless the party can somehow exit to the outskirts again.
+
+## Sources
+
+Recorded in [[Session 01 The Black Sheep Inn]].

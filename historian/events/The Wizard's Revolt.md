@@ -23,8 +23,14 @@ relates_to:
   - "[[Tser Pool Encampment]] (where the tale was told)"
 awareness: regional
 description: "Over a year ago a charismatic wizard rallied Barovia against Strahd, marched on Ravenloft, and was hurled to his death above the falls — a tale the Tser Pool Vistani told the party. World-history of the Strahd era."
+source_session: "[[Session 14 The Tarokka Reading]]"
+confirmed_date: "2026-06-16"
 ---
 
 Over a year before the party arrived, a charismatic wizard came to Barovia and did what few dare: he rallied the peasants into open revolt and marched them on Castle Ravenloft. When Strahd appeared, the army broke. The wizard dueled the devil from the castle courtyards to a precipice above the falls — surviving falling rock and lightning — until Strahd hurled him a thousand feet to his death. The River Ivlis swept the body away.
 
 > **Reliability:** The wizard is unnamed in play. Module canon identifies him as Khazan, but the party has not learned a name — left as the Vistani told it. Confirm with the DM before attaching a name.
+
+## Sources
+
+Recorded in [[Session 14 The Tarokka Reading]].

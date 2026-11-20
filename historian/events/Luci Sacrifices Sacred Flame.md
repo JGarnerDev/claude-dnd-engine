@@ -27,6 +27,12 @@ relates_to:
   - "[[Death House]] (occurred in)"
 awareness: regional
 description: "When a specter killed Odibli and Dip in Death House, Luci permanently gave up her Sacred Flame to bring them back — a loss that holds for the rest of the campaign."
+source_session: "[[Session 05 The Specter]]"
+confirmed_date: "2026-03-31"
 ---
 
 A specter ambushed the party in Death House and struck down both Odibli and Dip. To save them, Luci surrendered her Sacred Flame — not spent, but sacrificed permanently. The spell is gone for the rest of the campaign, the first of the party's lasting wounds in Barovia.
+
+## Sources
+
+Recorded in [[Session 05 The Specter]].

@@ -31,8 +31,13 @@ relates_to:
   - "[[Burgomaster's Mansion]]"
 awareness: local
 description: "The party uncovered Viktor Vallakovich experimenting on Vallaki's missing townsfolk in the mansion attic, subdued him with Hideous Laughter, fought off his skeleton cats, and traded silence for a waived penalty and his spellbooks."
+confirmed_date: "2026-07-29"
 ---
 
 > **Reliability:** In-world date is an estimate. Viktor's fate after the confrontation — free, confined, or under his father's control — is unrecorded, as is whether the Burgomaster already knew. Confirm with DM.
 
 Sent to work off the coffin-shop debt, the party instead found the truth in the [[Burgomaster's Mansion]] attic: **[[Viktor Vallakovich]]**, the Burgomaster's son, was the one behind Vallaki's disappearances — experimenting on the missing townsfolk and building a broken teleporter. When he demanded the party stand on the device to test it, they hit him with **Hideous Laughter**, fought off his **skeleton cats**, and — while [[Luci]] fetched the Burgomaster and [[Odibli]] gathered evidence — exposed him. [[Vargas Vallakovich]] waived the 600 gp penalty for their **silence**, and the party walked off with Viktor's spells and books.
+
+## Sources
+
+Recorded in [[Session 20 Viktor's Attic]].

@@ -25,6 +25,12 @@ relates_to:
   - "[[Strahd Von Zarovich]] (the named enemy)"
 awareness: regional
 description: "At the Tser Pool Encampment, Madame Eva read five tarokka cards — the Dictator, Mercenary, Paladin, Marionette, and Broken One — mapping the holy symbol, sunsword, ally, and Strahd's resting place."
+source_session: "[[Session 14 The Tarokka Reading]]"
+confirmed_date: "2026-06-16"
 ---
 
 In a tent of flame and incense at the Tser Pool Encampment, Madame Eva laid five cards before the party — the Dictator, the Mercenary, the Paladin, the Marionette, and the Broken One. Together they map the campaign: ancient knowledge at a throne, a holy symbol among the dead under gold, a sword of sunlight with a sleeping prince, a two-headed man of music to aid them, and an enemy who haunts the tomb of the man he envied. The Fortunes of Ravenloft are now in play.
+
+## Sources
+
+Recorded in [[Session 14 The Tarokka Reading]].

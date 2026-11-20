@@ -26,6 +26,8 @@ importance: minor
 active: false
   
 description: "Walter Durst. Illegitimate son of Gustav Durst and the nursemaid. Sacrificed on the basement altar. Crypt found empty."
+source_session: "[[Session 04 The Nursery Mirror]]"
+confirmed_date: "2026-03-30"
 ---
 
 
@@ -39,3 +41,7 @@ Location: [[Death House]] | Campaign: [[Curse of Strahd]]
 ## Background
 
 Illegitimate child of [[Gustav Durst]] and the nursemaid. [[Elisabeth Durst]], upon discovering the affair, organized his sacrifice on the basement altar. His crypt in the dungeon was found empty by the party.
+
+## Sources
+
+Recorded in [[Session 04 The Nursery Mirror]].

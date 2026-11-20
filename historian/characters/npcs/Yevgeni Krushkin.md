@@ -31,6 +31,8 @@ goals:
   - "Make a living hunting wolves"
 motives:
   - "Coin — sells pelts, guiding, and information"
+source_session: "[[Session 16 The Blue Water Inn]]"
+confirmed_date: "2026-06-30"
 ---
 
 Location: [[Blue Water Inn]] | Campaign: [[Curse of Strahd]]
@@ -50,3 +52,7 @@ Hired with [[Szoldar Szoldarovich]] for the day (**10 gp**) during the raid on [
 > **Reliability:** Day-rate logged as 10 gp here vs. 5 gp/day at first offer; which hunter made the noise is unspecified. Confirm with DM.
 
 > **Table note:** The two wolf-hunters were a real-life cameo of the group's friends **Sam and Samara**. The one-to-one mapping (which hunter is which friend) is not fixed. Confirm with DM.
+
+## Sources
+
+Recorded in [[Session 16 The Blue Water Inn]].

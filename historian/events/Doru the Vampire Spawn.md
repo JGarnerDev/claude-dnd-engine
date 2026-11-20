@@ -26,6 +26,12 @@ relates_to:
   - "[[Domain of Barovia]] (occurred in)"
 awareness: regional
 description: "At the Church of the Morning Lord, the party learned Father Donavich's son Doru had become a vampire spawn, locked in the cellar below."
+source_session: "[[Session 13 Dream Pastries]]"
+confirmed_date: "2026-06-02"
 ---
 
 At Kolyan's burial in the Church of the Morning Lord, the party met the broken Father Donavich and learned the source of his grief: his son Doru, turned to a vampire spawn, imprisoned in the church cellar below their feet. A danger and a sorrow the party left behind them — for now.
+
+## Sources
+
+Recorded in [[Session 13 Dream Pastries]].

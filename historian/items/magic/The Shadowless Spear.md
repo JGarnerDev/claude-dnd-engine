@@ -24,7 +24,7 @@ relates_to:
   - "[[Aashal-Groon Mellenegon Borak]] (fused it, through the fox)"
 known_by:
   - "[[Halsby]] (full)"
-  - "the party (saw the fusing; heard the reach and the +1)"
+  - "[[The Party]] (saw the fusing; heard the reach and the +1)"
 owner: "[[Halsby]]"
 current_holder: "[[Halsby]]"
 description: "Halsby's plain spear with his black shard grown onto it as the point. The haft throws a shadow; the head does not."
@@ -61,3 +61,7 @@ Design notes and the levels 6–8 upgrade: `meta/loot-options/Halsby/weapons/The
 > **Reliability:** at the table the DM gave it as "a +1 magical weapon" that works as his focus.
 > Paul asked whether the +1 also applies to spell attacks and save DC; Jeff ruled yes on
 > 2026-10-28, after Session 31 (todo #88).
+
+## Sources
+
+Known to / linked with [[The Party]].

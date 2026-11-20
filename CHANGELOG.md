@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.79.0] — 2026-11-20
+
+### Added
+
+- `meta/schemas/entity.schema.yaml`, the base schema in JSON Schema form (schema migration step 6). It types the base fields, limits `importance` to critical/major/minor/background and `contributed_by` to the players plus `pending`, and checks the shape of links and historian provenance. Type schemas will include it with `allOf: [{$ref: entity.schema.yaml}]`; by itself it checks no file yet.
+
+### Changed
+
+- **Rule:** `validate.py` now reports a historian file (other than a session) without `source_session` or `confirmed_date` as an error, not a warning. The 43 files that lacked them were filled from their session links and that session's `played_date`, with the link echoed under `## Sources`.
+- The notes-kit pin moves to `v0.5.0`, which resolves `$ref` between schema files.
+- Six files used importance values outside the schema: Sessions 11–14 and The Kolyanovich Family move from `high` to `major`, Parriwimple from `supporting` to `minor`.
+
 ## [0.78.0] — 2026-11-20
 
 ### Changed

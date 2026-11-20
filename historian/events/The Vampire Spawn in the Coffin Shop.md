@@ -28,8 +28,13 @@ awareness: secret
 known_by:
   - "[[The Party]] (partial)"
 description: "The party deceived their way into Henrik the coffinmaker's shop and learned six vampire spawn are hiding upstairs — an active threat in Vallaki, tied to Strahd's disguised visit and the stolen saint's bones."
+confirmed_date: "2026-07-07"
 ---
 
 After tracing the [[Church of St. Andril]]'s stolen saint's bones to [[Henrik]] the coffinmaker, the party deceived their way into his shop near the Vallaki town square. The cornered Henrik revealed that **six vampire spawn** are hiding upstairs. The party chose not to engage, turning back to the priest [[Lucien Petrovic]] to plan an approach. The nest is connected to [[Strahd]]'s disguised visit (see [[Strahd Walks Vallaki as Vasili van Holtz]]).
 
 > **Reliability:** The count of six vampire spawn is Henrik's word, unverified by the party's own sight. The in-world date is estimated from the Session 16 anchor. Confirm with DM.
+
+## Sources
+
+Recorded in [[Session 17 The Stolen Bones]].

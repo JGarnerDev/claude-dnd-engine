@@ -18,7 +18,7 @@ key_npcs:
   - "[[Ismark Kolyanovich]] (companion)"
   - "[[Bosco]] (Iggy's companion; began training)"
 party: "[[The Party]]"
-importance: high
+importance: major
 active: false
 description: "On the road to Vallaki the party reached a Vistani encampment by a lake, where they traded performances with the loyalist Vistani and heard the tale of a wizard who once raised Barovia in revolt and was hurled to his death by Strahd. Madame Eva read the tarokka cards — five fortunes pointing to a holy symbol, a sword of sunlight, an ally, and where Strahd may be found. After an uneasy overnight, the party set out again and spotted Strahd's carriage waiting on the bridge ahead."
 beats:

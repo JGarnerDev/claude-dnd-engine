@@ -28,6 +28,8 @@ importance: major
 active: false
   
 description: "Death House. A haunted manor just outside the village of Barovia. Fully explored and escaped by the party in Session 10."
+source_session: "[[Session 01 The Black Sheep Inn]]"
+confirmed_date: "2026-03-09"
 ---
 
 
@@ -69,3 +71,7 @@ A four-story haunted manor with a dungeon basement, situated on [[Barovia Villag
 ## Resolution
 
 Session 10: Luci sacrificed herself on the altar. The mists carried the party out. Rose and Thorn were stranded when Ben and Miguel left their scroll pages behind. Strahd greeted the party outside.
+
+## Sources
+
+Recorded in [[Session 01 The Black Sheep Inn]].

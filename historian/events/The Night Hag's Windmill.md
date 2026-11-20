@@ -27,6 +27,11 @@ relates_to:
   - "[[Old Bonegrinder]] (the windmill)"
 awareness: party
 description: "An agitated raven warned the party to flee a windmill; Bosco caught the dream-pastry hag's meat-pie scent. The party named it her lair and chose to prepare in Vallaki first."
+confirmed_date: "2026-06-23"
 ---
 
 A squawking raven barred the door of a dilapidated windmill. Through speak with animals it warned the party to run — go inside and you die. Bosco confirmed the danger by scent: meat pies, the smell of the dream-pastry hag. The party concluded the night hag lived there and chose to equip in Vallaki before confronting her.
+
+## Sources
+
+Recorded in [[Session 15 The Gates of Vallaki]].

@@ -26,6 +26,12 @@ relates_to:
   - "[[Kolyan Indirovich]] (Ireena's late father)"
 awareness: regional
 description: "Ismark asked the party at the Blood of the Vine to escort his sister Ireena to Vallaki, away from Strahd's reach — the quest that now drives the party's road."
+source_session: "[[Session 11 Blood of the Vine]]"
+confirmed_date: "2026-05-19"
 ---
 
 Stepping out of Death House into Barovia village, the party met Ismark Kolyanovich at the Blood of the Vine. His father, the burgomaster Kolyan, was dead; his sister Ireena was hunted by Strahd himself. Ismark begged the party to take Ireena to Vallaki, where she might be safe. They agreed — and the escort to Vallaki became the spine of the road ahead.
+
+## Sources
+
+Recorded in [[Session 11 Blood of the Vine]].

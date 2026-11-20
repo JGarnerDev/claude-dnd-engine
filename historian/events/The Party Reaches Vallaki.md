@@ -27,6 +27,11 @@ relates_to:
   - "[[Vallaki]] (occurred at)"
 awareness: regional
 description: "The party reached Vallaki, escorting Ireena past the grim gates. The guards admitted them warily and warned of a mandatory-fun festival days away."
+confirmed_date: "2026-06-23"
 ---
 
 The party crested the road to Vallaki and found a grim city — its limits spiked with wolf heads. The gate guards recognized Ireena and Ismark and let the wary party in, mentioning a festival in a few days where fun is mandatory. They pointed the way to the inn and the merchant stalls.
+
+## Sources
+
+Recorded in [[Session 15 The Gates of Vallaki]].

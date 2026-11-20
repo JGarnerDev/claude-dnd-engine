@@ -1,0 +1,72 @@
+# entity.schema.yaml -- the base every entity type extends (prose: meta/schemas/entity.md).
+# Type schemas pull it in and close the field list themselves:
+#   allOf: [{$ref: entity.schema.yaml}]
+#   unevaluatedProperties: false
+# So this file sets no additionalProperties. Historian rules (exists: true, source_session,
+# confirmed_date) live in scripts/validate.py, since they depend on the folder, not the type.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: entity
+type: object
+required: [name, type, exists]
+$defs:
+  text:
+    type: string
+    minLength: 1
+  link:
+    description: A wiki-link, e.g. "[[Session 09 The Shadows]]".
+    type: string
+    pattern: '^\[\[[^\]]+\]\]$'
+  annotated-links:
+    description: Wiki-links, each optionally followed by a note, e.g. "[[Ashford]] (resident)".
+    type: array
+    items:
+      type: string
+      pattern: '^\[\[[^\]]+\]\]'
+properties:
+  # --- mandatory ---
+  name: {$ref: '#/$defs/text'}
+  type: {$ref: '#/$defs/text'}
+  exists:
+    description: true = real/canon in the world; false = homebrew draft not yet canonized.
+    type: boolean
+  state:
+    description: Current in-world condition; valid values are set per type schema.
+    $ref: '#/$defs/text'
+  tags:
+    type: array
+    items:
+      type: string
+      pattern: '^[\w./-]+$'
+  # --- optional ---
+  subtype: {$ref: '#/$defs/text'}
+  aliases:
+    type: array
+    items: {$ref: '#/$defs/text'}
+  importance:
+    enum: [critical, major, minor, background]
+  active:
+    description: Currently in play; false = retired or dormant, importance unchanged.
+    type: boolean
+  last_updated: {$ref: '#/$defs/link'}
+  relates_to: {$ref: '#/$defs/annotated-links'}
+  resources: {$ref: '#/$defs/annotated-links'}
+  known_by: {$ref: '#/$defs/annotated-links'}
+  owner: {$ref: '#/$defs/link'}
+  contributed_by:
+    description: Real-world player who created or submitted this entity.
+    enum: [paul, ben, miguel, jeff, kellan, macleod, pending]
+  description: {$ref: '#/$defs/text'}
+  # --- historian ---
+  source_session:
+    description: The session that made this canon, or a plain source for canon from outside play.
+    anyOf:
+      - {$ref: '#/$defs/link'}
+      - type: string
+        pattern: '^(player backstory|DM ratification) \(.+\)$'
+  confirmed_date:
+    description: When it became canon (the session's played_date), or pre-campaign / unknown.
+    anyOf:
+      - {type: string, format: date}
+      - enum: [pre-campaign, unknown]
+      - {type: string, pattern: '^Session \d+$'}
+  supersedes: {$ref: '#/$defs/link'}

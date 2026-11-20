@@ -30,6 +30,8 @@ family:
   - "[[Urwin]] (father)"
   - "[[Danika]] (mother)"
   - "[[Brom]] (brother)"
+source_session: "[[Session 16 The Blue Water Inn]]"
+confirmed_date: "2026-06-30"
 ---
 
 Location: [[Blue Water Inn]] | Campaign: [[Curse of Strahd]]
@@ -43,3 +45,7 @@ The gray-haired son of [[Urwin]] and [[Danika]], brother of [[Brom]]. The two bo
 ## First Encounter (Session 16)
 
 Seen working in the [[Blue Water Inn]] kitchen when [[Dip]] followed [[Urwin]] in.
+
+## Sources
+
+Recorded in [[Session 16 The Blue Water Inn]].

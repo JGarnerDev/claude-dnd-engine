@@ -62,6 +62,7 @@ spotlight_hooks:
     status: open
 
 description: "Jeff's PC. Gruff but light-hearted soldier-bard with copper-red Aasimar features. Refugee of the destroyed library-plane Threnai, guided by the diminished god Sah."
+confirmed_date: "2026-03-09"
 ---
 
 
@@ -309,3 +310,7 @@ Shadow does not match Iggy's form and moves in the wrong direction. Onset: Sessi
 Iggy pressed [[Lady Fiona Wachter]] for anything concrete behind her coup, got nothing but secrecy, and later walked out of her cult chamber on a pretext — the move that started the fight that killed her. He rides with [[Bosco]].
 
 [[Davian Martikov]] (1) — warm but not personal. Iggy read more to Davian's story back in Session 25 and got the whole of it in Session 28, wereravens included, without ever having to press for it.
+
+## Sources
+
+Recorded in [[Session 01 The Black Sheep Inn]].

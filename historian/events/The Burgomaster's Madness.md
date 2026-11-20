@@ -27,6 +27,7 @@ relates_to:
   - "[[Blue Water Inn]] (revealed at)"
 awareness: regional
 description: "At the Blue Water Inn, drunk dissenters Karl and Nikolai told the party about the Burgomaster's obsession with mandatory happiness — themed festivals on pain of imprisonment — and the town's eerie mantra, 'all will be well in Vallaki.'"
+confirmed_date: "2026-06-30"
 ---
 
 Two drunk men, [[Karl]] and [[Nikolai]], beckoned the party over at the [[Blue Water Inn]] and, after praising their performance, spoke of wanting to relieve the town of the "[[The Burgomaster of Vallaki|Burgomaster]]'s madness." The Burgomaster holds themed, thematically unpredictable festivals — music, food, dancing — to keep [[Vallaki]] happy, and is unhealthily obsessed with everyone's happiness: cheer under duress, on pain of treason or harsh punishment. Dissenters are imprisoned or worse.
@@ -34,3 +35,7 @@ Two drunk men, [[Karl]] and [[Nikolai]], beckoned the party over at the [[Blue W
 When [[Iggy]] asked about Vallaki's desire to be free of the Burgomaster, the two only offered the detached, eerie mantra: "all will be well in Vallaki."
 
 > **Reliability:** Sourced from drunk, self-described dissenters — a one-sided account. The party has not met the Burgomaster. Confirm with DM.
+
+## Sources
+
+Recorded in [[Session 16 The Blue Water Inn]].

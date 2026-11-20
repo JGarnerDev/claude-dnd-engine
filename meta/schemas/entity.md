@@ -7,6 +7,8 @@ tags:
 
 The base schema for every file in this campaign engine. All entities — regardless of type or subtype — must include this frontmatter. Type and subtype schemas extend this; they do not replace it.
 
+The machine-readable version is [`entity.schema.yaml`](entity.schema.yaml). Type schemas include it with `allOf: [{$ref: entity.schema.yaml}]`.
+
 ## Canonical Frontmatter
 
 ```yaml
@@ -41,7 +43,7 @@ known_by:
 
 owner: [[Player Character Name]]     # player who is narratively responsible for this entity
 
-contributed_by: paul | ben | miguel | jeff   # real-world player who created or submitted this entity
+contributed_by: paul | ben | miguel | jeff | kellan | macleod | pending   # real-world player who created or submitted this entity
 
 description: "One-sentence summary shown in Obsidian hover previews."
 ---

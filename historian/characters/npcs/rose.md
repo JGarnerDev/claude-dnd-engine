@@ -26,6 +26,8 @@ importance: major
 active: true
   
 description: "Rose Durst. 11-year-old ghost. Daughter of the Durst family. Bound to Ben's scroll in Session 6; stranded in Session 10."
+source_session: "[[Session 01 The Black Sheep Inn]]"
+confirmed_date: "2026-03-09"
 ---
 
 
@@ -46,3 +48,7 @@ Daughter of [[Gustav Durst]] and [[Elisabeth Durst]]. Died in [[Death House]] as
 - **Session 6:** Found in the attic. Rose's ghost was bound to Dip's scroll. Said thank you, expressed she was just happy to be taken along.
 - **Session 8:** Rose told the companions that previous travelers had entered the house and never returned.
 - **Session 10:** Tried to fight against being left behind when the mists carried the party out. [[Dip]] and [[Odibli]] left the scroll pages. Rose is stranded.
+
+## Sources
+
+Recorded in [[Session 01 The Black Sheep Inn]].

@@ -28,8 +28,13 @@ relates_to:
   - "[[Lake Zarovich]]"
 awareness: local
 description: "The reveal that Izek Strazni and Ireena Kolyana are blood siblings — Izek born soulless and having forgotten her — resolving the open question of Ireena's true origin."
+confirmed_date: "2026-07-28"
 ---
 
 > **Reliability:** In-world date is an estimate. The framing (born soulless, forgot his sister) is drawn from the notes; the fuller Strazni history and how Ireena came to be adopted are unestablished. Confirm with DM.
 
 Noticing that [[Izek Strazni]] and [[Ireena Kolyana]] shared the same face, the party brought the matter before the priest [[Lucien Petrovic]] — and the truth came out. The two are **blood siblings**, born Strazni; Ireena was adopted into the Kolyanovich line, which resolves the Session 13 revelation that she was no Kolyanovich by blood ([[Ireena Is Not a Blood Relative]]). Izek, **born without a soul**, had forgotten he ever had a sister — recasting the hollow, longing air he has carried as the shape of that missing bond.
+
+## Sources
+
+Recorded in [[Session 19 The Burning of the Coffin Shop]].
