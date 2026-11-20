@@ -1,0 +1,42 @@
+# creature.schema.yaml -- type: creature (prose: creature.md). Extends entity.schema.yaml.
+# Named or campaign-specific creatures; reference stat blocks are type: monster.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: creature
+type: object
+required: [state, creature_type, challenge_rating, location]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: creature}
+  state: {enum: [alive, dead, dormant, imprisoned, transformed, unknown]}
+  creature_type:
+    enum: [undead, beast, humanoid, aberration, fiend, monstrosity, dragon, construct, elemental,
+      fey, giant, ooze, plant, other]
+  challenge_rating:
+    description: CR as a string ("5", "1/2"), or "TBD" / "unknown".
+    type: string
+    pattern: '^(\d+|1/[248]|TBD|unknown)$'
+  location:
+    description: A location link or a plain note.
+    $ref: entity.schema.yaml#/$defs/text
+  size: {enum: [tiny, small, medium, large, huge, gargantuan]}
+  alignment: {$ref: entity.schema.yaml#/$defs/text}
+  breed: {$ref: entity.schema.yaml#/$defs/text}
+  personality: {$ref: entity.schema.yaml#/$defs/text}
+  goals: {$ref: entity.schema.yaml#/$defs/text-list}
+  motives: {$ref: entity.schema.yaml#/$defs/text-list}
+  lair: {$ref: entity.schema.yaml#/$defs/text}
+  allies: {$ref: entity.schema.yaml#/$defs/text-list}
+  enemies: {$ref: entity.schema.yaml#/$defs/text-list}
+  tactics: {$ref: entity.schema.yaml#/$defs/text}
+  weaknesses: {$ref: entity.schema.yaml#/$defs/text}
+  stat_block:
+    description: Link to an external stat block, or "inline" if appended to the body.
+    $ref: entity.schema.yaml#/$defs/text
+  affinity:
+    description: Party companions only. Per-target liking, -10..+10; see meta/affinity.md.
+    type: array
+    items:
+      type: string
+      pattern: '^\[\[[^\]]+\]\] \([+-]?(10|\d)\)$'
+unevaluatedProperties: false

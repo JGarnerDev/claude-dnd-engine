@@ -6,6 +6,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.89.0] — 2026-11-20
+
+- `meta/schemas/creature.schema.yaml`: the creature schema. Mandatory: `state`, `creature_type`, `challenge_rating`, `location`. `challenge_rating` must be a CR ("5", "1/2") or `TBD` / `unknown`; `affinity` uses the same `[[Name]] (n)` pattern as characters.
+- `creature.md` now lists `size`, `alignment` and `breed`, already used by Bosco, Sergei Rubelgerd and Tithe, and links the YAML schema.
+
 ## [0.88.0] — 2026-11-20
 
 - `meta/schemas/resource.schema.yaml`: the resource schema. Mandatory: `state`, `resource_type`, `rarity`, `location` (may be empty while unplaced).

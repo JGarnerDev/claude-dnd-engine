@@ -4,9 +4,9 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-18):** steps 1–5 done (engine v0.73.0). Every entity file's frontmatter is strict YAML with quoted links, and `get_frontmatter` reads it with a YAML parser.
 
-**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0), `route` (v0.87.0), `resource` (v0.88.0).
+**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0), `route` (v0.87.0), `resource` (v0.88.0), `creature` (v0.89.0).
 
-**Next:** the `creature` schema.
+**Next:** the `monster` schema.
 
 ## Resuming in a new session
 
@@ -51,7 +51,8 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
   - [x] item: `meta/schemas/item.schema.yaml` (v0.86.0), enforced. One branch per subtype (magic, mundane). Added `unknown` to magic `rarity` (already used by three items); `material` and `appearance` allowed on magic items too. No content fixes
   - [x] route: `meta/schemas/route.schema.yaml` (v0.87.0), enforced. All 14 routes passed as they were; `origin`, `destination` and `controlling_faction` take a link or a placeholder (`TBD`, `unknown`). No content fixes
   - [x] resource: `meta/schemas/resource.schema.yaml` (v0.88.0), enforced. Added `varies` to `trade_value` and `contested` to `accessibility` (Whatwill uses both). `controlled_by` may be a list; `consumers` takes plain notes for groups with no file. No content fixes
-  - [ ] other campaign types (act, campaign, culture, rumor, mission, party, player, pc-arc, creature, skill)
+  - [x] creature: `meta/schemas/creature.schema.yaml` (v0.89.0), enforced. `challenge_rating` is pattern-checked (a CR, or `TBD` / `unknown`). Documented `size`, `alignment` and `breed` (used by the three companions). No content fixes
+  - [ ] other campaign types (act, campaign, culture, rumor, mission, party, player, pc-arc, skill)
   - [ ] reference catalogs (monster, spell, feat, race, class, background)
 - [ ] 7. `scripts/gen-schema-docs.py` generates `meta/schemas/*.md`; check that generated files are up to date
 - [ ] 8. Rules and docs updated (quote frontmatter links; edit schemas, not the generated docs), template synced with `/sync`, collaborators told, `tasks/schema-migration/scripts/` deleted

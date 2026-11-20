@@ -35,6 +35,8 @@ Covers **named creatures** — individuals with personality, recurring presence,
 
 ## Schema
 
+The machine-readable version is [`creature.schema.yaml`](creature.schema.yaml).
+
 ### Canonical Path
 
 `data/creatures/{name}.md`
@@ -64,7 +66,7 @@ tags:
 
 # --- MANDATORY (creature) ---
 creature_type: undead | beast | humanoid | aberration | fiend | monstrosity | dragon | construct | elemental | fey | giant | ooze | plant | other
-challenge_rating: ""    # CR value, e.g. "5" or "1/2"
+challenge_rating: ""    # CR value, e.g. "5" or "1/2"; "TBD" or "unknown" until fixed
 location: [[Location Name]]
 
 # --- OPTIONAL (entity base) ---
@@ -80,6 +82,9 @@ known_by:
 description: ""
 
 # --- OPTIONAL (creature) ---
+size: tiny | small | medium | large | huge | gargantuan
+alignment: ""
+breed: ""           # for animals with a known breed
 personality: ""
 goals: []
 motives: []
