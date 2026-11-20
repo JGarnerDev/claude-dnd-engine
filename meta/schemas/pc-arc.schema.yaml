@@ -1,0 +1,17 @@
+# pc-arc.schema.yaml -- type: pc-arc (prose: pc-arc.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: pc-arc
+type: object
+required: [state, pc, arc_checked, next_step]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: pc-arc}
+  state: {enum: [active, retired]}
+  pc: {$ref: entity.schema.yaml#/$defs/link}
+  arc_checked:
+    description: Session number the PC arc was last checked against.
+    type: integer
+    minimum: 0
+  next_step: {$ref: entity.schema.yaml#/$defs/text-list}
+unevaluatedProperties: false

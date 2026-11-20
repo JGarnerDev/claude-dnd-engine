@@ -1,0 +1,21 @@
+# campaign.schema.yaml -- type: campaign (prose: campaign.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: campaign
+type: object
+required: [state, dm, premise, central_conflict, tone, end_condition, themes]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: campaign}
+  state: {enum: [draft, active, on-hiatus, completed, abandoned]}
+  dm: {$ref: entity.schema.yaml#/$defs/text}
+  premise: {$ref: entity.schema.yaml#/$defs/text}
+  central_conflict: {$ref: entity.schema.yaml#/$defs/text}
+  tone: {$ref: entity.schema.yaml#/$defs/text}
+  current_act:
+    description: An act link, or a placeholder note ("TBD — ...").
+    $ref: entity.schema.yaml#/$defs/text
+  acts: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  end_condition: {$ref: entity.schema.yaml#/$defs/text}
+  themes: {$ref: entity.schema.yaml#/$defs/text-list}
+unevaluatedProperties: false

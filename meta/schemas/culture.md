@@ -37,10 +37,14 @@ Covers the shared customs, values, taboos, and aesthetic sensibilities of a peop
 
 ## Schema
 
+The machine-readable version is [`culture.schema.yaml`](culture.schema.yaml).
+
 ### Canonical Path
+
 `data/cultures/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `thriving` | Vibrant, widely practiced, culturally confident |
@@ -93,6 +97,7 @@ hook: ""
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

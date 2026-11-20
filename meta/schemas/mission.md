@@ -35,16 +35,21 @@ A mission is a self-contained objective — the atomic unit of story. It has a c
 
 ## Schema
 
+The machine-readable version is [`mission.schema.yaml`](mission.schema.yaml).
+
 ### Canonical Path
+
 `scheduler/missions/{name}.md`
 Moves to `historian/missions/{name}.md` when resolved.
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `draft` | Being written, not ready to run |
 | `planned` | Ready, queued behind an active mission |
 | `active` | Currently being pursued by the party |
+| `on-hiatus` | Paused with its campaign; picks up when the campaign resumes |
 | `completed` | Resolved successfully |
 | `failed` | Resolved with failure — consequences applied |
 | `abandoned` | Dropped from the story |
@@ -57,7 +62,7 @@ Moves to `historian/missions/{name}.md` when resolved.
 name: ""
 type: mission
 exists: false
-state: draft | planned | active | completed | failed | abandoned
+state: draft | planned | active | on-hiatus | completed | failed | abandoned
 tags:
   - mission/
   - act/
@@ -93,5 +98,6 @@ description: ""
 ```
 
 ### Notes
+
 - Both `success_consequences` and `failure_consequences` should be filled in before a mission goes `active` — failure should matter, not just be a dead end.
 - When resolved, move to `historian/missions/` and fill in the historian fields before archiving.

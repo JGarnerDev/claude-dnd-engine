@@ -1,0 +1,21 @@
+# mission.schema.yaml -- type: mission (prose: mission.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: mission
+type: object
+required: [state, act, objective, hook]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: mission}
+  state: {enum: [draft, planned, active, on-hiatus, completed, failed, abandoned]}
+  act: {$ref: entity.schema.yaml#/$defs/link}
+  objective: {$ref: entity.schema.yaml#/$defs/text}
+  hook: {$ref: entity.schema.yaml#/$defs/text}
+  sessions: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  locations: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  key_npcs: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  obstacles: {$ref: entity.schema.yaml#/$defs/text-list}
+  success_consequences: {$ref: entity.schema.yaml#/$defs/text}
+  failure_consequences: {$ref: entity.schema.yaml#/$defs/text}
+  reward: {$ref: entity.schema.yaml#/$defs/text}
+unevaluatedProperties: false

@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.93.0] — 2026-11-20
+
+- **Campaign type schemas** (schema migration step 6): `meta/schemas/rumor.schema.yaml`, `pc-arc.schema.yaml`, `culture.schema.yaml`, `act.schema.yaml`, `campaign.schema.yaml`, `mission.schema.yaml` and `party.schema.yaml`, enforced by `validate.py`. Each prose schema links to its YAML file. `player` gets no schema: player files are not entities and live in `meta/players/`, outside the validated folders.
+- Added `on-hiatus` to mission `state`, for a mission paused along with its campaign.
+- Content fixes: Curse of Strahd (campaign) and Find the Wine Wizard (mission) had `state: paused`, which neither schema lists; both are now `on-hiatus`.
+
 ## [0.92.0] — 2026-11-20
 
 - **Reference catalog schemas** (schema migration step 6): `meta/schemas/feat.schema.yaml`, `skill.schema.yaml`, `race.schema.yaml`, `background.schema.yaml` and `class.schema.yaml`, enforced by `validate.py`. Each prose schema links to its YAML file.

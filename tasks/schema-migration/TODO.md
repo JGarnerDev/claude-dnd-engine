@@ -4,9 +4,9 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-18):** steps 1–5 done (engine v0.73.0). Every entity file's frontmatter is strict YAML with quoted links, and `get_frontmatter` reads it with a YAML parser.
 
-**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0), `route` (v0.87.0), `resource` (v0.88.0), `creature` (v0.89.0), `monster` (v0.90.0), `spell` (v0.91.0), `feat`, `skill`, `race`, `background`, `class` (v0.92.0).
+**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0), `route` (v0.87.0), `resource` (v0.88.0), `creature` (v0.89.0), `monster` (v0.90.0), `spell` (v0.91.0), `feat`, `skill`, `race`, `background`, `class` (v0.92.0), `rumor`, `pc-arc`, `culture`, `act`, `campaign`, `mission`, `party` (v0.93.0).
 
-**Next:** the campaign types (rumor, pc-arc, culture, act, campaign, mission, party, player), then `lore`.
+**Next:** `lore` (no prose schema yet; its fields are a design call).
 
 ## Resuming in a new session
 
@@ -53,7 +53,14 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
   - [x] resource: `meta/schemas/resource.schema.yaml` (v0.88.0), enforced. Added `varies` to `trade_value` and `contested` to `accessibility` (Whatwill uses both). `controlled_by` may be a list; `consumers` takes plain notes for groups with no file. No content fixes
   - [x] creature: `meta/schemas/creature.schema.yaml` (v0.89.0), enforced. `challenge_rating` is pattern-checked (a CR, or `TBD` / `unknown`). Documented `size`, `alignment` and `breed` (used by the three companions). No content fixes
   - [x] skill: `meta/schemas/skill.schema.yaml` (v0.92.0), enforced. `ability` takes any of the six scores. No content fixes
-  - [ ] other campaign types (act, campaign, culture, rumor, mission, party, player, pc-arc)
+  - [x] rumor: `meta/schemas/rumor.schema.yaml` (v0.93.0), enforced. `truth` is a boolean or `partial` / `unknown`. No content fixes
+  - [x] pc-arc: `meta/schemas/pc-arc.schema.yaml` (v0.93.0), enforced. `pc` is a link; `arc_checked` an integer. No content fixes
+  - [x] culture: `meta/schemas/culture.schema.yaml` (v0.93.0), enforced. `region`, `associated_factions` and `associated_races` are links; `language` takes plain notes. No content fixes
+  - [x] act: `meta/schemas/act.schema.yaml` (v0.93.0), enforced. `goal`, `opening_state` and `closing_state` take `TBD` while an act is a draft. No content fixes
+  - [x] campaign: `meta/schemas/campaign.schema.yaml` (v0.93.0), enforced. `current_act` takes a placeholder note while acts are undefined. Fixed: Curse of Strahd `paused` → `on-hiatus` (the state the docs already use)
+  - [x] mission: `meta/schemas/mission.schema.yaml` (v0.93.0), enforced. Added `on-hiatus` to `state` (a mission paused with its campaign). Fixed: Find the Wine Wizard `paused` → `on-hiatus`
+  - [x] party: `meta/schemas/party.schema.yaml` (v0.93.0), enforced. `state` is active, restructured or disbanded; `members` links. No content fixes
+  - [x] player: no schema. Player files are not entities (no `exists` or in-world `state`) and live in `meta/players/`, outside the folders `validate.py` checks; `player.md` stays the reference
   - [x] monster: `meta/schemas/monster.schema.yaml` (v0.90.0), enforced. All 545 passed as they were. `challenge_rating` is pattern-checked; added `celestial` to `creature_type` (seven monsters use it), on creatures too. No content fixes
   - [x] spell: `meta/schemas/spell.schema.yaml` (v0.91.0), enforced. All 280 passed as they were. `level` is 0-9 and `components` a set of V, S, M. No content fixes
   - [x] feat: `meta/schemas/feat.schema.yaml` (v0.92.0), enforced. Fixed: 30 empty `prerequisite: ""` set to `none`

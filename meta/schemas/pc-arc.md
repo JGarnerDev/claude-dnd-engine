@@ -28,6 +28,8 @@ and a log of how play has bent it. Rules and meaning: `meta/pc-arcs.md`.
 
 ## Schema
 
+The machine-readable version is [`pc-arc.schema.yaml`](pc-arc.schema.yaml).
+
 ### Canonical Path
 
 `scheduler/arcs/{PC} PC Arc.md` — e.g. `scheduler/arcs/Dip PC Arc.md`. Never the bare PC name,

@@ -27,6 +27,8 @@ The root document of the entire campaign. There is one campaign file per campaig
 
 ## Schema
 
+The machine-readable version is [`campaign.schema.yaml`](campaign.schema.yaml).
+
 ### Canonical Path
 
 `scheduler/campaign/{name}.md` — one file per campaign. Exactly one file carries `state: active` at a time; the rest are `draft`, `on-hiatus`, or awaiting move to historian.
@@ -60,7 +62,7 @@ central_conflict: ""     # the driving tension the whole campaign ultimately res
 tone: ""                 # feel and register of the campaign
 
 # Optional fields:
-current_act: [[Act Name]]
+current_act: [[Act Name]]   # or a placeholder note while acts are undefined
 acts:
   - [[Act Name]]
 end_condition: ""        # what resolution looks like

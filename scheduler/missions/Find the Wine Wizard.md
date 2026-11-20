@@ -3,7 +3,7 @@ name: "Find the Wine Wizard"
 type: mission
 campaign: strahd
 exists: false
-state: paused
+state: on-hiatus
 tags:
   - mission
 

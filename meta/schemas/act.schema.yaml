@@ -1,0 +1,18 @@
+# act.schema.yaml -- type: act (prose: act.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: act
+type: object
+required: [state, central_conflict, goal, opening_state, closing_state]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: act}
+  state: {enum: [draft, planned, active, completed, abandoned]}
+  central_conflict: {$ref: entity.schema.yaml#/$defs/text}
+  goal: {$ref: entity.schema.yaml#/$defs/text}
+  opening_state: {$ref: entity.schema.yaml#/$defs/text}
+  closing_state: {$ref: entity.schema.yaml#/$defs/text}
+  missions: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  themes: {$ref: entity.schema.yaml#/$defs/text-list}
+  estimated_sessions: {type: integer, minimum: 1}
+unevaluatedProperties: false

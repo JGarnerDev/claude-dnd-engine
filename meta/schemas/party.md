@@ -9,6 +9,8 @@ Covers adventuring party entities — the in-world group of PCs that forms and e
 
 A party entity tracks who is in the group, how they came together, and what they've accomplished. The name is optional at creation — parties often earn one through play.
 
+The machine-readable version is [`party.schema.yaml`](party.schema.yaml).
+
 ---
 
 ## Canonical Path

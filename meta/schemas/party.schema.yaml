@@ -1,0 +1,15 @@
+# party.schema.yaml -- type: party (prose: party.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: party
+type: object
+required: [state, members]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: party}
+  state: {enum: [active, restructured, disbanded]}
+  members: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  base_of_operations:
+    description: A location link, or "unknown".
+    $ref: entity.schema.yaml#/$defs/text
+unevaluatedProperties: false

@@ -1,0 +1,21 @@
+# rumor.schema.yaml -- type: rumor (prose: rumor.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: rumor
+type: object
+required: [state, content, truth, circulating_in]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: rumor}
+  state: {enum: [spreading, believed, doubted, debunked, confirmed, forgotten]}
+  content: {$ref: entity.schema.yaml#/$defs/text}
+  truth:
+    anyOf:
+      - {type: boolean}
+      - {enum: [partial, unknown]}
+  circulating_in: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  source:
+    description: A link, or "unknown".
+    $ref: entity.schema.yaml#/$defs/text
+  truth_detail: {$ref: entity.schema.yaml#/$defs/text}
+unevaluatedProperties: false

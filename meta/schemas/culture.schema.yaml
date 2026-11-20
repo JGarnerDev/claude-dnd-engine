@@ -1,0 +1,20 @@
+# culture.schema.yaml -- type: culture (prose: culture.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: culture
+type: object
+required: [state, region, values]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: culture}
+  state: {enum: [thriving, declining, assimilated, isolated, persecuted, extinct]}
+  region: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  values: {$ref: entity.schema.yaml#/$defs/text-list}
+  taboos: {$ref: entity.schema.yaml#/$defs/text-list}
+  practices: {$ref: entity.schema.yaml#/$defs/text-list}
+  aesthetic: {$ref: entity.schema.yaml#/$defs/text}
+  language: {$ref: entity.schema.yaml#/$defs/text-list}
+  associated_factions: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  associated_races: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  hook: {$ref: entity.schema.yaml#/$defs/text}
+unevaluatedProperties: false
