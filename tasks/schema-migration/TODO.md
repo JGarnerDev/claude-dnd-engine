@@ -8,9 +8,9 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-20):** step 7 done (engine v0.95.0): `scripts/gen-schema-docs.py` writes each schema doc's state table and frontmatter template from its schema, and `validate.py` errors on a stale doc.
 
-**Status (2026-11-20):** step 8 done (engine v0.96.0): the rules are in `meta/entity-creation.md` and `CLAUDE.md`, the template is synced, and the temporary scripts are deleted. **The migration is done.** One item is left for Jeff: tell the collaborators about the link-quoting rule.
+**Status (2026-11-20):** step 8 done (engine v0.96.0): the rules are in `meta/entity-creation.md` and `CLAUDE.md`, and the temporary scripts are deleted. Two items are left: Jeff tells the collaborators about the link-quoting rule, and the template sync waits (see below).
 
-**Next:** nothing; Jeff sends the collaborator note.
+**Next:** Jeff sends the collaborator note. The template sync is on hold (2026-11-20, Jeff's call): the template is far behind (266 new, 391 changed, 206 stale files), a full sync would ship campaign content such as `data/deities/Aedra.md` into the public repo, so it needs a leak review first. Also, `notes-kit` is private and the template is public, so the template has no `pyproject.toml` and `validate.py` can't run there; Jeff decides whether to make `notes-kit` public. `.template-sync` now lists `meta/schemas/*.schema.yaml`.
 
 ## Resuming in a new session
 
@@ -66,5 +66,6 @@ The temporary scripts (`audit.py`, `quote-links.py`, `fill-provenance.py`, `snap
   - [x] background: `meta/schemas/background.schema.yaml` (v0.92.0), enforced. Fixed: seven empty `language_proficiencies: ""` set to `none`
   - [x] class: `meta/schemas/class.schema.yaml` (v0.92.0), enforced. `hit_die` is 6, 8, 10 or 12; `saving_throws` two abilities. The proficiency fields are one-line text (as every class file has them), not lists; prose updated. Fixed: four `spellcasting_ability: null` removed from non-casters
 - [x] 7. `scripts/gen-schema-docs.py` generates `meta/schemas/*.md`; check that generated files are up to date (v0.95.0). Only the Valid State Values table and the Frontmatter Template are generated, between marker comments; forms, body templates and notes stay hand-written. The text comes from schema keys the validator ignores: `x-states`, `description`, `x-placeholder`, `x-doc`. `validate.py` errors on a stale doc (`gen.sync(write=False)`); `tests/scripts/test_schema_docs.py` covers it. Fixed on the way: feat states, act and mission historian fields
-- [x] 8. Rules and docs updated (quote frontmatter links; run `validate.py` after creating an entity; edit schemas, not the generated docs) in `meta/entity-creation.md`, `CLAUDE.md` and `data/CLAUDE.md`, template synced with `/sync`, `tasks/schema-migration/scripts/` deleted (v0.96.0). The pre-commit validator hook was skipped: a full `validate.py` run takes minutes
+- [x] 8. Rules and docs updated (quote frontmatter links; run `validate.py` after creating an entity; edit schemas, not the generated docs) in `meta/entity-creation.md`, `CLAUDE.md` and `data/CLAUDE.md`, `tasks/schema-migration/scripts/` deleted (v0.96.0). The pre-commit validator hook was skipped: a full `validate.py` run takes minutes
 - [ ] Jeff tells the collaborators about the link-quoting rule
+- [ ] `/sync` to the template, after a leak review of `data/` and Jeff's call on `notes-kit` (see **Next**)

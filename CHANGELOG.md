@@ -10,7 +10,8 @@ The version in [`VERSION`](./VERSION) always matches the top entry below.
 
 - **Schema rules** (schema migration step 8, the last): `meta/entity-creation.md` and `CLAUDE.md` now say to quote every frontmatter link (`"[[Name]]"`), to run `uv run scripts/validate.py` after creating an entity, and to change a type's fields or states in its `.schema.yaml` and run `uv run scripts/gen-schema-docs.py` instead of editing the generated blocks. `data/CLAUDE.md` adds the validate step to elaboration write-back. The old rule against inline `#` comments on frontmatter scalars is gone: frontmatter is read with a YAML parser now, so trailing comments parse.
 - `gen-schema-docs.py` gets a row in the `CLAUDE.md` scripts table; `validate.py`'s row lists schema violations and stale schema docs.
-- Removed the migration's temporary scripts (`tasks/schema-migration/scripts/`). The migration is done.
+- Removed the migration's temporary scripts (`tasks/schema-migration/scripts/`).
+- `.template-sync` lists `meta/schemas/*.schema.yaml`, so the schemas ship with the next template sync (on hold for a leak review).
 
 ## [0.95.0] — 2026-11-20
 

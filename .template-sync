@@ -42,6 +42,7 @@ ruff.toml
 
 # Meta — engine protocol and structural guidelines
 meta/schemas/*.md
+meta/schemas/*.schema.yaml
 meta/calendar-template.md
 meta/character-focus.md
 meta/entity-creation.md
