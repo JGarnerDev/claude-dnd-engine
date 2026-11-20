@@ -38,6 +38,7 @@ Authoritative list of all valid `type` / `subtype` combinations. **Before declar
 | `location` | `shop` | `meta/schemas/location-shop.md` | `data/locations/shops/` | `historian/locations/shops/` |
 | `location` | `wilderness` | `meta/schemas/location-wilderness.md` | `data/locations/wilderness/` | `historian/locations/wilderness/` |
 | `location` | `terrain-feature` | `meta/schemas/location-terrain-feature.md` | `data/locations/terrain-features/` | `historian/locations/terrain-features/` |
+| `lore` | `calendar`, `geography`, `history`, `magic`, `religion` | `meta/schemas/lore.md` | `data/lore/` | — |
 | `mission` | — | `meta/schemas/mission.md` | `scheduler/missions/` | `historian/missions/` |
 | `monster` | — | `meta/schemas/monster.md` | `data/monsters/` | — |
 | `pc-arc` | — | `meta/schemas/pc-arc.md` | `scheduler/arcs/` | — |

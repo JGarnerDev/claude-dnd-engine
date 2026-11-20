@@ -6,6 +6,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.94.0] — 2026-11-20
+
+- **Lore schema** (schema migration step 6): `meta/schemas/lore.schema.yaml`, enforced by `validate.py`, plus a new prose schema `meta/schemas/lore.md` (lore had none) and a `lore` row in `meta/types.md`. Lore frontmatter is the entity base plus `subtype` (`calendar`, `geography`, `history`, `magic`, `religion`) and `state` (`draft`, `stable`); the substance lives in the body.
+- Step 6 is done: every entity type in `data/`, `historian/` and `scheduler/` now has a schema that `validate.py` enforces.
+
 ## [0.93.0] — 2026-11-20
 
 - **Campaign type schemas** (schema migration step 6): `meta/schemas/rumor.schema.yaml`, `pc-arc.schema.yaml`, `culture.schema.yaml`, `act.schema.yaml`, `campaign.schema.yaml`, `mission.schema.yaml` and `party.schema.yaml`, enforced by `validate.py`. Each prose schema links to its YAML file. `player` gets no schema: player files are not entities and live in `meta/players/`, outside the validated folders.

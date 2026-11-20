@@ -1,0 +1,14 @@
+# lore.schema.yaml -- type: lore (prose: lore.md). Extends entity.schema.yaml.
+# A lore file is one world-rules domain; its substance lives in the body, so the
+# frontmatter is the entity base plus subtype and state.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: lore
+type: object
+required: [subtype, state]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: lore}
+  subtype: {enum: [calendar, geography, history, magic, religion]}
+  state: {enum: [draft, stable]}
+unevaluatedProperties: false
