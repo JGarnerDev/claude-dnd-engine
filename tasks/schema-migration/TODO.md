@@ -4,9 +4,9 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-18):** steps 1–5 done (engine v0.73.0). Every entity file's frontmatter is strict YAML with quoted links, and `get_frontmatter` reads it with a YAML parser.
 
-**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0).
+**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0), `route` (v0.87.0).
 
-**Next:** the `route` schema.
+**Next:** the `resource` schema.
 
 ## Resuming in a new session
 
@@ -49,7 +49,8 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
   - [x] deity: `meta/schemas/deity.schema.yaml` (v0.84.0), enforced. Added `unknown` to `tier` (two `TBD` tiers set to it); `voice` and `voice_confirmed` allowed for deities that speak at the table
   - [x] session: `meta/schemas/session.schema.yaml` (v0.85.0), enforced. A `completed` session also needs `played_date`, `recap` and `in_world_end_date`; dates are pattern-checked. `key_npcs` and `new_entities` take plain notes for things with no file. Documented `act`, `party`, the difficulty tiers, `depth`, `scope`, `in_world_end_time` and `table_notes` in `session.md`. Fixed: four `planned_date: null` removed
   - [x] item: `meta/schemas/item.schema.yaml` (v0.86.0), enforced. One branch per subtype (magic, mundane). Added `unknown` to magic `rarity` (already used by three items); `material` and `appearance` allowed on magic items too. No content fixes
-  - [ ] other campaign types (act, campaign, culture, resource, route, rumor, mission, party, player, pc-arc, creature, skill)
+  - [x] route: `meta/schemas/route.schema.yaml` (v0.87.0), enforced. All 14 routes passed as they were; `origin`, `destination` and `controlling_faction` take a link or a placeholder (`TBD`, `unknown`). No content fixes
+  - [ ] other campaign types (act, campaign, culture, resource, rumor, mission, party, player, pc-arc, creature, skill)
   - [ ] reference catalogs (monster, spell, feat, race, class, background)
 - [ ] 7. `scripts/gen-schema-docs.py` generates `meta/schemas/*.md`; check that generated files are up to date
 - [ ] 8. Rules and docs updated (quote frontmatter links; edit schemas, not the generated docs), template synced with `/sync`, collaborators told, `tasks/schema-migration/scripts/` deleted

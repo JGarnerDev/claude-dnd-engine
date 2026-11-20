@@ -6,6 +6,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.87.0] — 2026-11-20
+
+- `meta/schemas/route.schema.yaml`: the route schema. Mandatory: `subtype`, `state`, `origin`, `destination`, `medium`. `origin`, `destination` and `controlling_faction` take a link or a placeholder (`TBD`, `unknown`). `route.md` links the YAML schema. All 14 routes passed with no changes.
+
 ## [0.86.0] — 2026-11-20
 
 - `meta/schemas/item.schema.yaml`: the item schema, one branch per subtype. Mandatory for both: `subtype`, `state`, `item_type`, `origin`; magic items add `rarity`, `attunement`, `effect`; mundane items add `significance`.

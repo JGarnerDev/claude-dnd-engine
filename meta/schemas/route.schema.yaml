@@ -1,0 +1,29 @@
+# route.schema.yaml -- type: route (prose: route.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: route
+type: object
+required: [subtype, state, origin, destination, medium]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: route}
+  subtype: {enum: [trade, pilgrimage, military, highway, trail]}
+  state: {enum: [active, disrupted, contested, abandoned, unknown]}
+  origin:
+    description: A location link, or "TBD".
+    $ref: entity.schema.yaml#/$defs/text
+  destination:
+    description: A location link, or "TBD".
+    $ref: entity.schema.yaml#/$defs/text
+  medium: {enum: [land, sea, air, river]}
+  waypoints: {$ref: entity.schema.yaml#/$defs/text-list}
+  controlling_faction:
+    description: A faction link, or "unknown".
+    $ref: entity.schema.yaml#/$defs/text
+  primary_goods: {$ref: entity.schema.yaml#/$defs/text-list}
+  travelers: {$ref: entity.schema.yaml#/$defs/text-list}
+  hazards: {$ref: entity.schema.yaml#/$defs/text-list}
+  toll_points: {$ref: entity.schema.yaml#/$defs/text-list}
+  distance: {$ref: entity.schema.yaml#/$defs/text}
+  travel_time: {$ref: entity.schema.yaml#/$defs/text}
+unevaluatedProperties: false
