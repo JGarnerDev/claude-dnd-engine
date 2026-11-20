@@ -1,0 +1,30 @@
+# resource.schema.yaml -- type: resource (prose: resource.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: resource
+type: object
+required: [state, resource_type, rarity, location]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: resource}
+  state: {enum: [abundant, scarce, depleted, hidden, monopolized, contested]}
+  resource_type:
+    enum: [ore, timber, food, fresh-water, stone, arcane, livestock, textiles, alchemical, labor,
+      goods, other]
+  rarity: {enum: [common, uncommon, rare, unique]}
+  location:
+    description: Location or region links; may be empty while unplaced.
+    $ref: entity.schema.yaml#/$defs/text-list
+  controlled_by:
+    description: One controller (a link or a plain note), or a list of annotated links.
+    anyOf:
+      - {$ref: entity.schema.yaml#/$defs/text}
+      - {$ref: entity.schema.yaml#/$defs/annotated-links}
+  trade_value: {enum: [negligible, low, moderate, high, priceless, varies]}
+  accessibility: {enum: [open, restricted, hidden, monopolized, contested]}
+  consumers:
+    description: Annotated links, or a plain note for a group with no file.
+    $ref: entity.schema.yaml#/$defs/text-list
+  depends_on: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  hook: {$ref: entity.schema.yaml#/$defs/text}
+unevaluatedProperties: false

@@ -6,6 +6,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.88.0] — 2026-11-20
+
+- `meta/schemas/resource.schema.yaml`: the resource schema. Mandatory: `state`, `resource_type`, `rarity`, `location` (may be empty while unplaced).
+- `trade_value` gains `varies` and `accessibility` gains `contested`, both already used by Whatwill. `controlled_by` may be a list of annotated links when control is split (Coffee); `consumers` takes plain notes for groups with no file. `resource.md` updated to match and links the YAML schema.
+
 ## [0.87.0] — 2026-11-20
 
 - `meta/schemas/route.schema.yaml`: the route schema. Mandatory: `subtype`, `state`, `origin`, `destination`, `medium`. `origin`, `destination` and `controlling_faction` take a link or a placeholder (`TBD`, `unknown`). `route.md` links the YAML schema. All 14 routes passed with no changes.

@@ -33,10 +33,14 @@ Covers named natural or economic resources: ore deposits, timber stands, fishing
 
 ## Schema
 
+The machine-readable version is [`resource.schema.yaml`](resource.schema.yaml).
+
 ### Canonical Path
+
 `data/resources/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `abundant` | Plentiful; easily accessed; low scarcity pressure |
@@ -77,11 +81,11 @@ owner: [[Player Character Name]]
 description: ""
 
 # --- OPTIONAL (resource) ---
-controlled_by: [[Faction or NPC Name]]
-trade_value: negligible | low | moderate | high | priceless
-accessibility: open | restricted | hidden | monopolized
+controlled_by: [[Faction or NPC Name]]   # or a list of annotated links when control is split
+trade_value: negligible | low | moderate | high | priceless | varies
+accessibility: open | restricted | hidden | monopolized | contested
 consumers:
-  - [[Faction or Location Name]] (nature of dependency)
+  - [[Faction or Location Name]] (nature of dependency)   # or a plain note for a group with no file
 depends_on:
   - [[Resource Name]] (what this resource requires to be produced or sustained)
   # Sync rule: if A depends_on B, B should list A in consumers. Keep both ends updated.
@@ -90,6 +94,7 @@ hook: ""
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |
