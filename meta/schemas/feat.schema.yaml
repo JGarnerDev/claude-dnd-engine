@@ -2,12 +2,20 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: feat
 type: object
+x-doc:
+  tags: [feat]
+  base: [description, aliases]
 required: [state, effect]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: feat}
-  state: {enum: [available]}
+  state:
+    enum: [available, banned, homebrew]
+    x-states:
+      available: Legal in this campaign
+      banned: Disallowed for this campaign
+      homebrew: Custom or modified version
   effect: {$ref: entity.schema.yaml#/$defs/text}
   prerequisite:
     description: What the feat requires, or "none".

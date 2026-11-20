@@ -41,6 +41,7 @@ The machine-readable version is [`resource.schema.yaml`](resource.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from resource.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `abundant` | Plentiful; easily accessed; low scarcity pressure |
@@ -49,15 +50,17 @@ The machine-readable version is [`resource.schema.yaml`](resource.schema.yaml).
 | `hidden` | Not yet discovered or publicly known |
 | `monopolized` | Single controller dominates all access |
 | `contested` | Multiple parties fighting for control or access |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from resource.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: resource
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: abundant | scarce | depleted | hidden | monopolized | contested
 tags:
   - resource
@@ -65,33 +68,35 @@ tags:
 # --- MANDATORY (resource) ---
 resource_type: ore | timber | food | fresh-water | stone | arcane | livestock | textiles | alchemical | labor | goods | other
 rarity: common | uncommon | rare | unique
-location:
-  - [[Location or Region Name]]
+location:               # Location or region links; may be empty while unplaced.
+  - "[[Location or Region Name]]"
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (resource) ---
-controlled_by: [[Faction or NPC Name]]   # or a list of annotated links when control is split
+controlled_by: "[[Faction or NPC Name]]"  # One controller (a link or a plain note), or a list of
+                                          # annotated links.
 trade_value: negligible | low | moderate | high | priceless | varies
 accessibility: open | restricted | hidden | monopolized | contested
-consumers:
-  - [[Faction or Location Name]] (nature of dependency)   # or a plain note for a group with no file
-depends_on:
-  - [[Resource Name]] (what this resource requires to be produced or sustained)
-  # Sync rule: if A depends_on B, B should list A in consumers. Keep both ends updated.
+consumers:              # Annotated links, or a plain note for a group with no file.
+  - "[[Faction or Location Name]] (nature of dependency)"
+depends_on:             # Sync rule: if A depends_on B, B should list A in consumers. Keep both ends
+                        # updated.
+  - "[[Resource Name]] (what this resource requires to be produced or sustained)"
 hook: ""
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

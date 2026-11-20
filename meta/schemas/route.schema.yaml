@@ -2,24 +2,39 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: route
 type: object
+x-doc:
+  tags: ['route/  # e.g. route/trade, route/military', region/]
+  base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
 required: [subtype, state, origin, destination, medium]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: route}
   subtype: {enum: [trade, pilgrimage, military, highway, trail]}
-  state: {enum: [active, disrupted, contested, abandoned, unknown]}
+  state:
+    enum: [active, disrupted, contested, abandoned, unknown]
+    x-states:
+      active: Operating normally
+      disrupted: Temporarily blocked or dangerous
+      contested: Multiple factions fighting for control
+      abandoned: No longer in regular use
+      unknown: Exists but current status unconfirmed by party
   origin:
     description: A location link, or "TBD".
     $ref: entity.schema.yaml#/$defs/text
+    x-placeholder: '"[[Location Name]]"'
   destination:
     description: A location link, or "TBD".
     $ref: entity.schema.yaml#/$defs/text
+    x-placeholder: '"[[Location Name]]"'
   medium: {enum: [land, sea, air, river]}
-  waypoints: {$ref: entity.schema.yaml#/$defs/text-list}
+  waypoints:
+    $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['"[[Location Name]]"']
   controlling_faction:
     description: A faction link, or "unknown".
     $ref: entity.schema.yaml#/$defs/text
+    x-placeholder: '"[[Faction Name]]"'
   primary_goods: {$ref: entity.schema.yaml#/$defs/text-list}
   travelers: {$ref: entity.schema.yaml#/$defs/text-list}
   hazards: {$ref: entity.schema.yaml#/$defs/text-list}

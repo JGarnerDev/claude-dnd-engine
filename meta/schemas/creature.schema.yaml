@@ -3,12 +3,22 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: creature
 type: object
+x-doc:
+  tags: [creature]
 required: [state, creature_type, challenge_rating, location]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: creature}
-  state: {enum: [alive, dead, dormant, imprisoned, transformed, unknown]}
+  state:
+    enum: [alive, dead, dormant, imprisoned, transformed, unknown]
+    x-states:
+      alive: Active in the world
+      dead: Confirmed destroyed or slain
+      dormant: Sleeping, hibernating, or otherwise inactive
+      imprisoned: Captured, bound, or otherwise contained
+      transformed: Significantly altered — polymorphed, corrupted, etc.
+      unknown: Status unclear
   creature_type:
     enum: [undead, beast, humanoid, aberration, celestial, fiend, monstrosity, dragon, construct,
       elemental, fey, giant, ooze, plant, other]
@@ -19,17 +29,31 @@ properties:
   location:
     description: A location link or a plain note.
     $ref: entity.schema.yaml#/$defs/text
+    x-placeholder: '"[[Location Name]]"'
   size: {enum: [tiny, small, medium, large, huge, gargantuan]}
   alignment: {$ref: entity.schema.yaml#/$defs/text}
-  breed: {$ref: entity.schema.yaml#/$defs/text}
+  breed:
+    description: For animals with a known breed.
+    $ref: entity.schema.yaml#/$defs/text
   personality: {$ref: entity.schema.yaml#/$defs/text}
   goals: {$ref: entity.schema.yaml#/$defs/text-list}
   motives: {$ref: entity.schema.yaml#/$defs/text-list}
-  lair: {$ref: entity.schema.yaml#/$defs/text}
-  allies: {$ref: entity.schema.yaml#/$defs/text-list}
-  enemies: {$ref: entity.schema.yaml#/$defs/text-list}
-  tactics: {$ref: entity.schema.yaml#/$defs/text}
-  weaknesses: {$ref: entity.schema.yaml#/$defs/text}
+  lair:
+    description: Specific lair if distinct from location.
+    $ref: entity.schema.yaml#/$defs/text
+    x-placeholder: '"[[Location Name]]"'
+  allies:
+    $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['"[[Character or Creature Name]] (nature of relationship)"']
+  enemies:
+    $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['"[[Character or Faction Name]] (nature of conflict)"']
+  tactics:
+    description: Brief combat or behavioral notes.
+    $ref: entity.schema.yaml#/$defs/text
+  weaknesses:
+    description: Narrative or mechanical vulnerabilities.
+    $ref: entity.schema.yaml#/$defs/text
   stat_block:
     description: Link to an external stat block, or "inline" if appended to the body.
     $ref: entity.schema.yaml#/$defs/text
@@ -39,4 +63,5 @@ properties:
     items:
       type: string
       pattern: '^\[\[[^\]]+\]\] \([+-]?(10|\d)\)$'
+    x-placeholder: ['"[[Owner or PC Name]] (n)"']
 unevaluatedProperties: false

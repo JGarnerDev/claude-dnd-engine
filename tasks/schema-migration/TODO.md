@@ -6,7 +6,9 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-20):** step 6 done (engine v0.94.0): every entity type has an enforced schema. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0), `route` (v0.87.0), `resource` (v0.88.0), `creature` (v0.89.0), `monster` (v0.90.0), `spell` (v0.91.0), `feat`, `skill`, `race`, `background`, `class` (v0.92.0), `rumor`, `pc-arc`, `culture`, `act`, `campaign`, `mission`, `party` (v0.93.0), `lore` (v0.94.0).
 
-**Next:** step 7, `scripts/gen-schema-docs.py`.
+**Status (2026-11-20):** step 7 done (engine v0.95.0): `scripts/gen-schema-docs.py` writes each schema doc's state table and frontmatter template from its schema, and `validate.py` errors on a stale doc.
+
+**Next:** step 8, rules and docs (needs Jeff's go-ahead).
 
 ## Resuming in a new session
 
@@ -68,5 +70,5 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
   - [x] race: `meta/schemas/race.schema.yaml` (v0.92.0), enforced. `size` is Small, Medium or Large; `speed` an integer. No content fixes
   - [x] background: `meta/schemas/background.schema.yaml` (v0.92.0), enforced. Fixed: seven empty `language_proficiencies: ""` set to `none`
   - [x] class: `meta/schemas/class.schema.yaml` (v0.92.0), enforced. `hit_die` is 6, 8, 10 or 12; `saving_throws` two abilities. The proficiency fields are one-line text (as every class file has them), not lists; prose updated. Fixed: four `spellcasting_ability: null` removed from non-casters
-- [ ] 7. `scripts/gen-schema-docs.py` generates `meta/schemas/*.md`; check that generated files are up to date
+- [x] 7. `scripts/gen-schema-docs.py` generates `meta/schemas/*.md`; check that generated files are up to date (v0.95.0). Only the Valid State Values table and the Frontmatter Template are generated, between marker comments; forms, body templates and notes stay hand-written. The text comes from schema keys the validator ignores: `x-states`, `description`, `x-placeholder`, `x-doc`. `validate.py` errors on a stale doc (`gen.sync(write=False)`); `tests/scripts/test_schema_docs.py` covers it. Fixed on the way: feat states, act and mission historian fields
 - [ ] 8. Rules and docs updated (quote frontmatter links; edit schemas, not the generated docs), template synced with `/sync`, collaborators told, `tasks/schema-migration/scripts/` deleted

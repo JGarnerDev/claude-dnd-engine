@@ -39,6 +39,7 @@ The machine-readable version is [`rumor.schema.yaml`](rumor.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from rumor.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `spreading` | Actively circulating |
@@ -47,41 +48,44 @@ The machine-readable version is [`rumor.schema.yaml`](rumor.schema.yaml).
 | `debunked` | Proven false, fading |
 | `confirmed` | Proven true in play |
 | `forgotten` | No longer circulating |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from rumor.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
-name: ""          # short slug name for the rumor, e.g. "dead-king-lives"
+name: ""                # A short slug name for the rumor, e.g. "dead-king-lives".
 type: rumor
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: spreading | believed | doubted | debunked | confirmed | forgotten
 tags:
   - rumor/
   - region/
 
 # --- MANDATORY (rumor) ---
-content: ""       # the rumor text as it would be heard in the world
+content: ""             # The rumor text as it would be heard in the world.
 truth: true | false | partial | unknown
 circulating_in:
-  - [[Location or Faction Name]]
+  - "[[Location or Faction Name]]"
 
 # --- OPTIONAL (entity base) ---
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-description: ""   # one-line DM summary, distinct from content
+  - "[[Character Name]] (partial | full)"
+description: ""
 
 # --- OPTIONAL (rumor) ---
-source: [[Entity Name]]     # or unknown
-truth_detail: ""  # the real story, if different from the rumor — DM eyes only
+source: "[[Entity Name]]"  # A link, or "unknown".
+truth_detail: ""        # The real story, if different from the rumor — DM eyes only.
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

@@ -2,29 +2,47 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: spell
 type: object
+x-doc:
+  tags: [spell, 'spell/evocation  # replace with actual school']
+  base: [description, aliases]
 required: [state, level, school, casting_time, range, components, duration, concentration, effect]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: spell}
-  state: {enum: [known, forbidden]}
+  state:
+    enum: [known, forbidden]
+    x-states:
+      known: Exists and accessible in this world
+      forbidden: Exists but suppressed or banned in this setting
   level:
     description: 0 for a cantrip, 1-9 for leveled spells.
     type: integer
     minimum: 0
     maximum: 9
+    x-placeholder: '0'
   school:
     enum: [abjuration, conjuration, divination, enchantment, evocation, illusion, necromancy,
       transmutation]
-  casting_time: {$ref: entity.schema.yaml#/$defs/text}
-  range: {$ref: entity.schema.yaml#/$defs/text}
+  casting_time:
+    description: '"1 action" / "1 bonus action" / "1 reaction" / "1 minute" / etc.'
+    $ref: entity.schema.yaml#/$defs/text
+  range:
+    description: '"60 feet" / "Self" / "Touch" / etc.'
+    $ref: entity.schema.yaml#/$defs/text
   components:
+    description: '- M.'
     type: array
     minItems: 1
     uniqueItems: true
     items: {enum: [V, S, M]}
-  duration: {$ref: entity.schema.yaml#/$defs/text}
-  concentration: {type: boolean}
+    x-placeholder: [V, S]
+  duration:
+    description: '"Instantaneous" / "1 minute" / "Concentration, up to 1 minute" / etc.'
+    $ref: entity.schema.yaml#/$defs/text
+  concentration:
+    type: boolean
+    x-placeholder: 'false'
   effect: {$ref: entity.schema.yaml#/$defs/text}
   material_component: {$ref: entity.schema.yaml#/$defs/text}
   available_to:

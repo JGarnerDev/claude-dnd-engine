@@ -43,6 +43,7 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 
 ### Valid State Values
 
+<!-- generated: states from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `stable` | Functioning under established control |
@@ -50,16 +51,18 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 | `occupied` | Under foreign or hostile control |
 | `frontier` | Largely unsettled, no dominant power |
 | `devastated` | Damaged by war, disaster, or magical event |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: location
 subtype: region
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: stable | contested | occupied | frontier | devastated
 tags:
   - location
@@ -67,32 +70,34 @@ tags:
 
 # --- MANDATORY (region) ---
 geography: ""
-controlling_faction: [[Faction Name]]   # or "unknown"; a list of links when control is shared
+controlling_faction: "[[Faction Name]]"  # Or "unknown"; a list of links when control is shared.
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (region) ---
 climate: ""
-biome: arctic | tundra | taiga | temperate-forest | tropical-forest | grassland | savanna | desert | scrubland | wetland | coastal | alpine | volcanic | aerial | underdark | planar | mediterranean  # list ok: [temperate-forest, tundra]
+biome: arctic | tundra | taiga | temperate-forest | tropical-forest | grassland | savanna | desert | scrubland | wetland | coastal | alpine | volcanic | aerial | underdark | planar | mediterranean
+                        # One biome, or a list of them.
 tensions: []
 settlements:
-  - [[City or Town Name]]
+  - "[[City or Town Name]]"
 notable_features: []
 wilderness_areas:
-  - [[Wilderness Name]]
-hook: ""                       # why adventurers would go here
+  - "[[Wilderness Name]]"
+hook: ""                # Why adventurers would go here.
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

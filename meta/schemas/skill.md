@@ -13,24 +13,39 @@ The machine-readable version is [`skill.schema.yaml`](skill.schema.yaml).
 
 ---
 
+## Valid State Values
+
+<!-- generated: states from skill.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
+| State | Meaning |
+|---|---|
+| `available` | Legal in this campaign |
+<!-- end generated -->
+
 ## Frontmatter Template
 
+<!-- generated: template from skill.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
-name: "{{Skill Name}}"
+# --- MANDATORY (entity base) ---
+name: ""
 type: skill
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: available
 tags:
   - skill
-ability: "{{STR|DEX|CON|INT|WIS|CHA}}"
+
+# --- MANDATORY (skill) ---
+ability: STR | DEX | CON | INT | WIS | CHA
+use_cases: []
+
+# --- OPTIONAL (entity base) ---
+description: ""
+
+# --- OPTIONAL (skill) ---
 source: PHB
-description: "{{What this skill covers in one sentence}}"
-use_cases:
-  - "{{Common application}}"
-  - "{{Common application}}"
 ---
 ```
+<!-- end generated -->
 
 ## Field Reference
 

@@ -2,20 +2,43 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: campaign
 type: object
+x-doc:
+  tags: [campaign/]
+  base: [importance, active, description]
 required: [state, dm, premise, central_conflict, tone, end_condition, themes]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: campaign}
-  state: {enum: [draft, active, on-hiatus, completed, abandoned]}
+  state:
+    enum: [draft, active, on-hiatus, completed, abandoned]
+    x-states:
+      draft: Campaign concept being developed, not yet started
+      active: Campaign is currently being played
+      on-hiatus: Paused but intended to resume
+      completed: Story reached its conclusion
+      abandoned: Discontinued
   dm: {$ref: entity.schema.yaml#/$defs/text}
-  premise: {$ref: entity.schema.yaml#/$defs/text}
-  central_conflict: {$ref: entity.schema.yaml#/$defs/text}
-  tone: {$ref: entity.schema.yaml#/$defs/text}
+  premise:
+    description: 'One or two sentences: what situation do the players enter?.'
+    $ref: entity.schema.yaml#/$defs/text
+  central_conflict:
+    description: The driving tension the whole campaign ultimately resolves.
+    $ref: entity.schema.yaml#/$defs/text
+  tone:
+    description: Feel and register of the campaign.
+    $ref: entity.schema.yaml#/$defs/text
   current_act:
     description: An act link, or a placeholder note ("TBD — ...").
     $ref: entity.schema.yaml#/$defs/text
-  acts: {$ref: entity.schema.yaml#/$defs/annotated-links}
-  end_condition: {$ref: entity.schema.yaml#/$defs/text}
-  themes: {$ref: entity.schema.yaml#/$defs/text-list}
+    x-placeholder: '"[[Act Name]]"'
+  acts:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Act Name]]"']
+  end_condition:
+    description: What resolution looks like.
+    $ref: entity.schema.yaml#/$defs/text
+  themes:
+    description: 2-5 recurring themes.
+    $ref: entity.schema.yaml#/$defs/text-list
 unevaluatedProperties: false

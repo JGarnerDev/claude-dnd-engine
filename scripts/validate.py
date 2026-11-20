@@ -5,7 +5,8 @@
 #   ERRORS   - dangling [[wiki-links]]; missing mandatory frontmatter (name/type/exists);
 #              exists:false in historian/ (canon must be real); historian files (except
 #              sessions) missing provenance (source_session/confirmed_date); two entities
-#              sharing a filename; frontmatter that isn't valid YAML.
+#              sharing a filename; frontmatter that isn't valid YAML; schema docs whose
+#              generated blocks are stale (scripts/gen-schema-docs.py).
 #   WARNINGS - core reference-catalog type marked exists:false (should be true);
 #              name != filename; frontmatter [[links]] not echoed in body (Foam graph gap).
 # Scope, skips and link targets are configured under [tool.notes-kit] in pyproject.toml.
@@ -16,6 +17,7 @@
 # Exit code: 0 = no errors, 1 = errors found (CI-friendly).
 
 import argparse
+import importlib.util
 import sys
 from pathlib import Path
 
@@ -86,10 +88,24 @@ def engine_checks(notes: dict) -> list:
     return problems
 
 
+def schema_doc_checks() -> list:
+    """Schema docs whose generated blocks don't match their schemas (scripts/gen-schema-docs.py)."""
+    spec = importlib.util.spec_from_file_location(
+        "gen_schema_docs", Path(__file__).parent / "gen-schema-docs.py"
+    )
+    gen = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(gen)
+    hint = "run: uv run scripts/gen-schema-docs.py"
+    return [
+        Problem(f"meta/schemas/{text} ({hint})", "schema-docs", "error")
+        for text in gen.sync(write=False)
+    ]
+
+
 def collect() -> tuple:
     """(notes, problems) for the whole entity graph: notes-kit's checks plus the engine's."""
     notes, problems = validate(Config.load(ROOT))
-    return notes, problems + engine_checks(notes)
+    return notes, problems + engine_checks(notes) + schema_doc_checks()
 
 
 def count_errors() -> int:

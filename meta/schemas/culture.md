@@ -45,6 +45,7 @@ The machine-readable version is [`culture.schema.yaml`](culture.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from culture.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `thriving` | Vibrant, widely practiced, culturally confident |
@@ -53,34 +54,36 @@ The machine-readable version is [`culture.schema.yaml`](culture.schema.yaml).
 | `isolated` | Cut off from outside contact; insular and self-referential |
 | `persecuted` | Actively suppressed by a dominant power or rival culture |
 | `extinct` | No longer practiced by any living community |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from culture.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: culture
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: thriving | declining | assimilated | isolated | persecuted | extinct
 tags:
   - culture
 
 # --- MANDATORY (culture) ---
 region:
-  - [[Region Name]]
+  - "[[Region Name]]"
 values: []
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (culture) ---
@@ -89,12 +92,13 @@ practices: []
 aesthetic: ""
 language: []
 associated_factions:
-  - [[Faction Name]]
+  - "[[Faction Name]]"
 associated_races:
-  - [[Race Name]]
+  - "[[Race Name]]"
 hook: ""
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

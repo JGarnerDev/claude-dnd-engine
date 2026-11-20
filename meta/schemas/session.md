@@ -61,76 +61,88 @@ one level of globbing no longer finds anything.
 
 ### Valid State Values
 
+<!-- generated: states from session.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `draft` | Being planned, not finalized |
 | `planned` | Finalized and ready to run |
 | `completed` | Played — file should be moved to historian |
 | `skipped` | Scheduled but not played |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from session.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
-# --- MANDATORY ---
+# --- MANDATORY (entity base) ---
 name: ""
 type: session
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: draft | planned | completed | skipped
 tags:
   - session/
   - act/
   - mission/
 
+# --- MANDATORY (session) ---
 session_number:
-mission: [[Mission Name]]   # or `none` — TRANSITION sessions planned with no active mission; backfill if a mission emerges from play. An act placeholder link is also acceptable.
-planned_date: ""
+mission: "[[Mission Name]]"  # Mission link, an act placeholder link, or `none` for a transition
+                             # session.
 
-# Optional fields:
-locations:          # links to historian/locations/ or data/locations/ entities only — not factions
-  - [[Location Name]]
-key_npcs:
-  - [[NPC Name]] (role)
+# --- OPTIONAL (entity base) ---
+relates_to:
+  - "[[Entity Name]] (relationship)"
+importance: critical | major | minor | background
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+description: ""
+
+# --- OPTIONAL (session) ---
+act: "[[Act Name]]"
+party: "[[Party Name]]"
+planned_date: ""        # Real-world date the session is planned for, or "TBD".
+difficulty_attrition: standard  # Attrition tier (meta/difficulty.md); missing means the file's
+                                # default.
+difficulty_lethality: standard  # Lethality tier (meta/difficulty.md); missing means the file's
+                                # default.
+depth: narrated         # Narrated | notes.
+scope: inline           # Inline | linked.
+locations:              # Links to historian/locations/ or data/locations/ entities only — not
+                        # factions.
+  - "[[Location Name]]"
+key_npcs:               # Annotated links, or a plain note for an NPC with no file.
+  - "[[NPC Name]] (role)"
 encounters: []
 loose_threads: []
 opening_scene: ""
 closing_hook: ""
-relates_to:
-  - [[Entity Name]] (relationship)
-importance: major
-active: true
-description: ""
-act: [[Act Name]]
-party: [[Party Name]]
-difficulty_attrition: standard   # light | standard | grinding (meta/difficulty.md); missing = default
-difficulty_lethality: standard   # soft | standard | dangerous | lethal
-depth: narrated                  # narrated | notes
-scope: inline                    # inline | linked
 
 # --- HISTORIAN ONLY (mandatory when moved) ---
-# played_date: ""          # YYYY-MM-DD
-# in_world_end_date: ""    # YYYY[-MM[-DD]] in-world date the session ended (meta/events.md)
-# in_world_end_time: ""    # HH:MM, homebrew only (recap sky slide)
-# table_notes: ""          # DM-facing remarks; never shown to players
-# recap: ""              # what actually happened — may differ from the plan
-# entities_canonized:    # data/ entities that became real this session
-#   - [[Entity Name]]
-# new_entities:          # net-new entities created during play (a plain note for narration-only ones)
-#   - [[Entity Name]]
-# cliffhanger: ""        # what the party is left with going into next session
-# beats:                 # spotlight ledger — one line per beat (see Spotlight Beats below)
+# played_date: ""         # Real-world date the session was played.
+# in_world_end_date: ""   # In-world date the session ended, YYYY[-MM[-DD]] (meta/events.md).
+# in_world_end_time: ""   # HH:MM the session ended in-world (homebrew; drives the recap sky slide).
+# table_notes: ""         # DM-facing remarks; never shown to players.
+# recap: ""               # What actually happened — may differ from the plan.
+# entities_canonized:     # Data/ entities that became real this session.
+#   - "[[Entity Name]]"
+# new_entities:           # Annotated links, or a plain note for something kept as narration only.
+#   - "[[Entity Name]]"
+# cliffhanger: ""         # What the party is left with going into next session.
+# beats:                  # Spotlight ledger, one line per beat (session.md, Spotlight Beats).
 #   - "spotlight(PC Name): beat"
 #   - "shared(PC One,PC Two): arc"
 #   - "party-centric: touch"
 #   - "world: touch"
-# pcs_present:           # PCs at the table this session — drives present-only rotation
+# pcs_present:            # PCs at the table this session — drives present-only rotation.
 #   - "PC Name"
-# choices:               # decisions the world should remember (meta/player-agency.md)
+# choices:                # Decisions the world should remember (meta/player-agency.md)
 #   - "party: what they chose → what it set in motion"
 #   - "PC Name: what they chose → what it set in motion"
-# deck_weight: light     # light | medium | heavy — recap deck size (meta/recap-slides.md → Deck weight); homebrew, written by /recap Phase 8; missing = heavy
+# deck_weight: light      # Light | medium | heavy — recap deck size (meta/recap-slides.md → Deck
+#                         # weight); homebrew, written by /recap Phase 8; missing = heavy.
 ---
 ```
+<!-- end generated -->
 
 ### Spotlight Beats
 

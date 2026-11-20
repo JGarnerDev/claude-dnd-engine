@@ -43,6 +43,7 @@ The machine-readable version is [`event.schema.yaml`](event.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from event.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `recent` | Within living memory |
@@ -51,56 +52,56 @@ The machine-readable version is [`event.schema.yaml`](event.schema.yaml).
 | `legendary` | May be mythologized or partially fictional |
 | `disputed` | Accounts conflict; truth unclear |
 | `secret` | Occurred but not publicly known |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from event.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: event
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: recent | historical | ancient | legendary | disputed | secret
 tags:
   - event/
-  - event/battle      # use a more specific tag where applicable
+  - event/battle  # use a more specific tag where applicable
   - region/
 
 # --- MANDATORY (event) ---
-date: ""              # in-world date, era, or relative time (human/prose)
-timeline_date: ""     # numeric YYYY[-MM[-DD]] plot key (year-only or month is fine) — the chart sort/position key.
-                      # Required to appear on the timeline; needs a numeric epoch
-                      # (see meta/calendar.md). Omit only for events with no fixable date.
+date: ""                # In-world date, era or relative time, in prose.
 outcome: ""
-consequences: []      # what about the present world exists because of this
-track: ""             # OPTIONAL placement override: "category" or "category:member"
-                      # (e.g. "faction:The Partenariats"). Empty => extractor auto-fans
-                      # onto participant/relates_to lanes, else world:<campaign>.
-                      # See meta/events.md "Track conventions".
+consequences: []        # What about the present world exists because of this.
 
 # --- OPTIONAL (entity base) ---
-aliases:
-  - ""    # other names this event is known by
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
+  - "[[Character Name]] (partial | full)"
 description: ""
 
 # --- OPTIONAL (event) ---
-daypart: ""           # sub-day tier: dawn|morning|midday|afternoon|evening|night|late.
-                      # Spreads same-day beats on the interactive timeline so events
-                      # minted at one session's date don't stack. See meta/calendar-template.md.
-order:                # 1-based intra-day sequence; tiebreaks beats sharing a daypart.
-                      # /recap assigns it in narrative order. Omit for big single-date events.
+timeline_date: ""       # Plot key "YYYY[-MM[-DD]]", year may be negative or short (meta/events.md).
+                        # Needs a numeric epoch (meta/calendar.md) to appear on the timeline. Omit
+                        # when no date can be fixed.
+track: ""               # Lane override, "category" or "category:member" (meta/events.md). Omit to
+                        # auto-fan.
+daypart: dawn | morning | midday | afternoon | evening | night | late
+                        # Sub-day tier. Spreads same-day beats on the interactive timeline so events
+                        # minted at one session's date don't stack. See meta/calendar-template.md.
+order:                  # 1-based sequence among beats sharing a date and daypart; /recap assigns it
+                        # in narrative order. Omit for big single-date events.
 participants:
-  - [[Entity Name]] (role)
+  - "[[Entity Name]] (role)"
 awareness: widely-known | regional | local | party | secret | forgotten | disputed
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

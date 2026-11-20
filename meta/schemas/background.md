@@ -33,41 +33,45 @@ The machine-readable version is [`background.schema.yaml`](background.schema.yam
 
 ### Valid State Values
 
+<!-- generated: states from background.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `available` | Open to players without restriction |
 | `restricted` | Allowed with DM approval |
 | `unavailable` | Not permitted in this campaign |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from background.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: background
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: available | restricted | unavailable
 tags:
   - background
 
 # --- MANDATORY (background) ---
-skill_proficiencies: []     # exactly two skills
-feature: ""                 # name of the background feature
-
-# --- OPTIONAL (background) ---
-tool_proficiencies: []      # tools, instruments, or gaming sets
-language_proficiencies: ""  # e.g. "Any two languages" or "Thieves' cant", or "none"
-equipment: []               # starting equipment list
-variants: []                # official variant names (e.g. Spy for Criminal)
-source: PHB
+skill_proficiencies: []  # Exactly two skills.
+feature: ""             # Name of the background feature.
 
 # --- OPTIONAL (entity base) ---
-importance: minor
-active: true
+importance: critical | major | minor | background
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
 description: ""
+
+# --- OPTIONAL (background) ---
+tool_proficiencies: []  # Tools, instruments, or gaming sets.
+language_proficiencies: ""  # e.g. "Any two languages", or "none".
+equipment: []           # Starting equipment list.
+variants: []            # Official variant names (e.g. Spy for Criminal)
+source: PHB
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

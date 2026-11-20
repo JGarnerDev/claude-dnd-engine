@@ -55,6 +55,7 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 
 ### Valid State Values
 
+<!-- generated: states from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `thriving` | Full, healthy ecosystem; abundant flora and fauna |
@@ -63,16 +64,18 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 | `blighted` | Corrupted by disease, pollution, or hostile magic; life twisted or sickened |
 | `barren` | Depleted or dead — resources exhausted, little life remains |
 | `shifting` | Transitioning toward another biome (climate change, magic, disaster) |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: location
 subtype: biome
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: thriving | stable | stressed | blighted | barren | shifting
 tags:
   - location
@@ -83,30 +86,31 @@ biome_type: desert | tundra | grassland | savanna | temperate-forest | rainfores
 climate: arid | semi-arid | temperate | mediterranean | tropical | subtropical | continental | polar | alpine | other
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
+resources:
+  - "[[Resource Name]]"
 
 # --- OPTIONAL (biome) ---
 regions:
-  - [[Region Name]]
+  - "[[Region Name]]"
 flora: []
 fauna: []
 hazards: []
-resources:
-  - [[Resource Name]]
 travel: open | moderate | slow | seasonal | impassable
 seasonal_effects: ""
 hook: ""
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

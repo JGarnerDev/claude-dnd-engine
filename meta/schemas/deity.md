@@ -43,6 +43,7 @@ The machine-readable version is [`deity.schema.yaml`](deity.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from deity.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `active` | Present and responsive to worship |
@@ -51,38 +52,40 @@ The machine-readable version is [`deity.schema.yaml`](deity.schema.yaml).
 | `dead` | Slain; may still have effects on the world |
 | `imprisoned` | Bound by another force |
 | `ascended` | Recently became divine |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from deity.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: deity
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: active | dormant | diminished | dead | imprisoned | ascended
 tags:
   - deity
-  - deity/war         # add one per domain — e.g. deity/war, deity/death, deity/trickery
+  - deity/war  # add one per domain — e.g. deity/war, deity/death, deity/trickery
 
 # --- MANDATORY (deity) ---
 tier: greater | intermediate | lesser | demigod | unknown
+                        # Divine rank; "unknown" while the table has not fixed it.
 domains: []
-moral_character: ""     # alignment or disposition in plain language
-worshippers:
-  - [[Faction or Culture Name]]
+moral_character: ""     # Alignment or disposition in plain language.
+worshippers:            # Faction or culture links; may be empty.
+  - "[[Faction or Culture Name]]"
 wants: ""
 
 # --- OPTIONAL (entity base) ---
-aliases:
-  - ""    # other names, titles, aspects
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
+  - "[[Character Name]] (partial | full)"
 description: ""
 
 # --- OPTIONAL (deity) ---
@@ -91,11 +94,13 @@ holy_day: ""
 sacred_practices: []
 myths: []
 divine_conflicts:
-  - [[Deity Name]] (nature of conflict)
-voice: ""              # only for deities that speak at the table (meta/voice.md)
-voice_confirmed:        # last played session the voice was checked at; set by /recap
+  - "[[Deity Name]] (nature of conflict)"
+voice: ""               # Core cadence and register in one line, for deities that speak at the
+                        # table; see meta/voice.md.
+voice_confirmed:        # Number of the last played session at which the voice was checked.
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

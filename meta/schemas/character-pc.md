@@ -43,6 +43,7 @@ The machine-readable version is [`character.schema.yaml`](character.schema.yaml)
 
 ### Valid State Values
 
+<!-- generated: states from character.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `active` | Currently playing |
@@ -51,65 +52,70 @@ The machine-readable version is [`character.schema.yaml`](character.schema.yaml)
 | `missing` | Whereabouts unknown in-world |
 | `transformed` | Significantly altered — undead, polymorphed, etc. |
 | `away` | Out of the story for a stretch and coming back, usually while their player DMs (Dip on pilgrimage during Ben's run). The body says where and why in one line. Briefs and spotlight skip them; their PC arc pauses (`meta/dm-rotation.md`) |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from character.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: character
 subtype: pc
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: active | dead | retired | missing | transformed | away
 tags:
   - character
   - character/pc
-  - player/          # player/jeff, player/ben, etc.
+  - player/  # player/jeff, player/ben, etc.
 
 # --- MANDATORY (pc) ---
-player: [[meta/players/player-name]]   # links to meta/players/{name}.md
-race: ""
-class: ""
-level:                 # integer, 1-20
-level_confirmed:       # last played session the level was checked at (stamp); see scripts/party-status.py
+race: ""                # A link to a race entry, or a plain note.
+class: ""               # A link to a class entry, or a plain note (multiclass, subclass,
+                        # "Unknown").
+level:                  # Integer, 1-20.
+player: "[[meta/players/player-name]]"  # Links to meta/players/{name}.md.
 
 # --- OPTIONAL (entity base) ---
-aliases:
-  - ""    # nicknames, titles
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
+  - "[[Character Name]] (partial | full)"
 description: ""
 
 # --- OPTIONAL (pc) ---
 background: ""
-homeland: [[Location Name]]
-motivation: ""
+pronouns: ""            # E.g. "they/them".
 goals: []
-secrets: []
 allies:
-  - [[Character or Faction Name]] (relationship)
-family:
-  - [[Character Name]] (relation)
+  - "[[Character or Faction Name]] (nature of relationship)"
 enemies:
-  - [[Character or Faction Name]] (nature of conflict)
-character_sheet: ""    # path to sheet file or external link
-pronouns: ""           # optional, e.g. "they/them"
-affinity:
-  - [[Character Name]] (n)   # optional: per-target liking, integer -10..+10; see meta/affinity.md. Subject->target; absence = neutral (0)
-
-# --- OPTIONAL (spotlight — see meta/character-focus.md) ---
-spotlight: normal          # normal | low. low = tactics-first player, never flagged "overdue"
-spotlight_hooks:           # queryable backstory/values/goal material /session surfaces
-  - hook: ""               # one-line story hook (a fear, wound, goal, unresolved thread)
-    status: open           # open | seeded | paid
+  - "[[Character or Faction Name]] (nature of conflict)"
+family:                 # Relatives, as annotated links or plain notes for people with no entry.
+  - "[[Character Name]] (relation)"
+character_sheet: ""     # Path to a sheet file, an external link, or an inline summary.
+homeland: "[[Location Name]]"
+motivation: ""
+secrets: []
+affinity:               # Per-target liking, integer -10..+10; see meta/affinity.md.
+                        # Subject->target; absence = neutral (0)
+  - "[[Character Name]] (n)"
+level_confirmed:        # Last played session the level was checked at (stamp); see
+                        # scripts/party-status.py.
+spotlight: normal       # low = tactics-first player, never flagged overdue
+                        # (meta/character-focus.md).
+spotlight_hooks:        # Queryable backstory, values and goal material that /session surfaces; each
+                        # hook is a one-line story hook (a fear, wound, goal, unresolved thread).
+  - hook: ""
+    status: open | seeded | paid
 ---
 ```
+<!-- end generated -->
 
 ### Spotlight Fields
 

@@ -24,16 +24,38 @@ allOf:
   - if:
       properties: {subtype: {const: biome}}
     then:
+      x-doc:
+        tags: [location, location/biome]
+        base:
+          - aliases
+          - importance
+          - active
+          - last_updated
+          - relates_to
+          - known_by
+          - owner
+          - description
+          - resources
       required: [biome_type, climate]
       properties:
-        state: {enum: [thriving, stable, stressed, blighted, barren, shifting]}
+        state:
+          enum: [thriving, stable, stressed, blighted, barren, shifting]
+          x-states:
+            thriving: Full, healthy ecosystem; abundant flora and fauna
+            stable: Normal, self-sustaining baseline
+            stressed: Under pressure — drought, overhunting, encroachment, blight onset
+            blighted: Corrupted by disease, pollution, or hostile magic; life twisted or sickened
+            barren: Depleted or dead — resources exhausted, little life remains
+            shifting: Transitioning toward another biome (climate change, magic, disaster)
         biome_type:
           enum: [desert, tundra, grassland, savanna, temperate-forest, rainforest, boreal-forest,
             wetland, marsh, mountain, alpine, coast, reef, volcanic, badlands, underdark, other]
         climate:
           enum: [arid, semi-arid, temperate, mediterranean, tropical, subtropical, continental,
             polar, alpine, other]
-        regions: {$ref: '#/$defs/links'}
+        regions:
+          $ref: '#/$defs/links'
+          x-placeholder: ['"[[Region Name]]"']
         flora: {$ref: '#/$defs/text-list'}
         fauna: {$ref: '#/$defs/text-list'}
         hazards: {$ref: '#/$defs/text-list'}
@@ -43,43 +65,115 @@ allOf:
   - if:
       properties: {subtype: {const: building}}
     then:
+      x-doc:
+        tags: [location, location/building]
+        base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
       required: [city, residents, purpose]
       properties:
-        state: {enum: [occupied, abandoned, damaged, ruined, destroyed]}
-        city: {$ref: '#/$defs/text'}
+        state:
+          enum: [occupied, abandoned, damaged, ruined, destroyed]
+          x-states:
+            occupied: Inhabited and functional
+            abandoned: Empty or near-empty
+            damaged: Structurally compromised but in use
+            ruined: Largely destroyed
+            destroyed: Razed or collapsed
+        city:
+          $ref: '#/$defs/text'
+          x-placeholder: '"[[City Name]]"'
         residents:
           description: Annotated links, or "unknown".
           $ref: '#/$defs/text-list'
+          x-placeholder: ['"[[NPC Name]] (role or relation)"']
         purpose: {enum: [residential, civic, religious, military, lair, other]}
-        map_location: {$ref: '#/$defs/text'}
-        condition: {$ref: '#/$defs/text'}
+        map_location:
+          description: Where within the city.
+          $ref: '#/$defs/text'
+        condition:
+          description: Descriptive note on physical state.
+          $ref: '#/$defs/text'
   - if:
       properties: {subtype: {const: city}}
     then:
+      x-doc:
+        tags: [location, location/city]
+        base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
       required: [global_location, purpose]
       properties:
-        state: {enum: [thriving, stable, troubled, besieged, ruined, abandoned]}
-        global_location: {$ref: '#/$defs/text'}
+        state:
+          enum: [thriving, stable, troubled, besieged, ruined, abandoned]
+          x-states:
+            thriving: Growing, prosperous
+            stable: Normal operation
+            troubled: Unrest, decay, or crisis
+            besieged: Under active attack or blockade
+            ruined: Largely destroyed but not empty
+            abandoned: Empty or near-empty
+        global_location:
+          $ref: '#/$defs/text'
+          x-placeholder: '"[[Region or Area Name]]"'
         purpose: {enum: [commerce, political, military, religious, other]}
-        map: {$ref: '#/$defs/text'}
-        population: {$ref: '#/$defs/text'}
+        map:
+          description: Path to map file or image.
+          $ref: '#/$defs/text'
+        population:
+          description: Rough descriptor or number.
+          $ref: '#/$defs/text'
         composition: {$ref: '#/$defs/text'}
         tensions: {$ref: '#/$defs/text-list'}
-        factions: {$ref: '#/$defs/links'}
-        controlling_faction: {$ref: '#/$defs/faction-control'}
-        rulership: {$ref: '#/$defs/text'}
-        shops: {$ref: '#/$defs/links'}
-        trade_specialty: {$ref: '#/$defs/text'}
+        factions:
+          $ref: '#/$defs/links'
+          x-placeholder: ['"[[Faction Name]]"']
+        controlling_faction:
+          description: A list of links when control is shared.
+          $ref: '#/$defs/faction-control'
+          x-placeholder: '"[[Faction Name]]"'
+        rulership:
+          $ref: '#/$defs/text'
+          x-placeholder: '"[[NPC Name]]"'
+        shops:
+          $ref: '#/$defs/links'
+          x-placeholder: ['"[[Shop Name]]"']
+        trade_specialty:
+          description: What this settlement is regionally known for producing or trading, e.g. "fine leatherwork", "dwarven arms".
+          $ref: '#/$defs/text'
         routes:
           description: Trade routes, highways or sea lanes serving the city (route-cities.py).
           $ref: '#/$defs/links'
+          x-placeholder: ['"[[Route Name]]"']
   - if:
       properties: {subtype: {const: dungeon}}
     then:
+      x-doc:
+        tags:
+          - location
+          - location/dungeon
+          - 'location/dungeon/ruin  # use a more specific tag where applicable'
+        base:
+          - aliases
+          - importance
+          - active
+          - last_updated
+          - relates_to
+          - resources
+          - known_by
+          - owner
+          - description
       required: [location, origin, current_threat, hook]
       properties:
-        state: {enum: [unknown, known, active, partially-explored, cleared, repopulated, sealed]}
-        location: {$ref: '#/$defs/text'}
+        state:
+          enum: [unknown, known, active, partially-explored, cleared, repopulated, sealed]
+          x-states:
+            unknown: Existence rumored but unconfirmed
+            known: Located and documented, not yet entered
+            active: Currently inhabited by a threat
+            partially-explored: Some areas cleared or mapped
+            cleared: Threat removed, at least temporarily
+            repopulated: Cleared but something moved back in
+            sealed: Deliberately closed off
+        location:
+          $ref: '#/$defs/text'
+          x-placeholder: '"[[Region or City Name]]"'
         origin: {$ref: '#/$defs/text'}
         current_threat: {$ref: '#/$defs/text'}
         hook: {$ref: '#/$defs/text'}
@@ -89,11 +183,24 @@ allOf:
   - if:
       properties: {subtype: {const: region}}
     then:
+      x-doc:
+        tags: [location, location/region]
+        base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
       required: [geography, controlling_faction]
       properties:
-        state: {enum: [stable, contested, occupied, frontier, devastated]}
+        state:
+          enum: [stable, contested, occupied, frontier, devastated]
+          x-states:
+            stable: Functioning under established control
+            contested: Multiple powers vying for control
+            occupied: Under foreign or hostile control
+            frontier: Largely unsettled, no dominant power
+            devastated: Damaged by war, disaster, or magical event
         geography: {$ref: '#/$defs/text'}
-        controlling_faction: {$ref: '#/$defs/faction-control'}
+        controlling_faction:
+          description: Or "unknown"; a list of links when control is shared.
+          $ref: '#/$defs/faction-control'
+          x-placeholder: '"[[Faction Name]]"'
         climate: {$ref: '#/$defs/text'}
         biome:
           description: One biome, or a list of them.
@@ -101,53 +208,127 @@ allOf:
             - {$ref: '#/$defs/region-biome'}
             - {type: array, items: {$ref: '#/$defs/region-biome'}}
         tensions: {$ref: '#/$defs/text-list'}
-        settlements: {$ref: '#/$defs/links'}
+        settlements:
+          $ref: '#/$defs/links'
+          x-placeholder: ['"[[City or Town Name]]"']
         notable_features: {$ref: '#/$defs/text-list'}
-        wilderness_areas: {$ref: '#/$defs/links'}
-        hook: {$ref: '#/$defs/text'}
+        wilderness_areas:
+          $ref: '#/$defs/links'
+          x-placeholder: ['"[[Wilderness Name]]"']
+        hook:
+          description: Why adventurers would go here.
+          $ref: '#/$defs/text'
   - if:
       properties: {subtype: {const: shop}}
     then:
+      x-doc:
+        tags:
+          - location
+          - location/shop
+          - 'location/shop/inn  # use a more specific tag when applicable'
+        base:
+          - aliases
+          - importance
+          - active
+          - last_updated
+          - relates_to
+          - resources
+          - known_by
+          - owner
+          - description
       required: [city, proprietor, purpose]
       properties:
-        state: {enum: [open, closed, under-new-management, destroyed]}
-        city: {$ref: '#/$defs/text'}
-        proprietor: {$ref: '#/$defs/text'}
+        state:
+          enum: [open, closed, under-new-management, destroyed]
+          x-states:
+            open: Operating normally
+            closed: Temporarily shut
+            under-new-management: Ownership or character changed
+            destroyed: Burned, collapsed, or demolished
+        city:
+          $ref: '#/$defs/text'
+          x-placeholder: '"[[City Name]]"'
+        proprietor:
+          $ref: '#/$defs/text'
+          x-placeholder: '"[[NPC Name]]"'
         purpose: {enum: [commerce, political, front, religious, criminal, other]}
-        map_location: {$ref: '#/$defs/text'}
+        map_location:
+          description: Where within the city.
+          $ref: '#/$defs/text'
         customers: {$ref: '#/$defs/text'}
-        supply: {$ref: '#/$defs/links'}
-        specialty: {$ref: '#/$defs/text'}
+        supply:
+          description: Raw materials or trade goods the shop sources; wiki-link when a resource entity exists.
+          $ref: '#/$defs/links'
+          x-placeholder: ['"[[Resource Name]]"']
+        specialty:
+          description: One-liner for what this shop is known for, e.g. "cold-forged iron weapons", "imported silk garments".
+          $ref: '#/$defs/text'
   - if:
       properties: {subtype: {const: terrain-feature}}
     then:
+      x-doc:
+        tags: [location, location/terrain-feature]
+        base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
+        label: terrain feature
       required: [feature_type, region]
       properties:
-        state: {enum: [passable, difficult, flooded, frozen, damaged, impassable, contested]}
+        state:
+          enum: [passable, difficult, flooded, frozen, damaged, impassable, contested]
+          x-states:
+            passable: Currently traversable without special preparation
+            difficult: Crossable but demanding — rough weather, poor roads, high water
+            flooded: Seasonal or disaster flooding; water crossings dangerous or impossible
+            frozen: Iced over — affects water crossings; may open land routes
+            damaged: Infrastructure broken — bridge out, road collapsed, ford silted
+            impassable: Cannot be crossed or traversed currently
+            contested: Factions fighting for control of this chokepoint or resource
         feature_type:
           enum: [river, lake, sea, mountain-range, peak, hill-range, valley, pass, cliff, forest,
             swamp, road, bridge, ford, canyon, island, peninsula, coast, bay, other]
         region:
           description: Region links, or "unknown".
           $ref: '#/$defs/text-list'
+          x-placeholder: ['"[[Region Name]]"']
         scale: {enum: [local, regional, continental]}
         navigability: {enum: [easy, moderate, difficult, impassable]}
-        connects: {$ref: '#/$defs/links'}
-        controlled_by: {$ref: '#/$defs/text'}
+        connects:
+          $ref: '#/$defs/links'
+          x-placeholder: ['"[[Location Name]]"']
+        controlled_by:
+          $ref: '#/$defs/text'
+          x-placeholder: '"[[Faction or NPC Name]]"'
         seasonal_effects: {$ref: '#/$defs/text'}
         hook: {$ref: '#/$defs/text'}
   - if:
       properties: {subtype: {const: wilderness}}
     then:
+      x-doc:
+        tags:
+          - location
+          - location/wilderness
+          - 'location/wilderness/forest  # use a more specific tag where applicable'
+        base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
       required: [region, terrain]
       properties:
-        state: {enum: [safe, dangerous, contested, cursed, blighted, impassable]}
-        region: {$ref: '#/$defs/text'}
+        state:
+          enum: [safe, dangerous, contested, cursed, blighted, impassable]
+          x-states:
+            safe: Navigable without significant threat
+            dangerous: Active monster presence or hazards
+            contested: Multiple factions or creatures fighting over it
+            cursed: Under a magical or divine affliction
+            blighted: Environmentally damaged — dead, diseased, or corrupted
+            impassable: Currently untraversable
+        region:
+          $ref: '#/$defs/text'
+          x-placeholder: '"[[Region Name]]"'
         terrain: {enum: [forest, mountain, swamp, plains, desert, coast, road, river, other]}
         travel_difficulty: {enum: [easy, moderate, hard, treacherous]}
         hazards: {$ref: '#/$defs/text-list'}
         notable_features: {$ref: '#/$defs/text-list'}
-        connects: {$ref: '#/$defs/links'}
+        connects:
+          $ref: '#/$defs/links'
+          x-placeholder: ['"[[Location Name]]"']
         hook: {$ref: '#/$defs/text'}
 properties:
   type: {const: location}

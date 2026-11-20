@@ -45,6 +45,7 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 
 ### Valid State Values
 
+<!-- generated: states from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `passable` | Currently traversable without special preparation |
@@ -54,16 +55,18 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 | `damaged` | Infrastructure broken — bridge out, road collapsed, ford silted |
 | `impassable` | Cannot be crossed or traversed currently |
 | `contested` | Factions fighting for control of this chokepoint or resource |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: location
 subtype: terrain-feature
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: passable | difficult | flooded | frozen | damaged | impassable | contested
 tags:
   - location
@@ -71,31 +74,32 @@ tags:
 
 # --- MANDATORY (terrain feature) ---
 feature_type: river | lake | sea | mountain-range | peak | hill-range | valley | pass | cliff | forest | swamp | road | bridge | ford | canyon | island | peninsula | coast | bay | other
-region:
-  - [[Region Name]]
+region:                 # Region links, or "unknown".
+  - "[[Region Name]]"
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (terrain feature) ---
 scale: local | regional | continental
 navigability: easy | moderate | difficult | impassable
 connects:
-  - [[Location Name]]
-controlled_by: [[Faction or NPC Name]]
+  - "[[Location Name]]"
+controlled_by: "[[Faction or NPC Name]]"
 seasonal_effects: ""
 hook: ""
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

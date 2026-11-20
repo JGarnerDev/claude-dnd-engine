@@ -4,11 +4,24 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: lore
 type: object
+x-doc:
+  tags: [lore, 'lore/{subtype}']
+  base: [aliases, campaign, importance, contributed_by, description, relates_to]
+  fields:
+    name: {x-placeholder: '"World {Domain}"'}
+    exists: {description: true once the DM ratifies it.}
+    campaign: {x-placeholder: homebrew}
+    importance: {x-placeholder: major}
+    contributed_by: {x-placeholder: pending, description: 'A player handle, party, or pending.'}
 required: [subtype, state]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: lore}
   subtype: {enum: [calendar, geography, history, magic, religion]}
-  state: {enum: [draft, stable]}
+  state:
+    enum: [draft, stable]
+    x-states:
+      draft: Being written or awaiting questionnaire answers; treat as open questions, not settled canon
+      stable: Ratified by the DM; settled canon
 unevaluatedProperties: false

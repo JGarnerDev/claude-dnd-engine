@@ -2,14 +2,34 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: party
 type: object
+x-doc:
+  tags: []
+  base: [description, aliases, campaign, source_session, confirmed_date]
+  fields:
+    name: {x-placeholder: '"TBD"', description: Fill in when the party earns a name; leave "TBD" until then.}
+    exists: {x-placeholder: 'true', description: null}
+    tags: {description: 'The party has no categorical tags; its campaign is the campaign: field.'}
+    description: {description: 'One-line summary, optional at creation.'}
+    aliases: {description: Other names or titles the party goes by.}
+    source_session: {x-placeholder: '"[[Session NN - Title]]"', description: The session when the party formed.}
+    confirmed_date: {x-placeholder: '"unknown"', description: In-world date of formation.}
 required: [state, members]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: party}
-  state: {enum: [active, restructured, disbanded]}
-  members: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  state:
+    enum: [active, restructured, disbanded]
+    x-states:
+      active: Party is operating together
+      restructured: Membership changed significantly (someone joined or left)
+      disbanded: Party has broken up
+  members:
+    description: Wiki-links to historian/characters/pcs/ files.
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[PC Name]]"']
   base_of_operations:
     description: A location link, or "unknown".
     $ref: entity.schema.yaml#/$defs/text
+    x-placeholder: '"unknown"'
 unevaluatedProperties: false

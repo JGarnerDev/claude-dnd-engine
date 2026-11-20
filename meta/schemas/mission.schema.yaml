@@ -2,20 +2,50 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: mission
 type: object
+x-doc:
+  historian: [outcome, outcome_detail, sessions_played]
+  tags: [mission/, act/]
+  base: [relates_to, importance, active, last_updated, description]
 required: [state, act, objective, hook]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: mission}
-  state: {enum: [draft, planned, active, on-hiatus, completed, failed, abandoned]}
-  act: {$ref: entity.schema.yaml#/$defs/link}
+  state:
+    enum: [draft, planned, active, on-hiatus, completed, failed, abandoned]
+    x-states:
+      draft: Being written, not ready to run
+      planned: Ready, queued behind an active mission
+      active: Currently being pursued by the party
+      on-hiatus: Paused with its campaign; picks up when the campaign resumes
+      completed: Resolved successfully
+      failed: Resolved with failure — consequences applied
+      abandoned: Dropped from the story
+  act:
+    $ref: entity.schema.yaml#/$defs/link
+    x-placeholder: '"[[Act Name]]"'
   objective: {$ref: entity.schema.yaml#/$defs/text}
   hook: {$ref: entity.schema.yaml#/$defs/text}
-  sessions: {$ref: entity.schema.yaml#/$defs/annotated-links}
-  locations: {$ref: entity.schema.yaml#/$defs/annotated-links}
-  key_npcs: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  sessions:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Session NN - Title]]"']
+  locations:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Location Name]]"']
+  key_npcs:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[NPC Name]] (role)"']
   obstacles: {$ref: entity.schema.yaml#/$defs/text-list}
   success_consequences: {$ref: entity.schema.yaml#/$defs/text}
   failure_consequences: {$ref: entity.schema.yaml#/$defs/text}
   reward: {$ref: entity.schema.yaml#/$defs/text}
+  # --- historian: added when the mission ends ---
+  outcome: {enum: [completed, failed]}
+  outcome_detail:
+    description: What actually happened.
+    $ref: entity.schema.yaml#/$defs/text
+  sessions_played:
+    type: integer
+    minimum: 0
+    x-placeholder: ['"[[Session NN - Title]]"']
 unevaluatedProperties: false

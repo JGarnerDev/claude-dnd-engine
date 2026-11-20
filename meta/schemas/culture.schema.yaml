@@ -2,19 +2,36 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: culture
 type: object
+x-doc:
+  tags: [culture]
+  base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
 required: [state, region, values]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: culture}
-  state: {enum: [thriving, declining, assimilated, isolated, persecuted, extinct]}
-  region: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  state:
+    enum: [thriving, declining, assimilated, isolated, persecuted, extinct]
+    x-states:
+      thriving: Vibrant, widely practiced, culturally confident
+      declining: Losing adherents or influence; under economic or political pressure
+      assimilated: Absorbed into a dominant culture; practices fading or surviving only in private
+      isolated: Cut off from outside contact; insular and self-referential
+      persecuted: Actively suppressed by a dominant power or rival culture
+      extinct: No longer practiced by any living community
+  region:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Region Name]]"']
   values: {$ref: entity.schema.yaml#/$defs/text-list}
   taboos: {$ref: entity.schema.yaml#/$defs/text-list}
   practices: {$ref: entity.schema.yaml#/$defs/text-list}
   aesthetic: {$ref: entity.schema.yaml#/$defs/text}
   language: {$ref: entity.schema.yaml#/$defs/text-list}
-  associated_factions: {$ref: entity.schema.yaml#/$defs/annotated-links}
-  associated_races: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  associated_factions:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Faction Name]]"']
+  associated_races:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Race Name]]"']
   hook: {$ref: entity.schema.yaml#/$defs/text}
 unevaluatedProperties: false

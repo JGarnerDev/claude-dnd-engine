@@ -33,45 +33,49 @@ The machine-readable version is [`class.schema.yaml`](class.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from class.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `available` | Open to players without restriction |
 | `restricted` | Allowed with DM approval |
 | `unavailable` | Not permitted in this campaign |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from class.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: class
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: available | restricted | unavailable
 tags:
   - class
 
 # --- MANDATORY (class) ---
 hit_die: 6 | 8 | 10 | 12
-saving_throws: []        # two ability abbreviations: STR CON DEX INT WIS CHA
-
-# --- OPTIONAL (class) ---
-spellcasting_ability: "" # INT | WIS | CHA — omit for non-casters
-armor_proficiencies: ""  # one line, e.g. "Light armor, shields", or "none"
-weapon_proficiencies: ""
-tool_proficiencies: ""
-skill_choices: ""        # "Choose N from [list]"
-multiclass_prerequisite: ""
-subclasses: []           # PHB subclass(es); not exhaustive
-source: PHB
-key_features: []         # two or three defining features of the class
+saving_throws: []       # Two ability abbreviations: STR CON DEX INT WIS CHA.
 
 # --- OPTIONAL (entity base) ---
-importance: minor
-active: true
+importance: critical | major | minor | background
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
 description: ""
+
+# --- OPTIONAL (class) ---
+spellcasting_ability: INT | WIS | CHA  # Omit for non-casters.
+armor_proficiencies: ""  # Plain list in one line, e.g. "Light armor, shields", or "none".
+weapon_proficiencies: ""
+tool_proficiencies: ""
+skill_choices: ""       # "Choose N from [list]".
+multiclass_prerequisite: ""
+subclasses: []          # PHB subclass(es); not exhaustive.
+source: PHB
+key_features: []        # Two or three defining features of the class.
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

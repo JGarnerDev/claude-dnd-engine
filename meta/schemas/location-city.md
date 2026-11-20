@@ -48,6 +48,7 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 
 ### Valid State Values
 
+<!-- generated: states from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `thriving` | Growing, prosperous |
@@ -56,53 +57,57 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 | `besieged` | Under active attack or blockade |
 | `ruined` | Largely destroyed but not empty |
 | `abandoned` | Empty or near-empty |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: location
 subtype: city
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: thriving | stable | troubled | besieged | ruined | abandoned
 tags:
   - location
   - location/city
 
 # --- MANDATORY (city) ---
-global_location: [[Region or Area Name]]
+global_location: "[[Region or Area Name]]"
 purpose: commerce | political | military | religious | other
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (city) ---
-map: ""                        # path to map file or image
-population: ""                 # rough descriptor or number
+map: ""                 # Path to map file or image.
+population: ""          # Rough descriptor or number.
 composition: ""
 tensions: []
 factions:
-  - [[Faction Name]]
-controlling_faction: [[Faction Name]]   # optional; a list of links when control is shared
-rulership: [[NPC Name]]
+  - "[[Faction Name]]"
+controlling_faction: "[[Faction Name]]"  # A list of links when control is shared.
+rulership: "[[NPC Name]]"
 shops:
-  - [[Shop Name]]
-trade_specialty: ""    # optional: what this settlement is regionally known for producing or trading, e.g. "fine leatherwork", "dwarven arms"
-routes:
-  - [[Route Name]]     # trade routes, highways, or sea lanes that serve this city (enables route-cities.py)
+  - "[[Shop Name]]"
+trade_specialty: ""     # What this settlement is regionally known for producing or trading, e.g.
+                        # "fine leatherwork", "dwarven arms".
+routes:                 # Trade routes, highways or sea lanes serving the city (route-cities.py).
+  - "[[Route Name]]"
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

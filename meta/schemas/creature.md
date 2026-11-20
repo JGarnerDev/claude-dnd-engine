@@ -43,6 +43,7 @@ The machine-readable version is [`creature.schema.yaml`](creature.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from creature.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `alive` | Active in the world |
@@ -51,55 +52,57 @@ The machine-readable version is [`creature.schema.yaml`](creature.schema.yaml).
 | `imprisoned` | Captured, bound, or otherwise contained |
 | `transformed` | Significantly altered — polymorphed, corrupted, etc. |
 | `unknown` | Status unclear |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from creature.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: creature
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: alive | dead | dormant | imprisoned | transformed | unknown
 tags:
   - creature
 
 # --- MANDATORY (creature) ---
 creature_type: undead | beast | humanoid | aberration | celestial | fiend | monstrosity | dragon | construct | elemental | fey | giant | ooze | plant | other
-challenge_rating: ""    # CR value, e.g. "5" or "1/2"; "TBD" or "unknown" until fixed
-location: [[Location Name]]
+challenge_rating: ""    # CR as a string ("5", "1/2"), or "TBD" / "unknown".
+location: "[[Location Name]]"  # A location link or a plain note.
 
 # --- OPTIONAL (entity base) ---
-aliases:
-  - ""
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
+  - "[[Character Name]] (partial | full)"
 description: ""
 
 # --- OPTIONAL (creature) ---
 size: tiny | small | medium | large | huge | gargantuan
 alignment: ""
-breed: ""           # for animals with a known breed
+breed: ""               # For animals with a known breed.
 personality: ""
 goals: []
 motives: []
-lair: [[Location Name]]     # specific lair if distinct from location
+lair: "[[Location Name]]"  # Specific lair if distinct from location.
 allies:
-  - [[Character or Creature Name]] (nature of relationship)
+  - "[[Character or Creature Name]] (nature of relationship)"
 enemies:
-  - [[Character or Faction Name]] (nature of conflict)
-tactics: ""         # brief combat or behavioral notes
-weaknesses: ""      # narrative or mechanical vulnerabilities
-stat_block: ""      # path to external stat block, or "inline" if appended to body
-affinity:           # only for party companions; per-target liking, integer -10..+10; see meta/affinity.md
-  - [[Owner or PC Name]] (n)
+  - "[[Character or Faction Name]] (nature of conflict)"
+tactics: ""             # Brief combat or behavioral notes.
+weaknesses: ""          # Narrative or mechanical vulnerabilities.
+stat_block: ""          # Link to an external stat block, or "inline" if appended to the body.
+affinity:               # Party companions only. Per-target liking, -10..+10; see meta/affinity.md.
+  - "[[Owner or PC Name]] (n)"
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

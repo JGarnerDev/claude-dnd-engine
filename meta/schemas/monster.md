@@ -39,34 +39,39 @@ The machine-readable version is [`monster.schema.yaml`](monster.schema.yaml).
 
 ### Frontmatter Template
 
+<!-- generated: template from monster.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
-# --- MANDATORY ---
+# --- MANDATORY (entity base) ---
 name: ""
 type: monster
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 tags:
   - monster
   - monster/<creature_type>
-  - cr/<decimal>           # e.g. cr/0.25 for CR 1/4, cr/0.5 for CR 1/2, cr/5 for CR 5
+  - cr/<decimal>  # e.g. cr/0.25 for CR 1/4, cr/0.5 for CR 1/2, cr/5 for CR 5
 
 # --- MANDATORY (monster) ---
 creature_type: undead | beast | humanoid | aberration | celestial | fiend | monstrosity | dragon | construct | elemental | fey | giant | ooze | plant | other
-challenge_rating: ""    # CR value, e.g. "5" or "1/2"
+challenge_rating: ""    # CR as a string, e.g. "5" or "1/2".
 
-# --- OPTIONAL ---
+# --- OPTIONAL (entity base) ---
+description: ""
+
+# --- OPTIONAL (monster) ---
 size: tiny | small | medium | large | huge | gargantuan
 alignment: ""
-source: ""              # e.g. "Monster Manual p.298"
-stat_block: ""          # URL or "inline"
-habitats: []            # environments where typically encountered
-description: ""
-weaknesses: []          # damage vulnerabilities + special (sunlight, silver, running water)
-resistances: []         # damage resistances (e.g. "bludgeoning from nonmagical attacks")
-immunities: []          # damage immunities + condition immunities (e.g. "poison", "charmed")
-legendary: false        # true if has legendary actions or lair actions
-movement: []            # special movement with speed (e.g. "fly 60", "swim 40", "burrow 30")
+source: ""              # Book and page, e.g. "Monster Manual p.298".
+stat_block: ""          # URL, or "inline" if appended to the body.
+habitats: []            # Environments where typically encountered.
+weaknesses: []          # Damage vulnerabilities + special (sunlight, silver, running water)
+resistances: []         # Damage resistances (e.g. "bludgeoning from nonmagical attacks")
+immunities: []          # Damage immunities + condition immunities (e.g. "poison", "charmed")
+legendary: false        # True if has legendary actions or lair actions.
+movement: []            # Special movement with speed, e.g. "fly 60".
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

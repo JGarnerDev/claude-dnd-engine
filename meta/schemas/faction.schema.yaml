@@ -2,30 +2,47 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: faction
 type: object
+x-doc:
+  tags: ['faction/  # e.g. faction/guild, faction/nation, faction/cult', region/]
+  base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
 required: [state, locations, purpose]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: faction}
-  state: {enum: [active, fractured, dormant, at-war, exiled, dissolved]}
+  state:
+    enum: [active, fractured, dormant, at-war, exiled, dissolved]
+    x-states:
+      active: Operating normally
+      fractured: Internal conflict, weakened
+      dormant: Inactive but not gone
+      at-war: In open conflict
+      exiled: Displaced from home territory
+      dissolved: No longer exists
   locations:
     description: Where the faction operates, as links or plain notes.
     $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['"[[Location Name]]"']
   purpose: {enum: [commerce, political, military, religious, criminal, arcane, family, other]}
   rulership:
     description: A link to the leader, or a plain note ("council", "unknown").
     $ref: entity.schema.yaml#/$defs/text
+    x-placeholder: '"[[NPC Name]]"'
   motives: {$ref: entity.schema.yaml#/$defs/text-list}
   tensions: {$ref: entity.schema.yaml#/$defs/text-list}
   hierarchy: {$ref: entity.schema.yaml#/$defs/text}
   livelihood: {$ref: entity.schema.yaml#/$defs/text}
-  members: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  members:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Character Name]] (role)"']
   allies:
     description: Annotated links, or plain notes ("No formal allies").
     $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['"[[Entity Name]] (nature of alliance)"']
   opposition:
     description: Annotated links, or plain notes for rivals with no entry.
     $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['"[[Entity Name]] (nature of conflict)"']
   hook:
     description: Why the party would get tangled up with them.
     $ref: entity.schema.yaml#/$defs/text

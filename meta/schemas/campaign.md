@@ -35,6 +35,7 @@ The machine-readable version is [`campaign.schema.yaml`](campaign.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from campaign.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `draft` | Campaign concept being developed, not yet started |
@@ -42,36 +43,41 @@ The machine-readable version is [`campaign.schema.yaml`](campaign.schema.yaml).
 | `on-hiatus` | Paused but intended to resume |
 | `completed` | Story reached its conclusion |
 | `abandoned` | Discontinued |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from campaign.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
-# --- MANDATORY ---
+# --- MANDATORY (entity base) ---
 name: ""
 type: campaign
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: draft | active | on-hiatus | completed | abandoned
 tags:
   - campaign/
-# the active DM's first name, as in meta/players/; the only record of who the DM is
+
+# --- MANDATORY (campaign) ---
 dm: ""
+premise: ""             # One or two sentences: what situation do the players enter?.
+central_conflict: ""    # The driving tension the whole campaign ultimately resolves.
+tone: ""                # Feel and register of the campaign.
+end_condition: ""       # What resolution looks like.
+themes: []              # 2-5 recurring themes.
 
-premise: ""              # one or two sentences: what situation do the players enter?
-central_conflict: ""     # the driving tension the whole campaign ultimately resolves
-tone: ""                 # feel and register of the campaign
-
-# Optional fields:
-current_act: [[Act Name]]   # or a placeholder note while acts are undefined
-acts:
-  - [[Act Name]]
-end_condition: ""        # what resolution looks like
-themes: []               # 2-5 recurring themes
-importance: critical
-active: true
+# --- OPTIONAL (entity base) ---
+importance: critical | major | minor | background
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
 description: ""
+
+# --- OPTIONAL (campaign) ---
+current_act: "[[Act Name]]"  # An act link, or a placeholder note ("TBD — ...").
+acts:
+  - "[[Act Name]]"
 ---
 ```
+<!-- end generated -->
 
 ### Notes
 

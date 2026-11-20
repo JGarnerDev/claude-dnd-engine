@@ -2,6 +2,9 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: class
 type: object
+x-doc:
+  tags: [class]
+  base: [importance, active, description]
 required: [state, hit_die, saving_throws]
 $defs:
   ability: {enum: [STR, DEX, CON, INT, WIS, CHA]}
@@ -9,9 +12,15 @@ allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: class}
-  state: {enum: [available, restricted, unavailable]}
+  state:
+    enum: [available, restricted, unavailable]
+    x-states:
+      available: Open to players without restriction
+      restricted: Allowed with DM approval
+      unavailable: Not permitted in this campaign
   hit_die: {enum: [6, 8, 10, 12]}
   saving_throws:
+    description: 'Two ability abbreviations: STR CON DEX INT WIS CHA.'
     type: array
     minItems: 2
     maxItems: 2
@@ -28,7 +37,13 @@ properties:
     description: '"Choose N from [list]".'
     $ref: entity.schema.yaml#/$defs/text
   multiclass_prerequisite: {$ref: entity.schema.yaml#/$defs/text}
-  subclasses: {$ref: entity.schema.yaml#/$defs/text-list}
-  source: {$ref: entity.schema.yaml#/$defs/text}
-  key_features: {$ref: entity.schema.yaml#/$defs/text-list}
+  subclasses:
+    description: PHB subclass(es); not exhaustive.
+    $ref: entity.schema.yaml#/$defs/text-list
+  source:
+    $ref: entity.schema.yaml#/$defs/text
+    x-placeholder: PHB
+  key_features:
+    description: Two or three defining features of the class.
+    $ref: entity.schema.yaml#/$defs/text-list
 unevaluatedProperties: false

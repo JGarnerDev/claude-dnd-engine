@@ -3,6 +3,12 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: monster
 type: object
+x-doc:
+  tags:
+    - monster
+    - monster/<creature_type>
+    - 'cr/<decimal>  # e.g. cr/0.25 for CR 1/4, cr/0.5 for CR 1/2, cr/5 for CR 5'
+  base: [description]
 required: [creature_type, challenge_rating]
 allOf:
   - $ref: entity.schema.yaml
@@ -23,11 +29,22 @@ properties:
   stat_block:
     description: URL, or "inline" if appended to the body.
     $ref: entity.schema.yaml#/$defs/text
-  habitats: {$ref: entity.schema.yaml#/$defs/text-list}
-  weaknesses: {$ref: entity.schema.yaml#/$defs/text-list}
-  resistances: {$ref: entity.schema.yaml#/$defs/text-list}
-  immunities: {$ref: entity.schema.yaml#/$defs/text-list}
-  legendary: {type: boolean}
+  habitats:
+    description: Environments where typically encountered.
+    $ref: entity.schema.yaml#/$defs/text-list
+  weaknesses:
+    description: Damage vulnerabilities + special (sunlight, silver, running water)
+    $ref: entity.schema.yaml#/$defs/text-list
+  resistances:
+    description: Damage resistances (e.g. "bludgeoning from nonmagical attacks")
+    $ref: entity.schema.yaml#/$defs/text-list
+  immunities:
+    description: Damage immunities + condition immunities (e.g. "poison", "charmed")
+    $ref: entity.schema.yaml#/$defs/text-list
+  legendary:
+    description: True if has legendary actions or lair actions.
+    type: boolean
+    x-placeholder: 'false'
   movement:
     description: Special movement with speed, e.g. "fly 60".
     $ref: entity.schema.yaml#/$defs/text-list

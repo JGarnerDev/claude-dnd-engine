@@ -41,6 +41,7 @@ The machine-readable version is [`faction.schema.yaml`](faction.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from faction.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `active` | Operating normally |
@@ -49,52 +50,55 @@ The machine-readable version is [`faction.schema.yaml`](faction.schema.yaml).
 | `at-war` | In open conflict |
 | `exiled` | Displaced from home territory |
 | `dissolved` | No longer exists |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from faction.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: faction
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: active | fractured | dormant | at-war | exiled | dissolved
 tags:
-  - faction/         # e.g. faction/guild, faction/nation, faction/cult
+  - faction/  # e.g. faction/guild, faction/nation, faction/cult
   - region/
 
 # --- MANDATORY (faction) ---
-locations:
-  - [[Location Name]]
+locations:              # Where the faction operates, as links or plain notes.
+  - "[[Location Name]]"
 purpose: commerce | political | military | religious | criminal | arcane | family | other
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (faction) ---
-rulership: [[NPC Name]]
+rulership: "[[NPC Name]]"  # A link to the leader, or a plain note ("council", "unknown").
 motives: []
 tensions: []
 hierarchy: ""
 livelihood: ""
-allies:
-  - [[Entity Name]] (nature of alliance)
-opposition:
-  - [[Entity Name]] (nature of conflict)   # plain notes allowed for allies and opposition
 members:
-  - [[Character Name]] (role)
-hook: ""                       # why the party would get tangled up with them
+  - "[[Character Name]] (role)"
+allies:                 # Annotated links, or plain notes ("No formal allies").
+  - "[[Entity Name]] (nature of alliance)"
+opposition:             # Annotated links, or plain notes for rivals with no entry.
+  - "[[Entity Name]] (nature of conflict)"
+hook: ""                # Why the party would get tangled up with them.
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

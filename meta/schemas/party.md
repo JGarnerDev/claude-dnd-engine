@@ -21,36 +21,43 @@ Parties are historian entities from the moment they form — they are not free d
 
 ## Valid State Values
 
+<!-- generated: states from party.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `active` | Party is operating together |
 | `restructured` | Membership changed significantly (someone joined or left) |
 | `disbanded` | Party has broken up |
+<!-- end generated -->
 
 ## Frontmatter Template
 
+<!-- generated: template from party.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
-name: "TBD"              # fill in when the party earns a name; leave "TBD" until then
+# --- MANDATORY (entity base) ---
+name: "TBD"             # Fill in when the party earns a name; leave "TBD" until then.
 type: party
 exists: true
-state: active
-description: ""          # one-line summary, optional at creation
+state: active | restructured | disbanded
+tags: []                # The party has no categorical tags; its campaign is the campaign: field.
 
-aliases: []              # alternate names or titles the party goes by
+# --- MANDATORY (party) ---
+members:                # Wiki-links to historian/characters/pcs/ files.
+  - "[[PC Name]]"
 
-members:
-  - [[PC Name]]          # wiki-links to historian/characters/pcs/ files
+# --- OPTIONAL (entity base) ---
+description: ""         # One-line summary, optional at creation.
+aliases: []             # Other names or titles the party goes by.
+campaign: strahd | homebrew  # The campaign this belongs to; acts and the party link the campaign
+                             # entry.
+source_session: "[[Session NN - Title]]"  # The session when the party formed.
+confirmed_date: "unknown"  # In-world date of formation.
 
-base_of_operations: "unknown"
-campaign: [[Campaign Name]]
-
-source_session: "[[session-NN-name]]"   # session when the party formed
-confirmed_date: "unknown"               # in-world date of formation
-
-tags: []    # party has no categorical tags — campaign relationship lives in campaign: [[Campaign Name]] field above
+# --- OPTIONAL (party) ---
+base_of_operations: "unknown"  # A location link, or "unknown".
 ---
 ```
+<!-- end generated -->
 
 ## Body Structure
 

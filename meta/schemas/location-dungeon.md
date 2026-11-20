@@ -43,6 +43,7 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 
 ### Valid State Values
 
+<!-- generated: states from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `unknown` | Existence rumored but unconfirmed |
@@ -52,40 +53,42 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 | `cleared` | Threat removed, at least temporarily |
 | `repopulated` | Cleared but something moved back in |
 | `sealed` | Deliberately closed off |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: location
 subtype: dungeon
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: unknown | known | active | partially-explored | cleared | repopulated | sealed
 tags:
   - location
   - location/dungeon
-  - location/dungeon/ruin   # use a more specific tag where applicable
+  - location/dungeon/ruin  # use a more specific tag where applicable
 
 # --- MANDATORY (dungeon) ---
-location: [[Region or City Name]]
+location: "[[Region or City Name]]"
 origin: ""
 current_threat: ""
 hook: ""
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 resources:
-  - [[Entity Name]] (relationship)
+  - "[[Resource Name]]"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (dungeon) ---
@@ -94,6 +97,7 @@ levels: ""
 known_dangers: []
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

@@ -35,34 +35,40 @@ The machine-readable version is [`feat.schema.yaml`](feat.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from feat.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `available` | Legal in this campaign |
 | `banned` | Disallowed for this campaign |
 | `homebrew` | Custom or modified version |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from feat.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: feat
-exists: false
-state: available
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
+state: available | banned | homebrew
 tags:
   - feat
 
 # --- MANDATORY (feat) ---
 effect: ""
 
-# --- OPTIONAL (feat) ---
-prerequisite: ""          # what the feat requires, or "none"
-source: ""
+# --- OPTIONAL (entity base) ---
 description: ""
-aliases: []
+aliases: []             # Other names or titles this is known by.
+
+# --- OPTIONAL (feat) ---
+prerequisite: ""        # What the feat requires, or "none".
+source: ""
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

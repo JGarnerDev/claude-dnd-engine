@@ -2,24 +2,44 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: race
 type: object
+x-doc:
+  tags: [race/, 'size/medium  # size/small, size/medium, size/large']
+  base: [aliases, importance, active, last_updated, relates_to, description]
 required: [state, size, speed]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: race}
-  state: {enum: [widespread, regional, rare, reclusive, scattered, monstrous]}
+  state:
+    enum: [widespread, regional, rare, reclusive, scattered, monstrous]
+    x-states:
+      widespread: Common across many regions
+      regional: Found primarily in specific areas
+      rare: Infrequently encountered
+      reclusive: Mostly keeps to themselves, avoids outsiders
+      scattered: No homeland; found in small numbers everywhere
+      monstrous: Typically encountered as enemies; rare as player characters in this world
   size: {enum: [Small, Medium, Large]}
   speed:
     description: Base walking speed in feet.
     type: integer
     minimum: 0
+    x-placeholder: '30'
   subraces: {$ref: entity.schema.yaml#/$defs/text-list}
   typical_alignment: {$ref: entity.schema.yaml#/$defs/text}
-  languages: {$ref: entity.schema.yaml#/$defs/text-list}
+  languages:
+    $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: [Common]
   homeland:
     description: A region link, or a plain description.
     $ref: entity.schema.yaml#/$defs/text
-  patron_deity: {$ref: entity.schema.yaml#/$defs/text-list}
-  source: {$ref: entity.schema.yaml#/$defs/text}
-  key_traits: {$ref: entity.schema.yaml#/$defs/text-list}
+  patron_deity:
+    $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['"[[Deity Name]]"']
+  source:
+    description: PHB, VGtM, MotM, etc.
+    $ref: entity.schema.yaml#/$defs/text
+  key_traits:
+    description: Brief list of notable racial traits; full detail goes in the body.
+    $ref: entity.schema.yaml#/$defs/text-list
 unevaluatedProperties: false

@@ -25,32 +25,36 @@ The machine-readable version is [`lore.schema.yaml`](lore.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from lore.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `draft` | Being written or awaiting questionnaire answers; treat as open questions, not settled canon |
 | `stable` | Ratified by the DM; settled canon |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from lore.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: "World {Domain}"
 type: lore
 subtype: calendar | geography | history | magic | religion
-exists: false            # true once the DM ratifies it
+exists: false           # true once the DM ratifies it.
 state: draft | stable
 tags:
   - lore
   - lore/{subtype}
 
 # --- OPTIONAL (entity base) ---
-aliases: []
-campaign: homebrew
+aliases: []             # Other names or titles this is known by.
+campaign: homebrew      # The campaign this belongs to; acts and the party link the campaign entry.
 importance: major
-contributed_by: pending  # player handle, party, or pending
+contributed_by: pending  # A player handle, party, or pending.
 description: ""
 relates_to:
   - "[[Entity Name]] (relationship)"
 ---
 ```
+<!-- end generated -->

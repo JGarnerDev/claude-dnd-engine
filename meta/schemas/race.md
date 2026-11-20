@@ -39,6 +39,7 @@ The machine-readable version is [`race.schema.yaml`](race.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from race.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `widespread` | Common across many regions |
@@ -47,31 +48,33 @@ The machine-readable version is [`race.schema.yaml`](race.schema.yaml).
 | `reclusive` | Mostly keeps to themselves, avoids outsiders |
 | `scattered` | No homeland; found in small numbers everywhere |
 | `monstrous` | Typically encountered as enemies; rare as player characters in this world |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from race.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: race
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: widespread | regional | rare | reclusive | scattered | monstrous
 tags:
   - race/
-  - size/medium        # size/small, size/medium, size/large
+  - size/medium  # size/small, size/medium, size/large
 
 # --- MANDATORY (race) ---
 size: Small | Medium | Large
-speed: 30              # base walking speed in feet
+speed: 30               # Base walking speed in feet.
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 description: ""
 
 # --- OPTIONAL (race) ---
@@ -79,13 +82,14 @@ subraces: []
 typical_alignment: ""
 languages:
   - Common
-homeland: ""           # region name or description; use [[wiki-link]] if a region file exists
+homeland: ""            # A region link, or a plain description.
 patron_deity:
-  - [[Deity Name]]
-source: ""             # PHB, VGtM, MotM, etc.
-key_traits: []         # brief list of notable racial traits; full detail goes in the body
+  - "[[Deity Name]]"
+source: ""              # PHB, VGtM, MotM, etc.
+key_traits: []          # Brief list of notable racial traits; full detail goes in the body.
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

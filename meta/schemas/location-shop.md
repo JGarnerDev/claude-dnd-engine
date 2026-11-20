@@ -42,55 +42,61 @@ The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (
 
 ### Valid State Values
 
+<!-- generated: states from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `open` | Operating normally |
 | `closed` | Temporarily shut |
 | `under-new-management` | Ownership or character changed |
 | `destroyed` | Burned, collapsed, or demolished |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from location.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: location
 subtype: shop
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: open | closed | under-new-management | destroyed
 tags:
   - location
   - location/shop
-  - location/shop/inn         # use a more specific tag when applicable
+  - location/shop/inn  # use a more specific tag when applicable
 
 # --- MANDATORY (shop) ---
-city: [[City Name]]
-proprietor: [[NPC Name]]
+city: "[[City Name]]"
+proprietor: "[[NPC Name]]"
 purpose: commerce | political | front | religious | criminal | other
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 resources:
-  - [[Entity Name]] (relationship)
+  - "[[Resource Name]]"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (shop) ---
-map_location: ""       # where within the city
+map_location: ""        # Where within the city.
 customers: ""
-supply:
-  - [[Resource Name]]  # raw materials or trade goods the shop sources; wiki-link when a resource entity exists
-specialty: ""          # one-liner for what this shop is known for, e.g. "cold-forged iron weapons", "imported silk garments"
+supply:                 # Raw materials or trade goods the shop sources; wiki-link when a resource
+                        # entity exists.
+  - "[[Resource Name]]"
+specialty: ""           # One-liner for what this shop is known for, e.g. "cold-forged iron
+                        # weapons", "imported silk garments".
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

@@ -12,9 +12,22 @@ allOf:
   - if:
       properties: {subtype: {const: magic}}
     then:
+      x-doc:
+        tags: [item/magic, 'item/magic/weapon  # use a more specific tag where applicable']
+        base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
+        label: magic item
       required: [rarity, attunement, effect]
       properties:
-        state: {enum: [unidentified, identified, attuned, dormant, lost, destroyed, cursed]}
+        state:
+          enum: [unidentified, identified, attuned, dormant, lost, destroyed, cursed]
+          x-states:
+            unidentified: Exists but properties unknown
+            identified: Properties known
+            attuned: Currently attuned to a creature
+            dormant: Temporarily inert or suppressed
+            lost: Location unknown
+            destroyed: No longer functional
+            cursed: Actively harmful, difficult to remove
         item_type: {enum: [weapon, armor, ring, wondrous, rod, staff, wand, ammunition, other]}
         rarity:
           description: '"unknown" while the table has not fixed it.'
@@ -24,14 +37,27 @@ allOf:
           anyOf:
             - {type: boolean}
             - {$ref: '#/$defs/text'}
+          x-placeholder: 'false'
         effect: {$ref: '#/$defs/text'}
         quirks: {$ref: '#/$defs/text-list'}
   - if:
       properties: {subtype: {const: mundane}}
     then:
+      x-doc:
+        tags: [item/mundane]
+        base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
+        label: mundane item
       required: [significance]
       properties:
-        state: {enum: [intact, damaged, broken, lost, destroyed, hidden]}
+        state:
+          enum: [intact, damaged, broken, lost, destroyed, hidden]
+          x-states:
+            intact: In good condition, fully functional
+            damaged: Worn or partially functional
+            broken: Non-functional but potentially repairable
+            lost: Location unknown
+            destroyed: Gone beyond recovery
+            hidden: Deliberately concealed
         item_type:
           enum: [weapon, armor, tool, container, document, jewelry, trophy, heirloom, quest-item, other]
         significance:
@@ -41,8 +67,16 @@ properties:
   type: {const: item}
   subtype: {enum: [magic, mundane]}
   origin: {$ref: '#/$defs/text'}
-  current_holder: {$ref: '#/$defs/text'}
-  history: {$ref: '#/$defs/text-list'}
-  material: {$ref: '#/$defs/text'}
-  appearance: {$ref: '#/$defs/text'}
+  current_holder:
+    $ref: '#/$defs/text'
+    x-placeholder: '"[[Character or Location Name]]"'
+  history:
+    description: Significant past owners or events involving this item.
+    $ref: '#/$defs/text-list'
+  material:
+    description: Primary material (iron, wood, parchment, bone, etc.)
+    $ref: '#/$defs/text'
+  appearance:
+    description: Brief physical description.
+    $ref: '#/$defs/text'
 unevaluatedProperties: false

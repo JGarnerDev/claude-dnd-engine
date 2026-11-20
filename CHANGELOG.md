@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.95.0] — 2026-11-20
+
+- **Generated schema docs** (schema migration step 7): new `scripts/gen-schema-docs.py` writes the **Valid State Values** table and the **Frontmatter Template** of each `meta/schemas/*.md` from its `.schema.yaml`, between `<!-- generated: ... -->` / `<!-- end generated -->` markers. Edit the schema, not those blocks; forms, body templates and notes stay hand-written. `validate.py` reports a doc whose generated blocks are stale as an error. New test `tests/scripts/test_schema_docs.py`.
+- Schemas now carry the doc text: `x-states` (each state's meaning), a `description` per field (the template comment), `x-placeholder` (the template value) and `x-doc` (tags, sections, historian-only fields, per-type values for base fields). The JSON Schema validator ignores the `x-` keys.
+- Templates now list fields in schema order, under MANDATORY / OPTIONAL sections that follow the schema's `required`, and write links quoted (`"[[Name]]"`). `skill.md` gains a Valid State Values section.
+- Schema fixes found while generating: feat `state` widened to `available`, `banned`, `homebrew` (the states `feat.md` already listed); act gains historian fields `outcome` and `sessions_played`, and mission gains `outcome`, `outcome_detail` and `sessions_played` (both docs listed them, the schemas rejected them).
+
 ## [0.94.0] — 2026-11-20
 
 - **Lore schema** (schema migration step 6): `meta/schemas/lore.schema.yaml`, enforced by `validate.py`, plus a new prose schema `meta/schemas/lore.md` (lore had none) and a `lore` row in `meta/types.md`. Lore frontmatter is the entity base plus `subtype` (`calendar`, `geography`, `history`, `magic`, `religion`) and `state` (`draft`, `stable`); the substance lives in the body.

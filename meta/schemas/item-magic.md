@@ -43,6 +43,7 @@ The machine-readable version is [`item.schema.yaml`](item.schema.yaml), shared w
 
 ### Valid State Values
 
+<!-- generated: states from item.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `unidentified` | Exists but properties unknown |
@@ -52,49 +53,52 @@ The machine-readable version is [`item.schema.yaml`](item.schema.yaml), shared w
 | `lost` | Location unknown |
 | `destroyed` | No longer functional |
 | `cursed` | Actively harmful, difficult to remove |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from item.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: item
 subtype: magic
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: unidentified | identified | attuned | dormant | lost | destroyed | cursed
 tags:
   - item/magic
-  - item/magic/weapon    # use a more specific tag where applicable
+  - item/magic/weapon  # use a more specific tag where applicable
 
 # --- MANDATORY (magic item) ---
+origin: ""
 item_type: weapon | armor | ring | wondrous | rod | staff | wand | ammunition | other
 rarity: common | uncommon | rare | very-rare | legendary | artifact | unknown
-attunement: false         # or true, or a string describing who can attune
-origin: ""
+                        # "unknown" while the table has not fixed it.
+attunement: false       # true, false, or who can attune.
 effect: ""
 
 # --- OPTIONAL (entity base) ---
-aliases:
-  - ""
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (magic item) ---
-current_holder: [[Character or Location Name]]
+current_holder: "[[Character or Location Name]]"
+history: []             # Significant past owners or events involving this item.
+material: ""            # Primary material (iron, wood, parchment, bone, etc.)
+appearance: ""          # Brief physical description.
 quirks: []
-history: []    # significant past owners or events involving this item
-material: ""
-appearance: ""
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

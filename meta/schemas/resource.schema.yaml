@@ -2,12 +2,23 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: resource
 type: object
+x-doc:
+  tags: [resource]
+  base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
 required: [state, resource_type, rarity, location]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: resource}
-  state: {enum: [abundant, scarce, depleted, hidden, monopolized, contested]}
+  state:
+    enum: [abundant, scarce, depleted, hidden, monopolized, contested]
+    x-states:
+      abundant: Plentiful; easily accessed; low scarcity pressure
+      scarce: Limited supply relative to demand; creates pressure
+      depleted: Nearly or fully exhausted; historical significance only
+      hidden: Not yet discovered or publicly known
+      monopolized: Single controller dominates all access
+      contested: Multiple parties fighting for control or access
   resource_type:
     enum: [ore, timber, food, fresh-water, stone, arcane, livestock, textiles, alchemical, labor,
       goods, other]
@@ -15,16 +26,22 @@ properties:
   location:
     description: Location or region links; may be empty while unplaced.
     $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['"[[Location or Region Name]]"']
   controlled_by:
     description: One controller (a link or a plain note), or a list of annotated links.
     anyOf:
       - {$ref: entity.schema.yaml#/$defs/text}
       - {$ref: entity.schema.yaml#/$defs/annotated-links}
+    x-placeholder: '"[[Faction or NPC Name]]"'
   trade_value: {enum: [negligible, low, moderate, high, priceless, varies]}
   accessibility: {enum: [open, restricted, hidden, monopolized, contested]}
   consumers:
     description: Annotated links, or a plain note for a group with no file.
     $ref: entity.schema.yaml#/$defs/text-list
-  depends_on: {$ref: entity.schema.yaml#/$defs/annotated-links}
+    x-placeholder: ['"[[Faction or Location Name]] (nature of dependency)"']
+  depends_on:
+    description: 'Sync rule: if A depends_on B, B should list A in consumers. Keep both ends updated.'
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Resource Name]] (what this resource requires to be produced or sustained)"']
   hook: {$ref: entity.schema.yaml#/$defs/text}
 unevaluatedProperties: false

@@ -37,32 +37,37 @@ which would collide with the PC file's wikilink. Never moves to `historian/`.
 
 ### Valid State Values
 
+<!-- generated: states from pc-arc.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `active` | The PC is playing; the PC arc steers planning |
 | `retired` | Finished, dropped, or the PC left. Kept for its Shifts log |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from pc-arc.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
-# --- MANDATORY ---
+# --- MANDATORY (entity base) ---
 name: "{PC} PC Arc"
 type: pc-arc
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: active | retired
 tags:
   - pc-arc
+
+# --- MANDATORY (pc-arc) ---
 pc: "[[PC Name]]"
-# session number last reviewed; /recap restamps every session
-arc_checked: 0
-# 1-2 hook strings, copied word for word from the PC's spotlight_hooks:
-next_step:
+arc_checked: 0          # Session number last reviewed; /recap restamps every session.
+next_step:              # 1-2 hook strings, copied word for word from the PC's spotlight_hooks.
   - ""
-# the logline, player-safe part only
-description: ""
+
+# --- OPTIONAL (entity base) ---
+description: ""         # The logline, player-safe part only.
 ---
 ```
+<!-- end generated -->
 
 ### Body
 

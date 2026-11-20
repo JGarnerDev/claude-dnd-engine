@@ -41,6 +41,7 @@ The machine-readable version is [`item.schema.yaml`](item.schema.yaml), shared w
 
 ### Valid State Values
 
+<!-- generated: states from item.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `intact` | In good condition, fully functional |
@@ -49,45 +50,47 @@ The machine-readable version is [`item.schema.yaml`](item.schema.yaml), shared w
 | `lost` | Location unknown |
 | `destroyed` | Gone beyond recovery |
 | `hidden` | Deliberately concealed |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from item.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: item
 subtype: mundane
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: intact | damaged | broken | lost | destroyed | hidden
 tags:
   - item/mundane
 
 # --- MANDATORY (mundane item) ---
-item_type: weapon | armor | tool | container | document | jewelry | trophy | heirloom | quest-item | other
 origin: ""
-significance: ""    # why this item matters narratively
+item_type: weapon | armor | tool | container | document | jewelry | trophy | heirloom | quest-item | other
+significance: ""        # Why this item matters narratively.
 
 # --- OPTIONAL (entity base) ---
-aliases:
-  - ""
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (mundane item) ---
-material: ""        # primary material (iron, wood, parchment, bone, etc.)
-appearance: ""      # brief physical description
-current_holder: [[Character or Location Name]]
-history: []         # significant past owners or events
+current_holder: "[[Character or Location Name]]"
+history: []             # Significant past owners or events involving this item.
+material: ""            # Primary material (iron, wood, parchment, bone, etc.)
+appearance: ""          # Brief physical description.
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

@@ -41,6 +41,7 @@ The machine-readable version is [`character.schema.yaml`](character.schema.yaml)
 
 ### Valid State Values
 
+<!-- generated: states from character.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `alive` | Living and active |
@@ -48,59 +49,63 @@ The machine-readable version is [`character.schema.yaml`](character.schema.yaml)
 | `missing` | Whereabouts unknown |
 | `imprisoned` | Captive or restrained |
 | `transformed` | Significantly altered — undead, polymorphed, etc. |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from character.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: character
 subtype: antagonist
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: alive | dead | missing | imprisoned | transformed
 tags:
   - character
   - character/antagonist
 
 # --- MANDATORY (antagonist) ---
-location: [[Location Name]]
+location: "[[Location Name]]"  # A link to a location, or a plain note such as "unknown" or "TBD".
 personality: ""
 livelihood: ""
 disposition: hostile
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (antagonist) ---
 background: ""
-race: ""
-class: ""
-level:                 # integer, 1-20
-pronouns: ""           # optional, e.g. "they/them"
+race: ""                # A link to a race entry, or a plain note.
+class: ""               # A link to a class entry, or a plain note (multiclass, subclass,
+                        # "Unknown").
+level:                  # Integer, 1-20.
+pronouns: ""            # E.g. "they/them".
 goals: []
-motives: []
 allies:
-  - [[Character or Faction Name]] (nature of relationship)
-family:
-  - [[Character Name]] (relation)
+  - "[[Character or Faction Name]] (nature of relationship)"
 enemies:
-  - [[Character or Faction Name]] (nature of conflict)
-character_sheet: ""    # path to sheet file, or inline summary
-human_detail: ""       # recommended for all antagonists: one comprehensible motive, mundane habit, or thing they protect
-voice: ""              # optional: core cadence and register in one line; see meta/voice.md
-voice_confirmed:       # optional: last played session the voice was checked at (stamp); set by /recap
+  - "[[Character or Faction Name]] (nature of conflict)"
+family:                 # Relatives, as annotated links or plain notes for people with no entry.
+  - "[[Character Name]] (relation)"
+character_sheet: ""     # Path to a sheet file, an external link, or an inline summary.
+motives: []
+voice: ""               # Core cadence and register in one line; see meta/voice.md.
+voice_confirmed:        # Last played session the voice was checked at (stamp); set by /recap.
+human_detail: ""        # One comprehensible motive, mundane habit, or thing they protect.
 ---
 ```
+<!-- end generated -->
 
 ### Body Template
 

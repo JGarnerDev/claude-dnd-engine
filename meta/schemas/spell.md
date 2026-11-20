@@ -47,44 +47,49 @@ The machine-readable version is [`spell.schema.yaml`](spell.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from spell.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `known` | Exists and accessible in this world |
 | `forbidden` | Exists but suppressed or banned in this setting |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from spell.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: spell
-exists: false
-state: known
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
+state: known | forbidden
 tags:
   - spell
-  - spell/evocation    # replace with actual school
+  - spell/evocation  # replace with actual school
 
 # --- MANDATORY (spell) ---
-level: 0            # 0 = cantrip; 1–9 for leveled spells
+level: 0                # 0 for a cantrip, 1-9 for leveled spells.
 school: abjuration | conjuration | divination | enchantment | evocation | illusion | necromancy | transmutation
-casting_time: ""    # "1 action" / "1 bonus action" / "1 reaction" / "1 minute" / etc.
-range: ""           # "60 feet" / "Self" / "Touch" / etc.
-components:
+casting_time: ""        # "1 action" / "1 bonus action" / "1 reaction" / "1 minute" / etc.
+range: ""               # "60 feet" / "Self" / "Touch" / etc.
+components:             # - M.
   - V
   - S
-  # - M
-duration: ""        # "Instantaneous" / "1 minute" / "Concentration, up to 1 minute" / etc.
+duration: ""            # "Instantaneous" / "1 minute" / "Concentration, up to 1 minute" / etc.
 concentration: false
 effect: ""
 
+# --- OPTIONAL (entity base) ---
+description: ""
+aliases: []             # Other names or titles this is known by.
+
 # --- OPTIONAL (spell) ---
 material_component: ""
-available_to: []
-description: ""
-aliases: []
+available_to: []        # Classes (and feats such as Ritual Caster) that grant the spell.
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

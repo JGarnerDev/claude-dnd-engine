@@ -2,12 +2,22 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: deity
 type: object
+x-doc:
+  tags: [deity, 'deity/war  # add one per domain — e.g. deity/war, deity/death, deity/trickery']
 required: [state, tier, domains, moral_character, worshippers, wants]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: deity}
-  state: {enum: [active, dormant, diminished, dead, imprisoned, ascended]}
+  state:
+    enum: [active, dormant, diminished, dead, imprisoned, ascended]
+    x-states:
+      active: Present and responsive to worship
+      dormant: Exists but silent or unreachable
+      diminished: Weakened — fewer followers, less power
+      dead: Slain; may still have effects on the world
+      imprisoned: Bound by another force
+      ascended: Recently became divine
   tier:
     description: Divine rank; "unknown" while the table has not fixed it.
     enum: [greater, intermediate, lesser, demigod, unknown]
@@ -18,12 +28,15 @@ properties:
   worshippers:
     description: Faction or culture links; may be empty.
     $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['"[[Faction or Culture Name]]"']
   wants: {$ref: entity.schema.yaml#/$defs/text}
   symbol: {$ref: entity.schema.yaml#/$defs/text}
   holy_day: {$ref: entity.schema.yaml#/$defs/text}
   sacred_practices: {$ref: entity.schema.yaml#/$defs/text-list}
   myths: {$ref: entity.schema.yaml#/$defs/text-list}
-  divine_conflicts: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  divine_conflicts:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Deity Name]] (nature of conflict)"']
   voice:
     description: Core cadence and register in one line, for deities that speak at the table; see meta/voice.md.
     $ref: entity.schema.yaml#/$defs/text

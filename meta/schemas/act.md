@@ -40,6 +40,7 @@ Moves to `historian/acts/{name}.md` when completed.
 
 ### Valid State Values
 
+<!-- generated: states from act.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `draft` | Being written, not ready to run |
@@ -47,43 +48,50 @@ Moves to `historian/acts/{name}.md` when completed.
 | `active` | Currently being played through |
 | `completed` | All missions resolved, act concluded |
 | `abandoned` | Dropped from the story |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from act.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
-# --- MANDATORY ---
+# --- MANDATORY (entity base) ---
 name: ""
 type: act
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: draft | planned | active | completed | abandoned
 tags:
   - act/
   - campaign/
 
-campaign: [[Campaign Name]]
+# --- MANDATORY (act) ---
 central_conflict: ""
 goal: ""
-opening_state: ""        # what is true at the start of this act
-closing_state: ""        # what is true when this act ends
+opening_state: ""       # What is true at the start of this act.
+closing_state: ""       # What is true when this act ends.
 
-# Optional fields:
-missions:
-  - [[Mission Name]]
-themes: []
-estimated_sessions:
+# --- OPTIONAL (entity base) ---
+campaign: strahd | homebrew  # The campaign this belongs to; acts and the party link the campaign
+                             # entry.
 relates_to:
-  - [[Entity Name]] (relationship)
-importance: critical
-active: true
-last_updated: [[Session NN - Title]]
+  - "[[Entity Name]] (relationship)"
+importance: critical | major | minor | background
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 description: ""
 
+# --- OPTIONAL (act) ---
+missions:
+  - "[[Mission Name]]"
+themes: []
+estimated_sessions:
+
 # --- HISTORIAN ONLY (mandatory when moved) ---
-# outcome: ""            # what actually happened; win, loss, or something in between
-# sessions_played:       # actual number of sessions
+# outcome: ""             # What actually happened; win, loss, or something in between.
+# sessions_played:        # Actual number of sessions.
 ---
 ```
+<!-- end generated -->
 
 ### Notes
 

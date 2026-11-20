@@ -2,16 +2,32 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: pc-arc
 type: object
+x-doc:
+  tags: [pc-arc]
+  base: [description]
+  fields:
+    name: {x-placeholder: '"{PC} PC Arc"'}
+    description: {description: 'The logline, player-safe part only.'}
 required: [state, pc, arc_checked, next_step]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: pc-arc}
-  state: {enum: [active, retired]}
-  pc: {$ref: entity.schema.yaml#/$defs/link}
+  state:
+    enum: [active, retired]
+    x-states:
+      active: The PC is playing; the PC arc steers planning
+      retired: Finished, dropped, or the PC left. Kept for its Shifts log
+  pc:
+    $ref: entity.schema.yaml#/$defs/link
+    x-placeholder: '"[[PC Name]]"'
   arc_checked:
-    description: Session number the PC arc was last checked against.
+    description: Session number last reviewed; /recap restamps every session.
     type: integer
     minimum: 0
-  next_step: {$ref: entity.schema.yaml#/$defs/text-list}
+    x-placeholder: '0'
+  next_step:
+    description: 1-2 hook strings, copied word for word from the PC's spotlight_hooks.
+    $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['""']
 unevaluatedProperties: false

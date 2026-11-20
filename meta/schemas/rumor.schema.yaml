@@ -2,20 +2,41 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: rumor
 type: object
+x-doc:
+  tags: [rumor/, region/]
+  base: [importance, active, last_updated, relates_to, known_by, description]
+  fields:
+    name: {description: 'A short slug name for the rumor, e.g. "dead-king-lives".'}
 required: [state, content, truth, circulating_in]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: rumor}
-  state: {enum: [spreading, believed, doubted, debunked, confirmed, forgotten]}
-  content: {$ref: entity.schema.yaml#/$defs/text}
+  state:
+    enum: [spreading, believed, doubted, debunked, confirmed, forgotten]
+    x-states:
+      spreading: Actively circulating
+      believed: Widely accepted as true
+      doubted: Circulating but met with skepticism
+      debunked: Proven false, fading
+      confirmed: Proven true in play
+      forgotten: No longer circulating
+  content:
+    description: The rumor text as it would be heard in the world.
+    $ref: entity.schema.yaml#/$defs/text
   truth:
     anyOf:
       - {type: boolean}
       - {enum: [partial, unknown]}
-  circulating_in: {$ref: entity.schema.yaml#/$defs/annotated-links}
+    x-placeholder: true | false | partial | unknown
+  circulating_in:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Location or Faction Name]]"']
   source:
     description: A link, or "unknown".
     $ref: entity.schema.yaml#/$defs/text
-  truth_detail: {$ref: entity.schema.yaml#/$defs/text}
+    x-placeholder: '"[[Entity Name]]"'
+  truth_detail:
+    description: The real story, if different from the rumor — DM eyes only.
+    $ref: entity.schema.yaml#/$defs/text
 unevaluatedProperties: false

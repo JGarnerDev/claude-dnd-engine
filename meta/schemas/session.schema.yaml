@@ -3,6 +3,22 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: session
 type: object
+x-doc:
+  historian:
+    - played_date
+    - in_world_end_date
+    - in_world_end_time
+    - table_notes
+    - recap
+    - entities_canonized
+    - new_entities
+    - cliffhanger
+    - beats
+    - pcs_present
+    - choices
+    - deck_weight
+  tags: [session/, act/, mission/]
+  base: [relates_to, importance, active, description]
 required: [state, session_number, mission]
 $defs:
   text: {$ref: entity.schema.yaml#/$defs/text}
@@ -16,28 +32,51 @@ allOf:
       required: [played_date, recap, in_world_end_date]
 properties:
   type: {const: session}
-  state: {enum: [draft, planned, completed, skipped]}
+  state:
+    enum: [draft, planned, completed, skipped]
+    x-states:
+      draft: Being planned, not finalized
+      planned: Finalized and ready to run
+      completed: Played — file should be moved to historian
+      skipped: Scheduled but not played
   session_number: {type: integer, minimum: 0}
   mission:
     description: Mission link, an act placeholder link, or `none` for a transition session.
     $ref: '#/$defs/text'
-  act: {$ref: '#/$defs/text'}
-  party: {$ref: '#/$defs/text'}
+    x-placeholder: '"[[Mission Name]]"'
+  act:
+    $ref: '#/$defs/text'
+    x-placeholder: '"[[Act Name]]"'
+  party:
+    $ref: '#/$defs/text'
+    x-placeholder: '"[[Party Name]]"'
   planned_date:
     description: Real-world date the session is planned for, or "TBD".
     $ref: '#/$defs/text'
   difficulty_attrition:
     description: Attrition tier (meta/difficulty.md); missing means the file's default.
     enum: [light, standard, grinding]
+    x-placeholder: standard
   difficulty_lethality:
     description: Lethality tier (meta/difficulty.md); missing means the file's default.
     enum: [soft, standard, dangerous, lethal]
-  depth: {enum: [narrated, notes]}
-  scope: {enum: [inline, linked]}
-  locations: {$ref: '#/$defs/links'}
+    x-placeholder: standard
+  depth:
+    description: Narrated | notes.
+    enum: [narrated, notes]
+    x-placeholder: narrated
+  scope:
+    description: Inline | linked.
+    enum: [inline, linked]
+    x-placeholder: inline
+  locations:
+    description: Links to historian/locations/ or data/locations/ entities only — not factions.
+    $ref: '#/$defs/links'
+    x-placeholder: ['"[[Location Name]]"']
   key_npcs:
     description: Annotated links, or a plain note for an NPC with no file.
     $ref: '#/$defs/text-list'
+    x-placeholder: ['"[[NPC Name]] (role)"']
   encounters: {$ref: '#/$defs/text-list'}
   loose_threads: {$ref: '#/$defs/text-list'}
   opening_scene: {$ref: '#/$defs/text'}
@@ -54,17 +93,43 @@ properties:
     description: HH:MM the session ended in-world (homebrew; drives the recap sky slide).
     type: string
     pattern: '^\d{2}:\d{2}$'
-  recap: {$ref: '#/$defs/text'}
-  entities_canonized: {$ref: '#/$defs/links'}
+  recap:
+    description: What actually happened — may differ from the plan.
+    $ref: '#/$defs/text'
+  entities_canonized:
+    description: Data/ entities that became real this session.
+    $ref: '#/$defs/links'
+    x-placeholder: ['"[[Entity Name]]"']
   new_entities:
     description: Annotated links, or a plain note for something kept as narration only.
     $ref: '#/$defs/text-list'
-  cliffhanger: {$ref: '#/$defs/text'}
-  table_notes: {$ref: '#/$defs/text'}
+    x-placeholder: ['"[[Entity Name]]"']
+  cliffhanger:
+    description: What the party is left with going into next session.
+    $ref: '#/$defs/text'
+  table_notes:
+    description: DM-facing remarks; never shown to players.
+    $ref: '#/$defs/text'
   beats:
     description: Spotlight ledger, one line per beat (session.md, Spotlight Beats).
     $ref: '#/$defs/text-list'
-  pcs_present: {$ref: '#/$defs/text-list'}
-  choices: {$ref: '#/$defs/text-list'}
-  deck_weight: {enum: [light, medium, heavy]}
+    x-placeholder:
+      - '"spotlight(PC Name): beat"'
+      - '"shared(PC One,PC Two): arc"'
+      - '"party-centric: touch"'
+      - '"world: touch"'
+  pcs_present:
+    description: PCs at the table this session — drives present-only rotation.
+    $ref: '#/$defs/text-list'
+    x-placeholder: ['"PC Name"']
+  choices:
+    description: Decisions the world should remember (meta/player-agency.md)
+    $ref: '#/$defs/text-list'
+    x-placeholder:
+      - '"party: what they chose → what it set in motion"'
+      - '"PC Name: what they chose → what it set in motion"'
+  deck_weight:
+    description: Light | medium | heavy — recap deck size (meta/recap-slides.md → Deck weight); homebrew, written by /recap Phase 8; missing = heavy.
+    enum: [light, medium, heavy]
+    x-placeholder: light
 unevaluatedProperties: false

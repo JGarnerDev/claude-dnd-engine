@@ -2,13 +2,23 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 title: skill
 type: object
+x-doc:
+  tags: [skill]
+  base: [description]
 required: [state, ability, use_cases]
 allOf:
   - $ref: entity.schema.yaml
 properties:
   type: {const: skill}
-  state: {enum: [available]}
-  ability: {enum: [STR, DEX, CON, INT, WIS, CHA]}
-  source: {$ref: entity.schema.yaml#/$defs/text}
-  use_cases: {$ref: entity.schema.yaml#/$defs/text-list}
+  state:
+    enum: [available]
+    x-states:
+      available: Legal in this campaign
+  ability:
+    enum: [STR, DEX, CON, INT, WIS, CHA]
+  source:
+    $ref: entity.schema.yaml#/$defs/text
+    x-placeholder: PHB
+  use_cases:
+    $ref: entity.schema.yaml#/$defs/text-list
 unevaluatedProperties: false

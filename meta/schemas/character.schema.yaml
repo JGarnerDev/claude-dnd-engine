@@ -17,9 +17,16 @@ $defs:
     properties:
       state:
         enum: [alive, dead, missing, imprisoned, transformed]
+        x-states:
+          alive: Living and active
+          dead: Deceased
+          missing: Whereabouts unknown
+          imprisoned: Captive or restrained
+          transformed: Significantly altered — undead, polymorphed, etc.
       location:
         description: A link to a location, or a plain note such as "unknown" or "TBD".
         $ref: entity.schema.yaml#/$defs/text
+        x-placeholder: '"[[Location Name]]"'
       personality: {$ref: entity.schema.yaml#/$defs/text}
       livelihood: {$ref: entity.schema.yaml#/$defs/text}
       disposition:
@@ -28,7 +35,9 @@ $defs:
       voice:
         description: Core cadence and register in one line; see meta/voice.md.
         $ref: entity.schema.yaml#/$defs/text
-      voice_confirmed: {$ref: '#/$defs/session-stamp'}
+      voice_confirmed:
+        description: Last played session the voice was checked at (stamp); set by /recap.
+        $ref: '#/$defs/session-stamp'
       human_detail:
         description: One comprehensible motive, mundane habit, or thing they protect.
         $ref: entity.schema.yaml#/$defs/text
@@ -43,6 +52,9 @@ allOf:
   - if:
       properties: {subtype: {const: npc}}
     then:
+      x-doc:
+        tags: [character, character/npc]
+        base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
       $ref: '#/$defs/npc-like'
       properties:
         charm_hook:
@@ -51,10 +63,17 @@ allOf:
         sells:
           description: Goods or services this NPC trades in, as links or plain notes.
           $ref: entity.schema.yaml#/$defs/text-list
-        affinity: {$ref: '#/$defs/affinity'}
+          x-placeholder: ['"[[Resource or Good Name]]"']
+        affinity:
+          description: Per-target liking, integer -10..+10; see meta/affinity.md. Subject->target; absence = neutral (0)
+          $ref: '#/$defs/affinity'
+          x-placeholder: ['"[[Player Character Name]] (n)"']
   - if:
       properties: {subtype: {const: antagonist}}
     then:
+      x-doc:
+        tags: [character, character/antagonist]
+        base: [aliases, importance, active, last_updated, relates_to, known_by, owner, description]
       $ref: '#/$defs/npc-like'
       required: [disposition]
       properties:
@@ -62,22 +81,43 @@ allOf:
   - if:
       properties: {subtype: {const: pc}}
     then:
+      x-doc:
+        tags: [character, character/pc, 'player/  # player/jeff, player/ben, etc.']
       required: [player, race, class, level]
       properties:
         state:
           enum: [active, dead, retired, missing, transformed, away]
+          x-states:
+            active: Currently playing
+            dead: Deceased
+            retired: Out of active play by choice
+            missing: Whereabouts unknown in-world
+            transformed: Significantly altered — undead, polymorphed, etc.
+            away: Out of the story for a stretch and coming back, usually while their player DMs (Dip on pilgrimage during Ben's run). The body says where and why in one line. Briefs and spotlight skip them; their PC arc pauses (`meta/dm-rotation.md`)
         tags:
           contains: {pattern: '^player/'}
-        player: {$ref: entity.schema.yaml#/$defs/link}
-        homeland: {$ref: entity.schema.yaml#/$defs/link}
+        player:
+          description: Links to meta/players/{name}.md.
+          $ref: entity.schema.yaml#/$defs/link
+          x-placeholder: '"[[meta/players/player-name]]"'
+        homeland:
+          $ref: entity.schema.yaml#/$defs/link
+          x-placeholder: '"[[Location Name]]"'
         motivation: {$ref: entity.schema.yaml#/$defs/text}
         secrets: {$ref: entity.schema.yaml#/$defs/text-list}
-        affinity: {$ref: '#/$defs/affinity'}
-        level_confirmed: {$ref: '#/$defs/session-stamp'}
+        affinity:
+          description: Per-target liking, integer -10..+10; see meta/affinity.md. Subject->target; absence = neutral (0)
+          $ref: '#/$defs/affinity'
+          x-placeholder: ['"[[Character Name]] (n)"']
+        level_confirmed:
+          description: Last played session the level was checked at (stamp); see scripts/party-status.py.
+          $ref: '#/$defs/session-stamp'
         spotlight:
           description: low = tactics-first player, never flagged overdue (meta/character-focus.md).
           enum: [normal, low]
+          x-placeholder: normal
         spotlight_hooks:
+          description: Queryable backstory, values and goal material that /session surfaces; each hook is a one-line story hook (a fear, wound, goal, unresolved thread).
           type: array
           items:
             type: object
@@ -86,6 +126,7 @@ allOf:
             properties:
               hook: {$ref: entity.schema.yaml#/$defs/text}
               status: {enum: [open, seeded, paid]}
+          x-placeholder: ["hook: \"\"\nstatus: open | seeded | paid"]
 properties:
   type: {const: character}
   subtype:
@@ -98,16 +139,24 @@ properties:
     description: A link to a class entry, or a plain note (multiclass, subclass, "Unknown").
     $ref: entity.schema.yaml#/$defs/text
   level:
+    description: Integer, 1-20.
     type: integer
     minimum: 1
     maximum: 20
-  pronouns: {$ref: entity.schema.yaml#/$defs/text}
+  pronouns:
+    description: E.g. "they/them".
+    $ref: entity.schema.yaml#/$defs/text
   goals: {$ref: entity.schema.yaml#/$defs/text-list}
-  allies: {$ref: entity.schema.yaml#/$defs/annotated-links}
-  enemies: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  allies:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Character or Faction Name]] (nature of relationship)"']
+  enemies:
+    $ref: entity.schema.yaml#/$defs/annotated-links
+    x-placeholder: ['"[[Character or Faction Name]] (nature of conflict)"']
   family:
     description: Relatives, as annotated links or plain notes for people with no entry.
     $ref: entity.schema.yaml#/$defs/text-list
+    x-placeholder: ['"[[Character Name]] (relation)"']
   character_sheet:
     description: Path to a sheet file, an external link, or an inline summary.
     $ref: entity.schema.yaml#/$defs/text

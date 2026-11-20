@@ -54,6 +54,7 @@ The machine-readable version is [`route.schema.yaml`](route.schema.yaml).
 
 ### Valid State Values
 
+<!-- generated: states from route.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `active` | Operating normally |
@@ -61,42 +62,44 @@ The machine-readable version is [`route.schema.yaml`](route.schema.yaml).
 | `contested` | Multiple factions fighting for control |
 | `abandoned` | No longer in regular use |
 | `unknown` | Exists but current status unconfirmed by party |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from route.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
 # --- MANDATORY (entity base) ---
 name: ""
 type: route
 subtype: trade | pilgrimage | military | highway | trail
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: active | disrupted | contested | abandoned | unknown
 tags:
-  - route/         # e.g. route/trade, route/military
+  - route/  # e.g. route/trade, route/military
   - region/
 
 # --- MANDATORY (route) ---
-origin: [[Location Name]]
-destination: [[Location Name]]
+origin: "[[Location Name]]"  # A location link, or "TBD".
+destination: "[[Location Name]]"  # A location link, or "TBD".
 medium: land | sea | air | river
 
 # --- OPTIONAL (entity base) ---
-aliases: []
+aliases: []             # Other names or titles this is known by.
 importance: critical | major | minor | background
-active: true | false
-last_updated: [[Session NN - Title]]
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
 relates_to:
-  - [[Entity Name]] (relationship)
+  - "[[Entity Name]] (relationship)"
 known_by:
-  - [[Character Name]] (partial | full)
-owner: [[Player Character Name]]
+  - "[[Character Name]] (partial | full)"
+owner: "[[Player Character Name]]"
 description: ""
 
 # --- OPTIONAL (route) ---
 waypoints:
-  - [[Location Name]]
-controlling_faction: [[Faction Name]]
+  - "[[Location Name]]"
+controlling_faction: "[[Faction Name]]"  # A faction link, or "unknown".
 primary_goods: []
 travelers: []
 hazards: []
@@ -105,6 +108,7 @@ distance: ""
 travel_time: ""
 ---
 ```
+<!-- end generated -->
 
 ### Form → Frontmatter Mapping
 

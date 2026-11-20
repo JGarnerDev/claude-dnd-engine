@@ -30,6 +30,7 @@ properties:
   name: {$ref: '#/$defs/text'}
   type: {$ref: '#/$defs/text'}
   exists:
+    x-placeholder: 'false'
     description: true = real/canon in the world; false = homebrew draft not yet canonized.
     type: boolean
   state:
@@ -43,6 +44,7 @@ properties:
   # --- optional ---
   subtype: {$ref: '#/$defs/text'}
   aliases:
+    description: Other names or titles this is known by.
     type: array
     items: {$ref: '#/$defs/text'}
   importance:
@@ -50,11 +52,21 @@ properties:
   active:
     description: Currently in play; false = retired or dormant, importance unchanged.
     type: boolean
-  last_updated: {$ref: '#/$defs/link'}
-  relates_to: {$ref: '#/$defs/annotated-links'}
-  resources: {$ref: '#/$defs/annotated-links'}
-  known_by: {$ref: '#/$defs/annotated-links'}
-  owner: {$ref: '#/$defs/link'}
+  last_updated:
+    $ref: '#/$defs/link'
+    x-placeholder: '"[[Session NN - Title]]"'
+  relates_to:
+    $ref: '#/$defs/annotated-links'
+    x-placeholder: ['"[[Entity Name]] (relationship)"']
+  resources:
+    $ref: '#/$defs/annotated-links'
+    x-placeholder: ['"[[Resource Name]]"']
+  known_by:
+    $ref: '#/$defs/annotated-links'
+    x-placeholder: ['"[[Character Name]] (partial | full)"']
+  owner:
+    $ref: '#/$defs/link'
+    x-placeholder: '"[[Player Character Name]]"'
   contributed_by:
     description: Real-world player who created or submitted this entity.
     enum: [paul, ben, miguel, jeff, kellan, macleod, party, pending]

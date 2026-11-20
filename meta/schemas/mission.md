@@ -44,6 +44,7 @@ Moves to `historian/missions/{name}.md` when resolved.
 
 ### Valid State Values
 
+<!-- generated: states from mission.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 | State | Meaning |
 |---|---|
 | `draft` | Being written, not ready to run |
@@ -53,49 +54,55 @@ Moves to `historian/missions/{name}.md` when resolved.
 | `completed` | Resolved successfully |
 | `failed` | Resolved with failure — consequences applied |
 | `abandoned` | Dropped from the story |
+<!-- end generated -->
 
 ### Frontmatter Template
 
+<!-- generated: template from mission.schema.yaml by scripts/gen-schema-docs.py; edit the schema, not this block -->
 ```yaml
 ---
-# --- MANDATORY ---
+# --- MANDATORY (entity base) ---
 name: ""
 type: mission
-exists: false
+exists: false           # true = real/canon in the world; false = homebrew draft not yet canonized.
 state: draft | planned | active | on-hiatus | completed | failed | abandoned
 tags:
   - mission/
   - act/
 
-act: [[Act Name]]
+# --- MANDATORY (mission) ---
+act: "[[Act Name]]"
 objective: ""
 hook: ""
 
-# Optional fields:
+# --- OPTIONAL (entity base) ---
+relates_to:
+  - "[[Entity Name]] (relationship)"
+importance: critical | major | minor | background
+active: true | false    # Currently in play; false = retired or dormant, importance unchanged.
+last_updated: "[[Session NN - Title]]"
+description: ""
+
+# --- OPTIONAL (mission) ---
 sessions:
-  - [[Session NN - Title]]
+  - "[[Session NN - Title]]"
 locations:
-  - [[Location Name]]
+  - "[[Location Name]]"
 key_npcs:
-  - [[NPC Name]] (role)
+  - "[[NPC Name]] (role)"
 obstacles: []
 success_consequences: ""
 failure_consequences: ""
 reward: ""
-relates_to:
-  - [[Entity Name]] (relationship)
-importance: major
-active: true
-last_updated: [[Session NN - Title]]
-description: ""
 
 # --- HISTORIAN ONLY (mandatory when moved) ---
 # outcome: completed | failed
-# outcome_detail: ""     # what actually happened
+# outcome_detail: ""      # What actually happened.
 # sessions_played:
-#   - [[Session NN - Title]]
+#   - "[[Session NN - Title]]"
 ---
 ```
+<!-- end generated -->
 
 ### Notes
 
