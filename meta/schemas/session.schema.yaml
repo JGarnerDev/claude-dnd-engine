@@ -1,0 +1,70 @@
+# session.schema.yaml -- type: session (prose: session.md; written by /session, closed by /recap).
+# Extends entity.schema.yaml. A completed session also needs the historian fields /recap writes.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: session
+type: object
+required: [state, session_number, mission]
+$defs:
+  text: {$ref: entity.schema.yaml#/$defs/text}
+  text-list: {$ref: entity.schema.yaml#/$defs/text-list}
+  links: {$ref: entity.schema.yaml#/$defs/annotated-links}
+allOf:
+  - $ref: entity.schema.yaml
+  - if:
+      properties: {state: {const: completed}}
+    then:
+      required: [played_date, recap, in_world_end_date]
+properties:
+  type: {const: session}
+  state: {enum: [draft, planned, completed, skipped]}
+  session_number: {type: integer, minimum: 0}
+  mission:
+    description: Mission link, an act placeholder link, or `none` for a transition session.
+    $ref: '#/$defs/text'
+  act: {$ref: '#/$defs/text'}
+  party: {$ref: '#/$defs/text'}
+  planned_date:
+    description: Real-world date the session is planned for, or "TBD".
+    $ref: '#/$defs/text'
+  difficulty_attrition:
+    description: Attrition tier (meta/difficulty.md); missing means the file's default.
+    enum: [light, standard, grinding]
+  difficulty_lethality:
+    description: Lethality tier (meta/difficulty.md); missing means the file's default.
+    enum: [soft, standard, dangerous, lethal]
+  depth: {enum: [narrated, notes]}
+  scope: {enum: [inline, linked]}
+  locations: {$ref: '#/$defs/links'}
+  key_npcs:
+    description: Annotated links, or a plain note for an NPC with no file.
+    $ref: '#/$defs/text-list'
+  encounters: {$ref: '#/$defs/text-list'}
+  loose_threads: {$ref: '#/$defs/text-list'}
+  opening_scene: {$ref: '#/$defs/text'}
+  closing_hook: {$ref: '#/$defs/text'}
+  played_date:
+    description: Real-world date the session was played.
+    type: string
+    pattern: '^\d{4}-\d{2}-\d{2}$'
+  in_world_end_date:
+    description: In-world date the session ended, YYYY[-MM[-DD]] (meta/events.md).
+    type: string
+    pattern: '^-?\d+(-\d{1,2}(-\d{1,2})?)?$'
+  in_world_end_time:
+    description: HH:MM the session ended in-world (homebrew; drives the recap sky slide).
+    type: string
+    pattern: '^\d{2}:\d{2}$'
+  recap: {$ref: '#/$defs/text'}
+  entities_canonized: {$ref: '#/$defs/links'}
+  new_entities:
+    description: Annotated links, or a plain note for something kept as narration only.
+    $ref: '#/$defs/text-list'
+  cliffhanger: {$ref: '#/$defs/text'}
+  table_notes: {$ref: '#/$defs/text'}
+  beats:
+    description: Spotlight ledger, one line per beat (session.md, Spotlight Beats).
+    $ref: '#/$defs/text-list'
+  pcs_present: {$ref: '#/$defs/text-list'}
+  choices: {$ref: '#/$defs/text-list'}
+  deck_weight: {enum: [light, medium, heavy]}
+unevaluatedProperties: false

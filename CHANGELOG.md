@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.85.0] — 2026-11-20
+
+- `meta/schemas/session.schema.yaml`: the session schema. Mandatory: `state`, `session_number`, `mission`; a `completed` session also needs `played_date`, `recap` and `in_world_end_date`. Dates are checked: `played_date` YYYY-MM-DD, `in_world_end_date` YYYY[-MM[-DD]], `in_world_end_time` HH:MM. Difficulty tiers, `depth`, `scope` and `deck_weight` are enums.
+- `key_npcs` and `new_entities` accept plain notes beside links, for NPCs and things kept as narration only. `session.md` now lists `act`, `party`, the difficulty tiers, `depth`, `scope`, `in_world_end_date`, `in_world_end_time` and `table_notes`, and links the YAML schema.
+- Content: removed `planned_date: null` from Sessions 11â€“14.
+
 ## [0.84.0] — 2026-11-20
 
 - `meta/schemas/deity.schema.yaml`: the deity schema. Mandatory: `state`, `tier`, `domains`, `moral_character`, `worshippers` (may be empty), `wants`.

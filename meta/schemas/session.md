@@ -33,6 +33,8 @@ A session is a single play session — typically three to four hours. The sessio
 
 ## Schema
 
+The machine-readable version is [`session.schema.yaml`](session.schema.yaml).
+
 ### Canonical Paths
 
 Filenames use the exact display name, matching `name:` per `entity.md` (e.g. `Session 13 Dream Pastries.md`).
@@ -98,13 +100,22 @@ relates_to:
 importance: major
 active: true
 description: ""
+act: [[Act Name]]
+party: [[Party Name]]
+difficulty_attrition: standard   # light | standard | grinding (meta/difficulty.md); missing = default
+difficulty_lethality: standard   # soft | standard | dangerous | lethal
+depth: narrated                  # narrated | notes
+scope: inline                    # inline | linked
 
 # --- HISTORIAN ONLY (mandatory when moved) ---
-# played_date: ""
+# played_date: ""          # YYYY-MM-DD
+# in_world_end_date: ""    # YYYY[-MM[-DD]] in-world date the session ended (meta/events.md)
+# in_world_end_time: ""    # HH:MM, homebrew only (recap sky slide)
+# table_notes: ""          # DM-facing remarks; never shown to players
 # recap: ""              # what actually happened — may differ from the plan
 # entities_canonized:    # data/ entities that became real this session
 #   - [[Entity Name]]
-# new_entities:          # net-new entities created during play
+# new_entities:          # net-new entities created during play (a plain note for narration-only ones)
 #   - [[Entity Name]]
 # cliffhanger: ""        # what the party is left with going into next session
 # beats:                 # spotlight ledger — one line per beat (see Spotlight Beats below)

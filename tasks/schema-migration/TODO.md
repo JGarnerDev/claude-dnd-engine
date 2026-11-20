@@ -4,9 +4,9 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-18):** steps 1–5 done (engine v0.73.0). Every entity file's frontmatter is strict YAML with quoted links, and `get_frontmatter` reads it with a YAML parser.
 
-**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0).
+**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0).
 
-**Next:** the `session` schema.
+**Next:** the `item` schema.
 
 ## Resuming in a new session
 
@@ -45,9 +45,10 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
   - [x] character (pc, npc, antagonist): `meta/schemas/character.schema.yaml` (v0.80.0), enforced. One file covers the three subtypes with an if/then branch each (states, mandatory fields, subtype-only fields). `location`, `race` and `class` stay free text, since many are plain notes ("unknown", "Wood elf"); `family` and `sells` allow plain notes too. `campaign` (in 15 types) went into the entity base. Fixed: Madame Eva `ambiguous` → `neutral`, Kranken Hammershaft's stray `awareness` removed
   - [x] location (each subtype): `meta/schemas/location.schema.yaml` (v0.81.0), enforced. One branch per subtype. Place fields stay free text ("Various", "None — …"); `controlling_faction` may be a list. Added `lair` (building purpose), `mediterranean` (region biome), `hook` on region, `controlling_faction` on city. Fixed 21 files with off-schema states, enums or stray fields (see CHANGELOG 0.81.0)
   - [x] faction: `meta/schemas/faction.schema.yaml` (v0.82.0), enforced. `allies` and `opposition` take plain notes as well as links. Added `family` to `purpose`, plus `members` and `hook`. Fixed: two stray `subtype` fields removed (The Hamlet Raiders, The Sage Enclave); a House Tomsen motive with an unquoted colon parsed as a mapping, now quoted
-  - [x] event: `meta/schemas/event.schema.yaml` (v0.83.0), enforced. done (v0.83.0)
-  - [x] deity: `meta/schemas/deity.schema.yaml` (v0.84.0), enforced. done (v0.84.0)
-  - [ ] other campaign types (session, act, campaign, culture, item, resource, route, rumor, mission, party, player, pc-arc, creature, skill)
+  - [x] event: `meta/schemas/event.schema.yaml` (v0.83.0), enforced. `timeline_date` takes `YYYY[-MM[-DD]]` (year-only dates are valid). Added `local` and `party` to `awareness`. Fixed: four empty `track: ""` removed
+  - [x] deity: `meta/schemas/deity.schema.yaml` (v0.84.0), enforced. Added `unknown` to `tier` (two `TBD` tiers set to it); `voice` and `voice_confirmed` allowed for deities that speak at the table
+  - [x] session: `meta/schemas/session.schema.yaml` (v0.85.0), enforced. A `completed` session also needs `played_date`, `recap` and `in_world_end_date`; dates are pattern-checked. `key_npcs` and `new_entities` take plain notes for things with no file. Documented `act`, `party`, the difficulty tiers, `depth`, `scope`, `in_world_end_time` and `table_notes` in `session.md`. Fixed: four `planned_date: null` removed
+  - [ ] other campaign types (act, campaign, culture, item, resource, route, rumor, mission, party, player, pc-arc, creature, skill)
   - [ ] reference catalogs (monster, spell, feat, race, class, background)
 - [ ] 7. `scripts/gen-schema-docs.py` generates `meta/schemas/*.md`; check that generated files are up to date
 - [ ] 8. Rules and docs updated (quote frontmatter links; edit schemas, not the generated docs), template synced with `/sync`, collaborators told, `tasks/schema-migration/scripts/` deleted

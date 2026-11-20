@@ -7,7 +7,6 @@ state: completed
 session_number: 11
 in_world_end_date: "0735-10-30"
 mission: "[[Act 1 - Placeholder]]"
-planned_date: null
 played_date: "2026-05-19"
 locations:
   - "[[Barovia Village]]"
