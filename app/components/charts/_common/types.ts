@@ -2,8 +2,6 @@
 // so importers use `import type`. The render JSON contract (TimelineData) is the
 // shape scripts/timeline-data.py emits and the charts consume.
 
-import type { DensityBar, Side } from 'jeff-ui/charts';
-
 export interface Month {
   name: string;
   days: number;
@@ -20,8 +18,8 @@ export interface DateParts {
   day: number;
 }
 
-// One plotted beat. track/major/minor/source are optional in the raw data;
-// computeLayout resolves track to a concrete string on its output items.
+// One plotted beat. track/major/minor/source are optional in the raw data
+// (items.ts reads a missing track as 'world').
 // keywords are extra search terms (related-entity names from the source's
 // relates_to/participants) so a beat is findable by a name not in its label.
 export interface TimelineEvent {
@@ -37,7 +35,7 @@ export interface TimelineEvent {
   secret?: boolean; // DM-only beat: only the DM viewpoint shows it; characters never do
   draft?: boolean; // canon-pending (exists:false): rendered distinct (dashed/translucent); -Full exports only
   knownBy?: string[]; // character names who know this beat (drives the per-character "Known by" viewpoint)
-  session?: boolean; // a play session: the world view draws it as a time-range band (date = its end), not an on-axis dot. The swimlane ignores this and treats it as a normal beat.
+  session?: boolean; // a play session: both views draw it as a time-range span (date = its end; a band in the world view, a column in the swimlane), not a dot.
   campaign?: string; // campaign slug (e.g. 'strahd'); absent = agnostic (shows under every campaign). Drives pages/home's campaign selector.
   sessionNumber?: number; // play order of a session beat; syncs the worlds' calendars at each campaign swap (segments.ts)
 }
@@ -113,20 +111,6 @@ export interface BreakMark {
   label: string;
 }
 
-export type Weight = 'is-major' | 'is-minor' | 'is-normal';
-
-// A laid-out beat: the event plus its computed geometry.
-export interface LayoutItem extends TimelineEvent {
-  x: number;
-  side: Side;
-  offset: number;
-  shift: number; // px the label box slides right off the dot (leader spans it); 0 = centered
-  weight: Weight;
-  track: string; // resolved (defaults to 'world')
-  text: string;
-  showLabel: boolean; // density-gated: false => bare on-axis dot (hover still shows text)
-}
-
 export interface Tick {
   label: string;
   x: number;
@@ -143,20 +127,6 @@ export interface SessionBand {
   label: string;
   major: boolean;
   source?: string;
-}
-
-export interface Layout {
-  isEmpty: boolean;
-  contentWidth: number;
-  canvasHeight: number;
-  items: LayoutItem[]; // individual markers: majors + sparse beats (dense ones roll into bars)
-  bars: DensityBar[]; // density histogram for crowded buckets
-  sessionBands: SessionBand[]; // play sessions drawn as time-range bands behind the beats
-  breaks: BreakMark[]; // squeezed dead stretches
-  rulers: string[]; // ruler row captions, row 0 first
-  ticks: Tick[];
-  laneCount: number;
-  spanYears: number;
 }
 
 export interface FilterState {
@@ -220,65 +190,3 @@ export interface TrackCategory {
   members: TrackChild[];
   hasParentBeats: boolean; // a beat tagged to the category with no member
 }
-
-// --- Swimlane layout (M4) ---------------------------------------------------
-// One rendered track row. key = category (parent / roll-up) or `category:member`
-// (child) — the same key a beat resolves to, so beats map straight onto rows.
-export interface SwimRow {
-  key: string;
-  category: string;
-  member: string | null; // null = parent / roll-up row
-  label: string;
-  depth: number; // 0 parent header, 1 child
-  colorVar: string;
-  isRollup: boolean; // collapsed parent aggregating its children's beats
-  collapsed: boolean;
-  hasToggle: boolean; // parent with children -> shows an expand/collapse control
-  y: number; // row top, px
-  centerY: number; // dot baseline, px
-  height: number;
-}
-
-// A beat placed in the swimlane grid: x from the time axis, y from its row.
-export interface SwimItem extends TimelineEvent {
-  x: number;
-  y: number;
-  rowKey: string;
-  colorVar: string;
-  weight: Weight;
-  track: string; // resolved
-  showLabel: boolean; // density-gated inline label (clears when its row crowds)
-  labelMaxWidth: number; // px to the next labelled dot in the row (responsive truncation)
-}
-
-// A per-row density bar (LOD): one crowded pixel bucket within a track row,
-// centered on the row. height ∝ count; members index into the sorted event set.
-export interface SwimBar {
-  x: number; // center x (mean member x)
-  y: number; // row center y
-  height: number; // scaled bar height, px
-  count: number;
-  hasMajor: boolean;
-  colorVar: string; // the row's track color
-  rowKey: string;
-  members: number[]; // indices into the sorted event set, for filter recount
-}
-
-export interface SwimLayout {
-  isEmpty: boolean;
-  topPad: number; // px above the first row: the tick strip, one ruler row per world
-  contentWidth: number;
-  totalHeight: number;
-  spanYears: number;
-  ticksIn: (x0: number, x1: number) => Tick[]; // ticks within a canvas-x window (drawn per visible slice)
-  rows: SwimRow[];
-  items: SwimItem[]; // individual dots (sparse buckets); dense ones roll into bars
-  bars: SwimBar[]; // per-row density histogram
-  sessionBands: SessionBand[]; // play sessions as full-height columns behind the lanes
-  breaks: BreakMark[]; // squeezed dead stretches
-  rulers: string[]; // ruler row captions, row 0 first
-}
-
-// The viewport element carries a flag set by enablePan so the click handler can
-// tell a pan-drag from a tap.
-export type PanViewport = HTMLElement & { _tlDragged?: boolean; _tlHideTip?: () => void };

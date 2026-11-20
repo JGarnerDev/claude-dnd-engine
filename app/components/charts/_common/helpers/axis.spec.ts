@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { computeAxis, indexEvents } from './axis.js';
+import { indexEvents, timeScaleFor } from './axis.js';
+import { axisAt } from './axis.test-helper.js';
 import type { TimelineEvent } from '../types.js';
 
 const events: TimelineEvent[] = [
@@ -8,34 +9,39 @@ const events: TimelineEvent[] = [
   { date: '1342-11-20', label: 'c' }, // within the default 360-day year
 ];
 
-describe('computeAxis', () => {
-  it('reports empty for no events', () => {
-    const a = computeAxis([]);
-    expect(a.isEmpty).toBe(true);
-    expect(a.contentWidth).toBe(0);
+describe('indexEvents', () => {
+  it('has no events for no input', () => {
+    expect(indexEvents([]).events).toEqual([]);
   });
 
   it('sorts events ascending by day index', () => {
-    const a = computeAxis([events[2], events[0], events[1]]);
-    expect(a.events.map((e) => e.label)).toEqual(['a', 'b', 'c']);
+    const idx = indexEvents([events[2], events[0], events[1]]);
+    expect(idx.events.map((e) => e.label)).toEqual(['a', 'b', 'c']);
   });
+});
+
+describe('timeScaleFor', () => {
+  const idx = indexEvents(events);
 
   it('maps later dates to larger x', () => {
-    const a = computeAxis(events);
-    const xs = a.events.map((e) => a.xOf(e._idx));
+    const a = axisAt(idx);
+    const xs = idx.events.map((e) => a.xOf(e._idx));
     expect(xs[0]).toBeLessThan(xs[1]);
     expect(xs[1]).toBeLessThan(xs[2]);
   });
 
   it('emits one year tick per year across the span', () => {
-    const a = computeAxis(events);
-    expect(a.ticks.map((t) => t.label)).toEqual(['1340', '1341', '1342']);
+    expect(axisAt(idx).ticks.map((t) => t.label)).toEqual(['1340', '1341', '1342']);
   });
 
   it('scales contentWidth with density', () => {
-    const a1 = computeAxis(events, undefined, 100);
-    const a2 = computeAxis(events, undefined, 200);
-    expect(a2.contentWidth).toBeGreaterThan(a1.contentWidth);
+    expect(axisAt(idx, 200).contentWidth).toBeGreaterThan(axisAt(idx, 100).contentWidth);
+  });
+
+  it('gives a lone beat a year of room and reaches day ticks at full zoom', () => {
+    const scale = timeScaleFor(idx);
+    expect(scale.minSpan).toBe(idx.daysPerYear);
+    expect(scale.reach?.map((r) => r.span)).toEqual([idx.daysPerYear / 12, 1]);
   });
 });
 

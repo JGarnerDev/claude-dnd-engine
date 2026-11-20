@@ -32,22 +32,22 @@ describe('TimelineView', () => {
 
   it('shows the world view by default (single-axis markers, no swimlanes)', () => {
     mount(data);
-    expect(container.querySelector('.chart-canvas')).toBeTruthy();
-    expect(container.querySelector('.chart-swim-canvas')).toBeFalsy();
+    expect(container.querySelector('.ui-chart-canvas')).toBeTruthy();
+    expect(container.querySelector('.ui-chart-swim-canvas')).toBeFalsy();
     expect(isSelected('World')).toBe(true);
   });
 
   it('honors an explicit initial view', () => {
     mount(data, 'tracks');
-    expect(container.querySelector('.chart-swim-canvas')).toBeTruthy();
+    expect(container.querySelector('.ui-chart-swim-canvas')).toBeTruthy();
     expect(isSelected('Campaign')).toBe(true);
   });
 
   it('swaps to the swimlane view when Campaign is clicked', () => {
     mount(data);
     fireEvent.click(tab('Campaign'));
-    expect(container.querySelector('.chart-swim-canvas')).toBeTruthy();
-    expect(container.querySelector('.chart-canvas')).toBeFalsy();
+    expect(container.querySelector('.ui-chart-swim-canvas')).toBeTruthy();
+    expect(container.querySelector('.ui-chart-canvas')).toBeFalsy();
     expect(isSelected('Campaign')).toBe(true);
     expect(isSelected('World')).toBe(false);
   });
@@ -55,8 +55,8 @@ describe('TimelineView', () => {
   it('swaps back to the world view', () => {
     mount(data, 'tracks');
     fireEvent.click(tab('World'));
-    expect(container.querySelector('.chart-canvas')).toBeTruthy();
-    expect(container.querySelector('.chart-swim-canvas')).toBeFalsy();
+    expect(container.querySelector('.ui-chart-canvas')).toBeTruthy();
+    expect(container.querySelector('.ui-chart-swim-canvas')).toBeFalsy();
   });
 
   it('mounts Save · Load · Settings in the header actions, in that order', () => {
@@ -85,11 +85,11 @@ describe('TimelineView', () => {
     fireEvent.change(container.querySelector('.chart-sv-name')!, { target: { value: 'home' } });
     fireEvent.click(container.querySelector('.chart-sv-confirm')!);
     fireEvent.click(tab('Campaign')); // drift away
-    expect(container.querySelector('.chart-swim-canvas')).toBeTruthy();
+    expect(container.querySelector('.ui-chart-swim-canvas')).toBeTruthy();
     fireEvent.click(container.querySelectorAll('.chart-sv-btn')[1]); // open Load
     fireEvent.click(container.querySelector('.chart-sv-load')!); // apply 'home'
-    expect(container.querySelector('.chart-canvas')).toBeTruthy();
-    expect(container.querySelector('.chart-swim-canvas')).toBeFalsy();
+    expect(container.querySelector('.ui-chart-canvas')).toBeTruthy();
+    expect(container.querySelector('.ui-chart-swim-canvas')).toBeFalsy();
     expect(isSelected('World')).toBe(true);
   });
 
@@ -98,7 +98,7 @@ describe('TimelineView', () => {
       mount(empty);
       expect(container.querySelector('.chart-empty')).toBeTruthy();
       expect(container.querySelector('.chart-viewtab')).toBeFalsy();
-      expect(container.querySelector('.chart-canvas')).toBeFalsy();
+      expect(container.querySelector('.ui-chart-canvas')).toBeFalsy();
     }
   });
 
@@ -131,7 +131,7 @@ describe('TimelineView', () => {
 
     it('renders the active campaign plus agnostic beats, not other campaigns', () => {
       mount(multi);
-      const labels = markers('.chart-marker');
+      const labels = markers('.ui-chart-marker');
       expect(labels).toContain('War begins'); // strahd
       expect(labels).toContain('A timeless myth'); // agnostic — shows under every campaign
     });
@@ -140,7 +140,7 @@ describe('TimelineView', () => {
       mount(multi);
       choose('homebrew');
       // Homebrew has no own dated beats, but the agnostic beat still shows.
-      expect(markers('.chart-marker')).toEqual(['A timeless myth']);
+      expect(markers('.ui-chart-marker')).toEqual(['A timeless myth']);
       expect(pick().value).toBe('homebrew');
     });
 
@@ -151,7 +151,7 @@ describe('TimelineView', () => {
         events: [{ date: '1340-02-15', label: 'War begins', track: 'world', campaign: 'strahd' }],
       });
       choose('homebrew');
-      expect(container.querySelector('.chart-canvas')).toBeFalsy();
+      expect(container.querySelector('.ui-chart-canvas')).toBeFalsy();
       expect(container.querySelector('.chart-empty')).toBeTruthy();
       // Header + selector stay so the DM can switch back.
       expect(container.querySelector('.chart-campaign-select')).toBeTruthy();
@@ -161,7 +161,7 @@ describe('TimelineView', () => {
       mount(multi);
       choose('homebrew'); // would scope the World view to agnostic-only
       fireEvent.click(tab('Campaign'));
-      const labels = markers('.chart-swim-marker');
+      const labels = markers('.ui-chart-swim-marker');
       expect(labels).toContain('War begins'); // strahd beat still shows on the cross-campaign view
       expect(labels).toContain('A timeless myth');
     });

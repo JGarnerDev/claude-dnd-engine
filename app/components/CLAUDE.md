@@ -27,7 +27,7 @@ Each chart is its own folder under `components/charts/`; its root component is n
 
 - `<chart>/<Chart>.tsx` (+ spec) — the chart component; `<chart>/helpers/` — pure math used only by that chart (+ specs).
 - `_common/*.tsx` — components shared by both charts: `FilterBar`, `SavedViews` (+ `SaveViewForm`, `SavedViewList`), `ChartSettings` (+ specs).
-- `_common/helpers/` — pure logic shared by more than one chart (+ specs). `markers.ts` tells jeff-ui's tooltip hook which nodes are markers.
+- `_common/helpers/` — pure logic shared by more than one chart (+ specs). `items.ts` turns indexed events into jeff-ui chart items, spans and breaks.
 - `_common/components/` — the CSS for the shared widgets (`filterbar.css`, `savedviews.css`, `settingspanel.css`).
 - `_common/constants.ts` (static data) and `_common/types.ts` (shared types).
 - `app/pages/home/` (sibling of `app/components/` — not under `components/`) — the timeline home page (`main.tsx` → `TimelineView.tsx`) and the session runner (`session/`, `main.tsx` → `Runner.tsx`), fed by the live campaign graph through the data plugins. This is the Vite root (see `app/pages/home/vite.config.ts`) and what `npm run home` opens; it imports the charts via `../../components/charts/…`.
@@ -37,7 +37,7 @@ Each chart is its own folder under `components/charts/`; its root component is n
 Generic widgets come from `jeff-ui` (`Desktop/Organized/jeff-ui-project`): `SettingsPanel`, `Popover`, `Tabs`, `Chip`, `Button`, `IconButton`, `Badge`, `Card`, `Disclosure`, `EmptyState`, and the design tokens (`jeff-ui/tokens.css`). Reach for these before writing a `<button>`, `<details>`, tag `<span>` or empty-state message by hand; pass the engine class as `className` so the specs and CSS that query it keep working. The engine installs it from GitHub pinned to a tag (`github:JGarnerDev/jeff-ui-project#vX.Y.Z` in `app/package.json`), because the engine has collaborators. Collaborators need read access to that repo for `npm install` to work.
 
 - **A widget belongs in jeff-ui** when it knows nothing about the campaign (no entities, no engine types) and another of Jeff's apps could use it as-is. Campaign-specific widgets stay here.
-- **Chart plumbing is in `jeff-ui/charts`:** the hooks (`usePan`, `useZoom`, `useWheelZoom`, `useViewportSize`, `useMarkerInteraction`) and the generic math (`createScale`, `clampZoom`, `clusterPoints`, `barHeightFor`, `layoutLabels`, `placement`). The engine passes its own sizes from `_common/constants.ts`. Calendar, segments, rulers, session bands, the track tree, filters and viewpoints stay here.
+- **The charts themselves are in `jeff-ui/charts`:** `Timeline` and `Swimlane` draw items, spans, breaks and lanes on a time axis, with pan, zoom, density bars, label packing and the dots' look. The engine's charts are thin wrappers: they turn events into those shapes (`_common/helpers/items.ts`, `tracks.ts`), turn the calendars into a `TimeScale` (`timeScaleFor` in `axis.ts`) and wire the filter and saved views. Calendar, segments, rulers, ticks, session bands, the track tree, filters and viewpoints stay here.
 - **jeff-ui stays generic:** no Jotai, no app imports; it takes state through props. Components with their own look take `unstyled` plus `classNames`/`className`, so the engine keeps its `chart-*` / `sr-*` classes.
 - **Release loop:** change jeff-ui in its own repo, bump its `version`, prepend its `CHANGELOG.md` entry, commit and push; then tag (`git tag vX.Y.Z && git push --tags`) — confirm with Jeff before pushing a tag. Then bump the pin in `app/package.json`, run `npm install --allow-git=all` (npm 12 refuses git dependencies without it), and run the gates here. Never move or delete a pushed tag; fix forward with a new one.
 
@@ -45,16 +45,16 @@ Generic widgets come from `jeff-ui` (`Desktop/Organized/jeff-ui-project`): `Sett
 
 CSS lives next to the component that produces the markup and is pulled in by a side-effect `import './x.css'` in that module — Vite serves it with the module (no `<link>` needed). Mirror the same file layout as the source:
 
-- `<chart>/<chart>.css` — styles for that chart only (e.g. `timeline/timeline.css`, `swimlane/swimlane.css`), imported by `<chart>/<Chart>.tsx`.
-- `_common/common.css` — theme tokens (`:root --chart-*` / `--track-*`), shared base classes (`.chart-root`, `.chart-dot`, `.chart-marker` + weight/state), and the shared scrollbar styling. Each chart imports it (Vite dedupes).
+- `<chart>/<chart>.css` — styles for that chart only (e.g. `swimlane/swimlane.css`), imported by `<chart>/<Chart>.tsx`. The drawn chart's own CSS ships with jeff-ui (`ui-chart-*`).
+- `_common/common.css` — theme tokens (`:root --chart-*` / `--track-*`), their mapping onto jeff-ui's `--ui-chart-*` variables on `.chart-root`, and `.chart-empty`. Each chart imports it (Vite dedupes).
 - `_common/components/<widget>.css` — styles for a shared widget, imported by its `.tsx` (e.g. `filterbar.css` by `FilterBar.tsx`).
 - `pages/home/view.css` — styles for the page-level view switcher, imported by `TimelineView.tsx`. `pages/home/theme.css` maps the jeff-ui tokens onto the pages.
 
 Classes are prefixed `chart-` (page-agnostic). Keep a rule with the element that owns it; lift a rule to `_common/` only when more than one chart needs it (the "shared when applicable" rule). When CSS geometry and layout math must agree, the constant lives in `_common/constants.ts` and the CSS comments point back to it. Per-element dynamic values go through inline custom properties (`style={{ '--from': … }}`), not string-built styles.
 
-Don't let a chart's private helper be imported by another chart — if both need it, it belongs in `_common` (this is why `weightOf` lives in `_common/helpers/weight.ts`).
+Don't let a chart's private helper be imported by another chart — if both need it, it belongs in `_common` (this is why `toneFor` and `lanesFor` live in `_common/helpers/tracks.ts`).
 
-Example: `timeline/` (World view) owns `helpers/layout`; `swimlane/` (Tracks view) owns `helpers/{swimlane-layout,tracks}`; both draw on `_common/helpers/{axis,calendar,ticks,filters,weight,markers}`, `jeff-ui/charts`, and `_common/{FilterBar,ChartSettings}` over `_common/{constants,types}`; `pages/home/TimelineView.tsx` mounts either chart.
+Example: `timeline/` (World view) and `swimlane/` (Tracks view) are each one wrapper file; both draw on `_common/helpers/{axis,calendar,ticks,items,tracks,bands,filters}`, `jeff-ui/charts`, and `_common/{FilterBar,ChartSettings}` over `_common/{constants,types}`; `pages/home/TimelineView.tsx` mounts either chart.
 
 ### Saved-views state contract
 

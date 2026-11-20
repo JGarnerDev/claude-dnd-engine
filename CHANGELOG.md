@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.75.7] — 2026-11-20
+
+### Changed
+
+- **The charts come from jeff-ui** (jeff-ui `tasks/component-census/PLAN.md`, step 37). The pin moves to `jeff-ui` v0.6.0. `timeline/Timeline.tsx` and `swimlane/Swimlane.tsx` are thin wrappers around jeff-ui's generic `Timeline` and `Swimlane`: `_common/helpers/items.ts` turns indexed events into chart items, session spans and axis breaks, `tracks.ts` builds the swimlane's lanes and each dot's color (`toneFor`, `lanesFor`, `laneFor`), and `timeScaleFor` in `axis.ts` hands the chart the calendar ticks, ruler rows and zoom reach. The engine's layout code (`timeline/helpers/layout.ts`, `swimlane/helpers/swimlane-layout.ts`), `_common/helpers/markers.ts` and `weight.ts`, `timeline/timeline.css` and the geometry constants and types are gone; `common.css` maps the engine's `--chart-*` / `--track-*` tokens onto jeff-ui's `--ui-chart-*`. Chart classes are now jeff-ui's `ui-chart-*`. Dots take their track category's color in both views (the World view used to draw them all in one color). `app/components/CLAUDE.md` describes the new layout.
+
 ## [0.75.6] — 2026-11-20
 
 ### Changed

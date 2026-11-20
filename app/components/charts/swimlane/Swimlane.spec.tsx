@@ -28,12 +28,12 @@ function mount(d: TimelineData, initialState?: ChartState) {
   const { container, all } = chart;
   return {
     ...chart,
-    width: () => px(container.querySelector<HTMLElement>('.chart-swim-canvas')),
-    markers: () => all('.chart-swim-marker'),
-    names: () => all('.chart-swim-rowname').map((n) => n.textContent),
-    row: (name: string) => all('.chart-swim-rowlabel').find((r) => r.querySelector('.chart-swim-rowname')!.textContent === name)!,
-    barSum: () => all('.chart-swim-bar:not(.chart-hidden)').reduce((s, b) => s + Number(b.dataset.count), 0),
-    wheel: (deltaY: number) => wheel(container.querySelector<HTMLElement>('.chart-swim')!, deltaY),
+    width: () => px(container.querySelector<HTMLElement>('.ui-chart-swim-canvas')),
+    markers: () => all('.ui-chart-swim-marker'),
+    names: () => all('.ui-chart-swim-lanename').map((n) => n.textContent),
+    row: (name: string) => all('.ui-chart-swim-lane').find((r) => r.querySelector('.ui-chart-swim-lanename')!.textContent === name)!,
+    barSum: () => all('.ui-chart-swim-bar:not(.ui-chart-hidden)').reduce((s, b) => s + Number(b.dataset.count), 0),
+    wheel: (deltaY: number) => wheel(container.querySelector<HTMLElement>('.ui-chart-swim')!, deltaY),
   };
 }
 
@@ -44,16 +44,16 @@ describe('Swimlane', () => {
 
   it('gives each marker a colored dot and track dataset', () => {
     for (const m of mount(data).markers()) {
-      expect(m.querySelector('.chart-dot')).toBeTruthy();
-      expect(m.dataset.track).toBeTruthy();
+      expect(m.querySelector('.ui-chart-dot')).toBeTruthy();
+      expect(m.dataset.group).toBeTruthy();
     }
   });
 
   it('builds a gutter with a row label per track row', () => {
     const chart = mount(data);
-    const labels = chart.all('.chart-swim-rowlabel');
+    const labels = chart.all('.ui-chart-swim-lane');
     expect(labels.length).toBeGreaterThan(0);
-    expect(labels.length).toBe(chart.all('.chart-swim-band').length);
+    expect(labels.length).toBe(chart.all('.ui-chart-swim-row').length);
   });
 
   it('expands a category with children into a header + child rows', () => {
@@ -71,7 +71,7 @@ describe('Swimlane', () => {
 
   it('toggles a collapsed category open via its gutter toggle', () => {
     const chart = mount(data);
-    fireEvent.click(chart.row('Factions').querySelector('.chart-swim-toggle')!);
+    fireEvent.click(chart.row('Factions').querySelector('.ui-chart-swim-toggle')!);
     expect(chart.names()).toContain('Ashen Cult');
   });
 
@@ -79,7 +79,7 @@ describe('Swimlane', () => {
     const chart = mount(data);
     const factions = chart.row('Factions');
     expect(factions.tagName).toBe('BUTTON'); // toggleable rows are buttons
-    fireEvent.click(factions.querySelector('.chart-swim-rowname')!); // the name, not the arrow
+    fireEvent.click(factions.querySelector('.ui-chart-swim-lanename')!); // the name, not the arrow
     expect(chart.names()).toContain('Ashen Cult');
   });
 
@@ -106,7 +106,7 @@ describe('Swimlane', () => {
     const before = chart.width();
     fireEvent.click(chart.chip('world'));
     expect(chart.markers()).toHaveLength(4); // all stay in the DOM
-    expect(chart.all('.chart-swim-marker.chart-hidden').length).toBeGreaterThan(0);
+    expect(chart.all('.ui-chart-swim-marker.ui-chart-hidden').length).toBeGreaterThan(0);
     expect(chart.width()).toBe(before);
   });
 
@@ -125,7 +125,7 @@ describe('Swimlane', () => {
     const chart = mount(spread([735, 935, 1135, 1335, 1535]));
     for (let i = 0; i < 60; i++) await chart.wheel(-120);
     expect(chart.width()).toBeGreaterThan(1_000_000);
-    expect(chart.all('.chart-swim-grid').length).toBeLessThan(200);
+    expect(chart.all('.ui-chart-swim-grid').length).toBeLessThan(200);
   });
 
   it('caps the canvas width at deep zoom and stays pinned there', async () => {
@@ -138,13 +138,13 @@ describe('Swimlane', () => {
   });
 
   it('exposes the source path on markers that have one', () => {
-    const sourced = mount(data).container.querySelector<HTMLElement>('.chart-swim-marker.has-source')!;
-    expect(sourced.dataset.source).toBe('historian/events/war.md');
+    const sourced = mount(data).container.querySelector<HTMLElement>('.ui-chart-swim-marker.has-href')!;
+    expect(sourced.dataset.href).toBe('historian/events/war.md');
     expect(sourced.dataset.label).toBe('War begins');
   });
 
   it('renders inline labels on density-gated markers', () => {
-    const labels = mount(data).all('.chart-swim-label').map((l) => l.textContent);
+    const labels = mount(data).all('.ui-chart-swim-label').map((l) => l.textContent);
     // At fit density rows are sparse here, so every beat gets its label.
     expect(labels).toContain('★ War begins'); // major → star prefix
     expect(labels).toContain('Aelith born');
@@ -153,7 +153,7 @@ describe('Swimlane', () => {
   it('shows an empty state when there are no events', () => {
     const { container } = mount({ events: [] });
     expect(container.querySelector('.chart-empty')).toBeTruthy();
-    expect(container.querySelector('.chart-swim-canvas')).toBeNull();
+    expect(container.querySelector('.ui-chart-swim-canvas')).toBeNull();
   });
 
   it('renders per-row density bars for crowded tracks and recounts them on filter', () => {
@@ -165,9 +165,9 @@ describe('Swimlane', () => {
         track: i % 2 === 0 ? 'world' : 'faction', // not 'party': that would set a campaign floor
       })),
     });
-    expect(chart.all('.chart-swim-bar').length).toBeGreaterThan(0);
+    expect(chart.all('.ui-chart-swim-bar').length).toBeGreaterThan(0);
     expect(chart.markers().length).toBeLessThan(40); // crowd aggregated
-    const shown = () => chart.all('.chart-swim-marker:not(.chart-hidden)').length + chart.barSum();
+    const shown = () => chart.all('.ui-chart-swim-marker:not(.ui-chart-hidden)').length + chart.barSum();
     expect(shown()).toBe(40);
     const before = chart.barSum();
     fireEvent.click(chart.chip('faction')); // drop half the beats

@@ -3,7 +3,7 @@
 // when deeply zoomed in, single
 // years at mid zoom, and multi-year steps (2/5/10/25…) when zoomed out far enough
 // that yearly ticks would crowd below MIN_TICK_PX. One source for both the world
-// view and the swimlane (both go through computeAxis).
+// view and the swimlane (both go through timeScaleFor).
 
 import { MIN_TICK_PX } from '../constants.js';
 import { calendarTables } from './calendar.js';

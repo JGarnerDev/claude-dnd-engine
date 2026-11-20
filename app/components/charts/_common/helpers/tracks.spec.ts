@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { parseTrack, buildTrackTree, DEFAULT_CATEGORIES } from './tracks.js';
-import type { TimelineEvent } from '../../_common/types.js';
+import { parseTrack, buildTrackTree, toneFor, lanesFor, laneFor, DEFAULT_CATEGORIES } from './tracks.js';
+import type { TimelineEvent } from '../types.js';
 
 describe('parseTrack', () => {
   it('splits category:member on the first colon', () => {
@@ -77,5 +77,54 @@ describe('buildTrackTree', () => {
       'continent',
       'world',
     ]);
+  });
+});
+
+describe('toneFor', () => {
+  it("uses the category's track color, members included", () => {
+    expect(toneFor('faction:Cult')).toBe('var(--track-faction)');
+    expect(toneFor('party')).toBe('var(--track-party)');
+  });
+
+  it('gives blank and unknown tracks the World look', () => {
+    expect(toneFor(undefined)).toBe('var(--track-world)');
+    expect(toneFor('deity:Pelor')).toBe('var(--track-world)');
+  });
+});
+
+describe('lanesFor', () => {
+  const ev = (track: string): TimelineEvent => ({ date: '1340', label: 'x', track });
+  const tree = buildTrackTree([ev('party'), ev('character:Mara'), ev('character:Iggy')]);
+
+  it('gives a leaf category one row with no toggle', () => {
+    const party = lanesFor(tree, new Set()).find((l) => l.key === 'party')!;
+    expect(party.toggle).toBeUndefined();
+    expect(party.tone).toBe('var(--track-party)');
+  });
+
+  it('opens a parent into a header row then one child row per member', () => {
+    const lanes = lanesFor(tree, new Set()).filter((l) => l.key.startsWith('character'));
+    expect(lanes.map((l) => [l.key, l.toggle, l.depth])).toEqual([
+      ['character', 'open', undefined],
+      ['character:Mara', undefined, 1],
+      ['character:Iggy', undefined, 1],
+    ]);
+  });
+
+  it('rolls a collapsed parent up into one row', () => {
+    const lanes = lanesFor(tree, new Set(['character'])).filter((l) => l.key.startsWith('character'));
+    expect(lanes.map((l) => [l.key, l.toggle])).toEqual([['character', 'closed']]);
+  });
+});
+
+describe('laneFor', () => {
+  it("puts a member beat on its child row when it's shown", () => {
+    expect(laneFor('character:Mara', new Set(['character', 'character:Mara']))).toBe('character:Mara');
+  });
+
+  it('falls back to the category row when the child is hidden or absent', () => {
+    expect(laneFor('character:Mara', new Set(['character']))).toBe('character');
+    expect(laneFor('party', new Set(['party']))).toBe('party');
+    expect(laneFor(undefined, new Set())).toBe('world');
   });
 });

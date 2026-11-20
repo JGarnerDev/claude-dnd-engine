@@ -7,7 +7,8 @@
 // appended after the configured ones. Presence is auto-derived — a category or
 // member row appears only once a beat references it.
 
-import type { CategoryConfig, ParsedTrack, TimelineEvent, TrackCategory } from '../../_common/types.js';
+import type { ChartLane } from 'jeff-ui/charts';
+import type { CategoryConfig, ParsedTrack, TimelineEvent, TrackCategory } from '../types.js';
 
 // Shipped defaults. Order here is the render order of the parent lanes.
 export const DEFAULT_CATEGORIES: CategoryConfig[] = [
@@ -76,4 +77,40 @@ export function buildTrackTree(
     });
   }
   return out;
+}
+
+// A beat's dot color: its category's track color (unknown categories get the
+// World look). Both views color dots this way.
+export function toneFor(track: string | undefined, config: CategoryConfig[] = DEFAULT_CATEGORIES): string {
+  const { category } = parseTrack(track);
+  return `var(${config.find((c) => c.key === category)?.colorVar ?? FALLBACK_COLOR})`;
+}
+
+// The swimlane's rows from the tree + collapse state (a set of category keys):
+// a leaf category is one row; a collapsed parent one roll-up row with a toggle;
+// an expanded parent a header row (holding its direct beats) with a toggle, then
+// one child row per member keyed "category:member". A toggle row's key is its
+// category, so the chart's onToggle hands back what to flip.
+export function lanesFor(tree: TrackCategory[], collapsed: Set<string>): ChartLane[] {
+  const lanes: ChartLane[] = [];
+  for (const cat of tree) {
+    const tone = `var(${cat.colorVar})`;
+    if (cat.members.length === 0) {
+      lanes.push({ key: cat.key, label: cat.label, tone });
+    } else if (collapsed.has(cat.key)) {
+      lanes.push({ key: cat.key, label: cat.label, tone, toggle: 'closed' });
+    } else {
+      lanes.push({ key: cat.key, label: cat.label, tone, toggle: 'open' });
+      for (const m of cat.members) lanes.push({ key: `${cat.key}:${m.member}`, label: m.label, depth: 1, tone });
+    }
+  }
+  return lanes;
+}
+
+// Which row a beat lands on: its child row when that child is shown, otherwise
+// its category's header/roll-up row.
+export function laneFor(track: string | undefined, laneKeys: Set<string>): string {
+  const { category, member } = parseTrack(track);
+  if (member !== null && laneKeys.has(`${category}:${member}`)) return `${category}:${member}`;
+  return category;
 }

@@ -23,7 +23,7 @@
     "vitest": "^4.1.10"
   },
   "dependencies": {
-    "jeff-ui": "github:JGarnerDev/jeff-ui-project#v0.5.0",
+    "jeff-ui": "github:JGarnerDev/jeff-ui-project#v0.6.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   }

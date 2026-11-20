@@ -4,7 +4,7 @@
 
 /* View host: header bar on top, the active view fills the rest. The flex chain
    (host → content → .chart-root) keeps a definite height all the way down so each
-   view's own scroll container (.chart-viewport / .chart-swim) bounds its overflow,
+   view's own scroll container (.ui-chart-viewport / .ui-chart-swim) bounds its overflow,
    instead of the page growing scrollbars. */
 .chart-viewhost {
   display: flex;
@@ -38,7 +38,7 @@
 /* The active view renders INTO this node — it also carries .chart-root (same
    element), so style it directly. flex:1 fills the host below the tabs; the
    min-width/height:0 let it shrink below its canvas size so the inner scroll
-   container (.chart-swim / .chart-viewport) clips overflow instead of the page. */
+   container (.ui-chart-swim / .ui-chart-viewport) clips overflow instead of the page. */
 .chart-viewcontent {
   flex: 1;
   min-width: 0;

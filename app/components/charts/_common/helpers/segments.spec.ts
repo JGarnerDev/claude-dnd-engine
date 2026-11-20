@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { segmentEvents, syncOffsets, axisOptionsFor } from './segments.js';
-import { computeAxisFrom, indexEvents } from './axis.js';
+import { indexEvents } from './axis.js';
+import { axisAt } from './axis.test-helper.js';
 import { DEFAULT_CALENDAR } from './calendar.js';
 import type { Calendar, TimelineData, TimelineEvent } from '../types.js';
 
@@ -148,7 +149,7 @@ describe('lived-time axis', () => {
   it('labels every row across the full width, each in its own calendar, aligned at the crossing', () => {
     const data = graph();
     const idx = indexEvents(data.events.filter((e) => e.label !== 'Collision'), DEFAULT_CALENDAR, axisOptionsFor(data));
-    const axis = computeAxisFrom(idx, DEFAULT_CALENDAR, 3000);
+    const axis = axisAt(idx, 3000);
     const rows = new Map<number, string[]>();
     for (const t of axis.ticks) rows.set(t.row ?? 0, [...(rows.get(t.row ?? 0) ?? []), t.label]);
     // Row 0 = Redwater (Aethryn, epoch label AR); row 1 = Curse of Strahd (default).
@@ -167,7 +168,7 @@ describe('lived-time axis', () => {
   it('drops ruler labels that would overlap in a row or sit under a break chip', () => {
     const data = graph();
     const idx = indexEvents(data.events, DEFAULT_CALENDAR, axisOptionsFor(data));
-    const axis = computeAxisFrom(idx, DEFAULT_CALENDAR, 2000);
+    const axis = axisAt(idx, 2000);
     const w = (l: string) => l.length * 6.5;
     for (const row of [0, 1]) {
       const ts = axis.ticks.filter((t) => (t.row ?? 0) === row).sort((a, b) => a.x - b.x);
@@ -180,9 +181,9 @@ describe('lived-time axis', () => {
   it('never runs a ruler row across a break', () => {
     const data = graph();
     const idx = indexEvents(data.events, DEFAULT_CALENDAR, axisOptionsFor(data));
-    const axis = computeAxisFrom(idx, DEFAULT_CALENDAR, 2000, 0.05, false);
+    const axis = axisAt(idx, 2000);
     const bx = axis.breaks[0].x;
-    const all = axis.ticksIn(0, axis.contentWidth);
+    const all = axis.ticks;
     const ancient = all.filter((t) => /-\d{3,}/.test(t.label));
     const present = all.filter((t) => /\b(735|1487)\b/.test(t.label));
     expect(ancient.length).toBeGreaterThan(0);
