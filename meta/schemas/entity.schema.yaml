@@ -54,8 +54,13 @@ properties:
   owner: {$ref: '#/$defs/link'}
   contributed_by:
     description: Real-world player who created or submitted this entity.
-    enum: [paul, ben, miguel, jeff, kellan, macleod, pending]
+    enum: [paul, ben, miguel, jeff, kellan, macleod, party, pending]
   description: {$ref: '#/$defs/text'}
+  campaign:
+    description: The campaign this belongs to; acts and the party link the campaign entry.
+    anyOf:
+      - enum: [strahd, homebrew]
+      - {$ref: '#/$defs/link'}
   # --- historian ---
   source_session:
     description: The session that made this canon, or a plain source for canon from outside play.

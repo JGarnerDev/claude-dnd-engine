@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.80.0] — 2026-11-20
+
+### Added
+
+- **Rule:** `meta/schemas/character.schema.yaml` checks every character file (schema migration step 6). Per subtype it sets the valid states and the mandatory fields (npc and antagonist: `location`, `personality`, `livelihood`; antagonist also `disposition: hostile`; pc: `player`, `race`, `class`, `level`, plus a `player/` tag), types `level`, `affinity`, `spotlight_hooks` and the session stamps, and rejects any field the schemas don't list. The prose schemas now also list `pronouns`, `level_confirmed` (pc) and `human_detail` on npcs.
+- The entity base gains `campaign` (`strahd`, `homebrew`, or a link to the campaign entry).
+
+### Changed
+
+- `contributed_by` also allows `party`, for work the whole group made.
+- Two character files used fields outside the schema: Madame Eva's disposition moves from `ambiguous` to `neutral`, and Kranken Hammershaft loses `awareness` (an event field).
+
 ## [0.79.0] — 2026-11-20
 
 ### Added

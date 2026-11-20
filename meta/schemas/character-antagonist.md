@@ -33,6 +33,8 @@ Covers NPCs who are actively hostile to the party. When a neutral or friendly NP
 
 ## Schema
 
+The machine-readable version is [`character.schema.yaml`](character.schema.yaml) (all three subtypes).
+
 ### Canonical Path
 
 `data/characters/antagonists/{name}.md`
@@ -83,7 +85,8 @@ description: ""
 background: ""
 race: ""
 class: ""
-level:
+level:                 # integer, 1-20
+pronouns: ""           # optional, e.g. "they/them"
 goals: []
 motives: []
 allies:

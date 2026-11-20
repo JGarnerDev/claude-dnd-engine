@@ -33,6 +33,8 @@ Covers any non-player character: townsfolk, antagonists, merchants, quest-givers
 
 ## Schema
 
+The machine-readable version is [`character.schema.yaml`](character.schema.yaml) (all three subtypes).
+
 ### Canonical Path
 
 `data/characters/npcs/{name}.md`
@@ -82,7 +84,8 @@ description: ""
 background: ""
 race: ""
 class: ""
-level:
+level:                 # integer, 1-20
+pronouns: ""           # optional, e.g. "they/them"
 disposition: hostile | neutral | friendly | unknown
 goals: []
 motives: []
@@ -100,6 +103,7 @@ affinity:
   - [[Player Character Name]] (n)   # optional: per-target liking, integer -10..+10; see meta/affinity.md. Subject->target; absence = neutral (0)
 voice: ""              # optional: core cadence and register in one line; see meta/voice.md
 voice_confirmed:       # optional: last played session the voice was checked at (stamp); set by /recap
+human_detail: ""       # optional: one comprehensible motive, mundane habit, or thing they protect
 ---
 ```
 

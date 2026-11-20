@@ -16,7 +16,6 @@ importance: major
 active: true
 aliases:
   - "Kraken Hammershaft"
-awareness: regional
 relates_to:
   - "[[Homebrew Campaign]] (belongs to this campaign)"
 goals:

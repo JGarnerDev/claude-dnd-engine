@@ -43,7 +43,9 @@ known_by:
 
 owner: [[Player Character Name]]     # player who is narratively responsible for this entity
 
-contributed_by: paul | ben | miguel | jeff | kellan | macleod | pending   # real-world player who created or submitted this entity
+contributed_by: paul | ben | miguel | jeff | kellan | macleod | party | pending   # real-world player who created it; party = the whole group
+
+campaign: strahd | homebrew  # or a link such as [[Curse of Strahd]] (acts, party)
 
 description: "One-sentence summary shown in Obsidian hover previews."
 ---

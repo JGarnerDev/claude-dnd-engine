@@ -35,6 +35,8 @@ Covers player characters. Unlike NPCs, PCs are owned by a player and link to tha
 
 ## Schema
 
+The machine-readable version is [`character.schema.yaml`](character.schema.yaml) (all three subtypes).
+
 ### Canonical Path
 
 `data/characters/pcs/{name}.md`
@@ -69,7 +71,8 @@ tags:
 player: [[meta/players/player-name]]   # links to meta/players/{name}.md
 race: ""
 class: ""
-level:
+level:                 # integer, 1-20
+level_confirmed:       # last played session the level was checked at (stamp); see scripts/party-status.py
 
 # --- OPTIONAL (entity base) ---
 aliases:
@@ -96,6 +99,7 @@ family:
 enemies:
   - [[Character or Faction Name]] (nature of conflict)
 character_sheet: ""    # path to sheet file or external link
+pronouns: ""           # optional, e.g. "they/them"
 affinity:
   - [[Character Name]] (n)   # optional: per-target liking, integer -10..+10; see meta/affinity.md. Subject->target; absence = neutral (0)
 

@@ -12,7 +12,7 @@ tags:
 location: "[[Tser Pool Encampment]] — her tent, on the road west of Barovia Village"
 personality: "Cryptic and commanding. A seer who deals only in riddles — gives no more than she means to."
 livelihood: "Fortune teller / seer."
-disposition: ambiguous
+disposition: neutral
 aliases: ["the crone"]
 importance: major
 active: true

@@ -4,9 +4,9 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-18):** steps 1–5 done (engine v0.73.0). Every entity file's frontmatter is strict YAML with quoted links, and `get_frontmatter` reads it with a YAML parser.
 
-**Status (2026-11-20):** step 6 started: the `entity` base schema is done (v0.79.0).
+**Status (2026-11-20):** step 6 under way: the `entity` base (v0.79.0) and `character` (v0.80.0) schemas are done.
 
-**Next:** tag notes-kit v0.5.0 and move the pin, then the `character` schema.
+**Next:** the `location` schema (each subtype).
 
 ## Resuming in a new session
 
@@ -41,8 +41,8 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 - [x] 5. `scripts/validate.py` replaces `validate.ps1` (v0.73.0). Built on notes-kit (pinned `v0.3.0`, `[tool.notes-kit]` in `pyproject.toml`) plus the engine's own checks. Compared line by line with `validate.ps1`: the only differences were fixes (3 duplicate filenames, now resolved by renaming the `Acolyte`/`Noble` backgrounds and merging `The Winery Druid`; `Tser Pool Encampment.md` now checked). Docs point at the new script; played session files still name `validate.ps1` and stay as records
   - [ ] Schema checks (D5), now part of step 6: notes-kit validates a type that has `meta/schemas/<type>.schema.yaml` (it loads frontmatter with typed YAML). Add each finished type to enforcement; until then list unfinished types under `warn-types` in `[tool.notes-kit]`
 - [ ] 6. Schemas per type (enforced when done). Start each one from `audit.py --type <type>` plus the prose schema in `meta/schemas/<type>.md`:
-  - [x] entity (base): `meta/schemas/entity.schema.yaml` (v0.79.0). All 1,584 entities pass it except `data/lore/magic.md` (`contributed_by: party`, not in the enum). It checks nothing by itself (no note has `type: entity`); each type schema pulls it in with `allOf: [{$ref: entity.schema.yaml}]` plus `unevaluatedProperties: false`, which needs notes-kit v0.5.0. `state` (545 files lack it) and `tags` (14 sessions lack them) are not required yet. Historian provenance is now an error in `validate.py`; `fill-provenance.py` filled 43 files and echoed the link under `## Sources`. Importance outliers fixed (`high` → `major`, `supporting` → `minor`)
-  - [ ] character (pc, npc, antagonist)
+  - [x] entity (base): `meta/schemas/entity.schema.yaml` (v0.79.0). All 1,584 entities pass it (`contributed_by` allows `party` for group work, as in `data/lore/magic.md`). It checks nothing by itself (no note has `type: entity`); each type schema pulls it in with `allOf: [{$ref: entity.schema.yaml}]` plus `unevaluatedProperties: false`, which needs notes-kit v0.5.0. `state` (545 files lack it) and `tags` (14 sessions lack them) are not required yet. Historian provenance is now an error in `validate.py`; `fill-provenance.py` filled 43 files and echoed the link under `## Sources`. Importance outliers fixed (`high` → `major`, `supporting` → `minor`)
+  - [x] character (pc, npc, antagonist): `meta/schemas/character.schema.yaml` (v0.80.0), enforced. One file covers the three subtypes with an if/then branch each (states, mandatory fields, subtype-only fields). `location`, `race` and `class` stay free text, since many are plain notes ("unknown", "Wood elf"); `family` and `sells` allow plain notes too. `campaign` (in 15 types) went into the entity base. Fixed: Madame Eva `ambiguous` → `neutral`, Kranken Hammershaft's stray `awareness` removed
   - [ ] location (each subtype)
   - [ ] faction
   - [ ] event

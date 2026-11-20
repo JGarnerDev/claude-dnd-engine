@@ -1,0 +1,117 @@
+# character.schema.yaml -- type: character (prose: character-npc.md, character-pc.md,
+# character-antagonist.md). Extends entity.schema.yaml. Fields every subtype may use are
+# listed under `properties`; the fields and states of one subtype live in its if/then branch,
+# so a pc-only field on an npc (or the reverse) fails unevaluatedProperties.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: character
+type: object
+required: [subtype, state]
+$defs:
+  text-list:
+    type: array
+    items: {$ref: entity.schema.yaml#/$defs/text}
+  session-stamp:
+    description: Number of the last played session at which this was checked.
+    type: integer
+    minimum: 1
+  npc-like:
+    description: Mandatory and optional fields shared by npc and antagonist.
+    required: [location, personality, livelihood]
+    properties:
+      state:
+        enum: [alive, dead, missing, imprisoned, transformed]
+      location:
+        description: A link to a location, or a plain note such as "unknown" or "TBD".
+        $ref: entity.schema.yaml#/$defs/text
+      personality: {$ref: entity.schema.yaml#/$defs/text}
+      livelihood: {$ref: entity.schema.yaml#/$defs/text}
+      disposition:
+        enum: [hostile, neutral, friendly, unknown]
+      motives: {$ref: '#/$defs/text-list'}
+      voice:
+        description: Core cadence and register in one line; see meta/voice.md.
+        $ref: entity.schema.yaml#/$defs/text
+      voice_confirmed: {$ref: '#/$defs/session-stamp'}
+      human_detail:
+        description: One comprehensible motive, mundane habit, or thing they protect.
+        $ref: entity.schema.yaml#/$defs/text
+  affinity:
+    description: Per-target liking, -10..+10; see meta/affinity.md.
+    type: array
+    items:
+      type: string
+      pattern: '^\[\[[^\]]+\]\] \([+-]?(10|\d)\)$'
+allOf:
+  - $ref: entity.schema.yaml
+  - if:
+      properties: {subtype: {const: npc}}
+    then:
+      $ref: '#/$defs/npc-like'
+      properties:
+        charm_hook:
+          description: One flaw, habit, fear or absurdity that makes players root for them.
+          $ref: entity.schema.yaml#/$defs/text
+        sells:
+          description: Goods or services this NPC trades in, as links or plain notes.
+          $ref: '#/$defs/text-list'
+        affinity: {$ref: '#/$defs/affinity'}
+  - if:
+      properties: {subtype: {const: antagonist}}
+    then:
+      $ref: '#/$defs/npc-like'
+      required: [disposition]
+      properties:
+        disposition: {const: hostile}
+  - if:
+      properties: {subtype: {const: pc}}
+    then:
+      required: [player, race, class, level]
+      properties:
+        state:
+          enum: [active, dead, retired, missing, transformed, away]
+        tags:
+          contains: {pattern: '^player/'}
+        player: {$ref: entity.schema.yaml#/$defs/link}
+        homeland: {$ref: entity.schema.yaml#/$defs/link}
+        motivation: {$ref: entity.schema.yaml#/$defs/text}
+        secrets: {$ref: '#/$defs/text-list'}
+        affinity: {$ref: '#/$defs/affinity'}
+        level_confirmed: {$ref: '#/$defs/session-stamp'}
+        spotlight:
+          description: low = tactics-first player, never flagged overdue (meta/character-focus.md).
+          enum: [normal, low]
+        spotlight_hooks:
+          type: array
+          items:
+            type: object
+            required: [hook, status]
+            additionalProperties: false
+            properties:
+              hook: {$ref: entity.schema.yaml#/$defs/text}
+              status: {enum: [open, seeded, paid]}
+properties:
+  type: {const: character}
+  subtype:
+    enum: [npc, pc, antagonist]
+  background: {$ref: entity.schema.yaml#/$defs/text}
+  race:
+    description: A link to a race entry, or a plain note.
+    $ref: entity.schema.yaml#/$defs/text
+  class:
+    description: A link to a class entry, or a plain note (multiclass, subclass, "Unknown").
+    $ref: entity.schema.yaml#/$defs/text
+  level:
+    type: integer
+    minimum: 1
+    maximum: 20
+  pronouns: {$ref: entity.schema.yaml#/$defs/text}
+  goals: {$ref: '#/$defs/text-list'}
+  allies: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  enemies: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  family:
+    description: Relatives, as annotated links or plain notes for people with no entry.
+    $ref: '#/$defs/text-list'
+  character_sheet:
+    description: Path to a sheet file, an external link, or an inline summary.
+    $ref: entity.schema.yaml#/$defs/text
+unevaluatedProperties: false
