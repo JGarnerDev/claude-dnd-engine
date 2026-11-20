@@ -72,8 +72,6 @@ export interface PanelApi {
   query: string;
   docked: boolean;
   open: boolean; // slid over the notes
-  search: RefObject<HTMLInputElement | null>;
-  body: RefObject<HTMLDivElement | null>;
   setQuery(q: string): void;
   openEntity(name: string, fresh?: boolean): void;
   openBeat(id: string, fresh?: boolean): void;
@@ -91,7 +89,14 @@ export interface PanelApi {
   onSearchInput(ev: ChangeEvent<HTMLInputElement>): void;
 }
 
-export function usePanel(resolve: Resolver): PanelApi {
+// The panel's DOM refs, kept out of PanelApi: callers destructure them and pass
+// them on as their own props, so reading the api during render isn't a ref read.
+export interface PanelRefs {
+  search: RefObject<HTMLInputElement | null>;
+  body: RefObject<HTMLDivElement | null>;
+}
+
+export function usePanel(resolve: Resolver): PanelApi & PanelRefs {
   const [s, set] = useState<PanelState>(() => ({
     stack: [],
     query: "",

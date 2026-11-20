@@ -26,7 +26,7 @@ import { RefContext } from "./RefChips.js";
 import type { RefIndex } from "./ref-index.js";
 import { SessionContext, useSession } from "./SessionContext.js";
 import type { EntityRef, Section, SessionData } from "./types.js";
-import { crumb, type Item, type PanelApi, type PanelContext } from "./usePanel.js";
+import { crumb, type Item, type PanelApi, type PanelContext, type PanelRefs } from "./usePanel.js";
 
 // A search hit's text with the match marked.
 function marked(s: string, q: string): ReactNode {
@@ -64,6 +64,7 @@ function Fold({ title, children }: { title: string; children: ReactNode[] }) {
 
 export interface PanelProps {
   p: PanelApi;
+  body: PanelRefs["body"];
   data: SessionData;
   resolve: Resolver;
   refs: RefIndex;
@@ -72,7 +73,7 @@ export interface PanelProps {
   onGo: (id: string) => void;
 }
 
-export function Panel({ p, data, resolve, refs, ctx, where, onGo }: PanelProps) {
+export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelProps) {
   const { known } = useSession();
   const plan = useMemo(() => data.sections.filter((s) => !isRecapSection(s.title)), [data]);
   const sections: Section[] = useMemo(() => [...(data.established ?? []), ...plan], [data, plan]);
@@ -291,9 +292,10 @@ export function Panel({ p, data, resolve, refs, ctx, where, onGo }: PanelProps) 
   // Back to the top whenever what's shown changes; home and peeks also follow the walk.
   const aside = useRef<HTMLElement>(null);
   const follows = !q && (!top || top.kind === "beat" || top.kind === "scene");
+  const followed = follows ? ctx : null;
   useLayoutEffect(() => {
     if (aside.current) aside.current.scrollTop = 0;
-  }, [q, top, follows ? ctx : null]);
+  }, [q, top, followed]);
 
   // Inside the panel a beat, scene or entity link opens here, on the same Back stack.
   const links = useMemo(
@@ -313,7 +315,7 @@ export function Panel({ p, data, resolve, refs, ctx, where, onGo }: PanelProps) 
       <SessionContext.Provider value={session}>
         <RefContext.Provider value={links}>
           <div className="sr-pn-head">{head}</div>
-          <div ref={p.body} className="sr-panel-body">
+          <div ref={body} className="sr-panel-body">
             {q ? results() : top ? item(top) : home()}
           </div>
         </RefContext.Provider>

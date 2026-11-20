@@ -58,6 +58,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib.achievements import achievements  # noqa: E402
+from lib.cards import cards  # noqa: E402
 from lib.common import (  # noqa: E402
     ROOT,
     ci_eq,
@@ -68,8 +70,6 @@ from lib.common import (  # noqa: E402
     read_text_no_bom,
     try_int,
 )
-from lib.achievements import achievements  # noqa: E402
-from lib.cards import cards  # noqa: E402
 from lib.reputation import reputation  # noqa: E402
 from lib.sky import sky  # noqa: E402
 from lib.stats import standings  # noqa: E402

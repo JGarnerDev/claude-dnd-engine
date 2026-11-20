@@ -76,7 +76,7 @@ function Walk({ raw }: { raw: SessionData }) {
   const { data, g, resolve, known, idx, recapIdx, combatants } = fixed;
   const s = data.session;
   const { state, current, dispatch } = useRunner(s.folder, g);
-  const p = usePanel(resolve);
+  const { search, body, ...p } = usePanel(resolve);
   const main = useRef<HTMLElement>(null);
   const [slides, setSlides] = useState(false);
 
@@ -183,6 +183,7 @@ function Walk({ raw }: { raw: SessionData }) {
         name={s.name}
         date={s.date}
         p={p}
+        search={search}
         onBack={back}
         onCopy={copy}
         onRestart={restart}
@@ -245,6 +246,7 @@ function Walk({ raw }: { raw: SessionData }) {
         <SessionContext.Provider value={session}>
           <Panel
             p={p}
+            body={body}
             data={data}
             resolve={resolve}
             refs={refs}

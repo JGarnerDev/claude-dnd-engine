@@ -9,7 +9,7 @@
 // so the runner underneath never sees them while the deck is open.
 
 import "./slides.css";
-import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { useEffect, useEffectEvent, useRef, useState, type MouseEvent } from "react";
 import { createPortal } from "react-dom";
 import { Button } from "jeff-ui";
 import { unlink, type DeckSlide } from "./deck.js";
@@ -122,29 +122,23 @@ export function Slides({
   const [i, setI] = useState(0);
   const el = useRef<HTMLDivElement>(null);
   const show = (n: number) => setI(Math.max(0, Math.min(deck.length - 1, n)));
-  const showRef = useRef(show);
-  showRef.current = show;
-  const at = useRef(i);
-  at.current = i;
-  const close = useRef(onClose);
-  close.current = onClose;
+  const onSlideKey = useEffectEvent((ev: KeyboardEvent) => {
+    ev.stopPropagation();
+    const k = ev.key;
+    if (k === "Escape") onClose();
+    else if (k === "ArrowRight" || k === " " || k === "Enter") show(i + 1);
+    else if (k === "ArrowLeft" || k === "Backspace") show(i - 1);
+    else if (k === "Home") show(0);
+    else if (k === "End") show(Infinity);
+    else if (k === "f" || k === "F") {
+      if (document.fullscreenElement) void document.exitFullscreen?.();
+      else void el.current?.requestFullscreen?.();
+    } else return;
+    ev.preventDefault();
+  });
 
   useEffect(() => {
-    const onKey = (ev: KeyboardEvent) => {
-      ev.stopPropagation();
-      const k = ev.key;
-      const go = showRef.current;
-      if (k === "Escape") close.current();
-      else if (k === "ArrowRight" || k === " " || k === "Enter") go(at.current + 1);
-      else if (k === "ArrowLeft" || k === "Backspace") go(at.current - 1);
-      else if (k === "Home") go(0);
-      else if (k === "End") go(Infinity);
-      else if (k === "f" || k === "F") {
-        if (document.fullscreenElement) void document.exitFullscreen?.();
-        else void el.current?.requestFullscreen?.();
-      } else return;
-      ev.preventDefault();
-    };
+    const onKey = (ev: KeyboardEvent) => onSlideKey(ev);
     document.addEventListener("keydown", onKey, true);
     return () => {
       document.removeEventListener("keydown", onKey, true);

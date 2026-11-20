@@ -329,9 +329,9 @@ def render(script: Path, force: bool):
 
 
 def seed(npc: str, line: str, voices: str):
-    from kokoro import KPipeline
     import numpy as np
     import soundfile as sf
+    from kokoro import KPipeline
 
     CANDIDATES.mkdir(parents=True, exist_ok=True)
     if len(line) < 160:  # Chatterbox clones best from ~10 s; pad a short line out

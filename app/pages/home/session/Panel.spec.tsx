@@ -24,7 +24,7 @@ function setup(d: SessionData = fixture(), ctx: PanelContext = { onCard: [], inS
   const onGo = vi.fn();
   const api: { p?: PanelApi } = {};
   function Harness() {
-    const p = usePanel(resolve);
+    const { search, body, ...p } = usePanel(resolve);
     api.p = p;
     return (
       <SessionContext.Provider value={{ known, openEntity: (n) => p.openEntity(n) }}>
@@ -32,7 +32,7 @@ function setup(d: SessionData = fixture(), ctx: PanelContext = { onCard: [], inS
           className="sr-search"
           type="search"
           value={p.query}
-          ref={p.search}
+          ref={search}
           onChange={p.onSearchInput}
           onKeyDown={p.onSearchKey}
         />
@@ -46,6 +46,7 @@ function setup(d: SessionData = fixture(), ctx: PanelContext = { onCard: [], inS
         >
           <Panel
             p={p}
+            body={body}
             data={d}
             resolve={resolve}
             refs={refs}

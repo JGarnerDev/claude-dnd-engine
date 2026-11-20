@@ -62,7 +62,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite
+from lib.common import cwrite
 
 _spec = importlib.util.spec_from_file_location(
     "diarize_track", Path(__file__).resolve().parent / "diarize-track.py"

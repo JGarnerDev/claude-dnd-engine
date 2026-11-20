@@ -17,7 +17,6 @@ import subprocess
 import sys
 from datetime import date, datetime
 from pathlib import Path
-from typing import Optional
 
 try:
     import yaml
@@ -246,7 +245,7 @@ def pending_recordings(root) -> list:
 INDEXED_DIRS = ("data/", "historian/", "scheduler/", "spitball/")
 
 
-def index_staleness(root) -> Optional[tuple]:
+def index_staleness(root) -> tuple | None:
     """Semantic index freshness. Returns None if never built, else (built_date, sha, commits).
 
     `commits` lists `git log --oneline` lines touching INDEXED_DIRS since the stamped
@@ -292,7 +291,7 @@ def ci_contains(haystack, needle) -> bool:
 
 
 # -- Active campaign + DM -----------------------------------------------------
-def get_active_campaign(root) -> Optional[dict]:
+def get_active_campaign(root) -> dict | None:
     """The campaign file with `state: active` in scheduler/campaign/ (trackers, the
     `_*.md` files, skipped), as {'name', 'dm', 'path'}; None when no campaign is active.
     Its `dm:` field is the only record of who the DM is (meta/dm-rotation.md)."""
@@ -322,7 +321,7 @@ def digits_int(s, default: int = 0) -> int:
     return int(stripped) if stripped else default
 
 
-def try_int(s) -> Optional[int]:
+def try_int(s) -> int | None:
     """Int if s is a clean integer string, else None (mirror of [int]::TryParse)."""
     try:
         return int(str(s).strip())
@@ -348,7 +347,7 @@ _DATE_FORMATS = (
 )
 
 
-def try_parse_date(s) -> Optional[date]:
+def try_parse_date(s) -> date | None:
     """Parse a planned_date string to a date, or None. Broadened toward
     PowerShell [datetime]::TryParse (ISO datetimes + 'July 1, 2026' forms)."""
     if not s:
@@ -407,7 +406,7 @@ class Beat:
         self.value = value
 
 
-def parse_spotlight_beat(s: str) -> Optional["Beat"]:
+def parse_spotlight_beat(s: str) -> Beat | None:
     """Parse one beat token '<class>(<PCs>): <weight>' -> Beat, or None if malformed."""
     m = _BEAT_RE.match(s)
     if not m:
@@ -517,7 +516,7 @@ def campaign_calendar_path(root, campaign: str) -> Path:
     return Path(root) / "meta" / f"calendar-{campaign}.md"
 
 
-def get_calendar(root, campaign: Optional[str] = None) -> Calendar:
+def get_calendar(root, campaign: str | None = None) -> Calendar:
     """Read the calendar: the campaign's own (meta/calendar-<slug>.md) when one is
     named and exists, else the shared meta/calendar.md, else the synced template."""
     path = campaign_calendar_path(root, campaign) if campaign else None
@@ -545,7 +544,7 @@ def split_date(s: str) -> list:
     return p
 
 
-def get_date_precision(s) -> Optional[str]:
+def get_date_precision(s) -> str | None:
     """Precision of a timeline_date string: 'year' | 'month' | 'day' | None."""
     if not s:
         return None

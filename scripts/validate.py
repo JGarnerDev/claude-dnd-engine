@@ -53,7 +53,7 @@ def engine_checks(notes: dict) -> list:
         rel, fm = note.rel, note.meta
         top = rel.split("/")[0]
 
-        def add(text, check, severity="error"):
+        def add(text, check, severity="error", rel=rel):
             problems.append(Problem(f"{rel}: {text}", check, severity))
 
         for req in ("name", "type", "exists"):

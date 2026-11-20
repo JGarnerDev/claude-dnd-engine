@@ -8,7 +8,7 @@
 // on a focused button or summary presses that instead. The recap slides catch keys
 // first (Slides.tsx), so none reach here while the deck is open.
 
-import { useEffect, useRef } from "react";
+import { useEffect, useEffectEvent } from "react";
 import type { NextOption } from "./flow.js";
 
 export interface KeyActions {
@@ -51,11 +51,10 @@ export function onRunnerKey(ev: KeyboardEvent, a: KeyActions): void {
 
 // One listener for the page's life; it always sees the latest options and actions.
 export function useKeys(a: KeyActions): void {
-  const latest = useRef(a);
-  latest.current = a;
+  const on = useEffectEvent((ev: KeyboardEvent) => onRunnerKey(ev, a));
   useEffect(() => {
-    const on = (ev: KeyboardEvent) => onRunnerKey(ev, latest.current);
-    document.addEventListener("keydown", on);
-    return () => document.removeEventListener("keydown", on);
+    const onKey = (ev: KeyboardEvent) => on(ev);
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
   }, []);
 }

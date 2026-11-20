@@ -784,7 +784,7 @@ def pc_classes() -> dict:
     for f in sorted(pcs.glob("*.md")):
         head = f.read_text(encoding="utf-8", errors="replace")[:1500]
 
-        def field(key):
+        def field(key, head=head):
             m = re.search(r"^" + key + r":\s*(.+)$", head, re.M)
             return re.sub(r'[\[\]"\']', "", m.group(1)).strip().lower() if m else None
 

@@ -6,6 +6,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.76.0] — 2026-11-20
+
+### Added
+
+- Shared formatting and lint setup from the hub starter: `.editorconfig`, `.gitattributes`, `.prettierrc.json`, `.prettierignore`, `.oxlintrc.json` (Prettier 3.10.1 and oxlint 1.94.0, pinned exact), `ruff.toml` (ruff 0.17.6 via `uvx`), and `.claude/rules/LINT.md`, which says how to avoid each lint error (a line is added after each hand fix). The pre-commit hook formats and lints staged code; oxlint and ruff errors block the commit.
+
+### Changed
+
+- Code reformatted with Prettier and `ruff format` (`app/`, `scripts/`, `tests/`); no behavior change.
+- The session runner's keyboard handlers (`useKeys`, `Slides`) read the latest props through `useEffectEvent` instead of refs set during render.
+- `usePanel` returns its `search` and `body` refs beside `PanelApi`; `Runner` passes them to `RunnerHeader` and `Panel` as their own props.
+- Markdown placeholder sentinels (`markdown-tokens.ts`, `markdown.ts`) are Private Use characters instead of control characters.
+- `.template-sync` ships the lint and format configs and `.claude/rules/LINT.md` to the template.
+
 ## [0.75.8] — 2026-11-20
 
 ### Changed

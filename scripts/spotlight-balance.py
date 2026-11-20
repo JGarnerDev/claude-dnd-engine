@@ -16,7 +16,6 @@ import argparse
 import re
 import sys
 from pathlib import Path
-from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (
@@ -93,7 +92,7 @@ def _arc_lines(pcs: list, latest: int, away: tuple = ()) -> list:
     return lines
 
 
-def _balance(session_set: list) -> Optional[dict]:
+def _balance(session_set: list) -> dict | None:
     spot = 0
     all_ = 0
     for s in session_set:
@@ -164,7 +163,7 @@ def render_lines(section: bool = False) -> list:
         lines.append(
             (
                 "  insufficient history - spotlight balance not yet meaningful "
-                "({0} of {1} sessions played).".format(played_count, cold_start),
+                f"({played_count} of {cold_start} sessions played).",
                 "yellow",
             )
         )
@@ -196,9 +195,7 @@ def render_lines(section: bool = False) -> list:
             verdict = "agnostic-heavy -> room for more character focus"
         lines.append(
             (
-                "  lifetime: {0}% spotlight / {1}% agnostic ({2})".format(
-                    spot_pct, ag_pct, verdict
-                ),
+                f"  lifetime: {spot_pct}% spotlight / {ag_pct}% agnostic ({verdict})",
                 "white",
             )
         )
@@ -217,16 +214,14 @@ def render_lines(section: bool = False) -> list:
                 lean = "agnostic-heavy -> lean spotlight this week"
             lines.append(
                 (
-                    "  recent trend (last {0}): {1}% spotlight -> {2}".format(window, tr_pct, lean),
+                    f"  recent trend (last {window}): {tr_pct}% spotlight -> {lean}",
                     "white",
                 )
             )
     else:
         lines.append(
             (
-                "  recent trend: suppressed (needs {0} sessions, have {1})".format(
-                    window, played_count
-                ),
+                f"  recent trend: suppressed (needs {window} sessions, have {played_count})",
                 "darkgray",
             )
         )

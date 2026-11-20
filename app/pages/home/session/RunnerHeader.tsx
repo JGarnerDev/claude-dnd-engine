@@ -3,18 +3,27 @@
 // the timeline, and the pin that docks or hides the panel (`\`).
 
 import { Button, Kbd } from "jeff-ui";
-import type { PanelApi } from "./usePanel.js";
+import type { PanelApi, PanelRefs } from "./usePanel.js";
 
 export interface RunnerHeaderProps {
   name: string;
   date: string;
   p: PanelApi;
+  search: PanelRefs["search"];
   onBack: () => void;
   onCopy: () => void;
   onRestart: () => void;
 }
 
-export function RunnerHeader({ name, date, p, onBack, onCopy, onRestart }: RunnerHeaderProps) {
+export function RunnerHeader({
+  name,
+  date,
+  p,
+  search,
+  onBack,
+  onCopy,
+  onRestart,
+}: RunnerHeaderProps) {
   return (
     <header className="sr-header">
       <div className="sr-title">
@@ -23,7 +32,7 @@ export function RunnerHeader({ name, date, p, onBack, onCopy, onRestart }: Runne
       </div>
       <div className="sr-searchbox">
         <input
-          ref={p.search}
+          ref={search}
           className="sr-search"
           type="search"
           autoComplete="off"

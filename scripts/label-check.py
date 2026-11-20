@@ -26,7 +26,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite, read_text_no_bom, try_int, get_frontmatter  # noqa: E402
+from lib.common import ROOT, cwrite, get_frontmatter, read_text_no_bom, try_int  # noqa: E402
 from lib.labels import (  # noqa: E402
     combatant_labels,
     glance_entries,

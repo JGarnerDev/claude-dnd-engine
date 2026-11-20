@@ -19,14 +19,14 @@ from lib.common import (  # noqa: E402
     ROOT,
     ci_eq,
     digits_int,
+    get_axis_config,
     get_calendar,
     get_date_parts,
     get_date_precision,
     get_date_sort_key,
+    get_frontmatter,
     get_plot_date,
     get_precision_duration,
-    get_axis_config,
-    get_frontmatter,
 )
 
 
@@ -306,7 +306,7 @@ def main() -> None:
     print(f"Wrote timeline to {out_dir}")
     print(f"  world-history.md  ({len(world)} event(s))")
     print(f"  party-history.md  ({len(party)} item(s))")
-    print(f"  timeline.md       (reference doc)")
+    print("  timeline.md       (reference doc)")
 
 
 if __name__ == "__main__":

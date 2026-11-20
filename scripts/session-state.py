@@ -79,9 +79,7 @@ def main() -> None:
             cwrite("\n[PARTY]", "cyan")
             for cols in rows:
                 if len(cols) >= 4:
-                    cwrite(
-                        "  {0}: {1} ({2}) - {3}".format(cols[0], cols[1], cols[2], cols[3]), "white"
-                    )
+                    cwrite(f"  {cols[0]}: {cols[1]} ({cols[2]}) - {cols[3]}", "white")
 
     cwrite("")
 

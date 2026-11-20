@@ -16,13 +16,11 @@ import re
 import sys
 from datetime import date, timedelta
 from pathlib import Path
-from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (
     ROOT,
     ci_eq,
-    color,
     cwrite,
     entity_md_files,
     get_frontmatter,
@@ -460,7 +458,7 @@ def main() -> None:
     cwrite("========================================\n", "darkgray")
 
 
-def _validate_error_count() -> Optional[int]:
+def _validate_error_count() -> int | None:
     """Error count from validate.py if present (built in a later PR), else None."""
     try:
         validate = importlib.import_module("validate")

@@ -91,7 +91,7 @@ def main() -> None:
 
         cwrite(f"\n  {name}", "white", end="")
         cwrite(f" ({player})", "gray")
-        cwrite("    {0} {1}, Level {2}".format(race, cls, level), "white")
+        cwrite(f"    {race} {cls}, Level {level}", "white")
 
         if ci_eq(state, "active") and latest_session > 0:
             confirmed = try_int(fm.get("level_confirmed"))
@@ -126,9 +126,7 @@ def main() -> None:
             seen = name in rotation["present"]
             note = "" if seen else " (absent this window)"
             cwrite(
-                "    Spotlight: {0} rotation turns over last {1} sessions{2}".format(
-                    fmt_num(t), rot_window, note
-                ),
+                f"    Spotlight: {fmt_num(t)} rotation turns over last {rot_window} sessions{note}",
                 "darkcyan",
             )
 

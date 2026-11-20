@@ -44,7 +44,7 @@ import os
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -647,7 +647,7 @@ def load_model(name: str, device: str):
             return WhisperModel(name, device="cuda", compute_type="float16"), "cuda", "float16"
         except Exception as e:
             if device == "cuda":
-                raise SystemExit("CUDA requested but unavailable: " + str(e))
+                raise SystemExit("CUDA requested but unavailable: " + str(e)) from e
             cwrite(
                 "  ! GPU unavailable (" + type(e).__name__ + ") -- falling back to CPU.",
                 "darkyellow",
@@ -785,9 +785,7 @@ def render(slug: str, tracks: list, results: dict, meta: dict, vocab: dict, do_f
     fm = [
         "---",
         'transcript_of: "' + slug + '"',
-        'generated: "'
-        + datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
-        + '"',
+        'generated: "' + datetime.now(UTC).astimezone().isoformat(timespec="seconds") + '"',
         'model: "' + meta["model"] + '"',
         'device: "' + meta["device"] + " (" + meta["compute"] + ')"',
         'duration: "' + _hms(dur) + '"',
@@ -961,7 +959,7 @@ def main() -> None:
     # diarize-track.py: one speaker name per cached utterance. Stamp those onto the
     # segments so render() can label each line individually. Missing sidecar, or a
     # null entry inside one, leaves the track label alone.
-    for speaker, path in tracks:
+    for _speaker, path in tracks:
         side = cache / (path.stem + ".speakers.json")
         if not side.exists():
             continue

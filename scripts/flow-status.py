@@ -17,8 +17,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import ROOT, cwrite, color, read_text_no_bom
-from lib.beat_order import flow_node_ids, order_problems, plan_beat_ids, parse_id
+from lib.beat_order import flow_node_ids, order_problems, parse_id, plan_beat_ids
+from lib.common import ROOT, color, cwrite, read_text_no_bom
 
 # A flow graph set is a folder whose README names the conventions doc.
 SET_MARKER = "meta/flow-graphs.md"

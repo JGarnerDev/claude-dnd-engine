@@ -1,0 +1,5 @@
+# Bulk reformats, skipped by git blame and GitHub.
+# Locally: git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+# Reformat with Prettier and ruff format
+045fe859f7ec5aaf18a75123fa57aee9273a12a7

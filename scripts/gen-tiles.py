@@ -1,6 +1,7 @@
 # consumers: maps/world/CLAUDE.md -- update these if usage, flags, or output format change.
-from PIL import Image
 import os
+
+from PIL import Image
 
 base_dir = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "maps", "world"

@@ -22,6 +22,8 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib.beat_order import flow_node_ids, order_problems, parse_id, plan_beat_ids  # noqa: E402
+from lib.cards import card_refs, cards  # noqa: E402
 from lib.common import (  # noqa: E402
     ROOT,
     ci_eq,
@@ -33,8 +35,6 @@ from lib.common import (  # noqa: E402
     try_int,
     try_parse_date,
 )
-from lib.beat_order import flow_node_ids, order_problems, parse_id, plan_beat_ids  # noqa: E402
-from lib.cards import card_refs, cards  # noqa: E402
 from lib.labels import combatant_labels, manifest_rules, role_of  # noqa: E402
 
 SESSIONS = ROOT / "scheduler" / "sessions"

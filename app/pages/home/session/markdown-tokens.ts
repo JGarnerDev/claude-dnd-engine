@@ -21,11 +21,11 @@ export type Block =
   | { t: "list"; items: ListItem[] }
   | { t: "p"; c: Inline[] };
 
-// Placeholders and markers, in characters no campaign file uses.
-const CODE = "\u0000";
-const WIKI = "\u0001";
-const [B_ON, B_OFF, I_ON, I_OFF] = ["\u0002", "\u0003", "\u0004", "\u0005"];
-const SPLIT_RE = /(\u0000\d+\u0000|\u0001\d+\u0001|[\u0002-\u0005])/;
+// Placeholders and markers, in Private Use characters no campaign file uses.
+const CODE = "\uE000";
+const WIKI = "\uE001";
+const [B_ON, B_OFF, I_ON, I_OFF] = ["\uE002", "\uE003", "\uE004", "\uE005"];
+const SPLIT_RE = /(\uE000\d+\uE000|\uE001\d+\uE001|[\uE002-\uE005])/;
 
 export function parseInline(text: string): Inline[] {
   const codes: string[] = [];

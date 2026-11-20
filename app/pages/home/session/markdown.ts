@@ -18,7 +18,7 @@ export function inline(text: string, known: Known = () => true): string {
   const codes: string[] = [];
   let s = escapeHtml(text).replace(
     /`([^`]+)`/g,
-    (_, c: string) => `\u0000${codes.push(c) - 1}\u0000`,
+    (_, c: string) => `\uE000${codes.push(c) - 1}\uE000`,
   );
   s = s.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, name: string, alias?: string) => {
     const n = name.trim();
@@ -28,7 +28,7 @@ export function inline(text: string, known: Known = () => true): string {
   s = s
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/(^|[^*])\*([^*\s][^*]*?)\*/g, "$1<em>$2</em>");
-  return s.replace(/\u0000(\d+)\u0000/g, (_, i: string) => `<code>${codes[Number(i)]}</code>`);
+  return s.replace(/\uE000(\d+)\uE000/g, (_, i: string) => `<code>${codes[Number(i)]}</code>`);
 }
 
 // Plain text for one-line previews: [[Name|alias]] -> alias, markup dropped.

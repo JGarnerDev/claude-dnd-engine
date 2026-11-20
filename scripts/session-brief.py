@@ -13,13 +13,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (
-    get_active_campaign,
     ROOT,
     ci_eq,
     cwrite,
     digits_int,
     entity_md_files,
     fmt_num,
+    get_active_campaign,
     get_frontmatter,
     index_staleness,
     parse_party_table,
@@ -212,9 +212,7 @@ def main() -> None:
                     )
                 else:
                     cwrite(
-                        "  ! Long rest NOT available: only {0} h since last (needs 24) - {1} h more in-world before a fresh reset.".format(
-                            fmt_num(hrs), fmt_num(24 - hrs)
-                        ),
+                        f"  ! Long rest NOT available: only {fmt_num(hrs)} h since last (needs 24) - {fmt_num(24 - hrs)} h more in-world before a fresh reset.",
                         "red",
                     )
             else:

@@ -77,7 +77,7 @@ def main() -> None:
 
     # -- by area (first topic segment), then by group (first two) ---------------
     areas = {}
-    for rel, status, topic, prio in open_rows:
+    for rel, _status, topic, prio in open_rows:
         areas.setdefault(group_key(topic, 1), []).append((rel, topic, prio))
 
     for area in sorted(areas):
@@ -100,7 +100,7 @@ def main() -> None:
 
     if answered:
         cwrite(f"\n--- answered ({answered}) ---", "darkgray")
-        for rel, status, topic, prio in sorted(questions):
+        for rel, status, _topic, _prio in sorted(questions):
             if status == "answered":
                 cwrite(f"  {rel}", "darkgray")
 
