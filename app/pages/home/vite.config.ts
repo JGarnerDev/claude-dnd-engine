@@ -6,15 +6,15 @@
 // /session.html is the session runner (session/), fed by the session-data plugin.
 // No build step: these pages are a local DM tool, served only by this dev server.
 
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { campaignData } from './campaign-data-plugin';
-import { sessionData } from './session-data-plugin';
+import { fileURLToPath } from "node:url";
+import { dirname, resolve } from "node:path";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { campaignData } from "./campaign-data-plugin";
+import { sessionData } from "./session-data-plugin";
 
 const here = dirname(fileURLToPath(import.meta.url)); // app/pages/home
-const repoRoot = resolve(here, '..', '..', '..'); // up out of app/pages/home to the campaign repo root
+const repoRoot = resolve(here, "..", "..", ".."); // up out of app/pages/home to the campaign repo root
 
 export default defineConfig({
   root: here,

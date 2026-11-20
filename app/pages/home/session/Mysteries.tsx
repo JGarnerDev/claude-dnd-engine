@@ -4,17 +4,24 @@
 // MAX_SHOWN show; any below wait in reserve for a later deck. The runner lays them
 // out as a numbered grid of cards so eight questions read at a glance when screen-shared.
 
-import './mysteries.css';
-import { unlink, type DeckSlide } from './deck.js';
-import { InlineMd } from './MarkdownView.js';
-import { MAX_SHOWN, questions } from './mystery-list.js';
+import "./mysteries.css";
+import { unlink, type DeckSlide } from "./deck.js";
+import { InlineMd } from "./MarkdownView.js";
+import { MAX_SHOWN, questions } from "./mystery-list.js";
 
-const isMysteries = (s: DeckSlide) => !s.body && /^mysteries(\s*(&|and)\s*loose ends)?$/i.test(s.title.trim());
+const isMysteries = (s: DeckSlide) =>
+  !s.body && /^mysteries(\s*(&|and)\s*loose ends)?$/i.test(s.title.trim());
 
 export function MysteryGrid({ qs }: { qs: string[] }) {
   return (
     <ol className="my-grid">
-      {qs.map((q, i) => <li key={i} className="my-card"><span className="my-q"><InlineMd md={unlink(q)} /></span></li>)}
+      {qs.map((q, i) => (
+        <li key={i} className="my-card">
+          <span className="my-q">
+            <InlineMd md={unlink(q)} />
+          </span>
+        </li>
+      ))}
     </ol>
   );
 }

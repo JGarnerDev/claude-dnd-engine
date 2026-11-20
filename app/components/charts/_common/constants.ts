@@ -58,8 +58,8 @@ export const BREAK_CHIP_PAD = 10;
 // everything (incl. secrets). Any other value is a character name: a character
 // knows the public beats plus the non-secret beats that name `knownBy`, but never
 // a secret beat. The sentinel is `\0`-prefixed so it can't collide with a name.
-export const DM_AUDIENCE = '\0dm';
-export const DM_LABEL = 'DM';
+export const DM_AUDIENCE = "\0dm";
+export const DM_LABEL = "DM";
 
 // Axis ticks: minimum pixel spacing between two tick labels. Drives the
 // responsive granularity — months when zoomed in, single years mid-zoom,

@@ -30,8 +30,8 @@ except ImportError:  # run outside `uv run`: frontmatter falls back to the line 
 # encoded with the locale codepage (cp1252), which crashes on emoji and mangles
 # non-ASCII. Force UTF-8 once so the em-dash and 🎲/🐉 glyphs round-trip. Mirrors
 # the `[Console]::OutputEncoding = UTF8` the PowerShell originals set.
-if hasattr(sys.stdout, 'reconfigure'):
-    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 
 # -- Repo root + script-path resolution ---------------------------------------
@@ -44,11 +44,18 @@ ROOT = SCRIPTS_DIR.parent
 # ANSI codes, stripped when piped/redirected or when NO_COLOR is set so the
 # plain text consumers parse stays clean.
 _ANSI = {
-    'cyan': '36', 'darkcyan': '36', 'yellow': '33', 'darkyellow': '33',
-    'white': '37', 'gray': '90', 'darkgray': '90', 'red': '31',
-    'green': '32', 'magenta': '35',
+    "cyan": "36",
+    "darkcyan": "36",
+    "yellow": "33",
+    "darkyellow": "33",
+    "white": "37",
+    "gray": "90",
+    "darkgray": "90",
+    "red": "31",
+    "green": "32",
+    "magenta": "35",
 }
-_USE_COLOR = sys.stdout.isatty() and not os.environ.get('NO_COLOR')
+_USE_COLOR = sys.stdout.isatty() and not os.environ.get("NO_COLOR")
 
 
 def color(text: str, name: str) -> str:
@@ -61,7 +68,7 @@ def color(text: str, name: str) -> str:
     return f"\033[{code}m{text}\033[0m"
 
 
-def cwrite(text: str = '', name: str = None, end: str = '\n') -> None:
+def cwrite(text: str = "", name: str = None, end: str = "\n") -> None:
     """Print one line, optionally colored. Mirror of Write-Host."""
     if name:
         text = color(text, name)
@@ -81,9 +88,9 @@ def entity_md_files(base) -> list:
     if not base.exists():
         return []
     return sorted(
-        (f for f in base.rglob('*.md')
-         if not f.name.startswith('_') and f.name != 'CLAUDE.md'),
-        key=lambda f: f.name.lower())
+        (f for f in base.rglob("*.md") if not f.name.startswith("_") and f.name != "CLAUDE.md"),
+        key=lambda f: f.name.lower(),
+    )
 
 
 # -- File reading -------------------------------------------------------------
@@ -92,27 +99,29 @@ def entity_md_files(base) -> list:
 # script remembering to.
 def read_text_no_bom(path) -> str:
     """Read a file as UTF-8 with any leading BOM stripped."""
-    raw = Path(path).read_text(encoding='utf-8')
-    if raw and raw[0] == '﻿':
+    raw = Path(path).read_text(encoding="utf-8")
+    if raw and raw[0] == "﻿":
         raw = raw[1:]
     return raw
 
 
 # -- Frontmatter --------------------------------------------------------------
-_FM_BLOCK_RE = re.compile(r'^---\r?\n(.+?)\r?\n---', re.DOTALL)
+_FM_BLOCK_RE = re.compile(r"^---\r?\n(.+?)\r?\n---", re.DOTALL)
 # A link value may be bare ([[X]] (note)) or quoted ("[[X]] (note)"); both give X. A quoted value
 # counts as a link only when the link stands alone or is followed by a "(note)" or a dash note;
 # quoted prose that merely starts with a link ("[[Miguel]]'s PC. ...") is kept whole.
-_QUOTED_LINK = (r'(?:"(?=\[\[[^\]]+\]\](?:"|\s+[(\-—–]))'
-                r"|'(?=\[\[[^\]]+\]\](?:'|\s+[(\-—–])))?")
-_WIKI_SCALAR_RE = re.compile(r'^(\w[\w_]*):\s*' + _QUOTED_LINK + r'\[\[([^\]]+)\]\]')
+_QUOTED_LINK = (
+    r'(?:"(?=\[\[[^\]]+\]\](?:"|\s+[(\-—–]))'
+    r"|'(?=\[\[[^\]]+\]\](?:'|\s+[(\-—–])))?"
+)
+_WIKI_SCALAR_RE = re.compile(r"^(\w[\w_]*):\s*" + _QUOTED_LINK + r"\[\[([^\]]+)\]\]")
 _SCALAR_RE = re.compile(r'^(\w[\w_]*):\s*"?([^"#\r\n]*)"?\s*$')
-_LIST_WIKI_RE = re.compile(r'^\s+-\s+' + _QUOTED_LINK + r'\[\[([^\]]+)\]\]')
+_LIST_WIKI_RE = re.compile(r"^\s+-\s+" + _QUOTED_LINK + r"\[\[([^\]]+)\]\]")
 _LIST_PLAIN_RE = re.compile(r'^\s+-\s+"?([^"#\r\n]+)"?\s*$')
 # A parsed value that is one link plus an optional "(note)" or dash note.
-_LINK_VALUE_RE = re.compile(r'^\[\[([^\]]+)\]\](?:\s+[(\-—–].*)?$', re.DOTALL)
+_LINK_VALUE_RE = re.compile(r"^\[\[([^\]]+)\]\](?:\s+[(\-—–].*)?$", re.DOTALL)
 # BaseLoader keeps every value a string (no false -> bool, 12:30 -> 750), as scripts expect.
-_YAML_LOADER = getattr(yaml, 'CBaseLoader', None) or getattr(yaml, 'BaseLoader', None)
+_YAML_LOADER = getattr(yaml, "CBaseLoader", None) or getattr(yaml, "BaseLoader", None)
 
 
 def get_frontmatter(path) -> dict:
@@ -151,14 +160,14 @@ def get_frontmatter_from_text(raw: str) -> dict:
         if isinstance(value, str):
             fm[key] = _unwrap_link(value.strip())
         elif isinstance(value, list):
-            fm[f'_list_{key}'] = [_list_item(v) for v in value]
+            fm[f"_list_{key}"] = [_list_item(v) for v in value]
     return fm
 
 
 def _unwrap_link(value: str) -> str:
     """'[[Name|alias]] (note)' -> 'Name'. Prose that merely starts with a link is kept whole."""
     m = _LINK_VALUE_RE.match(value)
-    return m.group(1).split('|')[0].strip() if m else value
+    return m.group(1).split("|")[0].strip() if m else value
 
 
 def _list_item(value) -> str:
@@ -167,7 +176,7 @@ def _list_item(value) -> str:
     if isinstance(value, dict) and value:
         # `- hook: x` / `  status: y` -> 'hook: x', as the line parser read it.
         k, v = next(iter(value.items()))
-        return f'{k}: {v}' if isinstance(v, str) else f'{k}:'
+        return f"{k}: {v}" if isinstance(v, str) else f"{k}:"
     return str(value)
 
 
@@ -175,25 +184,24 @@ def _frontmatter_from_lines(block: str) -> dict:
     """Line-by-line reader for frontmatter that isn't valid YAML."""
     fm = {}
     current_key = None
-    for line in block.split('\n'):
-        line = line.rstrip('\r')
+    for line in block.split("\n"):
+        line = line.rstrip("\r")
         mw = _WIKI_SCALAR_RE.match(line)
         ms = _SCALAR_RE.match(line)
         mlw = _LIST_WIKI_RE.match(line)
         mlp = _LIST_PLAIN_RE.match(line)
         if mw:
             current_key = mw.group(1).strip()
-            fm[current_key] = mw.group(2).split('|')[0].strip()
+            fm[current_key] = mw.group(2).split("|")[0].strip()
         elif ms:
             current_key = ms.group(1).strip()
             fm[current_key] = ms.group(2).strip()
         elif mlw:
             if current_key:
-                fm.setdefault(f'_list_{current_key}', []).append(
-                    mlw.group(1).split('|')[0].strip())
+                fm.setdefault(f"_list_{current_key}", []).append(mlw.group(1).split("|")[0].strip())
         elif mlp:
             if current_key:
-                fm.setdefault(f'_list_{current_key}', []).append(mlp.group(1).strip())
+                fm.setdefault(f"_list_{current_key}", []).append(mlp.group(1).strip())
     return fm
 
 
@@ -202,7 +210,7 @@ def _frontmatter_from_lines(block: str) -> dict:
 # recording in recaps/audio/ with no matching transcript is an
 # untranscribed session; both briefs and session-start.py surface it, so the check
 # lives here once.
-AUDIO_EXTS = {'.aac', '.m4a', '.mp3', '.wav', '.flac', '.ogg', '.opus', '.webm', '.mp4', '.mkv'}
+AUDIO_EXTS = {".aac", ".m4a", ".mp3", ".wav", ".flac", ".ogg", ".opus", ".webm", ".mp4", ".mkv"}
 
 
 def pending_recordings(root) -> list:
@@ -210,13 +218,15 @@ def pending_recordings(root) -> list:
 
     A folder of per-speaker tracks counts its audio files; a single mixed file counts 1.
     """
-    audio_dir = Path(root) / 'audio' if Path(root).name == 'recaps' else Path(root) / 'recaps' / 'audio'
-    out_dir = audio_dir.parent / 'transcripts'
+    audio_dir = (
+        Path(root) / "audio" if Path(root).name == "recaps" else Path(root) / "recaps" / "audio"
+    )
+    out_dir = audio_dir.parent / "transcripts"
     if not audio_dir.exists():
         return []
     pending = []
     for p in sorted(audio_dir.iterdir()):
-        if p.name.startswith('.'):
+        if p.name.startswith("."):
             continue
         if p.is_dir():
             slug, n = p.name, len([q for q in p.iterdir() if q.suffix.lower() in AUDIO_EXTS])
@@ -224,7 +234,7 @@ def pending_recordings(root) -> list:
             slug, n = p.stem, 1
         else:
             continue
-        if not (out_dir / (slug + '.md')).exists():
+        if not (out_dir / (slug + ".md")).exists():
             pending.append((slug, n))
     return pending
 
@@ -233,7 +243,7 @@ def pending_recordings(root) -> list:
 # Must match index-entities.py's default --dirs, or a commit to an indexed dir that
 # isn't listed here leaves the index silently stale. Both briefs report it, so the
 # check lives here once.
-INDEXED_DIRS = ('data/', 'historian/', 'scheduler/', 'spitball/')
+INDEXED_DIRS = ("data/", "historian/", "scheduler/", "spitball/")
 
 
 def index_staleness(root) -> Optional[tuple]:
@@ -243,18 +253,21 @@ def index_staleness(root) -> Optional[tuple]:
     build SHA; empty means fresh. Stamp file: vector-index/.index-built (line 1 ISO
     timestamp, line 2 commit SHA).
     """
-    stamp = Path(root) / 'vector-index' / '.index-built'
+    stamp = Path(root) / "vector-index" / ".index-built"
     if not stamp.exists():
         return None
     lines = read_text_no_bom(stamp).splitlines()
-    built = lines[0][:10] if lines else ''
-    sha = lines[1].strip() if len(lines) > 1 else ''
+    built = lines[0][:10] if lines else ""
+    sha = lines[1].strip() if len(lines) > 1 else ""
     commits = []
     if sha:
         try:
             out = subprocess.run(
-                ['git', '-C', str(root), 'log', '--oneline', f'{sha}..HEAD', '--', *INDEXED_DIRS],
-                capture_output=True, text=True, check=False)
+                ["git", "-C", str(root), "log", "--oneline", f"{sha}..HEAD", "--", *INDEXED_DIRS],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
             commits = [ln for ln in out.stdout.splitlines() if ln.strip()]
         except Exception:
             pass
@@ -283,27 +296,29 @@ def get_active_campaign(root) -> Optional[dict]:
     """The campaign file with `state: active` in scheduler/campaign/ (trackers, the
     `_*.md` files, skipped), as {'name', 'dm', 'path'}; None when no campaign is active.
     Its `dm:` field is the only record of who the DM is (meta/dm-rotation.md)."""
-    camp_dir = Path(root) / 'scheduler' / 'campaign'
+    camp_dir = Path(root) / "scheduler" / "campaign"
     if not camp_dir.exists():
         return None
-    for f in sorted(camp_dir.glob('*.md')):
-        if f.name.startswith('_'):
+    for f in sorted(camp_dir.glob("*.md")):
+        if f.name.startswith("_"):
             continue
         fm = get_frontmatter(f)
-        if ci_eq(fm.get('state'), 'active'):
-            return {'name': fm.get('name') or f.stem,
-                    'dm': (fm.get('dm') or '').strip().strip('"') or None,
-                    'path': f}
+        if ci_eq(fm.get("state"), "active"):
+            return {
+                "name": fm.get("name") or f.stem,
+                "dm": (fm.get("dm") or "").strip().strip('"') or None,
+                "path": f,
+            }
     return None
 
 
 # -- Numeric coercion + formatting --------------------------------------------
-_DIGITS_RE = re.compile(r'[^0-9]')
+_DIGITS_RE = re.compile(r"[^0-9]")
 
 
 def digits_int(s, default: int = 0) -> int:
     """Int from a string after stripping non-digits (e.g. 'S12' -> 12)."""
-    stripped = _DIGITS_RE.sub('', str(s or ''))
+    stripped = _DIGITS_RE.sub("", str(s or ""))
     return int(stripped) if stripped else default
 
 
@@ -311,7 +326,7 @@ def try_int(s) -> Optional[int]:
     """Int if s is a clean integer string, else None (mirror of [int]::TryParse)."""
     try:
         return int(str(s).strip())
-    except (TypeError, ValueError):
+    except TypeError, ValueError:
         return None
 
 
@@ -321,8 +336,16 @@ def fmt_num(n: float) -> str:
 
 
 # -- Date parsing -------------------------------------------------------------
-_DATE_FORMATS = ('%Y-%m-%d', '%m/%d/%Y', '%Y/%m/%d', '%d-%m-%Y',
-                 '%Y-%m-%dT%H:%M', '%Y-%m-%dT%H:%M:%S', '%B %d, %Y', '%B %d %Y')
+_DATE_FORMATS = (
+    "%Y-%m-%d",
+    "%m/%d/%Y",
+    "%Y/%m/%d",
+    "%d-%m-%Y",
+    "%Y-%m-%dT%H:%M",
+    "%Y-%m-%dT%H:%M:%S",
+    "%B %d, %Y",
+    "%B %d %Y",
+)
 
 
 def try_parse_date(s) -> Optional[date]:
@@ -340,7 +363,7 @@ def try_parse_date(s) -> Optional[date]:
 
 
 # -- Party table --------------------------------------------------------------
-_PARTY_BLOCK_RE = re.compile(r'## Party\r?\n([\s\S]+?)(\r?\n##|\Z)')
+_PARTY_BLOCK_RE = re.compile(r"## Party\r?\n([\s\S]+?)(\r?\n##|\Z)")
 
 
 def parse_party_table(campaign_file) -> list:
@@ -352,12 +375,12 @@ def parse_party_table(campaign_file) -> list:
     if not m:
         return []
     rows = []
-    for line in m.group(1).split('\n'):
-        line = line.rstrip('\r')
-        if not line.startswith('|') or line.startswith('|---'):
+    for line in m.group(1).split("\n"):
+        line = line.rstrip("\r")
+        if not line.startswith("|") or line.startswith("|---"):
             continue
-        cols = [c.strip() for c in line.split('|') if c != '']
-        if not cols or ci_eq(cols[0], 'Player'):
+        cols = [c.strip() for c in line.split("|") if c != ""]
+        if not cols or ci_eq(cols[0], "Player"):
             continue
         rows.append(cols)
     return rows
@@ -367,14 +390,15 @@ def parse_party_table(campaign_file) -> list:
 # Shared by spotlight-balance.py and party-status.py so the rotation tally has
 # one source.
 
-SPOTLIGHT_WEIGHT = {'touch': 1, 'beat': 3, 'arc': 9}
+SPOTLIGHT_WEIGHT = {"touch": 1, "beat": 3, "arc": 9}
 
 _BEAT_RE = re.compile(
-    r'^\s*(spotlight|shared|party-centric|world)\s*(?:\(([^)]*)\))?\s*:\s*(touch|beat|arc)\s*$')
+    r"^\s*(spotlight|shared|party-centric|world)\s*(?:\(([^)]*)\))?\s*:\s*(touch|beat|arc)\s*$"
+)
 
 
 class Beat:
-    __slots__ = ('cls', 'pcs', 'weight', 'value')
+    __slots__ = ("cls", "pcs", "weight", "value")
 
     def __init__(self, cls, pcs, weight, value):
         self.cls = cls
@@ -383,19 +407,19 @@ class Beat:
         self.value = value
 
 
-def parse_spotlight_beat(s: str) -> Optional['Beat']:
+def parse_spotlight_beat(s: str) -> Optional["Beat"]:
     """Parse one beat token '<class>(<PCs>): <weight>' -> Beat, or None if malformed."""
     m = _BEAT_RE.match(s)
     if not m:
         return None
     pcs = []
     if m.group(2):
-        pcs = [p.strip() for p in m.group(2).split(',') if p.strip()]
+        pcs = [p.strip() for p in m.group(2).split(",") if p.strip()]
     return Beat(m.group(1), pcs, m.group(3), SPOTLIGHT_WEIGHT[m.group(3)])
 
 
 class PlayedSession:
-    __slots__ = ('num', 'name', 'beats', 'present', 'has_presence')
+    __slots__ = ("num", "name", "beats", "present", "has_presence")
 
     def __init__(self, num, name, beats, present, has_presence):
         self.num = num
@@ -409,27 +433,29 @@ def get_played_spotlight_sessions(root) -> list:
     """Collect played sessions (historian/sessions, recursive) with parsed beats +
     attendance. Returns a list of PlayedSession sorted by num ascending.
     """
-    sessions_dir = Path(root) / 'historian' / 'sessions'
+    sessions_dir = Path(root) / "historian" / "sessions"
     out = []
     if sessions_dir.exists():
-        for f in sessions_dir.rglob('*.md'):
+        for f in sessions_dir.rglob("*.md"):
             fm = get_frontmatter(f)
-            if not ci_eq(fm.get('type'), 'session'):
+            if not ci_eq(fm.get("type"), "session"):
                 continue
             beats = []
-            for b in fm.get('_list_beats', []):
+            for b in fm.get("_list_beats", []):
                 parsed = parse_spotlight_beat(b)
                 if parsed:
                     beats.append(parsed)
-            present = list(fm.get('_list_pcs_present', []))
-            num = digits_int(fm.get('session_number', ''))
-            out.append(PlayedSession(
-                num=num,
-                name=fm.get('name'),
-                beats=beats,
-                present=present,
-                has_presence=bool(fm.get('_list_pcs_present')),
-            ))
+            present = list(fm.get("_list_pcs_present", []))
+            num = digits_int(fm.get("session_number", ""))
+            out.append(
+                PlayedSession(
+                    num=num,
+                    name=fm.get("name"),
+                    beats=beats,
+                    present=present,
+                    has_presence=bool(fm.get("_list_pcs_present")),
+                )
+            )
     return sorted(out, key=lambda s: s.num)
 
 
@@ -452,17 +478,17 @@ def get_spotlight_rotation(sessions: list, window: int, active_names: list) -> d
         for n in here:
             present[n] = True
         for b in s.beats:
-            if b.value < SPOTLIGHT_WEIGHT['beat']:
+            if b.value < SPOTLIGHT_WEIGHT["beat"]:
                 continue
-            if b.cls == 'spotlight' and len(b.pcs) >= 1:
+            if b.cls == "spotlight" and len(b.pcs) >= 1:
                 pc = b.pcs[0]
                 if pc in here:
                     turns[pc] = turns.get(pc, 0.0) + 1.0
-            elif b.cls == 'shared':
+            elif b.cls == "shared":
                 for pc in b.pcs:
                     if pc in here:
                         turns[pc] = turns.get(pc, 0.0) + 0.5
-    return {'turns': turns, 'present': present, 'fallback': fallback}
+    return {"turns": turns, "present": present, "fallback": fallback}
 
 
 # -- Calendar + timeline helpers (meta/calendar.md) ---------------------------
@@ -472,23 +498,23 @@ def get_spotlight_rotation(sessions: list, window: int, active_names: list) -> d
 
 
 class Calendar:
-    __slots__ = ('months', 'epoch_year', 'year_suffix', 'year_days')
+    __slots__ = ("months", "epoch_year", "year_suffix", "year_days")
 
     def __init__(self, months, epoch_year, year_suffix, year_days):
-        self.months = months          # list of (name, days) tuples
+        self.months = months  # list of (name, days) tuples
         self.epoch_year = epoch_year
         self.year_suffix = year_suffix
         self.year_days = year_days
 
 
-_INT_RE = re.compile(r'^-?\d+$')
+_INT_RE = re.compile(r"^-?\d+$")
 
 
 def campaign_calendar_path(root, campaign: str) -> Path:
     """Where a campaign's own calendar lives: meta/calendar-<slug>.md. Each world
     (season axis) may keep its own months; one without falls back to get_calendar's
     shared file."""
-    return Path(root) / 'meta' / f'calendar-{campaign}.md'
+    return Path(root) / "meta" / f"calendar-{campaign}.md"
 
 
 def get_calendar(root, campaign: Optional[str] = None) -> Calendar:
@@ -496,26 +522,26 @@ def get_calendar(root, campaign: Optional[str] = None) -> Calendar:
     named and exists, else the shared meta/calendar.md, else the synced template."""
     path = campaign_calendar_path(root, campaign) if campaign else None
     if path is None or not path.exists():
-        path = Path(root) / 'meta' / 'calendar.md'
+        path = Path(root) / "meta" / "calendar.md"
     if not path.exists():
-        path = Path(root) / 'meta' / 'calendar-template.md'
+        path = Path(root) / "meta" / "calendar-template.md"
     fm = get_frontmatter(path)
     months = []
-    for m in fm.get('_list_months', []):
-        parts = m.split(':', 1)
+    for m in fm.get("_list_months", []):
+        parts = m.split(":", 1)
         months.append((parts[0].strip(), int(parts[1].strip())))
-    epoch = int(fm['epoch_year']) if fm.get('epoch_year') and _INT_RE.match(fm['epoch_year']) else 0
+    epoch = int(fm["epoch_year"]) if fm.get("epoch_year") and _INT_RE.match(fm["epoch_year"]) else 0
     year_days = sum(d for _, d in months) if months else 365
-    return Calendar(months, epoch, fm.get('year_suffix'), year_days)
+    return Calendar(months, epoch, fm.get("year_suffix"), year_days)
 
 
 def split_date(s: str) -> list:
     """Split a "YYYY[-MM[-DD]]" timeline_date into its string parts. A leading
     minus is a pre-epoch year ("-5256-02" -> ["-5256", "02"]), not a separator."""
-    neg = s.startswith('-')
-    p = s[1:].split('-') if neg else s.split('-')
+    neg = s.startswith("-")
+    p = s[1:].split("-") if neg else s.split("-")
     if neg:
-        p[0] = '-' + p[0]
+        p[0] = "-" + p[0]
     return p
 
 
@@ -523,7 +549,7 @@ def get_date_precision(s) -> Optional[str]:
     """Precision of a timeline_date string: 'year' | 'month' | 'day' | None."""
     if not s:
         return None
-    return {1: 'year', 2: 'month', 3: 'day'}.get(len(split_date(s)))
+    return {1: "year", 2: "month", 3: "day"}.get(len(split_date(s)))
 
 
 def get_date_parts(s: str) -> tuple:
@@ -552,19 +578,27 @@ def get_precision_duration(s: str, cal: Calendar) -> str:
     """Bar duration string by precision: year -> whole year, month -> that month,
     day -> milestone (0d)."""
     prec = get_date_precision(s)
-    if prec == 'year':
+    if prec == "year":
         return f"{cal.year_days}d"
-    if prec == 'month':
+    if prec == "month":
         mi = get_date_parts(s)[1]
         days = cal.months[mi - 1][1] if len(cal.months) >= mi else 30
         return f"{days}d"
-    return '0d'
+    return "0d"
 
 
 _AXIS_STEPS = [
-    (7, '1week'), (14, '2week'), (30, '1month'), (91, '3month'),
-    (182, '6month'), (365, '12month'), (730, '24month'), (1825, '60month'),
-    (3650, '120month'), (18250, '600month'), (36500, '1200month'),
+    (7, "1week"),
+    (14, "2week"),
+    (30, "1month"),
+    (91, "3month"),
+    (182, "6month"),
+    (365, "12month"),
+    (730, "24month"),
+    (1825, "60month"),
+    (3650, "120month"),
+    (18250, "600month"),
+    (36500, "1200month"),
 ]
 
 
@@ -576,9 +610,9 @@ def get_axis_config(min_date: date, max_date: date) -> dict:
     pick = next((step for step in _AXIS_STEPS if step[0] >= raw), _AXIS_STEPS[-1])
     days, interval = pick
     if days < 30:
-        fmt = '%d %b'
+        fmt = "%d %b"
     elif days < 365:
-        fmt = '%b %Y'
+        fmt = "%b %Y"
     else:
-        fmt = '%Y'
-    return {'tick_interval': interval, 'axis_format': fmt, 'days': days}
+        fmt = "%Y"
+    return {"tick_interval": interval, "axis_format": fmt, "days": days}

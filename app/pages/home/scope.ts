@@ -6,9 +6,9 @@
 // "No events to show." When the graph knows no campaigns, the slug is null and
 // the full graph shows unscoped.
 
-import { syncOffsets } from '../../components/charts/_common/helpers/segments.js';
-import { DEFAULT_CALENDAR } from '../../components/charts/_common/helpers/calendar.js';
-import type { TimelineData } from '../../components/charts/_common/types.js';
+import { syncOffsets } from "../../components/charts/_common/helpers/segments.js";
+import { DEFAULT_CALENDAR } from "../../components/charts/_common/helpers/calendar.js";
+import type { TimelineData } from "../../components/charts/_common/types.js";
 
 export interface CampaignScope {
   campaigns: { slug: string; label: string }[];
@@ -23,7 +23,7 @@ export function campaignScope(data: TimelineData): CampaignScope {
   // lived-time sync worked out from the FULL graph (the scoped set holds only
   // one world's sessions, so it can't find the crossings), so the other worlds'
   // rulers still line up under it.
-  const calendars: Record<string, NonNullable<TimelineData['calendar']>> = {};
+  const calendars: Record<string, NonNullable<TimelineData["calendar"]>> = {};
   for (const c of known) if (c.calendar) calendars[c.slug] = c.calendar;
   const sync = syncOffsets(data.events, data.calendar || DEFAULT_CALENDAR, calendars);
   return {
@@ -33,7 +33,14 @@ export function campaignScope(data: TimelineData): CampaignScope {
       if (!slug) return data;
       const keep = (b: { campaign?: string }) => !b.campaign || b.campaign === slug;
       const calendar = known.find((c) => c.slug === slug)?.calendar ?? data.calendar;
-      return { ...data, calendar, sync, primary: slug, events: data.events.filter(keep), spans: data.spans?.filter(keep) };
+      return {
+        ...data,
+        calendar,
+        sync,
+        primary: slug,
+        events: data.events.filter(keep),
+        spans: data.spans?.filter(keep),
+      };
     },
   };
 }

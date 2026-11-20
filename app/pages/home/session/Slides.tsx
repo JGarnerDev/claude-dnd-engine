@@ -8,67 +8,89 @@
 // F toggles browser fullscreen. Keys are caught at the document's capture phase
 // so the runner underneath never sees them while the deck is open.
 
-import './slides.css';
-import { useEffect, useRef, useState, type MouseEvent } from 'react';
-import { createPortal } from 'react-dom';
-import { Button } from 'jeff-ui';
-import { unlink, type DeckSlide } from './deck.js';
-import { Markdown } from './MarkdownView.js';
-import { RefContext } from './RefChips.js';
+import "./slides.css";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { createPortal } from "react-dom";
+import { Button } from "jeff-ui";
+import { unlink, type DeckSlide } from "./deck.js";
+import { Markdown } from "./MarkdownView.js";
+import { RefContext } from "./RefChips.js";
 
 // Auto-scroll for a slide taller than its box (the standings, a long
 // achievements list): creep down, hold at the bottom, glide back up, hold at the
 // top, repeat. Pure, so the loop below is just frames feeding it.
-export type Scroll = { phase: 'down' | 'up'; wait: number; pos: number };
+export type Scroll = { phase: "down" | "up"; wait: number; pos: number };
 export const SCROLL = { speed: 40, back: 600, hold: 2.5, manual: 3, hover: 1 }; // px/s, px/s, then holds in s
 
 export function stepScroll(s: Scroll, dt: number, max: number): Scroll {
   if (max <= 0) return s;
   if (s.wait > 0) return { ...s, wait: s.wait - dt };
-  if (s.phase === 'down') {
+  if (s.phase === "down") {
     const pos = Math.min(max, s.pos + SCROLL.speed * dt);
-    return pos >= max ? { phase: 'up', wait: SCROLL.hold, pos } : { ...s, pos };
+    return pos >= max ? { phase: "up", wait: SCROLL.hold, pos } : { ...s, pos };
   }
   const pos = Math.max(0, s.pos - SCROLL.back * dt);
-  return pos <= 0 ? { phase: 'down', wait: SCROLL.hold, pos } : { ...s, pos };
+  return pos <= 0 ? { phase: "down", wait: SCROLL.hold, pos } : { ...s, pos };
 }
 
-const scrollBoxes = (root: HTMLElement) => [...root.querySelectorAll<HTMLElement>('.sr-slide-body *')].filter((b) =>
-  /auto|scroll/.test(getComputedStyle(b).overflowY) && b.scrollHeight > b.clientHeight + 2);
+const scrollBoxes = (root: HTMLElement) =>
+  [...root.querySelectorAll<HTMLElement>(".sr-slide-body *")].filter(
+    (b) => /auto|scroll/.test(getComputedStyle(b).overflowY) && b.scrollHeight > b.clientHeight + 2,
+  );
 
 // Runs the loop on every overflowing scroll box in the slide; returns a stop
 // function. A scroll the loop didn't make (wheel, scrollbar drag) takes over:
 // the loop waits SCROLL.manual seconds, then carries on down from there.
 function autoScroll(root: HTMLElement): () => void {
   const boxes = scrollBoxes(root);
-  if (!boxes.length || matchMedia?.('(prefers-reduced-motion: reduce)').matches) return () => {};
-  const st = boxes.map((): Scroll => ({ phase: 'down', wait: SCROLL.hold, pos: 0 }));
+  if (!boxes.length || matchMedia?.("(prefers-reduced-motion: reduce)").matches) return () => {};
+  const st = boxes.map((): Scroll => ({ phase: "down", wait: SCROLL.hold, pos: 0 }));
   // Hovering anything with a tooltip (a hall-of-fame chip) holds the scroll, so
   // the thing being inspected doesn't slide out from under the pointer.
   let held = false;
-  const onOver = (ev: PointerEvent) => { held = !!(ev.target as Element).closest?.('.sr-slide-body [title]'); };
-  root.addEventListener('pointerover', onOver);
+  const onOver = (ev: PointerEvent) => {
+    held = !!(ev.target as Element).closest?.(".sr-slide-body [title]");
+  };
+  root.addEventListener("pointerover", onOver);
   let last = performance.now();
   let raf = requestAnimationFrame(function frame(now) {
     const dt = Math.min(0.1, (now - last) / 1000);
     last = now;
     boxes.forEach((b, k) => {
-      if (Math.abs(b.scrollTop - st[k].pos) > 2) st[k] = { phase: 'down', wait: SCROLL.manual, pos: b.scrollTop };
+      if (Math.abs(b.scrollTop - st[k].pos) > 2)
+        st[k] = { phase: "down", wait: SCROLL.manual, pos: b.scrollTop };
       if (held) st[k] = { ...st[k], wait: Math.max(st[k].wait, SCROLL.hover) };
       st[k] = stepScroll(st[k], dt, b.scrollHeight - b.clientHeight);
       b.scrollTop = st[k].pos;
     });
     raf = requestAnimationFrame(frame);
   });
-  return () => { cancelAnimationFrame(raf); root.removeEventListener('pointerover', onOver); };
+  return () => {
+    cancelAnimationFrame(raf);
+    root.removeEventListener("pointerover", onOver);
+  };
 }
 
 // One slide and the foot under it.
-export function Slide({ deck, i, label, onClose }: { deck: DeckSlide[]; i: number; label: string; onClose: () => void }) {
+export function Slide({
+  deck,
+  i,
+  label,
+  onClose,
+}: {
+  deck: DeckSlide[];
+  i: number;
+  label: string;
+  onClose: () => void;
+}) {
   const s = deck[i];
   return (
     <>
-      <div className={`sr-slides-stage${s.bare ? ' is-bare' : ''}`} data-index={i} aria-label={s.bare ? s.title : undefined}>
+      <div
+        className={`sr-slides-stage${s.bare ? " is-bare" : ""}`}
+        data-index={i}
+        aria-label={s.bare ? s.title : undefined}
+      >
         <div className="sr-slide-text">
           {!s.bare && <h1 className="sr-slide-title">{s.title}</h1>}
           <div className="sr-slide-body">{s.body ?? <Markdown md={unlink(s.md)} />}</div>
@@ -76,15 +98,27 @@ export function Slide({ deck, i, label, onClose }: { deck: DeckSlide[]; i: numbe
       </div>
       <footer className="sr-slides-foot">
         <span className="sr-slides-label">{label}</span>
-        <span className="sr-slides-count">{i + 1} / {deck.length}</span>
-        <Button data-act="close" title="Close (Esc)" onClick={onClose}>Close</Button>
+        <span className="sr-slides-count">
+          {i + 1} / {deck.length}
+        </span>
+        <Button data-act="close" title="Close (Esc)" onClick={onClose}>
+          Close
+        </Button>
       </footer>
     </>
   );
 }
 
 // The deck over the page, until onClose. An empty deck shows nothing.
-export function Slides({ deck, label, onClose }: { deck: DeckSlide[]; label: string; onClose: () => void }) {
+export function Slides({
+  deck,
+  label,
+  onClose,
+}: {
+  deck: DeckSlide[];
+  label: string;
+  onClose: () => void;
+}) {
   const [i, setI] = useState(0);
   const el = useRef<HTMLDivElement>(null);
   const show = (n: number) => setI(Math.max(0, Math.min(deck.length - 1, n)));
@@ -100,20 +134,20 @@ export function Slides({ deck, label, onClose }: { deck: DeckSlide[]; label: str
       ev.stopPropagation();
       const k = ev.key;
       const go = showRef.current;
-      if (k === 'Escape') close.current();
-      else if (k === 'ArrowRight' || k === ' ' || k === 'Enter') go(at.current + 1);
-      else if (k === 'ArrowLeft' || k === 'Backspace') go(at.current - 1);
-      else if (k === 'Home') go(0);
-      else if (k === 'End') go(Infinity);
-      else if (k === 'f' || k === 'F') {
+      if (k === "Escape") close.current();
+      else if (k === "ArrowRight" || k === " " || k === "Enter") go(at.current + 1);
+      else if (k === "ArrowLeft" || k === "Backspace") go(at.current - 1);
+      else if (k === "Home") go(0);
+      else if (k === "End") go(Infinity);
+      else if (k === "f" || k === "F") {
         if (document.fullscreenElement) void document.exitFullscreen?.();
         else void el.current?.requestFullscreen?.();
       } else return;
       ev.preventDefault();
     };
-    document.addEventListener('keydown', onKey, true);
+    document.addEventListener("keydown", onKey, true);
     return () => {
-      document.removeEventListener('keydown', onKey, true);
+      document.removeEventListener("keydown", onKey, true);
       if (document.fullscreenElement) void document.exitFullscreen?.();
     };
   }, []);
@@ -129,8 +163,8 @@ export function Slides({ deck, label, onClose }: { deck: DeckSlide[]; label: str
       box.scrollTop += ev.deltaY;
       ev.preventDefault();
     };
-    root.addEventListener('wheel', onWheel, { passive: false });
-    return () => root.removeEventListener('wheel', onWheel);
+    root.addEventListener("wheel", onWheel, { passive: false });
+    return () => root.removeEventListener("wheel", onWheel);
   }, [deck.length]);
 
   useEffect(() => (el.current ? autoScroll(el.current) : undefined), [i, deck]);
@@ -138,7 +172,7 @@ export function Slides({ deck, label, onClose }: { deck: DeckSlide[]; label: str
   if (!deck.length) return null;
   // Click the right two-thirds to advance, the left third to go back.
   const onClick = (ev: MouseEvent<HTMLDivElement>) => {
-    if ((ev.target as HTMLElement).closest('.sr-slides-foot')) return;
+    if ((ev.target as HTMLElement).closest(".sr-slides-foot")) return;
     show(ev.clientX < ev.currentTarget.clientWidth / 3 ? i - 1 : i + 1);
   };
   // A portal keeps React's context, so the runner's beat and scene chips are switched off here.

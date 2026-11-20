@@ -10,13 +10,13 @@
      switching it restyles native controls and scrollbars; keep today's look. */
   color-scheme: normal;
 
-  --ui-bg: #0f172a;         /* --chart-bg, --sr-bg */
-  --ui-surface: #1f2937;    /* --chart-surface */
+  --ui-bg: #0f172a; /* --chart-bg, --sr-bg */
+  --ui-surface: #1f2937; /* --chart-surface */
   --ui-surface-hi: #273449; /* --sr-raised */
-  --ui-border: #334155;     /* --sr-line */
-  --ui-text: #e5e7eb;       /* --chart-text, --sr-text */
-  --ui-muted: #94a3b8;      /* --chart-muted, --sr-muted */
-  --ui-accent: #e3b341;     /* --sr-accent */
+  --ui-border: #334155; /* --sr-line */
+  --ui-text: #e5e7eb; /* --chart-text, --sr-text */
+  --ui-muted: #94a3b8; /* --chart-muted, --sr-muted */
+  --ui-accent: #e3b341; /* --sr-accent */
   --ui-ok: #4ade80;
   --ui-warn: #fbbf24;
   --ui-err: #f87171;

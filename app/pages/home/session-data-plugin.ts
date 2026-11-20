@@ -9,20 +9,20 @@
 // `/__entity?path=<repo-relative .md>`, which serves only .md files under the
 // entity layers. Editing any .md under those layers re-extracts and reloads.
 
-import { readFile } from 'node:fs/promises';
-import { resolve, sep } from 'node:path';
-import type { Plugin } from 'vite';
-import { runPython } from './run-python.js';
+import { readFile } from "node:fs/promises";
+import { resolve, sep } from "node:path";
+import type { Plugin } from "vite";
+import { runPython } from "./run-python.js";
 
-const VIRTUAL_ID = 'virtual:session-data';
-const RESOLVED_ID = '\0' + VIRTUAL_ID;
+const VIRTUAL_ID = "virtual:session-data";
+const RESOLVED_ID = "\0" + VIRTUAL_ID;
 // meta/loot-options holds the items a plan hands out (confirmed loot options).
-const ENTITY_DIRS = ['data', 'historian', 'scheduler', 'meta/loot-options'];
+const ENTITY_DIRS = ["data", "historian", "scheduler", "meta/loot-options"];
 
 function extract(repoRoot: string): string {
-  const args = ['--root', repoRoot];
-  if (process.env.SESSION) args.push('--session', process.env.SESSION);
-  return runPython(repoRoot, 'session-cards.py', args, 'session-data') ?? 'null';
+  const args = ["--root", repoRoot];
+  if (process.env.SESSION) args.push("--session", process.env.SESSION);
+  return runPython(repoRoot, "session-cards.py", args, "session-data") ?? "null";
 }
 
 export function sessionData(repoRoot: string): Plugin {
@@ -30,7 +30,7 @@ export function sessionData(repoRoot: string): Plugin {
   const roots = ENTITY_DIRS.map((d) => resolve(repoRoot, d));
 
   return {
-    name: 'session-data',
+    name: "session-data",
 
     resolveId(id) {
       if (id === VIRTUAL_ID) return RESOLVED_ID;
@@ -43,17 +43,17 @@ export function sessionData(repoRoot: string): Plugin {
     },
 
     configureServer(server) {
-      server.middlewares.use('/__entity', (req, res) => {
-        const rel = new URL(req.url ?? '', 'http://local').searchParams.get('path') ?? '';
+      server.middlewares.use("/__entity", (req, res) => {
+        const rel = new URL(req.url ?? "", "http://local").searchParams.get("path") ?? "";
         const abs = resolve(repoRoot, rel);
-        if (!abs.endsWith('.md') || !roots.some((r) => abs.startsWith(r + sep))) {
+        if (!abs.endsWith(".md") || !roots.some((r) => abs.startsWith(r + sep))) {
           res.statusCode = 403;
           res.end();
           return;
         }
-        readFile(abs, 'utf8').then(
+        readFile(abs, "utf8").then(
           (text) => {
-            res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+            res.setHeader("Content-Type", "text/plain; charset=utf-8");
             res.end(text);
           },
           () => {
@@ -65,20 +65,23 @@ export function sessionData(repoRoot: string): Plugin {
 
       // Re-extract on any entity edit, on a handout card edit (its artifact link), and
       // when the extractor itself changes.
-      const script = resolve(repoRoot, 'scripts', 'session-cards.py');
+      const script = resolve(repoRoot, "scripts", "session-cards.py");
       server.watcher.add([...roots, script]);
       const onChange = (file: string) => {
-        const isEntity = file.endsWith('.md') && roots.some((r) => file.startsWith(r));
-        const isCard = file.endsWith('.html') && file.includes(`${sep}handouts${sep}`) && roots.some((r) => file.startsWith(r));
+        const isEntity = file.endsWith(".md") && roots.some((r) => file.startsWith(r));
+        const isCard =
+          file.endsWith(".html") &&
+          file.includes(`${sep}handouts${sep}`) &&
+          roots.some((r) => file.startsWith(r));
         if (!isEntity && !isCard && resolve(file) !== script) return;
         cached = null;
         const mod = server.moduleGraph.getModuleById(RESOLVED_ID);
         if (mod) server.moduleGraph.invalidateModule(mod);
-        server.ws.send({ type: 'full-reload' });
+        server.ws.send({ type: "full-reload" });
       };
-      server.watcher.on('change', onChange);
-      server.watcher.on('add', onChange);
-      server.watcher.on('unlink', onChange);
+      server.watcher.on("change", onChange);
+      server.watcher.on("add", onChange);
+      server.watcher.on("unlink", onChange);
     },
   };
 }

@@ -42,10 +42,15 @@ def parse_manifest(text: str):
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Fetch gitignored map masters from the CDN")
-    parser.add_argument("--force", action="store_true",
-                        help="re-download even if the file already exists")
-    parser.add_argument("--list", dest="list_only", action="store_true",
-                        help="show manifest entries and local presence, fetch nothing")
+    parser.add_argument(
+        "--force", action="store_true", help="re-download even if the file already exists"
+    )
+    parser.add_argument(
+        "--list",
+        dest="list_only",
+        action="store_true",
+        help="show manifest entries and local presence, fetch nothing",
+    )
     args = parser.parse_args()
 
     if not MANIFEST.exists():
@@ -89,15 +94,20 @@ def main() -> None:
             # revocable/presigned and do go stale.
             if ctype and not ctype.startswith("image/"):
                 dest.unlink(missing_ok=True)
-                print(f"REJECT {path}: server returned '{ctype}', not an image "
-                      f"(url stale/revoked?). Re-export in Inkarnate and update maps/sources.tsv.",
-                      file=sys.stderr)
+                print(
+                    f"REJECT {path}: server returned '{ctype}', not an image "
+                    f"(url stale/revoked?). Re-export in Inkarnate and update maps/sources.tsv.",
+                    file=sys.stderr,
+                )
                 failed += 1
                 continue
             if size < _MIN_BYTES:
                 dest.unlink(missing_ok=True)
-                print(f"REJECT {path}: only {size} bytes -- likely an error page, not the map. "
-                      f"Check the url in maps/sources.tsv.", file=sys.stderr)
+                print(
+                    f"REJECT {path}: only {size} bytes -- likely an error page, not the map. "
+                    f"Check the url in maps/sources.tsv.",
+                    file=sys.stderr,
+                )
                 failed += 1
                 continue
 

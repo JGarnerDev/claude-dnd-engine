@@ -22,12 +22,18 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import (  # noqa: E402
-    ROOT, campaign_calendar_path, ci_eq, digits_int, get_calendar, get_frontmatter, split_date,
+    ROOT,
+    campaign_calendar_path,
+    ci_eq,
+    digits_int,
+    get_calendar,
+    get_frontmatter,
+    split_date,
 )
 
 
 def is_secret(fm) -> bool:
-    return ci_eq(fm.get('state'), 'secret') or ci_eq(fm.get('awareness'), 'secret')
+    return ci_eq(fm.get("state"), "secret") or ci_eq(fm.get("awareness"), "secret")
 
 
 def dedupe_ci(items: list) -> list:
@@ -66,7 +72,7 @@ def get_keywords(fm) -> list:
     (already unwrapped from [[wikilinks]] and alias-stripped). Lets a beat be
     found by a name not in its label."""
     names = []
-    for k in ('_list_relates_to', '_list_participants'):
+    for k in ("_list_relates_to", "_list_participants"):
         for v in fm.get(k, []) or []:
             if v:
                 names.append(v)
@@ -75,24 +81,28 @@ def get_keywords(fm) -> list:
 
 def add_weight(obj: dict, fm) -> None:
     """importance -> render weight flags (major bolds + enlarges, minor dims)."""
-    imp = fm.get('importance')
-    if ci_eq(imp, 'major') or ci_eq(fm.get('state'), 'ancient') or ci_eq(fm.get('state'), 'legendary'):
-        obj['major'] = True
-    elif ci_eq(imp, 'minor'):
-        obj['minor'] = True
+    imp = fm.get("importance")
+    if (
+        ci_eq(imp, "major")
+        or ci_eq(fm.get("state"), "ancient")
+        or ci_eq(fm.get("state"), "legendary")
+    ):
+        obj["major"] = True
+    elif ci_eq(imp, "minor"):
+        obj["minor"] = True
 
 
 def _unwrap_wikilink(s: str) -> str:
-    return re.sub(r'\[\[|\]\]', '', s).strip()
+    return re.sub(r"\[\[|\]\]", "", s).strip()
 
 
 def add_campaign(obj: dict, fm) -> None:
     """campaign tag -> beat (slug). Wikilink-wrapped values ([[Name]]) are unwrapped;
     agnostic beats (no campaign field) carry none, so the app's campaign selector
     shows them under every campaign."""
-    c = fm.get('campaign')
+    c = fm.get("campaign")
     if c:
-        obj['campaign'] = _unwrap_wikilink(c)
+        obj["campaign"] = _unwrap_wikilink(c)
 
 
 # Sub-day placement -> beat. `daypart` (dawn|morning|midday|afternoon|evening|
@@ -100,13 +110,13 @@ def add_campaign(obj: dict, fm) -> None:
 # they don't stack on one x; render's applySubDayOffsets (axis.ts) consumes them.
 # Both optional; absent => beat sits at day start (current behavior).
 def add_sub_day(obj: dict, fm) -> None:
-    daypart = fm.get('daypart')
+    daypart = fm.get("daypart")
     if daypart and str(daypart).strip():
-        obj['daypart'] = str(daypart).strip()
-    order = fm.get('order')
+        obj["daypart"] = str(daypart).strip()
+    order = fm.get("order")
     if order is not None and str(order).strip():
         try:
-            obj['order'] = int(str(order).strip())
+            obj["order"] = int(str(order).strip())
         except ValueError:
             pass
 
@@ -117,8 +127,8 @@ def calendar_json(cal):
     if not cal.months:
         return None
     return {
-        'epochLabel': cal.year_suffix if cal.year_suffix else '',
-        'months': [{'name': n, 'days': d} for n, d in cal.months],
+        "epochLabel": cal.year_suffix if cal.year_suffix else "",
+        "months": [{"name": n, "days": d} for n, d in cal.months],
     }
 
 
@@ -129,19 +139,21 @@ def get_campaigns(root: Path) -> list:
     shared top-level calendar). The app draws one ruler row per world in its own
     calendar, synced to the party's lived time."""
     out = []
-    for sub in ('scheduler/campaign', 'historian/campaign'):
+    for sub in ("scheduler/campaign", "historian/campaign"):
         dir_path = root / sub
         if not dir_path.exists():
             continue
-        for f in sorted(dir_path.rglob('*.md')):
+        for f in sorted(dir_path.rglob("*.md")):
             fm = get_frontmatter(f)
-            if not ci_eq(fm.get('type'), 'campaign'):
+            if not ci_eq(fm.get("type"), "campaign"):
                 continue
-            slug = _unwrap_wikilink(fm['campaign']) if fm.get('campaign') else ''
-            active = ci_eq(str(fm.get('active', '')).strip(), 'true') or ci_eq(fm.get('state'), 'active')
-            entry = {'slug': slug, 'label': fm.get('name'), 'active': active}
+            slug = _unwrap_wikilink(fm["campaign"]) if fm.get("campaign") else ""
+            active = ci_eq(str(fm.get("active", "")).strip(), "true") or ci_eq(
+                fm.get("state"), "active"
+            )
+            entry = {"slug": slug, "label": fm.get("name"), "active": active}
             if slug and campaign_calendar_path(root, slug).exists():
-                entry['calendar'] = calendar_json(get_calendar(root, slug))
+                entry["calendar"] = calendar_json(get_calendar(root, slug))
             out.append(entry)
     return out
 
@@ -158,15 +170,15 @@ class _NameTypeCache:
         if self._map is not None:
             return self._map
         m = {}
-        for layer in ('data', 'historian', 'scheduler'):
+        for layer in ("data", "historian", "scheduler"):
             dir_path = self.root / layer
             if not dir_path.exists():
                 continue
-            for f in sorted(dir_path.rglob('*.md')):
+            for f in sorted(dir_path.rglob("*.md")):
                 fm = get_frontmatter(f)
-                n, t = fm.get('name'), fm.get('type')
+                n, t = fm.get("name"), fm.get("type")
                 if n and t and n not in m:
-                    m[n] = {'type': t, 'subtype': fm.get('subtype')}
+                    m[n] = {"type": t, "subtype": fm.get("subtype")}
         self._map = m
         return m
 
@@ -176,15 +188,15 @@ def get_lane_category(info) -> str:
     split by subtype. Returns None for types that don't get their own lane."""
     if not info:
         return None
-    if ci_eq(info['type'], 'faction'):
-        return 'faction'
-    if ci_eq(info['type'], 'character'):
-        sub = info.get('subtype')
-        if ci_eq(sub, 'npc'):
-            return 'npc'
-        if ci_eq(sub, 'antagonist'):
-            return 'antagonist'
-        return 'character'
+    if ci_eq(info["type"], "faction"):
+        return "faction"
+    if ci_eq(info["type"], "character"):
+        sub = info.get("subtype")
+        if ci_eq(sub, "npc"):
+            return "npc"
+        if ci_eq(sub, "antagonist"):
+            return "antagonist"
+        return "character"
     return None
 
 
@@ -192,11 +204,11 @@ def resolve_event_tracks(fm, name_types: _NameTypeCache) -> list:
     """Resolve the lane(s) a world event plots on (meta/events.md "Track conventions"):
     explicit track: wins; else auto-fan onto member lanes from participants/relates_to;
     else fall back to the campaign-prefixed world lane."""
-    if fm.get('track'):
-        return [fm['track']]
+    if fm.get("track"):
+        return [fm["track"]]
     name_map = name_types.get()
     tracks = []
-    for k in ('_list_participants', '_list_relates_to'):
+    for k in ("_list_participants", "_list_relates_to"):
         for name in fm.get(k, []) or []:
             if not name:
                 continue
@@ -206,52 +218,52 @@ def resolve_event_tracks(fm, name_types: _NameTypeCache) -> list:
     uniq = dedupe_ci(tracks)
     if uniq:
         return uniq
-    campaign = fm.get('campaign') or ''
-    return [f"world:{campaign}"] if campaign else ['world']
+    campaign = fm.get("campaign") or ""
+    return [f"world:{campaign}"] if campaign else ["world"]
 
 
 def collect_event_beats(root: Path, full: bool, name_types: _NameTypeCache) -> list:
     """World events: type:event with a timeline_date."""
     out = []
-    for sub in ('data/events', 'historian/events'):
+    for sub in ("data/events", "historian/events"):
         dir_path = root / sub
         if not dir_path.exists():
             continue
-        for f in sorted(dir_path.rglob('*.md')):
+        for f in sorted(dir_path.rglob("*.md")):
             fm = get_frontmatter(f)
-            if not ci_eq(fm.get('type'), 'event'):
+            if not ci_eq(fm.get("type"), "event"):
                 continue
-            if not fm.get('timeline_date'):
+            if not fm.get("timeline_date"):
                 continue
             secret = is_secret(fm)
             if secret and not full:
                 continue
             # Canon-pending (exists:false): out-of-world "not yet ratified". Dropped
             # from player-safe exports; under --full it rides as a `draft` beat.
-            draft = ci_eq(str(fm.get('exists', '')).strip(), 'false')
+            draft = ci_eq(str(fm.get("exists", "")).strip(), "false")
             if draft and not full:
                 continue
-            kb = [v for v in (fm.get('_list_known_by') or []) if v]
+            kb = [v for v in (fm.get("_list_known_by") or []) if v]
             kw = get_keywords(fm)
             for track in resolve_event_tracks(fm, name_types):
                 beat = {
-                    'date': fm['timeline_date'],
-                    'label': fm.get('name'),
-                    'track': track,
-                    'source': get_rel_source(f, root),
+                    "date": fm["timeline_date"],
+                    "label": fm.get("name"),
+                    "track": track,
+                    "source": get_rel_source(f, root),
                 }
                 if secret:
-                    beat['secret'] = True
+                    beat["secret"] = True
                 if draft:
-                    beat['draft'] = True
+                    beat["draft"] = True
                 if kb:
-                    beat['knownBy'] = list(kb)
+                    beat["knownBy"] = list(kb)
                 add_weight(beat, fm)
                 add_campaign(beat, fm)
                 add_sub_day(beat, fm)
                 if kw:
-                    beat['keywords'] = list(kw)
-                out.append({'beat': beat, 'sort': get_beat_sort(beat['date'])})
+                    beat["keywords"] = list(kw)
+                out.append({"beat": beat, "sort": get_beat_sort(beat["date"])})
     return out
 
 
@@ -270,64 +282,73 @@ def collect_session_beats(root: Path) -> tuple:
     reported on stderr for backfill."""
     out = []
     fallback = 0
-    dir_path = root / 'historian' / 'sessions'
+    dir_path = root / "historian" / "sessions"
     if not dir_path.exists():
         return out, fallback
     rows = []
-    for f in sorted(dir_path.rglob('*.md')):
+    for f in sorted(dir_path.rglob("*.md")):
         fm = get_frontmatter(f)
-        if ci_eq(fm.get('type'), 'session'):
-            rows.append((digits_int(fm.get('session_number'), default=0), f, fm))
+        if ci_eq(fm.get("type"), "session"):
+            rows.append((digits_int(fm.get("session_number"), default=0), f, fm))
     rows.sort(key=lambda r: r[0])
-    in_world_campaigns = {_unwrap_wikilink(fm.get('campaign') or '')
-                          for _, _, fm in rows if fm.get('in_world_end_date')}
+    in_world_campaigns = {
+        _unwrap_wikilink(fm.get("campaign") or "")
+        for _, _, fm in rows
+        if fm.get("in_world_end_date")
+    }
     cal = get_calendar(root) if in_world_campaigns else None
     last_in_world = {}  # campaign slug -> last seen in_world_end_date
     last_any = None  # last in-world date of any campaign (placed sessions included)
     carried = []
     placed = []
     for num, f, fm in rows:
-        camp = _unwrap_wikilink(fm.get('campaign') or '')
-        date = fm.get('in_world_end_date')
+        camp = _unwrap_wikilink(fm.get("campaign") or "")
+        date = fm.get("in_world_end_date")
         if date:
             last_in_world[camp] = date
             last_any = date
         elif camp in in_world_campaigns:
             date = last_in_world.get(camp)
             if date:
-                carried.append(f"S{num}" if num else fm.get('name'))
+                carried.append(f"S{num}" if num else fm.get("name"))
         elif in_world_campaigns:
             if last_any:
                 date = _next_day(last_any, cal)
                 last_any = date
-                placed.append(f"S{num}" if num else fm.get('name'))
+                placed.append(f"S{num}" if num else fm.get("name"))
         else:
-            date = fm.get('played_date') or fm.get('planned_date')
+            date = fm.get("played_date") or fm.get("planned_date")
             if date:
                 fallback += 1
         if not date:
             continue
         beat = {
-            'date': date,
-            'label': f"S{num} {fm.get('name')}" if num else fm.get('name'),
-            'track': 'party',
-            'session': True,
-            'source': get_rel_source(f, root),
+            "date": date,
+            "label": f"S{num} {fm.get('name')}" if num else fm.get("name"),
+            "track": "party",
+            "session": True,
+            "source": get_rel_source(f, root),
         }
         if num:
-            beat['sessionNumber'] = num  # play order: the app syncs the worlds' calendars at each swap
+            beat["sessionNumber"] = (
+                num  # play order: the app syncs the worlds' calendars at each swap
+            )
         add_weight(beat, fm)
         add_campaign(beat, fm)
         kw = get_keywords(fm)
         if kw:
-            beat['keywords'] = list(kw)
-        out.append({'beat': beat, 'sort': get_beat_sort(date)})
+            beat["keywords"] = list(kw)
+        out.append({"beat": beat, "sort": get_beat_sort(date)})
     if carried:
-        sys.stderr.write(f"timeline-data: no in_world_end_date on {', '.join(carried)} -- placed at the "
-                         f"previous session's in-world date. Backfill the field (written by /recap).\n")
+        sys.stderr.write(
+            f"timeline-data: no in_world_end_date on {', '.join(carried)} -- placed at the "
+            f"previous session's in-world date. Backfill the field (written by /recap).\n"
+        )
     if placed:
-        sys.stderr.write(f"timeline-data: no in-world dates in the campaign of {', '.join(placed)} -- "
-                         f"placed one day after the previous dated session (a placeholder, not canon).\n")
+        sys.stderr.write(
+            f"timeline-data: no in-world dates in the campaign of {', '.join(placed)} -- "
+            f"placed one day after the previous dated session (a placeholder, not canon).\n"
+        )
     return out, fallback
 
 
@@ -349,42 +370,42 @@ def collect_chronicle_beats(root: Path) -> list:
     """Chronicle beats: a `chronicle:` list of 'category | member | date | label | flags'
     embedded in an entity. Track = 'category:member'. Scoped to historian/scheduler."""
     out = []
-    for layer in ('historian', 'scheduler'):
+    for layer in ("historian", "scheduler"):
         dir_path = root / layer
         if not dir_path.exists():
             continue
-        for f in sorted(dir_path.rglob('*.md')):
+        for f in sorted(dir_path.rglob("*.md")):
             fm = get_frontmatter(f)
-            rows = fm.get('_list_chronicle')
+            rows = fm.get("_list_chronicle")
             if not rows:
                 continue
             for row in rows:
-                p = [c.strip() for c in row.split('|')]
+                p = [c.strip() for c in row.split("|")]
                 if len(p) < 4:
                     continue
                 category, member, date, label = p[0], p[1], p[2], p[3]
-                flags = p[4] if len(p) >= 5 else ''
+                flags = p[4] if len(p) >= 5 else ""
                 if not date:
                     continue
                 beat = {
-                    'date': date,
-                    'label': label,
-                    'track': f"{category}:{member}" if member else category,
-                    'source': get_rel_source(f, root),
+                    "date": date,
+                    "label": label,
+                    "track": f"{category}:{member}" if member else category,
+                    "source": get_rel_source(f, root),
                 }
-                if re.search(r'\bmajor\b', flags, re.IGNORECASE):
-                    beat['major'] = True
-                elif re.search(r'\bminor\b', flags, re.IGNORECASE):
-                    beat['minor'] = True
+                if re.search(r"\bmajor\b", flags, re.IGNORECASE):
+                    beat["major"] = True
+                elif re.search(r"\bminor\b", flags, re.IGNORECASE):
+                    beat["minor"] = True
                 # Sub-day placement rides in the flags field: `daypart=evening order=3`.
-                m_dp = re.search(r'\bdaypart=(\w+)', flags, re.IGNORECASE)
+                m_dp = re.search(r"\bdaypart=(\w+)", flags, re.IGNORECASE)
                 if m_dp:
-                    beat['daypart'] = m_dp.group(1)
-                m_or = re.search(r'\border=(\d+)', flags, re.IGNORECASE)
+                    beat["daypart"] = m_dp.group(1)
+                m_or = re.search(r"\border=(\d+)", flags, re.IGNORECASE)
                 if m_or:
-                    beat['order'] = int(m_or.group(1))
+                    beat["order"] = int(m_or.group(1))
                 add_campaign(beat, fm)
-                out.append({'beat': beat, 'sort': get_beat_sort(date)})
+                out.append({"beat": beat, "sort": get_beat_sort(date)})
     return out
 
 
@@ -392,22 +413,22 @@ def collect_spans(root: Path, full: bool) -> list:
     """Acts/missions: span bars (timeline_start..timeline_end). render.js ignores
     `spans` until the M4 multi-track tree lands."""
     out = []
-    for sub in ('historian/acts', 'historian/missions', 'scheduler/acts'):
+    for sub in ("historian/acts", "historian/missions", "scheduler/acts"):
         dir_path = root / sub
         if not dir_path.exists():
             continue
-        for f in sorted(dir_path.rglob('*.md')):
+        for f in sorted(dir_path.rglob("*.md")):
             fm = get_frontmatter(f)
-            if not fm.get('timeline_start'):
+            if not fm.get("timeline_start"):
                 continue
             if is_secret(fm) and not full:
                 continue
             span = {
-                'start': fm['timeline_start'],
-                'end': fm.get('timeline_end') or fm['timeline_start'],
-                'label': fm.get('name'),
-                'track': fm.get('track') or 'party',
-                'source': get_rel_source(f, root),
+                "start": fm["timeline_start"],
+                "end": fm.get("timeline_end") or fm["timeline_start"],
+                "label": fm.get("name"),
+                "track": fm.get("track") or "party",
+                "source": get_rel_source(f, root),
             }
             add_campaign(span, fm)
             out.append(span)
@@ -418,36 +439,41 @@ def build_data(root: Path, full: bool) -> tuple:
     """Assemble the full data blob. Returns (data_dict, event_count, span_count, fallback_count)."""
     name_types = _NameTypeCache(root)
     session_beats, fallback = collect_session_beats(root)
-    event_rows = collect_event_beats(root, full, name_types) + session_beats + collect_chronicle_beats(root)
-    event_rows.sort(key=lambda r: r['sort'])
-    events = [r['beat'] for r in event_rows]
+    event_rows = (
+        collect_event_beats(root, full, name_types) + session_beats + collect_chronicle_beats(root)
+    )
+    event_rows.sort(key=lambda r: r["sort"])
+    events = [r["beat"] for r in event_rows]
     spans = collect_spans(root, full)
 
     # Null when there's no usable calendar -- render.js then uses DEFAULT_CALENDAR.
     # An empty months array would break its day-index math (divide by zero).
     cal_json = None
-    if (root / 'meta' / 'calendar.md').exists() or (root / 'meta' / 'calendar-template.md').exists():
+    if (root / "meta" / "calendar.md").exists() or (
+        root / "meta" / "calendar-template.md"
+    ).exists():
         cal_json = calendar_json(get_calendar(root))
 
     data = {
-        'calendar': cal_json,
-        'campaigns': get_campaigns(root),
-        'events': events,
-        'spans': spans,
+        "calendar": cal_json,
+        "campaigns": get_campaigns(root),
+        "events": events,
+        "spans": spans,
     }
     return data, len(events), len(spans), fallback
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description='Print the timeline data blob as JSON.')
-    parser.add_argument('--full', action='store_true',
-                        help='include secret + canon-pending beats (DM viewpoint)')
-    parser.add_argument('--root', default=str(ROOT), help='repo root')
+    parser = argparse.ArgumentParser(description="Print the timeline data blob as JSON.")
+    parser.add_argument(
+        "--full", action="store_true", help="include secret + canon-pending beats (DM viewpoint)"
+    )
+    parser.add_argument("--root", default=str(ROOT), help="repo root")
     args = parser.parse_args()
 
     data, _, _, _ = build_data(Path(args.root).resolve(), args.full)
-    print(json.dumps(data, separators=(',', ':'), ensure_ascii=False))
+    print(json.dumps(data, separators=(",", ":"), ensure_ascii=False))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -19,7 +19,10 @@ def build_output(span_grids: float, water_body: str = "none", locations: int = 0
     if span_grids <= 0:
         lines = [
             ("", None),
-            ("Usage: uv run scripts/region-scale.py --span-grids <n> [--water-body sea|river|both|none] [--locations <n>]", "yellow"),
+            (
+                "Usage: uv run scripts/region-scale.py --span-grids <n> [--water-body sea|river|both|none] [--locations <n>]",
+                "yellow",
+            ),
             ("", None),
             ("--span-grids: fraction of a world map grid square this region covers", "gray"),
             ("  Example: 0.25 = 250km across | 0.5 = 500km | 1.0 = 1000km", "gray"),
@@ -72,7 +75,10 @@ def build_output(span_grids: float, water_body: str = "none", locations: int = 0
             ("", None),
             (f"-- City Spacing ({locations} locations) --------------", "darkgray"),
             (f"  Avg spacing between markers: ~{avg_spacing}km", "gray"),
-            (f"  Nearest neighbors: ~{fmt_num(foot_days)} days on foot, ~{fmt_num(horse_days)} days on horse", "gray"),
+            (
+                f"  Nearest neighbors: ~{fmt_num(foot_days)} days on foot, ~{fmt_num(horse_days)} days on horse",
+                "gray",
+            ),
         ]
 
     lines.append(("", None))
@@ -86,12 +92,16 @@ def render(span_grids: float, water_body: str = "none", locations: int = 0) -> l
 
 def main():
     parser = argparse.ArgumentParser(description="Travel scale context for a region")
-    parser.add_argument("--span-grids", type=float, default=0,
-                        help="Fraction of a world map grid square this region covers")
-    parser.add_argument("--water-body", default="none",
-                        help="sea, river, both, or none")
-    parser.add_argument("--locations", type=int, default=0,
-                        help="Number of named locations for city spacing calc")
+    parser.add_argument(
+        "--span-grids",
+        type=float,
+        default=0,
+        help="Fraction of a world map grid square this region covers",
+    )
+    parser.add_argument("--water-body", default="none", help="sea, river, both, or none")
+    parser.add_argument(
+        "--locations", type=int, default=0, help="Number of named locations for city spacing calc"
+    )
     args = parser.parse_args()
 
     for text, color_name in build_output(args.span_grids, args.water_body, args.locations):

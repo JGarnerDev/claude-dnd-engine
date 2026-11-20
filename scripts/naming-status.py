@@ -41,7 +41,9 @@ def parse_naming(text):
             continue
         m = _LOCKED_RE.match(line)
         if m:
-            named.append({"Section": section, "Entry": m.group(1).strip(), "Name": m.group(2).strip()})
+            named.append(
+                {"Section": section, "Entry": m.group(1).strip(), "Name": m.group(2).strip()}
+            )
     return named, unnamed
 
 

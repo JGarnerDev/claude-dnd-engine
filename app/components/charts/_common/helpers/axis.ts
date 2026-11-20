@@ -3,13 +3,30 @@
 // the per-world ruler rows, ticks windowed to the visible slice, and the zoom
 // reach. jeff-ui/charts owns the date→x mapping, padding and content width.
 
-import type { AxisTick, TimeScale, TickWindow } from 'jeff-ui/charts';
-import { calendarTables, DEFAULT_CALENDAR } from './calendar.js';
-import { segmentEvents } from './segments.js';
-import type { SegmentedEvent } from './segments.js';
-import { TICK_LABEL_PAD, ANCHOR_GAP_PX, LABEL_CHAR_PX, LABEL_GAP_PX, BREAK_CHIP_PAD, MONTH_VIEW_FRAC, DAY_VIEW_FRAC } from '../constants.js';
-import { buildTicks } from './ticks.js';
-import type { AxisBreak, AxisOptions, AxisPiece, AxisRuler, BreakMark, Calendar, Tick, TimelineEvent } from '../types.js';
+import type { AxisTick, TimeScale, TickWindow } from "jeff-ui/charts";
+import { calendarTables, DEFAULT_CALENDAR } from "./calendar.js";
+import { segmentEvents } from "./segments.js";
+import type { SegmentedEvent } from "./segments.js";
+import {
+  TICK_LABEL_PAD,
+  ANCHOR_GAP_PX,
+  LABEL_CHAR_PX,
+  LABEL_GAP_PX,
+  BREAK_CHIP_PAD,
+  MONTH_VIEW_FRAC,
+  DAY_VIEW_FRAC,
+} from "../constants.js";
+import { buildTicks } from "./ticks.js";
+import type {
+  AxisBreak,
+  AxisOptions,
+  AxisPiece,
+  AxisRuler,
+  BreakMark,
+  Calendar,
+  Tick,
+  TimelineEvent,
+} from "../types.js";
 
 export type IndexedEvent = SegmentedEvent;
 
@@ -63,10 +80,31 @@ export interface IndexedEvents {
   rulers: AxisRuler[];
 }
 
-export function indexEvents(rawEvents: TimelineEvent[], cal: Calendar = DEFAULT_CALENDAR, opts: AxisOptions = {}): IndexedEvents {
+export function indexEvents(
+  rawEvents: TimelineEvent[],
+  cal: Calendar = DEFAULT_CALENDAR,
+  opts: AxisOptions = {},
+): IndexedEvents {
   const { events, pieces, breaks, rulers, daysPerYear } = segmentEvents(rawEvents, cal, opts);
-  if (events.length === 0) return { events, daysPerYear: calendarTables(cal).daysPerYear, minIdx: 0, maxIdx: 0, pieces, breaks, rulers };
-  return { events, daysPerYear, minIdx: events[0]._idx, maxIdx: events[events.length - 1]._idx, pieces, breaks, rulers };
+  if (events.length === 0)
+    return {
+      events,
+      daysPerYear: calendarTables(cal).daysPerYear,
+      minIdx: 0,
+      maxIdx: 0,
+      pieces,
+      breaks,
+      rulers,
+    };
+  return {
+    events,
+    daysPerYear,
+    minIdx: events[0]._idx,
+    maxIdx: events[events.length - 1]._idx,
+    pieces,
+    breaks,
+    rulers,
+  };
 }
 
 // The engine's TimeScale over indexed events (units: virtual day index). One
@@ -97,21 +135,44 @@ export function timeScaleFor(idx: IndexedEvents, cal: Calendar = DEFAULT_CALENDA
         const xOfRaw = (q: number) => xOf(q + shift);
         const rulerPxPerYear = (pxPerYear * rulerDpy[row]) / daysPerYear;
         // Only a multi-world axis needs every stretch to say its year (see buildTicks).
-        const ticks = buildTicks(p.rawMin - r.offset, p.rawMax - r.offset, r.cal, rulerPxPerYear, xOfRaw, width, TICK_LABEL_PAD, loV - shift, hiV - shift, multi);
+        const ticks = buildTicks(
+          p.rawMin - r.offset,
+          p.rawMax - r.offset,
+          r.cal,
+          rulerPxPerYear,
+          xOfRaw,
+          width,
+          TICK_LABEL_PAD,
+          loV - shift,
+          hiV - shift,
+          multi,
+        );
         // Every stretch says when it starts. A row with no tick in this stretch (it
         // falls between two of the world's month starts, or follows a break) gets one
         // at its start; on a multi-world axis so does a row whose first tick is far
         // in (another world's ruler would otherwise read blank over a long stretch).
         const start = p.rawMin - r.offset;
         const x = xOfRaw(start);
-        const wanted = ticks.length === 0 ? k > 0 || multi : multi && ticks[0].x - x > ANCHOR_GAP_PX;
-        if (wanted && start + shift >= loV && start + shift <= hiV && x >= TICK_LABEL_PAD && x <= width - TICK_LABEL_PAD) {
+        const wanted =
+          ticks.length === 0 ? k > 0 || multi : multi && ticks[0].x - x > ANCHOR_GAP_PX;
+        if (
+          wanted &&
+          start + shift >= loV &&
+          start + shift <= hiV &&
+          x >= TICK_LABEL_PAD &&
+          x <= width - TICK_LABEL_PAD
+        ) {
           ticks.unshift({ label: dateLabel(start, r.cal, rulerDpy[row], multi), x });
         }
         for (const t of ticks) out.push(row ? { ...t, row } : t);
       });
     });
-    return multi || idx.breaks.length ? declutter(out, idx.breaks.map((b) => ({ x: xOf(b.idx), label: b.label }))) : out;
+    return multi || idx.breaks.length
+      ? declutter(
+          out,
+          idx.breaks.map((b) => ({ x: xOf(b.idx), label: b.label })),
+        )
+      : out;
   };
   return {
     ticks,

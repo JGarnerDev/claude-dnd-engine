@@ -8,21 +8,27 @@
 // The filter never moves anything: a filter edit only hides dots and recounts
 // the density bars. Collapse changes the lanes, so it re-lays the chart.
 
-import { useCallback, useImperativeHandle, useMemo, useRef, useState } from 'react';
-import { Checkbox, EmptyState, type SettingsSection } from 'jeff-ui';
-import { Swimlane as SwimChart, type ChartItem, type TimeChartHandle } from 'jeff-ui/charts';
-import '../_common/common.css';
-import './swimlane.css';
-import { DEFAULT_CALENDAR } from '../_common/helpers/calendar.js';
-import { indexEvents, timeScaleFor } from '../_common/helpers/axis.js';
-import { breaksOf, itemsOf, spansOf } from '../_common/helpers/items.js';
-import { axisOptionsFor } from '../_common/helpers/segments.js';
-import { buildTrackTree, laneFor, lanesFor, parseTrack, DEFAULT_CATEGORIES } from '../_common/helpers/tracks.js';
-import { makeMatcher } from '../_common/helpers/filters.js';
-import { serializeState, DEFAULT_STATE } from '../_common/helpers/viewstate.js';
-import { seedFilter, useFilterSections } from '../_common/FilterBar.js';
-import { ChartSettings, type ChartProps } from '../_common/ChartSettings.js';
-import { EDGE_PAD } from '../_common/constants.js';
+import { useCallback, useImperativeHandle, useMemo, useRef, useState } from "react";
+import { Checkbox, EmptyState, type SettingsSection } from "jeff-ui";
+import { Swimlane as SwimChart, type ChartItem, type TimeChartHandle } from "jeff-ui/charts";
+import "../_common/common.css";
+import "./swimlane.css";
+import { DEFAULT_CALENDAR } from "../_common/helpers/calendar.js";
+import { indexEvents, timeScaleFor } from "../_common/helpers/axis.js";
+import { breaksOf, itemsOf, spansOf } from "../_common/helpers/items.js";
+import { axisOptionsFor } from "../_common/helpers/segments.js";
+import {
+  buildTrackTree,
+  laneFor,
+  lanesFor,
+  parseTrack,
+  DEFAULT_CATEGORIES,
+} from "../_common/helpers/tracks.js";
+import { makeMatcher } from "../_common/helpers/filters.js";
+import { serializeState, DEFAULT_STATE } from "../_common/helpers/viewstate.js";
+import { seedFilter, useFilterSections } from "../_common/FilterBar.js";
+import { ChartSettings, type ChartProps } from "../_common/ChartSettings.js";
+import { EDGE_PAD } from "../_common/constants.js";
 
 const PAD = [EDGE_PAD, EDGE_PAD] as const;
 
@@ -31,7 +37,10 @@ export function Swimlane(props: ChartProps) {
   // Sort + day-index the full set once. The Campaign view spans every campaign on
   // the party's lived time: each world's dates synced at the crossings, one ruler
   // row per world (segments.ts).
-  const full = useMemo(() => indexEvents(props.data.events, cal, axisOptionsFor(props.data)), [props.data, cal]);
+  const full = useMemo(
+    () => indexEvents(props.data.events, cal, axisOptionsFor(props.data)),
+    [props.data, cal],
+  );
   if (full.events.length === 0) return <SwimlaneEmpty {...props} />;
   return <SwimlaneChart {...props} full={full} />;
 }
@@ -46,18 +55,27 @@ function SwimlaneEmpty({ settingsSlot, className, ref }: ChartProps) {
   );
 }
 
-const rootClass = (extra?: string): string => (extra ? `chart-root ${extra}` : 'chart-root');
+const rootClass = (extra?: string): string => (extra ? `chart-root ${extra}` : "chart-root");
 
 type FullIndex = ReturnType<typeof indexEvents>;
 
-function SwimlaneChart({ data, initialState, settingsSlot, className, ref, full }: ChartProps & { full: FullIndex }) {
+function SwimlaneChart({
+  data,
+  initialState,
+  settingsSlot,
+  className,
+  ref,
+  full,
+}: ChartProps & { full: FullIndex }) {
   const cal = data.calendar || DEFAULT_CALENDAR;
   const chartRef = useRef<TimeChartHandle>(null);
 
   const [filter, setFilter] = useState(() => seedFilter(data.events, initialState));
   // Initial collapse state from the configured defaults (only bites a category
   // that actually has children — see lanesFor).
-  const [collapsed, setCollapsed] = useState(() => new Set(DEFAULT_CATEGORIES.filter((c) => c.collapsed).map((c) => c.key)));
+  const [collapsed, setCollapsed] = useState(
+    () => new Set(DEFAULT_CATEGORIES.filter((c) => c.collapsed).map((c) => c.key)),
+  );
   const [showDeepHistory, setShowDeepHistory] = useState(false);
 
   // The campaign floor: the earliest session (party) beat. The view locks its left
@@ -65,7 +83,9 @@ function SwimlaneChart({ data, initialState, settingsSlot, className, ref, full 
   // hidden unless the DM opts in via the History toggle. The lock only bites when a
   // party beat exists AND something precedes it.
   const floor = useMemo(() => {
-    const party = full.events.filter((e) => parseTrack(e.track).category === 'party').map((e) => e._idx);
+    const party = full.events
+      .filter((e) => parseTrack(e.track).category === "party")
+      .map((e) => e._idx);
     return party.length ? Math.min(...party) : null;
   }, [full]);
   const hasPreCampaign = floor !== null && full.events.some((e) => e._idx < floor);
@@ -74,7 +94,8 @@ function SwimlaneChart({ data, initialState, settingsSlot, className, ref, full 
   // full-height columns, not as a lane, so they're kept out of the tree; the Party
   // lane then vanishes on its own when sessions are its only members.
   const { idx, tree } = useMemo(() => {
-    const events = showDeepHistory || floor === null ? data.events : full.events.filter((e) => e._idx >= floor);
+    const events =
+      showDeepHistory || floor === null ? data.events : full.events.filter((e) => e._idx >= floor);
     return {
       idx: events === data.events ? full : indexEvents(events, cal, axisOptionsFor(data)),
       tree: buildTrackTree(events.filter((e) => !e.session)),
@@ -99,7 +120,13 @@ function SwimlaneChart({ data, initialState, settingsSlot, className, ref, full 
     () => ({
       getState: () => {
         const view = chartRef.current?.getView() ?? { zoom: 1, scrollLeft: 0 };
-        return serializeState(filter.query, filter.tracks, view.zoom, view.scrollLeft, filter.audiences);
+        return serializeState(
+          filter.query,
+          filter.tracks,
+          view.zoom,
+          view.scrollLeft,
+          filter.audiences,
+        );
       },
     }),
     [filter],
@@ -118,7 +145,7 @@ function SwimlaneChart({ data, initialState, settingsSlot, className, ref, full 
   const sections: SettingsSection[] = useFilterSections(data.events, filter, setFilter);
   if (hasPreCampaign) {
     sections.push({
-      label: 'History',
+      label: "History",
       content: (
         <Checkbox
           className="chart-swim-deephistory"

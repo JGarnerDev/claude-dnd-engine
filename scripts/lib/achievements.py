@@ -15,19 +15,19 @@ from pathlib import Path
 
 from lib.common import read_text_no_bom
 
-LEDGER_FILE = Path('historian') / 'sessions' / '_achievements.md'
+LEDGER_FILE = Path("historian") / "sessions" / "_achievements.md"
 
-_SESSION_RE = re.compile(r'^##\s+Session\s+(\d+)\s*$')
-_H2_RE = re.compile(r'^##\s')
-_PC_RE = re.compile(r'^###\s+(.+?)\s*$')
-_ITEM_RE = re.compile(r'^-\s+\*\*(.+?)\*\*\s*[:—-]?\s*(.*)$')
-_CONT_RE = re.compile(r'^\s+(\S.*)$')
-_ROMAN_RE = re.compile(r'\s+[IVX]+$')
+_SESSION_RE = re.compile(r"^##\s+Session\s+(\d+)\s*$")
+_H2_RE = re.compile(r"^##\s")
+_PC_RE = re.compile(r"^###\s+(.+?)\s*$")
+_ITEM_RE = re.compile(r"^-\s+\*\*(.+?)\*\*\s*[:—-]?\s*(.*)$")
+_CONT_RE = re.compile(r"^\s+(\S.*)$")
+_ROMAN_RE = re.compile(r"\s+[IVX]+$")
 
 
 def title_key(title: str) -> str:
     """Repeat key: case-folded, trailing roman numeral dropped ("Gravity's Favorite II")."""
-    return _ROMAN_RE.sub('', title.strip()).casefold()
+    return _ROMAN_RE.sub("", title.strip()).casefold()
 
 
 def load_ledger(root: Path) -> dict:
@@ -47,10 +47,10 @@ def load_ledger(root: Path) -> dict:
             pc, item = m.group(1), None
             ledger[session].setdefault(pc, [])
         elif pc and (m := _ITEM_RE.match(line)):
-            item = {'title': m.group(1).strip(), 'text': m.group(2).strip()}
+            item = {"title": m.group(1).strip(), "text": m.group(2).strip()}
             ledger[session][pc].append(item)
         elif item and (m := _CONT_RE.match(line)):
-            item['text'] = (item['text'] + ' ' + m.group(1).strip()).strip()
+            item["text"] = (item["text"] + " " + m.group(1).strip()).strip()
         elif not line.strip():
             item = None
     return ledger
@@ -71,7 +71,9 @@ def achievements(root: Path, number: int) -> list:
         seen = {}
         for s in upto:
             for it in ledger[s].get(pc, []):
-                k = title_key(it['title'])
+                k = title_key(it["title"])
                 seen[k] = seen.get(k, 0) + 1
-        out.append({'pc': pc, 'items': [{**it, 'times': seen[title_key(it['title'])]} for it in items]})
+        out.append(
+            {"pc": pc, "items": [{**it, "times": seen[title_key(it["title"])]} for it in items]}
+        )
     return out

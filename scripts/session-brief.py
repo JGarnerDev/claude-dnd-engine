@@ -12,16 +12,28 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib.common import (get_active_campaign, ROOT, ci_eq, cwrite, digits_int, entity_md_files, fmt_num,
-                        get_frontmatter, index_staleness, parse_party_table, pending_recordings,
-                        read_text_no_bom, try_parse_date)
+from lib.common import (
+    get_active_campaign,
+    ROOT,
+    ci_eq,
+    cwrite,
+    digits_int,
+    entity_md_files,
+    fmt_num,
+    get_frontmatter,
+    index_staleness,
+    parse_party_table,
+    pending_recordings,
+    read_text_no_bom,
+    try_parse_date,
+)
 
-spotlight = importlib.import_module('spotlight-balance')
+spotlight = importlib.import_module("spotlight-balance")
 
 
 def main() -> None:
-    hist_dir = ROOT / 'historian' / 'sessions'
-    sched_dir = ROOT / 'scheduler' / 'sessions'
+    hist_dir = ROOT / "historian" / "sessions"
+    sched_dir = ROOT / "scheduler" / "sessions"
     # Sessions are a folder each, so both of these recurse -- see entity_md_files.
     hist_sessions = entity_md_files(hist_dir)
     sched_sessions = entity_md_files(sched_dir)
@@ -33,14 +45,14 @@ def main() -> None:
     pending_plans = {}
     for s in all_sessions:
         fm = get_frontmatter(s)
-        n = digits_int(fm.get('session_number'))
+        n = digits_int(fm.get("session_number"))
         if n > max_num:
             max_num = n
         if s.resolve() in hist_full:
             if n > latest_played:
                 latest_played = n
-        elif str(fm.get('state') or '').lower() in ('draft', 'planned'):
-            pending_plans[n] = (fm.get('name'), str(fm.get('state')).lower())
+        elif str(fm.get("state") or "").lower() in ("draft", "planned"):
+            pending_plans[n] = (fm.get("name"), str(fm.get("state")).lower())
 
     # The next session is the first unplayed one. A planned-but-unplayed scheduler
     # artifact IS that session - don't skip past it to max+1.
@@ -48,185 +60,241 @@ def main() -> None:
     next_num = unplayed[0] if unplayed else max_num + 1
     existing_plan = pending_plans.get(next_num)
 
-    cwrite("\n========================================", 'darkgray')
-    cwrite("  SESSION BRIEF", 'cyan')
-    cwrite("========================================", 'darkgray')
+    cwrite("\n========================================", "darkgray")
+    cwrite("  SESSION BRIEF", "cyan")
+    cwrite("========================================", "darkgray")
     camp = get_active_campaign(ROOT)
     if camp:
-        cwrite(f"DM: {camp['dm'] or '(no dm: field)'} ({camp['name']})", 'darkcyan')
+        cwrite(f"DM: {camp['dm'] or '(no dm: field)'} ({camp['name']})", "darkcyan")
 
-    cwrite(f"\nNext session: #{next_num}", 'yellow')
+    cwrite(f"\nNext session: #{next_num}", "yellow")
     if existing_plan:
-        cwrite(f"  Plan exists: '{existing_plan[0]}' [{existing_plan[1]}]", 'white')
+        cwrite(f"  Plan exists: '{existing_plan[0]}' [{existing_plan[1]}]", "white")
         if len(unplayed) > 1:
-            cwrite("  Also planned ahead: " + ", ".join(
-                f"#{n}" for n in unplayed[1:]), 'darkgray')
+            cwrite("  Also planned ahead: " + ", ".join(f"#{n}" for n in unplayed[1:]), "darkgray")
     if next_num % 5 == 0:
-        cwrite(f"  MILESTONE: session #{next_num} - worth marking at the table.", 'magenta')
+        cwrite(f"  MILESTONE: session #{next_num} - worth marking at the table.", "magenta")
 
     # -- Uncanonized sessions -------------------------------------------------
     today = date.today()
     hist_nums = {}
     for s in hist_sessions:
         fm = get_frontmatter(s)
-        if fm.get('session_number'):
-            hist_nums[str(fm['session_number'])] = True
+        if fm.get("session_number"):
+            hist_nums[str(fm["session_number"])] = True
     uncanonized = []
     for s in sched_sessions:
         fm = get_frontmatter(s)
-        state = str(fm.get('state') or '').lower()
-        if state not in ('draft', 'planned'):
+        state = str(fm.get("state") or "").lower()
+        if state not in ("draft", "planned"):
             continue
-        if not fm.get('planned_date') or ci_eq(fm.get('planned_date'), 'null'):
+        if not fm.get("planned_date") or ci_eq(fm.get("planned_date"), "null"):
             continue
-        pd = try_parse_date(fm['planned_date'])
+        pd = try_parse_date(fm["planned_date"])
         if not pd:
             continue
-        if pd < today and str(fm.get('session_number')) not in hist_nums:
+        if pd < today and str(fm.get("session_number")) not in hist_nums:
             uncanonized.append(
                 f"  ! #{fm.get('session_number')} '{fm.get('name')}' planned "
-                f"{fm.get('planned_date')} - played but not canonized? Run /recap.")
-    inbox_dir = ROOT / 'recaps' / 'inbox'
-    inbox = [f for f in inbox_dir.glob('*.md') if f.name != '.gitkeep'] if inbox_dir.exists() else []
+                f"{fm.get('planned_date')} - played but not canonized? Run /recap."
+            )
+    inbox_dir = ROOT / "recaps" / "inbox"
+    inbox = (
+        [f for f in inbox_dir.glob("*.md") if f.name != ".gitkeep"] if inbox_dir.exists() else []
+    )
     for f in inbox:
         uncanonized.append(f"  ! Notes waiting in recaps/inbox/{f.name} - run /recap to canonize.")
     for slug, n_tracks in pending_recordings(ROOT):
         tracks = f"{n_tracks} tracks" if n_tracks != 1 else "single file"
         uncanonized.append(
-            f"  ! Recording '{slug}' ({tracks}) has no transcript - run /transcript {slug} --transcribe.")
+            f"  ! Recording '{slug}' ({tracks}) has no transcript - run /transcript {slug} --transcribe."
+        )
     if uncanonized:
-        cwrite("\n--- UNCANONIZED SESSIONS ---", 'red')
+        cwrite("\n--- UNCANONIZED SESSIONS ---", "red")
         for u in uncanonized:
-            cwrite(u, 'red')
+            cwrite(u, "red")
 
     # -- Semantic index -------------------------------------------------------
     # The callback and free-entity searches in /session degrade silently on a stale
     # index, so flag it here; never rebuild automatically -- the DM decides.
     idx = index_staleness(ROOT)
     if idx is None:
-        cwrite("\n! SEARCH INDEX NEVER BUILT - run: uv run scripts/index-entities.py", 'red')
+        cwrite("\n! SEARCH INDEX NEVER BUILT - run: uv run scripts/index-entities.py", "red")
     elif idx[2]:
-        cwrite(f"\n! SEARCH INDEX STALE since {idx[1][:7]} ({len(idx[2])} commit(s)) - "
-               "run: uv run scripts/index-entities.py", 'yellow')
+        cwrite(
+            f"\n! SEARCH INDEX STALE since {idx[1][:7]} ({len(idx[2])} commit(s)) - "
+            "run: uv run scripts/index-entities.py",
+            "yellow",
+        )
 
     # -- Campaign / Act / Mission ---------------------------------------------
-    cwrite("\n--- STORY STATE ---", 'darkgray')
-    campaign_dir = ROOT / 'scheduler' / 'campaign'
-    campaign_files = list(campaign_dir.glob('*.md')) if campaign_dir.exists() else []
+    cwrite("\n--- STORY STATE ---", "darkgray")
+    campaign_dir = ROOT / "scheduler" / "campaign"
+    campaign_files = list(campaign_dir.glob("*.md")) if campaign_dir.exists() else []
     for f in campaign_files:
         fm = get_frontmatter(f)
-        cwrite("  Campaign: {0} [{1}]".format(fm.get('name'), fm.get('state')), 'white')
-        if fm.get('current_act'):
-            cwrite(f"  Current act note: {fm['current_act']}", 'darkgray')
+        cwrite("  Campaign: {0} [{1}]".format(fm.get("name"), fm.get("state")), "white")
+        if fm.get("current_act"):
+            cwrite(f"  Current act note: {fm['current_act']}", "darkgray")
 
-    acts_dir = ROOT / 'scheduler' / 'acts'
-    for f in (sorted(acts_dir.glob('*.md'), key=lambda f: f.name.lower()) if acts_dir.exists() else []):
+    acts_dir = ROOT / "scheduler" / "acts"
+    for f in (
+        sorted(acts_dir.glob("*.md"), key=lambda f: f.name.lower()) if acts_dir.exists() else []
+    ):
         fm = get_frontmatter(f)
-        cwrite("  Act: {0} [{1}]".format(fm.get('name'), fm.get('state')), 'white')
+        cwrite("  Act: {0} [{1}]".format(fm.get("name"), fm.get("state")), "white")
 
-    missions_dir = ROOT / 'scheduler' / 'missions'
-    mission_files = sorted(missions_dir.glob('*.md'), key=lambda f: f.name.lower()) if missions_dir.exists() else []
+    missions_dir = ROOT / "scheduler" / "missions"
+    mission_files = (
+        sorted(missions_dir.glob("*.md"), key=lambda f: f.name.lower())
+        if missions_dir.exists()
+        else []
+    )
     if mission_files:
         for f in mission_files:
             fm = get_frontmatter(f)
-            cwrite("  Mission: {0} [{1}]".format(fm.get('name'), fm.get('state')), 'white')
+            cwrite("  Mission: {0} [{1}]".format(fm.get("name"), fm.get("state")), "white")
     else:
-        cwrite("  Missions: none active", 'darkgray')
+        cwrite("  Missions: none active", "darkgray")
 
     # -- Last played session --------------------------------------------------
-    cwrite("\n--- LAST SESSION ---", 'darkgray')
-    last_session = sorted(hist_sessions, key=lambda f: f.name.lower(), reverse=True)[0] if hist_sessions else None
+    cwrite("\n--- LAST SESSION ---", "darkgray")
+    last_session = (
+        sorted(hist_sessions, key=lambda f: f.name.lower(), reverse=True)[0]
+        if hist_sessions
+        else None
+    )
     if last_session:
         fm = get_frontmatter(last_session)
-        cwrite("  #{0}: {1}".format(fm.get('session_number'), fm.get('name')), 'white')
-        if fm.get('description'):
-            cwrite(f"  Summary: {fm['description']}", 'gray')
+        cwrite("  #{0}: {1}".format(fm.get("session_number"), fm.get("name")), "white")
+        if fm.get("description"):
+            cwrite(f"  Summary: {fm['description']}", "gray")
         body = read_text_no_bom(last_session)
         m = re.search(r'cliffhanger:\s*"([^"]+)"', body)
         if m:
-            cwrite(f"  Cliffhanger: {m.group(1)}", 'darkyellow')
+            cwrite(f"  Cliffhanger: {m.group(1)}", "darkyellow")
         m = re.search(r'played_date:\s*"?([^"\r\n]+)"?', body)
         if m:
-            cwrite(f"  Played: {m.group(1)}", 'darkgray')
+            cwrite(f"  Played: {m.group(1)}", "darkgray")
 
     # -- Rest clock -----------------------------------------------------------
-    cwrite("\n--- REST CLOCK ---", 'darkgray')
+    cwrite("\n--- REST CLOCK ---", "darkgray")
     active_campaign = None
     for f in campaign_files:
-        if ci_eq(get_frontmatter(f).get('state'), 'active'):
+        if ci_eq(get_frontmatter(f).get("state"), "active"):
             active_campaign = f
             break
     if not active_campaign and campaign_files:
         active_campaign = campaign_files[0]
 
-    content = read_text_no_bom(active_campaign) if active_campaign else ''
+    content = read_text_no_bom(active_campaign) if active_campaign else ""
     if active_campaign:
-        m = re.search(r'### Rest Clock \(as of:? Session (\d+)\)\r?\n([\s\S]+?)(\r?\n##|\r?\n###|\Z)', content)
+        m = re.search(
+            r"### Rest Clock \(as of:? Session (\d+)\)\r?\n([\s\S]+?)(\r?\n##|\r?\n###|\Z)", content
+        )
         if m:
             clock_session = int(m.group(1))
             clock_block = m.group(2)
-            for line in clock_block.split('\n'):
-                line = line.rstrip('\r')
-                lm = re.match(r'^- (.+)$', line)
+            for line in clock_block.split("\n"):
+                line = line.rstrip("\r")
+                lm = re.match(r"^- (.+)$", line)
                 if lm:
-                    cwrite(f"  {lm.group(1)}", 'white')
-            hm = re.search(r'(?im)^\s*-\s*Hours since last long rest:\s*~?\s*(\d+(?:\.\d+)?)', clock_block)
+                    cwrite(f"  {lm.group(1)}", "white")
+            hm = re.search(
+                r"(?im)^\s*-\s*Hours since last long rest:\s*~?\s*(\d+(?:\.\d+)?)", clock_block
+            )
             if hm:
                 hrs = float(hm.group(1))
                 if hrs >= 24:
-                    cwrite(f"  > Long rest TIME GATE met ({fmt_num(hrs)} h >= 24) - offerable if location is safe and no PC at 0 HP.", 'green')
+                    cwrite(
+                        f"  > Long rest TIME GATE met ({fmt_num(hrs)} h >= 24) - offerable if location is safe and no PC at 0 HP.",
+                        "green",
+                    )
                 else:
-                    cwrite("  ! Long rest NOT available: only {0} h since last (needs 24) - {1} h more in-world before a fresh reset.".format(
-                        fmt_num(hrs), fmt_num(24 - hrs)), 'red')
+                    cwrite(
+                        "  ! Long rest NOT available: only {0} h since last (needs 24) - {1} h more in-world before a fresh reset.".format(
+                            fmt_num(hrs), fmt_num(24 - hrs)
+                        ),
+                        "red",
+                    )
             else:
-                cwrite("  ! Long rest availability UNKNOWN - 'Hours since last long rest' not numeric; reconstruct with DM.", 'yellow')
+                cwrite(
+                    "  ! Long rest availability UNKNOWN - 'Hours since last long rest' not numeric; reconstruct with DM.",
+                    "yellow",
+                )
             if clock_session < latest_played:
-                cwrite(f"  ! REST CLOCK STALE: as of Session {clock_session}, latest played is {latest_played} - reconstruct with DM before encounter planning.", 'red')
-        elif re.search(r'### Rest Clock', content):
-            cwrite("  ! REST CLOCK NOT INITIALIZED - reconstruct with DM before encounter planning.", 'red')
+                cwrite(
+                    f"  ! REST CLOCK STALE: as of Session {clock_session}, latest played is {latest_played} - reconstruct with DM before encounter planning.",
+                    "red",
+                )
+        elif re.search(r"### Rest Clock", content):
+            cwrite(
+                "  ! REST CLOCK NOT INITIALIZED - reconstruct with DM before encounter planning.",
+                "red",
+            )
         else:
-            cwrite("  ! No Rest Clock section in campaign Current State - add one (see meta/difficulty.md).", 'red')
+            cwrite(
+                "  ! No Rest Clock section in campaign Current State - add one (see meta/difficulty.md).",
+                "red",
+            )
 
-        m = re.search(r'## Current State \((?:after|as of:) Session (\d+)\)', content)
+        m = re.search(r"## Current State \((?:after|as of:) Session (\d+)\)", content)
         if m:
             if int(m.group(1)) < latest_played:
-                cwrite(f"  ! CURRENT STATE STALE: header says Session {m.group(1)}, latest played is {latest_played} - update and restamp at next /recap.", 'red')
-        elif re.search(r'## Current State', content):
-            cwrite("  ! Current State header has no '(after Session N)' / '(as of: Session N)' stamp - restamp at next /recap.", 'yellow')
+                cwrite(
+                    f"  ! CURRENT STATE STALE: header says Session {m.group(1)}, latest played is {latest_played} - update and restamp at next /recap.",
+                    "red",
+                )
+        elif re.search(r"## Current State", content):
+            cwrite(
+                "  ! Current State header has no '(after Session N)' / '(as of: Session N)' stamp - restamp at next /recap.",
+                "yellow",
+            )
 
     # -- Party ----------------------------------------------------------------
-    cwrite("\n--- PARTY ---", 'darkgray')
+    cwrite("\n--- PARTY ---", "darkgray")
     afflictions = {}
     if active_campaign:
         for cols in parse_party_table(active_campaign):
             if len(cols) >= 4:
-                char_name = re.sub(r'\[\[|\]\]', '', cols[1]).replace('"', '')
+                char_name = re.sub(r"\[\[|\]\]", "", cols[1]).replace('"', "")
                 afflictions[char_name] = cols[3]
 
-    pcs_dir = ROOT / 'historian' / 'characters' / 'pcs'
-    pc_files = sorted(pcs_dir.glob('*.md'), key=lambda f: f.name.lower()) if pcs_dir.exists() else []
+    pcs_dir = ROOT / "historian" / "characters" / "pcs"
+    pc_files = (
+        sorted(pcs_dir.glob("*.md"), key=lambda f: f.name.lower()) if pcs_dir.exists() else []
+    )
     for f in pc_files:
         fm = get_frontmatter(f)
-        name = fm.get('name')
+        name = fm.get("name")
         affliction = None
         for key in afflictions:
-            if (name and key.lower() in name.lower()) or (key and name and name.lower() in key.lower()):
+            if (name and key.lower() in name.lower()) or (
+                key and name and name.lower() in key.lower()
+            ):
                 affliction = afflictions[key]
                 break
-        suffix = f" ! {affliction}" if affliction and not re.match(r'^Alive$', affliction) else ""
-        cwrite("  {0} ({1}) - {2} {3} L{4}{5}".format(
-            name, fm.get('player'), fm.get('race'), fm.get('class'), fm.get('level'), suffix), 'white')
+        suffix = f" ! {affliction}" if affliction and not re.match(r"^Alive$", affliction) else ""
+        cwrite(
+            "  {0} ({1}) - {2} {3} L{4}{5}".format(
+                name, fm.get("player"), fm.get("race"), fm.get("class"), fm.get("level"), suffix
+            ),
+            "white",
+        )
 
     # -- Design preference drought --------------------------------------------
-    pref_file = ROOT / 'meta' / 'campaign-design-preferences.md'
+    pref_file = ROOT / "meta" / "campaign-design-preferences.md"
     if pref_file.exists():
         raw = read_text_no_bom(pref_file)
-        total = len(re.findall(r'(?m)^\s*-\s*\*Deployed:', raw))
-        deployed = len(re.findall(r'(?m)^\s*-\s*\*Deployed:[^\r\n]*\[\[', raw))
-        seeded = len(re.findall(r'(?m)^\s*-\s*\*Seeded:', raw))
+        total = len(re.findall(r"(?m)^\s*-\s*\*Deployed:", raw))
+        deployed = len(re.findall(r"(?m)^\s*-\s*\*Deployed:[^\r\n]*\[\[", raw))
+        seeded = len(re.findall(r"(?m)^\s*-\s*\*Seeded:", raw))
         if total - deployed > 0:
-            cwrite("\n--- PREFERENCES ---", 'darkgray')
-            cwrite(f"  {total - deployed} of {total} group wishlist items not yet deployed; {seeded} seeded ({latest_played} sessions played)", 'white')
+            cwrite("\n--- PREFERENCES ---", "darkgray")
+            cwrite(
+                f"  {total - deployed} of {total} group wishlist items not yet deployed; {seeded} seeded ({latest_played} sessions played)",
+                "white",
+            )
 
     # -- Spotlight balance ----------------------------------------------------
     spotlight.emit(spotlight.render_lines(section=True))
@@ -236,26 +304,39 @@ def main() -> None:
     # meta/players/ (role: cameo); a filled questionnaire still in questionnaires/
     # has not been through ingestion yet, so it is flagged, not matched.
     cameos = []
-    for f in sorted((ROOT / 'meta' / 'players').glob('*.md')):
-        if f.name == 'player-template.md':
+    for f in sorted((ROOT / "meta" / "players").glob("*.md")):
+        if f.name == "player-template.md":
             continue
         fm = get_frontmatter(f)
-        if ci_eq(fm.get('role'), 'cameo') and not ci_eq(fm.get('status'), 'retired'):
+        if ci_eq(fm.get("role"), "cameo") and not ci_eq(fm.get("status"), "retired"):
             cameos.append(fm)
     unfilled_q = pending_cameo_questionnaires()
     if cameos or unfilled_q:
-        cwrite("\n--- CAMEO PLAYERS ---", 'darkgray')
+        cwrite("\n--- CAMEO PLAYERS ---", "darkgray")
         for fm in cameos:
-            prefs = ", ".join(x for x in (
-                fm.get('preferred_alignment'),
-                "/".join(fm.get('_list_preferred_archetypes', [])),
-            ) if x) or "no stated preferences"
-            cwrite(f"  {fm.get('name')} [{fm.get('status', '')}, {fm.get('availability') or 'availability unknown'}] "
-                   f"- {prefs} - {fm.get('description', '')}", 'white')
+            prefs = (
+                ", ".join(
+                    x
+                    for x in (
+                        fm.get("preferred_alignment"),
+                        "/".join(fm.get("_list_preferred_archetypes", [])),
+                    )
+                    if x
+                )
+                or "no stated preferences"
+            )
+            cwrite(
+                f"  {fm.get('name')} [{fm.get('status', '')}, {fm.get('availability') or 'availability unknown'}] "
+                f"- {prefs} - {fm.get('description', '')}",
+                "white",
+            )
         for q in unfilled_q:
-            cwrite(f"  ! Filled cameo questionnaire not yet ingested: {q} - run ingestion before matching", 'yellow')
+            cwrite(
+                f"  ! Filled cameo questionnaire not yet ingested: {q} - run ingestion before matching",
+                "yellow",
+            )
 
-    cwrite("\n========================================\n", 'darkgray')
+    cwrite("\n========================================\n", "darkgray")
 
 
 def pending_cameo_questionnaires() -> list:
@@ -263,20 +344,21 @@ def pending_cameo_questionnaires() -> list:
 
     questionnaires/ is gitignored, so ripgrep-based tools can't see it; this walks it directly.
     """
-    qdir = ROOT / 'questionnaires'
+    qdir = ROOT / "questionnaires"
     if not qdir.exists():
         return []
     out = []
-    for f in sorted(qdir.rglob('*.md')):
+    for f in sorted(qdir.rglob("*.md")):
         try:
             raw = read_text_no_bom(f)
-        except (OSError, UnicodeDecodeError):
+        except OSError, UnicodeDecodeError:
             continue
-        if re.search(r'(?m)^filled:\s*true\s*$', raw) and (
-                re.search(r'(?m)^entity_type:\s*player\s*$', raw) or f.stem.endswith('-cameo')):
-            out.append(str(f.relative_to(ROOT)).replace('\\', '/'))
+        if re.search(r"(?m)^filled:\s*true\s*$", raw) and (
+            re.search(r"(?m)^entity_type:\s*player\s*$", raw) or f.stem.endswith("-cameo")
+        ):
+            out.append(str(f.relative_to(ROOT)).replace("\\", "/"))
     return out
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

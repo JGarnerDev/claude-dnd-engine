@@ -13,22 +13,30 @@ def _write(root: Path, rel: str, text: str) -> None:
 
 
 def _session(root: Path, n: int, npcs: str) -> None:
-    _write(root, f"historian/sessions/Session {n} Test/Session {n} Test.md",
-           f'---\nname: "Session {n} Test"\nsession_number: {n}\nkey_npcs:\n{npcs}---\n\nBody.\n')
+    _write(
+        root,
+        f"historian/sessions/Session {n} Test/Session {n} Test.md",
+        f'---\nname: "Session {n} Test"\nsession_number: {n}\nkey_npcs:\n{npcs}---\n\nBody.\n',
+    )
 
 
 def _npc(root: Path, name: str, extra: str = "", body: str = "", sub: str = "npcs") -> None:
-    _write(root, f"historian/characters/{sub}/{name}.md",
-           f'---\nname: "{name}"\ntype: character\n{extra}---\n\n{body}')
+    _write(
+        root,
+        f"historian/characters/{sub}/{name}.md",
+        f'---\nname: "{name}"\ntype: character\n{extra}---\n\n{body}',
+    )
 
 
 def test_stale_when_appearance_lags_stamp(tmp_path):
     _session(tmp_path, 28, '  - "[[Sable Wren]] (the offer)"\n')
-    _session(tmp_path, 29, '  - [[Sable Wren]]\n')
+    _session(tmp_path, 29, "  - [[Sable Wren]]\n")
     _npc(tmp_path, "Sable Wren", "voice_confirmed: 28\n", "## Voice\n")
     lines = [t for t, _ in tb.voice_flags(tmp_path)]
-    assert lines == ["  VOICE STALE: Sable Wren confirmed at session 28, appeared in session 29"
-                     " - rebuild their current mood at next /recap"]
+    assert lines == [
+        "  VOICE STALE: Sable Wren confirmed at session 28, appeared in session 29"
+        " - rebuild their current mood at next /recap"
+    ]
 
 
 def test_current_stamp_is_clean(tmp_path):

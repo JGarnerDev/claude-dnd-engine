@@ -8,16 +8,16 @@
 // scheduler/); editing any .md re-extracts and full-reloads the page. So the DM
 // runs `npm run home` once and the page tracks the campaign with zero steps.
 
-import { resolve, sep } from 'node:path';
-import type { Plugin } from 'vite';
-import { runPython } from './run-python.js';
+import { resolve, sep } from "node:path";
+import type { Plugin } from "vite";
+import { runPython } from "./run-python.js";
 
-const VIRTUAL_ID = 'virtual:campaign-data';
-const RESOLVED_ID = '\0' + VIRTUAL_ID;
+const VIRTUAL_ID = "virtual:campaign-data";
+const RESOLVED_ID = "\0" + VIRTUAL_ID;
 
 // The graph layers a beat can come from. A change to any .md under these
 // invalidates the cached extraction.
-const GRAPH_DIRS = ['data', 'historian', 'scheduler'];
+const GRAPH_DIRS = ["data", "historian", "scheduler"];
 
 // Run the extractor and return its JSON text (or 'null' on failure — the page
 // then renders its empty state rather than crashing the dev server).
@@ -28,8 +28,13 @@ const GRAPH_DIRS = ['data', 'historian', 'scheduler'];
 // Without --full the extractor stays player-safe; only this local DM-side page
 // opts into the full set.
 function extract(repoRoot: string): string {
-  const out = runPython(repoRoot, 'timeline-data.py', ['--full', '--root', repoRoot], 'campaign-data');
-  return out === null ? 'null' : rewriteSources(out, repoRoot);
+  const out = runPython(
+    repoRoot,
+    "timeline-data.py",
+    ["--full", "--root", repoRoot],
+    "campaign-data",
+  );
+  return out === null ? "null" : rewriteSources(out, repoRoot);
 }
 
 // The extractor writes `source` as `../../<rel>` — tuned for the shipped
@@ -38,17 +43,17 @@ function extract(repoRoot: string): string {
 // Vite serves (repoRoot is in server.fs.allow), so click-to-open hits the real
 // .md. Untouched when JSON is null/empty.
 function rewriteSources(json: string, repoRoot: string): string {
-  if (json === 'null') return json;
+  if (json === "null") return json;
   let data: unknown;
   try {
     data = JSON.parse(json);
   } catch {
     return json; // leave malformed JSON for the loader to surface
   }
-  const absBase = repoRoot.split(sep).join('/');
+  const absBase = repoRoot.split(sep).join("/");
   const fix = (b: { source?: string }) => {
-    if (typeof b.source === 'string') {
-      const rel = b.source.replace(/^(\.\.\/)+/, '');
+    if (typeof b.source === "string") {
+      const rel = b.source.replace(/^(\.\.\/)+/, "");
       b.source = `/@fs/${absBase}/${rel}`;
     }
   };
@@ -62,7 +67,7 @@ export function campaignData(repoRoot: string): Plugin {
   let cached: string | null = null;
 
   return {
-    name: 'campaign-data',
+    name: "campaign-data",
 
     resolveId(id) {
       if (id === VIRTUAL_ID) return RESOLVED_ID;
@@ -79,18 +84,18 @@ export function campaignData(repoRoot: string): Plugin {
       server.watcher.add(roots);
 
       const onChange = (file: string) => {
-        if (!file.endsWith('.md')) return;
+        if (!file.endsWith(".md")) return;
         if (!roots.some((r) => file.startsWith(r))) return;
         cached = null; // re-extract lazily on next load
         const mod = server.moduleGraph.getModuleById(RESOLVED_ID);
         if (mod) server.moduleGraph.invalidateModule(mod);
-        server.ws.send({ type: 'full-reload' });
+        server.ws.send({ type: "full-reload" });
         server.config.logger.info(`[campaign-data] graph changed (${file}) — reloading`);
       };
 
-      server.watcher.on('change', onChange);
-      server.watcher.on('add', onChange);
-      server.watcher.on('unlink', onChange);
+      server.watcher.on("change", onChange);
+      server.watcher.on("add", onChange);
+      server.watcher.on("unlink", onChange);
     },
   };
 }

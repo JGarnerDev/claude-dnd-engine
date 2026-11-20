@@ -12,10 +12,7 @@ _CDN_HOST = "https://cdn2.inkarnate.com"
 
 def build_url(image_id: str, width: int, height: int) -> str:
     """Construct the Inkarnate CDN transform URL for an image ID."""
-    return (
-        f"{_CDN_HOST}/cdn-cgi/image/width={width},height={height}/"
-        f"{_CDN_HOST}/{image_id}"
-    )
+    return f"{_CDN_HOST}/cdn-cgi/image/width={width},height={height}/{_CDN_HOST}/{image_id}"
 
 
 def fetch_image(image_id: str, width: int = 8192, height: int = 6144) -> bytes:
@@ -25,15 +22,9 @@ def fetch_image(image_id: str, width: int = 8192, height: int = 6144) -> bytes:
         with urllib.request.urlopen(url, timeout=60) as response:
             status = getattr(response, "status", None)
             if status is not None and status != 200:
-                raise RuntimeError(
-                    f"Failed to fetch image '{image_id}': HTTP {status}"
-                )
+                raise RuntimeError(f"Failed to fetch image '{image_id}': HTTP {status}")
             return response.read()
     except urllib.error.HTTPError as exc:
-        raise RuntimeError(
-            f"Failed to fetch image '{image_id}': HTTP {exc.code}"
-        ) from exc
+        raise RuntimeError(f"Failed to fetch image '{image_id}': HTTP {exc.code}") from exc
     except urllib.error.URLError as exc:
-        raise RuntimeError(
-            f"Failed to fetch image '{image_id}': {exc.reason}"
-        ) from exc
+        raise RuntimeError(f"Failed to fetch image '{image_id}': {exc.reason}") from exc

@@ -56,7 +56,9 @@ def make_repo(tmp_path, campaigns):
     for n, tag in campaigns.items():
         (sessions / f"Session {n} Test.md").write_text(
             f'---\nname: "Session {n} Test"\ncampaign: {tag}\ntype: session\n'
-            f"session_number: {n}\nexists: true\n---\n", encoding="utf-8")
+            f"session_number: {n}\nexists: true\n---\n",
+            encoding="utf-8",
+        )
     (sessions / "_stats.md").write_text(LEDGER, encoding="utf-8")
     return tmp_path
 
@@ -101,7 +103,10 @@ def test_first_session_of_a_season_carries_the_previous_season(tmp_path):
     prev = stats.standings(root, 3)["previousSeason"]
     assert prev["campaign"] == "strahd" and (prev["first"], prev["last"]) == (1, 2)
     assert by_id(prev["leaderboards"], "killing-blows")["rows"][0] == {
-        "pc": "Dip", "value": 3, "rough": False}
+        "pc": "Dip",
+        "value": 3,
+        "rough": False,
+    }
     # Mid-season sessions do not repeat it.
     root2 = make_repo(tmp_path / "b", {1: "strahd", 2: "strahd", 3: "strahd"})
     assert stats.standings(root2, 3)["previousSeason"] is None

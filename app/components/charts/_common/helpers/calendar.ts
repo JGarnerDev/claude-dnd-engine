@@ -8,10 +8,10 @@
 // a clean, monotonic fallback that's good enough for ordering and placement.
 // Supply a config for real fantasy month systems (custom names / lengths).
 
-import type { Calendar, DateParts } from '../types.js';
+import type { Calendar, DateParts } from "../types.js";
 
 export const DEFAULT_CALENDAR: Calendar = {
-  epochLabel: '',
+  epochLabel: "",
   months: Array.from({ length: 12 }, (_, i) => ({ name: `Month ${i + 1}`, days: 30 })),
 };
 
@@ -25,20 +25,20 @@ export const DEFAULT_CALENDAR: Calendar = {
 // world/historical beats are untouched — only opted-in session beats spread. Keys
 // are the only valid `daypart` values.
 export const DAYPART_WINDOWS: Record<string, [number, number]> = {
-  dawn:      [0.00, 0.14],
-  morning:   [0.14, 0.36],
-  midday:    [0.36, 0.50],
-  afternoon: [0.50, 0.68],
-  evening:   [0.68, 0.82],
-  night:     [0.82, 0.93],
-  late:      [0.93, 1.00],
+  dawn: [0.0, 0.14],
+  morning: [0.14, 0.36],
+  midday: [0.36, 0.5],
+  afternoon: [0.5, 0.68],
+  evening: [0.68, 0.82],
+  night: [0.82, 0.93],
+  late: [0.93, 1.0],
 };
 
 // Parse "YYYY[-MM[-DD]]" -> { year, month, day }. Missing parts default to 1.
 // Negative (pre-epoch) years allowed: "-300-02-01".
 export function parseDate(str: string): DateParts {
   // Runtime guard: dates arrive from external JSON, not only typed callers.
-  if (typeof str !== 'string') {
+  if (typeof str !== "string") {
     throw new TypeError(`date must be a string, got ${typeof str}`);
   }
   const m = str.trim().match(/^(-?\d+)(?:-(\d{1,2}))?(?:-(\d{1,2}))?$/);
@@ -71,7 +71,10 @@ export function calendarTables(cal: Calendar = DEFAULT_CALENDAR): CalendarTables
 
 // O(1) absolute day index from precomputed tables. Hot paths (indexEvents over N
 // events) build the tables once and call this per event.
-export function dayIndexWith(date: DateParts, { daysPerYear, monthPrefix }: CalendarTables): number {
+export function dayIndexWith(
+  date: DateParts,
+  { daysPerYear, monthPrefix }: CalendarTables,
+): number {
   const { year, month, day } = date;
   if (month < 1 || month > monthPrefix.length) {
     throw new RangeError(`month ${month} out of range 1..${monthPrefix.length}`);
@@ -85,4 +88,3 @@ export function dayIndexWith(date: DateParts, { daysPerYear, monthPrefix }: Cale
 export function dayIndex(date: DateParts, cal: Calendar = DEFAULT_CALENDAR): number {
   return dayIndexWith(date, calendarTables(cal));
 }
-

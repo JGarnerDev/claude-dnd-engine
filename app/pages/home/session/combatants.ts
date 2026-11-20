@@ -16,7 +16,10 @@ export interface StatBlock {
   md: string;
 }
 
-export interface Phase { hp: number; name: string }
+export interface Phase {
+  hp: number;
+  name: string;
+}
 
 const AC_RE = /^[-*]\s+(AC\s+\d+.*)$/m;
 const HP_RE = /\bHP\s+(\d+)(?:\s*\/\s*(\d+))?/;
@@ -29,7 +32,8 @@ const SKIP_RE = /^\*\*(Kit|Label|Tactics|Look|Sound|Impression)\b/i;
 const ATTACK_RE = /\bto hit\b|\b\d*d\d+\b|\bsave\b|\breaction\b|^\*\*Multiattack/i;
 
 export function attackLines(md: string): string[] {
-  return md.split('\n')
+  return md
+    .split("\n")
     .map((l) => /^[-*]\s+(\*\*.*)$/.exec(l)?.[1].trim())
     .filter((l): l is string => !!l && !SKIP_RE.test(l) && ATTACK_RE.test(l));
 }
@@ -42,31 +46,46 @@ const LEGENDARY_RE = /\blegendary actions?\b\W{0,4}(\d+)|\b(\d+) legendary actio
 const PHASE_RE = /^\s*[-*]\s+\*\*([^*]*?\b(\d+) HP\b[^*]*)\*\*/gm;
 
 export function legendaryOf(md: string): number {
-  const m = LEGENDARY_RE.exec(md.replace(/\*/g, ''));
+  const m = LEGENDARY_RE.exec(md.replace(/\*/g, ""));
   return m ? Number(m[1] ?? m[2]) : 0;
 }
 
 export function phasesOf(md: string): Phase[] {
-  return [...md.matchAll(PHASE_RE)].map((m) => ({
-    hp: Number(m[2]),
-    name: m[1].split(/,|:|\s+at\s+|\s+\(/)[0].replace(/\b\d+ HP\b.*/, '').trim() || 'Next phase',
-  })).sort((a, b) => b.hp - a.hp);
+  return [...md.matchAll(PHASE_RE)]
+    .map((m) => ({
+      hp: Number(m[2]),
+      name:
+        m[1]
+          .split(/,|:|\s+at\s+|\s+\(/)[0]
+          .replace(/\b\d+ HP\b.*/, "")
+          .trim() || "Next phase",
+    }))
+    .sort((a, b) => b.hp - a.hp);
 }
 
 export function parseCombatants(sectionMd: string): StatBlock[] {
   const out: StatBlock[] = [];
-  const parts = ('\n' + sectionMd.replace(/\r/g, '')).split(/\n### /).slice(1);
+  const parts = ("\n" + sectionMd.replace(/\r/g, "")).split(/\n### /).slice(1);
   for (const part of parts) {
-    const nl = part.indexOf('\n');
+    const nl = part.indexOf("\n");
     const title = (nl < 0 ? part : part.slice(0, nl)).trim();
-    const md = nl < 0 ? '' : part.slice(nl + 1).trim();
+    const md = nl < 0 ? "" : part.slice(nl + 1).trim();
     const ac = AC_RE.exec(md);
     if (!ac) continue;
     const stats = ac[1].trim();
-    const hp = HP_RE.exec(stats.replace(/\*/g, ''));
+    const hp = HP_RE.exec(stats.replace(/\*/g, ""));
     const max = hp ? Number(hp[2] ?? hp[1]) : null;
     const start = hp && max !== null ? Math.min(Number(hp[1]), max) : null;
-    out.push({ title, stats, hp: max, start, attacks: attackLines(md), legendary: legendaryOf(md), phases: phasesOf(md), md });
+    out.push({
+      title,
+      stats,
+      hp: max,
+      start,
+      attacks: attackLines(md),
+      legendary: legendaryOf(md),
+      phases: phasesOf(md),
+      md,
+    });
   }
   return out;
 }
@@ -76,18 +95,24 @@ export function parseCombatants(sectionMd: string): StatBlock[] {
 // Cinder more than anyone"), so the strongest evidence goes first: the real name in a
 // block's title, then the label on its Label line, then either anywhere in its text.
 export function matchEnemy(entry: string, blocks: StatBlock[]): StatBlock | undefined {
-  const plain = entry.replace(/\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g, '$1');
+  const plain = entry.replace(/\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g, "$1");
   const m = /^(.*?)\s*\(([^)]+)\)\s*$/.exec(plain);
   const label = (m ? m[1] : plain).trim().toLowerCase();
   const name = m?.[2].trim().toLowerCase();
   const title = (b: StatBlock) => b.title.toLowerCase();
   const text = (b: StatBlock) => `${b.title}\n${b.md}`.toLowerCase();
   // A shared block (Fennel and Clatter are both Bandits) carries one Label line each.
-  const labelLine = (b: StatBlock) => [...b.md.matchAll(/label \(party-facing\):\*\*\s*(.*)$/gim)].map((x) => x[1]).join('\n').toLowerCase();
-  return (name ? blocks.find((b) => title(b).includes(name)) : undefined)
-    ?? (label ? blocks.find((b) => labelLine(b).includes(label)) : undefined)
-    ?? (name ? blocks.find((b) => text(b).includes(name)) : undefined)
-    ?? (label ? blocks.find((b) => text(b).includes(label)) : undefined);
+  const labelLine = (b: StatBlock) =>
+    [...b.md.matchAll(/label \(party-facing\):\*\*\s*(.*)$/gim)]
+      .map((x) => x[1])
+      .join("\n")
+      .toLowerCase();
+  return (
+    (name ? blocks.find((b) => title(b).includes(name)) : undefined) ??
+    (label ? blocks.find((b) => labelLine(b).includes(label)) : undefined) ??
+    (name ? blocks.find((b) => text(b).includes(name)) : undefined) ??
+    (label ? blocks.find((b) => text(b).includes(label)) : undefined)
+  );
 }
 
 // The HP box takes what the DM types mid-round: "12" or "-12" is damage, "+5" heals,
@@ -96,6 +121,6 @@ export function applyHp(current: number, max: number, input: string): number | n
   const m = /^\s*([+=-]?)\s*(\d+)\s*$/.exec(input);
   if (!m) return null;
   const n = Number(m[2]);
-  const next = m[1] === '+' ? current + n : m[1] === '=' ? n : current - n;
+  const next = m[1] === "+" ? current + n : m[1] === "=" ? n : current - n;
   return Math.max(0, Math.min(max, next));
 }

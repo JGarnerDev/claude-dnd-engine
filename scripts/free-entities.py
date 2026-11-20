@@ -12,30 +12,32 @@ from lib.common import ROOT, ci_eq, cwrite, get_frontmatter
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description='List free (exists: false) entities in ./data')
-    parser.add_argument('--type', default='')
-    parser.add_argument('--player', default='')
+    parser = argparse.ArgumentParser(description="List free (exists: false) entities in ./data")
+    parser.add_argument("--type", default="")
+    parser.add_argument("--player", default="")
     args = parser.parse_args()
 
-    data_dir = ROOT / 'data'
+    data_dir = ROOT / "data"
     results = []
-    for f in data_dir.rglob('*.md'):
+    for f in data_dir.rglob("*.md"):
         fm = get_frontmatter(f)
-        if not ci_eq(fm.get('exists'), 'false'):
+        if not ci_eq(fm.get("exists"), "false"):
             continue
-        if args.type and not ci_eq(fm.get('type'), args.type):
+        if args.type and not ci_eq(fm.get("type"), args.type):
             continue
-        if args.player and not ci_eq(fm.get('contributed_by'), args.player):
+        if args.player and not ci_eq(fm.get("contributed_by"), args.player):
             continue
-        results.append({
-            'Name': fm.get('name'),
-            'Type': fm.get('type'),
-            'Subtype': fm.get('subtype'),
-            'Importance': fm.get('importance'),
-            'ContributedBy': fm.get('contributed_by'),
-            'Description': fm.get('description'),
-            'File': str(f.relative_to(ROOT)),
-        })
+        results.append(
+            {
+                "Name": fm.get("name"),
+                "Type": fm.get("type"),
+                "Subtype": fm.get("subtype"),
+                "Importance": fm.get("importance"),
+                "ContributedBy": fm.get("contributed_by"),
+                "Description": fm.get("description"),
+                "File": str(f.relative_to(ROOT)),
+            }
+        )
 
     if not results:
         flt = []
@@ -47,19 +49,21 @@ def main() -> None:
         cwrite(f"No free entities found{suffix}.")
         return
 
-    types = sorted({r['Type'] for r in results}, key=lambda t: (t is None, str(t or '').lower()))
+    types = sorted({r["Type"] for r in results}, key=lambda t: (t is None, str(t or "").lower()))
     for t in types:
-        group = [r for r in results if r['Type'] == t]
-        cwrite(f"\n=== {t} ({len(group)}) ===", 'cyan')
-        for r in sorted(group, key=lambda r: (str(r['Importance'] or '').lower(), str(r['Name'] or '').lower())):
-            sub = f"/{r['Subtype']}" if r['Subtype'] else ""
-            by = f" [{r['ContributedBy']}]" if r['ContributedBy'] else ""
-            cwrite(f"  [{r['Importance']}] {r['Name']}{sub}{by}", 'white')
-            if r['Description']:
-                cwrite(f"    {r['Description']}", 'gray')
+        group = [r for r in results if r["Type"] == t]
+        cwrite(f"\n=== {t} ({len(group)}) ===", "cyan")
+        for r in sorted(
+            group, key=lambda r: (str(r["Importance"] or "").lower(), str(r["Name"] or "").lower())
+        ):
+            sub = f"/{r['Subtype']}" if r["Subtype"] else ""
+            by = f" [{r['ContributedBy']}]" if r["ContributedBy"] else ""
+            cwrite(f"  [{r['Importance']}] {r['Name']}{sub}{by}", "white")
+            if r["Description"]:
+                cwrite(f"    {r['Description']}", "gray")
 
-    cwrite(f"\nTotal: {len(results)} free entities", 'yellow')
+    cwrite(f"\nTotal: {len(results)} free entities", "yellow")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

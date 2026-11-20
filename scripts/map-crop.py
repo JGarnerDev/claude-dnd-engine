@@ -45,9 +45,11 @@ def _resolve_out(path_str: str) -> Path:
     return p if p.is_absolute() else ROOT / p
 
 
-def _crop_and_save(source: Path, col_min, col_max, row_min, row_max, margin,
-                   out_display: str, label: str) -> None:
+def _crop_and_save(
+    source: Path, col_min, col_max, row_min, row_max, margin, out_display: str, label: str
+) -> None:
     from PIL import Image
+
     img = Image.open(source)
     w, h = img.size
     box = crop_box(w, h, col_min, col_max, row_min, row_max, margin)
@@ -68,10 +70,12 @@ def main() -> None:
     parser.add_argument("--row-max", type=int, default=0)
     parser.add_argument("--margin", type=int, default=112)
     parser.add_argument("--output", default="")
-    parser.add_argument("--temp", action="store_true",
-                        help="Save as temp-crop.png instead of maps/locations/")
-    parser.add_argument("--markers", action="store_true",
-                        help="Also crop city-markers to the same bounds")
+    parser.add_argument(
+        "--temp", action="store_true", help="Save as temp-crop.png instead of maps/locations/"
+    )
+    parser.add_argument(
+        "--markers", action="store_true", help="Also crop city-markers to the same bounds"
+    )
     args = parser.parse_args()
 
     require_master(SOURCE_IMAGE)
@@ -82,8 +86,10 @@ def main() -> None:
     if args.feature:
         bounds = resolve_feature_bounds(INDEX_FILE, args.feature)
         if bounds is None:
-            print(f"'{args.feature}' not found in Known Region Positions table in maps/world/index.md",
-                  file=sys.stderr)
+            print(
+                f"'{args.feature}' not found in Known Region Positions table in maps/world/index.md",
+                file=sys.stderr,
+            )
             sys.exit(1)
         col_min, col_max, row_min, row_max = bounds
 
@@ -99,8 +105,9 @@ def main() -> None:
     else:
         output = f"maps/locations/{slugify(args.feature)}-map.png"
 
-    _crop_and_save(SOURCE_IMAGE, col_min, col_max, row_min, row_max, args.margin,
-                   output, label="Saved ")
+    _crop_and_save(
+        SOURCE_IMAGE, col_min, col_max, row_min, row_max, args.margin, output, label="Saved "
+    )
 
     if args.temp:
         print(f"Temp file -- delete after reading: {output}", file=sys.stderr)
@@ -114,8 +121,16 @@ def main() -> None:
     else:
         markers_output = f"maps/locations/{slugify(args.feature)}-markers.png"
 
-    _crop_and_save(MARKERS_IMAGE, col_min, col_max, row_min, row_max, args.margin,
-                   markers_output, label="Markers: ")
+    _crop_and_save(
+        MARKERS_IMAGE,
+        col_min,
+        col_max,
+        row_min,
+        row_max,
+        args.margin,
+        markers_output,
+        label="Markers: ",
+    )
 
 
 if __name__ == "__main__":

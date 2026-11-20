@@ -55,7 +55,7 @@ def test_flow_markers_read_boxes_and_diamonds():
     text = (
         'S1_GATE["[x] S1_GATE<br/>The gate"]\n'
         'S1_PICK{"[?] S1_PICK<br/>Fight or pay?"}\n'
-        'S1_GATE --> S1_PICK\n'
+        "S1_GATE --> S1_PICK\n"
         'S1_PAY["[-] S1_PAY<br/>Pay"]\n'
     )
     assert ps.flow_markers(text) == {"S1_GATE": "x", "S1_PICK": "?", "S1_PAY": "-"}

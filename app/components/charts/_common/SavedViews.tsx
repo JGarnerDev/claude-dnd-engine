@@ -5,22 +5,22 @@
 // with its ×. Both are jeff-ui Popovers, so they share the gear's
 // one-open-at-a-time group. Persistence lives in viewstore.ts.
 
-import { useRef, useState } from 'react';
-import { Popover } from 'jeff-ui';
-import './components/savedviews.css';
-import { SaveViewForm } from './SaveViewForm.js';
-import { SavedViewList } from './SavedViewList.js';
-import { listViews } from './helpers/viewstore.js';
-import type { ChartState, SavedView } from './types.js';
+import { useRef, useState } from "react";
+import { Popover } from "jeff-ui";
+import "./components/savedviews.css";
+import { SaveViewForm } from "./SaveViewForm.js";
+import { SavedViewList } from "./SavedViewList.js";
+import { listViews } from "./helpers/viewstore.js";
+import type { ChartState, SavedView } from "./types.js";
 
 export interface SavedViewsProps {
   // Read the host's current tab + the active chart's full state.
-  getCurrent(): { tab: SavedView['tab']; state: ChartState };
+  getCurrent(): { tab: SavedView["tab"]; state: ChartState };
   // Switch to a loaded view's tab and seed its chart with the saved state.
   apply(view: SavedView): void;
 }
 
-const classNames = { button: 'chart-settings-btn chart-sv-btn', panel: 'chart-sv-popover' };
+const classNames = { button: "chart-settings-btn chart-sv-btn", panel: "chart-sv-popover" };
 
 export function SavedViews({ getCurrent, apply }: SavedViewsProps) {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -28,10 +28,22 @@ export function SavedViews({ getCurrent, apply }: SavedViewsProps) {
   const [views, setViews] = useState(listViews);
   return (
     <>
-      <Popover label="Save view" icon={saveIcon} classNames={classNames} unstyled onOpen={() => nameRef.current?.focus()}>
+      <Popover
+        label="Save view"
+        icon={saveIcon}
+        classNames={classNames}
+        unstyled
+        onOpen={() => nameRef.current?.focus()}
+      >
         {({ close }) => <SaveViewForm nameRef={nameRef} getCurrent={getCurrent} onSaved={close} />}
       </Popover>
-      <Popover label="Load view" icon={loadIcon} classNames={classNames} unstyled onOpen={() => setViews(listViews())}>
+      <Popover
+        label="Load view"
+        icon={loadIcon}
+        classNames={classNames}
+        unstyled
+        onOpen={() => setViews(listViews())}
+      >
         {({ close }) => (
           <SavedViewList
             views={views}
@@ -48,8 +60,15 @@ export function SavedViews({ getCurrent, apply }: SavedViewsProps) {
 }
 
 const svg = {
-  viewBox: '0 0 24 24', width: 18, height: 18, fill: 'none', stroke: 'currentColor',
-  strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true,
+  viewBox: "0 0 24 24",
+  width: 18,
+  height: 18,
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 1.8,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  "aria-hidden": true,
 } as const;
 
 const saveIcon = (

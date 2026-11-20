@@ -5,10 +5,16 @@
 // and "Scene N" become chips (RefChips.tsx). `spoken` gives an *"italic quote"* the
 // read-aloud face, as the prompt book's blocks do.
 
-import { createContext, Fragment, useContext, useMemo, type ReactNode } from 'react';
-import { parseInline, parseMarkdown, type Block, type Inline, type ListItem } from './markdown-tokens.js';
-import { CodeRef, NoSceneLinks, useSceneLinker } from './RefChips.js';
-import { WikiLink } from './WikiLink.js';
+import { createContext, Fragment, useContext, useMemo, type ReactNode } from "react";
+import {
+  parseInline,
+  parseMarkdown,
+  type Block,
+  type Inline,
+  type ListItem,
+} from "./markdown-tokens.js";
+import { CodeRef, NoSceneLinks, useSceneLinker } from "./RefChips.js";
+import { WikiLink } from "./WikiLink.js";
 
 export type TextRender = (s: string) => ReactNode;
 
@@ -21,8 +27,8 @@ export const ItemClassContext = createContext<((it: ListItem) => string | undefi
 
 // An em that opens on a quote mark (inside a leading bold too) is a line to say.
 function quoted(c: Inline[]): boolean {
-  const first = c[0]?.t === 'strong' ? c[0].c[0] : c[0];
-  return first?.t === 'text' && /^["“']/.test(first.s);
+  const first = c[0]?.t === "strong" ? c[0].c[0] : c[0];
+  return first?.t === "text" && /^["“']/.test(first.s);
 }
 
 function Inlines({ c }: { c: Inline[] }) {
@@ -31,11 +37,28 @@ function Inlines({ c }: { c: Inline[] }) {
   const link = useSceneLinker();
   return c.map((n, i) => {
     switch (n.t) {
-      case 'text': return <Fragment key={i}>{link ? link(text(n.s)) : text(n.s)}</Fragment>;
-      case 'code': return <CodeRef key={i} s={n.s} />;
-      case 'strong': return <strong key={i}><Inlines c={n.c} /></strong>;
-      case 'em': return <em key={i} className={spoken && quoted(n.c) ? 'sr-say' : undefined}><Inlines c={n.c} /></em>;
-      case 'wiki': return <WikiLink key={i} entity={n.name}>{n.label}</WikiLink>;
+      case "text":
+        return <Fragment key={i}>{link ? link(text(n.s)) : text(n.s)}</Fragment>;
+      case "code":
+        return <CodeRef key={i} s={n.s} />;
+      case "strong":
+        return (
+          <strong key={i}>
+            <Inlines c={n.c} />
+          </strong>
+        );
+      case "em":
+        return (
+          <em key={i} className={spoken && quoted(n.c) ? "sr-say" : undefined}>
+            <Inlines c={n.c} />
+          </em>
+        );
+      case "wiki":
+        return (
+          <WikiLink key={i} entity={n.name}>
+            {n.label}
+          </WikiLink>
+        );
     }
   });
 }
@@ -43,12 +66,19 @@ function Inlines({ c }: { c: Inline[] }) {
 function Items({ items }: { items: readonly ListItem[] }) {
   const cls = useContext(ItemClassContext);
   return items.map((it, i) => (
-    <li key={i} className={cls?.(it)}><Inlines c={it.c} />{it.sub.length > 0 && <List items={it.sub} />}</li>
+    <li key={i} className={cls?.(it)}>
+      <Inlines c={it.c} />
+      {it.sub.length > 0 && <List items={it.sub} />}
+    </li>
   ));
 }
 
 function List({ items }: { items: ListItem[] }) {
-  return <ul><Items items={items} /></ul>;
+  return (
+    <ul>
+      <Items items={items} />
+    </ul>
+  );
 }
 
 // List items picked out of a block (the fight bar card's boss lines), without their <ul>.
@@ -64,19 +94,45 @@ function Pre({ s }: { s: string }) {
 function Blocks({ blocks }: { blocks: Block[] }) {
   return blocks.map((b, i) => {
     switch (b.t) {
-      case 'pre': return <Pre key={i} s={b.s} />;
-      case 'h': {
-        const H = `h${b.level}` as 'h1';
-        return <H key={i}>{b.level <= 2 ? <NoSceneLinks><Inlines c={b.c} /></NoSceneLinks> : <Inlines c={b.c} />}</H>;
+      case "pre":
+        return <Pre key={i} s={b.s} />;
+      case "h": {
+        const H = `h${b.level}` as "h1";
+        return (
+          <H key={i}>
+            {b.level <= 2 ? (
+              <NoSceneLinks>
+                <Inlines c={b.c} />
+              </NoSceneLinks>
+            ) : (
+              <Inlines c={b.c} />
+            )}
+          </H>
+        );
       }
-      case 'quote': return <blockquote key={i}><Blocks blocks={b.c} /></blockquote>;
-      case 'list': return <List key={i} items={b.items} />;
-      case 'p': return <p key={i}><Inlines c={b.c} /></p>;
+      case "quote":
+        return (
+          <blockquote key={i}>
+            <Blocks blocks={b.c} />
+          </blockquote>
+        );
+      case "list":
+        return <List key={i} items={b.items} />;
+      case "p":
+        return (
+          <p key={i}>
+            <Inlines c={b.c} />
+          </p>
+        );
     }
   });
 }
 
-interface MdProps { md: string; text?: TextRender; spoken?: boolean }
+interface MdProps {
+  md: string;
+  text?: TextRender;
+  spoken?: boolean;
+}
 
 function withText(text: TextRender | undefined, spoken: boolean | undefined, node: ReactNode) {
   const n = text ? <TextContext.Provider value={text}>{node}</TextContext.Provider> : node;

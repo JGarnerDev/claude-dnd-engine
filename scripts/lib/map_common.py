@@ -55,8 +55,7 @@ def resolve_feature_bounds(index_path, feature):
     return None
 
 
-def crop_box(width, height, col_min, col_max, row_min, row_max, margin,
-             ncols=NCOLS, nrows=NROWS):
+def crop_box(width, height, col_min, col_max, row_min, row_max, margin, ncols=NCOLS, nrows=NROWS):
     """Pixel crop box (left, top, right, bottom) for a grid-cell span, derived
     from the master's actual resolution and clamped to the image bounds."""
     cw, ch = width / ncols, height / nrows

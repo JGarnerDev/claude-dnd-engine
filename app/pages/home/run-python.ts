@@ -10,28 +10,33 @@
 // every candidate fails (after logging the last error) so the page renders its
 // empty state rather than crashing the dev server.
 
-import { execFileSync } from 'node:child_process';
-import { resolve } from 'node:path';
+import { execFileSync } from "node:child_process";
+import { resolve } from "node:path";
 
 type Candidate = [exe: string, prefix: string[]];
 
 const CANDIDATES: Candidate[] = [
   ...(process.env.PYTHON ? [[process.env.PYTHON, []] as Candidate] : []),
-  ['uv', ['run', '--quiet']],
-  ['python3', []],
-  ['python', []],
+  ["uv", ["run", "--quiet"]],
+  ["python3", []],
+  ["python", []],
 ];
 
-export function runPython(repoRoot: string, script: string, args: string[], tag: string): string | null {
-  const path = resolve(repoRoot, 'scripts', script);
-  let lastErr = '';
+export function runPython(
+  repoRoot: string,
+  script: string,
+  args: string[],
+  tag: string,
+): string | null {
+  const path = resolve(repoRoot, "scripts", script);
+  let lastErr = "";
   for (const [exe, prefix] of CANDIDATES) {
     try {
       const out = execFileSync(exe, [...prefix, path, ...args], {
         cwd: repoRoot,
-        encoding: 'utf8',
+        encoding: "utf8",
         maxBuffer: 64 * 1024 * 1024,
-        stdio: ['ignore', 'pipe', 'pipe'],
+        stdio: ["ignore", "pipe", "pipe"],
       });
       return out.trim() || null;
     } catch (err) {

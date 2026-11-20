@@ -67,7 +67,10 @@ def make_repo(tmp_path: Path) -> Path:
     write(loc / "shops" / "The Golden Lioness.md", location("The Golden Lioness"))
     pcs = tmp_path / "historian" / "characters" / "pcs"
     for name in ("Dip", "Iggy", "Luci"):
-        write(pcs / f"{name}.md", f'---\nname: "{name}"\ntype: character\nsubtype: pc\nexists: true\n---\n')
+        write(
+            pcs / f"{name}.md",
+            f'---\nname: "{name}"\ntype: character\nsubtype: pc\nexists: true\n---\n',
+        )
     write(pcs / "Elsewhere.md", '---\nname: "Elsewhere"\ncampaign: strahd\n---\n')
     return tmp_path
 
@@ -80,7 +83,10 @@ def test_formula_stacks_multipliers_and_rounds_half_up():
     cat = reputation.load_catalog(REPO)
     assert reputation.points(cat, "notable", ["named-foe", "witnesses"], 4) == 5424
     assert reputation.points(cat, "minor", ["style"], 1) == 22  # 22.1
-    assert reputation.points(cat, "legendary", ["named-foe", "witnesses", "style", "underdog"], 20) == 5457270
+    assert (
+        reputation.points(cat, "legendary", ["named-foe", "witnesses", "style", "underdog"], 20)
+        == 5457270
+    )
     assert reputation.points(cat, "huge", [], 4) is None
 
 
@@ -104,7 +110,9 @@ def test_tier_crossings_world_and_local(tmp_path):
     data = reputation.reputation(make_repo(tmp_path), 29)
     dip = by_pc(data)["Dip"]
     assert (dip["fame"]["tier"], dip["fame"]["up"]) == ("Noticed", True)
-    assert {"pc": "Dip", "track": "fame", "scope": "Ashford", "tier": "Noticed", "rank": 2} in data["crossings"]
+    assert {"pc": "Dip", "track": "fame", "scope": "Ashford", "tier": "Noticed", "rank": 2} in data[
+        "crossings"
+    ]
     later = reputation.reputation(tmp_path, 30)
     assert by_pc(later)["Dip"]["fame"]["up"] is False
 

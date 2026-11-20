@@ -31,8 +31,7 @@ def find_draft(drafts_dir: Path, region_slug: str = "") -> Path:
             sys.exit(1)
         return candidate
 
-    drafts = [f for f in drafts_dir.glob("*.md")
-              if not f.stem.endswith(".original")]
+    drafts = [f for f in drafts_dir.glob("*.md") if not f.stem.endswith(".original")]
     if not drafts:
         cwrite(f"No region drafts in {drafts_dir}", "red")
         sys.exit(1)
@@ -58,10 +57,7 @@ def parse_anchoring(content: str) -> tuple:
             if "None. No free entities" in body:
                 unanchored.append(num)
             else:
-                names = list(dict.fromkeys(
-                    w.split("|")[0].strip()
-                    for w in _WIKI_RE.findall(body)
-                ))
+                names = list(dict.fromkeys(w.split("|")[0].strip() for w in _WIKI_RE.findall(body)))
                 anchored.append(f"{num} -- {', '.join(names)}")
         else:
             unanchored.append(f"{num} (no anchor section yet)")
@@ -103,8 +99,7 @@ def phases_complete(content: str, draft_file: Path, questionnaires_dir: Path) ->
     return done
 
 
-def build_output(draft_file: Path, questionnaires_dir: Path = None,
-                 maps_dir: Path = None) -> list:
+def build_output(draft_file: Path, questionnaires_dir: Path = None, maps_dir: Path = None) -> list:
     """Return list of (text, color_name) tuples for the full brief."""
     if questionnaires_dir is None:
         questionnaires_dir = ROOT / "questionnaires"
@@ -165,8 +160,9 @@ def build_output(draft_file: Path, questionnaires_dir: Path = None,
         except ValueError:
             rel = str(maps_dir)
         lines.append((f"-- Maps ({rel}) ------------", "darkgray"))
-        images = sorted(f for f in maps_dir.iterdir()
-                        if f.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"})
+        images = sorted(
+            f for f in maps_dir.iterdir() if f.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}
+        )
         if images:
             for img in images:
                 lines.append((f"  {img.name}", "gray"))
@@ -181,15 +177,13 @@ def build_output(draft_file: Path, questionnaires_dir: Path = None,
     return lines
 
 
-def render(draft_file: Path, questionnaires_dir: Path = None,
-           maps_dir: Path = None) -> list:
+def render(draft_file: Path, questionnaires_dir: Path = None, maps_dir: Path = None) -> list:
     """Return rendered plain-text lines (no color, for test assertions)."""
     return [text for text, _ in build_output(draft_file, questionnaires_dir, maps_dir)]
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Compressed summary of an existing region draft")
+    parser = argparse.ArgumentParser(description="Compressed summary of an existing region draft")
     parser.add_argument("--region", default="", help="Region slug (filename without .md)")
     args = parser.parse_args()
 

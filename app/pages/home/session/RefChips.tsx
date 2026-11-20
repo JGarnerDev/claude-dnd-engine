@@ -10,10 +10,10 @@
 // never inside a link, a button, code or a top heading (NoSceneLinks); a beat id or
 // card path only as a whole `code` span.
 
-import { createContext, Fragment, useContext, type ReactNode } from 'react';
-import { Button } from 'jeff-ui';
-import type { BeatRef, RefIndex, SceneRef } from './ref-index.js';
-import type { CardRef } from './types.js';
+import { createContext, Fragment, useContext, type ReactNode } from "react";
+import { Button } from "jeff-ui";
+import type { BeatRef, RefIndex, SceneRef } from "./ref-index.js";
+import type { CardRef } from "./types.js";
 
 export interface RefLinks {
   ix: RefIndex;
@@ -32,11 +32,18 @@ export function NoSceneLinks({ children }: { children: ReactNode }) {
 
 export function BeatChip({ b }: { b: BeatRef }) {
   const links = useContext(RefContext);
-  const where = /\./.test(b.num) ? `Scene ${b.num.split('.')[0]}, step ${b.num.split('.')[1]}` : `step ${b.num}`;
+  const where = /\./.test(b.num)
+    ? `Scene ${b.num.split(".")[0]}, step ${b.num.split(".")[1]}`
+    : `step ${b.num}`;
   return (
-    <Button className={`sr-bref${b.here ? ' is-here' : ''}`} data-beat={b.id}
-      title={`${b.id} · ${where} · ${b.title}${b.here ? ' (you are here)' : ''}`} onClick={() => links?.onBeat(b)}>
-      <span className="sr-bref-n">{b.num}</span>{b.short}
+    <Button
+      className={`sr-bref${b.here ? " is-here" : ""}`}
+      data-beat={b.id}
+      title={`${b.id} · ${where} · ${b.title}${b.here ? " (you are here)" : ""}`}
+      onClick={() => links?.onBeat(b)}
+    >
+      <span className="sr-bref-n">{b.num}</span>
+      {b.short}
     </Button>
   );
 }
@@ -44,15 +51,30 @@ export function BeatChip({ b }: { b: BeatRef }) {
 export function SceneChip({ s }: { s: SceneRef }) {
   const links = useContext(RefContext);
   return (
-    <Button className={`sr-bref is-scene${s.here ? ' is-here' : ''}`} data-scene={s.key}
-      title={`Scene ${s.key} · ${s.title}${s.here ? ' (you are here)' : ''}`} onClick={() => links?.onScene(s)}>
-      <span className="sr-bref-n">S{s.key}</span>{s.title}
+    <Button
+      className={`sr-bref is-scene${s.here ? " is-here" : ""}`}
+      data-scene={s.key}
+      title={`Scene ${s.key} · ${s.title}${s.here ? " (you are here)" : ""}`}
+      onClick={() => links?.onScene(s)}
+    >
+      <span className="sr-bref-n">S{s.key}</span>
+      {s.title}
     </Button>
   );
 }
 
 export function CardLink({ c }: { c: CardRef }) {
-  return <a className="sr-cardref" href={c.url} target="_blank" rel="noopener" title={`Open the published card · ${c.path}`}>{c.title}</a>;
+  return (
+    <a
+      className="sr-cardref"
+      href={c.url}
+      target="_blank"
+      rel="noopener"
+      title={`Open the published card · ${c.path}`}
+    >
+      {c.title}
+    </a>
+  );
 }
 
 const BEAT_CODE_RE = /^[A-Z][A-Z0-9]*_[A-Z0-9_]+$/;
@@ -65,18 +87,30 @@ export function CodeRef({ s }: { s: string }) {
   if (links && CARD_CODE_RE.test(s)) {
     const c = links.ix.card(s);
     if (c?.url) return <CardLink c={c} />;
-    const why = c ? 'Card not published yet: no artifact link in the file' : "No such card in this session's handouts/";
-    return <code className="sr-ref-missing" title={why}>{s}</code>;
+    const why = c
+      ? "Card not published yet: no artifact link in the file"
+      : "No such card in this session's handouts/";
+    return (
+      <code className="sr-ref-missing" title={why}>
+        {s}
+      </code>
+    );
   }
   if (links && BEAT_CODE_RE.test(s)) {
     const b = links.ix.beat(s);
-    return b ? <BeatChip b={b} /> : <code className="sr-ref-missing" title="No beat with this id in this session's flow">{s}</code>;
+    return b ? (
+      <BeatChip b={b} />
+    ) : (
+      <code className="sr-ref-missing" title="No beat with this id in this session's flow">
+        {s}
+      </code>
+    );
   }
   return <code>{s}</code>;
 }
 
 function linkScenes(s: string, ix: RefIndex): ReactNode {
-  if (!s.includes('Scene ')) return s;
+  if (!s.includes("Scene ")) return s;
   const out: ReactNode[] = [];
   let last = 0;
   for (const m of s.matchAll(SCENE_RE)) {
@@ -99,8 +133,11 @@ export function useSceneLinker(): ((node: ReactNode) => ReactNode) | null {
   const off = useContext(NoScenesContext);
   if (!links || off) return null;
   return (node) => {
-    if (typeof node === 'string') return linkScenes(node, links.ix);
-    if (Array.isArray(node)) return node.map((x, i) => (typeof x === 'string' ? <Fragment key={`s${i}`}>{linkScenes(x, links.ix)}</Fragment> : x));
+    if (typeof node === "string") return linkScenes(node, links.ix);
+    if (Array.isArray(node))
+      return node.map((x, i) =>
+        typeof x === "string" ? <Fragment key={`s${i}`}>{linkScenes(x, links.ix)}</Fragment> : x,
+      );
     return node;
   };
 }

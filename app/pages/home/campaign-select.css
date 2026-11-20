@@ -17,7 +17,9 @@
   border: 1px solid var(--chart-axis);
   border-radius: 7px;
   cursor: pointer;
-  transition: color 120ms ease, border-color 120ms ease;
+  transition:
+    color 120ms ease,
+    border-color 120ms ease;
 }
 .chart-campaign-select:hover {
   color: var(--chart-text);

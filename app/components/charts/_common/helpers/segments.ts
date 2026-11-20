@@ -20,10 +20,24 @@
 // With default options (no rulers, offsets or compression) everything is one
 // piece at offset 0 on the shared calendar: the virtual index is the plain day index.
 
-import { parseDate, calendarTables, dayIndexWith, DEFAULT_CALENDAR, DAYPART_WINDOWS } from './calendar.js';
-import type { CalendarTables } from './calendar.js';
-import { GAP_MIN_YEARS, GAP_SPAN_FRAC, BREAK_FRAC, BREAK_MIN_YEARS } from '../constants.js';
-import type { AxisBreak, AxisOptions, AxisPiece, AxisRuler, Calendar, TimelineData, TimelineEvent } from '../types.js';
+import {
+  parseDate,
+  calendarTables,
+  dayIndexWith,
+  DEFAULT_CALENDAR,
+  DAYPART_WINDOWS,
+} from "./calendar.js";
+import type { CalendarTables } from "./calendar.js";
+import { GAP_MIN_YEARS, GAP_SPAN_FRAC, BREAK_FRAC, BREAK_MIN_YEARS } from "../constants.js";
+import type {
+  AxisBreak,
+  AxisOptions,
+  AxisPiece,
+  AxisRuler,
+  Calendar,
+  TimelineData,
+  TimelineEvent,
+} from "../types.js";
 
 export interface SegmentedEvent extends TimelineEvent {
   _idx: number; // virtual day index
@@ -49,19 +63,27 @@ function dayIndexer(): (date: string, cal: Calendar) => number {
 
 // Play order of a session beat: its sessionNumber, else the "S29 ..." label prefix.
 function sessionNo(e: TimelineEvent): number {
-  if (typeof e.sessionNumber === 'number') return e.sessionNumber;
-  const m = /^S(\d+)\b/.exec(e.label ?? '');
+  if (typeof e.sessionNumber === "number") return e.sessionNumber;
+  const m = /^S(\d+)\b/.exec(e.label ?? "");
   return m ? parseInt(m[1], 10) : Infinity;
 }
 
 // Lived-time sync offsets per campaign slug, from the session beats in play order
 // (see the header). A campaign with no session beats gets none: its dates can't be
 // tied to the party's line.
-export function syncOffsets(events: TimelineEvent[], cal: Calendar = DEFAULT_CALENDAR, calendars: Record<string, Calendar> = {}): Record<string, number> {
+export function syncOffsets(
+  events: TimelineEvent[],
+  cal: Calendar = DEFAULT_CALENDAR,
+  calendars: Record<string, Calendar> = {},
+): Record<string, number> {
   const dayIndex = dayIndexer();
   const sessions = events
     .filter((e) => e.session && e.campaign)
-    .map((e) => ({ campaign: e.campaign!, n: sessionNo(e), raw: dayIndex(e.date, calendars[e.campaign!] ?? cal) }))
+    .map((e) => ({
+      campaign: e.campaign!,
+      n: sessionNo(e),
+      raw: dayIndex(e.date, calendars[e.campaign!] ?? cal),
+    }))
     .sort((a, b) => a.n - b.n);
   const offsets: Record<string, number> = {};
   let prev: (typeof sessions)[number] | undefined;
@@ -88,7 +110,14 @@ export function axisOptionsFor(data: TimelineData): AxisOptions {
   const synced = (data.campaigns ?? []).filter((c) => offsets[c.slug] !== undefined);
   synced.sort((a, b) => Number(b.slug === primary) - Number(a.slug === primary));
   const rulers: AxisRuler[] | undefined =
-    synced.length > 1 ? synced.map((c) => ({ slug: c.slug, label: c.label, cal: calendars[c.slug] ?? cal, offset: offsets[c.slug] })) : undefined;
+    synced.length > 1
+      ? synced.map((c) => ({
+          slug: c.slug,
+          label: c.label,
+          cal: calendars[c.slug] ?? cal,
+          offset: offsets[c.slug],
+        }))
+      : undefined;
   return { compressGaps: true, calendars, offsets, rulers };
 }
 
@@ -118,7 +147,7 @@ function applySubDayOffsets(events: SegmentedEvent[]): void {
   for (const group of byDay.values()) {
     const buckets = new Map<string, SegmentedEvent[]>();
     for (const e of group) {
-      const key = e.daypart && DAYPART_WINDOWS[e.daypart] ? e.daypart : '';
+      const key = e.daypart && DAYPART_WINDOWS[e.daypart] ? e.daypart : "";
       const b = buckets.get(key);
       if (b) b.push(e);
       else buckets.set(key, [e]);
@@ -143,7 +172,10 @@ function applySubDayOffsets(events: SegmentedEvent[]): void {
 function deadGaps(sorted: SegmentedEvent[], daysPerYear: number): Set<number> {
   const dead = new Set<number>();
   if (sorted.length < 2) return dead;
-  const gaps = sorted.slice(1).map((e, i) => ({ i, size: e._idx - sorted[i]._idx })).sort((a, b) => b.size - a.size);
+  const gaps = sorted
+    .slice(1)
+    .map((e, i) => ({ i, size: e._idx - sorted[i]._idx }))
+    .sort((a, b) => b.size - a.size);
   let left = sorted[sorted.length - 1]._idx - sorted[0]._idx;
   for (const g of gaps) {
     if (g.size < GAP_MIN_YEARS * daysPerYear || g.size < GAP_SPAN_FRAC * left) break;
@@ -155,11 +187,17 @@ function deadGaps(sorted: SegmentedEvent[], daysPerYear: number): Set<number> {
 
 function yearsLabel(days: number, daysPerYear: number): string {
   const years = Math.round(days / daysPerYear);
-  return `${years.toLocaleString('en-US')} ${years === 1 ? 'year' : 'years'}`;
+  return `${years.toLocaleString("en-US")} ${years === 1 ? "year" : "years"}`;
 }
 
-export function segmentEvents(rawEvents: TimelineEvent[], cal: Calendar = DEFAULT_CALENDAR, opts: AxisOptions = {}): Segmentation {
-  const rulers: AxisRuler[] = opts.rulers?.length ? opts.rulers : [{ slug: '', label: '', cal, offset: 0 }];
+export function segmentEvents(
+  rawEvents: TimelineEvent[],
+  cal: Calendar = DEFAULT_CALENDAR,
+  opts: AxisOptions = {},
+): Segmentation {
+  const rulers: AxisRuler[] = opts.rulers?.length
+    ? opts.rulers
+    : [{ slug: "", label: "", cal, offset: 0 }];
   const daysPerYear = calendarTables(rulers[0].cal).daysPerYear;
   const calOf = (slug?: string) => (slug && opts.calendars?.[slug]) || cal;
   const offsetOf = (slug?: string) => (slug && opts.offsets?.[slug]) || 0;
@@ -167,7 +205,10 @@ export function segmentEvents(rawEvents: TimelineEvent[], cal: Calendar = DEFAUL
   // Onto the shared lived-time index: each beat on its own world's calendar, plus
   // its world's sync offset. Untagged beats ride the shared calendar at offset 0.
   const dayIndex = dayIndexer();
-  const evs: SegmentedEvent[] = rawEvents.map((e) => ({ ...e, _idx: dayIndex(e.date, calOf(e.campaign)) + offsetOf(e.campaign) }));
+  const evs: SegmentedEvent[] = rawEvents.map((e) => ({
+    ...e,
+    _idx: dayIndex(e.date, calOf(e.campaign)) + offsetOf(e.campaign),
+  }));
   applySubDayOffsets(evs);
   evs.sort((a, b) => a._idx - b._idx);
 
@@ -178,7 +219,12 @@ export function segmentEvents(rawEvents: TimelineEvent[], cal: Calendar = DEFAUL
   for (let i = 0; i < evs.length; i++) {
     if (i === evs.length - 1 || dead.has(i)) {
       const members = evs.slice(start, i + 1);
-      pieces.push({ rawMin: members[0]._idx, rawMax: members[members.length - 1]._idx, offset: 0, members });
+      pieces.push({
+        rawMin: members[0]._idx,
+        rawMax: members[members.length - 1]._idx,
+        offset: 0,
+        members,
+      });
       start = i + 1;
     }
   }
@@ -192,11 +238,20 @@ export function segmentEvents(rawEvents: TimelineEvent[], cal: Calendar = DEFAUL
   pieces.forEach((p, k) => {
     if (k > 0) {
       p.offset = cursor + breakDays - p.rawMin;
-      breaks.push({ idx: cursor + breakDays / 2, label: yearsLabel(p.rawMin - pieces[k - 1].rawMax, daysPerYear) });
+      breaks.push({
+        idx: cursor + breakDays / 2,
+        label: yearsLabel(p.rawMin - pieces[k - 1].rawMax, daysPerYear),
+      });
     }
     for (const e of p.members) e._idx += p.offset;
     cursor = p.rawMax + p.offset;
   });
 
-  return { events: evs, pieces: pieces.map(({ members: _m, ...piece }) => piece), breaks, rulers, daysPerYear };
+  return {
+    events: evs,
+    pieces: pieces.map(({ members: _m, ...piece }) => piece),
+    breaks,
+    rulers,
+    daysPerYear,
+  };
 }

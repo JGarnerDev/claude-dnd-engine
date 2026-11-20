@@ -18,21 +18,21 @@ _FIELD_RE = re.compile(r'^(description|argument-hint):\s*"?(.*?)"?\s*$', re.MULT
 
 
 def command_fields(path) -> dict:
-    raw = read_text_no_bom(path).replace('\r\n', '\n')
-    if not raw.startswith('---\n'):
+    raw = read_text_no_bom(path).replace("\r\n", "\n")
+    if not raw.startswith("---\n"):
         return {}
-    block = raw[4:raw.find('\n---', 4)]
+    block = raw[4 : raw.find("\n---", 4)]
     return dict(_FIELD_RE.findall(block))
 
 
 def main() -> None:
-    files = sorted((ROOT / '.claude' / 'commands').glob('*.md'), key=lambda f: f.stem)
+    files = sorted((ROOT / ".claude" / "commands").glob("*.md"), key=lambda f: f.stem)
     for f in files:
         fm = command_fields(f)
-        desc = fm.get('description') or 'MISSING description frontmatter'
+        desc = fm.get("description") or "MISSING description frontmatter"
         usage = f"/{f.stem} {fm.get('argument-hint', '')}".rstrip()
         cwrite(f"- `{usage}` -- {desc}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

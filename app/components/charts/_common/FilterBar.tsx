@@ -4,12 +4,12 @@
 // the header settings panel under their labels, as buildFilterBar's parts were
 // hoisted before. Pure matching stays in filters.ts.
 
-import { useMemo } from 'react';
-import { Chip, SearchInput, type SettingsSection } from 'jeff-ui';
-import './components/filterbar.css';
-import { trackList, audienceList } from './helpers/filters.js';
-import { DM_AUDIENCE, DM_LABEL } from './constants.js';
-import type { TimelineEvent } from './types.js';
+import { useMemo } from "react";
+import { Chip, SearchInput, type SettingsSection } from "jeff-ui";
+import "./components/filterbar.css";
+import { trackList, audienceList } from "./helpers/filters.js";
+import { DM_AUDIENCE, DM_LABEL } from "./constants.js";
+import type { TimelineEvent } from "./types.js";
 
 // An empty set means "filter nothing": every beat passes.
 export interface FilterValue {
@@ -18,7 +18,7 @@ export interface FilterValue {
   audiences: Set<string>;
 }
 
-export const EMPTY_FILTER: FilterValue = { query: '', tracks: new Set(), audiences: new Set() };
+export const EMPTY_FILTER: FilterValue = { query: "", tracks: new Set(), audiences: new Set() };
 
 interface AudienceOption {
   key: string;
@@ -45,7 +45,7 @@ export function seedFilter(
   const tracks = new Set(trackList(events));
   const audiences = new Set(audienceOptions(events).map((a) => a.key));
   return {
-    query: initial?.query ?? '',
+    query: initial?.query ?? "",
     tracks: new Set(initial?.tracks.filter((t) => tracks.has(t))),
     audiences: new Set(initial?.audiences?.filter((a) => audiences.has(a))),
   };
@@ -70,7 +70,7 @@ export function useFilterSections(
 
   const sections: SettingsSection[] = [
     {
-      label: 'Search',
+      label: "Search",
       content: (
         <SearchInput
           className="chart-search"
@@ -81,14 +81,14 @@ export function useFilterSections(
       ),
     },
     {
-      label: 'Filter',
+      label: "Filter",
       content: (
         <div className="chart-chips">
           {tracks.map((track) => (
             <Chip
               key={track}
               unstyled
-              className={value.tracks.has(track) ? 'chart-chip is-on' : 'chart-chip'}
+              className={value.tracks.has(track) ? "chart-chip is-on" : "chart-chip"}
               data-track={track}
               pressed={value.tracks.has(track)}
               onToggle={(on) => onChange({ ...value, tracks: toggled(value.tracks, track, on) })}
@@ -103,12 +103,12 @@ export function useFilterSections(
 
   if (audiences.length > 0) {
     sections.push({
-      label: 'Known by',
+      label: "Known by",
       content: (
         <div className="chart-chips chart-audiences">
           {audiences.map(({ key, label, dm }) => {
             const on = value.audiences.has(key);
-            const cls = `chart-chip chart-chip-audience${dm ? ' chart-chip-dm' : ''}${on ? ' is-on' : ''}`;
+            const cls = `chart-chip chart-chip-audience${dm ? " chart-chip-dm" : ""}${on ? " is-on" : ""}`;
             return (
               <Chip
                 key={key}
@@ -116,7 +116,9 @@ export function useFilterSections(
                 className={cls}
                 data-audience={key}
                 pressed={on}
-                onToggle={(next) => onChange({ ...value, audiences: toggled(value.audiences, key, next) })}
+                onToggle={(next) =>
+                  onChange({ ...value, audiences: toggled(value.audiences, key, next) })
+                }
               >
                 {label}
               </Chip>

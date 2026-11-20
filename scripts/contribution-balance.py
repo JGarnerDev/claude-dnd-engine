@@ -9,15 +9,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import ROOT, color, fmt_num, get_frontmatter
 
+
 # Derived from meta/players/ so a new player (file + `contributed_by` tag) shows up
 # without editing this script -- a hardcoded list silently dropped Kellan's rows.
 def _players() -> list:
     d = ROOT / "meta" / "players"
     if not d.exists():
         return []
-    return sorted(
-        f.stem.lower() for f in d.glob("*.md") if f.stem.lower() != "player-template"
-    )
+    return sorted(f.stem.lower() for f in d.glob("*.md") if f.stem.lower() != "player-template")
 
 
 PLAYERS = _players()
@@ -59,9 +58,12 @@ def render(pool, historian):
 
     for row in sorted(rows, key=lambda r: (r["Canon"], r["Idx"])):
         clr = "darkgray" if row["Player"] == "(none)" else "white"
-        lines.append(color(
-            f"{row['Player']:<12} {row['Pool']:>8} {row['Canon']:>12} {fmt_num(row['Pct']):>9}%",
-            clr))
+        lines.append(
+            color(
+                f"{row['Player']:<12} {row['Pool']:>8} {row['Canon']:>12} {fmt_num(row['Pct']):>9}%",
+                clr,
+            )
+        )
 
     lines.append(color(f"{'TOTAL':<12} {total_pool:>8} {total_hist:>12}", "yellow"))
 
@@ -69,9 +71,12 @@ def render(pool, historian):
     if candidates:
         nxt = sorted(candidates, key=lambda r: (r["Canon"], r["Player"]))[0]
         lines.append("")
-        lines.append(color(
-            f"Next up: {nxt['Player']} ({nxt['Canon']} canonized, {nxt['Pool']} in pool)",
-            "green"))
+        lines.append(
+            color(
+                f"Next up: {nxt['Player']} ({nxt['Canon']} canonized, {nxt['Pool']} in pool)",
+                "green",
+            )
+        )
     return lines
 
 

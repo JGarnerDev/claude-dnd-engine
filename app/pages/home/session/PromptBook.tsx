@@ -11,20 +11,24 @@
 //   Introduce  a character's first appearance: look, sound, impression
 //   Fight    where a fight or a boss fight starts and ends (`Combat starts:`, `Boss fight ends:`)
 
-import { Fragment, type ReactNode } from 'react';
-import { CopyButton } from 'jeff-ui';
-import { itemLit, watchCue, type Lit } from './fight-cues.js';
-import { useFightLit } from './FightContext.js';
-import { extractCallouts } from './markdown.js';
-import { InlineMd, ItemClassContext, Markdown } from './MarkdownView.js';
-import { promptBlocks, VOICE_NAME, type PbBlock } from './prompt-blocks.js';
-import { stripProvenance } from './provenance.js';
+import { Fragment, type ReactNode } from "react";
+import { CopyButton } from "jeff-ui";
+import { itemLit, watchCue, type Lit } from "./fight-cues.js";
+import { useFightLit } from "./FightContext.js";
+import { extractCallouts } from "./markdown.js";
+import { InlineMd, ItemClassContext, Markdown } from "./MarkdownView.js";
+import { promptBlocks, VOICE_NAME, type PbBlock } from "./prompt-blocks.js";
+import { stripProvenance } from "./provenance.js";
 
 function Intros({ md }: { md: string }) {
   return extractCallouts(md).intros.map((x, i) => (
     <Fragment key={i}>
-      <h3 className="sr-intro-name"><InlineMd md={stripProvenance(x.name)} /></h3>
-      <div className="sr-md"><Markdown md={x.md} /></div>
+      <h3 className="sr-intro-name">
+        <InlineMd md={stripProvenance(x.name)} />
+      </h3>
+      <div className="sr-md">
+        <Markdown md={x.md} />
+      </div>
     </Fragment>
   ));
 }
@@ -36,13 +40,26 @@ function Private({ md }: { md: string }) {
   if (!p) return null;
   return (
     <>
-      {p.when && <div className="sr-private-when"><InlineMd md={stripProvenance(p.when)} /></div>}
+      {p.when && (
+        <div className="sr-private-when">
+          <InlineMd md={stripProvenance(p.when)} />
+        </div>
+      )}
       <ul className="sr-private-list">
         {p.outcomes.map((o, i) => (
           <li key={i}>
-            {o.label && <span className="sr-private-label"><InlineMd md={o.label} /></span>}
+            {o.label && (
+              <span className="sr-private-label">
+                <InlineMd md={o.label} />
+              </span>
+            )}
             <span className="sr-private-text">{o.text}</span>
-            <CopyButton className="sr-copy" data-copy={o.text} title="Copy this message" text={o.text} />
+            <CopyButton
+              className="sr-copy"
+              data-copy={o.text}
+              title="Copy this message"
+              text={o.text}
+            />
           </li>
         ))}
       </ul>
@@ -52,33 +69,59 @@ function Private({ md }: { md: string }) {
 
 // A Watch block in a scene lights when its condition comes true, and so do its items.
 function Watched({ lit, children }: { lit: Lit; children: ReactNode }) {
-  return <ItemClassContext.Provider value={(it) => (itemLit(it, lit) ? 'is-now' : undefined)}>{children}</ItemClassContext.Provider>;
+  return (
+    <ItemClassContext.Provider value={(it) => (itemLit(it, lit) ? "is-now" : undefined)}>
+      {children}
+    </ItemClassContext.Provider>
+  );
 }
 
 export function PbBlockView({ b }: { b: PbBlock }) {
   const lit = useFightLit();
   let label = b.label;
-  if (b.voice === 'private') {
+  if (b.voice === "private") {
     const to = extractCallouts(b.md).privates[0]?.to;
-    label = to ? `→ ${to}` : '';
+    label = to ? `→ ${to}` : "";
   }
-  const watch = b.voice === 'watch' && lit;
-  const md = <div className="sr-md"><Markdown md={b.md} spoken /></div>;
+  const watch = b.voice === "watch" && lit;
+  const md = (
+    <div className="sr-md">
+      <Markdown md={b.md} spoken />
+    </div>
+  );
   return (
-    <div className={`sr-pb sr-pb-${b.voice}${watch && watchCue(b.label, b.md, lit).lit ? ' is-now' : ''}`}>
+    <div
+      className={`sr-pb sr-pb-${b.voice}${watch && watchCue(b.label, b.md, lit).lit ? " is-now" : ""}`}
+    >
       <div className="sr-pb-gut">
         <span className="sr-pb-voice">{VOICE_NAME[b.voice]}</span>
-        {label && <small><InlineMd md={label} /></small>}
+        {label && (
+          <small>
+            <InlineMd md={label} />
+          </small>
+        )}
       </div>
       <div className="sr-pb-text">
-        {b.voice === 'private' ? <Private md={b.md} />
-          : b.voice === 'intro' ? <Intros md={b.md} />
-          : watch ? <Watched lit={lit}>{md}</Watched> : md}
+        {b.voice === "private" ? (
+          <Private md={b.md} />
+        ) : b.voice === "intro" ? (
+          <Intros md={b.md} />
+        ) : watch ? (
+          <Watched lit={lit}>{md}</Watched>
+        ) : (
+          md
+        )}
       </div>
     </div>
   );
 }
 
 export function PromptBook({ prose }: { prose: string }) {
-  return <div className="sr-pbook">{promptBlocks(prose).map((b, i) => <PbBlockView key={i} b={b} />)}</div>;
+  return (
+    <div className="sr-pbook">
+      {promptBlocks(prose).map((b, i) => (
+        <PbBlockView key={i} b={b} />
+      ))}
+    </div>
+  );
 }

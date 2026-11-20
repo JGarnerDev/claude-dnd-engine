@@ -19,7 +19,7 @@ def parse_cr(cr_str):
         num, _, den = s.partition("/")
         try:
             return float(num) / float(den)
-        except (ValueError, ZeroDivisionError):
+        except ValueError, ZeroDivisionError:
             return -1.0
     try:
         return float(s)
@@ -50,13 +50,15 @@ def find_monsters(monsters_dir, type_filter="", cr_min=0.0, cr_max=30.0, habitat
         cr_num = parse_cr(fm.get("challenge_rating", ""))
         if cr_num < 0 or cr_num < cr_min or cr_num > cr_max:
             continue
-        results.append({
-            "Name": fm.get("name", ""),
-            "CR": fm.get("challenge_rating", ""),
-            "CRNum": cr_num,
-            "CreatureType": creature_type,
-            "Habitats": ", ".join(habitats),
-        })
+        results.append(
+            {
+                "Name": fm.get("name", ""),
+                "CR": fm.get("challenge_rating", ""),
+                "CRNum": cr_num,
+                "CreatureType": creature_type,
+                "Habitats": ", ".join(habitats),
+            }
+        )
     return results
 
 
@@ -87,7 +89,9 @@ def render(results, type_filter="", cr_min=None, cr_max=None, habitat=""):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Filter monsters by CR, creature type, and/or habitat")
+    parser = argparse.ArgumentParser(
+        description="Filter monsters by CR, creature type, and/or habitat"
+    )
     parser.add_argument("--type", default="")
     parser.add_argument("--cr-min", type=float, default=None)
     parser.add_argument("--cr-max", type=float, default=None)

@@ -11,9 +11,9 @@
 // 3. Dashed edges are asides — out of this card, or from any visited card into an
 //    unvisited card of this scene (an "if bitten" payoff waiting downstream).
 
-import type { FlowEdge, FlowNode, SessionData } from './types.js';
+import type { FlowEdge, FlowNode, SessionData } from "./types.js";
 
-export type OptionKind = 'edge' | 'scene' | 'aside';
+export type OptionKind = "edge" | "scene" | "aside";
 
 export interface NextOption {
   to: string;
@@ -29,7 +29,7 @@ export interface Graph {
   start: string | null;
 }
 
-export function buildGraph(data: Pick<SessionData, 'nodes' | 'edges' | 'scenes'>): Graph {
+export function buildGraph(data: Pick<SessionData, "nodes" | "edges" | "scenes">): Graph {
   const byId = new Map(data.nodes.map((n) => [n.id, n]));
   const out = new Map<string, FlowEdge[]>();
   for (const e of data.edges) {
@@ -50,13 +50,18 @@ export function buildGraph(data: Pick<SessionData, 'nodes' | 'edges' | 'scenes'>
 export function mergeLabelLines(lines: string[]): string[] {
   const out: string[] = [];
   for (const l of lines) {
-    if (out.length && /^[a-z(—–-]/.test(l)) out[out.length - 1] += ' ' + l;
+    if (out.length && /^[a-z(—–-]/.test(l)) out[out.length - 1] += " " + l;
     else out.push(l);
   }
   return out;
 }
 
-export function nextOptions(g: Graph, current: string, visited: ReadonlySet<string>, sceneTitle: (id: string) => string): NextOption[] {
+export function nextOptions(
+  g: Graph,
+  current: string,
+  visited: ReadonlySet<string>,
+  sceneTitle: (id: string) => string,
+): NextOption[] {
   const node = g.byId.get(current);
   if (!node) return [];
   const edges = g.out.get(current) ?? [];
@@ -64,7 +69,7 @@ export function nextOptions(g: Graph, current: string, visited: ReadonlySet<stri
   const opts: NextOption[] = solid.map((e) => ({
     to: e.to,
     label: e.label || g.byId.get(e.to)!.title,
-    kind: 'edge',
+    kind: "edge",
   }));
 
   const leaves = solid.every((e) => g.byId.get(e.to)!.scene !== node.scene);
@@ -78,10 +83,10 @@ export function nextOptions(g: Graph, current: string, visited: ReadonlySet<stri
     // Cut only when the arrows would skip that scene. An arrow back into an
     // earlier scene (the chase's last stage after the fork fight) or into the cut
     // scene itself is the path the plan means, so the cut would leapfrog it.
-    const at = (id: string) => g.sceneOrder.indexOf(g.byId.get(id)!.scene ?? '');
+    const at = (id: string) => g.sceneOrder.indexOf(g.byId.get(id)!.scene ?? "");
     const skipsIt = solid.every((e) => visited.has(e.to) || at(e.to) > g.sceneOrder.indexOf(next!));
     if (to && skipsIt && !opts.some((o) => o.to === to)) {
-      opts.unshift({ to, label: `Cut to ${sceneTitle(next!)}`, kind: 'scene' });
+      opts.unshift({ to, label: `Cut to ${sceneTitle(next!)}`, kind: "scene" });
     }
   }
 
@@ -96,7 +101,7 @@ export function nextOptions(g: Graph, current: string, visited: ReadonlySet<stri
   for (const to of new Set(asides)) {
     if (opts.some((o) => o.to === to)) continue;
     const e = edges.find((x) => x.to === to);
-    opts.push({ to, label: e?.label || g.byId.get(to)!.title, kind: 'aside' });
+    opts.push({ to, label: e?.label || g.byId.get(to)!.title, kind: "aside" });
   }
   return opts;
 }

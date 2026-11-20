@@ -36,15 +36,16 @@ def history_lines(hist_path, type_filter=""):
     hist_path = Path(hist_path)
     if not hist_path.exists():
         return ["\nPitch history: none"]
-    bullets = [ln.rstrip("\r") for ln in read_text_no_bom(hist_path).split("\n")
-               if ln.startswith("- ")]
+    bullets = [
+        ln.rstrip("\r") for ln in read_text_no_bom(hist_path).split("\n") if ln.startswith("- ")
+    ]
     if type_filter:
         prefix = f"- {type_filter}:"
         matched = [b for b in bullets if b.startswith(prefix)]
         if not matched:
             return [f"\n{type_filter} history: none"]
         out = [f"\n{type_filter} history ({len(matched)} entries - avoid all):"]
-        out.extend(f"  {b[len(prefix):].strip()}" for b in matched)
+        out.extend(f"  {b[len(prefix) :].strip()}" for b in matched)
         return out
     out = ["\nPitch history (all):"]
     out.extend(f"  {b}" for b in bullets)
@@ -64,8 +65,9 @@ def main():
     parser = argparse.ArgumentParser(description="Pre-pitch context summary")
     parser.add_argument("--type", default="")
     args = parser.parse_args()
-    lines = render(ROOT / "meta" / "worldbuilding.md",
-                   ROOT / "pitch-log" / "pitch-history.md", args.type)
+    lines = render(
+        ROOT / "meta" / "worldbuilding.md", ROOT / "pitch-log" / "pitch-history.md", args.type
+    )
     for line in lines:
         print(line)
 

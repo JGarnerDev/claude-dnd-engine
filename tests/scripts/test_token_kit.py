@@ -16,15 +16,23 @@ def rule(role, mx, rx):
     return {"role": role, "max": mx, "rx": re.compile(rx, re.I), "desert": False}
 
 
-MEMBERS = [member(f"FA_Tokens/Adversaries/Bandits/{n}") for n in (
-    "Bandit_Captain_A1_01.png", "Bandit_Captain_A2_01.png", "Bandit_Captain_A3_01.png",
-    "Desert_Bandit_Captain_A1_01.png", "Bandit_Thug_A1_01.png",
-)]
+MEMBERS = [
+    member(f"FA_Tokens/Adversaries/Bandits/{n}")
+    for n in (
+        "Bandit_Captain_A1_01.png",
+        "Bandit_Captain_A2_01.png",
+        "Bandit_Captain_A3_01.png",
+        "Desert_Bandit_Captain_A1_01.png",
+        "Bandit_Thug_A1_01.png",
+    )
+]
 
 
 def test_ledger_round_trip_sorts_and_dedupes(tmp_path):
     led = tmp_path / "tokens-uploaded.txt"
-    tk.write_ledger([(30, "drover", "B.png"), (29, "mastiff", "A.png"), (30, "drover", "B.png")], led)
+    tk.write_ledger(
+        [(30, "drover", "B.png"), (29, "mastiff", "A.png"), (30, "drover", "B.png")], led
+    )
     assert tk.read_ledger(led) == [(29, "mastiff", "A.png"), (30, "drover", "B.png")]
     assert led.read_text(encoding="utf-8").startswith("# Tokens already uploaded")
 

@@ -26,7 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib.common import ROOT, cwrite
 
 # Reference-catalog types are campaign-agnostic stat libraries; their schemas omit `exists`.
-REF_TYPES = {'monster', 'spell', 'deity', 'feat', 'race', 'class', 'background', 'skill'}
+REF_TYPES = {"monster", "spell", "deity", "feat", "race", "class", "background", "skill"}
 
 # Spotlight ledger fields (meta/character-focus.md) are intentionally plain-string, NOT wikilinks:
 #   spotlight_hooks (list of {hook,status}), spotlight (normal|low) on PCs;
@@ -35,7 +35,7 @@ REF_TYPES = {'monster', 'spell', 'deity', 'feat', 'race', 'class', 'background',
 # don't register as dangling [[links]] here. Do not convert them to [[wiki-links]].
 
 # notes-kit check names, plus the engine's own, split by --scope.
-LINK_CHECKS = {'wikilinks', 'echo'}
+LINK_CHECKS = {"wikilinks", "echo"}
 
 
 def blank(value) -> bool:
@@ -51,35 +51,38 @@ def engine_checks(notes: dict) -> list:
     problems = []
     for note in notes.values():
         rel, fm = note.rel, note.meta
-        top = rel.split('/')[0]
+        top = rel.split("/")[0]
 
-        def add(text, check, severity='error'):
-            problems.append(Problem(f'{rel}: {text}', check, severity))
+        def add(text, check, severity="error"):
+            problems.append(Problem(f"{rel}: {text}", check, severity))
 
-        for req in ('name', 'type', 'exists'):
+        for req in ("name", "type", "exists"):
             if blank(fm.get(req)):
-                add(f"missing mandatory field '{req}'", 'mandatory')
+                add(f"missing mandatory field '{req}'", "mandatory")
         # `exists` = real/canon in the world, not folder location. Historian is always canon;
         # core rulebook material in data/ should be real too (see meta/schemas/entity.md).
-        if str(fm.get('exists')).lower() == 'false':
-            if top == 'historian':
-                add('exists:false in historian/ (canon must be true)', 'exists')
-            if top == 'data' and fm.get('type') in REF_TYPES:
-                add(f"reference-catalog type '{fm['type']}' is exists:false (core material should be true)",
-                    'exists', 'warning')
+        if str(fm.get("exists")).lower() == "false":
+            if top == "historian":
+                add("exists:false in historian/ (canon must be true)", "exists")
+            if top == "data" and fm.get("type") in REF_TYPES:
+                add(
+                    f"reference-catalog type '{fm['type']}' is exists:false (core material should be true)",
+                    "exists",
+                    "warning",
+                )
         # Session files ARE the source of canon, so they carry no source_session/confirmed_date.
-        if top == 'historian' and '/sessions/' not in rel:
-            for req in ('source_session', 'confirmed_date'):
+        if top == "historian" and "/sessions/" not in rel:
+            for req in ("source_session", "confirmed_date"):
                 if blank(fm.get(req)):
-                    add(f"historian file missing '{req}'", 'provenance', 'warning')
-        name = fm.get('name')
+                    add(f"historian file missing '{req}'", "provenance", "warning")
+        name = fm.get("name")
         if not blank(name) and str(name).strip().lower() != note.stem.lower():
-            add(f"name '{name}' != filename '{note.stem}'", 'name', 'warning')
+            add(f"name '{name}' != filename '{note.stem}'", "name", "warning")
         # Frontmatter links must also appear in the body (Foam reads body links only).
         body = {b.lower() for b in links(note.body)}
         for fl in dict.fromkeys(links(note.head)):
             if fl.lower() not in body:
-                add(f'frontmatter link [[{fl}]] not echoed in body', 'echo', 'warning')
+                add(f"frontmatter link [[{fl}]] not echoed in body", "echo", "warning")
     return problems
 
 
@@ -95,30 +98,30 @@ def count_errors() -> int:
 
 
 def main():
-    ap = argparse.ArgumentParser(description='Integrity checks for the campaign entity graph.')
-    ap.add_argument('--scope', choices=['all', 'links', 'frontmatter'], default='all')
-    ap.add_argument('--quiet', action='store_true', help='show errors only')
+    ap = argparse.ArgumentParser(description="Integrity checks for the campaign entity graph.")
+    ap.add_argument("--scope", choices=["all", "links", "frontmatter"], default="all")
+    ap.add_argument("--quiet", action="store_true", help="show errors only")
     args = ap.parse_args()
 
     notes, problems = collect()
-    if args.scope != 'all':
-        problems = [p for p in problems if (p.check in LINK_CHECKS) == (args.scope == 'links')]
+    if args.scope != "all":
+        problems = [p for p in problems if (p.check in LINK_CHECKS) == (args.scope == "links")]
 
     errors = sorted(p for p in problems if p.is_error)
     warnings = sorted(p for p in problems if not p.is_error)
     if errors:
-        cwrite(f'\n=== ERRORS ({len(errors)}) ===', 'red')
+        cwrite(f"\n=== ERRORS ({len(errors)}) ===", "red")
         for p in errors:
-            cwrite(f'  {p}', 'red')
+            cwrite(f"  {p}", "red")
     if not args.quiet and warnings:
-        cwrite(f'\n=== WARNINGS ({len(warnings)}) ===', 'yellow')
+        cwrite(f"\n=== WARNINGS ({len(warnings)}) ===", "yellow")
         for p in warnings:
-            cwrite(f'  {p}', 'yellow')
+            cwrite(f"  {p}", "yellow")
 
-    tail = '' if args.quiet else f'  Warnings: {len(warnings)}'
-    cwrite(f'\nChecked {len(notes)} entity files. Errors: {len(errors)}{tail}', 'cyan')
+    tail = "" if args.quiet else f"  Warnings: {len(warnings)}"
+    cwrite(f"\nChecked {len(notes)} entity files. Errors: {len(errors)}{tail}", "cyan")
     sys.exit(1 if errors else 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -3,8 +3,8 @@
 // owns the filtering — agnostic beats (no campaign tag) always show — and this
 // only renders the choices and reports the pick, through jeff-ui's Select.
 
-import { Select } from 'jeff-ui';
-import './campaign-select.css';
+import { Select } from "jeff-ui";
+import "./campaign-select.css";
 
 export interface CampaignOption {
   slug: string;

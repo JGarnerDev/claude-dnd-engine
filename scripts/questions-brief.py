@@ -28,12 +28,14 @@ def collect():
         status = str(fm.get("status") or "").strip().lower()
         if not status:
             continue
-        out.append((
-            f.relative_to(QDIR).as_posix(),
-            status,
-            str(fm.get("topic") or "").strip(),
-            str(fm.get("priority") or "").strip().lower(),
-        ))
+        out.append(
+            (
+                f.relative_to(QDIR).as_posix(),
+                status,
+                str(fm.get("topic") or "").strip(),
+                str(fm.get("priority") or "").strip().lower(),
+            )
+        )
     return out
 
 
@@ -68,10 +70,10 @@ def main() -> None:
     cwrite("\n========================================", "darkgray")
     cwrite("  WORLD-DESIGN QUESTIONS", "cyan")
     cwrite("========================================", "darkgray")
-    cwrite(f"  {len(open_rows)} open  |  {answered} answered  |  {len(refs)} reference files",
-           "white")
-    cwrite(f"  {len(req_open)} of the open ones are REQUIRED",
-           "yellow" if req_open else "darkgray")
+    cwrite(
+        f"  {len(open_rows)} open  |  {answered} answered  |  {len(refs)} reference files", "white"
+    )
+    cwrite(f"  {len(req_open)} of the open ones are REQUIRED", "yellow" if req_open else "darkgray")
 
     # -- by area (first topic segment), then by group (first two) ---------------
     areas = {}
@@ -88,7 +90,7 @@ def main() -> None:
         for g in sorted(groups):
             gi = groups[g]
             g_req = sum(1 for _, p in gi if p == "required")
-            label = g[len(area) + 1:] if g.startswith(area + "/") else g
+            label = g[len(area) + 1 :] if g.startswith(area + "/") else g
             suffix = f", {g_req} required" if g_req else ""
             cwrite(f"  {label or '(top level)'}: {len(gi)} open{suffix}", "white")
             if args.list:

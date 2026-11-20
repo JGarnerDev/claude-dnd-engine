@@ -11,8 +11,8 @@
 // as if it were an outer edge instead of reaching across the break. No DOM — the caller maps the day
 // indices to px via the shared axis scale.
 
-import type { IndexedEvent } from './axis.js';
-import type { SessionBand } from '../types.js';
+import type { IndexedEvent } from "./axis.js";
+import type { SessionBand } from "../types.js";
 
 export function deriveSessionBands(
   sessions: IndexedEvent[], // sorted ascending by _idx
@@ -25,11 +25,22 @@ export function deriveSessionBands(
   const across = (a: number, b: number) => breaks.some((v) => v > a && v < b);
   return sessions.map((s, i) => {
     const prev = i > 0 && !across(sessions[i - 1]._idx, s._idx) ? sessions[i - 1] : undefined;
-    const next = i < sessions.length - 1 && !across(s._idx, sessions[i + 1]._idx) ? sessions[i + 1] : undefined;
+    const next =
+      i < sessions.length - 1 && !across(s._idx, sessions[i + 1]._idx)
+        ? sessions[i + 1]
+        : undefined;
     // Half-width to each side = half the gap to that neighbour; mirror the other
     // side at the ends so a first/last/lone band stays centered on its session.
-    const leftHalf = prev ? (s._idx - prev._idx) / 2 : next ? (next._idx - s._idx) / 2 : halfFallback;
-    const rightHalf = next ? (next._idx - s._idx) / 2 : prev ? (s._idx - prev._idx) / 2 : halfFallback;
+    const leftHalf = prev
+      ? (s._idx - prev._idx) / 2
+      : next
+        ? (next._idx - s._idx) / 2
+        : halfFallback;
+    const rightHalf = next
+      ? (next._idx - s._idx) / 2
+      : prev
+        ? (s._idx - prev._idx) / 2
+        : halfFallback;
     // Never past a break: the half-month fallback beside one could reach into it.
     const lo = Math.max(s._idx - leftHalf, ...breaks.filter((v) => v < s._idx));
     const hi = Math.min(s._idx + rightHalf, ...breaks.filter((v) => v > s._idx));

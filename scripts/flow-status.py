@@ -21,24 +21,24 @@ from lib.common import ROOT, cwrite, color, read_text_no_bom
 from lib.beat_order import flow_node_ids, order_problems, plan_beat_ids, parse_id
 
 # A flow graph set is a folder whose README names the conventions doc.
-SET_MARKER = 'meta/flow-graphs.md'
+SET_MARKER = "meta/flow-graphs.md"
 
-MARKERS = {'x': 'committed', '-': 'draft', '?': 'open'}
-MARKER_COLOR = {'committed': 'green', 'draft': 'yellow', 'open': 'gray'}
+MARKERS = {"x": "committed", "-": "draft", "?": "open"}
+MARKER_COLOR = {"committed": "green", "draft": "yellow", "open": "gray"}
 
 # Node definition: ID followed by [" or {" and a label whose first line should be "[m] ID".
 _NODE_RE = re.compile(
-    r'^\s*([A-Za-z][A-Za-z0-9_]*)\s*(?:\[\"|\{\"|\(\[\")(.*?)(?:<br/>|\"])',
+    r"^\s*([A-Za-z][A-Za-z0-9_]*)\s*(?:\[\"|\{\"|\(\[\")(.*?)(?:<br/>|\"])",
     re.M,
 )
-_LABEL_HEAD_RE = re.compile(r'^\[([x\-?])\]\s+([A-Za-z][A-Za-z0-9_]*)\s*$')
+_LABEL_HEAD_RE = re.compile(r"^\[([x\-?])\]\s+([A-Za-z][A-Za-z0-9_]*)\s*$")
 
 # Edges: A --> B, A -.-> B, with optional |"label"| between. Chains are split on the fly.
 _EDGE_RE = re.compile(
-    r'([A-Za-z][A-Za-z0-9_]*)\s*(?:-->|-\.->|---|==>)\s*(?:\|[^|]*\|\s*)?([A-Za-z][A-Za-z0-9_]*)'
+    r"([A-Za-z][A-Za-z0-9_]*)\s*(?:-->|-\.->|---|==>)\s*(?:\|[^|]*\|\s*)?([A-Za-z][A-Za-z0-9_]*)"
 )
 
-_FENCE_RE = re.compile(r'```mermaid\r?\n(.*?)```', re.S)
+_FENCE_RE = re.compile(r"```mermaid\r?\n(.*?)```", re.S)
 
 
 def mermaid_blocks(text):
@@ -57,17 +57,20 @@ def scan_file(path):
 
     for block in mermaid_blocks(text):
         # Strip classDef/class lines so their ids are never read as node definitions.
-        body = '\n'.join(
-            ln for ln in block.splitlines()
-            if not ln.strip().startswith(('classDef ', 'class ', 'subgraph ', 'direction '))
+        body = "\n".join(
+            ln
+            for ln in block.splitlines()
+            if not ln.strip().startswith(("classDef ", "class ", "subgraph ", "direction "))
         )
 
         for node_id, label in _NODE_RE.findall(body):
-            head = label.split('<br/>')[0].strip()
+            head = label.split("<br/>")[0].strip()
             m = _LABEL_HEAD_RE.match(head)
             if not m:
-                problems.append(f"{node_id}: label starts with '{head}', expected '[marker] {node_id}'")
-                nodes[node_id] = 'draft'
+                problems.append(
+                    f"{node_id}: label starts with '{head}', expected '[marker] {node_id}'"
+                )
+                nodes[node_id] = "draft"
                 continue
             marker, printed = m.groups()
             if printed != node_id:
@@ -89,65 +92,65 @@ def find_sets(root, explicit):
         return [p] if p.is_dir() else []
 
     found = []
-    for readme in root.rglob('README.md'):
+    for readme in root.rglob("README.md"):
         parts = readme.parts
-        if '.git' in parts or 'node_modules' in parts or 'vector-index' in parts:
+        if ".git" in parts or "node_modules" in parts or "vector-index" in parts:
             continue
         try:
             if SET_MARKER in read_text_no_bom(readme):
                 found.append(readme.parent)
-        except (OSError, UnicodeDecodeError):
+        except OSError, UnicodeDecodeError:
             continue
     return sorted(found)
 
 
 def session_order():
     """Check beat order in every planned session's _flow.md against its plan."""
-    sessions = ROOT / 'scheduler' / 'sessions'
-    flows = sorted(sessions.glob('*/_flow.md')) if sessions.is_dir() else []
+    sessions = ROOT / "scheduler" / "sessions"
+    flows = sorted(sessions.glob("*/_flow.md")) if sessions.is_dir() else []
     if not flows:
         return
-    cwrite('\n=== session flows (beat order) ===', 'cyan')
+    cwrite("\n=== session flows (beat order) ===", "cyan")
     for flow in flows:
         folder = flow.parent
-        m = re.match(r'Session\s+(\d+)', folder.name)
+        m = re.match(r"Session\s+(\d+)", folder.name)
         n = int(m.group(1)) if m else None
         ids = flow_node_ids(read_text_no_bom(flow))
         if not any(parse_id(i) for i in ids):
-            cwrite(f'  {folder.name}: no positions in its ids, skipped', 'gray')
+            cwrite(f"  {folder.name}: no positions in its ids, skipped", "gray")
             continue
-        plan = folder / f'{folder.name}.md'
+        plan = folder / f"{folder.name}.md"
         plan_ids = plan_beat_ids(read_text_no_bom(plan)) if plan.exists() else None
         problems = order_problems(ids, plan_ids, n)
         if problems:
-            cwrite(f'  {folder.name}: {len(problems)} order problem(s)', 'red')
+            cwrite(f"  {folder.name}: {len(problems)} order problem(s)", "red")
             for p in problems:
-                cwrite(f'    {p}', 'red')
+                cwrite(f"    {p}", "red")
         else:
-            cwrite(f'  {folder.name}: in order', 'green')
+            cwrite(f"  {folder.name}: in order", "green")
 
 
 def main():
-    ap = argparse.ArgumentParser(description='Commitment coverage for flow graph sets.')
-    ap.add_argument('--set', dest='set_path', help='scan one flow graph folder')
-    ap.add_argument('--blockers', action='store_true', help='list every committed-after-open edge')
-    ap.add_argument('--quiet', action='store_true', help='totals only')
+    ap = argparse.ArgumentParser(description="Commitment coverage for flow graph sets.")
+    ap.add_argument("--set", dest="set_path", help="scan one flow graph folder")
+    ap.add_argument("--blockers", action="store_true", help="list every committed-after-open edge")
+    ap.add_argument("--quiet", action="store_true", help="totals only")
     args = ap.parse_args()
 
     sets = find_sets(ROOT, args.set_path)
     if not sets:
-        cwrite('No flow graph sets found.', 'yellow')
-        cwrite('A set is a folder whose README.md references meta/flow-graphs.md.', 'gray')
-        cwrite('Run /flow to build one.', 'gray')
+        cwrite("No flow graph sets found.", "yellow")
+        cwrite("A set is a folder whose README.md references meta/flow-graphs.md.", "gray")
+        cwrite("Run /flow to build one.", "gray")
 
     for set_dir in sets:
         rel = set_dir.relative_to(ROOT).as_posix()
-        cwrite(f'\n=== {rel} ===', 'cyan')
+        cwrite(f"\n=== {rel} ===", "cyan")
 
         all_nodes, all_edges, all_problems = {}, [], []
         definitions = 0
         graph_files = 0
-        for f in sorted(set_dir.glob('*.md')):
+        for f in sorted(set_dir.glob("*.md")):
             nodes, edges, problems = scan_file(f)
             if not nodes:
                 continue
@@ -155,65 +158,75 @@ def main():
             definitions += len(nodes)
             all_nodes.update(nodes)
             all_edges.extend(edges)
-            all_problems.extend(f'{f.name}: {p}' for p in problems)
+            all_problems.extend(f"{f.name}: {p}" for p in problems)
 
             if not args.quiet:
                 counts = {k: 0 for k in MARKER_COLOR}
                 for state in nodes.values():
                     counts[state] += 1
                 total = len(nodes)
-                pct = (counts['committed'] * 100) // total if total else 0
-                bar = ' · '.join(
-                    color(f"{counts[s]} {s}", MARKER_COLOR[s]) for s in ('committed', 'draft', 'open')
+                pct = (counts["committed"] * 100) // total if total else 0
+                bar = " · ".join(
+                    color(f"{counts[s]} {s}", MARKER_COLOR[s])
+                    for s in ("committed", "draft", "open")
                 )
-                cwrite(f'  {f.name}')
-                cwrite(f'    {total} nodes — {bar}   ({pct}% committed)')
+                cwrite(f"  {f.name}")
+                cwrite(f"    {total} nodes — {bar}   ({pct}% committed)")
 
         if not all_nodes:
-            cwrite('  no marked nodes found', 'yellow')
+            cwrite("  no marked nodes found", "yellow")
             continue
 
         # Blockers: a committed node whose upstream is not committed.
         blockers = [
-            (a, b) for a, b in all_edges
-            if all_nodes.get(b) == 'committed' and all_nodes.get(a, 'draft') != 'committed'
+            (a, b)
+            for a, b in all_edges
+            if all_nodes.get(b) == "committed" and all_nodes.get(a, "draft") != "committed"
         ]
 
         totals = {k: 0 for k in MARKER_COLOR}
         for state in all_nodes.values():
             totals[state] += 1
         total = len(all_nodes)
-        pct = (totals['committed'] * 100) // total if total else 0
+        pct = (totals["committed"] * 100) // total if total else 0
 
         shared = definitions - total
-        shared_note = f'  ({shared} drawn at two zoom levels)' if shared else ''
-        cwrite(f'\n  TOTAL  {total} unique beats across {graph_files} graphs{shared_note}')
-        cwrite('  ' + ' · '.join(
-            color(f"{totals[s]} {s}", MARKER_COLOR[s]) for s in ('committed', 'draft', 'open')
-        ) + f'   ({pct}% committed)')
+        shared_note = f"  ({shared} drawn at two zoom levels)" if shared else ""
+        cwrite(f"\n  TOTAL  {total} unique beats across {graph_files} graphs{shared_note}")
+        cwrite(
+            "  "
+            + " · ".join(
+                color(f"{totals[s]} {s}", MARKER_COLOR[s]) for s in ("committed", "draft", "open")
+            )
+            + f"   ({pct}% committed)"
+        )
 
         if blockers:
-            cwrite(f'\n  {len(blockers)} committed node(s) sit downstream of uncommitted work:', 'red')
+            cwrite(
+                f"\n  {len(blockers)} committed node(s) sit downstream of uncommitted work:", "red"
+            )
             shown = blockers if args.blockers else blockers[:5]
             for a, b in shown:
-                cwrite(f'    {b} [committed] <- {a} [{all_nodes.get(a, "missing")}]', 'red')
+                cwrite(f"    {b} [committed] <- {a} [{all_nodes.get(a, 'missing')}]", "red")
             if not args.blockers and len(blockers) > len(shown):
-                cwrite(f'    ... and {len(blockers) - len(shown)} more (--blockers to list)', 'gray')
+                cwrite(
+                    f"    ... and {len(blockers) - len(shown)} more (--blockers to list)", "gray"
+                )
 
         if all_problems:
-            cwrite(f'\n  {len(all_problems)} id/label mismatch(es):', 'red')
+            cwrite(f"\n  {len(all_problems)} id/label mismatch(es):", "red")
             for p in all_problems[:10]:
-                cwrite(f'    {p}', 'red')
+                cwrite(f"    {p}", "red")
             if len(all_problems) > 10:
-                cwrite(f'    ... and {len(all_problems) - 10} more', 'gray')
+                cwrite(f"    ... and {len(all_problems) - 10} more", "gray")
 
         if not blockers and not all_problems:
-            cwrite('\n  integrity OK', 'green')
+            cwrite("\n  integrity OK", "green")
 
     if not args.set_path:
         session_order()
     return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sys.exit(main())

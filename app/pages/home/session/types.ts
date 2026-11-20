@@ -1,6 +1,6 @@
 // Shape of the session runner's data — the JSON scripts/session-cards.py emits.
 
-export type Marker = 'committed' | 'draft' | 'open' | null;
+export type Marker = "committed" | "draft" | "open" | null;
 
 // One card: a mermaid node from the session's _flow.md. `kind` is its classDef
 // (combat, social, decision, stake, seed, fail, open); `scene` the subgraph id it
@@ -69,7 +69,7 @@ export interface SessionMeta {
 }
 
 // A played session from historian/sessions/, for the "Previously on…" card.
-export type DeckWeight = 'light' | 'medium' | 'heavy';
+export type DeckWeight = "light" | "medium" | "heavy";
 
 export interface PreviousSession {
   name: string;
@@ -97,7 +97,13 @@ export interface SkyMoment {
   hour: number;
   sun: { phase: number; offset: number; trueDark: number };
   fida: { age: number; lit: number; waxing: boolean };
-  astra: { yearInCycle: number; toGlistening: number; next: number; trueAnomaly: number; radius: number };
+  astra: {
+    yearInCycle: number;
+    toGlistening: number;
+    next: number;
+    trueAnomaly: number;
+    radius: number;
+  };
 }
 
 // The moment a session ended, its Crawl (null when the Sky Clock has no log line for it), and
@@ -125,7 +131,7 @@ export interface StatCategory {
   label: string;
   icon: string;
   family: string;
-  kind: 'count' | 'sum' | string;
+  kind: "count" | "sum" | string;
 }
 
 // One PC's value; `rough` marks a transcript-mined sum not yet corrected (~).
@@ -156,7 +162,12 @@ export interface Stats {
   awards: StatAward[];
   leaderboards: StatBoard[];
   lifetime: StatLeader[];
-  previousSeason: { campaign: string; first: number; last: number; leaderboards: StatBoard[] } | null;
+  previousSeason: {
+    campaign: string;
+    first: number;
+    last: number;
+    leaderboards: StatBoard[];
+  } | null;
   notable?: { icon: string; text: string }[]; // personal bests, new season leaders: gate the compact slide
   firstOfSeason?: boolean;
   warnings: string[];
@@ -185,7 +196,7 @@ export interface RepTrack {
 }
 
 export interface RepDeed {
-  track: 'fame' | 'infamy' | string;
+  track: "fame" | "infamy" | string;
   scope: string;
   points: number;
   text: string;

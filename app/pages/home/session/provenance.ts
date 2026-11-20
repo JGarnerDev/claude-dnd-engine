@@ -8,15 +8,17 @@ const WHO = String.raw`(?:Jeff|Kellan|DM|engine|Engine|committed|approved|decide
 
 // A parenthetical that names a decider and carries a date: "(Jeff, 2026-10-07)",
 // "(engine 2026-10-09, committed 2026-10-13)", "(DM ruling, 2026-10-01)".
-const PAREN_RE = new RegExp(String.raw`\s*\((?=[^()]*\b${WHO}\b)(?=[^()]*${DATE})[^()]*\)`, 'g');
+const PAREN_RE = new RegExp(String.raw`\s*\((?=[^()]*\b${WHO}\b)(?=[^()]*${DATE})[^()]*\)`, "g");
 
 // A bold lead that is only provenance: "**Engine, 2026-10-09; committed 2026-10-13.**",
 // "**Draft (engine, 2026-10-21).**", "**Proposed by the engine, 2026-10-09; …:**".
-const LEAD_RE = new RegExp(String.raw`^(\s*(?:[-*]|\d+\.)\s+)?\*\*(?=[^*]*${DATE})(?:Engine|Draft|Proposed|Decided|Committed)\b[^*]*\*\*\s*`);
+const LEAD_RE = new RegExp(
+  String.raw`^(\s*(?:[-*]|\d+\.)\s+)?\*\*(?=[^*]*${DATE})(?:Engine|Draft|Proposed|Decided|Committed)\b[^*]*\*\*\s*`,
+);
 
 export function stripProvenance(md: string): string {
   const out: string[] = [];
-  for (const raw of md.replace(/\r/g, '').split('\n')) {
+  for (const raw of md.replace(/\r/g, "").split("\n")) {
     // The lead goes first: its own date-bearing parenthetical is part of it.
     let line = raw;
     const lead = LEAD_RE.exec(line);
@@ -24,9 +26,9 @@ export function stripProvenance(md: string): string {
       const rest = line.slice(lead[0].length);
       // A bullet that was nothing but provenance goes away; otherwise keep the rest.
       if (!rest.trim()) continue;
-      line = (lead[1] ?? '') + rest.charAt(0).toUpperCase() + rest.slice(1);
+      line = (lead[1] ?? "") + rest.charAt(0).toUpperCase() + rest.slice(1);
     }
-    out.push(line.replace(PAREN_RE, ''));
+    out.push(line.replace(PAREN_RE, ""));
   }
-  return out.join('\n');
+  return out.join("\n");
 }

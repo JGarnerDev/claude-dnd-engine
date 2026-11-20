@@ -15,7 +15,7 @@ from lib.common import ROOT, cwrite, get_frontmatter_from_text, read_text_no_bom
 
 GRID_KM = 1000
 
-_COORD_RE = re.compile(r'[^0-9.]')
+_COORD_RE = re.compile(r"[^0-9.]")
 
 
 def _parse_coord(s, default: int = 0) -> int:
@@ -24,7 +24,7 @@ def _parse_coord(s, default: int = 0) -> int:
     Matches PowerShell ``[int]($val -replace '[^0-9.]','')`` which keeps the
     decimal point before casting, so "3.5" rounds to 4 rather than becoming 35.
     """
-    stripped = _COORD_RE.sub('', str(s) if s is not None else '')
+    stripped = _COORD_RE.sub("", str(s) if s is not None else "")
     try:
         return int(round(float(stripped))) if stripped else default
     except ValueError:
@@ -84,8 +84,9 @@ def nearby_world_entities(col: int, row: int, world_dir: Path) -> list:
     return entities
 
 
-def build_output(col: int, row: int, total_cols: int = 16, total_rows: int = 13,
-                 world_dir: Path = None) -> list:
+def build_output(
+    col: int, row: int, total_cols: int = 16, total_rows: int = 13, world_dir: Path = None
+) -> list:
     """Return list of (text, color_name) tuples for the full output block."""
     equator_row = total_rows // 2 + 1
     hemisphere = "Northern" if row <= equator_row else "Southern"
@@ -107,15 +108,24 @@ def build_output(col: int, row: int, total_cols: int = 16, total_rows: int = 13,
     lines.append(("", None))
     lines.append((f"Climate:    {band}", "white"))
     lines.append((f"Hemisphere: {hemisphere}", "gray"))
-    lines.append((f"Position:   ~{km_west}km from western edge, ~{km_north}km from northern edge", "gray"))
+    lines.append(
+        (f"Position:   ~{km_west}km from western edge, ~{km_north}km from northern edge", "gray")
+    )
     lines.append(("", None))
     lines.append(("-- Wind & Moisture ----------------------", "darkgray"))
     lines.append((f"  {wnote}", "gray"))
     lines.append(("  Prevailing direction: West -> East", "gray"))
     if dist <= 2:
-        lines.append(("  West-facing slopes/coasts:  warm and moist; wet season distinct from dry; NOT persistently grey", "gray"))
+        lines.append(
+            (
+                "  West-facing slopes/coasts:  warm and moist; wet season distinct from dry; NOT persistently grey",
+                "gray",
+            )
+        )
     else:
-        lines.append(("  West-facing slopes/coasts:  wet, lush, frequent storms; overcast common", "gray"))
+        lines.append(
+            ("  West-facing slopes/coasts:  wet, lush, frequent storms; overcast common", "gray")
+        )
     lines.append(("  East-facing slopes/coasts:  drier; rain shadow if mountains present", "gray"))
     lines.append(("", None))
     lines.append(("-- Rivers -------------------------------", "darkgray"))
@@ -124,9 +134,16 @@ def build_output(col: int, row: int, total_cols: int = 16, total_rows: int = 13,
     lines.append(("", None))
     lines.append(("-- Coast Type (if applicable) -----------", "darkgray"))
     if dist <= 2:
-        lines.append(("  West-facing (tropical/subtropical):  warm water; beaches possible; rocky headlands between bays", "gray"))
+        lines.append(
+            (
+                "  West-facing (tropical/subtropical):  warm water; beaches possible; rocky headlands between bays",
+                "gray",
+            )
+        )
     else:
-        lines.append(("  West-facing (temperate/cold):  rocky cliffs, sea stacks, no beaches", "gray"))
+        lines.append(
+            ("  West-facing (temperate/cold):  rocky cliffs, sea stacks, no beaches", "gray")
+        )
     lines.append(("  East-facing/bays:  calmer, sandy beaches", "gray"))
     lines.append(("  River mouths:      wide muddy estuaries", "gray"))
     lines.append(("  Polar coasts:      fjords", "gray"))
@@ -134,7 +151,12 @@ def build_output(col: int, row: int, total_cols: int = 16, total_rows: int = 13,
     lines.append(("-- Scale --------------------------------", "darkgray"))
     lines.append(("  1 grid cell = 1000km x 1000km", "gray"))
     lines.append(("  Estimate how many grid squares wide the region covers", "yellow"))
-    lines.append(("  then run: uv run scripts/region-scale.py --span-grids <n> --water-body <type>", "yellow"))
+    lines.append(
+        (
+            "  then run: uv run scripts/region-scale.py --span-grids <n> --water-body <type>",
+            "yellow",
+        )
+    )
     lines.append(("", None))
     lines.append(("-- Water Body Checklist -----------------", "darkgray"))
     lines.append(("  Confirm before proceeding with draft:", "yellow"))
@@ -149,20 +171,22 @@ def build_output(col: int, row: int, total_cols: int = 16, total_rows: int = 13,
             lines.append((e, "gray"))
     else:
         lines.append(("  None. Add world-scale entries to data/locations/world/", "darkyellow"))
-        lines.append(("  Use schema: world_col, world_row fields for geographic indexing", "darkyellow"))
+        lines.append(
+            ("  Use schema: world_col, world_row fields for geographic indexing", "darkyellow")
+        )
     lines.append(("", None))
     return lines
 
 
-def render(col: int, row: int, total_cols: int = 16, total_rows: int = 13,
-           world_dir: Path = None) -> list:
+def render(
+    col: int, row: int, total_cols: int = 16, total_rows: int = 13, world_dir: Path = None
+) -> list:
     """Return rendered plain-text lines (no color, for test assertions)."""
     return [text for text, _ in build_output(col, row, total_cols, total_rows, world_dir)]
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Geographic rules for a world map grid position")
+    parser = argparse.ArgumentParser(description="Geographic rules for a world map grid position")
     parser.add_argument("--col", type=int, required=True, help="Grid column (1-based)")
     parser.add_argument("--row", type=int, required=True, help="Grid row (1-based)")
     parser.add_argument("--total-cols", type=int, default=16)

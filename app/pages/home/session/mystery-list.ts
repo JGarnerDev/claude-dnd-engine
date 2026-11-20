@@ -1,7 +1,7 @@
 // The Mysteries & Loose Ends slide's questions, and the sidebar search over the DM's
 // answer key (pure; Mysteries.tsx draws the slide).
 
-import type { Section } from './types.js';
+import type { Section } from "./types.js";
 
 export const MAX_SHOWN = 8;
 
@@ -21,6 +21,6 @@ export function questions(md: string): string[] {
 export function searchMysteries(query: string, answers: Section[]): Section[] {
   const q = query.trim().toLowerCase();
   if (!q) return [];
-  if (q.length >= 3 && 'mysteries'.startsWith(q)) return answers;
+  if (q.length >= 3 && "mysteries".startsWith(q)) return answers;
   return answers.filter((s) => s.title.toLowerCase().includes(q) || s.md.toLowerCase().includes(q));
 }

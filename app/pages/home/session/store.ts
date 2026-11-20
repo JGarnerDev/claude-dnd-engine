@@ -5,8 +5,8 @@
 // change log (hp-log.ts), which no reset clears, and each scene's round counter.
 // Fail-soft: storage can be blocked.
 
-import { sanitizeLog } from './hp-log.js';
-import type { HpLogEntry } from './hp-log.js';
+import { sanitizeLog } from "./hp-log.js";
+import type { HpLogEntry } from "./hp-log.js";
 
 export interface RunnerState {
   history: string[];
@@ -18,29 +18,48 @@ export interface RunnerState {
 
 const key = (folder: string) => `session-runner:${folder}:v1`;
 
-export function loadState(folder: string, storage: Storage | undefined = globalThis.localStorage): RunnerState {
+export function loadState(
+  folder: string,
+  storage: Storage | undefined = globalThis.localStorage,
+): RunnerState {
   const empty: RunnerState = { history: [], tokensOpen: false, hp: {}, hpLog: [], rounds: {} };
   try {
     const raw = storage?.getItem(key(folder));
     if (!raw) return empty;
     const v = JSON.parse(raw) as Partial<RunnerState>;
     return {
-      history: Array.isArray(v.history) ? v.history.filter((x): x is string => typeof x === 'string') : [],
+      history: Array.isArray(v.history)
+        ? v.history.filter((x): x is string => typeof x === "string")
+        : [],
       tokensOpen: v.tokensOpen === true,
-      hp: v.hp && typeof v.hp === 'object'
-        ? Object.fromEntries(Object.entries(v.hp).filter((e): e is [string, number] => typeof e[1] === 'number' && e[1] >= 0))
-        : {},
+      hp:
+        v.hp && typeof v.hp === "object"
+          ? Object.fromEntries(
+              Object.entries(v.hp).filter(
+                (e): e is [string, number] => typeof e[1] === "number" && e[1] >= 0,
+              ),
+            )
+          : {},
       hpLog: sanitizeLog(v.hpLog),
-      rounds: v.rounds && typeof v.rounds === 'object'
-        ? Object.fromEntries(Object.entries(v.rounds).filter((e): e is [string, number] => Number.isInteger(e[1]) && e[1] >= 1))
-        : {},
+      rounds:
+        v.rounds && typeof v.rounds === "object"
+          ? Object.fromEntries(
+              Object.entries(v.rounds).filter(
+                (e): e is [string, number] => Number.isInteger(e[1]) && e[1] >= 1,
+              ),
+            )
+          : {},
     };
   } catch {
     return empty;
   }
 }
 
-export function saveState(folder: string, state: RunnerState, storage: Storage | undefined = globalThis.localStorage): void {
+export function saveState(
+  folder: string,
+  state: RunnerState,
+  storage: Storage | undefined = globalThis.localStorage,
+): void {
   try {
     storage?.setItem(key(folder), JSON.stringify(state));
   } catch {

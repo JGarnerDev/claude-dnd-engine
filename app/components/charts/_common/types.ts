@@ -155,7 +155,7 @@ export interface ChartState {
 
 export interface SavedView {
   name: string;
-  tab: 'world' | 'tracks';
+  tab: "world" | "tracks";
   state: ChartState;
 }
 

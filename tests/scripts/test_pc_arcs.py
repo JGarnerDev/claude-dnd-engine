@@ -6,11 +6,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 sb = importlib.import_module("spotlight-balance")
 
 HOOKS = (
-    'spotlight_hooks:\n'
+    "spotlight_hooks:\n"
     '  - hook: "find the twin sister"\n'
-    '    status: open\n'
+    "    status: open\n"
     '  - hook: "confront the raiders"\n'
-    '    status: paid\n'
+    "    status: paid\n"
 )
 
 
@@ -21,7 +21,8 @@ def _arc(root: Path, pc: str, stamp: str, steps: list, state: str = "active") ->
     p.write_text(
         f'---\nname: "{pc} PC Arc"\ntype: pc-arc\nexists: false\nstate: {state}\n'
         f'pc: "[[{pc}]]"\narc_checked: {stamp}\nnext_step:\n{step_lines}---\n\n## Logline\n',
-        encoding="utf-8")
+        encoding="utf-8",
+    )
 
 
 def _pc(name: str) -> dict:
@@ -34,7 +35,10 @@ def _lines(root, monkeypatch, pcs, latest):
 
 
 def test_hook_statuses_parse():
-    assert sb._hook_statuses(HOOKS) == {"find the twin sister": "open", "confront the raiders": "paid"}
+    assert sb._hook_statuses(HOOKS) == {
+        "find the twin sister": "open",
+        "confront the raiders": "paid",
+    }
 
 
 def test_current_arc_is_clean(tmp_path, monkeypatch):

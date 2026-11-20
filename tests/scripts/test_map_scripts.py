@@ -14,6 +14,7 @@ fetch_maps = importlib.import_module("fetch-maps")
 
 # -- crop_box -----------------------------------------------------------------
 
+
 def test_crop_box_basic_no_margin():
     # 1600x1300 with the 16x13 grid -> 100px cells.
     assert map_common.crop_box(1600, 1300, 5, 10, 2, 6, margin=0) == (400, 100, 1000, 600)
@@ -30,6 +31,7 @@ def test_crop_box_derives_cell_size_from_resolution():
 
 
 # -- resolve_feature_bounds ---------------------------------------------------
+
 
 def _write_index(tmp_path, *rows):
     body = "| Feature | Cols | Rows | Draft |\n|---|---|---|---|\n" + "".join(rows)
@@ -55,12 +57,14 @@ def test_resolve_feature_bounds_missing_returns_none(tmp_path):
 
 # -- slugify ------------------------------------------------------------------
 
+
 def test_slugify_collapses_and_trims():
     assert map_crop.slugify("Erevast Bay!!") == "erevast-bay"
     assert map_crop.slugify("  --The Storm's Edge--  ") == "the-storm-s-edge"
 
 
 # -- count_red_blobs ----------------------------------------------------------
+
 
 def _red_block(px, x0, y0, w, h):
     for y in range(y0, y0 + h):
@@ -71,16 +75,16 @@ def _red_block(px, x0, y0, w, h):
 def test_count_red_blobs_counts_distinct_dots():
     img = Image.new("RGB", (100, 100), (255, 255, 255))
     px = img.load()
-    _red_block(px, 10, 10, 5, 5)   # 25 px
-    _red_block(px, 60, 60, 5, 5)   # 25 px, separated
+    _red_block(px, 10, 10, 5, 5)  # 25 px
+    _red_block(px, 60, 60, 5, 5)  # 25 px, separated
     assert count_markers.count_red_blobs(img, min_area=1) == 2
 
 
 def test_count_red_blobs_min_area_drops_specks():
     img = Image.new("RGB", (100, 100), (255, 255, 255))
     px = img.load()
-    _red_block(px, 10, 10, 5, 5)   # 25 px -- kept
-    px[80, 80] = (255, 0, 0)       # 1 px speck -- dropped
+    _red_block(px, 10, 10, 5, 5)  # 25 px -- kept
+    px[80, 80] = (255, 0, 0)  # 1 px speck -- dropped
     assert count_markers.count_red_blobs(img, min_area=6) == 1
 
 
@@ -90,6 +94,7 @@ def test_count_red_blobs_ignores_non_red():
 
 
 # -- parse_manifest -----------------------------------------------------------
+
 
 def test_parse_manifest_valid_and_skips_comments():
     text = "# comment\n\nmaps/a.webp\thttps://cdn/a\nmaps/b.webp\thttps://cdn/b\n"

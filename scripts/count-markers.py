@@ -67,9 +67,13 @@ def main() -> None:
     parser.add_argument("--row-min", type=int, default=0)
     parser.add_argument("--row-max", type=int, default=0)
     parser.add_argument("--margin", type=int, default=112)
-    parser.add_argument("--min-area", type=int, default=-1,
-                        help="-1 = auto (~0.0006 of a grid cell; scales with resolution). "
-                             "Drops sub-dot specks (lava flecks / webp noise).")
+    parser.add_argument(
+        "--min-area",
+        type=int,
+        default=-1,
+        help="-1 = auto (~0.0006 of a grid cell; scales with resolution). "
+        "Drops sub-dot specks (lava flecks / webp noise).",
+    )
     args = parser.parse_args()
 
     require_master(MARKERS_IMAGE)
@@ -80,8 +84,10 @@ def main() -> None:
     if args.feature:
         bounds = resolve_feature_bounds(INDEX_FILE, args.feature)
         if bounds is None:
-            print(f"'{args.feature}' not in index -- provide --col-min/--col-max/--row-min/--row-max directly",
-                  file=sys.stderr)
+            print(
+                f"'{args.feature}' not in index -- provide --col-min/--col-max/--row-min/--row-max directly",
+                file=sys.stderr,
+            )
             sys.exit(1)
         col_min, col_max, row_min, row_max = bounds
 
@@ -90,6 +96,7 @@ def main() -> None:
         sys.exit(1)
 
     from PIL import Image
+
     img = Image.open(MARKERS_IMAGE).convert("RGB")
     w, h = img.size
     cw, ch = w / NCOLS, h / NROWS

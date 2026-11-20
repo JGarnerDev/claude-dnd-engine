@@ -3,7 +3,15 @@
 // itself (phases, Astra's anomaly) comes from scripts/lib/sky.py; this only places it.
 
 export const C = 500;
-export const R = { slices: 58, fida: 108, suns: 162, shards: 216, wanderers: 272, blanket: 404, dial: 438 } as const;
+export const R = {
+  slices: 58,
+  fida: 108,
+  suns: 162,
+  shards: 216,
+  wanderers: 272,
+  blanket: 404,
+  dial: 438,
+} as const;
 export const ASTRA = { e: 0.94, far: 380, tilt: 128 } as const; // far point radius; direction of the far point
 
 const rad = (deg: number) => (deg * Math.PI) / 180;
@@ -20,17 +28,18 @@ export function ringPath(r: number): string {
 }
 
 // The bright sun: noon at the top, sunrise at the left, sunset at the right.
-export const sunAngle = (hour: number) => (((hour - 12) * 15) % 360 + 360) % 360;
+export const sunAngle = (hour: number) => ((((hour - 12) * 15) % 360) + 360) % 360;
 
 // The red sun trails the bright one by `offset` hours.
 export const redAngle = (hour: number, offset: number) => sunAngle(hour - offset);
 
 // Fida: full (age 0) stands opposite the bright sun, new (age 0.5) beside it.
-export const fidaAngle = (sun: number, age: number) => (((sun + 180 - 360 * age) % 360) + 360) % 360;
+export const fidaAngle = (sun: number, age: number) =>
+  (((sun + 180 - 360 * age) % 360) + 360) % 360;
 
 // Fida's lit part as a path centred on 0,0 with the lit side toward +x. `lit` is 0..1.
 export function phasePath(r: number, lit: number): string {
-  if (lit <= 0.005) return '';
+  if (lit <= 0.005) return "";
   const rx = f(r * Math.abs(2 * lit - 1));
   return `M 0,${-r} A ${r} ${r} 0 0 1 0,${r} A ${rx} ${r} 0 0 ${lit > 0.5 ? 1 : 0} 0,${-r} Z`;
 }
@@ -39,7 +48,13 @@ export function phasePath(r: number, lit: number): string {
 export function astraEllipse(): { cx: number; cy: number; rx: number; ry: number; rot: number } {
   const a = ASTRA.far / (1 + ASTRA.e);
   const c = polar(a * ASTRA.e, ASTRA.tilt);
-  return { cx: c.x, cy: c.y, rx: f(a), ry: f(a * Math.sqrt(1 - ASTRA.e ** 2)), rot: ASTRA.tilt - 90 };
+  return {
+    cx: c.x,
+    cy: c.y,
+    rx: f(a),
+    ry: f(a * Math.sqrt(1 - ASTRA.e ** 2)),
+    rot: ASTRA.tilt - 90,
+  };
 }
 
 // Astra at true anomaly `nu` (0 = the Glistening, at the near point).

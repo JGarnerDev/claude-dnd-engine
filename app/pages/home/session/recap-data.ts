@@ -13,10 +13,10 @@
 // A plan may carry its own `## Recap` section — a hand-written, read-aloud
 // version. It leads the card, and the plan panel leaves it out.
 
-import type { SessionData } from './types.js';
+import type { SessionData } from "./types.js";
 
-export const RECAP_ID = 'PREVIOUSLY';
-export const RECAP_SCENE = 'PREV';
+export const RECAP_ID = "PREVIOUSLY";
+export const RECAP_SCENE = "PREV";
 
 // Prepend the recap as a synthetic first card with its own rail group. A no-op
 // when historian has no earlier session (the campaign's very first night).
@@ -26,17 +26,32 @@ export function withRecap(data: SessionData): SessionData {
   if (!prev || !first) return data;
   return {
     ...data,
-    nodes: [{ id: RECAP_ID, marker: null, kind: 'recap', scene: RECAP_SCENE, title: `Previously on… ${prev.name}`, lines: [], notes: [] }, ...data.nodes],
-    scenes: [{ id: RECAP_SCENE, key: 'prev', title: 'Previously on…', md: '' }, ...data.scenes],
-    edges: [{ from: RECAP_ID, to: first.id, label: '', dashed: false }, ...data.edges],
+    nodes: [
+      {
+        id: RECAP_ID,
+        marker: null,
+        kind: "recap",
+        scene: RECAP_SCENE,
+        title: `Previously on… ${prev.name}`,
+        lines: [],
+        notes: [],
+      },
+      ...data.nodes,
+    ],
+    scenes: [{ id: RECAP_SCENE, key: "prev", title: "Previously on…", md: "" }, ...data.scenes],
+    edges: [{ from: RECAP_ID, to: first.id, label: "", dashed: false }, ...data.edges],
   };
 }
 
 export const isRecapSection = (title: string) => /^recap$/i.test(title.trim());
 
-export const writtenRecap = (data: SessionData) => data.sections.find((s) => isRecapSection(s.title))?.md ?? '';
+export const writtenRecap = (data: SessionData) =>
+  data.sections.find((s) => isRecapSection(s.title))?.md ?? "";
 
 // All the recap's prose, for finding the entities it mentions.
 export function recapText(data: SessionData): string {
-  return [writtenRecap(data), ...data.previously.flatMap((p) => [p.description, p.cliffhanger, p.recap])].join('\n');
+  return [
+    writtenRecap(data),
+    ...data.previously.flatMap((p) => [p.description, p.cliffhanger, p.recap]),
+  ].join("\n");
 }

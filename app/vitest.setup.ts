@@ -6,11 +6,14 @@
 //   endpoint. Without the stub every such spec logs ECONNREFUSED :3000.
 //   A spec that cares about fetch stubs it again itself.
 
-import { afterEach, beforeEach, vi } from 'vitest';
-import { cleanup } from '@testing-library/react';
+import { afterEach, beforeEach, vi } from "vitest";
+import { cleanup } from "@testing-library/react";
 
 beforeEach(() => {
-  vi.stubGlobal('fetch', vi.fn(async () => new Response('', { status: 404 })));
+  vi.stubGlobal(
+    "fetch",
+    vi.fn(async () => new Response("", { status: 404 })),
+  );
 });
 
 afterEach(() => {

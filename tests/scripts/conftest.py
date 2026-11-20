@@ -4,6 +4,7 @@ Forces color off so rendered output is plain text regardless of whether
 pytest captures stdout (`-s` makes stdout a tty, which would otherwise emit
 ANSI codes via common.color()).
 """
+
 import sys
 from pathlib import Path
 

@@ -6,31 +6,34 @@
 // The filter never moves the axis: a filter edit hides points in place (the
 // chart recounts its bars and re-packs labels over the survivors).
 
-import { useCallback, useImperativeHandle, useMemo, useRef, useState } from 'react';
-import '../_common/common.css';
-import { EmptyState } from 'jeff-ui';
-import { Timeline as TimeChart, type ChartItem, type TimeChartHandle } from 'jeff-ui/charts';
-import { DEFAULT_CALENDAR } from '../_common/helpers/calendar.js';
-import { indexEvents, timeScaleFor } from '../_common/helpers/axis.js';
-import { breaksOf, itemsOf, spansOf } from '../_common/helpers/items.js';
-import { axisOptionsFor } from '../_common/helpers/segments.js';
-import { makeMatcher } from '../_common/helpers/filters.js';
-import { serializeState, DEFAULT_STATE } from '../_common/helpers/viewstate.js';
-import { seedFilter, useFilterSections } from '../_common/FilterBar.js';
-import { ChartSettings, type ChartProps } from '../_common/ChartSettings.js';
-import { EDGE_PAD, WORLD_RIGHT_PAD } from '../_common/constants.js';
+import { useCallback, useImperativeHandle, useMemo, useRef, useState } from "react";
+import "../_common/common.css";
+import { EmptyState } from "jeff-ui";
+import { Timeline as TimeChart, type ChartItem, type TimeChartHandle } from "jeff-ui/charts";
+import { DEFAULT_CALENDAR } from "../_common/helpers/calendar.js";
+import { indexEvents, timeScaleFor } from "../_common/helpers/axis.js";
+import { breaksOf, itemsOf, spansOf } from "../_common/helpers/items.js";
+import { axisOptionsFor } from "../_common/helpers/segments.js";
+import { makeMatcher } from "../_common/helpers/filters.js";
+import { serializeState, DEFAULT_STATE } from "../_common/helpers/viewstate.js";
+import { seedFilter, useFilterSections } from "../_common/FilterBar.js";
+import { ChartSettings, type ChartProps } from "../_common/ChartSettings.js";
+import { EDGE_PAD, WORLD_RIGHT_PAD } from "../_common/constants.js";
 
 // Extra room past the latest beat, for what comes next.
 const PAD = [EDGE_PAD, WORLD_RIGHT_PAD] as const;
 
-const rootClass = (extra?: string): string => (extra ? `chart-root ${extra}` : 'chart-root');
+const rootClass = (extra?: string): string => (extra ? `chart-root ${extra}` : "chart-root");
 
 export function Timeline(props: ChartProps) {
   const cal = props.data.calendar || DEFAULT_CALENDAR;
   // Sort + day-index every event exactly once; every zoom level reuses this. Dead
   // stretches (an ancient beat thousands of years before the present) squeeze into
   // a break, and every synced world gets a ruler row (the selected one nearest).
-  const idx = useMemo(() => indexEvents(props.data.events, cal, axisOptionsFor(props.data)), [props.data, cal]);
+  const idx = useMemo(
+    () => indexEvents(props.data.events, cal, axisOptionsFor(props.data)),
+    [props.data, cal],
+  );
   if (idx.events.length === 0) return <TimelineEmpty {...props} />;
   return <TimelineChart {...props} idx={idx} />;
 }
@@ -47,7 +50,14 @@ function TimelineEmpty({ settingsSlot, className, ref }: ChartProps) {
 
 type Index = ReturnType<typeof indexEvents>;
 
-function TimelineChart({ data, initialState, settingsSlot, className, ref, idx }: ChartProps & { idx: Index }) {
+function TimelineChart({
+  data,
+  initialState,
+  settingsSlot,
+  className,
+  ref,
+  idx,
+}: ChartProps & { idx: Index }) {
   const cal = data.calendar || DEFAULT_CALENDAR;
   const chartRef = useRef<TimeChartHandle>(null);
   const [filter, setFilter] = useState(() => seedFilter(data.events, initialState));
@@ -67,7 +77,13 @@ function TimelineChart({ data, initialState, settingsSlot, className, ref, idx }
     () => ({
       getState: () => {
         const view = chartRef.current?.getView() ?? { zoom: 1, scrollLeft: 0 };
-        return serializeState(filter.query, filter.tracks, view.zoom, view.scrollLeft, filter.audiences);
+        return serializeState(
+          filter.query,
+          filter.tracks,
+          view.zoom,
+          view.scrollLeft,
+          filter.audiences,
+        );
       },
     }),
     [filter],

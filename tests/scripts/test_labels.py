@@ -4,6 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 from lib import labels  # noqa: E402
+
 lc = importlib.import_module("label-check")
 
 PLAN = """# Session 9
@@ -61,15 +62,30 @@ def test_role_of_drops_lookalike_numbers_and_hyphenates():
 
 
 def test_combatant_labels_stay_inside_combatants():
-    assert labels.combatant_labels(PLAN) == ["Archer Rider", "Drover", "Mastiff 1", "Mastiff 2", "Sniper"]
+    assert labels.combatant_labels(PLAN) == [
+        "Archer Rider",
+        "Drover",
+        "Mastiff 1",
+        "Mastiff 2",
+        "Sniper",
+    ]
 
 
 def test_glance_entries_read_name_stat_and_encounter():
     entries = labels.glance_entries(PLAN)
-    assert entries[0] == {"labels": ["Archer Rider"], "name": "Ilsa Thorn", "stat": "Scout",
-                          "encounter": "The Fork"}
+    assert entries[0] == {
+        "labels": ["Archer Rider"],
+        "name": "Ilsa Thorn",
+        "stat": "Scout",
+        "encounter": "The Fork",
+    }
     assert entries[2]["labels"] == ["Mastiff 1", "Mastiff 2"]
-    assert entries[3] == {"labels": ["Sniper"], "name": "Nella", "stat": "", "encounter": "The Camp"}
+    assert entries[3] == {
+        "labels": ["Sniper"],
+        "name": "Nella",
+        "stat": "",
+        "encounter": "The Camp",
+    }
     assert len(entries) == 4  # the Morale bullet has no dash-entry under a label
 
 
