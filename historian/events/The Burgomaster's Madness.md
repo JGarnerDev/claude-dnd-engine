@@ -9,7 +9,6 @@ tags:
   - region/barovia
 date: "Evening at the Blue Water Inn, Vallaki (~Day 13 in Barovia)"
 timeline_date: "0735-11-03"
-track: ""
 source_session: "[[Session 16 The Blue Water Inn]]"
 outcome: "Dissenters Karl and Nikolai revealed to the party that Vallaki's Burgomaster enforces happiness through mandatory themed festivals, imprisoning or worse anyone who dissents — and that the town repeats an eerie mantra, 'all will be well in Vallaki.'"
 consequences:

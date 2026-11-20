@@ -9,7 +9,6 @@ tags:
   - region/barovia
 date: "Tuesday in Vallaki (~Day 15 in Barovia)"
 timeline_date: "0735-11-05"
-track: ""
 source_session: "[[Session 17 The Stolen Bones]]"
 outcome: "Henrik the coffinmaker, cornered after the party deceived their way in, revealed that six vampire spawn are hiding upstairs in his shop. The party did not engage them, regrouping instead to plan an approach with the priest Lucien Petrovic."
 consequences:

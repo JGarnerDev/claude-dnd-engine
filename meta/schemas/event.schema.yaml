@@ -1,0 +1,32 @@
+# event.schema.yaml -- type: event (prose: event.md; timeline rules: meta/events.md).
+# Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: event
+type: object
+required: [state, date, outcome, consequences]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: event}
+  state: {enum: [recent, historical, ancient, legendary, disputed, secret]}
+  date:
+    description: In-world date, era or relative time, in prose.
+    $ref: entity.schema.yaml#/$defs/text
+  timeline_date:
+    description: Plot key "YYYY[-MM[-DD]]", year may be negative or short (meta/events.md). Omit when no date can be fixed.
+    type: string
+    pattern: '^-?\d+(-\d{1,2}(-\d{1,2})?)?$'
+  outcome: {$ref: entity.schema.yaml#/$defs/text}
+  consequences: {$ref: entity.schema.yaml#/$defs/text-list}
+  track:
+    description: Lane override, "category" or "category:member" (meta/events.md). Omit to auto-fan.
+    type: string
+    pattern: '^(party|character|npc|antagonist|faction|continent|world|region)(:.+)?$'
+  daypart: {enum: [dawn, morning, midday, afternoon, evening, night, late]}
+  order:
+    description: 1-based sequence among beats sharing a date and daypart.
+    type: integer
+    minimum: 1
+  participants: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  awareness: {enum: [widely-known, regional, local, party, secret, forgotten, disputed]}
+unevaluatedProperties: false

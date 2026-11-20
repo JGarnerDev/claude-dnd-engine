@@ -9,7 +9,6 @@ tags:
   - region/barovia
 date: "Evening at the Blue Water Inn, Vallaki (~Day 13 in Barovia)"
 timeline_date: "0735-11-03"
-track: ""
 source_session: "[[Session 16 The Blue Water Inn]]"
 outcome: "Through Odibli's speak with animals, Sergei told the Blue Water Inn his story — a Tibetan Mastiff from the Zeatchean Steppes searching for his lost friend Tidak, taken by the fog. The room wept and embraced him."
 consequences:

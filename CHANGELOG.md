@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.83.0] — 2026-11-20
+
+- `meta/schemas/event.schema.yaml`: the event schema. Mandatory: `state`, `date`, `outcome`, `consequences`. `timeline_date` must match `YYYY[-MM[-DD]]` (optional leading minus, year-only and month-level allowed); `track` must name a known track kind.
+- `awareness` gains `local` and `party`, already used by 13 events; `event.md` updated to match and links the YAML schema.
+- Content: removed empty `track: ""` from four historian events (Sergei's Tale of Tidak, Strahd Walks Vallaki as Vasili van Holtz, The Burgomaster's Madness, The Vampire Spawn in the Coffin Shop); empty meant auto-fan, same as omitting it.
+
 ## [0.82.0] — 2026-11-20
 
 ### Added

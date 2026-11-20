@@ -9,7 +9,6 @@ tags:
   - region/barovia
 date: "Tuesday in Vallaki (~Day 15 in Barovia)"
 timeline_date: "0735-11-05"
-track: ""
 source_session: "[[Session 17 The Stolen Bones]]"
 outcome: "Henrik the coffinmaker revealed to the party that Strahd had visited his shop in person, wearing the alias 'Vasili van Holtz' — placing the vampire lord inside Vallaki's walls, in disguise, tied to the vampire spawn nesting above the shop."
 consequences:

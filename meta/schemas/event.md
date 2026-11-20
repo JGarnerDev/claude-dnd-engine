@@ -35,6 +35,8 @@ For *what qualifies* as an event, the promotion rule, and how events surface on 
 
 ## Schema
 
+The machine-readable version is [`event.schema.yaml`](event.schema.yaml).
+
 ### Canonical Path
 
 `data/events/{name}.md`
@@ -66,7 +68,7 @@ tags:
 
 # --- MANDATORY (event) ---
 date: ""              # in-world date, era, or relative time (human/prose)
-timeline_date: ""     # numeric YYYY-MM-DD plot key — the chart sort/position key.
+timeline_date: ""     # numeric YYYY[-MM[-DD]] plot key (year-only or month is fine) — the chart sort/position key.
                       # Required to appear on the timeline; needs a numeric epoch
                       # (see meta/calendar.md). Omit only for events with no fixable date.
 outcome: ""
@@ -96,7 +98,7 @@ order:                # 1-based intra-day sequence; tiebreaks beats sharing a da
                       # /recap assigns it in narrative order. Omit for big single-date events.
 participants:
   - [[Entity Name]] (role)
-awareness: widely-known | regional | secret | forgotten | disputed
+awareness: widely-known | regional | local | party | secret | forgotten | disputed
 ---
 ```
 
@@ -105,7 +107,7 @@ awareness: widely-known | regional | secret | forgotten | disputed
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |
-| When | `date` (prose) + `timeline_date` (numeric `YYYY-MM-DD`) |
+| When | `date` (prose) + `timeline_date` (numeric `YYYY[-MM[-DD]]`) |
 | What happened | `description` + body prose |
 | Who was involved | `participants` |
 | Outcome | `outcome` |

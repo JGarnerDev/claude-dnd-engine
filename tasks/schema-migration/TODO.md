@@ -4,9 +4,9 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-18):** steps 1–5 done (engine v0.73.0). Every entity file's frontmatter is strict YAML with quoted links, and `get_frontmatter` reads it with a YAML parser.
 
-**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0).
+**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0).
 
-**Next:** the `event` schema.
+**Next:** the `deity` schema.
 
 ## Resuming in a new session
 
@@ -45,7 +45,7 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
   - [x] character (pc, npc, antagonist): `meta/schemas/character.schema.yaml` (v0.80.0), enforced. One file covers the three subtypes with an if/then branch each (states, mandatory fields, subtype-only fields). `location`, `race` and `class` stay free text, since many are plain notes ("unknown", "Wood elf"); `family` and `sells` allow plain notes too. `campaign` (in 15 types) went into the entity base. Fixed: Madame Eva `ambiguous` → `neutral`, Kranken Hammershaft's stray `awareness` removed
   - [x] location (each subtype): `meta/schemas/location.schema.yaml` (v0.81.0), enforced. One branch per subtype. Place fields stay free text ("Various", "None — …"); `controlling_faction` may be a list. Added `lair` (building purpose), `mediterranean` (region biome), `hook` on region, `controlling_faction` on city. Fixed 21 files with off-schema states, enums or stray fields (see CHANGELOG 0.81.0)
   - [x] faction: `meta/schemas/faction.schema.yaml` (v0.82.0), enforced. `allies` and `opposition` take plain notes as well as links. Added `family` to `purpose`, plus `members` and `hook`. Fixed: two stray `subtype` fields removed (The Hamlet Raiders, The Sage Enclave); a House Tomsen motive with an unquoted colon parsed as a mapping, now quoted
-  - [ ] event
+  - [x] event: `meta/schemas/event.schema.yaml` (v0.83.0), enforced. done (v0.83.0)
   - [ ] deity
   - [ ] other campaign types (session, act, campaign, culture, item, resource, route, rumor, mission, party, player, pc-arc, creature, skill)
   - [ ] reference catalogs (monster, spell, feat, race, class, background)
