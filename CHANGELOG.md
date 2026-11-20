@@ -6,6 +6,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.91.0] — 2026-11-20
+
+- `meta/schemas/spell.schema.yaml`: the spell schema. Mandatory: `state`, `level` (0â€“9), `school`, `casting_time`, `range`, `components` (a set of V, S, M), `duration`, `concentration`, `effect`. `spell.md` links the YAML schema. All 280 spells passed with no changes.
+
 ## [0.90.0] — 2026-11-20
 
 - `meta/schemas/monster.schema.yaml`: the monster schema for reference stat blocks. Mandatory: `creature_type`, `challenge_rating` (a CR string, "5" or "1/2"). All 545 monsters passed with no changes.
