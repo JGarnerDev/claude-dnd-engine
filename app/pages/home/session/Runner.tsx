@@ -6,7 +6,7 @@
 // scrolls into view. The "Previously on…" card opens the recap slides.
 
 import "./session.css";
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { buildGraph, nextOptions } from "./flow.js";
 import { findMentions, makeResolver, mentionIndex } from "./entities.js";
 import { parseCombatants } from "./combatants.js";
@@ -50,30 +50,7 @@ export function Runner({ data: raw }: { data: SessionData | null }) {
 }
 
 function Walk({ raw }: { raw: SessionData }) {
-  const fixed = useMemo(() => {
-    const data = withRecap(raw);
-    const s = data.session;
-    const resolve = makeResolver(data.entities);
-    return {
-      data,
-      g: buildGraph(data),
-      resolve,
-      known: (n: string) => !!resolve(n),
-      // Auto-surfacing skips the other season's entities (CLAUDE.md campaign separation)
-      // and PCs, which the party strip already shows. Search still finds everything.
-      idx: mentionIndex(
-        data.entities,
-        (e) => (!!e.campaign && !!s.campaign && e.campaign !== s.campaign) || e.subtype === "pc",
-      ),
-      // The recap card talks about the previous session, which may be the other
-      // season's — there, only PCs stay quiet.
-      recapIdx: mentionIndex(data.entities, (e) => e.subtype === "pc"),
-      combatants: parseCombatants(
-        data.sections.find((x) => /^combatants$/i.test(x.title.trim()))?.md ?? "",
-      ),
-    };
-  }, [raw]);
-  const { data, g, resolve, known, idx, recapIdx, combatants } = fixed;
+  const { data, g, resolve, known, idx, recapIdx, combatants } = prepare(raw);
   const s = data.session;
   const { state, current, dispatch } = useRunner(s.folder, g);
   const { search, body, ...p } = usePanel(resolve);
@@ -82,33 +59,28 @@ function Walk({ raw }: { raw: SessionData }) {
 
   const node = g.byId.get(current)!;
   const isRecap = current === RECAP_ID;
-  const visited = useMemo(() => new Set(state.history), [state.history]);
+  const visited = new Set(state.history);
   const sceneOf = (id: string | null) => data.scenes.find((x) => x.id === id);
   const scene = sceneOf(node.scene);
   const titleOf = (id: string) => g.byId.get(id)?.title ?? id;
   const options = nextOptions(g, current, visited, (id) => sceneOf(id)?.title ?? id);
   const inScene = data.nodes.filter((n) => n.scene === node.scene);
   // Beat and scene links are numbered from where the DM stands.
-  const refs = useMemo(
-    () => buildRefIndex(data.nodes, data.scenes, current, data.cards),
-    [data, current],
-  );
+  const refs = buildRefIndex(data.nodes, data.scenes, current, data.cards);
   const b = refs.beat(current);
   const where = b ? `step ${b.num}, ${b.short}` : "the current card";
 
-  const ctx: PanelContext = useMemo(() => {
-    const cardText = isRecap
-      ? recapText(data)
-      : [node.title, ...node.lines, ...node.notes].join("\n");
-    const md = scene?.md ?? "";
-    const linked = [...md.matchAll(WIKI_RE)]
-      .map((m) => resolve(m[1]))
-      .filter((e): e is EntityRef => !!e);
-    return {
-      onCard: findMentions(cardText, isRecap ? recapIdx : idx),
-      inScene: [...new Set([...linked, ...findMentions(md, idx)])],
-    };
-  }, [data, node, scene, isRecap, resolve, idx, recapIdx]);
+  const cardText = isRecap
+    ? recapText(data)
+    : [node.title, ...node.lines, ...node.notes].join("\n");
+  const sceneMd = scene?.md ?? "";
+  const linked = [...sceneMd.matchAll(WIKI_RE)]
+    .map((m) => resolve(m[1]))
+    .filter((e): e is EntityRef => !!e);
+  const ctx: PanelContext = {
+    onCard: findMentions(cardText, isRecap ? recapIdx : idx),
+    inScene: [...new Set([...linked, ...findMentions(sceneMd, idx)])],
+  };
 
   const go = (id: string) => {
     if (g.byId.has(id)) dispatch({ type: "go", id });
@@ -137,43 +109,33 @@ function Walk({ raw }: { raw: SessionData }) {
   });
 
   // In the notes, links open in the panel as a fresh trail.
-  const session = useMemo(
-    () => ({ known, openEntity: (name: string) => p.openEntity(name, true) }),
-    [known, p],
-  );
-  const links = useMemo(
-    () => ({
-      ix: refs,
-      onBeat: ({ id }: { id: string }) => {
-        if (id === current)
-          main.current
-            ?.querySelector(`.sr-step[data-id="${id}"]`)
-            ?.scrollIntoView?.({ block: "start", behavior: "smooth" });
-        else p.openBeat(id, true);
-      },
-      onScene: ({ key }: { key: string }) => p.openScene(key, true),
-    }),
-    [refs, current, p],
-  );
+  const session = { known, openEntity: (name: string) => p.openEntity(name, true) };
+  const links = {
+    ix: refs,
+    onBeat: ({ id }: { id: string }) => {
+      if (id === current)
+        main.current
+          ?.querySelector(`.sr-step[data-id="${id}"]`)
+          ?.scrollIntoView?.({ block: "start", behavior: "smooth" });
+      else p.openBeat(id, true);
+    },
+    onScene: ({ key }: { key: string }) => p.openScene(key, true),
+  };
 
   const prev = data.previously[0];
-  const deck = useMemo(
-    () =>
-      prev
-        ? withSky(
-            withStats(
-              withReputation(
-                withAchievements(withMysteries(prev.slides), prev.achievements),
-                prev.reputation,
-              ),
-              prev.stats,
-              prev.deckWeight,
-            ),
-            prev.sky,
-          )
-        : [],
-    [prev],
-  );
+  const deck = prev
+    ? withSky(
+        withStats(
+          withReputation(
+            withAchievements(withMysteries(prev.slides), prev.achievements),
+            prev.reputation,
+          ),
+          prev.stats,
+          prev.deckWeight,
+        ),
+        prev.sky,
+      )
+    : [];
   const round = (node.scene && state.rounds[node.scene]) || 1;
   const shell = ["sr-body", p.docked && "is-docked", p.open && "is-open"].filter(Boolean).join(" ");
 
@@ -259,4 +221,29 @@ function Walk({ raw }: { raw: SessionData }) {
       {slides && prev && <Slides deck={deck} label={prev.name} onClose={() => setSlides(false)} />}
     </div>
   );
+}
+
+/** Everything the walk derives from the session's data alone. */
+function prepare(raw: SessionData) {
+  const data = withRecap(raw);
+  const s = data.session;
+  const resolve = makeResolver(data.entities);
+  return {
+    data,
+    g: buildGraph(data),
+    resolve,
+    known: (n: string) => !!resolve(n),
+    // Auto-surfacing skips the other season's entities (CLAUDE.md campaign separation)
+    // and PCs, which the party strip already shows. Search still finds everything.
+    idx: mentionIndex(
+      data.entities,
+      (e) => (!!e.campaign && !!s.campaign && e.campaign !== s.campaign) || e.subtype === "pc",
+    ),
+    // The recap card talks about the previous session, which may be the other
+    // season's — there, only PCs stay quiet.
+    recapIdx: mentionIndex(data.entities, (e) => e.subtype === "pc"),
+    combatants: parseCombatants(
+      data.sections.find((x) => /^combatants$/i.test(x.title.trim()))?.md ?? "",
+    ),
+  };
 }

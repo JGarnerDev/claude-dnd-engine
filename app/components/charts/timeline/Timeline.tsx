@@ -6,7 +6,7 @@
 // The filter never moves the axis: a filter edit hides points in place (the
 // chart recounts its bars and re-packs labels over the survivors).
 
-import { useCallback, useImperativeHandle, useMemo, useRef, useState } from "react";
+import { useImperativeHandle, useRef, useState } from "react";
 import "../_common/common.css";
 import { EmptyState } from "jeff-ui";
 import { Timeline as TimeChart, type ChartItem, type TimeChartHandle } from "jeff-ui/charts";
@@ -30,10 +30,7 @@ export function Timeline(props: ChartProps) {
   // Sort + day-index every event exactly once; every zoom level reuses this. Dead
   // stretches (an ancient beat thousands of years before the present) squeeze into
   // a break, and every synced world gets a ruler row (the selected one nearest).
-  const idx = useMemo(
-    () => indexEvents(props.data.events, cal, axisOptionsFor(props.data)),
-    [props.data, cal],
-  );
+  const idx = indexEvents(props.data.events, cal, axisOptionsFor(props.data));
   if (idx.events.length === 0) return <TimelineEmpty {...props} />;
   return <TimelineChart {...props} idx={idx} />;
 }
@@ -62,15 +59,15 @@ function TimelineChart({
   const chartRef = useRef<TimeChartHandle>(null);
   const [filter, setFilter] = useState(() => seedFilter(data.events, initialState));
 
-  const beats = useMemo(() => idx.events.filter((e) => !e.session), [idx]);
-  const items = useMemo(() => itemsOf(beats), [beats]);
-  const spans = useMemo(() => spansOf(idx), [idx]);
-  const breaks = useMemo(() => breaksOf(idx), [idx]);
-  const scale = useMemo(() => timeScaleFor(idx, cal), [idx, cal]);
+  const beats = idx.events.filter((e) => !e.session);
+  const items = itemsOf(beats);
+  const spans = spansOf(idx);
+  const breaks = breaksOf(idx);
+  const scale = timeScaleFor(idx, cal);
 
   const sections = useFilterSections(data.events, filter, setFilter);
-  const match = useMemo(() => makeMatcher(filter), [filter]);
-  const visible = useCallback((_: ChartItem, i: number) => match(beats[i]), [match, beats]);
+  const match = makeMatcher(filter);
+  const visible = (_: ChartItem, i: number) => match(beats[i]);
 
   useImperativeHandle(
     ref,

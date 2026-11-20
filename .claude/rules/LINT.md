@@ -27,5 +27,5 @@ Run by hand:
 - `ruff E731` (lambda assigned to a name): write a `def`.
 - `ruff B904` (raise inside `except` loses the cause): `raise NewError(...) from e`, or `from None` when the cause is noise.
 - `react(refs)` (ref read or written during render): for a "latest callback", use `useEffectEvent`, not a ref set each render (`useKeys`, `Slides`). `usePanel` returns its refs beside `PanelApi`: destructure them (`const { search, body, ...p } = usePanel(resolve)`) and pass each as its own prop, never `ref={p.search}`.
-- `react-hooks(exhaustive-deps)`: deps are plain names; compute an expression into a variable first (`const followed = follows ? ctx : null;`).
+- `react-hooks(exhaustive-deps)`: a function an effect calls goes through `useEffectEvent`, never `useCallback`: React Compiler (`app/react-compiler.ts`) does the memoizing, so app code has no `useMemo`, `useCallback` or `memo`, and avoids the shapes it skips (hub `PREFERENCES.md`, React Compiler). Deps are plain names; compute an expression into a variable first (`const followed = follows ? ctx : null;`).
 - `eslint(no-control-regex)`: markdown placeholder sentinels use Private Use characters (`\uE000`…), not control characters.

@@ -11,7 +11,7 @@
 //
 // usePanel.ts holds the panel's state and what the runner calls (open, escape, …).
 
-import { useLayoutEffect, useMemo, useRef, type ReactNode } from "react";
+import { useLayoutEffect, useRef, type ReactNode } from "react";
 import { Badge, Button, Disclosure, EmptyState, IconButton } from "jeff-ui";
 import { searchEntities, type Resolver } from "./entities.js";
 import { EntityView } from "./EntityView.js";
@@ -75,22 +75,24 @@ export interface PanelProps {
 
 export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelProps) {
   const { known } = useSession();
-  const plan = useMemo(() => data.sections.filter((s) => !isRecapSection(s.title)), [data]);
-  const sections: Section[] = useMemo(() => [...(data.established ?? []), ...plan], [data, plan]);
+  const plan = data.sections.filter((s) => !isRecapSection(s.title));
+  const sections: Section[] = [...(data.established ?? []), ...plan];
   const mysteries = data.mysteries ?? [];
   const q = p.query.trim();
   const top = p.stack[p.stack.length - 1];
   const fresh = !!q; // a search result starts a new trail
 
-  const row = (e: EntityRef, name: ReactNode = e.name, key: string | number = e.name) => (
+  // Name and key default inside the body: React Compiler cannot compile a
+  // default parameter that reads another parameter's field.
+  const row = (e: EntityRef, name?: ReactNode, key?: string | number) => (
     <button
-      key={key}
+      key={key ?? e.name}
       type="button"
       className="sr-ent"
       data-entity={e.name}
       onClick={() => p.openEntity(e.name, fresh)}
     >
-      <span className="sr-ent-name">{name}</span>
+      <span className="sr-ent-name">{name ?? e.name}</span>
       <span className="sr-ent-type">
         {[e.type, e.subtype].filter(Boolean).join(" · ")} ·{" "}
         {LAYER_LABEL[e.path.split("/")[0]] ?? ""}
@@ -298,18 +300,12 @@ export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelP
   }, [q, top, followed]);
 
   // Inside the panel a beat, scene or entity link opens here, on the same Back stack.
-  const links = useMemo(
-    () => ({
-      ix: refs,
-      onBeat: (b: { id: string }) => p.openBeat(b.id, fresh),
-      onScene: (s: { key: string }) => p.openScene(s.key, fresh),
-    }),
-    [refs, p, fresh],
-  );
-  const session = useMemo(
-    () => ({ known, openEntity: (name: string) => p.openEntity(name, fresh) }),
-    [known, p, fresh],
-  );
+  const links = {
+    ix: refs,
+    onBeat: (b: { id: string }) => p.openBeat(b.id, fresh),
+    onScene: (s: { key: string }) => p.openScene(s.key, fresh),
+  };
+  const session = { known, openEntity: (name: string) => p.openEntity(name, fresh) };
   return (
     <aside ref={aside} className="sr-panel" aria-label="Side panel">
       <SessionContext.Provider value={session}>

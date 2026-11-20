@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.77.0] — 2026-11-20
+
+### Changed
+
+- The charting app and session runner compile with React Compiler (`app/react-compiler.ts`, in the pages' Vite config and in Vitest), so components drop `useMemo`, `useCallback` and `memo`. It also compiles jeff-ui from `node_modules`, which is served unbundled in dev (`optimizeDeps.exclude`).
+
 ## [0.76.0] — 2026-11-20
 
 ### Added

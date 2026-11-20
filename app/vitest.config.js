@@ -1,6 +1,8 @@
 import { defineConfig } from "vitest/config";
+import { reactCompiler } from "./react-compiler";
 
 export default defineConfig({
+  plugins: [reactCompiler()],
   test: {
     include: ["**/*.spec.ts", "**/*.spec.tsx"],
     exclude: ["**/node_modules/**"],

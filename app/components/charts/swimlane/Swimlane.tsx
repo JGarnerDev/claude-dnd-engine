@@ -8,7 +8,7 @@
 // The filter never moves anything: a filter edit only hides dots and recounts
 // the density bars. Collapse changes the lanes, so it re-lays the chart.
 
-import { useCallback, useImperativeHandle, useMemo, useRef, useState } from "react";
+import { useImperativeHandle, useRef, useState } from "react";
 import { Checkbox, EmptyState, type SettingsSection } from "jeff-ui";
 import { Swimlane as SwimChart, type ChartItem, type TimeChartHandle } from "jeff-ui/charts";
 import "../_common/common.css";
@@ -37,10 +37,7 @@ export function Swimlane(props: ChartProps) {
   // Sort + day-index the full set once. The Campaign view spans every campaign on
   // the party's lived time: each world's dates synced at the crossings, one ruler
   // row per world (segments.ts).
-  const full = useMemo(
-    () => indexEvents(props.data.events, cal, axisOptionsFor(props.data)),
-    [props.data, cal],
-  );
+  const full = indexEvents(props.data.events, cal, axisOptionsFor(props.data));
   if (full.events.length === 0) return <SwimlaneEmpty {...props} />;
   return <SwimlaneChart {...props} full={full} />;
 }
@@ -82,38 +79,30 @@ function SwimlaneChart({
   // edge there so pre-campaign deep history (world events before session 1) is
   // hidden unless the DM opts in via the History toggle. The lock only bites when a
   // party beat exists AND something precedes it.
-  const floor = useMemo(() => {
-    const party = full.events
-      .filter((e) => parseTrack(e.track).category === "party")
-      .map((e) => e._idx);
-    return party.length ? Math.min(...party) : null;
-  }, [full]);
+  const party = full.events
+    .filter((e) => parseTrack(e.track).category === "party")
+    .map((e) => e._idx);
+  const floor = party.length ? Math.min(...party) : null;
   const hasPreCampaign = floor !== null && full.events.some((e) => e._idx < floor);
 
   // The index and track tree for the current history setting. Sessions render as
   // full-height columns, not as a lane, so they're kept out of the tree; the Party
   // lane then vanishes on its own when sessions are its only members.
-  const { idx, tree } = useMemo(() => {
-    const events =
-      showDeepHistory || floor === null ? data.events : full.events.filter((e) => e._idx >= floor);
-    return {
-      idx: events === data.events ? full : indexEvents(events, cal, axisOptionsFor(data)),
-      tree: buildTrackTree(events.filter((e) => !e.session)),
-    };
-  }, [data, cal, full, floor, showDeepHistory]);
+  const events =
+    showDeepHistory || floor === null ? data.events : full.events.filter((e) => e._idx >= floor);
+  const idx = events === data.events ? full : indexEvents(events, cal, axisOptionsFor(data));
+  const tree = buildTrackTree(events.filter((e) => !e.session));
 
-  const lanes = useMemo(() => lanesFor(tree, collapsed), [tree, collapsed]);
-  const beats = useMemo(() => idx.events.filter((e) => !e.session), [idx]);
-  const items = useMemo(() => {
-    const keys = new Set(lanes.map((l) => l.key));
-    return itemsOf(beats, (e) => laneFor(e.track, keys));
-  }, [beats, lanes]);
-  const spans = useMemo(() => spansOf(idx), [idx]);
-  const breaks = useMemo(() => breaksOf(idx), [idx]);
-  const scale = useMemo(() => timeScaleFor(idx, cal), [idx, cal]);
+  const lanes = lanesFor(tree, collapsed);
+  const beats = idx.events.filter((e) => !e.session);
+  const laneKeys = new Set(lanes.map((l) => l.key));
+  const items = itemsOf(beats, (e) => laneFor(e.track, laneKeys));
+  const spans = spansOf(idx);
+  const breaks = breaksOf(idx);
+  const scale = timeScaleFor(idx, cal);
 
-  const match = useMemo(() => makeMatcher(filter), [filter]);
-  const visible = useCallback((_: ChartItem, i: number) => match(beats[i]), [match, beats]);
+  const match = makeMatcher(filter);
+  const visible = (_: ChartItem, i: number) => match(beats[i]);
 
   useImperativeHandle(
     ref,
@@ -132,15 +121,12 @@ function SwimlaneChart({
     [filter],
   );
 
-  const toggle = useCallback(
-    (category: string): void =>
-      setCollapsed((c) => {
-        const next = new Set(c);
-        if (!next.delete(category)) next.add(category);
-        return next;
-      }),
-    [],
-  );
+  const toggle = (category: string): void =>
+    setCollapsed((c) => {
+      const next = new Set(c);
+      if (!next.delete(category)) next.add(category);
+      return next;
+    });
 
   const sections: SettingsSection[] = useFilterSections(data.events, filter, setFilter);
   if (hasPreCampaign) {

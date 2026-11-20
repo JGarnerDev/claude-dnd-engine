@@ -8,7 +8,7 @@
 // beats). The Campaign view always spans every campaign the party is in, so the
 // selector is hidden there.
 
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Tabs } from "jeff-ui";
 import "./view.css";
 import { Timeline } from "../../components/charts/timeline/Timeline.js";
@@ -46,7 +46,7 @@ export function TimelineView({ data, initial = "world" }: TimelineViewProps) {
 }
 
 function ChartHost({ data, initial }: { data: TimelineData; initial: View }) {
-  const scope = useMemo(() => campaignScope(data), [data]);
+  const scope = campaignScope(data);
   const [campaign, setCampaign] = useState(scope.initial);
   const [shown, setShown] = useState<Shown>({ view: initial, key: 0 });
   // Where the active chart portals its settings gear and panel.
@@ -55,10 +55,7 @@ function ChartHost({ data, initial }: { data: TimelineData; initial: View }) {
 
   const show = (view: View, initialState?: ChartState) =>
     setShown((s) => ({ view, initialState, key: s.key + 1 }));
-  const viewData = useMemo(
-    () => (shown.view === "world" ? scope.scoped(campaign) : data),
-    [shown.view, scope, campaign, data],
-  );
+  const viewData = shown.view === "world" ? scope.scoped(campaign) : data;
   const Chart = shown.view === "world" ? Timeline : Swimlane;
 
   return (

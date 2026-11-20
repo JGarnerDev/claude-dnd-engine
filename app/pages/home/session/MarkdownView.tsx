@@ -5,7 +5,7 @@
 // and "Scene N" become chips (RefChips.tsx). `spoken` gives an *"italic quote"* the
 // read-aloud face, as the prompt book's blocks do.
 
-import { createContext, Fragment, useContext, useMemo, type ReactNode } from "react";
+import { createContext, Fragment, useContext, type ReactNode } from "react";
 import {
   parseInline,
   parseMarkdown,
@@ -140,11 +140,11 @@ function withText(text: TextRender | undefined, spoken: boolean | undefined, nod
 }
 
 export function Markdown({ md, text, spoken }: MdProps) {
-  const blocks = useMemo(() => parseMarkdown(md), [md]);
+  const blocks = parseMarkdown(md);
   return withText(text, spoken, <Blocks blocks={blocks} />);
 }
 
 export function InlineMd({ md, text, spoken }: MdProps) {
-  const c = useMemo(() => parseInline(md), [md]);
+  const c = parseInline(md);
   return withText(text, spoken, <Inlines c={c} />);
 }

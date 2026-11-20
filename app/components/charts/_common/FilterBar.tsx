@@ -4,7 +4,6 @@
 // the header settings panel under their labels, as buildFilterBar's parts were
 // hoisted before. Pure matching stays in filters.ts.
 
-import { useMemo } from "react";
 import { Chip, SearchInput, type SettingsSection } from "jeff-ui";
 import "./components/filterbar.css";
 import { trackList, audienceList } from "./helpers/filters.js";
@@ -65,8 +64,8 @@ export function useFilterSections(
   value: FilterValue,
   onChange: (next: FilterValue) => void,
 ): SettingsSection[] {
-  const tracks = useMemo(() => trackList(events), [events]);
-  const audiences = useMemo(() => audienceOptions(events), [events]);
+  const tracks = trackList(events);
+  const audiences = audienceOptions(events);
 
   const sections: SettingsSection[] = [
     {

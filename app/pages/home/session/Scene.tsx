@@ -10,7 +10,7 @@
 // The roll log, the picked chip, spent legendary actions and the HP log's open state
 // are the page's own: they survive moving between steps, not a reload.
 
-import { useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { Disclosure, Kbd } from "jeff-ui";
 import { applyHp, matchEnemy, type StatBlock } from "./combatants.js";
 import { RollContext, type LoggedRoll } from "./Dice.js";
@@ -186,9 +186,9 @@ export function Scene(v: SceneProps) {
   const [logOpen, setLogOpen] = useState(false);
 
   const md = v.scene?.md ?? "";
-  const { setup, nodes: prose } = useMemo(() => splitNodeSections(md), [md]);
-  const header = useMemo(() => parseSceneHeader(setup, md), [setup, md]);
-  const headings = useMemo(() => nodeHeadings(md), [md]);
+  const { setup, nodes: prose } = splitNodeSections(md);
+  const header = parseSceneHeader(setup, md);
+  const headings = nodeHeadings(md);
   const round = Math.max(1, v.round);
 
   // One HP box per enemy whose block carries HP: what the boxes and the bar show.
