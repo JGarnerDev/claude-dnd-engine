@@ -1,0 +1,32 @@
+# faction.schema.yaml -- type: faction (prose: faction.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: faction
+type: object
+required: [state, locations, purpose]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: faction}
+  state: {enum: [active, fractured, dormant, at-war, exiled, dissolved]}
+  locations:
+    description: Where the faction operates, as links or plain notes.
+    $ref: entity.schema.yaml#/$defs/text-list
+  purpose: {enum: [commerce, political, military, religious, criminal, arcane, family, other]}
+  rulership:
+    description: A link to the leader, or a plain note ("council", "unknown").
+    $ref: entity.schema.yaml#/$defs/text
+  motives: {$ref: entity.schema.yaml#/$defs/text-list}
+  tensions: {$ref: entity.schema.yaml#/$defs/text-list}
+  hierarchy: {$ref: entity.schema.yaml#/$defs/text}
+  livelihood: {$ref: entity.schema.yaml#/$defs/text}
+  members: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  allies:
+    description: Annotated links, or plain notes ("No formal allies").
+    $ref: entity.schema.yaml#/$defs/text-list
+  opposition:
+    description: Annotated links, or plain notes for rivals with no entry.
+    $ref: entity.schema.yaml#/$defs/text-list
+  hook:
+    description: Why the party would get tangled up with them.
+    $ref: entity.schema.yaml#/$defs/text
+unevaluatedProperties: false

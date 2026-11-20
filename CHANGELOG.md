@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.82.0] — 2026-11-20
+
+### Added
+
+- **Rule:** `meta/schemas/faction.schema.yaml` checks every faction file (schema migration step 6): the valid states, mandatory `locations` and `purpose`, and the optional fields `faction.md` lists. `allies` and `opposition` take plain notes as well as links ("No formal allies"). `purpose` gains `family`, and factions may list `members` and a `hook`.
+
+### Changed
+
+- The Hamlet Raiders and The Sage Enclave lose a `subtype` the faction schema never had (their `purpose` already says it). A House Tomsen motive with an unquoted colon was read as a mapping; it is now quoted.
+
 ## [0.81.0] — 2026-11-20
 
 ### Added

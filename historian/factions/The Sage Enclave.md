@@ -6,7 +6,6 @@ exists: true
 state: active
 tags:
   - faction/religious
-subtype: religious
 locations:
   - "[[Aethryn]]"
 purpose: religious

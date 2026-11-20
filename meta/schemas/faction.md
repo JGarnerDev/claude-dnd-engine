@@ -20,6 +20,7 @@ Covers any organized group: nations, guilds, cults, gangs, political movements, 
 **\* Why they exist:** What is their founding purpose — commerce, political power, military force, religion, crime, something else?
 
 **\* How they exist:**
+
 - What do they actually want right now (motives)?
 - What pressures or conflicts threaten them internally or externally (tensions)?
 - How are they organized — flat, hierarchical, cell-based (composition & hierarchy)?
@@ -32,10 +33,14 @@ Covers any organized group: nations, guilds, cults, gangs, political movements, 
 
 ## Schema
 
+The machine-readable version is [`faction.schema.yaml`](faction.schema.yaml).
+
 ### Canonical Path
+
 `data/factions/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `active` | Operating normally |
@@ -61,7 +66,7 @@ tags:
 # --- MANDATORY (faction) ---
 locations:
   - [[Location Name]]
-purpose: commerce | political | military | religious | criminal | arcane | other
+purpose: commerce | political | military | religious | criminal | arcane | family | other
 
 # --- OPTIONAL (entity base) ---
 aliases: []
@@ -84,11 +89,15 @@ livelihood: ""
 allies:
   - [[Entity Name]] (nature of alliance)
 opposition:
-  - [[Entity Name]] (nature of conflict)
+  - [[Entity Name]] (nature of conflict)   # plain notes allowed for allies and opposition
+members:
+  - [[Character Name]] (role)
+hook: ""                       # why the party would get tangled up with them
 ---
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

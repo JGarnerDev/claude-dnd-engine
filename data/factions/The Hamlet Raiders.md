@@ -6,7 +6,6 @@ exists: false
 state: active
 tags:
   - faction/mercenary
-subtype: mercenary
 locations:
   - "[[Aethryn]]"
 purpose: military

@@ -14,7 +14,7 @@ importance: major
 description: "Owns the ledger that grades and prices every legal bean. Quiet, unseen, never touches a sack. Burns surplus after good harvests to keep the price brutal. Quietly records the massacre that founded the Ashreaches."
 motives:
   - Keep the price brutal — burn surplus, restrict supply, never let the market breathe
-  - Maintain information asymmetry: knowing more than any other house is the real power
+  - "Maintain information asymmetry: knowing more than any other house is the real power"
 tensions:
   - The ledger records things that could destabilize all five houses if exposed
   - Their power is invisible — which means it is hard to defend openly
