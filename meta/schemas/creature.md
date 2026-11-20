@@ -65,7 +65,7 @@ tags:
   - creature
 
 # --- MANDATORY (creature) ---
-creature_type: undead | beast | humanoid | aberration | fiend | monstrosity | dragon | construct | elemental | fey | giant | ooze | plant | other
+creature_type: undead | beast | humanoid | aberration | celestial | fiend | monstrosity | dragon | construct | elemental | fey | giant | ooze | plant | other
 challenge_rating: ""    # CR value, e.g. "5" or "1/2"; "TBD" or "unknown" until fixed
 location: [[Location Name]]
 

@@ -4,9 +4,9 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-18):** steps 1–5 done (engine v0.73.0). Every entity file's frontmatter is strict YAML with quoted links, and `get_frontmatter` reads it with a YAML parser.
 
-**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0), `route` (v0.87.0), `resource` (v0.88.0), `creature` (v0.89.0).
+**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0), `route` (v0.87.0), `resource` (v0.88.0), `creature` (v0.89.0), `monster` (v0.90.0).
 
-**Next:** the `monster` schema.
+**Next:** the `spell` schema.
 
 ## Resuming in a new session
 
@@ -53,6 +53,7 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
   - [x] resource: `meta/schemas/resource.schema.yaml` (v0.88.0), enforced. Added `varies` to `trade_value` and `contested` to `accessibility` (Whatwill uses both). `controlled_by` may be a list; `consumers` takes plain notes for groups with no file. No content fixes
   - [x] creature: `meta/schemas/creature.schema.yaml` (v0.89.0), enforced. `challenge_rating` is pattern-checked (a CR, or `TBD` / `unknown`). Documented `size`, `alignment` and `breed` (used by the three companions). No content fixes
   - [ ] other campaign types (act, campaign, culture, rumor, mission, party, player, pc-arc, skill)
-  - [ ] reference catalogs (monster, spell, feat, race, class, background)
+  - [x] monster: `meta/schemas/monster.schema.yaml` (v0.90.0), enforced. All 545 passed as they were. `challenge_rating` is pattern-checked; added `celestial` to `creature_type` (seven monsters use it), on creatures too. No content fixes
+  - [ ] reference catalogs (spell, feat, race, class, background)
 - [ ] 7. `scripts/gen-schema-docs.py` generates `meta/schemas/*.md`; check that generated files are up to date
 - [ ] 8. Rules and docs updated (quote frontmatter links; edit schemas, not the generated docs), template synced with `/sync`, collaborators told, `tasks/schema-migration/scripts/` deleted

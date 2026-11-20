@@ -6,6 +6,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.90.0] — 2026-11-20
+
+- `meta/schemas/monster.schema.yaml`: the monster schema for reference stat blocks. Mandatory: `creature_type`, `challenge_rating` (a CR string, "5" or "1/2"). All 545 monsters passed with no changes.
+- `creature_type` gains `celestial` (seven monsters use it), on the creature schema as well. `monster.md` and `creature.md` updated to match; `monster.md` links the YAML schema.
+
 ## [0.89.0] — 2026-11-20
 
 - `meta/schemas/creature.schema.yaml`: the creature schema. Mandatory: `state`, `creature_type`, `challenge_rating`, `location`. `challenge_rating` must be a CR ("5", "1/2") or `TBD` / `unknown`; `affinity` uses the same `[[Name]] (n)` pattern as characters.

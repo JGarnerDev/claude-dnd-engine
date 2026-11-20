@@ -31,7 +31,10 @@ These files never move to `historian/` — monsters are perpetually free templat
 
 ## Schema
 
+The machine-readable version is [`monster.schema.yaml`](monster.schema.yaml).
+
 ### Canonical Path
+
 `data/monsters/{name}.md`
 
 ### Frontmatter Template
@@ -47,7 +50,7 @@ tags:
   - cr/<decimal>           # e.g. cr/0.25 for CR 1/4, cr/0.5 for CR 1/2, cr/5 for CR 5
 
 # --- MANDATORY (monster) ---
-creature_type: undead | beast | humanoid | aberration | fiend | monstrosity | dragon | construct | elemental | fey | giant | ooze | plant | other
+creature_type: undead | beast | humanoid | aberration | celestial | fiend | monstrosity | dragon | construct | elemental | fey | giant | ooze | plant | other
 challenge_rating: ""    # CR value, e.g. "5" or "1/2"
 
 # --- OPTIONAL ---
@@ -66,6 +69,7 @@ movement: []            # special movement with speed (e.g. "fly 60", "swim 40",
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

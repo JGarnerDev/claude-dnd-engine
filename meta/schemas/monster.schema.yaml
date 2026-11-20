@@ -1,0 +1,34 @@
+# monster.schema.yaml -- type: monster (prose: monster.md). Extends entity.schema.yaml.
+# Reference stat blocks from the books; a named or campaign-specific creature is type: creature.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: monster
+type: object
+required: [creature_type, challenge_rating]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: monster}
+  creature_type:
+    enum: [undead, beast, humanoid, aberration, celestial, fiend, monstrosity, dragon, construct,
+      elemental, fey, giant, ooze, plant, other]
+  challenge_rating:
+    description: CR as a string, e.g. "5" or "1/2".
+    type: string
+    pattern: '^(\d+|1/[248])$'
+  size: {enum: [tiny, small, medium, large, huge, gargantuan]}
+  alignment: {$ref: entity.schema.yaml#/$defs/text}
+  source:
+    description: Book and page, e.g. "Monster Manual p.298".
+    $ref: entity.schema.yaml#/$defs/text
+  stat_block:
+    description: URL, or "inline" if appended to the body.
+    $ref: entity.schema.yaml#/$defs/text
+  habitats: {$ref: entity.schema.yaml#/$defs/text-list}
+  weaknesses: {$ref: entity.schema.yaml#/$defs/text-list}
+  resistances: {$ref: entity.schema.yaml#/$defs/text-list}
+  immunities: {$ref: entity.schema.yaml#/$defs/text-list}
+  legendary: {type: boolean}
+  movement:
+    description: Special movement with speed, e.g. "fly 60".
+    $ref: entity.schema.yaml#/$defs/text-list
+unevaluatedProperties: false

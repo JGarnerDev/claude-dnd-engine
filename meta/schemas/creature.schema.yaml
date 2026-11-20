@@ -10,8 +10,8 @@ properties:
   type: {const: creature}
   state: {enum: [alive, dead, dormant, imprisoned, transformed, unknown]}
   creature_type:
-    enum: [undead, beast, humanoid, aberration, fiend, monstrosity, dragon, construct, elemental,
-      fey, giant, ooze, plant, other]
+    enum: [undead, beast, humanoid, aberration, celestial, fiend, monstrosity, dragon, construct,
+      elemental, fey, giant, ooze, plant, other]
   challenge_rating:
     description: CR as a string ("5", "1/2"), or "TBD" / "unknown".
     type: string
