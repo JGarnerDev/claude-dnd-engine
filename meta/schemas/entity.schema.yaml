@@ -16,6 +16,9 @@ $defs:
     description: A wiki-link, e.g. "[[Session 09 The Shadows]]".
     type: string
     pattern: '^\[\[[^\]]+\]\]$'
+  text-list:
+    type: array
+    items: {$ref: '#/$defs/text'}
   annotated-links:
     description: Wiki-links, each optionally followed by a note, e.g. "[[Ashford]] (resident)".
     type: array

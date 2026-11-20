@@ -6,6 +6,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.81.0] — 2026-11-20
+
+### Added
+
+- **Rule:** `meta/schemas/location.schema.yaml` checks every location file (schema migration step 6). One branch per subtype (biome, building, city, dungeon, region, shop, terrain-feature, wilderness) sets its valid states, mandatory fields and enums, and rejects fields the prose schemas don't list. Place fields (`city`, `region`, `location`, `proprietor`, …) take a link or a plain note; terrain-feature `region` is a list, wilderness `region` a single value.
+- Building `purpose` allows `lair`; region `biome` allows `mediterranean`; regions may carry a `hook`; cities may name a `controlling_faction`. Region and city `controlling_faction` may be a list when control is shared.
+- `text-list` moves into the entity base `$defs` for every type schema to share.
+
+### Changed
+
+- Location files that broke the new rule: The Companion and The Watcher `state: passable` → `stable`; The Reach `biome: temperate` → `scrubland`; Calenmere `state: active` → `passable`; Klein Zand `navigability: passable` → `moderate`; six terrain features with no known region get `region: [unknown]`.
+- Historian locations: Old Bonegrinder becomes `occupied` with a `city` note and its suspected resident; Black Sheep Inn `purpose: commerce` with `specialty: "Inn and tavern"`; Barovia Village Graveyard, Tser Pool Encampment and Lake Zarovich become `safe` wilderness in `[[Barovia]]` with a `terrain`, losing their stray `global_location`/`purpose`/`location`; Yester Hill loses `travel_difficulty: unknown`.
+
 ## [0.80.0] — 2026-11-20
 
 ### Added

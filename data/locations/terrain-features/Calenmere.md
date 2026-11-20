@@ -3,7 +3,7 @@ name: Calenmere
 type: location
 subtype: terrain-feature
 exists: false
-state: active
+state: passable
 contributed_by: miguel
 tags:
   - location

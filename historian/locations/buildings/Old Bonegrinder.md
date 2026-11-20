@@ -4,12 +4,14 @@ campaign: strahd
 type: location
 subtype: building
 exists: true
-state: stable
+state: occupied
 tags:
   - location
   - location/building
 
-global_location: "[[Barovia]]"
+city: "None — stands alone on the hilly road to Vallaki, in [[Barovia]]"
+residents:
+  - "[[The Dream Pastry Woman]] (suspected — the night hag)"
 purpose: lair
 aliases:
   - "The Windmill"

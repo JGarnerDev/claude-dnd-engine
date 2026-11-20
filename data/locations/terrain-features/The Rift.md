@@ -9,6 +9,8 @@ tags:
   - location
   - location/terrain-feature
 feature_type: other
+region:
+  - unknown
 scale: regional
 navigability: moderate
 importance: major

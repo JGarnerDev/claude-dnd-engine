@@ -9,6 +9,8 @@ tags:
   - location
   - location/terrain-feature
 feature_type: island
+region:
+  - unknown
 scale: local
 navigability: difficult
 importance: minor

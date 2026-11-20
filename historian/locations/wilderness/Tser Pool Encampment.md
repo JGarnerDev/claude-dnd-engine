@@ -4,13 +4,13 @@ campaign: strahd
 type: location
 subtype: wilderness
 exists: true
-state: stable
+state: safe
 tags:
   - location
   - location/wilderness
 
-global_location: "[[Barovia]]"
-purpose: settlement
+region: "[[Barovia]]"
+terrain: river
 aliases: []
 importance: major
 active: true

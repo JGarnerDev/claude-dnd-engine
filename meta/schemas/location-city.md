@@ -22,12 +22,14 @@ Covers cities, towns, villages, and any settled population center.
 **\* Why it exists:** What gave rise to this settlement — trade route, military fort, holy site, natural resource, something else?
 
 **\* How it exists:**
+
 - What underlying conflicts or pressures shape daily life here (tensions)?
 - Who lives here — rough mix of races, classes, wealth levels (composition)?
 - What factions operate in or around the city?
 - Who rules, and how stable is that rule (rulership)?
 
 **\* Shops:** What are the key establishments? At minimum:
+
 - Inn (name, proprietor)
 - Mundane shop (name, proprietor, specialty)
 - Magic shop — if any (name, proprietor)
@@ -38,10 +40,14 @@ Covers cities, towns, villages, and any settled population center.
 
 ## Schema
 
+The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (all eight subtypes).
+
 ### Canonical Path
+
 `data/locations/cities/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `thriving` | Growing, prosperous |
@@ -88,6 +94,7 @@ composition: ""
 tensions: []
 factions:
   - [[Faction Name]]
+controlling_faction: [[Faction Name]]   # optional; a list of links when control is shared
 rulership: [[NPC Name]]
 shops:
   - [[Shop Name]]
@@ -98,6 +105,7 @@ routes:
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

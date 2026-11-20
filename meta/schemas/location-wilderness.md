@@ -33,10 +33,14 @@ Covers named outdoor areas between settlements: forests, mountain passes, swamps
 
 ## Schema
 
+The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (all eight subtypes).
+
 ### Canonical Path
+
 `data/locations/wilderness/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `safe` | Navigable without significant threat |
@@ -88,6 +92,7 @@ hook: ""
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

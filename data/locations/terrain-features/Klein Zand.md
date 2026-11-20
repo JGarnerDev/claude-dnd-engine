@@ -12,7 +12,7 @@ feature_type: other
 region:
   - unknown
 scale: regional
-navigability: passable
+navigability: moderate
 importance: minor
 description: "Literally 'Small Sand'; secondary arid zone near [[Azel Samarat]]; smaller and less dramatic than its neighbor"
 ---

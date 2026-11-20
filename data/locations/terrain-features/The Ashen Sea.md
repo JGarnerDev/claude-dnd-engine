@@ -9,6 +9,8 @@ tags:
   - location
   - location/terrain-feature
 feature_type: sea
+region:
+  - unknown
 scale: regional
 navigability: difficult
 importance: major

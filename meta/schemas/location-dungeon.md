@@ -35,10 +35,14 @@ Covers any adventuring location with internal structure: ruins, caves, towers, c
 
 ## Schema
 
+The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (all eight subtypes).
+
 ### Canonical Path
+
 `data/locations/dungeons/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `unknown` | Existence rumored but unconfirmed |
@@ -92,6 +96,7 @@ known_dangers: []
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

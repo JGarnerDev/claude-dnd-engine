@@ -35,10 +35,14 @@ Covers broad geographic or political areas: nations, provinces, territories, isl
 
 ## Schema
 
+The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (all eight subtypes).
+
 ### Canonical Path
+
 `data/locations/regions/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `stable` | Functioning under established control |
@@ -63,7 +67,7 @@ tags:
 
 # --- MANDATORY (region) ---
 geography: ""
-controlling_faction: [[Faction Name]]
+controlling_faction: [[Faction Name]]   # or "unknown"; a list of links when control is shared
 
 # --- OPTIONAL (entity base) ---
 aliases: []
@@ -79,17 +83,19 @@ description: ""
 
 # --- OPTIONAL (region) ---
 climate: ""
-biome: arctic | tundra | taiga | temperate-forest | tropical-forest | grassland | savanna | desert | scrubland | wetland | coastal | alpine | volcanic | aerial | underdark | planar  # list ok: [temperate-forest, tundra]
+biome: arctic | tundra | taiga | temperate-forest | tropical-forest | grassland | savanna | desert | scrubland | wetland | coastal | alpine | volcanic | aerial | underdark | planar | mediterranean  # list ok: [temperate-forest, tundra]
 tensions: []
 settlements:
   - [[City or Town Name]]
 notable_features: []
 wilderness_areas:
   - [[Wilderness Name]]
+hook: ""                       # why adventurers would go here
 ---
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

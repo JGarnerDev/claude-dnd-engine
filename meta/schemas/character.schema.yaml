@@ -7,9 +7,6 @@ title: character
 type: object
 required: [subtype, state]
 $defs:
-  text-list:
-    type: array
-    items: {$ref: entity.schema.yaml#/$defs/text}
   session-stamp:
     description: Number of the last played session at which this was checked.
     type: integer
@@ -27,7 +24,7 @@ $defs:
       livelihood: {$ref: entity.schema.yaml#/$defs/text}
       disposition:
         enum: [hostile, neutral, friendly, unknown]
-      motives: {$ref: '#/$defs/text-list'}
+      motives: {$ref: entity.schema.yaml#/$defs/text-list}
       voice:
         description: Core cadence and register in one line; see meta/voice.md.
         $ref: entity.schema.yaml#/$defs/text
@@ -53,7 +50,7 @@ allOf:
           $ref: entity.schema.yaml#/$defs/text
         sells:
           description: Goods or services this NPC trades in, as links or plain notes.
-          $ref: '#/$defs/text-list'
+          $ref: entity.schema.yaml#/$defs/text-list
         affinity: {$ref: '#/$defs/affinity'}
   - if:
       properties: {subtype: {const: antagonist}}
@@ -74,7 +71,7 @@ allOf:
         player: {$ref: entity.schema.yaml#/$defs/link}
         homeland: {$ref: entity.schema.yaml#/$defs/link}
         motivation: {$ref: entity.schema.yaml#/$defs/text}
-        secrets: {$ref: '#/$defs/text-list'}
+        secrets: {$ref: entity.schema.yaml#/$defs/text-list}
         affinity: {$ref: '#/$defs/affinity'}
         level_confirmed: {$ref: '#/$defs/session-stamp'}
         spotlight:
@@ -105,12 +102,12 @@ properties:
     minimum: 1
     maximum: 20
   pronouns: {$ref: entity.schema.yaml#/$defs/text}
-  goals: {$ref: '#/$defs/text-list'}
+  goals: {$ref: entity.schema.yaml#/$defs/text-list}
   allies: {$ref: entity.schema.yaml#/$defs/annotated-links}
   enemies: {$ref: entity.schema.yaml#/$defs/annotated-links}
   family:
     description: Relatives, as annotated links or plain notes for people with no entry.
-    $ref: '#/$defs/text-list'
+    $ref: entity.schema.yaml#/$defs/text-list
   character_sheet:
     description: Path to a sheet file, an external link, or an inline summary.
     $ref: entity.schema.yaml#/$defs/text

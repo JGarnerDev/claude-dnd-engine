@@ -47,6 +47,8 @@ One biome can span many regions; one region can contain several biomes. Biomes f
 
 ## Schema
 
+The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (all eight subtypes).
+
 ### Canonical Path
 
 `data/locations/biomes/{name}.md`

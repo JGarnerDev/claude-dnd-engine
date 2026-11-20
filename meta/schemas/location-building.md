@@ -31,10 +31,14 @@ Covers non-commercial structures within a settlement: residences, manors, civic 
 
 ## Schema
 
+The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (all eight subtypes).
+
 ### Canonical Path
+
 `data/locations/buildings/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `occupied` | Inhabited and functional |
@@ -61,7 +65,7 @@ tags:
 city: [[City Name]]
 residents:
   - [[NPC Name]] (role or relation)
-purpose: residential | civic | religious | military | other
+purpose: residential | civic | religious | military | lair | other
 
 # --- OPTIONAL (entity base) ---
 aliases: []
@@ -90,6 +94,7 @@ City: [[City Name]] | Campaign: [[Campaign Name]]
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

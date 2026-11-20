@@ -37,10 +37,14 @@ Distinct from `location-wilderness`: a wilderness area is a named zone you trave
 
 ## Schema
 
+The machine-readable version is [`location.schema.yaml`](location.schema.yaml) (all eight subtypes).
+
 ### Canonical Path
+
 `data/locations/terrain-features/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `passable` | Currently traversable without special preparation |
@@ -94,6 +98,7 @@ hook: ""
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

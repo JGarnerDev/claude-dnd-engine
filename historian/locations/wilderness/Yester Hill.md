@@ -28,7 +28,6 @@ relates_to:
 known_by:
   - "[[The Party]] (partial)"
 description: "A hill somewhere in Barovia that the druids serving Baba Lysaga hold as their hideout. The third of the Wizard of Wines' three seeds was carried here after the druids stole it. The party has its location on a map from Davian Martikov and nothing else."
-travel_difficulty: unknown
 hazards:
   - "Home ground of [[Baba Lysaga's Druids]], whose numbers after the winery losses are unknown"
   - "Blights — the winery horde came from here, and there is no reason to assume it was all of them"

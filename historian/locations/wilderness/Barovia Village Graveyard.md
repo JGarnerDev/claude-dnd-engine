@@ -4,13 +4,13 @@ campaign: strahd
 type: location
 subtype: wilderness
 exists: true
-state: stable
+state: safe
 tags:
   - location
   - location/wilderness
 
-global_location: "[[Barovia Village]]"
-purpose: other
+region: "[[Barovia]]"
+terrain: other
 aliases: []
 importance: minor
 active: true
@@ -26,7 +26,7 @@ confirmed_date: "2026-05-19"
 last_updated: "[[Session 12 The March of the Dead]]"
 ---
 
-Global Location: [[Barovia Village]] | Campaign: [[Curse of Strahd]]
+Region: [[Barovia]], in [[Barovia Village]] | Campaign: [[Curse of Strahd]]
 
 ## Overview
 

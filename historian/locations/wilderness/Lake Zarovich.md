@@ -4,12 +4,13 @@ campaign: strahd
 type: location
 subtype: wilderness
 exists: true
-state: intact
+state: safe
 tags:
   - location
   - location/wilderness
   - region/barovia
-location: near [[Vallaki]]
+region: "[[Barovia]]"
+terrain: other
 importance: minor
 active: true
 source_session: "[[Session 19 The Burning of the Coffin Shop]]"
@@ -23,7 +24,7 @@ known_by:
 description: "A lake in the region of Vallaki. Named in Session 19 as the place where Izek Strazni lost his arm — the origin of the dark-magic limb that replaced it."
 ---
 
-Location: near [[Vallaki]] | Campaign: [[Curse of Strahd]]
+Region: [[Barovia]], near [[Vallaki]] | Campaign: [[Curse of Strahd]]
 
 ## Background
 

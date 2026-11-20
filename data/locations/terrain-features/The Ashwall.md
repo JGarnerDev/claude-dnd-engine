@@ -9,6 +9,8 @@ tags:
   - location
   - location/terrain-feature
 feature_type: mountain-range
+region:
+  - unknown
 scale: regional
 importance: minor
 aliases:

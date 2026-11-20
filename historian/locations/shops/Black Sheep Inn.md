@@ -13,7 +13,8 @@ tags:
 
 city: "[[Barovia Village Outskirts]]"
 proprietor: "[[Unknown -Tavern Master]]"
-purpose: "Inn and tavern. Starting point before Barovia. Party earned lodging and supplies by performing."
+purpose: commerce
+specialty: "Inn and tavern"
 
 relates_to:
   - "[[Curse of Strahd]] (campaign)"

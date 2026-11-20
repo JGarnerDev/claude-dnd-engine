@@ -1,0 +1,156 @@
+# location.schema.yaml -- type: location (prose: location-<subtype>.md, one per subtype).
+# Extends entity.schema.yaml. Each subtype's states, mandatory fields and own fields live in
+# its if/then branch, so a field from another subtype fails unevaluatedProperties.
+# Place fields (city, region, location, proprietor, ...) take a link or a plain note
+# ("unknown", "Various", "None — stands in the wilds"), per the base rule on placeholders.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: location
+type: object
+required: [subtype, state]
+$defs:
+  text: {$ref: entity.schema.yaml#/$defs/text}
+  text-list: {$ref: entity.schema.yaml#/$defs/text-list}
+  links: {$ref: entity.schema.yaml#/$defs/annotated-links}
+  faction-control:
+    description: A link, "unknown", or a list of links when control is shared.
+    anyOf:
+      - {$ref: '#/$defs/text'}
+      - {$ref: '#/$defs/links'}
+  region-biome:
+    enum: [arctic, tundra, taiga, temperate-forest, tropical-forest, grassland, savanna, desert,
+      scrubland, wetland, coastal, alpine, volcanic, aerial, underdark, planar, mediterranean]
+allOf:
+  - $ref: entity.schema.yaml
+  - if:
+      properties: {subtype: {const: biome}}
+    then:
+      required: [biome_type, climate]
+      properties:
+        state: {enum: [thriving, stable, stressed, blighted, barren, shifting]}
+        biome_type:
+          enum: [desert, tundra, grassland, savanna, temperate-forest, rainforest, boreal-forest,
+            wetland, marsh, mountain, alpine, coast, reef, volcanic, badlands, underdark, other]
+        climate:
+          enum: [arid, semi-arid, temperate, mediterranean, tropical, subtropical, continental,
+            polar, alpine, other]
+        regions: {$ref: '#/$defs/links'}
+        flora: {$ref: '#/$defs/text-list'}
+        fauna: {$ref: '#/$defs/text-list'}
+        hazards: {$ref: '#/$defs/text-list'}
+        travel: {enum: [open, moderate, slow, seasonal, impassable]}
+        seasonal_effects: {$ref: '#/$defs/text'}
+        hook: {$ref: '#/$defs/text'}
+  - if:
+      properties: {subtype: {const: building}}
+    then:
+      required: [city, residents, purpose]
+      properties:
+        state: {enum: [occupied, abandoned, damaged, ruined, destroyed]}
+        city: {$ref: '#/$defs/text'}
+        residents:
+          description: Annotated links, or "unknown".
+          $ref: '#/$defs/text-list'
+        purpose: {enum: [residential, civic, religious, military, lair, other]}
+        map_location: {$ref: '#/$defs/text'}
+        condition: {$ref: '#/$defs/text'}
+  - if:
+      properties: {subtype: {const: city}}
+    then:
+      required: [global_location, purpose]
+      properties:
+        state: {enum: [thriving, stable, troubled, besieged, ruined, abandoned]}
+        global_location: {$ref: '#/$defs/text'}
+        purpose: {enum: [commerce, political, military, religious, other]}
+        map: {$ref: '#/$defs/text'}
+        population: {$ref: '#/$defs/text'}
+        composition: {$ref: '#/$defs/text'}
+        tensions: {$ref: '#/$defs/text-list'}
+        factions: {$ref: '#/$defs/links'}
+        controlling_faction: {$ref: '#/$defs/faction-control'}
+        rulership: {$ref: '#/$defs/text'}
+        shops: {$ref: '#/$defs/links'}
+        trade_specialty: {$ref: '#/$defs/text'}
+        routes:
+          description: Trade routes, highways or sea lanes serving the city (route-cities.py).
+          $ref: '#/$defs/links'
+  - if:
+      properties: {subtype: {const: dungeon}}
+    then:
+      required: [location, origin, current_threat, hook]
+      properties:
+        state: {enum: [unknown, known, active, partially-explored, cleared, repopulated, sealed]}
+        location: {$ref: '#/$defs/text'}
+        origin: {$ref: '#/$defs/text'}
+        current_threat: {$ref: '#/$defs/text'}
+        hook: {$ref: '#/$defs/text'}
+        entrances: {$ref: '#/$defs/text-list'}
+        levels: {$ref: '#/$defs/text'}
+        known_dangers: {$ref: '#/$defs/text-list'}
+  - if:
+      properties: {subtype: {const: region}}
+    then:
+      required: [geography, controlling_faction]
+      properties:
+        state: {enum: [stable, contested, occupied, frontier, devastated]}
+        geography: {$ref: '#/$defs/text'}
+        controlling_faction: {$ref: '#/$defs/faction-control'}
+        climate: {$ref: '#/$defs/text'}
+        biome:
+          description: One biome, or a list of them.
+          anyOf:
+            - {$ref: '#/$defs/region-biome'}
+            - {type: array, items: {$ref: '#/$defs/region-biome'}}
+        tensions: {$ref: '#/$defs/text-list'}
+        settlements: {$ref: '#/$defs/links'}
+        notable_features: {$ref: '#/$defs/text-list'}
+        wilderness_areas: {$ref: '#/$defs/links'}
+        hook: {$ref: '#/$defs/text'}
+  - if:
+      properties: {subtype: {const: shop}}
+    then:
+      required: [city, proprietor, purpose]
+      properties:
+        state: {enum: [open, closed, under-new-management, destroyed]}
+        city: {$ref: '#/$defs/text'}
+        proprietor: {$ref: '#/$defs/text'}
+        purpose: {enum: [commerce, political, front, religious, criminal, other]}
+        map_location: {$ref: '#/$defs/text'}
+        customers: {$ref: '#/$defs/text'}
+        supply: {$ref: '#/$defs/links'}
+        specialty: {$ref: '#/$defs/text'}
+  - if:
+      properties: {subtype: {const: terrain-feature}}
+    then:
+      required: [feature_type, region]
+      properties:
+        state: {enum: [passable, difficult, flooded, frozen, damaged, impassable, contested]}
+        feature_type:
+          enum: [river, lake, sea, mountain-range, peak, hill-range, valley, pass, cliff, forest,
+            swamp, road, bridge, ford, canyon, island, peninsula, coast, bay, other]
+        region:
+          description: Region links, or "unknown".
+          $ref: '#/$defs/text-list'
+        scale: {enum: [local, regional, continental]}
+        navigability: {enum: [easy, moderate, difficult, impassable]}
+        connects: {$ref: '#/$defs/links'}
+        controlled_by: {$ref: '#/$defs/text'}
+        seasonal_effects: {$ref: '#/$defs/text'}
+        hook: {$ref: '#/$defs/text'}
+  - if:
+      properties: {subtype: {const: wilderness}}
+    then:
+      required: [region, terrain]
+      properties:
+        state: {enum: [safe, dangerous, contested, cursed, blighted, impassable]}
+        region: {$ref: '#/$defs/text'}
+        terrain: {enum: [forest, mountain, swamp, plains, desert, coast, road, river, other]}
+        travel_difficulty: {enum: [easy, moderate, hard, treacherous]}
+        hazards: {$ref: '#/$defs/text-list'}
+        notable_features: {$ref: '#/$defs/text-list'}
+        connects: {$ref: '#/$defs/links'}
+        hook: {$ref: '#/$defs/text'}
+properties:
+  type: {const: location}
+  subtype:
+    enum: [biome, building, city, dungeon, region, shop, terrain-feature, wilderness]
+unevaluatedProperties: false

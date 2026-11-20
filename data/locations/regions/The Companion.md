@@ -3,7 +3,7 @@ name: The Companion
 type: location
 subtype: region
 exists: false
-state: passable
+state: stable
 contributed_by: kellan
 tags:
   - location
