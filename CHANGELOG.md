@@ -11,6 +11,7 @@ The version in [`VERSION`](./VERSION) always matches the top entry below.
 ### Changed
 
 - The charting app and session runner compile with React Compiler (`app/react-compiler.ts`, in the pages' Vite config and in Vitest), so components drop `useMemo`, `useCallback` and `memo`. It also compiles jeff-ui from `node_modules`, which is served unbundled in dev (`optimizeDeps.exclude`).
+- The pin moves to `jeff-ui` v0.7.0, whose components are written for React Compiler.
 
 ## [0.76.0] — 2026-11-20
 
