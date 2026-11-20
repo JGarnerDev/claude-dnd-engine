@@ -8,20 +8,15 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-20):** step 7 done (engine v0.95.0): `scripts/gen-schema-docs.py` writes each schema doc's state table and frontmatter template from its schema, and `validate.py` errors on a stale doc.
 
-**Next:** step 8, rules and docs (needs Jeff's go-ahead).
+**Status (2026-11-20):** step 8 done (engine v0.96.0): the rules are in `meta/entity-creation.md` and `CLAUDE.md`, the template is synced, and the temporary scripts are deleted. **The migration is done.** One item is left for Jeff: tell the collaborators about the link-quoting rule.
+
+**Next:** nothing; Jeff sends the collaborator note.
 
 ## Resuming in a new session
 
 1. Read [PLAN.md](PLAN.md) (goal, decisions D1–D5, steps), then this file.
-2. Check the starting point: `uv run tasks/schema-migration/scripts/audit.py | head -7` should show 1,586 entity files, all strict YAML, 0 unquoted links. If new files have unquoted links, run `quote-links.py` on them first.
-3. Take a baseline before changing any parser or script: `uv run tasks/schema-migration/scripts/snapshot.py <scratch>/before`. After the change, snapshot to `<scratch>/after` and `diff -r` the two folders. Every difference must be explained as a fix.
 
-### Temporary tools (`tasks/schema-migration/scripts/`, deleted in step 8)
-
-- `audit.py`: read-only survey. No flags: summary plus fields and values per type. `--type <type>`: every field and value for one type (input for step 6). `--files`: files that fail strict YAML.
-- `quote-links.py <folder>... [--apply] [--quiet]`: quotes unquoted frontmatter links. Dry run by default.
-- `fill-provenance.py [--apply]`: fills missing `source_session` / `confirmed_date` in historian files (sessions exempt). Dry run by default; run it on new historian files if `validate.py` reports provenance errors.
-- `snapshot.py <out_dir>`: runs the 24 scripts that use `get_frontmatter` (28 runs) and saves each output. It restores `historian/timeline/` afterwards, and briefly copies Session 34 into `scheduler/sessions/` for four session-plan scripts (that folder is empty between sessions).
+The temporary scripts (`audit.py`, `quote-links.py`, `fill-provenance.py`, `snapshot.py`) were deleted in step 8; git history has them (engine v0.95.0).
 
 ### Things to know
 
@@ -71,4 +66,5 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
   - [x] background: `meta/schemas/background.schema.yaml` (v0.92.0), enforced. Fixed: seven empty `language_proficiencies: ""` set to `none`
   - [x] class: `meta/schemas/class.schema.yaml` (v0.92.0), enforced. `hit_die` is 6, 8, 10 or 12; `saving_throws` two abilities. The proficiency fields are one-line text (as every class file has them), not lists; prose updated. Fixed: four `spellcasting_ability: null` removed from non-casters
 - [x] 7. `scripts/gen-schema-docs.py` generates `meta/schemas/*.md`; check that generated files are up to date (v0.95.0). Only the Valid State Values table and the Frontmatter Template are generated, between marker comments; forms, body templates and notes stay hand-written. The text comes from schema keys the validator ignores: `x-states`, `description`, `x-placeholder`, `x-doc`. `validate.py` errors on a stale doc (`gen.sync(write=False)`); `tests/scripts/test_schema_docs.py` covers it. Fixed on the way: feat states, act and mission historian fields
-- [ ] 8. Rules and docs updated (quote frontmatter links; edit schemas, not the generated docs), template synced with `/sync`, collaborators told, `tasks/schema-migration/scripts/` deleted
+- [x] 8. Rules and docs updated (quote frontmatter links; run `validate.py` after creating an entity; edit schemas, not the generated docs) in `meta/entity-creation.md`, `CLAUDE.md` and `data/CLAUDE.md`, template synced with `/sync`, `tasks/schema-migration/scripts/` deleted (v0.96.0). The pre-commit validator hook was skipped: a full `validate.py` run takes minutes
+- [ ] Jeff tells the collaborators about the link-quoting rule

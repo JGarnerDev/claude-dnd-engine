@@ -45,7 +45,7 @@ When a sparse `./data` or `./historian` entity is selected as a **key story elem
 
    Then draft the elaboration as a clearly labeled proposal block, scoped to the tier. Wait for confirm, tweak, or reject before touching the file.
 4. If the DM writes it: wait; do not fill in parallel.
-5. On approval: write the elaboration back to the entity file immediately. Then add a one-line entry to `meta/trait-registry.md` under the matching entity-type section — 10 words max, format: `- [[Name]] — [core trait]`. Do this before moving on.
+5. On approval: write the elaboration back to the entity file immediately. Then add a one-line entry to `meta/trait-registry.md` under the matching entity-type section — 10 words max, format: `- [[Name]] — [core trait]`. Do this before moving on. If the elaboration touched frontmatter, run `uv run scripts/validate.py` (frontmatter links stay quoted: `"[[Name]]"`).
 
 **Skip the prompt if:** entity is background texture only (not a speaking role, not a central location), or the DM has indicated they want it loose.
 

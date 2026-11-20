@@ -12,6 +12,9 @@ Every piece of content in this engine is an **entity** — a markdown file with 
 5.3 The filename (excluding `.md`) must be the human-readable, properly capitalized name that exactly matches the `name:` frontmatter field. Do not use slugs, kebab-case, lowercase, or any other transformation — the filename and the `name:` value must be identical.
 6. Populate all mandatory frontmatter fields. Use `unknown` or `"TBD"` for anything not yet known — never omit a mandatory field.
 7. Turn all named references to known entities into wiki-links in the entire document, including front matter.
+8. Run `uv run scripts/validate.py` and fix any error it reports for the new file (schema violations, dangling links, missing fields).
+
+Each type's rules live in `meta/schemas/<type>.schema.yaml`; the State table and Frontmatter Template in `meta/schemas/<type>.md` are generated from it. **To change a field, state or template, edit the schema, then run `uv run scripts/gen-schema-docs.py`.** Never hand-edit a generated block (between `<!-- generated: ... -->` and `<!-- end generated -->`); `validate.py` reports a stale block as an error.
 
 If a user provides form answers (structured or freeform), use the **Form → Frontmatter Mapping** table in the schema to translate their answers into the correct fields. If required fields are missing, ask before creating the file.
 
@@ -83,11 +86,12 @@ Each schema file also contains a **Player Form** section — a set of plain-lang
 All entity files use Obsidian-compatible YAML frontmatter:
 
 - `relates_to`, `resources`, `known_by`, `owner`, and any other link fields must use `[[wiki-link]]` syntax so edges appear in Obsidian's graph view. Relationship annotations after the link are allowed.
+- **Always quote a frontmatter link:** `owner: "[[Name]]"`, `- "[[Name]] (note)"`. Unquoted, YAML reads `[[Name]]` as a nested list and the file fails validation.
 - **Every `[[wiki-link]]` in frontmatter must also appear somewhere in the markdown body.** Obsidian parses frontmatter links; Foam (VS Code) parses body links only. Dual placement is required for graph coverage in both tools.
 - `tags` must come from `meta/tags.md`. Never invent a tag — check the registry first.
 - **Entity → Entity relationships use `[[wiki-link]]` in the body, never tags.** If a relationship can be expressed as a direct link between two entity files (e.g. a character's race, class, background, faction, or location), use a `[[wiki-link]]` in the markdown body. Do not create a tag as a proxy for that relationship. Tags are only for properties that have no entity counterpart (e.g. `player/jeff`, `state/alive`, `pantheon/faerûnian`).
 - `type` and `subtype` must come from `meta/types.md`. Never invent a combination.
 - `aliases` enables Obsidian to resolve alternate names to the same node.
-- **Never put an inline `#` comment on a frontmatter scalar.** `get_frontmatter` in `scripts/lib/common.py` only accepts a scalar line that ends immediately after its value — a `#` anywhere after the value makes the whole line fail to match, so **the field is silently dropped for every script** while still looking correct in Obsidian and in the file. Put the note on its own full-line `#` comment *above* the field instead; full-line comments match nothing and are harmlessly ignored. (This cost `Halsby.md` its `campaign: homebrew` tag until 2026-10-01 — the campaign-separation field was invisible to every brief that reads it.)
+- Frontmatter must be strict YAML. Trailing `# comments` are fine; a value containing `:` or `#` must be quoted.
 
 Files in `historian/` use the same schema as `data/` but add mandatory `source_session` and `confirmed_date` fields (see `meta/schemas/entity.md`). When a `data/` entity and a `historian/` entity conflict, the `historian/` entry is authoritative.

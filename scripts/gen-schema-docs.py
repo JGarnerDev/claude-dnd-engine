@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # gen-schema-docs.py -- write the generated blocks of meta/schemas/<type>.md from <type>.schema.yaml.
-# consumers: scripts/validate.py (sync), meta/schemas/CLAUDE.md -- update these if usage, flags, or output format change.
+# consumers: scripts/validate.py (sync), CLAUDE.md, meta/entity-creation.md -- update these if usage, flags, or output format change.
 # Each prose doc keeps two generated blocks, between marker comments:
 #   <!-- generated: states from X.schema.yaml ... -->     the Valid State Values table
 #   <!-- generated: template from X.schema.yaml ... -->   the Frontmatter Template

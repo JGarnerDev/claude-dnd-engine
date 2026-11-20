@@ -94,7 +94,7 @@ When starting a new campaign, read `meta/new-campaign-setup.md` before generatin
 
 ## Entity Creation
 
-When creating any entity, read `meta/entity-creation.md` before proceeding. It contains the full protocol, known schemas, Obsidian frontmatter rules, and gameplay mechanics guidance.
+When creating any entity, read `meta/entity-creation.md` before proceeding. It contains the full protocol, known schemas, Obsidian frontmatter rules, and gameplay mechanics guidance. Three rules in short: quote every frontmatter link (`"[[Name]]"`); run `uv run scripts/validate.py` after creating an entity; change a type's fields or states in `meta/schemas/<type>.schema.yaml` and run `uv run scripts/gen-schema-docs.py`, never by hand-editing the generated blocks in `meta/schemas/<type>.md`.
 
 ## Prose Style
 
@@ -191,7 +191,8 @@ Only cross-cutting scripts are listed here. Scripts that one command or domain u
 | `semantic-search.py` | Semantic similarity search — find entities by meaning, not keywords | `uv run scripts/semantic-search.py "<text>" [--type <type>] [--subtype <sub>] [--exists true\|false] [--source data\|historian\|scheduler] [-k <n>]` |
 | `session-start.py` | Start-of-conversation orientation (run by the SessionStart hook) | `uv run scripts/session-start.py` |
 | `version-check.py` | Before a bump — engine changes since the last version bump (see `meta/versioning.md`) | `uv run scripts/version-check.py` |
-| `validate.py` | Graph integrity check — dangling `[[links]]`, missing/invalid `exists`/`name`/`type`, duplicate filenames, broken canon. Run before canonizing or after bulk edits | `uv run scripts/validate.py [--scope all\|links\|frontmatter] [--quiet]` |
+| `validate.py` | Graph integrity check — dangling `[[links]]`, missing/invalid `exists`/`name`/`type`, duplicate filenames, broken canon, schema violations, stale generated schema docs. Run after creating an entity, before canonizing, or after bulk edits | `uv run scripts/validate.py [--scope all\|links\|frontmatter] [--quiet]` |
+| `gen-schema-docs.py` | Rewrite the generated blocks (state table, frontmatter template) of `meta/schemas/*.md` from their `.schema.yaml`. Run after editing a schema | `uv run scripts/gen-schema-docs.py [--check]` |
 | `validate-refs.ps1` | Instruction-file reference lint — finds path refs in CLAUDE.md files, commands, meta, tests, and todo files that point at renamed/deleted files. Run after renaming, moving, or deleting any instruction file or script | `.\scripts\validate-refs.ps1 [-Quiet]` |
 | `refs.ps1` | Reverse dependency lookup — every file:line that references a target file. Run before renaming a file or changing a script's flags/output format, then update what it lists | `.\scripts\refs.ps1 -Target <path-or-filename>` |
 

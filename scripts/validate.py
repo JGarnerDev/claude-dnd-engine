@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # validate.py -- integrity checks for the campaign entity graph, built on notes-kit.
-# consumers: CLAUDE.md, tests/CLAUDE.md, scripts/todo-brief.py (count_errors), .claude/commands/handover.md, .claude/commands/recap.md, tests/commands/recap/spec.md -- update these if usage, flags, or output format change.
+# consumers: CLAUDE.md, meta/entity-creation.md, tests/CLAUDE.md, scripts/todo-brief.py (count_errors), .claude/commands/handover.md, .claude/commands/recap.md, tests/commands/recap/spec.md -- update these if usage, flags, or output format change.
 # Catches problems that accumulate silently across 1000+ files:
 #   ERRORS   - dangling [[wiki-links]]; missing mandatory frontmatter (name/type/exists);
 #              exists:false in historian/ (canon must be real); historian files (except
