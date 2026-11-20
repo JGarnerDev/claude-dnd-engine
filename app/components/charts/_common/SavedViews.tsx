@@ -28,10 +28,10 @@ export function SavedViews({ getCurrent, apply }: SavedViewsProps) {
   const [views, setViews] = useState(listViews);
   return (
     <>
-      <Popover label="Save view" icon={<SaveIcon />} classNames={classNames} unstyled onOpen={() => nameRef.current?.focus()}>
+      <Popover label="Save view" icon={saveIcon} classNames={classNames} unstyled onOpen={() => nameRef.current?.focus()}>
         {({ close }) => <SaveViewForm nameRef={nameRef} getCurrent={getCurrent} onSaved={close} />}
       </Popover>
-      <Popover label="Load view" icon={<LoadIcon />} classNames={classNames} unstyled onOpen={() => setViews(listViews())}>
+      <Popover label="Load view" icon={loadIcon} classNames={classNames} unstyled onOpen={() => setViews(listViews())}>
         {({ close }) => (
           <SavedViewList
             views={views}
@@ -52,25 +52,21 @@ const svg = {
   strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true,
 } as const;
 
-function SaveIcon() {
-  return (
-    <svg {...svg}>
-      <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
-      <polyline points="17 21 17 13 7 13 7 21" />
-      <polyline points="7 3 7 8 15 8" />
-    </svg>
-  );
-}
+const saveIcon = (
+  <svg {...svg}>
+    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
+    <polyline points="17 21 17 13 7 13 7 21" />
+    <polyline points="7 3 7 8 15 8" />
+  </svg>
+);
 
-function LoadIcon() {
-  return (
-    <svg {...svg}>
-      <line x1="8" y1="6" x2="21" y2="6" />
-      <line x1="8" y1="12" x2="21" y2="12" />
-      <line x1="8" y1="18" x2="21" y2="18" />
-      <line x1="3" y1="6" x2="3.01" y2="6" />
-      <line x1="3" y1="12" x2="3.01" y2="12" />
-      <line x1="3" y1="18" x2="3.01" y2="18" />
-    </svg>
-  );
-}
+const loadIcon = (
+  <svg {...svg}>
+    <line x1="8" y1="6" x2="21" y2="6" />
+    <line x1="8" y1="12" x2="21" y2="12" />
+    <line x1="8" y1="18" x2="21" y2="18" />
+    <line x1="3" y1="6" x2="3.01" y2="6" />
+    <line x1="3" y1="12" x2="3.01" y2="12" />
+    <line x1="3" y1="18" x2="3.01" y2="18" />
+  </svg>
+);

@@ -2,18 +2,19 @@
 // titled with the PC's name, each achievement a "New achievement!" popup.
 
 import './achievements.css';
+import { Card } from 'jeff-ui';
 import { beforeLast, unlink, type DeckSlide } from './deck.js';
 import { InlineMd } from './MarkdownView.js';
 import type { PcAchievements } from './types.js';
 
-function Card({ title, text, times }: { title: string; text: string; times: number }) {
+function AchievementCard({ title, text, times }: { title: string; text: string; times: number }) {
   const again = times > 1;
   return (
-    <div className={`ac-card${again ? ' is-repeat' : ''}`}>
+    <Card unstyled className={`ac-card${again ? ' is-repeat' : ''}`}>
       <div className="ac-eyebrow">{again ? <>Achievement earned again <b>×{times}</b></> : 'New achievement!'}</div>
       <div className="ac-title"><InlineMd md={unlink(title)} /></div>
       {text && <div className="ac-text"><InlineMd md={unlink(text)} /></div>}
-    </div>
+    </Card>
   );
 }
 
@@ -22,7 +23,7 @@ export function achievementSlides(a: PcAchievements[] | null | undefined): DeckS
   return (a ?? []).filter((p) => p.items.length).map((p) => ({
     title: p.pc,
     md: '',
-    body: <div className="ac-wrap">{p.items.map((i, k) => <Card key={k} title={i.title} text={i.text} times={i.times} />)}</div>,
+    body: <div className="ac-wrap">{p.items.map((i, k) => <AchievementCard key={k} title={i.title} text={i.text} times={i.times} />)}</div>,
   }));
 }
 

@@ -14,6 +14,7 @@
 // them all (they come back on its turn, which the runner doesn't track).
 
 import { useEffect, useRef, type KeyboardEvent } from 'react';
+import { Button, Disclosure, IconButton } from 'jeff-ui';
 import type { Phase, StatBlock } from './combatants.js';
 import { rollable, RollLog, type LoggedRoll } from './Dice.js';
 import { allItems, inlineText, type Alert } from './fight-cues.js';
@@ -85,13 +86,12 @@ function Card({ c, rolls, onClearRolls }: { c: FightChip; rolls: readonly Logged
       )}
       <div className="sr-strip-card-rolls">
         <RollLog rolls={rolls} />
-        <button type="button" className="sr-roll-clear" title="Clear the roll log" hidden={!rolls.length} onClick={onClearRolls}>Clear rolls</button>
+        <Button variant="ghost" className="sr-roll-clear" title="Clear the roll log" hidden={!rolls.length} onClick={onClearRolls}>Clear rolls</Button>
       </div>
       {boss.length > 0 && <ul className="sr-md sr-strip-card-boss"><MdItems items={boss} text={rollable} /></ul>}
-      <details className="sr-strip-card-more">
-        <summary>Full block</summary>
+      <Disclosure className="sr-strip-card-more" title="Full block">
         <div className="sr-md"><div className="sr-enemy-title">{b.title}</div><Markdown md={md} text={rollable} /></div>
-      </details>
+      </Disclosure>
     </div>
   );
 }
@@ -133,13 +133,13 @@ export function FightBar({ mode, round, chips, alerts, pick, spent, rolls, onRou
       <div className="sr-strip-top">
         <span className="sr-strip-mode">{mode === 'boss' ? 'Boss fight' : 'Fight'}</span>
         <span className="sr-round">
-          <button type="button" data-round="-1" aria-label="Previous round" onClick={() => onRound(-1)}>−</button>
+          <IconButton data-round="-1" label="Previous round" onClick={() => onRound(-1)}>−</IconButton>
           <span>Round <output>{round}</output></span>
-          <button type="button" data-round="1" aria-label="Next round" onClick={() => onRound(1)}>+</button>
+          <IconButton data-round="1" label="Next round" onClick={() => onRound(1)}>+</IconButton>
         </span>
         <div className="sr-strip-alerts" aria-live="polite">
           {alerts.map((a, i) => (a.kind === 'ready'
-            ? <button key={i} type="button" className="sr-alert is-ready" data-to={a.to} onClick={() => onGo(a.to)}>{a.text}</button>
+            ? <Button key={i} variant="primary" className="sr-alert is-ready" data-to={a.to} onClick={() => onGo(a.to)}>{a.text}</Button>
             : <span key={i} className="sr-alert is-now">{a.text}</span>))}
         </div>
       </div>

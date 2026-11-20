@@ -10,6 +10,7 @@
 // while HP changes around it.
 
 import type { KeyboardEvent, ReactNode } from 'react';
+import { Badge, Button, Disclosure, EmptyState } from 'jeff-ui';
 import { matchEnemy } from './combatants.js';
 import type { Phase, StatBlock } from './combatants.js';
 import { rollable, RollLog, type LoggedRoll } from './Dice.js';
@@ -47,7 +48,7 @@ export interface HpActions {
   onUndo: (i: number) => void;
 }
 
-function Row({ label, chips, children }: { label: string; chips?: boolean; children: ReactNode }) {
+function row(label: string, children: ReactNode, chips = false) {
   return (
     <div className="sr-sh-row">
       <span className="sr-sh-label">{label}</span>
@@ -56,7 +57,7 @@ function Row({ label, chips, children }: { label: string; chips?: boolean; child
   );
 }
 
-const Chips = ({ items }: { items: string[] }) => items.map((x, i) => <span key={i} className="sr-sh-chip"><InlineMd md={x} /></span>);
+const Chips = ({ items }: { items: string[] }) => items.map((x, i) => <Badge key={i} className="sr-sh-chip"><InlineMd md={x} /></Badge>);
 
 interface HpBoxProps {
   entry: string;
@@ -96,15 +97,14 @@ function Enemy({ entry, blocks, hp, arrives = 0, round, onHit }: { entry: string
   if (!b) return <div className={`sr-enemy is-unmatched${coming}`} data-arrives={at}><span className="sr-enemy-name"><InlineMd md={entry} />{tag}</span></div>;
   const down = b.hp !== null && (hp[entry] ?? b.start ?? b.hp) <= 0;
   return (
-    <details className={`sr-enemy${down ? ' is-down' : ''}${coming}`} data-arrives={at}>
-      <summary>
+    <Disclosure unstyled className={`sr-enemy${down ? ' is-down' : ''}${coming}`} data-arrives={at} title={<>
         <span className="sr-enemy-name"><InlineMd md={entry} />{tag}</span>
         <span className="sr-enemy-stats"><InlineMd md={rowStats(b.stats)} /></span>
         <span className="sr-enemy-atk">{b.attacks.map((a, i) => <span key={i} className="sr-atk"><InlineMd md={stripProvenance(a)} text={rollable} /></span>)}</span>
         {b.hp !== null ? <HpBox entry={entry} max={b.hp} hp={hp} start={b.start ?? b.hp} boss={b} onHit={onHit} /> : <span />}
-      </summary>
+      </>}>
       <div className="sr-md sr-enemy-block"><div className="sr-enemy-title">{b.title}</div><Markdown md={stripProvenance(b.md)} text={rollable} /></div>
-    </details>
+    </Disclosure>
   );
 }
 
@@ -119,8 +119,7 @@ export function HpLog({ log, entries, open, onToggle, onUndo }: {
   const rows = log.map((e, i) => ({ e, i })).filter(({ e }) => touches(e).some((k) => mine.has(k))).reverse();
   const live = rows.filter(({ e }) => !e.undone).length;
   return (
-    <details className="sr-hplog" open={open} onToggle={(ev) => onToggle(ev.currentTarget.open)}>
-      <summary>HP log ({live})</summary>
+    <Disclosure className="sr-hplog" title={`HP log (${live})`} open={open} onToggle={(ev) => onToggle(ev.currentTarget.open)}>
       {rows.length ? (
         <ol>{rows.map(({ e, i }) => (
           <li key={i} className={e.undone ? 'is-undone' : ''}>
@@ -130,12 +129,12 @@ export function HpLog({ log, entries, open, onToggle, onUndo }: {
               : <><b>{e.label}</b> {Object.entries(e.before).filter(([k]) => mine.has(k)).map(([k, v]) => `${plainText(k)} was ${v}`).join(' · ')}</>}</span>
             {e.undone
               ? <span className="sr-hplog-tag">undone</span>
-              : <button type="button" className="sr-hplog-undo" data-undo={i} disabled={!undoable(log, i)}
-                  title={undoable(log, i) ? undefined : 'Changed since: undo the newer entry first'} onClick={() => onUndo(i)}>Undo</button>}
+              : <Button variant="ghost" className="sr-hplog-undo" data-undo={i} disabled={!undoable(log, i)}
+                  title={undoable(log, i) ? undefined : 'Changed since: undo the newer entry first'} onClick={() => onUndo(i)}>Undo</Button>}
           </li>
         ))}</ol>
-      ) : <p className="sr-hplog-empty">Every HP entry lands here, and Reset HP never clears it.</p>}
-    </details>
+      ) : <EmptyState className="sr-hplog-empty">Every HP entry lands here, and Reset HP never clears it.</EmptyState>}
+    </Disclosure>
   );
 }
 
@@ -159,19 +158,19 @@ export function SceneHead({ h, blocks, hp, log, logOpen, onLogToggle, rolls, onC
     <>
       {h.summary && <p className="sr-sh-summary">{p(h.summary)}</p>}
       <div className="sr-sh-grid">
-        {h.where && <Row label="Where">{p(h.where)}</Row>}
-        {h.cast && <Row label="Who’s here" chips={castList}>{castList ? <Chips items={h.cast.split(' · ')} /> : p(h.cast)}</Row>}
-        {h.dcs.length > 0 && <Row label="DCs" chips><Chips items={h.dcs} /></Row>}
+        {h.where && row('Where', p(h.where))}
+        {h.cast && row('Who’s here', castList ? <Chips items={h.cast.split(' · ')} /> : p(h.cast), castList)}
+        {h.dcs.length > 0 && row('DCs', <Chips items={h.dcs} />, true)}
       </div>
       {h.enemies.length > 0 && (
         <div className="sr-enemies">
           <div className="sr-enemies-head">
             <span className="sr-sh-label">Enemies</span>
             <span className="sr-enemies-btns">
-              <button type="button" className="sr-roll-clear" title="Clear the roll log" hidden={!rolls.length} onClick={onClearRolls}>Clear rolls</button>
-              <button type="button" className="sr-hp-undo-reset" data-undo={undoAt} title="Put back the HP the last reset wiped" hidden={undoAt < 0}
-                onClick={() => { if (undoAt >= 0) onUndo(undoAt); }}>Undo reset</button>
-              <button type="button" className="sr-hp-reset" title="Put every enemy back to its known HP at the start of the session. The HP log keeps the old numbers." onClick={onReset}>Reset HP</button>
+              <Button variant="ghost" className="sr-roll-clear" title="Clear the roll log" hidden={!rolls.length} onClick={onClearRolls}>Clear rolls</Button>
+              <Button variant="ghost" className="sr-hp-undo-reset" data-undo={undoAt} title="Put back the HP the last reset wiped" hidden={undoAt < 0}
+                onClick={() => { if (undoAt >= 0) onUndo(undoAt); }}>Undo reset</Button>
+              <Button variant="danger" className="sr-hp-reset" title="Put every enemy back to its known HP at the start of the session. The HP log keeps the old numbers." onClick={onReset}>Reset HP</Button>
             </span>
           </div>
           <RollLog rolls={rolls} />

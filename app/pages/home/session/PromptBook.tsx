@@ -12,6 +12,7 @@
 //   Fight    where a fight or a boss fight starts and ends (`Combat starts:`, `Boss fight ends:`)
 
 import { Fragment, useEffect, useRef, useState, type ReactNode } from 'react';
+import { Button } from 'jeff-ui';
 import { itemLit, watchCue, type Lit } from './fight-cues.js';
 import { useFightLit } from './FightContext.js';
 import { extractCallouts } from './markdown.js';
@@ -32,9 +33,9 @@ export function CopyButton({ text }: { text: string }) {
     });
   };
   return (
-    <button type="button" className={`sr-copy${copied ? ' is-copied' : ''}`} data-copy={text} title="Copy this message" onClick={onClick}>
+    <Button className={`sr-copy${copied ? ' is-copied' : ''}`} data-copy={text} title="Copy this message" onClick={onClick}>
       {copied ? 'Copied' : 'Copy'}
-    </button>
+    </Button>
   );
 }
 

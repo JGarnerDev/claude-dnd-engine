@@ -12,6 +12,7 @@
 // usePanel.ts holds the panel's state and what the runner calls (open, escape, …).
 
 import { useLayoutEffect, useMemo, useRef, type ReactNode } from 'react';
+import { Badge, Button, Disclosure, EmptyState, IconButton } from 'jeff-ui';
 import { searchEntities, type Resolver } from './entities.js';
 import { EntityView } from './EntityView.js';
 import { LAYER_LABEL } from './entity-fetch.js';
@@ -28,19 +29,19 @@ import type { EntityRef, Section, SessionData } from './types.js';
 import { crumb, type Item, type PanelApi, type PanelContext } from './usePanel.js';
 
 // A search hit's text with the match marked.
-function Hl({ s, q }: { s: string; q: string }) {
+function marked(s: string, q: string): ReactNode {
   const i = s.toLowerCase().indexOf(q.toLowerCase());
   if (i < 0) return <>{s}</>;
   return <>{s.slice(0, i)}<mark>{s.slice(i, i + q.length)}</mark>{s.slice(i + q.length)}</>;
 }
 
-function Group({ title, children }: { title: string; children: ReactNode[] }) {
+function group(title: string, children: ReactNode[]) {
   return children.length > 0 && <><h3 className="sr-group">{title}</h3>{children}</>;
 }
 
 function Fold({ title, children }: { title: string; children: ReactNode[] }) {
   return children.length > 0 && (
-    <details className="sr-pn-fold"><summary>{title} <span className="sr-pn-count">{children.length}</span></summary>{children}</details>
+    <Disclosure className="sr-pn-fold" title={title} count={children.length}>{children}</Disclosure>
   );
 }
 
@@ -97,15 +98,15 @@ export function Panel({ p, data, resolve, refs, ctx, where, onGo }: PanelProps) 
             {m.status && <span className="sr-pc-status"><InlineMd md={m.status} /></span>}
           </button>
         ))}</div>
-        <Group title="On this step">{ctx.onCard.map((e) => row(e))}</Group>
-        <Group title="In this scene">{ctx.inScene.filter((e) => !onCard.has(e)).map((e) => row(e))}</Group>
-        <Group title="More">{more}</Group>
+        {group('On this step', ctx.onCard.map((e) => row(e)))}
+        {group('In this scene', ctx.inScene.filter((e) => !onCard.has(e)).map((e) => row(e)))}
+        {group('More', more)}
       </>
     );
   };
 
   const results = () => {
-    const hl = (s: string) => <Hl s={s} q={q} />;
+    const hl = (s: string) => marked(s, q);
     const ents = searchEntities(q, data.entities, 12); // few enough that the beats below stay in reach
     const flow = searchFlow(data, refs, q);
     const answers = searchMysteries(q, mysteries);
@@ -114,13 +115,13 @@ export function Panel({ p, data, resolve, refs, ctx, where, onGo }: PanelProps) 
     const hit = (h: FlowHit, i: number) => (h.kind === 'scene'
       ? pnRow(i, { 'data-scene': h.key }, () => p.openScene(h.key, fresh), hl(`Scene ${h.key} — ${h.title}`))
       : pnRow(i, { 'data-beat': h.id }, () => p.openBeat(h.id, fresh), hl(h.title), <><span className="sr-pn-id">{hl(h.id)}</span> · {h.sub}</>));
-    if (!ents.length && !flow.length && !answers.length && !secs.length) return <p className="sr-empty">No matches for “{q}”.</p>;
+    if (!ents.length && !flow.length && !answers.length && !secs.length) return <EmptyState className="sr-empty">No matches for “{q}”.</EmptyState>;
     return (
       <>
-        <Group title="People and places">{ents.map((e) => row(e, hl(e.name)))}</Group>
-        <Group title="Beats and scenes">{flow.map(hit)}</Group>
-        <Group title="Mysteries">{answers.map((s) => sectionRow('mystery', mysteries.indexOf(s), hl(s.title)))}</Group>
-        <Group title="Plan">{secs.map((s) => sectionRow('section', sections.indexOf(s), hl(s.title)))}</Group>
+        {group('People and places', ents.map((e) => row(e, hl(e.name))))}
+        {group('Beats and scenes', flow.map(hit))}
+        {group('Mysteries', answers.map((s) => sectionRow('mystery', mysteries.indexOf(s), hl(s.title))))}
+        {group('Plan', secs.map((s) => sectionRow('section', sections.indexOf(s), hl(s.title))))}
       </>
     );
   };
@@ -136,18 +137,18 @@ export function Panel({ p, data, resolve, refs, ctx, where, onGo }: PanelProps) 
     return (
       <>
         <h2 className="sr-pn-title">{s.title}</h2>
-        <div className="sr-ent-tags">{mystery ? <span className="sr-chiptag">mystery · DM answer</span> : <span className="sr-layer" data-layer="scheduler">plan</span>}</div>
+        <div className="sr-ent-tags">{mystery ? <Badge className="sr-chiptag">mystery · DM answer</Badge> : <Badge className="sr-layer" data-layer="scheduler">plan</Badge>}</div>
         <div className="sr-md"><Markdown md={s.md} /></div>
       </>
     );
   };
 
-  const close = p.docked ? null : <button type="button" className="sr-pn-btn" data-pn-close="" aria-label="Close the panel" onClick={p.close}>×</button>;
+  const close = p.docked ? null : <IconButton className="sr-pn-btn" data-pn-close="" label="Close the panel" onClick={p.close}>×</IconButton>;
   const head = q
-    ? <><span className="sr-pn-crumb">Search · “{q}”</span><button type="button" className="sr-pn-btn" data-pn-clear="" onClick={() => p.setQuery('')}>Clear</button>{close}</>
+    ? <><span className="sr-pn-crumb">Search · “{q}”</span><Button variant="ghost" className="sr-pn-btn" data-pn-clear="" onClick={() => p.setQuery('')}>Clear</Button>{close}</>
     : top
-      ? <><button type="button" className="sr-pn-btn sr-back" onClick={p.back}>← Back</button><span className="sr-pn-crumb">{crumb(top)}</span>
-        {p.docked ? <button type="button" className="sr-pn-btn" data-pn-home="" onClick={p.home}>Home</button> : close}</>
+      ? <><Button variant="ghost" className="sr-pn-btn sr-back" onClick={p.back}>← Back</Button><span className="sr-pn-crumb">{crumb(top)}</span>
+        {p.docked ? <Button variant="ghost" className="sr-pn-btn" data-pn-home="" onClick={p.home}>Home</Button> : close}</>
       : <><span className="sr-pn-crumb">This session</span>{close}</>;
 
   // Back to the top whenever what's shown changes; home and peeks also follow the walk.

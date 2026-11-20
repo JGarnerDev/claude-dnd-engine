@@ -97,7 +97,7 @@
   margin: 0 auto;
   padding: 4rem 2rem;
 }
-.chart-empty h1 { color: #f1f5f9; font-weight: 600; }
+.chart-empty .ui-empty-message { color: #f1f5f9; font-weight: 600; }
 .chart-empty code {
   background: #1e293b;
   padding: 0.1em 0.35em;

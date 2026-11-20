@@ -6,17 +6,18 @@
 // as "Last time in this world". A Slides button opens the previous session's
 // party-facing deck (_slides.md) fullscreen.
 
+import { Button, Disclosure } from 'jeff-ui';
 import { InlineMd, Markdown } from './MarkdownView.js';
 import { writtenRecap } from './recap-data.js';
 import type { PreviousSession, SessionData } from './types.js';
 
-function Meta({ p }: { p: PreviousSession }) {
+function meta(p: PreviousSession) {
   return <div className="sr-recap-meta">{[p.date && `played ${p.date}`, p.campaign].filter(Boolean).join(' · ')}</div>;
 }
 
 function Full({ p }: { p: PreviousSession }) {
   return p.recap && (
-    <details className="sr-recap-full"><summary>Full recap — {p.name}</summary><p><InlineMd md={p.recap} /></p></details>
+    <Disclosure className="sr-recap-full" title={`Full recap — ${p.name}`}><p><InlineMd md={p.recap} /></p></Disclosure>
   );
 }
 
@@ -27,8 +28,8 @@ export function Recap({ data, onSlides }: { data: SessionData; onSlides: () => v
   const threads = data.session.looseThreads;
   return (
     <>
-      {prev.slides.length > 0 && <button type="button" className="sr-slides-open" data-act="slides" title="Show the party-facing slides" onClick={onSlides}>Slides</button>}
-      <Meta p={prev} />
+      {prev.slides.length > 0 && <Button className="sr-slides-open" data-act="slides" title="Show the party-facing slides" onClick={onSlides}>Slides</Button>}
+      {meta(prev)}
       {written && <div className="sr-recap-written sr-md"><Markdown md={written} /></div>}
       {prev.description && !written && <p className="sr-recap-lead"><InlineMd md={prev.description} /></p>}
       <h3 className="sr-recap-h">TL;DR</h3>
@@ -45,7 +46,7 @@ export function Recap({ data, onSlides }: { data: SessionData; onSlides: () => v
       {inSeason && (
         <div className="sr-recap-season">
           <h3 className="sr-recap-h">Last time in this world — {inSeason.name}</h3>
-          <Meta p={inSeason} />
+          {meta(inSeason)}
           {inSeason.description && <p><InlineMd md={inSeason.description} /></p>}
           {inSeason.cliffhanger && <p><strong>Left off</strong> — <InlineMd md={inSeason.cliffhanger} /></p>}
           <Full p={inSeason} />

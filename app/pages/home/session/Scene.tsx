@@ -11,6 +11,7 @@
 // are the page's own: they survive moving between steps, not a reload.
 
 import { useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { Disclosure } from 'jeff-ui';
 import { applyHp, matchEnemy, type StatBlock } from './combatants.js';
 import { RollContext, type LoggedRoll } from './Dice.js';
 import { FightBar, type FightChip } from './FightBar.js';
@@ -89,7 +90,7 @@ function Setup({ rest, open }: { rest: string; open: boolean }) {
   return (
     <>
       {aloud && <div className="sr-md sr-aloud"><Markdown md={aloud} /></div>}
-      {other && <details className="sr-setup" open={open}><summary>Scene notes</summary><PromptBook prose={other} /></details>}
+      {other && <Disclosure className="sr-setup" title="Scene notes" open={open}><PromptBook prose={other} /></Disclosure>}
     </>
   );
 }
@@ -98,10 +99,9 @@ function Tokens({ nodes, prose, open, onToggle }: { nodes: FlowNode[]; prose: Ma
   const cues = nodes.flatMap((n, i) => extractCallouts(prose.get(n.id) ?? '').tokens.map((t) => ({ i, t })));
   if (!cues.length) return null;
   return (
-    <details className="sr-tokens-box" open={open} onToggle={(ev) => { if (ev.currentTarget.open !== open) onToggle(ev.currentTarget.open); }}>
-      <summary>Tokens</summary>
+    <Disclosure className="sr-tokens-box" title="Tokens" open={open} onToggle={(ev) => { if (ev.currentTarget.open !== open) onToggle(ev.currentTarget.open); }}>
       <ol>{cues.map((c, k) => <li key={k}><span className="sr-tok-step">{c.i + 1}</span> <InlineMd md={stripProvenance(c.t)} /></li>)}</ol>
-    </details>
+    </Disclosure>
   );
 }
 

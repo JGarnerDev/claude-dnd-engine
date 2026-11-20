@@ -7,6 +7,7 @@
 // `When:` line rides on its row as a pill the fight bar lights once it comes true.
 
 import type { ReactNode } from 'react';
+import { Badge } from 'jeff-ui';
 import { mergeLabelLines } from './flow.js';
 import { InlineMd } from './MarkdownView.js';
 import { PromptBook } from './PromptBook.js';
@@ -23,7 +24,7 @@ const MARKS: Record<Mark, { title: string; text: string }> = {
 
 function StepMark({ n, prose }: { n: FlowNode; prose: string }) {
   const m = stepMarkKind(n, prose);
-  return m && <span className="sr-mark" data-mark={m} title={MARKS[m].title}>{MARKS[m].text}</span>;
+  return m && <Badge className="sr-mark" data-mark={m} title={MARKS[m].title}>{MARKS[m].text}</Badge>;
 }
 
 function Rails({ s, i, last }: { s: Spans; i: number; last: number }) {
@@ -38,8 +39,8 @@ function EdgeTags({ s, i, last }: { s: Spans; i: number; last: number }) {
   const tags: ReactNode[] = [];
   for (const [kind, span, name] of [['fight', s.fight, 'fight'], ['boss', s.boss, 'boss fight']] as const) {
     if (!span) continue;
-    if (i === span[0] && (span[0] > 0 || kind === 'boss')) tags.push(<span key={`${kind}-s`} className={`sr-edge sr-edge-${kind}`}>{name} starts</span>);
-    if (i === span[1] && span[1] < last) tags.push(<span key={`${kind}-e`} className={`sr-edge sr-edge-${kind}`}>{name} ends</span>);
+    if (i === span[0] && (span[0] > 0 || kind === 'boss')) tags.push(<Badge key={`${kind}-s`} tone="err" className={`sr-edge sr-edge-${kind}`}>{name} starts</Badge>);
+    if (i === span[1] && span[1] < last) tags.push(<Badge key={`${kind}-e`} tone="err" className={`sr-edge sr-edge-${kind}`}>{name} ends</Badge>);
   }
   return tags;
 }

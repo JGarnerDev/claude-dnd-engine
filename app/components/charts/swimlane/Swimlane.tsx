@@ -11,6 +11,7 @@ import { useImperativeHandle, useLayoutEffect, useMemo, useRef, useState, type C
 import type { SettingsSection } from 'jeff-ui';
 import '../_common/common.css';
 import './swimlane.css';
+import { EmptyState } from 'jeff-ui';
 import { DEFAULT_CALENDAR } from '../_common/helpers/calendar.js';
 import { computeSwimlaneFrom } from './helpers/swimlane-layout.js';
 import { indexEvents, spanYearsOf } from '../_common/helpers/axis.js';
@@ -47,7 +48,7 @@ function SwimlaneEmpty({ settingsSlot, className, ref }: ChartProps) {
   useImperativeHandle(ref, () => ({ getState: () => ({ ...DEFAULT_STATE }) }), []);
   return (
     <div className={rootClass(className)}>
-      <div className="chart-empty">No events to show.</div>
+      <EmptyState className="chart-empty">No events to show.</EmptyState>
       <ChartSettings slot={settingsSlot} sections={[]} />
     </div>
   );

@@ -2,6 +2,7 @@
 // name takes a second click (decision F); editing the name cancels that.
 
 import { useState, type RefObject } from 'react';
+import { Button } from 'jeff-ui';
 import { listViews, saveView } from './helpers/viewstore.js';
 import type { ChartState, SavedView } from './types.js';
 
@@ -50,9 +51,9 @@ export function SaveViewForm({ nameRef, getCurrent, onSaved }: SaveViewFormProps
           if (e.key === 'Enter') confirm();
         }}
       />
-      <button type="button" className="chart-sv-confirm" onClick={confirm}>
+      <Button variant="primary" className="chart-sv-confirm" onClick={confirm}>
         {pending ? 'Overwrite?' : 'Save'}
-      </button>
+      </Button>
       <div className="chart-sv-msg">{pending && `"${pending}" already exists.`}</div>
     </div>
   );

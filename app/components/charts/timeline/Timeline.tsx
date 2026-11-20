@@ -10,6 +10,7 @@
 import { useImperativeHandle, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent } from 'react';
 import '../_common/common.css';
 import './timeline.css';
+import { EmptyState } from 'jeff-ui';
 import { DEFAULT_CALENDAR } from '../_common/helpers/calendar.js';
 import { computeLayoutFrom } from './helpers/layout.js';
 import { layoutLabels } from './helpers/labels.js';
@@ -47,7 +48,7 @@ function TimelineEmpty({ settingsSlot, className, ref }: ChartProps) {
   useImperativeHandle(ref, () => ({ getState: () => ({ ...DEFAULT_STATE }) }), []);
   return (
     <div className={rootClass(className)}>
-      <div className="chart-empty">No events to show.</div>
+      <EmptyState className="chart-empty">No events to show.</EmptyState>
       <ChartSettings slot={settingsSlot} sections={[]} />
     </div>
   );

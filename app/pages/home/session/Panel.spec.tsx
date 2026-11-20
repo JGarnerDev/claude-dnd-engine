@@ -10,6 +10,10 @@ import { makeResolver } from './entities.js';
 import { fixture } from './fixture-data.js';
 import type { SessionData } from './types.js';
 
+// Each fold's summary as "title count" (jeff-ui Disclosure puts the count in its own span).
+const foldTitles = (root: HTMLElement) =>
+  [...root.querySelectorAll('.sr-pn-fold > summary')].map((x) => [...x.childNodes].map((n) => n.textContent).join(' '));
+
 // The panel with the runner's search box and pin beside it, as Runner.tsx lays them out.
 function setup(d: SessionData = fixture(), ctx: PanelContext = { onCard: [], inScene: [] }) {
   const resolve = makeResolver(d.entities);
@@ -48,7 +52,7 @@ describe('Panel', () => {
     // "In this scene" omits what is already on the card; the roster skips unresolved names.
     expect(root.querySelectorAll('.sr-ent')).toHaveLength(1 + 1 + 2);
     // The roster and the plan sections fold away under More.
-    expect([...root.querySelectorAll('.sr-pn-fold > summary')].map((x) => x.textContent)).toEqual(['Act roster 2', 'Session plan 1']);
+    expect(foldTitles(root)).toEqual(['Act roster 2', 'Session plan 1']);
     await userEvent.click(root.querySelector<HTMLButtonElement>('[data-pn="section|0"]')!);
     expect(root.querySelector('.sr-pn-title')!.textContent).toBe('Orientation');
     expect(root.querySelector('.sr-md')!.textContent).toBe('Five PCs.');
@@ -58,7 +62,7 @@ describe('Panel', () => {
     const d = fixture();
     d.established = [{ title: 'Town — Ashford', md: '- A ford-town on the [[Ashford]] creek' }];
     const { root } = setup(d);
-    const folds = [...root.querySelectorAll('.sr-pn-fold > summary')].map((x) => x.textContent);
+    const folds = foldTitles(root);
     expect(folds.slice(-2)).toEqual(['Established 1', 'Session plan 1']);
     await userEvent.click(root.querySelector<HTMLButtonElement>('[data-pn="section|0"]')!);
     expect(root.querySelector('.sr-pn-title')!.textContent).toBe('Town — Ashford');

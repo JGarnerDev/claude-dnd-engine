@@ -3,6 +3,7 @@
 // fetched (entity-fetch.ts) once the header is up.
 
 import { useEffect, useState } from 'react';
+import { Badge, Disclosure } from 'jeff-ui';
 import { fetchEntity, LAYER_LABEL } from './entity-fetch.js';
 import { splitEntity } from './frontmatter.js';
 import { InlineMd, Markdown } from './MarkdownView.js';
@@ -15,8 +16,8 @@ export function EntityHeader({ e, root, quickRef }: { e: EntityRef; root: string
     <div className="sr-ent-head">
       <h2>{e.name}</h2>
       <div className="sr-ent-tags">
-        <span className="sr-layer" data-layer={layer}>{LAYER_LABEL[layer] ?? layer}</span>
-        {chips.map((c, i) => <span key={i} className="sr-chiptag">{c}</span>)}
+        <Badge className="sr-layer" data-layer={layer}>{LAYER_LABEL[layer] ?? layer}</Badge>
+        {chips.map((c, i) => <Badge key={i} className="sr-chiptag">{c}</Badge>)}
       </div>
       {e.description && <p className="sr-ent-desc"><InlineMd md={e.description} /></p>}
       {quickRef && <div className="sr-quickref"><div className="sr-quickref-label">This session</div><Markdown md={quickRef} /></div>}
@@ -30,10 +31,10 @@ export function EntityBody({ text }: { text: string }) {
   return (
     <>
       {fields.length > 0 && (
-        <details className="sr-fields"><summary>Fields</summary><dl>{fields.map(([k, v]) => [
+        <Disclosure className="sr-fields" title="Fields"><dl>{fields.map(([k, v]) => [
           <dt key={`t${k}`}>{k.replace(/_/g, ' ')}</dt>,
           <dd key={`d${k}`}>{Array.isArray(v) ? <ul>{v.map((x, i) => <li key={i}><InlineMd md={x} /></li>)}</ul> : <InlineMd md={v} />}</dd>,
-        ])}</dl></details>
+        ])}</dl></Disclosure>
       )}
       <div className="sr-md"><Markdown md={body} /></div>
     </>

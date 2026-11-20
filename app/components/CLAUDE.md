@@ -35,11 +35,11 @@ Each chart is its own folder under `components/charts/`; its root component is n
 
 ### Shared widgets: jeff-ui
 
-Generic widgets come from `jeff-ui` (`Desktop/Organized/jeff-ui-project`): `SettingsPanel`, `Popover`, `Tabs`, `Chip`, and the design tokens (`jeff-ui/tokens.css`). The engine installs it from GitHub pinned to a tag (`github:JGarnerDev/jeff-ui-project#vX.Y.Z` in `app/package.json`), because the engine has collaborators. Collaborators need read access to that repo for `npm install` to work.
+Generic widgets come from `jeff-ui` (`Desktop/Organized/jeff-ui-project`): `SettingsPanel`, `Popover`, `Tabs`, `Chip`, `Button`, `IconButton`, `Badge`, `Card`, `Disclosure`, `EmptyState`, and the design tokens (`jeff-ui/tokens.css`). Reach for these before writing a `<button>`, `<details>`, tag `<span>` or empty-state message by hand; pass the engine class as `className` so the specs and CSS that query it keep working. The engine installs it from GitHub pinned to a tag (`github:JGarnerDev/jeff-ui-project#vX.Y.Z` in `app/package.json`), because the engine has collaborators. Collaborators need read access to that repo for `npm install` to work.
 
 - **A widget belongs in jeff-ui** when it knows nothing about the campaign (no entities, no chart math, no engine types) and another of Jeff's apps could use it as-is. Campaign-specific widgets stay here.
 - **jeff-ui stays generic:** no Jotai, no app imports; it takes state through props. Components with their own look take `unstyled` plus `classNames`/`className`, so the engine keeps its `chart-*` / `sr-*` classes.
-- **Release loop:** change jeff-ui in its own repo, bump its `version`, prepend its `CHANGELOG.md` entry, commit and push; then tag (`git tag vX.Y.Z && git push --tags`) — confirm with Jeff before pushing a tag. Then bump the pin in `app/package.json`, run `npm install`, and run the gates here. Never move or delete a pushed tag; fix forward with a new one.
+- **Release loop:** change jeff-ui in its own repo, bump its `version`, prepend its `CHANGELOG.md` entry, commit and push; then tag (`git tag vX.Y.Z && git push --tags`) — confirm with Jeff before pushing a tag. Then bump the pin in `app/package.json`, run `npm install --allow-git=all` (npm 12 refuses git dependencies without it), and run the gates here. Never move or delete a pushed tag; fix forward with a new one.
 
 ### Styling (CSS)
 

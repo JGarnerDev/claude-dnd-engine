@@ -11,6 +11,7 @@
 import './slides.css';
 import { useEffect, useRef, useState, type MouseEvent } from 'react';
 import { createPortal } from 'react-dom';
+import { Button } from 'jeff-ui';
 import { unlink, type DeckSlide } from './deck.js';
 import { Markdown } from './MarkdownView.js';
 import { RefContext } from './RefChips.js';
@@ -76,7 +77,7 @@ export function Slide({ deck, i, label, onClose }: { deck: DeckSlide[]; i: numbe
       <footer className="sr-slides-foot">
         <span className="sr-slides-label">{label}</span>
         <span className="sr-slides-count">{i + 1} / {deck.length}</span>
-        <button type="button" data-act="close" title="Close (Esc)" onClick={onClose}>Close</button>
+        <Button data-act="close" title="Close (Esc)" onClick={onClose}>Close</Button>
       </footer>
     </>
   );

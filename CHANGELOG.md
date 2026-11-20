@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.75.4] — 2026-11-19
+
+### Changed
+
+- **More of the DM pages come from jeff-ui** (jeff-ui `tasks/component-census/PLAN.md`, step 16–17). The pin moves to `jeff-ui` v0.3.0, and the session runner and charts now use its `Button`, `IconButton`, `Badge`, `Card`, `Disclosure` and `EmptyState` for their buttons, tags, folds and empty messages. The engine's `sr-*` / `chart-*` classes stay on as `className`, so the look moves toward jeff-ui with the engine CSS as overrides. Small one-use helpers (the saved-view icons, the panel's search highlight and groups, the peek notes and fields, the recap meta line, the scene-header rows) become plain functions. `TimelineEmpty` is an `EmptyState`. `app/components/CLAUDE.md` lists the new widgets and notes `npm install --allow-git=all`. No behavior changes.
+
 ## [0.75.3] — 2026-11-19
 
 ### Changed
