@@ -8,7 +8,10 @@
     "home": "vite --config pages/home/vite.config.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "lint": "oxlint -c ../.oxlintrc.json",
+    "format": "prettier --write . --ignore-path ../.gitignore --ignore-path ../.prettierignore",
+    "format:check": "prettier --check . --ignore-path ../.gitignore --ignore-path ../.prettierignore"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.2",
@@ -18,6 +21,8 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.3.0",
     "happy-dom": "^20.10.5",
+    "oxlint": "1.94.0",
+    "prettier": "3.10.1",
     "typescript": "^7.0.2",
     "vite": "^8.2.1",
     "vitest": "^4.1.10"

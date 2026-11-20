@@ -29,6 +29,13 @@ CHANGELOG.md
 
 # Git hooks — pre-commit Markdown auto-format (paired with scripts/setup-hooks.py)
 .githooks/pre-commit
+.claude/rules/LINT.md
+.editorconfig
+.gitattributes
+.oxlintrc.json
+.prettierrc.json
+.prettierignore
+ruff.toml
 
 # Commands — all slash commands (glob, so new commands ship without an edit here)
 .claude/commands/*.md
