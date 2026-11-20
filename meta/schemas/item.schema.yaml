@@ -1,0 +1,48 @@
+# item.schema.yaml -- type: item (prose: item-magic.md, item-mundane.md). Extends entity.schema.yaml.
+# Each subtype's states, mandatory fields and own fields live in its if/then branch.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: item
+type: object
+required: [subtype, state, item_type, origin]
+$defs:
+  text: {$ref: entity.schema.yaml#/$defs/text}
+  text-list: {$ref: entity.schema.yaml#/$defs/text-list}
+allOf:
+  - $ref: entity.schema.yaml
+  - if:
+      properties: {subtype: {const: magic}}
+    then:
+      required: [rarity, attunement, effect]
+      properties:
+        state: {enum: [unidentified, identified, attuned, dormant, lost, destroyed, cursed]}
+        item_type: {enum: [weapon, armor, ring, wondrous, rod, staff, wand, ammunition, other]}
+        rarity:
+          description: '"unknown" while the table has not fixed it.'
+          enum: [common, uncommon, rare, very-rare, legendary, artifact, unknown]
+        attunement:
+          description: true, false, or who can attune.
+          anyOf:
+            - {type: boolean}
+            - {$ref: '#/$defs/text'}
+        effect: {$ref: '#/$defs/text'}
+        quirks: {$ref: '#/$defs/text-list'}
+  - if:
+      properties: {subtype: {const: mundane}}
+    then:
+      required: [significance]
+      properties:
+        state: {enum: [intact, damaged, broken, lost, destroyed, hidden]}
+        item_type:
+          enum: [weapon, armor, tool, container, document, jewelry, trophy, heirloom, quest-item, other]
+        significance:
+          description: Why this item matters narratively.
+          $ref: '#/$defs/text'
+properties:
+  type: {const: item}
+  subtype: {enum: [magic, mundane]}
+  origin: {$ref: '#/$defs/text'}
+  current_holder: {$ref: '#/$defs/text'}
+  history: {$ref: '#/$defs/text-list'}
+  material: {$ref: '#/$defs/text'}
+  appearance: {$ref: '#/$defs/text'}
+unevaluatedProperties: false

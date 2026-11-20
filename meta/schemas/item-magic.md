@@ -35,10 +35,14 @@ Covers magic items with narrative weight: weapons, armor, wondrous items, artifa
 
 ## Schema
 
+The machine-readable version is [`item.schema.yaml`](item.schema.yaml), shared with the mundane subtype.
+
 ### Canonical Path
+
 `data/items/magic/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `unidentified` | Exists but properties unknown |
@@ -65,7 +69,7 @@ tags:
 
 # --- MANDATORY (magic item) ---
 item_type: weapon | armor | ring | wondrous | rod | staff | wand | ammunition | other
-rarity: common | uncommon | rare | very-rare | legendary | artifact
+rarity: common | uncommon | rare | very-rare | legendary | artifact | unknown
 attunement: false         # or true, or a string describing who can attune
 origin: ""
 effect: ""
@@ -87,10 +91,13 @@ description: ""
 current_holder: [[Character or Location Name]]
 quirks: []
 history: []    # significant past owners or events involving this item
+material: ""
+appearance: ""
 ---
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

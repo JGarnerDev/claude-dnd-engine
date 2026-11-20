@@ -33,10 +33,14 @@ Covers significant non-magic objects that carry narrative weight: heirlooms, que
 
 ## Schema
 
+The machine-readable version is [`item.schema.yaml`](item.schema.yaml), shared with the magic subtype.
+
 ### Canonical Path
+
 `data/items/mundane/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `intact` | In good condition, fully functional |
@@ -86,6 +90,7 @@ history: []         # significant past owners or events
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

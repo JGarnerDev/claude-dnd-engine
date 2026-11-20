@@ -6,6 +6,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.86.0] — 2026-11-20
+
+- `meta/schemas/item.schema.yaml`: the item schema, one branch per subtype. Mandatory for both: `subtype`, `state`, `item_type`, `origin`; magic items add `rarity`, `attunement`, `effect`; mundane items add `significance`.
+- Magic `rarity` gains `unknown` (already used by three items); `material` and `appearance` are allowed on magic items as well. `item-magic.md` and `item-mundane.md` updated to match and link the YAML schema.
+
 ## [0.85.0] — 2026-11-20
 
 - `meta/schemas/session.schema.yaml`: the session schema. Mandatory: `state`, `session_number`, `mission`; a `completed` session also needs `played_date`, `recap` and `in_world_end_date`. Dates are checked: `played_date` YYYY-MM-DD, `in_world_end_date` YYYY[-MM[-DD]], `in_world_end_time` HH:MM. Difficulty tiers, `depth`, `scope` and `deck_weight` are enums.
