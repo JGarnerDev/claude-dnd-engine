@@ -2,6 +2,8 @@
 // so importers use `import type`. The render JSON contract (TimelineData) is the
 // shape scripts/timeline-data.py emits and the charts consume.
 
+import type { DensityBar, Side } from 'jeff-ui/charts';
+
 export interface Month {
   name: string;
   days: number;
@@ -111,14 +113,7 @@ export interface BreakMark {
   label: string;
 }
 
-export type Side = 'above' | 'below';
 export type Weight = 'is-major' | 'is-minor' | 'is-normal';
-
-export interface Placement {
-  side: Side;
-  tier: number;
-  offset: number;
-}
 
 // A laid-out beat: the event plus its computed geometry.
 export interface LayoutItem extends TimelineEvent {
@@ -136,17 +131,6 @@ export interface Tick {
   label: string;
   x: number;
   row?: number; // ruler row (0 = nearest the axis, the selected world); absent = 0
-}
-
-// A below-axis density bar: one fixed-width pixel bucket aggregating the non-major
-// beats that crowd into it (LOD). height ∝ √count; members index back to events.
-export interface DensityBar {
-  x0: number; // bucket left edge, px
-  centerX: number; // bar center (mean member x)
-  count: number;
-  height: number; // scaled bar height, px
-  hasMajor: boolean; // bucket contains >= 1 major beat — badge it
-  members: number[]; // indices into the (sorted) event set, for tooltip
 }
 
 // A session band: the world view draws each play session as a horizontal range
@@ -184,8 +168,6 @@ export interface FilterState {
   // non-secret beats it's in knownBy of, never a secret.
   audiences?: Set<string> | null;
 }
-
-export type ZoomKind = 'in' | 'out';
 
 // --- Saved views (named UI snapshots) ---------------------------------------
 // ChartState is the per-tab restorable bundle both charts emit (getState) and

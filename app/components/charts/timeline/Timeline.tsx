@@ -1,6 +1,6 @@
 // Timeline chart (the World view). Beats as markers on one time axis, labels
 // stacked above and below in tiers, crowds rolled into density bars. Positions
-// come from the pure layout (layout.ts) and label packer (labels.ts); this file
+// come from the pure layout (layout.ts) and label packer (jeff-ui/charts); this file
 // renders them.
 //
 // The filter never moves the axis: a filter edit hides markers, recounts the bars
@@ -12,23 +12,19 @@ import '../_common/common.css';
 import './timeline.css';
 import { EmptyState } from 'jeff-ui';
 import { DEFAULT_CALENDAR } from '../_common/helpers/calendar.js';
-import { computeLayoutFrom } from './helpers/layout.js';
-import { layoutLabels } from './helpers/labels.js';
-import { barHeightFor } from '../_common/helpers/cluster.js';
+import { computeLayoutFrom, worldBarHeight } from './helpers/layout.js';
 import { indexEvents, spanYearsOf } from '../_common/helpers/axis.js';
 import { axisOptionsFor } from '../_common/helpers/segments.js';
 import { makeMatcher } from '../_common/helpers/filters.js';
 import { serializeState, DEFAULT_STATE } from '../_common/helpers/viewstate.js';
 import { seedFilter, useFilterSections } from '../_common/FilterBar.js';
 import { ChartSettings, type ChartProps } from '../_common/ChartSettings.js';
-import { usePan } from '../_common/hooks/usePan.js';
-import { useMarkerInteraction } from '../_common/hooks/useMarkerInteraction.js';
-import { useViewportSize } from '../_common/hooks/useViewportSize.js';
-import { useZoom } from '../_common/hooks/useZoom.js';
-import { RULER_ROW_H, ZOOM_MAX, MARGIN, TARGET_PX_PER_BEAT, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, ZOOM_UPSCALE_FROM, ITEM_SCALE_MAX, WORLD_RIGHT_PAD } from '../_common/constants.js';
+import { layoutLabels, useMarkerInteraction, usePan, useViewportSize, useZoom, type DensityBar, type Side } from 'jeff-ui/charts';
+import { MARKER_OPTIONS } from '../_common/helpers/markers.js';
+import { RULER_ROW_H, ZOOM_FACTOR, ZOOM_MAX, MARGIN, TARGET_PX_PER_BEAT, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, ZOOM_UPSCALE_FROM, ITEM_SCALE_MAX, WORLD_RIGHT_PAD } from '../_common/constants.js';
 import { AXIS_GAP, TIER_H, LABEL_BOX_PAD, LABEL_MIN_TIERS, LABEL_TIER_CEIL } from '../_common/constants.js';
 import { LABEL_GAP, LABEL_MAX_SHIFT, LABEL_GAP_SPREAD, LABEL_SHIFT_SPREAD, LABEL_LIFT, BAND_MIN_PX } from '../_common/constants.js';
-import type { BreakMark, DensityBar, Layout, LayoutItem, SessionBand, Side, Tick, TimelineEvent } from '../_common/types.js';
+import type { BreakMark, Layout, LayoutItem, SessionBand, Tick, TimelineEvent } from '../_common/types.js';
 
 const openSource = (source: string): void => void window.open(source, '_blank');
 
@@ -109,6 +105,7 @@ function TimelineChart({ data, initialState, settingsSlot, className, ref, idx }
     widthAt: (z) => (scale ? layoutAt(scale.fitDensity * z).contentWidth : 0),
     initialZoom: initialState?.zoomLevel,
     initialScroll: initialState?.scrollLeft,
+    factor: ZOOM_FACTOR,
   });
   const layout = scale ? layoutAt(scale.fitDensity * zoomer.zoom) : null;
   // Lock the canvas height to the fit-zoom layout. Lanes only ever decrease as we
@@ -117,7 +114,7 @@ function TimelineChart({ data, initialState, settingsSlot, className, ref, idx }
   const canvasHeight = scale ? layoutAt(scale.fitDensity).canvasHeight + Math.max(0, idx.rulers.length - 1) * RULER_ROW_H : 0;
 
   const dragged = usePan(viewportRef);
-  const hideTip = useMarkerInteraction(viewportRef, dragged, openSource);
+  const hideTip = useMarkerInteraction(viewportRef, dragged, openSource, MARKER_OPTIONS);
   // A new layout discards markers; drop any tip hovering one (mouseout never fires
   // for a removed node).
   useLayoutEffect(() => hideTip(), [layout, hideTip]);
@@ -161,6 +158,8 @@ function TimelineChart({ data, initialState, settingsSlot, className, ref, idx }
         maxTiers: scale.maxTiers,
         gap: LABEL_GAP + progress * LABEL_GAP_SPREAD,
         maxShift: LABEL_MAX_SHIFT * (1 + progress * LABEL_SHIFT_SPREAD),
+        axisGap: AXIS_GAP,
+        tierH: TIER_H,
       },
     );
     return { visible, labels };
@@ -268,7 +267,7 @@ function Bar({ bar, events, match }: { bar: DensityBar; events: readonly Timelin
   return (
     <div
       className={`chart-bar${hasMajor ? ' has-major' : ''}`}
-      style={{ left: bar.centerX, height: barHeightFor(count) }}
+      style={{ left: bar.centerX, height: worldBarHeight(count) }}
       data-centerx={bar.centerX}
       data-count={count}
       title={`${count} beats${hasMajor ? ' (incl. a major)' : ''} · click to zoom in`}

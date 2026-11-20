@@ -7,7 +7,7 @@ import { DEFAULT_CALENDAR } from '../../_common/helpers/calendar.js';
 import { computeAxisFrom, indexEvents } from '../../_common/helpers/axis.js';
 import type { IndexedEvents } from '../../_common/helpers/axis.js';
 import { weightOf } from '../../_common/helpers/weight.js';
-import { clusterBeats, barHeightFor } from '../../_common/helpers/cluster.js';
+import { clusterPoints, barHeightFor } from 'jeff-ui/charts';
 import { deriveSessionBands } from '../../_common/helpers/bands.js';
 import { buildTrackTree } from './tracks.js';
 import {
@@ -23,6 +23,7 @@ import {
   SWIM_LABEL_MIN,
   SWIM_LABEL_MAX,
   DENSITY_BUCKET_PX,
+  DENSITY_MIN,
   CLUSTER_OFF_GAP,
   SWIM_BAR_MAX,
   SWIM_BAR_MIN,
@@ -131,7 +132,7 @@ export function computeSwimlaneFrom(
   let individualIdx: number[]; // global event indices that render as dots
 
   if (avgGap < CLUSTER_OFF_GAP) {
-    const swimBarHeight = (c: number) => barHeightFor(c, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT);
+    const swimBarHeight = (c: number) => barHeightFor(c, { maxH: SWIM_BAR_MAX, minH: SWIM_BAR_MIN, fullCount: SWIM_BAR_FULL_COUNT });
     const byRowIdx = new Map<string, number[]>(); // rowKey -> global event indices (x-sorted)
     events.forEach((_, i) => {
       const g = byRowIdx.get(keyOf[i]);
@@ -141,7 +142,7 @@ export function computeSwimlaneFrom(
     individualIdx = [];
     for (const [key, idxs] of byRowIdx) {
       const input = idxs.map((i) => ({ x: xs[i], major: !!events[i].major }));
-      const { individuals, bars: rowBars } = clusterBeats(input, DENSITY_BUCKET_PX, swimBarHeight);
+      const { individuals, bars: rowBars } = clusterPoints(input, { bucketPx: DENSITY_BUCKET_PX, minCount: DENSITY_MIN, barHeight: swimBarHeight });
       for (const li of individuals) individualIdx.push(idxs[li]);
       const cy = centerOf.get(key) ?? topPad;
       const color = colorOf.get(key) ?? '--track-world';

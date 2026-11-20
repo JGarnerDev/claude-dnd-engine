@@ -80,15 +80,9 @@ export function dayIndexWith(date: DateParts, { daysPerYear, monthPrefix }: Cale
 }
 
 // Absolute day index from year 0, month 1, day 1. Monotonic across the calendar,
-// so it doubles as a sort key and as the domain value for createScale. Thin
+// so it doubles as a sort key and as the domain value for createScale (jeff-ui/charts). Thin
 // wrapper over dayIndexWith for one-off callers/tests; loops should reuse tables.
 export function dayIndex(date: DateParts, cal: Calendar = DEFAULT_CALENDAR): number {
   return dayIndexWith(date, calendarTables(cal));
 }
 
-// Linear scale: day index -> x in [0, width]. min maps to 0, max maps to width.
-// Degenerate domain (min === max) maps everything to 0.
-export function createScale(minIndex: number, maxIndex: number, width: number): (index: number) => number {
-  const span = maxIndex - minIndex;
-  return (index: number) => (span === 0 ? 0 : ((index - minIndex) / span) * width);
-}

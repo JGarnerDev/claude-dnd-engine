@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.75.6] — 2026-11-20
+
+### Changed
+
+- **Chart plumbing comes from jeff-ui** (jeff-ui `tasks/component-census/PLAN.md`, step 36). The pin moves to `jeff-ui` v0.5.0. The timeline and swimlane import their pan, zoom, wheel, viewport and marker-tooltip hooks, the density-bar and label-lane helpers, `createScale` and `clampZoom` from `jeff-ui/charts`; the engine copies under `_common/hooks/`, `_common/helpers/cluster.ts`, `timeline/helpers/labels.ts` and `lanes.ts` and `controls.css` are gone. The engine passes its own layout constants as options, and `_common/helpers/markers.ts` tells the tooltip which nodes are markers, what the meta line says and which file a click opens. The Swimlane gutter opts out of panning with `data-no-pan`. The tooltip uses jeff-ui's `--ui-*` look and no longer title-cases its meta line. `app/components/CLAUDE.md` lists `jeff-ui/charts`.
+
 ## [0.75.5] — 2026-11-19
 
 ### Changed

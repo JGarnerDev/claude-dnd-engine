@@ -6,12 +6,16 @@
 import { DEFAULT_CALENDAR } from '../../_common/helpers/calendar.js';
 import { computeAxisFrom, indexEvents } from '../../_common/helpers/axis.js';
 import type { IndexedEvents } from '../../_common/helpers/axis.js';
-import { clusterBeats } from '../../_common/helpers/cluster.js';
+import { barHeightFor, clusterPoints, layoutLabels } from 'jeff-ui/charts';
 import { deriveSessionBands } from '../../_common/helpers/bands.js';
-import { layoutLabels } from './labels.js';
 import { weightOf } from '../../_common/helpers/weight.js';
-import { PX_PER_YEAR, AXIS_GAP, TIER_H, MIN_CANVAS_HEIGHT, BAR_MAX_H, CLUSTER_OFF_GAP, LABEL_MAX_TIERS, LABEL_BOX_PAD, WORLD_RIGHT_PAD } from '../../_common/constants.js';
-import type { Calendar, DensityBar, Layout, TimelineEvent } from '../../_common/types.js';
+import { PX_PER_YEAR, AXIS_GAP, TIER_H, MIN_CANVAS_HEIGHT, BAR_MAX_H, BAR_MIN_H, BAR_FULL_COUNT, DENSITY_BUCKET_PX, DENSITY_MIN, CLUSTER_OFF_GAP, LABEL_MAX_TIERS, LABEL_BOX_PAD, WORLD_RIGHT_PAD } from '../../_common/constants.js';
+import type { DensityBar } from 'jeff-ui/charts';
+import type { Calendar, Layout, TimelineEvent } from '../../_common/types.js';
+
+// World-view density bar height for a member count (the renderer sizes bars with it too).
+export const worldBarHeight = (count: number): number =>
+  barHeightFor(count, { maxH: BAR_MAX_H, minH: BAR_MIN_H, fullCount: BAR_FULL_COUNT });
 
 // pxPerYear is the axis density (driven by the zoom control); higher = stretched.
 // maxTiers is the label lane budget (the renderer derives it from viewport height;
@@ -62,7 +66,10 @@ export function computeLayoutFrom(
   const avgGap = beats.length > 1 ? (xs[xs.length - 1] - xs[0]) / (beats.length - 1) : Infinity;
   const { individuals, bars } =
     avgGap < CLUSTER_OFF_GAP
-      ? clusterBeats(beats.map((e, i) => ({ x: xs[i], major: !!e.major })))
+      ? clusterPoints(
+          beats.map((e, i) => ({ x: xs[i], major: !!e.major })),
+          { bucketPx: DENSITY_BUCKET_PX, minCount: DENSITY_MIN, barHeight: worldBarHeight },
+        )
       : { individuals: beats.map((_, i) => i), bars: [] as DensityBar[] };
 
   // Priority, capped label gate + lane packing over the individuals (all visible
@@ -75,7 +82,7 @@ export function computeLayoutFrom(
   const { showLabel, side: sideOf, offset: offsetOf, shift: shiftOf, laneCount } = layoutLabels(
     individuals.map((ei) => ({ x: xs[ei], major: !!beats[ei].major })),
     individuals.map(() => true),
-    { maxTiers },
+    { maxTiers, axisGap: AXIS_GAP, tierH: TIER_H },
   );
   const maxLane = Math.max(0, laneCount - 1);
 

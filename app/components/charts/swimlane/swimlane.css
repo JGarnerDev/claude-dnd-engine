@@ -9,7 +9,7 @@
   align-items: flex-start;
   cursor: grab;
 }
-.chart-swim.chart-grabbing { cursor: grabbing; }
+.chart-swim.ui-chart-grabbing { cursor: grabbing; }
 
 .chart-swim-gutter {
   position: sticky;

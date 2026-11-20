@@ -1,25 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { clampZoom, resolveTracks, serializeState, applyDefaults, DEFAULT_STATE } from './viewstate.js';
-
-describe('clampZoom', () => {
-  it('clamps below fit up to 1', () => {
-    expect(clampZoom(0.2, 8)).toBe(1);
-    expect(clampZoom(-5, 8)).toBe(1);
-  });
-  it('clamps above the current ceiling down to maxZoom', () => {
-    expect(clampZoom(50, 8)).toBe(8);
-  });
-  it('passes an in-range value through', () => {
-    expect(clampZoom(4, 8)).toBe(4);
-  });
-  it('falls back to 1 for non-finite input', () => {
-    expect(clampZoom(NaN, 8)).toBe(1);
-    expect(clampZoom(Infinity, 8)).toBe(1);
-  });
-  it('treats a maxZoom below 1 as 1', () => {
-    expect(clampZoom(3, 0.5)).toBe(1);
-  });
-});
+import { resolveTracks, serializeState, applyDefaults, DEFAULT_STATE } from './viewstate.js';
 
 describe('resolveTracks', () => {
   it('keeps only saved names still present, in saved order', () => {

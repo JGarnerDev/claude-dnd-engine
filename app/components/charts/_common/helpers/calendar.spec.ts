@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseDate, dayIndex, calendarTables, dayIndexWith, createScale, DEFAULT_CALENDAR } from './calendar.js';
+import { parseDate, dayIndex, calendarTables, dayIndexWith, DEFAULT_CALENDAR } from './calendar.js';
 
 describe('parseDate', () => {
   it('parses a full date', () => {
@@ -112,20 +112,6 @@ describe('dayIndexWith', () => {
     const t = calendarTables();
     expect(() => dayIndexWith(parseDate('1342-13-01'), t)).toThrow(RangeError);
     expect(() => dayIndexWith(parseDate('1342-00-01'), t)).toThrow(RangeError);
-  });
-});
-
-describe('createScale', () => {
-  it('maps min to 0 and max to width', () => {
-    const x = createScale(100, 200, 1000);
-    expect(x(100)).toBe(0);
-    expect(x(200)).toBe(1000);
-    expect(x(150)).toBe(500);
-  });
-
-  it('collapses a degenerate domain to 0', () => {
-    const x = createScale(50, 50, 1000);
-    expect(x(50)).toBe(0);
   });
 });
 

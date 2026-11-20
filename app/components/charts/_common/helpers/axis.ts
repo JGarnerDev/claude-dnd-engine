@@ -2,7 +2,8 @@
 // swimlane layout (track rows) need the same date→x mapping, domain padding,
 // content width, and year ticks — this is the one source for all of it.
 
-import { calendarTables, createScale, DEFAULT_CALENDAR } from './calendar.js';
+import { createScale } from 'jeff-ui/charts';
+import { calendarTables, DEFAULT_CALENDAR } from './calendar.js';
 import { segmentEvents } from './segments.js';
 import type { SegmentedEvent } from './segments.js';
 import { PX_PER_YEAR, MARGIN, EDGE_PAD, TICK_LABEL_PAD, ANCHOR_GAP_PX, LABEL_CHAR_PX, LABEL_GAP_PX, BREAK_CHIP_PAD } from '../constants.js';

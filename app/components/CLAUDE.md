@@ -8,7 +8,7 @@ Source is **TypeScript**, `strict` mode (`app/tsconfig.json`), with React 19 and
 
 - **Components are `.tsx` function components**, named in PascalCase after what they draw (`Timeline.tsx`, `FilterBar.tsx`). Pure modules stay `.ts`, kebab-case.
 - **Render with JSX, never with strings.** No `innerHTML`, no `dangerouslySetInnerHTML`, no `document.createElement`. Markdown goes through `MarkdownView` (`pages/home/session/MarkdownView.tsx`), not an HTML string.
-- **Imperative DOM only inside hooks and effects**, and only where React has no prop for it: pointer pan, wheel zoom with `passive: false`, marker tooltips, document-level keys, `matchMedia`. These live in `hooks/` and clean up after themselves.
+- **Imperative DOM only inside hooks and effects**, and only where React has no prop for it: pointer pan, wheel zoom with `passive: false`, marker tooltips, document-level keys, `matchMedia`. These live in hooks and clean up after themselves; the chart ones (pan, zoom, wheel, tooltip, viewport size) come from `jeff-ui/charts`.
 - **State:** React's own (`useState`, `useReducer`, props). When state gets more advanced (shared across distant components, derived, persisted), use Jotai atoms, per the hub's `PREFERENCES.md`. Context is fine for handing callbacks and settings down a subtree, not as a store; no other store library.
 - **Keep the CSS classes and `localStorage` keys stable.** The stylesheets and saved user data depend on them.
 
@@ -27,9 +27,8 @@ Each chart is its own folder under `components/charts/`; its root component is n
 
 - `<chart>/<Chart>.tsx` (+ spec) — the chart component; `<chart>/helpers/` — pure math used only by that chart (+ specs).
 - `_common/*.tsx` — components shared by both charts: `FilterBar`, `SavedViews` (+ `SaveViewForm`, `SavedViewList`), `ChartSettings` (+ specs).
-- `_common/hooks/` — the imperative hooks (`usePan`, `useWheelZoom`, `useZoom`, `useMarkerInteraction`, `useViewportSize`) (+ specs).
-- `_common/helpers/` — pure logic shared by more than one chart (+ specs).
-- `_common/components/` — the CSS for the shared widgets (`filterbar.css`, `controls.css`, `savedviews.css`, `settingspanel.css`).
+- `_common/helpers/` — pure logic shared by more than one chart (+ specs). `markers.ts` tells jeff-ui's tooltip hook which nodes are markers.
+- `_common/components/` — the CSS for the shared widgets (`filterbar.css`, `savedviews.css`, `settingspanel.css`).
 - `_common/constants.ts` (static data) and `_common/types.ts` (shared types).
 - `app/pages/home/` (sibling of `app/components/` — not under `components/`) — the timeline home page (`main.tsx` → `TimelineView.tsx`) and the session runner (`session/`, `main.tsx` → `Runner.tsx`), fed by the live campaign graph through the data plugins. This is the Vite root (see `app/pages/home/vite.config.ts`) and what `npm run home` opens; it imports the charts via `../../components/charts/…`.
 
@@ -37,7 +36,8 @@ Each chart is its own folder under `components/charts/`; its root component is n
 
 Generic widgets come from `jeff-ui` (`Desktop/Organized/jeff-ui-project`): `SettingsPanel`, `Popover`, `Tabs`, `Chip`, `Button`, `IconButton`, `Badge`, `Card`, `Disclosure`, `EmptyState`, and the design tokens (`jeff-ui/tokens.css`). Reach for these before writing a `<button>`, `<details>`, tag `<span>` or empty-state message by hand; pass the engine class as `className` so the specs and CSS that query it keep working. The engine installs it from GitHub pinned to a tag (`github:JGarnerDev/jeff-ui-project#vX.Y.Z` in `app/package.json`), because the engine has collaborators. Collaborators need read access to that repo for `npm install` to work.
 
-- **A widget belongs in jeff-ui** when it knows nothing about the campaign (no entities, no chart math, no engine types) and another of Jeff's apps could use it as-is. Campaign-specific widgets stay here.
+- **A widget belongs in jeff-ui** when it knows nothing about the campaign (no entities, no engine types) and another of Jeff's apps could use it as-is. Campaign-specific widgets stay here.
+- **Chart plumbing is in `jeff-ui/charts`:** the hooks (`usePan`, `useZoom`, `useWheelZoom`, `useViewportSize`, `useMarkerInteraction`) and the generic math (`createScale`, `clampZoom`, `clusterPoints`, `barHeightFor`, `layoutLabels`, `placement`). The engine passes its own sizes from `_common/constants.ts`. Calendar, segments, rulers, session bands, the track tree, filters and viewpoints stay here.
 - **jeff-ui stays generic:** no Jotai, no app imports; it takes state through props. Components with their own look take `unstyled` plus `classNames`/`className`, so the engine keeps its `chart-*` / `sr-*` classes.
 - **Release loop:** change jeff-ui in its own repo, bump its `version`, prepend its `CHANGELOG.md` entry, commit and push; then tag (`git tag vX.Y.Z && git push --tags`) — confirm with Jeff before pushing a tag. Then bump the pin in `app/package.json`, run `npm install --allow-git=all` (npm 12 refuses git dependencies without it), and run the gates here. Never move or delete a pushed tag; fix forward with a new one.
 
@@ -54,7 +54,7 @@ Classes are prefixed `chart-` (page-agnostic). Keep a rule with the element that
 
 Don't let a chart's private helper be imported by another chart — if both need it, it belongs in `_common` (this is why `weightOf` lives in `_common/helpers/weight.ts`).
 
-Example: `timeline/` (World view) owns `helpers/{layout,lanes,labels}`; `swimlane/` (Tracks view) owns `helpers/{swimlane-layout,tracks}`; both draw on `_common/helpers/{axis,calendar,ticks,filters,weight}`, `_common/hooks/`, and `_common/{FilterBar,ChartSettings}` over `_common/{constants,types}`; `pages/home/TimelineView.tsx` mounts either chart.
+Example: `timeline/` (World view) owns `helpers/layout`; `swimlane/` (Tracks view) owns `helpers/{swimlane-layout,tracks}`; both draw on `_common/helpers/{axis,calendar,ticks,filters,weight,markers}`, `jeff-ui/charts`, and `_common/{FilterBar,ChartSettings}` over `_common/{constants,types}`; `pages/home/TimelineView.tsx` mounts either chart.
 
 ### Saved-views state contract
 

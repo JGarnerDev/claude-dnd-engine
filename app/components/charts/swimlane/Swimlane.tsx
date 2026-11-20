@@ -18,19 +18,16 @@ import { indexEvents, spanYearsOf } from '../_common/helpers/axis.js';
 import { axisOptionsFor } from '../_common/helpers/segments.js';
 import { buildTrackTree, parseTrack, DEFAULT_CATEGORIES } from './helpers/tracks.js';
 import { makeMatcher } from '../_common/helpers/filters.js';
-import { barHeightFor } from '../_common/helpers/cluster.js';
 import { serializeState, DEFAULT_STATE } from '../_common/helpers/viewstate.js';
 import { seedFilter, useFilterSections } from '../_common/FilterBar.js';
 import { ChartSettings, type ChartProps } from '../_common/ChartSettings.js';
-import { usePan } from '../_common/hooks/usePan.js';
-import { useMarkerInteraction } from '../_common/hooks/useMarkerInteraction.js';
-import { useViewportSize } from '../_common/hooks/useViewportSize.js';
-import { useZoom } from '../_common/hooks/useZoom.js';
-import { ZOOM_MAX, MARGIN, GUTTER_W, SWIM_TOP_PAD, SWIM_RULER_ROW_H, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT, MAX_CONTENT_PX } from '../_common/constants.js';
+import { barHeightFor, useMarkerInteraction, usePan, useViewportSize, useZoom } from 'jeff-ui/charts';
+import { MARKER_OPTIONS } from '../_common/helpers/markers.js';
+import { ZOOM_FACTOR, ZOOM_MAX, MARGIN, GUTTER_W, SWIM_TOP_PAD, SWIM_RULER_ROW_H, MONTH_VIEW_FRAC, DAY_VIEW_FRAC, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT, MAX_CONTENT_PX } from '../_common/constants.js';
 import type { SwimBar, SwimItem, SwimLayout, Tick, TimelineEvent } from '../_common/types.js';
 
 // Per-row bar height for a member count (swimlane sizing — fits inside a row).
-const swimBarHeight = (count: number): number => barHeightFor(count, SWIM_BAR_MAX, SWIM_BAR_MIN, SWIM_BAR_FULL_COUNT);
+const swimBarHeight = (count: number): number => barHeightFor(count, { maxH: SWIM_BAR_MAX, minH: SWIM_BAR_MIN, fullCount: SWIM_BAR_FULL_COUNT });
 
 const openSource = (source: string): void => void window.open(source, '_blank');
 
@@ -128,11 +125,12 @@ function SwimlaneChart({ data, initialState, settingsSlot, className, ref, full 
     widthAt: (z) => (scale ? layoutAt(scale.fitDensity * z).contentWidth : 0),
     initialZoom: initialState?.zoomLevel,
     initialScroll: initialState?.scrollLeft,
+    factor: ZOOM_FACTOR,
   });
   const layout = scale ? layoutAt(scale.fitDensity * zoomer.zoom) : null;
 
   const dragged = usePan(swimRef);
-  const hideTip = useMarkerInteraction(swimRef, dragged, openSource);
+  const hideTip = useMarkerInteraction(swimRef, dragged, openSource, MARKER_OPTIONS);
 
   useImperativeHandle(
     ref,
@@ -225,7 +223,7 @@ function Gutter({ layout, onToggle }: { layout: SwimLayout; onToggle(category: s
   const { rows, totalHeight, topPad, rulers } = layout;
   const multi = rulers.length > 1;
   return (
-    <div className="chart-swim-gutter" style={{ height: totalHeight }}>
+    <div className="chart-swim-gutter" data-no-pan style={{ height: totalHeight }}>
       <div className={`chart-swim-gutter-head${multi ? ' has-rulers' : ''}`} style={{ height: topPad }}>
         {multi
           ? rulers.map((name, row) => (

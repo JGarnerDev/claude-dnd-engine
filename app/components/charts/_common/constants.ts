@@ -1,5 +1,5 @@
 // Layout constants for the timeline chart. Kept here so the pure layout math
-// (layout.js, lanes.js) and the DOM/CSS stay in agreement from one source.
+// (layout.ts, the jeff-ui/charts options) and the DOM/CSS stay in agreement from one source.
 
 export const PX_PER_YEAR = 160; // layout's default density (non-render callers/tests)
 // Zoom is relative: render starts at a "fit" density that fills the viewport

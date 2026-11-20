@@ -8,14 +8,6 @@ import type { ChartState } from '../types.js';
 // The "nothing saved" baseline: fit zoom, no filter/search, no pan, no viewpoint.
 export const DEFAULT_STATE: ChartState = { query: '', tracks: [], zoomLevel: 1, scrollLeft: 0, audiences: [] };
 
-// Clamp a saved zoom to the current data's range. maxZoom is data-derived and
-// may differ from when the view was saved, so an over-range value snaps to the
-// new ceiling; a non-finite value falls back to fit (1).
-export function clampZoom(z: number, maxZoom: number): number {
-  if (!Number.isFinite(z)) return 1;
-  return Math.min(Math.max(z, 1), Math.max(1, maxZoom));
-}
-
 // Intersect a saved track selection with the tracks present in the current data,
 // dropping names that no longer exist. Order follows the saved list. An empty
 // result means "no filter" (all pass), consistent with the default.

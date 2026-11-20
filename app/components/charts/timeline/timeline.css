@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
 }
-.chart-viewport.chart-grabbing { cursor: grabbing; }
+.chart-viewport.ui-chart-grabbing { cursor: grabbing; }
 
 .chart-canvas {
   position: relative;
