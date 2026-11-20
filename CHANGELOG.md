@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.75.8] — 2026-11-20
+
+### Changed
+
+- The session runner's map rail chips are jeff-ui `Button`s (`unstyled`, keeping the `sr-chip` look). Closes the jeff-ui component census (`jeff-ui-project`, step 41).
+- `app/components/CLAUDE.md` lists every jeff-ui widget the engine uses.
+
+### Fixed
+
+- The home page's "Run session" link rendered in the browser's default serif font. `pages/home/theme.css` now sets the page font to `--ui-font`.
+
 ## [0.75.7] — 2026-11-20
 
 ### Changed

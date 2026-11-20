@@ -21,3 +21,9 @@
   --ui-warn: #fbbf24;
   --ui-err: #f87171;
 }
+
+/* Browsers default the page to a serif font; buttons don't inherit it but links
+   and plain text do (the header's "Run session" link rendered serif). */
+body {
+  font-family: var(--ui-font);
+}
