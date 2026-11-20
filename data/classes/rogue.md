@@ -9,7 +9,6 @@ hit_die: 8
 saving_throws:
   - DEX
   - INT
-spellcasting_ability: null
 armor_proficiencies: "Light armor"
 weapon_proficiencies: "Simple weapons, longswords, rapiers, shortswords, hand crossbows"
 tool_proficiencies: "Thieves' Tools"

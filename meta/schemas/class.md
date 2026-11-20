@@ -25,10 +25,14 @@ Covers playable character classes. Each file represents the class as available i
 
 ## Schema
 
+The machine-readable version is [`class.schema.yaml`](class.schema.yaml).
+
 ### Canonical Path
+
 `data/classes/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `available` | Open to players without restriction |
@@ -53,9 +57,9 @@ saving_throws: []        # two ability abbreviations: STR CON DEX INT WIS CHA
 
 # --- OPTIONAL (class) ---
 spellcasting_ability: "" # INT | WIS | CHA — omit for non-casters
-armor_proficiencies: []
-weapon_proficiencies: []
-tool_proficiencies: []
+armor_proficiencies: ""  # one line, e.g. "Light armor, shields", or "none"
+weapon_proficiencies: ""
+tool_proficiencies: ""
 skill_choices: ""        # "Choose N from [list]"
 multiclass_prerequisite: ""
 subclasses: []           # PHB subclass(es); not exhaustive
@@ -70,6 +74,7 @@ description: ""
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

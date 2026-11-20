@@ -1,0 +1,16 @@
+# feat.schema.yaml -- type: feat (prose: feat.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: feat
+type: object
+required: [state, effect]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: feat}
+  state: {enum: [available]}
+  effect: {$ref: entity.schema.yaml#/$defs/text}
+  prerequisite:
+    description: What the feat requires, or "none".
+    $ref: entity.schema.yaml#/$defs/text
+  source: {$ref: entity.schema.yaml#/$defs/text}
+unevaluatedProperties: false

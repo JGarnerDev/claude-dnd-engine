@@ -9,7 +9,6 @@ hit_die: 8
 saving_throws:
   - STR
   - DEX
-spellcasting_ability: null
 armor_proficiencies: "none"
 weapon_proficiencies: "Simple weapons, shortswords"
 tool_proficiencies: "One artisan's tool or musical instrument of your choice"

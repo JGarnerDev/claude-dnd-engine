@@ -9,6 +9,8 @@ tags:
 **Historian path:** `historian/skills/{Skill Name}.md`
 **Type:** `skill` (no subtype)
 
+The machine-readable version is [`skill.schema.yaml`](skill.schema.yaml).
+
 ---
 
 ## Frontmatter Template

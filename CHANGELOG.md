@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.92.0] — 2026-11-20
+
+- **Reference catalog schemas** (schema migration step 6): `meta/schemas/feat.schema.yaml`, `skill.schema.yaml`, `race.schema.yaml`, `background.schema.yaml` and `class.schema.yaml`, enforced by `validate.py`. Each prose schema links to its YAML file.
+- `class.md` now shows `armor_proficiencies`, `weapon_proficiencies` and `tool_proficiencies` as one-line text, which is how every class file writes them.
+- Content fixes: 30 feats had `prerequisite: ""` (now `none`); seven backgrounds had `language_proficiencies: ""` (now `none`); barbarian, fighter, monk and rogue had `spellcasting_ability: null` (removed; omit it for non-casters).
+
 ## [0.91.0] — 2026-11-20
 
 - `meta/schemas/spell.schema.yaml`: the spell schema. Mandatory: `state`, `level` (0â€“9), `school`, `casting_time`, `range`, `components` (a set of V, S, M), `duration`, `concentration`, `effect`. `spell.md` links the YAML schema. All 280 spells passed with no changes.

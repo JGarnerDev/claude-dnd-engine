@@ -12,7 +12,7 @@ feature: "Rustic Hospitality"
 tool_proficiencies:
   - One type of artisan's tools
   - Vehicles (land)
-language_proficiencies: ""
+language_proficiencies: none
 equipment:
   - Artisan's tools (one type)
   - Shovel

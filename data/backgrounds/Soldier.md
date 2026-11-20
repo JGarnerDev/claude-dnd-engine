@@ -12,7 +12,7 @@ feature: "Military Rank"
 tool_proficiencies:
   - One type of gaming set
   - Vehicles (land)
-language_proficiencies: ""
+language_proficiencies: none
 equipment:
   - Insignia of rank
   - Trophy taken from a fallen enemy (dagger, broken blade, or piece of a banner)

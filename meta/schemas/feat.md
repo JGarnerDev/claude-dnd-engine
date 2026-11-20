@@ -27,10 +27,14 @@ Covers 5e feats from the Player's Handbook and major supplements. Feat files are
 
 ## Schema
 
+The machine-readable version is [`feat.schema.yaml`](feat.schema.yaml).
+
 ### Canonical Path
+
 `data/feats/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `available` | Legal in this campaign |
@@ -53,7 +57,7 @@ tags:
 effect: ""
 
 # --- OPTIONAL (feat) ---
-prerequisite: ""
+prerequisite: ""          # what the feat requires, or "none"
 source: ""
 description: ""
 aliases: []
@@ -61,6 +65,7 @@ aliases: []
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

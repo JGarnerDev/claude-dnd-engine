@@ -25,10 +25,14 @@ Covers character backgrounds. Each file represents a background as available in 
 
 ## Schema
 
+The machine-readable version is [`background.schema.yaml`](background.schema.yaml).
+
 ### Canonical Path
+
 `data/backgrounds/{name}.md`
 
 ### Valid State Values
+
 | State | Meaning |
 |---|---|
 | `available` | Open to players without restriction |
@@ -53,7 +57,7 @@ feature: ""                 # name of the background feature
 
 # --- OPTIONAL (background) ---
 tool_proficiencies: []      # tools, instruments, or gaming sets
-language_proficiencies: ""  # e.g. "Any two languages" or "Thieves' cant"
+language_proficiencies: ""  # e.g. "Any two languages" or "Thieves' cant", or "none"
 equipment: []               # starting equipment list
 variants: []                # official variant names (e.g. Spy for Criminal)
 source: PHB
@@ -66,6 +70,7 @@ description: ""
 ```
 
 ### Form → Frontmatter Mapping
+
 | Form answer | Field |
 |---|---|
 | Name | `name`, filename |

@@ -12,7 +12,7 @@ feature: "By Popular Demand"
 tool_proficiencies:
   - Disguise kit
   - One type of musical instrument
-language_proficiencies: ""
+language_proficiencies: none
 equipment:
   - Musical instrument (one of your choice)
   - Favor of an admirer (love letter, lock of hair, or trinket)

@@ -1,0 +1,24 @@
+# background.schema.yaml -- type: background (prose: background.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: background
+type: object
+required: [state, skill_proficiencies, feature]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: background}
+  state: {enum: [available, restricted, unavailable]}
+  skill_proficiencies:
+    description: Exactly two skills.
+    $ref: entity.schema.yaml#/$defs/text-list
+  feature:
+    description: Name of the background feature.
+    $ref: entity.schema.yaml#/$defs/text
+  tool_proficiencies: {$ref: entity.schema.yaml#/$defs/text-list}
+  language_proficiencies:
+    description: e.g. "Any two languages", or "none".
+    $ref: entity.schema.yaml#/$defs/text
+  equipment: {$ref: entity.schema.yaml#/$defs/text-list}
+  variants: {$ref: entity.schema.yaml#/$defs/text-list}
+  source: {$ref: entity.schema.yaml#/$defs/text}
+unevaluatedProperties: false

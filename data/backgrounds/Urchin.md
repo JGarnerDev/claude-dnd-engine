@@ -12,7 +12,7 @@ feature: "City Secrets"
 tool_proficiencies:
   - Disguise kit
   - Thieves' tools
-language_proficiencies: ""
+language_proficiencies: none
 equipment:
   - Small knife
   - Map of the city you grew up in

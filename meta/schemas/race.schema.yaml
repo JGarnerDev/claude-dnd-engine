@@ -1,0 +1,25 @@
+# race.schema.yaml -- type: race (prose: race.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: race
+type: object
+required: [state, size, speed]
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: race}
+  state: {enum: [widespread, regional, rare, reclusive, scattered, monstrous]}
+  size: {enum: [Small, Medium, Large]}
+  speed:
+    description: Base walking speed in feet.
+    type: integer
+    minimum: 0
+  subraces: {$ref: entity.schema.yaml#/$defs/text-list}
+  typical_alignment: {$ref: entity.schema.yaml#/$defs/text}
+  languages: {$ref: entity.schema.yaml#/$defs/text-list}
+  homeland:
+    description: A region link, or a plain description.
+    $ref: entity.schema.yaml#/$defs/text
+  patron_deity: {$ref: entity.schema.yaml#/$defs/text-list}
+  source: {$ref: entity.schema.yaml#/$defs/text}
+  key_traits: {$ref: entity.schema.yaml#/$defs/text-list}
+unevaluatedProperties: false

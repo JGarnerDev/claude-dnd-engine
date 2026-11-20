@@ -12,7 +12,7 @@ feature: "Ship's Passage"
 tool_proficiencies:
   - Navigator's tools
   - Vehicles (water)
-language_proficiencies: ""
+language_proficiencies: none
 equipment:
   - Belaying pin (club)
   - 50 feet of silk rope

@@ -1,0 +1,34 @@
+# class.schema.yaml -- type: class (prose: class.md). Extends entity.schema.yaml.
+$schema: https://json-schema.org/draft/2020-12/schema
+title: class
+type: object
+required: [state, hit_die, saving_throws]
+$defs:
+  ability: {enum: [STR, DEX, CON, INT, WIS, CHA]}
+allOf:
+  - $ref: entity.schema.yaml
+properties:
+  type: {const: class}
+  state: {enum: [available, restricted, unavailable]}
+  hit_die: {enum: [6, 8, 10, 12]}
+  saving_throws:
+    type: array
+    minItems: 2
+    maxItems: 2
+    items: {$ref: '#/$defs/ability'}
+  spellcasting_ability:
+    description: Omit for non-casters.
+    enum: [INT, WIS, CHA]
+  armor_proficiencies:
+    description: Plain list in one line, e.g. "Light armor, shields", or "none".
+    $ref: entity.schema.yaml#/$defs/text
+  weapon_proficiencies: {$ref: entity.schema.yaml#/$defs/text}
+  tool_proficiencies: {$ref: entity.schema.yaml#/$defs/text}
+  skill_choices:
+    description: '"Choose N from [list]".'
+    $ref: entity.schema.yaml#/$defs/text
+  multiclass_prerequisite: {$ref: entity.schema.yaml#/$defs/text}
+  subclasses: {$ref: entity.schema.yaml#/$defs/text-list}
+  source: {$ref: entity.schema.yaml#/$defs/text}
+  key_features: {$ref: entity.schema.yaml#/$defs/text-list}
+unevaluatedProperties: false

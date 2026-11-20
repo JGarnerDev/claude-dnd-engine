@@ -4,9 +4,9 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
 
 **Status (2026-11-18):** steps 1–5 done (engine v0.73.0). Every entity file's frontmatter is strict YAML with quoted links, and `get_frontmatter` reads it with a YAML parser.
 
-**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0), `route` (v0.87.0), `resource` (v0.88.0), `creature` (v0.89.0), `monster` (v0.90.0), `spell` (v0.91.0).
+**Status (2026-11-20):** step 6 under way. Done: `entity` base (v0.79.0), `character` (v0.80.0), `location` (v0.81.0), `faction` (v0.82.0), `event` (v0.83.0), `deity` (v0.84.0), `session` (v0.85.0), `item` (v0.86.0), `route` (v0.87.0), `resource` (v0.88.0), `creature` (v0.89.0), `monster` (v0.90.0), `spell` (v0.91.0), `feat`, `skill`, `race`, `background`, `class` (v0.92.0).
 
-**Next:** the small types (feat, skill, race, background, class, rumor, pc-arc, culture, act, campaign, mission, party, player), then `lore`.
+**Next:** the campaign types (rumor, pc-arc, culture, act, campaign, mission, party, player), then `lore`.
 
 ## Resuming in a new session
 
@@ -52,9 +52,13 @@ Plan: [PLAN.md](PLAN.md). Claude keeps this list current.
   - [x] route: `meta/schemas/route.schema.yaml` (v0.87.0), enforced. All 14 routes passed as they were; `origin`, `destination` and `controlling_faction` take a link or a placeholder (`TBD`, `unknown`). No content fixes
   - [x] resource: `meta/schemas/resource.schema.yaml` (v0.88.0), enforced. Added `varies` to `trade_value` and `contested` to `accessibility` (Whatwill uses both). `controlled_by` may be a list; `consumers` takes plain notes for groups with no file. No content fixes
   - [x] creature: `meta/schemas/creature.schema.yaml` (v0.89.0), enforced. `challenge_rating` is pattern-checked (a CR, or `TBD` / `unknown`). Documented `size`, `alignment` and `breed` (used by the three companions). No content fixes
-  - [ ] other campaign types (act, campaign, culture, rumor, mission, party, player, pc-arc, skill)
+  - [x] skill: `meta/schemas/skill.schema.yaml` (v0.92.0), enforced. `ability` takes any of the six scores. No content fixes
+  - [ ] other campaign types (act, campaign, culture, rumor, mission, party, player, pc-arc)
   - [x] monster: `meta/schemas/monster.schema.yaml` (v0.90.0), enforced. All 545 passed as they were. `challenge_rating` is pattern-checked; added `celestial` to `creature_type` (seven monsters use it), on creatures too. No content fixes
   - [x] spell: `meta/schemas/spell.schema.yaml` (v0.91.0), enforced. All 280 passed as they were. `level` is 0-9 and `components` a set of V, S, M. No content fixes
-  - [ ] reference catalogs (feat, race, class, background)
+  - [x] feat: `meta/schemas/feat.schema.yaml` (v0.92.0), enforced. Fixed: 30 empty `prerequisite: ""` set to `none`
+  - [x] race: `meta/schemas/race.schema.yaml` (v0.92.0), enforced. `size` is Small, Medium or Large; `speed` an integer. No content fixes
+  - [x] background: `meta/schemas/background.schema.yaml` (v0.92.0), enforced. Fixed: seven empty `language_proficiencies: ""` set to `none`
+  - [x] class: `meta/schemas/class.schema.yaml` (v0.92.0), enforced. `hit_die` is 6, 8, 10 or 12; `saving_throws` two abilities. The proficiency fields are one-line text (as every class file has them), not lists; prose updated. Fixed: four `spellcasting_ability: null` removed from non-casters
 - [ ] 7. `scripts/gen-schema-docs.py` generates `meta/schemas/*.md`; check that generated files are up to date
 - [ ] 8. Rules and docs updated (quote frontmatter links; edit schemas, not the generated docs), template synced with `/sync`, collaborators told, `tasks/schema-migration/scripts/` deleted

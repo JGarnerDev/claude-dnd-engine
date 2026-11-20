@@ -12,7 +12,7 @@ feature: "False Identity"
 tool_proficiencies:
   - Disguise kit
   - Forgery kit
-language_proficiencies: ""
+language_proficiencies: none
 equipment:
   - Fine clothes
   - Disguise kit

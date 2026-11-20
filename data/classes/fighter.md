@@ -9,7 +9,6 @@ hit_die: 10
 saving_throws:
   - STR
   - CON
-spellcasting_ability: null
 armor_proficiencies: "All armor, shields"
 weapon_proficiencies: "Simple weapons, martial weapons"
 tool_proficiencies: "none"

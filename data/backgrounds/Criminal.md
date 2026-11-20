@@ -12,7 +12,7 @@ feature: "Criminal Contact"
 tool_proficiencies:
   - One type of gaming set
   - Thieves' tools
-language_proficiencies: ""
+language_proficiencies: none
 equipment:
   - Crowbar
   - Dark common clothes with a hood
