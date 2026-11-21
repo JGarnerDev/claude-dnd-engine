@@ -1,40 +1,5 @@
-/* Saved-views widget (savedviews.ts). Save · Load buttons share the gear's
-   island look (.chart-settings-btn) and sit left of it in the header actions
-   cluster (.chart-actions, the positioning context). Each opens a popover that
-   drops below and anchors to the actions' right edge, matching the settings
-   panel. Tokens come from _common/common.css. */
-
-.chart-sv-popover {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  z-index: 30;
-  width: 266px;
-  max-width: calc(100vw - 24px);
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
-  padding: 12px;
-  background: var(--chart-surface);
-  border: 1px solid var(--chart-axis);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-
-  /* Closed by default: faded, lifted, click-through. [data-open] animates it in. */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-6px);
-  pointer-events: none;
-  transition:
-    opacity 140ms ease,
-    transform 140ms ease,
-    visibility 140ms;
-}
-.chart-sv-popover[data-open] {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-}
+/* Saved-views widget (SavedViews.tsx): the Save form and the Load list inside
+   their jeff-ui Popovers. Tokens come from _common/common.css. */
 
 /* Save form ----------------------------------------------------------------- */
 .chart-sv-form {

@@ -14,7 +14,7 @@
 // them all (they come back on its turn, which the runner doesn't track).
 
 import { useEffect, useRef, type KeyboardEvent } from "react";
-import { Button, Disclosure, IconButton } from "jeff-ui";
+import { Button, Disclosure, IconButton, Pips } from "jeff-ui";
 import type { Phase, StatBlock } from "./combatants.js";
 import { rollable, RollLog, type LoggedRoll } from "./Dice.js";
 import { allItems, inlineText, type Alert } from "./fight-cues.js";
@@ -103,23 +103,18 @@ function Legend({
   onSpend: (n: number) => void;
 }) {
   return (
-    <span
+    <Pips
       className="sr-legend"
       data-entry={entry}
-      aria-label={`Legendary actions, ${n - spent} left`}
-    >
-      {Array.from({ length: n }, (_, i) => (
-        <Button
-          key={i}
-          unstyled
-          className={`sr-pip${i < spent ? " is-spent" : ""}`}
-          data-pip={i}
-          aria-pressed={i < spent}
-          title={`Legendary action ${i + 1} of ${n}: click to spend, click again to give back. A new round refills them.`}
-          onClick={() => onSpend(i < spent ? i : i + 1)}
-        ></Button>
-      ))}
-    </span>
+      count={n}
+      spent={spent}
+      onChange={onSpend}
+      label={`Legendary actions, ${n - spent} left`}
+      hue="var(--sr-v-watch)"
+      pipTitle={(i) =>
+        `Legendary action ${i + 1} of ${n}: click to spend, click again to give back. A new round refills them.`
+      }
+    />
   );
 }
 

@@ -20,30 +20,16 @@ export interface SavedViewsProps {
   apply(view: SavedView): void;
 }
 
-const classNames = { button: "chart-settings-btn chart-sv-btn", panel: "chart-sv-popover" };
-
 export function SavedViews({ getCurrent, apply }: SavedViewsProps) {
   const nameRef = useRef<HTMLInputElement>(null);
   // Read from storage each time Load opens, so a view saved since shows up.
   const [views, setViews] = useState(listViews);
   return (
     <>
-      <Popover
-        label="Save view"
-        icon={saveIcon}
-        classNames={classNames}
-        unstyled
-        onOpen={() => nameRef.current?.focus()}
-      >
+      <Popover label="Save view" icon={saveIcon} onOpen={() => nameRef.current?.focus()}>
         {({ close }) => <SaveViewForm nameRef={nameRef} getCurrent={getCurrent} onSaved={close} />}
       </Popover>
-      <Popover
-        label="Load view"
-        icon={loadIcon}
-        classNames={classNames}
-        unstyled
-        onOpen={() => setViews(listViews())}
-      >
+      <Popover label="Load view" icon={loadIcon} onOpen={() => setViews(listViews())}>
         {({ close }) => (
           <SavedViewList
             views={views}

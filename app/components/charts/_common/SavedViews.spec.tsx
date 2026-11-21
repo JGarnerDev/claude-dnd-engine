@@ -29,10 +29,8 @@ function mount(over: { tab?: SavedView["tab"]; state?: ChartState } = {}) {
   );
   const q = <T extends HTMLElement>(sel: string) => container.querySelector<T>(sel)!;
   const all = <T extends HTMLElement>(sel: string) => [...container.querySelectorAll<T>(sel)];
-  const [save, load] = all<HTMLButtonElement>(".chart-sv-btn");
-  const [savePanel, loadPanel] = all(".chart-sv-popover");
-  const gear = q<HTMLButtonElement>(".ui-popover-btn");
-  const settings = q(".ui-settings-panel");
+  const [save, load, gear] = all<HTMLButtonElement>(".ui-popover-btn");
+  const [savePanel, loadPanel, settings] = all(".ui-popover-panel");
   const typeName = (name: string) =>
     fireEvent.change(q(".chart-sv-name"), { target: { value: name } });
   return { apply, q, all, save, load, savePanel, loadPanel, gear, settings, typeName };
@@ -47,9 +45,10 @@ describe("SavedViews", () => {
 
   it("renders Save and Load buttons in that order, both closed", () => {
     const { all, savePanel, loadPanel } = mount();
-    expect(all<HTMLButtonElement>(".chart-sv-btn").map((b) => b.title)).toEqual([
+    expect(all<HTMLButtonElement>(".ui-popover-btn").map((b) => b.title)).toEqual([
       "Save view",
       "Load view",
+      "Settings",
     ]);
     expect([isOpen(savePanel), isOpen(loadPanel)]).toEqual([false, false]);
   });

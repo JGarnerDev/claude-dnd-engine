@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.97.0] — 2026-11-21
+
+### Changed
+
+- **jeff-ui 0.11.0 → 0.12.0: the engine's look comes from jeff-ui.** jeff-ui dropped `unstyled` and `classNames`, so every widget the engine had reskinned now draws with jeff-ui's own look, tinted by `theme.css`. Engine classes stay on as `className` hooks for specs, with no CSS of their own.
+  - Charts: the settings gear, the Save and Load view buttons and their panels, and the World/Campaign tabs use jeff-ui's stock look. The header buttons grow from 34px to 44px. `settingspanel.css` is gone, and so are the duplicate skins in `filterbar.css`, `savedviews.css` and `view.css`.
+  - Track filter chips are hued Chips (`hue`), with a dot in their track color. The "Known by" chips are amber (`--ui-cat-4`), and the DM chip's lock is now text.
+  - Track colors are jeff-ui's category palette: `--track-*` map to `--ui-cat-*` in `common.css` (world blue, party violet, character green, NPC deep green, antagonist red, faction orange, continent magenta).
+  - Session runner: map rail chips are `Waypoint`s, legendary pips are `Pips`, roll tokens are `InlineButton`s, enemy rows are flush `Disclosure`s (the grid moves to `.sr-enemy-row`) and achievement popups are glow `Card`s.
+  - The runner's palette is jeff-ui's: `--sr-bg`, `--sr-surface`, `--sr-raised`, `--sr-line`, `--sr-text`, `--sr-muted` and `--sr-accent` are replaced by the `--ui-*` tokens, and `.sr-root` sets its bluer `--ui-surface`. `--sr-k-*` and `--sr-v-*` stay. The runner's bare-button rule is in the `ui.elements` layer, so it no longer overrides jeff-ui buttons.
+- Specs query jeff-ui state (`aria-pressed`, `aria-current`, `.ui-*` parts) instead of the old `is-on`, `is-current`, `is-visited` and `is-spent` classes.
+
 ## [0.96.1] — 2026-11-21
 
 ### Changed

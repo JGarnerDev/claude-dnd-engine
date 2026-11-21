@@ -20,7 +20,7 @@
   padding: 10px 12px;
 }
 /* Right-side action cluster (settings gear + future buttons). Positioning context
-   for the settings overlay (settingspanel.css) — the panel anchors to this
+   for the header popovers (Save, Load, the settings gear): each panel anchors to this
    cluster's right edge so it lines up flush under the gear, expanding leftward.
    The panel's own max-width (in vw) keeps it inside the page. */
 .chart-actions {
@@ -59,36 +59,6 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 .chart-sessionlink:hover {
-  background: var(--chart-axis);
-}
-
-/* View toggle (World | Campaign) — pill tab group at the header's left edge */
-.chart-viewtabs {
-  display: flex;
-  gap: 4px;
-  padding: 4px;
-  background: var(--chart-surface);
-  border-radius: 9px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-.chart-viewtab {
-  padding: 6px 16px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--chart-muted);
-  background: transparent;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition:
-    color 120ms ease,
-    background 120ms ease;
-}
-.chart-viewtab:hover {
-  color: var(--chart-text);
-}
-.chart-viewtab[aria-selected="true"] {
-  color: var(--chart-text);
   background: var(--chart-axis);
 }
 

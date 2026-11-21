@@ -1,16 +1,12 @@
-/* Session runner (runner.ts). Dark, matching the home page's slate palette.
+/* Session runner (runner.ts). Dark, on the engine's --ui-* palette (theme.css);
+   the runner's surface is one step bluer than the charts', set on .sr-root.
    Kind accents are the flow chart's classDef stroke colors, lifted for a dark
    ground (meta/flow-graphs.md legend: rust combat, parchment social, lantern
    fork, green payoff, blue thread, dusty-red setback, grey undecided). */
 
+@layer ui.base, ui.elements, ui.components, ui.layout;
+
 :root {
-  --sr-bg: #0f172a;
-  --sr-surface: #1e293b;
-  --sr-raised: #273449;
-  --sr-line: #334155;
-  --sr-text: #e5e7eb;
-  --sr-muted: #94a3b8;
-  --sr-accent: #e3b341;
   --sr-k-combat: #e0735a;
   --sr-k-social: #bdb38c;
   --sr-k-decision: #e3b341;
@@ -22,22 +18,26 @@
 }
 
 .sr-root {
+  --ui-surface: #1e293b;
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: var(--sr-bg);
-  color: var(--sr-text);
+  background: var(--ui-bg);
+  color: var(--ui-text);
   font:
     15px/1.5 system-ui,
     sans-serif;
 }
-.sr-root button {
-  font: inherit;
-  color: inherit;
+/* Bare buttons take the runner's type. Layered, so jeff-ui's buttons keep their look. */
+@layer ui.elements {
+  .sr-root button {
+    font: inherit;
+    color: inherit;
+  }
 }
 .sr-root code {
   font-size: 0.88em;
-  background: var(--sr-surface);
+  background: var(--ui-surface);
   padding: 0.05em 0.35em;
   border-radius: 4px;
 }
@@ -49,7 +49,7 @@
   justify-content: space-between;
   gap: 12px;
   padding: 10px 16px;
-  border-bottom: 1px solid var(--sr-line);
+  border-bottom: 1px solid var(--ui-border);
 }
 .sr-title {
   display: flex;
@@ -60,7 +60,7 @@
   font-size: 16px;
 }
 .sr-title span {
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   font-size: 13px;
 }
 .sr-actions {
@@ -72,16 +72,16 @@
 .sr-actions a {
   padding: 5px 12px;
   font-size: 13px;
-  background: var(--sr-surface);
-  border: 1px solid var(--sr-line);
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
   border-radius: 6px;
   cursor: pointer;
-  color: var(--sr-text);
+  color: var(--ui-text);
   text-decoration: none;
 }
 .sr-actions button:hover,
 .sr-actions a:hover {
-  background: var(--sr-raised);
+  background: var(--ui-surface-hi);
 }
 
 /* Map rail */
@@ -90,7 +90,7 @@
   flex-wrap: wrap;
   gap: 6px 14px;
   padding: 8px 16px;
-  border-bottom: 1px solid var(--sr-line);
+  border-bottom: 1px solid var(--ui-border);
   background: #111c30;
 }
 .sr-rail-group {
@@ -102,40 +102,15 @@
   border-radius: 6px;
 }
 .sr-rail-group.is-current {
-  background: var(--sr-surface);
+  background: var(--ui-surface);
 }
 .sr-rail-label {
   font-size: 12px;
   font-weight: 600;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   margin-right: 4px;
   text-transform: uppercase;
 }
-.sr-chip {
-  --k: var(--sr-k-social);
-  min-height: 0;
-  font-size: 10.5px !important;
-  line-height: 1;
-  padding: 4px 6px;
-  border-radius: 4px;
-  border: 1px solid var(--k);
-  background: transparent;
-  color: var(--sr-muted) !important;
-  cursor: pointer;
-}
-.sr-chip.is-visited {
-  background: color-mix(in srgb, var(--k) 28%, transparent);
-  color: var(--sr-text) !important;
-}
-.sr-chip.is-current {
-  background: var(--k);
-  color: #0f172a !important;
-  font-weight: 700;
-  box-shadow:
-    0 0 0 2px var(--sr-bg),
-    0 0 0 3px var(--k);
-}
-
 /* Kind → accent, shared by chips, cards and their badges */
 [data-kind="combat"] {
   --k: var(--sr-k-combat);
@@ -178,7 +153,7 @@
   width: 409px; /* includes padding and border (border-box) */
   flex-shrink: 0;
   overflow-y: auto;
-  border-left: 1px solid var(--sr-line);
+  border-left: 1px solid var(--ui-border);
   background: #121d31;
   padding: 12px 14px 40px;
 }
@@ -194,7 +169,7 @@
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;
-  border-bottom: 2px solid var(--sr-line);
+  border-bottom: 2px solid var(--ui-border);
   padding-bottom: 6px;
   margin-bottom: 12px;
 }
@@ -203,13 +178,13 @@
   font-size: 22px;
 }
 .sr-scene-pos {
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   font-size: 13px;
   white-space: nowrap;
 }
 .sr-scene-time {
   margin-right: 12px;
-  color: var(--sr-text);
+  color: var(--ui-text);
 }
 .sr-sh-summary {
   font-size: 18px;
@@ -233,7 +208,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .sr-sh-val {
   font-size: 15px;
@@ -244,15 +219,15 @@
   gap: 4px 6px;
 }
 .sr-sh-chip {
-  background: var(--sr-surface);
-  border: 1px solid var(--sr-line);
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
   border-radius: 999px;
   padding: 1px 10px;
   font-size: 14px;
 }
 .sr-enemies {
-  background: color-mix(in srgb, var(--sr-k-combat) 8%, var(--sr-bg));
-  border: 1px solid color-mix(in srgb, var(--sr-k-combat) 45%, var(--sr-line));
+  background: color-mix(in srgb, var(--sr-k-combat) 8%, var(--ui-bg));
+  border: 1px solid color-mix(in srgb, var(--sr-k-combat) 45%, var(--ui-border));
   border-radius: 8px;
   padding: 8px 12px;
   margin-bottom: 12px;
@@ -271,8 +246,8 @@
   font-size: 11.5px;
   padding: 1px 8px;
   background: transparent;
-  color: var(--sr-muted);
-  border: 1px solid var(--sr-line);
+  color: var(--ui-muted);
+  border: 1px solid var(--ui-border);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -281,35 +256,25 @@
 }
 .sr-hp-reset:hover,
 .sr-roll-clear:hover {
-  color: var(--sr-text);
-  background: var(--sr-surface);
+  color: var(--ui-text);
+  background: var(--ui-surface);
 }
-.sr-enemy > summary {
+.sr-enemy-row {
   display: grid;
   grid-template-columns: minmax(150px, 1fr) minmax(130px, 0.9fr) 2fr auto;
   gap: 10px;
   align-items: baseline;
-  padding: 5px 0;
-  cursor: pointer;
-  list-style: none;
   font-size: 14px;
-  border-top: 1px solid var(--sr-line);
-}
-.sr-enemy:first-of-type > summary {
-  border-top: none;
-}
-.sr-enemy > summary::-webkit-details-marker {
-  display: none;
 }
 .sr-enemy-name {
   font-weight: 600;
 }
 .sr-enemy-stats {
-  color: var(--sr-text);
+  color: var(--ui-text);
   font-variant-numeric: tabular-nums;
 }
 .sr-enemy-atk {
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   display: flex;
   flex-direction: column;
   gap: 1px;
@@ -326,10 +291,10 @@
 }
 .sr-hp-val {
   font-variant-numeric: tabular-nums;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .sr-hp-val b {
-  color: var(--sr-text);
+  color: var(--ui-text);
   font-size: 15px;
 }
 .sr-hp-in {
@@ -337,16 +302,16 @@
   padding: 1px 5px;
   font: inherit;
   font-size: 13px;
-  background: var(--sr-bg);
-  color: var(--sr-text);
-  border: 1px solid var(--sr-line);
+  background: var(--ui-bg);
+  color: var(--ui-text);
+  border: 1px solid var(--ui-border);
   border-radius: 4px;
 }
 .sr-hp-in:focus {
   outline: none;
   border-color: var(--sr-k-combat);
 }
-.sr-enemy.is-down > summary {
+.sr-enemy.is-down .sr-enemy-row {
   opacity: 0.5;
 }
 .sr-enemy.is-down .sr-enemy-name {
@@ -354,20 +319,6 @@
 }
 .sr-enemy.is-down .sr-hp-val b {
   color: var(--sr-k-combat);
-}
-.sr-roll {
-  font: inherit;
-  color: inherit;
-  background: color-mix(in srgb, var(--sr-k-combat) 12%, transparent);
-  border: none;
-  border-bottom: 1px dashed color-mix(in srgb, var(--sr-k-combat) 70%, transparent);
-  border-radius: 3px;
-  padding: 0 2px;
-  cursor: pointer;
-}
-.sr-roll:hover {
-  background: color-mix(in srgb, var(--sr-k-combat) 30%, transparent);
-  color: var(--sr-text);
 }
 .sr-roll-log {
   list-style: none;
@@ -385,21 +336,21 @@
   display: flex;
   align-items: baseline;
   gap: 8px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .sr-roll-entry.is-latest {
-  color: var(--sr-text);
+  color: var(--ui-text);
 }
 .sr-roll-total {
   min-width: 2.2em;
   text-align: right;
   font-size: 15px;
   font-variant-numeric: tabular-nums;
-  color: var(--sr-text);
+  color: var(--ui-text);
 }
 .sr-roll-entry.is-latest .sr-roll-total {
   font-size: 18px;
-  color: var(--sr-accent);
+  color: var(--ui-accent);
 }
 .sr-roll-entry.is-nat20 .sr-roll-total {
   color: var(--sr-k-stake);
@@ -418,8 +369,8 @@
   font-size: 11.5px;
   padding: 1px 8px;
   background: transparent;
-  color: var(--sr-accent);
-  border: 1px solid var(--sr-accent);
+  color: var(--ui-accent);
+  border: 1px solid var(--ui-accent);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -432,7 +383,7 @@
 }
 .sr-hplog > summary {
   cursor: pointer;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   padding: 2px 0;
 }
 .sr-hplog ol {
@@ -457,20 +408,20 @@
   opacity: 0.5;
 }
 .sr-hplog-at {
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .sr-hplog-undo {
   font-size: 11.5px;
   padding: 0 8px;
   background: transparent;
-  color: var(--sr-muted);
-  border: 1px solid var(--sr-line);
+  color: var(--ui-muted);
+  border: 1px solid var(--ui-border);
   border-radius: 4px;
   cursor: pointer;
 }
 .sr-hplog-undo:hover:not([disabled]) {
-  color: var(--sr-text);
-  background: var(--sr-surface);
+  color: var(--ui-text);
+  background: var(--ui-surface);
 }
 .sr-hplog-undo[disabled] {
   opacity: 0.4;
@@ -478,10 +429,10 @@
 }
 .sr-hplog-tag {
   font-size: 11.5px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .sr-hplog-empty {
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   margin: 4px 0 0;
 }
 .sr-enemy.is-unmatched {
@@ -507,7 +458,7 @@
 }
 .sr-setup {
   background: #131e33;
-  border: 1px solid var(--sr-line);
+  border: 1px solid var(--ui-border);
   border-radius: 8px;
   padding: 2px 14px;
   margin-bottom: 12px;
@@ -516,7 +467,7 @@
 .sr-tokens-box > summary {
   cursor: pointer;
   padding: 7px 0;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   font-size: 12.5px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -532,8 +483,8 @@
   gap: 6px;
 }
 .sr-step {
-  background: var(--sr-surface);
-  border: 1px solid var(--sr-line);
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
   border-radius: 8px;
 }
 .sr-step-head {
@@ -552,7 +503,7 @@
 .sr-step-num {
   min-width: 1.4em;
   text-align: right;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   font-variant-numeric: tabular-nums;
   font-weight: 700;
 }
@@ -568,9 +519,9 @@
   color: var(--sr-k-stake);
 }
 .sr-step.is-current {
-  border-color: var(--sr-accent);
-  border-left: 4px solid var(--sr-accent);
-  background: var(--sr-raised);
+  border-color: var(--ui-accent);
+  border-left: 4px solid var(--ui-accent);
+  background: var(--ui-surface-hi);
 }
 .sr-step.is-current .sr-step-head {
   font-size: 19px;
@@ -602,7 +553,7 @@
 .sr-tokens-box {
   margin-top: 14px;
   background: #131e33;
-  border: 1px solid var(--sr-line);
+  border: 1px solid var(--ui-border);
   border-radius: 8px;
   padding: 2px 14px 6px;
   font-size: 14px;
@@ -633,15 +584,15 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   margin-right: 6px;
 }
 .sr-intro {
-  background: var(--sr-surface);
+  background: var(--ui-surface);
   border-radius: 8px;
   padding: 8px 14px;
   margin: 4px 0 10px;
-  border-left: 4px solid var(--sr-accent);
+  border-left: 4px solid var(--ui-accent);
 }
 .sr-intro-name {
   font-size: 17px;
@@ -657,7 +608,7 @@
 
 /* Private messages, inside the open step: one Copy button per outcome */
 .sr-private {
-  background: var(--sr-surface);
+  background: var(--ui-surface);
   border-radius: 8px;
   padding: 8px 14px;
   margin: 4px 0 10px;
@@ -669,7 +620,7 @@
 }
 .sr-private-when {
   font-size: 13.5px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   margin-bottom: 6px;
 }
 .sr-private-list {
@@ -683,7 +634,7 @@
   column-gap: 10px;
   align-items: start;
   padding: 6px 0;
-  border-top: 1px solid var(--sr-line);
+  border-top: 1px solid var(--ui-border);
 }
 .sr-private-list li:first-child {
   border-top: 0;
@@ -705,13 +656,13 @@
     sans-serif;
   padding: 4px 10px;
   border-radius: 5px;
-  border: 1px solid var(--sr-line);
-  background: var(--sr-bg);
+  border: 1px solid var(--ui-border);
+  background: var(--ui-bg);
   color: inherit;
   cursor: pointer;
 }
 .sr-copy:hover {
-  border-color: var(--sr-muted);
+  border-color: var(--ui-muted);
 }
 .sr-copy[data-copied] {
   border-color: var(--sr-k-stake);
@@ -729,12 +680,12 @@
 .sr-asides {
   margin-top: 12px;
   padding-top: 10px;
-  border-top: 1px dashed var(--sr-line);
+  border-top: 1px dashed var(--ui-border);
 }
 .sr-asides-label {
   font-size: 12px;
   text-transform: uppercase;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   letter-spacing: 0.06em;
 }
 .sr-opt {
@@ -743,17 +694,17 @@
   column-gap: 12px;
   text-align: left;
   padding: 10px 14px;
-  background: var(--sr-bg);
-  border: 1px solid var(--sr-line);
+  background: var(--ui-bg);
+  border: 1px solid var(--ui-border);
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
 }
 .sr-opt:hover {
-  border-color: var(--sr-muted);
+  border-color: var(--ui-muted);
 }
 .sr-opt.is-primary {
-  border-color: var(--sr-accent);
+  border-color: var(--ui-accent);
 }
 .sr-opt[data-kind="aside"] {
   border-style: dashed;
@@ -766,16 +717,16 @@
     monospace;
   padding: 3px 7px;
   border-radius: 4px;
-  background: var(--sr-raised);
-  color: var(--sr-muted);
+  background: var(--ui-surface-hi);
+  color: var(--ui-muted);
 }
 .sr-opt.is-primary kbd {
-  background: var(--sr-accent);
+  background: var(--ui-accent);
   color: #0f172a;
 }
 .sr-opt-to {
   font-size: 12.5px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .sr-end {
   font-size: 16px;
@@ -790,14 +741,14 @@
 .sr-md blockquote {
   margin: 10px 0;
   padding: 4px 16px;
-  border-left: 3px solid var(--sr-accent);
-  background: var(--sr-bg);
+  border-left: 3px solid var(--ui-accent);
+  background: var(--ui-bg);
   font-style: italic;
   color: #f1e9d2;
 }
 .sr-md pre {
   white-space: pre-wrap;
-  background: var(--sr-bg);
+  background: var(--ui-bg);
   padding: 10px;
   border-radius: 6px;
   font-size: 13px;
@@ -818,7 +769,7 @@
   text-underline-offset: 3px;
 }
 .sr-wiki.is-missing {
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 
 /* Side panel */
@@ -826,16 +777,16 @@
   width: 100%;
   padding: 8px 10px;
   font: inherit;
-  color: var(--sr-text);
-  background: var(--sr-bg);
-  border: 1px solid var(--sr-line);
+  color: var(--ui-text);
+  background: var(--ui-bg);
+  border: 1px solid var(--ui-border);
   border-radius: 6px;
 }
 .sr-group {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   margin: 16px 0 6px;
 }
 .sr-ent,
@@ -846,14 +797,14 @@
   text-align: left;
   padding: 7px 9px;
   margin-bottom: 4px;
-  background: var(--sr-surface);
+  background: var(--ui-surface);
   border: 1px solid transparent;
   border-radius: 6px;
   cursor: pointer;
 }
 .sr-ent:hover,
 .sr-pc:hover {
-  border-color: var(--sr-line);
+  border-color: var(--ui-border);
 }
 .sr-ent-name,
 .sr-pc-name {
@@ -862,7 +813,7 @@
 .sr-ent-type,
 .sr-pc-class {
   font-size: 12px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .sr-ent-sub,
 .sr-pc-status {
@@ -883,7 +834,7 @@
 }
 .sr-pc-status {
   font-size: 12px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   white-space: normal;
 }
 .sr-ent-head h2 {
@@ -900,8 +851,8 @@
   font-size: 11.5px;
   padding: 1px 7px;
   border-radius: 999px;
-  background: var(--sr-raised);
-  color: var(--sr-muted);
+  background: var(--ui-surface-hi);
+  color: var(--ui-muted);
 }
 .sr-layer[data-layer="historian"] {
   background: #1f4d36;
@@ -919,8 +870,8 @@
   color: #cbd5e1;
 }
 .sr-quickref {
-  background: var(--sr-surface);
-  border-left: 3px solid var(--sr-accent);
+  background: var(--ui-surface);
+  border-left: 3px solid var(--ui-accent);
   border-radius: 6px;
   padding: 6px 12px;
   margin: 10px 0;
@@ -929,13 +880,13 @@
 .sr-quickref-label {
   font-size: 11.5px;
   text-transform: uppercase;
-  color: var(--sr-accent);
+  color: var(--ui-accent);
   letter-spacing: 0.06em;
   margin-top: 4px;
 }
 .sr-openfile {
   font-size: 12px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .sr-fields {
   margin: 12px 0;
@@ -944,11 +895,11 @@
 .sr-fields summary,
 .sr-section summary {
   cursor: pointer;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   padding: 4px 0;
 }
 .sr-fields dt {
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   margin-top: 6px;
   text-transform: capitalize;
 }
@@ -960,13 +911,13 @@
   margin: 0;
 }
 .sr-section {
-  background: var(--sr-surface);
+  background: var(--ui-surface);
   border-radius: 6px;
   padding: 2px 10px;
   margin-bottom: 4px;
 }
 .sr-empty {
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 
 .sr-emptypage {
@@ -1004,7 +955,7 @@
 }
 .sr-recap-meta {
   font-size: 13px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   margin-top: -6px;
 }
 .sr-recap-lead {
@@ -1035,19 +986,19 @@
 .sr-recap-full {
   margin-top: 14px;
   font-size: 15px;
-  background: var(--sr-bg);
+  background: var(--ui-bg);
   border-radius: 6px;
   padding: 4px 14px;
 }
 .sr-recap-full summary {
   cursor: pointer;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   padding: 6px 0;
 }
 .sr-recap-season {
   margin-top: 18px;
   padding-top: 6px;
-  border-top: 1px dashed var(--sr-line);
+  border-top: 1px dashed var(--ui-border);
 }
 
 /* ===== Scene-notes overhaul, stage 2 =====
@@ -1079,7 +1030,7 @@
 .sr-header .sr-search {
   padding: 6px 34px 6px 10px;
   font-size: 14px;
-  background: var(--sr-surface);
+  background: var(--ui-surface);
 }
 .sr-header .sr-search:focus {
   outline: none;
@@ -1091,8 +1042,8 @@
   top: 50%;
   transform: translateY(-50%);
   font: 600 11px var(--sr-f-cue);
-  color: var(--sr-muted);
-  border: 1px solid var(--sr-line);
+  color: var(--ui-muted);
+  border: 1px solid var(--ui-border);
   border-radius: 3px;
   padding: 0 5px;
   pointer-events: none;
@@ -1100,10 +1051,10 @@
 .sr-pin kbd {
   font: 600 11px var(--sr-f-cue);
   margin-left: 6px;
-  border: 1px solid var(--sr-line);
+  border: 1px solid var(--ui-border);
   border-radius: 3px;
   padding: 0 4px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 
 /* Panel: docked beside the notes, or a thin rail and a slide-over */
@@ -1121,7 +1072,7 @@
   gap: 6px;
   width: 45px;
   flex-shrink: 0;
-  border-left: 1px solid var(--sr-line);
+  border-left: 1px solid var(--ui-border);
   background: #111c30;
   padding: 10px 0;
 }
@@ -1134,12 +1085,12 @@
   border-radius: 6px;
   border: 1px solid transparent;
   background: transparent;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   cursor: pointer;
 }
 .sr-siderail button:hover {
-  background: var(--sr-surface);
-  color: var(--sr-text);
+  background: var(--ui-surface);
+  color: var(--ui-text);
 }
 .sr-siderail button[hidden] {
   display: none;
@@ -1160,7 +1111,7 @@
   height: 15px;
   border-radius: 8px;
   background: var(--sr-v-watch);
-  color: var(--sr-bg);
+  color: var(--ui-bg);
   font:
     700 10px/15px system-ui,
     sans-serif;
@@ -1206,7 +1157,7 @@
   margin: -12px -14px 6px;
   padding: 8px 14px 6px;
   background: #121d31;
-  border-bottom: 1px solid var(--sr-line);
+  border-bottom: 1px solid var(--ui-border);
 }
 .sr-pn-crumb {
   flex: 1;
@@ -1222,16 +1173,16 @@
 .sr-pn-btn.sr-back {
   padding: 3px 10px;
   border-radius: 6px;
-  border: 1px solid var(--sr-line);
+  border: 1px solid var(--ui-border);
   background: transparent;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   cursor: pointer;
   font-size: 12.5px;
   white-space: nowrap;
 }
 .sr-pn-btn:hover {
-  color: var(--sr-text);
-  background: var(--sr-surface);
+  color: var(--ui-text);
+  background: var(--ui-surface);
 }
 .sr-pn-row {
   display: flex;
@@ -1240,20 +1191,20 @@
   text-align: left;
   padding: 6px 9px;
   margin-bottom: 4px;
-  background: var(--sr-surface);
+  background: var(--ui-surface);
   border: 1px solid transparent;
   border-radius: 6px;
   cursor: pointer;
 }
 .sr-pn-row:hover {
-  border-color: var(--sr-line);
+  border-color: var(--ui-border);
 }
 .sr-pn-name {
   font-weight: 600;
 }
 .sr-pn-sub {
   font-size: 12px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .sr-pn-id {
   font-family: var(--sr-f-cue);
@@ -1265,20 +1216,20 @@
   border-radius: 2px;
 }
 .sr-pn-fold {
-  background: var(--sr-surface);
+  background: var(--ui-surface);
   border-radius: 6px;
   padding: 2px 10px;
   margin-bottom: 4px;
 }
 .sr-pn-fold > summary {
   cursor: pointer;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   padding: 6px 0;
   font-size: 13.5px;
 }
 .sr-pn-fold .sr-ent,
 .sr-pn-fold .sr-pn-row {
-  background: var(--sr-bg);
+  background: var(--ui-bg);
 }
 .sr-pn-title {
   margin: 4px 0 8px;
@@ -1288,7 +1239,7 @@
 }
 .sr-pn-num {
   font: 600 13px var(--sr-f-cue);
-  color: var(--sr-bg);
+  color: var(--ui-bg);
   background: var(--sr-v-watch);
   border-radius: 3px;
   padding: 0 5px;
@@ -1303,15 +1254,15 @@
   align-items: center;
   justify-content: space-between;
   font-size: 12.5px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   background: color-mix(in srgb, var(--sr-v-watch) 8%, transparent);
-  border-block: 1px solid var(--sr-line);
+  border-block: 1px solid var(--ui-border);
 }
 .sr-pn-go {
   padding: 4px 12px;
   border-radius: 6px;
-  border: 1px solid var(--sr-accent);
-  background: color-mix(in srgb, var(--sr-accent) 14%, transparent);
+  border: 1px solid var(--ui-accent);
+  background: color-mix(in srgb, var(--ui-accent) 14%, transparent);
   font-weight: 600;
   font-size: 13px;
   cursor: pointer;
@@ -1339,7 +1290,7 @@
   font-size: 14px;
 }
 .sr-pn-steps li {
-  background: var(--sr-surface);
+  background: var(--ui-surface);
   border-radius: 6px;
   padding: 6px 10px;
 }
@@ -1368,7 +1319,7 @@
   grid-template-columns: 108px minmax(0, 1fr);
   gap: 12px;
   padding: 9px 0;
-  border-top: 1px solid color-mix(in srgb, var(--sr-line) 60%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--ui-border) 60%, transparent);
 }
 .sr-pb:first-child {
   border-top: 0;
@@ -1384,7 +1335,7 @@
   --c: var(--sr-v-watch);
 }
 .sr-pb-choice {
-  --c: var(--sr-accent);
+  --c: var(--ui-accent);
 }
 .sr-pb-private {
   --c: var(--sr-v-private);
@@ -1459,13 +1410,13 @@
   padding: 6px 10px;
 }
 .sr-pb-choice .sr-pb-text {
-  background: color-mix(in srgb, var(--sr-accent) 12%, transparent);
+  background: color-mix(in srgb, var(--ui-accent) 12%, transparent);
   border-radius: 6px;
   padding: 6px 10px;
 }
 .sr-pb-private .sr-pb-text,
 .sr-pb-intro .sr-pb-text {
-  background: var(--sr-surface);
+  background: var(--ui-surface);
   border-radius: 8px;
   padding: 6px 12px;
 }
@@ -1505,22 +1456,22 @@
 }
 .sr-bref-n {
   font: 600 11.5px var(--sr-f-cue);
-  color: var(--sr-bg);
+  color: var(--ui-bg);
   background: var(--sr-v-watch);
   border-radius: 3px;
   padding: 0 4px;
 }
 .sr-bref.is-scene {
-  color: var(--sr-accent) !important;
-  background: color-mix(in srgb, var(--sr-accent) 9%, transparent);
-  border-color: color-mix(in srgb, var(--sr-accent) 45%, transparent);
+  color: var(--ui-accent) !important;
+  background: color-mix(in srgb, var(--ui-accent) 9%, transparent);
+  border-color: color-mix(in srgb, var(--ui-accent) 45%, transparent);
 }
 .sr-bref.is-scene .sr-bref-n {
-  background: var(--sr-accent);
+  background: var(--ui-accent);
 }
 .sr-cardref {
   font-weight: 600;
-  color: var(--sr-accent) !important;
+  color: var(--ui-accent) !important;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -1535,7 +1486,7 @@
   text-decoration: underline dotted;
   text-underline-offset: 3px;
   cursor: help;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 
 /* Fight bar: pinned at the top of the notes while a fight runs */
@@ -1549,7 +1500,7 @@
   gap: 6px;
   padding: 7px 10px;
   border-radius: 8px;
-  background: color-mix(in srgb, var(--sr-k-combat) 16%, var(--sr-bg));
+  background: color-mix(in srgb, var(--sr-k-combat) 16%, var(--ui-bg));
   border: 1px solid var(--sr-k-combat);
   box-shadow: 0 6px 16px rgb(0 0 0 / 0.35);
 }
@@ -1566,8 +1517,8 @@
   gap: 6px;
   padding: 2px 8px 2px 4px;
   border-radius: 5px;
-  border: 1px solid var(--sr-line);
-  background: var(--sr-bg);
+  border: 1px solid var(--ui-border);
+  background: var(--ui-bg);
   cursor: pointer;
   font-size: 13px;
   font-variant-numeric: tabular-nums;
@@ -1579,7 +1530,7 @@
   background: var(--hc);
 }
 .sr-hpchip.is-hurt {
-  --hc: var(--sr-accent);
+  --hc: var(--ui-accent);
 }
 .sr-hpchip.is-low {
   --hc: var(--sr-k-combat);
@@ -1590,8 +1541,8 @@
   text-decoration: line-through;
 }
 .sr-hpchip.is-picked {
-  border-color: var(--sr-accent);
-  background: var(--sr-raised);
+  border-color: var(--ui-accent);
+  background: var(--ui-surface-hi);
 }
 .sr-strip-quick {
   display: flex;
@@ -1603,14 +1554,14 @@
   width: 6em;
   padding: 2px 6px;
   font: inherit;
-  background: var(--sr-bg);
-  color: var(--sr-text);
+  background: var(--ui-bg);
+  color: var(--ui-text);
   border: 1px solid var(--sr-k-combat);
   border-radius: 4px;
 }
 .sr-strip-in:focus {
   outline: none;
-  border-color: var(--sr-accent);
+  border-color: var(--ui-accent);
 }
 .sr-strip-card {
   display: flex;
@@ -1621,12 +1572,12 @@
   overflow: auto;
   padding: 7px 10px;
   border-radius: 6px;
-  background: var(--sr-bg);
-  border: 1px solid var(--sr-line);
+  background: var(--ui-bg);
+  border: 1px solid var(--ui-border);
   font-size: 13px;
 }
 .sr-strip-card-stats {
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   font-variant-numeric: tabular-nums;
 }
 .sr-strip-card-atk {
@@ -1657,7 +1608,7 @@
 }
 .sr-strip-card-more > summary {
   cursor: pointer;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
   font-size: 12px;
 }
 .sr-strip-card-more > div {
@@ -1686,11 +1637,11 @@
     width: 100%;
   }
   /* Enemy rows stack: name and HP on top, stats and attacks under them */
-  .sr-enemy > summary {
+  .sr-enemy-row {
     grid-template-columns: minmax(0, 1fr) auto;
     row-gap: 2px;
   }
-  .sr-enemy > summary > .sr-hp {
+  .sr-enemy-row > .sr-hp {
     grid-column: 2;
     grid-row: 1;
   }
@@ -1737,7 +1688,7 @@
   color: #ffd2c6;
 }
 .sr-strip.is-boss .sr-strip-mode {
-  color: var(--sr-bg);
+  color: var(--ui-bg);
   background: var(--sr-boss);
   padding: 1px 7px;
   border-radius: 3px;
@@ -1753,12 +1704,12 @@
   height: 26px;
   border-radius: 6px;
   border: 1px solid var(--sr-k-combat);
-  background: var(--sr-bg);
+  background: var(--ui-bg);
   cursor: pointer;
   font-weight: 700;
 }
 .sr-round button:hover {
-  background: var(--sr-raised);
+  background: var(--ui-surface-hi);
 }
 .sr-round output {
   font:
@@ -1788,7 +1739,7 @@
     700 10.5px system-ui,
     sans-serif;
   letter-spacing: 0.06em;
-  color: var(--sr-bg);
+  color: var(--ui-bg);
   background: var(--sr-v-watch);
   border-radius: 3px;
   padding: 1px 5px;
@@ -1815,7 +1766,7 @@ button.sr-alert:hover {
 }
 .sr-hpchip small {
   font-size: 11px;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 
 /* Boss chips: a phase meter with ticks, and legendary-action pips */
@@ -1830,7 +1781,7 @@ button.sr-alert:hover {
   width: 56px;
   height: 5px;
   border-radius: 3px;
-  background: var(--sr-line);
+  background: var(--ui-border);
   overflow: visible;
 }
 .sr-meter-fill {
@@ -1845,7 +1796,7 @@ button.sr-alert:hover {
   bottom: -3px;
   width: 2px;
   margin-left: -1px;
-  background: var(--sr-text);
+  background: var(--ui-text);
 }
 .sr-hpchip .sr-phase {
   font-weight: 700;
@@ -1856,28 +1807,6 @@ button.sr-alert:hover {
 .sr-hpchip.is-phase {
   border-color: var(--sr-k-combat);
 }
-.sr-legend {
-  display: inline-flex;
-  gap: 3px;
-}
-.sr-pip {
-  width: 12px;
-  height: 12px;
-  padding: 0;
-  border-radius: 50%;
-  border: 1.5px solid var(--sr-v-watch);
-  background: var(--sr-v-watch);
-  cursor: pointer;
-}
-.sr-pip.is-spent {
-  background: transparent;
-  opacity: 0.6;
-}
-.sr-pip:focus-visible {
-  outline: 2px solid var(--sr-accent);
-  outline-offset: 1px;
-}
-
 /* Arrivals in the Enemies box */
 .sr-arrives {
   font-size: 11.5px;
@@ -1885,7 +1814,7 @@ button.sr-alert:hover {
   color: var(--sr-v-watch);
   white-space: nowrap;
 }
-.sr-enemy.is-coming > summary,
+.sr-enemy.is-coming .sr-enemy-row,
 .sr-enemy.is-unmatched.is-coming {
   opacity: 0.55;
 }
@@ -1916,7 +1845,7 @@ button.sr-alert:hover {
     700 10px system-ui,
     sans-serif;
   letter-spacing: 0.06em;
-  color: var(--sr-bg);
+  color: var(--ui-bg);
   background: var(--sr-v-watch);
   border-radius: 3px;
   padding: 1px 4px;
@@ -1947,7 +1876,7 @@ button.sr-alert:hover {
   color: var(--sr-faint);
 }
 .sr-when.is-ready {
-  color: var(--sr-bg);
+  color: var(--ui-bg);
   background: var(--sr-v-watch);
   border-radius: 3px;
   padding: 0 6px;
@@ -1955,7 +1884,7 @@ button.sr-alert:hover {
 }
 .sr-when.is-ready::before {
   content: "ready · ";
-  color: var(--sr-bg);
+  color: var(--ui-bg);
 }
 .sr-edge {
   font-size: 12px;
@@ -2039,11 +1968,11 @@ html,
 .sr-root,
 .sr-root * {
   scrollbar-width: thin;
-  scrollbar-color: var(--sr-line) transparent;
+  scrollbar-color: var(--ui-border) transparent;
 }
 html:hover,
 .sr-root *:hover {
-  scrollbar-color: color-mix(in srgb, var(--sr-muted) 70%, var(--sr-line)) transparent;
+  scrollbar-color: color-mix(in srgb, var(--ui-muted) 70%, var(--ui-border)) transparent;
 }
 /* Safari and older Chromium, which don't read scrollbar-color */
 ::-webkit-scrollbar {
@@ -2054,13 +1983,13 @@ html:hover,
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--sr-line);
+  background: var(--ui-border);
   border-radius: 4px;
   border: 2px solid transparent;
   background-clip: padding-box;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--sr-muted);
+  background-color: var(--ui-muted);
 }
 ::-webkit-scrollbar-button {
   display: none;

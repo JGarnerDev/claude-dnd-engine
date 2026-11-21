@@ -218,7 +218,7 @@ describe("Timeline", () => {
 
   it("portals a search box and one chip per track into the settings slot", () => {
     const { slot, all } = mount(data);
-    expect(slot.querySelector(".chart-settings-panel .chart-search")).toBeTruthy();
+    expect(slot.querySelector(".ui-settings-panel .chart-search")).toBeTruthy();
     expect(all(".chart-chip").map((c) => c.dataset.track)).toEqual(["world", "faction"]);
   });
 
@@ -326,7 +326,7 @@ describe("Timeline", () => {
       audiences: [],
     });
     expect(chart.container.querySelector<HTMLInputElement>(".chart-search")!.value).toBe("pact");
-    expect(chart.chip("faction").classList.contains("is-on")).toBe(true);
+    expect(chart.chip("faction").getAttribute("aria-pressed") === "true").toBe(true);
     expect(chart.visible().map((m) => m.dataset.group)).toEqual(["faction"]);
     expect(chart.state()).toMatchObject({ query: "pact", tracks: ["faction"] });
   });
@@ -364,7 +364,9 @@ describe("Timeline", () => {
       ],
     };
     const audChip = (chart: ReturnType<typeof mount>, label: string) =>
-      chart.all(".chart-chip-audience").find((c) => c.textContent === label);
+      chart
+        .all(".chart-chip-audience")
+        .find((c) => c.textContent?.replace("🔒", "").trim() === label);
     const labels = (chart: ReturnType<typeof mount>) => chart.visible().map((m) => m.dataset.label);
 
     it("shows everything by default and exposes DM + character chips", () => {

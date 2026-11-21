@@ -3,7 +3,7 @@
 // Chips carry step numbers, not ids: ids are for planning, not for the table.
 
 import { useEffect, useRef } from "react";
-import { Button } from "jeff-ui";
+import { Waypoint } from "jeff-ui";
 import type { FlowNode, Scene } from "./types.js";
 
 export interface RailProps {
@@ -37,18 +37,20 @@ export function Rail({ nodes, scenes, current, visited, onJump }: RailProps) {
       >
         <span className="sr-rail-label">{g.label}</span>
         {g.nodes.map((n, i) => (
-          <Button
+          <Waypoint
             key={n.id}
-            unstyled
             ref={n.id === current ? here : undefined}
-            className={`sr-chip${n.id === current ? " is-current" : ""}${visited.has(n.id) ? " is-visited" : ""}`}
+            className="sr-chip"
+            current={n.id === current}
+            visited={visited.has(n.id)}
+            hue="var(--k, var(--sr-k-social))"
             data-kind={n.kind}
             data-id={n.id}
             title={n.title}
             onClick={() => onJump(n.id)}
           >
             {i + 1}
-          </Button>
+          </Waypoint>
         ))}
       </div>
     ));

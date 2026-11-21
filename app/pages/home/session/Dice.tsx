@@ -5,7 +5,7 @@
 // rolls are for the moment, and survive re-renders but not a reload.
 
 import { createContext, Fragment, useContext, type MouseEvent } from "react";
-import { Button } from "jeff-ui";
+import { InlineButton } from "jeff-ui";
 import {
   parseExpr,
   roll,
@@ -61,9 +61,9 @@ function RollButton({ tok }: { tok: RollToken }) {
     if (r) log(logEntry(ev.currentTarget, r, tok.label));
   };
   return (
-    <Button
-      unstyled
+    <InlineButton
       className="sr-roll"
+      hue="var(--sr-k-combat)"
       data-roll={tok.expr}
       data-kind={tok.kind}
       data-label={tok.label || undefined}
@@ -71,7 +71,7 @@ function RollButton({ tok }: { tok: RollToken }) {
       onClick={onClick}
     >
       {tok.match}
-    </Button>
+    </InlineButton>
   );
 }
 

@@ -11,13 +11,13 @@
   --chart-axis: #475569;
   --chart-grid: #1e293b;
 
-  --track-world: #60a5fa;
-  --track-party: #c084fc;
-  --track-character: #4ade80;
-  --track-npc: #2dd4bf;
-  --track-antagonist: #f87171;
-  --track-faction: #fb923c;
-  --track-continent: #f472b6;
+  --track-world: var(--ui-cat-1);
+  --track-party: var(--ui-cat-7);
+  --track-character: var(--ui-cat-3);
+  --track-npc: var(--ui-cat-6);
+  --track-antagonist: var(--ui-cat-8);
+  --track-faction: var(--ui-cat-2);
+  --track-continent: var(--ui-cat-5);
   /* Ruler rows past the first (one per world, segments.ts): each world's dates in
      its own colour. Row 0 keeps --chart-muted. Deliberately not track colours. */
   --chart-ruler-1: #fcd34d;

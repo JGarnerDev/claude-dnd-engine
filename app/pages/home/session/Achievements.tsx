@@ -10,7 +10,11 @@ import type { PcAchievements } from "./types.js";
 function AchievementCard({ title, text, times }: { title: string; text: string; times: number }) {
   const again = times > 1;
   return (
-    <Card unstyled className={`ac-card${again ? " is-repeat" : ""}`}>
+    <Card
+      variant="glow"
+      hue={again ? "var(--sr-k-recap)" : undefined}
+      className={`ac-card${again ? " is-repeat" : ""}`}
+    >
       <div className="ac-eyebrow">
         {again ? (
           <>

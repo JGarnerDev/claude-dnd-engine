@@ -151,11 +151,11 @@ function Enemy({
   const down = b.hp !== null && (hp[entry] ?? b.start ?? b.hp) <= 0;
   return (
     <Disclosure
-      unstyled
+      variant="flush"
       className={`sr-enemy${down ? " is-down" : ""}${coming}`}
       data-arrives={at}
       title={
-        <>
+        <span className="sr-enemy-row">
           <span className="sr-enemy-name">
             <InlineMd md={entry} />
             {tag}
@@ -182,7 +182,7 @@ function Enemy({
           ) : (
             <span />
           )}
-        </>
+        </span>
       }
     >
       <div className="sr-md sr-enemy-block">

@@ -10,7 +10,7 @@
   max-width: 1200px;
   padding-right: 1.5em;
   scrollbar-gutter: stable;
-  --rp-fame: var(--sr-accent);
+  --rp-fame: var(--ui-accent);
   --rp-infamy: var(--sr-k-combat);
 }
 
@@ -19,7 +19,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .rp-party b {
   margin-left: 0.4em;
@@ -30,7 +30,7 @@
 }
 .rp-party span {
   margin-left: 0.4em;
-  color: var(--sr-text);
+  color: var(--ui-text);
 }
 
 .rp-grid {
@@ -46,8 +46,8 @@
   column-gap: 14px;
   align-items: baseline;
   padding: 10px 16px 12px;
-  background: linear-gradient(160deg, var(--sr-raised), var(--sr-surface));
-  border: 1px solid var(--sr-line);
+  background: linear-gradient(160deg, var(--ui-surface-hi), var(--ui-surface));
+  border: 1px solid var(--ui-border);
   border-radius: 6px;
 }
 .rp-name {
@@ -104,7 +104,7 @@
   font-size: clamp(14px, 1.15vw, 18px);
   font-style: italic;
   line-height: 1.35;
-  color: var(--sr-text);
+  color: var(--ui-text);
 }
 
 .rp-deeds {
@@ -121,7 +121,7 @@
   align-items: baseline;
   font-size: clamp(14px, 1.15vw, 18px);
   line-height: 1.35;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .rp-pts {
   min-width: 5ch;

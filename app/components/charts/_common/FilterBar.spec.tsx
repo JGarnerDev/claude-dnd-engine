@@ -33,13 +33,14 @@ function mount(data: TimelineEvent[], initial = seedFilter(data)) {
   const { container } = render(<Chart />);
   const all = <T extends HTMLElement>(sel: string) => [...container.querySelectorAll<T>(sel)];
   const group = () => container.querySelector<HTMLElement>(".chart-audiences");
-  const chip = (label: string) => all(".chart-chip-audience").find((c) => c.textContent === label)!;
+  const chip = (label: string) =>
+    all(".chart-chip-audience").find((c) => c.textContent?.replace("🔒", "").trim() === label)!;
   const track = (name: string) => all(".chart-chip").find((c) => c.dataset.track === name)!;
   return { container, changes, all, group, chip, track };
 }
 
 const onKeys = (chips: HTMLElement[], attr: "track" | "audience") =>
-  chips.filter((c) => c.classList.contains("is-on")).map((c) => c.dataset[attr]);
+  chips.filter((c) => c.getAttribute("aria-pressed") === "true").map((c) => c.dataset[attr]);
 
 describe("useFilterSections", () => {
   it("labels the panel groups Search and Filter", () => {
@@ -76,16 +77,18 @@ describe("useFilterSections", () => {
   it("toggles a track on then off, firing onChange each time", () => {
     const { track, changes } = mount(events);
     fireEvent.click(track("faction"));
-    expect(track("faction").classList.contains("is-on")).toBe(true);
+    expect(track("faction").getAttribute("aria-pressed") === "true").toBe(true);
     expect(track("faction").getAttribute("aria-pressed")).toBe("true");
     fireEvent.click(track("faction"));
-    expect(track("faction").classList.contains("is-on")).toBe(false);
+    expect(track("faction").getAttribute("aria-pressed") === "true").toBe(false);
     expect(changes.map((c) => [...c.tracks])).toEqual([["faction"], []]);
   });
 
   describe("Known-by viewpoint group", () => {
     const chipText = (group: HTMLElement) =>
-      [...group.querySelectorAll<HTMLElement>(".chart-chip-audience")].map((c) => c.textContent);
+      [...group.querySelectorAll<HTMLElement>(".chart-chip-audience")].map((c) =>
+        c.textContent?.replace("🔒", "").trim(),
+      );
 
     it("is absent when no beat has knownBy and none is secret", () => {
       const { group, all } = mount(events);
@@ -117,9 +120,9 @@ describe("useFilterSections", () => {
     it("toggles an audience into the set and fires onChange", () => {
       const { chip, changes } = mount(withKnowledge);
       fireEvent.click(chip("Mara"));
-      expect(chip("Mara").classList.contains("is-on")).toBe(true);
+      expect(chip("Mara").getAttribute("aria-pressed") === "true").toBe(true);
       fireEvent.click(chip("Mara"));
-      expect(chip("Mara").classList.contains("is-on")).toBe(false);
+      expect(chip("Mara").getAttribute("aria-pressed") === "true").toBe(false);
       expect(changes.map((c) => [...c.audiences])).toEqual([["Mara"], []]);
     });
 
@@ -128,8 +131,8 @@ describe("useFilterSections", () => {
         withKnowledge,
         seedFilter(withKnowledge, { query: "", tracks: [], audiences: ["Borin"] }),
       );
-      expect(chip("Borin").classList.contains("is-on")).toBe(true);
-      expect(chip("Mara").classList.contains("is-on")).toBe(false);
+      expect(chip("Borin").getAttribute("aria-pressed") === "true").toBe(true);
+      expect(chip("Mara").getAttribute("aria-pressed") === "true").toBe(false);
     });
   });
 });

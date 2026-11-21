@@ -66,9 +66,7 @@ function ChartHost({ data, initial }: { data: TimelineData; initial: View }) {
           items={TABS}
           selected={shown.view}
           onPick={(v) => v && show(v)}
-          unstyled
           className="chart-viewtabs"
-          classNames={{ tab: "chart-viewtab" }}
         />
         <div className="chart-actions">
           <a href="/session.html" className="chart-sessionlink">

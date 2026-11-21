@@ -7,6 +7,7 @@
 import { Chip, SearchInput, type SettingsSection } from "jeff-ui";
 import "./components/filterbar.css";
 import { trackList, audienceList } from "./helpers/filters.js";
+import { toneFor } from "./helpers/tracks.js";
 import { DM_AUDIENCE, DM_LABEL } from "./constants.js";
 import type { TimelineEvent } from "./types.js";
 
@@ -50,6 +51,13 @@ export function seedFilter(
   };
 }
 
+// "Known by" chips are amber, so they read as a knowledge filter, not a track.
+const AUDIENCE_HUE = "var(--ui-cat-4)";
+
+function capitalized(text: string): string {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
 function toggled(set: Set<string>, key: string, on: boolean): Set<string> {
   const next = new Set(set);
   if (on) next.add(key);
@@ -86,13 +94,13 @@ export function useFilterSections(
           {tracks.map((track) => (
             <Chip
               key={track}
-              unstyled
-              className={value.tracks.has(track) ? "chart-chip is-on" : "chart-chip"}
+              className="chart-chip"
               data-track={track}
+              hue={toneFor(track)}
               pressed={value.tracks.has(track)}
               onToggle={(on) => onChange({ ...value, tracks: toggled(value.tracks, track, on) })}
             >
-              {track}
+              {capitalized(track)}
             </Chip>
           ))}
         </div>
@@ -107,18 +115,18 @@ export function useFilterSections(
         <div className="chart-chips chart-audiences">
           {audiences.map(({ key, label, dm }) => {
             const on = value.audiences.has(key);
-            const cls = `chart-chip chart-chip-audience${dm ? " chart-chip-dm" : ""}${on ? " is-on" : ""}`;
             return (
               <Chip
                 key={key}
-                unstyled
-                className={cls}
+                className={dm ? "chart-chip-audience chart-chip-dm" : "chart-chip-audience"}
                 data-audience={key}
+                hue={AUDIENCE_HUE}
                 pressed={on}
                 onToggle={(next) =>
                   onChange({ ...value, audiences: toggled(value.audiences, key, next) })
                 }
               >
+                {dm && <span aria-hidden="true">🔒 </span>}
                 {label}
               </Chip>
             );

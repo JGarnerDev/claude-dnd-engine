@@ -21,14 +21,14 @@ describe("TimelineView", () => {
   };
 
   const tab = (label: string) =>
-    [...container.querySelectorAll<HTMLElement>(".chart-viewtab")].find(
+    [...container.querySelectorAll<HTMLElement>('[role="tab"]')].find(
       (b) => b.textContent === label,
     )!;
   const isSelected = (label: string) => tab(label).getAttribute("aria-selected") === "true";
 
   it("renders a World and Campaign tab", () => {
     mount(data);
-    const labels = [...container.querySelectorAll(".chart-viewtab")].map((b) => b.textContent);
+    const labels = [...container.querySelectorAll('[role="tab"]')].map((b) => b.textContent);
     expect(labels).toEqual(["World", "Campaign"]);
   });
 
@@ -73,15 +73,14 @@ describe("TimelineView", () => {
   it("hosts the active chart's controls in the settings panel", () => {
     mount(data);
     // Each chart portals its own panel, so re-query after every swap.
-    const groups = () =>
-      container.querySelectorAll(".chart-settings-panel .chart-settings-group").length;
+    const groups = () => container.querySelectorAll(".ui-settings-panel .ui-settings-group").length;
     const before = groups();
     expect(before).toBeGreaterThan(0);
     // Swapping charts swaps the controls with them, not appends.
     fireEvent.click(tab("Campaign"));
-    expect(container.querySelectorAll(".chart-settings-panel")).toHaveLength(1);
+    expect(container.querySelectorAll(".ui-settings-panel")).toHaveLength(1);
     fireEvent.click(tab("World"));
-    expect(container.querySelectorAll(".chart-settings-panel")).toHaveLength(1);
+    expect(container.querySelectorAll(".ui-settings-panel")).toHaveLength(1);
     expect(groups()).toBe(before);
   });
 
@@ -91,7 +90,7 @@ describe("TimelineView", () => {
     fireEvent.click(container.querySelector(".chart-sv-confirm")!);
     fireEvent.click(tab("Campaign")); // drift away
     expect(container.querySelector(".ui-chart-swim-canvas")).toBeTruthy();
-    fireEvent.click(container.querySelectorAll(".chart-sv-btn")[1]); // open Load
+    fireEvent.click(container.querySelector<HTMLButtonElement>('button[title="Load view"]')!); // open Load
     fireEvent.click(container.querySelector(".chart-sv-load")!); // apply 'home'
     expect(container.querySelector(".ui-chart-canvas")).toBeTruthy();
     expect(container.querySelector(".ui-chart-swim-canvas")).toBeFalsy();
@@ -102,7 +101,7 @@ describe("TimelineView", () => {
     for (const empty of [null, { calendar: null, events: [] } as TimelineData]) {
       mount(empty);
       expect(container.querySelector(".chart-empty")).toBeTruthy();
-      expect(container.querySelector(".chart-viewtab")).toBeFalsy();
+      expect(container.querySelector('[role="tab"]')).toBeFalsy();
       expect(container.querySelector(".ui-chart-canvas")).toBeFalsy();
     }
   });

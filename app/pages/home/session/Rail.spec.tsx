@@ -22,9 +22,9 @@ describe("Rail", () => {
     ).container;
     const labels = [...rail.querySelectorAll(".sr-rail-label")].map((l) => l.textContent);
     expect(labels).toEqual(["1", "1b", "2", "3", "·"]);
-    expect(rail.querySelector(".sr-chip.is-current")!.getAttribute("data-id")).toBe("S1_REST");
-    expect(rail.querySelectorAll(".sr-chip.is-visited")).toHaveLength(2);
-    expect(rail.querySelector(".sr-chip.is-current")!.textContent).toBe("2"); // step number, not the id
+    expect(rail.querySelector(".ui-waypoint-current")!.getAttribute("data-id")).toBe("S1_REST");
+    expect(rail.querySelectorAll(".ui-waypoint-visited")).toHaveLength(2);
+    expect(rail.querySelector(".ui-waypoint-current")!.textContent).toBe("2"); // step number, not the id
     await userEvent.click(rail.querySelector<HTMLButtonElement>('[data-id="S1_FIGHT"]')!);
     expect(onJump).toHaveBeenCalledWith("S1_FIGHT");
   });

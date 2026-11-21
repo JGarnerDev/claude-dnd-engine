@@ -6,7 +6,6 @@
 import type { Ref } from "react";
 import { createPortal } from "react-dom";
 import { SettingsPanel, type SettingsSection } from "jeff-ui";
-import "./components/settingspanel.css";
 import type { ChartState, TimelineData } from "./types.js";
 
 export interface ChartHandle {
@@ -21,13 +20,6 @@ export interface ChartProps {
   ref?: Ref<ChartHandle>;
 }
 
-const classNames = {
-  button: "chart-settings-btn",
-  panel: "chart-settings-panel",
-  group: "chart-settings-group",
-  groupLabel: "chart-settings-grouplabel",
-};
-
 export function ChartSettings({
   slot,
   sections,
@@ -36,5 +28,5 @@ export function ChartSettings({
   sections: SettingsSection[];
 }) {
   if (!slot) return null;
-  return createPortal(<SettingsPanel sections={sections} classNames={classNames} unstyled />, slot);
+  return createPortal(<SettingsPanel sections={sections} />, slot);
 }

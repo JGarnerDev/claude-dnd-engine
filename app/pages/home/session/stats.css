@@ -39,15 +39,15 @@
   align-items: flex-start;
   gap: 14px;
   padding: 14px 18px;
-  background: linear-gradient(160deg, var(--sr-raised), var(--sr-surface));
-  border: 1px solid var(--sr-line);
+  background: linear-gradient(160deg, var(--ui-surface-hi), var(--ui-surface));
+  border: 1px solid var(--ui-border);
   border-radius: 14px;
 }
 .st-card.is-best {
-  border-color: var(--sr-accent);
+  border-color: var(--ui-accent);
   box-shadow:
-    0 0 0 1px var(--sr-accent),
-    0 6px 24px color-mix(in srgb, var(--sr-accent) 18%, transparent);
+    0 0 0 1px var(--ui-accent),
+    0 6px 24px color-mix(in srgb, var(--ui-accent) 18%, transparent);
 }
 .st-icon {
   font-size: clamp(28px, 2.6vw, 40px);
@@ -64,7 +64,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .st-pc {
   font-size: clamp(20px, 1.9vw, 30px);
@@ -74,18 +74,18 @@
 .st-value {
   font-size: clamp(18px, 1.6vw, 26px);
   font-weight: 700;
-  color: var(--sr-accent);
+  color: var(--ui-accent);
   font-variant-numeric: tabular-nums;
 }
 .st-value span {
   font-size: 0.65em;
   font-weight: 500;
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .st-best {
   margin-top: 4px;
   font-size: clamp(12px, 1vw, 15px);
-  color: var(--sr-accent);
+  color: var(--ui-accent);
 }
 
 .st-boards {
@@ -98,7 +98,7 @@
 }
 .st-board .ui-card-title {
   font-size: clamp(14px, 1.2vw, 18px);
-  color: var(--sr-muted);
+  color: var(--ui-muted);
 }
 .st-row {
   display: grid;
@@ -119,10 +119,10 @@
 }
 .st-bar .ui-progress-track {
   height: 10px;
-  background: var(--sr-surface);
+  background: var(--ui-surface);
 }
 .st-row.is-top .st-bar.ui-progress {
-  --ui-progress-fill: var(--sr-accent);
+  --ui-progress-fill: var(--ui-accent);
 }
 .st-row-v {
   text-align: right;
@@ -136,7 +136,7 @@
   align-items: center;
   gap: 8px;
   padding-top: 2vh;
-  border-top: 1px solid var(--sr-line);
+  border-top: 1px solid var(--ui-border);
 }
 .st-fame-h {
   margin-right: 6px;
@@ -144,16 +144,16 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--sr-accent);
+  color: var(--ui-accent);
 }
 .st-chip {
   padding: 4px 10px;
   font-size: clamp(13px, 1.1vw, 17px);
-  background: var(--sr-surface);
-  border: 1px solid var(--sr-line);
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
   border-radius: 999px;
 }
 .st-chip b {
-  color: var(--sr-accent);
+  color: var(--ui-accent);
   font-variant-numeric: tabular-nums;
 }

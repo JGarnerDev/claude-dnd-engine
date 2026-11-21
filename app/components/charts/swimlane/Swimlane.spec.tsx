@@ -115,7 +115,7 @@ describe("Swimlane", () => {
 
   it("portals a search box and track chips into the settings slot", () => {
     const { slot, all } = mount(data);
-    expect(slot.querySelector(".chart-settings-panel .chart-search")).toBeTruthy();
+    expect(slot.querySelector(".ui-settings-panel .chart-search")).toBeTruthy();
     expect(all(".chart-chip").length).toBeGreaterThan(0);
   });
 
@@ -246,7 +246,7 @@ describe("Swimlane", () => {
       audiences: [],
     });
     expect(chart.container.querySelector<HTMLInputElement>(".chart-search")!.value).toBe("war");
-    expect(chart.chip("world").classList.contains("is-on")).toBe(true);
+    expect(chart.chip("world").getAttribute("aria-pressed") === "true").toBe(true);
     expect(chart.state()).toMatchObject({ query: "war", tracks: ["world"] });
   });
 });

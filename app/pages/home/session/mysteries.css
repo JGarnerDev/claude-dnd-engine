@@ -18,8 +18,8 @@
   gap: 0.7em;
   margin: 0;
   padding: 1.6vh 1.2vw;
-  background: var(--sr-surface);
-  border: 1px solid var(--sr-line);
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
   border-left: 4px solid var(--sr-k-recap);
   border-radius: 10px;
 }

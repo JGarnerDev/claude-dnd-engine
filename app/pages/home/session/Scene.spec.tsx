@@ -342,10 +342,10 @@ describe("Scene", () => {
       bar().querySelector<HTMLElement>('.sr-hpchip[data-entry="Griffon (Tithe)"]')!;
     expect(tithe().querySelector<HTMLElement>(".sr-meter-tick")!.style.left).toMatch(/^49\.4/);
     expect(tithe().querySelector(".sr-phase")).toBeNull();
-    const pip = (i: number) => bar().querySelectorAll<HTMLButtonElement>(".sr-pip")[i];
+    const pip = (i: number) => bar().querySelectorAll<HTMLButtonElement>(".ui-pip")[i];
     const pips = () =>
-      [...bar().querySelectorAll<HTMLButtonElement>(".sr-legend .sr-pip")].map((p) =>
-        p.classList.contains("is-spent"),
+      [...bar().querySelectorAll<HTMLButtonElement>(".sr-legend .ui-pip")].map(
+        (p) => p.getAttribute("aria-pressed") === "true",
       );
     expect(pips()).toEqual([false, false]);
     await userEvent.click(pip(1)); // a 2-cost action spends both

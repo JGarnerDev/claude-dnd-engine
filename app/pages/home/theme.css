@@ -3,17 +3,18 @@
    jeff-ui/tokens.css and jeff-ui/base.css (the page base: body font, background,
    border-box) in both page entries (main.tsx, session/main.tsx).
 
-   Sources: --chart-* in components/charts/_common/common.css, --sr-* in the
-   session runner's CSS. Keep the two in step when either palette changes. */
+   The session runner reads these directly and sets its bluer --ui-surface on
+   .sr-root (session/session.css). The charts' --chart-* tokens
+   (components/charts/_common/common.css) repeat these values; keep them in step. */
 
 :root {
-  --ui-bg: #0f172a; /* --chart-bg, --sr-bg */
+  --ui-bg: #0f172a; /* --chart-bg */
   --ui-surface: #1f2937; /* --chart-surface */
-  --ui-surface-hi: #273449; /* --sr-raised */
-  --ui-border: #334155; /* --sr-line */
-  --ui-text: #e5e7eb; /* --chart-text, --sr-text */
-  --ui-muted: #94a3b8; /* --chart-muted, --sr-muted */
-  --ui-accent: #e3b341; /* --sr-accent */
+  --ui-surface-hi: #273449;
+  --ui-border: #334155;
+  --ui-text: #e5e7eb; /* --chart-text */
+  --ui-muted: #94a3b8; /* --chart-muted */
+  --ui-accent: #e3b341;
   --ui-ok: #4ade80;
   --ui-warn: #fbbf24;
   --ui-err: #f87171;
