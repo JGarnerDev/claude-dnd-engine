@@ -5,6 +5,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "jeff-ui/tokens.css";
+import "jeff-ui/base.css";
 import "../theme.css";
 import { Runner } from "./Runner.js";
 import data from "virtual:session-data";

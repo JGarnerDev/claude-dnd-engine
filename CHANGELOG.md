@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.96.1] — 2026-11-21
+
+### Changed
+
+- **jeff-ui 0.8.0 → 0.11.0 and its page base.** The app pins `@jgarnerdev/jeff-ui` 0.11.0 (cascade layers: the app's own CSS now always beats jeff-ui's; design tokens for motion, stacking and type, and motion stops under reduced motion) and both pages import `jeff-ui/base.css` after `tokens.css`. base.css sets the body's font, background and text color from the theme tokens and makes every element `border-box`, so the app's scattered `box-sizing: border-box` lines and `theme.css`'s body font rule are gone.
+- Boxes that were sized as content-box keep their look: their widths now include padding and border (saved-views panel 266px, settings panel 290px, session runner side panel 409px, slide-over `min(450px, 92%)`, side-panel header 47px, HP input, side rail 45px, empty-runner page 42rem). Screens are pixel-identical to before. On a phone the slide-over panel no longer overflows the screen by its padding.
+
 ## [0.96.0] — 2026-11-20
 
 - **Schema rules** (schema migration step 8, the last): `meta/entity-creation.md` and `CLAUDE.md` now say to quote every frontmatter link (`"[[Name]]"`), to run `uv run scripts/validate.py` after creating an entity, and to change a type's fields or states in its `.schema.yaml` and run `uv run scripts/gen-schema-docs.py` instead of editing the generated blocks. `data/CLAUDE.md` adds the validate step to elaboration write-back. The old rule against inline `#` comments on frontmatter scalars is gone: frontmatter is read with a YAML parser now, so trailing comments parse.

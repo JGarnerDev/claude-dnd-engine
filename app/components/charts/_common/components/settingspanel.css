@@ -41,7 +41,7 @@
   top: calc(100% + 8px);
   right: 0;
   z-index: 30;
-  width: 260px;
+  width: 290px;
   max-width: calc(100vw - 24px);
   max-height: calc(100vh - 80px);
   overflow-y: auto;
@@ -89,5 +89,4 @@
 .chart-settings-panel .chart-search {
   flex: none;
   width: 100%;
-  box-sizing: border-box;
 }

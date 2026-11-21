@@ -9,7 +9,7 @@
   top: calc(100% + 8px);
   right: 0;
   z-index: 30;
-  width: 240px;
+  width: 266px;
   max-width: calc(100vw - 24px);
   max-height: calc(100vh - 80px);
   overflow-y: auto;
@@ -44,7 +44,6 @@
 }
 .chart-sv-name {
   width: 100%;
-  box-sizing: border-box;
   padding: 7px 9px;
   color: var(--chart-text);
   background: var(--chart-bg);

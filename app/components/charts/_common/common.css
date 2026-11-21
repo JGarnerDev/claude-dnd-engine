@@ -39,7 +39,6 @@
   font-family: system-ui, sans-serif;
   padding: 8px 0;
   width: 100%;
-  box-sizing: border-box;
   /* Fill the host's height so the chart can sit centered in the viewport.
      Falls back gracefully when the host has no fixed height (shrinks to fit). */
   height: 100%;
