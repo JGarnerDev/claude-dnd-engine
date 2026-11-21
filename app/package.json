@@ -30,7 +30,7 @@
     "vitest": "^4.1.10"
   },
   "dependencies": {
-    "jeff-ui": "npm:@jgarnerdev/jeff-ui@0.12.0",
+    "jeff-ui": "npm:@jgarnerdev/jeff-ui@1.0.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   }
