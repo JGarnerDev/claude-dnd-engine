@@ -140,7 +140,7 @@ function Walk({ raw }: { raw: SessionData }) {
   const shell = ["sr-body", p.docked && "is-docked", p.open && "is-open"].filter(Boolean).join(" ");
 
   return (
-    <div className="sr-root">
+    <div className="sr-root" data-theme="navy">
       <RunnerHeader
         name={s.name}
         date={s.date}

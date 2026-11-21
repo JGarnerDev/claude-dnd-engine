@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.97.1] — 2026-11-21
+
+### Changed
+
+- **jeff-ui 0.12.0 → 1.1.0: named themes.** jeff-ui 1.0.0 marks its API stable and only adds components; 1.1.0 adds named themes. Both pages now pick jeff-ui's `slate` theme with `data-theme` in their HTML, and the session runner picks `navy` (slate with bluer surfaces) on `.sr-root`, so `pages/home/theme.css` and the runner's `--ui-surface` override are gone. Nothing looks different.
+
 ## [0.97.0] — 2026-11-21
 
 ### Changed

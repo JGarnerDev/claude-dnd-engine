@@ -1,5 +1,5 @@
-/* Session runner (runner.ts). Dark, on the engine's --ui-* palette (theme.css);
-   the runner's surface is one step bluer than the charts', set on .sr-root.
+/* Session runner (runner.ts). Dark, on jeff-ui's navy theme (data-theme on
+   .sr-root in Runner.tsx): the page's slate with surfaces one step bluer.
    Kind accents are the flow chart's classDef stroke colors, lifted for a dark
    ground (meta/flow-graphs.md legend: rust combat, parchment social, lantern
    fork, green payoff, blue thread, dusty-red setback, grey undecided). */
@@ -18,7 +18,6 @@
 }
 
 .sr-root {
-  --ui-surface: #1e293b;
   display: flex;
   flex-direction: column;
   height: 100%;
