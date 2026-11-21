@@ -202,6 +202,10 @@ Scripts output plain text; parse with your own judgment. They read frontmatter o
 
 **Semantic index:** `vector-index/` (gitignored, rebuilt from source). Build once with `uv run scripts/index-entities.py`, re-run after bulk entity additions. Use `semantic-search.py` to surface entities by thematic relevance — betrayal arcs, forgotten NPCs, callback hooks, contradiction checks. Staleness is computed in `scripts/lib/common.py` (`INDEXED_DIRS` must match the indexer's dirs) and reported at session start, by `session-brief.py` and by `todo-brief.py`. Commits that touch only non-indexed files (`CLAUDE.md`, `README.md`) do not stale it. Never rebuild automatically; prompt the user.
 
+## Code Style
+
+Scripts and app code are hard to misuse: build from small single-purpose functions with obvious names, then compose them. Keyword-only arguments when two or more share a type; units in names (`timeout_s`); type hints always; return the detail, not just the total; validate the whole input at the boundary (match all of it, never search it for valid pieces) and reject the rest with a clear error. If a caller could easily get it wrong (call once and multiply, swap arguments), change the API and add a test showing correct use. Don't wrap trivial code.
+
 ## Stamp Pattern
 
 Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, NPC `voice_confirmed`, the campaign Rest Clock header, campaign tracker headers (`scheduler/campaign/_*.md`, e.g. the Citadel Clock), the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
