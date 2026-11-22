@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.98.1] — 2026-11-22
+
+### Changed
+
+- **jeff-ui 1.1.0 → 2.1.0: no outer margins on cards, folds and bars.** jeff-ui 2.0.0 drops the bottom margin from `Card` and `Disclosure` and the vertical margin from `ProgressBar`; the engine's stacks already set their own spacing, so the stats slides' `margin: 0` overrides are gone. The folds that end a block (full recap, tokens, HP log, a fight card's full block) lose a little trailing space, and achievement cards sit a little closer (the slide's gap only). 2.1.0 only adds a chart.
+
 ## [0.98.0] — 2026-11-22
 
 ### Added
