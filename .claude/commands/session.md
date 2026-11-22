@@ -271,7 +271,7 @@ One `### Scene N — [Title]` block per spine scene, with the spine's beats as i
 
 Each scene block opens with the **scene header**, the bullets the session runner shows at the top of the scene page so the DM can take in the scene at a glance while running it. Write them first, in this order, before the first `####` node:
 
-- **Summary:** 2–3 plain sentences on what the scene is for and how it usually goes. The DM reads this cold mid-game, so state the point outright
+- **Summary:** 1–2 plain sentences on what the scene is **for**: what it pays off, sets up or decides. The DM reads this cold mid-game, so state the point outright. Never put a crucial step, line or description here; the DM skims the header and will miss it. Those go in the nodes, descriptions as Say blocks
 - **Where:** `[[wiki-link]]` plus one line on what the space looks and feels like. Keep long terrain and Roll20 rulings out of it and put them in their own setup bullet (e.g. `- **The ground:**`), which the runner folds under "Scene notes"
 - **Cast:** everyone present, separated by ` · `, wikilinked when they have a file (`[[Sable Wren]] · [[Mara Tull]] · Dunny Marsh`). Goals and voice notes stay in the NPC Quick-Reference and in the nodes
 - **Enemies:** the combat labels with real names in parentheses, separated by ` · ` (`Archer Rider (Ilsa Hask) · Wolf (Cinder)`), or `none`. Each must match a stat block in `## Combatants`, either by its real name in the block's `###` title or by its `Label (party-facing):` line. The runner turns them into compact rows that expand to the stat block. An enemy who joins mid-fight ends its entry `arrives round N` (`Relief Captain (Garran Vey) arrives round 3`): the runner holds it greyed out until its round counter reaches N
@@ -289,7 +289,17 @@ Everyone the plan puts in front of the party gets a real name, walk-ons and name
 - **Narration** — if `depth: narrated`, include a `> *"..."*` blockquote for the key moment of the scene; if `depth: notes`, omit
 - **Transition** — one line on what triggers the move to the next scene or a likely detour
 
-**Labels set the voice.** The session runner shows each node as a prompt book, one block per bullet, tagged by its bold label: `Tokens:`, `Music:`, `Title card:` or `Set HP…:` is **Do** (the table or Roll20); a label with *read aloud*, *say* or *line(s)*, a bullet that opens on a quoted line, or a `>` quote is **Say**; `When …:`, `If …:`, `Once …:` or `After …:` is **Watch**; `Choice (…):` is **Choice**; anything else is for the DM. So give each bullet a short label ending in a colon, and put spoken lines in `*"…"*`. Backticked beat ids (`` `S35_07A_ESCAPE` ``) and "Scene N" become links that open in the side panel.
+**Labels set the voice.** The session runner shows each node as a prompt book, one block per bullet, tagged by its bold label: `Tokens:`, `Music:`, `Title card:` or `Set HP…:` is **Do** (the table or Roll20); a label with *read aloud*, *say* or *line(s)*, a bullet that opens on a quoted line, or a `>` quote is **Say**; `Time passes:` is **Time**; `When …:`, `If …:`, `Once …:` or `After …:` is **Watch**; `Choice (…):` is **Choice**; anything else is for the DM. So give each bullet a short label ending in a colon, and put spoken lines in `*"…"*`. Backticked beat ids (`` `S35_07A_ESCAPE` ``) and "Scene N" become links that open in the side panel.
+
+**Party-facing text is a Say block** (Jeff, 2026-11-22). Anything the party hears goes in a Say, so the DM knows at a glance to read it out:
+
+- **Description and narration** the party should hear (a place, a creature, a magic effect, what an NPC does) is a `- **Say:**` bullet followed by a `> *"…"*` quote, or a `- **Say:** *"…"*` line.
+- **Every NPC–PC interaction and line of dialogue** is a Say: `- **Say (<NPC>):** *"…"*`, or `- **Say (<NPC>, to <PC>):**`. Never bury a line in a DM bullet.
+- **DM bullets** carry only what the DM needs: rules, rolls, what stays hidden, why the beat is there.
+
+**Say when time passes.** At every jump in the in-world clock (the day turns, noon, evening, night, the next morning, a long rest, two weeks of downtime), open the beat with `- **Time passes:** <what the party notices, and the new time>`. The runner tags it **Time**, so the DM says out loud that the day has moved. A scene header's `- **Time:** ~20 min` is the scene's length, not a clock jump.
+
+**Loot is a copyable list.** When a beat hands over loot, put a `- **Loot (copy to the party):**` label, then an unindented fenced code block with a flat list: one line per item, coin as numbers, no DM notes. The runner shows it as one block the DM copies and sends. Anything hidden, gated by a roll, or needing a choice goes in a separate `- **Hidden or needs a roll:**` bullet below it, with its DC.
 
 **Say when things happen.** These let the runner's trackers light the notes:
 

@@ -8,7 +8,8 @@
 
 import { stripProvenance } from "./provenance.js";
 
-export type Voice = "you" | "say" | "do" | "watch" | "choice" | "private" | "intro" | "fight";
+export type Voice =
+  "you" | "say" | "time" | "do" | "watch" | "choice" | "private" | "intro" | "fight";
 
 export interface PbBlock {
   voice: Voice;
@@ -19,6 +20,7 @@ export interface PbBlock {
 export const VOICE_NAME: Record<Voice, string> = {
   you: "You",
   say: "Say",
+  time: "Time",
   do: "Do",
   watch: "Watch",
   choice: "Choice",
@@ -32,6 +34,8 @@ const LABEL_RE = /^\*\*([^*]+?):\*\*:?\s*(.*)$|^\*\*([^*]+?)\*\*:\s*(.*)$/;
 const CALLOUT_RE = /^[-*]\s+\*\*(Introduce|Tokens|Private)\b/;
 const DO_RE =
   /^(tokens?|music|jukebox|title card|handout|hp bars?|set hp|roll20|maps?|lighting|sound cue|show)\b/i;
+// `- **Time passes:** night falls.` marks the clock moving: the day ends, it's dusk, two weeks go by.
+const TIME_RE = /^time passes\b/i;
 const SAY_RE = /\b(read(?:s)? aloud|read-aloud|say|says|aloud|lines?)\b/i;
 export const FIGHT_RE = /^(combat|fight|boss fight|boss) (starts|begins|ends)\b/i;
 const WATCH_RE = /^(when|if|once|after|until|unless|the moment|(?:the )?triggers?|watch)\b/i;
@@ -129,37 +133,51 @@ function classify(c: Chunk): PbBlock {
   const md = body(rest, c.lines.slice(1));
   const voice: Voice = FIGHT_RE.test(label)
     ? "fight"
-    : /^choice\b/i.test(label)
-      ? "choice"
-      : DO_RE.test(label)
-        ? "do"
-        : SAY_RE.test(label) || QUOTED_RE.test(rest)
-          ? "say"
-          : WATCH_RE.test(label)
-            ? "watch"
-            : "you";
-  const shown = voice === "choice" ? (/\(([^)]+)\)/.exec(label)?.[1] ?? "") : label;
+    : TIME_RE.test(label)
+      ? "time"
+      : /^choice\b/i.test(label)
+        ? "choice"
+        : DO_RE.test(label)
+          ? "do"
+          : SAY_RE.test(label) || QUOTED_RE.test(rest)
+            ? "say"
+            : WATCH_RE.test(label)
+              ? "watch"
+              : "you";
+  // `Choice (Iggy)` and `Say (Dip)` show only who: the voice already says the rest.
+  const who = /\(([^)]+)\)/.exec(label)?.[1] ?? "";
+  const shown = voice === "choice" || /^say\b/i.test(label) ? who : label;
   return { voice, label: shown, md };
 }
 
 export function promptBlocks(prose: string): PbBlock[] {
   const out: PbBlock[] = [];
+  // A bare `- **Say (Dip):**` heads the quote under it: its label goes on that quote,
+  // and the quote starts a new block, so each speaker gets their own gutter.
+  let heading: string | null = null;
   // Provenance goes twice: per line first, then per block, once a label's wrapped
   // lines are joined, so a "(draft, engine 2026-…)" split across lines goes too.
   for (const b of chunks(stripProvenance(prose))
     .map(classify)
     .map((x) => ({ ...x, md: stripProvenance(x.md) }))) {
-    if (!b.md.trim() && b.voice !== "private" && b.voice !== "intro" && b.voice !== "fight")
+    if (!b.md.trim() && b.voice !== "private" && b.voice !== "intro" && b.voice !== "fight") {
+      if (b.voice === "say") heading = b.label;
       continue;
+    }
+    const headed = heading !== null && b.voice === "say";
+    if (headed && !b.label) b.label = heading!;
+    heading = null;
     const prev = out[out.length - 1];
     // Plain bullets carry on the DM block before them; quotes run together.
     if (
       prev &&
+      !headed &&
       !b.label &&
       prev.voice === b.voice &&
       (b.voice === "you" || (b.voice === "say" && !prev.label))
     ) {
-      prev.md += "\n" + b.md;
+      // Quotes keep a blank line between them, or markdown runs them into one paragraph.
+      prev.md += (b.voice === "say" ? "\n\n" : "\n") + b.md;
     } else out.push({ ...b });
   }
   return out;

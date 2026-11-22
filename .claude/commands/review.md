@@ -50,6 +50,12 @@ Rules:
 - Add under the existing node headings, so the session runner shows each addition on the right step. Never rename or reorder nodes
 - **Check each scene header** (`/session` Phase 6): Summary, Where, Cast, Enemies, DCs, Time and Trigger are present. Every DC in the scene's nodes is also listed in DCs, and every Enemies entry matches a `## Combatants` stat block. Add or fix what's missing. Move provenance (`(Jeff, <date>)`, `Engine, …; committed …`) out of scene prose and into the Engine notes
 - **Check the cues** (`/session` Phase 6 → Say when things happen): a beat that fires on a condition opens with a `When:` line, an enemy who joins mid-fight carries `arrives round N` on its Enemies entry, an HP threshold in a Watch item names the enemy and gives the number in HP, a fight whose combat beats don't bracket it carries `Combat starts:` / `Combat ends:` markers, and a boss carries `Boss fight starts:` / `Boss fight ends:`, a `Legendary actions: N a round` line if it has them, and its phases as bold labels with the HP in them, each phase with a beat of its own. Add what's missing
+- **Check the voices** (`/session` Phase 6 → Party-facing text is a Say block, Say when time passes, Loot is a copyable list). Fix each one you find:
+  - Party-facing description or narration in a DM bullet: move it into a `- **Say:**` block.
+  - An NPC line or NPC–PC interaction outside a Say: make it `- **Say (<NPC>):** *"…"*`.
+  - A clock jump (a new time of day, the next morning, a rest, downtime) with no `- **Time passes:**` line: add one at the top of the beat.
+  - A scene Summary that holds a crucial step, line or description: cut it to what the scene is for and move the rest into the nodes.
+  - Loot written as prose or mixed with DM notes: split it into a `- **Loot (copy to the party):**` fenced list and a `- **Hidden or needs a roll:**` bullet.
 - Skip anything already covered. A node with a working read-aloud or lines needs nothing
 
 ---

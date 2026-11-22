@@ -4,6 +4,7 @@
 //
 //   You      for the DM to read: what's true, what happens, how to run it (plain sans)
 //   Say      for the players: read-aloud quotes and spoken lines (serif italic)
+//   Time     the clock moves: `Time passes:` (night falls, the next morning, two weeks)
 //   Do       at the table or in Roll20: tokens, music, title cards, HP to set (mono)
 //   Watch    conditional: "When …", "If …", "Once …", what triggers what
 //   Choice   a real choice (`Choice (party):`, `Choice (Iggy):`)

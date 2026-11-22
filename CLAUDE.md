@@ -100,6 +100,10 @@ When creating any entity, read `meta/entity-creation.md` before proceeding. It c
 
 Generated prose (read-aloud text, plans, historian records, player-facing notes, lore) follows an anti-slop pass: no stock AI phrasing, no stock fantasy tells, register matched to the audience, and voice kept rather than flattened. Read `meta/prose-style.md` once per task whenever a task writes or edits prose, and run its **While drafting** checklist before prose goes to disk. `/session`, `/recap`, `/transcript` (Drive notes) and `/pitch` load it at their writing step; `/review` Pass 6 checks plans against it.
 
+## Plans for the table
+
+Session plans are read cold at the table, so the voice of each bullet matters (Jeff, 2026-11-22). Party-facing description and every NPC–PC interaction go in **Say** blocks; every in-world clock jump gets a `**Time passes:**` line; a scene's Summary says only what the scene is for; loot is a flat, copyable fenced list with hidden or roll-gated items in their own bullet. Full rules: `/session` Phase 6 (Labels set the voice and after). `/review` Pass 1 checks them.
+
 ## Affinity
 
 PC/NPC files carry an optional `affinity:` field — a per-target liking score (integer −10..+10) toward specific characters, distinct from `relates_to` and `disposition`. When working with character sentiment (proposing nudges, reading relationships, backfilling), read `meta/affinity.md` once per task for scale, bands, scope, and frontmatter shape. `/recap` proposes nudges; `scripts/entity-graph.py` reads them.

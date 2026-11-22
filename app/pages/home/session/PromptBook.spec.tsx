@@ -49,6 +49,35 @@ describe("promptBlocks", () => {
     ]);
   });
 
+  it("tags the clock moving as Time, so the DM says out loud that the day ends", () => {
+    const md = [
+      "- **Time passes:** the sun goes down on the road home. It's evening.",
+      "- **Time:** a scene header field, not a clock change.",
+    ].join("\n");
+    expect(voices(md)).toEqual(["time:Time passes", "you:Time"]);
+    expect(promptBlocks(md)[0].md).toBe("The sun goes down on the road home. It's evening.");
+  });
+
+  it("gives each speaker's quote its own Say block, named for who it's to", () => {
+    const md = [
+      "- **Say (Dip):**",
+      "",
+      '> *"Dip. One."*',
+      ">",
+      '> *"Two."*',
+      "",
+      "- **Say (Luci):**",
+      "",
+      '> *"Luci. Three."*',
+    ].join("\n");
+    expect(voices(md)).toEqual(["say:Dip", "say:Luci"]);
+    expect(promptBlocks(md)[0].md).toBe('> *"Dip. One."*\n>\n> *"Two."*');
+  });
+
+  it("keeps a blank line between quotes that run together, so they stay two paragraphs", () => {
+    expect(promptBlocks('> *"One."*\n\n> *"Two."*')[0].md).toBe('> *"One."*\n\n> *"Two."*');
+  });
+
   it("runs plain bullets on into the DM block before them, and drops provenance", () => {
     const md = [
       "- **Committed 2026-11-11 (Jeff 2026-11-10).** Nella's next turn.",

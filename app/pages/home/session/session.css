@@ -1002,11 +1002,13 @@
 
 /* ===== Scene-notes overhaul, stage 2 =====
    Voices (prompt-book.ts): sans = for you · serif italic = say it · mono = do it at the
-   table or in Roll20 · violet = watch for it · gold = a real choice · blue = private. */
+   table or in Roll20 · violet = watch for it · gold = a real choice · blue = private ·
+   amber = time passes. */
 :root {
   --sr-faint: #64748b;
   --sr-v-you: #94a3b8;
   --sr-v-say: #e8d7a6;
+  --sr-v-time: #e0a458;
   --sr-say-ink: #f4ead0;
   --sr-v-do: #4fc1b0;
   --sr-v-watch: #b79ce0;
@@ -1326,6 +1328,16 @@
 .sr-pb-say,
 .sr-pb-intro {
   --c: var(--sr-v-say);
+}
+.sr-pb-time {
+  --c: var(--sr-v-time);
+}
+.sr-pb-time .sr-pb-text {
+  border-top: 1px solid color-mix(in srgb, var(--sr-v-time) 55%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--sr-v-time) 55%, transparent);
+  padding: 6px 10px;
+  font-weight: 600;
+  color: var(--sr-v-time);
 }
 .sr-pb-do {
   --c: var(--sr-v-do);

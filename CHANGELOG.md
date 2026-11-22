@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.98.0] — 2026-11-22
+
+### Added
+
+- **Plans for the table: voice rules.** Party-facing description and every NPC–PC exchange go in Say blocks; every in-world clock jump gets a `**Time passes:**` line; a scene's Summary says only what the scene is for; loot is a flat, copyable fenced list with hidden or roll-gated items in their own bullet. Rules in `CLAUDE.md` and `/session` Phase 6; `/review` Pass 1 checks them.
+- **Session runner: Time voice.** `- **Time passes:**` bullets get their own "Time" voice in the prompt book, so the DM says out loud that the day moved.
+
+### Fixed
+
+- **Session runner: one Say block per speaker.** A bare `- **Say (Dip):**` bullet now heads the quote under it, so back-to-back speeches each get their own block with the name in the gutter, and quotes that run together keep a paragraph break between them.
+
 ## [0.97.1] — 2026-11-21
 
 ### Changed
