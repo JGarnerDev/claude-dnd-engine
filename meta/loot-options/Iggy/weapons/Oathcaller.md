@@ -10,7 +10,7 @@ rarity: uncommon
 attunement: false
 bracket: "levels 4-5"
 status: confirmed
-confirmed_for: "Act 1 finale (forged by Asher, promised Session 35)"
+confirmed_for: "Session 35 The Reeve's Ledger"
 ---
 
 # Oathcaller

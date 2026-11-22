@@ -123,7 +123,7 @@ Tracks the adventuring day across session boundaries — `/session` subtracts th
   - [[Odibli]]: 2 of 3 free racial Speak with Animals casts; Magic Missile ×2 (1st); **one Fireball left**
   - [[Luci]]: **0 focus points**; Energy Storm may still be up (~estimate)
   - [[Dip]]: Rage, still active; **out of oil**
-  - HP now (rough; check the Roll20 sheets at the start of Session 35, todo 101): Iggy 5 plus an unrolled Healing Word; Odibli **0** (1 death save success); Halsby ~11; Luci down 9 plus a little Fireball damage since Session 33's count; Dip unknown (~7 lost in Session 33, none heard in Session 34)
+  - HP now (Roll20 sheets, 2026-11-22): Iggy **5 / 40** (the sheet doesn't show the Healing Word yet: roll it at the table if he cast it); Luci **22 / 39**; Dip **45 / 55**; Halsby **11 / 32**; Odibli **0 / 27** (1 death save success)
   - Permanent losses that still apply: Luci's **Sacred Flame**, and Odibli's **familiar** (Session 25)
   - Afflictions are still **dormant** (Iggy's shadow, Dip's whispers)
 

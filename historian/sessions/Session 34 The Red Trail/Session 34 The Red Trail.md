@@ -36,7 +36,7 @@ beats:
   - "spotlight(Luci): beat"
   - "spotlight(Iggy): touch"
   - "world: touch"
-deck_weight: medium
+deck_weight: light
 pcs_present:
   - "Iggy"
   - "Luci"

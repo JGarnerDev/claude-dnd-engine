@@ -49,8 +49,8 @@ than a second item to track. The animal-handling line hands him the running cart
 
 ## Upgraded: Tithe-Taker (Uncommon)
 
-Asher reworks the whip with Tithe's talons and returns it before the act finale, renamed
-**Tithe-Taker** (Jeff, 2026-11-12). It becomes Dip's Uncommon and replaces the 6–8 step.
+Asher reworks the whip with Tithe's talons and returns it on the spot in his cave in Session 35 (Jeff,
+2026-11-22), renamed **Tithe-Taker** (Jeff, 2026-11-12). It becomes Dip's Uncommon and replaces the 6–8 step.
 
 - **+1** to attack and damage rolls. Drover's crack stays.
 - **Bring it down** (replaces Haul). Twice per short rest, when Dip hits a Large or smaller

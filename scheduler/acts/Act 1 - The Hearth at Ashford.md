@@ -27,7 +27,7 @@ relates_to:
   - "[[House Cael]] (the feud's losing side, and Ashford's nominal protector)"
   - "[[House Marlow]] (the hand behind the raids)"
   - "[[Harrow Bane]] (the band the party actually fights)"
-  - "[[Elowen Rimetusk]] (Odibli's scene and item; committed, Session 36)"
+  - "[[Elowen Rimetusk]] (Odibli's scene and item; committed, Session 35 The Reeve's Ledger)"
   - "[[The Wanderer's Boon]] (the relic that put them here and has not reopened)"
 description: "The first homebrew act. Five strangers land in a riverside ford-town mid-raid and are offered a share in the one building worth defending. The Cael–Marlow feud explains why Ashford bleeds, but the act is about the Golden Lioness: defend it, earn into it, and discover somewhere along the way that you live here now."
 ---
@@ -139,7 +139,7 @@ Jeff (questions 1–16 of `questionnaires/redwater/act-1-loot.md`), with questio
   `meta/loot-options/Party/misc/Earshot Crystals.md`). They are a Common, so they spend none of
   the Uncommon budget. No personalised item lands in Session 29; when each PC's item lands is
   paced later.
-- **Odibli's Uncommon: the Unfinished Binding** (confirmed for Session 36,
+- **Odibli's Uncommon: the Unfinished Binding** (confirmed for Session 35 The Reeve's Ledger,
   `meta/loot-options/Odibli/misc/The Unfinished Binding.md`). It comes from
   [[Elowen Rimetusk]] and only through her scene, below.
 
@@ -148,7 +148,7 @@ Jeff (questions 1–16 of `questionnaires/redwater/act-1-loot.md`), with questio
 These are decided and must land somewhere in this act. Fit them into a session when the story
 makes room. Check this list whenever `/session` plans an Act 1 session.
 
-- **Elowen and Odibli: Session 36 (Jeff, 2026-11-12).** A quiet moment between fights, not a
+- **Elowen and Odibli: Session 35 (moved from Session 36, which is Ben's; Jeff set Session 36 on 2026-11-12).** A quiet moment between fights, not a
   combat beat. Her secret is in her file. Changed from her file: she doesn't *almost* see the
   second Odibli. She sees it plainly, but only about three-quarters of the truth, read through
   her own wound. She takes him for a casting accident like hers: split in a crossing, part of him
@@ -191,21 +191,24 @@ makes room. Check this list whenever `/session` plans an Act 1 session.
     table.
 - **The party meets Asher: opens Session 35 (Jeff, 2026-11-12).** The party kills Tithe at the
   waystation and brings the body home (Session 34, `S2_ESCAPE`, `S2_HAUL_HOME`). In the morning
-  [[Sable Wren]] takes them and the carcass down to the Lioness cellar spring, and
-  [[Aashal-Groon Mellenegon Borak]] rises to take it: the party's first meeting with him.
+  [[Sable Wren]] walks them and the carcass to his cave by the river, a short walk from the
+  Lioness (Jeff, 2026-11-22: blue and gold fireflies, murky water, Asher in his real form), and
+  [[Aashal-Groon Mellenegon Borak]] rises to take it: the party's first meeting with him. Sable
+  knows his true name and most of what he is; she keeps him hidden from the town.
   - **The fox.** It went into the Lioness the evening before (Session 34). In the morning it lies
-    by the spring, and walks off into the dark when Asher rises. Halsby knows it. What he tells
+    by the water in the cave, and walks off into the dark when Asher rises. Halsby knows it. What he tells
     the others is Kellan's call.
   - **He gives his true name.** Not Sable's "Asher": the whole name, felt as pressure behind the
     eyes. It breaks his voice core ("never gives his name") on purpose, a DM-called shift; `/recap`
     records it in his `## Voice`.
   - **Dip first.** He speaks mind to mind, to [[Dip]] first (he feels Dip's Sage-trained sense for
     thin places), and asks for a true story told over the water before he asks for anything.
-  - **The ask.** Eating Tithe, he tastes its memory: Nella flew it over the old battlefield above
+  - **The ask.** He draws Tithe down through the earth into the cave and absorbs it, leaving
+    only bones, and tastes its memory (Jeff, 2026-11-22): Nella flew it over the old battlefield above
     the ford, where a druid ([[Jorn]]) is waking something. That something is a predator-spirit
     born of the old war's last stand, the old blood in his water gone sour. He asks Dip, by name,
     to lay it to rest.
-  - **Dip's sister: true, but thin.** Something of her did pass through water that reaches his. He
+  - **Dip's sister: true, but thin.** Asher raises it himself (Jeff, 2026-11-22). Something of her did pass through water that reaches his. He
     does not know where she is now, and says so if pressed.
   - **Iggy.** A slightly deeper bow, and a line or two of questions for what is inside him. In
     Session 29 he felt a divine presence arrive under his town and accepted it. Keep it short; the
@@ -217,8 +220,8 @@ makes room. Check this list whenever `/session` plans an Act 1 session.
     then for the first time a full line: *"Stand still, and I can reach you."* It binds her hands
     in grey cloth, and she wakes somewhere odd in town wearing **the Stillwater Wraps**. Cost: one
     level of exhaustion until her next long rest.
-  - **Promised now, delivered at the finale.** He takes Tithe's bone and talons and says the work
-    will take days. Before the finale's fight he returns **Oathcaller** for [[Iggy]] (griffon bone
+  - **Delivered the same day (Jeff, 2026-11-22: Session 35 is Jeff's last as DM).** He takes
+    Tithe's bone and talons, and Dip's whip, and works them on the spot in the cave into **Oathcaller** for [[Iggy]] (griffon bone
     and river minerals) and **Varrick's Cart-Whip improved with Tithe's talons** for Dip (now his
     Uncommon, renamed **Tithe-Taker**: +1, and Haul becomes **Bring it down**, twice per short rest, a 15 ft drag that
     grapples and drops fliers; see the loot file, Jeff 2026-11-12).
@@ -233,6 +236,8 @@ makes room. Check this list whenever `/session` plans an Act 1 session.
 - **The aegis-banner, aimed at act Session 2.** Marlow's ancestral banner flies on the raiders'
   line and is recoverable, then hangs in the Lioness as the prop that unspools the feud. It was
   held back from Session 29 (2026-10-05) so the matched boots stay that night's one feud detail.
+  **Unplaced now** (Jeff's review, 2026-11-22): too important a relic for a small waystation, so
+  it isn't recovered in Session 35. The thread stays open; place it somewhere fitting later.
 
 ### Gold and consumables
 

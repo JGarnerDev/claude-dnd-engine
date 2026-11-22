@@ -1,4 +1,4 @@
-Party-facing recap deck, shown from Session 35's "Previously on…" card. Deck weight: medium. Mysteries holds 15 questions ranked; the runner shows the top 8, the rest wait in reserve. Rules: `meta/recap-slides.md`.
+Party-facing recap deck, shown from Session 35's "Previously on…" card. Deck weight: light (trimmed 2026-11-22: Session 35 opens with an in-session recap instead). Mysteries holds 15 questions ranked; the runner shows the top 8, the rest wait in reserve. Rules: `meta/recap-slides.md`.
 
 ## Session 34 — The Red Trail
 
@@ -6,21 +6,20 @@ Played 2026-11-17.
 
 ## Last time…
 
-Nella set her griffon loose to hunt, and riders came in from the north to back up the camp.
-Halsby burned two of the crew to ash with one spell, and Odibli caught the riders in a Fireball
-from under a cart. Halsby's fire finally brought the griffon down.
+The camp fought back with riders and a war-griffon, and lost. The full story comes at the
+table.
 
 ## Where you stand
 
 The Stolen Casks. The camp is taken: the crew, the riders, their captain and the griffon are
 dead. Tithe fell on Odibli, who is down. The shed and two carts are burning, one beside the casks.
-Nella is running for the bridge, Luci behind her.
+Nella is running past the bridge for the river, Luci behind her.
 
 ## Mysteries & Loose Ends
 
 - Who sent riders to the camp, and how many more are out there?
 - Who is Harrow Bane, and why did the room go quiet at the name?
-- Who pays for raiders this organized: one cobbler's boots, a banner too fine for a camp?
+- Who pays for raiders this organized, all in one cobbler's boots?
 - How did a bandit camp come by a griffon trained for war?
 - What language was Iggy speaking when he healed Halsby?
 - Who else is listening on the raiders' crystals?
@@ -36,17 +35,6 @@ Nella is running for the bridge, Luci behind her.
 - Why did the green-eyed fox want the bound woman saved?
 - What answered "Closer." when Luci named the moon?
 
-## The riders arrive
-
-Dip held his crystal in his mouth and told the crew, one by one, how they died. The riders came
-in shaken. Odibli asked Luci first, then Fireballed the riders around her. She kicked their
-captain into a burning cart.
-
-## The griffon falls
-
-Tithe dove into the yard and carried Odibli into the air. Iggy opened wings of light. Dip leapt
-and dragged the griffon down. Halsby's fire caught under its burnt wing, and it fell on Odibli.
-
 ## Next
 
-Get to Odibli. Catch Nella before the bridge. Save the casks from the fire.
+Get to Odibli. Catch Nella before the river. Save the casks from the fire.

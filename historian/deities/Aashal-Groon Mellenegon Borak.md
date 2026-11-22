@@ -100,7 +100,9 @@ from the surface, and it points at the feud.
 
 ## Sable, and the pact
 
-The cellar spring under **[[The Golden Lioness]]** drops into his aquifer. Sable was hired
+The cellar spring under **[[The Golden Lioness]]** drops into his aquifer. The same water runs out
+to a cave by the river, a short walk from the Lioness, where he rises in his real form among blue
+and gold fireflies (Jeff, 2026-11-22; first shown in Session 35). Sable was hired
 to exorcise "the thing in the water." Instead she talked to it, was not disgusted by it, and
 started bringing it the world's small news and good drink. In exchange she gets the cleanest
 water in a fouling town, and the ability to bless and charge deep-water for potent brews.

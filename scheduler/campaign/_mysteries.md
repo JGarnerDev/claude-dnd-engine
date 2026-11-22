@@ -47,6 +47,9 @@ matched boots and staged crews.
 bleeding [[House Cael]] through a deniable land band. Act 1 does not require the party to learn it
 (`scheduler/acts/Act 1 - The Hearth at Ashford.md`, closing state).
 
+**Open.** The banner (Marlow's aegis-banner) is not recovered in Session 35 and isn't placed
+anywhere yet (Jeff's review, 2026-11-22). The question stays live until it is.
+
 ### How did a bandit camp come by a griffon trained for war?
 
 **Canon.** Tithe, a big tawny griffon kept hooded and staked behind the camp's blind and fed on

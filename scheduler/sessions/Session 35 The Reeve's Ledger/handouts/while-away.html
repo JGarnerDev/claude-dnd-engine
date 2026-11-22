@@ -1,0 +1,227 @@
+<title>While You're Away</title>
+<meta name="artifact-url" content="https://claude.ai/artifact/SJHDAqrPRJscPh8UYJc8cN" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap"
+/>
+<style>
+  /* Layout: one item card, centered, sized to its content. Party handout. Hand it over at closing on opening night, when Sable asks what to build while they're gone (S35_27_BUILD). Prices are Jeff's to check. */
+  :root {
+    --bg: #e9e7e2;
+    --card: #f7f5f0;
+    --ink: #23221f;
+    --muted: #615d55;
+    --rule: #cfc9bd;
+    --accent: #8a5a2b;
+    --shadow: rgba(35, 34, 31, 0.28);
+    --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+    --body: "Spectral", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141513;
+      --card: #1d1f1c;
+      --ink: #e6e2d8;
+      --muted: #a39e92;
+      --rule: #3a3c37;
+      --accent: #c99a6a;
+      --shadow: rgba(0, 0, 0, 0.55);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141513;
+    --card: #1d1f1c;
+    --ink: #e6e2d8;
+    --muted: #a39e92;
+    --rule: #3a3c37;
+    --accent: #c99a6a;
+    --shadow: rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.55;
+    padding: 32px 16px;
+  }
+  .card {
+    max-width: 34rem;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 28px 28px 24px;
+    display: grid;
+    gap: 18px;
+  }
+  header {
+    display: grid;
+    gap: 4px;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 2.1rem;
+    line-height: 1.1;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .type {
+    margin: 0;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .art {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .flavor {
+    margin: 0;
+  }
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin: 0;
+    padding: 10px 0;
+    border-block: 1px solid var(--rule);
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .stats div {
+    display: flex;
+    gap: 6px;
+  }
+  .stats dt {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.78rem;
+    align-self: center;
+  }
+  .stats dd {
+    margin: 0;
+  }
+  ul.props {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+  }
+  .props h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0 0 2px;
+    color: var(--accent);
+  }
+  .props p {
+    margin: 0;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    border-top: 1px solid var(--rule);
+    padding-top: 12px;
+  }
+  @media (max-width: 440px) {
+    .card {
+      padding: 22px 18px 20px;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<article class="card">
+  <header>
+    <h1>While You're Away</h1>
+    <p class="type">What Sable can build at the Golden Lioness while you're gone</p>
+  </header>
+
+  <svg
+    class="art"
+    viewBox="0 0 480 80"
+    role="img"
+    aria-label="The new wing of the tavern, half in scaffolding."
+  >
+    <!-- the finished side -->
+    <rect x="120" y="30" width="110" height="44" fill="var(--rule)" />
+    <polygon points="114,32 175,8 236,32" fill="var(--muted)" />
+    <rect x="164" y="50" width="20" height="24" fill="var(--card)" />
+    <!-- the new wing, framed -->
+    <g stroke="var(--accent)" stroke-width="2" fill="none">
+      <rect x="236" y="34" width="120" height="40" />
+      <line x1="276" y1="34" x2="276" y2="74" />
+      <line x1="316" y1="34" x2="316" y2="74" />
+      <line x1="236" y1="54" x2="356" y2="54" />
+      <polyline points="232,36 296,12 360,36" />
+    </g>
+    <!-- lantern -->
+    <circle cx="150" cy="46" r="4" fill="var(--accent)" />
+  </svg>
+
+  <p class="flavor">Leave Sable gold and a list. When you come back, some of it is built.</p>
+
+  <dl class="stats">
+    <div>
+      <dt>At a time</dt>
+      <dd>Two projects</dd>
+    </div>
+    <div>
+      <dt>Paid with</dt>
+      <dd>Gold you leave</dd>
+    </div>
+    <div>
+      <dt>Stake</dt>
+      <dd>Still by deeds</dd>
+    </div>
+  </dl>
+
+  <ul class="props">
+    <li>
+      <h2>Hire hands</h2>
+      <p>
+        Lok Thuliaga on the door, Bree Tealeaf behind the bar, Oswin on the stage. 50 gold each
+        covers a season's wages.
+      </p>
+    </li>
+    <li>
+      <h2>A room in the new wing</h2>
+      <p>250 to 500 gold each, and about a month of work.</p>
+    </li>
+    <li>
+      <h2>A better kitchen</h2>
+      <p>150 gold and two weeks. Better food, and more of it.</p>
+    </li>
+    <li>
+      <h2>Clear the back plot</h2>
+      <p>
+        50 gold and a month of digging out weeds and bad trees. It opens ground for stables, a
+        garden or a yard.
+      </p>
+    </li>
+    <li>
+      <h2>Stables</h2>
+      <p>300 gold, once the plot is clear.</p>
+    </li>
+    <li>
+      <h2>A new copper</h2>
+      <p>
+        Only George Ringo or Zach can remake it, and someone has to find one of them first. Until
+        then the Lioness pours, but it can't brew.
+      </p>
+    </li>
+  </ul>
+
+  <footer>A busier Lioness gets noticed. By everyone.</footer>
+</article>

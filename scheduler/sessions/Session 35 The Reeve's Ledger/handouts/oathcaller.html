@@ -1,0 +1,218 @@
+<title>Oathcaller</title>
+<meta name="artifact-url" content="https://claude.ai/artifact/2jqEhicA9hPvBdS4Uj11Dx" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap"
+/>
+<style>
+  /* Layout: one item card, centered, sized to its content. Player handout for Iggy (Jeff). Hand it over when Asher works the wing bone into it at his cave (S35_19_ASHER_BOW). */
+  :root {
+    --bg: #e9e7e2;
+    --card: #f7f5f0;
+    --ink: #23221f;
+    --muted: #615d55;
+    --rule: #cfc9bd;
+    --accent: #8a5a2b;
+    --shadow: rgba(35, 34, 31, 0.28);
+    --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+    --body: "Spectral", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141513;
+      --card: #1d1f1c;
+      --ink: #e6e2d8;
+      --muted: #a39e92;
+      --rule: #3a3c37;
+      --accent: #c99a6a;
+      --shadow: rgba(0, 0, 0, 0.55);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141513;
+    --card: #1d1f1c;
+    --ink: #e6e2d8;
+    --muted: #a39e92;
+    --rule: #3a3c37;
+    --accent: #c99a6a;
+    --shadow: rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.55;
+    padding: 32px 16px;
+  }
+  .card {
+    max-width: 34rem;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 28px 28px 24px;
+    display: grid;
+    gap: 18px;
+  }
+  header {
+    display: grid;
+    gap: 4px;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 2.1rem;
+    line-height: 1.1;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .type {
+    margin: 0;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .art {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .flavor {
+    margin: 0;
+  }
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin: 0;
+    padding: 10px 0;
+    border-block: 1px solid var(--rule);
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .stats div {
+    display: flex;
+    gap: 6px;
+  }
+  .stats dt {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.78rem;
+    align-self: center;
+  }
+  .stats dd {
+    margin: 0;
+  }
+  ul.props {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+  }
+  .props h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0 0 2px;
+    color: var(--accent);
+  }
+  .props p {
+    margin: 0;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    border-top: 1px solid var(--rule);
+    padding-top: 12px;
+  }
+  @media (max-width: 440px) {
+    .card {
+      padding: 22px 18px 20px;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<article class="card">
+  <header>
+    <h1>Oathcaller</h1>
+    <p class="type">Weapon (long single-edged blade), uncommon · no attunement · Iggy</p>
+  </header>
+
+  <svg
+    class="art"
+    viewBox="0 0 480 70"
+    role="img"
+    aria-label="A long, slightly curved pale blade with grey veins and a long grip."
+  >
+    <!-- long grip, room for a second hand -->
+    <rect x="24" y="31" width="96" height="9" rx="4" fill="var(--muted)" />
+    <rect x="118" y="24" width="8" height="23" rx="2" fill="var(--accent)" />
+    <!-- the pale bone blade, single edge, slight curve -->
+    <path
+      d="M126 31 C230 27 340 24 456 14 C350 34 240 40 126 40 Z"
+      fill="var(--rule)"
+      stroke="var(--ink)"
+      stroke-width="1.5"
+    />
+    <!-- grey river-stone veins -->
+    <path
+      d="M150 35 C200 33 240 36 290 31 M300 30 C340 28 370 26 410 21"
+      stroke="var(--muted)"
+      stroke-width="1.2"
+      fill="none"
+    />
+  </svg>
+
+  <p class="flavor">
+    A long blade of pale griffon bone with a slight curve, veined grey where river stone grew into
+    it. The grip is long enough for a second hand, though it never needs one, and it's balanced like
+    a much lighter sword. It came out of the water cold, and it stays cool.
+  </p>
+
+  <dl class="stats">
+    <div>
+      <dt>Bonus</dt>
+      <dd>+1 attack and damage</dd>
+    </div>
+    <div>
+      <dt>Damage</dt>
+      <dd>1d8 + 1 slashing</dd>
+    </div>
+    <div>
+      <dt>Properties</dt>
+      <dd>Finesse</dd>
+    </div>
+    <div>
+      <dt>Statistics</dt>
+      <dd>Rapier</dd>
+    </div>
+  </dl>
+
+  <ul class="props">
+    <li>
+      <h2>The call</h2>
+      <p>
+        Once per short rest, as a bonus action, you raise the blade and call out one creature within
+        30 feet of you that can hear you. It makes a Wisdom saving throw against your spell save DC.
+        On a failure, until the start of your next turn it has disadvantage on attack rolls against
+        anyone but you. If it attacks someone other than you anyway, you can use your reaction to
+        make one melee weapon attack against it.
+      </p>
+    </li>
+  </ul>
+
+  <footer>
+    Asher worked it from Tithe's wing bone in his cave by the river, and floated it to you across
+    the water.
+  </footer>
+</article>
