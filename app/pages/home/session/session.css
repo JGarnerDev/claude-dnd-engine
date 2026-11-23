@@ -285,7 +285,7 @@
   border-radius: var(--ui-radius);
   background: color-mix(in srgb, var(--ui-hue) 16%, var(--ui-bg));
   border: 1px solid var(--ui-hue);
-  box-shadow: 0 6px 16px rgb(0 0 0 / 0.35);
+  box-shadow: var(--ui-shadow-sm);
 }
 .sr-strip-top {
   display: flex;

@@ -23,9 +23,6 @@
   min-width: 0;
 }
 
-.st-board .ui-card-title {
-  color: var(--ui-muted);
-}
 .st-row {
   display: grid;
   grid-template-columns: 7em 1fr 3.5em;

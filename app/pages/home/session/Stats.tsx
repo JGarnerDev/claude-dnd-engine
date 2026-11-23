@@ -65,7 +65,15 @@ function Boards({ boards }: { boards: StatBoard[] }) {
   return (
     <Grid min="20rem" gap={4} className="st-boards">
       {boards.map((b, i) => (
-        <Card key={i} className="st-board" title={`${b.icon} ${b.label}`}>
+        <Card
+          key={i}
+          className="st-board"
+          title={
+            <Text as="span" tone="muted">
+              {b.icon} {b.label}
+            </Text>
+          }
+        >
           {b.rows.map((r, j) => (
             <Standing key={j} r={r} top={b.rows[0].value} />
           ))}
