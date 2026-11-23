@@ -2,8 +2,9 @@
 // titled with the PC's name, each achievement a "New achievement!" popup.
 
 import "./achievements.css";
-import { Card } from "jeff-ui";
+import { Card, Column, Heading, Text } from "jeff-ui";
 import { beforeLast, unlink, type DeckSlide } from "./deck.js";
+import { KIND_HUE } from "./hues.js";
 import { InlineMd } from "./MarkdownView.js";
 import type { PcAchievements } from "./types.js";
 
@@ -12,10 +13,15 @@ function AchievementCard({ title, text, times }: { title: string; text: string; 
   return (
     <Card
       variant="glow"
-      hue={again ? "var(--sr-k-recap)" : undefined}
+      hue={again ? KIND_HUE.recap : undefined}
       className={`ac-card${again ? " is-repeat" : ""}`}
     >
-      <div className="ac-eyebrow">
+      <Heading
+        level={3}
+        variant="eyebrow"
+        hue={again ? KIND_HUE.recap : "var(--ui-accent)"}
+        className="ac-eyebrow"
+      >
         {again ? (
           <>
             Achievement earned again <b>×{times}</b>
@@ -23,14 +29,14 @@ function AchievementCard({ title, text, times }: { title: string; text: string; 
         ) : (
           "New achievement!"
         )}
-      </div>
-      <div className="ac-title">
+      </Heading>
+      <Heading level={4} size="lg" className="ac-title">
         <InlineMd md={unlink(title)} />
-      </div>
+      </Heading>
       {text && (
-        <div className="ac-text">
+        <Text tone="muted" className="ac-text">
           <InlineMd md={unlink(text)} />
-        </div>
+        </Text>
       )}
     </Card>
   );
@@ -44,11 +50,11 @@ export function achievementSlides(a: PcAchievements[] | null | undefined): DeckS
       title: p.pc,
       md: "",
       body: (
-        <div className="ac-wrap">
+        <Column gap={4} className="ac-wrap">
           {p.items.map((i, k) => (
             <AchievementCard key={k} title={i.title} text={i.text} times={i.times} />
           ))}
-        </div>
+        </Column>
       ),
     }));
 }

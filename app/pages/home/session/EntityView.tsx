@@ -3,9 +3,22 @@
 // fetched (entity-fetch.ts) once the header is up.
 
 import { useEffect, useState } from "react";
-import { Badge, Disclosure } from "jeff-ui";
+import {
+  Badge,
+  Box,
+  Column,
+  Prose,
+  DescriptionList,
+  Disclosure,
+  Heading,
+  Link,
+  List,
+  Row,
+  Text,
+} from "jeff-ui";
 import { fetchEntity, LAYER_LABEL } from "./entity-fetch.js";
 import { splitEntity } from "./frontmatter.js";
+import { LAYER_HUE } from "./hues.js";
 import { InlineMd, Markdown } from "./MarkdownView.js";
 import type { EntityRef } from "./types.js";
 
@@ -21,10 +34,10 @@ export function EntityHeader({
   const layer = e.path.split("/")[0];
   const chips = [e.type, e.subtype, e.campaign].filter(Boolean);
   return (
-    <div className="sr-ent-head">
-      <h2>{e.name}</h2>
-      <div className="sr-ent-tags">
-        <Badge className="sr-layer" data-layer={layer}>
+    <Column gap={2} className="sr-ent-head">
+      <Heading level={2}>{e.name}</Heading>
+      <Row gap={1}>
+        <Badge className="sr-layer" data-layer={layer} hue={LAYER_HUE[layer]}>
           {LAYER_LABEL[layer] ?? layer}
         </Badge>
         {chips.map((c, i) => (
@@ -32,22 +45,26 @@ export function EntityHeader({
             {c}
           </Badge>
         ))}
-      </div>
+      </Row>
       {e.description && (
-        <p className="sr-ent-desc">
+        <Text>
           <InlineMd md={e.description} />
-        </p>
+        </Text>
       )}
       {quickRef && (
-        <div className="sr-quickref">
-          <div className="sr-quickref-label">This session</div>
+        <Box hue="var(--ui-accent)" edge="start" className="sr-quickref">
+          <Heading level={3} variant="eyebrow" hue="var(--ui-accent)">
+            This session
+          </Heading>
           <Markdown md={quickRef} />
-        </div>
+        </Box>
       )}
-      <a className="sr-openfile" href={`vscode://file/${encodeURI(`${root}/${e.path}`)}`}>
-        Open in VS Code
-      </a>
-    </div>
+      <Text size="xs">
+        <Link className="sr-openfile" href={`vscode://file/${encodeURI(`${root}/${e.path}`)}`}>
+          Open in VS Code
+        </Link>
+      </Text>
+    </Column>
   );
 }
 
@@ -57,29 +74,27 @@ export function EntityBody({ text }: { text: string }) {
     <>
       {fields.length > 0 && (
         <Disclosure className="sr-fields" title="Fields">
-          <dl>
-            {fields.map(([k, v]) => [
-              <dt key={`t${k}`}>{k.replace(/_/g, " ")}</dt>,
-              <dd key={`d${k}`}>
-                {Array.isArray(v) ? (
-                  <ul>
-                    {v.map((x, i) => (
-                      <li key={i}>
-                        <InlineMd md={x} />
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <InlineMd md={v} />
-                )}
-              </dd>,
-            ])}
-          </dl>
+          <DescriptionList
+            items={fields.map(([k, v]) => ({
+              term: k.replace(/_/g, " "),
+              value: Array.isArray(v) ? (
+                <List>
+                  {v.map((x, i) => (
+                    <li key={i}>
+                      <InlineMd md={x} />
+                    </li>
+                  ))}
+                </List>
+              ) : (
+                <InlineMd md={v} />
+              ),
+            }))}
+          />
         </Disclosure>
       )}
-      <div className="sr-md">
+      <Prose className="sr-md">
         <Markdown md={body} />
-      </div>
+      </Prose>
     </>
   );
 }

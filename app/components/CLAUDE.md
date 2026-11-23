@@ -43,14 +43,9 @@ Generic widgets come from `jeff-ui` (`Desktop/Organized/jeff-ui-project`): `Sett
 
 ### Styling (CSS)
 
-CSS lives next to the component that produces the markup and is pulled in by a side-effect `import './x.css'` in that module — Vite serves it with the module (no `<link>` needed). Mirror the same file layout as the source:
+The charts and the home page have no CSS of their own: layout is jeff-ui's `Row`, `Column` and `Box`, the chart colors come from the theme (`slate` sets `--ui-chart-*`), and each track's color is a `hue` in `DEFAULT_CATEGORIES` (`_common/helpers/tracks.ts`), a `var(--ui-cat-n)`. If a chart ever needs CSS, it lives next to the component that produces the markup, pulled in by a side-effect `import './x.css'`, and sets no `--ui-*` token (a token is the theme's).
 
-- `<chart>/<chart>.css` — styles for that chart only (e.g. `swimlane/swimlane.css`), imported by `<chart>/<Chart>.tsx`. The drawn chart's own CSS ships with jeff-ui (`ui-chart-*`).
-- `_common/common.css` — theme tokens (`:root --chart-*` / `--track-*`), their mapping onto jeff-ui's `--ui-chart-*` variables on `.chart-root`, and `.chart-empty`. Each chart imports it (Vite dedupes).
-- `_common/components/<widget>.css` — styles for a shared widget, imported by its `.tsx` (e.g. `filterbar.css` by `FilterBar.tsx`).
-- `pages/home/view.css` — styles for the page-level view switcher, imported by `TimelineView.tsx`.
-
-Classes are prefixed `chart-` (page-agnostic). Keep a rule with the element that owns it; lift a rule to `_common/` only when more than one chart needs it (the "shared when applicable" rule). When CSS geometry and layout math must agree, the constant lives in `_common/constants.ts` and the CSS comments point back to it. Per-element dynamic values go through inline custom properties (`style={{ '--from': … }}`), not string-built styles.
+Classes are prefixed `chart-` (page-agnostic) and stay on the markup as hooks for the specs. Keep a rule with the element that owns it; lift a rule to `_common/` only when more than one chart needs it (the "shared when applicable" rule). When CSS geometry and layout math must agree, the constant lives in `_common/constants.ts` and the CSS comments point back to it. Per-element dynamic values go through inline custom properties (`style={{ '--from': … }}`), not string-built styles.
 
 Don't let a chart's private helper be imported by another chart — if both need it, it belongs in `_common` (this is why `toneFor` and `lanesFor` live in `_common/helpers/tracks.ts`).
 

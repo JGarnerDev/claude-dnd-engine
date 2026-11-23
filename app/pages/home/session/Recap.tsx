@@ -6,16 +6,17 @@
 // as "Last time in this world". A Slides button opens the previous session's
 // party-facing deck (_slides.md) fullscreen.
 
-import { Button, Disclosure } from "jeff-ui";
+import { Button, Column, Disclosure, Divider, Heading, List, Prose, Row, Text } from "jeff-ui";
+import { KIND_HUE } from "./hues.js";
 import { InlineMd, Markdown } from "./MarkdownView.js";
 import { writtenRecap } from "./recap-data.js";
 import type { PreviousSession, SessionData } from "./types.js";
 
 function meta(p: PreviousSession) {
   return (
-    <div className="sr-recap-meta">
+    <Text as="div" size="sm" tone="muted" className="sr-recap-meta">
       {[p.date && `played ${p.date}`, p.campaign].filter(Boolean).join(" · ")}
-    </div>
+    </Text>
   );
 }
 
@@ -23,9 +24,11 @@ function Full({ p }: { p: PreviousSession }) {
   return (
     p.recap && (
       <Disclosure className="sr-recap-full" title={`Full recap — ${p.name}`}>
-        <p>
-          <InlineMd md={p.recap} />
-        </p>
+        <Prose>
+          <p>
+            <InlineMd md={p.recap} />
+          </p>
+        </Prose>
       </Disclosure>
     )
   );
@@ -37,30 +40,36 @@ export function Recap({ data, onSlides }: { data: SessionData; onSlides: () => v
   const written = writtenRecap(data);
   const threads = data.session.looseThreads;
   return (
-    <>
-      {prev.slides.length > 0 && (
-        <Button
-          className="sr-slides-open"
-          data-act="slides"
-          title="Show the party-facing slides"
-          onClick={onSlides}
-        >
-          Slides
-        </Button>
-      )}
-      {meta(prev)}
+    <Column gap={3}>
+      <Row justify="between" align="center" gap={3}>
+        {meta(prev)}
+        {prev.slides.length > 0 && (
+          <Button
+            size="sm"
+            hue={KIND_HUE.recap}
+            className="sr-slides-open"
+            data-act="slides"
+            title="Show the party-facing slides"
+            onClick={onSlides}
+          >
+            Slides
+          </Button>
+        )}
+      </Row>
       {written && (
-        <div className="sr-recap-written sr-md">
+        <Prose className="sr-recap-written sr-md">
           <Markdown md={written} />
-        </div>
+        </Prose>
       )}
       {prev.description && !written && (
-        <p className="sr-recap-lead">
+        <Text size="lg" serif className="sr-recap-lead">
           <InlineMd md={prev.description} />
-        </p>
+        </Text>
       )}
-      <h3 className="sr-recap-h">TL;DR</h3>
-      <ul className="sr-recap-tldr">
+      <Heading level={3} variant="eyebrow" hue={KIND_HUE.recap} className="sr-recap-h">
+        TL;DR
+      </Heading>
+      <List gap={2} className="sr-recap-tldr">
         {data.party.length > 0 && (
           <li>
             <strong>Party</strong>
@@ -96,25 +105,28 @@ export function Recap({ data, onSlides }: { data: SessionData; onSlides: () => v
             <strong>Cliffhanger</strong> — <InlineMd md={prev.cliffhanger} />
           </li>
         )}
-      </ul>
+      </List>
       <Full p={prev} />
       {inSeason && (
-        <div className="sr-recap-season">
-          <h3 className="sr-recap-h">Last time in this world — {inSeason.name}</h3>
+        <Column gap={2} className="sr-recap-season">
+          <Divider />
+          <Heading level={3} variant="eyebrow" hue={KIND_HUE.recap} className="sr-recap-h">
+            Last time in this world — {inSeason.name}
+          </Heading>
           {meta(inSeason)}
           {inSeason.description && (
-            <p>
+            <Text>
               <InlineMd md={inSeason.description} />
-            </p>
+            </Text>
           )}
           {inSeason.cliffhanger && (
-            <p>
+            <Text>
               <strong>Left off</strong> — <InlineMd md={inSeason.cliffhanger} />
-            </p>
+            </Text>
           )}
           <Full p={inSeason} />
-        </div>
+        </Column>
       )}
-    </>
+    </Column>
   );
 }

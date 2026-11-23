@@ -12,9 +12,24 @@
 // usePanel.ts holds the panel's state and what the runner calls (open, escape, …).
 
 import { useLayoutEffect, useRef, type ReactNode } from "react";
-import { Badge, Button, Disclosure, EmptyState, IconButton } from "jeff-ui";
+import {
+  Badge,
+  Box,
+  Button,
+  Disclosure,
+  Drawer,
+  EmptyState,
+  Heading,
+  Icon,
+  IconButton,
+  Prose,
+  Row,
+  RowButton,
+  Text,
+} from "jeff-ui";
 import { searchEntities, type Resolver } from "./entities.js";
 import { EntityView } from "./EntityView.js";
+import { LAYER_HUE, VOICE_HUE } from "./hues.js";
 import { LAYER_LABEL } from "./entity-fetch.js";
 import { searchFlow, type FlowHit } from "./flow-search.js";
 import { plainText } from "./markdown.js";
@@ -41,11 +56,22 @@ function marked(s: string, q: string): ReactNode {
   );
 }
 
+// Where the panel is, in its header: one line, in the panel's voice.
+function crumbText(text: string) {
+  return (
+    <Text as="span" size="xs" mono lines={1} hue={VOICE_HUE.watch} className="sr-pn-crumb">
+      {text}
+    </Text>
+  );
+}
+
 function group(title: string, children: ReactNode[]) {
   return (
     children.length > 0 && (
       <>
-        <h3 className="sr-group">{title}</h3>
+        <Heading level={3} variant="eyebrow" className="sr-group">
+          {title}
+        </Heading>
         {children}
       </>
     )
@@ -71,9 +97,14 @@ export interface PanelProps {
   ctx: PanelContext;
   where: string; // where the DM is: "step 2, Riders on the south road"
   onGo: (id: string) => void;
+  /** Beside the panel while it is not docked: the buttons that open it. */
+  rail?: ReactNode;
+  /** The notes, which the panel docks beside or slides over. */
+  children: ReactNode;
 }
 
-export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelProps) {
+export function Panel(props: PanelProps) {
+  const { p, body, data, resolve, refs, ctx, where, onGo, rail, children } = props;
   const { known } = useSession();
   const plan = data.sections.filter((s) => !isRecapSection(s.title));
   const sections: Section[] = [...(data.established ?? []), ...plan];
@@ -85,20 +116,19 @@ export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelP
   // Name and key default inside the body: React Compiler cannot compile a
   // default parameter that reads another parameter's field.
   const row = (e: EntityRef, name?: ReactNode, key?: string | number) => (
-    <button
+    <RowButton
       key={key ?? e.name}
-      type="button"
       className="sr-ent"
       data-entity={e.name}
       onClick={() => p.openEntity(e.name, fresh)}
-    >
-      <span className="sr-ent-name">{name ?? e.name}</span>
-      <span className="sr-ent-type">
-        {[e.type, e.subtype].filter(Boolean).join(" · ")} ·{" "}
-        {LAYER_LABEL[e.path.split("/")[0]] ?? ""}
-      </span>
-      {e.description && <span className="sr-ent-sub">{plainText(e.description)}</span>}
-    </button>
+      title={<span className="sr-ent-name">{name ?? e.name}</span>}
+      sub={e.description ? plainText(e.description) : undefined}
+      end={
+        <Text as="span" size="xs" tone="muted">
+          {[e.type, e.subtype, LAYER_LABEL[e.path.split("/")[0]]].filter(Boolean).join(" · ")}
+        </Text>
+      }
+    />
   );
   const pnRow = (
     key: string | number,
@@ -107,10 +137,14 @@ export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelP
     title: ReactNode,
     sub?: ReactNode,
   ) => (
-    <button key={key} type="button" className="sr-pn-row" {...attr} onClick={onClick}>
-      <span className="sr-pn-name">{title}</span>
-      {sub && <span className="sr-pn-sub">{sub}</span>}
-    </button>
+    <RowButton
+      key={key}
+      className="sr-pn-row"
+      {...attr}
+      onClick={onClick}
+      title={title}
+      sub={sub}
+    />
   );
   const sectionRow = (kind: "mystery" | "section", i: number, title: ReactNode) =>
     pnRow(`${kind}${i}`, { "data-pn": `${kind}|${i}` }, () => p.openSection(kind, i, fresh), title);
@@ -135,30 +169,24 @@ export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelP
     ].filter((_, i) => [roster, established, mysteries, plan][i].length > 0);
     return (
       <>
-        <h3 className="sr-group">Party</h3>
-        <div className="sr-party">
-          {data.party.map((m) => (
-            <button
+        {group(
+          "Party",
+          data.party.map((m) => (
+            <RowButton
               key={m.name}
-              type="button"
               className="sr-pc"
               data-entity={m.name}
               onClick={() => p.openEntity(m.name, fresh)}
-            >
-              <span className="sr-pc-line">
-                <span className="sr-pc-name">{m.name}</span>
-                <span className="sr-pc-class">
+              title={<span className="sr-pc-name">{m.name}</span>}
+              sub={m.status ? <InlineMd md={m.status} /> : undefined}
+              end={
+                <Text as="span" size="xs" tone="muted">
                   {m.raceClass} · L{m.level} · {m.player}
-                </span>
-              </span>
-              {m.status && (
-                <span className="sr-pc-status">
-                  <InlineMd md={m.status} />
-                </span>
-              )}
-            </button>
-          ))}
-        </div>
+                </Text>
+              }
+            />
+          )),
+        )}
         {group(
           "On this step",
           ctx.onCard.map((e) => row(e)),
@@ -195,7 +223,10 @@ export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelP
             () => p.openBeat(h.id, fresh),
             hl(h.title),
             <>
-              <span className="sr-pn-id">{hl(h.id)}</span> · {h.sub}
+              <Text as="span" mono>
+                {hl(h.id)}
+              </Text>{" "}
+              · {h.sub}
             </>,
           );
     if (!ents.length && !flow.length && !answers.length && !secs.length)
@@ -240,44 +271,46 @@ export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelP
     const s = mystery ? mysteries[it.i] : sections[it.i];
     return (
       <>
-        <h2 className="sr-pn-title">{s.title}</h2>
-        <div className="sr-ent-tags">
+        <Heading level={2} className="sr-pn-title">
+          {s.title}
+        </Heading>
+        <Row gap={1}>
           {mystery ? (
             <Badge className="sr-chiptag">mystery · DM answer</Badge>
           ) : (
-            <Badge className="sr-layer" data-layer="scheduler">
+            <Badge className="sr-layer" data-layer="scheduler" hue={LAYER_HUE.scheduler}>
               plan
             </Badge>
           )}
-        </div>
-        <div className="sr-md">
+        </Row>
+        <Prose className="sr-md">
           <Markdown md={s.md} />
-        </div>
+        </Prose>
       </>
     );
   };
 
   const close = p.docked ? null : (
-    <IconButton className="sr-pn-btn" data-pn-close="" label="Close the panel" onClick={p.close}>
-      ×
+    <IconButton data-pn-close="" label="Close the panel" onClick={p.close}>
+      <Icon name="close" />
     </IconButton>
   );
   const head = q ? (
     <>
-      <span className="sr-pn-crumb">Search · “{q}”</span>
-      <Button variant="ghost" className="sr-pn-btn" data-pn-clear="" onClick={() => p.setQuery("")}>
+      {crumbText(`Search · “${q}”`)}
+      <Button size="sm" variant="ghost" data-pn-clear="" onClick={() => p.setQuery("")}>
         Clear
       </Button>
       {close}
     </>
   ) : top ? (
     <>
-      <Button variant="ghost" className="sr-pn-btn sr-back" onClick={p.back}>
+      <Button size="sm" variant="ghost" className="sr-back" onClick={p.back}>
         ← Back
       </Button>
-      <span className="sr-pn-crumb">{crumb(top)}</span>
+      {crumbText(crumb(top))}
       {p.docked ? (
-        <Button variant="ghost" className="sr-pn-btn" data-pn-home="" onClick={p.home}>
+        <Button size="sm" variant="ghost" data-pn-home="" onClick={p.home}>
           Home
         </Button>
       ) : (
@@ -286,7 +319,7 @@ export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelP
     </>
   ) : (
     <>
-      <span className="sr-pn-crumb">This session</span>
+      {crumbText("This session")}
       {close}
     </>
   );
@@ -307,15 +340,31 @@ export function Panel({ p, body, data, resolve, refs, ctx, where, onGo }: PanelP
   };
   const session = { known, openEntity: (name: string) => p.openEntity(name, fresh) };
   return (
-    <aside ref={aside} className="sr-panel" aria-label="Side panel">
-      <SessionContext.Provider value={session}>
-        <RefContext.Provider value={links}>
-          <div className="sr-pn-head">{head}</div>
-          <div ref={body} className="sr-panel-body">
-            {q ? results() : top ? item(top) : home()}
-          </div>
-        </RefContext.Provider>
-      </SessionContext.Provider>
-    </aside>
+    <Drawer
+      label="Side panel"
+      className={["sr-body", p.docked && "is-docked", p.open && "is-open"]
+        .filter(Boolean)
+        .join(" ")}
+      docked={p.docked}
+      open={p.open}
+      rail={rail}
+      panelRef={aside}
+      header={
+        <Row gap={2} wrap={false} className="sr-pn-head">
+          {head}
+        </Row>
+      }
+      panel={
+        <SessionContext.Provider value={session}>
+          <RefContext.Provider value={links}>
+            <Box ref={body} padding={3} className="sr-panel-body">
+              {q ? results() : top ? item(top) : home()}
+            </Box>
+          </RefContext.Provider>
+        </SessionContext.Provider>
+      }
+    >
+      {children}
+    </Drawer>
   );
 }

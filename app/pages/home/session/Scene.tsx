@@ -11,7 +11,18 @@
 // are the page's own: they survive moving between steps, not a reload.
 
 import { useLayoutEffect, useRef, useState, type ReactNode } from "react";
-import { Disclosure, Kbd } from "jeff-ui";
+import {
+  Column,
+  Disclosure,
+  Divider,
+  Heading,
+  Kbd,
+  List,
+  Prose,
+  Row,
+  RowButton,
+  Text,
+} from "jeff-ui";
 import { applyHp, matchEnemy, type StatBlock } from "./combatants.js";
 import { RollContext, type LoggedRoll } from "./Dice.js";
 import { FightBar, type FightChip } from "./FightBar.js";
@@ -68,44 +79,50 @@ function Options({
   const btn = (o: NextOption, i: number) => {
     const label = !fork && o.kind === "edge" ? `Next — ${titleOf(o.to)}` : o.label;
     return (
-      <button
+      <RowButton
         key={i}
-        type="button"
-        className={`sr-opt${i === 0 && o.kind !== "aside" ? " is-primary" : ""}`}
+        className="sr-opt"
+        variant={i === 0 && o.kind !== "aside" ? "primary" : "default"}
         data-kind={o.kind}
         data-to={o.to}
         onClick={() => {
           if (o.to !== current) onGo(o.to);
         }}
-      >
-        <Kbd>{i + 1}</Kbd>
-        <span className="sr-opt-label">
-          <InlineMd md={label} />
-        </span>
-        {fork && o.label !== titleOf(o.to) && (
-          <span className="sr-opt-to">
-            → <InlineMd md={titleOf(o.to)} />
+        start={<Kbd>{i + 1}</Kbd>}
+        title={
+          <span className="sr-opt-label">
+            <InlineMd md={label} />
           </span>
-        )}
-      </button>
+        }
+        sub={
+          fork && o.label !== titleOf(o.to) ? (
+            <>
+              → <InlineMd md={titleOf(o.to)} />
+            </>
+          ) : undefined
+        }
+      />
     );
   };
   return (
     <NoSceneLinks>
-      <div className="sr-options">
+      <Column gap={2} className="sr-options">
         {branches.length ? (
           branches.map(btn)
         ) : (
-          <div className="sr-end">
+          <Text size="md" className="sr-end">
             <strong>End of the plan.</strong> <InlineMd md={closingHook} />
-          </div>
+          </Text>
         )}
-      </div>
+      </Column>
       {asides.length > 0 && (
-        <div className="sr-asides">
-          <span className="sr-asides-label">If it comes up</span>
+        <Column gap={2} className="sr-asides">
+          <Divider />
+          <Heading level={4} variant="eyebrow">
+            If it comes up
+          </Heading>
           {asides.map((o, i) => btn(o, branches.length + i))}
-        </div>
+        </Column>
       )}
     </NoSceneLinks>
   );
@@ -131,9 +148,9 @@ function Setup({ rest, open }: { rest: string; open: boolean }) {
   return (
     <>
       {aloud && (
-        <div className="sr-md sr-aloud">
+        <Prose className="sr-md sr-aloud">
           <Markdown md={aloud} />
-        </div>
+        </Prose>
       )}
       {other && (
         <Disclosure className="sr-setup" title="Scene notes" open={open}>
@@ -168,13 +185,16 @@ function Tokens({
         if (ev.currentTarget.open !== open) onToggle(ev.currentTarget.open);
       }}
     >
-      <ol>
+      <List ordered variant="plain" gap={1}>
         {cues.map((c, k) => (
           <li key={k}>
-            <span className="sr-tok-step">{c.i + 1}</span> <InlineMd md={stripProvenance(c.t)} />
+            <Text as="span" mono strong tone="accent" className="sr-tok-step">
+              {c.i + 1}
+            </Text>{" "}
+            <InlineMd md={stripProvenance(c.t)} />
           </li>
         ))}
-      </ol>
+      </List>
     </Disclosure>
   );
 }
@@ -263,9 +283,9 @@ export function Scene(v: SceneProps) {
   const body =
     v.body !== undefined ? (
       <>
-        <h1 className="sr-card-title">
+        <Heading level={1} size="xl">
           <InlineMd md={v.node.title} />
-        </h1>
+        </Heading>
         <div className="sr-card-body">{v.body}</div>
         {options}
       </>
@@ -334,19 +354,35 @@ export function Scene(v: SceneProps) {
       </>
     );
   return (
-    <article ref={article} className="sr-scene" data-kind={v.node.kind} data-current={v.node.id}>
-      <header className="sr-scene-bar">
-        <h2 className="sr-scene-title">{v.scene?.title ?? "Aside — outside the scene boxes"}</h2>
-        <span className="sr-scene-pos">
-          {header.time && <span className="sr-scene-time">{header.time}</span>}
-          {v.position}
-        </span>
-      </header>
+    <Column
+      as="article"
+      gap={3}
+      ref={article}
+      className="sr-scene"
+      data-kind={v.node.kind}
+      data-current={v.node.id}
+    >
+      <Column gap={1}>
+        <Row as="header" justify="between" align="baseline" gap={3}>
+          <Heading level={2}>{v.scene?.title ?? "Aside — outside the scene boxes"}</Heading>
+          <Row as="span" gap={3} className="sr-scene-pos">
+            {header.time && (
+              <Text as="span" size="sm">
+                {header.time}
+              </Text>
+            )}
+            <Text as="span" size="sm" tone="muted">
+              {v.position}
+            </Text>
+          </Row>
+        </Row>
+        <Divider />
+      </Column>
       <RollContext.Provider value={logRoll}>
         <FightContext.Provider value={v.body === undefined ? lit : null}>
           {body}
         </FightContext.Provider>
       </RollContext.Provider>
-    </article>
+    </Column>
   );
 }

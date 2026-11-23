@@ -4,9 +4,10 @@
 // compact "Worth noting" slide instead, or none (meta/recap-slides.md → Deck weight).
 
 import type { ReactNode } from "react";
-import { Badge, Card, ProgressBar } from "jeff-ui";
+import { Badge, Card, Column, Grid, List, ProgressBar, Row, Stat, Text } from "jeff-ui";
 import "./stats.css";
 import { beforeLast, type DeckSlide } from "./deck.js";
+import { KIND_HUE } from "./hues.js";
 import type { DeckWeight, StatBoard, StatRow, Stats } from "./types.js";
 
 const num = (x: { value: number; rough: boolean }) => `${x.rough ? "~" : ""}${x.value}`;
@@ -16,82 +17,99 @@ const lower = (s: string) => (/^[A-Z][a-z]/.test(s) ? s[0].toLowerCase() + s.sli
 
 function Awards({ s }: { s: Stats }) {
   return (
-    <div className="st-cards">
+    <Grid min="18rem" gap={4} className="st-cards">
       {s.awards.map((a, i) => (
-        <Card key={i} className={`st-card${a.best.length ? " is-best" : ""}`}>
-          <div className="st-icon">{a.icon}</div>
-          <div className="st-card-text">
-            <div className="st-award">{a.award}</div>
-            <div className="st-pc">{names(a.pcs)}</div>
-            <div className="st-value">
-              {num(a)} <span>{lower(a.label)}</span>
-            </div>
-            {a.best.length > 0 && (
-              <div className="st-best">
-                ⭐ Personal best{a.pcs.length > 1 ? `: ${names(a.best)}` : ""}
-              </div>
-            )}
-          </div>
+        <Card
+          key={i}
+          hue={a.best.length ? "var(--ui-accent)" : undefined}
+          className={`st-card${a.best.length ? " is-best" : ""}`}
+        >
+          <Row gap={4} align="start">
+            <span className="st-icon">{a.icon}</span>
+            <Column gap={1} className="st-card-text">
+              <Text size="xs" caps strong tone="muted" className="st-award">
+                {a.award}
+              </Text>
+              <Text size="xl" strong className="st-pc">
+                {names(a.pcs)}
+              </Text>
+              <Stat className="st-value" value={num(a)} label={lower(a.label)} />
+              {a.best.length > 0 && (
+                <Text size="xs" tone="accent" className="st-best">
+                  ⭐ Personal best{a.pcs.length > 1 ? `: ${names(a.best)}` : ""}
+                </Text>
+              )}
+            </Column>
+          </Row>
         </Card>
       ))}
-    </div>
+    </Grid>
   );
 }
 
-function Row({ r, top }: { r: StatRow; top: number }) {
+function Standing({ r, top }: { r: StatRow; top: number }) {
   const w = top ? Math.max(0.04, r.value / top) : 0;
+  const leads = r.value === top;
   return (
-    <div className={`st-row${r.value === top ? " is-top" : ""}`}>
+    <div className={`st-row${leads ? " is-top" : ""}`}>
       <span className="st-row-pc">{r.pc}</span>
-      <ProgressBar className="st-bar" value={w} />
-      <span className="st-row-v">{num(r)}</span>
+      <ProgressBar className="st-bar" value={w} hue={leads ? "var(--ui-accent)" : KIND_HUE.recap} />
+      <Text as="span" strong numeric className="st-row-v">
+        {num(r)}
+      </Text>
     </div>
   );
 }
 
 function Boards({ boards }: { boards: StatBoard[] }) {
   return (
-    <div className="st-boards">
+    <Grid min="20rem" gap={4} className="st-boards">
       {boards.map((b, i) => (
         <Card key={i} className="st-board" title={`${b.icon} ${b.label}`}>
           {b.rows.map((r, j) => (
-            <Row key={j} r={r} top={b.rows[0].value} />
+            <Standing key={j} r={r} top={b.rows[0].value} />
           ))}
         </Card>
       ))}
-    </div>
+    </Grid>
   );
 }
 
 function Fame({ s }: { s: Stats }) {
   if (!s.lifetime.length) return null;
   return (
-    <div className="st-fame">
-      <span className="st-fame-h">Hall of fame</span>
+    <Row gap={2} align="center" wrap className="st-fame">
+      <Text as="span" size="xs" caps strong tone="accent">
+        Hall of fame
+      </Text>
       {s.lifetime.map((h, i) => (
         <Badge key={i} className="st-chip" title={h.label}>
           {h.icon} {names(h.pcs)} <b>{num(h)}</b>
         </Badge>
       ))}
-    </div>
+    </Row>
   );
 }
 
 const Notable = ({ s }: { s: Stats }) => (
-  <ul className="st-notable">
+  <List variant="plain" gap={3} className="st-notable">
     {(s.notable ?? []).map((n, i) => (
       <li key={i}>
         <span className="st-icon">{n.icon}</span>
         {n.text}
       </li>
     ))}
-  </ul>
+  </List>
 );
 
 const wrap = (title: string, body: ReactNode): DeckSlide => ({
   title,
   md: "",
-  body: <div className="st-wrap">{body}</div>,
+  body: (
+    <Column gap={5} className="st-wrap">
+      {body}
+    </Column>
+  ),
 });
 
 // The stats slides for one session, in deck order. Gated by deck weight

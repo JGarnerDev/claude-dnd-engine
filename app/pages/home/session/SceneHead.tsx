@@ -9,12 +9,26 @@
 // The stat blocks are uncontrolled <details>, so one the DM opened stays open
 // while HP changes around it.
 
-import type { KeyboardEvent, ReactNode } from "react";
-import { Badge, Button, Disclosure, EmptyState } from "jeff-ui";
+import { useState, type KeyboardEvent } from "react";
+import {
+  Badge,
+  Box,
+  Button,
+  DescriptionList,
+  Disclosure,
+  EmptyState,
+  Heading,
+  List,
+  Row,
+  Text,
+  TextInput,
+  type DescriptionItem,
+} from "jeff-ui";
 import { matchEnemy } from "./combatants.js";
 import type { Phase, StatBlock } from "./combatants.js";
 import { rollable, RollLog, type LoggedRoll } from "./Dice.js";
 import { touches, undoable } from "./hp-log.js";
+import { KIND_HUE, VOICE_HUE } from "./hues.js";
 import type { HpLogEntry } from "./hp-log.js";
 import { plainText } from "./markdown.js";
 import { InlineMd, Markdown } from "./MarkdownView.js";
@@ -51,21 +65,15 @@ export interface HpActions {
   onUndo: (i: number) => void;
 }
 
-function row(label: string, children: ReactNode, chips = false) {
-  return (
-    <div className="sr-sh-row">
-      <span className="sr-sh-label">{label}</span>
-      <div className={`sr-sh-val${chips ? " is-chips" : ""}`}>{children}</div>
-    </div>
-  );
-}
-
-const Chips = ({ items }: { items: string[] }) =>
-  items.map((x, i) => (
-    <Badge key={i} className="sr-sh-chip">
-      <InlineMd md={x} />
-    </Badge>
-  ));
+const Chips = ({ items }: { items: string[] }) => (
+  <Row gap={1}>
+    {items.map((x, i) => (
+      <Badge key={i} className="sr-sh-chip">
+        <InlineMd md={x} />
+      </Badge>
+    ))}
+  </Row>
+);
 
 interface HpBoxProps {
   entry: string;
@@ -79,10 +87,11 @@ interface HpBoxProps {
 // A boss carries its legendary actions and phases on the box, for the fight bar.
 export function HpBox({ entry, max, hp, start = max, boss = {}, onHit }: HpBoxProps) {
   const cur = Math.min(hp[entry] ?? start, max);
+  const [typed, setTyped] = useState("");
   const onKeyDown = (ev: KeyboardEvent<HTMLInputElement>) => {
     if (ev.key !== "Enter") return;
     ev.preventDefault();
-    if (onHit(entry, ev.currentTarget.value)) ev.currentTarget.value = "";
+    if (onHit(entry, typed)) setTyped("");
   };
   return (
     <span
@@ -97,14 +106,15 @@ export function HpBox({ entry, max, hp, start = max, boss = {}, onHit }: HpBoxPr
       <span className="sr-hp-val">
         <b>{cur}</b>/{max}
       </span>
-      <input
+      <TextInput
         className="sr-hp-in"
-        type="text"
+        value={typed}
+        onChange={setTyped}
         inputMode="numeric"
         size={4}
         placeholder="dmg"
         title="12 or -12 deals damage · +5 heals · =40 sets · Enter applies"
-        aria-label="Damage or heal"
+        label="Damage or heal"
         onKeyUp={(ev) => {
           if (ev.key === " ") ev.preventDefault();
         }}
@@ -134,7 +144,9 @@ function Enemy({
   const tag = arrives ? (
     <>
       {" "}
-      <span className="sr-arrives">arrives round {arrives}</span>
+      <Text as="span" size="xs" strong hue={VOICE_HUE.watch} className="sr-arrives">
+        arrives round {arrives}
+      </Text>
     </>
   ) : null;
   const at = arrives || undefined;
@@ -185,10 +197,12 @@ function Enemy({
         </span>
       }
     >
-      <div className="sr-md sr-enemy-block">
-        <div className="sr-enemy-title">{b.title}</div>
+      <Box hue={KIND_HUE.combat} edge="start" className="sr-md sr-enemy-block">
+        <Heading level={4} size="sm">
+          {b.title}
+        </Heading>
         <Markdown md={stripProvenance(b.md)} text={rollable} />
-      </div>
+      </Box>
     </Disclosure>
   );
 }
@@ -225,7 +239,7 @@ export function HpLog({
       onToggle={(ev) => onToggle(ev.currentTarget.open)}
     >
       {rows.length ? (
-        <ol>
+        <List ordered variant="plain" gap={1}>
           {rows.map(({ e, i }) => (
             <li key={i} className={e.undone ? "is-undone" : ""}>
               <span className="sr-hplog-at">
@@ -233,7 +247,9 @@ export function HpLog({
                 {e.kind === "hit" && e.round ? (
                   <>
                     {" "}
-                    <span className="sr-hplog-round">R{e.round}</span>
+                    <Text as="span" strong hue={KIND_HUE.combat} className="sr-hplog-round">
+                      R{e.round}
+                    </Text>
                   </>
                 ) : null}
               </span>
@@ -253,9 +269,12 @@ export function HpLog({
                 )}
               </span>
               {e.undone ? (
-                <span className="sr-hplog-tag">undone</span>
+                <Text as="span" size="xs" tone="muted">
+                  undone
+                </Text>
               ) : (
                 <Button
+                  size="sm"
                   variant="ghost"
                   className="sr-hplog-undo"
                   data-undo={i}
@@ -268,7 +287,7 @@ export function HpLog({
               )}
             </li>
           ))}
-        </ol>
+        </List>
       ) : (
         <EmptyState className="sr-hplog-empty">
           Every HP entry lands here, and Reset HP never clears it.
@@ -307,21 +326,38 @@ export function SceneHead({
   const undoAt = undoResetIndex(log, h.enemies);
   const p = (s: string) => <InlineMd md={stripProvenance(s)} />;
   const castList = h.cast.includes(" · ");
+  const fields: DescriptionItem[] = [];
+  if (h.where)
+    fields.push({ term: "Where", value: <span className="sr-sh-val">{p(h.where)}</span> });
+  if (h.cast)
+    fields.push({
+      term: "Who’s here",
+      value: castList ? (
+        <Chips items={h.cast.split(" · ")} />
+      ) : (
+        <span className="sr-sh-val">{p(h.cast)}</span>
+      ),
+    });
+  if (h.dcs.length > 0) fields.push({ term: "DCs", value: <Chips items={h.dcs} /> });
   return (
     <>
-      {h.summary && <p className="sr-sh-summary">{p(h.summary)}</p>}
-      <div className="sr-sh-grid">
-        {h.where && row("Where", p(h.where))}
-        {h.cast &&
-          row("Who’s here", castList ? <Chips items={h.cast.split(" · ")} /> : p(h.cast), castList)}
-        {h.dcs.length > 0 && row("DCs", <Chips items={h.dcs} />, true)}
-      </div>
+      {h.summary && (
+        <Text size="lg" className="sr-sh-summary">
+          {p(h.summary)}
+        </Text>
+      )}
+      {fields.length > 0 && (
+        <DescriptionList layout="inline" termWidth="6rem" className="sr-sh-grid" items={fields} />
+      )}
       {h.enemies.length > 0 && (
-        <div className="sr-enemies">
-          <div className="sr-enemies-head">
-            <span className="sr-sh-label">Enemies</span>
-            <span className="sr-enemies-btns">
+        <Box hue={KIND_HUE.combat} className="sr-enemies">
+          <Row justify="between">
+            <Heading level={3} variant="eyebrow">
+              Enemies
+            </Heading>
+            <Row gap={1}>
               <Button
+                size="sm"
                 variant="ghost"
                 className="sr-roll-clear"
                 title="Clear the roll log"
@@ -331,6 +367,7 @@ export function SceneHead({
                 Clear rolls
               </Button>
               <Button
+                size="sm"
                 variant="ghost"
                 className="sr-hp-undo-reset"
                 data-undo={undoAt}
@@ -343,6 +380,7 @@ export function SceneHead({
                 Undo reset
               </Button>
               <Button
+                size="sm"
                 variant="danger"
                 className="sr-hp-reset"
                 title="Put every enemy back to its known HP at the start of the session. The HP log keeps the old numbers."
@@ -350,8 +388,8 @@ export function SceneHead({
               >
                 Reset HP
               </Button>
-            </span>
-          </div>
+            </Row>
+          </Row>
           <RollLog rolls={rolls} />
           {h.enemies.map((e, i) => (
             <Enemy
@@ -364,7 +402,11 @@ export function SceneHead({
               onHit={onHit}
             />
           ))}
-          {h.tactics && <p className="sr-tactics">{p(h.tactics)}</p>}
+          {h.tactics && (
+            <Text size="sm" tone="muted" className="sr-tactics">
+              {p(h.tactics)}
+            </Text>
+          )}
           <HpLog
             log={log}
             entries={h.enemies}
@@ -372,7 +414,7 @@ export function SceneHead({
             onToggle={onLogToggle}
             onUndo={onUndo}
           />
-        </div>
+        </Box>
       )}
     </>
   );

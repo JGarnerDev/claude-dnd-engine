@@ -1,13 +1,13 @@
-import { EmptyState } from "jeff-ui";
+import { EmptyState, Prose } from "jeff-ui";
 // Shown when the data carries no dated beats the timeline can place: a fresh
-// template, not an error. Styled by .chart-empty in view.css.
+// template, not an error.
 
 export function TimelineEmpty() {
   return (
     <EmptyState
       className="chart-empty"
       action={
-        <>
+        <Prose>
           <p>
             This view plots your campaign's dated beats. Nothing carries a date the timeline can
             place yet.
@@ -26,7 +26,7 @@ export function TimelineEmpty() {
               a <code>chronicle:</code> beat on any historian/scheduler entity
             </li>
           </ul>
-        </>
+        </Prose>
       }
     >
       No timeline yet

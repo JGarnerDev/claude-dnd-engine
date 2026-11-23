@@ -82,11 +82,11 @@ flowchart TD
   S2_BODIES --> S2_HAUL_HOME
   S2_TITHE_DIES -->|"the body on the wagon"| S2_HAUL_HOME
 
-  classDef combat fill:#F6DCD3,stroke:#B4452A,color:#5A1E10
-  classDef social fill:#E6E3D5,stroke:#8C8463,color:#3D3A28
-  classDef decision fill:#FDF0CE,stroke:#C79A2B,color:#5A4410
-  classDef stake fill:#D9E8DC,stroke:#4F8060,color:#1F3D2A
-  classDef seed fill:#DCE3EF,stroke:#5E7296,color:#24334D
+  classDef combat fill:#FDE2E2,stroke:#DC2626,color:#5B1414
+  classDef social fill:#FBE3D6,stroke:#D95926,color:#5A2410
+  classDef decision fill:#FBF0CF,stroke:#C79A2B,color:#5A4410
+  classDef stake fill:#D8F5E2,stroke:#22A35A,color:#134D2A
+  classDef seed fill:#DCE8FA,stroke:#3987E5,color:#17345E
 
   class S2_FIGHT,S2_TITHE_HUNTS,S2_TITHE_BLOODIED,S2_TITHE_DIES,S2_RELIEF,S2_MORALE,S2_ESCAPE combat
   class S2_IGGY_BEAT decision

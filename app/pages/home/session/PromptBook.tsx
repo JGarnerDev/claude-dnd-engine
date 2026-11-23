@@ -12,8 +12,9 @@
 //   Introduce  a character's first appearance: look, sound, impression
 //   Fight    where a fight or a boss fight starts and ends (`Combat starts:`, `Boss fight ends:`)
 
-import { Fragment, type ReactNode } from "react";
-import { CopyButton } from "jeff-ui";
+import { Fragment, type CSSProperties, type ReactNode } from "react";
+import { CopyButton, Heading, List, Prose, Text } from "jeff-ui";
+import { VOICE_HUE } from "./hues.js";
 import { itemLit, watchCue, type Lit } from "./fight-cues.js";
 import { useFightLit } from "./FightContext.js";
 import { extractCallouts } from "./markdown.js";
@@ -24,12 +25,12 @@ import { stripProvenance } from "./provenance.js";
 function Intros({ md }: { md: string }) {
   return extractCallouts(md).intros.map((x, i) => (
     <Fragment key={i}>
-      <h3 className="sr-intro-name">
+      <Heading level={3} size="md" className="sr-intro-name">
         <InlineMd md={stripProvenance(x.name)} />
-      </h3>
-      <div className="sr-md">
+      </Heading>
+      <Prose className="sr-md">
         <Markdown md={x.md} />
-      </div>
+      </Prose>
     </Fragment>
   ));
 }
@@ -42,20 +43,23 @@ function Private({ md }: { md: string }) {
   return (
     <>
       {p.when && (
-        <div className="sr-private-when">
+        <Text as="div" size="sm" tone="muted" className="sr-private-when">
           <InlineMd md={stripProvenance(p.when)} />
-        </div>
+        </Text>
       )}
-      <ul className="sr-private-list">
+      <List variant="divided" gap={2} className="sr-private-list">
         {p.outcomes.map((o, i) => (
           <li key={i}>
             {o.label && (
-              <span className="sr-private-label">
+              <Text as="span" size="xs" caps hue={VOICE_HUE.private} className="sr-private-label">
                 <InlineMd md={o.label} />
-              </span>
+              </Text>
             )}
-            <span className="sr-private-text">{o.text}</span>
+            <Text as="span" className="sr-private-text">
+              {o.text}
+            </Text>
             <CopyButton
+              size="sm"
               className="sr-copy"
               data-copy={o.text}
               title="Copy this message"
@@ -63,7 +67,7 @@ function Private({ md }: { md: string }) {
             />
           </li>
         ))}
-      </ul>
+      </List>
     </>
   );
 }
@@ -86,16 +90,20 @@ export function PbBlockView({ b }: { b: PbBlock }) {
   }
   const watch = b.voice === "watch" && lit;
   const md = (
-    <div className="sr-md">
+    <Prose className="sr-md">
       <Markdown md={b.md} spoken />
-    </div>
+    </Prose>
   );
+  const hue = { "--ui-hue": VOICE_HUE[b.voice] } as CSSProperties;
   return (
     <div
       className={`sr-pb sr-pb-${b.voice}${watch && watchCue(b.label, b.md, lit).lit ? " is-now" : ""}`}
+      style={hue}
     >
       <div className="sr-pb-gut">
-        <span className="sr-pb-voice">{VOICE_NAME[b.voice]}</span>
+        <Text as="span" size="xs" caps hue={VOICE_HUE[b.voice]} className="sr-pb-voice">
+          {VOICE_NAME[b.voice]}
+        </Text>
         {label && (
           <small>
             <InlineMd md={label} />

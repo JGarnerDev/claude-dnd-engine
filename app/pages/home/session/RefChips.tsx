@@ -11,7 +11,8 @@
 // card path only as a whole `code` span.
 
 import { createContext, Fragment, useContext, type ReactNode } from "react";
-import { Button } from "jeff-ui";
+import { Badge, Button, Link } from "jeff-ui";
+import { VOICE_HUE } from "./hues.js";
 import type { BeatRef, RefIndex, SceneRef } from "./ref-index.js";
 import type { CardRef } from "./types.js";
 
@@ -37,12 +38,16 @@ export function BeatChip({ b }: { b: BeatRef }) {
     : `step ${b.num}`;
   return (
     <Button
+      size="sm"
+      hue={VOICE_HUE.watch}
       className={`sr-bref${b.here ? " is-here" : ""}`}
       data-beat={b.id}
       title={`${b.id} · ${where} · ${b.title}${b.here ? " (you are here)" : ""}`}
       onClick={() => links?.onBeat(b)}
     >
-      <span className="sr-bref-n">{b.num}</span>
+      <Badge solid hue={VOICE_HUE.watch} className="sr-bref-n">
+        {b.num}
+      </Badge>
       {b.short}
     </Button>
   );
@@ -52,12 +57,16 @@ export function SceneChip({ s }: { s: SceneRef }) {
   const links = useContext(RefContext);
   return (
     <Button
+      size="sm"
+      hue="var(--ui-accent)"
       className={`sr-bref is-scene${s.here ? " is-here" : ""}`}
       data-scene={s.key}
       title={`Scene ${s.key} · ${s.title}${s.here ? " (you are here)" : ""}`}
       onClick={() => links?.onScene(s)}
     >
-      <span className="sr-bref-n">S{s.key}</span>
+      <Badge solid tone="accent" className="sr-bref-n">
+        S{s.key}
+      </Badge>
       {s.title}
     </Button>
   );
@@ -65,7 +74,7 @@ export function SceneChip({ s }: { s: SceneRef }) {
 
 export function CardLink({ c }: { c: CardRef }) {
   return (
-    <a
+    <Link
       className="sr-cardref"
       href={c.url}
       target="_blank"
@@ -73,7 +82,7 @@ export function CardLink({ c }: { c: CardRef }) {
       title={`Open the published card · ${c.path}`}
     >
       {c.title}
-    </a>
+    </Link>
   );
 }
 

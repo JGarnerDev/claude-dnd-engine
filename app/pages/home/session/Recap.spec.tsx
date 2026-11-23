@@ -45,7 +45,7 @@ describe("Recap", () => {
     expect(el.querySelector(".sr-recap-lead")!.textContent).toBe("What happened in 8.");
     const tldr = [...el.querySelectorAll(".sr-recap-tldr > li > strong")].map((s) => s.textContent);
     expect(tldr).toEqual(["Party", "Open threads", "Cliffhanger"]);
-    expect(el.querySelector(".sr-recap-tldr a.sr-wiki")!.getAttribute("data-entity")).toBe(
+    expect(el.querySelector(".sr-recap-tldr .sr-wiki")!.getAttribute("data-entity")).toBe(
       "Ashford",
     );
     expect(el.querySelector(".sr-recap-full p")!.textContent).toBe("Long recap of 8.");

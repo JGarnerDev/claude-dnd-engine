@@ -3,7 +3,8 @@
 // Chips carry step numbers, not ids: ids are for planning, not for the table.
 
 import { useEffect, useRef } from "react";
-import { Waypoint } from "jeff-ui";
+import { Box, Row, Text, Waypoint } from "jeff-ui";
+import { kindHue } from "./hues.js";
 import type { FlowNode, Scene } from "./types.js";
 
 export interface RailProps {
@@ -30,28 +31,34 @@ export function Rail({ nodes, scenes, current, visited, onJump }: RailProps) {
   return groups
     .filter((g) => g.nodes.length)
     .map((g, gi) => (
-      <div
+      <Box
         key={gi}
-        className={`sr-rail-group${g.nodes.some((n) => n.id === current) ? " is-current" : ""}`}
+        padding={1}
+        surface={g.nodes.some((n) => n.id === current)}
+        className="sr-rail-group"
         title={g.title}
       >
-        <span className="sr-rail-label">{g.label}</span>
-        {g.nodes.map((n, i) => (
-          <Waypoint
-            key={n.id}
-            ref={n.id === current ? here : undefined}
-            className="sr-chip"
-            current={n.id === current}
-            visited={visited.has(n.id)}
-            hue="var(--k, var(--sr-k-social))"
-            data-kind={n.kind}
-            data-id={n.id}
-            title={n.title}
-            onClick={() => onJump(n.id)}
-          >
-            {i + 1}
-          </Waypoint>
-        ))}
-      </div>
+        <Row gap={1}>
+          <Text as="span" size="xs" tone="muted" caps className="sr-rail-label">
+            {g.label}
+          </Text>
+          {g.nodes.map((n, i) => (
+            <Waypoint
+              key={n.id}
+              ref={n.id === current ? here : undefined}
+              className="sr-chip"
+              current={n.id === current}
+              visited={visited.has(n.id)}
+              hue={kindHue(n.kind)}
+              data-kind={n.kind}
+              data-id={n.id}
+              title={n.title}
+              onClick={() => onJump(n.id)}
+            >
+              {i + 1}
+            </Waypoint>
+          ))}
+        </Row>
+      </Box>
     ));
 }

@@ -7,6 +7,7 @@
 
 import "./session.css";
 import { useRef, useState } from "react";
+import { Box, Column, Divider, EmptyState, Prose, Row } from "jeff-ui";
 import { buildGraph, nextOptions } from "./flow.js";
 import { findMentions, makeResolver, mentionIndex } from "./entities.js";
 import { parseCombatants } from "./combatants.js";
@@ -36,14 +37,18 @@ const WIKI_RE = /\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g;
 export function Runner({ data: raw }: { data: SessionData | null }) {
   if (!raw || !raw.nodes.length) {
     return (
-      <div className="sr-emptypage">
-        <h1>No session to run</h1>
-        <p>
-          The runner walks a session folder in <code>scheduler/sessions/</code> that has a{" "}
-          <code>_flow.md</code> flow chart. Build one with <code>/flow</code>, then this page
-          reloads on its own.
-        </p>
-      </div>
+      <Box padding={6} className="sr-emptypage" data-theme="navy">
+        <EmptyState>
+          <Prose>
+            <h1>No session to run</h1>
+            <p>
+              The runner walks a session folder in <code>scheduler/sessions/</code> that has a{" "}
+              <code>_flow.md</code> flow chart. Build one with <code>/flow</code>, then this page
+              reloads on its own.
+            </p>
+          </Prose>
+        </EmptyState>
+      </Box>
     );
   }
   return <Walk raw={raw} />;
@@ -53,7 +58,7 @@ function Walk({ raw }: { raw: SessionData }) {
   const { data, g, resolve, known, idx, recapIdx, combatants } = prepare(raw);
   const s = data.session;
   const { state, current, dispatch } = useRunner(s.folder, g);
-  const { search, body, ...p } = usePanel(resolve);
+  const { body, ...p } = usePanel(resolve);
   const main = useRef<HTMLElement>(null);
   const [slides, setSlides] = useState(false);
 
@@ -137,89 +142,92 @@ function Walk({ raw }: { raw: SessionData }) {
       )
     : [];
   const round = (node.scene && state.rounds[node.scene]) || 1;
-  const shell = ["sr-body", p.docked && "is-docked", p.open && "is-open"].filter(Boolean).join(" ");
 
   return (
-    <div className="sr-root" data-theme="navy">
+    <Column fill gap={0} className="sr-root" data-theme="navy">
       <RunnerHeader
         name={s.name}
         date={s.date}
         p={p}
-        search={search}
         onBack={back}
         onCopy={copy}
         onRestart={restart}
       />
-      <nav className="sr-rail">
-        <Rail
-          nodes={data.nodes}
-          scenes={data.scenes}
-          current={current}
-          visited={visited}
-          onJump={go}
-        />
-      </nav>
-      <div className={shell}>
-        <main ref={main} className="sr-main">
-          <SessionContext.Provider value={session}>
-            <RefContext.Provider value={links}>
-              <Scene
-                node={node}
-                scene={scene}
-                sceneNodes={inScene}
-                visited={visited}
-                position={
-                  node.scene && !isRecap
-                    ? `step ${inScene.indexOf(node) + 1} of ${inScene.length}`
-                    : ""
-                }
-                options={options}
-                titleOf={titleOf}
-                closingHook={s.closingHook}
-                combatants={combatants}
-                hp={state.hp}
-                hpLog={state.hpLog}
-                tokensOpen={state.tokensOpen}
-                body={isRecap ? <Recap data={data} onSlides={() => setSlides(true)} /> : undefined}
-                round={round}
-                onGo={go}
-                onTokensToggle={(open) => dispatch({ type: "tokens", open })}
-                onHpHit={(entry, input, before, after, start) =>
-                  dispatch({
-                    type: "hit",
-                    entry,
-                    input,
-                    before,
-                    after,
-                    start,
-                    round: node.scene ? (state.rounds[node.scene] ?? 1) : undefined,
-                  })
-                }
-                onHpReset={(before) => dispatch({ type: "reset", before })}
-                onHpUndo={(index) => dispatch({ type: "undo", index })}
-                onRound={(r) => {
-                  if (node.scene) dispatch({ type: "round", scene: node.scene, round: r });
-                }}
-              />
-            </RefContext.Provider>
-          </SessionContext.Provider>
-        </main>
-        <SideRail p={p} />
-        <SessionContext.Provider value={session}>
-          <Panel
-            p={p}
-            body={body}
-            data={data}
-            resolve={resolve}
-            refs={refs}
-            ctx={ctx}
-            where={where}
-            onGo={go}
+      <Divider />
+      <Box as="nav" padding={2} className="sr-rail">
+        <Row gap={3}>
+          <Rail
+            nodes={data.nodes}
+            scenes={data.scenes}
+            current={current}
+            visited={visited}
+            onJump={go}
           />
-        </SessionContext.Provider>
-      </div>
+        </Row>
+      </Box>
+      <Divider />
+      <SessionContext.Provider value={session}>
+        <Panel
+          p={p}
+          body={body}
+          data={data}
+          resolve={resolve}
+          refs={refs}
+          ctx={ctx}
+          where={where}
+          onGo={go}
+          rail={<SideRail p={p} />}
+        >
+          <main ref={main} className="sr-main">
+            <Box padding={5}>
+              <RefContext.Provider value={links}>
+                <Scene
+                  node={node}
+                  scene={scene}
+                  sceneNodes={inScene}
+                  visited={visited}
+                  position={
+                    node.scene && !isRecap
+                      ? `step ${inScene.indexOf(node) + 1} of ${inScene.length}`
+                      : ""
+                  }
+                  options={options}
+                  titleOf={titleOf}
+                  closingHook={s.closingHook}
+                  combatants={combatants}
+                  hp={state.hp}
+                  hpLog={state.hpLog}
+                  tokensOpen={state.tokensOpen}
+                  body={
+                    isRecap ? <Recap data={data} onSlides={() => setSlides(true)} /> : undefined
+                  }
+                  round={round}
+                  onGo={go}
+                  onTokensToggle={(open) => dispatch({ type: "tokens", open })}
+                  onHpHit={(entry, input, before, after, start) =>
+                    dispatch({
+                      type: "hit",
+                      entry,
+                      input,
+                      before,
+                      after,
+                      start,
+                      round: node.scene ? (state.rounds[node.scene] ?? 1) : undefined,
+                    })
+                  }
+                  onHpReset={(before) => dispatch({ type: "reset", before })}
+                  onHpUndo={(index) => dispatch({ type: "undo", index })}
+                  onRound={(r) => {
+                    if (node.scene) dispatch({ type: "round", scene: node.scene, round: r });
+                  }}
+                />
+              </RefContext.Provider>
+            </Box>
+          </main>
+        </Panel>
+      </SessionContext.Provider>
       {slides && prev && <Slides deck={deck} label={prev.name} onClose={() => setSlides(false)} />}
-    </div>
+    </Column>
   );
 }
 

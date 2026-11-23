@@ -42,9 +42,9 @@ afterEach(cleanup);
 describe("SceneHead", () => {
   it("leaves out empty rows and shows a plain cast when it is not a · list", () => {
     const el = head({ ...blank, cast: "[[Silas Crubb]]; the fox." });
-    expect(el.querySelectorAll(".sr-sh-row")).toHaveLength(1);
+    expect(el.querySelectorAll(".sr-sh-grid .ui-dl-item")).toHaveLength(1);
     expect(el.querySelector(".sr-sh-chip")).toBeNull();
-    expect(el.querySelector(".sr-sh-val a.sr-wiki")!.textContent).toBe("Silas Crubb");
+    expect(el.querySelector(".sr-sh-val .sr-wiki")!.textContent).toBe("Silas Crubb");
   });
 
   it("shows enemy rows that expand to the stat block, unmatched ones plain, and tactics", () => {

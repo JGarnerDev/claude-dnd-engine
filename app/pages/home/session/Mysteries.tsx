@@ -5,7 +5,9 @@
 // out as a numbered grid of cards so eight questions read at a glance when screen-shared.
 
 import "./mysteries.css";
+import { Box, Grid } from "jeff-ui";
 import { unlink, type DeckSlide } from "./deck.js";
+import { KIND_HUE } from "./hues.js";
 import { InlineMd } from "./MarkdownView.js";
 import { MAX_SHOWN, questions } from "./mystery-list.js";
 
@@ -14,15 +16,15 @@ const isMysteries = (s: DeckSlide) =>
 
 export function MysteryGrid({ qs }: { qs: string[] }) {
   return (
-    <ol className="my-grid">
+    <Grid as="ol" columns={2} gap={4} className="my-grid">
       {qs.map((q, i) => (
-        <li key={i} className="my-card">
+        <Box as="li" key={i} hue={KIND_HUE.recap} edge="start" className="my-card">
           <span className="my-q">
             <InlineMd md={unlink(q)} />
           </span>
-        </li>
+        </Box>
       ))}
-    </ol>
+    </Grid>
   );
 }
 

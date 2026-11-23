@@ -109,13 +109,13 @@ flowchart TD
   S35_10_CAMP_INTEL -.->|"the ledger"| S35_26_REEVE
   S35_15_CELL -.->|"the hanging waits"| S35_26_REEVE
 
-  classDef combat   fill:#F6DCD3,stroke:#B4452A,color:#5A1E10
-  classDef social   fill:#E6E3D5,stroke:#8C8463,color:#3D3A28
-  classDef decision fill:#FDF0CE,stroke:#C79A2B,color:#5A4410
-  classDef stake    fill:#D9E8DC,stroke:#4F8060,color:#1F3D2A
-  classDef seed     fill:#DCE3EF,stroke:#5E7296,color:#24334D
-  classDef fail     fill:#EFE2E2,stroke:#A3736E,color:#4A2C29,stroke-dasharray:4 3
-  classDef open     fill:#EDEAE6,stroke:#9A948C,color:#4A453F,stroke-dasharray:4 3
+  classDef combat   fill:#FDE2E2,stroke:#DC2626,color:#5B1414
+  classDef social   fill:#FBE3D6,stroke:#D95926,color:#5A2410
+  classDef decision fill:#FBF0CF,stroke:#C79A2B,color:#5A4410
+  classDef stake    fill:#D8F5E2,stroke:#22A35A,color:#134D2A
+  classDef seed     fill:#DCE8FA,stroke:#3987E5,color:#17345E
+  classDef fail     fill:#F8DDE7,stroke:#D55181,color:#5A1A32,stroke-dasharray:4 3
+  classDef open     fill:#ECEFF3,stroke:#94A3B8,color:#334155,stroke-dasharray:4 3
 
   class S35_08_ESCAPE,NELLA_CAUGHT combat
   class S35_02_COLD,S35_03_RECAPS,S35_04_NELLA_TITHE,S35_06_GOODBYE,S35_11_BODIES,S35_12_HAUL_HOME,S35_14_SABLE_MORNING,S35_16_THE_SPRING,S35_17_TRUE_STORY,S35_28_DIP_ROAD social

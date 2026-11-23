@@ -1,102 +1,51 @@
-/* Recap-slides carousel — built for screen-share: big type, few words, high contrast.
-   Uses the runner's --sr-* tokens (session.css). */
+/* Recap-slides carousel (Slides.tsx), built for screen-share. A fixed layer of its
+   own rather than jeff-ui's Overlay: the deck needs a ref, a click handler and a foot
+   bar, which Overlay doesn't take yet. The Stage inside grows the type with the screen. */
 .sr-slides {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: var(--ui-z-overlay);
   display: flex;
   flex-direction: column;
   background: var(--ui-bg);
   color: var(--ui-text);
-  font:
-    15px/1.5 system-ui,
-    sans-serif;
+  font-family: var(--ui-font);
   cursor: pointer;
   user-select: none;
 }
 .sr-slides-stage {
   flex: 1;
+  min-height: 0;
   display: grid;
   align-items: center;
   padding: 6vh 7vw;
 }
 /* Capped so lines stay readable when screen-shared on a wide display. */
 .sr-slide-text {
-  max-width: 1200px;
-  border-left: 6px solid var(--sr-k-recap);
-  padding-left: 3vw;
+  max-width: 75rem;
 }
 .sr-slide-title {
-  margin: 0 0 3vh;
-  font-size: clamp(32px, 5vw, 72px);
-  line-height: 1.1;
-}
-.sr-slide-body {
-  font-size: clamp(20px, 2.4vw, 36px);
-  line-height: 1.4;
-  color: #e2e8f0;
-}
-.sr-slide-body p {
-  margin: 0 0 0.6em;
-}
-.sr-slide-body ul,
-.sr-slide-body ol {
-  margin: 0;
-  padding-left: 1.1em;
-}
-.sr-slide-body li {
-  margin: 0.25em 0;
+  margin-bottom: var(--ui-space-5);
 }
 .sr-slide-body strong {
   color: var(--ui-accent);
 }
-/* Tall slides auto-scroll (slides.ts), so the scrollbar is a faint position hint, not a control. */
+/* Tall slides auto-scroll (Slides.tsx), so the scrollbar is a faint position hint, not a control. */
 .sr-slide-body * {
   scrollbar-width: thin;
   scrollbar-color: var(--ui-border) transparent;
 }
 .sr-slides-foot {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 12px 24px;
-  color: var(--ui-muted);
-  font-size: 14px;
+  padding: var(--ui-space-3) var(--ui-space-5);
   border-top: 1px solid var(--ui-border);
   cursor: default;
 }
 .sr-slides-label {
   flex: 1;
 }
-.sr-slides-count {
-  font-variant-numeric: tabular-nums;
-}
-.sr-slides-foot button {
-  padding: 5px 12px;
-  font-size: 13px;
-  background: var(--ui-surface);
-  border: 1px solid var(--ui-border);
-  border-radius: 6px;
-  cursor: pointer;
-  color: var(--ui-text);
-}
-.sr-slides-foot button:hover {
-  background: var(--ui-surface-hi);
-}
 
 /* A bare slide (Slide.bare) has no headline and gives its body the whole stage. */
 .sr-slides-stage.is-bare {
   padding: 2vh 2vw;
   place-items: center;
-}
-.sr-slides-stage.is-bare .sr-slide-text {
-  max-width: none;
-  border-left: 0;
-  padding-left: 0;
-}
-
-@media (max-width: 700px) {
-  .sr-slides-stage {
-    padding: 6vh 16px;
-  }
 }

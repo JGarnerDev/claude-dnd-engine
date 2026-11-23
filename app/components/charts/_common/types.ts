@@ -171,7 +171,7 @@ export interface ParsedTrack {
 export interface CategoryConfig {
   key: string;
   label: string;
-  colorVar: string; // CSS custom property, e.g. '--track-world'
+  hue: string; // a CSS color, e.g. 'var(--ui-cat-1)'
   collapsed: boolean; // initial expand/collapse state
 }
 
@@ -185,7 +185,7 @@ export interface TrackChild {
 export interface TrackCategory {
   key: string;
   label: string;
-  colorVar: string;
+  hue: string;
   collapsed: boolean;
   members: TrackChild[];
   hasParentBeats: boolean; // a beat tagged to the category with no member

@@ -11,8 +11,9 @@
 import "./slides.css";
 import { useEffect, useEffectEvent, useRef, useState, type MouseEvent } from "react";
 import { createPortal } from "react-dom";
-import { Button } from "jeff-ui";
+import { Box, Button, Heading, Prose, Row, Stage, Text } from "jeff-ui";
 import { unlink, type DeckSlide } from "./deck.js";
+import { KIND_HUE } from "./hues.js";
 import { Markdown } from "./MarkdownView.js";
 import { RefContext } from "./RefChips.js";
 
@@ -84,27 +85,40 @@ export function Slide({
   onClose: () => void;
 }) {
   const s = deck[i];
+  const body = s.body ?? (
+    <Prose>
+      <Markdown md={unlink(s.md)} />
+    </Prose>
+  );
   return (
     <>
-      <div
+      <Stage
         className={`sr-slides-stage${s.bare ? " is-bare" : ""}`}
         data-index={i}
         aria-label={s.bare ? s.title : undefined}
       >
-        <div className="sr-slide-text">
-          {!s.bare && <h1 className="sr-slide-title">{s.title}</h1>}
-          <div className="sr-slide-body">{s.body ?? <Markdown md={unlink(s.md)} />}</div>
-        </div>
-      </div>
-      <footer className="sr-slides-foot">
-        <span className="sr-slides-label">{label}</span>
-        <span className="sr-slides-count">
+        {s.bare ? (
+          <div className="sr-slide-body">{body}</div>
+        ) : (
+          <Box hue={KIND_HUE.recap} edge="start" className="sr-slide-text">
+            <Heading level={1} size="xl" className="sr-slide-title">
+              {s.title}
+            </Heading>
+            <div className="sr-slide-body">{body}</div>
+          </Box>
+        )}
+      </Stage>
+      <Row as="footer" gap={4} className="sr-slides-foot">
+        <Text as="span" size="sm" tone="muted" className="sr-slides-label">
+          {label}
+        </Text>
+        <Text as="span" size="sm" tone="muted" numeric className="sr-slides-count">
           {i + 1} / {deck.length}
-        </span>
-        <Button data-act="close" title="Close (Esc)" onClick={onClose}>
+        </Text>
+        <Button size="sm" data-act="close" title="Close (Esc)" onClick={onClose}>
           Close
         </Button>
-      </footer>
+      </Row>
     </>
   );
 }
@@ -171,7 +185,14 @@ export function Slides({
   };
   // A portal keeps React's context, so the runner's beat and scene chips are switched off here.
   return createPortal(
-    <div ref={el} className="sr-slides" role="dialog" aria-label={label} onClick={onClick}>
+    <div
+      ref={el}
+      className="sr-slides"
+      data-theme="navy"
+      role="dialog"
+      aria-label={label}
+      onClick={onClick}
+    >
       <RefContext.Provider value={null}>
         <Slide deck={deck} i={Math.min(i, deck.length - 1)} label={label} onClose={onClose} />
       </RefContext.Provider>

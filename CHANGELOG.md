@@ -6,6 +6,23 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.99.0] — 2026-11-23
+
+### Changed
+
+- **jeff-ui 2.1.0 → 2.3.0: the app's CSS is jeff-ui's.** The timeline page, the campaign picker and the session runner now build from jeff-ui's components and tokens (Text and Heading scales, Box, Row, Column, Grid, List, Badge, Card, Stat, ProgressBar, Drawer, Stage, Prose), and every remaining app stylesheet reads only `--ui-*` tokens. The charts' `_common` CSS, `view.css` and `campaign-select.css` are gone. Class names stay as spec hooks.
+- **Kind and voice colors map to theme hues** (`app/pages/home/session/hues.ts`): combat red, social orange, decision gold, stake green, seed blue, fail magenta, open grey, boss `--ui-cat-8`. Flow graphs (`meta/flow-graphs.md` and every `_flow.md`) use the same hues, so a beat reads the same in the runner and the graph.
+- **Session runner looks.** Visible changes to check in the browser:
+  - Side panel is a jeff-ui Drawer. Rail border, gold span and the type scale follow the theme; mono is the theme's mono. "Do it" lines are mono, Say lines the serif.
+  - Prompt book: voices on theme hues with a 7rem gutter; When pills are Badges.
+  - Steps: marks and edges are hued Badges; the recap's Slides button sits inline; recap headings are eyebrows; roll totals are large with a tone.
+  - Fight bar: tinted by its hue (combat red, boss cat-8), the mode is a solid Badge, the hurt band is warn; ready alerts are small hued Buttons; HP chips are small.
+  - Beat chips are hued Buttons with a solid number Badge; card links use Link; scene bar is a Heading over a Divider; options are row buttons, wiki links inline buttons, markdown sits in Prose, token numbers are accent mono.
+  - Enemies box is a hued Box with a jeff-ui HP input; the summary is large Text.
+- **Recap slides.** The deck uses the navy theme and a Stage that grows its type with the screen; each slide's text is a recap-hued edge Box under an xl Heading; the foot is small.
+  - Achievements, mysteries, reputation and stats are plain Cards and Boxes (no gradients). Reputation's infamy is red and a gain is a stake Badge; stats values are Stats, the best award is an accent Card, standings bars are recap-hued. Mysteries stay two columns (one on narrow screens).
+  - The sky plate stays a picture; only the deck around it follows the theme.
+
 ## [0.98.1] — 2026-11-22
 
 ### Changed

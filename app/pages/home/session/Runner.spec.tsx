@@ -111,8 +111,10 @@ describe("Runner", () => {
       root.querySelector<HTMLButtonElement>('.sr-main .sr-bref[data-beat="S1_FIGHT"]')!,
     );
     expect(current(root)).toBe("S1_WOODS");
-    expect(root.querySelector(".sr-panel .sr-pn-crumb")!.textContent).toBe("S1_FIGHT");
-    await user.click(root.querySelector<HTMLButtonElement>('.sr-panel [data-jump="S1_FIGHT"]')!);
+    expect(root.querySelector(".sr-pn-head .sr-pn-crumb")!.textContent).toBe("S1_FIGHT");
+    await user.click(
+      root.querySelector<HTMLButtonElement>('.sr-panel-body [data-jump="S1_FIGHT"]')!,
+    );
     expect(current(root)).toBe("S1_FIGHT");
   });
 
@@ -129,7 +131,7 @@ describe("Runner", () => {
     const input = screen.getByRole("searchbox");
     expect(document.activeElement).toBe(input);
     await user.keyboard("ash");
-    expect(root.querySelector(".sr-panel .sr-ent-name")!.textContent).toBe("Ashford");
+    expect(root.querySelector(".sr-panel-body .sr-ent-name")!.textContent).toBe("Ashford");
   });
 
   it("jumps from the rail, and wikilinks in the scene open the panel", async () => {
@@ -137,9 +139,7 @@ describe("Runner", () => {
     const root = mount(fixture());
     await user.click(root.querySelector<HTMLButtonElement>('.sr-chip[data-id="S1_WOODS"]')!);
     expect(current(root)).toBe("S1_WOODS");
-    await user.click(
-      root.querySelector<HTMLElement>('.sr-scene a.sr-wiki[data-entity="Ashford"]')!,
-    );
+    await user.click(root.querySelector<HTMLElement>('.sr-scene .sr-wiki[data-entity="Ashford"]')!);
     expect(root.querySelector(".sr-ent-head h2")!.textContent).toBe("Ashford");
   });
 });

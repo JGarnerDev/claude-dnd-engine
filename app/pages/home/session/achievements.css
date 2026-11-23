@@ -1,21 +1,14 @@
-/* Achievement slides (achievements.ts, meta/achievements.md) — one popup per achievement,
-   game-notification style. Sized for screen-share like slides.css; uses the runner's
-   --sr-* tokens (session.css). */
+/* Achievement slides (Achievements.tsx, meta/achievements.md): one popup per achievement,
+   game-notification style, inside the slides Stage (slides.css). Tokens only. */
 .ac-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4vh;
   max-height: 68vh;
+  max-width: 56rem;
   overflow: auto;
-  max-width: 900px;
-  padding-right: 1.5em;
+  padding-right: var(--ui-space-5);
   scrollbar-gutter: stable;
 }
 
 .ac-card {
-  position: relative;
-  padding: 16px 22px 18px;
-  border-radius: 6px;
   animation: ac-pop 0.35s cubic-bezier(0.2, 1.4, 0.4, 1) both;
 }
 .ac-card:nth-child(2) {
@@ -27,28 +20,14 @@
 .ac-card:nth-child(n + 4) {
   animation-delay: 0.36s;
 }
-
-.ac-eyebrow {
-  font-size: clamp(12px, 1vw, 15px);
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ui-hue, var(--ui-accent));
-}
 .ac-eyebrow b {
   font-variant-numeric: tabular-nums;
 }
 .ac-title {
-  margin-top: 4px;
-  font-size: clamp(22px, 2.2vw, 34px);
-  font-weight: 800;
-  line-height: 1.15;
+  margin-top: var(--ui-space-1);
 }
 .ac-text {
-  margin-top: 6px;
-  font-size: clamp(16px, 1.45vw, 22px);
-  line-height: 1.45;
-  color: var(--ui-muted);
+  margin-top: var(--ui-space-2);
 }
 
 @keyframes ac-pop {

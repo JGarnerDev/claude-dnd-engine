@@ -1,6 +1,6 @@
 /* Sky slide (sky.ts, sky-plate.ts) — an old printed ring plate: paper, iron-gall ink, gilt for the
    gold sun, rust for the red. Sized for screen-share like slides.css. The plate keeps its paper in
-   light and dark; only the deck around it follows the runner's --sr-* tokens. */
+   light and dark; only the deck around it follows the theme tokens. */
 .sk-wrap {
   --sk-paper: #e8dabb;
   --sk-paper-dark: #c9b48a;

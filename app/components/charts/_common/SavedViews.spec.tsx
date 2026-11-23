@@ -115,8 +115,8 @@ describe("SavedViews", () => {
     const { all, load, loadPanel, apply } = mount();
     fireEvent.click(load);
     const rows = all<HTMLButtonElement>(".chart-sv-load");
-    expect(rows.map((r) => r.textContent)).toEqual(["A", "B"]);
-    expect(rows.map((r) => r.title)).toEqual(["World view", "Campaign view"]);
+    // Each row names its view, with the tab it opens on the line under it.
+    expect(rows.map((r) => r.textContent)).toEqual(["AWorld view", "BCampaign view"]);
     fireEvent.click(rows[1]);
     expect(apply).toHaveBeenCalledWith(expect.objectContaining({ name: "B", tab: "tracks" }));
     expect(isOpen(loadPanel)).toBe(false);
@@ -126,7 +126,7 @@ describe("SavedViews", () => {
     const { load, all } = mount();
     saveView({ name: "Late", tab: "world", state: state() });
     fireEvent.click(load);
-    expect(all(".chart-sv-load").map((r) => r.textContent)).toEqual(["Late"]);
+    expect(all(".chart-sv-load").map((r) => r.textContent)).toEqual(["LateWorld view"]);
   });
 
   it("deletes a view from the Load list via its ×, staying open", () => {
@@ -138,7 +138,7 @@ describe("SavedViews", () => {
     expect(del.getAttribute("aria-label")).toBe("Delete A");
     fireEvent.click(del);
     expect(listViews().map((v) => v.name)).toEqual(["B"]);
-    expect(all(".chart-sv-load").map((r) => r.textContent)).toEqual(["B"]);
+    expect(all(".chart-sv-load").map((r) => r.textContent)).toEqual(["BWorld view"]);
     expect(isOpen(loadPanel)).toBe(true);
   });
 

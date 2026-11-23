@@ -5,9 +5,8 @@
 // with its ×. Both are jeff-ui Popovers, so they share the gear's
 // one-open-at-a-time group. Persistence lives in viewstore.ts.
 
-import { useRef, useState } from "react";
-import { Popover } from "jeff-ui";
-import "./components/savedviews.css";
+import { useId, useState } from "react";
+import { Icon, Popover } from "jeff-ui";
 import { SaveViewForm } from "./SaveViewForm.js";
 import { SavedViewList } from "./SavedViewList.js";
 import { listViews } from "./helpers/viewstore.js";
@@ -21,15 +20,19 @@ export interface SavedViewsProps {
 }
 
 export function SavedViews({ getCurrent, apply }: SavedViewsProps) {
-  const nameRef = useRef<HTMLInputElement>(null);
+  const nameId = useId();
   // Read from storage each time Load opens, so a view saved since shows up.
   const [views, setViews] = useState(listViews);
   return (
     <>
-      <Popover label="Save view" icon={saveIcon} onOpen={() => nameRef.current?.focus()}>
-        {({ close }) => <SaveViewForm nameRef={nameRef} getCurrent={getCurrent} onSaved={close} />}
+      <Popover
+        label="Save view"
+        icon={<Icon name="save" />}
+        onOpen={() => document.getElementById(nameId)?.focus()}
+      >
+        {({ close }) => <SaveViewForm nameId={nameId} getCurrent={getCurrent} onSaved={close} />}
       </Popover>
-      <Popover label="Load view" icon={loadIcon} onOpen={() => setViews(listViews())}>
+      <Popover label="Load view" icon={<Icon name="list" />} onOpen={() => setViews(listViews())}>
         {({ close }) => (
           <SavedViewList
             views={views}
@@ -44,34 +47,3 @@ export function SavedViews({ getCurrent, apply }: SavedViewsProps) {
     </>
   );
 }
-
-const svg = {
-  viewBox: "0 0 24 24",
-  width: 18,
-  height: 18,
-  fill: "none",
-  stroke: "currentColor",
-  strokeWidth: 1.8,
-  strokeLinecap: "round",
-  strokeLinejoin: "round",
-  "aria-hidden": true,
-} as const;
-
-const saveIcon = (
-  <svg {...svg}>
-    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
-    <polyline points="17 21 17 13 7 13 7 21" />
-    <polyline points="7 3 7 8 15 8" />
-  </svg>
-);
-
-const loadIcon = (
-  <svg {...svg}>
-    <line x1="8" y1="6" x2="21" y2="6" />
-    <line x1="8" y1="12" x2="21" y2="12" />
-    <line x1="8" y1="18" x2="21" y2="18" />
-    <line x1="3" y1="6" x2="3.01" y2="6" />
-    <line x1="3" y1="12" x2="3.01" y2="12" />
-    <line x1="3" y1="18" x2="3.01" y2="18" />
-  </svg>
-);

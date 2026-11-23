@@ -7,7 +7,6 @@
 // chart recounts its bars and re-packs labels over the survivors).
 
 import { useImperativeHandle, useRef, useState } from "react";
-import "../_common/common.css";
 import { EmptyState } from "jeff-ui";
 import { Timeline as TimeChart, type ChartItem, type TimeChartHandle } from "jeff-ui/charts";
 import { DEFAULT_CALENDAR } from "../_common/helpers/calendar.js";

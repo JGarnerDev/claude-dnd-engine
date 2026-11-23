@@ -4,8 +4,7 @@
 // the header settings panel under their labels, as buildFilterBar's parts were
 // hoisted before. Pure matching stays in filters.ts.
 
-import { Chip, SearchInput, type SettingsSection } from "jeff-ui";
-import "./components/filterbar.css";
+import { Chip, Row, SearchInput, type SettingsSection } from "jeff-ui";
 import { trackList, audienceList } from "./helpers/filters.js";
 import { toneFor } from "./helpers/tracks.js";
 import { DM_AUDIENCE, DM_LABEL } from "./constants.js";
@@ -90,7 +89,7 @@ export function useFilterSections(
     {
       label: "Filter",
       content: (
-        <div className="chart-chips">
+        <Row wrap gap={2} className="chart-chips">
           {tracks.map((track) => (
             <Chip
               key={track}
@@ -103,7 +102,7 @@ export function useFilterSections(
               {capitalized(track)}
             </Chip>
           ))}
-        </div>
+        </Row>
       ),
     },
   ];
@@ -112,7 +111,7 @@ export function useFilterSections(
     sections.push({
       label: "Known by",
       content: (
-        <div className="chart-chips chart-audiences">
+        <Row wrap gap={2} className="chart-chips chart-audiences">
           {audiences.map(({ key, label, dm }) => {
             const on = value.audiences.has(key);
             return (
@@ -131,7 +130,7 @@ export function useFilterSections(
               </Chip>
             );
           })}
-        </div>
+        </Row>
       ),
     });
   }

@@ -1,107 +1,36 @@
-/* Stats slides (stats.ts, meta/stats.md) — award cards, standings bars, hall-of-fame strip,
-   and the compact "Worth noting" list.
-   Sized for screen-share like slides.css; uses the runner's --sr-* tokens (session.css). */
+/* Stats slides (Stats.tsx, meta/stats.md): award cards, standings bars, hall-of-fame strip,
+   and the compact "Worth noting" list, inside the slides Stage (slides.css). Tokens only. */
 .st-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 3vh;
   max-height: 68vh;
   overflow: auto;
-  padding-right: 1.5em;
+  padding-right: var(--ui-space-5);
   scrollbar-gutter: stable;
 }
 
-.st-notable {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6vh;
-}
 .st-notable li {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: clamp(20px, 1.9vw, 30px);
-  font-weight: 700;
+  gap: var(--ui-space-4);
+  font-size: var(--ui-font-size-xl);
+  font-weight: var(--ui-weight-bold);
   line-height: 1.2;
 }
-
-.st-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
-  gap: 14px;
-}
-.st-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 14px 18px;
-  background: linear-gradient(160deg, var(--ui-surface-hi), var(--ui-surface));
-  border: 1px solid var(--ui-border);
-  border-radius: 14px;
-}
-.st-card.is-best {
-  border-color: var(--ui-accent);
-  box-shadow:
-    0 0 0 1px var(--ui-accent),
-    0 6px 24px color-mix(in srgb, var(--ui-accent) 18%, transparent);
-}
 .st-icon {
-  font-size: clamp(28px, 2.6vw, 40px);
+  font-size: var(--ui-font-size-xl);
   line-height: 1;
 }
 .st-card-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
   min-width: 0;
 }
-.st-award {
-  font-size: clamp(12px, 1vw, 15px);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ui-muted);
-}
-.st-pc {
-  font-size: clamp(20px, 1.9vw, 30px);
-  font-weight: 700;
-  line-height: 1.15;
-}
-.st-value {
-  font-size: clamp(18px, 1.6vw, 26px);
-  font-weight: 700;
-  color: var(--ui-accent);
-  font-variant-numeric: tabular-nums;
-}
-.st-value span {
-  font-size: 0.65em;
-  font-weight: 500;
-  color: var(--ui-muted);
-}
-.st-best {
-  margin-top: 4px;
-  font-size: clamp(12px, 1vw, 15px);
-  color: var(--ui-accent);
-}
 
-.st-boards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-  gap: 14px 28px;
-}
 .st-board .ui-card-title {
-  font-size: clamp(14px, 1.2vw, 18px);
   color: var(--ui-muted);
 }
 .st-row {
   display: grid;
   grid-template-columns: 7em 1fr 3.5em;
   align-items: center;
-  gap: 10px;
-  font-size: clamp(15px, 1.3vw, 20px);
+  gap: var(--ui-space-3);
   line-height: 1.6;
 }
 .st-row-pc {
@@ -109,44 +38,13 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.st-bar.ui-progress {
-  --ui-progress-fill: var(--sr-k-recap);
-}
-.st-bar .ui-progress-track {
-  height: 10px;
-  background: var(--ui-surface);
-}
-.st-row.is-top .st-bar.ui-progress {
-  --ui-progress-fill: var(--ui-accent);
-}
 .st-row-v {
   text-align: right;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
 }
 
 .st-fame {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  padding-top: 2vh;
+  padding-top: var(--ui-space-4);
   border-top: 1px solid var(--ui-border);
-}
-.st-fame-h {
-  margin-right: 6px;
-  font-size: clamp(12px, 1vw, 15px);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ui-accent);
-}
-.st-chip {
-  padding: 4px 10px;
-  font-size: clamp(13px, 1.1vw, 17px);
-  background: var(--ui-surface);
-  border: 1px solid var(--ui-border);
-  border-radius: 999px;
 }
 .st-chip b {
   color: var(--ui-accent);

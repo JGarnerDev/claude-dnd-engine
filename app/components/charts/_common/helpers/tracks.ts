@@ -12,17 +12,17 @@ import type { CategoryConfig, ParsedTrack, TimelineEvent, TrackCategory } from "
 
 // Shipped defaults. Order here is the render order of the parent lanes.
 export const DEFAULT_CATEGORIES: CategoryConfig[] = [
-  { key: "party", label: "Party", colorVar: "--track-party", collapsed: false },
-  { key: "character", label: "Characters", colorVar: "--track-character", collapsed: false },
-  { key: "npc", label: "NPCs", colorVar: "--track-npc", collapsed: false },
-  { key: "antagonist", label: "Antagonists", colorVar: "--track-antagonist", collapsed: false },
-  { key: "faction", label: "Factions", colorVar: "--track-faction", collapsed: true },
-  { key: "continent", label: "Continents", colorVar: "--track-continent", collapsed: true },
-  { key: "world", label: "World", colorVar: "--track-world", collapsed: false },
+  { key: "party", label: "Party", hue: "var(--ui-cat-7)", collapsed: false },
+  { key: "character", label: "Characters", hue: "var(--ui-cat-3)", collapsed: false },
+  { key: "npc", label: "NPCs", hue: "var(--ui-cat-6)", collapsed: false },
+  { key: "antagonist", label: "Antagonists", hue: "var(--ui-cat-8)", collapsed: false },
+  { key: "faction", label: "Factions", hue: "var(--ui-cat-2)", collapsed: true },
+  { key: "continent", label: "Continents", hue: "var(--ui-cat-5)", collapsed: true },
+  { key: "world", label: "World", hue: "var(--ui-cat-1)", collapsed: false },
 ];
 
 // Untyped/unknown categories fall back to this look.
-const FALLBACK_COLOR = "--track-world";
+const FALLBACK_HUE = "var(--ui-cat-1)";
 
 // "faction:The Ashen Cult" -> { category, member }. Splits on the FIRST colon
 // so member names may contain colons. Blank/undefined => the World lane.
@@ -70,7 +70,7 @@ export function buildTrackTree(
     out.push({
       key,
       label: c ? c.label : key,
-      colorVar: c ? c.colorVar : FALLBACK_COLOR,
+      hue: c ? c.hue : FALLBACK_HUE,
       collapsed: c ? c.collapsed : false,
       members: entry.members.map((member) => ({ member, label: member })),
       hasParentBeats: entry.hasParent,
@@ -86,7 +86,7 @@ export function toneFor(
   config: CategoryConfig[] = DEFAULT_CATEGORIES,
 ): string {
   const { category } = parseTrack(track);
-  return `var(${config.find((c) => c.key === category)?.colorVar ?? FALLBACK_COLOR})`;
+  return config.find((c) => c.key === category)?.hue ?? FALLBACK_HUE;
 }
 
 // The swimlane's rows from the tree + collapse state (a set of category keys):
@@ -97,7 +97,7 @@ export function toneFor(
 export function lanesFor(tree: TrackCategory[], collapsed: Set<string>): ChartLane[] {
   const lanes: ChartLane[] = [];
   for (const cat of tree) {
-    const tone = `var(${cat.colorVar})`;
+    const tone = cat.hue;
     if (cat.members.length === 0) {
       lanes.push({ key: cat.key, label: cat.label, tone });
     } else if (collapsed.has(cat.key)) {

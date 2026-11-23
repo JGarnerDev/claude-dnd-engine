@@ -1,16 +1,9 @@
 // The side panel's state and what the runner calls on it: the Back stack of what's
 // open, the search query, and whether the panel is docked or slid over the notes.
-// The runner draws the search box, the pin and the rail from it; <Panel> draws the
-// rest. The pin's choice is remembered per browser (session-runner:panel-dock).
+// The runner draws the search box (by `searchId`), the pin and the rail from it;
+// <Panel> draws the rest. The pin's choice is remembered per browser (session-runner:panel-dock).
 
-import {
-  useEffect,
-  useRef,
-  useState,
-  type ChangeEvent,
-  type KeyboardEvent,
-  type RefObject,
-} from "react";
+import { useEffect, useId, useRef, useState, type KeyboardEvent, type RefObject } from "react";
 import type { Resolver } from "./entities.js";
 import type { EntityRef } from "./types.js";
 
@@ -70,6 +63,7 @@ interface PanelState {
 export interface PanelApi {
   stack: readonly Item[];
   query: string;
+  searchId: string; // the header's search box, which jeff-ui's SearchInput takes by id
   docked: boolean;
   open: boolean; // slid over the notes
   setQuery(q: string): void;
@@ -86,13 +80,11 @@ export interface PanelApi {
   toggleDock(): void;
   escape(): void;
   onSearchKey(ev: KeyboardEvent<HTMLInputElement>): void;
-  onSearchInput(ev: ChangeEvent<HTMLInputElement>): void;
 }
 
 // The panel's DOM refs, kept out of PanelApi: callers destructure them and pass
 // them on as their own props, so reading the api during render isn't a ref read.
 export interface PanelRefs {
-  search: RefObject<HTMLInputElement | null>;
   body: RefObject<HTMLDivElement | null>;
 }
 
@@ -104,7 +96,8 @@ export function usePanel(resolve: Resolver): PanelApi & PanelRefs {
     pinned: readPin(),
     wide: wideNow(),
   }));
-  const search = useRef<HTMLInputElement>(null);
+  const searchId = useId();
+  const searchBox = () => document.getElementById(searchId) as HTMLInputElement | null;
   const body = useRef<HTMLDivElement>(null);
   const docked = s.pinned ?? s.wide;
 
@@ -133,9 +126,9 @@ export function usePanel(resolve: Resolver): PanelApi & PanelRefs {
   return {
     stack: s.stack,
     query: s.query,
+    searchId,
     docked,
     open: !docked && s.slid,
-    search,
     body,
     setQuery,
     openEntity(name, fresh = false) {
@@ -157,12 +150,12 @@ export function usePanel(resolve: Resolver): PanelApi & PanelRefs {
       })),
     rail(which) {
       set((x) => ({ ...x, slid: true, ...(which === "home" ? { stack: [], query: "" } : {}) }));
-      if (which === "search") search.current?.focus();
+      if (which === "search") searchBox()?.focus();
     },
     focusSearch() {
       set(reveal);
-      search.current?.focus();
-      search.current?.select();
+      searchBox()?.focus();
+      searchBox()?.select();
     },
     toggleDock() {
       set((x) => {
@@ -180,9 +173,8 @@ export function usePanel(resolve: Resolver): PanelApi & PanelRefs {
             ? { ...x, slid: false }
             : { ...x, stack: [] },
       );
-      search.current?.blur();
+      searchBox()?.blur();
     },
-    onSearchInput: (ev) => setQuery(ev.currentTarget.value),
     onSearchKey(ev) {
       if (ev.key !== "Enter") return;
       ev.preventDefault();

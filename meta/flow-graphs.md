@@ -161,30 +161,31 @@ freshly generated set — say "nothing committed yet" rather than omitting the s
 ## Node kinds
 
 Seven classes, by what the beat *is*. Colors set `fill`, `stroke` **and** `color` so they survive
-both light and dark renderers:
+both light and dark renderers. The hues match the session runner's kind colors
+(`app/pages/home/session/hues.ts`), so a beat reads the same in both:
 
 ```text
-classDef combat   fill:#F6DCD3,stroke:#B4452A,color:#5A1E10
-classDef social   fill:#E6E3D5,stroke:#8C8463,color:#3D3A28
-classDef decision fill:#FDF0CE,stroke:#C79A2B,color:#5A4410
-classDef stake    fill:#D9E8DC,stroke:#4F8060,color:#1F3D2A
-classDef seed     fill:#DCE3EF,stroke:#5E7296,color:#24334D
-classDef fail     fill:#EFE2E2,stroke:#A3736E,color:#4A2C29,stroke-dasharray:4 3
-classDef open     fill:#EDEAE6,stroke:#9A948C,color:#4A453F,stroke-dasharray:4 3
+classDef combat   fill:#FDE2E2,stroke:#DC2626,color:#5B1414
+classDef social   fill:#FBE3D6,stroke:#D95926,color:#5A2410
+classDef decision fill:#FBF0CF,stroke:#C79A2B,color:#5A4410
+classDef stake    fill:#D8F5E2,stroke:#22A35A,color:#134D2A
+classDef seed     fill:#DCE8FA,stroke:#3987E5,color:#17345E
+classDef fail     fill:#F8DDE7,stroke:#D55181,color:#5A1A32,stroke-dasharray:4 3
+classDef open     fill:#ECEFF3,stroke:#94A3B8,color:#334155,stroke-dasharray:4 3
 ```
 
-- **combat** (rust) — a fight, or a combat-resolution beat like a morale break
-- **social** (parchment) — roleplay, town, travel, any scene played in conversation
-- **decision** (lantern) — a real fork, drawn as a diamond `{"..."}`
+- **combat** (red) — a fight, or a combat-resolution beat like a morale break
+- **social** (orange) — roleplay, town, travel, any scene played in conversation
+- **decision** (gold) — a real fork, drawn as a diamond `{"..."}`
 - **stake** (green) — a stake tick, loot, or mechanical payoff
-- **seed** (river blue) — a thread planted or paid off
-- **fail** (dusty red, dashed) — a designed setback or fail floor. Designed, so it is not `open`
+- **seed** (blue) — a thread planted or paid off
+- **fail** (magenta, dashed) — a designed setback or fail floor. Designed, so it is not `open`
 - **open** (grey, dashed) — undesigned, or an open DM decision. Pairs with the `[?]` marker
 
 Declare only the classes a given graph actually uses; an unused `classDef` makes the legend lie.
 
 The marker and the class are **independent axes**. A combat node can be `[x]`, `[-]`, or `[?]`; it
-stays rust in all three. Only genuinely undesigned beats take the `open` class — a documented
+stays red in all three. Only genuinely undesigned beats take the `open` class — a documented
 botch path is `fail`, not `open`.
 
 ## Drawing rules

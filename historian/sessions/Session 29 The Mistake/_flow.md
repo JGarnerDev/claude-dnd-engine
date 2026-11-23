@@ -128,13 +128,13 @@ flowchart TD
   S1_FIGHT -.-> S1_NELLA
   S1_NELLA -.-> S1_NAMES
 
-  classDef combat fill:#F6DCD3,stroke:#B4452A,color:#5A1E10
-  classDef social fill:#E6E3D5,stroke:#8C8463,color:#3D3A28
-  classDef decision fill:#FDF0CE,stroke:#C79A2B,color:#5A4410
-  classDef stake fill:#D9E8DC,stroke:#4F8060,color:#1F3D2A
-  classDef seed fill:#DCE3EF,stroke:#5E7296,color:#24334D
-  classDef open fill:#EDEAE6,stroke:#9A948C,color:#4A453F,stroke-dasharray:4 3
-  classDef fail fill:#EFE2E2,stroke:#A3736E,color:#4A2C29,stroke-dasharray:4 3
+  classDef combat fill:#FDE2E2,stroke:#DC2626,color:#5B1414
+  classDef social fill:#FBE3D6,stroke:#D95926,color:#5A2410
+  classDef decision fill:#FBF0CF,stroke:#C79A2B,color:#5A4410
+  classDef stake fill:#D8F5E2,stroke:#22A35A,color:#134D2A
+  classDef seed fill:#DCE8FA,stroke:#3987E5,color:#17345E
+  classDef open fill:#ECEFF3,stroke:#94A3B8,color:#334155,stroke-dasharray:4 3
+  classDef fail fill:#F8DDE7,stroke:#D55181,color:#5A1A32,stroke-dasharray:4 3
 
   class S1_FIGHT,S1_CASKS,S1_SABLE,S1_MORALE,S1_DIP_DUEL,S1_LUCI_STORM combat
   class S1_WOODS,S1_ASK,S1_HAGGLE,S1_REPLAY,S1_REST,S1_STEADY,S1_READ,S1_SCATTER,S1_MIDRAID,S1_PARLEY,S1_SCARE,S1_TRICK,S1_TOWN,S1_WREN social

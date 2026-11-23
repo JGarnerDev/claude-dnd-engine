@@ -11,8 +11,6 @@
 import { useImperativeHandle, useRef, useState } from "react";
 import { Checkbox, EmptyState, type SettingsSection } from "jeff-ui";
 import { Swimlane as SwimChart, type ChartItem, type TimeChartHandle } from "jeff-ui/charts";
-import "../_common/common.css";
-import "./swimlane.css";
 import { DEFAULT_CALENDAR } from "../_common/helpers/calendar.js";
 import { indexEvents, timeScaleFor } from "../_common/helpers/axis.js";
 import { breaksOf, itemsOf, spansOf } from "../_common/helpers/items.js";

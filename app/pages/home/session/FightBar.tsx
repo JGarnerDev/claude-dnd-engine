@@ -13,11 +13,12 @@
 // click spends one, a click on a spent one gives it back, and the next round refills
 // them all (they come back on its turn, which the runner doesn't track).
 
-import { useEffect, useRef, type KeyboardEvent } from "react";
-import { Button, Disclosure, IconButton, Pips } from "jeff-ui";
+import { useEffect, useRef, type CSSProperties, type KeyboardEvent } from "react";
+import { Badge, Box, Button, Disclosure, Heading, IconButton, Pips, Prose, Text } from "jeff-ui";
 import type { Phase, StatBlock } from "./combatants.js";
 import { rollable, RollLog, type LoggedRoll } from "./Dice.js";
 import { allItems, inlineText, type Alert } from "./fight-cues.js";
+import { BOSS_HUE, KIND_HUE, VOICE_HUE } from "./hues.js";
 import { plainText } from "./markdown.js";
 import { parseMarkdown } from "./markdown-tokens.js";
 import { InlineMd, Markdown, MdItems } from "./MarkdownView.js";
@@ -53,6 +54,7 @@ function Chip({
   const tip = phases.map((p) => `${p.name} at ${p.hp}`).join(", ");
   return (
     <Button
+      size="sm"
       className={`sr-hpchip is-${band(c.cur, c.max)}${coming ? " is-coming" : ""}${phase ? " is-phase" : ""}${picked ? " is-picked" : ""}`}
       data-entry={c.entry}
       title={`${plainText(c.entry)}${coming ? `, arrives round ${c.due}` : ""}${tip ? ` (${tip})` : ""}: type damage`}
@@ -78,13 +80,17 @@ function Chip({
       {phase && (
         <>
           {" "}
-          <small className="sr-phase">{phase.name}</small>
+          <Text as="span" size="xs" caps strong hue={KIND_HUE.combat} className="sr-phase">
+            {phase.name}
+          </Text>
         </>
       )}
       {coming && (
         <>
           {" "}
-          <small>R{c.due}</small>
+          <Text as="span" size="xs" tone="muted">
+            R{c.due}
+          </Text>
         </>
       )}
     </Button>
@@ -110,7 +116,7 @@ function Legend({
       spent={spent}
       onChange={onSpend}
       label={`Legendary actions, ${n - spent} left`}
-      hue="var(--sr-v-watch)"
+      hue={VOICE_HUE.watch}
       pipTitle={(i) =>
         `Legendary action ${i + 1} of ${n}: click to spend, click again to give back. A new round refills them.`
       }
@@ -137,10 +143,10 @@ function Card({
     return lead?.t === "strong" && BOSS_LINE.test(inlineText(lead.c));
   });
   return (
-    <div className="sr-strip-card" data-who={plainText(c.entry)}>
-      <div className="sr-strip-card-stats">
+    <Box inset className="sr-strip-card" data-who={plainText(c.entry)}>
+      <Text as="div" size="sm" tone="muted" numeric className="sr-strip-card-stats">
         <InlineMd md={rowStats(b.stats)} />
-      </div>
+      </Text>
       {b.attacks.length > 0 && (
         <div className="sr-strip-card-atk">
           {b.attacks.map((a, i) => (
@@ -153,6 +159,7 @@ function Card({
       <div className="sr-strip-card-rolls">
         <RollLog rolls={rolls} />
         <Button
+          size="sm"
           variant="ghost"
           className="sr-roll-clear"
           title="Clear the roll log"
@@ -163,17 +170,21 @@ function Card({
         </Button>
       </div>
       {boss.length > 0 && (
-        <ul className="sr-md sr-strip-card-boss">
-          <MdItems items={boss} text={rollable} />
-        </ul>
+        <Prose className="sr-md sr-strip-card-boss">
+          <ul>
+            <MdItems items={boss} text={rollable} />
+          </ul>
+        </Prose>
       )}
       <Disclosure className="sr-strip-card-more" title="Full block">
-        <div className="sr-md">
-          <div className="sr-enemy-title">{b.title}</div>
+        <Prose className="sr-md">
+          <Heading level={4} size="sm">
+            {b.title}
+          </Heading>
           <Markdown md={md} text={rollable} />
-        </div>
+        </Prose>
       </Disclosure>
-    </div>
+    </Box>
   );
 }
 
@@ -209,6 +220,7 @@ export function FightBar({
   onClearRolls,
 }: FightBarProps) {
   const picked = chips.find((c) => c.entry === pick);
+  const hue = mode === "boss" ? BOSS_HUE : KIND_HUE.combat;
   const input = useRef<HTMLInputElement>(null);
   // A chip click focuses its box; a box that comes back on a re-render leaves focus be.
   const focus = useRef(false);
@@ -231,26 +243,37 @@ export function FightBar({
     }
   };
   return (
-    <div className={`sr-strip${mode === "boss" ? " is-boss" : ""}`} aria-label="The fight">
+    <div
+      className={`sr-strip${mode === "boss" ? " is-boss" : ""}`}
+      aria-label="The fight"
+      style={{ "--ui-hue": hue } as CSSProperties}
+    >
       <div className="sr-strip-top">
-        <span className="sr-strip-mode">{mode === "boss" ? "Boss fight" : "Fight"}</span>
+        <Badge solid hue={hue} className="sr-strip-mode">
+          {mode === "boss" ? "Boss fight" : "Fight"}
+        </Badge>
         <span className="sr-round">
           <IconButton data-round="-1" label="Previous round" onClick={() => onRound(-1)}>
             −
           </IconButton>
-          <span>
+          <Text as="span">
             Round <output>{round}</output>
-          </span>
+          </Text>
           <IconButton data-round="1" label="Next round" onClick={() => onRound(1)}>
             +
           </IconButton>
         </span>
-        <div className="sr-strip-alerts" aria-live="polite">
+        <div
+          className="sr-strip-alerts"
+          aria-live="polite"
+          style={{ "--ui-hue": VOICE_HUE.watch } as CSSProperties}
+        >
           {alerts.map((a, i) =>
             a.kind === "ready" ? (
               <Button
                 key={i}
-                variant="primary"
+                size="sm"
+                hue={VOICE_HUE.watch}
                 className="sr-alert is-ready"
                 data-to={a.to}
                 onClick={() => onGo(a.to)}
@@ -258,9 +281,9 @@ export function FightBar({
                 {a.text}
               </Button>
             ) : (
-              <span key={i} className="sr-alert is-now">
+              <Text as="span" key={i} size="sm" className="sr-alert is-now">
                 {a.text}
-              </span>
+              </Text>
             ),
           )}
         </div>

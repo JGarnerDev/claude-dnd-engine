@@ -9,8 +9,7 @@
 // selector is hidden there.
 
 import { useRef, useState } from "react";
-import { Tabs } from "jeff-ui";
-import "./view.css";
+import { Box, Column, Link, Row, Tabs } from "jeff-ui";
 import { Timeline } from "../../components/charts/timeline/Timeline.js";
 import { Swimlane } from "../../components/charts/swimlane/Swimlane.js";
 import type { ChartHandle } from "../../components/charts/_common/ChartSettings.js";
@@ -59,45 +58,48 @@ function ChartHost({ data, initial }: { data: TimelineData; initial: View }) {
   const Chart = shown.view === "world" ? Timeline : Swimlane;
 
   return (
-    <div className="chart-viewhost">
-      <div className="chart-headerbar">
-        <Tabs
-          label="Views"
-          items={TABS}
-          selected={shown.view}
-          onPick={(v) => v && show(v)}
-          className="chart-viewtabs"
-        />
-        <div className="chart-actions">
-          <a href="/session.html" className="chart-sessionlink">
-            Run session
-          </a>
-          {campaign !== null && (
-            <CampaignSelect
-              campaigns={scope.campaigns}
-              current={campaign}
-              hidden={shown.view !== "world"}
-              onChange={(slug) => {
-                setCampaign(slug);
-                show(shown.view); // campaign is a separate axis from a saved view: chart state resets
-              }}
-            />
-          )}
-          <SavedViews
-            getCurrent={() => ({ tab: shown.view, state: api.current!.getState() })}
-            apply={(view) => show(view.tab, view.state)}
+    <Column fill className="chart-viewhost">
+      <Box padding={3}>
+        <Row justify="between" align="center" className="chart-headerbar">
+          <Tabs
+            label="Views"
+            items={TABS}
+            selected={shown.view}
+            onPick={(v) => v && show(v)}
+            className="chart-viewtabs"
           />
-          <div ref={setSettingsSlot} className="chart-settings-slot" />
-        </div>
-      </div>
-      <Chart
-        key={shown.key}
-        ref={api}
-        data={viewData}
-        initialState={shown.initialState}
-        settingsSlot={settingsSlot}
-        className="chart-viewcontent"
-      />
-    </div>
+          <Row align="center" gap={2} className="chart-actions">
+            <Link variant="nav" href="/session.html" className="chart-sessionlink">
+              Run session
+            </Link>
+            {campaign !== null && (
+              <CampaignSelect
+                campaigns={scope.campaigns}
+                current={campaign}
+                hidden={shown.view !== "world"}
+                onChange={(slug) => {
+                  setCampaign(slug);
+                  show(shown.view); // campaign is a separate axis from a saved view: chart state resets
+                }}
+              />
+            )}
+            <SavedViews
+              getCurrent={() => ({ tab: shown.view, state: api.current!.getState() })}
+              apply={(view) => show(view.tab, view.state)}
+            />
+            <div ref={setSettingsSlot} className="chart-settings-slot" />
+          </Row>
+        </Row>
+      </Box>
+      <Column grow>
+        <Chart
+          key={shown.key}
+          ref={api}
+          data={viewData}
+          initialState={shown.initialState}
+          settingsSlot={settingsSlot}
+        />
+      </Column>
+    </Column>
   );
 }

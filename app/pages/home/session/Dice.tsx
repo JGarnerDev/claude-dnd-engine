@@ -5,7 +5,8 @@
 // rolls are for the moment, and survive re-renders but not a reload.
 
 import { createContext, Fragment, useContext, type MouseEvent } from "react";
-import { InlineButton } from "jeff-ui";
+import { InlineButton, List, Text, type TextProps } from "jeff-ui";
+import { KIND_HUE } from "./hues.js";
 import {
   parseExpr,
   roll,
@@ -63,7 +64,7 @@ function RollButton({ tok }: { tok: RollToken }) {
   return (
     <InlineButton
       className="sr-roll"
-      hue="var(--sr-k-combat)"
+      hue={KIND_HUE.combat}
       data-roll={tok.expr}
       data-kind={tok.kind}
       data-label={tok.label || undefined}
@@ -101,9 +102,11 @@ export function RollDetail({ r }: { r: Roll }) {
 
 export function RollLog({ rolls }: { rolls: readonly LoggedRoll[] }) {
   return (
-    <ol className="sr-roll-log" aria-live="polite">
+    <List ordered variant="plain" gap={1} className="sr-roll-log" aria-live="polite">
       {rolls.map(({ who, what, r }, i) => {
         const tag = r.nat === 20 ? " is-nat20" : r.nat === 1 ? " is-nat1" : "";
+        const tone: TextProps["tone"] =
+          r.nat === 20 ? "ok" : r.nat === 1 ? "err" : i === 0 ? "accent" : undefined;
         const mode =
           r.mode === "adv"
             ? " · adv"
@@ -115,17 +118,19 @@ export function RollLog({ rolls }: { rolls: readonly LoggedRoll[] }) {
         const kind = r.kind === "hit" ? "to hit" : r.kind === "dmg" ? "damage" : "roll";
         return (
           <li key={i} className={`sr-roll-entry${tag}${i === 0 ? " is-latest" : ""}`}>
-            <b className="sr-roll-total">{r.total}</b>{" "}
-            <span className="sr-roll-what">
+            <Text as="span" size="lg" strong numeric tone={tone} className="sr-roll-total">
+              {r.total}
+            </Text>{" "}
+            <Text as="span" size="sm" className="sr-roll-what">
               {who} · {what} · {kind}
               {mode}
-            </span>{" "}
-            <span className="sr-roll-detail">
+            </Text>{" "}
+            <Text as="span" size="sm" tone="muted" numeric className="sr-roll-detail">
               <RollDetail r={r} />
-            </span>
+            </Text>
           </li>
         );
       })}
-    </ol>
+    </List>
   );
 }

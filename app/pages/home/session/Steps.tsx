@@ -7,7 +7,8 @@
 // `When:` line rides on its row as a pill the fight bar lights once it comes true.
 
 import type { ReactNode } from "react";
-import { Badge, Button } from "jeff-ui";
+import { Badge, Button, List, Prose, Text } from "jeff-ui";
+import { BOSS_HUE, KIND_HUE, VOICE_HUE } from "./hues.js";
 import { mergeLabelLines } from "./flow.js";
 import { InlineMd } from "./MarkdownView.js";
 import { PromptBook } from "./PromptBook.js";
@@ -25,17 +26,19 @@ import {
 } from "./step-info.js";
 import type { FlowNode } from "./types.js";
 
-const MARKS: Record<Mark, { title: string; text: string }> = {
-  combat: { title: "Combat", text: "⚔" },
-  choice: { title: "A real choice", text: "◆ choice" },
-  payoff: { title: "Payoff", text: "★" },
+const MARKS: Record<Mark, { title: string; text: string; hue: string }> = {
+  combat: { title: "Combat", text: "⚔", hue: KIND_HUE.combat },
+  choice: { title: "A real choice", text: "◆ choice", hue: KIND_HUE.decision },
+  payoff: { title: "Payoff", text: "★", hue: KIND_HUE.stake },
 };
+
+const RAIL_HUE = { fight: KIND_HUE.combat, boss: BOSS_HUE } as const;
 
 function StepMark({ n, prose }: { n: FlowNode; prose: string }) {
   const m = stepMarkKind(n, prose);
   return (
     m && (
-      <Badge className="sr-mark" data-mark={m} title={MARKS[m].title}>
+      <Badge className="sr-mark" data-mark={m} hue={MARKS[m].hue} title={MARKS[m].title}>
         {MARKS[m].text}
       </Badge>
     )
@@ -47,6 +50,7 @@ function Rails({ s, i, last }: { s: Spans; i: number; last: number }) {
     inSpan(span, i) && (
       <i
         className={`sr-r sr-r-${kind}${i === span![0] ? " is-start" : ""}${i === span![1] && span![1] < last ? " is-end" : ""}`}
+        style={{ background: RAIL_HUE[kind] }}
         title={kind === "boss" ? "Boss fight" : "Fight"}
       />
     );
@@ -67,13 +71,13 @@ function EdgeTags({ s, i, last }: { s: Spans; i: number; last: number }) {
     if (!span) continue;
     if (i === span[0] && (span[0] > 0 || kind === "boss"))
       tags.push(
-        <Badge key={`${kind}-s`} tone="err" className={`sr-edge sr-edge-${kind}`}>
+        <Badge key={`${kind}-s`} hue={RAIL_HUE[kind]} className={`sr-edge sr-edge-${kind}`}>
           {name} starts
         </Badge>,
       );
     if (i === span[1] && span[1] < last)
       tags.push(
-        <Badge key={`${kind}-e`} tone="err" className={`sr-edge sr-edge-${kind}`}>
+        <Badge key={`${kind}-e`} hue={RAIL_HUE[kind]} className={`sr-edge sr-edge-${kind}`}>
           {name} ends
         </Badge>,
       );
@@ -85,13 +89,15 @@ function EdgeTags({ s, i, last }: { s: Spans; i: number; last: number }) {
 export function BeatBody({ n, prose }: { n: FlowNode; prose: string }) {
   if (!prose)
     return (
-      <ul className="sr-md">
-        {mergeLabelLines(n.lines).map((l, i) => (
-          <li key={i}>
-            <InlineMd md={l} />
-          </li>
-        ))}
-      </ul>
+      <Prose className="sr-md">
+        <ul>
+          {mergeLabelLines(n.lines).map((l, i) => (
+            <li key={i}>
+              <InlineMd md={l} />
+            </li>
+          ))}
+        </ul>
+      </Prose>
     );
   return <PromptBook prose={prose} />;
 }
@@ -122,7 +128,7 @@ export function Steps({
   const last = nodes.length - 1;
   const lit = useFightLit();
   return (
-    <ol className={`sr-steps${rails ? " has-rails" : ""}`}>
+    <List ordered variant="plain" gap={2} className={`sr-steps${rails ? " has-rails" : ""}`}>
       {nodes.map((n, i) => {
         const prose = proseOf.get(n.id) ?? "";
         const state = n.id === current ? "current" : visited.has(n.id) ? "done" : "todo";
@@ -138,9 +144,15 @@ export function Steps({
                 if (n.id !== current) onGo(n.id);
               }}
             >
-              <span className="sr-step-num">
+              <Text
+                as="span"
+                numeric
+                strong
+                tone={state === "done" ? "ok" : "muted"}
+                className="sr-step-num"
+              >
                 {state === "done" ? "✓" : beatPosition(n.id) || i + 1}
-              </span>
+              </Text>
               <span className="sr-step-title">
                 <NoSceneLinks>
                   <InlineMd md={stepTitle(n, headings)} />
@@ -148,13 +160,15 @@ export function Steps({
               </span>
               {rails && <EdgeTags s={spans} i={i} last={last} />}
               {when && (
-                <span
+                <Badge
+                  hue={VOICE_HUE.watch}
+                  solid={lit?.(when)}
                   className={`sr-when${lit?.(when) ? " is-ready" : ""}`}
                   data-when={when}
                   title={`When: ${when}`}
                 >
                   {when.length > 42 ? `${when.slice(0, 40)}…` : when}
-                </span>
+                </Badge>
               )}
               <StepMark n={n} prose={prose} />
             </Button>
@@ -167,6 +181,6 @@ export function Steps({
           </li>
         );
       })}
-    </ol>
+    </List>
   );
 }

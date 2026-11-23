@@ -17,6 +17,7 @@ const foldTitles = (root: HTMLElement) =>
   );
 
 // The panel with the runner's search box and pin beside it, as Runner.tsx lays them out.
+// The panel is a jeff-ui Drawer; its root (.sr-body) carries is-docked and is-open.
 function setup(d: SessionData = fixture(), ctx: PanelContext = { onCard: [], inScene: [] }) {
   const resolve = makeResolver(d.entities);
   const known = (n: string) => !!resolve(n);
@@ -24,37 +25,32 @@ function setup(d: SessionData = fixture(), ctx: PanelContext = { onCard: [], inS
   const onGo = vi.fn();
   const api: { p?: PanelApi } = {};
   function Harness() {
-    const { search, body, ...p } = usePanel(resolve);
+    const { body, ...p } = usePanel(resolve);
     api.p = p;
     return (
       <SessionContext.Provider value={{ known, openEntity: (n) => p.openEntity(n) }}>
         <input
-          className="sr-search"
+          id={p.searchId}
           type="search"
           value={p.query}
-          ref={search}
-          onChange={p.onSearchInput}
+          onChange={(e) => p.setQuery(e.currentTarget.value)}
           onKeyDown={p.onSearchKey}
         />
         <button type="button" className="sr-pin" onClick={p.toggleDock}>
           {p.docked ? "Hide panel" : "Pin panel"}
         </button>
-        <div
-          className={["sr-body", p.docked && "is-docked", p.open && "is-open"]
-            .filter(Boolean)
-            .join(" ")}
+        <Panel
+          p={p}
+          body={body}
+          data={d}
+          resolve={resolve}
+          refs={refs}
+          ctx={ctx}
+          where="step 1, Open"
+          onGo={onGo}
         >
-          <Panel
-            p={p}
-            body={body}
-            data={d}
-            resolve={resolve}
-            refs={refs}
-            ctx={ctx}
-            where="step 1, Open"
-            onGo={onGo}
-          />
-        </div>
+          <main />
+        </Panel>
       </SessionContext.Provider>
     );
   }
@@ -153,7 +149,8 @@ describe("Panel", () => {
     }));
     const { root, call } = setup();
     const shell = root.querySelector(".sr-body")!;
-    expect(shell.className).toBe("sr-body");
+    expect(shell.classList.contains("is-docked")).toBe(false);
+    expect(shell.classList.contains("is-open")).toBe(false);
     call((p) => p.openEntity("Sable Wren"));
     expect(shell.classList.contains("is-open")).toBe(true);
     call((p) => p.escape());

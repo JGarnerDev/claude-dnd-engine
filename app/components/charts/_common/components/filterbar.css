@@ -1,8 +1,0 @@
-/* Filter controls (FilterBar.tsx): lays out the track and "Known by" chips.
-   The chips' look, track hue included, comes from jeff-ui's Chip. */
-
-.chart-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
