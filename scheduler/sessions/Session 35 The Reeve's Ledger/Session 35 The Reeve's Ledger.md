@@ -205,64 +205,106 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 #### S35_01_IGGY_BEAT — Iggy's wings, the smite, and the voice in every crystal
 
 - **Tell the table:** this is a recap. Each of you gets the fight back from your own side,
-  including the moments you lived and didn't hear. Iggy first.
+  including the moments you lived and didn't hear. Iggy first, from the moment it turned. Then
+  we rewind.
 - **Say:**
 
-> *"Iggy. You're on your knees by the cart, seven hit points, an arrow in your side, when your
-> crystal speaks. Not Nella. Not the crew. Every crystal in the yard at once, one old voice:
-> 'Up, Wallaed.'"*
->
-> *"And you get up. Your eyes go white-gold. Wings open out of your back and throw every shadow
-> in the yard the other way. You're off the ground before you've decided to be."*
->
-> *"The cloud lights up around you, the griffon goes black against it, and your blade finds it.
-> The smite lands warm, with a thread of cold underneath. You hear yourself say two names.
+> *"Iggy. The griffon drops out of the cloud into the yard, claws first, onto Halsby, and you're
+> already moving. Rapier up, the words of the smite in your mouth, and the words come out lit.
+> You can see them. The blade goes in under the griffon's shoulder and leaves a line hanging in
+> the air behind it, hard and white, straight as a ruler stroke. The smite lands warm, with a
+> thread of cold underneath, and you hear yourself say two names you didn't mean to say.
 > Caelion. Liora."*
+>
+> *"Then the ridge. You never see the arrow. You feel it, low in your side, and your knees hit
+> the sand by the cart. Seven hit points. Everything goes slow and loud. Halsby stopped dead in
+> the open, the Haste gone out of him. Dip dragging Odibli up by the collar. The griffon coming
+> down on both of them out of the cloud, and going up again with the gnome in its claws, and the
+> gnome twisting, and falling, and landing on his feet."*
+>
+> *"And your crystal speaks. Not Nella. Not the crew. Every crystal in the yard at once, one old
+> voice, level, like a sergeant who has said it a hundred times: 'Up, Wallaed.'"*
+>
+> *"You get up. Your eyes go white-gold. Wings tear open out of your back, and every shadow in
+> the yard swings the other way at once. The arrow wound closes under your hand. The ground
+> drops away, you're climbing, and the cloud over the yard lights up from underneath, white as
+> a lamp. Up in it, the griffon goes black against the glow. It can't hide in there any more."*
+>
+> *"From up here you see all of it. Two carts burning and the long shed roaring. Luci planting a
+> heel in the captain's chest and kicking him backward into his own fire. A bolt of flame from
+> Halsby turning the griffon's left wing grey, feather by feather. Dip leaping, both hands on the
+> axe. The griffon comes down out of the sky and you dive after it, and on the ground it turns
+> and rakes you open across the chest. Five hit points. Your wings are still open."*
 
-- **Say (to Odibli):** *"From under the cart you see the light cross the yard. The crystal in
-  your pocket says it too: 'Up, Wallaed.'"*
-- **Say (to Halsby):** *"The light pins your shadow short and hard under your feet, darker than
-  it should be. Then it lets go."*
+- **Say (to Odibli):** *"You're on your feet in the sand where you landed, ears still ringing
+  from the drop, when the light comes across the yard. The crystal in your pocket says it too,
+  right against your leg: 'Up, Wallaed.'"*
+- **Say (to Halsby):** *"You can't move yet. The Haste went out of your legs all at once and
+  left them made of wet sand. Then the light comes, and pins your shadow short and hard under
+  your feet, darker than it should be, as if it's been nailed there. Then it lets go."*
+- **Say (to Luci):** *"The captain in front of you lights up like noon, every dent in his
+  breastplate, and his shadow swings round behind him and points straight at his own burning
+  cart."*
 - **Private (Dip):** what Dip sees
   - **The message:** You feel the yard the way the Enclave taught you: the souls in it, each one
     a thread. Two of the raiders' threads go slack and slip out of this plane while you swing.
     That's ordinary. You've felt it a hundred times. Then something comes in the other way. It's
     too big to be a soul, and it comes from somewhere past this plane, straight into Iggy.
     It's the same presence you felt at the hearth, only now it isn't hiding. It's old, and very
-    tired, and it kept him from going out the way the raiders did. When the wings fold, it's
-    gone. Nobody else in the yard felt the current turn.
+    tired, and it kept him from going out the way the raiders did. When the wings fold, it will
+    be gone. Nobody else in the yard felt the current turn.
 - **What stays hidden:** what Sah is, why the crystals carried him, anything about the Lioness
   hearth beyond Dip's private. Nobody says the name Sah but Iggy. If someone asks Iggy who that
   was, it's his answer.
 - **Iggy's first spell last session** already came out in a language nobody knew. That's the
-  first cue landed; don't replay it.
+  first cue landed; don't replay it. Halsby's account touches it in one clause; make no more of
+  it.
+- **The order is real.** Smite, Nella's arrow, the snatch, then the wings, as it went at the table
+  (Session 34). The accounts after this one rewind and cross back over the same moments.
 
 #### S35_02_COLD — Odibli's fight, and the Citadel's cold
 
-- **When:** straight after Iggy, still in the recap.
+- **When:** straight after Iggy, still in the recap. Say *"Rewind."* and take Odibli back to
+  before the relief rode in.
 - **Say:**
 
-> *"Odibli. The relief rides in, four of them, and you do what every story says not to: you
-> dive. Belly-first under a cart, a camera's view through the spokes, sand in your beard,
-> 'Gnomaha'. And from there, for one shining round, you are exactly where an evoker belongs.
-> Three darts of light off your fingers and into the captain."*
+> *"Rewind. Odibli. The crystal you took off a dead raider sits in your pocket, and it hasn't
+> shut up all morning. A gruff stranger asking Nella where she wants them. Then Dip, thick, like
+> Dip's talking around a mouthful of stone: 'Your corpses are mine.' Then Dip's sound effects, as
+> Dip's axe meets the archer."*
 >
-> *"Then you lean out and ask Luci a question no wizard should ever have to ask. 'Can I
-> Fireball you?' 'Sounds like fun, dude.'"*
+> *"Then hooves. Four riders come over the north rise at a gallop, and you do what every story
+> says not to: you dive. Belly-first under the nearest cart, sand in your beard, the yard cut
+> into slices by the spokes. Gnomaha."*
 >
-> *"You flick it out from under the cart: one bead of light, no bigger than a cherry stone,
-> skipping low over the sand between the horses' legs. Three riders look down at it. Then it
-> opens. The light comes first, and the sound after, a deep thump you feel through the axle over
-> your head. The yard goes orange wall to wall. All the shade under your cart is gone, and you
-> can count the grains of sand in front of your nose. The heat rolls over you, singed horsehair
-> and lamp oil."*
+> *"Through the wheel: arrows hissing at Luci and finding nothing. Three darts of light off your
+> fingers, through the spokes and into the captain's chest. He looks around for where they came
+> from. He can't find you. Then Luci pulls the burning cart's embers up around herself like a
+> storm, and a rider's sword goes into it and comes out with nothing."*
 >
-> *"When it clears, three riders don't get up. Luci walks out of the smoke, trailing it,
-> grinning. Behind Luci the second cart has caught, and its canvas goes up in one long sheet."*
+> *"You lean out. 'Luci. Can I Fireball you?' 'Sounds like fun, dude.'"*
 >
-> *"Then the griffon comes for you. Talons, the ground falling away, the yard getting small. You
-> twist free and drop, and land on your feet, because of course you do. And it finds you
-> again. A beak like an axe. And the yard goes dark."*
+> *"One bead of light, no bigger than a cherry stone, skips low over the sand between the
+> horses' legs. Three riders look down at it."*
+>
+> *"Light first. Then the thump, up through the axle over your head and into your teeth. The yard
+> goes orange wall to wall. All the shade under your cart is gone, and you can count the grains
+> of sand in front of your nose. The heat rolls in under the cart, singed horsehair and lamp oil,
+> and over the roar, horses screaming. Gnomaha Beach. So hot right now."*
+>
+> *"When it clears, three riders don't get up. The captain does, smoking. Luci walks out of the
+> fire trailing it, grinning, and behind her the second cart catches and its canvas goes up in
+> one long sheet."*
+>
+> *"A hand in your collar. Dip, hauling you out into the light: 'On your feet, soldier!' Then the
+> light goes, all of it, because something huge is between you and the sky. Talons. The ground
+> falls away and the yard spins under you: fire, fire, the cask cart, Iggy on his knees with an
+> arrow in him. You twist free. There's nothing under you for a long way. You land on your feet,
+> because of course you do."*
+>
+> *"Then white-gold light opens across the yard behind you, and the griffon comes back down out
+> of it with one wing smoking grey and Dip's axe in its side, and it finds you. A beak, coming
+> down like a pick. The yard goes dark."*
 
 - **Private (Odibli):** the Citadel's cold
   - **The message:** Go back to your first Magic Missile, from under the cart. As the darts
@@ -280,39 +322,84 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
   the riders, the fire, the griffon coming down.
 - **Say (Dip):**
 
-> *"Dip. You put your crystal in your mouth and talk to the crew through their own stones. 'Your
-> corpses are mine.' Every one of them hears it, and the riders come in shaking. Your blade
-> takes the archer through the eye. You're up on the shed roof and the roof guard is down a leg.
-> You're inside the shed with the oil, and the shed is burning, because you meant it to."*
+> *"Dip. You put the raider's crystal in your mouth, bite down on it, and talk to the crew
+> through their own stones. 'Your corpses are mine.' Every one of them hears it inside their
+> skull, in your voice. Then you go to work, and you narrate it. The archer turns, your axe takes
+> her through the eye, and into the crystal you make the noise yourself, wet and happy, so the
+> rest of them hear that too."*
 >
-> *"You drag the gnome to his feet, 'On your feet, soldier!', and when the griffon comes down
-> low with one wing gone grey, you don't think. You jump, axe high, and bring it down into the
-> griffon's side. Then again. Feathers and blood come off the blade, and the thing that owned the
-> sky all morning drops out of it."*
+> *"One jump puts you on the shed roof. The roof guard is yelling targets, 'There it is! THERE
+> it is!', right up until your axe goes through his leg at the knee, and then he's yelling
+> something else. Below you the relief comes in at a gallop, and they come in shaking. Their
+> captain wears a crystal too. He heard every word."*
+>
+> *"Then the shed. You kick the door in: sacks, barrels, dry straw. You pour the oil over all of
+> it and strike the light, and the first flame runs along the floor faster than you'd think. The
+> last time you stood in a burning building, you were small, and someone else had lit it. This
+> time you walk out with the door open behind you and the heat on your back."*
+>
+> *"The Fireball goes off in the yard while you're in the doorway. Light through every crack in
+> the planks, then the thump, and the whole shed breathes in and out around you."*
+>
+> *"Your last flask goes spinning into the yard. You grab the gnome out from under his cart by
+> the collar, 'On your feet, soldier!', and the griffon takes him right out of your hand."*
+>
+> *"White-gold light behind you: Iggy, up. Then the griffon comes down low with one wing gone
+> grey and smoking, and you don't think. You jump, axe high, and bury it in the griffon's side,
+> and again, and feathers and blood come off the blade, and the thing that owned the sky all
+> morning drops out of it and hits the sand so hard you feel it in your heels."*
 
 - **Say (Luci):**
 
-> *"Luci. The tally-man goes down over your foot, and you're already past him. The burning
-> cart's embers rise when you move, and you take them, a whip of light and spark that wraps
-> you, a storm with you at its still center, and the relief's blows find nothing in it. Odibli's
-> Fireball rolls over you like warm water. You kick the captain backward into his own burning
-> cart, and he doesn't come out."*
+> *"Luci. The tally-man lunges, you hook his ankle, and he goes down over your foot. Before he
+> can get up, Halsby's orb hits him and he's ash, blowing across your shins. The fire jumps from
+> him to the half-orc to the captain's cart, and the cart goes up."*
+>
+> *"Then arrows. Riders shooting at you at a gallop, and you hear them go by: past your ear,
+> past your ribs, into the sand between your feet. None of them touch you."*
+>
+> *"So you take the fire. The burning cart's embers rise when you move, and you pull them in, a
+> whip of light and spark that wraps around you, and you're the still centre of a storm. A
+> rider's sword comes in through it and finds nothing. Another. Nothing. Then Odibli's Fireball
+> rolls over you like warm bathwater, and you walk out of it grinning, trailing smoke."*
+>
+> *"Glimpses through the smoke: Dip on the shed roof, swinging. The griffon on top of Halsby.
+> Odibli going up in its claws and coming down on his feet. Then the light, and the captain in
+> front of you lit like noon, his shadow pointing back at his own burning cart. Fine. You plant
+> a heel in his chest and send him after it. He doesn't come out."*
 >
 > *"Then you see her. On the ridge, the woman with the bow, already moving. And you can't be
 > still. You never could. Up the ridge path, over the old wall, across the bridge, down the far
 > bank, the warmth on your face the whole way, as if something behind the sky wanted you to run
-> toward the light."*
+> toward the light. Far behind you, the griffon screams."*
 
 - **Say (Halsby):**
 
 > *"Halsby. You don't like fire. You never have, and you have never once told the truth about
-> why. Today you made the most of it. One orb: the tally-man is ash. It leaps, and the half-orc
-> is ash. It leaps again, and the captain's cart goes up. Your first Fire Bolt turns the
-> griffon's left wing grey, feather by feather."*
+> why."*
 >
-> *"Then it's on the ground, and it's screaming at you, at you, and your second bolt goes in
-> under the burnt wing, where it's soft. It stops screaming. Afterwards you'll notice your hands
-> are cold. Colder than the fire had any right to leave them."*
+> *"The tally-man's knife goes in under your ribs, a short, practised punch. You hold the Haste
+> anyway. Then you raise the spear, and up on the shed roof someone yells 'Lightning man!', and
+> the orb leaves your hand fire-red. The tally-man is ash. It leaps, and the half-orc is ash; you
+> watch his hands come up and go grey. It leaps again, finds no one, and the captain's cart goes
+> up."*
+>
+> *"Six hit points. Then a hand on your back, Iggy's voice in words you don't know, and you're
+> whole enough to stand. The griffon drops out of the cloud onto you. Your Shield goes up, a
+> pane of hard air, and the claws come through it anyway."*
+>
+> *"Then the Haste goes out of you all at once. Your legs stop answering. For one whole breath
+> you stand in the open with fire on every side while the gnome goes up past you in the
+> griffon's claws, and you can't even turn your head to watch."*
+>
+> *"Your first Fire Bolt turns the griffon's left wing grey, feather by feather. Dip brings it out
+> of the sky. Then it's on the ground, and it's screaming at you, at you, a sound like a hinge the
+> size of a barn door, and your second bolt goes in under the burnt wing, where it's soft. It
+> stops screaming. It goes down all at once, on top of the gnome, and you feel it through the
+> ground."*
+>
+> *"Afterwards you'll notice your hands are cold. Colder than the fire had any right to leave
+> them."*
 
 #### S35_04_NELLA_TITHE — On the far bank, Nella feels Tithe die
 
@@ -320,11 +407,12 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 - **Say:**
 
 > *"And on the south bank of the river, with Luci somewhere behind her, Nella stops running for
-> the first time. She takes a small bone whistle off a cord at her neck and blows it once. Two
-> notes, the recall, the one Tithe always answers. She waits one breath."*
+> the first time. Mud to her ankles, the river loud at her back, three arrows left in the quiver.
+> She takes a small bone whistle off a cord at her neck and blows it once. Two notes, the recall,
+> the one Tithe always answers. She waits one breath."*
 >
-> *"Back in the yard, under a burnt wing, the griffon lifts its head toward the sound. Then it
-> lays it down."*
+> *"Back in the yard, in the smoke, under its own burnt wing, the griffon hears it. Its head comes
+> up off the sand and turns toward the river. Then it lays it down."*
 >
 > *"Nella's face doesn't move. She puts the whistle away very carefully, the way you put away
 > something you'll never use again, and she starts running."*
