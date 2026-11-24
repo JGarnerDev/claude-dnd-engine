@@ -988,7 +988,9 @@ From Asher
 - **Enemies:** none
 - **DCs:** Persuasion 14 — Dip argues the share up
 - **Time:** ~10 min
-- **Trigger:** evening; Sable puts the deed on the bar. **Message Tyler on Discord now.**
+- **Trigger:** evening; Sable puts the deed on the bar.
+- **⏰ Tyler, 30-minute heads-up:** message Tyler now to join the Discord. He enters in Scene 10,
+  about half an hour from here. If Scene 8 hasn't started by 10:00, message him anyway.
 
 #### S35_25_STAKE — Sable's deed, argued
 
@@ -1313,6 +1315,9 @@ next move, and his price · whether Ashford lets him live · why he surrendered,
 tells them · Bane's face · the field above
 the ford, and what's under it · where Dip's sister is · what Sabathiel wants · the Citadel's
 reach · what the order doesn't like at [[Tassad]].
+
+**After the table (DM only):** send Ben the Shaw card, `handouts/shaw-for-ben.html`: everything
+from the Tyler meeting, for his run. Share it from the page's Share menu first.
 
 ## Approaching Entities
 

@@ -1,0 +1,301 @@
+<title>Shaw for Ben</title>
+<meta name="artifact-url" content="https://claude.ai/artifact/T3ovjVqjqniW6wHUdNnXrq" />
+<meta name="claude:viewport-fit-sides" content="cover" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap"
+/>
+<style>
+  /* Layout: one parchment column, the same card family as "Tyler's Way In". For Ben, the incoming DM: everything from Jeff's 2026-11-23 meeting with Tyler. */
+  :root {
+    --bg: #e9e7e2;
+    --card: #f7f5f0;
+    --ink: #23221f;
+    --muted: #615d55;
+    --rule: #cfc9bd;
+    --accent: #7a3b2e;
+    --fixed: #ece6da;
+    --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+    --body: "Spectral", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141513;
+      --card: #1d1f1c;
+      --ink: #e6e2d8;
+      --muted: #a39e92;
+      --rule: #3a3c37;
+      --accent: #d08a72;
+      --fixed: #262823;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141513;
+    --card: #1d1f1c;
+    --ink: #e6e2d8;
+    --muted: #a39e92;
+    --rule: #3a3c37;
+    --accent: #d08a72;
+    --fixed: #262823;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    padding-block: 32px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .card {
+    max-width: 40rem;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 32px 32px 28px;
+    display: grid;
+    gap: 26px;
+  }
+  header {
+    display: grid;
+    gap: 6px;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 2.3rem;
+    line-height: 1.1;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .lede {
+    margin: 0;
+    color: var(--muted);
+    font-style: italic;
+  }
+  section {
+    display: grid;
+    gap: 10px;
+    min-width: 0;
+  }
+  h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.35rem;
+    margin: 0;
+    color: var(--accent);
+    text-wrap: balance;
+  }
+  p {
+    margin: 0;
+    max-width: 65ch;
+  }
+  ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 6px;
+  }
+  .quote {
+    background: var(--fixed);
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    font-style: italic;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    font-variant-numeric: tabular-nums;
+  }
+  .stats div {
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 8px 10px;
+    display: grid;
+    gap: 2px;
+  }
+  .stats span,
+  .split h3 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .stats b {
+    font-weight: 600;
+    font-size: 1.15rem;
+  }
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .split h3 {
+    margin: 0 0 6px;
+  }
+  .tentative {
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-style: italic;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    border-top: 1px solid var(--rule);
+    padding-top: 12px;
+  }
+  @media (max-width: 520px) {
+    .card {
+      padding: 22px 18px 20px;
+    }
+    h1 {
+      font-size: 1.9rem;
+    }
+    .split {
+      grid-template-columns: 1fr;
+    }
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<article class="card">
+  <header>
+    <h1>Shaw for Ben</h1>
+    <p class="lede">
+      Tyler's character, from Jeff's meeting with Tyler on 2026-11-23. Shaw enters at the end of
+      Jeff's run, and your run follows straight on from it.
+    </p>
+  </header>
+
+  <section>
+    <h2>Shaw Proudfoot</h2>
+    <p>
+      Halfling, 50, bald, two feet tall and far too much muscle for it. Monk 5 (Warrior of the Open
+      Hand), Soldier background, Chaotic Good. He wears a small blazer with no shirt under it, not
+      robes. Tyler's pitch: "he's like if the song Firestarter was a hobbit." His touchstone is
+      Jason Statham.
+    </p>
+    <ul>
+      <li>
+        A monk on the sheet only. No monastery, no inner peace. You find him in a bar or out on a
+        job.
+      </li>
+      <li>Hot-headed and stubborn. Do not joke about his height.</li>
+      <li>He takes shady jobs when money is short, up to one line: children and families.</li>
+      <li>
+        Ideal: family, family, family. A straight shooter. When he leaves, he leaves in plain sight.
+      </li>
+    </ul>
+    <div class="stats">
+      <div><span>AC</span><b>13</b></div>
+      <div><span>HP</span><b>43</b></div>
+      <div><span>Speed</span><b>40 ft</b></div>
+      <div><span>Focus</span><b>5</b></div>
+    </div>
+    <p>
+      Extra Attack, Stunning Strike, Deflect Attacks, Open Hand Technique, and the Grappler and
+      Savage Attacker feats. Save DC 12. His D&amp;D Beyond sheet is the source of truth.
+    </p>
+  </section>
+
+  <section>
+    <h2>His story</h2>
+    <p>
+      He left a quiet halfling homeland young, too confrontational to sit still, and learned to
+      fight as a soldier: cloak-and-dagger work and front-line vanguard alike. He joined Harrow
+      Bane's band as muscle and rose to its middle ranks.
+    </p>
+    <p>
+      The jobs grew seedier. Missions with no briefing led to raids on small villages, with upset
+      kids and broken-up families. The band offered him a promotion to lead a crew. Then came an
+      order to kidnap someone's daughter for ransom. He would rescue a kidnapped girl, but he would
+      never take one. He packed up, told the crew he had "something else to do", walked into
+      Ashford, the town he'd helped raid, laid his weapons down in front of the sheriff's office and
+      surrendered. He hasn't spoken since, because he thinks silence gets fewer people hurt.
+    </p>
+  </section>
+
+  <section>
+    <h2>How he enters</h2>
+    <p class="quote">
+      The last scene of Jeff's season finale, Session 35. The town has set his hanging for noon. The
+      party walks into the cell, and after sizing them up the silent man in the corner finally
+      speaks: "What do you know about it?" Then he holds out a letter.
+    </p>
+    <p>
+      The party opens the letter at the table, and it is what sends them north to Cinto and your
+      run. Tyler gets about half an hour's notice on Discord before his entrance, so he isn't
+      waiting around all night. Bring him in near the end of a session the same way if you need to
+      again.
+    </p>
+  </section>
+
+  <section>
+    <h2>Yours and Tyler's to write</h2>
+    <p>
+      The letter's text, and the reward that makes the party go north. Tyler said he'd message you
+      about it. Jeff's run only needs the letter to exist and be handed over.
+    </p>
+    <p>
+      <b>The leading idea:</b> Shaw has a long-lost half-brother (different fathers): Chocola,
+      Tyson's old character. The letter is from Chocola, saying he's in a prison up north and needs
+      Shaw to break him out, and Tyson comes back as the holiday special.
+    </p>
+    <p class="tentative">
+      Tentative. Nobody remembers Chocola's race, and neither Tyson nor Chocola has a file yet.
+      Tyler also floated, as a joke, that "Santa needs security."
+    </p>
+  </section>
+
+  <section>
+    <h2>What Tyler enjoys</h2>
+    <div class="split">
+      <div>
+        <h3>Give him</h3>
+        <ul>
+          <li>Action-movie beats: the quiet man who suddenly speaks up.</li>
+          <li>Room to find Shaw's quirks at the table rather than writing them ahead.</li>
+          <li>A rescue. Saving someone taken is exactly his thing.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Open hooks</h3>
+        <ul>
+          <li>Ashford wants him hanged. He wants to make it right.</li>
+          <li>Someone else in the band took the kidnapping job.</li>
+          <li>The band may send someone after the deserter who knows its plans.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Still open</h2>
+    <ul>
+      <li>The letter and its reward (you and Tyler).</li>
+      <li>
+        His sheet lists a chain shirt, which would switch off his unarmored AC. He probably carries
+        it rather than wears it. Ask Tyler.
+      </li>
+      <li>
+        The name of his home country, and one person from his soldiering or band days. Tyler hasn't
+        set either.
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    From Jeff. Full notes are in the engine: <i>historian/characters/pcs/Shaw Proudfoot.md</i> and
+    <i>meta/players/Tyler.md</i>.
+  </footer>
+</article>
