@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "The engine's local DM pages: the timeline home page and the session runner, served by `npm run home`.",
+  "description": "The engine's local DM pages: the timeline home page and the session runner, served by `npm --prefix app run app`.",
   "scripts": {
-    "home": "vite --config pages/home/vite.config.ts",
+    "app": "node ../scripts/run.ts up app",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",

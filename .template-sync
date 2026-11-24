@@ -114,6 +114,9 @@ data/spells/*.md
 # Scripts — all engine scripts and shared library (globs, so new scripts ship without an edit here)
 scripts/*.py
 scripts/*.ps1
+scripts/run.ts
+scripts/run.test.ts
+scripts/run.json
 scripts/lib/*.py
 # Orphaned: superseded by scripts/fetch-maps.py, referenced by nothing
 !scripts/inkarnate-fetch.py

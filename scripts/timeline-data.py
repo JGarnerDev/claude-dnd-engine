@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """timeline-data.py -- extract the timeline data blob the home-page charts draw.
-consumers: app/pages/home/campaign-data-plugin.ts (`npm run home`)
+consumers: app/pages/home/campaign-data-plugin.ts (`npm --prefix app run app`)
 
 Reads entity frontmatter (events, sessions, acts, chronicle beats) and prints,
 on one line, the JSON shape app/components/charts/ consumes:

@@ -1312,7 +1312,7 @@ def main() -> None:
     cwrite("")
     cwrite("  -> " + str(out.relative_to(ROOT)).replace("\\", "/"), "cyan")
     cwrite(
-        "  next: uv run scripts/transcribe.py --session "
+        "  next: node scripts/run.ts job transcribe -- --session "
         + str(args.session)
         + "  (re-merges from cache, no re-decode)",
         "darkcyan",

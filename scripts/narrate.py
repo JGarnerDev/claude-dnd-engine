@@ -349,7 +349,7 @@ def seed(npc: str, line: str, voices: str):
         print(
             f"candidate: {(CANDIDATES / f'{base}.mp3').relative_to(ROOT)}  ({len(wav) / SR:.1f}s)"
         )
-    print(f'keep one with: uv run scripts/narrate.py --keep "{npc}=<voice>"')
+    print(f'keep one with: node scripts/run.ts job narrate -- --keep "{npc}=<voice>"')
 
 
 def keep(spec: str):

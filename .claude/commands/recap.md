@@ -201,7 +201,7 @@ Present one numbered item per NPC, stable numbers, so the DM can answer from a p
 
 ## Phase 5.5 — Promote Significant Beats to Events
 
-The home-page charts (`npm run home`) are a player/DM journal plotted from `type: event` entities. After canonizing entities, scan this session's beats for ones worth a standalone event on the timeline.
+The home-page charts (`npm --prefix app run app`) are a player/DM journal plotted from `type: event` entities. After canonizing entities, scan this session's beats for ones worth a standalone event on the timeline.
 
 Apply the **hybrid promotion rule** (`meta/events.md` — read it once if not already in context): a beat earns its own event if **either** it changed canon (a death, pact, location lost/founded, faction shift a later session will reference) **or** it was simply memorable at the table (a great fight, betrayal, clutch reveal). Favor inclusion; low-stakes-but-fun beats ride as `importance: minor`.
 

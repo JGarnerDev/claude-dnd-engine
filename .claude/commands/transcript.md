@@ -24,14 +24,14 @@ The transcript is large (a four-hour session runs 30–50k words). Read it in ch
 ## Phase 1 — Locate the Transcript
 
 ```text
-uv run scripts/transcribe.py --list
+node scripts/run.ts job transcribe -- --list
 ```
 
 - If a transcript exists at `recaps/transcripts/<slug>.md`, use it.
 - If only audio exists and `--transcribe` was passed, run it now — a four-hour multi-track session takes roughly 15–25 minutes on GPU:
 
   ```text
-  uv run scripts/transcribe.py --session <n>
+  node scripts/run.ts job transcribe -- --session <n>
   ```
 
 - If only audio exists and `--transcribe` was *not* passed, say so and stop. Do not start a long transcription run the DM did not ask for.

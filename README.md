@@ -38,10 +38,11 @@ The index is stored locally in `vector-index/` (gitignored) and must be built on
 The timeline and the session runner are a React app in `app/`, served by the Vite dev server. It needs Node and npm.
 
 ```bash
-cd app
-npm install   # needs a GitHub token for jeff-ui; see below
-npm run home  # opens the timeline; the runner is at /session.html
+npm --prefix app install   # needs a GitHub token for jeff-ui; see below
+npm --prefix app run app   # opens http://localhost:5177/; the runner is at /session.html
 ```
+
+`scripts/run.ts` (Node 24) starts the server, or reuses it if it's already running, so there is only ever one. `node scripts/run.ts list` shows what's running and `stop app` stops it. `npm run app` from inside `app/` does the same.
 
 `npm install` pulls the shared UI library `jeff-ui`, the private package `@jgarnerdev/jeff-ui` on GitHub Packages (pinned in `app/package.json`; `app/.npmrc` points npm at the registry). Before the first install:
 
@@ -169,7 +170,7 @@ After you play a session:
 The group records sessions instead of taking notes. Drop the recording in `recaps/audio/` — a folder of per-speaker tracks (Craig-style multi-track) or a single mixed file — then:
 
 ```text
-uv run scripts/transcribe.py --session 26
+node scripts/run.ts job transcribe -- --session 26
 /transcript 26
 /recap
 ```
@@ -187,8 +188,8 @@ Optional: a `speakers.tsv` in the audio folder maps track filenames to real name
 **If two players share one microphone** (one of them is at the other's house), label that track with both names in `speakers.tsv` so no line is falsely attributed, then optionally split it by voice:
 
 ```text
-uv run scripts/diarize-track.py --session 27 --track 1-eljeffe0024 --speakers "Jeff (Iggy),Paul (Luci)" --refs "26,28"
-uv run scripts/transcribe.py --session 27
+node scripts/run.ts job diarize -- --session 27 --track 1-eljeffe0024 --speakers "Jeff (Iggy),Paul (Luci)" --refs "26,28"
+node scripts/run.ts job transcribe -- --session 27
 ```
 
 The first command embeds each already-transcribed utterance with ECAPA-TDNN and matches it to each player's voiceprint, taken from sessions where they had their own track (`--refs`). Without `--refs` it clusters the voiceprints instead and names each cluster from evidence in the room: the DM calling a player by name, and class vocabulary only one character would use. That naming step is the fragile part, which is why `--refs` is preferred. It writes a sidecar that the second command stamps onto the transcript; re-merging reads the cache, so nothing is re-decoded. Utterances too short or too ambiguous to call keep the joint label rather than a guess. First run downloads the ECAPA model (~80 MB) and a CPU torch wheel.
@@ -328,7 +329,7 @@ Minimum viable prep: one active `campaign`, an active act, a handful of seeded e
 
 ### After Playing
 
-1. If the session was recorded, run `uv run scripts/transcribe.py --session <n>` then `/transcript <n>` to turn the audio into notes
+1. If the session was recorded, run `node scripts/run.ts job transcribe -- --session <n>` then `/transcript <n>` to turn the audio into notes
 2. Run `/recap` to canonize what happened
 3. Session file moves from `scheduler/` to `historian/` with play metadata
 4. Entities used are moved from `data/` to `historian/`

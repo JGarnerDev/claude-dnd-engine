@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.101.0] — 2026-11-23
+
+### Added
+
+- **One copy of each server and long job** (`scripts/run.ts`, config `scripts/run.json`, tests `scripts/run.test.ts`; needs Node 24). `npm --prefix app run app` (`node scripts/run.ts up app`) starts the DM pages or reuses the running server; `job transcribe|diarize|narrate -- <args>` refuses to start a second copy, naming the one running; `list` and `stop <name>` manage them. Hooks in `.claude/settings.json`: a PreToolUse hook blocks direct starts and names the `run.ts` form, and SessionEnd stops the servers that session started (`--keep` survives). Registry and logs live in `.run/` (gitignored).
+
+### Changed
+
+- **Breaking:** `app/package.json`'s `home` script is replaced by `app`, the one start script (`npm --prefix app run app`, or `npm run app` inside `app/`).
+- **The DM pages have a fixed port, 5177** (`app/pages/home/vite.config.ts`, `strictPort`), so a second server fails instead of drifting to the next port. Docs, commands and script hints use the `run.ts` forms.
+
 ## [0.100.0] — 2026-11-23
 
 ### Added

@@ -208,36 +208,26 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
   including the moments you lived and didn't hear. Iggy first.
 - **Say:**
 
-> *"Go back to the yard. Iggy, you're at seven, an arrow in you, and the griffon is a shadow in
-> the cloud. Something in you stands up. Your eyes go white-gold, all the way across, and two
-> wings unfold out of your back, wide and luminous, the light off them strong enough to throw
-> every shadow in the yard the other way. Your copper hair lifts as if there's a wind only you
-> are standing in."*
+> *"The drover sees it first. The kid with the arrow in him, the one on his knees by the cart,
+> gets up. His eyes have gone white-gold. Then the wings, and every shadow in the yard swings the
+> other way."*
 >
-> *"And every crystal within three hundred feet speaks at once: yours, the crew's, the one at
-> Nella's throat. An old voice, level and unhurried, like a sergeant who has said it a hundred
-> times on a hundred drill yards. 'Up, Wallaed.'"*
+> *"Then the crystals talk. Every one in the yard at once: the drover's, the cask-hands', the
+> one at Nella's throat. 'Up, Wallaed.' The drover drops his in the dirt."*
 >
-> *"You go up. The cloud lights from underneath, and the griffon is a dark shape on white. When
-> your blade finds it, the smite goes off like a bell in a library: warm, steadying, the feeling
-> of a hand on your shoulder. Under the warmth there's something else, a wrong note, a chord
-> held a beat too long. And under your breath, without meaning to, you say two names. Caelion.
-> Liora."*
+> *"Iggy, you go up. The griffon is a dark shape on lit cloud, and your blade finds it. The
+> smite lands warm, with a thread of cold under it. You're saying two names you didn't mean to
+> say. Caelion. Liora."*
 
-- **Say (to Odibli):** *"From under the cart, you see the light go across the yard, and for a
-  heartbeat there's writing in it, margin notes in a hand you almost know, there and gone."*
-- **Say (to Halsby):** *"The light takes your shadow and pins it hard and short under your feet,
-  darker than it should be, and grey at the edges. Then it lets go."*
+- **Say (to Odibli):** *"From under the cart you see the light cross the yard. The crystal in
+  your pocket says it too: 'Up, Wallaed.'"*
+- **Say (to Halsby):** *"The light pins your shadow short and hard under your feet, darker than
+  it should be. Then it lets go."*
 - **Private (Dip):** what Dip sees
-  - **The message:** Your eye is trained to see the world as one face of many. When the wings
-    open, it all goes thin. Behind Iggy you see an old soldier, tall and very tired, one hand on
-    Iggy's shoulder, the other at his side, ink to the wrist. Behind him, shelves. Shelves that
-    go up out of sight, half of them empty, the books on the rest scorched at the spines. A
-    sealed letter turns slowly in the air between them, a wax seal stamped with an open book.
-    And under it all, a song, not finished, the last line still waiting. It's the same thing you
-    saw at the hearth, the innermost doll. It lives in Iggy. Then the threads come loose and it's
-    a yard again, on fire. For a moment you felt your own hands too, the many that push you, all
-    of them reaching for him. Hers still aren't among them.
+  - **The message:** When the wings open, the yard goes thin. Behind Iggy stands an old soldier,
+    tall and very tired, one hand on Iggy's shoulder. It's the same thing you saw at the hearth,
+    the innermost doll, and it lives in Iggy. Then it's a yard again, on fire. For a moment you
+    felt the hands that push you, all of them reaching for him. Hers still aren't among them.
 - **What stays hidden:** what Sah is, why the crystals carried him, anything about the Lioness
   hearth beyond Dip's private. Nobody says the name Sah but Iggy. If someone asks Iggy who that
   was, it's his answer.
@@ -1372,7 +1362,7 @@ reach · what the order doesn't like at [[Tassad]].
     `S35_27_BUILD`). Carry the job to Ben's first sessions.
 - **For `/recap`:**
   - **New canon if played:** the recap's details (the wings and Iggy's look in them, the
-    whispered names, Dip's vision of the old soldier and the shelves, the Citadel's cold as a pen
+    whispered names, Dip's vision of the old soldier, the Citadel's cold as a pen
     stopping, Halsby's cold hands) · Sah's voice through the crystals ("Up, Wallaed") · Nella's
     whistle as Tithe died · the hood on the willow · Spike Growth and the staked line on the
     south bank · the ledger in a tin box, charred but readable · Vey's order in a brass tube ·

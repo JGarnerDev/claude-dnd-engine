@@ -36,12 +36,12 @@ For each named NPC marked `NOT CAST` who has lines in the target:
    the NPC's own plan lines, then run:
 
    ```powershell
-   uv run scripts/narrate.py --seed "<NPC>" --voices <a,b,c> --line "<their line>"
+   node scripts/run.ts job narrate -- --seed "<NPC>" --voices <a,b,c> --line "<their line>"
    ```
 
 2. Give the DM the three candidate MP3 paths and ask which to keep: one question, the three
    voices plus "narrator voices them for now".
-3. On a pick, run `uv run scripts/narrate.py --keep "<NPC>=<voice>"` and add the NPC's row to
+3. On a pick, run `node scripts/run.ts job narrate -- --keep "<NPC>=<voice>"` and add the NPC's row to
    `narration/cast.md` with settings from the core and `from:` set to the core.
 
 Several new NPCs: seed them all in one go, then ask about them one per message.
@@ -64,7 +64,7 @@ Run in the background (a 5-minute take renders in a few minutes on the GPU; the 
 downloads the models):
 
 ```powershell
-uv run scripts/narrate.py --script narration/scripts/<take>.md [--force]
+node scripts/run.ts job narrate -- --script narration/scripts/<take>.md [--force]
 ```
 
 When it finishes, report the take path and length, and a line on what the forks covered. A

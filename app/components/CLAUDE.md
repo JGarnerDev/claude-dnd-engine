@@ -1,6 +1,6 @@
 # Frontend components — working rules
 
-Auto-loaded when working under `app/components/`. These are the React components (charts, widgets) for the engine's local DM pages (`app/pages/home/`), served by the Vite dev server (`npm run home`). All JS/TS tooling (`components/`, `pages/`, `package.json`, the configs) lives under `app/`; run `npm` from there. The campaign content (`data/`, `historian/`, `scheduler/`, `meta/`, `maps/`) and the PowerShell engine scripts (`scripts/`) stay at the repo root, one level up. There is no build step: the pages run only under the dev server.
+Auto-loaded when working under `app/components/`. These are the React components (charts, widgets) for the engine's local DM pages (`app/pages/home/`), served by the Vite dev server (`npm --prefix app run app`). All JS/TS tooling (`components/`, `pages/`, `package.json`, the configs) lives under `app/`; run `npm` from there. The campaign content (`data/`, `historian/`, `scheduler/`, `meta/`, `maps/`) and the PowerShell engine scripts (`scripts/`) stay at the repo root, one level up. There is no build step: the pages run only under the dev server.
 
 ## TypeScript and React
 
@@ -30,7 +30,7 @@ Each chart is its own folder under `components/charts/`; its root component is n
 - `_common/helpers/` — pure logic shared by more than one chart (+ specs). `items.ts` turns indexed events into jeff-ui chart items, spans and breaks.
 - `_common/components/` — the CSS for the shared widgets (`filterbar.css`, `savedviews.css`, `settingspanel.css`).
 - `_common/constants.ts` (static data) and `_common/types.ts` (shared types).
-- `app/pages/home/` (sibling of `app/components/` — not under `components/`) — the timeline home page (`main.tsx` → `TimelineView.tsx`) and the session runner (`session/`, `main.tsx` → `Runner.tsx`), fed by the live campaign graph through the data plugins. This is the Vite root (see `app/pages/home/vite.config.ts`) and what `npm run home` opens; it imports the charts via `../../components/charts/…`.
+- `app/pages/home/` (sibling of `app/components/` — not under `components/`) — the timeline home page (`main.tsx` → `TimelineView.tsx`) and the session runner (`session/`, `main.tsx` → `Runner.tsx`), fed by the live campaign graph through the data plugins. This is the Vite root (see `app/pages/home/vite.config.ts`) and what `npm --prefix app run app` opens; it imports the charts via `../../components/charts/…`.
 
 ### Shared widgets: jeff-ui
 
@@ -69,4 +69,4 @@ Both charts save/load named UI snapshots through one shared contract — don't r
 
 ## No build step
 
-The pages run only under the dev server (`npm run home`); nothing is built or shipped. The charts read the campaign data through the Vite data plugins (`campaign-data-plugin.ts`, `session-data-plugin.ts`), which run the Python extractors and cache the result until a watched campaign file changes. The old self-contained HTML build was removed in 0.74.0.
+The pages run only under the dev server (`npm --prefix app run app`); nothing is built or shipped. The charts read the campaign data through the Vite data plugins (`campaign-data-plugin.ts`, `session-data-plugin.ts`), which run the Python extractors and cache the result until a watched campaign file changes. The old self-contained HTML build was removed in 0.74.0.

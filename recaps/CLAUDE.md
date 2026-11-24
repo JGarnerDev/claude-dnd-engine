@@ -12,14 +12,14 @@ Domain rules for session recordings, transcripts and the recap inbox. Auto-loade
 
 Three steps, each with a human checkpoint:
 
-1. `uv run scripts/transcribe.py --session <n>` → `recaps/transcripts/session-<n>.md`
+1. `node scripts/run.ts job transcribe -- --session <n>` → `recaps/transcripts/session-<n>.md`
 2. `/transcript <n>` → `recaps/inbox/session-<n>.md`, digested notes shaped for `/recap`'s Phase 2 questions
 3. `/recap` → historian, DM-supervised as always
 
 Scripts:
 
-- `uv run scripts/transcribe.py [--session <n>] [--list] [--force]` — speaker-labeled transcript. Multi-track needs no diarization; decoding is biased toward canon names
-- `uv run scripts/diarize-track.py --session <n> --track <stem> --speakers "A,B" [--refs "<n>,<n>"] [--export-key <N>] [--dry-run]` — split one track that carries two or more speakers. Embeds each cached utterance with ECAPA-TDNN. With `--refs`, matches each line to voiceprints from those sessions' solo tracks. Without it, clusters by voice and names clusters from DM turn-anchors and class vocabulary
+- `node scripts/run.ts job transcribe -- [--session <n>] [--list] [--force]` — speaker-labeled transcript. Multi-track needs no diarization; decoding is biased toward canon names
+- `node scripts/run.ts job diarize -- --session <n> --track <stem> --speakers "A,B" [--refs "<n>,<n>"] [--export-key <N>] [--dry-run]` — split one track that carries two or more speakers. Embeds each cached utterance with ECAPA-TDNN. With `--refs`, matches each line to voiceprints from those sessions' solo tracks. Without it, clusters by voice and names clusters from DM turn-anchors and class vocabulary
 - `uv run scripts/diarize-bench.py --session <n> --tracks "<stem>,<stem>" [--method cluster|refs] [--ref-sessions "<n>,<n>"]` — scores a split method on a fake shared mic, built by mixing solo tracks, so every line has a known speaker. Use it before changing any split setting
 
 **A transcript is a source, not canon.** It mishears proper nouns, drops quiet speakers, and cannot tell a joke from a plan. Everything derived from one carries confidence marks (`(?)`, `(??)`) into the inbox note, and the DM resolves them during `/recap`. Never canonize straight from a transcript.

@@ -1,0 +1,39 @@
+{
+  "$comment": "Dev servers and long jobs for scripts/run.ts. `npm run app` (in app/) runs `up app`: the DM pages. A server's url has a fixed port (also in its Vite config, with strictPort: true; the hub's CLAUDE.md lists every project's ports). A server's command calls the tool directly, never an npm script that comes back here. Each guard pattern is a regex for a command that would start one of these directly; the PreToolUse hook blocks it and suggests `use`.",
+  "servers": {
+    "app": {
+      "command": "cd app && npx vite --config pages/home/vite.config.ts",
+      "url": "http://localhost:5177/",
+      "timeout_s": 90
+    }
+  },
+  "jobs": {
+    "transcribe": {
+      "command": "uv run scripts/transcribe.py"
+    },
+    "diarize": {
+      "command": "uv run scripts/diarize-track.py"
+    },
+    "narrate": {
+      "command": "uv run scripts/narrate.py"
+    }
+  },
+  "guard": [
+    {
+      "pattern": "^(npx |npm exec )?vite( (?!build\\b)|$)",
+      "use": "npm --prefix app run app"
+    },
+    {
+      "pattern": "^uv run \"?\\S*scripts/transcribe\\.py\\b",
+      "use": "node scripts/run.ts job transcribe -- <args>"
+    },
+    {
+      "pattern": "^uv run \"?\\S*scripts/diarize-track\\.py\\b",
+      "use": "node scripts/run.ts job diarize -- <args>"
+    },
+    {
+      "pattern": "^uv run \"?\\S*scripts/narrate\\.py\\b",
+      "use": "node scripts/run.ts job narrate -- <args>"
+    }
+  ]
+}

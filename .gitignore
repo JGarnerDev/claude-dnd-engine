@@ -66,3 +66,6 @@ narration/.cache/
 # Local-only Claude instructions and generated music (not shared)
 CLAUDE.local.md
 music/
+
+# Registry and logs of scripts/run.ts
+.run/

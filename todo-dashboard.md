@@ -26,6 +26,10 @@
 
 Ordered for the first homebrew session (game night Tuesday 2026-10-06). Top items block the ones below them.
 
+### High priority — Iggy's backstory leans too hard on the Library
+
+- **102.** 🤝 **Jeff** — **cut back the library and book imagery in Iggy's backstory** (Jeff, 2026-11-23). Threnai's Library is where he comes from. It shouldn't be a theme that follows him everywhere, and because generated beats draw on `historian/characters/pcs/Iggy.md`, they keep handing him shelves, ink and seals (the Session 35 recap had to be rewritten for this). The file has 14 mentions. The ones that shape his character: the frontmatter `description` ("library-plane"), the "Micro-reverence for records" quirk, the courier run (a sealed order with an open-book seal, the archivist's ink-stained sleeves and shelves), and the two spotlight hooks that name the Library. Claude drafts a trimmed pass for Jeff to approve, keeping the Library as a place in the history without making it his imagery. Check `scheduler/arcs/Iggy PC Arc.md` and `historian/deities/Sah.md` for the same thing. Until then, keep library and book imagery out of anything written about Iggy.
+
 ### Session 30 prep — Keep the Ale
 
 Plan drafted 2026-10-07 at `scheduler/sessions/Session 30 Keep the Ale/`. These block the table.

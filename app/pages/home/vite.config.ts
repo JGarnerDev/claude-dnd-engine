@@ -1,8 +1,9 @@
 // Dev config for pages/home — the user-facing timeline view fed by the LIVE
 // campaign graph.
 //
-// `npm run home` -> vite serves this with the campaign-data plugin, which runs
-// scripts/timeline-data.py under the hood and hot-reloads on entity edits.
+// `npm --prefix app run app` -> vite serves this with
+// the campaign-data plugin, which runs scripts/timeline-data.py under the hood
+// and hot-reloads on entity edits.
 // /session.html is the session runner (session/), fed by the session-data plugin.
 // No build step: these pages are a local DM tool, served only by this dev server.
 
@@ -22,6 +23,10 @@ export default defineConfig({
   plugins: [react(), reactCompiler(), campaignData(repoRoot), sessionData(repoRoot)],
   optimizeDeps,
   server: {
+    // Fixed port, shared with scripts/run.json: a second copy fails instead of
+    // drifting to the next port. Start it with `npm --prefix app run app`.
+    port: 5177,
+    strictPort: true,
     open: true,
     // home imports charts from components/ and opens source .md via /@fs/ —
     // both live outside the page root, so allow the whole repo.

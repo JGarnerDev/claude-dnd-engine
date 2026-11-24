@@ -6,7 +6,7 @@
 //
 // In `vite dev` it also watches the three graph layers (data/ historian/
 // scheduler/); editing any .md re-extracts and full-reloads the page. So the DM
-// runs `npm run home` once and the page tracks the campaign with zero steps.
+// runs `npm run app` once and the page tracks the campaign with zero steps.
 
 import { resolve, sep } from "node:path";
 import type { Plugin } from "vite";
