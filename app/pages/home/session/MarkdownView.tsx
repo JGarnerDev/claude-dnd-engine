@@ -2,7 +2,7 @@
 // prose, <InlineMd> one line of it. `text` lets a caller swap plain text runs for
 // something richer (dice buttons in a stat block); it never sees text inside a
 // link or `code`, as rollableHtml never did. Under a RefContext, beat ids, card paths
-// and "Scene N" become chips (RefChips.tsx). `spoken` gives an *"italic quote"* the
+// and "Scene N" become chips (RefChips.tsx). `spoken` gives a *"quote"* in emphasis the
 // read-aloud face, as the prompt book's blocks do.
 
 import { createContext, Fragment, useContext, type ReactNode } from "react";

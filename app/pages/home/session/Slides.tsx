@@ -189,6 +189,7 @@ export function Slides({
       ref={el}
       className="sr-slides"
       data-theme="ink"
+      data-density="comfortable"
       role="dialog"
       aria-label={label}
       onClick={onClick}

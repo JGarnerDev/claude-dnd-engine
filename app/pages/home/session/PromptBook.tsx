@@ -3,7 +3,7 @@
 // a glance, in plan order:
 //
 //   You      for the DM to read: what's true, what happens, how to run it (plain sans)
-//   Say      for the players: read-aloud quotes and spoken lines (serif italic)
+//   Say      for the players: read-aloud quotes and spoken lines (upright serif)
 //   Time     the clock moves: `Time passes:` (night falls, the next morning, two weeks)
 //   Do       at the table or in Roll20: tokens, music, title cards, HP to set (mono)
 //   Watch    conditional: "When …", "If …", "Once …", what triggers what

@@ -202,6 +202,7 @@
 .sr-md .sr-say {
   font-family: var(--ui-font-serif);
   color: var(--ui-text);
+  font-style: normal; /* upright: read-aloud text is the clearest on the page (style pass D2) */
   font-size: var(--ui-font-size-md);
   line-height: var(--ui-line-height-loose);
 }

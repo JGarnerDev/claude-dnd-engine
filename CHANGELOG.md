@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.104.0] — 2026-11-24
+
+### Changed
+
+- **jeff-ui 2.6.0** (`app/package.json`; 2.5.0 calmed the other apps' themes and changes nothing here). The DM pages and the runner are **compact** (`data-density="compact"` on both pages' `<html>`): about 32px controls and a tighter type and spacing scale for a desk (style pass step 5, todo 103). Slides stay `comfortable` until the TV step.
+- **SAY is upright** (`session.css`): the spoken quotes were still italic through their `<em>`; read-aloud text now sets `font-style: normal`, as decided (D2).
+
 ## [0.103.0] — 2026-11-23
 
 ### Changed
