@@ -581,3 +581,25 @@
     left: 1px;
   }
 }
+
+/* Side panel rows (Panel.tsx, style pass step 8): flush rows in divided lists. A
+   PC's status and class each take one muted line under the name. */
+.sr-pc-status,
+.sr-pc-class {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sr-pc-class {
+  font-size: var(--ui-font-size-xs);
+}
+
+/* An entity (EntityView.tsx): the file link ends the tag row; field lines from the
+   body read as a definition list */
+.sr-ent-tags .sr-openfile {
+  margin-inline-start: auto;
+  font-size: var(--ui-font-size-xs);
+}
+.sr-ent-fields {
+  margin-block: var(--ui-space-2);
+}

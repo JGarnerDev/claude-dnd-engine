@@ -1,6 +1,7 @@
 // One entity, opened in the side panel: layer badge, description, this session's
 // quick-ref for it (when the plan has one), frontmatter fields, then the body,
-// fetched (entity-fetch.ts) once the header is up.
+// fetched (entity-fetch.ts) once the header is up. The body's "Key: value | …" lines
+// show as definition lists (field-lines.ts).
 
 import { useEffect, useState } from "react";
 import {
@@ -17,6 +18,7 @@ import {
   Text,
 } from "jeff-ui";
 import { fetchEntity, LAYER_LABEL } from "./entity-fetch.js";
+import { splitFieldLines } from "./field-lines.js";
 import { splitEntity } from "./frontmatter.js";
 import { LAYER_HUE } from "./hues.js";
 import { InlineMd, Markdown } from "./MarkdownView.js";
@@ -36,7 +38,7 @@ export function EntityHeader({
   return (
     <Column gap={2} className="sr-ent-head">
       <Heading level={2}>{e.name}</Heading>
-      <Row gap={1}>
+      <Row gap={1} className="sr-ent-tags">
         <Badge className="sr-layer" data-layer={layer} hue={LAYER_HUE[layer]}>
           {LAYER_LABEL[layer] ?? layer}
         </Badge>
@@ -45,6 +47,13 @@ export function EntityHeader({
             {c}
           </Badge>
         ))}
+        <Link
+          className="sr-openfile"
+          href={`vscode://file/${encodeURI(`${root}/${e.path}`)}`}
+          title={e.path}
+        >
+          Open in VS Code
+        </Link>
       </Row>
       {e.description && (
         <Text>
@@ -59,11 +68,6 @@ export function EntityHeader({
           <Markdown md={quickRef} />
         </Box>
       )}
-      <Text size="xs">
-        <Link className="sr-openfile" href={`vscode://file/${encodeURI(`${root}/${e.path}`)}`}>
-          Open in VS Code
-        </Link>
-      </Text>
     </Column>
   );
 }
@@ -73,7 +77,7 @@ export function EntityBody({ text }: { text: string }) {
   return (
     <>
       {fields.length > 0 && (
-        <Disclosure className="sr-fields" title="Fields">
+        <Disclosure variant="flush" className="sr-fields" title="Fields">
           <DescriptionList
             items={fields.map(([k, v]) => ({
               term: k.replace(/_/g, " "),
@@ -92,9 +96,20 @@ export function EntityBody({ text }: { text: string }) {
           />
         </Disclosure>
       )}
-      <Prose className="sr-md">
-        <Markdown md={body} />
-      </Prose>
+      {splitFieldLines(body).map((part, i) =>
+        part.kind === "md" ? (
+          <Prose key={i} className="sr-md">
+            <Markdown md={part.md} />
+          </Prose>
+        ) : (
+          <DescriptionList
+            key={i}
+            layout="inline"
+            className="sr-ent-fields"
+            items={part.items.map(([term, value]) => ({ term, value: <InlineMd md={value} /> }))}
+          />
+        ),
+      )}
     </>
   );
 }

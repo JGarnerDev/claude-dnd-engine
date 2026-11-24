@@ -132,3 +132,30 @@ export function searchEntities(query: string, entities: EntityRef[], limit = 30)
     .slice(0, limit)
     .map((x) => x.e);
 }
+
+/** Why an entity matched a search, as searchEntities scores it: its name, an alias, or its description. */
+export type EntityMatch =
+  { field: "name" } | { field: "alias"; text: string } | { field: "description"; text: string };
+
+export function entityMatch(e: EntityRef, query: string): EntityMatch | null {
+  const q = query.trim().toLowerCase();
+  if (!q) return null;
+  if (e.name.toLowerCase().includes(q)) return { field: "name" };
+  const alias = e.aliases.find((a) => a.toLowerCase().includes(q));
+  if (alias) return { field: "alias", text: alias };
+  if (e.description.toLowerCase().includes(q)) return { field: "description", text: e.description };
+  return null;
+}
+
+/** The part of `text` around the first `query`, led by "…" when cut, so a one-line row shows the match. */
+export function excerptAround(
+  text: string,
+  query: string,
+  { beforeChars = 24 }: { beforeChars?: number } = {},
+): string {
+  const at = text.toLowerCase().indexOf(query.trim().toLowerCase());
+  if (at <= beforeChars) return text;
+  const cut = text.lastIndexOf(" ", at - beforeChars);
+  const start = cut > 0 ? cut + 1 : at - beforeChars;
+  return `…${text.slice(start)}`;
+}

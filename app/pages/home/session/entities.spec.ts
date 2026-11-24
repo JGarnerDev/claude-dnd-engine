@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { findMentions, makeResolver, mentionIndex, searchEntities } from "./entities.js";
+import {
+  entityMatch,
+  excerptAround,
+  findMentions,
+  makeResolver,
+  mentionIndex,
+  searchEntities,
+} from "./entities.js";
 import type { EntityRef } from "./types.js";
 import { fixture } from "./fixture-data.js";
 
@@ -66,5 +73,29 @@ describe("searchEntities", () => {
     expect(searchEntities("a", ents)[0].name).toBe("Ashford");
     expect(searchEntities("lioness", ents).map((e) => e.name)).toEqual(["Sable Wren"]);
     expect(searchEntities("  ", ents)).toEqual([]);
+  });
+});
+
+describe("entityMatch", () => {
+  const e = ent("Nella", "historian/characters/Nella.md", {
+    aliases: ["The Bowwoman"],
+    description: "Bandit lieutenant, a human ranger who rides with the griffon",
+  });
+  it("names the field that matched, in searchEntities' order", () => {
+    expect(entityMatch(e, "nel")).toEqual({ field: "name" });
+    expect(entityMatch(e, "bowwoman")).toEqual({ field: "alias", text: "The Bowwoman" });
+    expect(entityMatch(e, "griffon")).toEqual({ field: "description", text: e.description });
+    expect(entityMatch(e, "dragon")).toBeNull();
+  });
+});
+
+describe("excerptAround", () => {
+  it("keeps short leads whole and cuts long ones at a word", () => {
+    expect(excerptAround("A griffon", "griffon")).toBe("A griffon");
+    expect(
+      excerptAround("Bandit lieutenant, a human ranger who rides with the griffon", "griffon", {
+        beforeChars: 10,
+      }),
+    ).toBe("…with the griffon");
   });
 });

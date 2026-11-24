@@ -9,9 +9,12 @@
 // folds to a thin rail and slides over the notes when something opens. The pin
 // button (or `\`) docks or hides it whatever the width, and is remembered.
 //
+// Rows are flush, in divided lists (style pass step 8): one line per row, a muted
+// line under it, no box per row.
+//
 // usePanel.ts holds the panel's state and what the runner calls (open, escape, …).
 
-import { useLayoutEffect, useRef, type ReactNode } from "react";
+import { Children, useLayoutEffect, useRef, type ReactNode } from "react";
 import {
   Badge,
   Box,
@@ -22,12 +25,13 @@ import {
   Heading,
   Icon,
   IconButton,
+  List,
   Prose,
   Row,
   RowButton,
   Text,
 } from "jeff-ui";
-import { searchEntities, type Resolver } from "./entities.js";
+import { entityMatch, excerptAround, searchEntities, type Resolver } from "./entities.js";
 import { EntityView } from "./EntityView.js";
 import { LAYER_HUE, VOICE_HUE } from "./hues.js";
 import { LAYER_LABEL } from "./entity-fetch.js";
@@ -72,9 +76,20 @@ function group(title: string, children: ReactNode[]) {
         <Heading level={3} variant="eyebrow" className="sr-group">
           {title}
         </Heading>
-        {children}
+        <Rows>{children}</Rows>
       </>
     )
+  );
+}
+
+// Panel rows: flush RowButtons, one per item of a divided list.
+function Rows({ children }: { children: ReactNode[] }) {
+  return (
+    <List variant="divided" gap={0} className="sr-rows">
+      {Children.map(children, (c) => (
+        <li>{c}</li>
+      ))}
+    </List>
   );
 }
 
@@ -82,7 +97,7 @@ function Fold({ title, children }: { title: string; children: ReactNode[] }) {
   return (
     children.length > 0 && (
       <Disclosure className="sr-pn-fold" title={title} count={children.length}>
-        {children}
+        <Rows>{children}</Rows>
       </Disclosure>
     )
   );
@@ -115,14 +130,15 @@ export function Panel(props: PanelProps) {
 
   // Name and key default inside the body: React Compiler cannot compile a
   // default parameter that reads another parameter's field.
-  const row = (e: EntityRef, name?: ReactNode, key?: string | number) => (
+  const row = (e: EntityRef, name?: ReactNode, sub?: ReactNode) => (
     <RowButton
-      key={key ?? e.name}
+      key={e.name}
+      variant="flush"
       className="sr-ent"
       data-entity={e.name}
       onClick={() => p.openEntity(e.name, fresh)}
       title={<span className="sr-ent-name">{name ?? e.name}</span>}
-      sub={e.description ? plainText(e.description) : undefined}
+      sub={sub ?? (e.description ? plainText(e.description) : undefined)}
       end={
         <Text as="span" size="xs" tone="muted">
           {[e.type, e.subtype, LAYER_LABEL[e.path.split("/")[0]]].filter(Boolean).join(" · ")}
@@ -139,6 +155,7 @@ export function Panel(props: PanelProps) {
   ) => (
     <RowButton
       key={key}
+      variant="flush"
       className="sr-pn-row"
       {...attr}
       onClick={onClick}
@@ -174,15 +191,22 @@ export function Panel(props: PanelProps) {
           data.party.map((m) => (
             <RowButton
               key={m.name}
+              variant="flush"
               className="sr-pc"
               data-entity={m.name}
               onClick={() => p.openEntity(m.name, fresh)}
               title={<span className="sr-pc-name">{m.name}</span>}
-              sub={m.status ? <InlineMd md={m.status} /> : undefined}
-              end={
-                <Text as="span" size="xs" tone="muted">
-                  {m.raceClass} · L{m.level} · {m.player}
-                </Text>
+              sub={
+                <>
+                  {m.status && (
+                    <span className="sr-pc-status">
+                      <InlineMd md={m.status} />
+                    </span>
+                  )}
+                  <span className="sr-pc-class">
+                    {m.raceClass} · L{m.level} · {m.player}
+                  </span>
+                </>
               }
             />
           )),
@@ -202,7 +226,22 @@ export function Panel(props: PanelProps) {
 
   const results = () => {
     const hl = (s: string) => marked(s, q);
-    const ents = searchEntities(q, data.entities, 12); // few enough that the beats below stay in reach
+    // Sessions fold away under their own heading, so a run of "Session 31 The Red
+    // Trail", "Session 32 The Red Trail", … can't push people and places out of reach.
+    const isSession = (e: EntityRef) => e.type === "session";
+    const ents = searchEntities(
+      q,
+      data.entities.filter((e) => !isSession(e)),
+      12,
+    ); // few enough that the beats below stay in reach
+    const sessionHits = searchEntities(q, data.entities.filter(isSession), 12);
+    // A row's muted line says why it matched: the alias, or the description around the hit.
+    const why = (e: EntityRef) => {
+      const m = entityMatch(e, q);
+      if (m?.field === "alias") return <>aka {hl(m.text)}</>;
+      if (m?.field === "description") return hl(excerptAround(plainText(m.text), q));
+      return undefined;
+    };
     const flow = searchFlow(data, refs, q);
     const answers = searchMysteries(q, mysteries);
     const ql = q.toLowerCase();
@@ -229,13 +268,16 @@ export function Panel(props: PanelProps) {
               · {h.sub}
             </>,
           );
-    if (!ents.length && !flow.length && !answers.length && !secs.length)
+    if (!ents.length && !sessionHits.length && !flow.length && !answers.length && !secs.length)
       return <EmptyState className="sr-empty">No matches for “{q}”.</EmptyState>;
     return (
       <>
         {group(
           "People and places",
-          ents.map((e) => row(e, hl(e.name))),
+          ents.map((e) => row(e, hl(e.name), why(e))),
+        )}
+        {sessionHits.length > 0 && (
+          <Fold title="Sessions">{sessionHits.map((e) => row(e, hl(e.name), why(e)))}</Fold>
         )}
         {group("Beats and scenes", flow.map(hit))}
         {group(

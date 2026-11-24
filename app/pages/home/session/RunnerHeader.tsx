@@ -30,7 +30,7 @@ export function RunnerHeader({ name, date, p, onBack, onCopy, onRestart }: Runne
           id={p.searchId}
           className="sr-searchbox"
           label="Search people, places, beats and mysteries"
-          placeholder="Search people, places, beats, mysteries"
+          placeholder="Search the session"
           shortcut="/"
           value={p.query}
           onChange={p.setQuery}

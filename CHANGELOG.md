@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.106.0] — 2026-11-24
+
+### Changed
+
+- **The side panel is tidier** (`Panel.tsx`, `EntityView.tsx`, `RunnerHeader.tsx`, `session.css`, new `session/field-lines.ts`; style pass step 8, todo 103). Panel rows are flush, divided list rows. A PARTY row is name, then status, then a small `race class · L5 · player` line, so nothing squashes. An entity's "Key: value | Key: value" body lines render as a field list instead of a run-on paragraph (parsed at render; the files are untouched). The "Open in VS Code" link sits on the tag row. Search results say why they matched (an alias, or a highlighted excerpt), and session files fold under one "Sessions" group. The search box placeholder is "Search the session", so it no longer truncates.
+
 ## [0.105.0] — 2026-11-24
 
 ### Changed
