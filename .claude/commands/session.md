@@ -291,6 +291,8 @@ Everyone the plan puts in front of the party gets a real name, walk-ons and name
 
 **Labels set the voice.** The session runner shows each node as a prompt book, one block per bullet, tagged by its bold label: `Tokens:`, `Music:`, `Title card:` or `Set HP…:` is **Do** (the table or Roll20); a label with *read aloud*, *say* or *line(s)*, a bullet that opens on a quoted line, or a `>` quote is **Say**; `Time passes:` is **Time**; `When …:`, `If …:`, `Once …:` or `After …:` is **Watch**; `Choice (…):` is **Choice**; anything else is for the DM. So give each bullet a short label ending in a colon, and put spoken lines in `*"…"*`. Backticked beat ids (`` `S35_07A_ESCAPE` ``) and "Scene N" become links that open in the side panel.
 
+**Rolls the DM makes get dice.** The runner turns a roll into a button when its bonus or dice are written out: `CON save (+1)`, `Stealth +8`, `+4 to hit`, `2d4 piercing`, `a d6 per horse`. Write every roll the DM makes outside a stat block that way (an NPC's concentration save, a hidden Stealth, terrain damage, a heal), taking the bonus from the stat block, in a DM bullet: Say blocks never get buttons. A roll the players make needs only its DC (`Perception DC 13`), which stays plain. When the dice depend on something unsettled, give both (`1d4+4, or 2d4+4 on the 2024 rules`). `node scripts/roll-check.ts --session <NN>` lists what the runner will button and the rolls it can't.
+
 **Party-facing text is a Say block** (Jeff, 2026-11-22). Anything the party hears goes in a Say, so the DM knows at a glance to read it out:
 
 - **Description and narration** the party should hear (a place, a creature, a magic effect, what an NPC does) is a `- **Say:**` bullet followed by a `> *"…"*` quote, or a `- **Say:** *"…"*` line.

@@ -1,7 +1,8 @@
-// Dice rollers for enemy stat lines (pure). `rollTokens` finds every rollable token
-// in a run of text: "+4 to hit" and "beak +6, 1d8+4" roll a d20 attack, "1d6+2" and
-// "+2d6 (7)" roll damage, "Perception +5", "WIS +3" and a save note ("WIS save DC 13
-// (it has +3)") roll a d20 check. Dice.tsx draws them as buttons; Scene keeps the log.
+// Dice rollers for stat lines and beat prose (pure). `rollTokens` finds every rollable
+// token in a run of text: "+4 to hit" and "beak +6, 1d8+4" roll a d20 attack, "1d6+2",
+// "+2d6 (7)" and "a d6" roll damage, "Perception +5", "WIS +3", "CON save (+1)",
+// "Stealth (+8)" and a save note ("WIS save DC 13 (it has +3)") roll a d20 check.
+// Dice.tsx draws them as buttons; Scene keeps the log.
 
 export type RollKind = "hit" | "dmg" | "check";
 export type RollMode = "normal" | "adv" | "dis" | "crit";
@@ -76,7 +77,7 @@ const TOKEN_RE = new RegExp(
   [
     String.raw`(?<hit>[+-]\d+ to hit)`,
     String.raw`(?<hit2>(?<![\w+-])[+-]\d+(?=,\s*\d*d\d+))`,
-    String.raw`(?<check>\b(?:${SKILLS}|${ABILITIES})\s+[+-]\d+\b)`,
+    String.raw`(?<check>\b(?:${SKILLS}|${ABILITIES})(?:\s+save)?\s+(?:[+-]\d+\b|\([+-]\d+\)))`,
     String.raw`(?<save>(?<=\((?:it|he|she|they) ha(?:s|ve) )[+-]\d+(?=\)))`,
     String.raw`(?<dmg>(?<![\w])\d*d\d+(?:\s*[+-]\s*\d+(?![\d.]|d\d))?)`,
   ].join("|"),
@@ -109,7 +110,7 @@ export function rollTokens(text: string): Array<string | RollToken> {
     } else if (g.check) {
       kind = "check";
       expr = d20(bonusOf(match));
-      label = match.replace(/\s+[+-]\d+$/, "");
+      label = match.replace(/\s+\(?[+-]\d+\)?$/, "");
     } else if (g.save) {
       kind = "check";
       expr = d20(bonusOf(match));

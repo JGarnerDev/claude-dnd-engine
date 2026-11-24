@@ -41,6 +41,7 @@ import { InlineMd, Markdown } from "./MarkdownView.js";
 import { searchMysteries } from "./mystery-list.js";
 import { BeatPeek, ScenePeek } from "./Peeks.js";
 import { isRecapSection } from "./recap-data.js";
+import { rollableInline } from "./Dice.js";
 import { RefContext } from "./RefChips.js";
 import type { RefIndex } from "./ref-index.js";
 import { SessionContext, useSession } from "./SessionContext.js";
@@ -326,7 +327,7 @@ export function Panel(props: PanelProps) {
           )}
         </Row>
         <Prose className="sr-md">
-          <Markdown md={s.md} />
+          <Markdown md={s.md} text={rollableInline} />
         </Prose>
       </>
     );

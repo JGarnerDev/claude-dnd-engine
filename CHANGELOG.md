@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.110.0] — 2026-11-24
+
+### Added
+
+- **Dice buttons in beat prose** (`Dice.tsx`, `dice-roll.ts`, `PromptBook.tsx`, `SceneHead.tsx`, `Panel.tsx`). The DM's rolls in a beat, the scene's DCs row and the side panel's sections (Orientation) now get dice buttons, not only enemy stat blocks; a click shows the total beside the button. Read-aloud (Say) blocks stay plain. The parser reads a bonus in brackets with or without "save" (`CON save (+1)`, `Stealth (+8)`) and a bare `a d6`, and leaves bare DCs, passive scores and grid refs alone. Tests in `Dice.spec.tsx`.
+- **`scripts/roll-check.ts`** lists the rolls in a plan the runner will button, and the lines that name a roll with no dice: `node scripts/roll-check.ts --session <NN>`. Tests in `scripts/roll-check.test.ts`.
+
+### Changed
+
+- **Plans write the DM's rolls with their dice** (`/session` Phase 6 → Rolls the DM makes get dice; `/review` Pass 1 → Check the dice). A roll the DM makes outside a stat block gives its bonus or dice so the runner can button it; a player's roll needs only its DC.
+
 ## [0.109.0] — 2026-11-24
 
 ### Changed

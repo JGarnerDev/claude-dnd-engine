@@ -1,10 +1,10 @@
-// Dice buttons for enemy stat lines, and the roll log they feed. `rollable` is a
+// Dice buttons for enemy stat lines and beat prose, and the roll log they feed. `rollable` is a
 // text renderer for <Markdown>/<InlineMd>: it turns each rollable token
 // (dice-roll.ts) into a button. A click rolls (Shift: advantage or crit, Alt:
 // disadvantage) and logs it. The log lives in Scene, not the runner's store:
 // rolls are for the moment, and survive re-renders but not a reload.
 
-import { createContext, Fragment, useContext, type MouseEvent } from "react";
+import { createContext, Fragment, useContext, useState, type MouseEvent } from "react";
 import { InlineButton, List, Text, type TextProps } from "jeff-ui";
 import { KIND_HUE } from "./hues.js";
 import {
@@ -38,8 +38,11 @@ function logEntry(b: HTMLElement, r: Roll, label: string): LoggedRoll {
   return { who, what, r };
 }
 
-function RollButton({ tok }: { tok: RollToken }) {
+// `showLast` prints the latest result right after the button: beat prose has no
+// roll log beside it, so the DM reads the number where they clicked.
+function RollButton({ tok, showLast }: { tok: RollToken; showLast: boolean }) {
   const log = useContext(RollContext);
+  const [last, setLast] = useState<Roll | null>(null);
   const tip =
     tok.kind === "dmg"
       ? "Roll damage · Shift: critical"
@@ -59,9 +62,11 @@ function RollButton({ tok }: { tok: RollToken }) {
             ? "dis"
             : "normal";
     const r = roll(tok.expr, tok.kind, mode);
-    if (r) log(logEntry(ev.currentTarget, r, tok.label));
+    if (!r) return;
+    log(logEntry(ev.currentTarget, r, tok.label));
+    setLast(r);
   };
-  return (
+  const button = (
     <InlineButton
       className="sr-roll"
       hue={KIND_HUE.combat}
@@ -74,10 +79,28 @@ function RollButton({ tok }: { tok: RollToken }) {
       {tok.match}
     </InlineButton>
   );
+  if (!showLast || !last) return button;
+  const tone: TextProps["tone"] = last.nat === 20 ? "ok" : last.nat === 1 ? "err" : "accent";
+  return (
+    <>
+      {button}{" "}
+      <Text as="span" size="sm" strong numeric tone={tone} className="sr-roll-last">
+        → {last.total}
+        {last.mode !== "normal" && ` (${last.mode})`}
+      </Text>
+    </>
+  );
 }
 
-export const rollable = (text: string) =>
-  rollTokens(text).map((t, i) => (typeof t === "string" ? t : <RollButton key={i} tok={t} />));
+const renderTokens = (text: string, showLast: boolean) =>
+  rollTokens(text).map((t, i) =>
+    typeof t === "string" ? t : <RollButton key={i} tok={t} showLast={showLast} />,
+  );
+
+// For stat lines, where the roll log sits beside the buttons.
+export const rollable = (text: string) => renderTokens(text, false);
+// For beat prose and the scene's DC line: each button also shows its latest result.
+export const rollableInline = (text: string) => renderTokens(text, true);
 
 // "d20 (14, 6) +4" — both dice shown for adv/dis, the kept one bold.
 export function RollDetail({ r }: { r: Roll }) {
@@ -122,7 +145,7 @@ export function RollLog({ rolls }: { rolls: readonly LoggedRoll[] }) {
               {r.total}
             </Text>{" "}
             <Text as="span" size="sm" className="sr-roll-what">
-              {who} · {what} · {kind}
+              {[who, what, kind].filter(Boolean).join(" · ")}
               {mode}
             </Text>{" "}
             <Text as="span" size="sm" tone="muted" numeric className="sr-roll-detail">

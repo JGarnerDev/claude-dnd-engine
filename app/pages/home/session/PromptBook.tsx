@@ -16,6 +16,7 @@ import { Fragment, type CSSProperties, type ReactNode } from "react";
 import { CopyButton, Heading, List, Prose, Text } from "jeff-ui";
 import { VOICE_HUE } from "./hues.js";
 import { itemLit, watchCue, type Lit } from "./fight-cues.js";
+import { rollableInline } from "./Dice.js";
 import { useFightLit } from "./FightContext.js";
 import { extractCallouts } from "./markdown.js";
 import { InlineMd, ItemClassContext, Markdown } from "./MarkdownView.js";
@@ -89,9 +90,10 @@ export function PbBlockView({ b }: { b: PbBlock }) {
     label = to ? `→ ${to}` : "";
   }
   const watch = b.voice === "watch" && lit;
+  // Dice in the DM's text become buttons; read-aloud lines stay plain.
   const md = (
     <Prose className="sr-md">
-      <Markdown md={b.md} spoken />
+      <Markdown md={b.md} spoken text={b.voice === "say" ? undefined : rollableInline} />
     </Prose>
   );
   const hue = { "--ui-hue": VOICE_HUE[b.voice] } as CSSProperties;

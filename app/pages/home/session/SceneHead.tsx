@@ -26,7 +26,7 @@ import {
 } from "jeff-ui";
 import { matchEnemy } from "./combatants.js";
 import type { Phase, StatBlock } from "./combatants.js";
-import { rollable, RollLog, type LoggedRoll } from "./Dice.js";
+import { rollable, rollableInline, RollLog, type LoggedRoll } from "./Dice.js";
 import { touches, undoable } from "./hp-log.js";
 import { KIND_HUE, VOICE_HUE } from "./hues.js";
 import type { HpLogEntry } from "./hp-log.js";
@@ -82,7 +82,7 @@ const QuietRow = ({ items }: { items: string[] }) => (
     {items.map((x, i) => (
       <Fragment key={i}>
         {i > 0 && " · "}
-        <InlineMd md={x} />
+        <InlineMd md={x} text={rollableInline} />
       </Fragment>
     ))}
   </span>

@@ -1,7 +1,8 @@
 // @vitest-environment happy-dom
 import { afterEach, describe, expect, it } from "vitest";
-import { cleanup, render } from "@testing-library/react";
-import { rollable } from "./Dice.js";
+import { cleanup, fireEvent, render } from "@testing-library/react";
+import { rollable, rollableInline } from "./Dice.js";
+import { PromptBook } from "./PromptBook.js";
 import { parseExpr, roll } from "./dice-roll.js";
 import { InlineMd } from "./MarkdownView.js";
 
@@ -87,7 +88,44 @@ describe("rollable", () => {
       tokens("WIS save DC 13 (it has +3). Morale DC 12 WIS. +2 AC against one melee hit"),
     ).toEqual(["+3 | 1d20+3 | check | save"]);
   });
+  it("rolls a bonus in brackets, with or without 'save' (beat prose)", () => {
+    expect(tokens("concentration: CON save (+1), DC 10, against her Stealth (+8)")).toEqual([
+      "CON save (+1) | 1d20+1 | check | CON save",
+      "Stealth (+8) | 1d20+8 | check | Stealth",
+    ]);
+    expect(tokens("Nine squares at 2d4: 18d4, then a d6 per horse")).toEqual([
+      "2d4 | 2d4 | dmg",
+      "18d4 | 18d4 | dmg",
+      "d6 | 1d6 | dmg",
+    ]);
+  });
+  it("leaves bare DCs, passive scores and grid refs alone", () => {
+    expect(tokens("Perception DC 13 · passive Perception 13 · J9:N17 · S35_07_CHASE")).toEqual([]);
+  });
   it("never wraps inside a link or code", () => {
     expect(tokens("[[1d6|Dex +2]] `1d4`")).toEqual([]);
+  });
+});
+
+// Beat prose: the DM's lines get dice, read-aloud lines don't, and a click shows its result.
+describe("dice in the prompt book", () => {
+  const prose = [
+    "- **The thorns:** 2d4 for every 5 ft moved. Nella makes a CON save (+1), DC 10.",
+    "",
+    '> *"The grass is greener than it should be. Roll 2d4 in your head."*',
+  ].join("\n");
+  it("puts buttons in the DM's text and none in a Say block", () => {
+    const { container } = render(<PromptBook prose={prose} />);
+    const rolls = [...container.querySelectorAll<HTMLElement>(".sr-roll")];
+    expect(rolls.map((b) => b.dataset.roll)).toEqual(["2d4", "1d20+1"]);
+    expect(container.querySelector(".sr-pb-say .sr-roll")).toBeNull();
+  });
+  it("shows the latest result beside the button", () => {
+    const { container } = render(<InlineMd md="2d4 per 5 ft" text={rollableInline} />);
+    expect(container.querySelector(".sr-roll-last")).toBeNull();
+    fireEvent.click(container.querySelector(".sr-roll")!);
+    const total = Number(/\d+/.exec(container.querySelector(".sr-roll-last")!.textContent!)![0]);
+    expect(total).toBeGreaterThanOrEqual(2);
+    expect(total).toBeLessThanOrEqual(8);
   });
 });
