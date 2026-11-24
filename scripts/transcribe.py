@@ -3,6 +3,7 @@
 # requires-python = "==3.13.*"
 # dependencies = [
 #   "faster-whisper>=1.2,<2",
+#   "av<19",  # av 19 dropped open(metadata_errors=), which faster-whisper 1.2.1 passes
 #   "nvidia-cublas-cu12; sys_platform != 'darwin'",
 #   "nvidia-cudnn-cu12>=9,<10; sys_platform != 'darwin'",
 # ]

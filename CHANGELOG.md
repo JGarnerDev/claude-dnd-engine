@@ -6,6 +6,23 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.100.0] — 2026-11-23
+
+### Added
+
+- **Plants and payoffs** (`scripts/plant-check.py`). A plan marks a set-up with `**Plant (key):**` and its return with `**Payoff (key):**`, or keeps it for later with `**Plant (key, kept for Session N):**`. `uv run scripts/plant-check.py --session <NN>` reports unpaid plants, payoffs with no plant, payoffs before their plant, duplicate keys and malformed markers. `/session` Phase 6 writes the markers; `/review` Pass 1 runs the check.
+
+### Changed
+
+- **Rules fit every session** (root `CLAUDE.md`). Planning and review rules are written for sessions in general, never for one kind of episode. Music is no longer a planning concern: a cue or track is planned only when the DM asks.
+- **`/review` checks.** Pass 1 checks the Closing and cue entrances; Pass 5 flags a PC who is a spectator in the big scene (`meta/player-agency.md`); Pass 6 flags an earlier image that spends the Closing's (`meta/prose-style.md`).
+- **`/session`.** Contingencies cover a late player; the Closing needs a reveal. `meta/character-focus.md` covers party-wide sessions.
+- **Ruff keeps the transcription scripts on py313** (`ruff.toml` → `[per-file-target-version]`), so formatting no longer writes 3.14-only `except A, B:` into code that runs on 3.13.
+
+### Fixed
+
+- **`flow-status.py --set`** also takes a session folder holding a `_flow.md` (its path or just its name), and runs that session's beat-order check (tests in `tests/scripts/test_flow_status.py`).
+
 ## [0.99.0] — 2026-11-23
 
 ### Changed

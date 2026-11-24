@@ -4,6 +4,14 @@ line-length = 100
 target-version = "py314"
 include = ["*.py", "*.pyi"]  # not the Python blocks inside Markdown
 
+# The transcription scripts pin Python 3.13 (no ctranslate2 wheel for 3.14 on Windows) and
+# import scripts/lib, so keep 3.14-only syntax (unparenthesized `except A, B:`) out of them.
+[per-file-target-version]
+"scripts/transcribe.py" = "py313"
+"scripts/diarize-track.py" = "py313"
+"scripts/diarize-bench.py" = "py313"
+"scripts/lib/**" = "py313"
+
 [lint]
 select = ["E4", "E7", "E9", "F", "I", "UP", "B"]
 ignore = [

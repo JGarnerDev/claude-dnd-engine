@@ -56,6 +56,9 @@ Rules:
   - A clock jump (a new time of day, the next morning, a rest, downtime) with no `- **Time passes:**` line: add one at the top of the beat.
   - A scene Summary that holds a crucial step, line or description: cut it to what the scene is for and move the rest into the nodes.
   - Loot written as prose or mixed with DM notes: split it into a `- **Loot (copy to the party):**` fenced list and a `- **Hidden or needs a roll:**` bullet.
+- **Check the plants.** Anything a read-aloud or beat makes a point of (a coil of new rope on the boards, a sealed letter, a name dropped once) is marked `**Plant (key):**` and comes back later as `**Payoff (key):**`, or is marked `**Plant (key, kept for Session N):**`. Mark any unmarked plant, then run `uv run scripts/plant-check.py --session <NN>` and fix what it reports: add the payoff beat, or cut the plant
+- **Check the Closing.** A session that ends on an open question also answers one before it: something true the party learns that night. Name it in a DM note on the closing beat
+- **Check entrances on a cue.** A player who joins partway (a new PC's first scene, a player arriving after the start) has a contingency for running late, with how to stretch the scene before it and the cut-off time, as well as one for not coming
 - Skip anything already covered. A node with a working read-aloud or lines needs nothing
 
 ---
@@ -101,7 +104,8 @@ The party should feel they steer the story, not ride it. Check the plan against
   scene visibly pay off a choice from an earlier session?
 - **Look for the warning signs** listed under Railroad warning signs: a run of reaction-only
   scenes, a chain of skill checks with nothing to decide, a guaranteed outcome with no
-  counterplay, failure that costs nothing, a stack of gifts, steering text in the plan
+  counterplay, failure that costs nothing, a stack of gifts, steering text in the plan, a
+  spectator in the big scene
 - **Propose a fix for each sign found:** a small choice with a cost, added around the beat. Never
   reopen a DM-committed (`[x]`) beat. New choice beats go in as draft: a `[-]` node in
   `_flow.md` (a diamond if it's a real fork), dated "draft, engine `<date>`" in the plan
@@ -125,7 +129,8 @@ Check the plan's prose against `meta/prose-style.md`, after Pass 1 so its additi
   register only; don't polish rules text
 - **Read each one, don't grep.** A search for stock phrases is a fine first sweep, but the pass is
   reading every item against the tell lists, the structural tells (including the same picture
-  twice in one scene) and the audience calibration for read-aloud
+  twice, and an earlier image that spends the Closing's) and the audience calibration for
+  read-aloud
 - **Run each candidate through the validation questions.** Keep what survives, and anything the
   What to keep list protects: an NPC's `## Voice` core, a deliberate clue, a running joke
 - **Boss entrances:** every boss has one at its first close appearance, shaped per

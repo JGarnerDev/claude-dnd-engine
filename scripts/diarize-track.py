@@ -142,9 +142,14 @@ CLASS_VOCAB = {
 # -- Discovery ----------------------------------------------------------------
 
 
+def session_slug(session: str) -> str:
+    """Audio folder name, same rule as transcribe.py: a number becomes session-NN, a slug stays as is."""
+    return f"session-{int(session):02d}" if str(session).isdigit() else str(session)
+
+
 def resolve(session: str, track: str) -> tuple:
     """(slug, audio path, cache dir) for a session number/slug and a track stem."""
-    slug = session if str(session).startswith("session-") else "session-" + str(session)
+    slug = session_slug(session)
     folder = AUDIO_DIR / slug
     if not folder.is_dir():
         sys.exit("no audio folder: recaps/audio/" + slug)
@@ -184,10 +189,21 @@ def decode(path: Path):
     stream = container.streams.audio[0]
     resampler = av.audio.resampler.AudioResampler(format="s16", layout="mono", rate=SAMPLE_RATE)
     chunks = []
-    for frame in container.decode(stream):
-        for out in resampler.resample(frame):
-            chunks.append(out.to_ndarray().reshape(-1))
+    bad_packets = 0
+    # Skip packets that fail to decode (phone MP3s carry a few), as faster-whisper does,
+    # so this track's timeline matches the one transcribe.py cut segments on.
+    for packet in container.demux(stream):
+        try:
+            frames = packet.decode()
+        except av.error.InvalidDataError:
+            bad_packets += 1
+            continue
+        for frame in frames:
+            for out in resampler.resample(frame):
+                chunks.append(out.to_ndarray().reshape(-1))
     container.close()
+    if bad_packets:
+        cwrite(f"  decode  : skipped {bad_packets} bad packet(s) in {path.name}", "yellow")
     if not chunks:
         sys.exit("decoded no audio from " + path.name)
     wav = np.concatenate(chunks).astype("float32") / 32768.0
@@ -403,7 +419,7 @@ def ref_embeddings(handles: list, sessions: list, device: str) -> dict:
 
     out = {h: [] for h in handles}
     for sess in sessions:
-        slug = sess if str(sess).startswith("session-") else "session-" + str(sess)
+        slug = session_slug(sess)
         folder = AUDIO_DIR / slug
         cache = OUT_DIR / ".cache" / slug
         if not folder.is_dir():
@@ -626,7 +642,7 @@ def resolve_handles(names: list, sessions: list) -> list:
     first = [n.split("(")[0].strip().split()[0].lower() for n in names]
     found = {f: set() for f in first}
     for sess in sessions:
-        slug = sess if str(sess).startswith("session-") else "session-" + str(sess)
+        slug = session_slug(sess)
         for stem, label in speaker_map(AUDIO_DIR / slug).items():
             if "+" in label:
                 continue
@@ -758,7 +774,7 @@ def dm_anchors(cache: Path, stem: str, names: list, skip=()) -> list:
             continue
         try:
             segs = json.loads(jf.read_text(encoding="utf-8")).get("segments", [])
-        except ValueError, OSError:
+        except (ValueError, OSError):
             continue
         for s in segs:
             low = s["text"].lower()

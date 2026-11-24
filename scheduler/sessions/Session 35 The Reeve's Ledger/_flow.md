@@ -6,6 +6,11 @@
 > **Reshaped by Jeff's review (2026-11-22):** a recap for every PC and for Nella, the chase as one
 > roll on the south riverbank, the banner out, the items made in Asher's cave.
 >
+> **Season finale, with Tyler's entrance last (Jeff, 2026-11-23).** The reeve moved from Day 3 to
+> the morning of Day 18. Mara's rider sets the day in Scene 8, a gallows goes up during the build,
+> Dip leaves at dawn, then the reeve sets the hanging for noon and Shaw speaks. The ledger choice
+> moved with the reeve: `S35_26_REEVE` is now `S35_29_REEVE`.
+>
 > **Last session before the DM rotation.** Ben DMs next; Dip goes `state: away` after it.
 
 Not an entity. This is a derived view of the plan, for reading at the table. The plan file wins
@@ -67,14 +72,19 @@ flowchart TD
     S35_24_BINDING["[-] S35_24_BINDING<br/>She buckles the brace on him<br/>the Unfinished Binding"]
   end
 
-  subgraph SC8["Scene 8 · The Reeve's Ledger"]
+  subgraph SC8["Scene 8 · The Deed"]
     S35_25_STAKE["[-] S35_25_STAKE<br/>The deed argued<br/>twenty, or twenty-five"]
-    S35_26_REEVE{"[-] S35_26_REEVE<br/>Cael's reeve wants the ledger<br/>hand it over or keep it?"}
+    S35_26_RIDER["[-] S35_26_RIDER<br/>Mara's rider is back<br/>the reeve comes on the eighteenth"]
   end
 
   subgraph SC9["Scene 9 · Opening Night"]
-    S35_27_BUILD["[-] S35_27_BUILD<br/>Two weeks building, the doors open<br/>'What did you do?'"]
-    S35_28_DIP_ROAD["[-] S35_28_DIP_ROAD<br/>Dip takes the road at dawn<br/>Ben leads"]
+    S35_27_BUILD["[-] S35_27_BUILD<br/>Two weeks building, a gallows in the square<br/>'What did you do?' · Halsby: the job, or a question?"]
+    S35_28_DIP_ROAD["[-] S35_28_DIP_ROAD<br/>Dip takes the road at dawn<br/>past the scaffold, Ben leads"]
+  end
+
+  subgraph SC10["Scene 10 · The Reeve's Ledger"]
+    S35_29_REEVE{"[-] S35_29_REEVE<br/>Cael's reeve wants the ledger<br/>hand it over or keep it? 'Then noon.'<br/>the rope goes up"}
+    S35_30_SPEAKS["[-] S35_30_SPEAKS<br/>'What do you know about it?'<br/>an opening each, one true thing<br/>Shaw holds out the letter"]
   end
 
   NELLA_AWAY["[-] Nella away downstream"]
@@ -98,16 +108,19 @@ flowchart TD
   S35_16_THE_SPRING --> S35_17_TRUE_STORY --> S35_18_THE_ASK --> S35_19_ASHER_BOW --> S35_20_LUCI_DRAUGHT
   S35_20_LUCI_DRAUGHT -->|"drinks"| S35_21_TRIP --> S35_22_WRAPS --> S35_23_ELOWEN
   S35_20_LUCI_DRAUGHT -->|"later or never"| S35_23_ELOWEN
-  S35_23_ELOWEN --> S35_24_BINDING --> S35_25_STAKE --> S35_26_REEVE
-  S35_26_REEVE -->|"hand it over"| LEDGER_CAEL
-  S35_26_REEVE -->|"keep it"| LEDGER_KEPT
-  LEDGER_CAEL --> S35_27_BUILD
-  LEDGER_KEPT --> S35_27_BUILD
-  S35_27_BUILD --> S35_28_DIP_ROAD
+  S35_23_ELOWEN --> S35_24_BINDING --> S35_25_STAKE --> S35_26_RIDER
+  S35_26_RIDER --> S35_27_BUILD --> S35_28_DIP_ROAD --> S35_29_REEVE
+  S35_29_REEVE -->|"hand it over"| LEDGER_CAEL
+  S35_29_REEVE -->|"keep it"| LEDGER_KEPT
+  LEDGER_CAEL --> S35_30_SPEAKS
+  LEDGER_KEPT --> S35_30_SPEAKS
 
   S35_18_THE_ASK -.->|"the field waits for Dip"| S35_28_DIP_ROAD
-  S35_10_CAMP_INTEL -.->|"the ledger"| S35_26_REEVE
-  S35_15_CELL -.->|"the hanging waits"| S35_26_REEVE
+  S35_10_CAMP_INTEL -.->|"the ledger"| S35_29_REEVE
+  S35_15_CELL -.->|"the silent man"| S35_26_RIDER
+  S35_15_CELL -.->|"the hanging waits"| S35_30_SPEAKS
+  S35_19_ASHER_BOW -.->|"who studies his kind"| S35_27_BUILD
+  S35_27_BUILD -.->|"the new rope"| S35_29_REEVE
 
   classDef combat   fill:#FDE2E2,stroke:#DC2626,color:#5B1414
   classDef social   fill:#FBE3D6,stroke:#D95926,color:#5A2410
@@ -118,8 +131,8 @@ flowchart TD
   classDef open     fill:#ECEFF3,stroke:#94A3B8,color:#334155,stroke-dasharray:4 3
 
   class S35_08_ESCAPE,NELLA_CAUGHT combat
-  class S35_02_COLD,S35_03_RECAPS,S35_04_NELLA_TITHE,S35_06_GOODBYE,S35_11_BODIES,S35_12_HAUL_HOME,S35_14_SABLE_MORNING,S35_16_THE_SPRING,S35_17_TRUE_STORY,S35_28_DIP_ROAD social
-  class S35_05_ODIBLI_DOWN,S35_07_CHASE,S35_18_THE_ASK,S35_20_LUCI_DRAUGHT,S35_26_REEVE decision
+  class S35_02_COLD,S35_03_RECAPS,S35_04_NELLA_TITHE,S35_06_GOODBYE,S35_11_BODIES,S35_12_HAUL_HOME,S35_14_SABLE_MORNING,S35_16_THE_SPRING,S35_17_TRUE_STORY,S35_26_RIDER,S35_28_DIP_ROAD,S35_30_SPEAKS social
+  class S35_05_ODIBLI_DOWN,S35_07_CHASE,S35_18_THE_ASK,S35_20_LUCI_DRAUGHT,S35_29_REEVE decision
   class S35_09_TALLY,S35_19_ASHER_BOW,S35_22_WRAPS,S35_24_BINDING,S35_25_STAKE,LEDGER_CAEL,LEDGER_KEPT,S35_27_BUILD stake
   class S35_01_IGGY_BEAT,S35_10_CAMP_INTEL,S35_13_FOX,S35_15_CELL,S35_21_TRIP,S35_23_ELOWEN seed
   class NELLA_AWAY,ODIBLI_DEAD fail
@@ -142,7 +155,14 @@ flowchart TD
 - **Dropped:** `S2_MORALE`. The crew is dead; there's nobody left to break.
 - **New, `[-]`:** the recaps (Odibli and the cold, Dip, Luci, Halsby, Nella and Tithe), Odibli
   under Tithe, the one-roll chase, the whole cave scene with the items made there, the trip and
-  the Wraps, Elowen's flashback and the Binding, the stake, the reeve, the two weeks of building
-  and opening night, Dip's road (Ben leads it).
+  the Wraps, Elowen's flashback and the Binding, the stake, Mara's rider, the two weeks of
+  building with the gallows, opening night, Dip's road (Ben leads it), the reeve, and Shaw's
+  first words and the letter (Tyler's entrance, the season's last beat).
+- **Renumbered, still `[-]`:** `S35_26_REEVE` is now `S35_29_REEVE`, moved from Day 3 dusk to
+  Day 18 mid-morning (Jeff, 2026-11-23). `S35_26` is reused for Mara's rider.
+
+- **Added in review, `[-]` (draft, engine 2026-11-23):** Halsby's choice on Sable's job
+  (`S35_27_BUILD`), the rope hung after "noon" (`S35_29_REEVE`), one opening per PC and the one
+  true thing Shaw tells (`S35_30_SPEAKS`).
 
 Elowen's scene moved here from Session 36 (todo 100): Session 36 is Ben's.

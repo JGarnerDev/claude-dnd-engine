@@ -7,7 +7,10 @@
 # session flow under scheduler/sessions/ (positions vs. node order vs. the plan's #### headings,
 # scripts/lib/beat_order.py); flows whose ids carry no positions are listed as skipped.
 # Usage: python scripts/flow-status.py [--set <path>] [--blockers] [--quiet]
-#   --set <path> : scan one flow graph folder instead of discovering every set in the repo
+#   --set <path> : scan one folder instead of discovering every set in the repo: a flow graph set
+#                  (path from the repo root), or a session folder holding a _flow.md (its path, or
+#                  just its name, e.g. "Session 35 The Reeve's Ledger"). A session folder also gets
+#                  its beat-order check
 #   --blockers   : list every committed-after-open edge, not just the count
 #   --quiet      : totals only, no per-file breakdown
 
@@ -22,6 +25,8 @@ from lib.common import ROOT, color, cwrite, read_text_no_bom
 
 # A flow graph set is a folder whose README names the conventions doc.
 SET_MARKER = "meta/flow-graphs.md"
+SESSIONS_DIR = ROOT / "scheduler" / "sessions"
+SESSION_FLOW = "_flow.md"
 
 MARKERS = {"x": "committed", "-": "draft", "?": "open"}
 MARKER_COLOR = {"committed": "green", "draft": "yellow", "open": "gray"}
@@ -83,14 +88,27 @@ def scan_file(path):
     return nodes, edges, problems
 
 
-def find_sets(root, explicit):
-    """Locate flow graph folders. A set is a dir with a README naming the conventions doc."""
-    if explicit:
-        p = Path(explicit)
-        if not p.is_absolute():
-            p = root / p
-        return [p] if p.is_dir() else []
+def resolve_set_arg(set_arg: str, *, root: Path, sessions_dir: Path) -> Path:
+    """Resolve --set to one folder, or exit with every path tried.
 
+    Accepts a path (absolute or from the repo root) or a session folder's bare name.
+    """
+    given = Path(set_arg)
+    tried = [given] if given.is_absolute() else [root / given, sessions_dir / given]
+    for candidate in tried:
+        if candidate.is_dir():
+            return candidate
+    lines = "\n".join(f"  {c}" for c in tried)
+    raise SystemExit(f"--set: no folder named {set_arg!r}. Tried:\n{lines}")
+
+
+def is_session_folder(folder: Path) -> bool:
+    """A session folder is one that holds a session flow (_flow.md)."""
+    return (folder / SESSION_FLOW).is_file()
+
+
+def discover_sets(root: Path) -> list[Path]:
+    """Every flow graph folder in the repo: a dir with a README naming the conventions doc."""
     found = []
     for readme in root.rglob("README.md"):
         parts = readme.parts
@@ -104,10 +122,13 @@ def find_sets(root, explicit):
     return sorted(found)
 
 
-def session_order():
-    """Check beat order in every planned session's _flow.md against its plan."""
-    sessions = ROOT / "scheduler" / "sessions"
-    flows = sorted(sessions.glob("*/_flow.md")) if sessions.is_dir() else []
+def all_session_flows(sessions_dir: Path) -> list[Path]:
+    """Every planned session's _flow.md."""
+    return sorted(sessions_dir.glob(f"*/{SESSION_FLOW}")) if sessions_dir.is_dir() else []
+
+
+def session_order(flows: list[Path]) -> None:
+    """Check beat order in each session _flow.md against its plan."""
     if not flows:
         return
     cwrite("\n=== session flows (beat order) ===", "cyan")
@@ -132,12 +153,19 @@ def session_order():
 
 def main():
     ap = argparse.ArgumentParser(description="Commitment coverage for flow graph sets.")
-    ap.add_argument("--set", dest="set_path", help="scan one flow graph folder")
+    ap.add_argument(
+        "--set",
+        dest="set_path",
+        help="scan one folder: a flow graph set, or a session folder (path or bare name)",
+    )
     ap.add_argument("--blockers", action="store_true", help="list every committed-after-open edge")
     ap.add_argument("--quiet", action="store_true", help="totals only")
     args = ap.parse_args()
 
-    sets = find_sets(ROOT, args.set_path)
+    if args.set_path:
+        sets = [resolve_set_arg(args.set_path, root=ROOT, sessions_dir=SESSIONS_DIR)]
+    else:
+        sets = discover_sets(ROOT)
     if not sets:
         cwrite("No flow graph sets found.", "yellow")
         cwrite("A set is a folder whose README.md references meta/flow-graphs.md.", "gray")
@@ -224,7 +252,9 @@ def main():
             cwrite("\n  integrity OK", "green")
 
     if not args.set_path:
-        session_order()
+        session_order(all_session_flows(SESSIONS_DIR))
+    elif is_session_folder(sets[0]):
+        session_order([sets[0] / SESSION_FLOW])
     return 0
 
 

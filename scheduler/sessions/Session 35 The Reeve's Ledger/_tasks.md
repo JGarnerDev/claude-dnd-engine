@@ -14,7 +14,11 @@ Planned date: 2026-11-24.
 
 - [ ] **Look over the plan**, especially the opening recaps (`S35_01`–`S35_04`), the one-roll
       chase (`S35_07`), Asher's cave (`S35_16`–`S35_20`), the trip (`S35_21`–`S35_22`) and the
-      reeve (`S35_26`).
+      finale (`S35_29`–`S35_30`, Jeff's order 2026-11-23: Dip leaves, then the reeve, then Shaw).
+- [ ] **Tyler's entrance** (`S35_30_SPEAKS`): message Tyler on Discord when Scene 8 starts (about
+      half an hour's warning). Make sure he has the Roll20 invite and knows his first line is his.
+- [ ] **Tell Ben the letter opens his run.** It stays shut at this table. Its text and reward are
+      Ben's and Tyler's.
 - [x] **The stake number** (`S35_25_STAKE`): 20% to start, 25% if Dip argues it (Jeff, 2026-11-22).
 - [ ] **Dip's road** (`S35_28_DIP_ROAD`): played, Ben leads (Jeff, 2026-11-22). Tell Ben before
       the table so he can think about how Dip says goodbye.
@@ -32,8 +36,9 @@ Planned date: 2026-11-24.
       Odibli's death saves.
 - [ ] **The south riverbank** is one roll, no grid. Only if the table forces a fight: a blank grid
       with the river and willows. Her token is Sniper.
-- [ ] **No new tokens.** Asher, Sabathiel and the reeve are narrated. Keep the waystation
-      map up for the recap.
+- [ ] **One new token: Shaw Proudfoot** (Tyler's PC), in the last cell on a map of Mara's office
+      (six cells along the back wall), ready for Scene 10. Asher, Sabathiel and the reeve are
+      narrated. Keep the waystation map up for the recap.
 
 ## Cards and handouts
 

@@ -74,8 +74,8 @@ balance = sum(spotlight + shared weight) / sum(all beat weight)  →  aim 0.5
 ```
 
 A big arc payoff tilts the lifetime ledger spotlight-heavy, so the campaign then *owes*
-agnostic material later — it self-corrects. Act and campaign finales (intentionally
-party-focused = agnostic) help rebalance; this is why we never clear the tally.
+agnostic material later — it self-corrects. Party-wide sessions (agnostic by design) help
+rebalance; this is why we never clear the tally.
 
 Alongside the lifetime number, a **recent-trend** readout over the **last 4 played sessions**
 keeps the nudge actionable, since the lifetime figure moves slowly late-campaign. The trend

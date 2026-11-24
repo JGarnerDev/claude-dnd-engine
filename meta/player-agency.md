@@ -86,6 +86,9 @@ choice around the beat instead:
   between them. Fix: put one choice between them, or let one gift come with a condition.
 - **Steering text in the plan:** "expect the yes", "make sure they go", "lead them to". Keep
   the expectation as a DM note, and add what happens if they refuse.
+- **A spectator in the big scene:** the scene the session builds to gives a present PC nothing
+  to do, say or decide. Fix: a DM note with one opening per PC, aimed at their PC arc's next
+  step where it fits. Openings are offered, never forced.
 
 ## Mark choices in the plan
 

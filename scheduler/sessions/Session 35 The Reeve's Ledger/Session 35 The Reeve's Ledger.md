@@ -24,17 +24,17 @@ key_npcs:
   - "[[Sable Wren]] (historian — walks them to Asher's cave; the share talk and the deed)"
   - "[[Elowen Rimetusk]] (data — Odibli's scene, her flashback, and the Unfinished Binding)"
   - "[[Sabathiel]] (historian — Luci's patron; reaches her through Asher's draught)"
-  - "[[Mara Tull]] (historian — sheriff; holds the silent prisoner)"
+  - "[[Mara Tull]] (historian — sheriff; holds the silent prisoner, and sets the day the reeve comes)"
   - "[[Silas Crubb]] (historian — his horses back, his cart a number)"
-  - "Cael's reeve (human — Lord Cael's officer from Orrend's upper town; arrives at dusk for the ledger; no name, not an entity)"
-  - "the prisoner (a silhouette only — Tyler's cameo; no name, no lines)"
+  - "Cael's reeve (human — Lord Cael's officer from Orrend's upper town; rides in the morning Dip leaves, for the ledger and the hanging; no name, not an entity)"
+  - "[[Shaw Proudfoot]] (Tyler's PC — the silent prisoner; a silhouette until the finale, where he speaks)"
 encounters:
   - "None on the grid. Nella's escape at the south riverbank (Scene 2) is one hard check for Luci, DC 18: caught or gone. Her block is in Combatants in case the table forces a fight anyway."
 loose_threads:
   - "[[Session 34 The Red Trail]] ended with Tithe dead on Odibli (0 HP, one death save success), Iggy at 5 HP with his wings open, and Luci chasing Nella past the bridge to the south riverbank"
   - "Sah's 'Up, Wallaed' and the Citadel's cold for Odibli were never delivered; this session opens with them, and a recap for every PC, as a flashback"
   - "Sable's deed: 10% offered, Dip asked for more; 'Bring the deed tomorrow and we'll argue it'"
-  - "The silent prisoner in Mara's cell; the hanging waits on Cael's reeve"
+  - "The silent prisoner in Mara's cell (Shaw Proudfoot, Tyler's PC); the hanging waits on Cael's reeve"
   - "Unspent reputation (Session 29): Silas waives the shoeing on Halsby's horse; Richmond Ellesine gives Dip a better price"
   - "Still open from Session 29: what the order doesn't like at [[Tassad]], and the later job Halsby owes Sable"
 difficulty_attrition: standard
@@ -42,7 +42,7 @@ difficulty_lethality: standard
 depth: narrated
 scope: inline
 opening_scene: "A cinematic recap of the waystation fight, one PC at a time: Sah's voice through every crystal when Iggy's wings opened, the Citadel's cold through Odibli, then Dip, Luci and Halsby, and last Nella as Tithe dies. Then the present: about 11 a.m. on Day 2, Tithe dead on top of Odibli, and Luci a few strides behind Nella on the south bank of the river."
-closing_hook: "Cael's reeve has the ledger, or wants it, and says the hanging can wait. Two weeks of building later, the Golden Lioness opens its doors, and at dawn after opening night Dip takes the road south."
+closing_hook: "Two weeks of building end with the Lioness open and a gallows in the square. Dip takes the road south at dawn. That morning Cael's reeve rides in and sets the hanging for noon, and in the last cell the silent prisoner finally speaks, then holds a letter out through the bars."
 relates_to:
   - "[[The Stolen Casks]] (closes this session)"
   - "[[Act 1 - The Hearth at Ashford]] (act)"
@@ -50,13 +50,14 @@ relates_to:
   - "[[Session 34 The Red Trail]] (its unplayed beats carry here)"
   - "[[Harrow Bane]] (the ledger; still no face)"
   - "[[House Cael]] (the reeve)"
+  - "[[Shaw Proudfoot]] (Tyler's PC; enters in the finale)"
   - "[[The Stillwater Wraps]] (Luci's Uncommon)"
   - "[[The Unfinished Binding]] (Odibli's Uncommon)"
   - "[[Oathcaller]] (Iggy's Uncommon, from Asher)"
   - "[[Varrick's Cart-Whip]] (reworked by Asher as Tithe-Taker, Dip's Uncommon)"
 importance: critical
 active: true
-description: "The last session before the DM rotation. It opens on a recap of the waystation fight told from every side, Nella's included. Then Odibli under the griffon, and Luci's one chance at Nella on the south riverbank. The casks come home, and in the morning Sable walks the party to Asher's cave by the river. He draws Tithe in through the earth, gives his true name, asks Dip to lay the old field to rest, and works the griffon's bones into Oathcaller for Iggy and Tithe-Taker for Dip on the spot. Luci drinks his draught and wakes in the ford wearing the Stillwater Wraps. Elowen tells Odibli how she moved a whole company, gives him her brace and tells him to count his flock. At dusk Cael's reeve comes for Bane's ledger. The party spends two weeks building the Lioness, it opens its doors, and Dip takes the road."
+description: "The last session before the DM rotation. It opens on a recap of the waystation fight told from every side, Nella's included. Then Odibli under the griffon, and Luci's one chance at Nella on the south riverbank. The casks come home, and in the morning Sable walks the party to Asher's cave by the river. He draws Tithe in through the earth, gives his true name, asks Dip to lay the old field to rest, and works the griffon's bones into Oathcaller for Iggy and Tithe-Taker for Dip on the spot. Luci drinks his draught and wakes in the ford wearing the Stillwater Wraps. Elowen tells Odibli how she moved a whole company, gives him her brace and tells him to count his flock. At dusk the deed is signed, and Mara's rider brings the day Cael's reeve will come. For two weeks the party builds the Lioness while the town builds a gallows in the square. The Lioness opens, and Dip takes the road at dawn. That morning the reeve rides in for Bane's ledger and the hanging, and in the last cell the silent prisoner, Tyler's Shaw Proudfoot, speaks for the first time and holds out a letter. The season ends there."
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
@@ -76,6 +77,12 @@ Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The
 > commits nothing about the boat, the letter or the pilgrimage beyond Dip leaving. The letter
 > is Ben's to open his run with (Jeff, 2026-11-22). Ben's run starts on Day 18 or later, after
 > the two weeks of building.
+>
+> **Season finale, with Tyler's entrance last (Jeff, 2026-11-23).** The reeve moved from Day 3
+> to the morning of Day 18, so the hanging becomes a clock that runs through the build. Dip
+> leaves first, then the reeve, then the cell. [[Shaw Proudfoot]] speaks for the first time and
+> holds out his letter, and the season ends on it. Shaw carries the letter. It stays shut at
+> this table, and its text is Ben's and Tyler's to open the next run with.
 
 ## Combatants
 
@@ -147,7 +154,10 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
   (`S35_28_DIP_ROAD`).
 - **Afflictions:** Iggy's shadow and Dip's whispers are dormant in Aethryn. Luci's Sacred Flame
   and Odibli's familiar are still gone.
-- **The prisoner** is still a silhouette (todo 71). No name, no lines, nothing committed.
+- **The prisoner** is [[Shaw Proudfoot]], Tyler's PC (todo 71). He stays a silhouette with no
+  name and no lines until the last scene (`S35_30_SPEAKS`), where Tyler plays him.
+- **Tyler's cue:** message Tyler on Discord when Scene 8 starts. That gives him about half an
+  hour before his entrance ([[Tyler]]'s notes for the DM). Have his token ready on the cell map.
 
 ### Rest Clock across the session
 
@@ -155,19 +165,28 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 - **Day 2:** the chase, the yard, the slow road home. They reach Ashford in the evening and long
   rest at the Lioness. That clears the 24-hour gate.
 - **Day 3:** Asher's cave in the morning, Luci's trip late morning, Elowen in the afternoon, the
-  deed and the reeve at dusk. No long rest is due; a short rest fits after the cave. **Luci's
+  deed and Mara's rider at dusk. No long rest is due; a short rest fits after the cave. **Luci's
   exhaustion** lasts until she long rests that night.
 - **Days 4–17:** two weeks building the Lioness, narrated. Long rests every night. Opening
   night is the evening of Day 17.
-- **Day 18, dawn:** Dip's road.
+- **Day 18, dawn:** Dip's road. The reeve arrives mid-morning; the hanging is set for noon.
 
 ## Scenes
 
-> Lines and read-alouds below are guidance, not script. Nine scenes, about 205 minutes. The table
-> runs 7–11 pm (Jeff, 2026-11-22), so that leaves about 35 minutes for breaks and overrun. Take a
-> break after Scene 5. If Scene 8 starts after 10:15, cut in this order: `S35_11_BODIES` to its
-> loot list, `S35_13_FOX` (move it to the cave), `S35_27_BUILD` to its read-aloud, the question and
-> the card.
+> Lines and read-alouds below are guidance, not script. Ten scenes, about 225 minutes. The table
+> runs 7–11 pm (Jeff, 2026-11-22), so that leaves about 15 minutes for a break and overrun. Take
+> a short break after Scene 5.
+>
+> **Scene 10 is never cut.** It's the season's end and Tyler's entrance, so start it by 10:30.
+> Cut earlier scenes instead, in this order:
+>
+> 1. If Scene 3 starts after 8:00: `S35_11_BODIES` to its loot list, and `S35_13_FOX` moves to
+>    the cave.
+> 2. If Scene 8 starts after 10:05: `S35_25_STAKE` to the number and the card; Sable's job for
+>    Halsby goes to Ben's run (tell Ben); `S35_27_BUILD` to its read-aloud, the gallows, the
+>    question and the card.
+> 3. Never cut the gallows line in `S35_27_BUILD` or the reeve's "noon". Together they make the
+>    clock.
 >
 > **Say** blocks are for the party: read them, or say them in your own words. **Time passes**
 > blocks mark the clock moving; say them out loud so the table knows the day has turned.
@@ -620,6 +639,7 @@ The yard
     step like he was returning a borrowed thing."* (Hob Fenner)
   - *"Hasn't said a word since. Not his name, not nothing."* (Pell Ashby)
   - *"Mara's in there with him now. Go and ask her yourself."* Someone points at the office.
+- **Plant (sword):** the sword he put down. Mara has it on her desk from now on.
 - **The prisoner is a silhouette only.** No name, no lines, no face in the light. Whoever looks
   in sees six cells along the back wall, five empty, and a man on the bench in the last one,
   hands on his knees, not moving.
@@ -957,16 +977,16 @@ From Asher
   that moved her surrounded company. The script on it ends on the spell's last order, *move them*,
   and the order never finished. She wore it every day after, until she buckled it on Odibli.
 
-### Scene 8 — The Reeve's Ledger
+### Scene 8 — The Deed
 
-- **Summary:** the act's business lands. The party's share in the Lioness is settled, and House
-  Cael arrives for Bane's ledger and the man in the cell.
-- **Where:** [[The Golden Lioness]], then Mara's office, the evening of Day 3.
-- **Cast:** [[Sable Wren]] · [[Mara Tull]] · Cael's reeve · the prisoner (a silhouette)
+- **Summary:** the party's share in the Lioness is settled. Then Mara brings the day the reeve
+  will come, and the clock on the prisoner starts.
+- **Where:** [[The Golden Lioness]], the evening of Day 3.
+- **Cast:** [[Sable Wren]] · [[Mara Tull]]
 - **Enemies:** none
-- **DCs:** Persuasion 14 — Dip argues the share up · Insight 13 — read the reeve
-- **Time:** ~25 min
-- **Trigger:** evening; Sable puts the deed on the bar.
+- **DCs:** Persuasion 14 — Dip argues the share up
+- **Time:** ~10 min
+- **Trigger:** evening; Sable puts the deed on the bar. **Message Tyler on Discord now.**
 
 #### S35_25_STAKE — Sable's deed, argued
 
@@ -995,42 +1015,32 @@ From Asher
 - **Handout:** the Stake terms card when the pen comes out: `handouts/stake-terms.html` (25%) if
   the argument lands, `handouts/stake-terms-20.html` (20%) if it doesn't.
 
-#### S35_26_REEVE — Cael's reeve, at dusk
+#### S35_26_RIDER — Mara's rider is back: the reeve comes on the eighteenth
 
 - **Time passes:** dusk. Pell Ashby is lighting the lamps in the square.
+- **When:** as the ink on the deed dries.
 - **Say:**
 
-> *"Hoofbeats in the square. A lean grey man on a good horse, mud to the knee, Cael's colours on a
-> plain cloak and a writing case strapped to his saddle. He gets down slowly, like a man who's
-> been riding since before dawn, and asks Pell for the sheriff."*
+> *"The door lets the cold in. Mara Tull, mud to the ankle, doesn't sit down. Out in the square
+> behind her, a boy is walking a horse up and down, and the horse is still steaming."*
 
-- **Introduce:** Cael's reeve
-  - **Look:** as in the Say above.
-  - **Sound:** level, tired, a clerk's patience.
-  - **Impression:** fair, and in a hurry to be somewhere else.
-- **What he wants:** Bane's ledger. Mara sent a rider to Orrend about the prisoner the night the
-  party got home, and word of the ledger went with him.
-  - **Say (the reeve):** *"His lordship would like to read it. As evidence."*
-- **Choice (party):** hand it over, or keep it.
-  - **Hand it over:** Cael has Bane's name in his hand, written down. It tilts the feud toward
-    Cael, and the reeve owes them a courtesy.
-  - **Keep it:** the party holds the only written proof of who pays the raiders. **Say (the
-    reeve):** *"Then I'll tell his lordship who has it."*
-- **The cell.** He goes to Mara's office and looks through the bars a long time. No line from the
-  prisoner. **Say (the reeve):** *"The hanging waits. When he talks, send for me. I'll hear him
-  myself."*
-- **Insight 13:** he's relieved. He didn't want to hang a man who walked in.
+- **Say (Mara):** *"Rider's back from Orrend. Cael's reeve comes on the eighteenth, for your
+  ledger and for my prisoner. If he hasn't said a word by then, the reeve hangs him."* A beat.
+  *"His lordship's in no hurry. He never is."*
+- **If asked about the ledger:** *"Keep it till he comes. It's yours to hand him or not."*
+- **If anyone visits the cell** tonight or during the two weeks: the man on the bench watches
+  them and says nothing. Don't give him a line yet. His voice is Tyler's, in Scene 10.
 
 ### Scene 9 — Opening Night
 
-- **Summary:** the act closes. Two weeks of building pass, the Lioness opens, Sable sets the work
-  for while they're away, and Dip leaves.
-- **Where:** [[The Golden Lioness]] and its yard, Days 4–18.
-- **Cast:** [[Sable Wren]] · [[Silas Crubb]] · Richmond Ellesine · the town
+- **Summary:** two weeks of building pass. The Lioness opens while a gallows goes up across the
+  square, Sable sets the work for while they're away, and Dip leaves at dawn.
+- **Where:** [[The Golden Lioness]] and its yard, and the square, Days 4–18.
+- **Cast:** [[Sable Wren]] · [[Silas Crubb]] · [[Mara Tull]] · Richmond Ellesine · the town
 - **Enemies:** none
 - **DCs:** none
-- **Time:** ~15 min
-- **Trigger:** the morning after the reeve.
+- **Time:** ~20 min
+- **Trigger:** the morning after the deed.
 
 #### S35_27_BUILD — Two weeks on the Lioness
 
@@ -1041,9 +1051,19 @@ From Asher
 
 > *"Two weeks. The hole in the new wing gets a wall, then a roof, then a window someone argues
 > about. The black circle in the yard goes green again. Silas comes by every morning to look at
-> the work, and every morning he says it won't be ready. On the seventeenth night the lanterns
-> are lit at the door, the casks you carried home are tapped, and Ashford comes in out of the
-> cold. By midnight there isn't a chair left."*
+> the work, and every morning he says it won't be ready."*
+>
+> *"Across the square, something else goes up. Nobody asks Mara. Hob Fenner brings the timber,
+> and by the second week there's a platform outside the sheriff's office, a crossbeam over it,
+> and a coil of new rope on the boards, not yet hung."*
+>
+> *"On the seventeenth night the lanterns are lit at the Lioness door, the casks you carried home
+> are tapped, and Ashford comes in out of the cold. By midnight there isn't a chair left."*
+
+- **The gallows (never cut).** Mara didn't order it, and she won't take it down. **Say (Mara, if
+  asked):** *"I didn't build it. I can't stop a town building."*
+- **Plant (rope):** the coil of new rope on the boards, not yet hung. It goes up after "noon"
+  (`S35_29_REEVE`).
 
 - **Ask everyone:** *"What did you do to make opening night work?"* Go round the table once. Take
   each answer, make it canon, move on.
@@ -1054,6 +1074,7 @@ From Asher
   - It pours but can't brew: the copper is still ruined, and only [[George Ringo]] or [[Zach]] can
     remake it.
   - Sable's first payment goes to Silas.
+  - A gallows stands in the square outside Mara's office, waiting on the eighteenth.
 - **Sable calls in Halsby's job** (about 3 min; Jeff, 2026-11-22). This is the favour he owes
   her through Asher (Session 29). She finds him alone one night of the two weeks.
   - **Say (Sable):** *"Asher said I'd need you. He was right, the old toad. I need a copper. Find
@@ -1062,6 +1083,9 @@ From Asher
   - Halsby wanders anyway, so the job goes with him. Where the smiths are stays TBD for Ben.
     Asher already paid Halsby ([[The Shadowless Spear]], Session 31); this job is what Halsby
     owes Sable, not Asher.
+  - **Choice (Halsby)** (draft, engine 2026-11-23): take the job as the favour owed, or ask for
+    something back: who Asher meant by "people who study your kind" (`S35_19_ASHER_BOW`). Sable says
+    she'll ask him. The answer is Ben's.
 - **Say (Sable, at closing):** *"Before you go. Tell me what to build while you're gone."* Hand
   over the While You're Away card (`handouts/while-away.html`).
 - **Choice (party):** which projects Sable starts, and how much gold they leave her. Write it
@@ -1072,13 +1096,115 @@ From Asher
 - **Time passes:** dawn on Day 18, the morning after opening night. The Lioness is still asleep.
 - **Ben leads.** Dip leaves on pilgrimage, to understand the bond between the divine and the
   mortal, and to look for the sister Asher's water once touched. How Dip says goodbye, and to
-  whom, is Ben's. Give each PC a moment with them, then end on Dip's back on the road south.
+  whom, is Ben's. Give each PC a moment with them, then hold on Dip's back on the road south.
+  The road south runs through the square, past the scaffold.
+- **If Ben wants Dip to stay for the reeve,** let him. Dip goes into the cell with the others and
+  leaves straight after the season's last line, and the farewell happens at the end instead.
 - **Say (Richmond Ellesine, reputation, unspent):** if Dip buys anything for the road, the
   blacksmith knocks the price down without being asked. *"For the one who saved the Lioness.
   Twice."*
 - **Say (Sable):** a room stays kept. *"It's yours. I'll air it."*
 - **Asher:** the field waits for Dip. When Dip passes the willow on the river path, a single gold
   firefly drifts up out of the roots in the daylight, and goes back down.
+- **Time passes:** the sun climbs. Mid-morning, and the square is full.
+
+### Scene 10 — The Reeve's Ledger
+
+- **Summary:** the season ends. Cael's reeve comes for Bane's ledger and sets the hanging for
+  noon. The party goes into the cell with him, and the silent prisoner speaks for the first time.
+- **Where:** the square and Mara's office, mid-morning of Day 18.
+- **Cast:** Cael's reeve · [[Mara Tull]] · Dunny Marsh · Pell Ashby · Hob Fenner ·
+  [[Shaw Proudfoot]] (Tyler)
+- **Enemies:** none
+- **DCs:** Insight 13 — read the reeve
+- **Time:** ~25 min. Never cut.
+- **Trigger:** mid-morning, after Dip is gone. Tyler should be in the Roll20 game by now. Ben
+  stays at the table: this is the hook his run opens on.
+
+#### S35_29_REEVE — Cael's reeve, and noon
+
+- **Say:**
+
+> *"Hoofbeats in the square. A lean grey man on a good horse, mud to the knee, Cael's colours on a
+> plain cloak and a writing case strapped to his saddle. He gets down slowly, like a man who's
+> been riding since before dawn. He looks at the scaffold a long moment, then asks Pell Ashby
+> for the sheriff."*
+
+- **Introduce:** Cael's reeve
+  - **Look:** as in the Say above.
+  - **Sound:** level, tired, a clerk's patience.
+  - **Impression:** fair, and in a hurry to be somewhere else.
+- **What he wants:** Bane's ledger. Mara's rider told Orrend about the prisoner and the ledger
+  on Day 3.
+  - **Say (the reeve):** *"His lordship would like to read it. As evidence."*
+- **Choice (party):** hand it over, or keep it.
+  - **Hand it over:** Cael has Bane's name in his hand, written down. It tilts the feud toward
+    Cael, and the reeve owes them a courtesy.
+  - **Keep it:** the party holds the only written proof of who pays the raiders. **Say (the
+    reeve):** *"Then I'll tell his lordship who has it."*
+- **The hanging.** **Say (the reeve, to Mara):** *"Two weeks. Not a word?"* **Say (Mara):** *"Not
+  one."* **Say (the reeve):** *"Then noon. A man who gives himself up has till noon to
+  speak for himself. That's the law."*
+- **Payoff (rope):** (draft, engine 2026-11-23) **Say:** *"Across the square, Hob Fenner climbs the
+  platform with the new rope over his shoulder and starts tying it to the crossbeam."*
+- **Say (Mara, to the party):** *"You've seen their faces. Come and tell me if he was one of
+  them."* She takes the keys from Dunny. If the party holds back, **Say (the reeve):** *"I'd like
+  witnesses."*
+- *If they refuse:* Mara goes in with the reeve and leaves the door open. They hear it from the
+  square. Shaw still speaks.
+
+#### S35_30_SPEAKS — The man in the last cell speaks
+
+- **Say:**
+
+> *"Mara's office is dim after the square. Six cells along the back wall, five empty. In the
+> last, on the bench, is the man Ashford has stared at for two weeks. He's a halfling, bald, with
+> the squarest jaw any of you have seen and far too much muscle for his size, in a dark blazer
+> with no shirt under it. His hands are on his knees. He looks at each of you in turn, and keeps
+> looking."*
+
+- **Tokens:** cell map: Shaw on the bench in the last cell; party at the door; Mara and the reeve
+  by the desk; Nella in the far cell, if caught.
+- **Payoff (sword):** his sword lies on Mara's desk, where she put it two weeks ago.
+- **Tyler takes over.** Shaw has spent two weeks reading Ashford through the bars, and now he
+  reads the party. When he speaks is Tyler's call. Don't fill the silence: let the reeve read the
+  charge and let the party talk at him.
+- **Natural openings:** Harrow Bane's name, the ledger, the dead crew at the waystation, what the
+  band did to Ashford. Any of them can draw him out.
+- **One opening per PC** (draft, engine 2026-11-23). Offer them, never force them:
+  - **Iggy:** stand in front of him or not, when the reeve talks rope.
+  - **Luci:** if Nella was caught, she and Shaw see each other. Insight 13: they know each other.
+    What it means is Tyler's.
+  - **Odibli:** *"Count them."* The waystation dead had names, and Shaw knows them.
+  - **Halsby:** the arithmetic, in his flat ferry tone: one man, one rope, one ledger.
+  - **Dip:** only if Ben kept them for the reeve.
+- **He tells one true thing tonight** (draft, engine 2026-11-23): why he walked in. Tyler picks
+  it. The letter keeps the rest. Message Tyler before the session so he has it ready.
+- **His first line** is Tyler's, from the planning meeting: ***"What do you know about it?"***
+  Tyler can say it his own way.
+- **Introduce:** [[Shaw Proudfoot]] (Tyler's PC)
+  - **Look:** as in the Say above.
+  - **Sound:** Tyler's. Quirks are found at the table, not written ahead.
+  - **Impression:** a soldier, not a monk, and a man who has already made up his mind.
+- **Say (the reeve), once he talks:** *"So he talks."* Then: *"The hanging waits. I'll hear all
+  of it myself."*
+- **Insight 13:** the reeve is relieved. He didn't want to hang a man who walked in.
+- **What Shaw knows (Tyler plays it):** why he left (the kidnapping order), and what the band
+  does next. Where the next raid falls is open (todo 71). If Tyler wants something to bargain
+  with, he can hold the raid back as his price.
+- **Don't settle tonight:** his freedom, his price, or what Ashford does with him. Those are
+  Ben's run.
+- **The last beat.** When the talk has run its course:
+
+> *"He reaches inside the blazer and holds a letter out through the bars. It's folded small and
+> soft at the corners, and the seal has been broken and pressed flat again many times."*
+
+- **Say (Mara):** *"I let him keep that. It's paper."*
+- **Shaw's last line** is Tyler's. If he wants one: ***"Read it."***
+- **Plant (letter, kept for Session 36):** the letter stays folded. Ben's run opens on it.
+- **Stop there.** Don't open the letter. That's the season's last image. Its text is Ben's and
+  Tyler's to open the next run with. If a player opens it anyway, say: *"That's where we stop.
+  Ben reads it to you next time."*
 
 ## NPC Quick-Reference
 
@@ -1127,13 +1253,15 @@ From Asher
 
 - **Motivation:** hold the town together with too few hands.
 - **Knows:** every raid and what it cost · that Lord Cael answers letters and sends nothing ·
-  nothing about why her prisoner surrendered.
+  nothing about why her prisoner surrendered · the reeve comes on the eighteenth (her rider,
+  Day 3).
 - **Voice:** quiet, weathered, economical. Gives an order once.
 - **Her office:** six cells along the back wall. One man in the last.
 
 ### Cael's reeve
 
 - **Motivation:** get the ledger to Lord Cael and get home.
+- **Arrives:** mid-morning of Day 18, the morning Dip leaves (Scene 10).
 - **Knows:** that Cael wants proof against Bane · the law on hanging a man who surrendered.
 - **Voice:** level and tired, a clerk's patience.
 
@@ -1157,15 +1285,30 @@ From Asher
   Don't offer it; let the table think of it.
 - **Elowen is absent all afternoon.** She buckles the brace on and says *"Count them."* The
   flashback and the rest of the scene are a later lucid day.
+- **Tyler can't make it.** Shaw stays a silhouette. Play `S35_29_REEVE` as written, then end on
+  the old closing: *"The reeve stands at the bars a long time. The man on the bench doesn't look
+  up. 'The hanging waits,' the reeve says, to nobody in particular, and goes out to his horse."*
+  Shaw speaks in Ben's first session instead; tell Ben.
+- **Tyler is late.** Stretch `S35_29_REEVE`: the reeve reads the charge aloud, Mara asks the party
+  what they saw, the rope goes up slowly. Not in by 10:45: play the can't-make-it ending above.
+- **The party wants him hanged.** Let them say so; the reeve hears it. Shaw's line still lands,
+  and the reeve still says *"The hanging waits."* A man who talks is evidence. Don't play the
+  hanging this season.
+- **A PC tries to make him talk early** (during the build, by threat or kindness): he watches and
+  says nothing. The square's opinion of the gallows is the pressure, not the PCs.
 
 ## Closing
 
-Land it on the reeve at the cell, or on Dip's road at dawn.
+Land it on Shaw's letter, held out through the bars (`S35_30_SPEAKS`). Nothing after it: no
+wrap-up narration, no "next time". Cut while the letter is still in his hand, then say the season
+is over.
 
-> *"The reeve stands at the bars a long time. The man on the bench doesn't look up. 'The hanging
-> waits,' the reeve says, to nobody in particular, and goes out to his horse."*
+The order of the last half hour is the shape: Dip's back on the road south (loss), the reeve's
+"noon" under the gallows (threat), the silent man speaks (turn), the letter (the next road).
 
-**Leave unresolved:** who the prisoner is and why he surrendered · Bane's face · the field above
+**Leave unresolved:** what the letter says and who wrote it · what Shaw knows about the band's
+next move, and his price · whether Ashford lets him live · why he surrendered, beyond what he
+tells them · Bane's face · the field above
 the ford, and what's under it · where Dip's sister is · what Sabathiel wants · the Citadel's
 reach · what the order doesn't like at [[Tassad]].
 
@@ -1177,7 +1320,10 @@ reach · what the order doesn't like at [[Tassad]].
 
 ## Cameo Candidates
 
-- **The prisoner** (Tyler's cameo, beat 1) — a silhouette in the cell. The reeve looks at him.
+- **The prisoner, [[Shaw Proudfoot]]** (Tyler) — a silhouette in Scene 4 and through the build,
+  then speaks in Scene 10 (`S35_30_SPEAKS`). He stops being a cameo here: Tyler is a player from
+  Ben's run on. The cameo's chains-to-sword beat in `workshop/first-homebrew-act/drafts/cameos.md`
+  is overtaken by this.
 - **Old Tobin Reed** — finds Luci in the ford.
 
 ## Engine notes
@@ -1199,12 +1345,14 @@ reach · what the order doesn't like at [[Tassad]].
     or never (`S35_20_LUCI_DRAUGHT`)
   - Party: Tithe's hood (`S35_06_GOODBYE`) · Nella's purse (`S35_09_TALLY`) · the crew's crystals
     (`S35_11_BODIES`) · what Silas gets for his cart (`S35_12_HAUL_HOME`) · what to name in the
-    new wing (`S35_25_STAKE`) · the ledger to the reeve or not (`S35_26_REEVE`) · what Sable
+    new wing (`S35_25_STAKE`) · the ledger to the reeve or not (`S35_29_REEVE`) · what Sable
     builds while they're away (`S35_27_BUILD`)
+  - Halsby: take Sable's job as the favour owed, or ask for something back (`S35_27_BUILD`)
   - Dip: take Asher's debt or not (`S35_18_THE_ASK`) · hand the whip to Asher or keep it
     (`S35_19_ASHER_BOW`)
   - Odibli: believe Elowen, tell the party, open Mara's letter (`S35_23_ELOWEN`)
-- **Mysteries:** `S35_01_IGGY_BEAT` touches Sah; `S35_10_CAMP_INTEL` and `S35_26_REEVE` touch
+  - Shaw (Tyler): when he speaks, what he tells, and his price (`S35_30_SPEAKS`)
+- **Mysteries:** `S35_01_IGGY_BEAT` touches Sah; `S35_10_CAMP_INTEL` and `S35_29_REEVE` touch
   Harrow Bane; `S35_09_TALLY` touches Nella's debt; `S35_18_THE_ASK` touches Jorn and the field;
   `S35_21_TRIP` touches Sabathiel and the Sun Temple. Check `scheduler/campaign/_mysteries.md`
   when the answers land.
@@ -1236,11 +1384,17 @@ reach · what the order doesn't like at [[Tassad]].
     the draught · Sabathiel's first full line, "Stand still, and I can reach you." · Luci woke
     in the ford with the water still around her · the Stillwater Wraps · Elowen's look as written
     here (her file has none) · Elowen's flashback of the translocation · the Unfinished Binding ·
-    Mara's sealed letter · the stake number and what the party named · Cael's reeve, unnamed ·
-    "the hanging waits" · two weeks of building · what each PC did for opening night · the
+    Mara's sealed letter · the stake number and what the party named · Mara's rider and the
+    eighteenth · Cael's reeve, unnamed, on Day 18 · the gallows the town built · "Then noon." ·
+    Shaw's first words · "the hanging waits" · the letter held out, unopened · two weeks of
+    building · what each PC did for opening night · the
     Lioness open on the recovered casks, but not brewing · what the party named, signed over the
     door · the projects Sable runs while they're away · Sable's job for Halsby: find George Ringo
-    or Zach for the copper · Dip's farewell
+    or Zach for the copper · Halsby's choice on the job · Iggy's answers to Asher's two questions ·
+    the rope hung at noon · Shaw's sword on Mara's desk · the one true thing Shaw tells · Nella and
+    Shaw knowing each other, if it came up · Dip's farewell
   - **Log Odibli's casts** (Citadel Clock, at 1 / 3). Restamp the trackers. Mark spent: Silas's
     shoeing for Halsby and Richmond's price for Dip, if played.
-  - **Rotation:** set Dip `state: away` with "on pilgrimage", then run `/handover`.
+  - **Rotation:** set Dip `state: away` with "on pilgrimage", then run `/handover`. Shaw
+    becomes an active PC: add his Session History, and hand Ben the letter, Shaw's price and the
+    noon hanging in the handover.

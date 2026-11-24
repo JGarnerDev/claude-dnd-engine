@@ -325,7 +325,7 @@ def try_int(s) -> int | None:
     """Int if s is a clean integer string, else None (mirror of [int]::TryParse)."""
     try:
         return int(str(s).strip())
-    except TypeError, ValueError:
+    except (TypeError, ValueError):
         return None
 
 

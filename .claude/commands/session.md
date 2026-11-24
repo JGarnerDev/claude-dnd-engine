@@ -307,11 +307,13 @@ Everyone the plan puts in front of the party gets a real name, walk-ons and name
 - **Cues the runner can check:** a round (`round 3`), an enemy's HP (`Nella drops to half (24 HP)`, `Tithe at 47 HP`: the number in HP, near the name), an enemy going down (`Garran Vey drops`, `Tithe drops to 0`), or a head count (`the crew (everyone but Nella and Tithe) is down to two`: `crew`, `enemies` or `foes`, then `down to N`; names after "but" or "except" don't count, and an enemy who hasn't arrived yet isn't standing). Name the enemy the way its Enemies entry does: its real name, either half of it, or its label. Anything else stays for the DM to judge; join cues with "or"
 - **Watch items** (`- **If Nella drops to half (24 HP):** …`) light up the same way, one nested bullet per condition
 - **Fight markers** — `- **Combat starts:** …` and `- **Combat ends:** …` on the beats where a fight begins and ends, and `- **Boss fight starts:**` / `- **Boss fight ends:**` for a boss inside it. The runner draws a rail down the steps between them and shows its fight bar (round counter, what's due now, HP chips) on those steps. Unmarked, the fight runs from the first combat beat to the last
-- **Boss blocks** — a boss's stat block carries `- **Legendary actions: N a round,** …` and one bold bullet per phase with its HP in the label (`- **Bloodied, at 47 HP or less: the second phase.**`). The runner gives the boss's chip N pips to spend and a meter with a tick at each phase, and names the phase once it's in it. Each phase that changes the scene (a read-aloud, a new behavior) is also its own beat, with a `When:` line at the same HP, so it lights up as a step; the block keeps the rules. The boss's first close appearance carries its entrance read-aloud (`meta/prose-style.md` → Boss introductions), with the title card and boss music cued on its last line
+- **Boss blocks** — a boss's stat block carries `- **Legendary actions: N a round,** …` and one bold bullet per phase with its HP in the label (`- **Bloodied, at 47 HP or less: the second phase.**`). The runner gives the boss's chip N pips to spend and a meter with a tick at each phase, and names the phase once it's in it. Each phase that changes the scene (a read-aloud, a new behavior) is also its own beat, with a `When:` line at the same HP, so it lights up as a step; the block keeps the rules. The boss's first close appearance carries its entrance read-aloud (`meta/prose-style.md` → Boss introductions), with the title card cued on its last line
 
 **No provenance in scenes.** Who decided a beat and when (`(Jeff, 2026-10-07)`, `Engine, …; committed …`) goes in the Engine notes, not in scene prose. The runner strips any it finds, but a beat should read clean in the file too.
 
 **Choices bullet:** the count was settled at the spine. List every choice point by node in a **Choices** bullet in the plan's Engine notes.
+
+**Plants and payoffs.** When a read-aloud or beat makes a point of something that should come back (a coil of new rope, a sealed letter, a name dropped once), put a `- **Plant (key):** …` bullet after it, and `- **Payoff (key):** …` on the beat where it comes back. A plant kept for a later session is `- **Plant (key, kept for Session N):** …`. Keys are lowercase words joined by hyphens. Markers go on bullets, never inside a read-aloud. `uv run scripts/plant-check.py --session <NN>` reports unpaid plants, payoffs with no plant, and payoffs that come first.
 
 If `scope: linked`, replace the full encounter detail with a one-line reference: `→ see [[encounter-{slug}]]` and note that the encounter file will be written separately.
 
@@ -328,10 +330,13 @@ One entry per key NPC appearing this session. For canon NPCs, run `/voice <name>
 
 2–3 likely detours the party might take. For each: what triggers it, how to handle it without derailing the session, how to redirect.
 
+If a player joins partway (a new PC's first scene, a player arriving after the start), cover them running late as well as not coming: how to stretch the scene before their entrance, and the time after which the not-coming version plays.
+
 ### Closing
 
 - How to land the closing hook (specific DM move or line)
 - What to leave unresolved going into the next session
+- If the hook is an open question, one thing that gets answered first, so the session ends on a reveal as well as a wait
 
 ### Approaching Entities
 

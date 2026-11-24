@@ -99,6 +99,8 @@ The stock moves of model-written fantasy. Same rule: candidates, not bans.
 - Em-dash as the default connector. Vary with commas, colons, periods, parentheses.
 - Symmetrical hedging and tidy "both sides" wrap-ups when the answer is known.
 - The same picture twice: a read-aloud that repeats one a few minutes earlier in the same scene.
+- A closing image spent early: the session's last picture (a broken seal, a door shutting)
+  already used anywhere earlier in the session, so the ending lands as a repeat.
 
 ## Before and after
 
@@ -191,7 +193,7 @@ saying so. Every quality is shown through something the party can see, hear or f
 - **Still prose-style rules:** no stock tells, one detail per idea, second person, present tense,
   nothing the party feels or decides. The length allowance is for the boss only, once per fight.
   Bloodied and death beats go back to two to four sentences.
-- **Cue the table on its last line:** title card, boss music, HP bar, all on the same moment
+- **Cue the table on its last line:** title card and HP bar, on the same moment
   (usually its first scream, roar or strike). Name them on the beat (`/session` Phase 6 → Boss
   blocks).
 
@@ -206,7 +208,8 @@ Check a draft before it goes to disk, not only at review:
 2. Every sensory detail is specific to this place: a thing the party could point at.
 3. No read-aloud tells the party what they feel, think or decide.
 4. Read-aloud ends on something the party can act on, not on a portent.
-5. No two read-alouds in one scene paint the same picture.
+5. No two read-alouds in one scene paint the same picture, and nothing earlier in the session
+   uses the closing image.
 6. Each NPC line could only come from that NPC (their file's `voice` and `## Voice`), and needs no
    gloss to land on a cold read.
 
