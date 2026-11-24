@@ -31,6 +31,29 @@ export function itemsOf(
   });
 }
 
+// "S5" from "S5 The Red Trail", for a Swimlane column header; undefined otherwise.
+export function sessionNumber(label: string): string | undefined {
+  return /^S\d+(?=\s|$)/.exec(label)?.[0];
+}
+
+// Number of latest beats a chart opens on (RECENT_BEATS), so a long history
+// starts at its recent stretch instead of squeezed into one column.
+export const RECENT_BEATS = 12;
+
+// The [first, last] day-index of the `count` latest beats after the last axis
+// break (`breaks`, day-indexes): an era gap ends "recent". Undefined with none.
+export function recentRange(
+  beats: readonly IndexedEvent[],
+  { breaks, count = RECENT_BEATS }: { breaks: readonly number[]; count?: number },
+): [number, number] | undefined {
+  const ats = beats.map((e) => e._idx).sort((a, b) => a - b);
+  if (!ats.length) return undefined;
+  const last = ats[ats.length - 1];
+  const gap = Math.max(-Infinity, ...breaks.filter((b) => b <= last));
+  const recent = ats.filter((at) => at > gap).slice(-count);
+  return [recent[0], recent[recent.length - 1]];
+}
+
 export function spansOf(idx: IndexedEvents): ChartSpan[] {
   const sessions = idx.events.filter((e) => e.session);
   return deriveSessionBands(
@@ -42,6 +65,7 @@ export function spansOf(idx: IndexedEvents): ChartSpan[] {
     start: b.x0,
     end: b.x1,
     label: b.label,
+    short: sessionNumber(b.label),
     weight: b.major ? "major" : undefined,
     href: b.source,
   }));

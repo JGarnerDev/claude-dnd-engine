@@ -31,8 +31,11 @@ const dense: TimelineData = {
   })),
 };
 
-function mount(d: TimelineData, initialState?: ChartState) {
-  const chart = mountChart(Timeline, d, initialState);
+// A saved fit view, so specs start at fit rather than on the recent beats (focus).
+const FIT: ChartState = { query: "", tracks: [], zoomLevel: 1, scrollLeft: 0, audiences: [] };
+
+function mount(d: TimelineData, initialState: ChartState | null = FIT) {
+  const chart = mountChart(Timeline, d, initialState ?? undefined);
   const { container, all } = chart;
   const viewport = () => container.querySelector<HTMLElement>(".ui-chart-viewport")!;
   return {
@@ -52,6 +55,15 @@ function mount(d: TimelineData, initialState?: ChartState) {
 }
 
 describe("Timeline", () => {
+  it("opens zoomed on the recent beats when there is no saved view", () => {
+    const old: TimelineData = {
+      calendar: null,
+      events: [{ date: "1000", label: "long ago" }, ...dense.events.slice(0, 5)],
+    };
+    const fit = mount(old).width();
+    expect(mount(old, null).width()).toBeGreaterThan(fit * 4);
+  });
+
   it("renders one marker per event", () => {
     expect(mount(data).markers()).toHaveLength(3);
   });

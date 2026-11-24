@@ -11,7 +11,7 @@ import { EmptyState } from "jeff-ui";
 import { Timeline as TimeChart, type ChartItem, type TimeChartHandle } from "jeff-ui/charts";
 import { DEFAULT_CALENDAR } from "../_common/helpers/calendar.js";
 import { indexEvents, timeScaleFor } from "../_common/helpers/axis.js";
-import { breaksOf, itemsOf, spansOf } from "../_common/helpers/items.js";
+import { breaksOf, itemsOf, recentRange, spansOf } from "../_common/helpers/items.js";
 import { axisOptionsFor } from "../_common/helpers/segments.js";
 import { makeMatcher } from "../_common/helpers/filters.js";
 import { serializeState, DEFAULT_STATE } from "../_common/helpers/viewstate.js";
@@ -98,6 +98,7 @@ function TimelineChart({
       visible={visible}
       initialZoom={initialState?.zoomLevel}
       initialScroll={initialState?.scrollLeft}
+      focus={recentRange(beats, { breaks: idx.breaks.map((b) => b.idx) })}
     >
       <ChartSettings slot={settingsSlot} sections={sections} />
     </TimeChart>

@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.109.0] — 2026-11-24
+
+### Changed
+
+- **jeff-ui 2.9.0** (`app/package.json`): chart tooltips anchored to the hovered dot, one dot size, no fades, a bigger legend, short span labels, and a `focus` range on `Timeline` (style pass step 11, todo 103).
+- **The home timeline opens on what happened lately** (`Timeline.tsx`, `_common/helpers/items.ts`; style pass step 11). With no saved view, the World chart zooms to the last 12 beats since the latest axis break, instead of fitting all history into one squashed strip. The Campaign view's session headers read `S5`, not the full session name. Tests in `items.spec.ts` and `Timeline.spec.tsx`.
+
 ## [0.108.0] — 2026-11-24
 
 ### Changed

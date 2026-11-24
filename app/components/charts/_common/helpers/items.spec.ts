@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { breaksOf, itemsOf, spansOf } from "./items.js";
+import { breaksOf, itemsOf, recentRange, sessionNumber, spansOf } from "./items.js";
 import { indexEvents, type IndexedEvent } from "./axis.js";
 import type { TimelineEvent } from "../types.js";
 
@@ -66,6 +66,37 @@ describe("spansOf", () => {
 
   it("gives no spans without sessions", () => {
     expect(spansOf(indexEvents([ev("1340", "Beat")]))).toEqual([]);
+  });
+});
+
+describe("sessionNumber", () => {
+  it("takes the leading session number, or nothing", () => {
+    expect(sessionNumber("S5 The Red Trail")).toBe("S5");
+    expect(sessionNumber("S12")).toBe("S12");
+    expect(sessionNumber("Summer break")).toBeUndefined();
+    expect(sessionNumber("S5x")).toBeUndefined();
+  });
+});
+
+describe("recentRange", () => {
+  const idx = indexEvents([
+    { date: "1340", label: "a" },
+    { date: "1342", label: "c" },
+    { date: "1341", label: "b" },
+  ]);
+  const at = (label: string) => idx.events.find((e) => e.label === label)!._idx;
+
+  it("spans the latest beats, whatever their order", () => {
+    expect(recentRange(idx.events, { breaks: [], count: 2 })).toEqual([at("b"), at("c")]);
+  });
+
+  it("stops at the last axis break before the latest beat", () => {
+    const breaks = [at("a") + 1, at("c") + 1];
+    expect(recentRange(idx.events, { breaks })).toEqual([at("b"), at("c")]);
+  });
+
+  it("gives nothing without beats", () => {
+    expect(recentRange([], { breaks: [] })).toBeUndefined();
   });
 });
 
