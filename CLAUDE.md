@@ -125,6 +125,10 @@ Homebrew PCs carry two scored tracks, **fame** and **infamy**: big, odd arcade n
 
 NPC and antagonist files can carry a `## Voice` section: a **core** (how they speak, which changes only by correction or a DM-called arc shift) and a **now** layer (what sessions have done to them, every line citing its cause), plus lines actually said at the table. Frontmatter `voice:` holds the core in one line; `voice_confirmed:` stamps it. When writing, updating or playing a voice, read `meta/voice.md` once per task. `/recap` proposes voice shifts after the affinity nudges; `/voice` caches new ones; `todo-brief.py` flags stale stamps.
 
+## NPC Stat Blocks
+
+A recurring NPC or antagonist with a custom stat block keeps it in a `## Stat block` section of their historian file (current block, **Shown at the table**, changes), stamped by `stats_confirmed:`. What the table has seen is canon and locked: a later plan copies the block from the historian file, never from the last plan, and tunes only what is unshown. `/session` copies it, `/review` flags a plan that changes a shown item, `/recap` records what was shown and restamps, `todo-brief.py` flags stale stamps. Read `meta/npc-stats.md` once per task when writing, planning or recapping one.
+
 ## PC Arcs
 
 Each PC has a **PC arc** in `scheduler/arcs/`: a provisional direction (logline, growth and fall, the next one or two `spotlight_hooks:` to seed), DM-facing and shared by both seasons. Always "PC arc", never bare "arc", which means four other things here. `/session` reaches for the overdue PC's Next step first, `/review` notes a present PC whose arc nothing touches, `/recap` proposes shifts and restamps `arc_checked`, and `scripts/spotlight-balance.py` prints them in the briefs. Read `meta/pc-arcs.md` once per task when writing, shifting or planning from one.
@@ -215,7 +219,7 @@ Scripts and app code are hard to misuse: build from small single-purpose functio
 
 ## Stamp Pattern
 
-Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, NPC `voice_confirmed`, the campaign Rest Clock header, campaign tracker headers (`scheduler/campaign/_*.md`, e.g. the Citadel Clock), the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
+Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, NPC `voice_confirmed` and `stats_confirmed`, the campaign Rest Clock header, campaign tracker headers (`scheduler/campaign/_*.md`, e.g. the Citadel Clock), the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
 
 ## Versioning
 

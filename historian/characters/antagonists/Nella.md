@@ -19,6 +19,7 @@ livelihood: "Bandit lieutenant — the band's hunter and marksman, raiding for H
 disposition: hostile
 voice: "Patient and dry, never raised: short sentences from a long way off, and she counts things aloud."
 voice_confirmed: 34
+stats_confirmed: 34
 
 # --- OPTIONAL (entity base) ---
 importance: minor
@@ -123,6 +124,76 @@ hears, and she can answer. She sits on that through many fights before it comes 
   called **"Get moving, they're coming,"** and launched the griffon into the air. Halsby saw the
   crystal at her neck, so the party now knows she can hear an all-holder broadcast.
 - The session ended with her airborne over a mobilising camp, at about 10 a.m. on Day 2.
+
+## Canon — Session 33
+
+- **She fought from the air.** On Tithe's back (her griffon) about 90 ft up, under the low cloud over the
+  waystation, she loosed two arrows in one turn: one went wild and struck her own big cask-hand,
+  the other hit [[Dip]].
+- Later in the fight she swooped low, the griffon screaming, and shot [[Iggy]] and [[Odibli]].
+- The session ended with her circling about 60 ft up while her crew died in the yard below.
+
+## Canon — Session 34
+
+- **She sent the griffon off.** She landed Tithe on the ridge, dismounted, and over the crystals
+  told it, "Alright, Tithe. Go hunt." It climbed back into the cloud and fought riderless.
+- **Her relief came to her.** A gruff voice on the crystals asked her where she wanted them: Bane's
+  relief riders, a captain and three men, in from the north. All four died in the yard.
+- **From the ridge she shot Iggy down to 7 HP** while he went for the griffon.
+- **Tithe died** in the yard, its wing burned and the bird brought down, and fell on Odibli.
+- **She ran.** On foot and apparently unhurt, up the ridge or river path toward the bridge, with
+  [[Luci]] some way behind. The chase carries into Session 35.
+- **Ruling at the table:** cover plus obscurement on her shots counted as +2 AC, not double
+  disadvantage.
+
+> **Reliability:** the S34 ruling's wording ("on Nella's shots") doesn't say whether the +2 AC
+> went to her targets or to her while she shot from the blind. Confirm with DM.
+
+## Stat block
+
+### Current
+
+- AC 15 (studded leather) · **HP 49** · Speed 40 ft, **swim 40 ft** (Roving) · CR 3
+- STR 12 · **DEX 18 (+4)** · CON 12 · INT 12 · **WIS 16 (+3)** · CHA 10
+- Stealth +8, Survival +7, Perception +7, Nature +5
+- **Multiattack:** two longbow attacks
+- **Longbow ×2** +6 to hit, range 150/600, 1d8+4 piercing (avg 8)
+- **Shortsword** +6, 1d6+4 piercing — cornered only; she never chooses melee
+- **Marked Quarry (1/turn):** +1d6 against a creature she hit on her previous turn
+- **Skirmisher's Step:** Dash, Disengage or Hide as a bonus action
+- **Ranger spells** (WIS, save DC 13, +5 to hit; 1st-level slots ×4, 2nd ×2), all PHB:
+  - **Spike Growth** (2nd, concentration): a 20 ft radius of hidden thorns, difficult terrain,
+    2d4 piercing for every 5 ft moved through it. Spotting it before stepping in is Perception
+    DC 13.
+  - **Ensnaring Strike** (1st, concentration): on a hit, STR save DC 13 or restrained by vines.
+  - **Hunter's Mark** (1st)
+- **Roving:** +10 ft speed and a swim speed equal to it
+- **Prepared Ground:** on ground she chose, advantage on initiative, and her way out is rigged
+- **Mounted:** mounting costs half her movement; mounted, she fights from the air. No mount since
+  Tithe died (S34)
+- **Tactics: wound and pin, never kill.** She spreads her shots, and never shoots a downed PC
+- **Kit (player-facing):** *dark studded leather under a long weathered cape, a tall longbow,
+  and a short sword at her hip she doesn't touch.*
+
+### Shown at the table
+
+- **Rides a griffon and fights from it** (S33): drops out of the cloud to shoot, swoops low
+- **Two longbow shots a turn** (S33, from about 90 ft up)
+- **Arrows that hurt:** hits on Dip, Iggy and Odibli (S33); Iggy shot down to 7 HP (S34)
+- **Dismounts and fights on foot from the ridge** (S34)
+- **Hears and speaks over the [[Earshot Crystals|earshot crystals]]** (S32, S34)
+- **Runs on foot**, apparently unhurt (S34). Her AC and HP have not been tested
+
+> **Reliability:** the notes don't say whether Marked Quarry's +1d6 fired in S33 or S34, so it
+> isn't listed as shown. Confirm with DM.
+
+### Changes
+
+- S33 plan: Mounted added for Tithe (Jeff, 2026-10-28).
+- S35 plan: speed 35 → 40, swim 40 (Roving), Ranger spells (Spike Growth, Ensnaring Strike,
+  Hunter's Mark). None of it shown yet.
+- Backfilled at S34 (2026-11-24): the plans' "never broadcasts" is dropped, because she spoke
+  over the crystals at the table in S34.
 
 ## Voice
 

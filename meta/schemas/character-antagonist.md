@@ -102,6 +102,8 @@ character_sheet: ""     # Path to a sheet file, an external link, or an inline s
 motives: []
 voice: ""               # Core cadence and register in one line; see meta/voice.md.
 voice_confirmed:        # Last played session the voice was checked at (stamp); set by /recap.
+stats_confirmed:        # Last played session the `## Stat block` was checked at (stamp); set by
+                        # /recap. See meta/npc-stats.md.
 human_detail: ""        # One comprehensible motive, mundane habit, or thing they protect.
 ---
 ```
@@ -122,6 +124,8 @@ Omit any line for values that are unknown — do not create dead placeholder lin
 Fill `human_detail` for all antagonists regardless of importance — even minor ones. One comprehensible reason, mundane habit, or thing they protect separates them from obstacle NPCs and makes encounters land harder.
 
 Once the antagonist has spoken at the table, `/recap` adds a `## Voice` section at the end of the body (core, now, lines said at the table, arc) and sets `voice` and `voice_confirmed`. Shape and rules: `meta/voice.md`.
+
+Once a recurring antagonist with a custom or tuned stat block has fought the party, `/recap` adds a `## Stat block` section before `## Voice` (current block, what was shown at the table, changes) and sets `stats_confirmed`. What the table has seen is locked. A stock block gets one line naming it instead. Shape and rules: `meta/npc-stats.md`.
 
 ### Form → Frontmatter Mapping
 

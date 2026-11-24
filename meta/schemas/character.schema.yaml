@@ -38,6 +38,10 @@ $defs:
       voice_confirmed:
         description: Last played session the voice was checked at (stamp); set by /recap.
         $ref: '#/$defs/session-stamp'
+      stats_confirmed:
+        description: Last played session the `## Stat block` was checked at (stamp); set by
+          /recap. See meta/npc-stats.md.
+        $ref: '#/$defs/session-stamp'
       human_detail:
         description: One comprehensible motive, mundane habit, or thing they protect.
         $ref: entity.schema.yaml#/$defs/text

@@ -6,6 +6,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.111.0] — 2026-11-24
+
+### Added
+
+- **NPC stat blocks are canon once shown** (`meta/npc-stats.md`). A recurring NPC or antagonist with a custom block keeps it in a `## Stat block` section of their historian file: **Current**, **Shown at the table** (locked; changing it is a DM-called retcon) and **Changes**, stamped by the new `stats_confirmed:` field (`character.schema.yaml`). `/session` Phase 6 copies the block from the historian file, never from the last plan; `/review` Pass 1 flags a plan that changes a shown item; `/recap` Phase 5 records what was shown and restamps. `todo-brief.py` prints `--- NPC STAT BLOCKS ---` (STATS STALE / UNSTAMPED), with tests.
+- **Nella backfilled:** her stat block (the S35 plan's, with what the table saw in S32–S34), and her missing Session 33 and Session 34 canon.
+
+### Fixed
+
+- `todo-brief.py` reads a bare `[[Name]]` in `key_npcs` (YAML parses it as a nested list), so NPC voice stamps no longer go stale by mistake.
+
 ## [0.110.0] — 2026-11-24
 
 ### Added

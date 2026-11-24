@@ -37,7 +37,6 @@ spotlight = importlib.import_module("spotlight-balance")
 D20, DRAGON, SCROLL, CROWN, HORNS = "🎲", "🐉", "📜", "👑", "🤘"
 
 _WIKI_NAME_RE = re.compile(r"\[\[([^\]|]+)")
-_VOICE_SECTION_RE = re.compile(r"^## Voice\s*$", re.M)
 
 
 def _glob(rel: str, pattern: str = "*.md") -> list:
@@ -48,15 +47,14 @@ def _glob(rel: str, pattern: str = "*.md") -> list:
     return list(d.glob(pattern)) if d.exists() else []
 
 
-def voice_flags(root: Path) -> list:
-    """(text, color) lines for NPC voices that lag the sessions they appeared in.
+def _last_seen(root: Path) -> dict[str, int]:
+    """Lower-cased NPC name -> the last played session that lists them in `key_npcs`.
 
-    Appearance is a played session's `key_npcs`, whose items come either bare
-    ([[Name]]) or quoted with a note ("[[Name]] (why they're here)"). A voice is
-    stale when its `voice_confirmed` stamp is older than its last appearance, and
-    unstamped when it has a `## Voice` section but no stamp (meta/voice.md).
+    Items come either bare ([[Name]]) or quoted with a note ("[[Name]] (why they're here)").
+    YAML reads a bare [[Name]] as a nested list, which the frontmatter parser prints as
+    [['Name']], so the quotes are stripped from the name.
     """
-    last_seen = {}
+    last_seen: dict[str, int] = {}
     for s in entity_md_files(root / "historian" / "sessions"):
         fm = get_frontmatter(s)
         n = try_int(fm.get("session_number"))
@@ -64,33 +62,76 @@ def voice_flags(root: Path) -> list:
             continue
         for item in fm.get("_list_key_npcs", []):
             m = _WIKI_NAME_RE.search(item)
-            name = (m.group(1) if m else item.split(" (")[0]).strip().lower()
+            name = (m.group(1) if m else item.split(" (")[0]).strip().strip("'\"").lower()
             last_seen[name] = max(last_seen.get(name, 0), n)
+    return last_seen
 
+
+def _stamp_flags(
+    root: Path,
+    *,
+    section: str,
+    stamp_field: str,
+    label: str,
+    unstamped: str,
+    stale: str,
+) -> list:
+    """(text, color) lines for NPC sections whose stamp lags the sessions the NPC appeared in.
+
+    `section` is the heading, e.g. `## Voice`. A section is stale when its stamp is older than
+    the NPC's last appearance, and unstamped when the file has the section but no stamp.
+    `unstamped` and `stale` are the fix advice.
+    """
+    section_re = re.compile(rf"^{re.escape(section)}\s*$", re.M)
+    last_seen = _last_seen(root)
     lines = []
     for sub in ("npcs", "antagonists"):
         for f in entity_md_files(root / "historian" / "characters" / sub):
             raw = read_text_no_bom(f)
             fm = get_frontmatter_from_text(raw)
             name = fm.get("name") or f.stem
-            stamp = try_int(fm.get("voice_confirmed"))
+            stamp = try_int(fm.get(stamp_field))
             seen = last_seen.get(name.lower())
             if stamp is None:
-                if _VOICE_SECTION_RE.search(raw):
+                if section_re.search(raw):
                     lines.append(
                         (
-                            f"  VOICE UNSTAMPED: {name} has a voice section but no voice_confirmed - confirm at next /recap or /voice",
+                            f"  {label} UNSTAMPED: {name} has a {section} section but no {stamp_field} - {unstamped}",
                             "yellow",
                         )
                     )
             elif seen and seen > stamp:
                 lines.append(
                     (
-                        f"  VOICE STALE: {name} confirmed at session {stamp}, appeared in session {seen} - rebuild their current mood at next /recap",
+                        f"  {label} STALE: {name} confirmed at session {stamp}, appeared in session {seen} - {stale}",
                         "yellow",
                     )
                 )
     return lines
+
+
+def voice_flags(root: Path) -> list:
+    """NPC voices that lag the sessions they appeared in (meta/voice.md)."""
+    return _stamp_flags(
+        root,
+        section="## Voice",
+        stamp_field="voice_confirmed",
+        label="VOICE",
+        unstamped="confirm at next /recap or /voice",
+        stale="rebuild their current mood at next /recap",
+    )
+
+
+def stats_flags(root: Path) -> list:
+    """NPC stat blocks that lag the sessions they appeared in (meta/npc-stats.md)."""
+    return _stamp_flags(
+        root,
+        section="## Stat block",
+        stamp_field="stats_confirmed",
+        label="STATS",
+        unstamped="confirm at next /recap",
+        stale="add what the table saw at next /recap",
+    )
 
 
 def main() -> None:
@@ -252,6 +293,14 @@ def main() -> None:
     for text, clr in v_lines:
         cwrite(text, clr)
     if not v_lines:
+        cwrite("  (clean)", "darkgray")
+
+    # -- 1b2c. NPC stat-block stamps --------------------------------------------
+    cwrite("\n--- NPC STAT BLOCKS ---", "darkgray")
+    s_lines = stats_flags(ROOT)
+    for text, clr in s_lines:
+        cwrite(text, clr)
+    if not s_lines:
         cwrite("  (clean)", "darkgray")
 
     # -- 1b3. Spotlight -------------------------------------------------------

@@ -102,6 +102,8 @@ disposition: hostile | neutral | friendly | unknown
 motives: []
 voice: ""               # Core cadence and register in one line; see meta/voice.md.
 voice_confirmed:        # Last played session the voice was checked at (stamp); set by /recap.
+stats_confirmed:        # Last played session the `## Stat block` was checked at (stamp); set by
+                        # /recap. See meta/npc-stats.md.
 human_detail: ""        # One comprehensible motive, mundane habit, or thing they protect.
 charm_hook: ""          # One flaw, habit, fear or absurdity that makes players root for them.
 sells:                  # Goods or services this NPC trades in, as links or plain notes.
@@ -128,6 +130,8 @@ Omit any line for values that are unknown — do not create dead placeholder lin
 For `disposition: friendly` or `importance: major` NPCs, consider a `charm_hook` — one specific detail (flaw, habit, fear, absurdity) that makes players want to root for them rather than just use them.
 
 Once the NPC has spoken at the table, `/recap` adds a `## Voice` section at the end of the body (core, now, lines said at the table, arc) and sets `voice` and `voice_confirmed`. Shape and rules: `meta/voice.md`.
+
+Once a recurring NPC with a custom or tuned stat block has fought the party, `/recap` adds a `## Stat block` section before `## Voice` (current block, what was shown at the table, changes) and sets `stats_confirmed`. What the table has seen is locked. A stock block gets one line naming it instead. Shape and rules: `meta/npc-stats.md`.
 
 ### Form → Frontmatter Mapping
 

@@ -55,3 +55,25 @@ def test_no_voice_no_flag(tmp_path):
     _session(tmp_path, 29, '  - [[Mara Tull]]\n  - "the big one (nameless by design)"\n')
     _npc(tmp_path, "Mara Tull")
     assert tb.voice_flags(tmp_path) == []
+
+
+def test_stat_block_stale_and_unstamped(tmp_path):
+    _session(tmp_path, 34, "  - [[Nella]]\n")
+    _npc(tmp_path, "Nella", "stats_confirmed: 33\n", "## Stat block\n", sub="antagonists")
+    _npc(tmp_path, "Harrow Bane", body="## Stat block\n", sub="antagonists")
+    lines = sorted(t for t, _ in tb.stats_flags(tmp_path))
+    assert lines == [
+        "  STATS STALE: Nella confirmed at session 33, appeared in session 34"
+        " - add what the table saw at next /recap",
+        "  STATS UNSTAMPED: Harrow Bane has a ## Stat block section but no stats_confirmed"
+        " - confirm at next /recap",
+    ]
+
+
+def test_voice_stamp_does_not_cover_stat_block(tmp_path):
+    _session(tmp_path, 34, "  - [[Nella]]\n")
+    _npc(
+        tmp_path, "Nella", "voice_confirmed: 34\n", "## Voice\n\n## Stat block\n", sub="antagonists"
+    )
+    assert tb.voice_flags(tmp_path) == []
+    assert len(tb.stats_flags(tmp_path)) == 1
