@@ -68,7 +68,7 @@ flowchart TD
   S2_CAMP_INTEL --> S2_HAUL_HOME
 
   classDef combat fill:#FDE2E2,stroke:#DC2626,color:#5B1414
-  classDef social fill:#FBE3D6,stroke:#D95926,color:#5A2410
+  classDef social fill:#D7F0EE,stroke:#2B8F89,color:#123F3C
   classDef decision fill:#FBF0CF,stroke:#C79A2B,color:#5A4410
   classDef stake fill:#D8F5E2,stroke:#22A35A,color:#134D2A
   classDef seed fill:#DCE8FA,stroke:#3987E5,color:#17345E

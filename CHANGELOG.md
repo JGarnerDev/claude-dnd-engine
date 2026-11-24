@@ -6,6 +6,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.103.0] — 2026-11-23
+
+### Changed
+
+- **One theme, `ink`, for the DM pages and the session runner** (was `slate` and `navy`; style pass step 3, todo 103). Parchment text on a near-neutral dark ground with one gold accent.
+- **Colours mean one thing each** (`app/pages/home/session/hues.ts`, `FilterBar.tsx`, `_common/helpers/tracks.ts`). Kinds, voices, layers and tracks all draw from the theme's seven muted hues (`--ui-hue-ember`, `amber`, `moss`, `verdigris`, `sky`, `plum`, `rose`): combat ember, social verdigris, stakes moss, seeds sky, fail and bosses rose, recaps plum; gold stays for decisions, forks and choices. `--ui-cat-*` is left to charts.
+- **SAY reads as speech**: upright serif in full text colour behind a thin gold rule, with no tinted box (choices keep theirs).
+- **Flow graphs draw social beats teal** (`meta/flow-graphs.md` legend and every graph's `social` classDef), matching the runner.
+
 ## [0.102.0] — 2026-11-23
 
 ### Changed

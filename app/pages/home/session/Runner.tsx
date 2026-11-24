@@ -37,7 +37,7 @@ const WIKI_RE = /\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g;
 export function Runner({ data: raw }: { data: SessionData | null }) {
   if (!raw || !raw.nodes.length) {
     return (
-      <Box padding={6} className="sr-emptypage" data-theme="navy">
+      <Box padding={6} className="sr-emptypage" data-theme="ink">
         <EmptyState>
           <Prose>
             <h1>No session to run</h1>
@@ -144,7 +144,7 @@ function Walk({ raw }: { raw: SessionData }) {
   const round = (node.scene && state.rounds[node.scene]) || 1;
 
   return (
-    <Column fill gap={0} className="sr-root" data-theme="navy">
+    <Column fill gap={0} className="sr-root" data-theme="ink">
       <RunnerHeader
         name={s.name}
         date={s.date}

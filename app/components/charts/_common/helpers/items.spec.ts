@@ -19,7 +19,7 @@ describe("itemsOf", () => {
       at: 10,
       label: "Beat",
       weight: "major",
-      tone: "var(--ui-cat-2)",
+      tone: "var(--ui-hue-plum)",
       dashed: true,
       href: "factions/cult.md",
       group: "faction:Cult",

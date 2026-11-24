@@ -1,4 +1,4 @@
-/* Session runner (runner.ts), on jeff-ui's navy theme (data-theme on .sr-root in
+/* Session runner (runner.ts), on jeff-ui's ink theme (data-theme on .sr-root in
    Runner.tsx). Colors are theme tokens only: the kind and voice hues live in hues.ts
    and arrive as hue props, or as an inline --ui-hue that the rules here read. */
 
@@ -183,7 +183,10 @@
   font-weight: var(--ui-weight-strong);
   color: var(--ui-hue);
 }
-.sr-pb-say .sr-pb-text,
+.sr-pb-say .sr-pb-text {
+  padding: var(--ui-space-1) 0 var(--ui-space-1) var(--ui-space-3);
+  border-left: 1px solid var(--ui-hue);
+}
 .sr-pb-choice .sr-pb-text {
   background: color-mix(in srgb, var(--ui-hue) 10%, transparent);
   padding: var(--ui-space-2) var(--ui-space-3);
@@ -198,7 +201,7 @@
 .sr-pb-say blockquote,
 .sr-md .sr-say {
   font-family: var(--ui-font-serif);
-  font-style: italic;
+  color: var(--ui-text);
   font-size: var(--ui-font-size-md);
   line-height: var(--ui-line-height-loose);
 }
@@ -243,7 +246,7 @@
   margin-left: var(--ui-space-1);
 }
 .sr-panel-body mark {
-  background: color-mix(in srgb, var(--ui-cat-7) 35%, transparent);
+  background: color-mix(in srgb, var(--ui-hue-plum) 35%, transparent);
   color: inherit;
   border-radius: var(--ui-radius-sm);
 }

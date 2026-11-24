@@ -63,7 +63,7 @@ describe("buildTrackTree", () => {
     const tree = buildTrackTree([ev("faction:Cult")]);
     const faction = tree.find((c) => c.key === "faction")!;
     expect(faction.label).toBe("Factions");
-    expect(faction.hue).toBe("var(--ui-cat-2)");
+    expect(faction.hue).toBe("var(--ui-hue-plum)");
     expect(faction.collapsed).toBe(true);
   });
 
@@ -72,7 +72,7 @@ describe("buildTrackTree", () => {
     expect(tree.map((c) => c.key)).toEqual(["world", "deity"]);
     const deity = tree.find((c) => c.key === "deity")!;
     expect(deity.label).toBe("deity");
-    expect(deity.hue).toBe("var(--ui-cat-1)");
+    expect(deity.hue).toBe("var(--ui-hue-moss)");
   });
 
   it("defaults untagged events to the world parent", () => {
@@ -96,13 +96,13 @@ describe("buildTrackTree", () => {
 
 describe("toneFor", () => {
   it("uses the category's track color, members included", () => {
-    expect(toneFor("faction:Cult")).toBe("var(--ui-cat-2)");
-    expect(toneFor("party")).toBe("var(--ui-cat-7)");
+    expect(toneFor("faction:Cult")).toBe("var(--ui-hue-plum)");
+    expect(toneFor("party")).toBe("var(--ui-hue-sky)");
   });
 
   it("gives blank and unknown tracks the World look", () => {
-    expect(toneFor(undefined)).toBe("var(--ui-cat-1)");
-    expect(toneFor("deity:Pelor")).toBe("var(--ui-cat-1)");
+    expect(toneFor(undefined)).toBe("var(--ui-hue-moss)");
+    expect(toneFor("deity:Pelor")).toBe("var(--ui-hue-moss)");
   });
 });
 
@@ -113,7 +113,7 @@ describe("lanesFor", () => {
   it("gives a leaf category one row with no toggle", () => {
     const party = lanesFor(tree, new Set()).find((l) => l.key === "party")!;
     expect(party.toggle).toBeUndefined();
-    expect(party.tone).toBe("var(--ui-cat-7)");
+    expect(party.tone).toBe("var(--ui-hue-sky)");
   });
 
   it("opens a parent into a header row then one child row per member", () => {

@@ -188,7 +188,7 @@ export function Slides({
     <div
       ref={el}
       className="sr-slides"
-      data-theme="navy"
+      data-theme="ink"
       role="dialog"
       aria-label={label}
       onClick={onClick}

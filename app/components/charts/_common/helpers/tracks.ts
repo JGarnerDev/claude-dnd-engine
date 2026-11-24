@@ -12,17 +12,17 @@ import type { CategoryConfig, ParsedTrack, TimelineEvent, TrackCategory } from "
 
 // Shipped defaults. Order here is the render order of the parent lanes.
 export const DEFAULT_CATEGORIES: CategoryConfig[] = [
-  { key: "party", label: "Party", hue: "var(--ui-cat-7)", collapsed: false },
-  { key: "character", label: "Characters", hue: "var(--ui-cat-3)", collapsed: false },
-  { key: "npc", label: "NPCs", hue: "var(--ui-cat-6)", collapsed: false },
-  { key: "antagonist", label: "Antagonists", hue: "var(--ui-cat-8)", collapsed: false },
-  { key: "faction", label: "Factions", hue: "var(--ui-cat-2)", collapsed: true },
-  { key: "continent", label: "Continents", hue: "var(--ui-cat-5)", collapsed: true },
-  { key: "world", label: "World", hue: "var(--ui-cat-1)", collapsed: false },
+  { key: "party", label: "Party", hue: "var(--ui-hue-sky)", collapsed: false },
+  { key: "character", label: "Characters", hue: "var(--ui-hue-amber)", collapsed: false },
+  { key: "npc", label: "NPCs", hue: "var(--ui-hue-verdigris)", collapsed: false },
+  { key: "antagonist", label: "Antagonists", hue: "var(--ui-hue-rose)", collapsed: false },
+  { key: "faction", label: "Factions", hue: "var(--ui-hue-plum)", collapsed: true },
+  { key: "continent", label: "Continents", hue: "var(--ui-hue-ember)", collapsed: true },
+  { key: "world", label: "World", hue: "var(--ui-hue-moss)", collapsed: false },
 ];
 
 // Untyped/unknown categories fall back to this look.
-const FALLBACK_HUE = "var(--ui-cat-1)";
+const FALLBACK_HUE = "var(--ui-hue-moss)";
 
 // "faction:The Ashen Cult" -> { category, member }. Splits on the FIRST colon
 // so member names may contain colons. Blank/undefined => the World lane.

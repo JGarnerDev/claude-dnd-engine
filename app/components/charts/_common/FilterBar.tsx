@@ -51,7 +51,7 @@ export function seedFilter(
 }
 
 // "Known by" chips are amber, so they read as a knowledge filter, not a track.
-const AUDIENCE_HUE = "var(--ui-cat-4)";
+const AUDIENCE_HUE = "var(--ui-hue-sky)";
 
 function capitalized(text: string): string {
   return text.charAt(0).toUpperCase() + text.slice(1);
