@@ -1020,8 +1020,9 @@ From Asher
 
 ### Scene 6 — Stand Still
 
-- **Summary:** Luci's patron reaches her for the first time in Aethryn. It answers a little of her
-  temple question and gives her the Stillwater Wraps.
+- **Summary:** Luci's patron shows itself for the first time: it says it searched for her through
+  her lost 113 years, charges her with a watch she doesn't understand, and gives her the
+  Stillwater Wraps.
 - **Where:** [[Ashford]], late morning of Day 3, from the Lioness to the ford.
 - **Cast:** [[Sabathiel]] · townsfolk, watching
 - **Enemies:** none
@@ -1042,26 +1043,79 @@ From Asher
 > again, and a dog barking. The warmth on your face is back, stronger than it has ever been."*
 
 - **Say (to anyone following):** *"She walks down the middle of the street with her eyes open
-  and not seeing, and she talks, quietly, to someone just ahead of her who isn't there."*
+  and not seeing, and she talks, quietly, to someone just ahead of her who isn't there. The gold
+  that always drips from her eyes runs faster, and the dust in the sunlight around her glitters
+  like it's snowing."*
 - **Private (Luci):** the floor
   - **Ask:** does Luci know this floor? Paul answers; the engine doesn't.
   - **The message:** the stone under your feet is worn smooth in a line, as if someone walked
     the same way a thousand times.
+- **Say (Sabathiel), from somewhere ahead:** ***"Closer."*** The old word, the only one it has
+  said in Aethryn. She hurries toward it. It stays exactly as far ahead.
+- **Say (when she looks up, or tries to see what she's chasing):**
+
+> *"The sky over Ashford goes dark at noon, both suns still in it. Then the stars come out, more
+> than you have ever seen, and they move. They wheel into a shape across the whole sky, vast,
+> bending down over the rooftops to look at you. Prayer bells chime somewhere up there, and great
+> slow wheels of light turn behind its face. Small lights drift around it like motes in a sunbeam,
+> flaring and winking out. The warmth on your face is a hand now, holding your cheek."*
+
 - **Introduce:** Sabathiel
-  - **Look:** a shape of light where the street should end, too bright to see the edges of.
-    Stars move in it.
-  - **Sound:** the voice she knows, warm on her face, in a language that compels her.
-  - **Impression:** watchful, and patient for the first time.
-- **Say (Sabathiel):** first the old word, the only one it has said in Aethryn: ***"Closer."***
-  Then, for the first time, a full line: ***"Stand still, and I can reach you."***
-- **What stays hidden:** whether Sabathiel wants Aedra freed, what is at the temple's heart, and
-  what "Closer" points at. Nothing about Aedra shows.
+  - **Look:** a figure drawn in moving stars, filling the sky, bent low over the town. Too bright
+    to see the edges of.
+  - **Sound:** the voice she knows, in the language that compels her, and for the first time,
+    whole sentences.
+  - **Impression:** a parent finding a lost child. Glad, grieving, a little stern.
+- **The talk, in four beats.** Sabathiel speaks in short lines and waits for Luci between each.
+  Paul plays Luci's side; let her answer, argue or ask.
+  1. **Her name.** ***"Lucitania."*** The first time anyone in Aethryn has used her full name.
+  2. **The reproach.** ***"You have run so far you forgot what you are."***
+  3. **The lost years** (if she asks where it has been, why it was quiet, or says nothing):
+     ***"The Serpent scattered you into the dark. I called after you for a hundred and thirteen
+     years. You never answered."*** Then, softer: ***"Here the dark is thin. Here you can hear
+     me."*** That is why the voice is louder in Aethryn.
+  4. **The charge:** ***"You were lit to keep a watch. Remember it."***
+- **If she asks what the watch is, or names Aedra:** the stars dim for a breath, the way the
+  warmth went out when Halsby fired through the Spear. Then only: ***"Remember the watch."*** It
+  never says whether the watch means guarding or freeing.
+- **If she asks to come home, or asks it to stay:** ***"Not yet."***
+- **Say (as it goes):**
+
+> *"The figure starts to fold back into the sky. The stars pull away, up and up, back to their
+> places, smaller every heartbeat. You run after it, down the street, out past the last houses,
+> toward the river. The faster you run, the faster it goes. The hand on your cheek is slipping."*
+
+- **Say (Sabathiel), last, from one star's worth of light:** ***"Stand still, and I can reach
+  you."*** If she stops, `S35_22_WRAPS` starts with the light reaching her. If she keeps
+  running, it starts anyway, a little later.
+- **What stays hidden:** whether Sabathiel wants Aedra freed, what the watch is, what is at the
+  temple's heart, and what "Closer" points at. Nothing about Aedra shows. Sabathiel never says
+  where it lost her, so whether she was ever really in the temple stays open.
+- **What Luci leaves with:** Sabathiel looked for her for 113 years; she was "lit" for a watch
+  she doesn't understand; and the thing she can never do, stand still, is the one thing that
+  lets it reach her.
 
 #### S35_22_WRAPS — She wakes in the ford, wearing grey
 
 - **The binding.** If Luci stands still, the light reaches her hands and binds them in grey
   cloth, wrist to knuckle. If she keeps moving, it takes longer, and she stops anyway.
 - **Say:**
+
+> *"The light comes down out of the sky in one thread and settles on your hands. It winds around
+> your wrists, then your knuckles, warm as it goes and cool when it's done. The warmth on your
+> face is right beside you now."*
+
+- **Say (Sabathiel), while it winds them.** One line at a time; let Luci answer between.
+  1. ***"Hold out your hands."***
+  2. ***"I wove these while I called after you. Nothing will stain them."***
+  3. ***"When you strike, I strike with you."*** (the +1)
+  4. ***"Stand still, and I am in your hands. Strike from stillness, and my light is in the
+     blow."*** (the +1d4 radiant when she hasn't moved)
+  - **If she asks why stillness:** ***"A watch is kept standing. You never learned that. Learn
+    it."***
+  - **If she asks why now, or what they're for:** ***"So you can hold the light, and not only
+    chase it."***
+- **Say (as she wakes):**
 
 > *"You come back to yourself standing knee-deep in the ford. The river runs on either side of
 > you, but around your legs the water is perfectly still, as if it's holding its breath. Your
@@ -1550,7 +1604,9 @@ from the Tyler meeting, for his run. Share it from the page's Share menu first.
   - **Iggy:** the wings, the smite and the voice (recap), with Sah's clues in them; his choice
     in the yard; Asher's two questions; Oathcaller.
   - **Luci:** her recap (can't be still, running toward the light), the chase, the trip, the
-    Wraps. Seeds her hook: whether she was ever truly in the Sun Temple (the floor she may know).
+    Wraps. Seeds two hooks: the lost 113 years (Sabathiel called after her the whole time) and
+    whether she was ever truly in the Sun Temple (the floor she may know). The charge, "keep a
+    watch," sets up her aim against Sabathiel's (Fall 3) without answering it.
   - **Odibli:** his recap puts him at the back for one shining round, then in front again.
     Elowen's flashback and flock speech are his back-line step: he takes the back line on his
     own, against how he was made.
@@ -1571,7 +1627,8 @@ from the Tyler meeting, for his run. Share it from the page's Share menu first.
     Asher's true name given to the party, breaking his voice core (record it in his `## Voice`) ·
     Asher's ask: lay the field to rest · "a man in green" · the sister's trace in his water,
     raised by Asher · Oathcaller and Tithe-Taker, worked at the cave · Halsby and Asher square ·
-    the draught · Sabathiel's first full line, "Stand still, and I can reach you." · Luci woke
+    the draught · Sabathiel in the stars over Ashford: her full name, the 113 years it called after her, "You
+    were lit to keep a watch," and "Stand still, and I can reach you." · Luci woke
     in the ford with the water still around her · the Stillwater Wraps · Elowen's look as written
     here (her file has none) · Elowen's flashback of the translocation · the Unfinished Binding ·
     Mara's sealed letter · the stake number and what the party named · Mara's rider and the
