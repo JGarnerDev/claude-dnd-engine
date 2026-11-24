@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.105.0] — 2026-11-24
+
+### Changed
+
+- **jeff-ui 2.7.0** (`app/package.json`): borderless cards, flush list rows, a link button, tabs that keep their labels, and timeline rulers that drop labels instead of overlapping them (style pass step 6, todo 103).
+- **The step card is calmer** (`session.css`, `PromptBook.tsx`, `Steps.tsx`, `SceneHead.tsx`; style pass step 7). A prompt block's voice is a small label above its text, not a coloured gutter column. Watch, choice, private, intro and fight blocks share one borderless fill (tinted for a choice, a fight, or a watch item that came true), and SAY lines sit on a gold rule. The open step loses its duplicate "when …" pill (its prompt book shows the line) and its 4px gold edge (now a 2px inset). Beat chips fit the line they sit in. A scene's DCs are one quiet line, `·` between them, with no bold.
+
 ## [0.104.0] — 2026-11-24
 
 ### Changed

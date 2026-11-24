@@ -1,5 +1,5 @@
 // A beat's prose as a prompt book: one block per bullet, paragraph or read-aloud
-// quote (prompt-blocks.ts), each tagged in the gutter with a voice the DM can see at
+// quote (prompt-blocks.ts), each labelled above its text with a voice the DM can see at
 // a glance, in plan order:
 //
 //   You      for the DM to read: what's true, what happens, how to run it (plain sans)

@@ -4,7 +4,8 @@
 //
 // Steps inside a fight carry a red rail down their left edge, and a boss fight a
 // second, salmon one, so the DM sees where a battle starts and ends. A beat's
-// `When:` line rides on its row as a pill the fight bar lights once it comes true.
+// `When:` line rides on its row as a pill the fight bar lights once it comes true;
+// the open step drops the pill, since its prompt book already shows the line.
 
 import type { ReactNode } from "react";
 import { Badge, Button, List, Prose, Text } from "jeff-ui";
@@ -159,7 +160,7 @@ export function Steps({
                 </NoSceneLinks>
               </span>
               {rails && <EdgeTags s={spans} i={i} last={last} />}
-              {when && (
+              {when && state !== "current" && (
                 <Badge
                   hue={VOICE_HUE.watch}
                   solid={lit?.(when)}

@@ -136,14 +136,14 @@ const enter = (input: Element, typed: string) => userEvent.type(input, `${typed}
 describe("Scene", () => {
   afterEach(cleanup);
 
-  it("shows the header: summary, cast chips, DCs, time, and enemies matched to stat blocks", () => {
+  it("shows the header: summary, cast chips, a DC line, time, and enemies matched to stat blocks", () => {
     const { main, q } = mount(props());
     expect(q(".sr-sh-summary").textContent).toBe("The night closes out.");
     expect([...main.querySelectorAll(".sr-sh-chip")].map((c) => c.textContent)).toEqual([
       "Sable Wren",
       "Dunny",
-      "Arcana 13 — read it",
     ]);
+    expect(q(".sr-sh-quiet").textContent).toBe("Arcana 13 — read it"); // DCs: one quiet line
     expect(q(".sr-scene-pos").textContent).toBe("~30 minstep 2 of 3");
     expect(q(".sr-enemy-stats").textContent).toBe("AC 13 · HP 16");
     expect(q(".sr-aloud blockquote").textContent).toContain("Read this aloud.");

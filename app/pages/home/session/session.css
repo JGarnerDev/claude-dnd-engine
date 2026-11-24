@@ -99,7 +99,7 @@
   color: var(--ui-muted);
 }
 
-/* Steps (Steps.tsx): done steps faded, the open one raised with an accent edge */
+/* Steps (Steps.tsx): done steps faded, the open one raised with a thin gold edge */
 .sr-step {
   background: var(--ui-surface);
   border: 1px solid var(--ui-border);
@@ -128,8 +128,8 @@
   background: transparent;
 }
 .sr-step.is-current {
-  border-color: var(--ui-accent);
-  border-inline-start: 4px solid var(--ui-accent);
+  border-color: color-mix(in srgb, var(--ui-accent) 50%, var(--ui-border));
+  box-shadow: inset 2px 0 0 var(--ui-accent);
   background: var(--ui-surface-hi);
 }
 .sr-step.is-current .sr-step-head {
@@ -146,29 +146,27 @@
   font-size: var(--ui-font-size-sm);
 }
 
-/* Prompt book (PromptBook.tsx): one block per bullet, its voice in the gutter.
-   Each block's --ui-hue is its voice (hues.ts VOICE_HUE): say lines serif,
-   do lines mono (Decision N). */
+/* Prompt book (PromptBook.tsx): one block per bullet, its voice a small label above
+   the text (style pass item 15). Each block's --ui-hue is its voice (hues.ts
+   VOICE_HUE). One box style (items 14, 18): a borderless fill, tinted for a choice,
+   a fight or a watch item that came true; SAY lines upright serif on a gold rule. */
 .sr-step-body {
   padding: 0 var(--ui-space-4) var(--ui-space-4);
+  --sr-pb-fill: color-mix(in srgb, var(--ui-text) 5%, transparent);
 }
 .sr-pb {
-  display: grid;
-  grid-template-columns: 7rem minmax(0, 1fr);
-  gap: var(--ui-space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-space-1);
   padding: var(--ui-space-2) 0;
-  border-top: 1px solid var(--ui-border);
-}
-.sr-pb:first-child {
-  border-top: 0;
 }
 .sr-pb-gut {
-  padding-right: var(--ui-space-2);
-  border-right: 3px solid var(--ui-hue);
-  text-align: right;
+  display: flex;
+  align-items: baseline;
+  gap: var(--ui-space-2);
+  min-width: 0;
 }
 .sr-pb-gut small {
-  display: block;
   font-size: var(--ui-font-size-xs);
   line-height: var(--ui-line-height-tight);
   color: var(--ui-muted);
@@ -178,19 +176,25 @@
   min-width: 0;
 }
 .sr-pb-time .sr-pb-text {
-  border-block: 1px solid var(--ui-hue);
-  padding: var(--ui-space-1) var(--ui-space-3);
   font-weight: var(--ui-weight-strong);
   color: var(--ui-hue);
 }
 .sr-pb-say .sr-pb-text {
   padding: var(--ui-space-1) 0 var(--ui-space-1) var(--ui-space-3);
-  border-left: 1px solid var(--ui-hue);
+  border-left: 2px solid var(--ui-accent);
 }
-.sr-pb-choice .sr-pb-text {
-  background: color-mix(in srgb, var(--ui-hue) 10%, transparent);
+.sr-pb-choice .sr-pb-text,
+.sr-pb-watch .sr-pb-text,
+.sr-pb-private .sr-pb-text,
+.sr-pb-intro .sr-pb-text,
+.sr-pb-fight .sr-pb-text {
+  background: var(--sr-pb-fill, var(--ui-surface));
+  border-radius: var(--ui-radius);
   padding: var(--ui-space-2) var(--ui-space-3);
-  border-radius: var(--ui-radius-sm);
+}
+.sr-pb-choice .sr-pb-text,
+.sr-pb-fight .sr-pb-text {
+  background: color-mix(in srgb, var(--ui-hue) 12%, transparent);
 }
 .sr-pb-say blockquote {
   margin: 0;
@@ -210,17 +214,6 @@
   font-family: var(--ui-font-mono);
   font-size: var(--ui-font-size-sm);
 }
-.sr-pb-watch .sr-pb-text {
-  border: 1px dashed var(--ui-hue);
-  border-radius: var(--ui-radius);
-  padding: var(--ui-space-1) var(--ui-space-3);
-}
-.sr-pb-private .sr-pb-text,
-.sr-pb-intro .sr-pb-text {
-  background: var(--ui-surface);
-  border-radius: var(--ui-radius);
-  padding: var(--ui-space-2) var(--ui-space-3);
-}
 .sr-private-list li {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -231,21 +224,7 @@
   grid-column: 1 / -1;
 }
 
-/* In the side panel a prompt book is one column wide; search hits in the watch hue */
-.sr-panel-body .sr-pb {
-  grid-template-columns: 1fr;
-  gap: var(--ui-space-1);
-}
-.sr-panel-body .sr-pb-gut {
-  text-align: left;
-  border-right: 0;
-  border-left: 3px solid var(--ui-hue);
-  padding: 0 0 0 var(--ui-space-2);
-}
-.sr-panel-body .sr-pb-gut small {
-  display: inline;
-  margin-left: var(--ui-space-1);
-}
+/* Search hits in the side panel */
 .sr-panel-body mark {
   background: color-mix(in srgb, var(--ui-hue-plum) 35%, transparent);
   color: inherit;
@@ -260,9 +239,15 @@
   max-width: 100%;
   white-space: nowrap;
   vertical-align: baseline;
+  /* fits the line it sits in (style pass item 16) */
+  padding-block: 0;
+  line-height: var(--ui-line-height-tight);
 }
 .sr-bref.is-here {
   border-style: dashed;
+}
+.sr-sh-quiet strong {
+  font-weight: inherit;
 }
 .sr-cardref::after {
   content: " ↗";
@@ -464,20 +449,6 @@
 }
 
 @media (max-width: 720px) {
-  .sr-pb {
-    grid-template-columns: 1fr;
-    gap: var(--ui-space-1);
-  }
-  .sr-pb-gut {
-    text-align: left;
-    border-right: 0;
-    border-left: 3px solid var(--ui-hue);
-    padding: 0 0 0 var(--ui-space-2);
-  }
-  .sr-pb-gut small {
-    display: inline;
-    margin-left: var(--ui-space-2);
-  }
   /* Enemy rows stack: name and HP on top, stats and attacks under them */
   .sr-enemy-row {
     grid-template-columns: minmax(0, 1fr) auto;
@@ -510,8 +481,7 @@
 
 /* Watch items light up when they come true */
 .sr-pb-watch.is-now .sr-pb-text {
-  border-style: solid;
-  background: color-mix(in srgb, var(--ui-hue) 12%, transparent);
+  background: color-mix(in srgb, var(--ui-hue) 14%, transparent);
 }
 .sr-pb-watch.is-now .sr-pb-voice::after {
   content: " · now";
@@ -533,15 +503,6 @@
   border-radius: var(--ui-radius-sm);
   padding: 0 var(--ui-space-1);
   margin-right: var(--ui-space-2);
-}
-
-/* Fight markers in the prompt book */
-.sr-pb-fight .sr-pb-text {
-  background: color-mix(in srgb, var(--ui-hue) 14%, transparent);
-  border: 1px solid var(--ui-hue);
-  border-radius: var(--ui-radius);
-  padding: var(--ui-space-1) var(--ui-space-3);
-  min-height: 1.5em;
 }
 
 /* When pills on step rows (a Badge in the watch hue, solid once ready) */

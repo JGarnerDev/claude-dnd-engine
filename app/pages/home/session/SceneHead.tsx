@@ -9,7 +9,7 @@
 // The stat blocks are uncontrolled <details>, so one the DM opened stays open
 // while HP changes around it.
 
-import { useState, type KeyboardEvent } from "react";
+import { Fragment, useState, type KeyboardEvent } from "react";
 import {
   Badge,
   Box,
@@ -73,6 +73,19 @@ const Chips = ({ items }: { items: string[] }) => (
       </Badge>
     ))}
   </Row>
+);
+
+// DCs as one quiet line, " · " between them; bold in the plan reads as plain here
+// (style pass item 19), since every DC weighs the same at the table.
+const QuietRow = ({ items }: { items: string[] }) => (
+  <span className="sr-sh-quiet">
+    {items.map((x, i) => (
+      <Fragment key={i}>
+        {i > 0 && " · "}
+        <InlineMd md={x} />
+      </Fragment>
+    ))}
+  </span>
 );
 
 interface HpBoxProps {
@@ -338,7 +351,7 @@ export function SceneHead({
         <span className="sr-sh-val">{p(h.cast)}</span>
       ),
     });
-  if (h.dcs.length > 0) fields.push({ term: "DCs", value: <Chips items={h.dcs} /> });
+  if (h.dcs.length > 0) fields.push({ term: "DCs", value: <QuietRow items={h.dcs} /> });
   return (
     <>
       {h.summary && (
