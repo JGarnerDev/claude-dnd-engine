@@ -451,7 +451,9 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 - **DCs:** Athletics 12 (two people) or 17 (one) — drag Odibli out from under Tithe · Medicine 10
   — stabilise Odibli · **Acrobatics or Athletics 18 — Luci's tackle, only if she reaches Nella this
   turn** · Perception or Survival 13, a Search action — spot the hidden thorns · Nella's
-  concentration on the thorns: CON save (+1), DC 10 or half the damage
+  concentration on the thorns: CON save (+1), DC 10 or half the damage · only if someone goes into
+  the water after her: Perception vs her Stealth (+8), at disadvantage while she's under ·
+  Athletics 13 each round in the current · Perception 18, Iggy watching the bend
 - **Time:** ~20 min
 - **Trigger:** the recap ends.
 
@@ -504,6 +506,7 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 #### S35_07_CHASE — Six seconds for Luci
 
 - **When:** the goodbye ends. It's Luci's turn, and Nella is still standing on the bank.
+- **Tokens:** Luci (Lu) J5, the Sniper (Sn) M19.
 - **The ground (Roll20 map; layout `maps/south-bank.txt`).** A strip of grass 10 to 15 ft wide
   runs south between the boulder ridge and the river. Luci is at **J5**, among the bushes below
   the bridge. Nella is at **M19**, 70 ft down the strip, at the water's edge; the rope ring is
@@ -573,7 +576,7 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
   is grabbing a fish. Advantage only through Iggy.
 - **Success:** Luci lands on her at the water's edge, a hand on the rope, a knee on the bow.
   - **Say (Nella):** she stops. She unstrings the bow, sits down in the mud, and looks at the
-    river for a long moment. *"Well. That'll cost me."*
+    river. *"Well. That'll cost me."*
   - **Choice (Luci):** take her, or let her go. Taken, she's the party's to question, and her
     tally is theirs to bargain with. Let go, she owes Luci, and she counts it.
 - **Fail, or didn't reach her:** fingers on wet leather, or thorns, a heartbeat too long, and
@@ -631,7 +634,8 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 - **Cast:** Sergei and Bosco · Nella, if she was caught (roped)
 - **Enemies:** none
 - **DCs:** Investigation 12 / 16 — read the tally · DEX save 12 — fetch the ledger from the
-  burning shed (fail: 1d6 fire) · Animal Handling 12 — catch a loose horse
+  burning shed (fail: 1d6 fire) · Animal Handling 12 — catch a loose horse · Investigation 10 —
+  Ilsa's buckle matches Cinder's collar
 - **Time:** ~20 min
 - **Trigger:** the chase ends, or the party gives it up.
 
@@ -766,13 +770,14 @@ The yard
 > doesn't say hello. He walks down the line of horses and lifts every hoof, one after another,
 > and only when he's done the last does he look at you."*
 
-- **Say (Silas):** *"All four shoes on every one. We're square. Next time you need horses, you
-  come to me first."*
+- **Say (Silas), only if every horse came back sound:** *"All four shoes on every one. We're
+  square. Next time you need horses, you come to me first."* If any d6 came up 1, he opens with
+  that horse's line below instead, and "square" waits until the cart is settled.
   - **Halsby's horse (reputation, unspent):** if it threw a shoe, Silas waves it off: *"Not that
     one. That's the missile-and-horse man's. I'll shoe it myself."*
   - If another horse came back lame: *"That one's lame. Eleven gold, and we'll talk about the
     rest another day."*
-  - About the cart: *"And my cart is where, exactly?"* A beat. *"That's a number too."* About
+  - About the cart, always last: *"And my cart is where, exactly?"* A beat. *"That's a number too."* About
     35 gp; he'll take the camp's wagon in trade if they offer.
 - **Choice (party):** what Silas gets for his cart.
   - **Pay the ~35 gp:** square with Silas, and the Lioness keeps the wagon.
@@ -852,6 +857,9 @@ The yard
 #### S35_16_THE_SPRING — The walk, the cave, and Asher's name
 
 - **Time passes:** the next morning. Day 3, early, mist on the river.
+- **Tokens:** cave map: Asher (A) L4 by the water, Sable (Sb) I9 just inside, the fox (fx) H10.
+- **Insight 15, any time he talks (all of Scene 5):** he is lonely, and the courtesy is how he
+  hides it.
 - **Say (Sable):** *"Bring the wagon. And the whip, Dip. He'll want to see that."*
 - **Say:**
 
@@ -922,8 +930,8 @@ The yard
 
 > *"The cave goes very quiet. Up through the roof, through the roots and the rock, you hear the mud
 > on the bank above move, a long slow suck, like a boot pulled out of a bog. Dirt rains down. And
-> the griffon comes through the ceiling, not falling, drawn, pulled down through the earth like
-> a stone through honey, wings first."*
+> the griffon comes through the ceiling, not falling, drawn, pulled down through the earth,
+> slow, wings first."*
 >
 > *"It doesn't land. It hangs over the water, and it comes apart. Feathers loosen and drift. The
 > flesh goes to threads, golden threads, and the threads go down into the black water and the
@@ -931,6 +939,8 @@ The yard
 > left in the air but bones, clean and white, and they come down onto the stone shelf at the
 > water's edge one by one, with a sound like dice."*
 
+- **If they took the head:** it stays on the Lioness wall. Asher takes the rest and doesn't ask
+  for it.
 - **He tastes its memory.** That's what the absorbing is for: he's read everything Tithe ever saw.
 - **Say (Asher):** *"This one flew over my old field, above the ford. Many times. There is a man
   there, digging in the last stand. There is something under him that remembers being killed.
@@ -973,7 +983,7 @@ The yard
 > like a fist. It's still wet when it slides back across the stone to Dip."*
 
 - **For Iggy: [[Oathcaller]].** A long single-edged blade of pale griffon bone, veined grey with
-  river stone. +1, rapier statistics, slashing. Once per short rest, as a bonus action, he calls
+  river stone. +1, finesse, 1d8+1 slashing (a rapier, but it cuts). Once per short rest, as a bonus action, he calls
   out one creature within 30 ft (WIS save against his spell save DC): on a fail it has
   disadvantage against anyone but him, and if it attacks someone else anyway, he gets a reaction
   attack. Hand over `handouts/oathcaller.html`.
@@ -999,7 +1009,8 @@ From Asher
 
 - **When:** last, before he goes down.
 - **Say (Asher, to Luci):** *"Yours is a long way off, and calling. Drink this, and you will hear
-  it better. It will not be gentle."* He sympathises with a god so far from its one follower; he
+  it better. It will not be gentle."*
+- **Why he does it (DM only):** he sympathises with a god so far from its one follower; he
   fears being forgotten himself.
 - **Say:**
 
@@ -1118,7 +1129,7 @@ From Asher
 - **Say (as she wakes):**
 
 > *"You come back to yourself standing knee-deep in the ford. The river runs on either side of
-> you, but around your legs the water is perfectly still, as if it's holding its breath. Your
+> you, but around your legs the water is perfectly still. Your
 > hands are bound in cloth the grey of the sky before dawn, cool, and dry."*
 
 - **Say (Old Tobin Reed, on the bank, mending a net):** *"You've been stood there the best part
@@ -1544,6 +1555,8 @@ Land it on Shaw's letter, held out through the bars (`S35_30_SPEAKS`). Nothing a
 wrap-up narration, no "next time". Cut while the letter is still in his hand, then say the season
 is over.
 
+**Learned tonight:** Bane's name in the duty ledger, and whatever true thing Shaw gives them.
+
 The order of the last half hour is the shape: Dip's back on the road south (loss), the reeve's
 "noon" under the gallows (threat), the silent man speaks (turn), the letter (the next road).
 
@@ -1639,7 +1652,10 @@ from the Tyler meeting, for his run. Share it from the page's Share menu first.
     door · the projects Sable runs while they're away · Sable's job for Halsby: find George Ringo
     or Zach for the copper · Halsby's choice on the job · Iggy's answers to Asher's two questions ·
     the rope hung at noon · Shaw's sword on Mara's desk · the one true thing Shaw tells · Nella and
-    Shaw knowing each other, if it came up · Dip's farewell
+    Shaw knowing each other, if it came up · Dip's farewell · Nella's debt tally (250 gp, exactly
+    her debt) · thirty bedrolls, the band's size · Ilsa's buckle matching Cinder's collar ·
+    Silas's cart and what was paid · Hob Fenner (cooper) and Pell Ashby (lamplighter) · Nella
+    caught or gone
   - **Log Odibli's casts** (Citadel Clock, at 1 / 3). Restamp the trackers. Mark spent: Silas's
     shoeing for Halsby and Richmond's price for Dip, if played.
   - **Rotation:** set Dip `state: away` with "on pilgrimage", then run `/handover`. Shaw

@@ -87,11 +87,11 @@ flowchart TD
     S35_30_SPEAKS["[-] S35_30_SPEAKS<br/>'What do you know about it?'<br/>an opening each, one true thing<br/>Shaw holds out the letter"]
   end
 
-  NELLA_AWAY["[-] Nella away downstream"]
-  NELLA_CAUGHT["[-] Nella caught<br/>'Well. That'll cost me.'"]
-  ODIBLI_DEAD["[-] Odibli fails three saves"]
-  LEDGER_CAEL["[-] Cael holds Bane's name"]
-  LEDGER_KEPT["[-] Party holds the only proof"]
+  NELLA_AWAY["[-] NELLA_AWAY<br/>Nella away downstream"]
+  NELLA_CAUGHT["[-] NELLA_CAUGHT<br/>Nella caught<br/>'Well. That'll cost me.'"]
+  ODIBLI_DEAD["[-] ODIBLI_DEAD<br/>Odibli fails three saves"]
+  LEDGER_CAEL["[-] LEDGER_CAEL<br/>Cael holds Bane's name"]
+  LEDGER_KEPT["[-] LEDGER_KEPT<br/>Party holds the only proof"]
 
   S35_01_IGGY_BEAT --> S35_02_COLD --> S35_03_RECAPS --> S35_04_NELLA_TITHE --> S35_05_ODIBLI_DOWN
   S35_05_ODIBLI_DOWN -->|"land and heal"| S35_06_GOODBYE
