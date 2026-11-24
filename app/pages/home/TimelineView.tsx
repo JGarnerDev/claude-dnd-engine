@@ -69,7 +69,7 @@ function ChartHost({ data, initial }: { data: TimelineData; initial: View }) {
             className="chart-viewtabs"
           />
           <Row align="center" gap={2} className="chart-actions">
-            <Link variant="nav" href="/session.html" className="chart-sessionlink">
+            <Link variant="button" href="/session.html" className="chart-sessionlink">
               Run session
             </Link>
             {campaign !== null && (

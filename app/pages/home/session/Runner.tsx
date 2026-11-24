@@ -155,7 +155,7 @@ function Walk({ raw }: { raw: SessionData }) {
       />
       <Divider />
       <Box as="nav" padding={2} className="sr-rail">
-        <Row gap={3}>
+        <Row gap={3} wrap={false}>
           <Rail
             nodes={data.nodes}
             scenes={data.scenes}

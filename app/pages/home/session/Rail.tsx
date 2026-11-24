@@ -1,10 +1,12 @@
-// The map rail under the header: every step as a numbered chip, grouped by scene,
-// colored by kind. Current step ringed, visited steps filled. Click any chip to jump.
+// The map rail under the header: every step as a numbered chip, grouped by scene.
+// Chips are neutral with a small mark in the kind's hue; the current step is the
+// one gold chip, visited steps are filled. Click any chip to jump.
 // Chips carry step numbers, not ids: ids are for planning, not for the table.
 
 import { useEffect, useRef } from "react";
 import { Box, Row, Text, Waypoint } from "jeff-ui";
 import { kindHue } from "./hues.js";
+import { RECAP_SCENE } from "./recap-data.js";
 import type { FlowNode, Scene } from "./types.js";
 
 export interface RailProps {
@@ -21,13 +23,13 @@ export function Rail({ nodes, scenes, current, visited, onJump }: RailProps) {
     here.current?.scrollIntoView?.({ block: "nearest", inline: "nearest" });
   }, [current]);
   const groups = scenes.map((s) => ({
-    label: s.key ? s.key : s.id,
+    label: s.id === RECAP_SCENE ? "Recap" : s.key ? s.key : s.id,
     title: s.title,
     nodes: nodes.filter((n) => n.scene === s.id),
   }));
   const loose = nodes.filter((n) => !n.scene || !scenes.some((s) => s.id === n.scene));
   if (loose.length)
-    groups.push({ label: "·", title: "Asides — outside the scene boxes", nodes: loose });
+    groups.push({ label: "Asides", title: "Asides — outside the scene boxes", nodes: loose });
   return groups
     .filter((g) => g.nodes.length)
     .map((g, gi) => (
@@ -46,6 +48,7 @@ export function Rail({ nodes, scenes, current, visited, onJump }: RailProps) {
             <Waypoint
               key={n.id}
               ref={n.id === current ? here : undefined}
+              variant="marked"
               className="sr-chip"
               current={n.id === current}
               visited={visited.has(n.id)}

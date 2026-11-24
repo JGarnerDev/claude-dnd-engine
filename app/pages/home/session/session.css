@@ -603,3 +603,15 @@
 .sr-ent-fields {
   margin-block: var(--ui-space-2);
 }
+
+/* The map rail (Rail.tsx, style pass step 9): one line that scrolls sideways, never
+   wraps; the current chip scrolls itself into view */
+.sr-rail {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.sr-rail-group,
+.sr-rail-label {
+  flex-shrink: 0;
+  white-space: nowrap;
+}

@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.107.0] — 2026-11-24
+
+### Changed
+
+- **jeff-ui 2.8.0** (`app/package.json`): a marked waypoint variant, a button-style link and a docked drawer capped at 30% of the window (style pass step 9, todo 103).
+- **The header and rail are cleaner** (`RunnerHeader.tsx`, `Rail.tsx`, `Runner.tsx`, `TimelineView.tsx`, `session.css`, new `session/session-title.ts`; style pass step 9). The rail is neutral: each step shows its kind as a small coloured mark, visited steps are filled and the current one is gold. The recap scene is labelled "Recap" (was "PREV") and loose steps "Asides" (was "·"). The rail stays one row and scrolls sideways when narrow instead of wrapping. The title reads `Session 35 · The Reeve's Ledger`. The Timeline and Run session links look like buttons.
+
 ## [0.106.0] — 2026-11-24
 
 ### Changed

@@ -4,6 +4,7 @@
 
 import { Box, Button, Kbd, Link, Row, SearchInput, Text } from "jeff-ui";
 import type { PanelApi } from "./usePanel.js";
+import { sessionTitle } from "./session-title.js";
 
 export interface RunnerHeaderProps {
   name: string;
@@ -20,7 +21,7 @@ export function RunnerHeader({ name, date, p, onBack, onCopy, onRestart }: Runne
       <Row justify="between" gap={3}>
         <Row align="baseline" gap={3} className="sr-title">
           <Text as="span" size="md" strong>
-            {name}
+            {sessionTitle(name)}
           </Text>
           <Text as="span" size="sm" tone="muted">
             {date}
@@ -46,7 +47,7 @@ export function RunnerHeader({ name, date, p, onBack, onCopy, onRestart }: Runne
           <Button data-act="restart" onClick={onRestart}>
             Restart
           </Button>
-          <Link variant="nav" href="/">
+          <Link variant="button" href="/">
             Timeline
           </Link>
           <Button className="sr-pin" title="Dock or hide the side panel (\)" onClick={p.toggleDock}>
