@@ -21,12 +21,12 @@ Planned date: 2026-11-24.
       Ben's and Tyler's.
 - [x] **The stake number** (`S35_25_STAKE`): 20% to start, 25% if Dip argues it (Jeff, 2026-11-22).
 - [ ] **Dip's road** (`S35_28_DIP_ROAD`): played, Ben leads (Jeff, 2026-11-22). Tell Ben before
-      the table so he can think about how Dip says goodbye.
-      Also tell him about Sable's job for Halsby (find George Ringo or Zach). Where the smiths
-      are is his to set.
-- [x] **Elowen moved here** from Session 36 (todo 100). Stays: she gives Odibli something special (Jeff, 2026-11-24).
+      the table so he can think about how Dip says goodbye.- [x] **Elowen moved here** from Session 36 (todo 100). Stays: she gives Odibli something special (Jeff, 2026-11-24).
 - [x] **HP check (todo 101):** read off the Roll20 sheets (2026-11-22) into the plan's Orientation:
       Iggy 5/40, Luci 22/39, Dip 45/55, Halsby 11/32, Odibli 0/27 (dying, as planned).
+- [ ] **Check the Lioness upgrades** (`S35_25_STAKE`): the six free-pick perks on
+      `handouts/on-the-house.html`, and the gold and material loads on `handouts/while-away.html`,
+      including the dock and Old Tobin's riverboat (draft, engine 2026-11-24).
 - [ ] **Run `/review 35 --ready`**, commit the `[-]` beats in `_flow.md`, then flip the plan to
       `state: planned`.
 
@@ -64,7 +64,7 @@ Planned date: 2026-11-24.
 - [x] **Oathcaller** card: `handouts/oathcaller.html` (Scene 5, `S35_19_ASHER_BOW`, for Iggy).
 - [x] **Tithe-Taker** card: `handouts/tithe-taker.html` (Scene 5, for Dip; replaces the
       cart-whip card if Dip left the whip with Asher).
-- [x] **While You're Away** card: `handouts/while-away.html` (Scene 9). Prices are a first
+- [x] **What We Build Next** card: `handouts/while-away.html` (Scene 9). Prices are a first
       pass; check them.
 - [x] **Carried from Session 34:** `nella-tally.html` and `cart-whip.html`, copied into this
       folder's `handouts/` (same artifact links).

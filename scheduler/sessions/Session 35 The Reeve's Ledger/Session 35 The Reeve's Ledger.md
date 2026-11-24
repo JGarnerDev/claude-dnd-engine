@@ -184,8 +184,7 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 >
 > 1. If Scene 3 starts after 8:00: `S35_11_BODIES` to its loot list, and `S35_13_FOX` moves to
 >    the cave.
-> 2. If Scene 8 starts after 10:05: `S35_25_STAKE` to the number and the card; Sable's job for
->    Halsby goes to Ben's run (tell Ben); `S35_27_BUILD` to its read-aloud, the gallows, the
+> 2. If Scene 8 starts after 10:05: `S35_25_STAKE` to the number and the card; `S35_27_BUILD` to its read-aloud, the gallows, the
 >    question and the card.
 > 3. Never cut the gallows line in `S35_27_BUILD` or the reeve's "noon". Together they make the
 >    clock.
@@ -1264,6 +1263,27 @@ From Asher
 - **What signing gives at once:** a room each at the Lioness, free meals, and the party names one
   thing in the new wing.
 - **Choice (party):** what to name in the new wing. Whatever they name, Sable writes it on the deed.
+- **Two upgrades on the house** (Jeff, 2026-11-24). Once the deed is signed, Sable offers her
+  thanks for the casks: two upgrades to the Lioness, free, built in the two weeks
+  (`S35_27_BUILD`). Hand over the On the House card (`handouts/on-the-house.html`).
+  - **Say (Sable):** *"You brought my casks home, so here's the part that isn't ledger. Pick two
+    off this, and I'll have them up before we open. Anything after that, you pay for in gold and
+    timber like everyone else."*
+  - **The six:**
+    - Hire hands: Lok Thuliaga, Bree Tealeaf and Oswin, a season's wages paid. The Lioness runs
+      while the party is away, and Lok remembers every face at the door.
+    - A proper kitchen: oven and smoke hood. A long rest at the Lioness gives each PC one extra
+      Hit Die.
+    - Clear the back plot: opens ground for stables, a garden or a yard, and gives 3 timber.
+    - A room in the new wing: one finished room the Lioness can let.
+    - Palisade and lamp watch: nobody reaches the Lioness unseen, and the party can't be
+      surprised there.
+    - A better dock: a proper landing on the river. Stone and iron come by water, with no week's
+      wait, and it's where a boat of the party's own could tie up (the riverboat on the What We Build
+      Next card needs it).
+  - **The perks are draft** (engine 2026-11-24); check them before the table.
+  - **Choice (party):** which two. Write them down. The other four stay on the What We Build Next
+    card at its prices (gold plus loads of timber, stone or iron), handed over at closing.
 - **Handout:** the Stake terms card when the pen comes out: `handouts/stake-terms.html` (25%) if
   the argument lands, `handouts/stake-terms-20.html` (20%) if it doesn't.
 
@@ -1286,7 +1306,7 @@ From Asher
 ### Scene 9 — Opening Night
 
 - **Summary:** two weeks of building pass. The Lioness opens while a gallows goes up across the
-  square, Sable sets the work for while they're away, and Dip leaves at dawn.
+  square, Sable sits the party down to plan what the Lioness builds next, and Dip leaves at dawn.
 - **Where:** [[The Golden Lioness]] and its yard, and the square, Days 4–18.
 - **Cast:** [[Sable Wren]] · [[Silas Crubb]] · [[Mara Tull]] · Richmond Ellesine · the town
 - **Enemies:** none
@@ -1312,6 +1332,14 @@ From Asher
 > *"On the seventeenth night the lanterns are lit at the Lioness door, the casks you carried home
 > are tapped, and Ashford comes in out of the cold. By midnight there isn't a chair left."*
 
+- **Say (Dip, opening night):** a quiet plant for the morning. Read it once the room is full, then
+  move on. If anyone asks Dip what's wrong, Ben answers, and Dip doesn't have to say yet.
+
+> *"Dip has the stool at the end of the bar, nearest the hearth, and has kept it since the casks
+> were tapped. The cup in front of them is still full. When the room comes in on a chorus, Dip
+> isn't singing. They're turned toward the window over the south road, where the glass is black
+> and holds the lanterns of the room behind them."*
+
 - **The gallows (never cut).** Mara didn't order it, and she won't take it down. **Say (Mara, if
   asked):** *"I didn't build it. I can't stop a town building."*
 - **Plant (rope):** the coil of new rope on the boards, not yet hung. It goes up after "noon"
@@ -1322,30 +1350,42 @@ From Asher
 - **What gets done (canon if played):**
   - The hole in the new wing is closed and roofed. The scorched circle in the yard is turfed over.
   - What the party named in the new wing (`S35_25_STAKE`) gets its sign over the door.
+  - The two upgrades picked at the stake (`S35_25_STAKE`) are finished. Show each in one clause
+    of the read-aloud if it fits (Lok on the door, the lantern on its post).
   - The Lioness opens on the evening of Day 17, pouring from the casks the party brought home.
   - It pours but can't brew: the copper is still ruined, and only [[George Ringo]] or [[Zach]] can
     remake it.
   - Sable's first payment goes to Silas.
   - A gallows stands in the square outside Mara's office, waiting on the eighteenth.
-- **Sable calls in Halsby's job** (about 3 min; Jeff, 2026-11-22). This is the favour he owes
-  her through Asher (Session 29). She finds him alone one night of the two weeks.
-  - **Say (Sable):** *"Asher said I'd need you. He was right, the old toad. I need a copper. Find
-    me [[George Ringo]] or [[Zach]], and bring whichever one you find back here. I don't care how
-    long it takes."*
-  - Halsby wanders anyway, so the job goes with him. Where the smiths are stays TBD for Ben.
-    Asher already paid Halsby ([[The Shadowless Spear]], Session 31); this job is what Halsby
-    owes Sable, not Asher.
-  - **Choice (Halsby)** (draft, engine 2026-11-23): take the job as the favour owed, or ask for
-    something back: who Asher meant by "people who study your kind" (`S35_19_ASHER_BOW`). Sable says
-    she'll ask him. The answer is Ben's.
-- **Say (Sable, at closing):** *"Before you go. Tell me what to build while you're gone."* Hand
-  over the While You're Away card (`handouts/while-away.html`).
-- **Choice (party):** which projects Sable starts, and how much gold they leave her. Write it
-  down for Ben.
+- **Say (at closing):**
+
+> *"The last of Ashford goes home a little after two. Sable locks the door, pulls a stool up to
+> the bar, and opens the ledger beside a cup she hasn't touched all night."*
+
+- **Say (Sable):** *"Full house. Don't tell Silas I said it went well. A full house tonight is a
+  full house's worth of trouble next month: more mouths, more beds wanted, more people who know
+  where the money is. So. Partners. Here's what I'd build next, and what each one costs. Tell me
+  where the money goes."* Hand over the What We Build Next card (`handouts/while-away.html`).
+- **Choice (party):** which projects Sable starts, and how much gold and how many materials they
+  put in. Sable runs two at a time, whether the party is in town or not. Write it down for Ben.
 
 #### S35_28_DIP_ROAD — Dip takes the road
 
 - **Time passes:** dawn on Day 18, the morning after opening night. The Lioness is still asleep.
+- **Say:**
+
+> *"Dawn on the eighteenth. The Lioness smells of spilled ale and cold ash, and the chairs are
+> still where Ashford left them."*
+>
+> *"Dip is downstairs first. Their pack sits on the bar, buckled shut, with the whip coiled
+> through the straps. They've pulled the curtain back from the window over the south road. Last
+> night it was black glass. This morning the road shows in it, running out past the square."*
+>
+> *"Sable comes down in a shawl, looks at the pack, and puts the kettle on without a word. The
+> rest of you come down to the smell of it. Dip has pulled out a chair for each of you."*
+
+- **Then Dip tells them** (Ben's line). The pilgrimage is news to the table here; nothing before
+  this says it aloud.
 - **Ben leads.** Dip leaves on pilgrimage, to understand the bond between the divine and the
   mortal, and to look for the sister Asher's water once touched. How Dip says goodbye, and to
   whom, is Ben's. Give each PC a moment with them, then hold on Dip's back on the road south.
@@ -1602,9 +1642,8 @@ from the Tyler meeting, for his run. Share it from the page's Share menu first.
     or never (`S35_20_LUCI_DRAUGHT`)
   - Party: Tithe's hood (`S35_06_GOODBYE`) · Nella's purse (`S35_09_TALLY`) · the crew's crystals
     (`S35_11_BODIES`) · what Silas gets for his cart (`S35_12_HAUL_HOME`) · what to name in the
-    new wing (`S35_25_STAKE`) · the ledger to the reeve or not (`S35_29_REEVE`) · what Sable
-    builds while they're away (`S35_27_BUILD`)
-  - Halsby: take Sable's job as the favour owed, or ask for something back (`S35_27_BUILD`)
+    new wing and the two free upgrades (`S35_25_STAKE`) · the ledger to the reeve or not (`S35_29_REEVE`) · which projects
+    Sable builds next (`S35_27_BUILD`)
   - Dip: take Asher's debt or not (`S35_18_THE_ASK`) · hand the whip to Asher or keep it
     (`S35_19_ASHER_BOW`)
   - Odibli: believe Elowen, tell the party, open Mara's letter (`S35_23_ELOWEN`)
@@ -1627,8 +1666,7 @@ from the Tyler meeting, for his run. Share it from the page's Share menu first.
     Asher's ask and the sister (Asher raises it), Tithe-Taker, the road. Seeds both hooks: the
     pilgrimage to grasp the divine-mortal bond, and the twin sister.
   - **Halsby:** his recap (the man who avoids fire, and his cold hands), the fox, Asher's
-    "square", the hint about who studies his kind, and Sable's job (find George Ringo or Zach,
-    `S35_27_BUILD`). Carry the job to Ben's first sessions.
+    "square", and the hint about who studies his kind.
 - **For `/recap`:**
   - **New canon if played:** the recap's details (the wings and Iggy's look in them, the
     whispered names, Dip feeling the presence pour into Iggy, the Citadel's cold as a pen
@@ -1649,8 +1687,7 @@ from the Tyler meeting, for his run. Share it from the page's Share menu first.
     Shaw's first words · "the hanging waits" · the letter held out, unopened · two weeks of
     building · what each PC did for opening night · the
     Lioness open on the recovered casks, but not brewing · what the party named, signed over the
-    door · the projects Sable runs while they're away · Sable's job for Halsby: find George Ringo
-    or Zach for the copper · Halsby's choice on the job · Iggy's answers to Asher's two questions ·
+    door · the two free upgrades, built · the projects Sable builds next · Iggy's answers to Asher's two questions ·
     the rope hung at noon · Shaw's sword on Mara's desk · the one true thing Shaw tells · Nella and
     Shaw knowing each other, if it came up · Dip's farewell · Nella's debt tally (250 gp, exactly
     her debt) · thirty bedrolls, the band's size · Ilsa's buckle matching Cinder's collar ·

@@ -73,12 +73,12 @@ flowchart TD
   end
 
   subgraph SC8["Scene 8 · The Deed"]
-    S35_25_STAKE["[-] S35_25_STAKE<br/>The deed argued<br/>twenty, or twenty-five"]
+    S35_25_STAKE["[-] S35_25_STAKE<br/>The deed argued<br/>twenty, or twenty-five · two upgrades free"]
     S35_26_RIDER["[-] S35_26_RIDER<br/>Mara's rider is back<br/>the reeve comes on the eighteenth"]
   end
 
   subgraph SC9["Scene 9 · Opening Night"]
-    S35_27_BUILD["[-] S35_27_BUILD<br/>Two weeks building, a gallows in the square<br/>'What did you do?' · Halsby: the job, or a question?"]
+    S35_27_BUILD["[-] S35_27_BUILD<br/>Two weeks building, a gallows in the square<br/>'What did you do?'"]
     S35_28_DIP_ROAD["[-] S35_28_DIP_ROAD<br/>Dip takes the road at dawn<br/>past the scaffold, Ben leads"]
   end
 
@@ -119,7 +119,6 @@ flowchart TD
   S35_10_CAMP_INTEL -.->|"the ledger"| S35_29_REEVE
   S35_15_CELL -.->|"the silent man"| S35_26_RIDER
   S35_15_CELL -.->|"the hanging waits"| S35_30_SPEAKS
-  S35_19_ASHER_BOW -.->|"who studies his kind"| S35_27_BUILD
   S35_27_BUILD -.->|"the new rope"| S35_29_REEVE
 
   classDef combat   fill:#FDE2E2,stroke:#DC2626,color:#5B1414
@@ -161,8 +160,10 @@ flowchart TD
 - **Renumbered, still `[-]`:** `S35_26_REEVE` is now `S35_29_REEVE`, moved from Day 3 dusk to
   Day 18 mid-morning (Jeff, 2026-11-23). `S35_26` is reused for Mara's rider.
 
-- **Added in review, `[-]` (draft, engine 2026-11-23):** Halsby's choice on Sable's job
-  (`S35_27_BUILD`), the rope hung after "noon" (`S35_29_REEVE`), one opening per PC and the one
+- **Added in review, `[-]` (draft, engine 2026-11-23):** the rope hung after "noon" (`S35_29_REEVE`), one opening per PC and the one
   true thing Shaw tells (`S35_30_SPEAKS`).
+
+- **Added, `[-]` (Jeff, 2026-11-24):** two free Lioness upgrades picked from six at the stake
+  (`S35_25_STAKE`), built during `S35_27_BUILD`; after that, building costs gold and materials.
 
 Elowen's scene moved here from Session 36 (todo 100): Session 36 is Ben's.
