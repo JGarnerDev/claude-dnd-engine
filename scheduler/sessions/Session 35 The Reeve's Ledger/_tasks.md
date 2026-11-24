@@ -5,7 +5,7 @@ to run. The `_` prefix keeps it out of `validate.ps1` and the semantic index. De
 session is played.
 
 Carried from Session 34 (recap 2026-11-18), which ended with Tithe dead on Odibli and Luci chasing
-Nella past the bridge to the south riverbank. Reshaped by Jeff's review (2026-11-22). This is Jeff's last session as DM before Ben takes over; Dip goes away on
+Nella down the riverbank below the boulder ridge. Reshaped by Jeff's review (2026-11-22). This is Jeff's last session as DM before Ben takes over; Dip goes away on
 pilgrimage after it.
 
 Planned date: 2026-11-24.
@@ -38,7 +38,7 @@ Planned date: 2026-11-24.
         layout `maps/mara-office.txt` in this folder.
       - **Asher's cave** (Roll20, Scene 5): `maps/battlemaps/session-35/asher-cave-key.png`;
         layout `maps/asher-cave.txt`.
-      - **South bank backup grid** (Roll20, only if a fight breaks out): `maps/battlemaps/session-35/south-bank-key.png`;
+      - **Riverbank grid** (Roll20, the strip below the boulder ridge; Luci J5, Nella M19): `maps/battlemaps/session-35/south-bank-key.png`;
         layout `maps/south-bank.txt`.
       - **Ashford town** (Inkarnate overview): `maps/battlemaps/ashford/ashford-key.png`. Leave
         the cave (AC7) off the player copy.
@@ -49,8 +49,8 @@ Planned date: 2026-11-24.
         `silas-sheet-draft.png`: it has DM-only marks.
 - [ ] **Keep the waystation map up** from Session 34's end for Scene 1. Clear initiative but keep
       Odibli's death saves.
-- [ ] **The south riverbank** is one roll, no grid. Only if the table forces a fight: a blank grid
-      with the river and willows. Her token is Sniper.
+- [ ] **The riverbank** runs on the Roll20 map Jeff built: Luci at J5, Nella (token Sniper) at M19.
+      Draw the hidden Spike Growth (J9:N17) on the GM layer only.
 - [ ] **One new token: Shaw Proudfoot** (Tyler's PC), in the last cell on a map of Mara's office
       (six cells along the back wall), ready for Scene 10. Asher, Sabathiel and the reeve are
       narrated. Keep the waystation map up for the recap.

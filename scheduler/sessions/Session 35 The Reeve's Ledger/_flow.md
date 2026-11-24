@@ -36,8 +36,8 @@ flowchart TD
 
   subgraph SC2["Scene 2 · The River"]
     S35_05_ODIBLI_DOWN{"[-] S35_05_ODIBLI_DOWN<br/>Odibli under Tithe<br/>Iggy: land and heal, or fly?"}
-    S35_06_GOODBYE["[x] S35_06_GOODBYE<br/>The hood on the willow<br/>'Nineteen flights'"]
-    S35_07_CHASE{"[-] S35_07_CHASE<br/>Spike Growth, one roll, DC 18<br/>caught or gone?"}
+    S35_06_GOODBYE["[x] S35_06_GOODBYE<br/>The hood on the bush<br/>'Nineteen flights'"]
+    S35_07_CHASE{"[-] S35_07_CHASE<br/>Hidden thorns, one turn<br/>tackle DC 18: caught or gone?"}
     S35_08_ESCAPE["[x] S35_08_ESCAPE<br/>The staked line and the river<br/>the rigging shown after"]
   end
 

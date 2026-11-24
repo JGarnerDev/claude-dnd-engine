@@ -19,7 +19,7 @@ locations:
   - "[[Ashford]]"
   - "[[The Golden Lioness]]"
 key_npcs:
-  - "[[Nella]] (historian — her moment with Tithe as it dies; on foot at the south riverbank; the goodbye, then the thorns and the river)"
+  - "[[Nella]] (historian — her moment with Tithe as it dies; on foot at the water's edge below the boulder ridge; the goodbye, then the thorns and the river)"
   - "[[Aashal-Groon Mellenegon Borak]] (historian — Asher; meets the party in his cave by the river, a short walk from the Lioness; draws Tithe in through the earth and works its bones on the spot)"
   - "[[Sable Wren]] (historian — walks them to Asher's cave; the share talk and the deed)"
   - "[[Elowen Rimetusk]] (data — Odibli's scene, her flashback, and the Unfinished Binding)"
@@ -29,9 +29,9 @@ key_npcs:
   - "Cael's reeve (human — Lord Cael's officer from Orrend's upper town; rides in the morning Dip leaves, for the ledger and the hanging; no name, not an entity)"
   - "[[Shaw Proudfoot]] (Tyler's PC — the silent prisoner; a silhouette until the finale, where he speaks)"
 encounters:
-  - "None on the grid. Nella's escape at the south riverbank (Scene 2) is one hard check for Luci, DC 18: caught or gone. Her block is in Combatants in case the table forces a fight anyway."
+  - "None on the grid. Nella's escape on the riverbank (Scene 2) is Luci's one turn to reach her through hidden thorns, then one DC 18 tackle: caught or gone. Her block is in Combatants in case the table forces a fight anyway."
 loose_threads:
-  - "[[Session 34 The Red Trail]] ended with Tithe dead on Odibli (0 HP, one death save success), Iggy at 5 HP with his wings open, and Luci chasing Nella past the bridge to the south riverbank"
+  - "[[Session 34 The Red Trail]] ended with Tithe dead on Odibli (0 HP, one death save success), Iggy at 5 HP with his wings open, and Luci chasing Nella down the riverbank below the boulder ridge, away from the bridge"
   - "Sah's 'Up, Wallaed' and the Citadel's cold for Odibli were never delivered; this session opens with them, and a recap for every PC, as a flashback"
   - "Sable's deed: 10% offered, Dip asked for more; 'Bring the deed tomorrow and we'll argue it'"
   - "The silent prisoner in Mara's cell (Shaw Proudfoot, Tyler's PC); the hanging waits on Cael's reeve"
@@ -41,7 +41,7 @@ difficulty_attrition: standard
 difficulty_lethality: standard
 depth: narrated
 scope: inline
-opening_scene: "A cinematic recap of the waystation fight, one PC at a time: Sah's voice through every crystal when Iggy's wings opened, the Citadel's cold through Odibli, then Dip, Luci and Halsby, and last Nella as Tithe dies. Then the present: about 11 a.m. on Day 2, Tithe dead on top of Odibli, and Luci a few strides behind Nella on the south bank of the river."
+opening_scene: "A cinematic recap of the waystation fight, one PC at a time: Sah's voice through every crystal when Iggy's wings opened, the Citadel's cold through Odibli, then Dip, Luci and Halsby, and last Nella as Tithe dies. Then the present: about 11 a.m. on Day 2, Tithe dead on top of Odibli, and Luci 70 ft behind Nella on the riverbank below the boulder ridge."
 closing_hook: "Two weeks of building end with the Lioness open and a gallows in the square. Dip takes the road south at dawn. That morning Cael's reeve rides in and sets the hanging for noon, and in the last cell the silent prisoner finally speaks, then holds a letter out through the bars."
 relates_to:
   - "[[The Stolen Casks]] (closes this session)"
@@ -57,7 +57,7 @@ relates_to:
   - "[[Varrick's Cart-Whip]] (reworked by Asher as Tithe-Taker, Dip's Uncommon)"
 importance: critical
 active: true
-description: "The last session before the DM rotation. It opens on a recap of the waystation fight told from every side, Nella's included. Then Odibli under the griffon, and Luci's one chance at Nella on the south riverbank. The casks come home, and in the morning Sable walks the party to Asher's cave by the river. He draws Tithe in through the earth, gives his true name, asks Dip to lay the old field to rest, and works the griffon's bones into Oathcaller for Iggy and Tithe-Taker for Dip on the spot. Luci drinks his draught and wakes in the ford wearing the Stillwater Wraps. Elowen tells Odibli how she moved a whole company, gives him her brace and tells him to count his flock. At dusk the deed is signed, and Mara's rider brings the day Cael's reeve will come. For two weeks the party builds the Lioness while the town builds a gallows in the square. The Lioness opens, and Dip takes the road at dawn. That morning the reeve rides in for Bane's ledger and the hanging, and in the last cell the silent prisoner, Tyler's Shaw Proudfoot, speaks for the first time and holds out a letter. The season ends there."
+description: "The last session before the DM rotation. It opens on a recap of the waystation fight told from every side, Nella's included. Then Odibli under the griffon, and Luci's one chance at Nella on the riverbank. The casks come home, and in the morning Sable walks the party to Asher's cave by the river. He draws Tithe in through the earth, gives his true name, asks Dip to lay the old field to rest, and works the griffon's bones into Oathcaller for Iggy and Tithe-Taker for Dip on the spot. Luci drinks his draught and wakes in the ford wearing the Stillwater Wraps. Elowen tells Odibli how she moved a whole company, gives him her brace and tells him to count his flock. At dusk the deed is signed, and Mara's rider brings the day Cael's reeve will come. For two weeks the party builds the Lioness while the town builds a gallows in the square. The Lioness opens, and Dip takes the road at dawn. That morning the reeve rides in for Bane's ledger and the hanging, and in the last cell the silent prisoner, Tyler's Shaw Proudfoot, speaks for the first time and holds out a letter. The season ends there."
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
@@ -69,7 +69,7 @@ Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The
 > `FOX`, `SABLE_MORNING` and `CELL`. `S2_MORALE` is dropped: there's no crew left to break.
 >
 > **Jeff's review (2026-11-22)** reshaped it: a recap for every PC and for Nella, the chase moved
-> to the south riverbank as one roll, the banner taken out, Asher met in his own cave with the
+> to the riverbank as one roll, the banner taken out, Asher met in his own cave with the
 > items made there, and Say and Time passes blocks throughout.
 >
 > **Last session before the rotation.** Ben DMs next, so Dip goes `state: away` after this
@@ -91,8 +91,8 @@ case the table forces a fight anyway.
 
 ### At a glance
 
-- **The south riverbank** (Scene 2, only if the table forces a fight).
-  - **Sniper** — [[Nella]], on foot on the south bank, unhurt · 49 / 49
+- **The riverbank** (Scene 2, only if the table forces a fight).
+  - **Sniper** — [[Nella]], on foot at the water's edge (M19), unhurt · 49 / 49
 - **Dead (Session 34):** Sennet Orrin, Brask, Ilsa Hask, Tam "Clatter" Cobb, Garran Vey, Dace
   Morrow, Pim Ostler, Callan Shire, and Tithe.
 - **Dead (Session 33):** Varrick Tenn, Hesper Mudd, Haddo Keel, Cinder.
@@ -115,7 +115,7 @@ case the table forces a fight anyway.
   - **Hunter's Mark** (1st): she doesn't bother; she isn't hunting anyone today.
 - **Roving:** +10 ft speed and a swim speed equal to it. The river is home ground.
 - **Prepared Ground:** on ground she chose, advantage on initiative. Her way out is rigged: a
-  staked line under the south bank, out into the current.
+  staked line under the bank at the bottom of the strip, out into the current.
 - **Tactics: wound and pin, never kill.** She makes for the river. She never shoots a downed PC.
   Iggy is at 5 HP: one arrow drops him, so she aims at his wings' edge, not him, unless he is
   the only thing between her and the water.
@@ -133,13 +133,15 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 
 - **Where everyone is:** Tithe lies dead in front of the waystation with **Odibli under it** (0 HP,
   one death save success). **Iggy is at 5 HP** in the air, his
-  wings open (Radiant Soul, a few rounds left). **Luci** is past the bridge on the **south bank of
-  the river**, some way behind **Nella**, who is on foot and unhurt. **Dip** and **Halsby** are in
+  wings open (Radiant Soul, a few rounds left). **Luci** is on the **riverbank below the boulder
+  ridge**, south of the bridge (J5 on the Roll20 map), 70 ft behind **Nella**, who is on foot and
+  unhurt at the water's edge (M19), the rope ring beside her. Nella's **Spike Growth** is already
+  down between them, hidden (`S35_07_CHASE`). **Dip** and **Halsby** are in
   the yard. Sergei and Bosco are by the shed's west wall.
 - **HP, off the Roll20 sheets (2026-11-22):** Iggy **5 / 40** · Luci **22 / 39** · Dip
   **45 / 55** · Halsby **11 / 32** · Odibli **0 / 27**, so `S35_05_ODIBLI_DOWN` runs as dying. No
   temp HP on anyone. Iggy's sheet doesn't show last session's Healing Word: ask, and roll it if
-  he cast it. The sheets' death-save boxes don't come through in the PDF: keep Session 34's
+  he cast it (1d4+4, or 2d4+4 on the 2024 rules). The sheets' death-save boxes don't come through in the PDF: keep Session 34's
   one success for Odibli unless Roll20 shows more.
 - **Burning:** the long shed (the stores and the ledger inside, Clatter dead on its roof) and two
   carts, the relief captain's and one beside the stolen cask cart.
@@ -204,37 +206,39 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 
 #### S35_01_IGGY_BEAT — Iggy's wings, the smite, and the voice in every crystal
 
-- **Tell the table:** this is a recap. Each of you gets the fight back from your own side,
-  including the moments you lived and didn't hear. Iggy first, from the moment it turned. Then
-  we rewind.
+- **Tell the table:** this is a recap. First the moment it turned, told like the opening shot of
+  a film. Then we rewind, and each of you gets the fight back from your own side, including the
+  moments you lived and didn't hear.
 - **Say:**
 
-> *"Iggy. The griffon drops out of the cloud into the yard, claws first, onto Halsby, and you're
-> already moving. Rapier up, the words of the smite in your mouth, and the words come out lit.
-> You can see them. The blade goes in under the griffon's shoulder and leaves a line hanging in
-> the air behind it, hard and white, straight as a ruler stroke. The smite lands warm, with a
-> thread of cold underneath, and you hear yourself say two names you didn't mean to say.
-> Caelion. Liora."*
+> *"The yard, from above. Two carts burning, the long shed roaring, smoke leaning east. Out of
+> the cloud the griffon drops claws-first onto Halsby, and the bard is already moving. Iggy
+> brings the rapier up with the words of the smite in his mouth, and the words come out lit.
+> Anyone near him can see them. The blade goes in under the griffon's shoulder and leaves a line
+> hanging in the air behind it, hard and white, straight as a ruler stroke. Warm light, with a
+> thread of cold running through it. And two names come out of him that nobody in the yard has
+> heard him say. Caelion. Liora."*
 >
-> *"Then the ridge. You never see the arrow. You feel it, low in your side, and your knees hit
-> the sand by the cart. Seven hit points. Everything goes slow and loud. Halsby stopped dead in
-> the open, the Haste gone out of him. Dip dragging Odibli up by the collar. The griffon coming
-> down on both of them out of the cloud, and going up again with the gnome in its claws, and the
-> gnome twisting, and falling, and landing on his feet."*
+> *"Then the ridge. Iggy never sees the arrow. It takes him low in the side, and his knees hit
+> the sand by the cart. Seven hit points. For a moment he's the one still thing in the yard:
+> Halsby stopped dead in the open, the Haste gone out of him. Dip hauling Odibli up by the
+> collar. The griffon coming down on both of them and going up again with the gnome in its
+> claws. The gnome twisting free, falling, landing on his feet."*
 >
-> *"And your crystal speaks. Not Nella. Not the crew. Every crystal in the yard at once, one old
-> voice, level, like a sergeant who has said it a hundred times: 'Up, Wallaed.'"*
+> *"Then every crystal in the yard speaks at once, and the one up on the ridge with Nella too.
+> Not Nella's voice. Not the crew's. One old voice, level, like a sergeant who has said it a
+> hundred times: 'Up, Wallaed.'"*
 >
-> *"You get up. Your eyes go white-gold. Wings tear open out of your back, and every shadow in
-> the yard swings the other way at once. The arrow wound closes under your hand. The ground
-> drops away, you're climbing, and the cloud over the yard lights up from underneath, white as
-> a lamp. Up in it, the griffon goes black against the glow. It can't hide in there any more."*
+> *"And Iggy gets up. His eyes go white-gold. Wings tear open out of his back, and every shadow
+> in the yard swings the other way at once. The arrow wound closes under his hand. Then he's off
+> the ground and climbing, and the cloud over the yard lights up from underneath, white as a
+> lamp. Up inside it, the griffon goes black against the glow. It has nowhere left to hide."*
 >
-> *"From up here you see all of it. Two carts burning and the long shed roaring. Luci planting a
-> heel in the captain's chest and kicking him backward into his own fire. A bolt of flame from
-> Halsby turning the griffon's left wing grey, feather by feather. Dip leaping, both hands on the
-> axe. The griffon comes down out of the sky and you dive after it, and on the ground it turns
-> and rakes you open across the chest. Five hit points. Your wings are still open."*
+> *"Below him, everything happens at once. Luci plants a heel in the captain's chest and kicks
+> him backward into his own fire. A bolt from Halsby turns the griffon's left wing grey, feather
+> by feather. Dip leaps, both hands on the axe, and the griffon comes down out of the sky with
+> Iggy diving after it. On the ground it turns and rakes him across the chest. Five hit points.
+> The wings stay open."*
 
 - **Say (to Odibli):** *"You're on your feet in the sand where you landed, ears still ringing
   from the drop, when the light comes across the yard. The crystal in your pocket says it too,
@@ -369,8 +373,8 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 > a heel in his chest and send him after it. He doesn't come out."*
 >
 > *"Then you see her. On the ridge, the woman with the bow, already moving. And you can't be
-> still. You never could. Up the ridge path, over the old wall, across the bridge, down the far
-> bank, the warmth on your face the whole way, as if something behind the sky wanted you to run
+> still. You never could. Up into the boulders, rock to rock, over the top and down
+> onto the grass by the river, the warmth on your face the whole way, as if something behind the sky wanted you to run
 > toward the light. Far behind you, the griffon screams."*
 
 - **Say (Halsby):**
@@ -401,21 +405,36 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 > *"Afterwards you'll notice your hands are cold. Colder than the fire had any right to leave
 > them."*
 
-#### S35_04_NELLA_TITHE — On the far bank, Nella feels Tithe die
+#### S35_04_NELLA_TITHE — By the river, Nella feels Tithe die
 
 - **When:** last in the recap, and it leads straight into the present.
 - **Say:**
 
-> *"And on the south bank of the river, with Luci somewhere behind her, Nella stops running for
-> the first time. Mud to her ankles, the river loud at her back, three arrows left in the quiver.
-> She takes a small bone whistle off a cord at her neck and blows it once. Two notes, the recall,
-> the one Tithe always answers. She waits one breath."*
+> *"And down on the riverbank, under the boulders, with Luci somewhere behind her, Nella stops
+> running for the first time. Mud to her ankles, the river loud at her back, three arrows left in the quiver.
+> She takes a small bone whistle off a cord at her neck, gone yellow with handling, and blows it
+> once. Two notes, rising. The recall. The one Tithe always answers. Then she does what she
+> always does. She counts. 'One.'"*
 >
-> *"Back in the yard, in the smoke, under its own burnt wing, the griffon hears it. Its head comes
-> up off the sand and turns toward the river. Then it lays it down."*
+> *"Back in the yard, in the smoke, the griffon hears it. Under the burnt wing its chest is still
+> moving. Its head comes up off the sand and turns toward the river, and the good wing starts to
+> open, the way it always opened to take her weight. Its claws drag at the sand. It makes
+> a sound, small, much too small for something that size: the sound it made when it heard her
+> coming up the ridge with its breakfast."*
 >
-> *"Nella's face doesn't move. She puts the whistle away very carefully, the way you put away
-> something you'll never use again, and she starts running."*
+> *"'Two.'"*
+>
+> *"The wing folds back down. The head goes down slowly onto the sand, still turned toward the
+> river."*
+>
+> *"Down by the river, Nella says 'Three,' and nothing comes. She stands there longer than she can
+> afford, with Luci getting closer. Then she winds the cord twice round the whistle and puts it
+> away inside her coat, the way you put away something you'll never use again, and she starts
+> running. She doesn't count anything the rest of the way."*
+
+- **Pause.** Let it sit a beat. Then, flat, like a title card:
+
+> *"Tithe, war-griffon of Bandit Lieutenant Nella, is no more."*
 
 - **What this does:** it's the whistle beat, moved here from her goodbye, so the goodbye in
   Scene 2 is short and the chase starts fast. Everything else she does is in `S35_06_GOODBYE`.
@@ -424,13 +443,15 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 ### Scene 2 — The River
 
 - **Summary:** the fight's last two loose ends. Odibli is under the griffon; Luci gets one try at
-  Nella on the south bank, caught or gone.
-- **Where:** [[The Waystation]] yard, then the south bank of the river, past the bridge.
+  Nella on the riverbank, caught or gone.
+- **Where:** [[The Waystation]] yard, then the grass strip between the boulder ridge and the
+  river, south of the bridge (the Roll20 map, `maps/south-bank.txt`).
 - **Cast:** [[Nella]] · Iggy, if he flies
 - **Enemies:** none on the grid
 - **DCs:** Athletics 12 (two people) or 17 (one) — drag Odibli out from under Tithe · Medicine 10
-  — stabilise Odibli · **Acrobatics or Athletics 18 — Luci's one chance at Nella** · Athletics 13 —
-  swim after her (~3 rounds)
+  — stabilise Odibli · **Acrobatics or Athletics 18 — Luci's tackle, only if she reaches Nella this
+  turn** · Perception or Survival 13, a Search action — spot the hidden thorns · Nella's
+  concentration on the thorns: CON save (+1), DC 10 or half the damage
 - **Time:** ~20 min
 - **Trigger:** the recap ends.
 
@@ -439,8 +460,8 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 - **Say:**
 
 > *"Now. The griffon is down, and the yard is loud with fire. Under one dead wing, a small boot,
-> and a hand that isn't moving. Up past the bridge, Luci is running, and somewhere ahead of
-> her, so is Nella."*
+> and a hand that isn't moving. Down on the riverbank, under the boulders, Luci is running,
+> and somewhere ahead of her, so is Nella."*
 
 - **If Odibli is at 0 HP:** initiative is over, but keep turns for him: a death save at the start
   of each of his turns. Three failures is death; let the dice stand.
@@ -457,50 +478,106 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
     advantage. Someone in the yard has to deal with Odibli.
   - Iggy is at 5 HP either way. Going after her is him planting his feet against the thing
     alone ([[Iggy PC Arc]]); landing is him standing in front of his friends. Neither is wrong.
-- **Transition:** cut to Luci on the south bank.
+- **Transition:** cut to Luci on the riverbank.
 
-#### S35_06_GOODBYE — Nella's goodbye, from the south bank
+#### S35_06_GOODBYE — Nella's goodbye, from the water's edge
 
-- **When:** Nella reaches the willows on the south bank, a long stone's throw from the water.
+- **When:** straight after the Odibli beat, before anyone else moves. Nella's last Session 34
+  turn already happened: she ran down the strip, sowed the thorns behind her (`S35_07_CHASE`) and,
+  passing the bush at L16, hung something on it without breaking stride. Now she stands at the
+  water's edge at M19, the rope in her hand.
 - **Say:**
 
-> *"The south bank is willow and mud and loud water. Nella stops under the biggest willow, takes
-> an empty leather hood off her belt, Tithe's hood, worn smooth, and hangs it on a low branch.
-> She doesn't look at it again."*
+> *"The strip under the boulders is grass and mud and loud water. As she runs she pulls an empty
+> leather hood off her belt, Tithe's hood, worn smooth, and hooks it on a bush as she passes.
+> She doesn't look at it again. At the water's edge she stops, a rope in her fist."*
 
 - **Say (Nella, over every crystal):** for the only time, she broadcasts. The party's crystals
   hear it too. She doesn't raise her voice. *"Nineteen flights. Never once dropped me."* A beat.
   *"Fuck you all."*
-- **Choice (party):** the hood on the willow. Keep it, or give it back to her the next time
-  they meet. Either way she'll remember who had it.
-- **Then the chase**, straight away.
+- **Choice (party):** the hood on the bush. Keep it, or give it back to her the next time they
+  meet. Either way she'll remember who had it. It hangs inside the thorns: whoever fetches it
+  before the spell ends takes 2d4 for every 5 ft they move in there. Once she's gone, the thorns
+  lie down within the minute.
+- **Then the chase**, straight away. Luci goes first.
 
-#### S35_07_CHASE — One roll for Luci
+#### S35_07_CHASE — Six seconds for Luci
 
-- **When:** the goodbye ends. Nella runs for the water.
-- **What Nella does (RAW):** as she runs, she casts **Spike Growth** on the bank behind her (20 ft
-  radius, hidden thorns, 2d4 piercing per 5 ft). Then a staked line she rigged days ago, under
-  the bank, takes her out into the current. With Roving she swims as fast as she runs.
+- **When:** the goodbye ends. It's Luci's turn, and Nella is still standing on the bank.
+- **The ground (Roll20 map; layout `maps/south-bank.txt`).** A strip of grass 10 to 15 ft wide
+  runs south between the boulder ridge and the river. Luci is at **J5**, among the bushes below
+  the bridge. Nella is at **M19**, 70 ft down the strip, at the water's edge; the rope ring is
+  under the bank beside her at **N19**. Halfway down, two clumps of bush pinch the strip (K12:L13
+  and L16:M17).
+- **What Nella already did (RAW).** On her last Session 34 turn she Dashed as a bonus action
+  (Skirmisher's Step), which left her action free, and cast **Spike Growth** on the run, centred
+  on the bush choke at L13. It's a 20 ft radius: rows 9 to 17, boulders to water, the whole strip
+  (zone **J9:N17**). She's concentrating on it. It doesn't spare her, but she's already past it.
+- **The thorns are hidden.** Luci didn't see the cast; she was coming down the boulders. RAW, to
+  know the ground is wrong before stepping in, she takes the **Search action** and makes
+  Perception or Survival **DC 13**. Her passive Perception is 13: allowing that instead is the
+  DM's call. If she doesn't spot it, she finds out in the first square: **2d4**, and now she knows.
 - **Say:**
 
-> *"She's fast. You're faster. You close the gap, forty feet, thirty, and as she passes the last
-> willow she flicks two fingers back at the ground without looking. The grass behind her
-> stands up. Every blade of it is a thorn now, a carpet of them between you and her, and she's
-> past it, at the water's edge, a hand already on a rope you didn't see."*
+> *"You come off the last of the rocks onto grass, and there she is. Seventy feet down the strip,
+> at the edge of the water, not running anymore. She has a rope in one hand, running down under
+> the bank, and she's looking at you. Between you the grass is long and very green, greener than
+> it should be in a dry month, and it's quite still, though the wind is coming off the river."*
 
-- **Ask Paul for one check, DC 18:** Acrobatics or Athletics, his pick. He says how Luci does it.
-  This is the whole chase; make it count.
-  - **Advantage** if she spends a focus point on **Step of the Wind** (her jump distance doubles,
-    so she clears the thorns), or if Iggy flew and lands on the bank. Not both; advantage
-    doesn't stack.
-  - **If she runs through the thorns** without leaping, she takes the damage (2d4 per 5 ft,
-    about 15 ft of it) and still rolls.
+- **Why one turn is everything.** On her next turn Nella is in the river (`S35_08_ESCAPE`), and
+  in the river nobody at this table can catch her. So Luci gets **one turn**, six seconds, to
+  reach her. If she does, Paul rolls the tackle. If she doesn't, Nella is gone. Tell Paul this
+  plainly: *"You have this turn. Next turn she's in the water."*
+- **Ask Paul what Luci does.** Don't list the routes; let him find one. If he asks what he can
+  see: the boulders on his right, the river on his left, the bushes, the odd grass, and Nella
+  standing still, 70 ft away.
+- **What Luci has this turn:** 40 ft of movement; her action (Dash, another 40); and her focus
+  points. **Step of the Wind** costs one: Dash and Disengage as a bonus action (another 40), and
+  her jump distance doubles. All in, **120 ft of movement**. Thorns are difficult terrain, so every
+  square of them costs 10 ft. **Her running long jump is 9 ft (STR 9); with Step of the Wind,
+  18 ft.** She can't jump 45 ft of thorns. That's the point of them.
+- **Her HP:** 22 on the sheet. Check it before she commits to anything that crosses the thorns.
+- **The routes, and what each costs:**
+  - **Straight down the strip.** 15 ft of open grass (rows 6 to 8), nine squares of thorns
+    (rows 9 to 17, 90 ft), then 5 ft to M18, beside her: **110 ft**, so her action and a focus
+    point. Nine squares at 2d4: **18d4, about 45 damage. That kills her.** If she runs in blind,
+    stop after the first square: she's taken 2d4 and knows. Let her choose again from there.
+  - **Leap, then run.** Step of the Wind, 15 ft run-up, an 18 ft jump that clears rows 9 to 11 and
+    lands at row 12, then rows 13 to 17 and out: 15 + 18 + 60 + 5, **about 100 ft**. Five or six
+    squares of thorns, **10d4 to 12d4, about 25 to 30.** At 22 HP that most likely drops her. Say
+    so if she asks how bad it looks.
+  - **The river.** Run to M8 (15 ft), drop off the bank into the shallows at N9 (5 ft) and wade
+    down the edge under the thorns to N18, beside her. The thorns grow from the ground; the water
+    isn't ground, so no damage there. She has no swim speed, so nine squares of water cost 90 ft.
+    **About 110 ft, so her action and a focus point. No damage.** She arrives in the water next to
+    Nella, on Nella's ground.
+    - **If she found the thorns the hard way** (one square in, at M9), she can still step
+      diagonally into the water at N10 and wade the rest: about 115 ft. Tight, but it fits. 2d4 in
+      all.
+  - **Break the spell.** Hit Nella with something that reaches 70 ft (Energy Storm, if its range
+    allows) and she makes a CON save (+1) against DC 10 or half the damage. Fail, and the grass
+    lies down and is only grass. The attack used Luci's action, so she runs it on Step of the
+    Wind's Dash: 80 ft against about 65 ft to M18. **About a coin flip, and no damage.** Miss, or
+    Nella saves, and the turn is spent. If she doesn't know the thorns are there, she has no
+    reason to try this; it happens only if she shoots anyway.
+  - **Iggy.** If he flew (`S35_05_ODIBLI_DOWN`), he can sweep in, lift her over and drop her
+    beside Nella. No cost to her, and she arrives with her action free: the tackle has
+    **advantage**.
+  - **Over the boulders.** The ridge is climbing, not running: half speed at best, and the rocks
+    come down to the water further on. Not this turn.
+- **Searching first** costs her action, which leaves 80 ft. Every route that reaches Nella needs
+  about 110. If she searches, she knows exactly what's there and can't get through it in time.
+  That's a fair result; tell Paul the distance if he asks before he commits.
+- **The tackle, DC 18:** Acrobatics or Athletics, his pick, when she reaches Nella. It's the end of
+  her move, not an action. Nella is greased to the elbow and already leaning into the water; this
+  is grabbing a fish. Advantage only through Iggy.
 - **Success:** Luci lands on her at the water's edge, a hand on the rope, a knee on the bow.
   - **Say (Nella):** she stops. She unstrings the bow, sits down in the mud, and looks at the
     river for a long moment. *"Well. That'll cost me."*
   - **Choice (Luci):** take her, or let her go. Taken, she's the party's to question, and her
     tally is theirs to bargain with. Let go, she owes Luci, and she counts it.
-- **Fail:** the thorns, a heartbeat too long, and Nella is gone. `S35_08_ESCAPE`.
+- **Fail, or didn't reach her:** fingers on wet leather, or thorns, a heartbeat too long, and
+  Nella is gone. `S35_08_ESCAPE`.
 - **If the table forces a fight anyway:** her block is in Combatants. Roll initiative only for her
   and whoever is there; she has advantage (Prepared Ground). Wound and pin, never kill. Grappled
   or with the river cut off, she sits down as above.
@@ -511,18 +588,36 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 - **Say:**
 
 > *"She goes into the river like she was born in it. The rope runs out through a ring under the
-> bank and lets go. One look back, not at you, at the willow. Then the current has her, and she's
-> a dark shape going downstream, and then she's nothing at all."*
+> bank and lets go. One look back, not at you, at the hood on the bush. Then the current has her,
+> and she's a dark shape going downstream, and then she's nothing at all."*
 
-- **The river** is her way out. Swimming after her is Athletics DC 13 for about 3 rounds, and she
-  swims at 40 ft. If even that can't honestly stick, the table wins. Never visibly cheat, and
-  never add HP, a reaction or a rescue she didn't have.
+- **Why six seconds was enough.** On the bank she's a woman on open grass, 70 ft away past the
+  thorns. In the water she's something else:
+  - **The rope.** It runs from the stake under the bank out to a sunken post in the channel. She
+    loops it round her wrist, pulls the greased slip end, and it swings her out of the slack
+    water and into the fast current in one go. She ends that turn 60 ft out, mid-channel.
+  - **She's invisible.** Brown water is heavily obscured. Once she's under, nobody can see her or
+    target her. She can hold her breath for two minutes.
+  - **She's faster.** Swim 40, Dash 40 (bonus action), and the current adds 30: **110 ft a round.**
+    Luci has no swim speed: everything she has, 120 ft, halves to 60 in the water, plus the same
+    30 from the current. **90 ft a round, if she knew where to swim.** She doesn't.
+  - **The bank won't help.** South of her the boulders come right down to the water and the strip
+    runs out: Luci would be climbing rock, about 60 ft a round, half Nella's pace.
+  - **She's out of sight in two rounds.** 200 ft down, the river bends under the ridge into a reed
+    bed on the far bank. She comes up in the reeds, and that's the last of her.
+- **If someone goes after her anyway:** in the water, they first have to find her: Perception
+  against her Stealth (+8), at disadvantage while she's under. Each round they're in the fast
+  water, Athletics DC 13 or the current takes them past where they meant to go. Iggy, if he's
+  still flying, can watch the bend for where she surfaces: Perception DC 18. If something honestly
+  sticks, the table wins. Never visibly cheat, and never add HP, a reaction or a rescue she didn't
+  have.
 - **If Nella drops to 0:** knocked out or killed is the party's call.
 - **Make the preparation visible.** Whoever looks at the bank sees it:
 - **Say:**
 
 > *"Under the bank, a stake driven deep and a rope through an iron ring, the rope's end greased.
 > The stake's been there a while; the mud around it has dried and cracked and been rained on.
+> Out in the channel, the top of a post breaks the water, the rope still running to it.
 > Up on the ridge, if you go back that way, there's a ring of flattened grass around another
 > stake, and the bones in it run from old to fresh."*
 
@@ -1469,8 +1564,8 @@ from the Tyler meeting, for his run. Share it from the page's Share menu first.
   - **New canon if played:** the recap's details (the wings and Iggy's look in them, the
     whispered names, Dip feeling the presence pour into Iggy, the Citadel's cold as a pen
     stopping, Halsby's cold hands) · Sah's voice through the crystals ("Up, Wallaed") · Nella's
-    whistle as Tithe died · the hood on the willow · Spike Growth and the staked line on the
-    south bank · the ledger in a tin box, charred but readable · Vey's order in a brass tube ·
+    whistle as Tithe died · the hood on the bush · Spike Growth and the staked line on the
+    riverbank · the ledger in a tin box, charred but readable · Vey's order in a brass tube ·
     Mara's six cells · Asher's cave by the river and his real form · Sable knows his name and
     keeps him hidden from the town · Asher drew Tithe in through the earth and kept the bones ·
     Asher's true name given to the party, breaking his voice core (record it in his `## Voice`) ·
