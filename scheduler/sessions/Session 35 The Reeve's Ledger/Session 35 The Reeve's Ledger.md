@@ -1119,7 +1119,7 @@ From Asher
 
 > *"You come back to yourself standing knee-deep in the ford. The river runs on either side of
 > you, but around your legs the water is perfectly still, as if it's holding its breath. Your
-> hands are bound in plain grey cloth, cool, and dry."*
+> hands are bound in cloth the grey of the sky before dawn, cool, and dry."*
 
 - **Say (Old Tobin Reed, on the bank, mending a net):** *"You've been stood there the best part
   of an hour. Water wouldn't touch you."*
@@ -1127,8 +1127,8 @@ From Asher
 - **The item:** [[The Stillwater Wraps]]. Unarmed strikes +1 to hit and damage; if she hasn't
   moved this turn, +1d4 radiant. Hand over the card (`handouts/stillwater-wraps.html`) when she
   looks at them.
-- **History (three sentences, attached now):** Sabathiel wound them on her hands in the ford at
-  Ashford. They are cut from nothing anyone in town has woven. They never take a stain.
+- **History (three sentences, attached now):** Sabathiel wove them in the years it called after
+  her, and wound them on her hands with its light. They never take a stain.
 
 ### Scene 7 — Count Them
 
