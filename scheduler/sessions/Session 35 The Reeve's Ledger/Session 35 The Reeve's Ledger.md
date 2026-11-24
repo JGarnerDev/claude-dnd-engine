@@ -208,26 +208,29 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
   including the moments you lived and didn't hear. Iggy first.
 - **Say:**
 
-> *"The drover sees it first. The kid with the arrow in him, the one on his knees by the cart,
-> gets up. His eyes have gone white-gold. Then the wings, and every shadow in the yard swings the
-> other way."*
+> *"Iggy. You're on your knees by the cart, seven hit points, an arrow in your side, when your
+> crystal speaks. Not Nella. Not the crew. Every crystal in the yard at once, one old voice:
+> 'Up, Wallaed.'"*
 >
-> *"Then the crystals talk. Every one in the yard at once: the drover's, the cask-hands', the
-> one at Nella's throat. 'Up, Wallaed.' The drover drops his in the dirt."*
+> *"And you get up. Your eyes go white-gold. Wings open out of your back and throw every shadow
+> in the yard the other way. You're off the ground before you've decided to be."*
 >
-> *"Iggy, you go up. The griffon is a dark shape on lit cloud, and your blade finds it. The
-> smite lands warm, with a thread of cold under it. You're saying two names you didn't mean to
-> say. Caelion. Liora."*
+> *"The cloud lights up around you, the griffon goes black against it, and your blade finds it.
+> The smite lands warm, with a thread of cold underneath. You hear yourself say two names.
+> Caelion. Liora."*
 
 - **Say (to Odibli):** *"From under the cart you see the light cross the yard. The crystal in
   your pocket says it too: 'Up, Wallaed.'"*
 - **Say (to Halsby):** *"The light pins your shadow short and hard under your feet, darker than
   it should be. Then it lets go."*
 - **Private (Dip):** what Dip sees
-  - **The message:** When the wings open, the yard goes thin. Behind Iggy stands an old soldier,
-    tall and very tired, one hand on Iggy's shoulder. It's the same thing you saw at the hearth,
-    the innermost doll, and it lives in Iggy. Then it's a yard again, on fire. For a moment you
-    felt the hands that push you, all of them reaching for him. Hers still aren't among them.
+  - **The message:** You feel the yard the way the Enclave taught you: the souls in it, each one
+    a thread. Two of the raiders' threads go slack and slip out of this plane while you swing.
+    That's ordinary. You've felt it a hundred times. Then something comes in the other way. It's
+    too big to be a soul, and it comes from somewhere past this plane, straight into Iggy.
+    It's the same presence you felt at the hearth, only now it isn't hiding. It's old, and very
+    tired, and it kept him from going out the way the raiders did. When the wings fold, it's
+    gone. Nobody else in the yard felt the current turn.
 - **What stays hidden:** what Sah is, why the crystals carried him, anything about the Lioness
   hearth beyond Dip's private. Nobody says the name Sah but Iggy. If someone asks Iggy who that
   was, it's his answer.
@@ -245,8 +248,17 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 > Three darts of light off your fingers and into the captain."*
 >
 > *"Then you lean out and ask Luci a question no wizard should ever have to ask. 'Can I
-> Fireball you?' 'Sounds like fun, dude.' The yard goes orange. Three riders don't get up. Luci
-> walks out of it. A second cart catches."*
+> Fireball you?' 'Sounds like fun, dude.'"*
+>
+> *"You flick it out from under the cart: one bead of light, no bigger than a cherry stone,
+> skipping low over the sand between the horses' legs. Three riders look down at it. Then it
+> opens. The light comes first, and the sound after, a deep thump you feel through the axle over
+> your head. The yard goes orange wall to wall. All the shade under your cart is gone, and you
+> can count the grains of sand in front of your nose. The heat rolls over you, singed horsehair
+> and lamp oil."*
+>
+> *"When it clears, three riders don't get up. Luci walks out of the smoke, trailing it,
+> grinning. Behind Luci the second cart has caught, and its canvas goes up in one long sheet."*
 >
 > *"Then the griffon comes for you. Talons, the ground falling away, the yard getting small. You
 > twist free and drop, and land on your feet, because of course you do. And it finds you
@@ -274,9 +286,9 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 > You're inside the shed with the oil, and the shed is burning, because you meant it to."*
 >
 > *"You drag the gnome to his feet, 'On your feet, soldier!', and when the griffon comes down
-> low with one wing gone grey, you don't think. You jump. Your hands find feathers, and the whole
-> weight of it comes down out of the sky with you, the way it always has: you, standing where
-> the town needs someone to stand."*
+> low with one wing gone grey, you don't think. You jump, axe high, and bring it down into the
+> griffon's side. Then again. Feathers and blood come off the blade, and the thing that owned the
+> sky all morning drops out of it."*
 
 - **Say (Luci):**
 
@@ -1362,7 +1374,7 @@ reach · what the order doesn't like at [[Tassad]].
     `S35_27_BUILD`). Carry the job to Ben's first sessions.
 - **For `/recap`:**
   - **New canon if played:** the recap's details (the wings and Iggy's look in them, the
-    whispered names, Dip's vision of the old soldier, the Citadel's cold as a pen
+    whispered names, Dip feeling the presence pour into Iggy, the Citadel's cold as a pen
     stopping, Halsby's cold hands) · Sah's voice through the crystals ("Up, Wallaed") · Nella's
     whistle as Tithe died · the hood on the willow · Spike Growth and the staked line on the
     south bank · the ledger in a tin box, charred but readable · Vey's order in a brass tube ·
