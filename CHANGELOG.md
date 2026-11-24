@@ -6,6 +6,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.108.0] — 2026-11-24
+
+### Changed
+
+- **The recap and the slides read cleaner** (`Recap.tsx`, `recap-data.ts`, `Slides.tsx`, `session.css`, `slides.css`, `stats.css`; style pass step 10, todo 103). The "Previously on…" card uses one type style: the lead, the TL;DR and the written recap share the body size, the lead is no longer serif (serif is for text read aloud), the TL;DR eyebrows are plain, and the heading reads `Session 34 · The Red Trail` instead of repeating "Previously on…". The recap column stays at the scene width (880px), since one type size now fills it well. Slides use the presentation density, sit in one centred column so every slide starts at the same left edge, and have one box each (the outer accent box is gone; an achievement card keeps its own). The footer label, count and Close button are sized for reading from the couch. "Worth noting" lines are larger and not bold, with each emoji in a fixed-width slot so the text lines up.
+
+### Fixed
+
+- **A shared new lead takes a plural verb** (`scripts/lib/stats.py`): "Halsby & Luci take the lead in natural 1s", not "takes". Test in `tests/scripts/test_stats_standings.py`.
+
 ## [0.107.0] — 2026-11-24
 
 ### Changed

@@ -17,13 +17,14 @@
   flex: 1;
   min-height: 0;
   display: grid;
+  grid-template-columns: minmax(0, 75rem);
+  justify-content: center;
   align-items: center;
   padding: 6vh 7vw;
 }
-/* Capped so lines stay readable when screen-shared on a wide display. */
-.sr-slide-text {
-  max-width: 75rem;
-}
+/* One box per slide (style pass item 28): the text sits on the page in one centred
+   column, capped so lines stay readable when screen-shared on a wide display, and
+   every slide starts at the same left edge. */
 .sr-slide-title {
   margin-bottom: var(--ui-space-5);
 }
@@ -35,7 +36,9 @@
   scrollbar-width: thin;
   scrollbar-color: var(--ui-border) transparent;
 }
+/* Read from the couch (style pass item 30): the presentation density's body size. */
 .sr-slides-foot {
+  font-size: var(--ui-font-size);
   padding: var(--ui-space-3) var(--ui-space-5);
   border-top: 1px solid var(--ui-border);
   cursor: default;
@@ -47,5 +50,6 @@
 /* A bare slide (Slide.bare) has no headline and gives its body the whole stage. */
 .sr-slides-stage.is-bare {
   padding: 2vh 2vw;
+  grid-template-columns: minmax(0, 1fr);
   place-items: center;
 }

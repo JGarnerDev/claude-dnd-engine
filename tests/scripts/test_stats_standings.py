@@ -116,3 +116,15 @@ def test_unknown_ids_warn_and_unledgered_sessions_return_none(tmp_path):
     root = make_repo(tmp_path, {1: "strahd", 2: "strahd", 3: "strahd"})
     assert any("bogus-stat" in w for w in stats.standings(root, 3)["warnings"])
     assert stats.standings(root, 9) is None
+
+
+def test_a_shared_new_lead_takes_a_plural_verb(tmp_path):
+    root = make_repo(tmp_path, {1: "strahd", 2: "strahd"})
+    (root / "historian" / "sessions" / "_stats.md").write_text(
+        "## Session 1\n\n### Dip\n\n- killing-blows: 2\n\n"
+        "## Session 2\n\n### Luci\n\n- killing-blows: 2\n\n### Iggy\n\n- killing-blows: 2\n",
+        encoding="utf-8",
+    )
+    texts = [n["text"] for n in stats.standings(root, 2)["notable"]]
+    assert any(t.endswith("take the lead in killing blows (2)") for t in texts), texts
+    assert not any(" & " in t and "takes" in t for t in texts)

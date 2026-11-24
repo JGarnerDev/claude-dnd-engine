@@ -140,10 +140,15 @@
   white-space: nowrap;
 }
 
-/* "Previously on..." card (Recap.tsx): the TL;DR's nested lists sit tight */
+/* "Previously on..." card (Recap.tsx): one type style (style pass item 21), so
+   the lead and the TL;DR share the written recap's Prose size, and the nested lists
+   sit tight */
+.sr-recap-lead,
+.sr-recap-tldr {
+  font-size: var(--ui-font-size-md);
+}
 .sr-recap-tldr ul {
   margin-top: var(--ui-space-1);
-  font-size: var(--ui-font-size-sm);
 }
 
 /* Prompt book (PromptBook.tsx): one block per bullet, its voice a small label above

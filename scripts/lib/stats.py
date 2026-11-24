@@ -187,7 +187,8 @@ def standings(root: Path, number: int) -> dict:
             notable.append(
                 {
                     "icon": c["icon"],
-                    "text": f"{' & '.join(new)} takes the lead in {low(c['label'])} ({num(lead)})",
+                    "text": f"{' & '.join(new)} {'take' if len(new) > 1 else 'takes'} the lead"
+                    f" in {low(c['label'])} ({num(lead)})",
                 }
             )
 

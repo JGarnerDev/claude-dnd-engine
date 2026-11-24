@@ -7,15 +7,18 @@
   scrollbar-gutter: stable;
 }
 
+/* One weight and a fixed icon column, so the lines start together (style pass item 29) */
 .st-notable li {
   display: flex;
   align-items: center;
-  gap: var(--ui-space-4);
-  font-size: var(--ui-font-size-xl);
-  font-weight: var(--ui-weight-bold);
-  line-height: 1.2;
+  gap: var(--ui-space-3);
+  font-size: var(--ui-font-size-lg);
+  line-height: 1.3;
 }
 .st-icon {
+  flex: none;
+  width: 1.4em;
+  text-align: center;
   font-size: var(--ui-font-size-xl);
   line-height: 1;
 }

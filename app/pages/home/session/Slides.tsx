@@ -11,11 +11,11 @@
 import "./slides.css";
 import { useEffect, useEffectEvent, useRef, useState, type MouseEvent } from "react";
 import { createPortal } from "react-dom";
-import { Box, Button, Heading, Prose, Row, Stage, Text } from "jeff-ui";
+import { Button, Heading, Prose, Row, Stage, Text } from "jeff-ui";
 import { unlink, type DeckSlide } from "./deck.js";
-import { KIND_HUE } from "./hues.js";
 import { Markdown } from "./MarkdownView.js";
 import { RefContext } from "./RefChips.js";
+import { sessionTitle } from "./session-title.js";
 
 // Auto-scroll for a slide taller than its box (the standings, a long
 // achievements list): creep down, hold at the bottom, glide back up, hold at the
@@ -100,22 +100,22 @@ export function Slide({
         {s.bare ? (
           <div className="sr-slide-body">{body}</div>
         ) : (
-          <Box hue={KIND_HUE.recap} edge="start" className="sr-slide-text">
+          <div className="sr-slide-text">
             <Heading level={1} size="xl" className="sr-slide-title">
               {s.title}
             </Heading>
             <div className="sr-slide-body">{body}</div>
-          </Box>
+          </div>
         )}
       </Stage>
       <Row as="footer" gap={4} className="sr-slides-foot">
-        <Text as="span" size="sm" tone="muted" className="sr-slides-label">
-          {label}
+        <Text as="span" tone="muted" className="sr-slides-label">
+          {sessionTitle(label)}
         </Text>
-        <Text as="span" size="sm" tone="muted" numeric className="sr-slides-count">
+        <Text as="span" tone="muted" numeric className="sr-slides-count">
           {i + 1} / {deck.length}
         </Text>
-        <Button size="sm" data-act="close" title="Close (Esc)" onClick={onClose}>
+        <Button data-act="close" title="Close (Esc)" onClick={onClose}>
           Close
         </Button>
       </Row>
@@ -189,7 +189,7 @@ export function Slides({
       ref={el}
       className="sr-slides"
       data-theme="ink"
-      data-density="comfortable"
+      data-density="presentation"
       role="dialog"
       aria-label={label}
       onClick={onClick}

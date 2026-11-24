@@ -32,7 +32,7 @@ describe("withRecap", () => {
     expect(d.nodes[0]).toMatchObject({
       id: RECAP_ID,
       kind: "recap",
-      title: "Previously on… Session 8 Before",
+      title: "Session 8 · Before",
     });
     expect(d.scenes[0].key).toBe("prev");
     expect(d.edges[0]).toEqual({ from: RECAP_ID, to: "S1_OPEN", label: "", dashed: false });

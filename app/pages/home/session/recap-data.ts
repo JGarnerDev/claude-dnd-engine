@@ -13,6 +13,7 @@
 // A plan may carry its own `## Recap` section — a hand-written, read-aloud
 // version. It leads the card, and the plan panel leaves it out.
 
+import { sessionTitle } from "./session-title.js";
 import type { SessionData } from "./types.js";
 
 export const RECAP_ID = "PREVIOUSLY";
@@ -32,7 +33,7 @@ export function withRecap(data: SessionData): SessionData {
         marker: null,
         kind: "recap",
         scene: RECAP_SCENE,
-        title: `Previously on… ${prev.name}`,
+        title: sessionTitle(prev.name),
         lines: [],
         notes: [],
       },

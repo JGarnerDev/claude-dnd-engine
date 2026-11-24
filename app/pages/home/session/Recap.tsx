@@ -62,11 +62,11 @@ export function Recap({ data, onSlides }: { data: SessionData; onSlides: () => v
         </Prose>
       )}
       {prev.description && !written && (
-        <Text size="lg" serif className="sr-recap-lead">
+        <Text className="sr-recap-lead">
           <InlineMd md={prev.description} />
         </Text>
       )}
-      <Heading level={3} variant="eyebrow" hue={KIND_HUE.recap} className="sr-recap-h">
+      <Heading level={3} variant="eyebrow" className="sr-recap-h">
         TL;DR
       </Heading>
       <List gap={2} className="sr-recap-tldr">
@@ -110,7 +110,7 @@ export function Recap({ data, onSlides }: { data: SessionData; onSlides: () => v
       {inSeason && (
         <Column gap={2} className="sr-recap-season">
           <Divider />
-          <Heading level={3} variant="eyebrow" hue={KIND_HUE.recap} className="sr-recap-h">
+          <Heading level={3} variant="eyebrow" className="sr-recap-h">
             Last time in this world — {inSeason.name}
           </Heading>
           {meta(inSeason)}
