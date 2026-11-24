@@ -13,7 +13,7 @@ in on, and later Elowen, Halsby, Mara and Richmond each add their own layer.
   Sable would say out loud. DM-only facts are listed separately at the bottom and stay off the
   map.
 - **Scope:** `maps/locations/silas-region-scope.png` (local render, gitignored) shows how much ground the map covers. Build frame B, Ashford to the bay, as one Inkarnate map, and export frame A from it as Silas's sheet.
-- **Status:** draft. Anything tagged *(proposed)* is new and is not canon until Jeff confirms it.
+- **Status:** layers 1 and 2 confirmed 2026-11-24 (see *Canon set by this map*); the *(proposed)* tags below are now canon, except the optional creek mark.
 
 ## How it reaches the table
 
@@ -90,7 +90,7 @@ Leave the **west** of the sheet sparse, and the **east** blank past a day's ride
 east. Elowen's out-of-date war map covers the river country, so leave the Moorthistle banks
 uncluttered for her. Halsby's route to Tassad will run off the edge.
 
-## Layer 2 — Sable's road east *(all proposed)*
+## Layer 2 — Sable's road east
 
 When asked where she came from, Sable draws one line due east from Ashford, into the woodland
 that fills Velmora's south past the Moorthistle's bend, and writes three short notes along it. She
@@ -136,11 +136,14 @@ about the fouling that she won't explain. Leave it off if the fouling isn't read
 - Which river is the Moorthistle on the world master is still an open item (`todo-worldmap.md` →
   Calenmere). The handout is local scale and doesn't depend on that decision.
 
-## New canon this would set (confirm or strike)
+## Canon set by this map
 
-1. Orrend, a day and a half south: Cael's market, Marlow's wharves (entity drafted)
-2. Duskwater's edge is 2 days southeast by the drover's road
-3. Sable came from **Coldwell**, five days east through the woods, on foot
-4. The Stones, a day and a half east on the old salt road
-5. The old salt road runs east from Ashford through the woods
-6. *(optional)* Sable's "not below here" mark on the creek
+Jeff confirmed 1-5 on 2026-11-24 (Session 35 prep, both layers go on the act's regional map):
+
+1. Orrend, a day and a half south: Cael's market, Marlow's wharves (entity drafted) *(canon)*
+2. Duskwater's edge is 2 days southeast by the drover's road *(canon)*
+3. Sable came from **Coldwell**, five days east through the woods, on foot *(canon)*
+4. The Stones, a day and a half east on the old salt road *(canon)*
+5. The old salt road runs east from Ashford through the woods *(canon)*
+6. *(optional)* Sable's "not below here" mark on the creek. Left off for Session 35 (no answer
+   2026-11-24); open hook for Ben's run.

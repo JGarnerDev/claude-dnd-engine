@@ -24,7 +24,7 @@ Planned date: 2026-11-24.
       the table so he can think about how Dip says goodbye.
       Also tell him about Sable's job for Halsby (find George Ringo or Zach). Where the smiths
       are is his to set.
-- [ ] **Elowen moved here** from Session 36 (todo 100). Confirm, or move her back and cut Scene 7.
+- [x] **Elowen moved here** from Session 36 (todo 100). Stays: she gives Odibli something special (Jeff, 2026-11-24).
 - [x] **HP check (todo 101):** read off the Roll20 sheets (2026-11-22) into the plan's Orientation:
       Iggy 5/40, Luci 22/39, Dip 45/55, Halsby 11/32, Odibli 0/27 (dying, as planned).
 - [ ] **Run `/review 35 --ready`**, commit the `[-]` beats in `_flow.md`, then flip the plan to
@@ -32,6 +32,21 @@ Planned date: 2026-11-24.
 
 ## Maps and Roll20
 
+- [ ] **Make maps** from the drafts (all local renders, gitignored; ask Claude to re-render any
+      that's missing). Battle maps are built by hand in Roll20, and overviews in Inkarnate.
+      - **Mara's office** (Roll20, Scene 10): `maps/battlemaps/session-35/mara-office-key.png`;
+        layout `maps/mara-office.txt` in this folder.
+      - **Asher's cave** (Roll20, Scene 5): `maps/battlemaps/session-35/asher-cave-key.png`;
+        layout `maps/asher-cave.txt`.
+      - **South bank backup grid** (Roll20, only if a fight breaks out): `maps/battlemaps/session-35/south-bank-key.png`;
+        layout `maps/south-bank.txt`.
+      - **Ashford town** (Inkarnate overview): `maps/battlemaps/ashford/ashford-key.png`. Leave
+        the cave (AC7) off the player copy.
+      - **Act regional map, Silas's sketch** (Inkarnate overview): trace
+        `maps/locations/silas-map-layer1-player.png` (Silas) and
+        `maps/locations/silas-map-layer2-player.png` (adds Sable's road east). Export each layer
+        separately. The spec is `maps/handouts/silas-road-sketch.md`. Don't use
+        `silas-sheet-draft.png`: it has DM-only marks.
 - [ ] **Keep the waystation map up** from Session 34's end for Scene 1. Clear initiative but keep
       Odibli's death saves.
 - [ ] **The south riverbank** is one roll, no grid. Only if the table forces a fight: a blank grid

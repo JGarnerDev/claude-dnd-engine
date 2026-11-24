@@ -25,8 +25,9 @@ raiders' matched boots) is also your call.
 
 ### 2. Draw Silas's sketch in Inkarnate (45–60 min) ⭐ the main job
 
-Trace from `maps/locations/silas-sheet-draft.png`. It's a local render, so ask Claude to
-regenerate it if it's missing. Use a parchment, hand-drawn style: it's a merchant's sketch.
+Trace from `maps/locations/silas-map-layer1-player.png` (Silas) and
+`silas-map-layer2-player.png` (adds Sable's road east). Not `silas-sheet-draft.png`: it has
+DM-only marks. They're local renders, so ask Claude to regenerate one if it's missing. Use a parchment, hand-drawn style: it's a merchant's sketch.
 
 - **On the map:** Ashford and its creek, the Moorthistle loop, the Broadwend down to the bay,
   Orrend, the north road to Lord Cael's hall, the drover's road to Duskwater, and an arrow off the
