@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.102.0] — 2026-11-23
+
+### Changed
+
+- **jeff-ui 2.4.0** (`app/package.json`). Fixes the Save view, Load view and Settings popovers opening off-screen, and PARTY rows in the runner's side panel squashing the name under the class (style pass, todo 103). Adds the `ink` theme and `--ui-hue-*` tokens, unused here until style pass step 3.
+
 ## [0.101.0] — 2026-11-23
 
 ### Added
