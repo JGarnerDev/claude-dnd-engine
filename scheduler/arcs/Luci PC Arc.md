@@ -6,7 +6,7 @@ state: active
 tags:
   - pc-arc
 pc: "[[Luci]]"
-arc_checked: 34
+arc_checked: 35
 next_step:
   - "learn whether she was ever truly in the sun temple, or only remembers it through genetic memory"
   - "the time she lost drifting in the Astral Sea, 113 years she did not live, catches up with her"
@@ -51,3 +51,4 @@ Paul has no Looking Ahead section yet. What he has asked for lives in [[Luci]] �
 ## Shifts
 
 - S33 — created with Jeff (2026-11-11).
+- S35 — Sabathiel named the 113 years through Asher's draught ("I called for you for 113 years"): the lost-time Next step is seeded.

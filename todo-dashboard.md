@@ -30,6 +30,12 @@ Ordered for the first homebrew session (game night Tuesday 2026-10-06). Top item
 
 - **102.** 🤝 **Jeff** — **cut back the library and book imagery in Iggy's backstory** (Jeff, 2026-11-23). Threnai's Library is where he comes from. It shouldn't be a theme that follows him everywhere, and because generated beats draw on `historian/characters/pcs/Iggy.md`, they keep handing him shelves, ink and seals (the Session 35 recap had to be rewritten for this). The file has 14 mentions. The ones that shape his character: the frontmatter `description` ("library-plane"), the "Micro-reverence for records" quirk, the courier run (a sealed order with an open-book seal, the archivist's ink-stained sleeves and shelves), and the two spotlight hooks that name the Library. Claude drafts a trimmed pass for Jeff to approve, keeping the Library as a place in the history without making it his imagery. Check `scheduler/arcs/Iggy PC Arc.md` and `historian/deities/Sah.md` for the same thing. Until then, keep library and book imagery out of anything written about Iggy.
 
+### Session 35 carry-over — open prep from its `_tasks.md` (recap 2026-11-25)
+
+- **103.** 🙋 **Jeff** — **two Inkarnate overviews** still to build. Ashford town from `maps/battlemaps/ashford/ashford-key.png` (leave Asher's cave, AC7, off the player copy). Silas's road sketch, the act's regional map, from `maps/locations/silas-map-layer1-player.png` and `silas-map-layer2-player.png` (layer 2 adds Sable's road east), each layer exported separately; spec in `maps/handouts/silas-road-sketch.md`. Never `silas-sheet-draft.png`: it has DM-only marks.
+- **104.** 🤝 **Jeff** — **check the Lioness upgrades before the build is played.** The six free-pick perks on `historian/sessions/Session 35 The Reeve's Ledger/handouts/on-the-house.html`, and the gold and material loads on `handouts/while-away.html` (prices are a first pass), including the dock and Old Tobin's riverboat. Scenes S35_25 to S35_29 (the stake, the build, the reeve and the ledger) went unplayed to the party todo, with the cord of charms.
+- **105.** 🤝 **Jeff** — **at `/handover`:** reshape the act's `## Shape` (the old-field finale waits for Dip's return), and tell Ben that Shaw's sealed letter opens his run: its text and reward are Ben's and Tyler's (`handouts/shaw-for-ben.html`).
+
 ### Session 30 prep — Keep the Ale
 
 Plan drafted 2026-10-07 at `scheduler/sessions/Session 30 Keep the Ale/`. These block the table.

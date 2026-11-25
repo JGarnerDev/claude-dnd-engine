@@ -17,6 +17,7 @@ confirmed_date: "2026-11-23"
 race: "Halfling"
 class: "Monk (Warrior of the Open Hand)"
 level: 5
+level_confirmed: 35
 background: "Soldier"
 pronouns: "he/him"
 # D&D Beyond sheet (2026-11-23) is the mechanical source of truth.
@@ -41,6 +42,9 @@ spotlight_hooks:
   - hook: "Bane's band sends someone after the deserter who knows its plans"
     status: open
 description: "Tyler's PC. Fifty-year-old halfling soldier and ex-muscle for Harrow Bane's band, a monk on paper only. Quit when the work turned on villages and children, and surrendered in Ashford."
+affinity:
+  - "[[Iggy]] (3)"
+  - "[[Luci]] (1)"
 ---
 
 Campaign: [[Homebrew Campaign]] | Player: [[Tyler]]
@@ -132,7 +136,11 @@ Chain shirt, spear, shortbow, quiver with 20 arrows, healer's kit, traveler's cl
 
 ## Session History
 
-None played yet. He is the silent prisoner in Mara's cell (`S2_CELL`, [[Session 30 Keep the Ale]]), a silhouette through most of Session 35. Planned entry: the last scene of [[Session 35 The Reeve's Ledger]] (`S35_30_SPEAKS`), the season finale. Cael's reeve sets his hanging for noon, the party walks into the cell, and he speaks; then he holds out the letter, unopened at the table. Tyler gets a Discord message when Scene 8 starts. The bridge into Ben's run (todo 71).
+- **Session 35** (first played, the last scene): asked for "the people that killed that griffin" from [[Mara Tull]]'s cell, and met the party. On the man from the king's court: "Tell them to get in line." Cartwheeled to the bars (Acrobatics 16) to shake [[Odibli]]'s hand: "I'm not a threat, but I could be for the right price." [[Luci]], as "Lusitania", laid a protective light on him. Told them his one true thing: he ran with the brigands under [[Harrow Bane]] and turned himself in when the jobs got too dirty. Told the letter aloud: robbing the mail, he found one from (he assumes) his long-lost brother, saying something is happening far to the north, at the [[Deorum Ostium]] (Dip's name for it), and asked the party to come with him. At [[Iggy]]'s asking, Mara freed him and called off the hanging; he must stay away from [[Ashford]] about a month. ([[Session 35 The Reeve's Ledger]])
+
+> **Reliability:** the brother is Shaw's assumption, and the letter's contents beyond "far to the
+> north" are Tyler's to fill (Ben: "I'll let you wing it with the letter"). Whether Luci's light
+> was a spell or flavour is unclear. Confirm with Tyler.
 
 ## Gaps — pending Tyler
 

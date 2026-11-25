@@ -6,6 +6,7 @@ exists: true
 source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 state: active
+last_updated: "[[Session 35 The Reeve's Ledger]]"
 campaign: homebrew
 tags:
   - deity
@@ -42,8 +43,12 @@ sacred_practices:
   - "Bringing him a true story, told aloud over the water, so the telling is remembered"
 myths:
   - "The river's red was his own deep mineral dye before any blood was spilled in it"
-voice: "Formal and courteous through the fox; talks in debts and their settling; bows before he refuses, and never gives his name."
-voice_confirmed: 31
+voice: "Formal and courteous; talks in debts and their settling; bows before he refuses."
+voice_confirmed: 35
+affinity:
+  - "[[Dip]] (2)"
+  - "[[Iggy]] (1)"
+  - "[[Halsby]] (1)"
 ---
 
 Beneath **[[Ashford]]**, in the flooded caverns and the deep aquifer that feeds the
@@ -159,22 +164,48 @@ The joke underneath all of it: the safest building in town is sitting on a monst
   once again," wished him luck in helping save Sable, said "perhaps we will talk again", and ran
   into the woods. Asher is still unnamed to the party. ([[Session 31 The Red Trail]])
 
-## Voice
+## Canon — Session 35
 
-> **Draft** (S31 recap, 2026-10-27): built from the fox's lines and his file. Confirm with Jeff.
+- **He showed himself.** In the firefly cave he rose and bowed, lower to [[Iggy]] than the rest,
+  and gave his name into their minds. [[Sable Wren]] told the party she is his warlock.
+- **The griffon.** He drew [[Tithe]] up through the ceiling and unthreaded it into gold; the bones
+  fell "like dice". From a wing bone and four talons he remade [[Dip]]'s whip as [[Tithe-Taker]]:
+  "The debt has been paid."
+- **His ask.** Over the Four: "a man there, digging in the last stand. There is something under him
+  that remembers being killed. My water… has gone sour." Dip agreed to lay it to rest: "I'll do it
+  for free."
+- **Dip's sister.** He had sensed [[Dip's Twin Sister]] pass through his water, and will try to
+  learn which way she went.
+- **Iggy's guest.** He asked what Iggy carries and whether it means to stay; when Iggy said it is
+  diminished and asked that it stay, he nodded. He gave Iggy [[Oathcaller]].
+- **Halsby.** "You did what I asked. And I did what I said. We are square." Then a warning: people
+  study [[Halsby]]'s kind, and the price to learn will be high; pay it slowly. The fox had gone
+  into the Lioness the night before "like a regular".
+- **Luci.** He gave [[Luci]] a draught of milky spring water with a crumbled rib in it; it brought
+  her vision of Sabathiel at the ford. ([[Session 35 The Reeve's Ledger]])
+
+## Voice
 
 ### Core
 
-- **Signature:** speaks of debts and their settling ("The debt is repaid"), with a formal bow
-- **Never:** gives his name
+- **Signature:** speaks of debts and their settling ("We are square"), with a formal bow
+- **Never:** leaves a debt unsettled
 - **Tell:** a slow bow before he refuses
 
 ### Now
 
-- **Toward Halsby:** square with him, and open to more (S31: the Spear delivered, "perhaps we will talk again")
+- **Stance:** has named himself to the party and trusts them with the Four and the sister; his water has gone sour (S35: the meeting in his cave)
+- **Toward Halsby:** square with him, and warned him (S35: "We are square")
+- **Toward Dip:** fond; Dip took the Four job for free (S35)
 
 ### Said at the table
 
 - S31: "You did what I asked. People rarely do. Please, if you will, hand me your spear and the shard." (the fox, at the bridge)
 - S31: "This is quite kind of you, but I need not your magic." (the fox, refusing Halsby's offer)
-- S31: "The debt is repaid. I thank you once again." (the fox, after the fusing)
+- S35: "There is something under him that remembers being killed. My water… has gone sour." (over Tithe's body)
+- S35: "You did what I asked. And I did what I said. We are square." (to Halsby)
+- S35: "The debt has been paid." (to the party)
+
+### Arc
+
+- S35: Never was "gives his name", became "leaves a debt unsettled", because he gave the party his full name with a bow once Halsby's debt was settled and he had a new ask to make (the Four, the sister)

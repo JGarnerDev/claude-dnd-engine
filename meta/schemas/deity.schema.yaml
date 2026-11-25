@@ -37,6 +37,13 @@ properties:
   divine_conflicts:
     $ref: entity.schema.yaml#/$defs/annotated-links
     x-placeholder: ['"[[Deity Name]] (nature of conflict)"']
+  affinity:
+    description: Deities that deal with the party in person (a patron, a bargainer). Per-target liking, -10..+10; see meta/affinity.md.
+    type: array
+    items:
+      type: string
+      pattern: '^\[\[[^\]]+\]\] \([+-]?(10|\d)\)$'
+    x-placeholder: ['"[[PC Name]] (n)"']
   voice:
     description: Core cadence and register in one line, for deities that speak at the table; see meta/voice.md.
     $ref: entity.schema.yaml#/$defs/text

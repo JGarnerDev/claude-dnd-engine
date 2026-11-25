@@ -11,15 +11,17 @@ creature_type: monstrosity
 challenge_rating: "2"
 size: large
 alignment: unaligned
-location: "[[The Waystation]] (its body lies in the yard)"
+location: "[[Ashford]] (its body given to Asher and unmade)"
 stat_block: "inline"
 importance: minor
 active: false
-last_updated: "[[Session 34 The Red Trail]]"
+last_updated: "[[Session 35 The Reeve's Ledger]]"
 relates_to:
   - "[[Nella]] (rode it, and sent it hunting riderless in its last fight)"
   - "[[Halsby]] (burned its wing, then killed it with a second Fire Bolt)"
   - "[[The Waystation]] (staked behind the ridge blind; died in the yard)"
+  - "[[Aashal-Groon Mellenegon Borak]] (took its body and unthreaded it into gold)"
+  - "[[Tithe-Taker]] (a wing bone and four talons went into it)"
 known_by:
   - "[[The Party]] (name only: Nella called it Tithe over the crystals)"
 description: "A big tawny griffon, eagle in front and lion behind, kept hooded and staked behind the waystation's ridge blind and fed on mutton. Nella flew it in the Ashford raid and in the waystation fight, then set it loose to hunt the party. Halsby killed it in the yard in Session 34."
@@ -49,3 +51,13 @@ The DM called it an animal "trained for war, amongst other things".
 > **Reliability:** the plan holds that Tithe was not Nella's own and that whose it was stays
 > open; nothing at the table settled that. Per the plan, Nella's debt tally is in its
 > saddlebags; the party hasn't searched the body yet. Confirm with DM.
+
+## Session 35
+
+[[Dip]] hauled it onto the second cart whole, and the party chose not to butcher it. [[Luci]] laid
+[[Nella]]'s hood back on it. It came home through [[Ashford]]'s square at sundown under a cover,
+and [[Sable Wren]] lifted the cover to look. [[Mara Tull]] suggested mounting its skull on
+[[The Golden Lioness]]; it went instead to [[Aashal-Groon Mellenegon Borak]] the next morning. In
+his cave it was drawn up through the ceiling and unthreaded into gold, and the bones fell "like
+dice". A wing bone became the blade of [[Tithe-Taker]] and four talons sank into its lash.
+Its saddlebags held 150 gp, 500 sp and 5 pp. ([[Session 35 The Reeve's Ledger]])

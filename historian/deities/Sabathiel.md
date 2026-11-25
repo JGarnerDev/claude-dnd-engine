@@ -29,6 +29,8 @@ relates_to:
 known_by:
   - "[[Luci]] (partial)"
 description: "Luci's warlock patron and the radiant voice in her head; Aedra's eternal guardian, watchful over an imprisonment of a sort. Revived Odibli and Dip in Session 5 at the price of Luci's Sacred Flame."
+voice: "Warm and grave, speaks across long years; promises, never orders."
+voice_confirmed: 35
 ---
 
 **Sabathiel** is the patron behind [[Luci]]'s warlock pact. It grants her Guidance and Augury through the *Written in the Stars* invocation: a glimpse of the cosmos and its twinkling agents of illumination. Luci hears it as a voice in her head, speaking a language that compels her, and feels it as warmth on her face.
@@ -43,3 +45,18 @@ Sabathiel is the eternal guardian of [[Aedra]], a powerful dark entity at the co
 
 - **[[Session 05 The Specter]]** — went silent under the specter's presence; Luci's Religion check to reach it failed. When the specter killed [[Odibli]] and [[Dip]], Sabathiel revived them both through Luci, and took her **Sacred Flame** forever as the price.
 - **Aethryn (Session 29 on)** — the voice is louder and clearer than it ever was in Barovia. Its first clear word there was **"Closer."**
+
+## Voice
+
+> **Draft** (S35 recap, 2026-11-25): built from its S35 lines and its file.
+
+### Core
+
+- **Signature:** speaks in long time, the years counted
+- **Never:** commands Luci; it asks or promises
+- **Tell:** warmth on Luci's face
+
+### Said at the table
+
+- S35: "You have run so far that you've forgotten what you are… I called for you for 113 years." (to Luci, through Asher's draught)
+- S35: "Nothing will stain them. When you strike, I will strike with you." (to Luci)

@@ -6,11 +6,11 @@ Achievements ledger (meta/achievements.md). One `## Session <n>` per homebrew se
 
 - fireplaces examined: 2 (S30, S31)
 - financial advice nobody asked for: 2 (S30, S34)
-- animals interviewed: 2 (S30, S32)
+- animals interviewed: 3 (S30, S32, S35)
 
 ### Luci
 
-- fires made worse: 2 (S30, S34)
+- fires made worse: 3 (S30, S34, S35)
 
 ### Halsby
 
@@ -75,3 +75,20 @@ Achievements ledger (meta/achievements.md). One `## Session <n>` per homebrew se
 
 - **Controlled Burn**: Whipped a burning cart's embers into a whirlwind and stood in the middle of
   it. Four men swung at you through the fire, and none of them got anything for it.
+
+## Session 35
+
+### Luci
+
+- **Fire Hazard**: Fire number three, and this time it was the tree you were standing in. The
+  ranger got away anyway.
+
+### Odibli
+
+- **Hiring Manager**: Third animal interview, biggest intake yet. Asked five bandit horses for
+  their consent and all five said yes. One of them thinks you're the promised land.
+
+### Iggy
+
+- **Character Witness**: A day after the town wanted him hanged, the raider walked out of the cell
+  on your word. Mara still hasn't forgiven him.

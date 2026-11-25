@@ -20,7 +20,7 @@ livelihood: "Mayor of Ashford and its general-goods merchant — one man, both j
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
-last_updated: "[[Session 31 The Red Trail]]"
+last_updated: "[[Session 35 The Reeve's Ledger]]"
 relates_to:
   - "[[Ashford]] (he is its mayor and its general store)"
   - "[[House Cael]] (trades with them, favours them in public never)"
@@ -40,9 +40,9 @@ charm_hook: "Every tangent he goes on ends, eventually and apparently by acciden
 affinity:
   - "[[Odibli]] (2)"
   - "[[Halsby]] (0)"
-  - "[[Luci]] (-1)"
+  - "[[Luci]] (0)"
 voice: "Affable small-town drawl that always lands on a number. Shrewd, never predatory, slow to commit."
-voice_confirmed: 34
+voice_confirmed: 35
 ---
 
 Location: [[Ashford]]
@@ -96,6 +96,12 @@ which households are quietly in debt and to whom.
 - Thanked [[Odibli]] and [[Halsby]] for their business advice, said they'd talk more once things
   settle, and shook each one's hand. ([[Session 31 The Red Trail]])
 
+## Session 35
+
+- At sundown on Day 2 he checked every hoof of the five horses he lent: "All four shoes on each
+  one… we're pretty square. Next time you need horses you come to me first." One horse came back
+  lame; the 11 gp for it is owed and deferred ("we'll talk about that another day"). ([[Session 35 The Reeve's Ledger]])
+
 ## Voice
 
 ### Core
@@ -106,8 +112,7 @@ which households are quietly in debt and to whom.
 
 ### Now
 
-- **Stance:** amused and wary; thinks the party "alien" to the town's finances (S30: the debt and awning pitches), and now invested: lent five horses, every shoe counted (S31)
-- **Toward Luci:** wary (S31: her look backed him off)
+- **Stance:** square with the party and wants their horse trade first (S35: every horse came back shod)
 
 ### Said at the table
 
@@ -115,4 +120,4 @@ which households are quietly in debt and to whom.
 - S30: "Certainly not from that piece of slag." (to Iggy, offering to heat it)
 - S30: "So you're selling me a boat." (to Halsby's shade-on-command pitch)
 - S31: "These are loans, not gifts. I want them back with all four shoes on each horse. I'll count them." (lending the horses at dawn)
-- S31: "Listen, fellas, I appreciate your advice there in terms of business. Let's talk more about it in the future. We're all a bit on edge." (to Odibli and Halsby, before the handshakes)
+- S35: "All four shoes on each one… we're pretty square. Next time you need horses you come to me first." (counting the horses back)

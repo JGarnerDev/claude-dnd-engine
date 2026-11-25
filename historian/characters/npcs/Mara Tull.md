@@ -20,7 +20,7 @@ livelihood: "Sheriff of Ashford."
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
-last_updated: "[[Session 30 Keep the Ale]]"
+last_updated: "[[Session 35 The Reeve's Ledger]]"
 relates_to:
   - "[[Ashford]] (she is its law, and most of its actual defense)"
   - "[[Elowen Rimetusk]] (the town mage who helps her hold it, when she is lucid)"
@@ -39,7 +39,9 @@ allies:
   - "[[Elowen Rimetusk]] (the old mage, formidable on her good days)"
 charm_hook: "She lost both her son and her daughter in the war — the wound that made her the wall Ashford leans on, and she has never once mentioned it to ask for anything."
 voice: "Short, plain soldier's report: what happened, how many, what's next. Gives an order once."
-voice_confirmed: 34
+voice_confirmed: 35
+affinity:
+  - "[[Iggy]] (2)"
 ---
 
 Location: [[Ashford]]
@@ -110,6 +112,16 @@ in between is deliberately unanswered.
 - From the dead: the raiders call themselves independent, but every pair of boots came from the
   same cobbler. This is the third crew this season, and she suspects one force provisions them.
 
+## Session 35
+
+- At sundown on Day 2 she told the party the raider who surrendered was locked up. Half the town
+  wanted him hanged by the end of the week, but she meant to wait for the county reeve from
+  Orrend. She suggested mounting the griffon's skull on [[The Golden Lioness]].
+- On Day 3, after [[Iggy]] spoke for him, she freed the raider, [[Shaw Proudfoot]], and called off
+  the hanging, against the upper courts: "They haven't done jack shit until there's something to be
+  hanged. Fuck 'em." To Shaw: "I don't forgive you for what you did. But you come back here with a
+  different name in about a month, I'll look the other way." ([[Session 35 The Reeve's Ledger]])
+
 ## Voice
 
 ### Core
@@ -120,8 +132,11 @@ in between is deliberately unanswered.
 
 ### Now
 
-- **Stance:** thankful, and curious about the light from the sky (S30: they saved Sable)
+- **Stance:** sides with the party over Cael's courts, with open contempt for the reeve (S35: freed Shaw on Iggy's word)
+- **Toward Iggy:** takes his word as surety (S35: he vouched for Shaw and she let him go)
 
 ### Said at the table
 
 - S30: "The last time was about three months ago, but we've gotten word that they're being a little more organized. Seems they've got plans for us." (to the party, over soup)
+- S35: "They haven't done jack shit until there's something to be hanged. Fuck 'em." (on the reeve and Cael's courts)
+- S35: "I don't forgive you for what you did. But you come back here with a different name in about a month, I'll look the other way." (to Shaw, unlocking the cell)

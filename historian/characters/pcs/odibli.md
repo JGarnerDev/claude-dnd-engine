@@ -13,7 +13,7 @@ race: "Gnome (Forest)"
 class: "Wizard (Evoker)"
 background: "[[Sage]]"
 level: 5
-level_confirmed: 34
+level_confirmed: 35
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Odibli Spannerbranch (Wizard 5, Evoker)"
 aliases:
@@ -42,6 +42,7 @@ affinity:
   - "[[Davian Martikov]] (3)"
   - "[[Luci]] (3)"
   - "[[Rictavio]] (3)"
+  - "[[Elowen Rimetusk]] (1)"
 motivation: "Wonder over safety. Discover the world one day at a time."
 goals:
   - "Discover the world and reality, one day at a time"
@@ -198,6 +199,8 @@ Wizard 5 (Evoker) · Forest Gnome · Sage · Lawful Neutral · Small, 30 ft. Pro
 - **Wizard Wine Ink**: the wine-made label ink from [[Davian Martikov]]'s press, Session 27.
 - Quarterstaff, 2 daggers, alchemist's fire, healing potion, robe, lamp, 7 flasks of oil, ink and ink pen, 10 sheets of parchment, book, tinderbox, backpack. No coin.
 
+**From Session 35:** [[The Unfinished Binding]] (from [[Elowen Rimetusk]]); the iron tap key and bung mallet from the waystation yard ([[Sable Wren]]'s, he assumes); [[Nella]]'s carved antler debt tally.
+
 ## Abilities (Noted in Play)
 
 - **Jump** - 40 ft jump by spending 10 ft of movement. Not on the current sheet; no longer prepared or no longer in the book.
@@ -222,6 +225,7 @@ Wizard 5 (Evoker) · Forest Gnome · Sage · Lawful Neutral · Small, 30 ft. Pro
 - **Session 30:** Told [[Sable Wren]] the party had been ripped from another reality and fell from the stars, and said he feels drawn in one direction. Cast Prestidigitation on the fire alongside Halsby, which smothered most of it. Would not go near the dead raider mage, or the hearth. Read the hearth anyway (Arcana 23): it is linked to another entity not currently present. Told Sable she is a bad business owner and introduced himself as "Warren O'Ghibli Buffett". Pitched [[Silas Crubb]] on rebundling the town's debt (Charisma 19), and hyped Halsby's awning pitch. Reunited with [[Sergei Rubelgerd]] and spoke with him through Speak with Animals. Stays level 4; his level-up waits on the hearth. Holds an [[Earshot Crystals|earshot crystal]].
 - **Session 31:** Turned the [[The Wanderer's Boon]] over with an illusory hand (Prestidigitation) and, taking 20, found it inert; with [[Halsby]] he sensed it will hold magic again. Rolled a 9 on what foxes are: his notes say some speak, bargain, and eat children's hearts. Drawn to the hearth again when it dipped (Investigation 24 with Luci's guidance), he found a smother charm, the raiders' hedge mage's glyph, and read it (Arcana with guidance, very high): it would drown the self-feeding fire over about eight hours, and it carries its maker's name. He sketched it into his journal, then tried to write it inert. The first stroke went wrong and set off its explosive ward; he rode [[Sergei Rubelgerd]] out, threw it as a paper airplane, and it blew up on the big raider's body in the yard. **Level 5.** [[Sable Wren]] thanked him and asked him not to speak of the fire; he swore to it. A d6 for whether the magic reached his gnome people: 5, not sensed. Shook [[Silas Crubb]]'s hand on future business talk. **Fame (DM-approved):** word goes round [[Ashford]] that the gnome ran a burning charm out of the Lioness and it blew up in the yard; the town saw the blast, not the reason, since Sable has asked for silence about the fire.
 - **Session 32:** Spotted a deer antler in the lead horse's path on the shortcut and pulled it clear with Mage Hand, helped by Luci's. After the rear-guard fight he used Speak with Animals (racial free cast) on the dead crossbowman's horse, which blamed the party for killing the man who fed it, and scattered the cart's whole oat supply as a trail to win it over. On the hill above [[The Waystation]] the horse caught up angry, out of oats. He cast Speak with Animals again and won him over with promises of "mountains of oats" (Persuasion 13). The horse calls himself Pablo, and he smelled a big strange animal near the camp's bridge. Citadel d6 for both casts (rolled by the engine at the DM's request): 6 and 3, neither sensed.
+- **Session 35:** Came up from 0 HP under the dead griffon (Lay on Hands). Cast Speak with Animals and asked [[The Camp Horses]] for their consent; they gave it, and like him. Read Nella's antler tally (Investigation 20): a pastoral debt about 85% paid, with a duplicate somewhere. Met [[Elowen Rimetusk]], who saw two of him and gave him [[The Unfinished Binding]]: "These are your flock." ([[Session 35 The Reeve's Ledger]])
 
 > **Reliability:** Odibli's pull in one direction (Session 30) is player-side, not yet known in fiction. Miguel's 2026-10-25 doc puts the Citadel in Aethryn but doesn't say the pull points at it. Confirm with Miguel.
 

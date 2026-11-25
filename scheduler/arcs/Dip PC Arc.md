@@ -6,7 +6,7 @@ state: active
 tags:
   - pc-arc
 pc: "[[Dip]]"
-arc_checked: 34
+arc_checked: 35
 next_step:
   - "stay and fight for a town of strangers who would never do the same"
   - "interpret the guiding hands in their visions, and why their sister's are absent"
@@ -52,3 +52,4 @@ See [[Dip]] → Looking Ahead (Player Intent): Ben wants a fight, a fortune and 
 - S33 — created with Jeff (2026-11-11).
 - S34 — Ben DMs next and sits Dip out on a pilgrimage of their own for his run (Ben, 2026-11-11). It answers the "pilgrimage to grasp the divine-mortal bond" hook. Next step pauses while Dip is away. Open idea for Ben: the pilgrimage ends at [[Deorum Ostium]], where his run is headed.
 - S34 — set the waystation's long shed alight himself and promised the crew all their corpses over the crystals — a second early sign of Fall 1 (after the leg beating, S32); Emberhollow burned too. Next step unchanged.
+- S35 — fought for Ashford to the end, then left by choice on Asher's errand (the Four, taken for free); Asher will look for Vessa. Growth 1 holds; Fall 3 gets a lead. Next step unchanged, and paused while Dip is away.

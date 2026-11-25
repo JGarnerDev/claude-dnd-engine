@@ -1,4 +1,4 @@
-# Mystery Answers (as of: Session 34)
+# Mystery Answers (as of: Session 35)
 
 DM-only. Not an entity. The answer key to the questions on the recap deck's **Mysteries & Loose Ends** slide
 (`meta/recap-slides.md` → Mysteries & Loose Ends slide). The `_` prefix keeps it out of `validate.py` and the
@@ -22,23 +22,33 @@ file with an `(as of: Session NN)` header and follow this section. Homebrew sess
 
 ## Answers
 
-### Who sent riders to the camp, and how many more are out there?
+### What are the Four, and why does Asher want Dip looking into them?
 
-**Canon (Session 34).** Four riders came in from the north under a captain in grey splint, to
-collect the casks, and found a fight. All four died in the yard. The party never heard their
-names (Garran Vey and three riders, plan names only).
+**Canon (Session 35).** [[Aashal-Groon Mellenegon Borak]]'s ask: a man at the Four is "digging in the last stand. There is something under him that remembers being killed. My water… has gone sour." [[Dip]] agreed to lay it to rest, for free.
 
-**Planned.** They answer to someone other than Nella and come from a camp that can spare riders:
-[[Harrow Bane]]'s main band, about a day across the river. The camp's ledger and bedrolls give the
-band's size (`S2_CAMP_INTEL`, carried to Session 35).
+**Open.** Who the digger is and what lies under him are not set here; settle before Dip's return.
 
-### Who is Harrow Bane, and why did the room go quiet at the name?
+### Who is following Odibli's spells, the way Elowen warned?
+
+**Canon (Session 35).** [[Elowen Rimetusk]] told [[Odibli]] that every spell he casts helps someone find him, when she gave him [[The Unfinished Binding]].
+
+**Planned.** The Citadel, tracked in `scheduler/campaign/_citadel-clock.md` (1 / 3 after Session 35).
+
+### Who holds the twin of Nella's tally stick, and who is her debt owed to?
+
+**Canon.** [[Nella]] is debt-collared to [[Harrow Bane]] and raids to buy herself out. The tally from the yard shows about 85% paid, with a duplicate kept somewhere else.
+
+**Open.** Where the twin is kept is not set.
+
+### Who is Harrow Bane, and what does his ledger say?
 
 **Canon.** [[Harrow Bane]] commands the land band raiding [[Ashford]]: an ex-soldier, matched boots,
 no wasted violence. [[Nella]] is debt-collared to him and raids to buy herself out. His name is in
 the camp's ledger (Session 32). The party has not seen his face; Act 1 means for them to meet him.
 
-### Who pays for raiders this organized: one cobbler's boots, a banner too fine for a camp?
+**Canon (Session 35).** The party took Bane's ledger from the yard in a copper tube. **Open:** nobody has read it at the table yet; reading it is scene S35_29, on the party todo.
+
+### Who pays for raiders this organized, all in one cobbler's boots?
 
 **Canon.** The band is [[Harrow Bane]]'s: an ex-soldier running banditry as a business, hence the
 matched boots and staged crews.
@@ -49,6 +59,43 @@ bleeding [[House Cael]] through a deniable land band. Act 1 does not require the
 
 **Open.** The banner (Marlow's aegis-banner) is not recovered in Session 35 and isn't placed
 anywhere yet (Jeff's review, 2026-11-22). The question stays live until it is.
+
+### What will the reeve from Orrend do when he finds the prisoner gone?
+
+**Planned.** [[Lord Corren Cael]]'s reeve, from Orrend's upper town, rides into [[Ashford]] the morning Dip leaves, for the ledger and the hanging (Session 35 plan, scenes S35_25 to S35_29, on the party todo). Unnamed, not an entity.
+
+**Open.** How he takes [[Mara Tull]] cancelling the hanging is not set.
+
+### What happened at the ford, 113 years ago?
+
+**Canon (Session 35).** [[Sabathiel at the Ford]]: [[Luci]] drank Asher's draught, met [[Sabathiel]] at the ford 113 years late, and came out wearing [[The Stillwater Wraps]]. [[Old Tobin Reed]] watched from his nets.
+
+### What is the Lioness's hearth tied to, and why did it stop during Iggy's song?
+
+**Open** (`meta/mysteries.md`, "What the Lioness hearth is linked to"; todo 78). Known: it feeds
+itself, Odibli found it linked to something not present with an aura about 100–200 ft across, and
+it stilled for ten seconds during Iggy's song (Session 30). [[Sable Wren]] calls the fire "a little
+bit strange" and has asked Odibli to keep quiet until she talks to him. Her patron, Asher
+([[Aashal-Groon Mellenegon Borak]]), lives in the aquifer under the cellar spring: a candidate, not
+an answer. Settle it in play.
+
+### What is in the letter Shaw carries north?
+
+**Open, by design.** [[Shaw Proudfoot]]'s sealed letter for the Deorum Ostium opens Ben's run; its text and reward are Ben's and Tyler's (`historian/sessions/Session 35 The Reeve's Ledger/handouts/shaw-for-ben.html`; todo 105).
+
+### How did Asher know about Dip's sister?
+
+**Canon (Session 35).** Asher sensed [[Dip's Twin Sister]] pass through his water at some point, and will try to learn which way she went. Her name is Vessa; "Tip" is Dip's name for her.
+
+### Who sent riders to the camp, and how many more are out there?
+
+**Canon (Session 34).** Four riders came in from the north under a captain in grey splint, to
+collect the casks, and found a fight. All four died in the yard. The party never heard their
+names (Garran Vey and three riders, plan names only).
+
+**Planned.** They answer to someone other than Nella and come from a camp that can spare riders:
+[[Harrow Bane]]'s main band, about a day across the river. The camp's ledger and bedrolls give the
+band's size (`S2_CAMP_INTEL`, carried to Session 35).
 
 ### How did a bandit camp come by a griffon trained for war?
 
@@ -83,15 +130,6 @@ too (Session 33), and heard Halsby's "going dark". The plan had the relief rider
 > **Reliability:** the plan said the relief didn't wear crystals; the table had the captain speak
 > on them. Treated as the table's version. Confirm with DM.
 
-### What is the Lioness's hearth tied to, and why did it stop during Iggy's song?
-
-**Open** (`meta/mysteries.md`, "What the Lioness hearth is linked to"; todo 78). Known: it feeds
-itself, Odibli found it linked to something not present with an aura about 100–200 ft across, and
-it stilled for ten seconds during Iggy's song (Session 30). [[Sable Wren]] calls the fire "a little
-bit strange" and has asked Odibli to keep quiet until she talks to him. Her patron, Asher
-([[Aashal-Groon Mellenegon Borak]]), lives in the aquifer under the cellar spring: a candidate, not
-an answer. Settle it in play.
-
 ### What did Dip mean, shouting that a flame went inside Iggy the night of the fire?
 
 **Canon.** During [[Iggy]]'s song at [[The Golden Lioness]] (Session 30, played as a flashback at
@@ -122,7 +160,13 @@ shadow ways.
 **Open.** What Sabathiel makes of the Spear, or of Halsby, is not set. Don't explain it; check
 Paul's and Kellan's appetite for PC friction before building on it.
 
-### Where are we? No map, and no names past Ashford and the river
+### Why does Old Tom think the party is a prophecy?
+
+**Canon (Session 35).** [[The Camp Horses]]: Old Tom, the eldest, told Odibli "The promised land has come. They will free us. Free us all."
+
+**Open.** No prophecy is set behind it; it may stay a horse's faith.
+
+### Where are we? Still no names past Ashford, Orrend and the river
 
 **Canon.** The world is [[Aethryn]]. The town is [[Ashford]], on a small tributary that feeds the
 **Moorthistle**, the border-river between the purple power (Velmora) and the red one (Riolgatha).
@@ -132,6 +176,8 @@ and the stolen casks are heading.
 
 **Planned.** [[Calenmere Basin]] and [[Duskwater]] are still data drafts. Townsfolk can name the
 river, the fief and the Caels freely; the party has heard none of them yet.
+
+**Canon (Session 35).** Mara named Orrend: the reeve rides from there, [[Lord Corren Cael]]'s town.
 
 ### Why does the sky look wrong: two suns, and a broken moon shedding shards?
 

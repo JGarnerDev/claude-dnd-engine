@@ -15,7 +15,7 @@ livelihood: "Proprietor and brewer at The Golden Lioness."
 race: tiefling
 class: warlock
 importance: major
-last_updated: "[[Session 31 The Red Trail]]"
+last_updated: "[[Session 35 The Reeve's Ledger]]"
 disposition: friendly
 description: "Tiefling warlock who runs The Golden Lioness in Ashford; her patron is the deep-water being beneath the town, whom she calls Asher. Got the building by making friends with something she was hired to exorcise."
 contributed_by: jeff
@@ -27,13 +27,13 @@ relates_to:
   - "[[Bree Tealeaf]] (planned hire)"
   - "[[Silas Crubb]] (her lender; she owes him about 650 gp)"
 affinity:
-  - "[[Luci]] (3)"
-  - "[[Halsby]] (2)"
-  - "[[Iggy]] (2)"
-  - "[[Odibli]] (3)"
-  - "[[Dip]] (1)"
+  - "[[Luci]] (4)"
+  - "[[Halsby]] (3)"
+  - "[[Iggy]] (3)"
+  - "[[Odibli]] (4)"
+  - "[[Dip]] (2)"
 voice: "Practical and dry: acts first, thanks later. Blunt to the point of swearing when pushed, warm under it, never explains herself."
-voice_confirmed: 34
+voice_confirmed: 35
 ---
 
 Location: [[The Golden Lioness]]
@@ -112,6 +112,16 @@ to take on [[Lok Thuliaga]] and [[Bree Tealeaf]].
 - **The send-off.** Breakfast was leftover soup and hardtack. "Bring back the casks if you can,
   but come back anyways if you can't." ([[Session 31 The Red Trail]])
 
+## Canon — Session 35
+
+- **The griffon in the square.** At sundown she lifted its cover: "That's twice now that you saved
+  this place… Ten percent might be too little now. Bring the deed in tomorrow and then we'll argue
+  over it. No number tonight." The deed is still unsigned and the share unargued.
+- **The morning.** Over porridge she told them to "bring the wagon and the whip", and someone
+  wanted to meet them. She led them to [[Aashal-Groon Mellenegon Borak]]'s cave and **revealed
+  that she is a warlock and Asher her patron**, a local river god of mud and water who helps her
+  brew. ([[Session 35 The Reeve's Ledger]])
+
 ## Voice
 
 ### Core
@@ -122,7 +132,7 @@ to take on [[Lok Thuliaga]] and [[Bree Tealeaf]].
 
 ### Now
 
-- **Stance:** grateful, and putting her bar in their hands (S30: the rescue and the offer)
+- **Stance:** twice saved by them; the deal is open, ten percent too low, the deed unsigned (S35: the griffon in the square)
 - **Toward Odibli:** trusts him with the fire and has asked for his silence; the exasperation is still there underneath (S31: he saved the hearth; S30: he called her a bad business owner)
 
 ### Said at the table
@@ -131,4 +141,4 @@ to take on [[Lok Thuliaga]] and [[Bree Tealeaf]].
 - S30: "That's the Mistake. It's the one people come back for." (pouring for the party)
 - S30: "I just got my thing stolen from me and you're telling me I have bad financial planning?" (to Odibli)
 - S31: "Thank you for doing that. Maybe I'll talk to you later about that fire, it's a little bit strange, but I'd ask you now to not bring it up." (to Odibli, hand on his shoulder)
-- S31: "Bring back the casks if you can, but come back anyways if you can't." (seeing them off at dawn) (?)
+- S35: "That's twice now that you saved this place… Ten percent might be too little now. Bring the deed in tomorrow and then we'll argue over it. No number tonight." (to the party, after the square)

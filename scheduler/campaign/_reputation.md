@@ -1,4 +1,4 @@
-# Reputation (as of: Session 34)
+# Reputation (as of: Session 35)
 
 DM-only. Not an entity. What each fame and infamy tier unlocks, the rewards already given, and
 where each PC stands. Scores and rules: `meta/reputation.md`. The deed ledger is
@@ -117,10 +117,11 @@ Nella. If she escapes in Session 35 she carries the story out, and these unlock 
 
 From `reputation-standings.py`. Rewritten at each `/recap`.
 
-Party fame 6,593 (Noticed).
+Party fame 6,628 (Noticed).
 
-- **Dip:** fame 4,791 Noticed · infamy 15,795 Suspect. Ashford: Noticed. The Waystation: infamy Suspect. Duskwater: infamy Suspect (held).
-- **Halsby:** fame 12,091 Noticed · infamy 14,690 Suspect. Ashford: Noticed. The Waystation: fame Noticed (held), infamy Suspect. Duskwater: fame Noticed (held), infamy Suspect (held).
-- **Luci:** fame 8,195 Noticed (held) · infamy 978 Unremarked. The Waystation and Duskwater: fame Noticed (held).
-- **Iggy:** fame 7,889 Noticed (held) · infamy 0. The Waystation and Duskwater: fame Noticed (held).
-- **Odibli:** fame 0 · infamy 7,345 Suspect (held). The Waystation and Duskwater: infamy Suspect (held).
+- **Dip:** fame 6,066 Noticed · infamy 15,795 Suspect. Ashford: Noticed. The Waystation: infamy Suspect. Duskwater: infamy Suspect (held).
+- **Halsby:** fame 13,366 Noticed · infamy 14,690 Suspect. Ashford: Noticed. The Waystation: fame Noticed (held), infamy Suspect. Duskwater: fame Noticed (held), infamy Suspect (held).
+- **Luci:** fame 9,470 Noticed (held) · infamy 978 Unremarked. The Waystation and Duskwater: fame Noticed (held).
+- **Iggy:** fame 9,589 Noticed (held) · infamy 0. The Waystation and Duskwater: fame Noticed (held).
+- **Odibli:** fame 1,275 Unknown · infamy 7,345 Suspect (held). The Waystation and Duskwater: infamy Suspect (held).
+- **Shaw Proudfoot:** fame 0 · infamy 0.

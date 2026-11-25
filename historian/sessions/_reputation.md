@@ -105,3 +105,32 @@ Reputation ledger (meta/reputation.md). One `## Session <n>` per homebrew sessio
 
 - fame · The Waystation · notable × witnesses × style · lvl 5 = 7,345: Opened wings of light in
   the waystation yard, smote the griffon with a glowing blade, and flew at it.
+
+## Session 35
+
+### Halsby
+
+- fame · Ashford · minor × named-foe × witnesses · lvl 5 = 1,275: Rode into the square at
+  sundown with Nella's griffon dead on the cart.
+
+### Dip
+
+- fame · Ashford · minor × named-foe × witnesses · lvl 5 = 1,275: Rode into the square at
+  sundown with Nella's griffon dead on the cart.
+
+### Iggy
+
+- fame · Ashford · minor × named-foe × witnesses · lvl 5 = 1,275: Rode into the square at
+  sundown with Nella's griffon dead on the cart.
+- fame · Ashford · minor · lvl 5 = 425: Vouched for the surrendered raider Shaw, and Mara
+  let him walk.
+
+### Luci
+
+- fame · Ashford · minor × named-foe × witnesses · lvl 5 = 1,275: Rode into the square at
+  sundown with Nella's griffon dead on the cart.
+
+### Odibli
+
+- fame · Ashford · minor × named-foe × witnesses · lvl 5 = 1,275: Rode into the square at
+  sundown with Nella's griffon dead on the cart.

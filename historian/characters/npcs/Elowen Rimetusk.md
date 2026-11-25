@@ -3,7 +3,9 @@
 name: "Elowen Rimetusk"
 type: character
 subtype: npc
-exists: false
+exists: true
+source_session: "[[Session 35 The Reeve's Ledger]]"
+confirmed_date: "2026-11-25"
 state: alive
 campaign: homebrew
 tags:
@@ -18,9 +20,14 @@ livelihood: "The old mage of Ashford; helps the sheriff defend the town when she
 # --- OPTIONAL (entity base) ---
 importance: major
 active: true
+last_updated: "[[Session 35 The Reeve's Ledger]]"
 relates_to:
   - "[[Mara Tull]] (aids her defense of Ashford; secretly, it is a debt)"
   - "[[Ashford]] (the town she has ended up defending)"
+  - "[[Odibli]] (saw the two of him; gave him her brace)"
+  - "[[The Unfinished Binding]] (her casting brace, now Odibli's)"
+known_by:
+  - "[[Odibli]] (partial: her story of the translocation, not Mara's children)"
 description: "Ashford's old, senile mage — a half-orc wizard whose power has outlasted her fading mind. In the war she moved a whole surrounded company in one translocation; part of her mind never arrived, and neither did Mara Tull's two children. She stands beside Mara as a repayment Mara knows nothing about."
 
 # --- OPTIONAL (npc) ---
@@ -35,6 +42,8 @@ motives:
 allies:
   - "[[Mara Tull]] (the sheriff she stands beside)"
 charm_hook: "A soft elven given name carried over an orcish battle-name — and half the time she cannot recall which war the second one is from."
+voice: "Gentle and courteous, sharp in flashes; drifts between now and the war mid-thought."
+voice_confirmed: 35
 ---
 
 Location: [[Ashford]]
@@ -79,23 +88,43 @@ steel splint, the translocation's working tooled down its length in faded guild 
 end of the spell — the order to *move them* — is cut into it and never finished running. Below
 it, her fingers move half a second behind her.
 
-## Odibli, and the favor
+## Odibli, and the brace
 
-When she first gets a proper look at **Odibli**, something in her lines up: she can almost see
-that there are two of him. *"You're not all here either. No — you're all here. It's the other
-one who isn't."* She talks to him in mixed lucidity, as one displaced person to another — he
-is the first she has met who is split the way she is.
+In [[Session 35 The Reeve's Ledger]], on Day 3, she found [[Odibli]] shopping near
+[[Mara Tull]]'s office and saw at once that there were two of him: *"There's two of you. One's at
+a desk a long way from here and he hasn't looked up for years."*
 
-She asks him a favor, in three pieces that come out across her lucid and absent stretches:
+She told him her story as far as she knows it: her company was cut off, she moved all 61 of them
+from a circle in the mud, not all of them arrived, and *"not all of me left there too."* She warned
+him: *"Every spell you cast, somebody's trying to find you."* Odibli told her about ink and
+darkness, and someone reaching through.
 
-- **A letter.** Sealed, for Mara: *"If I go all the way — the day I don't come back — give this
-  to her."* It is her confession. Whether the party opens it is theirs to decide.
-- **Find the missing.** *"You know the way between. If you ever find where they went, tell
-  Mara. Not me."*
-- **Find the rest of her.** *"And if you find the rest of me, bring it back."*
+Then she unbuckled the brace and gave it to him, [[The Unfinished Binding]]: *"These are your
+flock. Count them before and after every time, bring them all back."* Giving it away changed
+nothing about her.
 
-Then she unbuckles the brace and gives it to him: the
-[Unfinished Binding](../../../meta/loot-options/Odibli/misc/The%20Unfinished%20Binding.md).
-Giving it away changes nothing about her — she is no sharper and no worse for it.
+She did not mention Mara's children. The planned favor (a sealed letter for Mara, *find the
+missing*, *find the rest of me*) was not played and stays with the DM to use or drop.
 
 Whether Mara's children are still somewhere in between is deliberately unanswered.
+
+> **Reliability:** her lines are from the Session 35 recording, lightly cleaned. Confirm with DM.
+
+## Voice
+
+> **Draft** (S35 recap, 2026-11-25): built from her S35 lines and her file.
+
+### Core
+
+- **Signature:** sees two times at once and says both
+- **Never:** names what she lost in the war
+- **Tell:** drifts mid-sentence to somewhere else
+
+### Now
+
+- **Toward Odibli:** gave him the Unfinished Binding and a warning (S35)
+
+### Said at the table
+
+- S35: "There's two of you. One's at a desk a long way from here and he hasn't looked up for years." (to Odibli)
+- S35: "These are your flock… count them before and after every time, bring them all back." (to Odibli, with the Binding)

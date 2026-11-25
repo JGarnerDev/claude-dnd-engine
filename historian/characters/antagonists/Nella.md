@@ -7,19 +7,20 @@ exists: true
 source_session: "[[Session 29 The Mistake]]"
 confirmed_date: "2026-10-06"
 state: alive
+last_updated: "[[Session 35 The Reeve's Ledger]]"
 campaign: homebrew
 tags:
   - character
   - character/antagonist
 
 # --- MANDATORY (antagonist) ---
-location: "[[The Waystation]]"
+location: "[[The Waystation]] (last seen escaping downriver; whereabouts unknown)"
 personality: "Patient and watchful. Tracks, waits, and picks off from range; disengages the moment a position stops being good. Not loyal and not a believer — collared. Keeps meticulous count of everything, especially what she is owed and what she has paid."
 livelihood: "Bandit lieutenant — the band's hunter and marksman, raiding for House Marlow, unofficially."
 disposition: hostile
 voice: "Patient and dry, never raised: short sentences from a long way off, and she counts things aloud."
-voice_confirmed: 34
-stats_confirmed: 34
+voice_confirmed: 35
+stats_confirmed: 35
 
 # --- OPTIONAL (entity base) ---
 importance: minor
@@ -149,6 +150,19 @@ hears, and she can answer. She sits on that through many fights before it comes 
 > **Reliability:** the S34 ruling's wording ("on Nella's shots") doesn't say whether the +2 AC
 > went to her targets or to her while she shot from the blind. Confirm with DM.
 
+## Canon — Session 35
+
+- **Her goodbye.** Below the ridge she hung her hood on a bush and spoke over the crystals: "19
+  flights and he never once dropped me… fuck you all."
+- **The chase.** [[Luci]] came after her alone and ran through her **Spike Growth**. Luci
+  springboarded off a tree and landed beside her; the cinders of Luci's failing Energy Storm set the
+  tree on fire.
+- **She got away.** She Disengaged, gave Luci the finger, dove into the river and escaped on a
+  rope she had rigged there. She looked back once, not at Luci but at the hood on the bush.
+- **What she left.** Luci kept the hood, then put it back on [[Tithe]]'s body. The party took her
+  carved antler debt tally from the yard: about 85% paid off, with a duplicate held somewhere else
+  ([[Odibli]], Investigation). Where she went downriver is unknown. ([[Session 35 The Reeve's Ledger]])
+
 ## Stat block
 
 ### Current
@@ -169,8 +183,8 @@ hears, and she can answer. She sits on that through many fights before it comes 
   - **Hunter's Mark** (1st)
 - **Roving:** +10 ft speed and a swim speed equal to it
 - **Prepared Ground:** on ground she chose, advantage on initiative, and her way out is rigged
-- **Mounted:** mounting costs half her movement; mounted, she fights from the air. No mount since
-  Tithe died (S34)
+- **Mounted:** mounting costs half her movement; mounted, she fights from the air. No mount:
+  Tithe died (S34) and Asher unmade its body (S35)
 - **Tactics: wound and pin, never kill.** She spreads her shots, and never shoots a downed PC
 - **Kit (player-facing):** *dark studded leather under a long weathered cape, a tall longbow,
   and a short sword at her hip she doesn't touch.*
@@ -183,6 +197,11 @@ hears, and she can answer. She sits on that through many fights before it comes 
 - **Dismounts and fights on foot from the ridge** (S34)
 - **Hears and speaks over the [[Earshot Crystals|earshot crystals]]** (S32, S34)
 - **Runs on foot**, apparently unhurt (S34). Her AC and HP have not been tested
+- **Spike Growth** (S35, the riverbank): hidden thorns around her line of escape. The DC and
+  damage dice were not said aloud
+- **Disengage as a bonus action** (S35, slipping out of Luci's reach): Skirmisher's Step
+- **Swims, on a way out rigged in advance** (S35, the river rope): Roving's swim and Prepared
+  Ground's rigged exit
 
 > **Reliability:** the notes don't say whether Marked Quarry's +1d6 fired in S33 or S34, so it
 > isn't listed as shown. Confirm with DM.
@@ -192,6 +211,8 @@ hears, and she can answer. She sits on that through many fights before it comes 
 - S33 plan: Mounted added for Tithe (Jeff, 2026-10-28).
 - S35 plan: speed 35 → 40, swim 40 (Roving), Ranger spells (Spike Growth, Ensnaring Strike,
   Hunter's Mark). None of it shown yet.
+- S35 recap: Spike Growth, Roving's swim, Skirmisher's Step and Prepared Ground shown; Mounted
+  notes Tithe's body unmade. AC and HP still untested.
 - Backfilled at S34 (2026-11-24): the plans' "never broadcasts" is dropped, because she spoke
   over the crystals at the table in S34.
 
@@ -205,9 +226,10 @@ hears, and she can answer. She sits on that through many fights before it comes 
 
 ### Now
 
-- **Stance:** on the run, on foot; her griffon died in the yard and her crew with it (S34: the waystation fight)
+- **Stance:** lost Tithe and her crew; cursed the party over the body and fled downriver on a rigged rope. Still counting (S35: the antler tally ~85%)
 
 ### Said at the table
 
 - S32: "Get moving, they're coming." (to her crew, mounting the griffon)
 - S34: "Alright, Tithe. Go hunt." (over the crystals, setting the griffon loose)
+- S35: "19 flights and he never once dropped me… fuck you all." (over Tithe's body and the crystals)

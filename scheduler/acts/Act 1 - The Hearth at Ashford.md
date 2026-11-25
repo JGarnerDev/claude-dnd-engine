@@ -259,10 +259,9 @@ makes room. Check this list whenever `/session` plans an Act 1 session.
 
 ## Open
 
-- **First mission written; the rest are not.** [[The Stolen Casks]] covers Sessions 1–2 (the
-  raid and the pursuit). Sessions 3–4 — the cell and the flush, convergence night — still
-  exist only as workshop beat sheets and need their own mission artifacts. The real Session 1
-  plan comes from `/session`.
+- **First mission done; the rest are not written.** [[The Stolen Casks]] ran Sessions 29–35
+  (the raid, the pursuit, the haul home) and is completed. The cell and the flush and convergence
+  night still exist only as workshop beat sheets and need their own mission artifacts.
 - **The act's length no longer matches this file.** Jeff doubts the act fits in 10 sessions and
   wants story ahead of speed (loot questionnaire, question 3). `estimated_sessions: 4` and the
   `## Shape` section above still describe four designed sessions plus about four spare slots.

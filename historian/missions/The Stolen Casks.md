@@ -3,8 +3,10 @@
 name: "The Stolen Casks"
 type: mission
 campaign: homebrew
-exists: false
-state: active
+exists: true
+state: completed
+source_session: "[[Session 35 The Reeve's Ledger]]"
+confirmed_date: "2026-11-25"
 tags:
   - mission
 
@@ -16,6 +18,11 @@ hook: "The party arrives in Ashford mid-raid and saves Sable Wren, but the ale i
 sessions:
   - "[[Session 29 The Mistake]]"
   - "[[Session 30 Keep the Ale]]"
+  - "[[Session 31 The Red Trail]]"
+  - "[[Session 32 The Red Trail]]"
+  - "[[Session 33 The Red Trail]]"
+  - "[[Session 34 The Red Trail]]"
+  - "[[Session 35 The Reeve's Ledger]]"
 locations:
   - "[[Ashford]]"
   - "[[The Golden Lioness]]"
@@ -42,6 +49,16 @@ description: "Act 1's opening mission. Nella's crew carries off the Golden Lione
 ---
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Given by: [[Sable Wren]]
+
+## Outcome (Session 35)
+
+**Completed: the casks came home.** The pursuit ran five sessions, not two. The party ran Nella's
+crew down at [[The Waystation]], killed her griffon [[Tithe]], and hauled the casks back to
+[[Ashford]] on the camp's wagon at sundown on Day 2 ([[Session 35 The Reeve's Ledger]]).
+[[Nella]] escaped downriver, as designed. [[Silas Crubb]] called the loan square, with 11 gp for
+one lamed horse left for another day. [[Sable Wren]] called the casks home and the deed's share
+ten percent too little; nothing is signed yet, so the Stake deed is banked, not cashed. The camp
+gave up Bane's ledger, Nella's tally stick, coin, five crystals and five horses.
 
 ## Objective
 

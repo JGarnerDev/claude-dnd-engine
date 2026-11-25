@@ -6,7 +6,7 @@ state: active
 tags:
   - pc-arc
 pc: "[[Halsby]]"
-arc_checked: 34
+arc_checked: 35
 next_step:
   - "the fade clock bites — time away from shadow-dense places costs him"
   - "a neutral bystander's death is the fastest, safest route; he proposes it in the flat ferry tone"

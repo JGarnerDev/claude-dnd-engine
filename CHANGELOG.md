@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.113.0] — 2026-11-25
+
+### Added
+
+- **Deities can carry affinity** (`deity.schema.yaml`, optional `affinity:`). A god or patron who deals with the party in person (a patron, a bargainer) keeps a per-target liking score, -10..+10, in the same shape PCs and NPCs use (`meta/affinity.md`). `/recap` can propose nudges for them; nothing breaks for deity files without the field.
+
 ## [0.112.0] — 2026-11-24
 
 ### Added

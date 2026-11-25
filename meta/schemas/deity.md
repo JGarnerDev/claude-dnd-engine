@@ -95,6 +95,9 @@ sacred_practices: []
 myths: []
 divine_conflicts:
   - "[[Deity Name]] (nature of conflict)"
+affinity:               # Deities that deal with the party in person (a patron, a bargainer).
+                        # Per-target liking, -10..+10; see meta/affinity.md.
+  - "[[PC Name]] (n)"
 voice: ""               # Core cadence and register in one line, for deities that speak at the
                         # table; see meta/voice.md.
 voice_confirmed:        # Number of the last played session at which the voice was checked.

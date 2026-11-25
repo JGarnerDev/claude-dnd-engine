@@ -15,7 +15,7 @@ race: "Orc"
 class: "Barbarian (Path of the Berserker)"
 background: "[[Sage]]"
 level: 5
-level_confirmed: 34
+level_confirmed: 35
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Dip T (Barbarian 4, Path of the Berserker)"
 pronouns: "they/them"
@@ -33,6 +33,7 @@ affinity:
   - "[[Odibli]] (1)"
   - "[[Davian Martikov]] (3)"
   - "[[Lady Fiona Wachter]] (-5)"
+  - "[[Aashal-Groon Mellenegon Borak]] (3)"
 importance: critical
 active: true
 spotlight: normal
@@ -168,6 +169,8 @@ Save DC 12, spell attack +4.
 
 Greataxe, 4 handaxes, quarterstaff, chain shirt, holy water (noted on the sheet: 1d6 radiant against vampires), cornelian eye patch (25 gp), tooth necklace, 2 flasks of oil, 10 torches, tinderbox, robe, book, 8 sheets of parchment, calligrapher's supplies, bedroll, rope, mess kit, 9 days of rations, waterskin, a potion (2d4+2), 5 gp.
 
+**Tithe-Taker** ([[Tithe-Taker]]): the whip, reforged by [[Aashal-Groon Mellenegon Borak]] in [[Session 35 The Reeve's Ledger]] with a moon-pale blade from the griffon's wing bone and four of its talons in the lash.
+
 ## Death Experience (Session 7, Player-Written)
 
 > *"I was surrounded by shrieks of madness, torment, and despair. The sounds transformed into a cacophony of sound, that when it transitioned into the fury of a maelstrom... winds whipped my face and soon the storm turned into ice as it melted my flesh... I felt something latch onto my legs and pull me down... it was hands, claws, tentacles, wings, a slew of different things, disembodied but at once a part of something much larger... The embrace transferred from a feeling of dread and demise into one of hope, lost memories finding a ledge to grasp onto... A shrill piercing sound and a burst of light, that felt tainted exploded through the limbs and wrenched me from the depths of this ocean back into a place filled with quickly becoming familiar faces."*
@@ -193,10 +196,11 @@ Hears whispers when it is quiet. Onset: Session 10, after Odibli absorbed shadow
 - **Session 30 (Ben absent):** Narrated by the DM. Came down from the rage to help Luci free Sable, shaken by a scene so like the fire of their past, and finished the yard fire with the last pail. The table ruled that Dip pocketed the ~150 gp off the raiders and won't donate it. Holds an [[Earshot Crystals|earshot crystal]] from the pile. A private moment at Iggy's song is owed as a later flashback.
 - **Session 31:** Owed from Session 30: during Iggy's song Dip saw the hearth go still, and the private roll (Arcana 15) opened it like a nesting doll, real, then hollow, then real again, with the innermost layer inside [[Iggy]]. Dip has told no one. Took the 150 gp share off the raiders and an [[Earshot Crystals|earshot crystal]]. Told [[Sable Wren]] that 10% was low for the work and to think on it while they're gone.
 - **Session 32:** Drove the cart with Halsby. Missed the stream crossing's depth (Animal Handling), and a horse stumbled. At the rear guard Dip leapt off the cart and charged, yelling "Give me back my daughter!" The intimidation sent the archer and her wolf running toward the camp. Dip cut the crossbowman down (8 damage, killing blow), then, in Dip's telling, beat him with his own leg and threw it into a tree. Kept one of his shoes and threw it at Luci.
+- **Session 35:** Hauled Odibli out from under the dead griffon and loaded it whole onto the cart. Handed the whip, reluctantly, to [[Aashal-Groon Mellenegon Borak]], who remade it as [[Tithe-Taker]]. Told Asher the true story of the hands, agreed to lay to rest what lies under the Four ("I'll do it for free"), and learned Asher had sensed their sister pass through his water: "I think I love you, Asher." Proposed breaking Shaw out of the cell. ([[Session 35 The Reeve's Ledger]])
 
 > **Reliability:** the gold and the crystal were assigned with Ben absent (DM, 2026-10-21). Confirm with Ben.
 
-> **Reliability:** the level-5 features are as Ben read them aloud at the table while his sheet was down. The Roll20 sheet is authoritative. Ben confirmed (2026-10-14) the mastery is the **whip**, not the javelin, and nothing else changed. The gear list has no whip; left as is on purpose, a candidate for future loot.
+> **Reliability:** the level-5 features are as Ben read them aloud at the table while his sheet was down. The Roll20 sheet is authoritative. Ben confirmed (2026-10-14) the mastery is the **whip**, not the javelin, and nothing else changed. The sheet's gear list had no whip; the table played one, and in Session 35 it was reforged as [[Tithe-Taker]].
 
 ## Affinity notes
 

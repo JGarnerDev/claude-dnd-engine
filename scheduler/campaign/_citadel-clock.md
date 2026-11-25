@@ -1,4 +1,4 @@
-# The Citadel Clock (as of: Session 34)
+# The Citadel Clock (as of: Session 35)
 
 DM-only. Not an entity. Tracks [[Odibli]]'s casting in Aethryn, whether [[The Citadel]] senses it,
 and what the DM can do with the results. The `_` prefix keeps it out of `validate.py` and the
@@ -100,6 +100,17 @@ from the d6 as fuel for the ideas sheet. They don't trigger anything on their ow
 - Sensed: 0 · Clock after: 1 / 3
 - **Owed:** the brief cold from Session 33's sensed cast was never sent. It goes into Session 35's
   combat flashback (DM, 2026-11-18). Ideas 1–3 are still ready, not used.
+
+### Session 35
+
+- Leveled: Speak with Animals (1st, a free racial cast) on the five camp horses — d6 **5**, not
+  sensed
+- Cantrips: none
+- Spell 1s: 0
+- Sensed: 0 · Clock after: 1 / 3
+- The Session 33 cold owed from Session 34 was delivered in the opening combat flashback. Ideas 1–3
+  are still ready, not used. [[Elowen Rimetusk]] has now told Odibli that every spell he casts
+  helps someone find him.
 
 ## Ideas sheet
 

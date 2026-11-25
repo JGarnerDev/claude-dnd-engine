@@ -6,7 +6,7 @@ state: active
 tags:
   - pc-arc
 pc: "[[Odibli]]"
-arc_checked: 34
+arc_checked: 35
 next_step:
   - "a street, a phrasing or a smell in Aethryn is one he knows without knowing why"
   - "he takes the back line on his own, against how he was made"
@@ -35,7 +35,7 @@ A cheerful gnome who'd rather be in danger than bored, [[Odibli]] thinks he's th
 
 - **Aethryn feels familiar.** A street, a phrasing or a smell he knows without knowing why. Small and cheap, and it plants the copy without saying it. He'll explain it away with a tale under his breath; let him.
 - **The back line.** Offer it as a `Choice (Odibli):` when a fight opens: lead the charge as always, or hold back and count. The learning Miguel wants to play, chosen rather than forced. Tests Growth 1 against Fall 1.
-- **After these:** pages in his own handwriting he doesn't remember writing, then a leap that finally costs a companion. The original detecting his magic runs on the Citadel Clock (`scheduler/campaign/_citadel-clock.md`), never planned. Hold "he learns he is the copy" for a turn of the campaign.
+- **After these:** pages in his own handwriting he doesn't remember writing, then a leap that finally costs a companion. The original detecting his magic runs on the Citadel Clock (`scheduler/campaign/_citadel-clock.md`), never planned. Hold "he learns he is the copy" for a turn of the campaign. Elowen Rimetusk has seen the original (S35: "There's two of you. One's at a desk a long way from here"); hold her for when he learns. *(DM-only)*
 
 ## Player wants
 
@@ -51,3 +51,4 @@ Miguel has no Looking Ahead section yet. What he wants is in [[Odibli]] → Pers
 
 - S33 — created with Jeff (2026-11-11).
 - S34 — fought flat under a cart and asked Luci before Fireballing her — a first, mixed lean toward Growth 1: he still dove in and was pecked to 0 HP. Next step unchanged.
+- S35 — asked the camp horses for their consent, and Elowen handed him a flock to count ("count them before and after every time, bring them all back"): Growth 1 leans closer. Elowen has seen the original (DM-only); added to After these.

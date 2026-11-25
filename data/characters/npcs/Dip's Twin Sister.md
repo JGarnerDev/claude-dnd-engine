@@ -3,6 +3,7 @@ name: "Dip's Twin Sister"
 type: character
 aliases:
   - "Vessa"
+  - "Tip"
 subtype: npc
 campaign: homebrew
 exists: false
@@ -30,7 +31,11 @@ Location: [[Aethryn]] | Campaign: [[Homebrew Campaign]]
 
 Race: [[Orc]]
 
-> **Reliability:** Sourced from [[Dip]]'s player backstory (Ben), pre-campaign. Fate unknown — free pool entity (`exists: false`) for a future session. Name (Vessa) chosen by Jeff 2026-10-14; race corrected to Orc, as both parents were orcs. Other details pending Ben's / the DM's design.
+> **Reliability:** Sourced from [[Dip]]'s player backstory (Ben), pre-campaign. Fate unknown — free pool entity (`exists: false`) for a future session. Name (Vessa) chosen by Jeff 2026-10-14; race corrected to Orc, as both parents were orcs. Other details pending Ben's / the DM's design. Called "Tip" by Dip at the table in [[Session 35 The Reeve's Ledger]]; taken as Dip's name for her (DM, 2026-11-25). Confirm with Ben.
+
+## Session 35
+
+In [[Session 35 The Reeve's Ledger]], [[Aashal-Groon Mellenegon Borak]] told [[Dip]] he had sensed her pass through his water at some point, and that he would try to learn which way she went.
 
 ## Overview
 

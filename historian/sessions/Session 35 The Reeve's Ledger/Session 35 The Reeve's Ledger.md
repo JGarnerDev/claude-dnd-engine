@@ -4,13 +4,62 @@ name: "Session 35 The Reeve's Ledger"
 campaign: homebrew
 type: session
 session_number: 35
-exists: false
-state: draft
+exists: true
+state: completed
 tags:
   - session
 
 mission: "[[The Stolen Casks]]"
 planned_date: "2026-11-24"
+played_date: "2026-11-24"
+in_world_end_date: "6743-05-22"
+in_world_end_time: "16:00"
+deck_weight: heavy
+recap: "The session opened on a recap of the waystation fight. Odibli was dragged out from under Tithe and brought back to 1 HP with Lay on Hands. Nella, on the ridge, hung her hood on a bush and said her goodbye over the crystals, and Luci went after her alone: Spike Growth, a springboard off a tree, and an Energy Storm that set the tree on fire. Nella got away by the river, and Luci laid the hood on the dead griffon. Iggy pulled the burning carts clear. Odibli cast Speak with Animals and asked the five camp horses for their consent; Clover, Old Tom, Biscuit, Nettle and Parson gave it, and Old Tom took the party for prophecy. The yard gave up Bane's ledger in a copper tube, a tally stick showing the debt 85% paid with its twin kept elsewhere, 150 gp, 500 sp and 5 pp, and five crystals off the crew; Odibli took the iron tap key and bung mallet. The griffon went onto the wagon whole, and Iggy played the fiddle on the road home. Silas checked every hoof, called them square, and left 11 gp for one lamed horse to another day. Ashford's square was full at sundown: Hob Fenner told how the raider in the cell had put his sword down like a borrowed thing, Mara said a reeve was riding from Orrend, and Sable Wren called the casks home and the deed's share ten percent too little. The party took a long rest at the Golden Lioness. On Day 3 they carried the griffon to Asher's cave. Asher gave his true name, Sable was revealed as his warlock, and Dip told the story of his hands; Asher turned the griffon to gold. Asher asked Dip to look into the Four, and Dip took it on for free; Asher sensed Dip's sister. Iggy's guest was allowed to stay, Halsby was called square and warned, Iggy was given Oathcaller, and Dip's cart-whip came back as Tithe-Taker. Luci drank Asher's draught and saw Sabathiel at the ford, 113 years gone, and came away with the Stillwater Wraps while Old Tobin Reed watched from his nets. That afternoon Elowen Rimetusk found Odibli and gave him the Unfinished Binding, with a warning that every spell he casts helps someone find him. Late in the afternoon the party went to the cell. Shaw Proudfoot told his story and showed the letter he carries north to the Deorum Ostium; Iggy asked Mara to let him go, and Mara cancelled the hanging. Shaw is a month away from home."
+cliffhanger: "About 4 p.m. on Day 3, in Mara's office. Shaw Proudfoot walks free with his letter for the north. The reeve from Orrend is still on the road and does not know the prisoner is gone. Sable's deed is unsigned, the Lioness is unbuilt, and Asher's ask about the Four is open."
+entities_canonized:
+  - "[[Oathcaller]]"
+  - "[[Tithe-Taker]]"
+  - "[[The Stillwater Wraps]]"
+  - "[[The Unfinished Binding]]"
+  - "[[Elowen Rimetusk]]"
+  - "[[The Camp Horses]]"
+  - "[[Hob Fenner]]"
+new_entities:
+  - "Shaw Proudfoot's brother: named in Shaw's story, unnamed. Not an entity"
+  - "Pell Ashby: lamplighter in the square at sundown. Plan name only, not an entity"
+  - "The cord of charms: open, on the party todo"
+table_notes: "Big praise at the table: Tyler's entrance as Shaw landed, and Asher's scene was the high point of the night. Friction: screen share cost time early, and Days 4 to 18 were cut. Scenes S35_25 to S35_29 were not played and go to the party todo, with the Lioness build and the cord of charms. The cell was played off-plan; the table version is canon. 'Up, Iggy' is canon. Dip's sister was called Tip at the table; her name stays Vessa, and Tip is Dip's name for her (DM, 2026-11-25). Rulings: Acrobatics may replace Athletics on a climb or jump; a whip has 10 ft reach."
+choices:
+  - "Dip: took Asher's ask about the Four, for free → the task is open; Asher sensed his sister"
+  - "Dip: handed Asher the cart-whip → it came back as Tithe-Taker"
+  - "Luci: drank Asher's draught → Sabathiel's vision at the ford and the Stillwater Wraps"
+  - "Luci: chased Nella alone and laid her hood on the griffon → Nella escaped by river"
+  - "Party: gave the griffon whole to Asher → turned to gold"
+  - "Odibli: believed Elowen → the Unfinished Binding; he counts his flock"
+  - "Iggy: asked Mara to free Shaw → the hanging cancelled; Shaw goes north with the letter"
+  - "Party: kept the five camp horses and took five crystals off the crew"
+beats:
+  - "party-centric: touch"
+  - "spotlight(Dip): touch"
+  - "spotlight(Luci): beat"
+  - "spotlight(Odibli): touch"
+  - "world: touch"
+  - "party-centric: arc"
+  - "spotlight(Dip): beat"
+  - "spotlight(Halsby): touch"
+  - "spotlight(Iggy): touch"
+  - "spotlight(Luci): arc"
+  - "spotlight(Odibli): arc"
+  - "spotlight(Shaw Proudfoot): beat"
+  - "spotlight(Iggy): beat"
+pcs_present:
+  - "Iggy"
+  - "Luci"
+  - "Odibli"
+  - "Dip"
+  - "Halsby"
+  - "Shaw Proudfoot"
 
 # --- OPTIONAL ---
 act: "[[Act 1 - The Hearth at Ashford]]"
@@ -62,6 +111,20 @@ description: "The last session before the DM rotation. It opens on a recap of th
 
 Campaign: [[Redwater]] | Act: [[Act 1 - The Hearth at Ashford]] | Mission: [[The Stolen Casks]]
 
+> **Played 2026-11-24 (recap 2026-11-25).** The table played from the opening recap through
+> Asher's cave, Luci's vision at the ford, Elowen and the cell, and stopped about 4 p.m. on Day 3.
+> Not played: `S35_25` to `S35_29` (the two weeks of building, Days 4 to 18); they go to the party
+> todo with the Lioness build and the cord of charms. The cell was played off-plan, and the table
+> version is canon: Shaw Proudfoot told his story, Iggy asked Mara Tull to free him, and the hanging
+> was cancelled. Canonized this session: [[Oathcaller]], [[Tithe-Taker]], [[The Stillwater Wraps]],
+> [[The Unfinished Binding]], [[Elowen Rimetusk]], [[The Camp Horses]] and [[Hob Fenner]].
+>
+> **Reliability:** digested from a machine transcript. Dip's sister was called "Tip" at the table;
+> her canon name stays Vessa, and Tip is taken as Dip's name for her (DM, 2026-11-25). Confirm with
+> Ben. "Old Tovin Reed", heard mending nets at the ford, is taken to be [[Old Tobin Reed]]. The
+> times of Elowen's visit and the cell (afternoon of Day 3) are inferred from the order of play.
+> Confirm with DM.
+>
 > **Carried from [[Session 34 The Red Trail]] at its `/recap` (2026-11-18).** Session 34 ended
 > with Tithe dead and Nella running. Its unplayed beats come here with new `S35_` ids, matched by
 > slug: `IGGY_BEAT` (now the opening recap), `GOODBYE`, `ESCAPE` (trimmed to what's still live),

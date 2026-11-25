@@ -1,4 +1,4 @@
-# The Sky Clock (as of: Session 34)
+# The Sky Clock (as of: Session 35)
 
 DM-only. Not an entity. Holds Aethryn's running date, the Crawl tally, the next Kerning and a
 per-session log. The `_` prefix keeps it out of `validate.py` and the semantic index. **Update it at
@@ -30,10 +30,10 @@ file with an `(as of: Session NN)` header and follow this section. Homebrew sess
 
 ## Now
 
-- **Date:** `6743-05-21`, about 11 a.m. (Ashford Day 2), the fight over at [[The Waystation]], the chase still on
-- **Crawl:** 5 of 6743, began `6743-04-25` (day 27 today). No major landing since.
-- **Sun phase:** 5 of 18: about 5.3 hours of true dark tonight, shrinking to none by `6743-05-25`
-- **Fida:** full on the night of Ashford Day 1, waning now
+- **Date:** `6743-05-22`, about 4 p.m. (Ashford Day 3), in [[Ashford]]
+- **Crawl:** 5 of 6743, began `6743-04-25` (day 28 today). No major landing since.
+- **Sun phase:** 6 of 18: about 4 hours of true dark tonight, shrinking to none by `6743-05-25`
+- **Fida:** full on the night of Ashford Day 1, waning now (97% lit)
 - **Next Kerning:** `6743-06-01` (rolled 1d6+4 = 10 from `6743-05-21` at the calendar ingest,
   2026-11-08). The DM decides at the time whether it is a major landing.
 - **Seventh Glistening:** year 7000, 257 years out
@@ -55,6 +55,8 @@ One line per recapped homebrew session, in this exact shape:
   waystation, mid-fight under low cloud. One hour on, the DM's estimate.
 - **Session 34** · 6743-05-21 11:00 · Crawl 5 of 6743 (began 6743-04-25) · the rest of the
   waystation fight; Tithe dies. Under a minute passed. No Showering.
+- **Session 35** · 6743-05-22 16:00 · Crawl 5 of 6743 (began 6743-04-25) · the chase, the haul
+  home, Asher's cave, Sabathiel at the ford and the cell. Days 4 to 18 cut. No Showering.
 
 ## Ideas sheet
 

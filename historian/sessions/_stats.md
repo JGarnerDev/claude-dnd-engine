@@ -243,3 +243,24 @@ Stats ledger (meta/stats.md). One `## Session <n>` per session, both campaigns, 
 - hp-healed: ~16
 - performances: 1
 - spells-cast: 4
+
+## Session 35
+
+### Odibli
+
+- spells-cast: 1
+- npcs-won-over: 1
+
+### Iggy
+
+- heals-cast: 1
+- hp-healed: 1
+- npcs-won-over: 1
+
+### Dip
+
+- deals-struck: 1
+
+### Luci
+
+- spells-cast: 1

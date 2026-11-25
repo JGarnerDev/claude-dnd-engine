@@ -13,7 +13,7 @@ race: "Aasimar (Scourge)"
 class: "Monk 2 / Warlock 1 / Transcendent 1"
 background: "Astral Drifter"
 level: 5
-level_confirmed: 34
+level_confirmed: 35
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Lucitania (Monk 2 / Warlock 1 / Transcendent 1)"
 aliases:
@@ -45,7 +45,7 @@ spotlight_hooks:
   - hook: "the Void Serpent that shattered the temple surfaces again"
     status: open
   - hook: "the time she lost drifting in the Astral Sea, 113 years she did not live, catches up with her"
-    status: open
+    status: seeded
   - hook: "free Aedra from her descent into madness, hand in hand with Sabathiel"
     status: open
   - hook: "enter the pocket temple as a hackable board, where every piece placed shifts it"
@@ -165,6 +165,8 @@ Monk 2 / Warlock 1 / Transcendent 1 · Scourge Aasimar · Astral Drifter · Neut
 
 Bullseye lantern, 3 poison darts, a diary, an ink pen, traveler's clothes. No coin.
 
+**The Stillwater Wraps** ([[The Stillwater Wraps]]): grey hand-wraps from Sabathiel, [[Session 35 The Reeve's Ledger]]. Also [[Nella]]'s hood for a while; she put it back on the griffon.
+
 ## Abilities (Noted in Play)
 
 - **Sacred Flame** -permanently sacrificed at end of Session 5 to revive Miguel and Ben (via Sabathiel). Gone for the rest of the campaign.
@@ -189,6 +191,7 @@ Bullseye lantern, 3 poison darts, a diary, an ink pen, traveler's clothes. No co
 - **Session 30:** Vibe-checked Halsby (Insight ~21) and read that he meant no harm. Freed [[Sable Wren]], read her as sincere and long-hurt (Insight 14), and told her to her face that she was untouched by the darkness of Barovia. Her psychokinetic storm fanned the yard fire instead of helping. Gave Halsby guidance on reading the crystals. Asked [[Silas Crubb]] who Strahd von Zarovich is, and celebrated when he'd never heard of him. Healed [[Dunny Marsh]] with her healing hands. Danced to Iggy's viol, juggling glassware before the hearth and pulling old [[Agnes Brand]] into the dance. Proposed ambushing the raiders as they leave camp rather than assaulting it. Holds an [[Earshot Crystals|earshot crystal]].
 - **Session 31:** Cast Guidance three or four times (Halsby's read of the Boon, Odibli's hunt through the hearth and his read of the glyph). Pitched "The Lightbearers!" as the party's name to Sable and again to Jory; nobody took it up. When [[Silas Crubb]] slapped her on the back she gave him a look that sent him back a step. Egged Iggy to flash his wings for Jory.
 - **Session 32:** Cast Guidance on herself and won over the rear pair of Silas's horses, Chestnut and George, roped them together and rode the whole chase standing astride them (Acrobatics 20). Readied Sanctuary to guard the lead horse. Added her own Mage Hand to Odibli's to pull a deer antler out of the lead horse's path. Yelled "We are the Lightbearers!" at the rear guard. Realised mid-session that her level-5 attacks carry an extra 1d6 radiant she hadn't been rolling.
+- **Session 35:** Chased [[Nella]] alone, through her Spike Growth, springboarded off a tree to land beside her, and set the tree on fire with her own failing Energy Storm; Nella still got away down the river. Kept the hood ("this is all I got of her"), then gave it back to the griffon. Drank [[Aashal-Groon Mellenegon Borak]]'s draught and, standing in the ford, saw Sabathiel, who called her "Lucitania" (?), said she had called for her for 113 years, and gave her [[The Stillwater Wraps]]. In the cell she named herself "Lusitania" to Shaw and laid a protective light on him. ([[Session 35 The Reeve's Ledger]])
 
 > **Reliability:** the class line still reads Monk 2 / Warlock 1 / Transcendent 1. Which class took the fifth level isn't recorded; Paul mentioned d8 attacks and +3 proficiency. Update the class line from the Roll20 sheet. Confirm with Paul.
 

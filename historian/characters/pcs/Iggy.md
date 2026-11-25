@@ -14,7 +14,7 @@ class: "Bard 3 (College of Valor) / Paladin 2"
 background: "Entertainer"
 homeland: "[[Threnai]]"
 level: 5
-level_confirmed: 34
+level_confirmed: 35
 # Roll20 sheet (2026-10-05) is the mechanical source of truth.
 character_sheet: "Roll20 — Iggadron \"Iggy\" Wallaed (Bard 3 Valor / Paladin 2 from Session 30)"
 aliases:
@@ -32,6 +32,7 @@ affinity:
   - "[[Bosco]] (4)"
   - "[[Davian Martikov]] (1)"
   - "[[Lady Fiona Wachter]] (-4)"
+  - "[[Shaw Proudfoot]] (2)"
 importance: critical
 active: true
 spotlight: normal
@@ -276,6 +277,8 @@ Bard 3 (College of Valor) / Paladin 1 · Protector Aasimar *(sheet as ingested; 
 
 Rapier, silver shortsword, dagger, light crossbow, heavy crossbow, hand crossbow, 60 bolts, hide armor, leather armor, shield, the viol, 2 costumes, disguise kit, thieves' tools, healing potion, holy water, scrolls of Bless and Protection from Poison, deck of cards, torch, 5 candles, rations, bedroll, waterskin.
 
+**Oathcaller** ([[Oathcaller]]): from [[Aashal-Groon Mellenegon Borak]], [[Session 35 The Reeve's Ledger]].
+
 **Keys and papers:**
 
 - **The Wine Wizard keys** (two, "mk 1" and "mk 2") — the two keys from the winery's upper floor, Session 27.
@@ -304,6 +307,7 @@ Shadow does not match Iggy's form and moves in the wrong direction. Onset: Sessi
 - **Session 30:** Shook Halsby's hand. Offered to heat Sable's ruined brewing copper back into shape; Silas said it needed a specialist. Healed the deputy [[Dunny Marsh]] with Lay on Hands, alongside Luci. After a few drinks he played his viol for the room while Luci danced, slow and bittersweet and then a sing-along. When the tune wandered somewhere foreign, the self-feeding hearth went completely still for about ten seconds, until he came out of it and found the chorus again. Leveled to **5** (**Paladin 2**). Reunited with [[Bosco]], who arrived riding [[Sergei Rubelgerd]]. Holds an [[Earshot Crystals|earshot crystal]].
 - **Session 31:** Played through the night at the Lioness while Luci danced. At dawn, [[Jory Pike]] asked whether the party were angels; Iggy kept his wings hidden and said they came from somewhere strange, by strange magic, so Jory took them for mages. Unknown to him, Dip's private vision placed the innermost layer of the hearth's stillness inside him.
 - **Session 32:** Rode in the back of the cart on the chase southeast. Missed the dragged-log false trail at the fork (Investigation), costing the party time. At the rear guard he walked out of the cart, knelt and hit the crossbowman with his heavy crossbow (~3 damage) before Dip finished him. Cast nothing; the wings stayed hidden.
+- **Session 35:** Lay on Hands brought Odibli up from 0. Played fiddle on the road home. In the cave [[Aashal-Groon Mellenegon Borak]] bowed lowest to him, asked what he carries and whether it means to stay; Iggy said the guest is diminished and asked that it stay, and Asher nodded and gave him [[Oathcaller]]. Knelt to Shaw's eye level in the cell ("I think I see right here a hero now") and asked [[Mara Tull]] to let him go; she did. ([[Session 35 The Reeve's Ledger]])
 
 ## Affinity notes
 

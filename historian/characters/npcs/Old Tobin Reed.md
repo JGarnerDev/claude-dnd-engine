@@ -20,17 +20,20 @@ livelihood: "Ferryman at the Ashford ford. Lost his only boat in the raid."
 # --- OPTIONAL (entity base) ---
 importance: minor
 active: true
-last_updated: "[[Session 30 Keep the Ale]]"
+last_updated: "[[Session 35 The Reeve's Ledger]]"
+aliases:
+  - "Old Tovin Reed"
 relates_to:
   - "[[Ashford]] (works its ford)"
   - "[[Wick]] (saw him during the raid)"
+  - "[[Luci]] (watched her stand in the ford during her vision)"
 description: "Ashford ferryman, old and river-brown, who lost his only boat early in the raid. Well connected with everyone in and through the town; described the raider commander Wick to the party."
 
 # --- OPTIONAL (npc) ---
 race: "[[Human]]"
 disposition: friendly
 voice: "Slow, gravelly, tells it like a story."
-voice_confirmed: 30
+voice_confirmed: 35
 ---
 
 Location: [[Ashford]]
@@ -42,8 +45,14 @@ was burned among the raid's first hits. He knows everyone who comes through. Ove
 [[The Golden Lioness]] he described [[Wick]]: an elf commander with a neat, brand-like mark on his
 hand, "like someone did it with paperwork", who took careful note of the houses.
 
+In [[Session 35 The Reeve's Ledger]], on Day 3, he was mending nets on the bank of the ford when
+[[Luci]] walked into the water after drinking [[Aashal-Groon Mellenegon Borak]]'s draught. He
+watched her stand there for a quarter of an hour before she sent him off. She came out wearing
+[[The Stillwater Wraps]].
+
 > **Reliability:** the DM called him "Old Tobin" at the table; the surname Reed and his race come
-> from the session plan. Confirm with DM.
+> from the session plan. In Session 35 the name was heard as "Old Tovin Reed"; taken to be him.
+> Confirm with DM.
 
 ## Voice
 

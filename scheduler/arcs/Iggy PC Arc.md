@@ -6,7 +6,7 @@ state: active
 tags:
   - pc-arc
 pc: "[[Iggy]]"
-arc_checked: 34
+arc_checked: 35
 next_step:
   - "Rebuild an emergent Sahism as Sah's coherence grows alongside Iggy"
   - "Meet the grief society: talk first, fight when something comes back wrong"
@@ -52,3 +52,4 @@ See [[Iggy]] → Looking Ahead (Player Intent): a fight worth having and answers
 ## Shifts
 
 - S33 — created with Jeff (2026-11-11).
+- S35 — knelt to the surrendered raider Shaw, named him a hero and won him his freedom: Growth 2 leans closer. Next step unchanged.
