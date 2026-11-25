@@ -22,6 +22,6 @@ relates_to:
 description: "Why nothing has come out of the Buckle: the shared cause behind every opening hook."
 ---
 
-Circulating in: [[Cinto]] | Source: [[Hober Mallow]] | Campaign: [[It's a cold day to be so lit]]
+Circulating in: [[Cinto]] | Source: [[Hober Mallow]] | Campaign: [[A short quick trip to see some family]]
 
 Pilgrims Captain [[Hober Mallow]] ferried north haven't come back. [[Kissoon]] has a riddle about "the fire that eats the way." Both point at [[The Yule Log]] on [[The Ice Bridge]], the cause behind every opening hook (see [[A Small Worry in Cinto]]).

@@ -21,7 +21,7 @@ relates_to:
 description: "A burlap groundhog hood."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** [[Prophet Boone]] (Order of the Burrow)
 

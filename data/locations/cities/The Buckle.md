@@ -30,7 +30,7 @@ relates_to:
 description: "The base camp deep in the Deorum Ostium, carved out around a vast iron ship found in the ice."
 ---
 
-Location: [[Deorum Ostium]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Deorum Ostium]] | Campaign: [[A short quick trip to see some family]]
 
 **Read aloud:** *The cavern is vast, and filling it is a ship. Not a ship of wood and sail, but an iron mountain riveted together, its towers bristling with black tubes that point at nothing. Lanterns hang from every rail, smoke curls up from food stalls on its deck, and somewhere a bell rings. In the ice beside it, a little post office carved to look like stone has its lamp lit.*
 

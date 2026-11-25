@@ -22,7 +22,7 @@ relates_to:
 description: "Choco La's letter to his half-brother Shaw from the Buckle: the reason the party goes north."
 ---
 
-Held by: Shaw | Campaign: [[It's a cold day to be so lit]]
+Held by: Shaw | Campaign: [[A short quick trip to see some family]]
 
 Choco La's letter to his half-brother Shaw (both monks and PCs), handed to [[Pip Post]] at [[The Buckle Post Office]] and carried by [[The Post]] until Shaw, riding with Harrow Bane's band, robbed the mail and found his own name on it (Session 35). It is still sealed with the Post's small closed envelope pressed into the wax. Robbing the Post may get him blacklisted (see [[The Post]]). It introduces [[Hobbes]]. Give it to Tyler before the first session, or have Shaw read it aloud in [[Cinto]].
 

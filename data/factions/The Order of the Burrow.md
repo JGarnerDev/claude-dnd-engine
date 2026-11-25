@@ -20,7 +20,7 @@ motives:
 description: "A tiny silly faith on the Buckle's deck that worships a great burrowing beast and predicts six more weeks of winter. They're right."
 ---
 
-Location: [[The Deck Stalls]] | Leader: [[Prophet Boone]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Deck Stalls]] | Leader: [[Prophet Boone]] | Campaign: [[A short quick trip to see some family]]
 
 A small faith in burlap groundhog hoods, selling "Shadow Snacks" on deck. They worship a great burrowing beast and predict "six more weeks." Nobody takes them seriously. They're right: the beast is [[Groundhog Claus]] (DM-only).
 

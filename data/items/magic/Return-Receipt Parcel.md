@@ -22,7 +22,7 @@ relates_to:
 description: "Wrap an item that fits in a backpack and name a place you've been."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** The brothers Post
 

@@ -24,7 +24,7 @@ importance: major
 active: false
 ---
 
-Act: [[Act 1 - The Fire That Eats the Way]] | Campaign: [[It's a cold day to be so lit]]
+Act: [[Act 1 - The Fire That Eats the Way]] | Campaign: [[A short quick trip to see some family]]
 
 > **What happens here:** the deep tunnels become a maze. The party works out its rules, follows the brothers Post's stamps, runs the dam and wheel to lower the drawbridge, and deals with random encounters along the way.
 

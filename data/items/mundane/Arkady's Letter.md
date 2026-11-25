@@ -22,7 +22,7 @@ relates_to:
 description: "A child asking the Claus if spring is real; a ready-made prop for talking Groundhog Claus down."
 ---
 
-Held by: [[Groundhog Claus]] | Campaign: [[It's a cold day to be so lit]]
+Held by: [[Groundhog Claus]] | Campaign: [[A short quick trip to see some family]]
 
 Found in the pile of letters at the core with a DC 10 INT (Investigation) check. Arkady is [[Bayta Darell]]'s granddaughter, so the grandma who saw spring once is the baker. Showing it to [[Groundhog Claus]] is an automatic success when talking him down.
 

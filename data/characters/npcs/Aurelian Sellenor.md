@@ -29,7 +29,7 @@ relates_to:
 description: "Leads the monks of the cupola temple. Slow, grave and patient; lets long pauses hang."
 ---
 
-Location: [[The Cupola Temple]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Cupola Temple]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Aasimar
 

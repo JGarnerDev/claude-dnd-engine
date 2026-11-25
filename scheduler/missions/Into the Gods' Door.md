@@ -22,7 +22,7 @@ importance: major
 active: false
 ---
 
-Act: [[Act 1 - The Fire That Eats the Way]] | Campaign: [[It's a cold day to be so lit]]
+Act: [[Act 1 - The Fire That Eats the Way]] | Campaign: [[A short quick trip to see some family]]
 
 > **What happens here:** the party enters the glacier temple and travels through the pilgrims' carvings, from fresh nicks on the outer walls to the strange work of the deep ice. It's mostly atmosphere and travel: meet pilgrims and feel the veil getting thinner.
 

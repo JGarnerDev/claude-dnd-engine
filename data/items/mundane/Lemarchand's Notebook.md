@@ -23,7 +23,7 @@ relates_to:
 description: "Holds the lost ending of the Lay (\"and the builder bowed\"), how the wheel works, and a map of the maze."
 ---
 
-Held by: [[The Old Bank]] | Campaign: [[It's a cold day to be so lit]]
+Held by: [[The Old Bank]] | Campaign: [[A short quick trip to see some family]]
 
 Deposit box 117 at [[The Old Bank]], unclaimed for longer than [[Mendelson Shape]] has worked there. It has the ending of [[The Lay of Sartori and the River Daughter]] and a map of [[The Rimefolk Maze]].
 

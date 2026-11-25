@@ -23,7 +23,7 @@ importance: major
 active: false
 ---
 
-Act: [[Act 1 - The Fire That Eats the Way]] | Campaign: [[It's a cold day to be so lit]]
+Act: [[Act 1 - The Fire That Eats the Way]] | Campaign: [[A short quick trip to see some family]]
 
 > **What happens here:** the mini-boss fight. At [[The Rimefolk Maze|the maze]]'s exit, [[The Yule Log|the Yule Log]] guards [[The Ice Bridge|the ice bridge]] into [[The Buckle|the Buckle]]. Beating it, ideally without wrecking the bridge, reopens [[The Buckle|the Buckle]] and resolves every opening hook.
 

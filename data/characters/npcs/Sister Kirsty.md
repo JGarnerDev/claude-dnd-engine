@@ -25,7 +25,7 @@ relates_to:
 description: "Keeps the Christian stall: gingerbread and mulled cider. Warm and motherly."
 ---
 
-Location: [[The Deck Stalls]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Deck Stalls]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Tortle
 

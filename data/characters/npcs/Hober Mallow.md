@@ -28,7 +28,7 @@ relates_to:
 description: "Sea captain who ferries pilgrims north. Salty, gravelly and proud of her ship."
 ---
 
-Location: [[Cinto]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Triton
 

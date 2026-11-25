@@ -21,7 +21,7 @@ relates_to:
 description: "Takes 1 minute to set up anywhere: a ledge, a storm, mid-dungeon."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** [[The Matron]]
 

@@ -16,7 +16,7 @@ Character: [[Dip]]
 
 ## DM role
 
-Ben DMs the next Aethryn campaign after Jeff's Redwater: a holiday pilgrimage north to [[Deorum Ostium]], starting in the port town of Cinto. Tyler's character carries over from Jeff's sessions as the bridge, and Dip sits Ben's run out on a pilgrimage of their own. Status and open questions: `todo-dashboard.md` item 71. His campaign is [[It's a cold day to be so lit]], active since the DM rotation (2026-11-25).
+Ben DMs the next Aethryn campaign after Jeff's Redwater: a holiday pilgrimage north to [[Deorum Ostium]], starting in the port town of Cinto. Tyler's character carries over from Jeff's sessions as the bridge, and Dip sits Ben's run out on a pilgrimage of their own. Status and open questions: `todo-dashboard.md` item 71. His campaign is [[A short quick trip to see some family]], active since the DM rotation (2026-11-25).
 
 ## Working with
 <!-- How Claude should work with Ben at the keyboard. Not filled yet: ask Ben (todo-dashboard.md item 98). -->

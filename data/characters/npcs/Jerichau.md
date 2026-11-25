@@ -25,7 +25,7 @@ relates_to:
 description: "Candlestick maker. Soft-spoken and secretive, as if a flame might go out."
 ---
 
-Location: [[Cinto]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Dragonborn
 

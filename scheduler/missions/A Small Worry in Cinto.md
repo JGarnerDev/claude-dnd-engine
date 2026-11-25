@@ -29,7 +29,7 @@ importance: major
 active: false
 ---
 
-Act: [[Act 1 - The Fire That Eats the Way]] | Campaign: [[It's a cold day to be so lit]]
+Act: [[Act 1 - The Fire That Eats the Way]] | Campaign: [[A short quick trip to see some family]]
 
 > **What happens here:** the party arrives in the pilgrim port and learns that knowledge is the local currency. Whoever they talk to first hands them a small worry (the opening hook), and every hook points into [[Deorum Ostium|the Sanctum]]. This is also where they can sell secrets and pick up tools that help free [[Groundhog Claus]] later: the baker's cookies, the candlestick maker's [[Shade Candles|shade candles]] and the gardener's [[Glass-Garden Flower|glass-garden flower]].
 

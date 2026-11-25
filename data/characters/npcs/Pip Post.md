@@ -27,7 +27,7 @@ relates_to:
 description: "Postman, the Buckle post office. Short, fit and endlessly cheerful; never misses a delivery."
 ---
 
-Location: [[The Buckle Post Office]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Buckle Post Office]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Halfling
 

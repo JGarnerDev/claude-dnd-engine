@@ -34,7 +34,7 @@ relates_to:
 description: "The final boss and the surprise: a misunderstood groundhog in a worn red coat, stuck in a time loop at the core of the Hollow Mountain."
 ---
 
-Location: [[The Hollow Mountain]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Hollow Mountain]] | Campaign: [[A short quick trip to see some family]]
 
 ## DM-only
 

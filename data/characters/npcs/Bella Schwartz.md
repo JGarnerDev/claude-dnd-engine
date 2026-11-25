@@ -25,7 +25,7 @@ relates_to:
 description: "Keeps the Jewish stall with her husband Joseph. Bickering and loving; finishes her husband's sentences."
 ---
 
-Location: [[The Deck Stalls]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Deck Stalls]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Human
 

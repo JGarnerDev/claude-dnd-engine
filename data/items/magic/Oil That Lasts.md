@@ -22,7 +22,7 @@ relates_to:
 description: "One creature regains one expended use of a limited ability, or one spell slot of level 3 or lower."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** [[Joseph Schwartz|Joseph]] and [[Bella Schwartz]] (Jewish stall)
 

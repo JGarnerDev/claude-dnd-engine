@@ -27,7 +27,7 @@ relates_to:
 description: "The mini-boss: a burning log the size of a wagon, in a festive ribbon, that blocks the ice bridge into the Buckle."
 ---
 
-Location: [[The Ice Bridge]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Ice Bridge]] | Campaign: [[A short quick trip to see some family]]
 
 A log the size of a wagon, wreathed in flame and wearing what might be a festive ribbon. It lives at the maze's exit beside [[The Ice Bridge]], feeding on carvings and offerings left by lost pilgrims, and its presence is why nothing has come out of [[The Buckle]] in weeks.
 

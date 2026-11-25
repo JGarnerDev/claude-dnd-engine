@@ -22,7 +22,7 @@ relates_to:
 description: "A letter that can never be delivered, because Dip's sibling is in another world. At the end it may slip through the cracks in reality."
 ---
 
-Held by: [[The Buckle Post Office]] | Campaign: [[It's a cold day to be so lit]]
+Held by: [[The Buckle Post Office]] | Campaign: [[A short quick trip to see some family]]
 
 A paper letter from [[Dip]] to Dip's sibling, held at [[The Buckle Post Office]] by [[Pip Post]] and Barnaby, that can never be delivered. As Groundhog Claus darts into the fissure, it lifts out of the mailbag and is drawn in: one of the five messages (see [[Who Should Know]]).
 

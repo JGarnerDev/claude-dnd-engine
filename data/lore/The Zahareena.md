@@ -22,7 +22,7 @@ relates_to:
 description: "The place outside everything, older than the worlds and the gods; the mountain is where it touches Aethryn."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 *Zahareena* (said zah-hah-REE-nah) comes from the Basque word zaharrena, "the oldest." Every ancient people who reached the mountain had their own word for the same place, and the party will find all of them. This is the one that stuck.
 

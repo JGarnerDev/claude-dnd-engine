@@ -28,7 +28,7 @@ hook: "Nothing has come out of the Buckle in weeks, because the Yule Log is bloc
 description: "The ice bridge over the chasm into the Buckle, guarded by the Yule Log."
 ---
 
-Region: [[Deorum Ostium]] | Campaign: [[It's a cold day to be so lit]]
+Region: [[Deorum Ostium]] | Campaign: [[A short quick trip to see some family]]
 
 > **What happens here:** the mini-boss fight. At [[The Rimefolk Maze|the maze]]'s exit, [[The Yule Log|the Yule Log]] guards the ice bridge into [[The Buckle|the Buckle]]. Beating it, ideally without wrecking the bridge, reopens [[The Buckle|the Buckle]] and resolves every opening hook.
 

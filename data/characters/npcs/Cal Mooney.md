@@ -25,7 +25,7 @@ relates_to:
 description: "Innkeeper of the Last Fire. Warm, loud and generous; hugs first, asks later."
 ---
 
-Location: [[The Last Fire]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Last Fire]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Bugbear
 

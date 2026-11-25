@@ -22,7 +22,7 @@ relates_to:
 description: "How the Iron Leviathan came to be in the ice: rumor says it slipped through from another world during a great cosmic shift."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 No one knows who built [[The Iron Leviathan]]. Rumor says it slipped through from another world during a great cosmic shift. Dwarven smiths say it was made without magic; wizards say it's a warship from a world where the gods died; the monks say it proves the veil is thin. [[The Buckle]] grew up around it.
 

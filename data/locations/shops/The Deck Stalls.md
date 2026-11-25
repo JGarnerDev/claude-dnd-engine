@@ -26,7 +26,7 @@ relates_to:
 description: "Four food stalls on the deck of the Iron Leviathan, all celebrating a winter festival of light."
 ---
 
-Location: [[The Buckle]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Buckle]] | Campaign: [[A short quick trip to see some family]]
 
 Four stalls between the Thunder Towers. Each keeper has their own file; [[Sister Kirsty]] is listed as proprietor only because the schema wants one name.
 

@@ -26,7 +26,7 @@ relates_to:
 description: "Keeps the Jewish stall with his wife Bella: latkes and sufganiyot. Bickering and loving; finishes his wife's sentences."
 ---
 
-Location: [[The Deck Stalls]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Deck Stalls]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Human
 

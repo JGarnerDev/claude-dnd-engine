@@ -26,7 +26,7 @@ relates_to:
 description: "Keeps the Hindu stall: ladoo, jalebi and chai. Calm and storytelling."
 ---
 
-Location: [[The Deck Stalls]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Deck Stalls]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Elf
 

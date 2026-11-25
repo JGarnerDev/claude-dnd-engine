@@ -30,7 +30,7 @@ relates_to:
 description: "The pilgrim port outside the glaciers of the Deorum Ostium, where knowledge is worth more than gold."
 ---
 
-Location: [[Deorum Ostium]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Deorum Ostium]] | Campaign: [[A short quick trip to see some family]]
 
 Cinto is the pilgrim port outside the glaciers, a melting pot of faiths and commerce that never sleeps. Shops, temples, guilds, a port, an infirmary, homes and an inn crowd together, and the town swells during festivals. Even monks under vows of silence struggle to keep quiet in the excitement.
 

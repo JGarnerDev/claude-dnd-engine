@@ -18,7 +18,7 @@ livelihood: "Buying, selling and verifying secrets"
 description: "Cinto's guild of secrets, run by Archivist Ebling Mis: it appraises, buys, sells and verifies knowledge like a bank."
 ---
 
-Location: [[Cinto]] | Head: [[Ebling Mis]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Head: [[Ebling Mis]] | Campaign: [[A short quick trip to see some family]]
 
 The guilds of [[Cinto]] buy, sell and verify knowledge, like banks for secrets. Archivist [[Ebling Mis]] runs the largest. It holds [[Item 4471]], a scrap of [[The Lay of Sartori and the River Daughter]].
 

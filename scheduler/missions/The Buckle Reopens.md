@@ -26,7 +26,7 @@ importance: major
 active: false
 ---
 
-Act: [[Act 2 - Below the Ice]] | Campaign: [[It's a cold day to be so lit]]
+Act: [[Act 2 - Below the Ice]] | Campaign: [[A short quick trip to see some family]]
 
 > **What happens here:** the party reaches the base camp built around the frozen iron ship. They can rest at [[The Matron|the Matron]]'s inn and visit [[The Buckle Post Office|the post office]], [[The Cupola Temple|the cupola temple]] and the food stalls, earning the NPCs' gifts. This is where the small hook snowballs into the larger quest for the core.
 

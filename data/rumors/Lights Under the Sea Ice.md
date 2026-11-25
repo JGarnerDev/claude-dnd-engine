@@ -21,6 +21,6 @@ relates_to:
 description: "A sailor's story of lights under the sea ice that match the Inner Sun."
 ---
 
-Circulating in: [[Cinto]] | Source: [[Hober Mallow]] | Campaign: [[It's a cold day to be so lit]]
+Circulating in: [[Cinto]] | Source: [[Hober Mallow]] | Campaign: [[A short quick trip to see some family]]
 
 Captain [[Hober Mallow]] has seen lights under the sea ice that match the Inner Sun of [[The Hollow Mountain]]. Most of Cinto puts it down to sailors' stories.

@@ -25,7 +25,7 @@ relates_to:
 description: "A halfling scholar who heard the scratching in the Buckle and went down into the Hollow Mountain to say hello, leaving his friend Choco La waiting."
 ---
 
-Location: [[The Hollow Mountain]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Hollow Mountain]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Halfling.
 

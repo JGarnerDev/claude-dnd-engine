@@ -20,7 +20,7 @@ specialty: "Free soup for pilgrims who can't pay"
 description: "Cinto's inn, run by the warm-hearted Cal Mooney, the last warm room before the ice."
 ---
 
-Location: [[Cinto]] | Proprietor: [[Cal Mooney]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Proprietor: [[Cal Mooney]] | Campaign: [[A short quick trip to see some family]]
 
 Cinto's inn and the warm opposite of [[The Matron's Inn]] under the ice. [[Cal Mooney]] gives free soup to pilgrims who can't pay. Captain [[Hober Mallow]]'s sailors sing "The River Daughter" here (see [[The Lay of Sartori and the River Daughter]]), and the whole room joins in on the chorus.
 

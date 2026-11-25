@@ -26,7 +26,7 @@ relates_to:
 description: "Prophet of the Order of the Burrow; sells Shadow Snacks. Loud, devout and delighted by anything that burrows."
 ---
 
-Location: [[The Deck Stalls]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Deck Stalls]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Kobold
 

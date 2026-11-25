@@ -23,7 +23,7 @@ importance: major
 active: false
 ---
 
-Act: [[Act 2 - Below the Ice]] | Campaign: [[It's a cold day to be so lit]]
+Act: [[Act 2 - Below the Ice]] | Campaign: [[A short quick trip to see some family]]
 
 Each key NPC can give the party a single-use gift, depending on the party's actions. The ways to earn each gift are suggestions.
 

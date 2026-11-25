@@ -25,7 +25,7 @@ relates_to:
 description: "Thief who steals notebooks instead of purses. Smooth and fast, never quite meets your eyes."
 ---
 
-Location: [[Cinto]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Goblin
 

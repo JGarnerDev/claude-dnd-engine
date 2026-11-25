@@ -22,7 +22,7 @@ importance: major
 active: false
 ---
 
-Act: [[Act 3 - The Hour of Calm]] | Campaign: [[It's a cold day to be so lit]]
+Act: [[Act 3 - The Hour of Calm]] | Campaign: [[A short quick trip to see some family]]
 
 > **What happens here:** the party descends into the hollow mountain at the deepest part of the ice. They pass through the relic layers, each with a riddle inspired by Dante's Inferno, while thin reality throws strange effects at them.
 

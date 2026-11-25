@@ -23,7 +23,7 @@ importance: major
 active: false
 ---
 
-Act: [[Act 3 - The Hour of Calm]] | Campaign: [[It's a cold day to be so lit]]
+Act: [[Act 3 - The Hour of Calm]] | Campaign: [[A short quick trip to see some family]]
 
 ## DM-only
 

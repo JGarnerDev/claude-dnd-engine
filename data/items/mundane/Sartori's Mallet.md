@@ -22,6 +22,6 @@ relates_to:
 description: "A relic jammed in the maze's water wheel; worth a Rare secret in Cinto."
 ---
 
-Held by: [[The Rimefolk Maze]] | Campaign: [[It's a cold day to be so lit]]
+Held by: [[The Rimefolk Maze]] | Campaign: [[A short quick trip to see some family]]
 
 Found in the frozen bundle of Rimefolk tools jammed in the wheel of [[The Rimefolk Maze]]. It belonged to Sartori of [[The Lay of Sartori and the River Daughter]]. Fire destroys the bundle; pulling it free is a DC 12 STR (Athletics) or DEX (Sleight of Hand) check.

@@ -30,7 +30,7 @@ relates_to:
 description: "A maze of pilgrim tunnels between the Sanctum and the Buckle, with a Rimefolk dam and water wheel that lower its drawbridge."
 ---
 
-Location: [[Deorum Ostium]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Deorum Ostium]] | Campaign: [[A short quick trip to see some family]]
 
 A tangle of pilgrim tunnels in the deep ice, adapted from the Tomb of the Unknown King maze in Final Fantasy VIII. Turning right always leads on; turning left leads back. The route runs Entrance, Fallen Sword, Statue Room, Dam Room, Wheel Room and back to the entrance, after which the straight path leads over the lowered drawbridge to [[The Ice Bridge]].
 

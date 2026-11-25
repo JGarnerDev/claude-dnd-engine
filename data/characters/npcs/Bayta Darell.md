@@ -25,7 +25,7 @@ relates_to:
 description: "Baker. Cheerful and flustered, dusted in flour."
 ---
 
-Location: [[Cinto]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Loxodon
 

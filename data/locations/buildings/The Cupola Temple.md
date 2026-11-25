@@ -22,7 +22,7 @@ relates_to:
 description: "The temple carved into the cupola above the Buckle, reached by precarious stairs or by climbing the ship's mast."
 ---
 
-Location: [[The Buckle]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Buckle]] | Campaign: [[A short quick trip to see some family]]
 
 Carved into the cupola of the chamber and run by [[Aurelian Sellenor]] and [[The Monks of the Ostium]]. It's reached by precarious stairs or by climbing the mast (DC 13 STR (Athletics)), which pilgrims treat as part of the pilgrimage. Fail by 5 or more and you fall 10 ft. The stairs need no roll, just a lot of complaining.
 

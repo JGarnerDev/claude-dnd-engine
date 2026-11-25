@@ -23,7 +23,7 @@ relates_to:
 description: "A vast iron ship frozen in the ice at the heart of the Buckle, from a world with no magic."
 ---
 
-Location: [[The Buckle]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Buckle]] | Campaign: [[A short quick trip to see some family]]
 
 A WW2-style battleship, always described to the players in D&D terms, never as modern technology.
 

@@ -24,7 +24,7 @@ voice: "Slow and wistful, always looking at the sky. Catchphrase: Smell that? Ne
 description: "Farmer with vent-warmed greenhouses. Slow and wistful, always looking at the sky."
 ---
 
-Location: [[Cinto]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Lizardfolk
 

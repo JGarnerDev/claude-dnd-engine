@@ -20,7 +20,7 @@ active: false
 description: "Cinto's infirmary, treating frostbite, exhaustion and the stranger things pilgrims bring back from the deep ice."
 ---
 
-Location: [[Cinto]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Campaign: [[A short quick trip to see some family]]
 
 Run by [[Susan Calvin]], with [[Nurse Dors]] as her right hand. It treats frostbite, exhaustion and the odder ailments pilgrims bring back from the deep ice. Patients from the deep ice talk in their sleep in languages no one knows, and some wake up remembering lives they never lived. The doctor suspects the veil is thinning.
 

@@ -25,7 +25,7 @@ relates_to:
 description: "Gardener of the monks' ice garden. Gentle and absent-minded; talks to her plants."
 ---
 
-Location: [[Cinto]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Earth genasi
 

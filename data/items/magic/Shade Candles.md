@@ -21,7 +21,7 @@ relates_to:
 description: "Candles that give off darkness instead of light."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** [[Jerichau]], candlestick maker of [[Cinto]]
 

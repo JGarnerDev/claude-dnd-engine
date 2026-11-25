@@ -27,7 +27,7 @@ relates_to:
 description: "The Blackmarket guildsect that carries things: a loose underground delivery system that runs through the whole world with an efficiency nobody can explain. Motto: Nothing stops the letters from getting through."
 ---
 
-Campaign: [[It's a cold day to be so lit]] | One of [[The Blackmarket Guildsects]]
+Campaign: [[A short quick trip to see some family]] | One of [[The Blackmarket Guildsects]]
 
 The Post is the guildsect that carries things: a loose, underground delivery system that runs through the whole world with an efficiency nobody can explain. A letter handed over in [[The Buckle|the Buckle]] can be in someone's hand on the far side of Aethryn within days, and couriers find people who don't want to be found. Nobody quite knows how they do it. Their motto: *"Nothing stops the letters from getting through."*
 

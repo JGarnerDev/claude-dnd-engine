@@ -23,7 +23,7 @@ relates_to:
 description: "The inn in the hull of the Iron Leviathan, run by the Matron, with cabins like the Gun Deck Suite and the Boiler Cabin."
 ---
 
-Location: [[The Buckle]] | Proprietor: [[The Matron]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Buckle]] | Proprietor: [[The Matron]] | Campaign: [[A short quick trip to see some family]]
 
 The inn fills the main body of [[The Iron Leviathan]], with rooms below deck like "the Gun Deck Suite" and "the Boiler Cabin". [[Mitzi]] hands out cocoa. The Matron keeps a vault: anything left in her care below the ice stays safe. [[Shadwell]] would like to rob it (a DC 20 DEX (Sleight of Hand) check with thieves' tools; getting caught loses her favor for good, which is a crack).
 

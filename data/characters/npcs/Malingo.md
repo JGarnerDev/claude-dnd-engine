@@ -24,7 +24,7 @@ voice: "Fussy and precise, sizes people up by eye. Catchphrase: Hold still. You'
 description: "Tailor of cold-weather gear. Fussy and precise; sizes people up by eye."
 ---
 
-Location: [[Cinto]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Tabaxi
 

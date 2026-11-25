@@ -26,7 +26,7 @@ relates_to:
 description: "Riddle master; sells hints about the maze, paid in secrets or riddles. Creaky and teasing; answers only in riddles."
 ---
 
-Location: [[Cinto]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Tiefling
 

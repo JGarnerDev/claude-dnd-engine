@@ -3,7 +3,7 @@ name: "Act 2 - Below the Ice"
 type: act
 exists: false
 state: draft
-campaign: "[[It's a cold day to be so lit]]"
+campaign: "[[A short quick trip to see some family]]"
 central_conflict: "The Buckle is open again, but its people have their own worries, and the scratching under everything is getting louder."
 goal: "Rest at the Buckle, earn its people's gifts, and turn the small hook into the quest for the core."
 opening_state: "The party crosses into the Buckle; the hook that brought them is resolved."
@@ -17,7 +17,7 @@ importance: critical
 active: false
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 Part 5 of the campaign doc.
 

@@ -24,7 +24,7 @@ relates_to:
 description: "The Buckle's post office, carved into the ice to look like stone and run by the brothers Post."
 ---
 
-Location: [[The Buckle]] | Proprietor: [[Pip Post]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Buckle]] | Proprietor: [[Pip Post]] | Campaign: [[A short quick trip to see some family]]
 
 Run by the brothers Post, [[Pip Post]] and [[Barnaby Post]], with [[Stamp]] the puffin. Their motto: "Nothing stops the letters from getting through." They hold [[Dip's Letter]], which can never be delivered. The pile of letters to "the Claus" at the core came from here.
 

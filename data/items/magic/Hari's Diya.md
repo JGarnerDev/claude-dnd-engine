@@ -21,7 +21,7 @@ relates_to:
 description: "As an action, light it for 1 minute: it sheds bright light in a 30-ft."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** [[Hari]] (Hindu stall)
 

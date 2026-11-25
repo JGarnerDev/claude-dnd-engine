@@ -21,7 +21,7 @@ relates_to:
 description: "While lit, it sheds light in a 20-ft."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** [[Sister Kirsty]] (Christian stall)
 

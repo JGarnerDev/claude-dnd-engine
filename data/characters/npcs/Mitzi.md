@@ -25,7 +25,7 @@ relates_to:
 description: "The Matron's helper at the inn. A beam of pure joy; hugs strangers, hums, hands out cocoa."
 ---
 
-Location: [[The Matron's Inn]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Matron's Inn]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Gnome
 

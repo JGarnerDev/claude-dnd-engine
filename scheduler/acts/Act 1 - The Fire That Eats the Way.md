@@ -3,7 +3,7 @@ name: "Act 1 - The Fire That Eats the Way"
 type: act
 exists: false
 state: draft
-campaign: "[[It's a cold day to be so lit]]"
+campaign: "[[A short quick trip to see some family]]"
 central_conflict: "Something is blocking the way into the Buckle, and nothing has come out in weeks."
 goal: "Get from Cinto, through the Sanctum and the maze, past the Yule Log and over the ice bridge."
 opening_state: "The party is in Cinto just before festival season. Every NPC they meet has a small worry with the same cause."
@@ -19,7 +19,7 @@ importance: critical
 active: false
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 Parts 1–4 of the campaign doc.
 

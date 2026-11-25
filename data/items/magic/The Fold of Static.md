@@ -21,7 +21,7 @@ relates_to:
 description: "As an action, you and up to 8 willing creatures within 10 ft."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** [[Aurelian Sellenor|The Archhierophant]]
 

@@ -25,7 +25,7 @@ relates_to:
 description: "The last banker at the Old Bank, happily retired at the till. Slow, contented and rambling, like a grandparent with all the time in the world."
 ---
 
-Location: [[The Old Bank]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[The Old Bank]] | Campaign: [[A short quick trip to see some family]]
 
 Race: Kenku
 

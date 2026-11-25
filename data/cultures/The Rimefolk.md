@@ -25,7 +25,7 @@ relates_to:
 description: "The people who dug the first tunnels in the deep ice long before the monks came, and built the maze's dam and wheel."
 ---
 
-Region: [[Deorum Ostium]] | Campaign: [[It's a cold day to be so lit]]
+Region: [[Deorum Ostium]] | Campaign: [[A short quick trip to see some family]]
 
 Long before the monks came, the Rimefolk dug the first tunnels in the deep ice. Their master builder was Sartori. They are long gone; what survives is their machinery in [[The Rimefolk Maze]], a few marks in their script, and [[The Lay of Sartori and the River Daughter]].
 

@@ -27,7 +27,7 @@ relates_to:
 description: "The Rimefolk legend of the builder Sartori, who dammed the river Celestine, and bowed to her when her song broke the dam."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 The drawbridge over the frozen moat only lowers once meltwater from the dam turns the water wheel. Both machines are far older than [[Deorum Ostium|the Sanctum]], and both are built around the same forgotten story. Each room has a small puzzle, and both can be brute forced.
 

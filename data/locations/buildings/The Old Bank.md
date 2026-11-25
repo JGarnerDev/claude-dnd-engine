@@ -21,7 +21,7 @@ condition: "Cracked columns; the sign has lost half its letters"
 description: "A decrepit bank in Cinto's old square, full of gold nobody wants, run by one contented banker."
 ---
 
-Location: [[Cinto]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Cinto]] | Campaign: [[A short quick trip to see some family]]
 
 An old, decrepit stone bank sits off to the side of what used to be [[Cinto]]'s original town square, long since abandoned for the busier streets near the port. Its columns are cracked, its sign has lost half its letters, and almost no one goes in. Since knowledge became the currency, nobody needs a bank for gold.
 

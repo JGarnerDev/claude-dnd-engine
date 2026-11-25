@@ -1,6 +1,7 @@
 ---
-name: "It's a cold day to be so lit"
+name: "A short quick trip to see some family"
 aliases:
+  - "It's a cold day to be so lit"
   - "The Northward Pilgrimage"
   - "Deorum Sanctum Campaign"
   - "The holiday campaign"
@@ -31,10 +32,10 @@ relates_to:
   - "[[Deorum Ostium]] (destination — Ben's region)"
   - "[[Cinto]] (where the pilgrimage starts)"
   - "[[Shaw Proudfoot]] (his letter sends the party north)"
-description: "Ben's Aethryn campaign, the second after Redwater (active since the DM rotation, 2026-11-25): a holiday pilgrimage from Cinto into the Deorum Ostium, ending at the core of a hollow mountain with Groundhog Claus. Opened by Jeff as The Northward Pilgrimage and renamed by Ben."
+description: "Ben's Aethryn campaign, the second after Redwater (active since the DM rotation, 2026-11-25): a holiday pilgrimage from Cinto into the Deorum Ostium, ending at the core of a hollow mountain with Groundhog Claus. Opened by Jeff as The Northward Pilgrimage, then renamed by Ben."
 ---
 
-# It's a cold day to be so lit
+# A short quick trip to see some family
 
 Ben's campaign in [[Aethryn]], the second after Jeff's [[Redwater]], which is on hiatus. It picks up where [[Redwater]] paused after [[Session 35 The Reeve's Ledger]]. Jeff opened this file at the DM rotation (2026-11-25) as The Northward Pilgrimage; Ben's draft was folded into it the same day. Jeff's handover page is `scheduler/campaign/_handover.md`.
 

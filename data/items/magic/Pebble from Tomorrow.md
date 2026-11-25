@@ -21,7 +21,7 @@ relates_to:
 description: "Once, when a creature fails a saving throw, it can succeed instead."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** [[Tesla Bombeck]]
 

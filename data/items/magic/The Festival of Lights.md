@@ -24,7 +24,7 @@ relates_to:
 description: "When Kirsty's Candle, Oil That Lasts, Hari's Diya and the Burrow Hood are brought to the core together, their lights merge."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** All four food stalls together
 

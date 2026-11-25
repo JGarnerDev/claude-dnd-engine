@@ -22,7 +22,7 @@ relates_to:
 description: "A crystal flower that hums and holds a memory of spring."
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 **From:** The glass gardens of the Hollow Mountain
 

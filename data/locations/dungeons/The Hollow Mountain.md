@@ -32,7 +32,7 @@ relates_to:
 description: "A mountain older than time in the deepest ice, hollow inside, with relics of ancient peoples in rings around its core."
 ---
 
-Location: [[Deorum Ostium]] | Campaign: [[It's a cold day to be so lit]]
+Location: [[Deorum Ostium]] | Campaign: [[A short quick trip to see some family]]
 
 The deepest part of the ice holds a mountain older than time, with relics of countless ancient species and unknown gods. Reality is thinnest here, and the final boss waits at its heart.
 

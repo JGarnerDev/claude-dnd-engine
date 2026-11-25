@@ -3,7 +3,7 @@ name: "Act 3 - The Hour of Calm"
 type: act
 exists: false
 state: draft
-campaign: "[[It's a cold day to be so lit]]"
+campaign: "[[A short quick trip to see some family]]"
 central_conflict: "At the core of a hollow mountain, a groundhog who always sees his shadow has been keeping winter on for a thousand years."
 goal: "Pass the relic rings, free Groundhog Claus, and decide who should know about the core."
 opening_state: "The party descends from the Buckle into the deepest ice."
@@ -18,7 +18,7 @@ importance: critical
 active: false
 ---
 
-Campaign: [[It's a cold day to be so lit]]
+Campaign: [[A short quick trip to see some family]]
 
 Parts 6–8 of the campaign doc.
 
