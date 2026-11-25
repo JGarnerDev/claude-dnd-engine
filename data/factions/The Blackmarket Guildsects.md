@@ -29,3 +29,4 @@ a loose web of underground guilds, each one a "sect" with a single trade nobody 
 ### Known sects
 
 - [[The Post]]: the sect that carries things.
+- The grave-goods trade (DM-only, no file yet): sells grave markers with no death date, cut from the hull of [[The Iron Leviathan]]. See [[The Post]] → Another sect.

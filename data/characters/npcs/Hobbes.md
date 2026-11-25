@@ -72,6 +72,30 @@ Pick before Part 6. The marks work for both, so you can decide late.
 - **Fighting:** reaching 0 HP breaks the loop instead of killing him, as always, so nobody can kill Hobbes. Beating him by force without trying to understand him is still a crack.
 - **When he's freed:** the hour of calm comes as usual. Then the groundhog peels off him like a coat of shadow and darts into the fissure without him. Left behind in the letters is a skinny halfling with a beard down to his knees. "Choco? I was only gone a minute." [[Groundhog Claus]] is free out there somewhere, still a little bit Hobbes. Whether the red hat stays with Hobbes or goes with the groundhog is your call.
 
+## Hobbes's real face (DM-only)
+
+Under both possibilities, Hobbes is something worse than he looks: one of the ones eating the Pillars (see The Pillars and the ones eating them). The rambling, kindly scholar in the red hat is the face he wears.
+
+- **What he wanted:** to reach the core of [[The Hollow Mountain|the Mountain]] and bite into the Pillar. He got through the first four gates alone, but the fifth beat him ("Haven't got this one"), and the loop at the core held him there, or, under possibility 2, swallowed him into [[Groundhog Claus]].
+- **Why the party matters to him:** he needs someone to open the last gate for him. Choco La was meant to be that someone ("Someone has to keep him out of trouble"), and Choco La's letter brought [[Shaw Proudfoot|Shaw]] and the party instead. Hobbes is glad of the upgrade.
+- **If the party wins,** none of this comes out. The Pillar holds, and Hobbes is the grateful friend he seems, under whichever possibility you picked. He thanks them warmly, and goes on his way. Keep him for later.
+- **If the party fails,** the Meeting (see The worst ending).
+- **Clues that read innocently either way:** he knew the grown tunnels well enough to map them before anyone else had been down; his chalk notes never once say he was scared; and [[Aurelian Sellenor|the Archhierophant]], who listens to everything, says after meeting him: "Your friend is very quiet underneath."
+
+### The Meeting (if the party fails)
+
+**And the Pillar cracks.** [[The Hollow Mountain]] is one of this plane's Pillars (see The Pillars and the ones eating them). When the fissure tears open, [[The Hollow Mountain|the Mountain]] cracks with it, and something on the far side takes its first bite.
+
+**The Meeting.** After the escape, when the survivors have made it back across the ice, someone is waiting for them, sitting on a rock by the trail as if he had all the time in the world. It's Hobbes, clean-shaven, the red hat neat on his head, and calm. He has stopped rambling.
+
+- **Read aloud:** *"Thank you. A thousand years is a long time to wait for someone to open the last door. I did try to warn you, in my way. Back after breakfast, I said. I'm always back after breakfast."*
+- **It isn't a fight.** He's one of the ones eating the Pillars, and far beyond the party at level 5: anyone who attacks him finds the blow simply doesn't land, and he doesn't bother to answer it. Let the scene make that plain without a roll.
+- **What he tells them, if they ask:** that there are other Pillars, and others like him; that [[The Hollow Mountain|the Mountain]] was only one; and that Choco La was a good friend, really. What he never tells them is a name.
+- **For Choco La:** Hobbes speaks to him last and most gently. Whatever Choco La's player does with that is theirs.
+- **Then he's gone,** the way [[Tesla Bombeck]] leaves: around a rock, and the snow where he sat falls upward. The campaign ends on the worst ending, and on a hook for whatever comes next.
+
+See [[The Pillars Are Being Eaten]].
+
 ## How they speak
 
 (The `## Voice` section is added by `/recap` once they've spoken at the table; see `meta/voice.md`.)

@@ -191,6 +191,14 @@ The story going round: "Played the viol at the Golden Lioness for the sheriff, t
 - **[[Sister Suzanna]]** asks [[Iggy]] to play to her ice garden. "They're listening." (One flower opens.)
 - **Pilgrims** in [[Cinto]] stop [[Iggy]] to ask for a song they heard about secondhand, and hum it wrong. Correcting them is a free Gossip secret: the true version of a famous song.
 
+#### Seeds for Iggy's villains (DM-only)
+
+From Jeff's villain ideas for [[Iggy]], scored by you. Small touches only: nothing here is a scene yet.
+
+- **The First Corrector, Returned** (you scored it 5): in [[Cinto]]'s temple quarter a pilgrim hands out pamphlets for a "grief society" that promises the dead can come back. [[Iggy]] knows the line printed at the bottom: *"Nothing that must end can be called just."* It's the Correctors' own phrase, from the cult that ended his world. [[Ebling Mis|Mis]] buys a pamphlet as Gossip (2 gp), and [[Prophet Boone]] has one pinned up at his stall in [[The Buckle|the Buckle]], because he collects pamphlets.
+- **The Archivist with the ledger** (5, optional here): among the Knowledge Bank's lots, [[Ebling Mis|Mis]] has "Item 4473: a page in an unknown script, appraised Rare (100 gp)." [[Iggy]] recognises his own world's script. Who brought it in, [[Ebling Mis|Mis]] won't say: that's another secret, and it costs more.
+- **The Patron Who Won't Die** (5): comes in through the Blackmarket Guildsects and [[The Iron Leviathan|the Iron Leviathan]]'s hull (see The Post and the Blackmarket Guildsects, in the Overview).
+
 #### Shaw: Choco La got here first
 
 Choco La came through [[Cinto]] on his way north and talked about his little half-brother the whole time. Nobody has heard of Shaw the adventurer, but everyone has heard of Shaw the little brother. It's all Choco La's version, and Shaw can deny any of it.

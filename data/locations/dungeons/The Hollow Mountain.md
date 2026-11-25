@@ -34,6 +34,8 @@ description: "A mountain older than time in the deepest ice, hollow inside, with
 
 Location: [[Deorum Ostium]] | Campaign: [[A short quick trip to see some family]]
 
+**One of the Pillars (DM-only):** It is also one of this plane's Pillars, a Beam of this universe, and someone is trying to eat it (see [[The Pillars Are Being Eaten]]).
+
 The deepest part of the ice holds a mountain older than time, with relics of countless ancient species and unknown gods. Reality is thinnest here, and the final boss waits at its heart.
 
 **Name ideas:** the First Stone, the Root of the World, the Hollow Crown, or Mount Before, because monks say it was there before anything else.

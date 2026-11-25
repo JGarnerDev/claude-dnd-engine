@@ -1,0 +1,379 @@
+<title>Looking Ahead</title>
+<meta name="claude:viewport-fit-sides" content="cover" />
+<meta name="artifact-url" content="https://claude.ai/artifact/TRfrpq4RCg3rFRPzYU3sgp" />
+<!-- Player-intent handout from Ben, the Aethryn DM, for Kellan (Halsby), Paul (Luci) and Miguel (Odibli): todo 97. Spoiler-free. Answers fill each PC file's "## Looking Ahead (Player Intent)" section. -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap"
+/>
+<style>
+  /* Layout: one parchment card read top to bottom, the same family as the group's other handout cards; questions as a numbered list because the order is the order to answer in. */
+  :root {
+    --bg: #e9e7e2;
+    --card: #f7f5f0;
+    --ink: #23221f;
+    --muted: #615d55;
+    --rule: #cfc9bd;
+    --accent: #6a3a5c;
+    --field: #fffdf8;
+    --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+    --body: "Spectral", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141513;
+      --card: #1d1f1c;
+      --ink: #e6e2d8;
+      --muted: #a39e92;
+      --rule: #3a3c37;
+      --accent: #d39cc4;
+      --field: #262823;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141513;
+    --card: #1d1f1c;
+    --ink: #e6e2d8;
+    --muted: #a39e92;
+    --rule: #3a3c37;
+    --accent: #d39cc4;
+    --field: #262823;
+    color-scheme: dark;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    padding-block: 32px 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .card {
+    max-width: 42rem;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: clamp(20px, 5vw, 36px);
+    display: grid;
+    gap: 28px;
+  }
+  h1,
+  h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    margin: 0;
+    text-wrap: balance;
+  }
+  h1 {
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  p {
+    margin: 0;
+    max-width: 65ch;
+  }
+  header {
+    display: grid;
+    gap: 10px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 20px;
+  }
+  .from {
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .lede {
+    color: var(--muted);
+  }
+  .who {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+  }
+  label {
+    display: grid;
+    gap: 6px;
+    font-weight: 600;
+  }
+  .hint {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: var(--ink);
+    background: var(--field);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 8px 10px;
+    width: 100%;
+  }
+  textarea {
+    min-height: 4.6em;
+    resize: vertical;
+    line-height: 1.5;
+  }
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  ol.qs {
+    list-style: none;
+    counter-reset: q;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 22px;
+  }
+  ol.qs li {
+    counter-increment: q;
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0 10px;
+  }
+  ol.qs li::before {
+    content: counter(q);
+    font-family: var(--display);
+    font-size: 1.4rem;
+    color: var(--accent);
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+  }
+  .send {
+    display: grid;
+    gap: 12px;
+    border-top: 1px solid var(--rule);
+    padding-top: 20px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  button {
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--accent);
+    color: var(--card);
+    border: 0;
+    border-radius: 3px;
+    padding: 10px 18px;
+  }
+  .status {
+    color: var(--muted);
+    font-style: italic;
+  }
+  #fallback {
+    min-height: 10em;
+    font-size: 0.9rem;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+    }
+  }
+</style>
+
+<main class="card">
+  <header>
+    <span class="from">From Ben, your next DM</span>
+    <h1>Looking Ahead</h1>
+    <p class="lede">
+      After Ashford, the party heads north on a holiday pilgrimage, to a place where the veil
+      between worlds is thin. Before we go, I'd love to know what you want for your character. There
+      are no wrong answers, short ones are fine, and anything you skip is fine too. These are wishes
+      for me, not promises from you.
+    </p>
+  </header>
+
+  <section class="who" aria-label="Who's answering">
+    <label for="player"
+      >Your name
+      <input id="player" autocomplete="name" placeholder="Kellan" />
+    </label>
+    <label for="pc"
+      >Your character
+      <select id="pc">
+        <option value="">Pick one</option>
+        <option>Halsby</option>
+        <option>Luci</option>
+        <option>Odibli</option>
+        <option>Someone else</option>
+      </select>
+    </label>
+  </section>
+
+  <form id="form">
+    <ol class="qs">
+      <li>
+        <label for="q1"
+          >What do they want right now?
+          <span class="hint"
+            >A fight, a fortune, answers, a way home, revenge, a quiet life… whatever is pulling
+            them.</span
+          >
+          <textarea id="q1"></textarea>
+        </label>
+      </li>
+      <li>
+        <label for="q2"
+          >What keeps them with this party?
+          <span class="hint">A friend, a debt, nowhere better to be, a promise.</span>
+          <textarea id="q2"></textarea>
+        </label>
+      </li>
+      <li>
+        <label for="q3"
+          >What do they want to be known for?
+          <span class="hint"
+            >The story people tell about them in a tavern, if it goes their way.</span
+          >
+          <textarea id="q3"></textarea>
+        </label>
+      </li>
+      <li>
+        <label for="q4"
+          >A line they'd say at the table
+          <span class="hint">Something you can hear in their voice.</span>
+          <textarea id="q4"></textarea>
+        </label>
+      </li>
+      <li>
+        <label for="q5">A thought they'd never say out loud <textarea id="q5"></textarea></label>
+      </li>
+      <li>
+        <label for="q6"
+          >Their biggest personal thread: how you hope it goes, and how you fear it goes
+          <span class="hint"
+            >The hope and the fear are both useful. I won't use the fear without checking with
+            you.</span
+          >
+          <textarea id="q6"></textarea>
+        </label>
+      </li>
+      <li>
+        <label for="q7"
+          >Something you'd like to share with another character
+          <span class="hint">A secret, a bond, a rivalry, a running joke.</span>
+          <textarea id="q7"></textarea>
+        </label>
+      </li>
+      <li>
+        <label for="q8"
+          >Anything you'd rather not see in our games?
+          <span class="hint">Topics, kinds of scenes, anything. I'll keep it to myself.</span>
+          <textarea id="q8"></textarea>
+        </label>
+      </li>
+    </ol>
+  </form>
+
+  <section class="send">
+    <h2>Send it to Ben</h2>
+    <p>
+      Copy your answers, then paste them to me on Discord. Your answers are saved in this browser
+      until you copy them, so you can come back and finish later.
+    </p>
+    <div class="row">
+      <button id="copy" type="button">Copy my answers</button>
+      <span class="status" id="status" role="status"></span>
+    </div>
+    <textarea id="fallback" hidden aria-label="Your answers, ready to copy" readonly></textarea>
+  </section>
+
+  <footer>
+    Thanks! I'll use these to bring your character's story into the sessions, a little at a time.
+  </footer>
+</main>
+
+<script>
+  (function () {
+    const ids = ["player", "pc", "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"];
+    const labels = {
+      q1: "Wants right now",
+      q2: "Stays with the party for",
+      q3: "Wants to be known for",
+      q4: "Table line",
+      q5: "Thought never said",
+      q6: "Biggest thread (hope / fear)",
+      q7: "To share with another character",
+      q8: "Rather not see",
+    };
+    const KEY = "looking-ahead-draft";
+    const el = (id) => document.getElementById(id);
+    try {
+      const saved = JSON.parse(localStorage.getItem(KEY) || "{}");
+      ids.forEach((id) => {
+        if (saved[id]) el(id).value = saved[id];
+      });
+    } catch (e) {}
+    function save() {
+      try {
+        const d = {};
+        ids.forEach((id) => (d[id] = el(id).value));
+        localStorage.setItem(KEY, JSON.stringify(d));
+      } catch (e) {}
+    }
+    ids.forEach((id) => el(id).addEventListener("input", save));
+    el("form").addEventListener("submit", (e) => e.preventDefault());
+    function text() {
+      const who =
+        (el("player").value.trim() || "A player") +
+        " (" +
+        (el("pc").value || "character not picked") +
+        ")";
+      const lines = ["Looking Ahead: " + who, ""];
+      Object.keys(labels).forEach((k) => {
+        const v = el(k).value.trim();
+        lines.push(labels[k] + ": " + (v || "(skipped)"));
+      });
+      return lines.join("\n");
+    }
+    el("copy").addEventListener("click", () => {
+      const t = text();
+      const fb = el("fallback");
+      const show = (msg) => {
+        fb.value = t;
+        fb.hidden = false;
+        fb.focus();
+        fb.select();
+        el("status").textContent = msg;
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard
+          .writeText(t)
+          .then(() => {
+            el("status").textContent = "Copied. Paste it to Ben on Discord.";
+            fb.hidden = true;
+          })
+          .catch(() => show("Select the text below and copy it."));
+      } else show("Select the text below and copy it.");
+    });
+  })();
+</script>

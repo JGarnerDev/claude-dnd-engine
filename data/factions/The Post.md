@@ -47,6 +47,14 @@ The Post is the guildsect that carries things: a loose, underground delivery sys
 - **Clearing his name:** make the Post whole. Deliver what's left of the robbed sack, if any of it survived; carry the Claus letters down to the core for Pip; or owe the Post a favour, which it will collect at the worst possible moment. Any one of these takes his name off the list, and Pip stamps it FORWARD.
 - **Choice ([[Shaw Proudfoot|Shaw]]):** own up to the Post, or keep quiet and hope nobody connects him to the robbery.
 
+## Another sect: the grave-goods trade (DM-only)
+
+When the party learns about the guildsects, let one more sect surface: the one that sells grave goods. Its prize stock is grave markers with no death date, cut from the hull of [[The Iron Leviathan|the Iron Leviathan]]. The ship isn't from this world, and its iron has strange properties: the grief society believes a marker of otherworld iron keeps the dead from ever properly ending. Someone has been quietly cutting neat squares out of the inside of the hull, down in the deep hold where nobody goes, and carrying them off.
+
+- **The buyer:** the sect's best customer is a lord or merchant-prince who buys the markers in bulk and quietly funds the grief society. He isn't grieving; he's afraid of his own story ending (Jeff's "Patron Who Won't Die", for [[Iggy]]). Leave him offstage and unnamed for now.
+- **How the party hears of it:** Pip, if [[Shaw Proudfoot|Shaw]] is on good terms with the Post, mutters that "the iron lot" ship their crates through the Post and pay double for silence. Or [[Shadwell]] offers to sell the party "a souvenir from the big ship": a small iron tablet, blank where a death date should be.
+- **[[The Matron]] doesn't know.** If she finds out someone is stripping her ship, that's a whole new hook in [[The Buckle|the Buckle]], and a way to win her favour for good.
+
 ## How they're so fast (DM-only, a possibility)
 
 the Post moves letters through the thin places between worlds. A letter slipped into one crack comes out of another. That would explain why Pip's letters to "the Claus" always reach the core, and why [[Aurelian Sellenor|the Archhierophant]] sometimes hears a faint rustle of paper in the static. Keep it or drop it.

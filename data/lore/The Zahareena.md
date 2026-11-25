@@ -26,7 +26,7 @@ Campaign: [[A short quick trip to see some family]]
 
 *Zahareena* (said zah-hah-REE-nah) comes from the Basque word zaharrena, "the oldest." Every ancient people who reached the mountain had their own word for the same place, and the party will find all of them. This is the one that stuck.
 
-**What it is:** the Zahareena is the place outside everything. It's older than the worlds and older than the gods: the stillness that all the grinding worlds rest on. Nothing lives there, and nothing ends there. The mountain is where the Zahareena touches this world, like a thumb pressed into clay from the other side. That's why it's older than time, and why it points both up and down.
+**What it is:** the Zahareena is the place outside everything. It's older than the worlds and older than the gods: the stillness that all the grinding worlds rest on. Nothing lives there, and nothing ends there. The mountain is where the Zahareena touches this world, like a thumb pressed into clay from the other side. That's why it's older than time, and why it points both up and down. It is also one of this plane's Pillars, a Beam of this universe, and someone is trying to eat it (see [[The Pillars Are Being Eaten]]).
 
 #### What the party can learn
 

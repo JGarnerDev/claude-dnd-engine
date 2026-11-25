@@ -7,7 +7,7 @@ campaign: homebrew
 target: unassigned
 state: raw
 created: 2026-10-14
-updated: 2026-10-14
+updated: 2026-11-25
 description: "Antagonist ideas for Iggy, one per lens, built around the Correctors, the grief society, Caelion's bridge and the sealed order. Lenses 2 and 6 TBD."
 relates_to:
   - "[[Iggy]]"
@@ -68,6 +68,13 @@ Iggy already has a big villain on file: the grief society, its three tempted, an
    - Ladder: touch: a ledger page in Threnai script turns up for sale. Beat: she finds Iggy and reads him the order aloud. Arc: Iggy has to decide what he owes for it, in front of Sah.
 
 6. **Institution's price: TBD.** Killed so far, don't re-propose: Old Sah (Sah's rigid old self opposing the vow-break) and Velhareth (the Great Library as an absorbing collective that is also Dip's guiding hands).
+
+## Heat scores (Ben, 2026-11-25)
+
+- **Idea 1 (the First Corrector, Returned):** **5** (Ben, 2026-11-25). Ben: love it; add mentions of them. Seeded in Ben's campaign: a grief-society pamphlet in Cinto quoting their line.
+- **Idea 3 (the Patron Who Won't Die):** **5** (Ben, 2026-11-25). Ben: love it; mention it when the party learns about the Blackmarket Guildsects. Seeded there: a grave-goods sect sells grave markers with no death date, cut from the Iron Leviathan's otherworld hull (Ben's idea), and the Patron is its best buyer.
+- **Idea 4 (Caelion Marr):** unscored (Ben had no preference, 2026-11-25).
+- **Idea 5 (the Archivist with the ledger):** **5** (Ben, 2026-11-25). Seeded lightly in Ben's campaign: a ledger page in Threnai script among the Knowledge Bank's lots.
 
 ## Combinations
 
