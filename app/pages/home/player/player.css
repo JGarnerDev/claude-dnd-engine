@@ -1,0 +1,192 @@
+/* Player guide page. A phone gets one readable column. From 60rem the main column
+   is centred with Notes in a sticky column at its right and Roleplay under them; from
+   72rem Roleplay moves to its own sticky column at the left. */
+.pg-root {
+  container-type: inline-size;
+}
+.pg-layout,
+.pg-empty-page {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+.pg-main {
+  min-width: 0;
+}
+.pg-side {
+  display: none;
+}
+@container (min-width: 60rem) {
+  .pg-layout-rail {
+    display: grid;
+    grid-template-columns: minmax(var(--ui-space-6), 1fr) minmax(0, 52rem) minmax(15rem, 1fr);
+    gap: var(--ui-space-4);
+    align-items: start;
+    max-width: none;
+  }
+  .pg-layout-rail .pg-main {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .pg-layout-rail .pg-notes-phone {
+    display: none;
+  }
+  .pg-side {
+    position: sticky;
+    top: var(--ui-space-4);
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    gap: var(--ui-space-3);
+    max-width: 22rem;
+    /* A rail taller than the screen scrolls on its own, so its foot stays reachable. */
+    max-height: calc(100dvh - 2 * var(--ui-space-4));
+    overflow-y: auto;
+  }
+  .pg-side-notes {
+    grid-row: 1;
+  }
+  .pg-side-roleplay {
+    grid-row: 2;
+  }
+  .pg-layout-rail:not(:has(.pg-side-notes)) .pg-side-roleplay {
+    grid-row: 1;
+  }
+}
+@container (min-width: 72rem) {
+  .pg-layout-rail {
+    grid-template-columns: minmax(15rem, 1fr) minmax(0, 52rem) minmax(15rem, 1fr);
+  }
+  .pg-layout-rail .pg-main {
+    grid-row: 1;
+  }
+  .pg-side-roleplay,
+  .pg-layout-rail:not(:has(.pg-side-notes)) .pg-side-roleplay {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+    width: 100%;
+  }
+}
+
+/* Phone width: the tab strip scrolls sideways; long words in prose wrap. */
+.pg-tabs {
+  overflow-x: auto;
+}
+.pg-root .pg-card {
+  overflow-wrap: anywhere;
+}
+
+/* Plays: tap targets that open their text inside the card. */
+.pg-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ui-space-2);
+}
+.pg-tile {
+  min-height: var(--ui-tap);
+  padding: var(--ui-space-1) var(--ui-space-3);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  background: var(--ui-surface-hi);
+  color: var(--ui-text);
+  font: inherit;
+  font-size: var(--ui-font-size-sm);
+  text-align: left;
+  cursor: pointer;
+}
+/* The concentration mark: a small pill after a tile's label, or before the open text. */
+.pg-conc-tile {
+  margin-inline-start: var(--ui-space-1);
+}
+.pg-conc-tile .ui-badge {
+  padding: 0 0.35em;
+  font-size: var(--ui-font-size-xs);
+  line-height: 1.3;
+}
+.pg-conc-open {
+  margin-inline-end: var(--ui-space-2);
+}
+.pg-tile:hover,
+.pg-tile:focus-visible {
+  border-color: var(--ui-accent);
+}
+.pg-tile-big {
+  flex: 1 1 45%;
+  font-size: var(--ui-font-size-md);
+  font-weight: var(--ui-weight-bold);
+}
+.pg-tile-on {
+  border-color: var(--ui-accent);
+  background: color-mix(in srgb, var(--ui-accent) 18%, var(--ui-surface-hi));
+}
+.pg-open {
+  margin-top: var(--ui-space-2);
+  padding: var(--ui-space-2) var(--ui-space-3);
+  border-left: 3px solid var(--ui-accent);
+  border-radius: var(--ui-radius-sm);
+  background: var(--ui-surface-hi);
+  overflow-wrap: anywhere;
+}
+.pg-open-item {
+  margin: var(--ui-space-1) 0 0;
+}
+.pg-crumb {
+  margin: 0;
+  color: var(--ui-muted);
+  font-size: var(--ui-font-size-xs);
+}
+.pg-note {
+  margin: 0 0 var(--ui-space-2);
+  color: var(--ui-muted);
+  font-size: var(--ui-font-size-sm);
+}
+.pg-lines {
+  margin: var(--ui-space-2) 0 0;
+  padding-left: var(--ui-space-4);
+  font-size: var(--ui-font-size-sm);
+}
+
+/* The turn's yes/no checklist. */
+.pg-flow {
+  padding: var(--ui-space-4);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-surface);
+}
+.pg-flow-dots {
+  display: flex;
+  gap: var(--ui-space-1);
+  margin: 0 0 var(--ui-space-3);
+  padding: 0;
+  list-style: none;
+}
+.pg-flow-dot {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--ui-border);
+}
+.pg-flow-dot-on {
+  background: var(--ui-accent);
+}
+.pg-flow-q {
+  margin: 0 0 var(--ui-space-3);
+  font-size: var(--ui-font-size-xl);
+  font-weight: var(--ui-weight-bold);
+  line-height: var(--ui-line-height-tight);
+}
+.pg-flow-a {
+  margin-bottom: var(--ui-space-3);
+  padding: var(--ui-space-3);
+  border-left: 3px solid var(--ui-accent);
+  border-radius: var(--ui-radius-sm);
+  background: var(--ui-surface-hi);
+  line-height: var(--ui-line-height-loose);
+}
+.pg-flow-btns {
+  display: flex;
+  gap: var(--ui-space-2);
+}
+.pg-flow-btns > * {
+  flex: 1;
+}

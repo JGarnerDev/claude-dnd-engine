@@ -57,6 +57,10 @@ House rules for working in this repo, whoever the DM is:
 - **Rules fit every session.** Planning and review rules are written for sessions in general, never for one kind of episode (no finale rules). Music is not a planning concern: plan a cue or a track only when the DM asks for one.
 - **Reliability flags.** In historian files, add a `> **Reliability:**` note when a detail is inferred, comes from a nickname, conflicts with another source, or is ambiguous between mechanics and fiction, ending "Confirm with DM" or "Confirm with `<player>`".
 
+## Player Guides
+
+Each player can have a guide to their own PC in `meta/player-guides/<PC>.md`, shown at `/player.html`: Turn, Combos, Strategies, Build, Notes and Roleplay. Guides are **player-safe**: never put DM-only material or other PCs' secrets in one. `/player-guide <PC>` writes or fully refreshes a guide; `/recap` Phase 6.5 proposes small updates after each session the PC plays and restamps `guide_confirmed`. The page warns when the PC levels past the guide or plays two sessions past its stamp.
+
 ## Placeholder Files
 
 Blank or incomplete files (meta templates, draft lore, unfilled player files) are intentional placeholders the group fills later. When an audit or task surfaces one, the only required action is ensuring the `/todo` dashboard (`todo-dashboard.md`) carries an entry for filling it — as a backlog item with a note on what degrades until then. Don't flag them as defects, don't propose detection heuristics or workarounds to skip them, and don't score them as gaps beyond the todo entry.
@@ -219,7 +223,7 @@ Scripts and app code are hard to misuse: build from small single-purpose functio
 
 ## Stamp Pattern
 
-Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, NPC `voice_confirmed` and `stats_confirmed`, the campaign Rest Clock header, campaign tracker headers (`scheduler/campaign/_*.md`, e.g. the Citadel Clock), the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
+Recurring engine idiom for drift-prone state: stamp the state with the marker it was last confirmed at (session number or git SHA), restamp on every `/recap` even when nothing changed, and let a script flag when the stamp lags the latest played session. A stale stamp means reconstruct-with-DM — never trust the old numbers. Current instances: `vector-index/.index-built` (git SHA), PC `level_confirmed`, NPC `voice_confirmed` and `stats_confirmed`, the campaign Rest Clock header, campaign tracker headers (`scheduler/campaign/_*.md`, e.g. the Citadel Clock), player guide `guide_confirmed`, the project `VERSION` (last bump commit — see Versioning below). Use this pattern for any new state that can go silently stale.
 
 ## Versioning
 

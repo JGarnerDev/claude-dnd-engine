@@ -39,7 +39,7 @@ The timeline and the session runner are a React app in `app/`, served by the Vit
 
 ```bash
 npm --prefix app install   # needs a GitHub token for jeff-ui; see below
-npm --prefix app run app   # opens http://localhost:5177/; the runner is at /session.html
+npm --prefix app run app   # opens http://localhost:5177/; the runner is at /session.html, the player guide at /player.html
 ```
 
 `scripts/run.ts` (Node 24) starts the server, or reuses it if it's already running, so there is only ever one. `node scripts/run.ts list` shows what's running and `stop app` stops it. `npm run app` from inside `app/` does the same.

@@ -72,6 +72,9 @@ function ChartHost({ data, initial }: { data: TimelineData; initial: View }) {
             <Link variant="button" href="/session.html" className="chart-sessionlink">
               Run session
             </Link>
+            <Link variant="button" href="/player.html" className="chart-playerlink">
+              Player guide
+            </Link>
             {campaign !== null && (
               <CampaignSelect
                 campaigns={scope.campaigns}

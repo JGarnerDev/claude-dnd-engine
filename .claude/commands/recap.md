@@ -249,6 +249,36 @@ Present the proposed changes and ask for confirmation before writing.
 
 ---
 
+## Phase 6.5 — Player Guides
+
+For each guide in `meta/player-guides/` (not `_template.md`) whose PC is in this session's
+`pcs_present` and whose `guide_confirmed` is older than this session, list what the session gives
+it, section by section, only where something changed:
+
+- **Turn / Build:** a level-up, a new feature, spell or item that changes what the PC does on a turn
+- **Combos:** a new party member or companion, or an ally's new trick that pairs with the PC
+- **Strategies:** an enemy type the party met for the first time, and what worked or didn't
+- **Notes:** a `### To do` item this session settled (remove it), a new question for the DM, or
+  a reminder the player would want. Always rewrite `### Currently` from this session's
+  player-facing slides (where the party is, what's next, the open mysteries)
+- **Roleplay:** a table moment that landed with a character, as a new hook in their group; a new
+  character the PC now deals with gets a group
+
+**Player-safe only.** A guide is for its player. Draw only on what happened in front of the table:
+nothing DM-only (scheduler plans, `DM-only` blocks, `scheduler/campaign/_*.md` trackers, PC arcs,
+loot options), no other PC's private backstory or secrets, no NPC truths the party hasn't learned.
+
+Present one numbered list per guide and ask once per guide (per Working Rules: one question per
+message): apply all, pick by number, or skip. Apply what's picked in the guide's existing voice
+and format (`meta/player-guides/_template.md`). A level-up that reshapes the build is a full
+`/player-guide <PC>` refresh, not a line edit: say so and leave it for that.
+
+Then restamp `guide_confirmed` to this session, also when the DM says nothing changed (Stamp
+Pattern). Leave it alone only when the DM skips the guide: the page then warns once the PC has
+played two sessions past the stamp. Skip this phase silently when no guide's PC was present.
+
+---
+
 ## Phase 7 — Summary
 
 **Clear the inbox first.** If Phase 1 found a notes file in `recaps/inbox/`, delete it now — its content lives in the historian record, and a file left behind makes the next `/session` and `/todo` report this session as still uncanonized. Delete only that one file, and only once Phases 4–6 are written; if the DM stopped the recap early, leave it.
@@ -265,6 +295,7 @@ Report what was done:
 - Missing entities still needing files: [list]
 - Campaign state: updated / no changes needed
 - Preference `Deployed:`/`Seeded:` lines updated: [list, or none]
+- Player guides updated / restamped: [list, or none]
 - Inbox notes file deleted: [yes / n/a]
 
 If any action items remain (unconfirmed entities, meta files to update), list them explicitly.

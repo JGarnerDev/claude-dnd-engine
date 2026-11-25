@@ -11,3 +11,10 @@ declare module "virtual:session-data" {
   const data: SessionData | null;
   export default data;
 }
+
+// Ambient type for the player guide page's data, supplied by player-guide-plugin.
+declare module "virtual:player-guides" {
+  import type { GuideFile } from "./player/guide-file.js";
+  const files: GuideFile[];
+  export default files;
+}
