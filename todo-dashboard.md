@@ -37,7 +37,6 @@ Read `scheduler/campaign/_handover.md` first.
 - **57.** 🙋 **Ben** — Halsby's sheet has `race: "TBD"` and `background: "TBD"`, **Level is now 4 on his sheet** (written 2026-10-01); he carries no `level_confirmed` stamp until he is played, so `party-status.py` flags him STALE by design and Session 1's `/recap` clears it. Race and background are still `TBD` — fill whenever Kellan has them; Halsby is a Session-1 body (he is the fifth PC — see item 6), so having them before Tuesday matters more than it did.
 - **36.** 🤝 **Ben** — `meta/difficulty.md`'s five Skill Challenge DC cells are empty. S2's four-stage pursuit needs them; Session 1 does not.
 - **74.** 🤝 **Ben** — `meta/difficulty.md`'s Party Profile **General power level** is blank. Session 29 hints the party plays above paper (Twinned Spell, Extra Attack, area psionics cleared six raiders in two rounds). Until it is filled, the new rounds-to-clear check has no baseline for how hard this table hits, so encounters may again run soft.
-- **98.** 🙋 **Ben** — **fill the `## Working with` section of `meta/players/Ben.md`**: how you read (phone or desk), how you want questions asked, anything Claude should avoid. Jeff's section in `meta/players/Jeff.md` is the example. Until then Claude works with you on the repo-wide rules only (root `CLAUDE.md` → Working Rules).
 
 ### Session 35 carry-over — open prep from its `_tasks.md` (recap 2026-11-25)
 
