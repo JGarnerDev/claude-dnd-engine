@@ -37,6 +37,60 @@ Act: [[Act 1 - The Fire That Eats the Way]] | Campaign: [[A short quick trip to 
 
 [[Cinto]] is the pilgrim port outside the glaciers, a melting pot of faiths and commerce that never sleeps. Shops, temples, guilds, a port, an infirmary, homes and an inn crowd together, and the town swells during festivals. Even monks under vows of silence struggle to keep quiet in the excitement.
 
+## Before Cinto: leaving Ashford
+
+This is where Jeff's Redwater stopped, and where your first session picks up. Everything here comes from Jeff's handover; the choices are yours.
+
+**Where they are:** [[Mara Tull]]'s office in [[Ashford]], about 4 p.m. on `6743-05-22` ([[Ashford]] Day 3). [[Shaw Proudfoot|Shaw]] has just walked free with his sealed letter, and Mara has called off the hanging, as long as he stays away from [[Ashford]] for about a month. The whole party is level 5 and at full HP, and they can't take a long rest before tonight.
+
+**Who's coming:** [[Halsby]], [[Luci]], [[Odibli]], [[Iggy]] and [[Shaw Proudfoot|Shaw]]. [[Dip]] is away. Two animal companions ride along: **[[Sergei Rubelgerd|Sergei]]**, [[Odibli]]'s big talking dog (a good boy, always asking for snacks), and **[[Bosco]]**, [[Iggy]]'s grudge-holding raccoon from Barovia.
+
+**What they're carrying:** an earshot crystal each plus the crew's five spares, Bane's ledger in its copper tube, [[Nella]]'s tally stick, 150 gp, 500 sp and 5 pp, and the five camp horses (Clover, Old Tom, Biscuit, Nettle and Parson).
+
+### 1. Opening the letter
+
+The first thing at the table: [[Shaw Proudfoot|Shaw]] breaks the seal and reads Choco La's letter aloud (the handout is in [[Shaw Proudfoot|Shaw]], Choco La and [[Hobbes]], in the Overview). It's from a long-lost half-brother, it says something is happening far to the north at the [[Deorum Ostium|Deorum Sanctum]], and it asks [[Shaw Proudfoot|Shaw]] to come and find him by Midwinter. The reward that makes the party go is Tyler's and yours to settle; [[Shaw Proudfoot|Shaw]]'s "family, family, family" may be reason enough for him, and the rest of the party has plenty of reasons to be anywhere but [[Ashford]].
+
+- **Choice (party):** go north with [[Shaw Proudfoot|Shaw]], now. Every hour they wait is an hour closer to the reeve.
+
+### 2. The reeve from [[Orrend]]
+
+Lord Cael's reeve is riding in from [[Orrend]] for Bane's ledger and the hanging, and arrives the morning after the party leaves, to find the prisoner gone. Jeff's handover asks you to leave Harrow Bane's band and the ledger for Redwater's return, so keep this light:
+
+- **Leaving at night** (the easy way): the party is on the river before he arrives. He becomes a name, not a scene.
+- **A rider catches up** at the dock, or on the riverbank the next morning: a Cael rider with a warrant for "the halfling deserter." Mara's word that the hanging is off counts for something: CHA (Persuasion) DC 13 with her name behind it, DC 16 without. Handing over Bane's ledger would satisfy him at once, but that touches Redwater's parked threads, so it's a choice to make with Jeff in mind.
+- **Later, in [[Cinto]]:** someone sells the secret "where the halfling deserter went" to [[Ebling Mis|Archivist Mis]] (a Useful secret, 25 gp). A Cael notice turns up on the harbour board. It never has to become more than a threat.
+
+### 3. The way north
+
+Your run opens with a long boat ride. One way to do it, in two legs:
+
+- **Downriver:** a riverboat from [[Ashford]]'s dock down to the sea, about two days. (The river route and the coast are Jeff's world, outside your regions, so check the details with him.) [[Nella]] escaped downriver too, and one glimpse of her hood on a passing barge is all the river needs; she's Redwater's, so let her go.
+- **North by sea:** at the coast, **Captain [[Hober Mallow]]**'s ship takes them north to [[Cinto]], about eight days. Her sailors teach the party the shanty "The River Daughter" on the way, verses in the wrong order, which seeds the dam and wheel puzzle before they ever reach [[Cinto]].
+- **The horses:** five horses on a ship are a problem. Leave them with Mara, sell them at the coast, or pay [[Hober Mallow|Mallow]]'s freight. **Old Tom**, who took the party for prophecy, refuses to be left behind.
+- **[[Sergei Rubelgerd|Sergei]] and [[Bosco]] aboard:** [[Bosco]] steals from the galley; [[Hober Mallow|Mallow]]'s cook declares war. In [[Cinto]], [[Malingo]] offers fur coats "in dog and raccoon." In [[The Buckle|the Buckle]], [[Stamp]] the puffin and [[Bosco]] hate each other on sight.
+- **The bright nights:** around `6743-05-25` there's no true dark at all. At sea the sun barely sets, which makes a good first night for strange talk on deck.
+
+### 4. The Kerning
+
+The next Kerning lands on `6743-06-01`. With two days on the river and eight at sea, that's the day the ship reaches [[Cinto]]. A good arrival: the whistle sounds as the ship comes into harbour, the docks empty in seconds, and everyone in [[Cinto]] knows to get indoors except the party (Jeff's sky-clock idea 1). Whether it's a major landing is your call on the day (`scheduler/campaign/_sky-clock.md`).
+
+### 5. [[Odibli]] and the Citadel Clock
+
+The clock stands at 1 of 3. Every levelled spell [[Odibli]] casts, you roll a hidden d6; a 1 means the Citadel sensed it, and he feels a brief cold. At 3, a teardown reaches him and the clock resets. Spells never fail. The rules and the ideas sheet are in `scheduler/campaign/_citadel-clock.md`.
+
+- **It lines up with [[Odibli]]'s secret:** Jeff's ideas for a sensed cast include his journal's newest line bleeding as if the ink were wet, and a line in his own hand that he doesn't remember writing. That's the same thread as the nameless altar in [[The Hollow Mountain|the Mountain]] (fresh ink, his handwriting) and [[Aurelian Sellenor|the Archhierophant]]'s "Your ink is very old." Using "the ink runs" on his first sensed cast in [[Cinto]] foreshadows the altar nicely.
+- **The thin veil:** if you want the [[Deorum Ostium]]'s thin veil to make his casting riskier (say, sensed on a 1 or 2 inside [[The Hollow Mountain|the Mountain]]), that changes Miguel's premise, so ask him first.
+
+### 6. [[Iggy]]'s Act I item
+
+Jeff didn't pick his own character's item; Act 1 needs one from `meta/loot-options/[[Iggy]]/`. The sheet's recommended pick, **[[The Unfinished Catechism]]** (a small blank prayer book that holds three tenets [[Iggy]] writes in play, with advantage once per long rest when he acts on one), fits [[Cinto]]'s melting pot of faiths. One way to give it: after [[Iggy]] plays at [[The Last Fire|the Last Fire]], [[Cal Mooney]] hands him a blank prayer book a pilgrim left behind. "Somebody who knew what they believed would've filled it. Maybe you will."
+
+### 7. [[Shaw Proudfoot|Shaw]]'s band and [[The Post|the Post]]
+
+- **Bane's band** may send someone after the deserter who knows its plans (one of [[Shaw Proudfoot|Shaw]]'s open hooks). [[Shadwell]] in [[Cinto]] is an easy fit, as a contact the band pays to watch for him; keep the band itself offstage for Redwater.
+- **The Post** is already counting the robbed sack: the blank RETURN TO SENDER letter on his pillow at [[The Last Fire|the Last Fire]] is the first sign (see [[Shaw Proudfoot|Shaw]] and [[The Post|the Post]], in the Overview).
+
 ## Knowledge is currency
 
 **Knowledge is currency.** It's worth more than gold, though gold still has its place. Players can pay with a secret, and the merchant judges how rare it is:
