@@ -28,3 +28,6 @@ Race: halfling
 [[Bree Tealeaf]] tends bar at [[The Golden Lioness]]. She knows people she shouldn't, in cities she's never mentioned visiting. The chatty act is real, and also useful.
 
 She and [[Lok Thuliaga]] arrived at the Lioness within a season of each other.
+
+> **DM note (Jeff, 2026-11-24):** kept for a plot line of her own, introduced later. Don't bring
+> Bree in as a hire, an upgrade or a walk-on.

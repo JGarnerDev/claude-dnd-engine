@@ -1,9 +1,9 @@
 ---
-description: "Polish a session plan before it runs: fill thin scenes, make lines plain and cued, keep names and cuts consistent, list new canon, check for real choices, check prose against the anti-slop guide."
+description: "Polish a session plan before it runs: fill thin scenes, make lines plain and cued, keep names and cuts consistent, list new canon, check for real choices, check prose against the anti-slop guide, check scene order and cause and effect."
 argument-hint: "[session] [--ready]"
 ---
 
-Review a session plan before it runs: fill what is thin, make lines plain and cued, keep names and cuts consistent, list the new canon the plan sets, and make sure the party has real choices to make.
+Review a session plan before it runs: fill what is thin, make lines plain and cued, keep names and cuts consistent, list the new canon the plan sets, make sure the party has real choices to make, and check that each scene runs in an order the table can follow.
 
 **Arguments:**
 
@@ -21,7 +21,7 @@ Two modes:
 - **Called by `/session` Phase 6** (plan being written for the first time): run the passes and apply them directly. No findings list. The DM already approved the spine, so never add a beat in this mode: a new beat a pass wants, such as a Pass 5 choice, goes back to `/session` as a proposed spine change.
 - **Run by the DM** (standalone): run the passes, present the findings as a numbered list in plain language, and apply what the DM approves ("all" is a fine answer). Keep the numbers stable across follow-up turns, so the DM can answer by number from a phone.
 
-Read once, at the start: the plan file, its `_flow.md` if present, `meta/player-agency.md` (for Pass 5), `meta/prose-style.md` (for Pass 1's additions and Pass 6), the files of every NPC who speaks and every location a scene is set in (1 hop, frontmatter first), and the PC arc of every PC present (`scheduler/arcs/`, frontmatter plus Growth / Fall, for Pass 5). Do not re-read the plan between passes.
+Read once, at the start: the plan file, its `_flow.md` if present, `meta/player-agency.md` (for Pass 5), `meta/prose-style.md` (for Pass 1's additions, Pass 6 and Pass 7), the files of every NPC who speaks and every location a scene is set in (1 hop, frontmatter first), and the PC arc of every PC present (`scheduler/arcs/`, frontmatter plus Growth / Fall, for Pass 5). Do not re-read the plan between passes.
 
 ---
 
@@ -47,7 +47,7 @@ Rules:
 - **Every line has a cue.** Note what in the scene prompts it: something the NPC sees, a question, an event. A character tangent needs a concrete object or moment to set it off, ideally drawn from the location's file, never a musing out of nowhere
 - **Leave unset canon unset.** Numbers, names and facts that canon has not fixed go in as backticked placeholders (`` `<a big number>` ``) for the DM to set at the table and `/recap` to record. When the DM asks for the detail instead, write it and log it in Pass 4
 - Respect the plan's own limits: do not narrate a PC's inner experience, do not name what a scene says stays unnamed, and do not front-load a feud past its stated budget
-- Add under the existing node headings, so the session runner shows each addition on the right step. Never rename or reorder nodes
+- Add under the existing node headings, so the session runner shows each addition on the right step. Never rename or reorder nodes here; a reorder is a Pass 7 finding
 - **Check each scene header** (`/session` Phase 6): Summary, Where, Cast, Enemies, DCs, Time and Trigger are present. Every DC in the scene's nodes is also listed in DCs, and every Enemies entry matches a `## Combatants` stat block. Add or fix what's missing. Move provenance (`(Jeff, <date>)`, `Engine, …; committed …`) out of scene prose and into the Engine notes
 - **Check the cues** (`/session` Phase 6 → Say when things happen): a beat that fires on a condition opens with a `When:` line, an enemy who joins mid-fight carries `arrives round N` on its Enemies entry, an HP threshold in a Watch item names the enemy and gives the number in HP, a fight whose combat beats don't bracket it carries `Combat starts:` / `Combat ends:` markers, and a boss carries `Boss fight starts:` / `Boss fight ends:`, a `Legendary actions: N a round` line if it has them, and its phases as bold labels with the HP in them, each phase with a beat of its own. Add what's missing
 - **Check the voices** (`/session` Phase 6 → Party-facing text is a Say block, Say when time passes, Loot is a copyable list). Fix each one you find:
@@ -148,9 +148,44 @@ Check the plan's prose against `meta/prose-style.md`, after Pass 1 so its additi
 
 ---
 
+## Pass 7 — Scene Flow
+
+Read every scene top to bottom, in the order the table will hear it, against `meta/prose-style.md`
+→ Scene flow. Run it last, so what Pass 1 added is checked too. Look for:
+
+- **Order:** beats that send the party back to a place they left, an NPC who enters twice in one
+  scene, a calm beat ahead of an urgent one in the same place, a `Time passes:` line above work
+  that happens before it, and anything after a clock jump that shows the old state or the wrong
+  time word
+- **Cause and effect:** a fact an NPC acts on with no beat showing how they learned it, a payoff
+  whose set-up the table never sees, and a choice whose "now" option can't start from where the
+  party is
+- **Payoffs:** a party choice no later read-aloud shows, and a reward scene told in one summary
+  sentence instead of its own paragraph from inside the place
+- **Pacing:** a moment told twice across a recap or montage, and a run of read-aloud longer than
+  three to five minutes with nothing for a player to answer
+- **Layout:** a beat whose labels aren't in playing order (Say, `Introduce:`, rules, choice), a
+  handout listed away from the moment it comes out, and prep reminders inside a beat instead of
+  `_tasks.md`
+
+Each finding names the nodes, says what the table would notice ("the wagon reaches the Lioness,
+then drives through the square"), and gives the fix: the new order, the missing beat, or the line
+to add in full. Rules:
+
+- **A reorder keeps every id and marker.** Moving a `[x]` beat is the DM's call, so it is always a
+  finding, never applied silently. Once approved, reorder the plan, then `_flow.md`: the node
+  lines in their subgraph, the edges, and a commitment-ledger line saying what moved
+- **New wording is draft.** A line added to a committed beat is dated "draft, engine `<date>`"
+- **Geography and facts canon hasn't set** (where a road crosses a river) are asked, or written
+  with "Confirm with DM", never invented silently
+- Called by `/session`: report reorders and new beats as proposed spine changes; apply only
+  in-place fixes (a moved `Time passes:` line, a merged NPC entrance, a time word)
+
+---
+
 ## Close
 
 1. Confirm the plan still parses: `uv run scripts/session-cards.py --session {NN}`
 2. If `_flow.md` exists: `uv run scripts/flow-status.py --set "<session folder>" --quiet`. Report only problems this review caused or touched
 3. With `--ready`: set `state: planned` in the plan's frontmatter, then run `uv run scripts/prep-status.py --session {NN}` for what is still left before game night (maps, tokens, draft beats, hand-kept tasks)
-4. In chat, list what changed, grouped by scene, plus any placeholders the DM must set, the new-canon list, the choice count, and the Pass 6 result (prose findings, and what was kept on purpose). With `--ready`, add the prep-status TODO lines after them. Plain language, numbered. Do not commit
+4. In chat, list what changed, grouped by scene, plus any placeholders the DM must set, the new-canon list, the choice count, the Pass 6 result (prose findings, and what was kept on purpose), and the Pass 7 result (reorders and missing set-ups). With `--ready`, add the prep-status TODO lines after them. Plain language, numbered. Do not commit

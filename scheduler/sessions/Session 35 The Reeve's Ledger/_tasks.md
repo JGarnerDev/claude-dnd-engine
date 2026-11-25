@@ -17,6 +17,8 @@ Planned date: 2026-11-24.
       finale (`S35_29`–`S35_30`, Jeff's order 2026-11-23: Dip leaves, then the reeve, then Shaw).
 - [ ] **Tyler's entrance** (`S35_30_SPEAKS`): message Tyler on Discord when Scene 8 starts (about
       half an hour's warning). Make sure he has the Roll20 invite and knows his first line is his.
+- [ ] **Shaw's one true thing** (`S35_30_SPEAKS`, draft, engine 2026-11-24): message Tyler before
+      the session so he has it ready: why Shaw walked into Ashford. The plan leaves it to him.
 - [ ] **Tell Ben the letter opens his run.** It stays shut at this table. Its text and reward are
       Ben's and Tyler's.
 - [x] **The stake number** (`S35_25_STAKE`): 20% to start, 25% if Dip argues it (Jeff, 2026-11-22).

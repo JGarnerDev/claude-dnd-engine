@@ -102,6 +102,40 @@ The stock moves of model-written fantasy. Same rule: candidates, not bans.
 - A closing image spent early: the session's last picture (a broken seal, a door shutting)
   already used anywhere earlier in the session, so the ending lands as a repeat.
 
+## Scene flow
+
+A plan is read in order at the table, so the order of its beats is part of the prose. These rules
+keep a scene's causes visible and its picture consistent. `/review` Pass 7 checks them.
+
+1. **Follow the map.** A scene's beats follow the party's actual route. No beat puts them back in a
+   place they have already left: the edge of town, then the square, then the door, never the door
+   and then the square.
+2. **One entrance per NPC per scene.** Fold everything an NPC says in a scene into one
+   appearance. An NPC who is "in there with him now" can't have walked up a beat earlier.
+3. **Time passes goes after the work it covers.** Put the line below the beats that happen before
+   the jump. After it, nothing shows the old state (a fire still burning, light that's wrong for the
+   hour), and every time word in the scene ("tonight", "dusk", "noon") matches the clock.
+4. **Urgent before calm.** In one place, a beat with a deadline (something burning, someone
+   leaving) runs before the unhurried ones.
+5. **Every fact an NPC acts on has a visible source.** If an NPC knows something, a beat shows who
+   told them and how it travelled: a rider sent, a letter, a witness. The payoff then lands as a
+   result, not a surprise.
+6. **Set up what a later beat leans on.** An object, a ruin or a person's past that a later beat
+   builds on (a burned landing someone rebuilds) is shown to the table earlier, in passing.
+7. **Every choice shows up again.** Each choice the party makes gets a slot in a later read-aloud,
+   with brackets for the DM to fill. A reward scene gets its own paragraph from inside the place,
+   not a summary sentence.
+8. **A choice's trigger works from where they stand.** If a choice says "now", the next beat
+   starts in that place. If it can't, move the choice or change its options.
+9. **Tell each moment once.** When a recap, montage or later account crosses a moment already
+   told, refer back to it ("as before") instead of describing it again.
+10. **No long stretch of narration.** After three to five minutes of read-aloud, give the table
+    something to answer: an `Ask:` to one player ("What went through your head?"), a choice, a
+    roll. Take one line and move on.
+11. **Write a beat in the order it's played.** Say, then `Introduce:`, then the rules, then the
+    choice, with each handout at the moment it comes out. Prep reminders (message a player, print
+    a card) go in `_tasks.md`, not inside a beat.
+
 ## Before and after
 
 ### From the source skill
@@ -212,6 +246,8 @@ Check a draft before it goes to disk, not only at review:
    uses the closing image.
 6. Each NPC line could only come from that NPC (their file's `voice` and `## Voice`), and needs no
    gloss to land on a cold read.
+7. Read the scene top to bottom as the table will hear it, against Scene flow: the route, one
+   entrance per NPC, the clock, and a source for every fact an NPC acts on.
 
 ## Review findings
 

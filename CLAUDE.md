@@ -99,7 +99,7 @@ When creating any entity, read `meta/entity-creation.md` before proceeding. It c
 
 ## Prose Style
 
-Generated prose (read-aloud text, plans, historian records, player-facing notes, lore) follows an anti-slop pass: no stock AI phrasing, no stock fantasy tells, register matched to the audience, and voice kept rather than flattened. Read `meta/prose-style.md` once per task whenever a task writes or edits prose, and run its **While drafting** checklist before prose goes to disk. `/session`, `/recap`, `/transcript` (Drive notes) and `/pitch` load it at their writing step; `/review` Pass 6 checks plans against it.
+Generated prose (read-aloud text, plans, historian records, player-facing notes, lore) follows an anti-slop pass: no stock AI phrasing, no stock fantasy tells, register matched to the audience, and voice kept rather than flattened. Read `meta/prose-style.md` once per task whenever a task writes or edits prose, and run its **While drafting** checklist before prose goes to disk. `/session`, `/recap`, `/transcript` (Drive notes) and `/pitch` load it at their writing step; `/review` Pass 6 checks plans against it, and Pass 7 checks scene order against its Scene flow rules.
 
 ## Plans for the table
 

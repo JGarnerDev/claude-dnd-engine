@@ -27,3 +27,6 @@ Race: goliath
 [[Lok Thuliaga]] handles security and heavy work at [[The Golden Lioness]]. He left something behind before settling here and does not talk about it. The way he watches a room is not just bouncer instinct.
 
 He and [[Bree Tealeaf]] arrived at the Lioness within a season of each other.
+
+> **DM note (Jeff, 2026-11-24):** kept for a plot line of his own, introduced later. Don't bring
+> Lok in as a hire, an upgrade or a walk-on.

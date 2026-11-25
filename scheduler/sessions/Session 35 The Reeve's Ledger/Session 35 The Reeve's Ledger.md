@@ -242,12 +242,8 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 - **Say (to Odibli):** *"You're on your feet in the sand where you landed, ears still ringing
   from the drop, when the light comes across the yard. The crystal in your pocket says it too,
   right against your leg: 'Up, Wallaed.'"*
-- **Say (to Halsby):** *"You can't move yet. The Haste went out of your legs all at once and
-  left them made of wet sand. Then the light comes, and pins your shadow short and hard under
-  your feet, darker than it should be, as if it's been nailed there. Then it lets go."*
-- **Say (to Luci):** *"The captain in front of you lights up like noon, every dent in his
-  breastplate, and his shadow swings round behind him and points straight at his own burning
-  cart."*
+- **Luci and Halsby get their own view of the light in their accounts** (`S35_03_RECAPS`), so
+  don't give it to them here (draft, engine 2026-11-24).
 - **Private (Dip):** what Dip sees
   - **The message:** You feel the yard the way the Enclave taught you: the souls in it, each one
     a thread. Two of the raiders' threads go slack and slip out of this plane while you swing.
@@ -352,6 +348,8 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 > and again, and feathers and blood come off the blade, and the thing that owned the sky all
 > morning drops out of it and hits the sand so hard you feel it in your heels."*
 
+- **Ask (Ben):** *"What went through Dip's head, walking out of that shed with the fire at your
+  back?"* Take one line, then move on (draft, engine 2026-11-24).
 - **Say (Luci):**
 
 > *"Luci. The tally-man lunges, you hook his ankle, and he goes down over your foot. Before he
@@ -376,6 +374,8 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 > onto the grass by the river, the warmth on your face the whole way, as if something behind the sky wanted you to run
 > toward the light. Far behind you, the griffon screams."*
 
+- **Ask (Paul):** *"Every arrow missed you. Does Luci think that was luck?"* Take one line, then
+  move on (draft, engine 2026-11-24).
 - **Say (Halsby):**
 
 > *"Halsby. You don't like fire. You never have, and you have never once told the truth about
@@ -403,6 +403,9 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 >
 > *"Afterwards you'll notice your hands are cold. Colder than the fire had any right to leave
 > them."*
+
+- **Ask (Kellan):** *"You said you don't like fire. Does Halsby say anything, watching the
+  shed burn?"* Take one line, or a no, then move on (draft, engine 2026-11-24).
 
 #### S35_04_NELLA_TITHE — By the river, Nella feels Tithe die
 
@@ -638,40 +641,12 @@ About 11 a.m. on Day 2, in the yard of [[The Waystation]], the moment the fight 
 - **Time:** ~20 min
 - **Trigger:** the chase ends, or the party gives it up.
 
-#### S35_09_TALLY — Her debt tally, in Tithe's saddlebags
-
-- **Time passes:** the fire burns down. It's noon, the sun straight overhead, and the yard is
-  quiet for the first time today.
-- **Say:**
-
-> *"In the griffon's saddlebags, a notched antler stick and a purse, tied off in three places.
-> The antler is worn smooth where a thumb rests. Hundreds of notches, in groups, some scored
-> through. Each section of the purse is a different coin, counted."*
-
-- **Investigation, DC 12:** the notches are payments; the scored-through groups are *years*.
-  **DC 16:** the last group isn't finished, and the gap left for it is small. She is close.
-- **Don't name the debt.** The party holds something she needs back. That's the whole beat.
-- **The coin is exactly what she still owes.** The unfinished last group of notches leaves room
-  for the same sum, so anyone who counts both (DC 16 on the tally, then a look at the purse) can
-  work it out. Never say it aloud for them.
-- **Loot (copy to the party):**
-
-```
-Tithe's saddlebags
-- Notched antler stick (Nella's tally)
-- Purse, tied in three sections: 150 gp, 500 sp, 5 pp (250 gp in all)
-```
-
-- **Nella, if she's roped and sees them open it:** she says nothing, and counts the coins with
-  her eyes as they come out.
-- **Handout:** `handouts/nella-tally.html`, contents only.
-- **Choice (party):** the 250 gp purse: keep it (about one room in the new wing), spend it, or give
-  it back. It is exactly her remaining debt, and the choice comes due later.
-
 #### S35_10_CAMP_INTEL — What the fire left: the band's size and Bane's name
 
 Two discoverables. **Nothing else** — no Marlow coppers, no Jorn, no banner.
 
+- **When:** first, while the shed is still burning, so the ledger can be fetched from the fire
+  (reordered in review, draft, engine 2026-11-24).
 - **Say:**
 
 > *"The shed roof goes in with a sound like a sigh. Through the smoke, before it does, you see
@@ -697,6 +672,38 @@ The long shed
 - Harrow Bane's duty ledger, in a tin box (charred, readable)
 - Varrick's Cart-Whip (Dip's)
 ```
+
+- **Time passes:** the fire burns down. It's noon, the sun straight overhead, and the yard is
+  quiet for the first time today.
+
+#### S35_09_TALLY — Her debt tally, in Tithe's saddlebags
+
+- **When:** after the fire is down, at the griffon.
+- **Say:**
+
+> *"In the griffon's saddlebags, a notched antler stick and a purse, tied off in three places.
+> The antler is worn smooth where a thumb rests. Hundreds of notches, in groups, some scored
+> through. Each section of the purse is a different coin, counted."*
+
+- **Investigation, DC 12:** the notches are payments; the scored-through groups are *years*.
+  **DC 16:** the last group isn't finished, and the gap left for it is small. She is close.
+- **Don't name the debt.** The party holds something she needs back. That's the whole beat.
+- **The coin is exactly what she still owes.** The unfinished last group of notches leaves room
+  for the same sum, so anyone who counts both (DC 16 on the tally, then a look at the purse) can
+  work it out. Never say it aloud for them.
+- **Loot (copy to the party):**
+
+```
+Tithe's saddlebags
+- Notched antler stick (Nella's tally)
+- Purse, tied in three sections: 150 gp, 500 sp, 5 pp (250 gp in all)
+```
+
+- **Nella, if she's roped and sees them open it:** she says nothing, and counts the coins with
+  her eyes as they come out.
+- **Handout:** `handouts/nella-tally.html`, contents only.
+- **Choice (party):** the 250 gp purse: keep it (about one room in the new wing), spend it, or give
+  it back. It is exactly her remaining debt, and the choice comes due later.
 
 #### S35_11_BODIES — What the fire left on them
 
@@ -752,8 +759,6 @@ The yard
 
 #### S35_12_HAUL_HOME — The casks come home on their own cart
 
-- **Time passes:** the afternoon goes by on the road. The sun is low and red behind you by the time
-  Ashford's roofs come up. It's evening.
 - **The camp's wagon** takes the casks; Silas's cart is wrecked against the shed. The wagon
   becomes the Lioness's delivery cart.
 - **Tithe comes home too.** About five hundred pounds of griffon. Lifting it is a group Athletics
@@ -763,6 +768,8 @@ The yard
     morning. Name no item tonight.
 - **Silas's horses scattered** but are nearby (Animal Handling 12 each, or Odibli's Speak with
   Animals for all five). Roll a d6 for each: on a 1 it's lame or has thrown a shoe.
+- **Time passes:** the afternoon goes by on the road. The sun is low and red behind you by the time
+  Ashford's roofs come up. It's evening.
 - **Say:**
 
 > *"Silas is waiting at the edge of town, as if he's been standing there since you left. He
@@ -782,21 +789,54 @@ The yard
   - **Pay the ~35 gp:** square with Silas, and the Lioness keeps the wagon.
   - **Give him the camp's wagon:** no coin, but the Lioness has no cart.
   - **Neither:** he thinks less of them, and the next favour costs more.
-- **Say (Hob Fenner, the cooper):** *"Is that the thing that carried the archer?"*
-- **Say (Pell Ashby, the lamplighter):** *"Somebody fetch Mara. She'll want to see this."*
-- **Say (Mara):** *"Put that skull up in the Lioness. Let every raider who drinks there see it."*
-  The party decides what they keep.
-- **Say (Sable, at the door):** she puts down what she's holding and stands very still. *"That's
-  twice now you've saved this place."* Once the casks are inside: *"You said ten was thin. Bring
-  the deed tomorrow and we'll argue it."* No number tonight.
+- **Next:** the wagon goes on into the square (`S35_15_CELL`), then to the Lioness door
+  (`S35_13_FOX`, `S35_14_SABLE_MORNING`). Reordered in review so the town comes before the
+  door (draft, engine 2026-11-24).
+
+#### S35_15_CELL — While they were gone, a raider walked in and surrendered
+
+- **Say:**
+
+> *"The square is fuller than it should be at this hour. Pell Ashby is going round with his
+> pole, and every lamp he lights shows more people: standing in knots, talking low. When the
+> wagon comes through, half of them turn to stare at the griffon and the other half keep looking
+> across the square, at the sheriff's office, with its door shut and a lamp lit behind the
+> shutters. A woman with a basket on her hip is saying 'rope' as if it's already been
+> decided."*
+
+- **Say (Hob Fenner, the cooper), first, at the wagon:** *"Is that the thing that carried the
+  archer?"*
+- **Say (the townsfolk), as the party comes through:**
+  - *"You've not heard? One of them walked in. One of the raiders. Put his sword down on Mara's
+    step like he was returning a borrowed thing."* (Hob Fenner)
+  - *"Hasn't said a word since. Not his name, not nothing."* (Pell Ashby, from the top of his
+    ladder)
+- **Mara comes out of the office on her own**, drawn by the noise, and looks at the griffon
+  before she looks at anyone (draft, engine 2026-11-24).
+  - **Say (Mara):** *"He walked in. Put his blade down on my step. Hasn't said a word since. Half
+    the town wants him hanged by week's end."* A beat. *"I haven't decided anything. The
+    hanging's the reeve's to say, and the reeve's in Orrend."*
+  - **Say (Mara), at the griffon:** *"Put that skull up in the Lioness. Let every raider who
+    drinks there see it."* The party decides what they keep.
+  - **Say (Mara), over her shoulder, already turning:** *"Dunny. Saddle the grey. Orrend,
+    tonight."* This is the rider who comes back in `S35_26_RIDER` (draft, engine 2026-11-24).
+  - **If anyone mentions Bane's ledger**, she adds: *"And tell them we've got a name on paper."*
+    If nobody does, she hears of it from Sable by morning; the rider carries it either way.
+- **Plant (sword):** the sword he put down. Mara has it on her desk from now on.
+- **The prisoner is a silhouette only.** No name, no lines, no face in the light. Whoever looks
+  in through the open door sees six cells along the back wall, five empty, and a man on the
+  bench in the last one, hands on his knees, not moving.
+- **If Nella is roped on the cart:** **Say (Mara):** *"Six cells and one man in them. Put her at
+  the far end from him. Dunny, the keys. Then the grey."*
+- **Don't let them in the cell tonight.** Mara shuts the door on it.
 
 #### S35_13_FOX — A fox goes in at the Lioness door
 
 - **Say:**
 
-> *"As the wagon pulls up, a fox crosses the street ahead of it, unhurried, as if it owns the
-> road. Its eyes catch the lamplight, smoky green. It stops at the Lioness door, looks back at
-> the wagon, at the griffon, at Halsby, and goes in."*
+> *"As the wagon pulls up at the Lioness, a fox crosses the street ahead of it, unhurried, as if
+> it owns the road. Its eyes catch the lamplight, smoky green. It stops at the Lioness door,
+> looks back at the wagon, at the griffon, at Halsby, and goes in."*
 
 - **Halsby knows it on sight.** Nobody else has seen it before. Don't explain it. It's waiting at
   Asher's cave in the morning.
@@ -805,41 +845,19 @@ The yard
 
 - **Say:**
 
-> *"Sable comes out with a lamp and lifts the cover off the griffon. She looks a long time. Then
+> *"The door opens before anyone reaches it. Sable comes out with a lamp, looks once at the
+> casks, and then past them. She lifts the cover off the griffon and looks a long time. Then
 > she lets it fall."*
 
-- **Say (Sable):** *"Leave it in the wagon. Take what you want off it tonight. In the morning it
-  goes to the river, and I'll walk you there."* Pushed: *"Someone wants to meet you. He's waited
-  long enough. Morning."*
+- **Say (Sable):** she puts down the lamp and stands very still. *"That's twice now you've saved
+  this place."* Once the casks are inside: *"You said ten was thin. Bring the deed tomorrow and
+  we'll argue it."* No number tonight.
+- **Say (Sable), about the griffon:** *"Leave it in the wagon. Take what you want off it tonight.
+  In the morning it goes to the river, and I'll walk you there."* Pushed: *"Someone wants to meet
+  you. He's waited long enough. Morning."*
 - **Don't let her name Asher tonight.** She will in the morning.
-
-#### S35_15_CELL — While they were gone, a raider walked in and surrendered
-
-- **Say:**
-
-> *"The square is fuller than it should be at this hour. Lamps are lit at every door. People
-> stand in knots, talking low, and when the wagon comes through, half of them turn to stare at
-> the griffon and the other half keep looking across the square, at the sheriff's office, with
-> its door shut and a lamp lit behind the shutters. A woman with a basket on her hip is saying
-> 'rope' as if it's already been decided."*
-
-- **Say (the townsfolk), as the party comes through:**
-  - *"You've not heard? One of them walked in. One of the raiders. Put his sword down on Mara's
-    step like he was returning a borrowed thing."* (Hob Fenner)
-  - *"Hasn't said a word since. Not his name, not nothing."* (Pell Ashby)
-  - *"Mara's in there with him now. Go and ask her yourself."* Someone points at the office.
-- **Plant (sword):** the sword he put down. Mara has it on her desk from now on.
-- **The prisoner is a silhouette only.** No name, no lines, no face in the light. Whoever looks
-  in sees six cells along the back wall, five empty, and a man on the bench in the last one,
-  hands on his knees, not moving.
-- **Say (Mara):** *"He walked in. Put his blade down on my step. Hasn't said a word since. Half
-  the town wants him hanged by week's end."* A beat. *"I haven't decided anything. The hanging's
-  the reeve's to say, and the reeve's in Orrend."*
-- **If Nella is roped on the cart:** **Say (Mara):** *"Six cells and one man in them. Put her at
-  the far end from him. Dunny, the keys."*
-- **Don't let them in the cell tonight.** Long rest at the Lioness.
 - **Time passes:** the square empties. Night comes down on Ashford, and the party sleeps in real
-  beds for the first time in days.
+  beds for the first time in days. Long rest at the Lioness.
 
 ### Scene 5 — Asher
 
@@ -862,8 +880,9 @@ The yard
 - **Say (Sable):** *"Bring the wagon. And the whip, Dip. He'll want to see that."*
 - **Say:**
 
-> *"Sable leads you out the back of the Lioness and down the river path, the wagon creaking
-> behind. Five minutes, no more. Where the bank is steepest, under the roots of an old willow,
+> *"Sable leads you out the back of the Lioness. The back door is standing open a hand's width,
+> though she says she bolted it, and the yard mud past it has one line of small prints going
+> down toward the water. You follow them down the river path, the wagon creaking behind. Five minutes, no more. Where the bank is steepest, under the roots of an old willow,
 > there's a gap in the earth you'd walk past a hundred times. She has you leave the griffon on
 > the mud at the water's edge, and she goes in first, with a lamp she doesn't light."*
 >
@@ -889,7 +908,8 @@ The yard
 - **What the fox is:** what Halsby tells the others is Kellan's call.
 - **Say:**
 
-> *"He bows, slowly, the whole bulk tilting. Then a name lands behind your eyes, too heavy to say
+> *"He bows, slowly, the whole bulk tilting. Then he finds Iggy, and bows again, lower, and holds
+> it there longer than is comfortable for something that size. Then a name lands behind your eyes, too heavy to say
 > back: Aashal-Groon Mellenegon Borak. Sable smiles at it, as if at an old joke. 'I tried to say
 > it once,' she says. 'Took me a week. He's been Asher since.'"*
 
@@ -960,7 +980,8 @@ The yard
 
 #### S35_19_ASHER_BOW — Iggy's questions, Halsby squared, and the bones worked on the spot
 
-- **Iggy.** Asher bows again to Iggy, slower and deeper than to anyone else. He felt something
+- **Iggy.** Asher turns to Iggy and bows as low as he did when he rose (`S35_16_THE_SPRING`),
+  the one bow in the cave he gives twice. He felt something
   divine arrive under his town in the spring and let it stay. Two questions, no more:
   - **Say (Asher):** *"What you carry. Does it know it is a guest?"* Then: *"And does it mean to
     stay?"*
@@ -1016,8 +1037,9 @@ From Asher
 > *"A clay cup comes up out of the water on a tendril, full of spring water gone milky. A rib off
 > the shelf crumbles into it as you watch, grit swirling. Tithe's, and other things."*
 
-- **Choice (Luci):** drink now, later, or never.
-  - **Now:** Scene 6 starts as the cup empties.
+- **Say (Asher), as she reaches for it:** *"Not here. Drink it under the sky."*
+- **Choice (Luci):** drink this morning, later, or never.
+  - **This morning:** at breakfast in the Lioness. Scene 6 starts as the cup empties.
   - **Later:** she keeps it. Scene 6 starts whenever she drinks.
   - **Never:** the trip doesn't happen, and the Wraps wait for another night.
 - **Say:**
@@ -1043,7 +1065,8 @@ From Asher
 #### S35_21_TRIP — Sabathiel, and the temple in the town
 
 - **Time passes:** late morning. The mist is off the river and the street is busy.
-- **When:** Luci drinks. She walks out the Lioness door, and nobody can stop her without
+- **When:** Luci drinks, at the Lioness table or whenever she chose. She gets up and walks out
+  the Lioness door, and nobody can stop her without
   grappling her. If someone follows, they see her walk the streets talking to nothing.
 - **Say (to Luci):**
 
@@ -1131,8 +1154,10 @@ From Asher
 > you, but around your legs the water is perfectly still. Your
 > hands are bound in cloth the grey of the sky before dawn, cool, and dry."*
 
-- **Say (Old Tobin Reed, on the bank, mending a net):** *"You've been stood there the best part
-  of an hour. Water wouldn't touch you."*
+- **Say:** *"On the bank, Old Tobin Reed sits mending a net beside four black stumps in the mud,
+  all that the raiders left of his ferry landing."*
+- **Say (Old Tobin Reed):** *"You've been stood there the best part of an hour. Water wouldn't
+  touch you."*
 - **The cost:** one level of exhaustion until her next long rest.
 - **The item:** [[The Stillwater Wraps]]. Unarmed strikes +1 to hit and damage; if she hasn't
   moved this turn, +1d4 radiant. Hand over the card (`handouts/stillwater-wraps.html`) when she
@@ -1169,21 +1194,20 @@ From Asher
   1. **Say (Elowen, she finds him):** *"There you are. No. There you are. There's two of you.
      One's at a desk a long way from here, and he hasn't looked up in years."*
   2. **If he laughs or argues, she tells him why she'd know.** She sits down, and her voice
-     goes steady, and she's somewhere else. Run it as her flashback:
-- **Say (Elowen's flashback):**
+     goes steady, and she's somewhere else. **Say (Elowen's flashback):**
 
-> *"'I was with a company once. Sixty-one of them, and me. We were cut off in a valley with the
-> enemy on all three ridges, and the guild had taught me how to move a wagon, a wall, a cask of
-> powder. Not people. Not sixty-one people all at once.'"*
->
-> *"'I drew the circle in the mud with my knife. Big. Bigger than it should be. They stood in it
-> shoulder to shoulder, and I could hear the arrows starting. I cut the order into the brace as I
-> spoke it, every word, so I'd hold on to it. Move them. Move them.'"*
->
-> *"'And the world folded. It was like being poured from one cup into another, and some of you
-> doesn't make it, it stays on the rim. We came down in a field forty miles off, in the rain, and
-> they were cheering, and I was counting. I counted twice. Not all of them got there.'"* A beat.
-> *"'Not all of me did either. I've been waiting for the rest of me ever since.'"*
+     > *"'I was with a company once. Sixty-one of them, and me. We were cut off in a valley with the
+     > enemy on all three ridges, and the guild had taught me how to move a wagon, a wall, a cask of
+     > powder. Not people. Not sixty-one people all at once.'"*
+     >
+     > *"'I drew the circle in the mud with my knife. Big. Bigger than it should be. They stood in it
+     > shoulder to shoulder, and I could hear the arrows starting. I cut the order into the brace as I
+     > spoke it, every word, so I'd hold on to it. Move them. Move them.'"*
+     >
+     > *"'And the world folded. It was like being poured from one cup into another, and some of you
+     > doesn't make it, it stays on the rim. We came down in a field forty miles off, in the rain, and
+     > they were cheering, and I was counting. I counted twice. Not all of them got there.'"* A beat.
+     > *"'Not all of me did either. I've been waiting for the rest of me ever since.'"*
 
   3. **Say (Elowen, gently):** *"You're not all here either, love. Something moved you, and not
      all of you came. It's all right. Same as me."*
@@ -1230,18 +1254,19 @@ From Asher
 
 - **Summary:** the party's share in the Lioness is settled. Then Mara brings the day the reeve
   will come, and the clock on the prisoner starts.
-- **Where:** [[The Golden Lioness]], the evening of Day 3.
+- **Where:** [[The Golden Lioness]], late afternoon into dusk on Day 3.
 - **Cast:** [[Sable Wren]] · [[Mara Tull]]
 - **Enemies:** none
 - **DCs:** Persuasion 14 — Dip argues the share up
 - **Time:** ~10 min
-- **Trigger:** evening; Sable puts the deed on the bar.
+- **Trigger:** late afternoon; Sable puts the deed on the bar.
 - **⏰ Tyler, 30-minute heads-up:** message Tyler now to join the Discord. He enters in Scene 10,
   about half an hour from here. If Scene 8 hasn't started by 10:00, message him anyway.
 
 #### S35_25_STAKE — Sable's deed, argued
 
-- **Time passes:** evening. The Lioness is quiet before the night's drinkers come in.
+- **Time passes:** late afternoon, back from the cave and the ford. The Lioness is quiet, the
+  light going long across the floor, and the night's drinkers are hours off.
 - **Say:**
 
 > *"Sable pours five cups without asking what anyone wants and gets it right every time. She sits
@@ -1258,6 +1283,8 @@ From Asher
 - **Dip argues** (Persuasion DC 14, or a good argument in Ben's words). **Say (Sable, if it
   lands):** *"Fine. Twenty-five. And that's the last time you get to say thin."* If it doesn't
   land, it stays at twenty, and she says so with a grin.
+- **Handout:** the Stake terms card when the pen comes out: `handouts/stake-terms.html` (25%) if
+  the argument lands, `handouts/stake-terms-20.html` (20%) if it doesn't.
 - **The rules:** coin never buys stake; stake is earned by deeds. Rooms in the new wing cost
   250–500 gp each, and gold for building is welcome.
 - **What signing gives at once:** a room each at the Lioness, free meals, and the party names one
@@ -1270,8 +1297,10 @@ From Asher
     off this, and I'll have them up before we open. Anything after that, you pay for in gold and
     timber like everyone else."*
   - **The six:**
-    - Hire hands: Lok Thuliaga, Bree Tealeaf and Oswin, a season's wages paid. The Lioness runs
-      while the party is away, and Lok remembers every face at the door.
+    - Hire hands: Wat Corley on the door, Ada Fenner behind the bar and Oswin on the stage, a
+      season's wages paid. The Lioness runs while the party is away, and Wat remembers every face
+      at the door. Not Lok Thuliaga or Bree Tealeaf: they're kept for plot lines of their
+      own later, so they don't join through an upgrade (Jeff, 2026-11-24).
     - A proper kitchen: oven and smoke hood. A long rest at the Lioness gives each PC one extra
       Hit Die.
     - Clear the back plot: opens ground for stables, a garden or a yard, and gives 3 timber.
@@ -1284,17 +1313,16 @@ From Asher
   - **The perks are draft** (engine 2026-11-24); check them before the table.
   - **Choice (party):** which two. Write them down. The other four stay on the What We Build Next
     card at its prices (gold plus loads of timber, stone or iron), handed over at closing.
-- **Handout:** the Stake terms card when the pen comes out: `handouts/stake-terms.html` (25%) if
-  the argument lands, `handouts/stake-terms-20.html` (20%) if it doesn't.
 
 #### S35_26_RIDER — Mara's rider is back: the reeve comes on the eighteenth
 
-- **Time passes:** dusk. Pell Ashby is lighting the lamps in the square.
-- **When:** as the ink on the deed dries.
+- **When:** as the ink on the deed dries. It's dusk by then; the Say carries it, so no Time passes
+  line (draft, engine 2026-11-24).
 - **Say:**
 
-> *"The door lets the cold in. Mara Tull, mud to the ankle, doesn't sit down. Out in the square
-> behind her, a boy is walking a horse up and down, and the horse is still steaming."*
+> *"The door lets the cold in, and the dusk with it. Mara Tull, mud to the ankle, doesn't sit
+> down. Out in the square behind her, Pell Ashby is going round the lamps, and under the first
+> one a boy is walking the grey up and down. The horse is still steaming."*
 
 - **Say (Mara):** *"Rider's back from Orrend. Cael's reeve comes on the eighteenth, for your
   ledger and for my prisoner. If he hasn't said a word by then, the reeve hangs him."* A beat.
@@ -1332,6 +1360,16 @@ From Asher
 > *"On the seventeenth night the lanterns are lit at the Lioness door, the casks you carried home
 > are tapped, and Ashford comes in out of the cold. By midnight there isn't a chair left."*
 
+- **Say (inside the room):** fill the brackets from `S35_25_STAKE` and drop any that don't apply
+  (draft, engine 2026-11-24).
+
+> *"Inside, it's loud and close and warm. Over the door to the new wing hangs a sign, new paint,
+> [what the party named]. [One clause for each upgrade picked: Wat Corley on the door, nodding people
+> in by name; the smell of bread from the new oven; the lantern on its post outside.] [If they
+> kept it: Over the hearth, Tithe's skull looks down on the room, and nobody takes the seat
+> under it.] Silas has the chair by the door, a cup in his fist, telling anyone who'll listen
+> that it won't last."*
+
 - **Say (Dip, opening night):** a quiet plant for the morning. Read it once the room is full, then
   move on. If anyone asks Dip what's wrong, Ben answers, and Dip doesn't have to say yet.
 
@@ -1345,13 +1383,11 @@ From Asher
 - **Plant (rope):** the coil of new rope on the boards, not yet hung. It goes up after "noon"
   (`S35_29_REEVE`).
 
-- **Ask everyone:** *"What did you do to make opening night work?"* Go round the table once. Take
-  each answer, make it canon, move on.
 - **What gets done (canon if played):**
   - The hole in the new wing is closed and roofed. The scorched circle in the yard is turfed over.
   - What the party named in the new wing (`S35_25_STAKE`) gets its sign over the door.
-  - The two upgrades picked at the stake (`S35_25_STAKE`) are finished. Show each in one clause
-    of the read-aloud if it fits (Lok on the door, the lantern on its post).
+  - The two upgrades picked at the stake (`S35_25_STAKE`) are finished. Each gets its clause in
+    the inside-the-room read-aloud.
   - The Lioness opens on the evening of Day 17, pouring from the casks the party brought home.
   - It pours but can't brew: the copper is still ruined, and only [[George Ringo]] or [[Zach]] can
     remake it.
@@ -1362,9 +1398,12 @@ From Asher
 > *"The last of Ashford goes home a little after two. Sable locks the door, pulls a stool up to
 > the bar, and opens the ledger beside a cup she hasn't touched all night."*
 
-- **Say (Sable):** *"Full house. Don't tell Silas I said it went well. A full house tonight is a
-  full house's worth of trouble next month: more mouths, more beds wanted, more people who know
-  where the money is. So. Partners. Here's what I'd build next, and what each one costs. Tell me
+- **Say (Sable):** *"Full house. Don't tell Silas I said it went well. Go on, then. Tonight
+  worked, and it wasn't all me. What did you do?"*
+- **Ask everyone** (Sable's question, out of character too: what did you do to make opening night
+  work?). Go round the table once. Take each answer, make it canon, move on.
+- **Say (Sable, once everyone has answered):** *"A full house tonight is a full house's worth of
+  trouble next month: more mouths, more beds wanted, more people who know where the money is. So. Partners. Here's what I'd build next, and what each one costs. Tell me
   where the money goes."* Hand over the What We Build Next card (`handouts/while-away.html`).
 - **Choice (party):** which projects Sable starts, and how much gold and how many materials they
   put in. Sable runs two at a time, whether the party is in town or not. Write it down for Ben.
@@ -1388,17 +1427,25 @@ From Asher
   this says it aloud.
 - **Ben leads.** Dip leaves on pilgrimage, to understand the bond between the divine and the
   mortal, and to look for the sister Asher's water once touched. How Dip says goodbye, and to
-  whom, is Ben's. Give each PC a moment with them, then hold on Dip's back on the road south.
-  The road south runs through the square, past the scaffold.
+  whom, is Ben's. Give each PC a moment with them.
+- **Say (Sable), at the table, before Dip stands:** a room stays kept. *"It's yours. I'll air it."*
+- **For Ben:** Dip leaves on the morning of the hanging. The reeve rides in an hour or two after
+  Dip is gone, so Dip misses the cell and Shaw's first words unless Ben keeps them (below).
 - **If Ben wants Dip to stay for the reeve,** let him. Dip goes into the cell with the others and
   leaves straight after the season's last line, and the farewell happens at the end instead.
-- **Say (Richmond Ellesine, reputation, unspent):** if Dip buys anything for the road, the
-  blacksmith knocks the price down without being asked. *"For the one who saved the Lioness.
-  Twice."*
-- **Say (Sable):** a room stays kept. *"It's yours. I'll air it."*
-- **Asher:** the field waits for Dip. When Dip passes the willow on the river path, a single gold
-  firefly drifts up out of the roots in the daylight, and goes back down.
-- **Time passes:** the sun climbs. Mid-morning, and the square is full.
+- **Follow Dip out, in the order the road goes** (reordered in review, draft, engine 2026-11-24):
+  1. **The square.** The road south runs through it, past the scaffold and the coil of rope on
+     the boards. Nobody else is up.
+  2. **The forge. Say (Richmond Ellesine, reputation, unspent):** he's at his forge door,
+     opening up. If Dip stops to buy anything for the road, he knocks the price down without
+     being asked. *"For the one who saved the Lioness. Twice."*
+  3. **The ford. Asher:** the field waits for Dip. Where the south road crosses the river at
+     the ford, a single gold firefly drifts up out of the water in the daylight, circles Dip
+     once, and goes back down. (Draft, engine 2026-11-24: that the south road crosses at the
+     ford isn't recorded anywhere yet. Confirm with DM.)
+  4. **Hold on Dip's back** on the road south, past the ford, until it's gone.
+- **Time passes:** the sun climbs. Mid-morning, and the square is full: Ashford has come out to
+  see what the reeve does.
 
 ### Scene 10 — The Reeve's Ledger
 
@@ -1426,8 +1473,8 @@ From Asher
   - **Look:** as in the Say above.
   - **Sound:** level, tired, a clerk's patience.
   - **Impression:** fair, and in a hurry to be somewhere else.
-- **What he wants:** Bane's ledger. Mara's rider told Orrend about the prisoner and the ledger
-  on Day 3.
+- **What he wants:** Bane's ledger. Mara's rider left for Orrend the night the casks came home
+  (Day 2, `S35_15_CELL`) and carried word of the prisoner and the ledger; he was back on Day 3.
   - **Say (the reeve):** *"His lordship would like to read it. As evidence."*
 - **Choice (party):** hand it over, or keep it.
   - **Hand it over:** Cael has Bane's name in his hand, written down. It tilts the feud toward
@@ -1457,6 +1504,10 @@ From Asher
 
 - **Tokens:** cell map: Shaw on the bench in the last cell; party at the door; Mara and the reeve
   by the desk; Nella in the far cell, if caught.
+- **Introduce:** [[Shaw Proudfoot]] (Tyler's PC)
+  - **Look:** as in the Say above.
+  - **Sound:** Tyler's. Quirks are found at the table, not written ahead.
+  - **Impression:** a soldier, not a monk, and a man who has already made up his mind.
 - **Payoff (sword):** his sword lies on Mara's desk, where she put it two weeks ago.
 - **Tyler takes over.** Shaw has spent two weeks reading Ashford through the bars, and now he
   reads the party. When he speaks is Tyler's call. Don't fill the silence: let the reeve read the
@@ -1470,21 +1521,17 @@ From Asher
   - **Odibli:** *"Count them."* The waystation dead had names, and Shaw knows them.
   - **Halsby:** the arithmetic, in his flat ferry tone: one man, one rope, one ledger.
   - **Dip:** only if Ben kept them for the reeve.
-- **He tells one true thing tonight** (draft, engine 2026-11-23): why he walked in. Tyler picks
-  it. The letter keeps the rest. Message Tyler before the session so he has it ready.
+- **He tells one true thing here** (draft, engine 2026-11-23): why he walked in. Tyler picks
+  it. The letter keeps the rest. Tyler has it ready (`_tasks.md`).
 - **His first line** is Tyler's, from the planning meeting: ***"What do you know about it?"***
   Tyler can say it his own way.
-- **Introduce:** [[Shaw Proudfoot]] (Tyler's PC)
-  - **Look:** as in the Say above.
-  - **Sound:** Tyler's. Quirks are found at the table, not written ahead.
-  - **Impression:** a soldier, not a monk, and a man who has already made up his mind.
 - **Say (the reeve), once he talks:** *"So he talks."* Then: *"The hanging waits. I'll hear all
   of it myself."*
 - **Insight 13:** the reeve is relieved. He didn't want to hang a man who walked in.
 - **What Shaw knows (Tyler plays it):** why he left (the kidnapping order), and what the band
   does next. Where the next raid falls is open (todo 71). If Tyler wants something to bargain
   with, he can hold the raid back as his price.
-- **Don't settle tonight:** his freedom, his price, or what Ashford does with him. Those are
+- **Don't settle this session:** his freedom, his price, or what Ashford does with him. Those are
   Ben's run.
 - **The last beat.** When the talk has run its course:
 
@@ -1561,9 +1608,13 @@ From Asher
 
 - **Old Tobin Reed** — ferryman. Finds Luci in the ford.
 - **Hob Fenner** — cooper, split brow. Stares at the griffon; tells them about the prisoner.
-- **Pell Ashby** — lamplighter. Sends for Mara; lights the lamps when the reeve rides in.
+- **Pell Ashby** — lamplighter. Lighting the square the night the casks come home, and up his ladder when the reeve rides in.
 - **Dunny Marsh** — young deputy, arm in a sling. Keeps the keys to the cells.
 - **Richmond Ellesine** — the blacksmith. A better price for Dip.
+- **Wat Corley** (draft, engine 2026-11-24) — Tobin's ferryhand, big and slow to speak, out of
+  work since the raiders burned the landing. On the Lioness door if the party picks Hire hands.
+- **Ada Fenner** (draft, engine 2026-11-24) — Hob's daughter, quick and dry, knows every cask by
+  the sound it makes when she knocks on it. Behind the Lioness bar if the party picks Hire hands.
 
 ## Contingencies
 
@@ -1682,7 +1733,7 @@ from the Tyler meeting, for his run. Share it from the page's Share menu first.
     were lit to keep a watch," and "Stand still, and I can reach you." · Luci woke
     in the ford with the water still around her · the Stillwater Wraps · Elowen's look as written
     here (her file has none) · Elowen's flashback of the translocation · the Unfinished Binding ·
-    Mara's sealed letter · the stake number and what the party named · Mara's rider and the
+    Mara's sealed letter · the stake number and what the party named · Mara's rider (sent the night of Day 2) and the
     eighteenth · Cael's reeve, unnamed, on Day 18 · the gallows the town built · "Then noon." ·
     Shaw's first words · "the hanging waits" · the letter held out, unopened · two weeks of
     building · what each PC did for opening night · the
@@ -1691,7 +1742,7 @@ from the Tyler meeting, for his run. Share it from the page's Share menu first.
     the rope hung at noon · Shaw's sword on Mara's desk · the one true thing Shaw tells · Nella and
     Shaw knowing each other, if it came up · Dip's farewell · Nella's debt tally (250 gp, exactly
     her debt) · thirty bedrolls, the band's size · Ilsa's buckle matching Cinder's collar ·
-    Silas's cart and what was paid · Hob Fenner (cooper) and Pell Ashby (lamplighter) · Nella
+    Silas's cart and what was paid · Tobin's ferry landing, burned to four stumps · Hob Fenner (cooper) and Pell Ashby (lamplighter) · Wat Corley and Ada Fenner, if hired · Nella
     caught or gone
   - **Log Odibli's casts** (Citadel Clock, at 1 / 3). Restamp the trackers. Mark spent: Silas's
     shoeing for Halsby and Richmond's price for Dip, if played.

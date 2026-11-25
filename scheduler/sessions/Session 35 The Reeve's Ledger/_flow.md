@@ -42,16 +42,16 @@ flowchart TD
   end
 
   subgraph SC3["Scene 3 · The Yard After"]
-    S35_09_TALLY["[x] S35_09_TALLY<br/>Antler tally, 250 gp purse<br/>exactly her debt"]
     S35_10_CAMP_INTEL["[x] S35_10_CAMP_INTEL<br/>Thirty bedrolls<br/>Bane's ledger in a tin"]
+    S35_09_TALLY["[x] S35_09_TALLY<br/>Antler tally, 250 gp purse<br/>exactly her debt"]
     S35_11_BODIES["[-] S35_11_BODIES<br/>What the fire left<br/>Vey's order, five crystals"]
   end
 
   subgraph SC4["Scene 4 · The Road Home"]
-    S35_12_HAUL_HOME["[x] S35_12_HAUL_HOME<br/>Wagon, griffon, Silas's horses<br/>'That's twice now'"]
+    S35_12_HAUL_HOME["[x] S35_12_HAUL_HOME<br/>Wagon, griffon, Silas's horses<br/>what Silas gets for his cart"]
+    S35_15_CELL["[x] S35_15_CELL<br/>The square talks<br/>six cells, one silent man<br/>Mara's rider to Orrend"]
     S35_13_FOX["[x] S35_13_FOX<br/>A fox goes in<br/>at the Lioness door"]
-    S35_14_SABLE_MORNING["[x] S35_14_SABLE_MORNING<br/>'In the morning it goes<br/>to the river'"]
-    S35_15_CELL["[x] S35_15_CELL<br/>The square talks<br/>six cells, one silent man"]
+    S35_14_SABLE_MORNING["[x] S35_14_SABLE_MORNING<br/>'That's twice now'<br/>'In the morning it goes<br/>to the river'"]
   end
 
   subgraph SC5["Scene 5 · Asher"]
@@ -100,11 +100,11 @@ flowchart TD
   S35_06_GOODBYE --> S35_07_CHASE
   S35_07_CHASE -->|"success"| NELLA_CAUGHT
   S35_07_CHASE -->|"fail, or let go"| S35_08_ESCAPE --> NELLA_AWAY
-  NELLA_AWAY --> S35_09_TALLY
-  NELLA_CAUGHT --> S35_09_TALLY
-  S35_09_TALLY --> S35_10_CAMP_INTEL --> S35_11_BODIES --> S35_12_HAUL_HOME
-  S35_12_HAUL_HOME --> S35_13_FOX --> S35_14_SABLE_MORNING --> S35_15_CELL
-  S35_15_CELL -->|"long rest"| S35_16_THE_SPRING
+  NELLA_AWAY --> S35_10_CAMP_INTEL
+  NELLA_CAUGHT --> S35_10_CAMP_INTEL
+  S35_10_CAMP_INTEL --> S35_09_TALLY --> S35_11_BODIES --> S35_12_HAUL_HOME
+  S35_12_HAUL_HOME --> S35_15_CELL --> S35_13_FOX --> S35_14_SABLE_MORNING
+  S35_14_SABLE_MORNING -->|"long rest"| S35_16_THE_SPRING
   S35_16_THE_SPRING --> S35_17_TRUE_STORY --> S35_18_THE_ASK --> S35_19_ASHER_BOW --> S35_20_LUCI_DRAUGHT
   S35_20_LUCI_DRAUGHT -->|"drinks"| S35_21_TRIP --> S35_22_WRAPS --> S35_23_ELOWEN
   S35_20_LUCI_DRAUGHT -->|"later or never"| S35_23_ELOWEN
@@ -117,7 +117,7 @@ flowchart TD
 
   S35_18_THE_ASK -.->|"the field waits for Dip"| S35_28_DIP_ROAD
   S35_10_CAMP_INTEL -.->|"the ledger"| S35_29_REEVE
-  S35_15_CELL -.->|"the silent man"| S35_26_RIDER
+  S35_15_CELL -.->|"the silent man, the rider to Orrend"| S35_26_RIDER
   S35_15_CELL -.->|"the hanging waits"| S35_30_SPEAKS
   S35_27_BUILD -.->|"the new rope"| S35_29_REEVE
 
@@ -165,5 +165,9 @@ flowchart TD
 
 - **Added, `[-]` (Jeff, 2026-11-24):** two free Lioness upgrades picked from six at the stake
   (`S35_25_STAKE`), built during `S35_27_BUILD`; after that, building costs gold and materials.
+
+- **Reordered in review (draft, engine 2026-11-24):** Scene 3 runs `S35_10` → `S35_09` → `S35_11`;
+  Scene 4 runs `S35_12` → `S35_15` → `S35_13` → `S35_14`. Markers unchanged; the new wording
+  inside them is `[-]` until Jeff signs it off.
 
 Elowen's scene moved here from Session 36 (todo 100): Session 36 is Ben's.

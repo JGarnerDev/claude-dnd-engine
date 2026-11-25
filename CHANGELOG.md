@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.112.0] — 2026-11-24
+
+### Added
+
+- **Scene flow** (`meta/prose-style.md` → Scene flow, `/review` Pass 7). Eleven rules for the order of a scene's beats: follow the party's route, one entrance per NPC per scene, `Time passes:` after the work it covers, urgent before calm, a visible source for every fact an NPC acts on, set-ups before what leans on them, every choice shown again in a later read-aloud, "now" triggers that work from where the party stands, each moment told once, no read-aloud run past three to five minutes without something to answer, and beats written in playing order with prep reminders in `_tasks.md`. Pass 7 checks a plan against them last; a reorder keeps ids and markers and is always the DM's call, and `_flow.md` follows it. The **While drafting** checklist gains a read-through against them.
+
 ## [0.111.0] — 2026-11-24
 
 ### Added
