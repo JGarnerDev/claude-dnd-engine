@@ -13,8 +13,20 @@
 // click spends one, a click on a spent one gives it back, and the next round refills
 // them all (they come back on its turn, which the runner doesn't track).
 
-import { useEffect, useRef, type CSSProperties, type KeyboardEvent } from "react";
-import { Badge, Box, Button, Disclosure, Heading, IconButton, Pips, Prose, Text } from "jeff-ui";
+import { useEffect, useRef, useState, type KeyboardEvent, type Ref } from "react";
+import {
+  Badge,
+  Box,
+  Button,
+  Disclosure,
+  Heading,
+  hueStyle,
+  IconButton,
+  Pips,
+  Prose,
+  Text,
+  TextInput,
+} from "jeff-ui";
 import type { Phase, StatBlock } from "./combatants.js";
 import { rollable, RollLog, type LoggedRoll } from "./Dice.js";
 import { allItems, inlineText, type Alert } from "./fight-cues.js";
@@ -204,6 +216,46 @@ export interface FightBarProps {
   onClearRolls: () => void;
 }
 
+// The picked enemy's damage box. Keyed by the entry, so a new pick starts empty.
+function DamageBox({
+  entry,
+  ref,
+  onHit,
+  onClose,
+}: {
+  entry: string;
+  ref: Ref<HTMLInputElement>;
+  onHit: (typed: string) => boolean;
+  onClose: () => void;
+}) {
+  const [typed, setTyped] = useState("");
+  const onKeyDown = (ev: KeyboardEvent<HTMLInputElement>) => {
+    if (ev.key === "Escape") {
+      ev.stopPropagation();
+      onClose();
+      return;
+    }
+    if (ev.key !== "Enter") return;
+    ev.preventDefault();
+    if (onHit(typed)) setTyped("");
+  };
+  return (
+    <TextInput
+      ref={ref}
+      size="sm"
+      className="sr-strip-in"
+      data-entry={entry}
+      inputMode="numeric"
+      placeholder="dmg"
+      title="12 or -12 deals damage · +5 heals · =40 sets · Enter applies · Esc closes"
+      label={`Damage or heal for ${plainText(entry)}`}
+      value={typed}
+      onChange={setTyped}
+      onKeyDown={onKeyDown}
+    />
+  );
+}
+
 export function FightBar({
   mode,
   round,
@@ -228,25 +280,11 @@ export function FightBar({
     if (focus.current) input.current?.focus();
     focus.current = false;
   }, [pick]);
-  const onKeyDown = (ev: KeyboardEvent<HTMLInputElement>) => {
-    if (ev.key === "Escape") {
-      ev.stopPropagation();
-      onPick("");
-      return;
-    }
-    if (ev.key !== "Enter") return;
-    ev.preventDefault();
-    const el = ev.currentTarget;
-    if (onHit(pick, el.value)) {
-      el.value = "";
-      el.focus();
-    }
-  };
   return (
     <div
       className={`sr-strip${mode === "boss" ? " is-boss" : ""}`}
       aria-label="The fight"
-      style={{ "--ui-hue": hue } as CSSProperties}
+      style={hueStyle(hue)}
     >
       <div className="sr-strip-top">
         <Badge solid hue={hue} className="sr-strip-mode">
@@ -263,11 +301,7 @@ export function FightBar({
             +
           </IconButton>
         </span>
-        <div
-          className="sr-strip-alerts"
-          aria-live="polite"
-          style={{ "--ui-hue": VOICE_HUE.watch } as CSSProperties}
-        >
+        <div className="sr-strip-alerts" aria-live="polite" style={hueStyle(VOICE_HUE.watch)}>
           {alerts.map((a, i) =>
             a.kind === "ready" ? (
               <Button
@@ -322,18 +356,12 @@ export function FightBar({
           <>
             <label className="sr-strip-quick">
               <span>{plainText(picked.entry)}</span>
-              <input
+              <DamageBox
                 key={picked.entry}
                 ref={input}
-                className="sr-strip-in"
-                data-entry={picked.entry}
-                type="text"
-                inputMode="numeric"
-                size={5}
-                placeholder="dmg"
-                title="12 or -12 deals damage · +5 heals · =40 sets · Enter applies · Esc closes"
-                aria-label={`Damage or heal for ${plainText(picked.entry)}`}
-                onKeyDown={onKeyDown}
+                entry={picked.entry}
+                onHit={(typed) => onHit(pick, typed)}
+                onClose={() => onPick("")}
               />
             </label>
             <Card c={picked} rolls={rolls} onClearRolls={onClearRolls} />

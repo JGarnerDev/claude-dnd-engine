@@ -3,19 +3,28 @@
 // the timeline, and the pin that docks or hides the panel (`\`).
 
 import { Box, Button, Kbd, Link, Row, SearchInput, Text } from "jeff-ui";
-import type { PanelApi } from "./usePanel.js";
+import type { PanelApi, PanelRefs } from "./usePanel.js";
 import { sessionTitle } from "./session-title.js";
 
 export interface RunnerHeaderProps {
   name: string;
   date: string;
   p: PanelApi;
+  search: PanelRefs["search"];
   onBack: () => void;
   onCopy: () => void;
   onRestart: () => void;
 }
 
-export function RunnerHeader({ name, date, p, onBack, onCopy, onRestart }: RunnerHeaderProps) {
+export function RunnerHeader({
+  name,
+  date,
+  p,
+  search,
+  onBack,
+  onCopy,
+  onRestart,
+}: RunnerHeaderProps) {
   return (
     <Box as="header" padding={3} className="sr-header">
       <Row justify="between" gap={3}>
@@ -28,7 +37,8 @@ export function RunnerHeader({ name, date, p, onBack, onCopy, onRestart }: Runne
           </Text>
         </Row>
         <SearchInput
-          id={p.searchId}
+          ref={search}
+          grow
           className="sr-searchbox"
           label="Search people, places, beats and mysteries"
           placeholder="Search the session"

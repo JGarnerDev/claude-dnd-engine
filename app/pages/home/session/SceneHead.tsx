@@ -124,7 +124,7 @@ export function HpBox({ entry, max, hp, start = max, boss = {}, onHit }: HpBoxPr
         value={typed}
         onChange={setTyped}
         inputMode="numeric"
-        size={4}
+        size="sm"
         placeholder="dmg"
         title="12 or -12 deals damage · +5 heals · =40 sets · Enter applies"
         label="Damage or heal"

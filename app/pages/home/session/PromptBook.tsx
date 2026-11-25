@@ -12,8 +12,8 @@
 //   Introduce  a character's first appearance: look, sound, impression
 //   Fight    where a fight or a boss fight starts and ends (`Combat starts:`, `Boss fight ends:`)
 
-import { Fragment, type CSSProperties, type ReactNode } from "react";
-import { CopyButton, Heading, List, Prose, Text } from "jeff-ui";
+import { Fragment, type ReactNode } from "react";
+import { CopyButton, Heading, hueStyle, List, Prose, Text } from "jeff-ui";
 import { VOICE_HUE } from "./hues.js";
 import { itemLit, watchCue, type Lit } from "./fight-cues.js";
 import { rollableInline } from "./Dice.js";
@@ -96,7 +96,7 @@ export function PbBlockView({ b }: { b: PbBlock }) {
       <Markdown md={b.md} spoken text={b.voice === "say" ? undefined : rollableInline} />
     </Prose>
   );
-  const hue = { "--ui-hue": VOICE_HUE[b.voice] } as CSSProperties;
+  const hue = hueStyle(VOICE_HUE[b.voice]);
   return (
     <div
       className={`sr-pb sr-pb-${b.voice}${watch && watchCue(b.label, b.md, lit).lit ? " is-now" : ""}`}

@@ -2,8 +2,7 @@
 // fame and infamy with tier names, the gain last session, what the PC is known for, its top
 // deeds, and a banner on a tier-up. Only PCs who gained; nobody gained, no slide. Never the rewards.
 
-import type { CSSProperties } from "react";
-import { Badge, Box, Card, Column, Grid, Heading, List, Row, Text } from "jeff-ui";
+import { Badge, Box, Card, Column, Grid, Heading, hueStyle, List, Row, Text } from "jeff-ui";
 import "./reputation.css";
 import { beforeLast, unlink, type DeckSlide } from "./deck.js";
 import { KIND_HUE } from "./hues.js";
@@ -55,11 +54,7 @@ function Pc({ p }: { p: PcReputation }) {
       {ups.length > 0 && (
         <Row gap={2} wrap className="rp-banners">
           {ups.map((k) => (
-            <span
-              key={k}
-              className={`rp-banner is-${k}`}
-              style={{ "--ui-hue": TRACK_HUE[k] } as CSSProperties}
-            >
+            <span key={k} className={`rp-banner is-${k}`} style={hueStyle(TRACK_HUE[k])}>
               {p.pc} is now <b>{p[k].tier}</b>
             </span>
           ))}

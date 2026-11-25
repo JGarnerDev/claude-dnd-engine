@@ -4,7 +4,19 @@
 // compact "Worth noting" slide instead, or none (meta/recap-slides.md → Deck weight).
 
 import type { ReactNode } from "react";
-import { Badge, Card, Column, Grid, List, ProgressBar, Row, Stat, Text } from "jeff-ui";
+import {
+  Badge,
+  Card,
+  Column,
+  Grid,
+  List,
+  ProgressBar,
+  Row,
+  Stat,
+  Table,
+  Text,
+  type TableColumn,
+} from "jeff-ui";
 import "./stats.css";
 import { beforeLast, type DeckSlide } from "./deck.js";
 import { KIND_HUE } from "./hues.js";
@@ -47,18 +59,31 @@ function Awards({ s }: { s: Stats }) {
   );
 }
 
-function Standing({ r, top }: { r: StatRow; top: number }) {
-  const w = top ? Math.max(0.04, r.value / top) : 0;
-  const leads = r.value === top;
-  return (
-    <div className={`st-row${leads ? " is-top" : ""}`}>
-      <span className="st-row-pc">{r.pc}</span>
-      <ProgressBar className="st-bar" value={w} hue={leads ? "var(--ui-accent)" : KIND_HUE.recap} />
-      <Text as="span" strong numeric className="st-row-v">
-        {num(r)}
-      </Text>
-    </div>
-  );
+// One board's standings: name, a bar against the leader, and the value.
+function standingColumns(top: number): TableColumn<StatRow>[] {
+  return [
+    { key: "pc", width: "7em", className: "st-row-pc", cell: (r) => r.pc, title: (r) => r.pc },
+    {
+      key: "bar",
+      cell: (r) => (
+        <ProgressBar
+          className="st-bar"
+          value={top ? Math.max(0.04, r.value / top) : 0}
+          hue={r.value === top ? "var(--ui-accent)" : KIND_HUE.recap}
+        />
+      ),
+    },
+    {
+      key: "value",
+      width: "3.5em",
+      align: "end",
+      cell: (r) => (
+        <Text as="span" strong numeric>
+          {num(r)}
+        </Text>
+      ),
+    },
+  ];
 }
 
 function Boards({ boards }: { boards: StatBoard[] }) {
@@ -74,9 +99,15 @@ function Boards({ boards }: { boards: StatBoard[] }) {
             </Text>
           }
         >
-          {b.rows.map((r, j) => (
-            <Standing key={j} r={r} top={b.rows[0].value} />
-          ))}
+          <Table
+            variant="plain"
+            columns={standingColumns(b.rows[0]?.value ?? 0)}
+            rows={b.rows}
+            rowKey={(r) => r.pc}
+            rowProps={(r) => ({
+              className: r.value === b.rows[0].value ? "st-row is-top" : "st-row",
+            })}
+          />
         </Card>
       ))}
     </Grid>

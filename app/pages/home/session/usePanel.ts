@@ -1,9 +1,9 @@
 // The side panel's state and what the runner calls on it: the Back stack of what's
 // open, the search query, and whether the panel is docked or slid over the notes.
-// The runner draws the search box (by `searchId`), the pin and the rail from it;
+// The runner draws the search box (through the `search` ref), the pin and the rail from it;
 // <Panel> draws the rest. The pin's choice is remembered per browser (session-runner:panel-dock).
 
-import { useEffect, useId, useRef, useState, type KeyboardEvent, type RefObject } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent, type RefObject } from "react";
 import type { Resolver } from "./entities.js";
 import type { EntityRef } from "./types.js";
 
@@ -63,7 +63,6 @@ interface PanelState {
 export interface PanelApi {
   stack: readonly Item[];
   query: string;
-  searchId: string; // the header's search box, which jeff-ui's SearchInput takes by id
   docked: boolean;
   open: boolean; // slid over the notes
   setQuery(q: string): void;
@@ -86,6 +85,7 @@ export interface PanelApi {
 // them on as their own props, so reading the api during render isn't a ref read.
 export interface PanelRefs {
   body: RefObject<HTMLDivElement | null>;
+  search: RefObject<HTMLInputElement | null>; // the header's search box
 }
 
 export function usePanel(resolve: Resolver): PanelApi & PanelRefs {
@@ -96,8 +96,8 @@ export function usePanel(resolve: Resolver): PanelApi & PanelRefs {
     pinned: readPin(),
     wide: wideNow(),
   }));
-  const searchId = useId();
-  const searchBox = () => document.getElementById(searchId) as HTMLInputElement | null;
+  const search = useRef<HTMLInputElement>(null);
+  const searchBox = () => search.current;
   const body = useRef<HTMLDivElement>(null);
   const docked = s.pinned ?? s.wide;
 
@@ -126,10 +126,10 @@ export function usePanel(resolve: Resolver): PanelApi & PanelRefs {
   return {
     stack: s.stack,
     query: s.query,
-    searchId,
     docked,
     open: !docked && s.slid,
     body,
+    search,
     setQuery,
     openEntity(name, fresh = false) {
       const e = resolve(name);

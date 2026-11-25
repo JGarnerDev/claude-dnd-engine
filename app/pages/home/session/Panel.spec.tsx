@@ -25,12 +25,12 @@ function setup(d: SessionData = fixture(), ctx: PanelContext = { onCard: [], inS
   const onGo = vi.fn();
   const api: { p?: PanelApi } = {};
   function Harness() {
-    const { body, ...p } = usePanel(resolve);
+    const { body, search, ...p } = usePanel(resolve);
     api.p = p;
     return (
       <SessionContext.Provider value={{ known, openEntity: (n) => p.openEntity(n) }}>
         <input
-          id={p.searchId}
+          ref={search}
           type="search"
           value={p.query}
           onChange={(e) => p.setQuery(e.currentTarget.value)}

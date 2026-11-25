@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.114.0] — 2026-11-25
+
+### Changed
+
+- **jeff-ui 2.10.0** (`app/package.json`). The runner drops its own copies of what jeff-ui now gives. The fight strip's damage box is a compact `TextInput` (`size="sm"`) in a small `DamageBox` component that keeps its own typed text, so it loses its hue border. The header's search box grows to fill the row and is focused through a `ref` (`usePanel` returns `search`), not a generated id. Hue styles use `hueStyle` (`FightBar.tsx`, `PromptBook.tsx`, `Reputation.tsx`). The recap's standings boards are a plain `Table` (name, bar, value columns) instead of a hand-made grid, so `stats.css` drops its row rules. `SceneHead.tsx`'s HP box uses `size="sm"`.
+
 ## [0.113.0] — 2026-11-25
 
 ### Added

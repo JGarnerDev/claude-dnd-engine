@@ -61,8 +61,6 @@
 /* A small TextInput inside the stat line */
 .sr-hp-in {
   inline-size: 5em;
-  min-height: 0;
-  padding: 0 var(--ui-space-1);
 }
 .sr-enemy.is-down .sr-enemy-row {
   opacity: 0.5;
@@ -402,17 +400,7 @@
   font-size: var(--ui-font-size-sm);
 }
 .sr-strip-in {
-  width: 6em;
-  padding: var(--ui-space-1) var(--ui-space-2);
-  font: inherit;
-  background: var(--ui-bg);
-  color: var(--ui-text);
-  border: 1px solid var(--ui-hue);
-  border-radius: var(--ui-radius-sm);
-}
-.sr-strip-in:focus {
-  outline: none;
-  border-color: var(--ui-focus);
+  inline-size: 6em;
 }
 .sr-strip-card {
   display: flex;
