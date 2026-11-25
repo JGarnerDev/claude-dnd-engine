@@ -1,0 +1,522 @@
+<title>Aethryn DM Start</title>
+<meta name="claude:viewport-fit-sides" content="cover" />
+<!-- Start guide for Ben, the incoming Aethryn DM (DM rotation 2026-11-25). Spoiler-free: campaign secrets live in scheduler/campaign/_handover.md. Refresh at the next DM rotation. Published: https://claude.ai/artifact/22gvEJSU45TKkFki3V9kPx -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+/>
+<style>
+  /* Layout: one narrow card read top to bottom; setup, then the weekly loop as a numbered track, then commands and habits */
+  :root {
+    --bg: #eef0f4;
+    --card: #fbfbfd;
+    --ink: #1d2230;
+    --muted: #5b6275;
+    --line: #d7dbe5;
+    --glass: #5b4fb0;
+    --glass-soft: #ebe8f8;
+    --code-bg: #f1f2f7;
+    --display: "Alegreya SC", Georgia, serif;
+    --body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12141b;
+      --card: #1b1e28;
+      --ink: #e6e8ef;
+      --muted: #a2a8b8;
+      --line: #2e3242;
+      --glass: #b2a8ff;
+      --glass-soft: #252239;
+      --code-bg: #232736;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12141b;
+    --card: #1b1e28;
+    --ink: #e6e8ef;
+    --muted: #a2a8b8;
+    --line: #2e3242;
+    --glass: #b2a8ff;
+    --glass-soft: #252239;
+    --code-bg: #232736;
+    color-scheme: dark;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.55;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 32px 48px;
+  }
+  .card {
+    max-width: 780px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: clamp(20px, 5vw, 44px);
+    display: grid;
+    gap: 40px;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--display);
+    font-weight: 700;
+    text-wrap: balance;
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+  h1 {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    line-height: 1.05;
+  }
+  h2 {
+    font-size: 1.45rem;
+  }
+  h3 {
+    font-size: 1.08rem;
+  }
+  p {
+    margin: 0;
+    max-width: 65ch;
+  }
+  section {
+    display: grid;
+    gap: 14px;
+    min-width: 0;
+  }
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-weight: 700;
+  }
+  header {
+    display: grid;
+    gap: 12px;
+  }
+  .lede {
+    color: var(--muted);
+    font-size: 1.08rem;
+  }
+  code,
+  .cmd {
+    font-family: var(--mono);
+    font-size: 0.86em;
+    background: var(--code-bg);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 1px 5px;
+    overflow-wrap: anywhere;
+  }
+  pre {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 0.84rem;
+    line-height: 1.6;
+    background: var(--code-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 14px;
+    overflow-x: auto;
+  }
+  ul.plain {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+  }
+  ul.plain li {
+    padding-left: 18px;
+    position: relative;
+    max-width: 68ch;
+  }
+  ul.plain li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0.62em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--glass);
+  }
+  .note {
+    background: var(--glass-soft);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: grid;
+    gap: 6px;
+  }
+  .note p {
+    max-width: none;
+  }
+
+  /* The weekly loop: a real sequence, so it is numbered */
+  ol.loop {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0;
+    counter-reset: step;
+  }
+  ol.loop li {
+    counter-increment: step;
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 4px 14px;
+    padding-bottom: 18px;
+  }
+  ol.loop li::before {
+    content: counter(step);
+    grid-row: span 2;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-family: var(--display);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    background: var(--glass);
+    color: var(--card);
+  }
+  ol.loop li::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 36px;
+    bottom: 2px;
+    width: 2px;
+    background: var(--line);
+  }
+  ol.loop li:last-child::after {
+    display: none;
+  }
+  ol.loop h3 {
+    align-self: center;
+  }
+  ol.loop p {
+    color: var(--ink);
+  }
+  .when {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--glass);
+    font-weight: 700;
+    margin-left: 6px;
+    font-family: var(--body);
+  }
+
+  /* Command list: name on the left, what it does on the right, stacking on phones */
+  dl.cmds {
+    margin: 0;
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 10px 18px;
+  }
+  dl.cmds dt {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--glass);
+    padding-top: 2px;
+  }
+  dl.cmds dd {
+    margin: 0;
+  }
+  @media (max-width: 560px) {
+    dl.cmds {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2px;
+    }
+    dl.cmds dd {
+      margin-bottom: 10px;
+    }
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .split > div {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px;
+    display: grid;
+    gap: 10px;
+    align-content: start;
+    min-width: 0;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 0.92rem;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+  a {
+    color: var(--glass);
+  }
+  a:focus-visible {
+    outline: 2px solid var(--glass);
+    outline-offset: 2px;
+  }
+</style>
+
+<main class="card">
+  <header>
+    <span class="eyebrow">For Ben · DM of the next Aethryn campaign</span>
+    <h1>Taking over the table</h1>
+    <p class="lede">
+      The repo is a campaign engine you drive by talking to Claude Code. You say what you want in
+      plain words, Claude reads the campaign files, and you approve anything before it is written.
+      This page covers the setup, the weekly loop, and the habits that save the most time.
+    </p>
+  </header>
+
+  <section>
+    <h2>Start here</h2>
+    <ul class="plain">
+      <li>
+        <strong>Read <code>scheduler/campaign/_handover.md</code> first.</strong> One page from
+        Jeff: where the story stands, the open threads, what each PC is chasing, and what's yours.
+        It holds the DM-only answers, so this page leaves them out.
+      </li>
+      <li>
+        <strong>Your campaign file</strong> is
+        <code>scheduler/campaign/The Northward Pilgrimage.md</code>. The name is a placeholder. Tell
+        Claude what to call it, and give it a conflict, tone and ending when you know them.
+      </li>
+      <li>
+        <strong>Tell Claude how you like to work.</strong> Say
+        <em>"fill my Working with section"</em> and answer its questions: phone or desk, how you
+        want questions asked, what to avoid. It goes in <code>meta/players/Ben.md</code> and Claude
+        reads it at the start of every conversation.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>One-time setup</h2>
+    <p>
+      You need <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>, Node 24,
+      Git, the <a href="https://cli.github.com/">GitHub CLI</a> (signed in with
+      <code>gh auth login</code>) and <a href="https://claude.ai/code">Claude Code</a>. First accept
+      your GitHub invitations to <code>JGarnerDev/notes-kit</code> and
+      <code>JGarnerDev/jeff-ui-project</code> (<a href="https://github.com/notifications"
+        >github.com/notifications</a
+      >
+      or your email): two private repos the engine installs from. Then get the engine and set it up:
+    </p>
+    <pre>
+gh repo clone JGarnerDev/claude-dnd-engine   # skip if you have it; else git pull
+cd claude-dnd-engine
+uv sync                                          # Python packages
+uv run scripts/setup-hooks.py                    # tidies markdown on commit
+uv run --python 3.13 scripts/index-entities.py   # search index, ~20 s</pre>
+    <p>
+      The DM pages (session runner and timeline) need the shared UI package from
+      <code>jeff-ui-project</code>. Let the GitHub CLI read it, then install:
+    </p>
+    <pre>
+gh auth refresh -s read:packages
+npm config set //npm.pkg.github.com/:_authToken "$(gh auth token)"
+npm --prefix app install
+npm --prefix app run app       # http://localhost:5177/ · runner at /session.html</pre>
+    <p>
+      Then start Claude in the same folder with <code>claude</code>. It reads the engine's rules on
+      its own and shows what changed since you last worked here. If any step fails, paste the error
+      to Claude. It knows this setup.
+    </p>
+  </section>
+
+  <section>
+    <h2>The weekly loop</h2>
+    <ol class="loop">
+      <li>
+        <h3>Plan <span class="when">days before</span></h3>
+        <p>
+          Run <span class="cmd">/session</span>. Claude reads the campaign state and proposes a beat
+          spine. You edit the spine first, then it writes the full plan: scenes, read-aloud lines,
+          NPC stat blocks, loot, and two or three real choices for the party.
+        </p>
+      </li>
+      <li>
+        <h3>Polish <span class="when">the night before</span></h3>
+        <p>
+          Run <span class="cmd">/review</span> to fill thin scenes, fix vague lines and catch
+          contradictions. <code>uv run scripts/prep-status.py</code> lists what is still missing:
+          maps, tokens, cards.
+        </p>
+      </li>
+      <li>
+        <h3>Run it <span class="when">game night</span></h3>
+        <p>
+          Open the session runner at <code>localhost:5177/session.html</code>. It shows the plan
+          scene by scene, tracks enemy HP with an undo log, and puts a Copy button on every private
+          message so you can whisper it to one player. Record on Discord with Craig if you want a
+          transcript later.
+        </p>
+      </li>
+      <li>
+        <h3>Get the notes in <span class="when">after</span></h3>
+        <p>
+          Either drop your own notes in <code>recaps/inbox/</code> (bullets are fine), or put the
+          Craig recording in <code>recaps/audio/</code> and run
+          <span class="cmd">/transcript</span>. Transcription runs on a local GPU and takes 15 to 25
+          minutes; if your machine can't, send Jeff the files.
+        </p>
+      </li>
+      <li>
+        <h3>Make it canon <span class="when">same week</span></h3>
+        <p>
+          Run <span class="cmd">/recap</span>. Claude asks what happened one question at a time,
+          then writes the session record, updates NPCs and the rest clock, and builds the recap deck
+          for the table. Nothing is canon until it goes through here.
+        </p>
+      </li>
+      <li>
+        <h3>Save it</h3>
+        <p>
+          Say <em>"commit this"</em>. Your commits go on a branch with a pull request into
+          <code>master</code>, and Jeff approves the merge. Claude makes the branch and the PR for
+          you.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Commands worth knowing</h2>
+    <dl class="cmds">
+      <dt>/todo</dt>
+      <dd>Your dashboard. Items 71, 88, 97, 76, 57, 36, 74 and 98 are yours.</dd>
+      <dt>/spitball</dt>
+      <dd>
+        Save a loose idea in one line, even from your phone. It goes on disk at once and is never
+        canon.
+      </dd>
+      <dt>/region</dt>
+      <dd>
+        Build out Cinto, the route north and the Deorum Ostium: geography, places, and
+        questionnaires for cities.
+      </dd>
+      <dt>/threads</dt>
+      <dd>Forgotten threads and unpaid callbacks, ranked against where the story is now.</dd>
+      <dt>/find</dt>
+      <dd>Search everything by meaning: "a merchant who owes someone money".</dd>
+      <dt>/check</dt>
+      <dd>Before you state a fact at the table, check it against canon.</dd>
+      <dt>/voice</dt>
+      <dd>A short brief on how an NPC talks, from what's been played.</dd>
+      <dt>/rumor</dt>
+      <dd>Tavern talk and session openers from the rumor pool.</dd>
+      <dt>/pitch</dt>
+      <dd>Quick ideas for an NPC, hook or place, with nothing written to disk.</dd>
+      <dt>/commands</dt>
+      <dd>Every command with its options.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Habits that save time</h2>
+    <ul class="plain">
+      <li>
+        <strong>Talk plainly.</strong> "Plan next session around the boat leaving Cinto" works. You
+        don't need the command names; Claude picks the right one.
+      </li>
+      <li>
+        <strong>Answer by number.</strong> Claude asks one question at a time with options. "2", or
+        "2, but make her older", is a full answer.
+      </li>
+      <li>
+        <strong>Say no to a beat and ask for three more.</strong> That's faster than arguing it into
+        shape.
+      </li>
+      <li>
+        <strong>Hidden rolls:</strong> ask Claude to roll one. It uses
+        <code>scripts/roll.py</code> and tells you the result.
+      </li>
+      <li>
+        <strong>Mid-fight,</strong> you can tell Claude "the guard took 12". It keeps a running HP
+        tally per enemy.
+      </li>
+      <li>
+        <strong>Handouts</strong> (item cards, letters) come back as a file plus a link you can
+        paste to the table.
+      </li>
+      <li>
+        <strong>Leave the Redwater threads alone</strong> unless the party turns back: the Lioness,
+        the stake and Act 1's last scenes wait for Jeff's return.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where things live</h2>
+    <div class="split">
+      <div>
+        <h3>Canon</h3>
+        <p>
+          <code>historian/</code> is what happened at the table. When anything disagrees with it,
+          the historian wins.
+        </p>
+      </div>
+      <div>
+        <h3>Plans</h3>
+        <p>
+          <code>scheduler/</code> holds your campaign, acts, missions and session plans, plus the
+          DM-only trackers (<code>_*.md</code>).
+        </p>
+      </div>
+      <div>
+        <h3>Ideas</h3>
+        <p>
+          <code>data/</code> is the pool of player-made NPCs, places and lore waiting to be used.
+          <code>spitball/</code> is loose notes.
+        </p>
+      </div>
+      <div>
+        <h3>Rules</h3>
+        <p>
+          <code>meta/</code> covers difficulty, rewards, tone and prose style. Claude follows them;
+          change one by asking.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="note">
+      <h3>Who decides what</h3>
+      <p>
+        Your regions are yours: Cinto, the route north, the Deorum Ostium, and their festivals.
+        World questions outside them (history, religion, the other continents) still go to Jeff, and
+        Claude will say when one comes up. Jeff plays Iggy at your table, so Claude won't show him
+        your plans.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Written at the handover, 2026-11-25. The source is <code>docs/ben-dm-start.html</code> in the
+    repo.
+  </footer>
+</main>
