@@ -6,7 +6,7 @@ aliases:
 type: campaign
 dm: "Jeff"
 exists: false
-state: active
+state: on-hiatus
 campaign: homebrew
 premise: "The party steps out of Barovia's mists holding the Vintner Mage's relic and arrives in a world under a broken moon. Trillions of glass shards from the Astra Collision still fall as Whatwill — pearlescent, phosphorescent, volatile — in Showerings no one can predict, and every power in the world is built on getting to where it lands first."
 central_conflict: "Control of Whatwill. The Vitricants revere it, the Mintners dissect it, the Partenariats steal it, the Courts Superior deadlock over who owns where it fell, and the Lifted stake their floating homes on it. Newcomers with no allegiance are the most useful — and most expendable — pieces on that board."
@@ -18,8 +18,8 @@ themes:
   - "Ancient mystery — the world is older than anyone knows"
   - "Small people facing a vast world"
 importance: critical
-active: true
-description: "Active campaign document for the first homebrew season — named Redwater for the red/purple border-river (the Moorthistle, named 2026-10-05) the opening act turns on. Opened 2026-09-30 when the party left Barovia via the Wanderer's Boon. Jeff DMs. The *world* is Aethryn, named 2026-10-01; Redwater names the campaign, not the planet."
+active: false
+description: "Campaign document for the first homebrew season, on hiatus since the DM rotation to Ben (2026-11-25) — named Redwater for the red/purple border-river (the Moorthistle, named 2026-10-05) the opening act turns on. Opened 2026-09-30 when the party left Barovia via the Wanderer's Boon. Jeff DMs. The *world* is Aethryn, named 2026-10-01; Redwater names the campaign, not the planet."
 relates_to:
   - "[[Aethryn]] (setting — the world)"
   - "[[Curse of Strahd]] (predecessor campaign)"
@@ -30,7 +30,7 @@ relates_to:
 
 Draft root document for the homebrew campaign that alternates with [[Curse of Strahd]] like TV seasons. The party carries across both worlds and shifts between them via a deliberate narrative device — a story beat, not a soft drift (see `.claude/commands/transition.md` for the season-swap flow). Jeff DMs the first homebrew season; the homebrew DM rotates thereafter. Unlike Strahd (planned outside this repo, record-only here), homebrew uses the full engine — planning and recording both happen here.
 
-**Status: active** as of 2026-09-30 — the season swap ran via `/transition`, pausing [[Curse of Strahd]]. The party arrived through [[The Wanderer's Boon]], the relic [[Davian Martikov]] gave them in Session 28; it is now campaign-agnostic and is also the route back to Barovia. The setting is [[Aethryn]], named 2026-10-01. The first act is [[Act 1 - The Hearth at Ashford]].
+**Status: on hiatus** since 2026-11-25: after Session 35 the homebrew DM rotated to Ben, whose [[The Northward Pilgrimage]] is now the active campaign (`scheduler/campaign/_handover.md`). Redwater resumes with Dip's return. It opened 2026-09-30 — the season swap ran via `/transition`, pausing [[Curse of Strahd]]. The party arrived through [[The Wanderer's Boon]], the relic [[Davian Martikov]] gave them in Session 28; it is now campaign-agnostic and is also the route back to Barovia. The setting is [[Aethryn]], named 2026-10-01. The first act is [[Act 1 - The Hearth at Ashford]].
 
 > **Naming note:** campaign and world are named separately and both are now settled. The *campaign* is **Redwater**, after the red/purple border-river (the Moorthistle, named 2026-10-05), with `"Homebrew Campaign"` kept as an alias so older links resolve. The *world* is **Aethryn** (AITH-rin; Greek *aithēr* "upper air" + Welsh *bryn* "hill"), named 2026-10-01 — `data/locations/regions/Aethryn.md`, keeping `"Homebrew World"` and `"The World"` as aliases. Multiple campaigns may run in Aethryn; Redwater is only the first.
 
@@ -95,20 +95,9 @@ to 18 were cut.
   over 18 days; the date, the Crawl and the next Kerning live in `scheduler/campaign/_sky-clock.md`,
   the system in [[World Calendar]].
 
-### Rest Clock (as of: Session 35)
+### Rest Clock
 
-Tracks the adventuring day across session boundaries — `/session` subtracts this from the attrition budget in `meta/difficulty.md`; `/recap` updates it every canonization (reset on long rest, else accumulate) and restamps the header to the canonized session number. The in-world time fields drive the long-rest 24-hour gate (`meta/difficulty.md` -> Long Rest Rules).
-
-- In-world time now: **`6743-05-22`, about 4 p.m.** (Ashford Day 3), in Mara's office in [[Ashford]]. The date itself is kept in `scheduler/campaign/_sky-clock.md`
-- Last long rest (in-world): **overnight Day 2 → Day 3 at the Golden Lioness** (Session 35)
-- Hours since last long rest: ~8–9 (~estimate): Asher's cave, the ford, Elowen, the cell
-- Long rest available: **no, not until the night of Day 3 at the earliest** (24-hour gate)
-- Rounds of combat since: **0**
-- Short rests since: **0**
-- Notable burns since the rest: **none**. Odibli's Speak with Animals and Iggy's Lay on Hands came before it
-  - HP: full after the long rest (~estimate; confirm against Roll20 sheets)
-  - Permanent losses that still apply: Luci's **Sacred Flame**, and Odibli's **familiar** (Session 25)
-  - Afflictions are still **dormant** (Iggy's shadow, Dip's whispers)
+Moved to [[The Northward Pilgrimage]], the active campaign, at the DM rotation (2026-11-25).
 
 ## Setup TODO
 

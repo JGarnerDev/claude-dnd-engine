@@ -5,7 +5,7 @@ name: "Dip"
 type: character
 subtype: pc
 exists: true
-state: active
+state: away
 tags:
   - character
   - character/pc
@@ -114,6 +114,10 @@ At first the visions had only a few touches, a few hands. Over time they have gr
 The Enclave opened many avenues, but few held them. What drew them most were the literatures of gods and goddesses and their interventions in mortal lives, and the holy sites that gather the faithful. These are the focus of their pilgrimages, as they try to understand the tangled relationship of the divine and the mortal.
 
 The holiest sites are not as common as they used to be, but Dip finds the ones that matter: souls gathered around a warm campfire, a tide that brings in good hope, the sunrise that warms the land and makes the flowers bloom. These answer their questions every day: keep going, keep pushing.
+
+## Away
+
+After [[Session 35 The Reeve's Ledger]], Dip leaves on a pilgrimage of their own while Ben DMs (DM rotation, 2026-11-25). Dip returns when Redwater resumes.
 
 ## Looking Ahead (Player Intent)
 
