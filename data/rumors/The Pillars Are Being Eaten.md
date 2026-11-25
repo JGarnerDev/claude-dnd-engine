@@ -16,7 +16,7 @@ circulating_in:
 source: "[[Hober Mallow]]"
 importance: major
 active: false
-truth_detail: "The Hollow Mountain is one of the Pillars. The ones eating them are real and unnamed; Hobbes is one of them (DM-only). World-level lore beyond Ben's regions: check with Jeff how the Pillars fit Aethryn's cosmology."
+truth_detail: "The Hollow Mountain is one of the Pillars. The ones eating them are real and unnamed; Hobbes is one of them (DM-only): Tom, an aberration from beyond the Material Plane who wants every thinking creature reverted to the Marbhan Beo, mindless and ruled by base desires, then loosed across the planes as an endless horde. World-level lore beyond Ben's regions: check with Jeff how the Pillars fit Aethryn's cosmology."
 relates_to:
   - "[[The Hollow Mountain]] (one of the Pillars)"
   - "[[Hobbes]] (one of the ones eating them, DM-only)"

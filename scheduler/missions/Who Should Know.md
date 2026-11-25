@@ -87,9 +87,9 @@ No matter how badly it goes, [[Groundhog Claus]] is still freed. It's the party'
 
 **The Meeting.** After the escape, when the survivors have made it back across the ice, someone is waiting for them, sitting on a rock by the trail as if he had all the time in the world. It's [[Hobbes]], clean-shaven, the red hat neat on his head, and calm. He has stopped rambling.
 
-- **Read aloud:** *"Thank you. A thousand years is a long time to wait for someone to open the last door. I did try to warn you, in my way. Back after breakfast, I said. I'm always back after breakfast."*
+- **Read aloud:** *"Thank you. A thousand years is a long time to wait for someone to open the last door. I did try to warn you, in my way. Back after breakfast, I said. I'm always back after breakfast. [[Hobbes]] was a nice name. You can call me Tom."*
 - **It isn't a fight.** He's one of the ones eating the Pillars, and far beyond the party at level 5: anyone who attacks him finds the blow simply doesn't land, and he doesn't bother to answer it. Let the scene make that plain without a roll.
-- **What he tells them, if they ask:** that there are other Pillars, and others like him; that [[The Hollow Mountain|the Mountain]] was only one; and that Choco La was a good friend, really. What he never tells them is a name.
+- **What he tells them, if they ask:** that there are other Pillars, and others like him; that [[The Hollow Mountain|the Mountain]] was only one; and that Choco La was a good friend, really. He gives them one name, Tom, and never the names of the others. If they ask what he wants, he tells them, cheerfully: everyone, everywhere, back the way they were before anyone taught them to stop (see Tom: what [[Hobbes]] really is).
 - **For Choco La:** [[Hobbes]] speaks to him last and most gently. Whatever Choco La's player does with that is theirs.
 - **Then he's gone,** the way [[Tesla Bombeck]] leaves: around a rock, and the snow where he sat falls upward. The campaign ends on the worst ending, and on a hook for whatever comes next.
 

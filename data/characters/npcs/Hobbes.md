@@ -13,7 +13,8 @@ tags:
 location: "[[The Hollow Mountain]]"
 personality: "Soft-spoken, endlessly curious and hopeless at keeping track of time"
 livelihood: "Halfling scholar hunting for the oldest place in the world"
-aliases: []
+aliases:
+  - "Tom"
 importance: major
 active: false
 race: "Halfling"
@@ -77,10 +78,31 @@ Pick before Part 6. The marks work for both, so you can decide late.
 Under both possibilities, Hobbes is something worse than he looks: one of the ones eating the Pillars (see The Pillars and the ones eating them). The rambling, kindly scholar in the red hat is the face he wears.
 
 - **What he wanted:** to reach the core of [[The Hollow Mountain|the Mountain]] and bite into the Pillar. He got through the first four gates alone, but the fifth beat him ("Haven't got this one"), and the loop at the core held him there, or, under possibility 2, swallowed him into [[Groundhog Claus]].
-- **Why the party matters to him:** he needs someone to open the last gate for him. Choco La was meant to be that someone ("Someone has to keep him out of trouble"), and Choco La's letter brought [[Shaw Proudfoot|Shaw]] and the party instead. Hobbes is glad of the upgrade.
+- **Why the party matters to him:** he needs someone to open the last gate for him. Choco La was meant to be that someone ("Someone has to keep him out of trouble"), and Choco La's letter brought Shaw and the party instead. Hobbes is glad of the upgrade.
 - **If the party wins,** none of this comes out. The Pillar holds, and Hobbes is the grateful friend he seems, under whichever possibility you picked. He thanks them warmly, and goes on his way. Keep him for later.
 - **If the party fails,** the Meeting (see The worst ending).
 - **Clues that read innocently either way:** he knew the grown tunnels well enough to map them before anyone else had been down; his chalk notes never once say he was scared; and [[Aurelian Sellenor|the Archhierophant]], who listens to everything, says after meeting him: "Your friend is very quiet underneath."
+
+### Tom: what Hobbes really is
+
+When the mask comes off, he goes by **Tom**. A plain, small name, and he likes how little it tells anyone.
+
+**What he is:** an aberration from beyond the Material Plane, from the dark between the planes where nothing ever learned to think. He has worn people for a very long time, and the halfling scholar in the red hat is only the latest. He and the others like him are the ones eating the Pillars.
+
+**What the Pillars really hold up:** not stone. Each Pillar anchors something in the Material Plane's weave: the reason, conscience and memory that make people people, the restraint that lets them choose something other than what they want right now. As each Pillar is eaten, that weave thins everywhere at once.
+
+**What Tom wants:** to bring every Pillar down. When the last one falls, every thinking creature on the Material Plane, of every race, reverts to the **Marbhan Beo**: mindless, violent beings ruled by base desires alone, hunger, rage and want, with nothing left behind the eyes to stop them. Then he tears open the seams between the planes and drives them out across the Astral Sea, into the Outer Planes and beyond: a horde that never tires, never stops, and makes more of itself wherever it lands, like a zombie plague with the whole multiverse to eat. The Marbhan Beo (said MAR-vawn BYOH, roughly "the living dead") are Tom's one last victory before he churns everything back into the darkness again: robbing every living thing of its will, as one last slight to the light.
+
+**Why it fits what's already here:**
+
+- **"Back after breakfast"** was never a joke. It's appetite. He always comes back to eat.
+- **The scratching** beneath [[The Buckle|the Buckle]] was never only [[Groundhog Claus]] digging. Some of it was Tom, chewing at the Pillar.
+- **The loop held him.** [[Groundhog Claus]]'s Same Day Again kept resetting Tom's work every morning, which is why a thousand years got him no further than the last gate. Freeing [[Groundhog Claus]] also frees Tom.
+- **The hour of calm is his opposite.** For one hour, nothing in the whole world is afraid, and nobody acts on hunger or rage. That's what settles the Pillar when the party wins, and why Tom hates it.
+
+**In the rules, for flavour:** Tom is far beyond a level 5 party, somewhere around CR 20, with legendary actions he never needs to use on them. If you want the Meeting to leave a mark, give one hint of what he can do: the PC who stands closest makes a DC 18 WIS save, and on a failure has one short-term madness from the *Dungeon Master's Guide* until their next long rest, a flash of becoming one of the Marbhan Beo. Nobody dies. Everyone understands.
+
+**After a broken Pillar:** if the worst ending happens, the thinning shows. Over the next weeks, one NPC the party loves gets a little worse at stopping themselves: [[Cal Mooney]] shouting where he'd have hugged, a monk breaking her silence in a scream. It's the first sign of the Marbhan Beo, and a hook for whatever comes next.
 
 ### The Meeting (if the party fails)
 
@@ -88,9 +110,9 @@ Under both possibilities, Hobbes is something worse than he looks: one of the on
 
 **The Meeting.** After the escape, when the survivors have made it back across the ice, someone is waiting for them, sitting on a rock by the trail as if he had all the time in the world. It's Hobbes, clean-shaven, the red hat neat on his head, and calm. He has stopped rambling.
 
-- **Read aloud:** *"Thank you. A thousand years is a long time to wait for someone to open the last door. I did try to warn you, in my way. Back after breakfast, I said. I'm always back after breakfast."*
+- **Read aloud:** *"Thank you. A thousand years is a long time to wait for someone to open the last door. I did try to warn you, in my way. Back after breakfast, I said. I'm always back after breakfast. Hobbes was a nice name. You can call me Tom."*
 - **It isn't a fight.** He's one of the ones eating the Pillars, and far beyond the party at level 5: anyone who attacks him finds the blow simply doesn't land, and he doesn't bother to answer it. Let the scene make that plain without a roll.
-- **What he tells them, if they ask:** that there are other Pillars, and others like him; that [[The Hollow Mountain|the Mountain]] was only one; and that Choco La was a good friend, really. What he never tells them is a name.
+- **What he tells them, if they ask:** that there are other Pillars, and others like him; that [[The Hollow Mountain|the Mountain]] was only one; and that Choco La was a good friend, really. He gives them one name, Tom, and never the names of the others. If they ask what he wants, he tells them, cheerfully: everyone, everywhere, back the way they were before anyone taught them to stop (see Tom: what Hobbes really is).
 - **For Choco La:** Hobbes speaks to him last and most gently. Whatever Choco La's player does with that is theirs.
 - **Then he's gone,** the way [[Tesla Bombeck]] leaves: around a rock, and the snow where he sat falls upward. The campaign ends on the worst ending, and on a hook for whatever comes next.
 
