@@ -10,7 +10,7 @@
 - ⚪ — FYI only, no action needed right now
 - ❓ — owner unclear
 
-**Scope:** The Northward Pilgrimage (homebrew). Ben is DM; Jeff and Kellan are players. Ben sets his regions; world-building outside them stays Jeff's.
+**Scope:** It's a cold day to be so lit (homebrew; opened as The Northward Pilgrimage). Ben is DM; Jeff and Kellan are players. Ben sets his regions; world-building outside them stays Jeff's.
 
 **Season swap done 2026-09-30.** `/transition` ran: Curse of Strahd paused, Homebrew Campaign active with Jeff as DM and a premise built on Paul's Whatwill cosmology, Act 1 retagged, the Wanderer's Boon made campaign-agnostic, the Barovian wine-wizard mission stood down.
 

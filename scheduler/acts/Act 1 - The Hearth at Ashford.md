@@ -87,7 +87,7 @@ Nothing in these four sessions reopens the way home. **[[The Wanderer's Boon]]**
 Odibli's hand and stays inert, and one line of Session 1 should say so out loud — otherwise
 the season reads as a detour instead of the errand the relic sent them on.
 
-**Paused after Session 35** at the DM rotation (2026-11-25): Ben's [[The Northward Pilgrimage]] runs next. Scenes S35_25–S35_29 (the stake, the build, the reeve and the ledger), the stake ladder, the Lioness build and the old-field finale wait for Redwater's return with Dip.
+**Paused after Session 35** at the DM rotation (2026-11-25): Ben's [[It's a cold day to be so lit]] runs next. Scenes S35_25–S35_29 (the stake, the build, the reeve and the ledger), the stake ladder, the Lioness build and the old-field finale wait for Redwater's return with Dip.
 
 ## Difficulty
 
