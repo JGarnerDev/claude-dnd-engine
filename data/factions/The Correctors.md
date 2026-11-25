@@ -1,6 +1,5 @@
 ---
 name: "The Correctors"
-campaign: homebrew
 type: faction
 exists: false
 state: dormant

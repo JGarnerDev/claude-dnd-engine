@@ -1,6 +1,5 @@
 ---
 name: "The First Corrector"
-campaign: homebrew
 type: character
 subtype: antagonist
 exists: false

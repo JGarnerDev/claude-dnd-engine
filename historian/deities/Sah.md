@@ -1,6 +1,5 @@
 ---
 name: "Sah"
-campaign: homebrew
 type: deity
 exists: true
 state: diminished
@@ -37,7 +36,7 @@ Campaign: [[Homebrew Campaign]]
 
 Sah was the real and present divine force of **[[Threnai]]**, the god who upheld its function as a keeper of meaning and continuity. His followers, the Sahists, held that meaning is cumulative and lived, preservation a duty, and death a painful but necessary boundary that protects reality from something worse.
 
-When **[[The Correctors]]** enacted the ritual to break the plane's spine, Sah's earlier attempt to correct the first Returned — a resurrected Corrector who resisted the plane's own rules — failed publicly, a turning point in the war. At the collapse, Sah forcibly displaced **[[Iggy]]** to the Material Plane to save him: *"Go now, there are other worlds than these."*
+When **[[The Correctors]]** enacted the ritual to break the plane's spine, Sah's earlier attempt to correct the first Returned — a resurrected Corrector who resisted the plane's own rules — failed publicly, a turning point in the war. At the collapse, Sah forcibly displaced **[[Iggy]]** toward the Material Plane to save him: *"Go now, there are other worlds than these."* The Mists caught him on the way and set him down in Barovia.
 
 > **Reliability:** Player-backstory canon for Iggy. Sourced to Iggy's debut session; predates the campaign as origin lore. Whether Sah survived intact, was diminished, or persists fractured is deliberately open for DM interpretation.
 

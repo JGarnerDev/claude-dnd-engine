@@ -1,6 +1,5 @@
 ---
 name: "Threnai"
-campaign: homebrew
 type: location
 subtype: region
 exists: true

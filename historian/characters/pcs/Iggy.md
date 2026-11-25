@@ -49,9 +49,9 @@ spotlight_hooks:
     status: open
   - hook: "Learn what came up the road at Caelion Marr's bridge, and whether she died, was taken, or Returned"
     status: open
-  - hook: "Recover what the sealed order said, and whether Iggy carried the Failed Intervention plan to the Library himself"
+  - hook: "Recover what the sealed order said, and whether Iggy carried the Failed Intervention plan himself"
     status: open
-  - hook: "Walk into an unfinished stretch of the world, like the blank road from the Library, and recognize it"
+  - hook: "Walk into an unfinished stretch of the world, like the blank road on his last courier run, and recognize it"
     status: open
   - hook: "Echo moment: a scene that rhymes with one of the 23 Threnai names, a chance to succeed where they failed"
     status: open
@@ -62,7 +62,7 @@ spotlight_hooks:
   - hook: "A secret he shares with Luci, and no one else (confirmed by Jeff 2026-10-25; his party wish; what it is, open)"
     status: open
 
-description: "Jeff's PC. Gruff but light-hearted soldier-bard with copper-red Aasimar features. Refugee of the destroyed library-plane Threnai, guided by the diminished god Sah."
+description: "Jeff's PC. Gruff but light-hearted soldier-bard with copper-red Aasimar features. Refugee of the destroyed plane Threnai, guided by the diminished god Sah."
 confirmed_date: "2026-03-09"
 ---
 
@@ -88,13 +88,13 @@ Immediately warm and affiliative — treats new companions as if belonging toget
 Player-facing tells (cue others into his past):
 
 - **Whispered names** — while tuning/playing, quietly speaks 1–3 names under his breath, mixing clear and fragmented identities. If asked: *"Feels important I say them."*
-- **Micro-reverence for records** — brief pause to touch or straighten books, maps, inscriptions, then rejoins without explanation.
 - **Off-beat rhythm in tension** — subtle foot/weapon tapping before combat; stops once chaos starts, resumes after.
 - **Unease around death/return** — a hesitation or stare at kills and revivals: *"Make sure they're… truly back."*
 - **Sees allies as heroes** — assigns brief heroic titles and notes their deeds, delivered naturally, not ceremonially.
 - **Hums in silence** — when a room goes too quiet, he starts humming before he notices he's doing it. A habit from the blank road (see The Sealed Order).
+- **A small reverence for records** — in passing, straightens a crooked sign or a dropped page, and says nothing about it.
 
-He is disturbed by echoes of his home plane's fall even when he can't name the connection: the deaths of well-intentioned people, the destruction or neglect of books and records, and melancholic songs of war and loss.
+He is disturbed by echoes of his home plane's fall even when he can't name the connection: the deaths of well-intentioned people, anything left to be forgotten (unmarked graves, names no one says anymore), and melancholic songs of war and loss.
 
 ## Abilities (Noted in Play)
 
@@ -105,7 +105,7 @@ He is disturbed by echoes of his home plane's fall even when he can't name the c
 - Fought as a soldier in an urban guard on Threnai — effective at breaching and close-quarters work; offense-first, stabilize/heal allies a close second.
 - As a Paladin, his smite reads as a "good"/radiant aura with an eldritch dissonance beneath — observers feel reassurance and unease at once.
 
-> **Reliability:** Player backstory calls the instrument a **viol** (not violin); it now also serves as a partial archive (see The Viol below). "Violin" from Session-1 notes kept as recorded.
+> **Reliability:** Player backstory calls the instrument a **viol** (not violin); it now also holds part of his past (see The Viol below). "Violin" from Session-1 notes kept as recorded.
 
 ## Backstory (from Session 1 Intro)
 
@@ -117,38 +117,38 @@ Came to the area a year ago. Has been working with the local militia since. Want
 
 Iggy is a refugee of **[[Threnai]]**, a destroyed plane that functioned as a semantic anchor for adjacent realities — it preserved not just knowledge but the meaning, context, and emotional weight behind it, centered on a vast Great Library. Its culture blended feudal-Japan and medieval-Europe aesthetics: orderly, artistic, tradition-bound, but lively and celebratory, trading in stories, histories, and legend rather than material goods.
 
-He was one inhabitant among many, no singular status at birth. He cultivated three disciplines in parallel — music (viol), record-keeping (writing), and the sword — and later served in an urban guard. In the plane's final civil war he worked as a **courier between fronts**, documenting events and encoding fallen comrades into song. Preservation under pressure, human-scale, not institutional.
+He was one inhabitant among many, no singular status at birth. He cultivated two disciplines in parallel, music (viol) and the sword, and later served in an urban guard. In the plane's final civil war he worked as a **courier between fronts**, carrying word across the lines and putting fallen comrades into song. Preservation under pressure, human-scale, not institutional.
 
 The war was ideological: a faction of Library insiders (**[[The Correctors]]**, led by the **[[The First Corrector]]**) came to believe death was an imposed falsehood — a consequence of living beings being recorded and finalized into fixed narrative. To "free" existence from finality they enacted a ritual to **break the plane's spine**, which instead collapsed Threnai catastrophically. Opposing them were the followers of **[[Sah]]**, the plane's real and present god of meaning and continuity, who held that preservation is a responsibility and finality a necessary, protective boundary.
 
 ### Inciting Incident
 
-When the ritual completed, Iggy was in an outlying town near a major battle, the central city and Great Library still visible on the horizon. He was composing a final song meant to encode the whole of what was being lost — the battle, his fallen comrades, the plane itself, the origins of the war. The composition was interrupted mid-act as reality disintegrated around him. Sah forcibly displaced him to the Material Plane to save him, with a directive: *"Go now, there are other worlds than these."* The viol survived, carrying the unfinished, unstable song.
+When the ritual completed, Iggy was in an outlying town near a major battle, the central city still visible on the horizon. He was composing a final song meant to encode the whole of what was being lost — the battle, his fallen comrades, the plane itself, the origins of the war. The composition was interrupted mid-act as reality disintegrated around him. Sah forcibly displaced him toward the Material Plane to save him, with a directive: *"Go now, there are other worlds than these."* The Mists caught him on the way and set him down in Barovia. The viol survived, carrying the unfinished, unstable song.
 
 ### The Final Song
 
-He meant it as a goodbye: ordinary mornings, the names of the people he'd lost, and an honest account of how the war began, written before the winners could rewrite it. As he played, it took in far more than he intended: the people themselves, how they laughed and stood and argued, not only facts about them. That is why it frightens him a little now. It is more archive than song. The opening, as it was:
+He meant it as a goodbye: ordinary mornings, the names of the people he'd lost, and an honest account of how the war began, written before the winners could rewrite it. As he played, it took in far more than he intended: the people themselves, how they laughed and stood and argued, not only facts about them. That is why it frightens him a little now. It holds more than a song should. The opening, as it was:
 
-> *Before the ink, before the end,*
+> *Before the war, before the end,*
 > *there was a morning, and a friend.*
 > *Bread on the sill at the river gate,*
 > *Caelion laughing, Liora late.*
 >
 > *Let me set down how the quarrel grew,*
 > *before they write it false and new:*
-> *some feared the ending, some the pen,*
+> *some feared the ending, some feared when,*
 > *and both were only frightened men.*
 >
 > *So here is every name I keep,*
 > *the waking ones, the ones asleep.*
-> *I cannot hold the Library's stone,*
+> *I cannot hold the city's stone,*
 > *but I can hold you, one by one.*
 
 ### The Sealed Order
 
-The courier run he remembers best. He carried a sealed order from Sah's high command, closed with wax pressed in the shape of an open book, for the Library alone and not to be read, even by him. It was the only run where they made him repeat the instructions back. He crossed Caelion's bridge at dawn, and she didn't joke. She looked at the seal and said, "Run fast."
+The courier run he remembers best. He carried a sealed order from Sah's high command, closed with wax pressed with Sah's mark, for one hand only and not to be read, even by him. It was the only run where they made him repeat the instructions back. He crossed Caelion's bridge at dawn, and she didn't joke. She looked at the seal and said, "Run fast."
 
-It went to an old archivist deep in the Great Library, a woman whose name he can't recall, with ink-stained sleeves and shelves around her already emptied. She read it twice and copied it into a ledger while he waited: *"If this goes wrong, someone should know we chose it."* He doesn't remember what it said. He remembers her hand shaking.
+It went to an old woman in a back room of the central city, whose name he can't recall, with the rooms around her already emptied. She read it twice, burned it, and said, looking at him: *"If this goes wrong, someone should know we chose it."* He doesn't remember what it said. He remembers her hand shaking.
 
 On the way back, about a hundred paces of road had stopped being finished: grass without blades, trees without bark, footsteps without sound, his own hands like an abandoned sketch. He hummed the whole way across, because it felt like the only thing keeping him drawn in. He never told anyone. It was an early crack from the Correctors' ritual, though he can't name it.
 
@@ -185,7 +185,7 @@ The oath is turning into **remembrance**: live so that deeds are remembered, and
 
 ## The Viol
 
-Iggy's viol survived the collapse and holds fragments of the unfinished final song — battle, personal loss, cultural memory, unresolved truth, overlapping and unstable. Tones or sequences sometimes surface that Iggy doesn't recall composing. It functions as both instrument and residual archive of the destroyed plane. (Carried item — no separate entity file.)
+Iggy's viol survived the collapse and holds fragments of the unfinished final song — battle, personal loss, cultural memory, unresolved truth, overlapping and unstable. Tones or sequences sometimes surface that Iggy doesn't recall composing. It is both his instrument and the last piece of Threnai he can still hear. (Carried item — no separate entity file.)
 
 The phrase it plays on its own is the line he was in the middle of when Threnai broke, and it always stops on the same unresolved note, because the song never got its ending. When it surfaces, Iggy feels the floor drop away, then a strange warmth, as if someone is keeping a door open for him.
 
@@ -203,9 +203,9 @@ Aurelion Thane the Dawnbound · Seraphiel Vorn · Caelion Marr the Bridge-Holder
 
 ### Caelion Marr, the Bridge-Holder
 
-His sergeant in the city guard, and the first person to call him "Iggy." She was broad-shouldered and loud, laughed at her own jokes before the punchline, and kept a ledger of every soldier she'd lost in handwriting too neat for her. She made him a courier: *"You run faster than you fight, Wallaed. Make it useful."* That ledger may be where his reverence for records comes from.
+His sergeant in the city guard, and the first person to call him "Iggy." She was broad-shouldered and loud, laughed at her own jokes before the punchline, and knew the name of every soldier she'd lost, and called them at roll call anyway. She made him a courier: *"You run faster than you fight, Wallaed. Make it useful."* That habit may be where his whispered names come from.
 
-She fought with a long spear and a tower shield and never gave ground. In the war she held the stone bridge over the river gate, the only road between the eastern front and the Library, and waved every courier over it with the same bad joke.
+She fought with a long spear and a tower shield and never gave ground. In the war she held the stone bridge over the river gate, the only road between the eastern front and the central city, and waved every courier over it with the same bad joke.
 
 Her fall is blurred. On the last day she waved him across without the joke. From the far bank he saw her plant the shield as something came up the road behind him. He doesn't remember what it was, or whether the bridge held. He never crossed back.
 
