@@ -30,6 +30,8 @@ description: "The ice bridge over the chasm into the Buckle, guarded by the Yule
 
 Region: [[Deorum Ostium]] | Campaign: [[A short quick trip to see some family]]
 
+Map: `Desktop\DnD Bosses\Maps\The Ice Bridge - Battle Map` (DM sheet, 5-ft grid, bridge sections A to D) and `The Ice Bridge (Roll20).png` (a 30 × 40-unit page).
+
 > **What happens here:** the mini-boss fight. At [[The Rimefolk Maze|the maze]]'s exit, [[The Yule Log|the Yule Log]] guards the ice bridge into [[The Buckle|the Buckle]]. Beating it, ideally without wrecking the bridge, reopens [[The Buckle|the Buckle]] and resolves every opening hook.
 
 **Read aloud:** *Warm air hits you first, then the smell of woodsmoke, impossible this deep in the ice. The tunnel opens onto a chasm spanned by a single bridge of glassy ice. Beside it, crackling happily, sits a log the size of a wagon, wreathed in flame and wearing what might be a festive ribbon. It pops at you. Somehow, you know it was an insult.*

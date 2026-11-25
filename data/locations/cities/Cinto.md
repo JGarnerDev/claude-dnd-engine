@@ -32,7 +32,7 @@ description: "The pilgrim port outside the glaciers of the Deorum Ostium, where 
 
 Location: [[Deorum Ostium]] | Campaign: [[A short quick trip to see some family]]
 
-Map: `DesktopDnD BossesMapsCinto - The Town and Port` (DM sheet, 1 square = 10 ft) and its Roll20 copy; interiors in "Cinto - Town Buildings Grid" and "Cinto - The Knowledge Bank Floors".
+Map: `Desktop\DnD Bosses\Maps\Cinto - The Town and Port` (DM sheet, 1 square = 10 ft) and its Roll20 copy; interiors in "Cinto - Town Buildings Grid" and "Cinto - The Knowledge Bank Floors".
 
 Cinto is the pilgrim port outside the glaciers, a melting pot of faiths and commerce that never sleeps. Shops, temples, guilds, a port, an infirmary, homes and an inn crowd together, and the town swells during festivals. Even monks under vows of silence struggle to keep quiet in the excitement.
 

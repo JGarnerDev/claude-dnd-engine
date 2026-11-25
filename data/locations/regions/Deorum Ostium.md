@@ -25,3 +25,5 @@ The far north's only claim to significance. Rumored to be the last place the god
 Pilgrims and the people of [[Cinto]] call the site the **Deorum Sanctum**: the whole north pole, a temple carved into the glaciers where the veil between worlds is thin. [[The Monks of the Ostium]] keep it ("We keep the door, not the key"). The carvings get older the deeper you go: fresh nicks and names on the outer walls, decades-long murals in the middle tunnels, and scripts no one alive can read in the deep ice.
 
 Campaign: [[A short quick trip to see some family]]. Places inside it: [[Cinto]] (the port), [[The Rimefolk Maze]], [[The Ice Bridge]], [[The Buckle]] and [[The Hollow Mountain]].
+
+Map: `Desktop\DnD Bosses\Maps\The Deorum Sanctum - The Pilgrim Route` (DM sheet, 1 square = 10 ft: the Cathedral Door, the glacier path and its crevasse, the mural galleries and the deep ice) and `The Deorum Sanctum (Roll20).png` (a 36 × 60-unit page).
