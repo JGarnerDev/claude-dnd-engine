@@ -6,6 +6,21 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.116.0] — 2026-11-25
+
+### Added
+
+- **Favorite plays** on the player guide page. An open play has a **Favorite** toggle (☆ off, ★ on); a favorite moves first in its card (or `####` divider run), with an amber border on its tile that leaves its size alone. Kept per PC in the browser, under the play's section, group and lead, so a favorite survives the guide's lists being reordered. Strategies' whole-group tiles and the yes/no checklist can't be starred.
+- **Spell levels and upcasting** on the player guide page. A spell's lead tags its level, like `(1st, concentration)` or `(cantrip)`; a card lists its spells under a **Spells** divider, one sublist per level from cantrips up (the tile keeps only the **C**), the open play says "1st level", and an `Upcast: …` sentence at the end of its detail shows on its own line. Iggy's guide tags every spell and says what each gains from a higher slot, by the 2024 rules (Vicious Mockery now 2d6, as it is at level 5).
+
+### Changed
+
+- **jeff-ui 2.12.1** (`app/package.json`): the selected guide tab and the current waypoint no longer turn bold, so picking one doesn't shift its neighbours.
+
+### Removed
+
+- **The Turn tab's yes/no checklist** on the player guide page. Turn now opens straight on its Action card; a guide no longer starts Turn with an `### Ask in this order` list, and Iggy's is gone.
+
 ## [0.115.0] — 2026-11-25
 
 ### Added
@@ -13,7 +28,7 @@ The version in [`VERSION`](./VERSION) always matches the top entry below.
 - **Player guide page** (`/player.html`, linked from the timeline header) and the **`/player-guide <PC>`** command. A player-facing guide to one PC, read on a phone at the table: **Turn** (what to do with the action, bonus action, reaction and move), **Combos** (alone and with each party member), **Strategies** (a party plan and the PC's part against flyers, casters, tanks, swarms, undead and fiends, invisible enemies and grapplers) and **Build** (paths through the next five levels). Guides live in `meta/player-guides/<PC>.md` (format and what a player provides: `_template.md`), are player-safe only, and don't repeat Roll20 (no sheet, dice, HP or spell text). Each `###` group is a card of tappable plays: tap one and its text opens inside the card, tap again to close. Turn's opening questions run as a yes/no checklist, Strategies shows one tile per enemy type, and a search box finds plays across every section. The page warns when the PC file's `level` passes the guide's. First guide: Iggy, 2024 rules.
 - **Player guide Notes** (`## Notes` in a guide, jeff-ui 2.11.0's `NotePanel`). Short reminders and to-dos live out of the tabs and the search: a `### To do` group gets checkboxes remembered in the browser (per PC), any other group (`### Remember`) is a plain list, and a lead ending `(at the table)` gets a tag. On a wide screen they sit in a narrow side rail beside a centred main column; on a phone they fold into a Notes disclosure above the search. A **`## Roleplay`** section works the same way in rose panels, one per character (hooks that work with them): a left rail on a wide screen, under Notes at mid width, a Roleplay disclosure on a phone. Every side panel folds from its heading: Notes panels start open, Roleplay panels folded (jeff-ui 2.12.0's `NotePanel` `folds`). A search that finds one play opens it. The page shows no intro: text before a guide's first `##` is a note for whoever edits the file.
 - **Guides kept current.** `/recap` Phase 6.5 lists what the session gives each present PC's guide, section by section and player-safe, applies what the DM picks, and restamps `guide_confirmed`. The page also warns when the PC has played two or more sessions past `guide_confirmed` (`pcs_present` on completed session records, read by `player-guide-plugin.ts`). A Player Guides section in `CLAUDE.md` names the flow.
-- **Fuller Turn tab and a Currently panel.** The template's Turn now has `### Any creature can` (the 2024 actions everyone has, Ready included) and `### Free (no action)` beside the PC's own groups. Notes gains `### Currently`: where the party is, what's next and the open mysteries, from the latest player-facing recap slides, rewritten by `/recap` 6.5 each session.
+- **Fuller Turn tab and a Currently panel.** The template's Turn now ends `### Action` with an `#### Any creature can` divider (the 2024 actions everyone has, Ready included; a `####` inside any group shows as a named divider in its card) and `### Free (no action)` beside the PC's own groups. Notes gains `### Currently`: where the party is, what's next and the open mysteries, from the latest player-facing recap slides, rewritten by `/recap` 6.5 each session.
 - **Concentration marks.** A guide lead ending `(concentration)` shows a **C** badge on its tile and "concentration" in its open text; the template asks for it on every spell that needs it.
 
 ## [0.114.0] — 2026-11-25

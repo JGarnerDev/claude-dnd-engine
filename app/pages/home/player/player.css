@@ -95,16 +95,61 @@
   cursor: pointer;
 }
 /* The concentration mark: a small pill after a tile's label, or before the open text. */
-.pg-conc-tile {
+.pg-mark-tile {
   margin-inline-start: var(--ui-space-1);
 }
-.pg-conc-tile .ui-badge {
+.pg-mark-tile .ui-badge {
   padding: 0 0.35em;
   font-size: var(--ui-font-size-xs);
   line-height: 1.3;
 }
-.pg-conc-open {
+.pg-mark-open {
   margin-inline-end: var(--ui-space-2);
+}
+.pg-open-item p {
+  margin: 0;
+}
+.pg-open-item .pg-upcast {
+  margin-top: var(--ui-space-1);
+  color: var(--ui-muted);
+  font-size: var(--ui-font-size-sm);
+}
+/* A card's spells: a Spells divider, then one indented sublist per level. */
+.pg-tiles + .pg-spells,
+.pg-open + .pg-spells {
+  margin-top: var(--ui-space-3);
+}
+.pg-level {
+  padding-inline-start: var(--ui-space-3);
+  border-inline-start: 2px solid var(--ui-border);
+}
+.pg-level + .pg-level {
+  margin-top: var(--ui-space-2);
+}
+.pg-level-title {
+  margin: 0 0 var(--ui-space-1);
+  color: var(--ui-muted);
+  font-size: var(--ui-font-size-xs);
+}
+/* A named divider (a guide's `####`) between runs of tiles in one card. */
+.pg-run + .pg-run {
+  margin-top: var(--ui-space-3);
+}
+.pg-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--ui-space-2);
+  margin: 0 0 var(--ui-space-2);
+  color: var(--ui-muted);
+  font-size: var(--ui-font-size-xs);
+  font-weight: var(--ui-weight-strong);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pg-divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--ui-border);
 }
 .pg-tile:hover,
 .pg-tile:focus-visible {
@@ -118,6 +163,36 @@
 .pg-tile-on {
   border-color: var(--ui-accent);
   background: color-mix(in srgb, var(--ui-accent) 18%, var(--ui-surface-hi));
+}
+.pg-tile-fav {
+  border-color: var(--ui-hue-amber);
+  box-shadow: inset 0 0 0 1px var(--ui-hue-amber);
+}
+.pg-open-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ui-space-2);
+}
+.pg-fav-toggle {
+  min-height: var(--ui-tap);
+  padding: 0 var(--ui-space-2);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  background: transparent;
+  color: var(--ui-muted);
+  font: inherit;
+  font-size: var(--ui-font-size-xs);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.pg-fav-toggle:hover,
+.pg-fav-toggle:focus-visible {
+  border-color: var(--ui-hue-amber);
+}
+.pg-fav-toggle-on {
+  border-color: var(--ui-hue-amber);
+  color: var(--ui-text);
 }
 .pg-open {
   margin-top: var(--ui-space-2);
@@ -144,49 +219,4 @@
   margin: var(--ui-space-2) 0 0;
   padding-left: var(--ui-space-4);
   font-size: var(--ui-font-size-sm);
-}
-
-/* The turn's yes/no checklist. */
-.pg-flow {
-  padding: var(--ui-space-4);
-  border: 1px solid var(--ui-border);
-  border-radius: var(--ui-radius-lg);
-  background: var(--ui-surface);
-}
-.pg-flow-dots {
-  display: flex;
-  gap: var(--ui-space-1);
-  margin: 0 0 var(--ui-space-3);
-  padding: 0;
-  list-style: none;
-}
-.pg-flow-dot {
-  flex: 1;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--ui-border);
-}
-.pg-flow-dot-on {
-  background: var(--ui-accent);
-}
-.pg-flow-q {
-  margin: 0 0 var(--ui-space-3);
-  font-size: var(--ui-font-size-xl);
-  font-weight: var(--ui-weight-bold);
-  line-height: var(--ui-line-height-tight);
-}
-.pg-flow-a {
-  margin-bottom: var(--ui-space-3);
-  padding: var(--ui-space-3);
-  border-left: 3px solid var(--ui-accent);
-  border-radius: var(--ui-radius-sm);
-  background: var(--ui-surface-hi);
-  line-height: var(--ui-line-height-loose);
-}
-.pg-flow-btns {
-  display: flex;
-  gap: var(--ui-space-2);
-}
-.pg-flow-btns > * {
-  flex: 1;
 }

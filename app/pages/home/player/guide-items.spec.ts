@@ -1,10 +1,12 @@
 import { describe, expect, it } from "vitest";
 import {
+  byLevel,
   groupItems,
   isParallel,
-  questionGroup,
+  levelTitle,
   searchTree,
   searchWords,
+  spellLead,
   treeOf,
 } from "./guide-items.js";
 import { splitSections } from "./guide-sections.js";
@@ -63,11 +65,88 @@ describe("groupItems", () => {
   });
 });
 
-describe("questionGroup and isParallel", () => {
-  it("finds the numbered all-question group", () => {
-    expect(questionGroup(tree)?.title).toBe("Ask");
+describe("spellLead", () => {
+  it("splits a level and concentration off the name, in either order", () => {
+    expect(spellLead("Bless (1st, concentration)")).toEqual({
+      name: "Bless",
+      level: "1st",
+      concentration: true,
+    });
+    expect(spellLead("Heat Metal (concentration, 2nd)")).toEqual({
+      name: "Heat Metal",
+      level: "2nd",
+      concentration: true,
+    });
+    expect(spellLead("Vicious Mockery (cantrip)")).toEqual({
+      name: "Vicious Mockery",
+      level: "cantrip",
+      concentration: false,
+    });
+    expect(spellLead("Bane (concentration)")).toEqual({
+      name: "Bane",
+      level: null,
+      concentration: true,
+    });
   });
 
+  it("keeps the lead whole when any part of the parentheses isn't a spell tag", () => {
+    for (const lead of [
+      "Radiant Soul (once per long rest)",
+      "Bless (1st, at the table)",
+      "Bless (1st, 2nd)",
+      "Bless (1th)",
+      "Attack",
+    ])
+      expect(spellLead(lead)).toEqual({ name: lead, level: null, concentration: false });
+  });
+});
+
+describe("groupItems upcast", () => {
+  it("splits the text after Upcast: into its own field", () => {
+    const [g] = groupItems({
+      title: "Turn",
+      slug: "turn",
+      body: [
+        "### Action",
+        "",
+        "- **Bless (1st, concentration):** 3 allies add 1d4. Upcast: +1 ally per slot level above 1st.",
+        "- **Attack:** hit it.",
+      ].join("\n"),
+    });
+    expect(g.items[0]).toMatchObject({
+      lead: "Bless",
+      level: "1st",
+      detail: "3 allies add 1d4.",
+      upcast: "+1 ally per slot level above 1st.",
+    });
+    expect(g.items[1]).toMatchObject({ lead: "Attack", level: null, upcast: null });
+  });
+});
+
+describe("byLevel", () => {
+  it("keeps non-spells apart and lists spells by level from cantrips up, in guide order", () => {
+    const [g] = groupItems({
+      title: "Turn",
+      slug: "turn",
+      body: [
+        "- **Shatter (2nd):** boom.",
+        "- **Attack:** hit it.",
+        "- **Bless (1st):** d4s.",
+        "- **Mockery (cantrip):** insult.",
+        "- **Command (1st):** grovel.",
+      ].join("\n"),
+    });
+    const { others, levels } = byLevel(g.items);
+    expect(others.map((i) => i.lead)).toEqual(["Attack"]);
+    expect(levels.map((l) => [levelTitle(l.level), l.items.map((i) => i.lead)])).toEqual([
+      ["Cantrips", ["Mockery"]],
+      ["1st level", ["Bless", "Command"]],
+      ["2nd level", ["Shatter"]],
+    ]);
+  });
+});
+
+describe("isParallel", () => {
   it("calls groups parallel only when their leads match", () => {
     expect(isParallel(tree[1].groups)).toBe(true);
     expect(isParallel(tree[0].groups)).toBe(false);

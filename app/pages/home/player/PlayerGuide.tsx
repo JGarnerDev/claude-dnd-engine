@@ -3,7 +3,8 @@
 // above the tabs finds plays across every section. The guide's `## Notes` and
 // `## Roleplay` sit apart: Notes in a sticky column at the right on a wide screen,
 // Roleplay at the left (under Notes when the screen is too narrow for both), each
-// folded above the search on a phone.
+// folded above the search on a phone. Starred plays (favorites) are kept per PC in
+// this browser, like the done to-dos.
 // A PC picker when there are several guides; a notice when the PC file's level has
 // moved past the guide's.
 
@@ -28,7 +29,7 @@ import {
   type Guide,
   type GuideFile,
 } from "./guide-file.js";
-import { questionGroup, searchTree, searchWords, treeOf } from "./guide-items.js";
+import { searchTree, searchWords, treeOf } from "./guide-items.js";
 import { splitNotes } from "./guide-notes.js";
 import { GuideNotes, ROLEPLAY_HUE } from "./GuideNotes.js";
 import { onlyHit, SearchPlays, SectionPlays, type Opened } from "./GuidePlays.js";
@@ -64,6 +65,7 @@ function GuideBody({ guide, header }: { guide: Guide; header: ReactNode }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState<Opened | null>(null);
   const done = useStoredSet(`player-guide/${guide.pc}/done`);
+  const favs = useStoredSet(`player-guide/${guide.pc}/favs`);
   const tree = treeOf(sections);
   const section = tree.find((s) => s.slug === tab) ?? tree[0];
   const words = searchWords(query);
@@ -100,7 +102,13 @@ function GuideBody({ guide, header }: { guide: Guide; header: ReactNode }) {
           />
         )}
         {words.length > 0 ? (
-          <SearchPlays hits={searchTree(tree, words)} query={query} open={open} onTap={tap} />
+          <SearchPlays
+            hits={searchTree(tree, words)}
+            query={query}
+            open={open}
+            onTap={tap}
+            favs={favs}
+          />
         ) : (
           section && (
             <>
@@ -115,7 +123,7 @@ function GuideBody({ guide, header }: { guide: Guide; header: ReactNode }) {
                 }}
                 className="pg-tabs"
               />
-              <SectionPlays section={section} flow={questionGroup(tree)} open={open} onTap={tap} />
+              <SectionPlays section={section} open={open} onTap={tap} favs={favs} />
             </>
           )
         )}

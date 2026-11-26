@@ -249,29 +249,29 @@ What Jeff wants for Iggy this season, from the 2026-10-13 handout. These are wis
 
 ## Character Sheet (Roll20)
 
-Bard 3 (College of Valor) / Paladin 1 · Protector Aasimar *(sheet as ingested; now Paladin 2 from Session 30, re-ingest the Roll20 sheet for the new numbers)* · Entertainer · Chaotic Good · Medium.
+Bard 3 (College of Valor) / Paladin 2 · Aasimar *(sheet re-ingested 2026-11-25)* · Entertainer · Chaotic Good · Medium.
 
-- **Defenses:** AC 16 (hide armor + shield), HP 32, Hit Dice 3d8 + 1d10, initiative +2, passive Perception 13. Resistant to radiant and necrotic damage.
-- **Ability scores:** STR 10, DEX 15 (save +4), CON 15, INT 10, WIS 14, CHA 18 (save +6).
-- **Skills:** Performance +8, Persuasion +8, Deception +5, Intimidation +5, Acrobatics +4; Jack of All Trades on the rest.
-- **Spellcasting:** CHA; save DC 14, spell attack +6. Slots: 4 × 1st, 2 × 2nd.
+- **Defenses:** AC 17 (hide armor + shield + Defense), HP 40, Hit Dice 3d8 + 2d10, initiative +2, passive Perception 13. Resistant to radiant and necrotic damage.
+- **Ability scores:** STR 10, DEX 15 (save +5), CON 15, INT 10, WIS 14 (save +5), CHA 18 (save +7).
+- **Skills:** Performance +10, Persuasion +10, Intimidation +7, Deception +5, Acrobatics +5; Jack of All Trades on the rest.
+- **Spellcasting:** CHA; save DC 15, spell attack +7. Slots: 4 × 1st, 3 × 2nd.
 - **Senses:** Darkvision 60 ft (Aasimar). The sheet's darkvision field reads 0, a sheet error that Jeff confirmed on 2026-10-05.
-- **Languages:** Common.
+- **Languages:** Common, Celestial, Draconic (chosen 2026-11-25). Celestial is a 2024 Rare language, which an origin normally can't grant: confirm with DM.
 - **Proficiencies:** simple and martial weapons; light and medium armor, shields; lute, bagpipes, viol.
 
 ### Spells
 
 - **Cantrips:** Minor Illusion, Vicious Mockery, Light.
-- **1st:** Dissonant Whispers, Bless, Charm Person, Healing Word, Faerie Fire, Command, Searing Smite (Paladin).
+- **1st:** Dissonant Whispers, Bless, Charm Person, Healing Word, Faerie Fire, Command, Divine Smite and Searing Smite (Paladin).
 - **2nd:** Heat Metal.
 
 ### Features
 
-- **Bard:** Bardic Inspiration (d6, CHA-mod uses; Valor lets it add to weapon damage or AC), Expertise, Jack of All Trades, Song of Rest.
-- **Paladin:** Lay On Hands (5-HP pool), Weapon Mastery (Longsword — Sap, Whip — Slow).
-- **Protector Aasimar — Radiant Soul:** once per long rest, luminous wings for 1 minute, 30 ft flight, extra radiant damage equal to his level once per turn.
+- **Bard:** Bardic Inspiration (d6, CHA-mod uses; Valor lets it add to weapon damage or AC), Expertise, Jack of All Trades. (Song of Rest is a 2014 feature; it isn't in the 2024 bard, and the sheet still lists it.)
+- **Paladin:** Lay On Hands (10-HP pool), Paladin's Smite (one free Divine Smite per long rest), Fighting Style (Defense), Weapon Mastery (Rapier — Vex for Oathcaller, Kusarigama — Topple, a homebrew reach weapon pending DM approval; set 2026-11-25).
+- **Aasimar (2024): Celestial Revelation:** once per long rest, as a bonus action, transforms for 1 minute: once per turn +3 radiant (his proficiency bonus) on a damaging attack or spell, and one form per use, Heavenly Wings (fly at his speed), Inner Radiance or Necrotic Shroud. The sheet still names the 2014 Protector's Radiant Soul. Also Light Bearer (the Light cantrip).
 - **Healing Hands** (1/long rest) and **Shazzam** (1/long rest — see Abilities).
-- **Feat:** Lucky (3 luck points).
+- **Feats:** Lucky (3 luck points), Defense (+1 AC in armor, from the Paladin Fighting Style).
 
 ### Gear
 

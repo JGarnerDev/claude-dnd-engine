@@ -22,16 +22,17 @@ function guide(
     "",
     "## Turn",
     "",
-    "### Ask",
-    "",
-    "1. **Ally down?** Heal them.",
-    "2. **Nothing urgent?** Inspire.",
-    "",
     "### Action",
     "",
     `- **Attack:** ${pc} attacks with the rapier.`,
-    "- **Bless (concentration):** three allies.",
+    "- **Command (1st):** one word.",
+    "- **Bless (1st, concentration):** three allies. Upcast: one more ally per slot level.",
+    "- **Vicious Mockery (cantrip):** an insult.",
     "- Move first.",
+    "",
+    "#### Any creature can",
+    "",
+    "- **Dash:** double your speed.",
     "",
     "## Strategies",
     "",
@@ -109,12 +110,56 @@ describe("PlayerGuide", () => {
     expect(screen.queryByText(/\(concentration\)/)).toBeNull();
   });
 
-  it("walks the yes/no checklist", () => {
+  it("names a spell's level in its open text and puts its upcasting on its own line", () => {
+    const { container } = render(<PlayerGuide files={[guide("Iggy", 5, 5)]} />);
+    fireEvent.click(screen.getByRole("button", { name: "Bless C" }));
+    expect(container.querySelector(".pg-open-item")?.textContent).toMatch(/^Bless: 1st level/);
+    expect(screen.queryByText(/three allies\. Upcast/)).toBeNull();
+    expect(container.querySelector(".pg-upcast")?.textContent).toBe(
+      "Upcast: one more ally per slot level.",
+    );
+  });
+
+  it("shows a #### divider by name inside its card, with its plays after it", () => {
+    const { container } = render(<PlayerGuide files={[guide("Iggy", 5, 5)]} />);
+    const runs = [...container.querySelectorAll(".pg-run")].map((r) => r.textContent);
+    expect(runs).toEqual([
+      "AttackSpellsCantripsVicious Mockery1st levelCommandBlessC",
+      "Any creature canDash",
+    ]);
+  });
+
+  it("lists a card's spells under Spells, one sublist per level from cantrips up", () => {
+    const { container } = render(<PlayerGuide files={[guide("Iggy", 5, 5)]} />);
+    const levels = [...container.querySelectorAll(".pg-level")].map((l) => [
+      l.querySelector(".pg-level-title")?.textContent,
+      [...l.querySelectorAll(".pg-tile")].map((t) => t.textContent),
+    ]);
+    expect(levels).toEqual([
+      ["Cantrips", ["Vicious Mockery"]],
+      ["1st level", ["Command", "BlessC"]],
+    ]);
+  });
+
+  it("puts a favorite play first in its list, outlined, and remembers it", () => {
+    localStorage.clear();
+    const { container } = render(<PlayerGuide files={[guide("Iggy", 5, 5)]} />);
+    fireEvent.click(screen.getByRole("button", { name: "Bless C" }));
+    const star = screen.getByRole("button", { name: "Favorite" });
+    expect(star.getAttribute("aria-pressed")).toBe("false");
+    fireEvent.click(star);
+    expect(screen.getByRole("button", { name: "Favorite" }).getAttribute("aria-pressed")).toBe(
+      "true",
+    );
+    const firstRun = () =>
+      [...container.querySelectorAll(".pg-level")][1].querySelectorAll(".pg-tile");
+    expect([...firstRun()].map((t) => t.textContent)).toEqual(["BlessC", "Command"]);
+    expect(firstRun()[0].classList.contains("pg-tile-fav")).toBe(true);
+    expect(firstRun()[1].classList.contains("pg-tile-fav")).toBe(false);
+    expect(JSON.parse(localStorage.getItem("player-guide/Iggy/favs") ?? "[]")).toHaveLength(1);
+    cleanup();
     render(<PlayerGuide files={[guide("Iggy", 5, 5)]} />);
-    expect(screen.getByText("Ally down?")).toBeTruthy();
-    fireEvent.click(screen.getByRole("button", { name: "No" }));
-    expect(screen.getByText("Nothing urgent?")).toBeTruthy();
-    expect(screen.getByText("Inspire.")).toBeTruthy();
+    expect(document.querySelector(".pg-tile-fav")?.textContent).toBe("BlessC");
   });
 
   it("shows one tile per enemy type when groups share their leads", () => {

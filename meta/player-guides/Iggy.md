@@ -11,35 +11,45 @@ guide_confirmed: 35
 
 ## Turn
 
-### Ask in this order
-
-1. **Is an ally at 0 HP?** Lay on Hands (bonus action, touch, no slot) or Healing Word (bonus
-   action, 60 ft, a 1st-level slot). Then take your action.
-2. **Is a big target in reach?** Attack with Oathcaller, and Smite on the hit.
-3. **Is an enemy hitting someone fragile (ODB, Halsby)?** Oathcaller's call on it.
-4. **Nothing urgent?** Give Bardic Inspiration to whoever acts next.
-
 ### Action
 
-- **Attack:** one melee attack with Oathcaller, a +1 rapier: 1d8 + DEX + 1 slashing on a hit.
-  Your best default.
-- **Bless (concentration):** 3 allies add 1d4 to attacks and saves. Concentration. The best first-round spell in a
-  long fight.
-- **Faerie Fire (concentration):** a 20 ft cube; anyone who fails a DEX save glows, and attacks on them get
-  advantage. Concentration. It also shows invisible creatures.
-- **Command:** one word, WIS save. *Grovel* knocks it prone, and a flyer falls. *Drop* disarms.
-  *Flee* sends it away for a turn.
-- **Dissonant Whispers:** 3d6 psychic, and on a failed save it must use its reaction to run. It
-  runs past your allies, and they get opportunity attacks.
-- **Heat Metal (concentration):** against anyone in metal armor or holding a metal weapon. 2d8 fire with no
-  attack roll, and the damage repeats as a bonus action each turn. Concentration.
-- **Vicious Mockery:** a cantrip, 60 ft. On a failed WIS save it takes 2d6 psychic and has
-  disadvantage on its next attack roll. Costs no slot.
-- **Radiant Soul (once per long rest):** costs your action. Wings and 30 ft of flight for 1
-  minute, and +5 radiant damage on one hit each turn. Worth it in a long fight or when flying
-  solves the problem. In a short fight, attack instead.
+- **Attack:** one melee attack with Oathcaller, a +1 rapier: +6 to hit, 1d8 + 3 slashing.
+  **Vex:** if you hit and deal damage, you have advantage on your next attack against that target
+  before the end of your next turn. Your best default. Out of reach: heavy crossbow, +5 to hit,
+  1d10 + 2 piercing, 100/400 ft. 10 ft away: kusarigama, +5 to hit, 1d4 + 2 slashing, reach. You
+  can still smite with it. **Topple:** on a hit, it makes a DC 13 CON save or falls prone. Prone
+  means allies within 5 ft attack it with advantage, but your next reach swing has disadvantage.
+- **Bless (1st, concentration):** 3 allies add 1d4 to attacks and saves. The best first-round spell
+  in a long fight. Upcast: +1 ally per slot level above 1st (4 allies with a 2nd).
+- **Faerie Fire (1st, concentration):** a 20 ft cube; anyone who fails a DEX save glows, and attacks
+  on them get advantage. It also shows invisible creatures. Upcast: nothing more, so use a 1st.
+- **Command (1st):** one word, WIS save. *Grovel* knocks it prone, and a flyer falls. *Drop*
+  disarms. *Flee* sends it away for a turn. Upcast: +1 creature per slot level above 1st, all
+  within 30 ft of each other (2 with a 2nd).
+- **Charm Person (1st):** one humanoid within 30 ft makes a WIS save, with advantage if you or
+  your allies are fighting it. On a failure it's charmed for an hour and treats you as a friend,
+  until you or an ally hurts it. It knows it was charmed when the spell ends, so use it to talk
+  past someone, not to make a friend. Upcast: +1 creature per slot level above 1st (2 with a
+  2nd).
+- **Dissonant Whispers (1st):** 3d6 psychic, and on a failed save it must use its reaction to
+  run. It runs past your allies, and they get opportunity attacks. Upcast: +1d6 per slot level
+  above 1st (4d6 with a 2nd).
+- **Heat Metal (2nd, concentration):** against anyone in metal armor or holding a metal weapon. 2d8
+  fire with no attack roll, and the damage repeats as a bonus action each turn. Upcast: +1d8 per
+  slot level above 2nd (3d8 with a 3rd, once you have them).
+- **Vicious Mockery (cantrip):** 60 ft. On a failed WIS save it takes 2d6 psychic and has
+  disadvantage on its next attack roll. Costs no slot. Upcast: a cantrip can't be; it grows with
+  your level instead (3d6 at level 11).
+- **Minor Illusion (cantrip):** within 30 ft, a sound or a still image no bigger than a 5 ft
+  cube, for a minute. An image is good cover to hide behind; a voice or footsteps pull guards
+  away. Anyone who studies it (an action and an Investigation check against your DC 15) sees
+  through it. Costs no slot. Upcast: a cantrip can't be.
+- **Light (cantrip):** touch an object and it sheds bright light 20 ft and dim light 20 ft more
+  for an hour. No concentration. Costs no slot. Upcast: a cantrip can't be.
+- **Healing Hands (once per long rest):** touch a creature and it heals 3d4 HP (one d4 per
+  proficiency bonus). No slot. Save it for when Lay on Hands is empty.
 
-### Any creature can (costs your action)
+#### Any creature can
 
 - **Dash:** double your speed this turn.
 - **Disengage:** your movement provokes no opportunity attacks this turn. Use it to get back to
@@ -64,19 +74,26 @@ guide_confirmed: 35
 
 ### Bonus action (only one per turn)
 
-- **Divine Smite:** right after a melee hit. 2d8 radiant with a 1st-level slot, +1d8 per slot
-  level above that, +1d8 against undead and fiends. One free cast per long rest (Paladin's Smite).
-- **Searing Smite:** right after a hit, 1d6 fire, and the target keeps burning each turn until it
-  passes a CON save. It costs the same slot as Divine Smite, so use it only when the fight will go
-  long.
+- **Divine Smite (1st):** right after a melee hit. 2d8 radiant, +1d8 against undead and fiends.
+  One free cast per long rest (Paladin's Smite). Upcast: +1d8 per slot level above 1st (3d8,
+  4d8 against undead, with a 2nd).
+- **Searing Smite (1st):** right after a hit, 1d6 fire, and the target keeps burning (1d6 each
+  turn) until it passes a CON save. It costs the same slot as Divine Smite, so use it only when
+  the fight will go long. Upcast: both the hit and the burn get +1d6 per slot level above 1st.
 - **Bardic Inspiration (4 per long rest, d6):** an ally within 60 ft keeps the die for an hour.
   They add it after failing a d20 roll, or (Valor) add it to damage after a hit, or use their
   reaction to add it to AC when hit.
 - **Lay on Hands (10-HP pool):** touch an ally and heal them any number of HP from the pool
   (or spend 5 to cure poison). No slot, and it's not a spell, so it doesn't trigger the one-slot
   rule.
-- **Healing Word:** an ally within 60 ft heals 2d4 + CHA HP. A 1st-level slot. It's how you get
-  someone up from across the room.
+- **Healing Word (1st):** an ally within 60 ft heals 2d4 + CHA HP. It's how you get someone up
+  from across the room. Upcast: +2d4 per slot level above 1st (4d4 + CHA with a 2nd).
+- **Celestial Revelation (once per long rest):** transform for 1 minute. Once on each of your
+  turns, one target you damage with an attack or spell takes +3 radiant. Pick one form each time:
+  *Heavenly Wings* (fly at your speed), *Inner Radiance* (you shed light, and each creature
+  within 10 ft takes 3 radiant at the end of your turns) or *Necrotic Shroud* (creatures within
+  10 ft make a CHA save, DC 15, or are frightened of you until the end of your next turn). It
+  costs the turn's bonus action, so no Smite that turn: use it on round one of a long fight.
 - **Oathcaller's call (once per short rest):** one enemy within 30 ft makes a WIS save. On a
   failure it has disadvantage attacking anyone but you until your next turn, and if it attacks
   someone else anyway, you get a reaction attack.
@@ -93,7 +110,7 @@ guide_confirmed: 35
 
 ### Movement
 
-- Stand between the enemy and ODB or Halsby. Your AC is 16 and they're the party's lowest.
+- Stand between the enemy and ODB or Halsby. Your AC is 17 and they're the party's lowest.
 - Stay within 10 ft of Luci when she lights up (see Combos): you resist radiant damage, so you're
   the one ally who can.
 - Move before you attack when an enemy is prone. Melee attacks on a prone enemy have advantage.
@@ -115,9 +132,10 @@ guide_confirmed: 35
 ### On your own
 
 - **Big hit:** Attack, and on the hit Divine Smite with a 2nd-level slot (3d8, 4d8 against undead)
-  plus Radiant Soul's +5 if your wings are out. Spend a Lucky point on the attack roll.
+  plus Celestial Revelation's +3 if you've transformed. Spend a Lucky point on the attack roll.
+  Best on a Vex turn: advantage doubles your crit chance, and a crit doubles the smite dice.
 - **Wall:** Oathcaller's call (bonus action), then Attack. The enemy hits you or takes your
-  reaction strike.
+  reaction strike. A hit with either sets up Vex, so your next turn's attack has advantage.
 - **First round of a long fight:** Bless (action) and Inspiration on the ally with the biggest
   hits, Shaw or ODB.
 - **Pick-up:** Lay on Hands on the downed ally, then Bless or Attack. Use Healing Word only when
@@ -136,19 +154,24 @@ guide_confirmed: 35
 
 ### With ODB
 
-- **Hold Person, then smite (concentration):** a paralyzed creature takes a critical hit from any melee hit within
-  5 ft. A crit doubles the Smite dice: 2nd-level Divine Smite goes from 3d8 to 6d8. It only works
-  on humanoids.
-- **Hideous Laughter (concentration):** the target falls prone and can't act. Melee advantage again.
-- **Shatter:** it's a 10 ft sphere and it hits allies. Step out of the middle before ODB casts.
+- **Hold Person, then smite (concentration):** a paralyzed creature takes a critical hit from
+  any melee hit within 5 ft. A crit doubles the Smite dice: 2nd-level Divine Smite goes from 3d8
+  to 6d8. It only works on humanoids. Upcast: +1 humanoid per slot level above 2nd.
+- **Hideous Laughter (concentration):** the target falls prone and can't act. Melee advantage
+  again. Upcast: +1 creature per slot level above 1st.
+- **Shatter:** 3d6 thunder in a 10 ft sphere, and it hits allies. Step out of the middle
+  before ODB casts. Upcast: +1d6 per slot level above 2nd.
 - **Guard him:** ODB has the fewest HP in the party. Call the enemy who's closing on him.
 
 ### With Halsby
 
-- **Bless and Bane (concentration):** Bless your side, Halsby Banes theirs. Both are concentration, yours and his. Every roll moves by a d4 both ways.
-- **Darkness (concentration):** Halsby sees through his own Darkness, and you don't. Stay out of it unless the
-  enemy relies on sight more than you do.
-- **Pass without Trace (concentration):** +10 Stealth for the party. Open the fight with a surprise hit and Smite.
+- **Bless and Bane (concentration):** Bless your side, Halsby Banes theirs. Both are
+  concentration, yours and his. Every roll moves by a d4 both ways. Upcast: each takes +1
+  creature per slot level above 1st.
+- **Darkness (concentration):** Halsby sees through his own Darkness, and you don't. Stay out
+  of it unless the enemy relies on sight more than you do. Upcast: nothing more.
+- **Pass without Trace (concentration):** +10 Stealth for the party. Open the fight with a
+  surprise hit and Smite. Upcast: nothing more.
 - **His AC is 12:** he's your best target for a Valor Inspiration die (added to AC as a reaction)
   and for the Oathcaller call.
 
@@ -166,8 +189,8 @@ guide_confirmed: 35
 - **Team:** Halsby's Gust of Wind (concentration) pushes them back; ODB and Halsby hit them with ranged spells.
   Shaw grapples anything that lands.
 - **Iggy:** Command *Grovel*: a flying creature knocked prone falls. Or Faerie Fire so the ranged
-  attackers hit, or your heavy crossbow. If it's a long fight, Radiant Soul puts you in the air
-  with them.
+  attackers hit, or your heavy crossbow. If it's a long fight, Celestial Revelation's wings put you
+  in the air with them.
 
 ### Spellcasters
 
@@ -182,7 +205,7 @@ guide_confirmed: 35
 - **Team:** use saves, not attack rolls: ODB's Hold Person and Hideous Laughter, your Command.
   Topple it so attacks get advantage, and let everyone dig in.
 - **Iggy:** Heat Metal if it wears metal armor: damage every turn, no attack roll. Faerie Fire for
-  everyone's advantage. Call it with Oathcaller to keep its hits on your AC 16.
+  everyone's advantage. Call it with Oathcaller to keep its hits on your AC 17.
 
 ### Swarms and hordes
 
@@ -195,7 +218,7 @@ guide_confirmed: 35
 
 - **Team:** radiant damage is your weapon here. You and Luci both resist necrotic. Holy water
   hurts both undead and fiends.
-- **Iggy:** Divine Smite gets +1d8 against them. Radiant Soul adds radiant damage on top. Charms,
+- **Iggy:** Divine Smite gets +1d8 against them. Celestial Revelation adds +3 radiant on top. Charms,
   Hold Person and Hideous Laughter often fail on undead (no mind, not humanoid). Read what it is
   before you spend a slot. The silver shortsword is for creatures that resist anything that isn't
   silver.
@@ -209,7 +232,7 @@ guide_confirmed: 35
 ### Grapplers and brutes
 
 - **Team:** Shaw counters a grapple best. Keep ODB and Halsby out of its reach.
-- **Iggy:** Vicious Mockery and the Sap mastery (longsword) give its next attack disadvantage.
+- **Iggy:** Vicious Mockery gives its next attack disadvantage.
   Spend Lucky to give its big hit disadvantage. Call it with Oathcaller, so it fights you, not the
   casters.
 
@@ -217,7 +240,9 @@ guide_confirmed: 35
 
 ### Where you are (level 5)
 
-- Bard 3 (Valor) / Paladin 2. Proficiency +3, spell save DC 14, spell attack +6.
+- Bard 3 (Valor) / Paladin 2. Proficiency +3, spell save DC 15, spell attack +7.
+- AC 17: hide armor 12, DEX +2, shield +2 and the Defense fighting style +1 (only while you
+  wear armor).
 - Slots: 4 × 1st, 3 × 2nd. Under 2024 rules the paladin's half levels round **up** for
   multiclass slots: 3 bard + 1 paladin makes you a level-4 caster.
 - Jeff's plan (2026-10-13) is to stop at Paladin 2 and keep levelling bard.
@@ -252,23 +277,19 @@ guide_confirmed: 35
 ### Feat picks for the ASI
 
 - **CHA to 20:** spell DC and spell attack +1, a fifth Inspiration use. The safe pick.
-- **War Caster:** advantage on concentration saves, so Bless and Heat Metal last in melee. Good for
-  how you fight.
-- **Resilient (CON):** proficiency on concentration saves. Slower to pay off than War Caster, but
+- **War Caster:** +1 CHA (to 19), advantage on concentration saves, so Bless and Heat Metal last
+  in melee. Good for how you fight.
+- **Resilient (CON):** +1 CON (to 16) and proficiency on concentration saves. Slower to pay off than War Caster, but
   it lasts.
 
 ## Notes
 
 ### To do
 
-- **Import the new sheet:** Roll20 still has Paladin 1. Export it to Claude so the guide's numbers
-  (Lay on Hands 10, slots 4 × 1st and 3 × 2nd) come from the sheet.
-- **Pick a Fighting Style:** Paladin 2 gives one and it isn't on the sheet. Blessed Warrior (two
-  cleric cantrips) or Defense (+1 AC) both fit Iggy.
-- **Ask Ben (at the table):** Does Oathcaller count as a rapier for weapon mastery? If so, swap Whip
-  (Slow) for Rapier (Vex) on a long rest. A hit with Vex gives advantage on your next attack against
-  that target.
-- **Choose the ASI feat:** CHA to 20, War Caster or Resilient (CON). See Build.
+- **Get a kusarigama:** you have Kusarigama mastery (Topple) but don't carry one. It's homebrew
+  (a whip with Topple in place of Slow), so ask the DM to approve it first.
+- **At level 6 (Bard 4), choose a feat:** not yet, you're level 5. CHA to 20, War Caster or
+  Resilient (CON). See Build.
 
 ### Remember
 

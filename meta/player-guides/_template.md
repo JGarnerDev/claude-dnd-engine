@@ -36,8 +36,6 @@ before the first `##` (keep it empty, or use it for a note to whoever edits the 
   searches them all, so:
   - Every bullet starts with a bold lead, `- **Divine Smite:** when…`. The lead is the tile's label;
     the rest opens under it. A bullet with no lead shows as plain text.
-  - Turn opens with a numbered list whose leads are all questions (`1. **Is an ally at 0 HP?** …`).
-    The page walks it as a yes/no checklist.
   - Every Strategies group uses the same leads in the same order (`**Team:**`, `**<PC>:**`), so the
     page shows one tile per enemy type.
   - Notes and Roleplay are not plays: `## Notes` and `## Roleplay` stay out of the tabs and the
@@ -49,19 +47,26 @@ before the first `##` (keep it empty, or use it for a note to whoever edits the 
 
 ## Turn
 
-What to do with each part of the turn. Start with `### Ask in this order` (the questions, in
-order), then one group each for the PC's own options: `### Action`, `### Any creature can (costs
-your action)` (the 2024 actions everyone has: Dash, Disengage, Dodge, Help, Hide, Influence,
-Magic, Ready, Search, Study, Utilize, with a note where one suits this PC), `### Bonus action`,
+What to do with each part of the turn: one group each for the PC's own options: `### Action` (the PC's own actions, then a
+`#### Any creature can` divider over the 2024 actions everyone has: Dash, Disengage, Dodge, Help,
+Hide, Influence, Magic, Ready, Search, Study, Utilize, with a note where one suits this PC),
+`### Bonus action`,
 `### Reaction`, `### Movement`, and `### Free (no action)` (speaking, the free object
 interaction, dropping prone, and any table ruling or feature that takes no action). Every
 bullet's detail says what the play **does** (the effect, damage or healing, with numbers), then
 when to use it. "When a called enemy attacks someone else" is only a trigger; say what happens.
 
-Mark every spell that needs concentration (2024 rules) by ending its lead with
-`(concentration)`, in any tab: `- **Bless (concentration):** …`. The page drops the suffix and
-shows a **C** badge on the tile. A combo or an ally's spell that needs concentration gets it too;
-an unled mention says `(concentration)` after the spell's name.
+Tag every spell's lead with its level and, if it needs concentration (2024 rules),
+`concentration`, in any tab: `- **Bless (1st, concentration):** …`, `- **Shatter (2nd):** …`,
+`- **Vicious Mockery (cantrip):** …`. The page drops the tags, lists a card's spells under a
+**Spells** divider with one sublist per level (Cantrips, 1st level, …), and shows a **C** badge
+on the tile. Level tags are for this PC's own casts in Turn; a combo or an ally's spell takes
+only `(concentration)`, and an unled mention says `(concentration)` after the spell's name.
+
+End a leveled spell's detail with `Upcast: …`, what a higher slot adds, with the number at this
+PC's next slot level (`Upcast: +1d6 per slot level above 1st (4d6 with a 2nd).`). Say
+`Upcast: nothing more.` when a higher slot adds nothing. A cantrip says how it grows with the
+character's level instead. The page shows the upcast on its own line under the play.
 
 ## Combos
 
