@@ -98,11 +98,6 @@
 .pg-mark-tile {
   margin-inline-start: var(--ui-space-1);
 }
-.pg-mark-tile .ui-badge {
-  padding: 0 0.35em;
-  font-size: var(--ui-font-size-xs);
-  line-height: 1.3;
-}
 .pg-mark-open {
   margin-inline-end: var(--ui-space-2);
 }

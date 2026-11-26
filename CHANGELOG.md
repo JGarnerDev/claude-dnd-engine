@@ -6,6 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.118.0] — 2026-11-26
+
+### Changed
+
+- **jeff-ui 3.0.0** (`app/package.json`). The recap slides now open on jeff-ui's `Overlay`: the session title sits in its header, **Close** sits top right, and the slide count is in its footer. Clicking the left third of a slide goes back, and clicking anywhere else goes forward. A guide's short concentration mark is now a small `Badge` (`size="sm"`), not a restyled one.
+- **Pre-commit checks app CSS** with `jeff-ui-css-check`, which fails on raw colors, `.ui-*` selectors and `:root` custom properties. The night-sky plate keeps its raw colors on lines marked `/* css-audit: allow raw-color */`.
+
 ## [0.117.0] — 2026-11-25
 
 ### Added

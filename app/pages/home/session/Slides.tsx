@@ -11,7 +11,7 @@
 import "./slides.css";
 import { useEffect, useEffectEvent, useRef, useState, type MouseEvent } from "react";
 import { createPortal } from "react-dom";
-import { Button, Heading, Prose, Row, Stage, Text } from "jeff-ui";
+import { Heading, Overlay, Prose, Stage, Text } from "jeff-ui";
 import { unlink, type DeckSlide } from "./deck.js";
 import { Markdown } from "./MarkdownView.js";
 import { RefContext } from "./RefChips.js";
@@ -72,17 +72,15 @@ function autoScroll(root: HTMLElement): () => void {
   };
 }
 
-// One slide and the foot under it.
+// One slide on its stage. A click on it steps the deck (onClick).
 export function Slide({
   deck,
   i,
-  label,
-  onClose,
+  onClick,
 }: {
   deck: DeckSlide[];
   i: number;
-  label: string;
-  onClose: () => void;
+  onClick?: (ev: MouseEvent<HTMLDivElement>) => void;
 }) {
   const s = deck[i];
   const body = s.body ?? (
@@ -91,35 +89,23 @@ export function Slide({
     </Prose>
   );
   return (
-    <>
-      <Stage
-        className={`sr-slides-stage${s.bare ? " is-bare" : ""}`}
-        data-index={i}
-        aria-label={s.bare ? s.title : undefined}
-      >
-        {s.bare ? (
+    <Stage
+      className={`sr-slides-stage${s.bare ? " is-bare" : ""}`}
+      data-index={i}
+      aria-label={s.bare ? s.title : undefined}
+      onClick={onClick}
+    >
+      {s.bare ? (
+        <div className="sr-slide-body">{body}</div>
+      ) : (
+        <div className="sr-slide-text">
+          <Heading level={1} size="xl" className="sr-slide-title">
+            {s.title}
+          </Heading>
           <div className="sr-slide-body">{body}</div>
-        ) : (
-          <div className="sr-slide-text">
-            <Heading level={1} size="xl" className="sr-slide-title">
-              {s.title}
-            </Heading>
-            <div className="sr-slide-body">{body}</div>
-          </div>
-        )}
-      </Stage>
-      <Row as="footer" gap={4} className="sr-slides-foot">
-        <Text as="span" tone="muted" className="sr-slides-label">
-          {sessionTitle(label)}
-        </Text>
-        <Text as="span" tone="muted" numeric className="sr-slides-count">
-          {i + 1} / {deck.length}
-        </Text>
-        <Button data-act="close" title="Close (Esc)" onClick={onClose}>
-          Close
-        </Button>
-      </Row>
-    </>
+        </div>
+      )}
+    </Stage>
   );
 }
 
@@ -178,26 +164,34 @@ export function Slides({
   useEffect(() => (el.current ? autoScroll(el.current) : undefined), [i, deck]);
 
   if (!deck.length) return null;
-  // Click the right two-thirds to advance, the left third to go back.
+  const at = Math.min(i, deck.length - 1);
+  // Click the right two-thirds of the slide to advance, the left third to go back.
   const onClick = (ev: MouseEvent<HTMLDivElement>) => {
-    if ((ev.target as HTMLElement).closest(".sr-slides-foot")) return;
-    show(ev.clientX < ev.currentTarget.clientWidth / 3 ? i - 1 : i + 1);
+    const box = ev.currentTarget.getBoundingClientRect();
+    show(ev.clientX - box.left < box.width / 3 ? at - 1 : at + 1);
   };
   // A portal keeps React's context, so the runner's beat and scene chips are switched off here.
   return createPortal(
-    <div
+    <Overlay
       ref={el}
       className="sr-slides"
       data-theme="ink"
       data-density="presentation"
       role="dialog"
       aria-label={label}
-      onClick={onClick}
+      title={sessionTitle(label)}
+      exitLabel="Close"
+      onExit={onClose}
+      footer={
+        <Text as="span" tone="muted" numeric className="sr-slides-count">
+          {at + 1} / {deck.length}
+        </Text>
+      }
     >
       <RefContext.Provider value={null}>
-        <Slide deck={deck} i={Math.min(i, deck.length - 1)} label={label} onClose={onClose} />
+        <Slide deck={deck} i={at} onClick={onClick} />
       </RefContext.Provider>
-    </div>,
+    </Overlay>,
     document.body,
   );
 }

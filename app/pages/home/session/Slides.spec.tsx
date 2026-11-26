@@ -13,8 +13,7 @@ const deck: DeckSlide[] = [
 ];
 const overlay = () => document.querySelector<HTMLElement>(".sr-slides");
 const title = () => overlay()!.querySelector(".sr-slide-title")!.textContent;
-const slide = (d: DeckSlide[], i: number, label: string) =>
-  render(<Slide deck={d} i={i} label={label} onClose={() => {}} />).container;
+const slide = (d: DeckSlide[], i: number) => render(<Slide deck={d} i={i} />).container;
 
 // Open until closed, as the runner holds it.
 function Host({ d }: { d: DeckSlide[] }) {
@@ -25,25 +24,20 @@ function Host({ d }: { d: DeckSlide[] }) {
 afterEach(cleanup);
 
 describe("Slide", () => {
-  it("renders the headline, markdown body and the counter", () => {
-    const el = slide(deck, 1, "Session 8");
+  it("renders the headline and markdown body", () => {
+    const el = slide(deck, 1);
     expect(el.querySelector(".sr-slide-title")!.textContent).toBe("Previously on…");
     expect(el.querySelector(".sr-slide-body li strong")!.textContent).toBe("Dip");
-    expect(el.querySelector(".sr-slides-count")!.textContent).toBe("2 / 3");
   });
 
   it("uses a generated slide’s body in place of its markdown", () => {
-    const el = slide(
-      [{ title: "Stats", md: "ignored", body: <div className="st-cards" /> }],
-      0,
-      "",
-    );
+    const el = slide([{ title: "Stats", md: "ignored", body: <div className="st-cards" /> }], 0);
     expect(el.querySelector(".sr-slide-body .st-cards")).not.toBeNull();
     expect(el.querySelector(".sr-slide-body")!.textContent).not.toContain("ignored");
   });
 
   it("drops the headline on a bare slide and labels the stage instead", () => {
-    const el = slide([{ title: "As the sky stood", md: "", body: <svg />, bare: true }], 0, "");
+    const el = slide([{ title: "As the sky stood", md: "", body: <svg />, bare: true }], 0);
     expect(el.querySelector(".sr-slide-title")).toBeNull();
     const stage = el.querySelector(".sr-slides-stage")!;
     expect(stage.classList.contains("is-bare")).toBe(true);
@@ -51,7 +45,7 @@ describe("Slide", () => {
   });
 
   it("shows wikilinks as plain text, never entity links", () => {
-    const el = slide([{ title: "T", md: "Met [[Sable Wren]] at [[Ashford|the ford]]" }], 0, "");
+    const el = slide([{ title: "T", md: "Met [[Sable Wren]] at [[Ashford|the ford]]" }], 0);
     expect(el.querySelector("a")).toBeNull();
     expect(el.querySelector(".sr-slide-body")!.textContent!.trim()).toBe(
       "Met Sable Wren at the ford",
@@ -63,6 +57,12 @@ describe("Slides", () => {
   it("does nothing for an empty deck", () => {
     render(<Slides deck={[]} label="none" onClose={() => {}} />);
     expect(overlay()).toBeNull();
+  });
+
+  it("shows the session title above and the slide count below", () => {
+    render(<Host d={deck} />);
+    expect(overlay()!.querySelector(".ui-overlay-title")!.textContent).toContain("Session 8");
+    expect(overlay()!.querySelector(".sr-slides-count")!.textContent).toBe("1 / 3");
   });
 
   it("steps with the arrow keys, clamped at both ends, and Home / End jump", async () => {

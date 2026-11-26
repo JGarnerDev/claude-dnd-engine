@@ -64,7 +64,9 @@ function SpellMarks({ item, short }: { item: GuideItem; short: boolean }) {
           className={`pg-mark ${short ? "pg-mark-tile" : "pg-mark-open"}`}
           title="Needs concentration"
         >
-          <Badge hue={CONCENTRATION_HUE}>{short ? "C" : "concentration"}</Badge>
+          <Badge hue={CONCENTRATION_HUE} size={short ? "sm" : "md"}>
+            {short ? "C" : "concentration"}
+          </Badge>
         </span>
       )}
     </>
