@@ -6,7 +6,8 @@
 // divider run) with an outline, kept per PC in this browser.
 // A card's spells sit under a Spells divider, one sublist per level from cantrips up.
 // A spell's tile shows a C when it needs concentration; its open text spells out its
-// level and concentration and puts what upcasting does on a line of its own.
+// level and concentration. Its detail opens with the rules; what upcasting does and
+// the tip (when to use it) each get a line of their own.
 
 import { Badge, Card } from "jeff-ui";
 import { InlineMd } from "../session/MarkdownView.js";
@@ -109,6 +110,12 @@ function OpenText({ opened, favs }: { opened: Opened; favs: StoredSet }) {
             <p className="pg-upcast">
               <strong>Upcast: </strong>
               <InlineMd md={i.upcast} />
+            </p>
+          )}
+          {i.tip && (
+            <p className="pg-tip">
+              <strong>Tip: </strong>
+              <InlineMd md={i.tip} />
             </p>
           )}
         </div>

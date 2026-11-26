@@ -26,7 +26,7 @@ function guide(
     "",
     `- **Attack:** ${pc} attacks with the rapier.`,
     "- **Command (1st):** one word.",
-    "- **Bless (1st, concentration):** three allies. Upcast: one more ally per slot level.",
+    "- **Bless (1st, concentration):** three allies. Tip: cast it first. Upcast: one more ally per slot level.",
     "- **Vicious Mockery (cantrip):** an insult.",
     "- Move first.",
     "",
@@ -118,6 +118,7 @@ describe("PlayerGuide", () => {
     expect(container.querySelector(".pg-upcast")?.textContent).toBe(
       "Upcast: one more ally per slot level.",
     );
+    expect(container.querySelector(".pg-tip")?.textContent).toBe("Tip: cast it first.");
   });
 
   it("shows a #### divider by name inside its card, with its plays after it", () => {

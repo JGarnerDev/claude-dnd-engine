@@ -29,8 +29,10 @@ before the first `##` (keep it empty, or use it for a note to whoever edits the 
   Never from DM-only material: scheduler plans, `DM-only` blocks, `scheduler/campaign/_*.md`,
   `meta/loot-options/`, PC arcs.
 - **Strategies cover enemy types the party has met, or common ones**, never what the DM has planned.
-- **No Roll20 overlap:** no full sheet, dice, HP tracking, spell text or inventory. Name a feature
-  and say when to use it.
+- **No Roll20 overlap:** no full sheet, HP tracking or inventory. Each play does carry its rules,
+  in our own words (never copied book text): casting time, range, target, duration, the save and
+  what happens on a failure, with this PC's numbers. Then `Tip: …`, when and why to use it. The
+  page shows the tip on its own line.
 - **No tables, no wikilinks.** Headings, bullets and numbered lists only; the page renders them.
 - **Shape it for the page.** The page turns each `###` group into a card of tappable plays and
   searches them all, so:

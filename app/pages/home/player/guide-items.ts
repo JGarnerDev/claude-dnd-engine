@@ -21,6 +21,8 @@ export interface GuideItem {
   level: string | null;
   /** What casting it with a higher slot does: the text after "Upcast:", or null. */
   upcast: string | null;
+  /** When and how to use it: the text after "Tip:", or null. The detail before it is the rules. */
+  tip: string | null;
   /** The `#### ` divider above it inside its group, or null before any divider. */
   part: string | null;
 }
@@ -52,7 +54,9 @@ const BULLET = /^(?:[-*]|\d+\.)\s+(.*)$/;
 const LEAD = /^\*\*(.+?)\*\*:?\s*(.*)$/s;
 const TAGS = /^(.*?)\s*\(([^()]*)\)$/;
 const LEVELS = ["cantrip", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"];
-const UPCAST = /\s+Upcast:\s+/;
+/** Labels that split the rest of a detail onto a line of its own, in any order. */
+const MARKERS = { upcast: /\s+Upcast:\s+/, tip: /\s+Tip:\s+/ } as const;
+type Marker = keyof typeof MARKERS;
 
 interface SpellLead {
   name: string;
@@ -78,11 +82,27 @@ export function spellLead(lead: string): SpellLead {
   return { name: m[1], level: levels[0] ?? null, concentration: conc.length === 1 };
 }
 
-/** Split "… Upcast: …" off a detail. Only the first "Upcast:" splits. */
-function splitUpcast(detail: string): { detail: string; upcast: string | null } {
-  const at = UPCAST.exec(detail);
-  if (!at) return { detail, upcast: null };
-  return { detail: detail.slice(0, at.index), upcast: detail.slice(at.index + at[0].length) };
+/**
+ * Split "… Tip: … Upcast: …" (either order) off a detail. Each label splits at its first
+ * match only, and its text runs to the next label or the end.
+ */
+export function splitMarkers(detail: string): {
+  detail: string;
+  upcast: string | null;
+  tip: string | null;
+} {
+  const found = (Object.keys(MARKERS) as Marker[])
+    .map((name) => ({ name, at: MARKERS[name].exec(detail) }))
+    .filter((f): f is { name: Marker; at: RegExpExecArray } => f.at !== null)
+    .sort((a, b) => a.at.index - b.at.index);
+  const out = { detail, upcast: null as string | null, tip: null as string | null };
+  if (found.length === 0) return out;
+  out.detail = detail.slice(0, found[0].at.index);
+  found.forEach((f, n) => {
+    const end = n + 1 < found.length ? found[n + 1].at.index : detail.length;
+    out[f.name] = detail.slice(f.at.index + f.at[0].length, end);
+  });
+  return out;
 }
 
 function slug(s: string): string {
@@ -114,6 +134,7 @@ function toItem({
       concentration: false,
       level: null,
       upcast: null,
+      tip: null,
       part,
     };
   const spell = spellLead(m[1].replace(/:$/, ""));
@@ -123,7 +144,7 @@ function toItem({
     lead: spell.name,
     concentration: spell.concentration,
     level: spell.level,
-    ...splitUpcast(m[2]),
+    ...splitMarkers(m[2]),
     part,
   };
 }
@@ -241,7 +262,10 @@ export function searchTree(tree: readonly TreeSection[], words: readonly string[
       const items = hasAll(words, group.title)
         ? group.items
         : group.items.filter((i) =>
-            hasAll(words, `${i.lead ?? ""} ${i.level ?? ""} ${i.detail} ${i.upcast ?? ""}`),
+            hasAll(
+              words,
+              `${i.lead ?? ""} ${i.level ?? ""} ${i.detail} ${i.upcast ?? ""} ${i.tip ?? ""}`,
+            ),
           );
       return items.length > 0 ? [{ section: s.title, group, items }] : [];
     }),

@@ -6,6 +6,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Versioning rules
 
 The version in [`VERSION`](./VERSION) always matches the top entry below.
 
+## [0.117.0] — 2026-11-25
+
+### Added
+
+- **Rules on every play** in the player guides. A play's detail now opens with what it does by the rules, in our own words (casting time, range, targets, duration, save and effect, with the PC's numbers), and a `Tip: …` sentence for when to use it shows on its own line under the play, like `Upcast: …`. The two can come in either order. Iggy's Turn tab is rewritten this way, and Necrotic Shroud's extra damage is now necrotic, not radiant. The `/player-guide` command and the guide template drop the old "no spell text" rule.
+
 ## [0.116.0] — 2026-11-25
 
 ### Added

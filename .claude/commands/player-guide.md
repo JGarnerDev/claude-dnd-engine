@@ -63,8 +63,10 @@ never other PCs' private backstories or DM-only material.
 - **Rules accuracy over flavor.** Use the chosen edition's rules exactly: action costs, the
   one-slot-per-turn rule (2024), concentration, multiclass slots. Flag anything you're unsure of
   as a question for the DM in `## Build` → Ask the DM.
-- **No Roll20 overlap:** no full sheet, dice rolling, HP, spell text or inventory. Name a feature
-  and say when to use it.
+- **No Roll20 overlap:** no full sheet, dice rolling, HP or inventory. Each play does carry its
+  rules, paraphrased in our own words (never copied book text): casting time, range, target,
+  duration, the save and its effect, with the PC's numbers. Then `Tip: …` (when and why), then
+  `Upcast: …` for a leveled spell. The page puts the tip and the upcast on lines of their own.
 - **Short bullets, phone-sized.** `###` subsections, bullets and numbered lists. No tables, no
   wikilinks (the page doesn't follow them).
 - Read `meta/prose-style.md` once and run its **While drafting** checklist before writing.

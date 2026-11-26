@@ -13,97 +13,138 @@ guide_confirmed: 35
 
 ### Action
 
-- **Attack:** one melee attack with Oathcaller, a +1 rapier: +6 to hit, 1d8 + 3 slashing.
-  **Vex:** if you hit and deal damage, you have advantage on your next attack against that target
-  before the end of your next turn. Your best default. Out of reach: heavy crossbow, +5 to hit,
-  1d10 + 2 piercing, 100/400 ft. 10 ft away: kusarigama, +5 to hit, 1d4 + 2 slashing, reach. You
-  can still smite with it. **Topple:** on a hit, it makes a DC 13 CON save or falls prone. Prone
-  means allies within 5 ft attack it with advantage, but your next reach swing has disadvantage.
-- **Bless (1st, concentration):** 3 allies add 1d4 to attacks and saves. The best first-round spell
-  in a long fight. Upcast: +1 ally per slot level above 1st (4 allies with a 2nd).
-- **Faerie Fire (1st, concentration):** a 20 ft cube; anyone who fails a DEX save glows, and attacks
-  on them get advantage. It also shows invisible creatures. Upcast: nothing more, so use a 1st.
-- **Command (1st):** one word, WIS save. *Grovel* knocks it prone, and a flyer falls. *Drop*
-  disarms. *Flee* sends it away for a turn. Upcast: +1 creature per slot level above 1st, all
-  within 30 ft of each other (2 with a 2nd).
-- **Charm Person (1st):** one humanoid within 30 ft makes a WIS save, with advantage if you or
-  your allies are fighting it. On a failure it's charmed for an hour and treats you as a friend,
-  until you or an ally hurts it. It knows it was charmed when the spell ends, so use it to talk
-  past someone, not to make a friend. Upcast: +1 creature per slot level above 1st (2 with a
+- **Attack:** make one weapon attack. Oathcaller (+1 rapier, finesse): +6 to hit, 1d8 + 3
+  piercing. **Vex:** when you hit and deal damage, you have advantage on your next attack roll
+  against that creature before the end of your next turn. Heavy crossbow (ammunition, heavy,
+  loading, two-handed): +5 to hit, 1d10 + 2 piercing, range 100/400 ft. Kusarigama (finesse,
+  reach 10 ft): +5 to hit, 1d4 + 2 slashing. **Topple:** on a hit, the target makes a DC 13 CON
+  save or falls prone. Tip: Oathcaller is your default, and Vex sets up the next swing. Use the
+  chain to smite from 10 ft or to drop a target for your front line: prone gives allies within
+  5 ft advantage, but your next swing from 10 ft has disadvantage.
+- **Bless (1st, concentration):** action, range 30 ft, up to 3 creatures, 1 minute. Each target
+  adds 1d4 to its attack rolls and saving throws while the spell lasts. Tip: the best first-round
+  spell in a long fight. Upcast: +1 creature per slot level above 1st (4 with a 2nd).
+- **Faerie Fire (1st, concentration):** action, range 60 ft, a 20 ft cube, 1 minute. Each
+  creature in the cube makes a DEX save; on a failure it sheds dim light in 10 ft, can't benefit
+  from being Invisible, and attack rolls against it have advantage. Objects in the cube glow too.
+  Tip: cast it on a cluster, or on anything that turns invisible. Upcast: nothing more, so use a
+  1st.
+- **Command (1st):** action, range 60 ft, one creature that can hear you. It makes a WIS save; on
+  a failure it follows a one-word command on its next turn: *Approach* (moves to you by the
+  shortest route and ends its turn within 5 ft), *Drop* (drops what it holds), *Flee* (moves away
+  from you as far as it can), *Grovel* (falls prone and ends its turn) or *Halt* (doesn't move and
+  takes no action or bonus action). Tip: *Grovel* drops a flyer, *Drop* disarms, *Halt* wastes a
+  turn. Upcast: +1 creature per slot level above 1st, all within 30 ft of each other (2 with a
   2nd).
-- **Dissonant Whispers (1st):** 3d6 psychic, and on a failed save it must use its reaction to
-  run. It runs past your allies, and they get opportunity attacks. Upcast: +1d6 per slot level
-  above 1st (4d6 with a 2nd).
-- **Heat Metal (2nd, concentration):** against anyone in metal armor or holding a metal weapon. 2d8
-  fire with no attack roll, and the damage repeats as a bonus action each turn. Upcast: +1d8 per
-  slot level above 2nd (3d8 with a 3rd, once you have them).
-- **Vicious Mockery (cantrip):** 60 ft. On a failed WIS save it takes 2d6 psychic and has
-  disadvantage on its next attack roll. Costs no slot. Upcast: a cantrip can't be; it grows with
-  your level instead (3d6 at level 11).
-- **Minor Illusion (cantrip):** within 30 ft, a sound or a still image no bigger than a 5 ft
-  cube, for a minute. An image is good cover to hide behind; a voice or footsteps pull guards
-  away. Anyone who studies it (an action and an Investigation check against your DC 15) sees
-  through it. Costs no slot. Upcast: a cantrip can't be.
-- **Light (cantrip):** touch an object and it sheds bright light 20 ft and dim light 20 ft more
-  for an hour. No concentration. Costs no slot. Upcast: a cantrip can't be.
-- **Healing Hands (once per long rest):** touch a creature and it heals 3d4 HP (one d4 per
-  proficiency bonus). No slot. Save it for when Lay on Hands is empty.
+- **Charm Person (1st):** action, range 30 ft, one humanoid, 1 hour. It makes a WIS save, with
+  advantage if you or your allies are fighting it. On a failure it is Charmed and treats you as a
+  friendly acquaintance. The spell ends early if you or an ally damages it, and it knows it was
+  charmed when the spell ends. Tip: use it to talk past someone, not to make a friend. Upcast: +1
+  creature per slot level above 1st, within 30 ft of each other (2 with a 2nd).
+- **Dissonant Whispers (1st):** action, range 60 ft, one creature that can hear you. It makes a
+  WIS save: on a failure it takes 3d6 psychic and must use its reaction, if it has one, to move as
+  far from you as its speed allows (not into obviously dangerous ground); on a success, half
+  damage and no move. Tip: it runs past your allies, and they get opportunity attacks. Upcast:
+  +1d6 per slot level above 1st (4d6 with a 2nd).
+- **Heat Metal (2nd, concentration):** action, range 60 ft, one manufactured metal object you can
+  see (armor, a weapon), 1 minute. Whoever touches or wears it takes 2d8 fire, no attack roll. If
+  they hold it, they make a CON save or drop it if they can; if they keep it, they have
+  disadvantage on attacks and ability checks until the start of your next turn. On later turns, a
+  bonus action repeats the damage. Tip: wreck one enemy in metal armor or with a metal weapon, and
+  it leaves your action free. Upcast: +1d8 per slot level above 2nd (3d8 with a 3rd, once you
+  have them).
+- **Vicious Mockery (cantrip):** action, range 60 ft, one creature that can hear you. It makes a
+  WIS save; on a failure it takes 2d6 psychic and has disadvantage on its next attack roll before
+  the end of its next turn. Tip: no slot, so it's your ranged default when you won't close.
+  Upcast: a cantrip can't be; it grows with your level instead (3d6 at level 11).
+- **Minor Illusion (cantrip):** action, range 30 ft, 1 minute. Make a sound (a whisper to a
+  scream, a voice, footsteps) or a still image of an object no bigger than a 5 ft cube; not both.
+  Touching the image shows it's fake. A creature can take the Study action and make an
+  Investigation check against your DC 15 to see through either. Tip: an image is cover to hide
+  behind; a voice or footsteps pull guards away. Upcast: a cantrip can't be.
+- **Light (cantrip):** action, touch an object no bigger than 5 ft across, 1 hour. It sheds bright
+  light in 20 ft and dim light 20 ft more. If a hostile creature holds or wears the object, it
+  makes a DEX save to avoid it. No concentration. Upcast: a cantrip can't be.
+- **Healing Hands (once per long rest):** Magic action, touch a creature, and it regains 3d4 HP
+  (one d4 per proficiency bonus). Not a spell, so no slot. Tip: save it for when Lay on Hands is
+  empty.
 
 #### Any creature can
 
-- **Dash:** double your speed this turn.
-- **Disengage:** your movement provokes no opportunity attacks this turn. Use it to get back to
-  ODB or Halsby through a crowd.
-- **Dodge:** attacks on you have disadvantage and you have advantage on DEX saves until your next
-  turn. Good when you've called an enemy with Oathcaller and want to soak its hits.
-- **Help:** give an ally advantage on their next attack against an enemy within 5 ft of you, or
-  on a check you could help with.
-- **Hide:** out of sight behind cover, make a DC 15 Stealth check. On a success you're
-  Invisible: attacks on you have disadvantage and your attacks have advantage, until you attack,
-  make noise or get found. Rarely your job.
-- **Influence:** talk a creature into something, out of combat or in it (CHA check).
-- **Magic:** cast a spell with a casting time of an action, or use a magic item that needs one.
-- **Ready (hold your action):** name a trigger ("when it comes through the door") and what you'll
-  do. When the trigger happens, you do it with your reaction. A readied spell needs concentration
-  and spends its slot even if the trigger never comes.
-- **Search / Study:** a WIS check to spot something, or an INT check to recall or work it out.
-- **Utilize:** use an object that takes an action (pull a lever, drink a potion yourself).
-- **Grapple or shove:** take the Attack action, but instead of a weapon attack the target makes
-  a STR or DEX save (DC 8 + your STR + 3). On a failure it's grappled (speed 0), or you push it
-  5 ft or knock it prone.
+- **Dash:** extra movement equal to your speed this turn. Tip: 60 ft to reach a downed ally.
+- **Disengage:** your movement provokes no opportunity attacks for the rest of the turn. Tip: get
+  back to ODB or Halsby through a crowd.
+- **Dodge:** until the start of your next turn, attacks on you have disadvantage if you can see
+  the attacker, and you have advantage on DEX saves. You lose it if you're Incapacitated or your
+  speed drops to 0. Tip: when you've called an enemy with Oathcaller and want to soak its hits.
+- **Help:** give one ally advantage on their next ability check for a task you could help with,
+  or on their next attack roll against an enemy within 5 ft of you, before the start of your next
+  turn.
+- **Hide:** heavily obscured or behind three-quarters or total cover, out of any enemy's line of
+  sight, make a DC 15 DEX (Stealth) check. On a success you're Invisible until you attack, make
+  noise louder than a whisper, cast a spell with a verbal component, or an enemy finds you. Tip:
+  rarely your job.
+- **Influence:** try to talk a creature into something, out of combat or in it: a CHA check
+  (Deception, Intimidation, Performance or Persuasion) or a WIS (Animal Handling) check, and the
+  DM sets how willing it is.
+- **Magic:** cast a spell with a casting time of an action, use a magic item that needs an action,
+  or use a feature that says Magic action (Healing Hands).
+- **Ready (hold your action):** name a trigger and the action you'll take. When it happens, you
+  take that action with your reaction, or ignore it. A readied spell is cast now and held with
+  concentration until it's released; if the trigger never comes, the slot is still spent.
+- **Search / Study:** Search is a WIS check (Insight, Medicine, Perception or Survival) to notice
+  something. Study is an INT check (Arcana, History, Investigation, Nature or Religion) to recall
+  or work something out.
+- **Utilize:** use a nonmagical object that takes an action (pull a lever, drink a potion
+  yourself).
+- **Grapple or shove:** one of your Attack action's attacks becomes an Unarmed Strike against a
+  creature no more than one size larger, within 5 ft. It makes a STR or DEX save (its choice), DC
+  8 + your STR modifier + 3. On a failure: grappled (speed 0 until it escapes), or pushed 5 ft
+  away, or knocked prone (your choice).
 
 ### Bonus action (only one per turn)
 
-- **Divine Smite (1st):** right after a melee hit. 2d8 radiant, +1d8 against undead and fiends.
-  One free cast per long rest (Paladin's Smite). Upcast: +1d8 per slot level above 1st (3d8,
-  4d8 against undead, with a 2nd).
-- **Searing Smite (1st):** right after a hit, 1d6 fire, and the target keeps burning (1d6 each
-  turn) until it passes a CON save. It costs the same slot as Divine Smite, so use it only when
-  the fight will go long. Upcast: both the hit and the burn get +1d6 per slot level above 1st.
-- **Bardic Inspiration (4 per long rest, d6):** an ally within 60 ft keeps the die for an hour.
-  They add it after failing a d20 roll, or (Valor) add it to damage after a hit, or use their
-  reaction to add it to AC when hit.
-- **Lay on Hands (10-HP pool):** touch an ally and heal them any number of HP from the pool
-  (or spend 5 to cure poison). No slot, and it's not a spell, so it doesn't trigger the one-slot
-  rule.
-- **Healing Word (1st):** an ally within 60 ft heals 2d4 + CHA HP. It's how you get someone up
-  from across the room. Upcast: +2d4 per slot level above 1st (4d4 + CHA with a 2nd).
-- **Celestial Revelation (once per long rest):** transform for 1 minute. Once on each of your
-  turns, one target you damage with an attack or spell takes +3 radiant. Pick one form each time:
-  *Heavenly Wings* (fly at your speed), *Inner Radiance* (you shed light, and each creature
-  within 10 ft takes 3 radiant at the end of your turns) or *Necrotic Shroud* (creatures within
-  10 ft make a CHA save, DC 15, or are frightened of you until the end of your next turn). It
-  costs the turn's bonus action, so no Smite that turn: use it on round one of a long fight.
+- **Divine Smite (1st):** bonus action, cast right after you hit a target with a melee weapon or
+  an Unarmed Strike. The target takes an extra 2d8 radiant, +1d8 if it's a fiend or undead. You
+  get one cast without a slot per long rest (Paladin's Smite). Tip: save it for crits and for
+  finishing blows. Upcast: +1d8 per slot level above 1st (3d8, 4d8 against undead, with a 2nd).
+- **Searing Smite (1st):** bonus action, cast right after you hit with a melee weapon or an
+  Unarmed Strike, 1 minute, no concentration. The target takes an extra 1d6 fire, then 1d6 fire at
+  the start of each of its turns. It makes a CON save at the end of each of its turns, and a
+  success ends the spell. Tip: same slot as Divine Smite, so use it only when the fight will go
+  long. Upcast: both the hit and the burn get +1d6 per slot level above 1st.
+- **Bardic Inspiration (4 per long rest, d6):** bonus action, one other creature within 60 ft who
+  can see or hear you gets a d6 for 1 hour. Once, after it fails a d20 test (attack, check or
+  save), it can roll the die and add it, maybe turning the fail into a success. Valor: it can
+  instead add the die to a weapon's damage after a hit, or use its reaction to add it to its AC
+  against one attack. Tip: give it before the enemy's turn, so the AC use is ready.
+- **Lay on Hands (10-HP pool):** bonus action, touch a creature and restore any number of HP from
+  the pool. Spend 5 from it to remove the Poisoned condition instead. The pool refills on a long
+  rest. Tip: no slot and not a spell, so it doesn't count against the one-slot-per-turn rule.
+- **Healing Word (1st):** bonus action, range 60 ft, one creature you can see regains 2d4 + 3 HP
+  (your CHA). Tip: how you get someone up from across the room. Upcast: +2d4 per slot level above
+  1st (4d4 + 3 with a 2nd).
+- **Celestial Revelation (once per long rest):** bonus action, transform for 1 minute. Once on
+  each of your turns, one target you damage with an attack or a spell takes +3 extra damage (your
+  proficiency bonus). Pick one form each time: *Heavenly Wings* (spectral wings: a fly speed equal
+  to your speed; the extra damage is radiant), *Inner Radiance* (you shed bright light in 10 ft
+  and dim light 10 ft more, and each creature within 10 ft takes 3 radiant at the end of each of
+  your turns; the extra damage is radiant) or *Necrotic Shroud* (when you transform, each creature
+  you choose within 10 ft makes a DC 15 CHA save or is Frightened of you until the end of your
+  next turn; the extra damage is necrotic). Tip: it costs the turn's bonus action, so no Smite
+  that turn. Use it on round one of a long fight.
 - **Oathcaller's call (once per short rest):** one enemy within 30 ft makes a WIS save. On a
   failure it has disadvantage attacking anyone but you until your next turn, and if it attacks
-  someone else anyway, you get a reaction attack.
+  someone else anyway, you get a reaction attack (Oathcaller's strike). Tip: call the enemy that's
+  going for ODB or Halsby.
 
 ### Reaction
 
-- **Opportunity attack:** when an enemy you can see leaves your reach, make one melee attack
-  against it (Oathcaller, 1d8 + DEX + 1).
+- **Opportunity attack:** when a creature you can see leaves your reach (5 ft with Oathcaller, 10
+  ft with the chain), make one melee attack against it with your reaction. Teleporting or being
+  moved without using its own movement doesn't provoke.
 - **Oathcaller's strike:** when the enemy you called with Oathcaller attacks someone else, make one
-  melee attack against it (Oathcaller, 1d8 + DEX + 1). It's not your turn, so you can't Smite
+  melee attack against it (Oathcaller, 1d8 + DEX + 1). Tip: it's not your turn, so you can't Smite
   (that's a bonus action).
 - Your allies' Inspiration reactions use *their* reactions, not yours. Give the die before the
   enemy's turn.
@@ -113,19 +154,22 @@ guide_confirmed: 35
 - Stand between the enemy and ODB or Halsby. Your AC is 17 and they're the party's lowest.
 - Stay within 10 ft of Luci when she lights up (see Combos): you resist radiant damage, so you're
   the one ally who can.
-- Move before you attack when an enemy is prone. Melee attacks on a prone enemy have advantage.
+- Move before you attack when an enemy is prone. Melee attacks on a prone enemy from within 5 ft
+  have advantage.
 
 ### Free (no action)
 
 - **Shazzam (once per long rest):** say the word and a random ally heals 1 HP. The first time
-  you say it each day, it fires, meant or not. Make a show of it.
-- **Talk:** say a few words or shout a warning or a plan, on your turn or off it.
-- **One object:** draw or sheathe a weapon, open a door, pick something up, once on your turn as
-  part of moving or acting. A second one costs your action (Utilize).
-- **Drop it:** let go of something you're holding.
-- **Drop prone:** costs no movement. Standing up costs half your speed.
-- **Lucky:** spend a point to give your own d20 roll advantage, or an attack on you
-  disadvantage. No action needed, even on an enemy's turn.
+  you say it each day, it fires, meant or not. Tip: make a show of it.
+- **Talk:** brief words or a shouted warning or plan, on your turn or off it.
+- **One object:** interact with one object for free on your turn, as part of moving or acting:
+  draw or sheathe a weapon, open a door, pick something up. A second one costs your action
+  (Utilize).
+- **Drop it:** let go of something you're holding. No action.
+- **Drop prone:** fall prone at no cost in movement. Standing up costs half your speed.
+- **Lucky (3 points, back on a long rest):** when you roll a d20 for a test, spend a point to give
+  that roll advantage. When a creature rolls an attack against you, spend a point to give it
+  disadvantage. No action, even on an enemy's turn.
 
 ## Combos
 

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   byLevel,
+  splitMarkers,
   groupItems,
   isParallel,
   levelTitle,
@@ -120,6 +121,25 @@ describe("groupItems upcast", () => {
       upcast: "+1 ally per slot level above 1st.",
     });
     expect(g.items[1]).toMatchObject({ lead: "Attack", level: null, upcast: null });
+  });
+});
+
+describe("splitMarkers", () => {
+  it("splits Tip and Upcast in either order, each running to the next label", () => {
+    expect(splitMarkers("Rules here. Tip: use it early. Upcast: +1 ally.")).toEqual({
+      detail: "Rules here.",
+      tip: "use it early.",
+      upcast: "+1 ally.",
+    });
+    expect(splitMarkers("Rules here. Upcast: +1 ally. Tip: use it early.")).toEqual({
+      detail: "Rules here.",
+      tip: "use it early.",
+      upcast: "+1 ally.",
+    });
+  });
+
+  it("leaves a detail with no labels whole", () => {
+    expect(splitMarkers("Just rules.")).toEqual({ detail: "Just rules.", tip: null, upcast: null });
   });
 });
 

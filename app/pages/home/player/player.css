@@ -114,6 +114,9 @@
   color: var(--ui-muted);
   font-size: var(--ui-font-size-sm);
 }
+.pg-open-item .pg-tip {
+  margin-top: var(--ui-space-2);
+}
 /* A card's spells: a Spells divider, then one indented sublist per level. */
 .pg-tiles + .pg-spells,
 .pg-open + .pg-spells {
