@@ -42,7 +42,7 @@ Read `scheduler/campaign/_handover.md` first.
 ### Session 35 carry-over — open prep from its `_tasks.md` (recap 2026-11-25)
 
 - **103.** 🙋 **Jeff** — **two Inkarnate overviews** still to build. Ashford town from `maps/battlemaps/ashford/ashford-key.png` (leave Asher's cave, AC7, off the player copy). Silas's road sketch, the act's regional map, from `maps/locations/silas-map-layer1-player.png` and `silas-map-layer2-player.png` (layer 2 adds Sable's road east), each layer exported separately; spec in `maps/handouts/silas-road-sketch.md`. Never `silas-sheet-draft.png`: it has DM-only marks.
-- **104.** 🤝 **Jeff** (parked with Redwater) — **check the Lioness upgrades before the build is played.** The six free-pick perks on `historian/sessions/Session 35 The Reeve's Ledger/handouts/on-the-house.html`, and the gold and material loads on `handouts/while-away.html` (prices are a first pass), including the dock and Old Tobin's riverboat. Scenes S35_25 to S35_29 (the stake, the build, the reeve and the ledger) went unplayed to the party todo, with the cord of charms.
+- **104.** 🤝 **Jeff** (parked with Redwater) — **check the Lioness upgrades before the build is played.** The two free picks are made (2026-11-27): a room in the new wing and Hire hands. Still to check: the gold and material loads on `handouts/while-away.html` (prices are a first pass), including the dock and Old Tobin's riverboat. Scenes S35_25 to S35_29 (the stake, the build, the reeve and the ledger) went unplayed to the party todo, with the cord of charms.
 
 ### Session 34 prep — cards and the region map
 

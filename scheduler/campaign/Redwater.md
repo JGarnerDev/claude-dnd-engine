@@ -71,8 +71,9 @@ to 18 were cut.
 - **The casks are home:** [[The Stolen Casks]] is completed (`historian/missions/`). [[Silas Crubb]] checked every hoof and called it square; 11 gp for one
   lamed horse is left for another day. Sable called the casks home and the deed's share ten percent
   too little. **Nothing is signed.**
-- **The Golden Lioness** is unbuilt: the new wing, its name and the two free upgrades wait on the
-  party todo.
+- **The Golden Lioness** is unbuilt: the new wing and its name wait on the party todo. The two free
+  upgrades are picked (2026-11-27): **a room in the new wing** and **hire hands** (Wat Corley,
+  Ada Fenner, Oswin, a season's wages paid). Sable builds them in the two weeks (`S35_27_BUILD`).
 - **Taken from the yard:** [[The Camp Horses]] (Clover, Old Tom, Biscuit, Nettle, Parson, all by
   consent; Old Tom takes the party for prophecy), Bane's ledger in a copper tube, the tally stick,
   150 gp, 500 sp and 5 pp, and five crystals off the crew. Odibli took the iron tap key and the
@@ -94,6 +95,44 @@ to 18 were cut.
 - **The sky:** a single vast **broken moon**, **Fida**, shedding shards. Two suns turn the night
   over 18 days; the date, the Crawl and the next Kerning live in `scheduler/campaign/_sky-clock.md`,
   the system in [[World Calendar]].
+
+### The Month Away (Days 18–48)
+
+Plan for Jeff's return session, approved 2026-11-27 (draft and "maybe" extras:
+`workshop/base-building/month-away.md`). The Golden Lioness runs itself while the party is away.
+None of it belongs to Ben's sessions unless Ben asks. Nothing new is built except the Terrace; the
+town grows a little, with more people, more coin and more river traffic.
+
+- **The River Terrace** seats about a dozen more on warm evenings, and Orrend-road travellers stop to
+  eat. Children fish off the rail and Tobin sells fish to the kitchen. The old folk on the end bench
+  count every crossing, and Ada writes the count in the ledger's margin. A lantern at the end of the
+  rail means the Lioness is open and the ford is safe.
+- **Wat Corley** ends fights at the door, before they reach the street. Fights still happen, but
+  [[Mara Tull]] spends fewer nights at the Lioness and more on the rest of the town. Wat poles
+  Tobin's surviving skiff at dawn for a copper a crossing, and he sleeps in the stable loft, so
+  someone is awake at the Lioness at every hour.
+- **Ada Fenner** keeps the first real ledger, in Hob's old order book. The room and the Terrace take
+  about 15–20 gp a week, about 70 gp for the month; the party's share is paid at the deed's rate.
+  Hob gets steady cask orders, takes on a boy and burns a lioness into the cask heads, and two casks
+  go downriver. The copper is still ruined, so [[Sable Wren]]'s best brews wait for it. Ada brews a
+  thin, cheap beer the regulars call "Ada's", boiled in Sable's soup kettle and fermented in a new
+  cask from Hob. On brew days there is no soup. Ada writes one letter, which waits for Jeff's session.
+- **Oswin** plays two fixed nights a week, and by the third week the room and the Terrace are full by
+  dark. Someone keeps chalking a Duskwater drinking song on the request slate and nobody owns up.
+  One night is given to the names of the people who left and the people the raids killed.
+- **Week by week:** in week 1 travellers stay the night and [[Silas Crubb]] sells out of salt and lamp
+  oil. In week 2 Silas holds a market morning, and Ada has her first brew day. In week 3 the Brandles
+  (a new name) come home from Orrend, and a bakehouse opens off the square as Silas's rival. In week 4
+  comes the names night and Ada's letter. All month, Pell Ashby lights one more street.
+- **The town hall:** a collection box fills on the Lioness bar. Silas wants the hall beside his
+  store and Mara wants it beside her office, and it is still undecided when the party returns.
+- **Seeds, with no attack:** Cael's note from Orrend asks for Lioness casks at the reeve's table. A
+  boat sits off the ford for an hour at dusk and turns back. The cellar spring rises a finger's width,
+  and Sable pours an extra cup into the hearth.
+- **On the return:** Ada's letter, the ledger and the party's share, Ford Night (lanterns floated off
+  the Terrace, planned by Oswin and Sable), and the town-hall quarrel. The rumours are the five on
+  Ada's back page in the draft.
+- **Canon:** `historian/locations/shops/The Golden Lioness.md` changes only once this is played.
 
 ### Rest Clock
 

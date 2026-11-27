@@ -1374,7 +1374,8 @@ From Asher
       wait, and it's where a boat of the party's own could tie up (the riverboat on the What We Build
       Next card needs it).
   - **The perks are draft** (engine 2026-11-24); check them before the table.
-  - **Choice (party):** which two. Write them down. The other four stay on the What We Build Next
+  - **Choice (party):** which two. Write them down. **Picked (party todo, 2026-11-27):** a room
+    in the new wing, and Hire hands. The other four stay on the What We Build Next
     card at its prices (gold plus loads of timber, stone or iron), handed over at closing.
 
 #### S35_26_RIDER — Mara's rider is back: the reeve comes on the eighteenth

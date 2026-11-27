@@ -23,7 +23,7 @@ relates_to:
   - "[[Aashal-Groon Mellenegon Borak]] (the deep-water being beneath; the cellar spring drops into his aquifer)"
   - "[[Lok Thuliaga]] (planned hire: security; not yet on staff)"
   - "[[Bree Tealeaf]] (planned hire: bartender; not yet on staff)"
-  - "[[Oswin]] (hoped-for performer; not yet engaged)"
+  - "[[Oswin]] (performer; engaged for a season through Hire hands, picked 2026-11-27)"
   - "[[Silas Crubb]] (lent Sable the setup money)"
 customers: "Working locals, occasional families, small tradespeople; also draws academic and bureaucratic mages with steady salaries."
 specialty: "Stonecap mushroom dishes, pot pies, rotisserie. Signature ales: Lioness's Pride, The Standing, Pale Crossing, Embertide, Ironhold, The Mistake."
@@ -31,8 +31,9 @@ specialty: "Stonecap mushroom dishes, pot pies, rotisserie. Signature ales: Lion
 
 The town's brewery and pub, on a corner in **[[Ashford]]**.
 
-Staff: [[Sable Wren]] (proprietor, alone for now). Planned hires: [[Lok Thuliaga]] (security),
-[[Bree Tealeaf]] (bartender). Hoped-for performer: [[Oswin]].
+Staff: [[Sable Wren]] (proprietor). Hired through the free upgrades (picked 2026-11-27, built over
+the two weeks): Wat Corley on the door, Ada Fenner behind the bar, [[Oswin]] on the stage. Planned
+hires kept for later plot: [[Lok Thuliaga]] (security), [[Bree Tealeaf]] (bartender).
 
 > **Retconned at Session 30** (DM ruling, 2026-10-21). The table established that Sable came to
 > Ashford about a week before the raid to open its *first* tavern, in a building still under

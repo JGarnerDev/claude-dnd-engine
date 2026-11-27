@@ -53,6 +53,7 @@ Full arcs: `scheduler/arcs/`.
   World questions outside them go to Jeff.
 - **Parked with Redwater:** Act 1's last scenes, the Lioness, the stake. Leave them unless the
   party turns back.
+- **The Lioness runs itself this month.** If the party asks about it, check with Jeff.
 
 ## 6. Held back
 
