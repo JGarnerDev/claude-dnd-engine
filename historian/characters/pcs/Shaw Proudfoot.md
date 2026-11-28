@@ -34,7 +34,7 @@ relates_to:
 spotlight: normal
 spotlight_hooks:
   - hook: "the letter: a long-lost half-brother writes from a prison in the north (tentative, see Backstory)"
-    status: open
+    status: seeded
   - hook: "Ashford wants him hanged for raids he helped carry out; earn the town's trust or face the rope"
     status: open
   - hook: "the kidnapping job he refused: someone else in Bane's band took it"

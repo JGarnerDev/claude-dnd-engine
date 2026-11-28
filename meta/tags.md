@@ -136,6 +136,7 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | `faction/noble` | faction entity | Faction subtype: noble house or aristocracy |
 | `faction/administrative` | faction entity | Faction subtype: administrative authority or bureaucracy |
 | `faction/mercenary` | faction entity | Faction subtype: mercenary company, warband, or raider band |
+| `faction/blackmarket` | faction entity | Faction subtype: a Blackmarket guildsect, an underground guild with one unlicensed trade (Ben, 2026-11-25) |
 | **resource** | | |
 | `resource` | resource entity | Entity type: natural or economic resource |
 | **route** | | |
@@ -186,6 +187,7 @@ Authoritative list of all valid tags. **Before tagging any entity, check here.**
 | **region/** | | |
 | `region/barovia` | any entity | Located in or belonging to the region of Barovia |
 | `region/calenmere` | any entity | Located in or belonging to the Calenmere region |
+| `region/deorum-ostium` | any entity | Located in or belonging to the Deorum Ostium region (the far north, the Gods' Door) |
 | **lore/** | | |
 | `lore` | lore document | World lore reference document — parent tag for all lore subtypes |
 | `lore/calendar` | lore document | Lore subtype: calendar and timekeeping |

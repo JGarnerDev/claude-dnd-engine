@@ -75,11 +75,13 @@ Tiers:
 
 ## Skill Challenge DCs
 
-- **Easy** —
-- **Medium** —
-- **Hard** —
-- **Very Hard** —
-- **Nearly Impossible** —
+Set by Ben, 2026-11-25, to match the DCs in his campaign (mostly 12 to 18 at level 5).
+
+- **Easy** — 10
+- **Medium** — 13
+- **Hard** — 15
+- **Very Hard** — 18
+- **Nearly Impossible** — 21
 
 ## Non-Combat Stakes
 
