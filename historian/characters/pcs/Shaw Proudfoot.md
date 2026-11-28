@@ -85,7 +85,7 @@ He stays silent until he has read the party. Then he speaks up, action-movie sty
 
 He came in carrying a letter, and it is what sends the party north to Ben's run. Tyler and Ben are writing its text and its reward together.
 
-> **Reliability:** The letter is tentative (Jeff, 2026-11-23). The leading idea from the meeting: Shaw has a long-lost half-brother (different fathers), Chocola, the old PC of Tyson, a past player. The letter is from Chocola, saying he's in prison and needs Shaw to break him out, and Tyson returns as a holiday special. Neither Tyson nor Chocola has a file yet, and Chocola's race is unremembered. Confirm with Tyler and Ben before writing it as fact.
+> **Reliability:** The letter is tentative (Jeff, 2026-11-23). The leading idea from the meeting: Shaw has a long-lost half-brother (different fathers), [[Cho'Cola]], the old PC of [[Tyson]], a past player. The letter is from Cho'Cola, saying he's in prison and needs Shaw to break him out, and Tyson returns as a holiday special. Cho'Cola is a drow (sheet ingested 2026-11-27), which leaves the halfling/drow tie to explain. The brothers carry a matched pair of brass knuckles, Pham and Lee (drafts in `meta/loot-options/`). Confirm with Tyler and Ben before writing it as fact.
 
 > **Reliability:** Bane's file says the band does "no cruelty for its own sake". Shaw's account (raids on vulnerable villages, a child kidnapped for ransom) pushes past that. A ransom fits the band's business-first style; the village raids need a reason, such as Marlow's orders escalating. Confirm with DM.
 

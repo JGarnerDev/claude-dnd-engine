@@ -1,0 +1,241 @@
+<title>Pham</title>
+<meta name="artifact-url" content="https://claude.ai/artifact/L2FdYkguwXtLagJGj7MZH3" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap"
+/>
+<style>
+  /* Layout: one item card, centered, sized to its content. Player handout for Shaw Proudfoot (Tyler). Draft of 2026-11-27; hand it over when the knuckles enter play. Pair: lee-card.html. */
+  :root {
+    --bg: #e9e7e2;
+    --card: #f7f5f0;
+    --ink: #23221f;
+    --muted: #615d55;
+    --rule: #cfc9bd;
+    --accent: #8a5a2b;
+    --shadow: rgba(35, 34, 31, 0.28);
+    --display: "IM Fell English SC", "Palatino Linotype", Georgia, serif;
+    --body: "Spectral", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141513;
+      --card: #1d1f1c;
+      --ink: #e6e2d8;
+      --muted: #a39e92;
+      --rule: #3a3c37;
+      --accent: #c99a6a;
+      --shadow: rgba(0, 0, 0, 0.55);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141513;
+    --card: #1d1f1c;
+    --ink: #e6e2d8;
+    --muted: #a39e92;
+    --rule: #3a3c37;
+    --accent: #c99a6a;
+    --shadow: rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.55;
+    padding: 32px 16px;
+  }
+  .card {
+    max-width: 34rem;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 28px 28px 24px;
+    display: grid;
+    gap: 18px;
+  }
+  header {
+    display: grid;
+    gap: 4px;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 2.1rem;
+    line-height: 1.1;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .type {
+    margin: 0;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .art {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .flavor {
+    margin: 0;
+  }
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin: 0;
+    padding: 10px 0;
+    border-block: 1px solid var(--rule);
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .stats div {
+    display: flex;
+    gap: 6px;
+  }
+  .stats dt {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.78rem;
+    align-self: center;
+  }
+  .stats dd {
+    margin: 0;
+  }
+  ul.props {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+  }
+  .props h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0 0 2px;
+    color: var(--accent);
+  }
+  .props p {
+    margin: 0;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    border-top: 1px solid var(--rule);
+    padding-top: 12px;
+  }
+  @media (max-width: 440px) {
+    .card {
+      padding: 22px 18px 20px;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<article class="card">
+  <header>
+    <h1>Pham</h1>
+    <p class="type">Weapon (brass knuckles), rare · requires attunement · Shaw Proudfoot</p>
+  </header>
+
+  <svg
+    class="art"
+    viewBox="0 0 480 70"
+    role="img"
+    aria-label="A brass knuckle-duster driving through a cracked wall."
+  >
+    <!-- cracked wall -->
+    <g stroke="var(--rule)" stroke-width="2" fill="none">
+      <line x1="300" y1="6" x2="300" y2="64" />
+      <path d="M300 35 L330 20 L360 26 M300 35 L334 48 L370 44 M330 20 L340 6 M334 48 L346 64" />
+    </g>
+    <!-- motion lines -->
+    <g stroke="var(--muted)" stroke-width="2">
+      <line x1="80" y1="26" x2="150" y2="26" />
+      <line x1="60" y1="35" x2="150" y2="35" />
+      <line x1="80" y1="44" x2="150" y2="44" />
+    </g>
+    <rect x="180" y="22" width="84" height="26" rx="9" fill="var(--accent)" />
+    <g fill="var(--card)">
+      <circle cx="195" cy="35" r="6" />
+      <circle cx="214" cy="35" r="6" />
+      <circle cx="233" cy="35" r="6" />
+      <circle cx="252" cy="35" r="6" />
+    </g>
+    <!-- arrow outward -->
+    <path
+      d="M380 35 L440 35 M428 25 L442 35 L428 45"
+      stroke="var(--accent)"
+      stroke-width="3"
+      fill="none"
+    />
+  </svg>
+
+  <p class="flavor">
+    A heavy brass knuckle-duster stamped PHAM. It hits like a door being kicked in, and it hums when
+    its twin, Lee, is near.
+  </p>
+
+  <dl class="stats">
+    <div>
+      <dt>Rarity</dt>
+      <dd>Rare</dd>
+    </div>
+    <div>
+      <dt>Attunement</dt>
+      <dd>Required</dd>
+    </div>
+    <div>
+      <dt>Bonus</dt>
+      <dd>+1 unarmed</dd>
+    </div>
+  </dl>
+
+  <ul class="props">
+    <li>
+      <h2>Brass</h2>
+      <p>
+        While you wear Pham, your Unarmed Strikes gain a +1 bonus to attack and damage rolls and
+        count as magical. Martial Arts, Flurry of Blows and Stunning Strike all work with it.
+      </p>
+    </li>
+    <li>
+      <h2>Shove</h2>
+      <p>
+        Once per turn, when you hit a Large or smaller creature with an Unarmed Strike, you can push
+        it up to 10 ft straight away from you. No save.
+      </p>
+    </li>
+    <li>
+      <h2>Breaker</h2>
+      <p>Your Unarmed Strikes deal double damage to objects and structures.</p>
+    </li>
+    <li>
+      <h2>Wallbreaker</h2>
+      <p>
+        As an action, spend 1 Focus Point to punch a 5-ft hole through a nonmagical door or wall, up
+        to 1 ft of stone or 3 ft of wood. It is loud: anyone within 300 ft hears it.
+      </p>
+    </li>
+    <li>
+      <h2>Blood Brothers</h2>
+      <p>
+        Within 15 ft of Lee's wearer, Shove pushes up to 20 ft. When a creature you push ends that
+        move within 5 ft of Lee's wearer, they can use a Reaction to make one Unarmed Strike against
+        it. Lee's pull gives you the same. It uses the same Reaction as Deflect Attacks.
+      </p>
+    </li>
+  </ul>
+
+  <footer>One of a matched pair. Pham pushes; Lee pulls. Draft, 2026-11-27.</footer>
+</article>
