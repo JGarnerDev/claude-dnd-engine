@@ -19,6 +19,8 @@ aliases:
 relates_to:
   - "[[The Correctors]] (founder and ideological architect)"
   - "[[Threnai]] (the plane their ritual destroyed)"
+  - "[[The Nul|Nul]] (DM-only: the hunger they turned to; they are its prophet)"
+  - "[[The Absolvers]] (DM-only: the cult they lead in secret)"
 enemies:
   - "[[Iggy]] (survivor sworn against the movement)"
   - "[[Sah]] (the god they defied)"
@@ -35,3 +37,9 @@ The First Corrector was the primary articulator of the ideology that death is an
 ## Failure Point
 
 They assumed what lay beyond meaning was neutral or empty, and ignored that the plane's finalizing function may have been protective, not restrictive. What they broke through instead corrupted the returned dead — the **Returned** — and even resisted Sah's direct intervention.
+
+## The Turn
+
+> **DM-only (Jeff and Paul, 2026-11-27):** The First Corrector survived Threnai, and what they found past the ending was not empty. It was [[The Nul|Nul]], the hunger outside of being. They watched [[Farzrig]] eat the plane they had tried to save and understood it as an answer. They turned their creed inside out: **"Nothing that refuses to end can be called just."** They are now Nul's mortal prophet and the secret head of [[The Absolvers]], hunting the heirs of their own movement.
+>
+> They are the outermost of Nul's three faces (prophet, the Dead Sun, the hunger itself), so the party meets them first and fights Nul last. Still serene, still certain, still framing every atrocity as compassion: only the mercy has changed direction. The title "Last Corrector" is dropped; they keep this name.

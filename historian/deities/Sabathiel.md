@@ -41,6 +41,8 @@ voice_confirmed: 35
 
 Sabathiel is the eternal guardian of [[Aedra]], a powerful dark entity at the core of [[The Sun Temple]] who is trying to find the light and descending into madness. Paul describes it as "ever watchful within the imprisonment of a sort": guardian and warden at once. Luci means to free Aedra *hand in hand* with Sabathiel. Whether Sabathiel shares that aim, or only tolerates it, is the DM's to decide.
 
+> **DM-only (Jeff and Paul, 2026-11-27):** Sabathiel hid Aedra. Aedra is the Astral's power of spontaneous creation, and when [[Farzrig]], the primordial made to balance her, bent into [[The Nul|Nul]]'s herald and began to eat, Sabathiel shut her in the Sun Temple behind Fida, the broken moon, where Farzrig could not reach her. The watch is protection first and imprisonment second. "Closer" is Sabathiel calling Luci to the door, and the drifting shards are the reason it is urgent.
+
 ## In Play
 
 - **[[Session 05 The Specter]]** — went silent under the specter's presence; Luci's Religion check to reach it failed. When the specter killed [[Odibli]] and [[Dip]], Sabathiel revived them both through Luci, and took her **Sacred Flame** forever as the price.

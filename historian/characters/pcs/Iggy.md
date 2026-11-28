@@ -28,6 +28,8 @@ relates_to:
 enemies:
   - "[[The Correctors]] (death-denial cult that destroyed his home plane)"
   - "[[The First Corrector]] (ideological architect, fate unknown)"
+  - "[[The Nul|Nul]] (DM-only: shared late-game enemy with Luci)"
+  - "[[Farzrig]] (DM-only: what came up the road at Caelion's bridge)"
 affinity:
   - "[[Bosco]] (4)"
   - "[[Davian Martikov]] (1)"
@@ -59,7 +61,7 @@ spotlight_hooks:
     status: open
   - hook: "Meet the grief society: talk first, fight when something comes back wrong"
     status: open
-  - hook: "A secret he shares with Luci, and no one else (confirmed by Jeff 2026-10-25; his party wish; what it is, open)"
+  - hook: "A secret he shares with Luci, and no one else (confirmed by Jeff 2026-10-25; his party wish; decided 2026-11-27, DM-only, see [[The Nul|Nul]])"
     status: open
 
 description: "Jeff's PC. Gruff but light-hearted soldier-bard with copper-red Aasimar features. Refugee of the destroyed plane Threnai, guided by the diminished god Sah."
@@ -153,6 +155,8 @@ It went to an old woman in a back room of the central city, whose name he can't 
 On the way back, about a hundred paces of road had stopped being finished: grass without blades, trees without bark, footsteps without sound, his own hands like an abandoned sketch. He hummed the whole way across, because it felt like the only thing keeping him drawn in. He never told anyone. It was an early crack from the Correctors' ritual, though he can't name it.
 
 > **DM-only:** Iggy has started to suspect the order was the plan for the Failed Intervention (Tier 3). If so, he carried it there himself.
+>
+> **DM-only (Jeff and Paul, 2026-11-27):** It was. The order was Sah's summons to [[Farzrig]], an old balancing power set on the first Returned, already bent into the herald of [[The Nul|Nul]]. The blank road was not the Correctors' ritual: it was Farzrig's touch, the world going unfinished where it had fed. Iggy hummed his way across the edge of the void, and that is half of the secret he shares with [[Luci]] (see [[The Nul|Nul]], The Shared Secret).
 
 ### Memory Reveal (3 Tiers)
 
@@ -208,6 +212,8 @@ His sergeant in the city guard, and the first person to call him "Iggy." She was
 She fought with a long spear and a tower shield and never gave ground. In the war she held the stone bridge over the river gate, the only road between the eastern front and the central city, and waved every courier over it with the same bad joke.
 
 Her fall is blurred. On the last day she waved him across without the joke. From the far bank he saw her plant the shield as something came up the road behind him. He doesn't remember what it was, or whether the bridge held. He never crossed back.
+
+> **DM-only (Jeff and Paul, 2026-11-27):** What came up the road was [[Farzrig]], answering the order Iggy had just delivered. Caelion stood in front of it so he could get clear. Whether she was eaten whole or left as something unfinished stays open.
 
 His song for her is "The Count at the River Gate," a marching tune counted like soldiers over the bridge, one name added each verse:
 

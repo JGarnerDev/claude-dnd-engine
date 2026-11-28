@@ -16,6 +16,7 @@ contributed_by: paul
 relates_to:
   - "[[Luci]] (glimpsed it while drifting)"
   - "[[Aedra]] (the kind of power that would notice her loose)"
+  - "[[Farzrig]] (remembers it before it bent)"
 known_by:
   - "[[Luci]] (partial)"
 description: "A dragon of the Aether, keeper of balance in the Astral Sea: cold, calculating, punishingly wise, rivaled only by its cousins the Time Dragons. One of two cosmic powers Luci remembers from her century adrift."
@@ -33,3 +34,4 @@ One of two impressions [[Luci]] kept from the drift: **an Astral Dragon**, a dra
 
 - It arrives to weigh Luci, or what she means to do.
 - Freeing [[Aedra]] is exactly the kind of overreach it exists to answer.
+- It remembers what [[Farzrig]] was before it bent: a balance, not a hunger. It may be the one witness who can tell Luci what the Rider used to be.

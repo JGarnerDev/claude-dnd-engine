@@ -18,6 +18,7 @@ Used during elaboration drafting to prevent slot collisions within each entity t
 - [[Nadirium]] — arcane school that reads the past out of deep stone
 - [[Vaskgrath]] — dwarf/human mining confederation, toll war, sealed holds
 - [[The Marrow Concord]] — three-power frontier accord tilted by settler tide
+- [[The Absolvers]] — gentle cult of endings; burns names so dead rest
 
 ## Locations
 
@@ -38,3 +39,5 @@ Used during elaboration drafting to prevent slot collisions within each entity t
 - [[Jorn]] — circle-exile whose loyalty is the crew, not the cause
 - [[Wick]] — guild-sanctioned hunter using raiders as cover
 - [[Nella]] — debt-collared marksman working off a notched tally
+- [[The Nul|Nul]] — faceless hunger outside being; unmaking as mercy
+- [[Farzrig]] — bent primordial balancer turned rider; eats what lingers

@@ -58,3 +58,7 @@ Three who are tempted, each a thread of one larger arc:
 - **A good healer** tired of losing patients, who decided ending death is the only real cure.
 
 > **DM-only:** None of the three knows the others are involved. The homebrew's climax is the moment all three threads meet the thing they've been feeding: a demon, or something older, wearing the Correctors' philosophy as a mask. Already seeded in canon: [[Tassad]]'s spreading fashion for grave-markers with no death date. Unconfirmed link: [[Halsby]]'s open Tassad rumor could lead here.
+
+## Rivals: the Absolvers
+
+> **DM-only (Jeff and Paul, 2026-11-27):** The grief society has a rival cult, [[The Absolvers]] (working name), who preach endings as mercy for [[The Nul|Nul]]. Their secret leader is [[The First Corrector]], this movement's own founder, turned. The thing under the grief society stays its own villain, not Nul. But the Returned are Nul's eyes, so every crude return the society makes lets Nul look through, and the society feeds the enemy it would most hate without knowing.

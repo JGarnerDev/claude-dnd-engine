@@ -21,6 +21,8 @@ relates_to:
   - "[[Luci]] (woke here; remembers it as home)"
   - "[[Aedra]] (held at its core)"
   - "[[Sabathiel]] (guardian of what lies at its core)"
+  - "[[Farzrig]] (its steed, the Void Serpent, shattered the temple)"
+  - "[[The Nul|Nul]] (the walls are its scripture)"
 known_by:
   - "[[Luci]] (partial)"
 owner: "[[Luci]]"
@@ -37,6 +39,15 @@ known_dangers:
 ## The Walls
 
 Words cover the walls, wheeling in script and meaning, each fighting for the reader's attention. The light is exalted and revered and feared and condemned, all in one breath. Every etched sigil filled Luci with the worship and the horror of the people who carved it, as the light envelops them. Within her, the perpetual light illuminated all of those peoples' ideas of their place in the universe: motes dancing in an infinite, harsh expanse, drifting and flaring and winking out, pulling life in with them. A dance that feeds, that burns, that twirls.
+
+## The Door, the Serpent and the Walls
+
+> **DM-only (Jeff and Paul, 2026-11-27):**
+>
+> - **The door is Fida**, Aethryn's broken moon. That is why Luci felt closer to home under it, and why the voice said "Closer." The shards still drifting off it are [[Farzrig]] feeding on the door.
+> - **The Void Serpent is Farzrig's steed.** It struck the temple hunting the door, not Luci.
+> - **The walls are the Dead Sun's scripture**, which is [[The Nul|Nul]]'s. The Dead Sun Worshippers revered a sun god that chose to die. The worship and the horror Luci felt in every sigil is a congregation learning to love its ending.
+> - [[Sabathiel]] hid [[Aedra]] here, from Farzrig, in a temple built by Nul's own faithful. The irony is the lock: Nul's servants do not search their own house.
 
 ## How Paul Wants It Played
 

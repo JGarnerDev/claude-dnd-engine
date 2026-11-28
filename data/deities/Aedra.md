@@ -36,7 +36,11 @@ Luci means to liberate Aedra from her descent into madness, hand in hand with Sa
 
 ## Why It Matters
 
-Aedra is a liability of existential proportions. A being of her temperament could not drift unsupervised through creation without being noticed. Freeing her draws the attention of cosmic powers: the kind Luci glimpsed in the Astral Sea, such as the [[Rider of the Black Sun]] and the [[The Astral Dragon|Astral Dragon]].
+Aedra is a liability of existential proportions. A being of her temperament could not drift unsupervised through creation without being noticed. Freeing her draws the attention of cosmic powers: the kind Luci glimpsed in the Astral Sea, such as the [[Farzrig|Rider of the Black Sun]] and the [[The Astral Dragon|Astral Dragon]].
+
+## What She Is
+
+> **DM-only (Jeff and Paul, 2026-11-27):** Aedra is the Astral's power of spontaneous creation, the force [[Farzrig]] was made to balance. The dark she sits in is the dark before anything is made, and her longing for light is the longing to make something. When Farzrig bent and began to eat instead of balance, [[Sabathiel]] hid her in [[The Sun Temple]] behind Fida, where it could not reach her. Her madness is creation with nothing to create: penned up too long. Freeing her puts the one thing Farzrig hungers for most back in reach, which is why it is a danger and why it may be the only way to beat [[The Nul|Nul]].
 
 ## Hooks
 

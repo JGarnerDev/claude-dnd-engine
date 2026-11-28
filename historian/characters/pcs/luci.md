@@ -25,6 +25,8 @@ relates_to:
   - "[[Sabathiel]] (warlock patron; Written in the Stars)"
   - "[[Aedra]] (means to free her from her madness)"
   - "[[The Sun Temple]] (remembered home; a pocket dimension)"
+  - "[[Farzrig]] (the Rider of the Black Sun; its steed is the Void Serpent)"
+  - "[[The Nul|Nul]] (DM-only: shared late-game enemy with Iggy)"
 affinity:
   - "[[Odibli]] (3)"
   - "[[Davian Martikov]] (1)"
@@ -56,7 +58,7 @@ spotlight_hooks:
     status: open
   - hook: "the Astral Dragon arrives to weigh her and what she means to do"
     status: open
-  - hook: "a secret she shares with Iggy, and no one else (confirmed by Jeff 2026-10-25; what it is, open)"
+  - hook: "a secret she shares with Iggy, and no one else (confirmed by Jeff 2026-10-25; decided 2026-11-27, DM-only, see [[The Nul|Nul]])"
     status: open
 description: "Paul's PC. Lucitania, a Scourge Aasimar monk-warlock-psion who woke in an abandoned sun temple, was scattered across the Astral Sea by a Void Serpent, and drifted into Barovia in perma-wanderlust."
 confirmed_date: "2026-03-09"
@@ -116,8 +118,10 @@ never be. Agency gone, a billowing nothingness that fills no sails, time creepin
 impossibility of the senses. Breaking the emptiness: cosmic powers passing through, mortals on the
 edge of their undoing, titanic cruelties. She kept brief impressions of two:
 
-- **[[Rider of the Black Sun|a Rider of the Black Sun]]** — a gravity-wielding gravekeeper raiding the realms of light to snuff them out.
+- **[[Farzrig|a Rider of the Black Sun]]** — a gravity-wielding gravekeeper raiding the realms of light to snuff them out.
 - **[[The Astral Dragon|an Astral Dragon]]** — a dragon of the Aether, keeper of balance, rivaled only by its cousins the Time Dragons. Cold, calculating, punishingly wise; its neutrality is a coiled watch on primordial overreach.
+
+> **DM-only (Jeff and Paul, 2026-11-27):** The Rider is [[Farzrig]], Huzzar of the Void, Herald of [[The Nul|Nul]], and the Void Serpent that shattered the temple is its steed. Luci saw rider and serpent apart and never joined them. The oblivion of the drift, with no before and no after, is where she saw the void: not shadow, or darkness, but the hunger that exists outside of being. That is her half of the secret she shares with [[Iggy]] (see [[The Nul|Nul]], The Shared Secret).
 
 ## The Pocket Temple
 
@@ -178,6 +182,8 @@ Bullseye lantern, 3 poison darts, a diary, an ink pen, traveler's clothes. No co
 - **The voice is [[Sabathiel]]** (Jeff, 2026-10-25): her warlock patron, the same voice that grants her Guidance and Augury. "Closer" is Sabathiel speaking. What it points at (the Sun Temple, [[Aedra]], or somewhere in Aethryn) is open.
 - **Fida.** Luci's name for Aethryn's broken moon, spoken in the Dead Sun tongue when she first saw it (Session 29). Canon as the moon's name as the voice gave it to her. Whether anyone in Aethryn calls it that is unknown.
 - **The voice is louder and clearer here** than it ever was in Barovia. This is a standing fact of the season. Its first clear word in Aethryn was **"Closer"**. Closer to what, or to whom, is open.
+
+> **DM-only (Jeff and Paul, 2026-11-27):** Fida is the door to [[The Sun Temple]]. Its drifting shards are Farzrig feeding on the door, which is why "Closer" is urgent.
 
 ## Session History
 
